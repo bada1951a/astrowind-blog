@@ -1,14 +1,14 @@
 ---
 publishDate: '2026-10-12T00:00:00Z'
 title: 'exFAT vs NTFS 차이점 완벽 정리: 외장 SSD와 USB 포맷 선택 가이드'
-excerpt: '윈도우와 맥(Mac)에서 외장하드나 USB를 인식하지 못하거나 파일 전송 오류가 날 때, 어떤 파일 시스템으로 포맷해야 하는지 완벽하게 정리해 드립니다.'
+excerpt: '윈도우와 맥에서 외장하드나 USB를 인식하지 못할 때 파일 시스템 선택 가이드'
 image: 'https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?q=80&w=1200'
 category: 'Tech'
 tags:
-  - 외장하드
-  - SSD
-  - 포맷방법
-  - IT팁
+  - '외장하드'
+  - 'SSD'
+  - '포맷방법'
+  - 'IT팁'
 ---
 
 새 외장 SSD나 대용량 USB 메모리를 구매한 뒤 PC에 연결했을 때, "어떤 방식으로 포맷하시겠습니까?"라는 창이 뜨면서 **NTFS, exFAT, FAT32** 중 하나를 선택해야 하는 순간이 있습니다.
