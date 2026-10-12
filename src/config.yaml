@@ -50,3 +50,5 @@ apps:
 
 ui:
   theme: 'system'
+  announcement:
+    isEnabled: false
