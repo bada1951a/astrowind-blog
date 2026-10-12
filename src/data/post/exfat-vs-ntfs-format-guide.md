@@ -1,5 +1,5 @@
 ---
-publishDate: '2026-10-12T00:00:00Z'
+publishDate: 2026-10-12T00:00:00Z
 title: 'exFAT vs NTFS 차이점 완벽 정리: 외장 SSD와 USB 포맷 선택 가이드'
 excerpt: '윈도우와 맥에서 외장하드나 USB를 인식하지 못할 때 파일 시스템 선택 가이드'
 image: 'https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?q=80&w=1200'
