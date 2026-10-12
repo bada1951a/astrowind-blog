@@ -1,9 +1,9 @@
 ---
-publishDate: 2026-10-12T00:00:00Z
-title: exFAT vs NTFS 차이점 완벽 정리: 외장 SSD·USB 포맷 어떤 걸 골라야 할까?
-excerpt: 윈도우와 맥(Mac)에서 외장하드나 USB를 인식하지 못하거나 파일 전송 오류가 날 때, 어떤 파일 시스템으로 포맷해야 하는지 완벽하게 정리해 드립니다.
-image: https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?q=80&w=1200
-category: Tech
+publishDate: '2026-10-12T00:00:00Z'
+title: 'exFAT vs NTFS 차이점 완벽 정리: 외장 SSD와 USB 포맷 선택 가이드'
+excerpt: '윈도우와 맥(Mac)에서 외장하드나 USB를 인식하지 못하거나 파일 전송 오류가 날 때, 어떤 파일 시스템으로 포맷해야 하는지 완벽하게 정리해 드립니다.'
+image: 'https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?q=80&w=1200'
+category: 'Tech'
 tags:
   - 외장하드
   - SSD
