@@ -3,7 +3,7 @@ import Layout from '~/layouts/PageLayout.astro';
 import Hero from '~/components/widgets/Hero.astro';
 import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
 
-// JPG로 저장하셨다면:
+// 대문 이미지(JPG) 불러오기
 import heroImage from '~/assets/images/satellite-earth.jpg';
 
 const metadata = {
@@ -23,6 +23,10 @@ const metadata = {
         icon: 'tabler:chevron-right',
       },
     ]}
+    image={{
+      src: heroImage,
+      alt: 'Troubleshooting Tutorials - Daily Insight Cover',
+    }}
   >
     <Fragment slot="title">
       Daily Practical Tech Insights,<br />
