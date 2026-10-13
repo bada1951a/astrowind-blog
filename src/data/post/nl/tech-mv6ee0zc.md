@@ -8,7 +8,6 @@ tags: ["Tech", "Troubleshooting", "Hardware"]
 theme: "Pastel Lavender Tech"
 ---
 
-# Mechanisch toetsenbord repareren: Haperende toetsen en dubbele invoer (chattering) oplossen
 
 Als werkplekbeheerder en IT-infrastructuurspecialist krijg ik regelmatig randapparatuur op mijn werkbank die door collega's al bijna is afgeschreven. Vorige week nog stond een senior software developer aan mijn bureau: zijn op maat gemaakte mechanische toetsenbord met Cherry MX Brown switches registreerde bij de 'E'-toets willekeurig dubbele aanslagen (`ee`) en liet de spatiebalk regelmatig steken. Voor een programmeur is dit funest; één onbedoelde dubbele letter breekt variabelen en veroorzaakt syntaxfouten. 
 
