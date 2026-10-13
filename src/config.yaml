@@ -52,3 +52,8 @@ ui:
   theme: 'system'
 announcement:
   enabled: false
+
+analytics:
+  vendors:
+    googleAnalytics:
+      id: 'G-9N381KKW13'
