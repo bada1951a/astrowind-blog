@@ -2,6 +2,7 @@
 title: "Guida Sistemistica al Chattering e Mancata Risposta nei Tasti Meccanici: Diagnostica e Uso del Disossidante"
 description: "Risolvi chattering e tasti non registrati sulla tastiera meccanica. Analisi hardware, test firmware e protocollo con disossidante per contatti a secco."
 publishDate: 2026-10-13T16:00:00.000Z
+image: "https://images.unsplash.com/photo-1629654297299-c8506221ca97?auto=format&fit=crop&w=1200&h=630&q=85"
 category: "Hardware"
 tags: ["Tech", "Troubleshooting", "Hardware"]
 theme: "Mint Fresh Engineering"
@@ -41,6 +42,7 @@ Tutti gli interruttori fisici soffrono fisiologicamente di rimbalzo (*contact bo
 Nelle tastiere moderne dotate di socket a innesto rapido (Kailh o Gateron hot-swap), i terminali a pinzetta saldati sul retro del circuito stampato (PCB) subiscono sollecitazioni torsionali continue. Con il tempo, le alette del socket perdono forza di serraggio oppure si sviluppano micro-crepe da fatica nella lega di stagno (*cold solder joints*). Il contatto diventa quindi intermittente in base alla pressione e all'angolo con cui il tasto viene colpito.
 
 ---
+![Tech Diagnostics](https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?auto=format&fit=crop&w=1000&h=550&q=80)
 
 ## 2. Protocollo Operativo di Ripristino Passo-Passo
 
