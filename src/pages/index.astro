@@ -4,37 +4,37 @@ import Hero from '~/components/widgets/Hero.astro';
 import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
 
 const metadata = {
-  title: '데일리 인사이트 — 매일 만나는 알짜 핫이슈와 정보 큐레이션',
+  title: 'Daily Insight — Practical Tech Insights & Troubleshooting Guides',
   ignoreTitleTemplate: true,
 };
 ---
 
 <Layout metadata={metadata}>
-  <!-- 헤더 하단 간단 소개 영역 -->
+  <!-- Hero Section -->
   <Hero
     actions={[
       {
         variant: 'primary',
-        text: '포스팅 전체보기',
+        text: 'Explore Articles',
         href: '/blog',
         icon: 'tabler:chevron-right',
       },
     ]}
   >
     <Fragment slot="title">
-      매일 만나는 알짜 정보와 인사이트,<br />
-      <span class="text-accent dark:text-white highlight">데일리 인사이트</span>
+      Daily Practical Tech Insights,<br />
+      <span class="text-accent dark:text-white highlight">Daily Insight</span>
     </Fragment>
 
     <Fragment slot="subtitle">
-      트렌드 핫이슈부터 IT·테크 리뷰, 유용한 실생활 꿀팁까지 꼭 필요한 핵심 지식만 선별해 전해드립니다.
+      From trending IT topics to in-depth hardware troubleshooting and practical tech guides.
     </Fragment>
   </Hero>
 
-  <!-- 메인 최신 블로그 글 카드 목록 -->
+  <!-- Latest Posts Section -->
   <BlogLatestPosts
-    title="최신 포스팅 둘러보기"
-    information="데일리 인사이트에서 엄선한 최신 아티클을 확인해 보세요."
+    title="Latest Articles"
+    information="Explore carefully selected technical guides and troubleshooting tutorials."
     count={6}
   />
 </Layout>
