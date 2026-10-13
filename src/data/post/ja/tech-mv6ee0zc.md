@@ -2,6 +2,7 @@
 title: "メカニカルキーボードのチャタリング・入力抜けを自力で直す｜接点復活剤の正しい選定と現場直伝のメンテ術"
 description: "メカニカルキーボードの特定のキーで発生するチャタリングや入力抜け（認識不良）を根本から解決する実践ガイド。現場での接点復活剤の安全な塗布法や診断手順をエンジニア目線で解説します。"
 publishDate: 2026-10-13T11:00:00.000Z
+image: "https://images.unsplash.com/photo-1587202372775-e229f172b9d7?auto=format&fit=crop&w=1200&h=630&q=85"
 category: "Hardware"
 tags: ["Tech", "Troubleshooting", "Hardware"]
 theme: "Dracula Purple Dev"
@@ -36,6 +37,7 @@ theme: "Dracula Purple Dev"
 冬場の低湿度環境における帯電、またはUSBハブの給電不安定により、MCU（マイクロコントローラー）のGPIOピンに入力ノイズが乗るケースです。キー側のバウンス時間がスイッチの経年劣化によって数ミリ秒伸びた際、ファームウェアのデバウンスフィルタ設定がタイトすぎると、物理的な異常が軽微であってもチャタリングとして表面化します。
 
 ---
+![Tech Diagnostics](https://images.unsplash.com/photo-1600132806370-bf17e65e942f?auto=format&fit=crop&w=1000&h=550&q=80)
 
 ## 2. トラブルシューティング手順：診断から接点復活剤塗布まで
 
