@@ -11,6 +11,23 @@ export const headerData = {
       href: getBlogPermalink(),
     },
     {
+      text: '🌐 Language',
+      links: [
+        { text: '🇰🇷 한국어 (KO)', href: getBlogPermalink() },
+        { text: '🇺🇸 English (EN)', href: getPermalink('/en') },
+        { text: '🇯🇵 日本語 (JA)', href: getPermalink('/ja') },
+        { text: '🇻🇳 Tiếng Việt (VI)', href: getPermalink('/vi') },
+        { text: '🇧🇷 Português (PT)', href: getPermalink('/pt') },
+        { text: '🇩🇪 Deutsch (DE)', href: getPermalink('/de') },
+        { text: '🇫🇷 Français (FR)', href: getPermalink('/fr') },
+        { text: '🇪🇸 Español (ES)', href: getPermalink('/es') },
+        { text: '🇮🇩 Indonesia (ID)', href: getPermalink('/id') },
+        { text: '🇮🇹 Italiano (IT)', href: getPermalink('/it') },
+        { text: '🇳🇱 Nederlands (NL)', href: getPermalink('/nl') },
+        { text: '🇵🇱 Polski (PL)', href: getPermalink('/pl') },
+      ],
+    },
+    {
       text: 'Tech & IT',
       href: getPermalink('/category/hardware'),
     },
