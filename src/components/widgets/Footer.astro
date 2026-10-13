@@ -25,7 +25,6 @@ export interface Props {
 
 const { socialLinks = [], secondaryLinks = [], links = [], footNote = '', theme = 'light' } = Astro.props;
 
-// 관리자용 12개국 언어 목록
 const adminLanguages = [
   { code: 'ko', name: '🇰🇷 한국어 (KO)' },
   { code: 'en', name: '🇺🇸 English (EN)' },
@@ -50,7 +49,7 @@ const adminLanguages = [
         <div class="mb-2">
           <a class="inline-block font-bold text-xl" href={getHomePermalink()}>{SITE?.name}</a>
         </div>
-        <div class="text-sm text-muted flex gap-1">
+        <div class="text-sm text-muted flex items-center gap-1">
           {
             secondaryLinks.map(({ text, href }, index) => (
               <>
@@ -68,8 +67,8 @@ const adminLanguages = [
           <button
             id="admin-lang-btn"
             type="button"
-            class="hover:scale-125 transition-transform cursor-pointer text-base leading-none"
-            title="Admin Language Switcher"
+            class="hover:scale-125 transition-transform cursor-pointer text-base leading-none p-1"
+            title="Global Language Hub"
           >
             🌐
           </button>
@@ -124,12 +123,13 @@ const adminLanguages = [
     </div>
   </div>
 
-  <!-- 관리자 전용 언어 선택 팝업 모달창 (평소에는 hidden) -->
+  <!-- 관리자 전용 언어 선택 팝업 모달창 -->
   <div
     id="admin-lang-modal"
-    class="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm hidden"
+    class="fixed inset-0 z-50 items-center justify-center bg-black/60 backdrop-blur-sm hidden"
+    style="display: none;"
   >
-    <div class="bg-white dark:bg-slate-900 border border-gray-200 dark:border-slate-800 rounded-2xl p-6 max-w-md w-full mx-4 shadow-2xl">
+    <div class="bg-white dark:bg-slate-900 border border-gray-200 dark:border-slate-800 rounded-2xl p-6 max-w-md w-full mx-4 shadow-2xl relative">
       <div class="flex justify-between items-center mb-4 pb-2 border-b border-gray-100 dark:border-slate-800">
         <h3 class="text-lg font-bold text-gray-900 dark:text-white flex items-center gap-2">
           🌐 Global Edition Hub
@@ -137,19 +137,19 @@ const adminLanguages = [
         <button
           id="admin-modal-close"
           type="button"
-          class="text-gray-400 hover:text-gray-600 dark:hover:text-white text-xl font-bold px-2 py-1"
+          class="text-gray-400 hover:text-gray-600 dark:hover:text-white text-xl font-bold px-2 py-1 cursor-pointer"
         >
           ✕
         </button>
       </div>
-      <p class="text-xs text-muted mb-4">선택한 국가의 포스팅 보관함으로 이동합니다.</p>
+      <p class="text-xs text-muted mb-4">확인할 국가의 포스팅 목록을 선택하세요.</p>
       
       <div class="grid grid-cols-2 gap-2">
         {
           adminLanguages.map(({ code, name }) => (
             <a
               href={`/${code}`}
-              class="px-3 py-2 text-xs sm:text-sm font-medium rounded-lg border border-gray-100 dark:border-slate-800 hover:border-primary hover:bg-primary/5 dark:hover:bg-primary/10 transition-colors flex items-center"
+              class="px-3 py-2 text-xs sm:text-sm font-medium rounded-lg border border-gray-200 dark:border-slate-700 hover:border-primary hover:bg-primary/5 dark:hover:bg-primary/10 transition-colors flex items-center"
             >
               {name}
             </a>
@@ -165,24 +165,36 @@ const adminLanguages = [
   </div>
 </footer>
 
-<script>
-  const btn = document.getElementById('admin-lang-btn');
-  const modal = document.getElementById('admin-lang-modal');
-  const closeBtn = document.getElementById('admin-modal-close');
+<script is:inline>
+  function setupAdminLangModal() {
+    const btn = document.getElementById('admin-lang-btn');
+    const modal = document.getElementById('admin-lang-modal');
+    const closeBtn = document.getElementById('admin-modal-close');
 
-  if (btn && modal && closeBtn) {
-    btn.addEventListener('click', () => {
+    if (!btn || !modal) return;
+
+    btn.onclick = function (e) {
+      e.preventDefault();
+      modal.style.display = 'flex';
       modal.classList.remove('hidden');
-    });
+    };
 
-    closeBtn.addEventListener('click', () => {
-      modal.classList.add('hidden');
-    });
+    if (closeBtn) {
+      closeBtn.onclick = function () {
+        modal.style.display = 'none';
+        modal.classList.add('hidden');
+      };
+    }
 
-    modal.addEventListener('click', (e) => {
+    modal.onclick = function (e) {
       if (e.target === modal) {
+        modal.style.display = 'none';
         modal.classList.add('hidden');
       }
-    });
+    };
   }
+
+  // 초기 로드 및 Astro 페이지 전환 시 모두 동작
+  setupAdminLangModal();
+  document.addEventListener('astro:page-load', setupAdminLangModal);
 </script>
