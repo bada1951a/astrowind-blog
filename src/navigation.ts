@@ -40,8 +40,6 @@ export const footerData = {
     { text: 'About Us', href: getPermalink('/about') },
     { text: 'Privacy Policy', href: getPermalink('/privacy') },
     { text: 'Terms of Service', href: getPermalink('/terms') },
-    // 관리자 전용 미니 비밀 아이콘 (클릭 시 전체 글 목록 확인)
-    { text: '🌐', href: '/sitemap-0.xml' },
   ],
   socialLinks: [],
   footNote: `
