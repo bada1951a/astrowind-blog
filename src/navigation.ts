@@ -1,42 +1,43 @@
-import { getPermalink, getBlogPermalink } from './utils/permalinks';
+import { getPermalink, getBlogPermalink, getHomePermalink } from './utils/permalinks';
 
 export const headerData = {
   links: [
     {
-      text: '홈',
-      href: getPermalink('/'),
+      text: 'Home',
+      href: getHomePermalink(),
     },
     {
-      text: '전체 글',
+      text: 'Blog',
       href: getBlogPermalink(),
     },
     {
-      text: '테크 & IT',
-      href: getPermalink('Tech', 'category'),
+      text: 'Tech & IT',
+      href: getPermalink('/category/hardware'),
     },
   ],
-  actions: [{ text: '글 목록 보러가기', href: getBlogPermalink() }],
+  actions: [{ text: 'Explore Articles', href: getBlogPermalink() }],
 };
 
 export const footerData = {
   links: [
     {
-      title: '카테고리',
+      title: 'Categories',
       links: [
-        { text: '전체 글 보기', href: getBlogPermalink() },
-        { text: '테크 & IT', href: getPermalink('Tech', 'category') },
+        { text: 'All Articles', href: getBlogPermalink() },
+        { text: 'Tech & IT', href: getPermalink('/category/hardware') },
       ],
     },
     {
-      title: '블로그',
+      title: 'Blog',
       links: [
-        { text: '홈으로', href: getPermalink('/') },
+        { text: 'Home', href: getHomePermalink() },
+        { text: 'Articles', href: getBlogPermalink() },
       ],
     },
   ],
   secondaryLinks: [],
   socialLinks: [],
   footNote: `
-    © 2026 데일리 인사이트 (Daily Insight) · All rights reserved.
+    © 2026 Daily Insight. All rights reserved.
   `,
 };
