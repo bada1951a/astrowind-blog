@@ -8,7 +8,6 @@ tags: ["Tech", "Troubleshooting", "Hardware"]
 theme: "Pure Titanium Clean"
 ---
 
-# Protocole d'atelier : Réparation du bégaiement (chattering) et des contacts défaillants sur clavier mécanique
 
 En tant qu'ingénieur système, mon clavier n'est pas un simple périphérique de saisie : c'est l'interface directe avec les consoles de production, les hyperviseurs et les terminaux d'infrastructure. Rien n'est plus critique – et exaspérant – qu'un interrupteur mécanique qui commence à "bégaier" lors de la saisie d'une commande sensible sous SSH. Une touche `a` ou `Enter` qui enregistre deux frappes au lieu d'une, ou qui ignore purement et simplement la pression, peut transformer une commande d'administration anodine en incident d'exploitation.
 
