@@ -8,7 +8,6 @@ tags: ["Tech", "Troubleshooting", "Hardware"]
 theme: "Mint Fresh Engineering"
 ---
 
-# Guida Sistemistica al Chattering e Mancata Risposta nei Tasti Meccanici: Diagnostica e Uso del Disossidante
 
 Nel mio lavoro quotidiano sui terminali di gestione e nei laboratori di collaudo hardware, uno strumento di input inaffidabile rappresenta un collo di bottiglia critico. Qualche mese fa, durante la configurazione in loco di un cluster di virtualizzazione, la tastiera meccanica della mia workstation da campo ha iniziato a mostrare sintomi subdoli: digitando credenziali complesse su terminale SSH, alcune lettere venivano registrate due volte (*key chattering* o rimbalzo), mentre la barra spaziatrice e il tasto `Tab` perdevano colpi in modo casuale (*key skipping*). 
 
