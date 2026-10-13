@@ -44,45 +44,49 @@ const adminLanguages = [
 <footer class:list={[{ dark: theme === 'dark' }, 'relative border-t border-gray-200 dark:border-slate-800 not-prose']}>
   <div class="dark:bg-dark absolute inset-0 pointer-events-none" aria-hidden="true"></div>
   <div class="relative max-w-7xl mx-auto px-4 sm:px-6 dark:text-slate-300">
-    <div class="grid grid-cols-12 gap-4 gap-y-8 sm:gap-8 py-8 md:py-12">
-      <div class="col-span-12 lg:col-span-4">
-        <div class="mb-2">
-          <a class="inline-block font-bold text-xl" href={getHomePermalink()}>{SITE?.name}</a>
+    <div class="grid grid-cols-12 gap-6 sm:gap-8 py-8 md:py-12">
+      <!-- 왼쪽 영역: 너비를 6칸으로 넉넉하게 확장하여 약관이 가로 한 줄로 배치되도록 수정 -->
+      <div class="col-span-12 lg:col-span-6">
+        <div class="mb-3">
+          <a class="inline-block font-bold text-xl tracking-tight" href={getHomePermalink()}>{SITE?.name}</a>
         </div>
-        <div class="text-sm text-muted flex items-center gap-1">
+        <div class="text-sm text-muted flex flex-wrap items-center gap-x-2 gap-y-1">
           {
             secondaryLinks.map(({ text, href }, index) => (
               <>
-                {index > 0 && <span>·</span>}
+                {index > 0 && <span class="text-gray-400 select-none">·</span>}
                 <a
-                  class="text-muted hover:text-gray-700 dark:text-gray-400 hover:underline transition duration-150 ease-in-out"
+                  class="text-muted hover:text-gray-700 dark:text-gray-400 hover:underline transition duration-150 ease-in-out whitespace-nowrap"
                   href={href}
                   set:html={text}
                 />
               </>
             ))
           }
-          <span>·</span>
+          <!-- 관리자 전용 숨김 지구본 버튼 -->
+          <span class="text-gray-400 select-none">·</span>
           <button
             id="admin-lang-btn"
             type="button"
-            class="hover:scale-125 transition-transform cursor-pointer text-base leading-none p-1"
+            class="hover:scale-125 transition-transform cursor-pointer text-base leading-none p-0.5 inline-flex items-center"
             title="Global Language Hub"
           >
             🌐
           </button>
         </div>
       </div>
+
+      <!-- 오른쪽 영역: Categories, Blog를 오른쪽으로 이동하여 3칸씩 정돈 -->
       {
         links.map(({ title, links }) => (
-          <div class="col-span-6 md:col-span-3 lg:col-span-2">
-            <div class="dark:text-gray-300 font-medium mb-2">{title}</div>
+          <div class="col-span-6 lg:col-span-3">
+            <div class="dark:text-gray-300 font-semibold mb-3">{title}</div>
             {links && Array.isArray(links) && links.length > 0 && (
-              <ul class="text-sm">
+              <ul class="text-sm space-y-2">
                 {links.map(({ text, href, ariaLabel }) => (
-                  <li class="mb-2">
+                  <li>
                     <a
-                      class="text-muted hover:text-gray-700 hover:underline dark:text-gray-400 transition duration-150 ease-in-out"
+                      class="text-muted hover:text-gray-700 hover:underline dark:text-gray-400 transition duration-150 ease-in-out whitespace-nowrap"
                       href={href}
                       aria-label={ariaLabel}
                     >
@@ -96,7 +100,8 @@ const adminLanguages = [
         ))
       }
     </div>
-    <div class="md:flex md:items-center md:justify-between py-6 md:py-8">
+
+    <div class="md:flex md:items-center md:justify-between py-6 md:py-8 border-t border-gray-100 dark:border-slate-800/80">
       {
         socialLinks?.length > 0 && (
           <ul class="flex mb-4 md:order-1 -ml-2 md:ml-4 md:mb-0 rtl:ml-0 rtl:-mr-2 rtl:md:ml-0 rtl:md:mr-4">
@@ -116,12 +121,13 @@ const adminLanguages = [
         )
       }
 
-      <div class="text-sm mr-4 dark:text-muted">
+      <div class="text-sm dark:text-muted">
         <Fragment set:html={footNote} />
       </div>
     </div>
   </div>
 
+  <!-- 관리자 전용 언어 선택 모달 -->
   <div
     id="admin-lang-modal"
     class="fixed inset-0 z-50 items-center justify-center bg-black/60 backdrop-blur-sm hidden"
