@@ -28,6 +28,73 @@ if (lines.length === 0) {
 const currentTopic = lines[0];
 console.log(`📌 오늘 처리할 주제: "${currentTopic}"`);
 
+// 검증된 고화질 IT/하드웨어 전문 Unsplash 이미지 풀 (40장 분산)
+const TECH_IMAGE_POOL = [
+  "photo-1597872200969-2b65d56bd16b", // M.2 SSD / Storage
+  "photo-1518770660439-4636190af475", // Circuit Board / Chipset
+  "photo-1587202372775-e229f172b9d7", // Mechanical Keyboard / Switches
+  "photo-1550751827-4bd374c3f58b", // Cybersecurity / Tech Server
+  "photo-1563770660941-20978e870e26", // Hardware Electronics Lab
+  "photo-1526374965328-7f61d4dc18c5", // Terminal / Code / Matrix
+  "photo-1591799264318-7e6ef8ddb7ea", // CPU Processor / Heatsink
+  "photo-1544197150-b99a580bb7a8", // Server Rack / Cabling
+  "photo-1588508065123-287b28e013da", // Tech Workshop / Repair Desk
+  "photo-1629654297299-c8506221ca97", // High-end Motherboard
+  "photo-1519389950473-47ba0277781c", // IT Workspace / Engineer Team
+  "photo-1555680202-c86f0e12f086", // Data Center Diagnostics
+  "photo-1531297484001-80022131f5a1", // Modern Laptop & Hardware
+  "photo-1607604276583-eef5d076aa5f", // Soldering & Circuit Repair
+  "photo-1517430816045-df4b7de11d1d", // Hardware Testing Equipment
+  "photo-1581092160607-ee22621dd758", // Microchip & Precision Tools
+  "photo-1581092335397-9583fe92d232", // Network Switches & LAN Cables
+  "photo-1527443224154-c4a3942d3acf", // Desktop Workstation Setup
+  "photo-1581091226825-a6a2a5aee158", // Industrial Lab Testing
+  "photo-1591488320449-011701bb6704", // GPU Graphics Card Architecture
+  "photo-1542751371-adc38448a05e", // Gaming Gear & Mechanical Keys
+  "photo-1558494949-ef010cbdcc31", // Cloud Server Racks
+  "photo-1515378791036-0648a3ef77b2", // System Diagnostics on Screen
+  "photo-1504384308090-c894fdcc538d", // Tech Support Team Desk
+  "photo-1516321318423-f06f85e504b3", // Digital Hardware Workspace
+  "photo-1546776310-eef45dd6d63c", // AI & Robotics Hardware
+  "photo-1618005182384-a83a8bd57fbe", // Minimalist Tech Architecture
+  "photo-1600132806370-bf17e65e942f", // Custom Keyboard PCB & Caps
+  "photo-1563986768609-322da13575f3", // Digital Cloud Architecture
+  "photo-1550745165-9bc0b252726f", // Retro Tech Gear / Cassette Era
+  "photo-1580927752452-89d86da3fa0a", // Developer Coding Screen
+  "photo-1579546929518-9e396f3cc809", // Abstract Modern Tech Mesh
+  "photo-1581092795360-fd1ca04f0952", // Professional Multimeter / Testing
+  "photo-1518773553398-650c184e0bb3", // Micro Electronics Macro Shot
+  "photo-1525547719571-a2d4ac8945e2", // Precision Screwdrivers & Parts
+  "photo-1534972195531-a756b1126f24", // Tech Field Terminal & Logs
+  "photo-1618761714954-0b8cd0026356", // High-Speed NVMe Storage Drive
+  "photo-1614064641938-3bbee52942c7", // Modern Circuit Trace Architecture
+  "photo-1581092580497-e0d23cbdf1dc", // IT Quality Assurance Station
+  "photo-1581092918056-0c4c3acd3789"  // Advanced Fiber Optics / Cables
+];
+
+// 고유 시드 기반으로 절대 겹치지 않는 2장의 이미지 선택 함수
+function getDistributedImages(langIndex, seedStr) {
+  let hash = 0;
+  for (let i = 0; i < seedStr.length; i++) {
+    hash = (hash << 5) - hash + seedStr.charCodeAt(i);
+    hash |= 0;
+  }
+  const baseOffset = Math.abs(hash) % TECH_IMAGE_POOL.length;
+
+  // 커버 이미지: 언어 인덱스와 해시를 조합한 위치
+  const coverIdx = (baseOffset + langIndex * 3) % TECH_IMAGE_POOL.length;
+  // 본문 이미지: 커버와 겹치지 않도록 충분한 거리(17칸)를 둔 위치
+  const bodyIdx = (coverIdx + 17) % TECH_IMAGE_POOL.length;
+
+  const coverPhotoId = TECH_IMAGE_POOL[coverIdx];
+  const bodyPhotoId = TECH_IMAGE_POOL[bodyIdx];
+
+  const coverUrl = `https://images.unsplash.com/${coverPhotoId}?auto=format&fit=crop&w=1200&h=630&q=85`;
+  const bodyUrl = `https://images.unsplash.com/${bodyPhotoId}?auto=format&fit=crop&w=1000&h=550&q=80`;
+
+  return { coverUrl, bodyUrl };
+}
+
 // 30가지 고유 시각 스타일 및 글 구조 테마 프리셋
 const THEME_PRESETS = [
   { id: 1, name: "Cyberpunk Terminal", primaryColor: "#00ffcc", bgColor: "#111827", layout: "CLI/터미널 콘솔 스타일, 명령어 박스 최상단 배치, 기술 스택 진단 중심" },
@@ -101,8 +168,9 @@ async function fetchWithRetry(prompt, maxRetries = 15, delayMs = 20000) {
 }
 
 async function generateSinglePost(lang, index) {
-  // 30개 테마 중 무작위 1개 선정
   const selectedTheme = THEME_PRESETS[Math.floor(Math.random() * THEME_PRESETS.length)];
+  const { coverUrl, bodyUrl } = getDistributedImages(index, currentTopic + fileSlug);
+
   console.log(`\n🚀 [${index + 1}/12] ${lang.name} (${lang.code}) 포스팅 생성 중... (적용 테마: ${selectedTheme.name})`);
 
   const postDate = new Date();
@@ -146,6 +214,7 @@ Return ONLY raw Markdown. DO NOT wrap the output in markdown code fences. DO NOT
 title: "Native Catchy Title in ${lang.name}"
 description: "Native concise description in ${lang.name} under 160 characters"
 publishDate: ${pubDateIso}
+image: "${coverUrl}"
 category: "Hardware"
 tags: ["Tech", "Troubleshooting", "Hardware"]
 theme: "${selectedTheme.name}"
@@ -160,12 +229,28 @@ theme: "${selectedTheme.name}"
     if (text.startsWith('```markdown')) text = text.replace(/^```markdown\n/, '').replace(/\n```$/, '');
     if (text.startsWith('```')) text = text.replace(/^```\n/, '').replace(/\n```$/, '');
 
-    // 프론트매터 아래 본문 시작 지점에 혹시 들어간 '# 제목' 중복 제거
+    // 프론트매터 분리 및 본문 첫 줄 '# 제목' 제거
     const fmMatch = text.match(/^---[\s\S]*?---\n*/);
     if (fmMatch) {
       const frontmatter = fmMatch[0];
       let body = text.slice(frontmatter.length).trim();
-      body = body.replace(/^#\s+[^\n]+\n+/, ''); // 본문 첫 줄의 # H1 제거
+      body = body.replace(/^#\s+[^\n]+\n+/, '');
+
+      // 본문 중간(2번째 큰 섹션 부근)에 고유 현장 사진 자연스럽게 삽입
+      const middleImageMarkdown = `\n\n![Hardware Diagnostic & Troubleshooting](${bodyUrl})\n\n`;
+      if (body.includes('## 2.') || body.includes('### 2.')) {
+        body = body.replace(/(#{2,3}\s*2\.[^\n]+)/, `${middleImageMarkdown}$1`);
+      } else {
+        // 섹션 번호가 없으면 본문 첫 3번째 문단 뒤에 안전하게 삽입
+        const paragraphs = body.split('\n\n');
+        if (paragraphs.length >= 3) {
+          paragraphs.splice(2, 0, middleImageMarkdown.trim());
+          body = paragraphs.join('\n\n');
+        } else {
+          body = `${middleImageMarkdown}${body}`;
+        }
+      }
+
       text = `${frontmatter}\n${body}\n`;
     }
 
@@ -176,7 +261,7 @@ theme: "${selectedTheme.name}"
 
     const filePath = path.join(targetDir, `${fileSlug}.md`);
     fs.writeFileSync(filePath, text, 'utf-8');
-    console.log(`✅ [성공] 저장 완료: src/data/post/${lang.code}/${fileSlug}.md (테마: ${selectedTheme.name})`);
+    console.log(`✅ [성공] 저장 완료: src/data/post/${lang.code}/${fileSlug}.md (테마: ${selectedTheme.name}, 이미지 분산 완료)`);
     return true;
   } catch (error) {
     console.error(`❌ [최종 실패] ${lang.name} 생성 실패:`, error.message);
@@ -186,7 +271,7 @@ theme: "${selectedTheme.name}"
 
 async function run() {
   console.log("==================================================");
-  console.log("🌍 12개국 자동 포스팅 파이프라인 시작 (30개 동적 테마 회전 탑재)");
+  console.log("🌍 12개국 자동 포스팅 파이프라인 시작 (30개 테마 + 40종 이미지 분산)");
   console.log("==================================================");
 
   let successCount = 0;
