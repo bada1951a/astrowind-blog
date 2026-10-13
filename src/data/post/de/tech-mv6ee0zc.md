@@ -8,7 +8,6 @@ tags: ["Hardware", "Troubleshooting", "Mechanische Tastatur", "Peripherie"]
 theme: "Midnight Navy Royal"
 ---
 
-# Notfall-Einsatz im Leitstand: Wenn die mechanische Tastatur prellt (Key Chattering DIY-Guide)
 
 Es ist 02:47 Uhr während einer regulären Wartungsnacht im RZ-Bereich Frankfurt-Nord. Ich sitze an der primären Konsole für die Core-Switches, will per SSH ein Konfigurations-Update aufspielen – und das Terminal verweigert den Dienst. Fehlermeldung: *Authentication failure*. Nach drei Versuchen schaue ich mir die Eingabe im Klartext-Notizblock an: Statt `passwort` steht dort `passsswwort`. Meine treue mechanische Tastatur mit taktilen Cherry-MX-Switches hat beschlossen, massives **Key Chattering** (Tastenprellen) auf der Taste `S` und zeitgleich sporadische Kontaktabbrüche bei der Leertaste an den Tag zu legen.
 
