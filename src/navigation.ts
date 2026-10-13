@@ -32,7 +32,8 @@ export const footerData = {
       links: [
         { text: 'Home', href: getHomePermalink() },
         { text: 'Articles', href: getBlogPermalink() },
-        { text: 'Contact Us', href: 'mailto:contact@storydailyview.com' },
+        // 링크 없이 단순 이메일 텍스트 안내로 변경
+        { text: 'Contact: contact@storydailyview.com', href: undefined },
       ],
     },
   ],
