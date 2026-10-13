@@ -8,7 +8,6 @@ tags: ["Tech", "Troubleshooting", "Hardware"]
 theme: "Sunset Horizon Coral"
 ---
 
-# Jak naprawić chattering i zacinające się klawisze w klawiaturze mechanicznej: Praktyczny poradnik DIY
 
 Jako inżynier wsparcia IT w środowisku korporacyjnym widziałem już setki peryferiów skazanych na przedwczesną utylizację. W zeszły piątek na mój stół warsztatowy trafiła klawiatura jednego z naszych senior developerów – customowy mechanik na przełącznikach Gateron Yellow, w którym klawisze `W` oraz `E` naprzemiennie gubiły wciśnięcia albo generowały irytujący podwójny klik (*chattering*). Zamiast wpisać prostą komendę w terminalu, system rejestrował `wwweee`. Użytkownik był przekonany, że kontroler na płytce PCB uległ uszkodzeniu, a sprzęt nadaje się wyłącznie do kosza.
 
