@@ -8,7 +8,6 @@ tags: ["Tech", "Troubleshooting", "Hardware"]
 theme: "Nordic Clean Ice"
 ---
 
-# Fixing Mechanical Keyboard Chatter and Missed Keystrokes: A Field Guide to Switch Triage and Contact Cleaners
 
 > *"A misplaced semicolon will break your build, but an intermittent switch leaf will break your sanity. In production environments, deterministic hardware input is not an amenity—it is an absolute operational baseline."*
 
