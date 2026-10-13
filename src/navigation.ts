@@ -11,23 +11,6 @@ export const headerData = {
       href: getBlogPermalink(),
     },
     {
-      text: '🌐 Language',
-      links: [
-        { text: '🇰🇷 한국어 (KO)', href: getBlogPermalink() },
-        { text: '🇺🇸 English (EN)', href: getPermalink('/en') },
-        { text: '🇯🇵 日本語 (JA)', href: getPermalink('/ja') },
-        { text: '🇻🇳 Tiếng Việt (VI)', href: getPermalink('/vi') },
-        { text: '🇧🇷 Português (PT)', href: getPermalink('/pt') },
-        { text: '🇩🇪 Deutsch (DE)', href: getPermalink('/de') },
-        { text: '🇫🇷 Français (FR)', href: getPermalink('/fr') },
-        { text: '🇪🇸 Español (ES)', href: getPermalink('/es') },
-        { text: '🇮🇩 Indonesia (ID)', href: getPermalink('/id') },
-        { text: '🇮🇹 Italiano (IT)', href: getPermalink('/it') },
-        { text: '🇳🇱 Nederlands (NL)', href: getPermalink('/nl') },
-        { text: '🇵🇱 Polski (PL)', href: getPermalink('/pl') },
-      ],
-    },
-    {
       text: 'Tech & IT',
       href: getPermalink('/category/hardware'),
     },
@@ -52,11 +35,28 @@ export const footerData = {
         { text: 'About & Contact', href: getPermalink('/about') },
       ],
     },
+    // 푸터에 조용하게 들어가는 관리자용 언어별 아카이브
+    {
+      title: 'Global Editions',
+      links: [
+        { text: '🇺🇸 English', href: '/en' },
+        { text: '🇯🇵 日本語', href: '/ja' },
+        { text: '🇻🇳 Tiếng Việt', href: '/vi' },
+        { text: '🇧🇷 Português', href: '/pt' },
+        { text: '🇩🇪 Deutsch', href: '/de' },
+        { text: '🇫🇷 Français', href: '/fr' },
+      ],
+    },
   ],
   secondaryLinks: [
     { text: 'About Us', href: getPermalink('/about') },
     { text: 'Privacy Policy', href: getPermalink('/privacy') },
     { text: 'Terms of Service', href: getPermalink('/terms') },
+    { text: 'ES', href: '/es' },
+    { text: 'ID', href: '/id' },
+    { text: 'IT', href: '/it' },
+    { text: 'NL', href: '/nl' },
+    { text: 'PL', href: '/pl' },
   ],
   socialLinks: [],
   footNote: `
