@@ -24,13 +24,27 @@ export interface Props {
 }
 
 const { socialLinks = [], secondaryLinks = [], links = [], footNote = '', theme = 'light' } = Astro.props;
+
+// 관리자용 12개국 언어 목록
+const adminLanguages = [
+  { code: 'ko', name: '🇰🇷 한국어 (KO)' },
+  { code: 'en', name: '🇺🇸 English (EN)' },
+  { code: 'ja', name: '🇯🇵 日本語 (JA)' },
+  { code: 'vi', name: '🇻🇳 Tiếng Việt (VI)' },
+  { code: 'pt', name: '🇧🇷 Português (PT)' },
+  { code: 'de', name: '🇩🇪 Deutsch (DE)' },
+  { code: 'fr', name: '🇫🇷 Français (FR)' },
+  { code: 'es', name: '🇪🇸 Español (ES)' },
+  { code: 'id', name: '🇮🇩 Indonesia (ID)' },
+  { code: 'it', name: '🇮🇹 Italiano (IT)' },
+  { code: 'nl', name: '🇳🇱 Nederlands (NL)' },
+  { code: 'pl', name: '🇵🇱 Polski (PL)' },
+];
 ---
 
 <footer class:list={[{ dark: theme === 'dark' }, 'relative border-t border-gray-200 dark:border-slate-800 not-prose']}>
   <div class="dark:bg-dark absolute inset-0 pointer-events-none" aria-hidden="true"></div>
-  <div
-    class="relative max-w-7xl mx-auto px-4 sm:px-6 dark:text-slate-300 intersect-once intersect-quarter intersect-no-queue motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade"
-  >
+  <div class="relative max-w-7xl mx-auto px-4 sm:px-6 dark:text-slate-300">
     <div class="grid grid-cols-12 gap-4 gap-y-8 sm:gap-8 py-8 md:py-12">
       <div class="col-span-12 lg:col-span-4">
         <div class="mb-2">
@@ -40,7 +54,7 @@ const { socialLinks = [], secondaryLinks = [], links = [], footNote = '', theme 
           {
             secondaryLinks.map(({ text, href }, index) => (
               <>
-                {index !== 0 ? ' · ' : ''}
+                {index > 0 && <span>·</span>}
                 <a
                   class="text-muted hover:text-gray-700 dark:text-gray-400 hover:underline transition duration-150 ease-in-out"
                   href={href}
@@ -49,6 +63,16 @@ const { socialLinks = [], secondaryLinks = [], links = [], footNote = '', theme 
               </>
             ))
           }
+          <!-- 관리자 전용 숨김 지구본 버튼 -->
+          <span>·</span>
+          <button
+            id="admin-lang-btn"
+            type="button"
+            class="hover:scale-125 transition-transform cursor-pointer text-base leading-none"
+            title="Admin Language Switcher"
+          >
+            🌐
+          </button>
         </div>
       </div>
       {
@@ -76,7 +100,7 @@ const { socialLinks = [], secondaryLinks = [], links = [], footNote = '', theme 
     </div>
     <div class="md:flex md:items-center md:justify-between py-6 md:py-8">
       {
-        socialLinks?.length ? (
+        socialLinks?.length > 0 && (
           <ul class="flex mb-4 md:order-1 -ml-2 md:ml-4 md:mb-0 rtl:ml-0 rtl:-mr-2 rtl:md:ml-0 rtl:md:mr-4">
             {socialLinks.map(({ ariaLabel, href, text, icon }) => (
               <li>
@@ -91,8 +115,6 @@ const { socialLinks = [], secondaryLinks = [], links = [], footNote = '', theme 
               </li>
             ))}
           </ul>
-        ) : (
-          ''
         )
       }
 
@@ -101,4 +123,66 @@ const { socialLinks = [], secondaryLinks = [], links = [], footNote = '', theme 
       </div>
     </div>
   </div>
+
+  <!-- 관리자 전용 언어 선택 팝업 모달창 (평소에는 hidden) -->
+  <div
+    id="admin-lang-modal"
+    class="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm hidden"
+  >
+    <div class="bg-white dark:bg-slate-900 border border-gray-200 dark:border-slate-800 rounded-2xl p-6 max-w-md w-full mx-4 shadow-2xl">
+      <div class="flex justify-between items-center mb-4 pb-2 border-b border-gray-100 dark:border-slate-800">
+        <h3 class="text-lg font-bold text-gray-900 dark:text-white flex items-center gap-2">
+          🌐 Global Edition Hub
+        </h3>
+        <button
+          id="admin-modal-close"
+          type="button"
+          class="text-gray-400 hover:text-gray-600 dark:hover:text-white text-xl font-bold px-2 py-1"
+        >
+          ✕
+        </button>
+      </div>
+      <p class="text-xs text-muted mb-4">선택한 국가의 포스팅 보관함으로 이동합니다.</p>
+      
+      <div class="grid grid-cols-2 gap-2">
+        {
+          adminLanguages.map(({ code, name }) => (
+            <a
+              href={`/${code}`}
+              class="px-3 py-2 text-xs sm:text-sm font-medium rounded-lg border border-gray-100 dark:border-slate-800 hover:border-primary hover:bg-primary/5 dark:hover:bg-primary/10 transition-colors flex items-center"
+            >
+              {name}
+            </a>
+          ))
+        }
+      </div>
+
+      <div class="mt-4 pt-3 border-t border-gray-100 dark:border-slate-800 flex justify-between text-xs text-muted">
+        <a href="/sitemap-0.xml" target="_blank" class="hover:underline">📑 전체 사이트맵 XML</a>
+        <span>Admin Only</span>
+      </div>
+    </div>
+  </div>
 </footer>
+
+<script>
+  const btn = document.getElementById('admin-lang-btn');
+  const modal = document.getElementById('admin-lang-modal');
+  const closeBtn = document.getElementById('admin-modal-close');
+
+  if (btn && modal && closeBtn) {
+    btn.addEventListener('click', () => {
+      modal.classList.remove('hidden');
+    });
+
+    closeBtn.addEventListener('click', () => {
+      modal.classList.add('hidden');
+    });
+
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        modal.classList.add('hidden');
+      }
+    });
+  }
+</script>
