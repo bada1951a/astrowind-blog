@@ -2,6 +2,7 @@
 title: "Guia de Bancada: Eliminando Chattering e Falhas de Acionamento em Teclados Mecânicos com Limpa-Contato"
 description: "Diagnóstico técnico e reparo prático de chattering e teclas fantasmas em teclados mecânicos. Aprenda a usar limpa-contato sem danificar o PCB."
 publishDate: 2026-10-13T17:15:00.000Z
+image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1200&h=630&q=85"
 category: "Hardware"
 tags: ["Tech", "Troubleshooting", "Hardware"]
 theme: "Cyberpunk Terminal"
@@ -33,6 +34,7 @@ Esse comportamento errático — conhecido no meio técnico como **key chatterin
 Neste guia prático de laboratório, mostro o protocolo exato que utilizo para diagnosticar, isolar e reparar esses switches em nível cirúrgico, fazendo uso correto de produtos químicos de grau eletrônico sem destruir as propriedades dos plásticos internos.
 
 ---
+![Tech Diagnostics](https://images.unsplash.com/photo-1581092335397-9583fe92d232?auto=format&fit=crop&w=1000&h=550&q=80)
 
 ## 2. Anatomia da Falha: As 3 Causas Raiz do Chattering
 
