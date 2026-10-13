@@ -3,7 +3,7 @@ import Layout from '~/layouts/PageLayout.astro';
 
 const metadata = {
   title: 'Contact Us — Daily Insight',
-  description: 'Get in touch with the editorial team at Daily Insight.',
+  description: 'Contact the editorial team at Daily Insight for inquiries and technical feedback.',
 };
 ---
 
@@ -14,10 +14,10 @@ const metadata = {
     <div class="prose dark:prose-invert max-w-none text-muted leading-relaxed space-y-8">
       <div>
         <p class="text-lg">
-          Daily Insight 콘텐츠에 대한 기술적 피드백, 오탈자 제보, 하드웨어 협업 및 비즈니스 제휴 문의는 공식 이메일을 통해 접수받고 있습니다.
+          For technical feedback, errata submissions, hardware reviews, or business inquiries, please reach out directly via email.
         </p>
         <p>
-          접수된 문의 사항은 운영진 확인 후 영업일 기준 2~3일 이내에 회신드립니다.
+          Our editorial team reviews all messages and strives to respond within 2 to 3 business days.
         </p>
       </div>
 
@@ -25,11 +25,11 @@ const metadata = {
         <h2 class="text-xl font-semibold text-default mb-4">Official Contact Address</h2>
         <div class="p-5 rounded-xl bg-gray-50 dark:bg-slate-800/60 border border-gray-200 dark:border-gray-700/60 inline-block w-full max-w-lg">
           <p class="text-sm text-gray-500 dark:text-gray-400 mb-1">Direct Editorial & Business Inquiries</p>
-          <!-- 마우스로 클릭하면 한 번에 싹 잡히는 순수 텍스트 (Cloudflare 난독화 차단) -->
+          <!-- data-cfemail 파싱 방지 처리된 순수 텍스트 -->
           <p class="font-mono text-lg font-bold text-primary dark:text-blue-400 select-all tracking-wide">
-            contact@storydailyview.com
+            contact<span>@</span>storydailyview.com
           </p>
-          <p class="text-xs text-gray-400 mt-2">* 메일 앱 자동 실행 링크가 아닌 복사용 텍스트입니다. 주소를 복사하여 메일 작성기에 입력해 주세요.</p>
+          <p class="text-xs text-gray-400 mt-2">* Plain text address. Please copy and paste into your email client.</p>
         </div>
       </div>
     </div>
