@@ -8,7 +8,6 @@ tags: ["Tech", "Troubleshooting", "Hardware"]
 theme: "Midnight Navy Royal"
 ---
 
-# Nhật Ký Xử Lý Sự Cố Ca Đêm: Khắc Phục Triệt Để Phím Cơ Bị Chattering Và Nuốt Phím Bằng Dung Dịch Phục Hồi Tiếp Điểm
 
 ## [INCIDENT LOG 01:15 AM] Bối Cảnh Sự Cố Tại Bàn Trực Vận Hành
 
