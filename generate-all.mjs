@@ -2,7 +2,6 @@ import fs from 'fs';
 import path from 'path';
 import { GoogleGenAI } from '@google/genai';
 
-// 1. API 키 확인
 const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
 if (!GEMINI_API_KEY) {
   console.error("❌ GEMINI_API_KEY 환경변수가 설정되지 않았습니다.");
@@ -13,7 +12,6 @@ const ai = new GoogleGenAI({ apiKey: GEMINI_API_KEY });
 const POSTS_BASE_DIR = path.resolve('src/data/post');
 const TOPICS_FILE = path.resolve('topics.txt');
 
-// 2. topics.txt 확인 및 첫 번째 주제 가져오기
 if (!fs.existsSync(TOPICS_FILE)) {
   console.error("❌ topics.txt 파일이 존재하지 않습니다.");
   process.exit(1);
@@ -30,7 +28,6 @@ if (lines.length === 0) {
 const currentTopic = lines[0];
 console.log(`📌 오늘 처리할 주제: "${currentTopic}"`);
 
-// 3. 글로벌 12개국 언어 설정
 const TARGET_LANGS = [
   { code: 'ko', name: 'Korean', persona: '한국 IT 인프라/하드웨어 엔지니어', osUi: '장치 관리자, 디스크 관리, 명령 프롬프트' },
   { code: 'en', name: 'English', persona: 'Silicon Valley Senior Systems Engineer', osUi: 'Device Manager, Disk Management, Command Prompt' },
@@ -43,13 +40,31 @@ const TARGET_LANGS = [
   { code: 'nl', name: 'Dutch', persona: 'Nederlandse IT-infrastructuurspecialist', osUi: 'Apparaatbeheer, Schijfbeheer, Opdrachtprompt' },
   { code: 'pl', name: 'Polish', persona: 'Polski inżynier wsparcia IT i systemów operacyjnych', osUi: 'Menedżer urządzeń, Zarządzanie dyskami, Wiersz polecenia' },
   { code: 'id', name: 'Indonesian', persona: 'Spesialis teknisi IT dan perangkat keras Indonesia', osUi: 'Device Manager, Manajemen Disk, Command Prompt' },
-  { code: 'vi', name: 'Vietnamese', persona: 'Kỹ sư phần cứng và hỗ trợ IT doanh nghiệp Việt Nam', osUi: 'Device Manager, Disk Management, Command Prompt' }
+  { code: 'vi', name: 'Vietnamese', persona: 'Kỹ sư phần cứng 및 hỗ trợ IT doanh nghiệp Việt Nam', osUi: 'Device Manager, Disk Management, Command Prompt' }
 ];
 
 const delay = (ms) => new Promise((res) => setTimeout(res, ms));
-
-// 고유 파일명(슬러그) 생성
 const fileSlug = `tech-${Date.now().toString(36)}`;
+
+// 5분 동안 재시도하며 API 호출하는 핵심 함수
+async function fetchWithRetry(prompt, maxRetries = 15, delayMs = 20000) {
+  for (let attempt = 1; attempt <= maxRetries; attempt++) {
+    try {
+      const response = await ai.models.generateContent({
+        model: 'gemini-2.0-flash',
+        contents: prompt,
+      });
+      return response.text;
+    } catch (error) {
+      console.warn(`⚠️ [호출 지연/에러] 시도 ${attempt}/${maxRetries}: ${error.message}`);
+      if (attempt === maxRetries) {
+        throw error;
+      }
+      console.log(`⏳ ${delayMs / 1000}초 동안 대기 후 다시 시도합니다... (최대 5분 대기 로직)`);
+      await delay(delayMs);
+    }
+  }
+}
 
 async function generateSinglePost(lang, index) {
   console.log(`\n🚀 [${index + 1}/12] ${lang.name} (${lang.code}) 포스팅 생성 중...`);
@@ -96,12 +111,8 @@ tags: ["Tech", "Troubleshooting", "Hardware"]
 `;
 
   try {
-    const response = await ai.models.generateContent({
-      model: 'gemini-2.5-flash',
-      contents: prompt,
-    });
-
-    let text = response.text.trim();
+    let rawText = await fetchWithRetry(prompt);
+    let text = rawText.trim();
     if (text.startsWith('```markdown')) text = text.replace(/^```markdown\n/, '').replace(/\n```$/, '');
     if (text.startsWith('```')) text = text.replace(/^```\n/, '').replace(/\n```$/, '');
 
@@ -113,29 +124,38 @@ tags: ["Tech", "Troubleshooting", "Hardware"]
     const filePath = path.join(targetDir, `${fileSlug}.md`);
     fs.writeFileSync(filePath, text, 'utf-8');
     console.log(`✅ [성공] 저장 완료: src/data/post/${lang.code}/${fileSlug}.md`);
+    return true;
   } catch (error) {
-    console.error(`❌ [실패] ${lang.name} 생성 중 에러 발생:`, error.message);
+    console.error(`❌ [최종 실패] ${lang.name} 생성 실패:`, error.message);
+    return false;
   }
 }
 
 async function run() {
   console.log("==================================================");
-  console.log("🌍 12개국 자동 포스팅 파이프라인 시작");
+  console.log("🌍 12개국 자동 포스팅 파이프라인 시작 (대기열 자동 복구 탑재)");
   console.log("==================================================");
 
+  let successCount = 0;
+
   for (let i = 0; i < TARGET_LANGS.length; i++) {
-    await generateSinglePost(TARGET_LANGS[i], i);
+    const isSuccess = await generateSinglePost(TARGET_LANGS[i], i);
+    if (isSuccess) successCount++;
     if (i < TARGET_LANGS.length - 1) {
-      console.log("⏳ API 보호를 위해 5초 대기합니다...");
       await delay(5000);
     }
   }
 
-  // 사용한 첫 번째 줄 제거 후 topics.txt 업데이트
-  lines.shift();
-  fs.writeFileSync(TOPICS_FILE, lines.join('\n'), 'utf-8');
-  console.log("\n🧹 사용한 주제를 topics.txt에서 삭제하고 저장했습니다.");
-  console.log(`📊 남은 주제 수: ${lines.length}개`);
+  // 최소 1개 이상이라도 성공했을 때만 주제 삭제
+  if (successCount > 0) {
+    lines.shift();
+    fs.writeFileSync(TOPICS_FILE, lines.join('\n'), 'utf-8');
+    console.log(`\n🧹 총 ${successCount}개국 발행 완료. topics.txt에서 주제를 삭제했습니다.`);
+    console.log(`📊 남은 주제 수: ${lines.length}개`);
+  } else {
+    console.error("\n❌ 모든 언어 생성이 실패하여 topics.txt를 유지합니다.");
+    process.exit(1);
+  }
 }
 
 run();
