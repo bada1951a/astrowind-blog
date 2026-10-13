@@ -85,7 +85,7 @@ async function fetchWithRetry(prompt, maxRetries = 15, delayMs = 20000) {
   for (let attempt = 1; attempt <= maxRetries; attempt++) {
     try {
       const response = await ai.models.generateContent({
-        model: 'gemini-3.8-flash',
+        model: 'gemini-2.5-flash-lite',
         contents: prompt,
       });
       return response.text;
