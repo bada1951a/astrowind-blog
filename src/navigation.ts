@@ -35,7 +35,10 @@ export const footerData = {
       ],
     },
   ],
-  secondaryLinks: [],
+  secondaryLinks: [
+    { text: 'Privacy Policy', href: getPermalink('/privacy') },
+    { text: 'Terms of Service', href: getPermalink('/terms') },
+  ],
   socialLinks: [],
   footNote: `
     © 2026 Daily Insight. All rights reserved.
