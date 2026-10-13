@@ -58,7 +58,7 @@ const THEME_PRESETS = [
   { id: 26, name: "Acid Lime Hacker Space", primaryColor: "#84cc16", bgColor: "#14532d", layout: "오픈소스 하드웨어 펌웨어 패치 가이드, 깃허브 오픈 툴 연동 안내" },
   { id: 27, name: "Sandstone Desert Minimal", primaryColor: "#a16207", bgColor: "#fefce8", layout: "깔끔한 매뉴얼 북 스타일, 소제목 하단 1줄 핵심 팁 강조 배너" },
   { id: 28, name: "Dracula Purple Dev", primaryColor: "#bd93f9", bgColor: "#282a36", layout: "전통 드라큘라 테마 스타일, 숏컷 단축키 및 복구 키 조합 하이라이트" },
-  { id: 29, name: "Electric Cyan Speed", primaryColor: "#06b6d4", bgColor: "#ecfeff", layout: "초고속 3분 해결 가이드 형식, 빠른 조치법 $\\rightarrow$ 심층 조치법 2단계 분리" },
+  { id: 29, name: "Electric Cyan Speed", primaryColor: "#06b6d4", bgColor: "#ecfeff", layout: "초고속 3분 해결 가이드 형식, 빠른 조치법 -> 심층 조치법 2단계 분리" },
   { id: 30, name: "Pure Titanium Clean", primaryColor: "#334155", bgColor: "#ffffff", layout: "초고화질 매뉴얼 스타일, 볼드 타이포그래피 강조, 깔끔한 구분선과 블록인용" }
 ];
 
@@ -140,7 +140,7 @@ ${currentTopic}
 - Other languages: 1,200 to 1,500 words of thorough technical explanation.
 
 [Strict Output Format]
-Return ONLY raw Markdown. DO NOT wrap the output in markdown code fences. Begin immediately with the frontmatter:
+Return ONLY raw Markdown. DO NOT wrap the output in markdown code fences. DO NOT include the post title as an H1 (# Title) in the body (the template automatically displays the title from frontmatter). Begin immediately with the frontmatter:
 
 ---
 title: "Native Catchy Title in ${lang.name}"
@@ -151,8 +151,7 @@ tags: ["Tech", "Troubleshooting", "Hardware"]
 theme: "${selectedTheme.name}"
 ---
 
-# Title
-(Body starts here)
+(Body starts directly here without H1 header)
 `;
 
   try {
@@ -160,6 +159,15 @@ theme: "${selectedTheme.name}"
     let text = rawText.trim();
     if (text.startsWith('```markdown')) text = text.replace(/^```markdown\n/, '').replace(/\n```$/, '');
     if (text.startsWith('```')) text = text.replace(/^```\n/, '').replace(/\n```$/, '');
+
+    // 프론트매터 아래 본문 시작 지점에 혹시 들어간 '# 제목' 중복 제거
+    const fmMatch = text.match(/^---[\s\S]*?---\n*/);
+    if (fmMatch) {
+      const frontmatter = fmMatch[0];
+      let body = text.slice(frontmatter.length).trim();
+      body = body.replace(/^#\s+[^\n]+\n+/, ''); // 본문 첫 줄의 # H1 제거
+      text = `${frontmatter}\n${body}\n`;
+    }
 
     const targetDir = path.join(POSTS_BASE_DIR, lang.code);
     if (!fs.existsSync(targetDir)) {
