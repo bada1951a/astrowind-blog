@@ -8,7 +8,6 @@ tags: ["Keyboard Mekanikal", "Troubleshooting", "Hardware", "DIY Repair"]
 theme: "Sandstone Desert Minimal"
 ---
 
-# Panduan Teknisi: Mengatasi Keyboard Mekanikal Chattering dan Miss-Click Menggunakan Contact Cleaner
 
 Sebagai seorang teknisi IT yang sering menangani inventaris periferal di lingkungan kantor dan lab komputasi, pemandangan keyboard mekanikal yang "dibuang" ke gudang karena tombolnya mengetik ganda (*chattering*) atau macet (*miss-click*) adalah hal yang lumrah. Keluhan yang masuk ke meja kerja saya biasanya seragam: tombol spasi tiba-tiba melompat dua kali, atau huruf "W" dan "A" mendadak tidak merespons saat dipakai kerja maupun bermain game. 
 
