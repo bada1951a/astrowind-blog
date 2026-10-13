@@ -8,7 +8,6 @@ tags: ["Hardware", "Mantenimiento TI", "Periféricos", "Soporte Técnico"]
 theme: "Deep Ocean Cobalt"
 ---
 
-# Guía de Diagnóstico y Reparación de Chattering y Fallos de Pulsación en Teclados Mecánicos
 
 Como responsable del puesto de trabajo e infraestructura técnica en entornos de desarrollo y centros de operaciones de red (NOC), me encuentro con frecuencia con incidencias de teclado que desconciertan a los usuarios: caracteres duplicados de forma aleatoria (el temido *chattering* o rebote de conmutador) o combinaciones de teclas que se niegan a registrarse en momentos críticos, como la introducción de contraseñas de privilegios o comandos de consola en producción. 
 
