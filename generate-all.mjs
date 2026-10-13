@@ -50,8 +50,8 @@ const fileSlug = `tech-${Date.now().toString(36)}`;
 async function fetchWithRetry(prompt, maxRetries = 15, delayMs = 20000) {
   for (let attempt = 1; attempt <= maxRetries; attempt++) {
     try {
-      const response = await ai.models.generateContent({
-        model: 'gemini-2.0-flash',
+     const response = await ai.models.generateContent({
+        model: 'gemini-2.5-flash',
         contents: prompt,
       });
       return response.text;
