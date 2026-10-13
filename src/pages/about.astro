@@ -2,45 +2,41 @@
 import Layout from '~/layouts/PageLayout.astro';
 
 const metadata = {
-  title: 'About & Contact — Daily Insight',
-  description: 'Learn more about Daily Insight, our mission, and how to get in touch with our editorial team.',
+  title: 'About Us — Daily Insight',
+  description: 'Learn about Daily Insight and our practical technical guides on hardware and IT systems.',
 };
 ---
 
 <Layout metadata={metadata}>
   <section class="px-6 py-12 sm:py-16 lg:py-20 mx-auto max-w-4xl text-default">
-    <h1 class="text-3xl md:text-4xl font-bold tracking-tight mb-8">About & Contact</h1>
+    <h1 class="text-3xl md:text-4xl font-bold tracking-tight mb-8">About Daily Insight</h1>
     
     <div class="prose dark:prose-invert max-w-none text-muted leading-relaxed space-y-8">
       <div>
-        <h2 class="text-2xl font-semibold text-default mb-3">About Daily Insight</h2>
+        <h2 class="text-2xl font-semibold text-default mb-3">Our Mission</h2>
         <p>
-          Welcome to <strong>Daily Insight</strong>, an independent technical publication dedicated to demystifying modern hardware, IT infrastructure, and system diagnostics.
+          <strong>Daily Insight</strong>는 빠르게 변화하는 IT 생태계 속에서 실무에 즉시 활용할 수 있는 테크 정보와 시스템 트러블슈팅 가이드를 전달하는 독립 기술 블로그입니다.
         </p>
         <p>
-          Our team comprises seasoned IT engineers and tech enthusiasts sharing real-world troubleshooting workflows, practical hardware teardowns, and actionable operating system guides. We believe in high-utility, verified solutions that save time and prevent critical data loss.
-        </p>
-      </div>
-
-      <div class="border-t border-gray-200 dark:border-gray-800 pt-6">
-        <h2 class="text-2xl font-semibold text-default mb-3">Editorial Standards & Ethics</h2>
-        <p>
-          All guides published on Daily Insight undergo rigorous practical testing. We adhere to transparent technical reporting, prioritizing data safety, standardized testing environments, and authentic troubleshooting experiences.
+          복잡한 기술 용어나 이론에 매몰되지 않고, 실제 사용자가 겪는 하드웨어 호환성 문제, 저장장치 복구, OS 최적화, 최신 테크 기기 실사용 분석 등 실질적인 해결책(Actionable Solutions)을 제공하는 것을 목표로 합니다.
         </p>
       </div>
 
       <div class="border-t border-gray-200 dark:border-gray-800 pt-6">
-        <h2 class="text-2xl font-semibold text-default mb-3">Contact Us</h2>
+        <h2 class="text-2xl font-semibold text-default mb-3">What We Cover</h2>
+        <ul class="list-disc list-inside space-y-2 mt-2">
+          <li><strong>Hardware & Storage:</strong> NVMe SSD 인클로저 조립, 외장 스토리지 포맷(exFAT/NTFS) 호환성 및 디스크 복구 툴 가이드</li>
+          <li><strong>System Diagnostics:</strong> Windows 및 macOS 환경의 시스템 오류 해결, 명령어 기반 무결성 검사(CHKDSK, SFC)</li>
+          <li><strong>Tech Peripherals & Gear:</strong> 커스텀 기계식 키보드, 생산성 데스크 셋업, 오디오 및 디스플레이 인터페이스 분석</li>
+          <li><strong>Practical Tech News:</strong> 실생활과 업무 생산성에 직결되는 글로벌 IT 트렌드 요약</li>
+        </ul>
+      </div>
+
+      <div class="border-t border-gray-200 dark:border-gray-800 pt-6">
+        <h2 class="text-2xl font-semibold text-default mb-3">Editorial Standards</h2>
         <p>
-          Have questions, technical feedback, errata submissions, or partnership inquiries? We value our readers' insights and strive to respond to all inquiries within 2-3 business days.
+          Daily Insight의 모든 기술 가이드는 직접 검증된 절차와 객관적인 데이터를 바탕으로 작성됩니다. 독자의 소중한 데이터 안전과 안정적인 기기 운용을 최우선 가치로 두고 정확한 정보를 제공합니다.
         </p>
-        <div class="mt-4 p-4 rounded-lg bg-gray-50 dark:bg-slate-800 border border-gray-200 dark:border-gray-700">
-          <p class="font-medium text-default mb-1">Direct Editorial Inquiries:</p>
-          <!-- 클릭 링크 없이 마우스로 한 번에 복사하기 편한 순수 텍스트 -->
-          <p class="font-mono font-semibold text-base select-all text-primary dark:text-blue-400">
-            contact@storydailyview.com
-          </p>
-        </div>
       </div>
     </div>
   </section>
