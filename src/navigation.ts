@@ -32,10 +32,12 @@ export const footerData = {
       links: [
         { text: 'Home', href: getHomePermalink() },
         { text: 'Articles', href: getBlogPermalink() },
+        { text: 'About & Contact', href: getPermalink('/about') },
       ],
     },
   ],
   secondaryLinks: [
+    { text: 'About Us', href: getPermalink('/about') },
     { text: 'Privacy Policy', href: getPermalink('/privacy') },
     { text: 'Terms of Service', href: getPermalink('/terms') },
   ],
