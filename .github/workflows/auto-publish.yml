@@ -1,38 +1,61 @@
-name: Daily 12-Language Auto Publish
+name: Auto Multi-Language Blog Publishing Pipeline
 
 on:
   schedule:
-    # 매일 한국 시간 오전 09:00에 자동 실행 (UTC 00:00)
-    - cron: '0 0 * * *'
-  # 필요할 때 버튼 눌러서 즉시 실행도 가능
+    # --------------------------------------------------------------------------
+    # [미국 최대 시장(동부 뉴욕/워싱턴 기준) 오전 8시, 오후 5시 발행]
+    # - UTC 12:00 -> 한국 시간 당일 오후 9시 (21:00) / 미국 동부 오전 08:00
+    # - UTC 21:00 -> 한국 시간 다음날 오전 6시 (06:00) / 미국 동부 오후 17:00
+    # --------------------------------------------------------------------------
+    - cron: '0 12,21 * * *'
+
+  # GitHub Actions 콘솔에서 언제든 수동으로 즉시 실행할 수 있는 버튼 활성화
   workflow_dispatch:
+
+permissions:
+  contents: write # 파일 커밋 및 푸시 권한 부여
 
 jobs:
   publish:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
 
     steps:
-      - name: 저장소 코드 가져오기
+      - name: Checkout Repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
-      - name: Node.js 환경 세팅
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: 20
+          cache: 'npm' # npm 캐시 활성화로 빌드 속도 향상
 
-      - name: Gemini SDK 설치
-        run: npm install @google/genai
+      - name: Install Dependencies
+        run: |
+          if [ -f package-lock.json ]; then
+            npm ci
+          else
+            npm install
+          fi
 
-      - name: 12개국 글 자동 생성 및 topics.txt 갱신
+      - name: Run Auto Publishing Script (Gemini 3.5 Flash-Lite)
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: node generate-all.mjs
 
-      - name: 변경된 글 및 topics.txt 자동 저장(Commit & Push)
+      - name: Commit and Push Generated Posts
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add .
-          git diff --quiet && git diff --staged --quiet || (git commit -m "chore: auto-publish 12 languages and update topics" && git push)
+
+          # 새로 생성된 글과 수정된 topics.txt를 스테이징
+          git add src/data/post/ topics.txt
+
+          # 변경 사항이 있을 때만 커밋 및 푸시 실행 (오류 방지)
+          if git diff --staged --quiet; then
+            console.log "⚠️ 변경되거나 생성된 파일이 없습니다."
+          else
+            git commit -m "chore: auto-published 12-language posts [skip ci]"
+            git push origin main
+          fi
