@@ -42,7 +42,7 @@ function getDistributedImages(langIndex, seedStr) {
   const coverSeed = ((baseNum + (langIndex * 73)) % 1000) + 1;
   const bodySeed = ((coverSeed + 499) % 1000) + 1;
 
-  const coverUrl = `https://picsum.photos/seed/hardware${coverSeed}/1200/630`;
+  const coverUrl = `https://picsum.photos/seed/hardware${coverSeed}/900/600`;
   const bodyUrl = `https://picsum.photos/seed/computer${bodySeed}/1000/550`;
 
   return { coverUrl, bodyUrl };
