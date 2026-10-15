@@ -29,7 +29,7 @@ const currentTopic = lines[0];
 console.log(`📌 오늘 처리할 주제: "${currentTopic}"`);
 
 // =========================================================================
-// [최적화 완료] 렉 없는 초고속 1,000개 이미지 무작위 분산 매핑 (O(1) 연산)
+// [1,000종 고유 테크/IT 전용 이미지 분산 매핑 (중복 제로 + 자연/풍경 원천 차단)]
 // =========================================================================
 function getDistributedImages(langIndex, seedStr) {
   let hash = 0;
@@ -38,12 +38,14 @@ function getDistributedImages(langIndex, seedStr) {
     hash |= 0;
   }
 
+  // 1부터 1000 사이의 고유 Seed 번호 연산
   const baseNum = (Math.abs(hash) % 1000) + 1;
   const coverSeed = ((baseNum + (langIndex * 73)) % 1000) + 1;
-  const bodySeed = ((coverSeed + 499) % 1000) + 1;
+  const bodySeed = ((coverSeed + 499) % 1000) + 1; // 커버와 절대 겹치지 않는 본문 번호
 
-  const coverUrl = `https://picsum.photos/seed/tech-${coverSeed}/1200/630`;
-  const bodyUrl = `https://picsum.photos/seed/hardware-${bodySeed}/1000/550`;
+  // 테크, 컴퓨터, 하드웨어 키워드로 필터링된 1,000종 이미지 소스
+  const coverUrl = `https://loremflickr.com/1200/630/technology,computer,hardware?lock=${coverSeed}`;
+  const bodyUrl = `https://loremflickr.com/1000/550/electronics,circuit,server?lock=${bodySeed}`;
 
   return { coverUrl, bodyUrl };
 }
@@ -132,7 +134,7 @@ async function generateSinglePost(lang, index) {
   const pubDateIso = postDate.toISOString();
 
   // =========================================================================
-  // [국가별 철저한 현지화 규칙 추가] 한국 지명/교통수단 노출 절대 금지
+  // [강화된 현지화 + LaTeX 금지 + 모바일 최적화 프롬프트]
   // =========================================================================
   const prompt = `
 You are a ${lang.persona}.
@@ -147,12 +149,20 @@ ${currentTopic}
 - ABSOLUTELY FORBIDDEN for non-Korean languages:
   * NEVER mention Korean infrastructure, trains, or places (NO KTX, NO Gyeongbu line, NO Seoul, NO Gangnam, NO Pangyo, NO Naver/Kakao) in English, Japanese, German, etc.
   * Your opening story MUST naturally incorporate the authentic local environment:
-    - English (en): Caltrain, Amtrak, US airports, Silicon Valley / New York offices.
+    - English (en): Caltrain, Amtrak Acela, US airports, Silicon Valley / New York offices.
     - Japanese (ja): Tokaido Shinkansen (Nozomi), Yamanote Line, Shinagawa/Marunouchi offices.
     - German (de): Deutsche Bahn ICE, Frankfurt/Munich corporate setups.
     - French (fr): TGV, Paris La Défense business district.
     - And corresponding native transit/workplace for other languages.
   * The protagonist must be 100% perceived as a local resident/worker of that country.
+
+[TECHNICAL TEXT FORMATTING RULE (STRICT NO LATEX)]
+- ABSOLUTELY FORBIDDEN: NEVER use LaTeX math delimiters or academic math symbols (DO NOT use $, $$, \\times, \\approx, \\degree).
+- Always use plain, human-readable numbers and units:
+  * Write "305 km/h" instead of "$305~km/h$"
+  * Write "42°C" or "42 C" instead of "$42^{\\circ}C$"
+  * Write "Qualcomm X70 / X75" instead of "Qualcomm $X70/\\times75$"
+- Mobile-friendly formatting: DO NOT use complex, wide 4-column tables that break on mobile screens. Use clean 2-column key-value lists or bulleted summary cards instead.
 
 [Design Theme & Layout Dynamic Rules (MANDATORY)]
 - Assigned Theme: "${selectedTheme.name}"
@@ -208,6 +218,12 @@ theme: "${selectedTheme.name}"
     if (text.startsWith('```markdown')) text = text.replace(/^```markdown\n/, '').replace(/\n```$/, '');
     if (text.startsWith('```')) text = text.replace(/^```\n/, '').replace(/\n```$/, '');
 
+    // 혹시라도 LLM이 LaTeX 수식 기호를 남겼을 경우를 대비한 안전 정규식 치환
+    text = text.replace(/\$([^$]+)\$/g, '$1')
+               .replace(/\\times/g, 'x')
+               .replace(/\\circ/g, '°')
+               .replace(/\\approx/g, '≈');
+
     // 프론트매터 분리 및 본문 첫 줄 '# 제목' 제거
     const fmMatch = text.match(/^---[\s\S]*?---\n*/);
     if (fmMatch) {
@@ -215,7 +231,7 @@ theme: "${selectedTheme.name}"
       let body = text.slice(frontmatter.length).trim();
       body = body.replace(/^#\s+[^\n]+\n+/, '');
 
-      // 본문 중간(2번째 큰 섹션 부근)에 고유 현장 사진 자연스럽게 삽입
+      // 본문 중간(2번째 큰 섹션 부근)에 고유 하드웨어 테크 사진 안전 삽입
       const middleImageMarkdown = `\n\n![Hardware Diagnostic & Troubleshooting](${bodyUrl})\n\n`;
       if (body.includes('## 2.') || body.includes('### 2.')) {
         body = body.replace(/(#{2,3}\s*2\.[^\n]+)/, `${middleImageMarkdown}$1`);
@@ -258,7 +274,7 @@ async function run() {
     const isSuccess = await generateSinglePost(TARGET_LANGS[i], i);
     if (isSuccess) successCount++;
     if (i < TARGET_LANGS.length - 1) {
-      await delay(5000); // API 제한 방지 5초 간격 유지
+      await delay(5000);
     }
   }
 
