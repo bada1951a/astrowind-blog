@@ -134,7 +134,7 @@ async function generateSinglePost(lang, index) {
   const pubDateIso = postDate.toISOString();
 
   // =========================================================================
-  // [강화된 현지화 + LaTeX 금지 + 모바일 최적화 프롬프트]
+  // [강화된 현지화 + 한글 혼입 원천 차단 + LaTeX 금지 + 모바일 최적화 프롬프트]
   // =========================================================================
   const prompt = `
 You are a ${lang.persona}.
@@ -156,6 +156,12 @@ ${currentTopic}
     - And corresponding native transit/workplace for other languages.
   * The protagonist must be 100% perceived as a local resident/worker of that country.
 
+[CRITICAL OUTPUT LANGUAGE INTEGRITY - ZERO HANGUL IN GLOBAL POSTS]
+- If target language is NOT Korean (ko):
+  * Absolutely NEVER include any Korean Hangul characters (가-힣) anywhere in the title, description, tags, or body.
+  * Special note for Dutch/German/European languages: Never attach Korean phonetic words like "브랜드" to words containing "brand" (e.g., Dutch "OLED-inbranden" must be written strictly in native Dutch, NEVER with Korean text).
+  * Every single character in the title and description MUST strictly be in native ${lang.name}.
+
 [TECHNICAL TEXT FORMATTING RULE (STRICT NO LATEX)]
 - ABSOLUTELY FORBIDDEN: NEVER use LaTeX math delimiters or academic math symbols (DO NOT use $, $$, \\times, \\approx, \\degree).
 - Always use plain, human-readable numbers and units:
@@ -169,7 +175,8 @@ ${currentTopic}
 - Primary Accent Color: ${selectedTheme.primaryColor}
 - Layout Characteristic: ${selectedTheme.layout}
 - You MUST incorporate native Markdown and inline styled HTML callouts tailored to this theme.
-  * Use custom styled tip/warning boxes (e.g., <div style="border-left: 4px solid ${selectedTheme.primaryColor}; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px;">...</div>).
+  * Use custom styled tip/warning boxes (e.g., <div style="border-left: 4px solid ${selectedTheme.primaryColor}; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">...</div>).
+  * CRITICAL: All text inside callout/tip/warning boxes MUST be crisp dark charcoal/black (color: #111827) so it is 100% legible against any background.
   * Structure the sections uniquely based on: "${selectedTheme.layout}".
 
 [Tone & Writing Style Rules (STRICT - NO AI VIBE)]
@@ -224,6 +231,16 @@ theme: "${selectedTheme.name}"
                .replace(/\\circ/g, '°')
                .replace(/\\approx/g, '≈');
 
+    // 비한국어 글인데 제목/설명에 한글 단어(예: '브랜드')가 혼입된 경우 자동 제거 필터링
+    if (lang.code !== 'ko') {
+      text = text.replace(/(title:\s*")([^"]*)(")/g, (match, p1, p2, p3) => {
+        return `${p1}${p2.replace(/[가-힣]+/g, '').trim()}${p3}`;
+      });
+      text = text.replace(/(description:\s*")([^"]*)(")/g, (match, p1, p2, p3) => {
+        return `${p1}${p2.replace(/[가-힣]+/g, '').trim()}${p3}`;
+      });
+    }
+
     // 프론트매터 분리 및 본문 첫 줄 '# 제목' 제거
     const fmMatch = text.match(/^---[\s\S]*?---\n*/);
     if (fmMatch) {
@@ -274,7 +291,7 @@ async function run() {
     const isSuccess = await generateSinglePost(TARGET_LANGS[i], i);
     if (isSuccess) successCount++;
     if (i < TARGET_LANGS.length - 1) {
-      await delay(5000);
+      await delay(5000); // API 제한 방지 5초 간격 유지
     }
   }
 
