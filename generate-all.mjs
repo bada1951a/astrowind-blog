@@ -249,4 +249,61 @@ theme: "${selectedTheme.name}"
       frontmatter = frontmatter.replace(/category:\s*["'][^"']*["']/i, "category: 'tech'")
                                .replace(/category:\s*[^\n\r]+/i, "category: 'tech'");
 
-      const middleImageMarkdown =
+      const middleImageMarkdown = `\n\n![Tech & IT Solution Guide](${bodyUrl})\n\n`;
+      if (body.includes('## 2.') || body.includes('### 2.')) {
+        body = body.replace(/(#{2,3}\s*2\.[^\n]+)/, `${middleImageMarkdown}$1`);
+      } else {
+        const paragraphs = body.split('\n\n');
+        if (paragraphs.length >= 3) {
+          paragraphs.splice(2, 0, middleImageMarkdown.trim());
+          body = paragraphs.join('\n\n');
+        } else {
+          body = `${middleImageMarkdown}${body}`;
+        }
+      }
+
+      text = `${frontmatter}\n${body}\n`;
+    }
+
+    const targetDir = path.join(POSTS_BASE_DIR, lang.code);
+    if (!fs.existsSync(targetDir)) {
+      fs.mkdirSync(targetDir, { recursive: true });
+    }
+
+    const filePath = path.join(targetDir, `${fileSlug}.md`);
+    fs.writeFileSync(filePath, text, 'utf-8');
+    console.log(`✅ [성공] 1호기 저장 완료: src/data/post/${lang.code}/${fileSlug}.md (테마: ${selectedTheme.name})`);
+    return true;
+  } catch (error) {
+    console.error(`❌ [최종 실패] ${lang.name} 생성 실패:`, error.message);
+    return false;
+  }
+}
+
+async function run() {
+  console.log("==================================================");
+  console.log("⚡ 1호기 메인 테크/IT 12개국 초고속 자동 포스팅 파이프라인 시작");
+  console.log("==================================================");
+
+  let successCount = 0;
+
+  for (let i = 0; i < TARGET_LANGS.length; i++) {
+    const isSuccess = await generateSinglePost(TARGET_LANGS[i], i);
+    if (isSuccess) successCount++;
+    if (i < TARGET_LANGS.length - 1) {
+      await delay(5000);
+    }
+  }
+
+  if (successCount > 0) {
+    lines.shift();
+    fs.writeFileSync(TOPICS_FILE, lines.join('\n'), 'utf-8');
+    console.log(`\n🧹 총 ${successCount}개국 포스팅 완료. topics.txt에서 주제를 삭제했습니다.`);
+    console.log(`📊 남은 주제 수: ${lines.length}개`);
+  } else {
+    console.error("\n❌ 모든 언어 생성이 실패하여 topics.txt를 유지합니다.");
+    process.exit(1);
+  }
+}
+
+run();
