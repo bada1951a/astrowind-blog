@@ -31,7 +31,6 @@ console.log(`📌 오늘 처리할 주제: "${currentTopic}"`);
 // =========================================================================
 // [최적화 완료] 렉 없는 초고속 1,000개 이미지 무작위 분산 매핑 (O(1) 연산)
 // =========================================================================
-// 무거운 외부 호출이나 1,000개 배열 로딩 없이 수학적 시드로 1~1000 고유 이미지를 즉시 생성합니다.
 function getDistributedImages(langIndex, seedStr) {
   let hash = 0;
   for (let i = 0; i < seedStr.length; i++) {
@@ -39,12 +38,10 @@ function getDistributedImages(langIndex, seedStr) {
     hash |= 0;
   }
 
-  // 1부터 1000 사이의 고유 Seed 번호 연산 (렉 제로)
   const baseNum = (Math.abs(hash) % 1000) + 1;
   const coverSeed = ((baseNum + (langIndex * 73)) % 1000) + 1;
-  const bodySeed = ((coverSeed + 499) % 1000) + 1; // 커버와 절대 겹치지 않는 본문 번호
+  const bodySeed = ((coverSeed + 499) % 1000) + 1;
 
-  // 고속 글로벌 캐시 CDN 사용 (빠른 렌더링 + 엑박 원천 방지)
   const coverUrl = `https://picsum.photos/seed/tech-${coverSeed}/1200/630`;
   const bodyUrl = `https://picsum.photos/seed/hardware-${bodySeed}/1000/550`;
 
@@ -85,27 +82,25 @@ const THEME_PRESETS = [
   { id: 30, name: "Pure Titanium Clean", primaryColor: "#334155", bgColor: "#ffffff", layout: "초고화질 매뉴얼 스타일, 볼드 타이포그래피 강조, 깔끔한 구분선과 블록인용" }
 ];
 
+// 각 국가별 철저한 현지 직장 환경 및 인프라 매핑
 const TARGET_LANGS = [
-  { code: 'ko', name: 'Korean', persona: '8년 차 한국 IT 현업 엔지니어 (사내 대나무숲/블라인드 썰 장인)', osUi: '장치 관리자, 디스크 관리, 명령 프롬프트' },
-  { code: 'en', name: 'English', persona: 'Silicon Valley Senior Systems Engineer sharing raw office war stories', osUi: 'Device Manager, Disk Management, Command Prompt' },
-  { code: 'ja', name: 'Japanese', persona: '修羅場をくぐり抜けてきた日本の現役ITインフラエンジニア', osUi: 'デバイス マネージャー, ディスクの管理, コマンド プロンプト' },
-  { code: 'de', name: 'German', persona: 'Erfahrener deutscher IT-Systemadministrator aus der Praxis', osUi: 'Geräte-Manager, Datenträgerverwaltung, Eingabeaufforderung' },
-  { code: 'fr', name: 'French', persona: 'Ingénieur système informatique français racontant ses galères de bureau', osUi: 'Gestionnaire de périphériques, Gestion des disques, Invite de commandes' },
-  { code: 'es', name: 'Spanish', persona: 'Ingeniero de soporte TI español compartiendo anécdotas reales de oficina', osUi: 'Administrador de dispositivos, Administración de discos, Símbolo del sistema' },
-  { code: 'it', name: 'Italian', persona: 'Ingegnere sistemista hardware italiano con esperienza diretta sul campo', osUi: 'Gestione dispositivi, Gestione disco, Prompt dei comandi' },
-  { code: 'pt', name: 'Portuguese', persona: 'Especialista em TI brasileiro contando perrengues e soluções reais de trabalho', osUi: 'Gerenciador de Dispositivos, Gerenciamento de Disco, Prompt de Comando' },
-  { code: 'nl', name: 'Dutch', persona: 'Nederlandse IT-infrastructuurspecialist met praktijkervaring', osUi: 'Apparaatbeheer, Schijfbeheer, Opdrachtprompt' },
-  { code: 'pl', name: 'Polish', persona: 'Polski inżynier wsparcia IT dzielący się autentycznymi historiami z biura', osUi: 'Menedżer urządzeń, Zarządzanie dyskami, Wiersz polecenia' },
-  { code: 'id', name: 'Indonesian', persona: 'Teknisi IT Indonesia yang berbagi pengalaman nyata di lapangan', osUi: 'Device Manager, Manajemen Disk, Command Prompt' },
-  { code: 'vi', name: 'Vietnamese', persona: 'Kỹ sư IT thực chiến chia sẻ trải nghiệm xử lý sự cố tại doanh nghiệp', osUi: 'Device Manager, Disk Management, Command Prompt' }
+  { code: 'ko', name: 'Korean', persona: '8년 차 한국 IT 현업 엔지니어 (사내 대나무숲/블라인드 썰 장인)', osUi: '장치 관리자, 디스크 관리, 명령 프롬프트', localeContext: '서울/판교 IT 테크노밸리, KTX 경부선, 지하철 2호선 출퇴근, 국내 기업 회의 문화' },
+  { code: 'en', name: 'English', persona: 'Silicon Valley Senior Systems Engineer sharing raw office war stories', osUi: 'Device Manager, Disk Management, Command Prompt', localeContext: 'Silicon Valley / NYC corporate offices, Caltrain (SF to Mountain View), Amtrak Acela (NYC to DC), Slack/Zoom sync culture' },
+  { code: 'ja', name: 'Japanese', persona: '修羅場をくぐり抜けてきた日本の現役ITインフラエンジニア', osUi: 'デバイス マネージャー, ディスクの管理, コマンド プロンプト', localeContext: '丸の内・品川のオフィス街, 東海道新幹線(のぞみ), 山手線満員電車, 顧客向けプレゼン直前の修羅場' },
+  { code: 'de', name: 'German', persona: 'Erfahrener deutscher IT-Systemadministrator aus der Praxis', osUi: 'Geräte-Manager, Datenträgerverwaltung, Eingabeaufforderung', localeContext: 'Frankfurt/München Büro, Deutsche Bahn ICE (WLAN-Probleme), Feierabend-Druck, strikte IT-Compliance' },
+  { code: 'fr', name: 'French', persona: 'Ingénieur système informatique français racontant ses galères de bureau', osUi: 'Gestionnaire de périphériques, Gestion des disques, Invite de commandes', localeContext: 'La Défense (Paris) bureau, TGV (Paris à Lyon), réunions tendues du matin' },
+  { code: 'es', name: 'Spanish', persona: 'Ingeniero de soporte TI español compartiendo anécdotas reales de oficina', osUi: 'Administrador de dispositivos, Administración de discos, Símbolo del sistema', localeContext: 'Oficinas en Madrid (Paseo de la Castellana), tren AVE (Madrid-Barcelona), entregas urgentes' },
+  { code: 'it', name: 'Italian', persona: 'Ingegnere sistemista hardware italiano con esperienza diretta sul campo', osUi: 'Gestione dispositivi, Gestione disco, Prompt dei comandi', localeContext: 'Uffici di Milano (Porta Nuova), treno Frecciarossa (Milano-Roma), scadenze serrate di fine mese' },
+  { code: 'pt', name: 'Portuguese', persona: 'Especialista em TI brasileiro contando perrengues e soluções reais de trabalho', osUi: 'Gerenciador de Dispositivos, Gerenciamento de Disco, Prompt de Comando', localeContext: 'Avenida Paulista / Faria Lima em São Paulo, home office no trânsito caótico, reuniões de crise' },
+  { code: 'nl', name: 'Dutch', persona: 'Nederlandse IT-infrastructuurspecialist met praktijkervaring', osUi: 'Apparaatbeheer, Schijfbeheer, Opdrachtprompt', localeContext: 'Zuidas Amsterdam kantoren, NS intercity treinen (Utrecht-Amsterdam), drukke sprints' },
+  { code: 'pl', name: 'Polish', persona: 'Polski inżynier wsparcia IT dzielący się autentycznymi historiami z biura', osUi: 'Menedżer urządzeń, Zarządzanie dyskami, Wiersz polecenia', localeContext: 'Warszawskie Mordor na Domaniewskiej, pociąg PKP Intercity, awarie przed demo dla klienta' },
+  { code: 'id', name: 'Indonesian', persona: 'Teknisi IT Indonesia yang berbagi pengalaman nyata di lapangan', osUi: 'Device Manager, Manajemen Disk, Command Prompt', localeContext: 'Kawasan SCBD Jakarta, KRL Commuter Line / macetnya Jakarta, kejar deadline bos mendadak' },
+  { code: 'vi', name: 'Vietnamese', persona: 'Kỹ sư IT thực chiến chia sẻ trải nghiệm xử lý sự cố tại doanh nghiệp', osUi: 'Device Manager, Disk Management, Command Prompt', localeContext: 'Khu công nghệ cao TP.HCM / Cầu Giấy Hà Nội, deadline căng thẳng trước giờ báo cáo sếp' }
 ];
 
 const delay = (ms) => new Promise((res) => setTimeout(res, ms));
 const fileSlug = `tech-${Date.now().toString(36)}`;
 
-// =========================================================================
-// [최저가 모델 적용] gemini-3.5-flash-lite로 실행 및 지수 백오프 재시도
-// =========================================================================
 async function fetchWithRetry(prompt, maxRetries = 15, delayMs = 20000) {
   for (let attempt = 1; attempt <= maxRetries; attempt++) {
     try {
@@ -137,15 +132,27 @@ async function generateSinglePost(lang, index) {
   const pubDateIso = postDate.toISOString();
 
   // =========================================================================
-  // [직장인 리얼 썰 풀이 프롬프트] 오프닝 고정 + 구어체 + 2,500자 이상
+  // [국가별 철저한 현지화 규칙 추가] 한국 지명/교통수단 노출 절대 금지
   // =========================================================================
   const prompt = `
 You are a ${lang.persona}.
 Write a highly practical, authoritative, 1st-person technical storytelling guide natively in ${lang.name}.
-CRITICAL: DO NOT translate literally. Write from scratch using authentic local office workplace tone, developer/engineer community slang, and native OS terminology.
+CRITICAL: DO NOT translate literally from Korean. Write completely from scratch as an authentic native worker living and working in THAT specific country/culture.
 
 [Topic]
 ${currentTopic}
+
+[CRITICAL LOCALIZATION & REAL WORLD CONTEXT (MANDATORY)]
+- Target Locale Context: "${lang.localeContext}"
+- ABSOLUTELY FORBIDDEN for non-Korean languages:
+  * NEVER mention Korean infrastructure, trains, or places (NO KTX, NO Gyeongbu line, NO Seoul, NO Gangnam, NO Pangyo, NO Naver/Kakao) in English, Japanese, German, etc.
+  * Your opening story MUST naturally incorporate the authentic local environment:
+    - English (en): Caltrain, Amtrak, US airports, Silicon Valley / New York offices.
+    - Japanese (ja): Tokaido Shinkansen (Nozomi), Yamanote Line, Shinagawa/Marunouchi offices.
+    - German (de): Deutsche Bahn ICE, Frankfurt/Munich corporate setups.
+    - French (fr): TGV, Paris La Défense business district.
+    - And corresponding native transit/workplace for other languages.
+  * The protagonist must be 100% perceived as a local resident/worker of that country.
 
 [Design Theme & Layout Dynamic Rules (MANDATORY)]
 - Assigned Theme: "${selectedTheme.name}"
@@ -158,16 +165,16 @@ ${currentTopic}
 [Tone & Writing Style Rules (STRICT - NO AI VIBE)]
 1. Mandatory Opening:
    - Absolutely FORBIDDEN: Boring textbook intros like "Hello", "In this post", "Today we will look into", "~습니다" rigid style.
-   - You MUST start immediately with an intense, sweat-inducing real office emergency scenario (e.g., "10 minutes before the big meeting", "right before Friday deadline", "when my senior manager was breathing down my neck").
+   - You MUST start immediately with an intense, sweat-inducing real office emergency scenario (e.g., "10 minutes before the big client pitch", "right before Friday deadline", "when my boss was standing behind my monitor").
 2. Tone & Voice:
-   - Write like a real employee venting in an anonymous workplace community (like Blind / Reddit / Bamboo) in a relatable, conversational 1st-person voice.
+   - Write like a real employee venting in an anonymous workplace community (like Blind / Reddit / 5ch) in a relatable, conversational 1st-person voice.
 3. Fast-Paced 3-Step Narrative:
-   - Step 1: Sudden panic-inducing problem (Opening story)
+   - Step 1: Sudden panic-inducing problem (Opening story set in ${lang.localeContext})
    - Step 2: Desperate trial-and-error & wasted hours (Real struggles)
    - Step 3: The breakthrough secret tip & actionable step-by-step resolution.
 
 [Content & Structure (AdSense E-E-A-T Compliant)]
-1. Opening Story: Intense real workplace incident regarding this topic.
+1. Opening Story: Intense real workplace incident regarding this topic set in local context.
 2. Root Cause Breakdown: Clearly explain 3 realistic root causes behind the disaster.
 3. Step-by-Step Resolution:
    - Use official local OS terminology matching: "${lang.osUi}".
