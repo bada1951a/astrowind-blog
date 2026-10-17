@@ -249,6 +249,9 @@ theme: "${selectedTheme.name}"
       frontmatter = frontmatter.replace(/category:\s*["'][^"']*["']/i, "category: 'tech'")
                                .replace(/category:\s*[^\n\r]+/i, "category: 'tech'");
 
+      // Cloudflare 빌드 실패 방지: publishDate의 불필요한 따옴표 자동 제거
+      frontmatter = frontmatter.replace(/publishDate:\s*["']([^"']+)["']/i, "publishDate: $1");
+
       const middleImageMarkdown = `\n\n![Tech & IT Solution Guide](${bodyUrl})\n\n`;
       if (body.includes('## 2.') || body.includes('### 2.')) {
         body = body.replace(/(#{2,3}\s*2\.[^\n]+)/, `${middleImageMarkdown}$1`);
