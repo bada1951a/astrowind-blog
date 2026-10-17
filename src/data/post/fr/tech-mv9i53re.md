@@ -2,8 +2,8 @@
 title: "Windows 11 ronge votre PC : Comment neutraliser les applications en arrière-plan et les effets visuels superflus"
 description: "Journal de bord d'un technicien support à La Défense : comment j'ai sauvé mon PC portable avant une réunion tendue dans le TGV Paris-Lyon."
 publishDate: 2026-10-15T13:30:00.000Z
-image: "https://loremflickr.com/1200/630/technology,computer,hardware?lock=934"
-category: "Support Informatique"
+image: "https://picsum.photos/seed/tech734/900/600"
+category: "tech"
 tags: ["Windows 11", "Optimisation", "Support IT", "Productivité"]
 theme: "Midnight Navy Royal"
 ---
@@ -13,7 +13,7 @@ Il est 7h45 ce mardi matin. Je suis assis à mon bureau dans une tour de verre �
 
 Ce genre de panne n'attend jamais le bon moment. Si vous aussi, votre bécane a l'air de traîner un boulet invisible alors que vous avez juste besoin d'efficacité immédiate, sortez votre carnet de notes. Voici le journal de bord de mon intervention d'urgence, heure par heure, pour redonner vie à un Windows 11 essoufflé.
 
-![Hardware Diagnostic & Troubleshooting](https://loremflickr.com/1000/550/electronics,circuit,server?lock=434)
+![Hardware Diagnostic & Troubleshooting](https://picsum.photos/seed/computer834/1000/550)
 
 <div style="border-left: 4px solid #1d4ed8; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Journal d'incident - Incident #404-W11</strong><br>
@@ -40,11 +40,11 @@ Pas besoin d'être ingénieur système pour régler ça. Voici la procédure exa
 #### Étape 1 : Mettre au pas les applications en arrière-plan
 Par défaut, Windows autorise presque tout le monde à s'activer en cachette. On va siffler la fin de la récréation.
 
-* Ouvrez les **Paramètres** de Windows (raccourci clavier : `Touche Windows + I`).
-* Allez dans l'onglet **Applications**, puis cliquez sur **Applications installées**.
-* Faites défiler la liste pour traquer les applications superflues (celles dont vous ne vous servez jamais).
-* Cliquez sur les trois petits points à droite du nom de l'application, puis sélectionnez **Options avancées**.
-* Repérez la section **Autorisations des applications en arrière-plan** et changez le menu déroulant de *Toujours* ou *Optimisé par l'alimentation* vers **Jamais**.
+- Ouvrez les **Paramètres** de Windows (raccourci clavier : `Touche Windows + I`).
+- Allez dans l'onglet **Applications**, puis cliquez sur **Applications installées**.
+- Faites défiler la liste pour traquer les applications superflues (celles dont vous ne vous servez jamais).
+- Cliquez sur les trois petits points à droite du nom de l'application, puis sélectionnez **Options avancées**.
+- Repérez la section **Autorisations des applications en arrière-plan** et changez le menu déroulant de *Toujours* ou *Optimisé par l'alimentation* vers **Jamais**.
 
 <div style="border-left: 4px solid #1d4ed8; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Astuce du technicien :</strong> Pour un nettoyage de printemps radical des applications qui se lancent au démarrage avec Windows, faites un <code>Ctrl + Maj + Échap</code> pour ouvrir le <strong>Gestionnaire des tâches</strong>, allez sur l'icône de jauge de vitesse (Applications de démarrage) et désactivez tout ce qui n'est pas vital (Spotify, Cortana, Steam, etc.).
@@ -53,12 +53,12 @@ Par défaut, Windows autorise presque tout le monde à s'activer en cachette. On
 #### Étape 2 : Couper les effets visuels superflus
 On retire le maquillage inutile pour privilégier la performance pure.
 
-* Ouvrez à nouveau les **Paramètres** (`Touche Windows + I`).
-* Naviguez vers **Système** > **À propos de** (ou tapez directement "Performance" dans la barre de recherche du menu Démarrer).
-* Cliquez sur **Paramètres système avancés** (une petite fenêtre pop-up va s'ouvrir).
-* Dans l'onglet *Paramètres avancés*, sous la section *Performances*, cliquez sur le bouton **Paramètres**.
-* Dans l'onglet *Effets visuels*, cochez l'option **Ajuster pour obtenir les meilleures performances** (ou décochez manuellement les animations de fenêtres et les effets de transparence si vous souhaitez garder un design un minimum propre).
-* Cliquez sur **Appliquer**, puis sur **OK**. Vos fenêtres vont s'ouvrir instantanément, sans fioritures.
+- Ouvrez à nouveau les **Paramètres** (`Touche Windows + I`).
+- Naviguez vers **Système** > **À propos de** (ou tapez directement "Performance" dans la barre de recherche du menu Démarrer).
+- Cliquez sur **Paramètres système avancés** (une petite fenêtre pop-up va s'ouvrir).
+- Dans l'onglet *Paramètres avancés*, sous la section *Performances*, cliquez sur le bouton **Paramètres**.
+- Dans l'onglet *Effets visuels*, cochez l'option **Ajuster pour obtenir les meilleures performances** (ou décochez manuellement les animations de fenêtres et les effets de transparence si vous souhaitez garder un design un minimum propre).
+- Cliquez sur **Appliquer**, puis sur **OK**. Vos fenêtres vont s'ouvrir instantanément, sans fioritures.
 
 ---
 
@@ -66,9 +66,9 @@ On retire le maquillage inutile pour privilégier la performance pure.
 
 Pour ne plus jamais vous retrouver bloqué la sueur au front avant une réunion importante ou un trajet en train :
 
-* **Le réflexe du redémarrage :** Un PC portable mis en veille prolongée pendant des semaines accumule des bugs de mémoire vive. Redémarrez votre machine au moins une fois par semaine pour vider le cache.
-* **Attention aux logiciels "optimiseurs" tiers :** Évitez de télécharger des logiciels miracles trouvés sur internet qui promettent d'accélérer votre PC. 90% du temps, ce sont des bloatwares qui aggravent la situation. Les outils natifs de Windows suffisent amplement.
-* **Surveillez la température :** Si votre ventilateur continue de s'affoler après ces optimisations, vérifiez que les grilles d'aération sous votre PC ne sont pas bloquées par la poussière ou un tissu de sacoche.
+- **Le réflexe du redémarrage :** Un PC portable mis en veille prolongée pendant des semaines accumule des bugs de mémoire vive. Redémarrez votre machine au moins une fois par semaine pour vider le cache.
+- **Attention aux logiciels "optimiseurs" tiers :** Évitez de télécharger des logiciels miracles trouvés sur internet qui promettent d'accélérer votre PC. 90% du temps, ce sont des bloatwares qui aggravent la situation. Les outils natifs de Windows suffisent amplement.
+- **Surveillez la température :** Si votre ventilateur continue de s'affoler après ces optimisations, vérifiez que les grilles d'aération sous votre PC ne sont pas bloquées par la poussière ou un tissu de sacoche.
 
 ---
 
