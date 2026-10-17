@@ -2,7 +2,7 @@
 title: "Sửa lỗi ổ cứng ngoài không nhận và dọn sạch ổ C đầy dung lượng tại văn phòng TP.HCM"
 description: "Mẹo thực chiến khắc phục nhanh lỗi ổ cứng ngoài không nhận trước giờ họp ở TP.HCM và cách dọn sạch file rác ổ C chỉ trong 3 bước."
 publishDate: 2026-10-15T22:15:00.000Z
-image: "https://picsum.pics/seed/hardware710/900/600"
+image: "https://picsum.photos/seed/hardware710/900/600"
 category: "Hardware"
 tags: ["PC", "Hardware", "Troubleshooting", "Windows", "Ho Chi Minh City"]
 theme: "Midnight Navy Royal"
@@ -31,10 +31,10 @@ Không cần cài thêm phần mềm bên thứ ba rườm rà, chúng ta sẽ t
 
 ### Bước 1: Tổng vệ sinh file rác hệ thống bằng Storage Sense và lệnh Temp
 Đừng mất thời gian xóa từng file thủ công. Hãy làm theo đường dẫn nhanh sau đây để dọn dẹp hàng gigabyte rác:
-* Mở **Settings** (Nhấn phím Windows + I) > Chọn **System** > Chọn **Storage**.
-* Bật tính năng **Storage Sense** và bấm vào **Temporary files**.
-* Tích chọn vào các mục: *Windows Update Cleanup, Temporary Files, Delivery Optimization Files, và Recycle Bin*.
-* Nhấn **Remove files**. 
+- Mở **Settings** (Nhấn phím Windows + I) > Chọn **System** > Chọn **Storage**.
+- Bật tính năng **Storage Sense** và bấm vào **Temporary files**.
+- Tích chọn vào các mục: *Windows Update Cleanup, Temporary Files, Delivery Optimization Files, và Recycle Bin*.
+- Nhấn **Remove files**. 
 
 Tiếp theo, để dọn tận gốc rác ẩn, nhấn tổ hợp phím **Windows + R**, gõ `%temp%` rồi nhấn Enter. Nhấn `Ctrl + A` để chọn tất cả các file trong thư mục này rồi nhấn `Shift + Delete` để xóa vĩnh viễn (những file nào đang chạy nền không xóa được thì chọn *Skip*). Làm tương tự với lệnh `temp` và `prefetch`.
 
@@ -44,9 +44,9 @@ Tiếp theo, để dọn tận gốc rác ẩn, nhấn tổ hợp phím **Window
 
 ### Bước 2: Đánh thức ổ cứng ngoài thông qua Device Manager và Quản lý ổ đĩa
 Ngay sau khi ổ C đã có không gian trống, việc kết nối ổ cứng ngoài sẽ trở nên khả thi hơn. Hãy thực hiện các bước sau để ép Windows nhận diện thiết bị:
-* Nhấp chuột phải vào nút Start, chọn **Device Manager** (Quản lý thiết bị).
-* Tìm đến mục **Universal Serial Bus controllers**, nhấp chuột phải vào từng dòng *USB Root Hub* (hoặc *Extensible Host Controller*), chọn **Properties** > Thẻ **Power Management** > **Bỏ tích** ở ô *"Allow the computer to turn off this device to save power"*. Thao tác này đảm bảo cổng USB luôn cấp đủ điện 5V cho ổ cứng ngoài.
-* Tiếp tục nhấn chuột phải vào Start, chọn **Disk Management** (Quản lý ổ đĩa). Kéo xuống danh sách phía dưới để tìm ổ cứng ngoài của bạn (thường hiển thị ở trạng thái *Unallocated* hoặc thiếu tên ký tự). Nhấp chuột phải vào phân vùng của ổ cứng ngoài, chọn **Change Drive Letter and Paths...** rồi gán cho nó một ký tự mới (ví dụ ổ Z hoặc ổ H).
+- Nhấp chuột phải vào nút Start, chọn **Device Manager** (Quản lý thiết bị).
+- Tìm đến mục **Universal Serial Bus controllers**, nhấp chuột phải vào từng dòng *USB Root Hub* (hoặc *Extensible Host Controller*), chọn **Properties** > Thẻ **Power Management** > **Bỏ tích** ở ô *"Allow the computer to turn off this device to save power"*. Thao tác này đảm bảo cổng USB luôn cấp đủ điện 5V cho ổ cứng ngoài.
+- Tiếp tục nhấn chuột phải vào Start, chọn **Disk Management** (Quản lý ổ đĩa). Kéo xuống danh sách phía dưới để tìm ổ cứng ngoài của bạn (thường hiển thị ở trạng thái *Unallocated* hoặc thiếu tên ký tự). Nhấp chuột phải vào phân vùng của ổ cứng ngoài, chọn **Change Drive Letter and Paths...** rồi gán cho nó một ký tự mới (ví dụ ổ Z hoặc ổ H).
 
 ### Bước 3: Kiểm tra hệ thống file bằng Command Prompt (Chống lỗi Bad Sector)
 Để chắc chắn ổ cứng ngoài không bị lỗi phân vùng nặng do rút đột ngột trước đó, hãy mở **Command Prompt** với quyền Admin (gõ `cmd` vào thanh tìm kiếm, chọn *Run as administrator*) và gõ lệnh sau:
@@ -66,9 +66,7 @@ Ngay sau khi ổ C đã có không gian trống, việc kết nối ổ cứng n
 ### 1. Tại sao tôi đã xóa hết phim và nhạc ở ổ C nhưng dung lượng trống vẫn rất ít?
 **Trả lời:** Windows thường lưu trữ các bản vá lỗi cập nhật cũ, điểm khôi phục hệ thống (System Restore) và file ngủ đông (hiberfil.sys) ẩn sâu bên trong. Bạn cần dùng công cụ *Disk Cleanup* chọn mục *Clean up system files* để xóa sạch các bản backup Windows Update cũ, nơi thường ngốn từ 10GB đến 30GB dung lượng ổ C mà người dùng không hề hay biết.
 
-
-
-![Hardware Diagnostic & Troubleshooting](https://picsum.photos/seed/computer210/1000/550)
+![Hardware Diagnostic & Troubleshooting](https://picsum.photos/seed/gadget710/1000/550)
 
 ### 2. Ổ cứng ngoài cắm vào máy tính có đèn sáng nhưng không hiện trong My Computer thì xử lý thế nào?
 **Trả lời:** Trường hợp này 90% là do ổ cứng chưa được gán tên ký tự ổ đĩa hoặc thiếu nguồn điện. Hãy thử cắm ổ cứng vào cổng USB ở phía sau thùng máy (kết nối trực tiếp với bo mạch chủ Mainboard thay vì cổng phía trước case) và tiến hành gán lại ký tự trong *Disk Management* như hướng dẫn ở Bước 2.
