@@ -2,7 +2,7 @@
 title: "C드라이브 용량 부족 해결 용량 잡아먹는 임시파일 완전 삭제법"
 description: "서울 판교 IT 기업 전산실에서 겪은 C드라이브 용량 부족 비상 상황! 임시파일 정리와 디스크 청소로 속 시원하게 해결하는 실무 매뉴얼."
 publishDate: 2026-10-15T08:30:00.000Z
-image: "https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?auto=format&fit=crop&w=1200&h=675&q=85"
+image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&h=675&q=85"
 category: 'tech'
 tags: ["C드라이브용량부족", "임시파일삭제", "윈도우최적화", "PC유지보수", "전산실팁"]
 theme: "Sandstone Desert Minimal"
@@ -13,7 +13,7 @@ theme: "Sandstone Desert Minimal"
 
 급한 마음에 백업용 외장 SSD를 연결해 데이터를 옮기려 했으나, C드라이브의 가상메모리(페이지파일) 공간조차 부족해져 외장 SSD 인식조차 제대로 안 되는 최악의 상황이 벌어졌습니다. 보고서는 날아가기 직전이고, 바탕화면의 아이콘들은 빨간색 용량 경고등을 깜빡이며 시스템을 압박했습니다.
 
-![Tech Diagnostic Guide](https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=1000&h=550&q=80)
+![Tech Hardware Guide](https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?auto=format&fit=crop&w=1200&h=675&q=85)
 
 <div style="border-left: 4px solid #a16207; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>실무 핵심 팁:</strong> C드라이브 용량이 5% 미만으로 떨어지면 윈도우는 임시 파일조차 생성하지 못해 블루스크린, 프로그램 강제 종료, 외장 장치 인식 오류 등 연쇄적인 시스템 장애를 일으킵니다. 평소에 15% 이상의 여유 공간을 확보하는 것이 철칙입니다.

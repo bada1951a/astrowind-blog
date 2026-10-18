@@ -15,7 +15,7 @@ theme: "Forest Emerald Bio"
 <strong>실무 전문가의 긴급 진단:</strong> 윈도우 11 업데이트가 100%에서 멈추는 현상은 대부분 다운로드된 패키지를 설치하는 과정에서 시스템 캐시 파일이 꼬였거나, 이전 설치 잔여물과의 충돌로 인해 백그라운드 프로세스가 데드락(Deadlock) 상태에 빠졌기 때문입니다.
 </div>
 
-![Tech Diagnostic Guide](https://images.unsplash.com/photo-1531297484001-80022131f5a1?auto=format&fit=crop&w=1000&h=550&q=80)
+![Tech Hardware Guide](https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?auto=format&fit=crop&w=1200&h=675&q=85)
 
 ---
 
