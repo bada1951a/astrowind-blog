@@ -2,7 +2,7 @@
 title: "노트북 듀얼 모니터 ‘신호 없음’과 화면 깜빡임 완벽 해결 가이드: 드라이버 재설정부터 EDID 핸드셰이크 복구까지"
 description: "노트북 외장 모니터 연결 시 발생하는 신호 없음, 간헐적 블랙스크린 깜빡임 현상을 해결하는 엔지니어 실무 가이드입니다. 드라이버 클린 설치와 핸드셰이크 복구 절차를 다룹니다."
 publishDate: 2026-10-14T08:30:00.000Z
-image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&h=630&q=85"
+image: "https://images.unsplash.com/photo-1591488320449-011701bb6704?auto=format&fit=crop&w=1200&h=675&q=85"
 category: 'tech'
 tags: ["Hardware", "DualMonitor", "DriverTroubleshooting", "Windows11", "ITInfrastructure"]
 theme: "Midnight Navy Royal"
@@ -39,7 +39,7 @@ theme: "Midnight Navy Royal"
 
 
 
-![Hardware Diagnostic & Troubleshooting](https://images.unsplash.com/photo-1618761714954-0b8cd0026356?auto=format&fit=crop&w=1000&h=550&q=80)
+![Tech Diagnostic Guide](https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=1000&h=550&q=80)
 
 ## 2. 장애 극복 단계별 해결 절차 (Step-by-Step Resolution)
 

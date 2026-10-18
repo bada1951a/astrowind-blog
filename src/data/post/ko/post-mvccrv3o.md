@@ -2,7 +2,7 @@
 title: "블루스크린 0x0000000a 완벽 해결 가이드: 메모리 진단부터 드라이버 롤백까지"
 description: "판교 IT 기업 실무 현장에서 겪은 블루스크린 IRQL_NOT_LESS_OR_EQUAL 에러의 원인 분석과 메모리 진단, 드라이버 롤백을 통한 즉각적인 시스템 복구 가이드."
 publishDate: 2026-10-17T08:30:00.000Z
-image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&h=630&q=85"
+image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=1200&h=675&q=85"
 category: 'tech'
 tags: ["BlueScreen", "WindowsTroubleshooting", "MemoryDiagnostic", "DriverRollback", "ITSupport"]
 theme: "Deep Ocean Cobalt"
@@ -13,7 +13,7 @@ theme: "Deep Ocean Cobalt"
 
 데드라인은 코앞인데 재부팅을 해도 윈도우 진입 직후 어김없이 동일한 블루스크린이 반복되었습니다. 당황스러운 상황에서 덤프 파일을 분석하고, 물리적 메모리부터 최근 업데이트된 네트워크 장치 드라이버까지 차근차근 점검하며 찾아낸 실전 해결 노하우를 공유합니다. 이 글을 읽고 계신다면 아마 비슷한 상황에서 진땀을 흘리고 계실 겁니다. 자, 침착하고 신속하게 시스템을 정상화해 봅시다.
 
-![Tech Solution Guide](https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&h=630&q=85)
+![Tech Diagnostic Guide](https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1000&h=550&q=80)
 
 <div style="border-left: 4px solid #2563eb; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>실무 팁:</strong> 0x0000000a 코드는 커널 모드 프로세스나 드라이버가 허용되지 않은 메모리 주소에 접근하려고 할 때 발생합니다. 무조건 포맷부터 하지 마시고, 원인부터 정확히 파악하는 것이 시간 절약의 지름길입니다.
