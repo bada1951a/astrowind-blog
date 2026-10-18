@@ -39,14 +39,14 @@ jobs:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: node generate-all.mjs
 
-      - name: Commit and Push New Posts & Updated Topics
+      - name: Commit and Push New Posts, Images & Updated Topics
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add src/data/post/ topics.txt
+          git add src/data/post/ public/assets/images/ topics.txt
           if git diff --staged --quiet; then
             echo "변경사항이 없습니다."
           else
-            git commit -m "chore: auto-publish 12-language blog posts"
-            git push origin main
+            git commit -m "chore: auto-publish 12-language blog posts with local images"
+            git push
           fi
