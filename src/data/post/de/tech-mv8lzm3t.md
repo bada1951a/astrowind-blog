@@ -2,8 +2,8 @@
 title: "Rechner braucht ewig zum Hochfahren? Autostart-Müll endlich radikal aussortieren"
 description: "Der PC kriecht beim Booten? Als Admin zeige ich dir, wie du den Autostart und Task-Manager kompromisslos aufräumst und die Kiste wieder flottmachst."
 publishDate: 2026-10-14T12:15:00.000Z
-image: "https://picsum.photos/seed/tech-969/1200/630"
-category: "Hardware"
+image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&h=630&q=85"
+category: 'tech'
 tags: ["Tech", "Troubleshooting", "Hardware"]
 theme: "Pure Titanium Clean"
 ---
@@ -11,11 +11,11 @@ theme: "Pure Titanium Clean"
 
 Freitag, 16:50 Uhr. Zehn Minuten vor dem verdienten Feierabend brennt mal wieder der Baum. Der wichtigste Kunde ruft an, will sofort einen geänderten Report, und mein Rechner entscheidet sich, das Windows-Logo für gefühlte zwölfeinhalb Minuten auf den Bildschirm zu malen, während die Lüfter hochdrehen wie eine Boeing 747 beim Start. Ich sitze da, schwitze, der Chef läuft im Gang auf und ab, und das System friert im Login-Screen ein, weil im Hintergrund gerade gefühlt zwanzig Update-Agenten, Updater für Chat-Tools, die ich nie benutze, und Cloud-Dienste gleichzeitig um die CPU-Zyklen prügeln. Wer das schon mal erlebt hat, weiß: In diesem Moment hasst man seinen eigenen Computer.
 
-<div style="border-left: 4px solid #334155; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px;">
+<div style="border-left: 4px solid #334155; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Admin-Notiz:</strong> Ein lahmer Bootvorgang ist kein Schicksal und auch kein sofortiges Signal für eine Neuanschaffung. In 90 % der Fälle ist es einfach zugemüllter Autostart-Speicher und ein Haufen Software, die meint, sie sei der Nabel der Welt.
 </div>
 
-![Hardware Diagnostic & Troubleshooting](https://picsum.photos/seed/hardware-469/1000/550)
+![Tech Solution Guide](https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&h=630&q=85)
 
 ### Warum der Rechner zur Krücke wird: Die 3 Hauptverdächtigen
 
@@ -35,7 +35,7 @@ Vergiss alte Registry-Hacks aus Windows-XP-Zeiten. Wir nutzen die modernen Bordm
 * Klicke links auf das Tacho-Symbol (**Autostart-Apps** bzw. *Startup apps*).
 * Jetzt sortieren wir gnadenlos nach der Spalte **Start Frist** (Startauswirkung).
 
-<div style="border-left: 4px solid #334155; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px;">
+<div style="border-left: 4px solid #334155; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Faustregel für den Admin:</strong> Alles, was nicht absolut lebensnotwendig für den Systemstart ist (wie der Virenscanner oder der Touchpad-Treiber), wird deaktiviert. Discord, Steam, Epic Games, Cortana-Überbleibsel? <strong>Deaktivieren!</strong> Du kannst die Programme später immer noch manuell starten, wenn du sie brauchst.
 </div>
 

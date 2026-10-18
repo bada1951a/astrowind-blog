@@ -2,7 +2,7 @@
 title: "Windows 11 Update bei 100 Prozent eingefroren? So löst du das Cache-Problem"
 description: "Hängt dein Windows 11 Update bei genau 100 Prozent fest? Erfahre, wie du den SoftwareDistribution-Cache per Terminal bereinigst und das System rettest."
 publishDate: 2026-10-18T12:15:00.000Z
-image: "https://picsum.photos/seed/tech933/900/600"
+image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&h=630&q=85"
 category: 'tech'
 tags: ["Windows 11", "Troubleshooting", "IT-Support", "Systemupdate", "BerlinTech"]
 theme: "Matte Black stealth"
@@ -16,7 +16,7 @@ Es ist mal wieder Freitag, kurz vor 17:00 Uhr in unserem Berliner Tech-Hub, und 
 <p style="margin: 4px 0 0 0; color: #111827;">Wenn Windows bei 100 Prozent festhängt, hilft langes Warten meistens nicht mehr. Der Installationsprozess ist in einer Endlosschleife gefangen, weil die Abschluss-Skripte aufgrund beschädigter temporärer Update-Pakete nicht geschrieben werden können.</p>
 </div>
 
-![Tech & IT Solution Guide](https://picsum.photos/seed/computer433/1000/550)
+![Tech Solution Guide](https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&h=630&q=85)
 
 ### Warum Windows 11 beim Update-Endspurt stecken bleibt
 

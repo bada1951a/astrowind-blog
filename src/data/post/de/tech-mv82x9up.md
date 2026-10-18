@@ -2,8 +2,8 @@
 title: "Schwarzer Bildschirm, Lüfter drehen: Wenn der RAM wieder Geister hostet"
 description: "Rechner läuft, Monitor bleibt schwarz? Wie du RAM-Kontakte reinigst und Slots debuggst wie ein echter Sysadmin."
 publishDate: 2026-10-14T12:15:00.000Z
-image: "https://picsum.photos/seed/tech-84/1200/630"
-category: "Hardware"
+image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&h=630&q=85"
+category: 'tech'
 tags: ["Sysadmin", "Hardware", "Troubleshooting", "RAM"]
 theme: "Retro Monokai"
 ---
@@ -11,13 +11,13 @@ theme: "Retro Monokai"
 
 Freitagnachmittag, 16:45 Uhr. Der letzte Deployment-Lauf für das Release am Montag läuft durch, der Kaffee ist kalt, und ich will eigentlich nur noch den Rechner zuklappen und ins Wochenende starten. Plötzlich fängt die Kiste neben mir an zu röhren wie ein startender A380 – die Gehäuselüfter drehen auf 100%, die RGB-Beleuchtung glimmt in traurigem Monokai-Grün, aber der Dell-Monitor bleibt eisern im Standby. Kein POST-Screen, kein BIOS-Logo, absolut tote Hose. Und natürlich wartet der Abteilungsleiter im Teams auf den finalen Build. Herzlichen Glückwunsch, der klassische Hardware-Gau.
 
-<div style="border-left: 4px solid #a6e22e; padding: 12px 16px; margin: 20px 0; background-color: rgba(166,226,46,0.05); border-radius: 4px; font-family: monospace;">
+<div style="border-left: 4px solid #a6e22e; padding: 12px 16px; margin: 20px 0; background-color: rgba(166,226,46,0.05); border-radius: 4px; color: #111827; font-family: monospace;">
 [16:48:12] DEBUG: Power supply -> OK (Fans spinning)<br>
 [16:48:15] DEBUG: GPU PCIe power -> OK<br>
 [16:48:20] ERROR: POST halted. No display signal. CPU initialization failed or RAM missing/unstable.
 </div>
 
-![Hardware Diagnostic & Troubleshooting](https://picsum.photos/seed/hardware-584/1000/550)
+![Tech Solution Guide](https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&h=630&q=85)
 
 ## Root Cause Analysis: Warum streikt die Kiste genau jetzt?
 
@@ -37,7 +37,7 @@ Zuerst ziehen wir dem Rechner den Stecker. Komplett. Netzstecker raus, und dann 
 ### Schritt 2: RAM-Riegel extrahieren und Kontakte reinigen
 Jetzt öffnen wir die Seitenwand. Wir berühren vorher kurz das unlackierte Netzteilgehäuse, um uns zu erden. 
 
-<div style="border-left: 4px solid #a6e22e; padding: 12px 16px; margin: 20px 0; background-color: rgba(166,226,46,0.05); border-radius: 4px;">
+<div style="border-left: 4px solid #a6e22e; padding: 12px 16px; margin: 20px 0; background-color: rgba(166,226,46,0.05); border-radius: 4px; color: #111827;">
 <strong>Sysadmin-Pro-Tipp:</strong> Finger weg von Küchenpapier oder fusselnden Tüchern! Nimm einen weichen Radiergummi (ja, ganz klassisch aus der Schule) und reibe vorsichtig über die Goldkontakte des RAM-Riegels. Das entfernt die Oxidschicht perfekt, ohne das Gold wegzuschmirgeln. Danach mit Druckluftspray (Dose senkrecht halten!) den Slot ausblasen.
 </div>
 
@@ -64,7 +64,7 @@ Falls Windows wider Erwarten hochfährt, werfen wir noch einen Blick in den **Ge
 
 ## Expert Warning: Was du unbedingt vermeiden solltest
 
-<div style="border-left: 4px solid #ff5555; padding: 12px 16px; margin: 20px 0; background-color: rgba(255,85,85,0.05); border-radius: 4px;">
+<div style="border-left: 4px solid #ff5555; padding: 12px 16px; margin: 20px 0; background-color: rgba(255,85,85,0.05); border-radius: 4px; color: #111827;">
 <strong>WARNUNG:</strong> Hände weg von Kontaktsprays oder Kontaktreinigern aus dem Baumarkt, es sei denn, sie sind explizit <em>rückstandsfrei</em> und für Elektronik zertifiziert (z.B. Tuner 600 oder Isopropanol > 99%). Ölbasierte Sprays ziehen den Staub erst recht an und grillen dir im schlimmsten Fall den RAM-Slot durch Kurzschluss.
 </div>
 

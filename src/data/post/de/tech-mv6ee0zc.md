@@ -2,8 +2,8 @@
 title: "Tasten-Chattering und Aussetzer beheben: Sysadmin-Leitfaden zur Reparatur mechanischer Tastaturen"
 description: "Mechanische Tastatur prellt oder schluckt Tastenanschläge? Praxiserprobte Anleitung zur Switch-Diagnose und Instandsetzung mittels Kontaktreiniger."
 publishDate: 2026-10-13T12:15:00.000Z
-image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1200&h=630&q=85"
-category: "Hardware"
+image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&h=630&q=85"
+category: 'tech'
 tags: ["Hardware", "Troubleshooting", "Mechanische Tastatur", "Peripherie"]
 theme: "Midnight Navy Royal"
 ---
@@ -13,7 +13,7 @@ Es ist 02:47 Uhr während einer regulären Wartungsnacht im RZ-Bereich Frankfurt
 
 Im Sysadmin-Alltag ist so etwas kein bloßes Ärgernis, sondern ein echtes Betriebsrisiko. Wenn ein `rm -rf /var/log/app/*` durch ein verschlucktes Zeichen oder doppelten Anschlag im falschen Verzeichnis landet, brennt der Baum. Wer in solchen Situationen nicht sofort 150 Euro für ein neues Board ausgeben will, greift zur systematischen Instandsetzung. In diesem Logbuch dokumentiere ich den exakten Ablauf, wie wir Tastenaussetzer und Chattering physikalisch wie logisch analysieren und mechanische Schalter fachgerecht revitalisieren.
 
-<div style="border-left: 4px solid #1d4ed8; padding: 14px 18px; margin: 24px 0; background-color: rgba(29, 78, 216, 0.05); border-radius: 4px;">
+<div style="border-left: 4px solid #1d4ed8; padding: 14px 18px; margin: 24px 0; background-color: rgba(29, 78, 216, 0.05); border-radius: 4px; color: #111827;">
   <strong style="color: #1d4ed8; font-size: 1.05rem;">Nachtschicht-Protokoll [INCIDENT-8842-HW]</strong><br/>
   <strong>Symptom:</strong> Hohe Fehlerrate durch Tastenprellen (Bouncing) und Signal-Dropouts bei mechanischen Einzelschaltern.<br/>
   <strong>Auswirkung:</strong> Fehlgeschlagene CLI-Kommandos, Zeitverzug bei Systemwartung.<br/>
@@ -64,7 +64,7 @@ Bevor wir zur Flasche mit dem Kontaktreiniger greifen, stellen wir sicher, dass 
 
 ### Phase 2: Gezielte Behandlung mit Kontaktchemie
 
-<div style="border-left: 4px solid #1d4ed8; padding: 14px 18px; margin: 24px 0; background-color: rgba(29, 78, 216, 0.05); border-radius: 4px;">
+<div style="border-left: 4px solid #1d4ed8; padding: 14px 18px; margin: 24px 0; background-color: rgba(29, 78, 216, 0.05); border-radius: 4px; color: #111827;">
   <strong style="color: #1d4ed8;">Kritischer Hinweis zur Chemikalienwahl:</strong><br/>
   Verwenden Sie <strong>niemals</strong> aggressives Kontaktspray aus dem KFZ-Bereich (wie Kontakt 60 ohne Spülung) oder gar Kriechöle. Greifen Sie zwingend zu rückstandsfreiem Elektronik-Kontaktreiniger (z. B. <em>Kontakt Chemie Tuner 600</em>, <em>Kontakt WL</em> oder <em>DeoxIT D5 / Contact Cleaner</em>) bzw. hochreinem Isopropanol (mind. 99,9%). Standard-Öle zerstören den Kunststoff des Tastaturschalters!
 </div>
@@ -108,7 +108,7 @@ Sollte das Chattering nach Phase 2 weiterhin auftreten, ist die Blattfeder entwe
 
 Im RZ-Betrieb gelten strenge Richtlinien für Flüssigkeiten und Gase. Bei Heim- und Büroarbeitsplätzen wird der Umgang mit Kontaktsprays dagegen oft fahrlässig gehandhabt.
 
-<div style="border-left: 4px solid #1d4ed8; padding: 14px 18px; margin: 24px 0; background-color: rgba(29, 78, 216, 0.05); border-radius: 4px;">
+<div style="border-left: 4px solid #1d4ed8; padding: 14px 18px; margin: 24px 0; background-color: rgba(29, 78, 216, 0.05); border-radius: 4px; color: #111827;">
   <strong style="color: #1d4ed8;">ACHTUNG: Das WD-40-Desaster vermeiden</strong><br/>
   Klassisches WD-40 Multifunktionsöl ist <strong>kein</strong> Kontaktspray! Es hinterlässt einen öligen Schmierfilm, der Staub bindet wie ein Magnet. Binnen zwei Wochen bildet sich im Switch eine abrasive Paste aus Staub und Schmiermittel, die den Schalter irreversibel ruiniert. Zudem greifen die enthaltenen Lösungsmittel Kunststoffe wie Polycarbonat (PC) und Acrylnitril-Butadien-Styrol (ABS) an, was zum Verspröden des Switch-Gehäuses führt.
 </div>

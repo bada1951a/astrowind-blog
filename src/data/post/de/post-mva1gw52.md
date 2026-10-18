@@ -2,7 +2,7 @@
 title: "Windows 11 C-Platte voll? So löschst du Temp-Dateien sicher im Berliner Tech-Hub"
 description: "Rolle einen System-Rollout im Berliner Tech-Hub aus und C: ist voll? Erfahre, wie du Windows 11 Temp-Dateien sicher löschst und Speicherplatz freigibst."
 publishDate: 2026-10-15T12:15:00.000Z
-image: "https://picsum.photos/seed/tech906/900/600"
+image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&h=630&q=85"
 category: 'tech'
 tags: ["Windows 11", "Speicherfreigabe", "IT-Support", "Performance", "Berlin Tech"]
 theme: "Matte Black stealth"
@@ -13,7 +13,7 @@ Es war kurz vor 17 Uhr in unserem Büro in Berlin-Mitte. Mitten in der finalen V
 
 Wer in einer schnelllebigen IT-Umgebung arbeitet, kennt das Problem. Windows 11 neigt dazu, sich im Laufe der Zeit unbemerkt mit Gigabytes an temporärem Datenmüll vollzusaugen. Hier ist mein praxiserprobter Leitfaden, wie du deine C-Platte in wenigen Minuten wieder freiräumst, ohne dein System zu gefährden.
 
-![Tech & IT Solution Guide](https://picsum.photos/seed/computer406/1000/550)
+![Tech Solution Guide](https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&h=630&q=85)
 
 ## Warum läuft das Laufwerk C: eigentlich immer wieder voll?
 

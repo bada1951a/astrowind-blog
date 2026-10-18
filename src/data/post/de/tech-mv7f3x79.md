@@ -2,8 +2,8 @@
 title: "Kein Signal & Bildschirmflackern am Laptop-Zweitmonitor: Der ultimative Guide zur Treiber-Wiederherstellung"
 description: "Schluss mit schwarzem Bildschirm und Flackern bei Multi-Monitor-Setups. Ein Sysadmin zeigt Schritt für Schritt, wie Sie Grafiktreiber sauber zurücksetzen."
 publishDate: 2026-10-14T12:15:00.000Z
-image: "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=1200&h=630&q=85"
-category: "Hardware"
+image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&h=630&q=85"
+category: 'tech'
 tags: ["Tech", "Troubleshooting", "Hardware"]
 theme: "Dracula Purple Dev"
 ---
@@ -55,10 +55,10 @@ Wenn der Bildschirm schwarz bleibt, aber das Notebook noch auf Eingaben reagiert
 Drücken Sie folgende Tastenkombination simultan:
 
 <div style="text-align: center; margin: 24px 0;">
-  <kbd style="background: #44475a; color: #bd93f9; border: 1px solid #6272a4; border-radius: 4px; padding: 6px 12px; font-weight: bold; font-family: monospace; font-size: 1.1em; box-shadow: 0 2px 4px rgba(0,0,0,0.4);">Win</kbd> + 
-  <kbd style="background: #44475a; color: #bd93f9; border: 1px solid #6272a4; border-radius: 4px; padding: 6px 12px; font-weight: bold; font-family: monospace; font-size: 1.1em; box-shadow: 0 2px 4px rgba(0,0,0,0.4);">Ctrl</kbd> + 
-  <kbd style="background: #44475a; color: #bd93f9; border: 1px solid #6272a4; border-radius: 4px; padding: 6px 12px; font-weight: bold; font-family: monospace; font-size: 1.1em; box-shadow: 0 2px 4px rgba(0,0,0,0.4);">Shift</kbd> + 
-  <kbd style="background: #44475a; color: #bd93f9; border: 1px solid #6272a4; border-radius: 4px; padding: 6px 12px; font-weight: bold; font-family: monospace; font-size: 1.1em; box-shadow: 0 2px 4px rgba(0,0,0,0.4);">B</kbd>
+  <kbd style="background: #44475a; color: #bd93f9; border: 1px solid #6272a4; border-radius: 4px; color: #111827; padding: 6px 12px; font-weight: bold; font-family: monospace; font-size: 1.1em; box-shadow: 0 2px 4px rgba(0,0,0,0.4);">Win</kbd> + 
+  <kbd style="background: #44475a; color: #bd93f9; border: 1px solid #6272a4; border-radius: 4px; color: #111827; padding: 6px 12px; font-weight: bold; font-family: monospace; font-size: 1.1em; box-shadow: 0 2px 4px rgba(0,0,0,0.4);">Ctrl</kbd> + 
+  <kbd style="background: #44475a; color: #bd93f9; border: 1px solid #6272a4; border-radius: 4px; color: #111827; padding: 6px 12px; font-weight: bold; font-family: monospace; font-size: 1.1em; box-shadow: 0 2px 4px rgba(0,0,0,0.4);">Shift</kbd> + 
+  <kbd style="background: #44475a; color: #bd93f9; border: 1px solid #6272a4; border-radius: 4px; color: #111827; padding: 6px 12px; font-weight: bold; font-family: monospace; font-size: 1.1em; box-shadow: 0 2px 4px rgba(0,0,0,0.4);">B</kbd>
 </div>
 
 1. Der Bildschirm wird für den Bruchteil einer Sekunde dunkel.
