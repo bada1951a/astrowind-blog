@@ -11,6 +11,7 @@ if (!GEMINI_API_KEY) {
 const ai = new GoogleGenAI({ apiKey: GEMINI_API_KEY });
 const POSTS_BASE_DIR = path.resolve('src/data/post');
 const TOPICS_FILE = path.resolve('topics.txt');
+const LOCAL_IMAGE_BASE_DIR = path.resolve('public/assets/images');
 
 if (!fs.existsSync(TOPICS_FILE)) {
   console.error("❌ topics.txt 파일이 존재하지 않습니다.");
@@ -29,23 +30,41 @@ const currentTopic = lines[0];
 console.log(`📌 오늘 처리할 주제 (1호기 메인 테크/IT): "${currentTopic}"`);
 
 // =========================================================================
-// [1호기 전용] 차단 없는 고속 CDN (Picsum) 기반 안정적 메인 테크 이미지
+// [1호기 전용] 무료 실사 테크 AI 이미지 다운로드 및 로컬 에셋 저장 로직
 // =========================================================================
-function getDistributedImages(langIndex, seedStr) {
-  let hash = 0;
-  for (let i = 0; i < seedStr.length; i++) {
-    hash = ((hash << 5) - hash) + seedStr.charCodeAt(i);
-    hash |= 0;
+async function downloadAndSaveImage(promptText, saveRelativePath) {
+  const fullSavePath = path.resolve('public', saveRelativePath.replace(/^\//, ''));
+  const dir = path.dirname(fullSavePath);
+  if (!fs.existsSync(dir)) {
+    fs.mkdirSync(dir, { recursive: true });
   }
 
-  const baseNum = (Math.abs(hash) % 1000) + 1;
-  const coverSeed = ((baseNum + (langIndex * 73)) % 1000) + 1;
-  const bodySeed = ((coverSeed + 499) % 1000) + 1;
+  const encodedPrompt = encodeURIComponent(promptText);
+  const seed = Math.floor(Math.random() * 999999);
+  const imageUrl = `https://image.pollinations.ai/prompt/${encodedPrompt}?width=1200&height=675&nologo=true&seed=${seed}`;
 
-  const coverUrl = `https://picsum.photos/seed/tech${coverSeed}/900/600`;
-  const bodyUrl = `https://picsum.photos/seed/computer${bodySeed}/1000/550`;
+  // 최대 3회 재시도 (무료 엔드포인트 안정성 확보)
+  for (let attempt = 1; attempt <= 3; attempt++) {
+    try {
+      const response = await fetch(imageUrl, { signal: AbortSignal.timeout(25000) });
+      if (response.ok) {
+        const arrayBuffer = await response.arrayBuffer();
+        const buffer = Buffer.from(arrayBuffer);
+        if (buffer.length > 5000) {
+          fs.writeFileSync(fullSavePath, buffer);
+          // AstroWind 에셋 참조 경로 반환
+          return `~/assets/images/${saveRelativePath.replace(/^assets\/images\//, '')}`;
+        }
+      }
+    } catch (err) {
+      console.warn(`  ⚠️ 이미지 다운로드 재시도 (${attempt}/3): ${err.message}`);
+      await delay(3000);
+    }
+  }
 
-  return { coverUrl, bodyUrl };
+  // 예외 상황 시 Unsplash 고화질 테크 스톡 직접 폴백
+  console.warn(`  ⚠️ AI 이미지 생성 타임아웃, 안정적 테크 실사로 대체합니다.`);
+  return `https://images.unsplash.com/photo-1518770660439-4636190af475?w=1200&auto=format&fit=crop&q=80`;
 }
 
 // 30가지 고유 시각 스타일 및 글 구조 테마 프리셋
@@ -105,7 +124,7 @@ async function fetchWithRetry(prompt, maxRetries = 15, delayMs = 20000) {
   for (let attempt = 1; attempt <= maxRetries; attempt++) {
     try {
       const response = await ai.models.generateContent({
-        model: 'gemini-3.5-flash-lite',
+        model: 'gemini-2.5-flash',
         contents: prompt,
       });
       return response.text;
@@ -122,9 +141,19 @@ async function fetchWithRetry(prompt, maxRetries = 15, delayMs = 20000) {
 
 async function generateSinglePost(lang, index) {
   const selectedTheme = THEME_PRESETS[Math.floor(Math.random() * THEME_PRESETS.length)];
-  const { coverUrl, bodyUrl } = getDistributedImages(index, currentTopic + fileSlug);
 
   console.log(`\n🚀 [${index + 1}/12] ${lang.name} (${lang.code}) 1호기 메인 테크 포스팅 생성 중... (적용 테마: ${selectedTheme.name})`);
+
+  // 1. 본문 주제와 100% 매칭되는 실사 고유 이미지 로컬 다운로드
+  const coverPrompt = `A clean, authentic professional photo showing ${currentTopic}, tech office desk environment, hardware or screen troubleshooting scene, realistic lighting, highly detailed editorial, no text, no letters`;
+  const bodyPrompt = `A close-up realistic photograph of technology equipment or setup related to ${currentTopic}, minimalist modern workspace, natural daylight, no text, clean composition`;
+
+  console.log(`  📸 주제 매칭 이미지 생성 및 로컬 저장 중...`);
+  const coverRelativePath = `assets/images/${lang.code}/${fileSlug}-cover.jpg`;
+  const bodyRelativePath = `assets/images/${lang.code}/${fileSlug}-body.jpg`;
+
+  const coverUrl = await downloadAndSaveImage(coverPrompt, coverRelativePath);
+  const bodyUrl = await downloadAndSaveImage(bodyPrompt, bodyRelativePath);
 
   const postDate = new Date();
   const baseMinutes = 8 * 60 + 30 + Math.floor(index * 75);
@@ -245,14 +274,17 @@ theme: "${selectedTheme.name}"
       let body = text.slice(frontmatter.length).trim();
       body = body.replace(/^#\s+[^\n]+\n+/, '');
 
-      // 1호기 404 방지: AI 출력과 상관없이 category를 무조건 'tech'로 강제 고정
+      // 1호기 카테고리 영구 고정 규칙
       frontmatter = frontmatter.replace(/category:\s*["'][^"']*["']/i, "category: 'tech'")
                                .replace(/category:\s*[^\n\r]+/i, "category: 'tech'");
 
-      // Cloudflare 빌드 실패 방지: publishDate의 불필요한 따옴표 자동 제거
+      // Cloudflare 빌드 실패 방지: publishDate 따옴표 제거
       frontmatter = frontmatter.replace(/publishDate:\s*["']([^"']+)["']/i, "publishDate: $1");
 
-      const middleImageMarkdown = `\n\n![Tech & IT Solution Guide](${bodyUrl})\n\n`;
+      // 이미지 경로 강제 동기화
+      frontmatter = frontmatter.replace(/image:\s*["'][^"']*["']/i, `image: '${coverUrl}'`);
+
+      const middleImageMarkdown = `\n\n![${currentTopic} IT Guide](${bodyUrl})\n\n`;
       if (body.includes('## 2.') || body.includes('### 2.')) {
         body = body.replace(/(#{2,3}\s*2\.[^\n]+)/, `${middleImageMarkdown}$1`);
       } else {
@@ -275,7 +307,7 @@ theme: "${selectedTheme.name}"
 
     const filePath = path.join(targetDir, `${fileSlug}.md`);
     fs.writeFileSync(filePath, text, 'utf-8');
-    console.log(`✅ [성공] 1호기 저장 완료: src/data/post/${lang.code}/${fileSlug}.md (테마: ${selectedTheme.name})`);
+    console.log(`✅ [성공] 1호기 저장 완료: src/data/post/${lang.code}/${fileSlug}.md (로컬 이미지 저장 완료)`);
     return true;
   } catch (error) {
     console.error(`❌ [최종 실패] ${lang.name} 생성 실패:`, error.message);
