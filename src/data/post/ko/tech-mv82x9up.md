@@ -2,8 +2,8 @@
 title: "출근 직전 본체만 요란하게 도는데 모니터가 '신호 없음'? 8년 차 엔지니어가 알려주는 RAM 접촉 불량 5분 컷 살생부"
 description: "컴퓨터 전원은 켜지는데 화면이 안 나올 때, 람(RAM) 접촉 불량 원인 분석부터 지우개 신공, 슬롯 점검까지 8년 차 IT 엔지니어가 현장 감성으로 완벽 정리해 드립니다."
 publishDate: 2026-10-14T08:30:00.000Z
-image: "https://picsum.photos/seed/tech-865/1200/630"
-category: "Hardware"
+image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&h=630&q=85"
+category: 'tech'
 tags: ["하드웨어", "RAM접촉불량", "PC수리", "블라인드썰", "엔지니어노하우"]
 theme: "Cobalt Enterprise Lab"
 ---
@@ -11,14 +11,14 @@ theme: "Cobalt Enterprise Lab"
 
 금요일 오후 4시 50분, 주말 배포를 앞두고 메인 데스크탑을 켰는데 본체 쿨러는 제트기 엔진 마냥 굉음을 내며 돌아가는데 모니터는 끝까지 'No Signal'을 띄우더라. 팀장님은 5분 뒤에 최종 산출물 확인하자고 스윽 다가오는데, 등줄기에 식은땀이 쫙 흐르면서 뇌가 하얘지는 그 기분, 다들 겪어봤을 거다. 이리저리 케이블을 뽑았다 꽂아봐도 무소용. 결국 출근길 메신저로 연차를 고민하게 만드는 이 개떡 같은 상황, 8년 차 엔지니어인 내가 사내 대나무숲에 푸는 심폐소생술 썰이자 완벽한 기술 랩 리포트로 종결해 준다.
 
-<div style="border-left: 4px solid #1e40af; padding: 12px 16px; margin: 20px 0; background-color: rgba(30,64,175,0.05); border-radius: 4px;">
+<div style="border-left: 4px solid #1e40af; padding: 12px 16px; margin: 20px 0; background-color: rgba(30,64,175,0.05); border-radius: 4px; color: #111827;">
 <strong>[QA Lab Test Report #0865] System Diagnostic Overview</strong><br>
 - <strong>대상 증상:</strong> 전원 팬 구동 정상, 비프음(또는 무음), 모니터 무신호(No Signal)<br>
 - <strong>현장 추정 불량률:</strong> 부팅 불가 하드웨어 이슈 중 RAM/슬롯 접촉 불량이 약 68.4% 차지<br>
 - <strong>내구성 및 산화 스트레스:</strong> 미세 진동 및 온도 변화로 인한 골드핑거(Gold Finger) 산화막 형성 메커니즘 분석 완료
 </div>
 
-![Hardware Diagnostic & Troubleshooting](https://picsum.photos/seed/hardware-365/1000/550)
+![Tech Solution Guide](https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&h=630&q=85)
 
 ---
 
@@ -36,7 +36,7 @@ theme: "Cobalt Enterprise Lab"
 
 자, 당황하지 말고 아래 순서대로 본체를 까자. 드라이버 하나면 충분하다.
 
-<div style="border-left: 4px solid #1e40af; padding: 12px 16px; margin: 20px 0; background-color: rgba(30,64,175,0.05); border-radius: 4px;">
+<div style="border-left: 4px solid #1e40af; padding: 12px 16px; margin: 20px 0; background-color: rgba(30,64,175,0.05); border-radius: 4px; color: #111827;">
 <strong>⚠️ 엔지니어 긴급 경고 (Safety First)</strong><br>
 작업 전 반드시 <strong>멀티탭 전원을 끄고 파워서플라이 후면의 물리 스위치를 OFF</strong>로 놓아라. 메인보드에 잔류 전기가 남은 상태에서 RAM을 뽑으면 억 소리 나는 메인보드 쇼트(Short)로 이어져 부품 날려먹기 딱 좋다.
 </div>

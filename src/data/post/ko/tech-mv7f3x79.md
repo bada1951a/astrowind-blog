@@ -2,14 +2,14 @@
 title: "노트북 듀얼 모니터 ‘신호 없음’과 화면 깜빡임 완벽 해결 가이드: 드라이버 재설정부터 EDID 핸드셰이크 복구까지"
 description: "노트북 외장 모니터 연결 시 발생하는 신호 없음, 간헐적 블랙스크린 깜빡임 현상을 해결하는 엔지니어 실무 가이드입니다. 드라이버 클린 설치와 핸드셰이크 복구 절차를 다룹니다."
 publishDate: 2026-10-14T08:30:00.000Z
-image: "https://images.unsplash.com/photo-1591488320449-011701bb6704?auto=format&fit=crop&w=1200&h=630&q=85"
-category: "Hardware"
+image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&h=630&q=85"
+category: 'tech'
 tags: ["Hardware", "DualMonitor", "DriverTroubleshooting", "Windows11", "ITInfrastructure"]
 theme: "Midnight Navy Royal"
 ---
 
 
-<div style="border-left: 4px solid #1d4ed8; padding: 14px 18px; margin: 20px 0; background-color: rgba(29, 78, 216, 0.04); border-radius: 4px;">
+<div style="border-left: 4px solid #1d4ed8; padding: 14px 18px; margin: 20px 0; background-color: rgba(29, 78, 216, 0.04); border-radius: 4px; color: #111827;">
   <strong style="color: #1d4ed8; font-size: 0.95rem; text-transform: uppercase; letter-spacing: 0.5px;">[INCIDENT LOG #20261014-SYS] 판교 데이터센터 파견 인프라 당직 로그</strong><br>
   <span style="font-size: 0.9rem; color: #334155;">새벽 02시 40분, 관제 모니터링 콘솔용 랩톱 3대에서 동시다발적으로 외장 디스플레이 신호 단절 및 3~5초 간격의 간헐적 블랙아웃(암전) 현상 발생. 단순 케이블 재연결로 복구되지 않는 디스플레이 파이프라인 교착 상태 확인 후 드라이버 서브시스템 재구축 및 핸드셰이크 초기화 절차 수행.</span>
 </div>
@@ -45,7 +45,7 @@ theme: "Midnight Navy Royal"
 
 다음 절차는 Windows 11 및 Windows 10 환경에서 그래픽 드라이버 스택을 백지 상태로 초기화하고 신호 라인을 재구축하는 엔지니어 표준 프로토콜입니다.
 
-<div style="border-left: 4px solid #1d4ed8; padding: 14px 18px; margin: 20px 0; background-color: rgba(29, 78, 216, 0.04); border-radius: 4px;">
+<div style="border-left: 4px solid #1d4ed8; padding: 14px 18px; margin: 20px 0; background-color: rgba(29, 78, 216, 0.04); border-radius: 4px; color: #111827;">
   <strong style="color: #1d4ed8;">[타임스탬프 02:50 AM] STEP 1: 그래픽 파이프라인 핫 리로드(Hot Reload) 진단</strong>
 </div>
 
@@ -55,7 +55,7 @@ theme: "Midnight Navy Royal"
 2. 시스템 비프음(‘삑’ 소리)과 함께 노트북 화면이 약 1초간 깜빡이며 그래픽 드라이버와 DWM 프로세스가 재기동됩니다.
 3. 이 단계에서 화면이 돌아오면 단순 드라이버 버퍼 오버플로우 문제이며, 여전히 신호가 잡히지 않는다면 물리적/소프트웨어적 레지스트리 꼬임 상태이므로 STEP 2로 진입합니다.
 
-<div style="border-left: 4px solid #1d4ed8; padding: 14px 18px; margin: 20px 0; background-color: rgba(29, 78, 216, 0.04); border-radius: 4px;">
+<div style="border-left: 4px solid #1d4ed8; padding: 14px 18px; margin: 20px 0; background-color: rgba(29, 78, 216, 0.04); border-radius: 4px; color: #111827;">
   <strong style="color: #1d4ed8;">[타임스탬프 03:05 AM] STEP 2: 장치 관리자 고스트 디바이스 및 PnP 캐시 제거</strong>
 </div>
 
@@ -73,7 +73,7 @@ pnputil /enum-devices /class Display
 
 위 명령어를 **명령 프롬프트(cmd)**에 관리자 권한으로 입력하면 현재 등록된 디스플레이 핸들러 목록을 파악할 수 있습니다.
 
-<div style="border-left: 4px solid #1d4ed8; padding: 14px 18px; margin: 20px 0; background-color: rgba(29, 78, 216, 0.04); border-radius: 4px;">
+<div style="border-left: 4px solid #1d4ed8; padding: 14px 18px; margin: 20px 0; background-color: rgba(29, 78, 216, 0.04); border-radius: 4px; color: #111827;">
   <strong style="color: #1d4ed8;">[타임스탬프 03:25 AM] STEP 3: DDU(Display Driver Uninstaller) 기반 드라이버 클린 설치</strong>
 </div>
 
@@ -94,7 +94,7 @@ pnputil /enum-devices /class Display
    - 윈도우 정상 부팅 후, **반드시 내장 그래픽(iGPU) 드라이버를 1순위로 설치**하고 재부팅합니다.
    - 그 다음 **외장 그래픽(dGPU) 드라이버를 2순위로 설치**합니다. 이 순서가 바뀌면 디스플레이 스위칭 레지스트리가 꼬여 외장 출력 포트가 영구 먹통이 될 수 있습니다.
 
-<div style="border-left: 4px solid #1d4ed8; padding: 14px 18px; margin: 20px 0; background-color: rgba(29, 78, 216, 0.04); border-radius: 4px;">
+<div style="border-left: 4px solid #1d4ed8; padding: 14px 18px; margin: 20px 0; background-color: rgba(29, 78, 216, 0.04); border-radius: 4px; color: #111827;">
   <strong style="color: #1d4ed8;">[타임스탬프 03:55 AM] STEP 4: 고급 디스플레이 설정 및 DSC/대역폭 튜닝</strong>
 </div>
 
@@ -111,7 +111,7 @@ pnputil /enum-devices /class Display
 
 현장에서 문제를 해결한 뒤 재발을 방지하기 위해 다음 3가지 사항을 시스템에 즉각 반영해야 합니다.
 
-<div style="border-left: 4px solid #1d4ed8; padding: 14px 18px; margin: 20px 0; background-color: rgba(29, 78, 216, 0.04); border-radius: 4px;">
+<div style="border-left: 4px solid #1d4ed8; padding: 14px 18px; margin: 20px 0; background-color: rgba(29, 78, 216, 0.04); border-radius: 4px; color: #111827;">
   <strong style="color: #1d4ed8; font-size: 0.95rem;">🚨 CRITICAL ADVICE: 윈도우 업데이트의 그래픽 드라이버 강제 덮어쓰기 방지</strong><br>
   <span style="font-size: 0.9rem; color: #334155;">
   정상 복구된 시스템이 며칠 뒤 다시 고장 나는 원인의 90%는 Windows Update가 백그라운드에서 하위 버전의 범용 드라이버를 강제로 밀어 넣기 때문입니다. Pro 에디션 사용자라면 즉시 <strong>로컬 그룹 정책 편집기(gpedit.msc)</strong>를 여십시오.<br>

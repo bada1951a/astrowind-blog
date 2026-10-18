@@ -2,8 +2,8 @@
 title: "기계식 키보드 채터링 및 키 씹힘 완벽 해결 가이드: 접점 부활제 실무 정비 프로토콜"
 description: "기계식 키보드 채터링(중복 입력)과 씹힘 현상의 하드웨어 회로 원인을 규명하고, BW-100 접점 부활제를 활용한 정밀 세척 및 핫스왑 수리 공정을 다룹니다."
 publishDate: 2026-10-13T08:30:00.000Z
-image: "https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?auto=format&fit=crop&w=1200&h=630&q=85"
-category: "Hardware"
+image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&h=630&q=85"
+category: 'tech'
 tags: ["Tech", "Troubleshooting", "Hardware"]
 theme: "Industrial Blueprint"
 ---
@@ -40,8 +40,8 @@ theme: "Industrial Blueprint"
        PCB 솔더링 핀 (Pad)
 ```
 
-<div style="border-left: 4px solid #f59e0b; padding: 12px 16px; margin: 20px 0; background-color: rgba(245, 158, 11, 0.05); border-radius: 4px;">
-<strong>엔지니어링 코멘트:</strong> 채터링은 물리적 스위치가 닫힐 때 발생하는 자연스러운 미세 진동(Bouncing) 시간이 키보드 펌웨어의 <strong>디바운스 타임(Debounce Time, 통상 5~15ms)</strong>을 초과하여 발생합니다. 반대로 키 씹힘은 접점 간 저항이 무한대($\infty\ \Omega$)로 치솟아 로직 하이/로우 판정 임계값을 넘지 못할 때 발생합니다.
+<div style="border-left: 4px solid #f59e0b; padding: 12px 16px; margin: 20px 0; background-color: rgba(245, 158, 11, 0.05); border-radius: 4px; color: #111827;">
+<strong>엔지니어링 코멘트:</strong> 채터링은 물리적 스위치가 닫힐 때 발생하는 자연스러운 미세 진동(Bouncing) 시간이 키보드 펌웨어의 <strong>디바운스 타임(Debounce Time, 통상 5~15ms)</strong>을 초과하여 발생합니다. 반대로 키 씹힘은 접점 간 저항이 무한대(무한 옴)로 치솟아 로직 하이/로우 판정 임계값을 넘지 못할 때 발생합니다.
 </div>
 
 ### 주요 원인 1: 접점부 산화 피막 형성 및 아크 방전 이물질
@@ -128,7 +128,7 @@ theme: "Industrial Blueprint"
 
 ## 4. 엔지니어 경고 및 유지보수 유의점
 
-<div style="border-left: 4px solid #f59e0b; padding: 12px 16px; margin: 20px 0; background-color: rgba(245, 158, 11, 0.05); border-radius: 4px;">
+<div style="border-left: 4px solid #f59e0b; padding: 12px 16px; margin: 20px 0; background-color: rgba(245, 158, 11, 0.05); border-radius: 4px; color: #111827;">
 <strong>주의 (Hardware Fault Prevention):</strong><br>
 1. <strong>유성 윤활제와의 혼용 금지</strong>: 상용 방청제인 WD-40 오리지널은 절연 피막이 아닌 유막을 형성하여 단기적으로는 작동하는 것처럼 보여도 먼지를 흡착해 수주일 내로 스위치를 영구 고장 냅니다. 반드시 <strong>전자 전용 클리너(BW-100 등)</strong>만을 사용하십시오.<br>
 2. <strong>공장 윤활 팩토리 손실</strong>: 접점 부활제는 세척력이 뛰어나 접점뿐만 아니라 슬라이더 레일에 칠해진 그리스까지 일부 씻어냅니다. 작업 후 해당 키의 타건음이 다소 건조해지거나(서걱임 증가) 금속 스프링 소음(핑 노이즈)이 발생할 수 있습니다. 필요 시 주사기를 이용해 스템 가이드에만 미량의 크라이톡스 205g0를 재도포하십시오.<br>

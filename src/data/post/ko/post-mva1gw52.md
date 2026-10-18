@@ -2,7 +2,7 @@
 title: "윈도우 11 C드라이브 용량 부족 해결: 임시 파일 안전하게 삭제하는 실무 가이드"
 description: "판교 IT 기업 실무자가 알려주는 윈도우 11 C드라이브 빨간불 긴급 복구법! 임시 파일 안전 삭제부터 디스크 정리 꿀팁까지 완벽 정리."
 publishDate: 2026-10-15T08:30:00.000Z
-image: "https://picsum.photos/seed/tech687/900/600"
+image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&h=630&q=85"
 category: 'tech'
 tags: ["Windows11", "C드라이브용량부족", "디스크정리", "임시파일삭제", "IT튜토리얼"]
 theme: "Crimson Emergency Field"
@@ -13,7 +13,7 @@ theme: "Crimson Emergency Field"
 
 도커(Docker) 컨테이너는 비정상적으로 종료되고, 비주얼 스튜디오(Visual Studio)는 저장 공간 부족으로 크래시를 일으키는 절체절명의 순간이었습니다. 중요한 시스템 검증을 코앞에 두고 발을 동동 구르던 그때, 수년간의 인프라 및 OS 최적화 경험을 바탕으로 10분 만에 C드라이브 용량을 40GB 이상 확보해 낸 실무 노하우를 지금부터 가감 없이 풀어드립니다. 섣불리 폴더를 지웠다가 시스템이 먹통이 되기 전에, 이 글을 따라 안전하고 확실하게 용량을 확보해 보세요.
 
-![Tech & IT Solution Guide](https://picsum.photos/seed/computer187/1000/550)
+![Tech Solution Guide](https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&h=630&q=85)
 
 <div style="border-left: 4px solid #ef4444; padding: 12px 16px; margin: 20px 0; background-color: rgba(239, 68, 68, 0.05); border-radius: 4px; color: #111827;">
 <strong>긴급 경고:</strong> C드라이브가 완전히 꽉 찬 상태에서는 윈도우가 가상 메모리(페이지 파일)를 정상적으로 쓰지 못해 강제 종료나 블루스크린이 발생할 수 있습니다. 무작정 대용량 폴더를 삭제하기 전, 아래의 안전한 절차를 반드시 준수하세요!

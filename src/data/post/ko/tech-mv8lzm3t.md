@@ -2,8 +2,8 @@
 title: "아침 출근길 켜놓은 팀즈가 부팅을 망쳤다: OS 커널 레벨에서 파헤치는 시작프로그램 팩폭 정리 가이드"
 description: "8년 차 현업 엔지니어가 전수하는 진짜 부팅 속도 개선법. 작업관리자 수준을 넘어선 커널 로그와 레지스트리, 드라이버 충돌 분석으로 10초 만에 켜지는 법."
 publishDate: 2026-10-14T08:30:00.000Z
-image: "https://picsum.photos/seed/tech-750/1200/630"
-category: "Hardware"
+image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&h=630&q=85"
+category: 'tech'
 tags: ["Windows", "Troubleshooting", "SystemOptimization", "Registry"]
 theme: "Deep Indigo System"
 ---
@@ -13,7 +13,7 @@ theme: "Deep Indigo System"
 
 개발자 8년 차 구르면서 터득한, 겉핥기 식 클리너 프로그램 따위 쓰지 않고 레지스트리와 장치 관리자를 직접 파고들어 부팅 속도를 광속으로 끌어올리는 팩폭 가이드를 풀어본다.
 
-![Hardware Diagnostic & Troubleshooting](https://picsum.photos/seed/hardware-250/1000/550)
+![Tech Solution Guide](https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&h=630&q=85)
 
 ---
 
@@ -28,7 +28,7 @@ theme: "Deep Indigo System"
 3. **M.2 NVMe SSD의 온보드 캐시 고갈 및 쓰기 증폭**: 
    가상 메모리(Pagefile.sys)와 부팅 시 로그를 기록하는 I/O 대기열이 포화 상태일 때 발생한다.
 
-<div style="border-left: 4px solid #4338ca; padding: 12px 16px; margin: 20px 0; background-color: rgba(67, 56, 202, 0.05); border-radius: 4px;">
+<div style="border-left: 4px solid #4338ca; padding: 12px 16px; margin: 20px 0; background-color: rgba(67, 56, 202, 0.05); border-radius: 4px; color: #111827;">
 <strong>엔지니어 팁:</strong> 작업관리자의 '시작 프로그램' 탭만 보고 안심하지 마라. 거기는 빙산의 일각이다. 진짜 주범은 서비스(services.msc)와 레지스트리 Run 키에 숨어 있다.
 </div>
 
@@ -50,7 +50,7 @@ theme: "Deep Indigo System"
 * **정리 요령**: 정렬 기준을 '시작 유형'으로 바꾼 뒤, '자동(지연된 시작)'이나 '자동'으로 되어 있는 사내 메신저, 어도비 업데이트 서비스, 프린터 제조사 유틸리티 등을 찾는다.
 * **수정**: 해당 서비스를 우클릭 ➔ `속성` ➔ `시작 유형`을 **'수동(Manual)'**으로 변경한다. (필요할 때만 켜지게 만드는 게 핵심이다.)
 
-<div style="border-left: 4px solid #4338ca; padding: 12px 16px; margin: 20px 0; background-color: rgba(67, 56, 202, 0.05); border-radius: 4px;">
+<div style="border-left: 4px solid #4338ca; padding: 12px 16px; margin: 20px 0; background-color: rgba(67, 56, 202, 0.05); border-radius: 4px; color: #111827;">
 <strong>⚠️ 주의:</strong> 윈도우 코어 서비스나 그래픽카드 드라이버(NVIDIA, AMD), 백신 프로그램(Windows Defender 등)은 건드리면 블루스크린(BSOD) 구경하게 되니 절대 건드리지 마라.
 </div>
 
