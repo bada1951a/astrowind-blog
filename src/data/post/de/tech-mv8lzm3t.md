@@ -2,7 +2,7 @@
 title: "Rechner braucht ewig zum Hochfahren? Autostart-Müll endlich radikal aussortieren"
 description: "Der PC kriecht beim Booten? Als Admin zeige ich dir, wie du den Autostart und Task-Manager kompromisslos aufräumst und die Kiste wieder flottmachst."
 publishDate: 2026-10-14T12:15:00.000Z
-image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&h=630&q=85"
+image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1200&h=675&q=85"
 category: 'tech'
 tags: ["Tech", "Troubleshooting", "Hardware"]
 theme: "Pure Titanium Clean"
@@ -15,7 +15,7 @@ Freitag, 16:50 Uhr. Zehn Minuten vor dem verdienten Feierabend brennt mal wieder
 <strong>Admin-Notiz:</strong> Ein lahmer Bootvorgang ist kein Schicksal und auch kein sofortiges Signal für eine Neuanschaffung. In 90 % der Fälle ist es einfach zugemüllter Autostart-Speicher und ein Haufen Software, die meint, sie sei der Nabel der Welt.
 </div>
 
-![Tech Solution Guide](https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&h=630&q=85)
+![Tech Hardware Guide](https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1200&h=675&q=85)
 
 ### Warum der Rechner zur Krücke wird: Die 3 Hauptverdächtigen
 

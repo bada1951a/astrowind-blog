@@ -2,7 +2,7 @@
 title: "Schwarzer Bildschirm, Lüfter drehen: Wenn der RAM wieder Geister hostet"
 description: "Rechner läuft, Monitor bleibt schwarz? Wie du RAM-Kontakte reinigst und Slots debuggst wie ein echter Sysadmin."
 publishDate: 2026-10-14T12:15:00.000Z
-image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&h=630&q=85"
+image: "https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1200&h=675&q=85"
 category: 'tech'
 tags: ["Sysadmin", "Hardware", "Troubleshooting", "RAM"]
 theme: "Retro Monokai"
@@ -17,7 +17,7 @@ Freitagnachmittag, 16:45 Uhr. Der letzte Deployment-Lauf für das Release am Mon
 [16:48:20] ERROR: POST halted. No display signal. CPU initialization failed or RAM missing/unstable.
 </div>
 
-![Tech Solution Guide](https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&h=630&q=85)
+![Tech Hardware Guide](https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=1200&h=675&q=85)
 
 ## Root Cause Analysis: Warum streikt die Kiste genau jetzt?
 
