@@ -104,22 +104,20 @@ const { post, url } = Astro.props;
     </div>
   </article>
 </section>
+
 <script>
-  // 이미 발행된 모든 글의 깨진 로컬 이미지 주소를 자동으로 정상 복구
   document.addEventListener('DOMContentLoaded', () => {
-    // 1. 텍스트로 그대로 노출된 마크다운 이미지 문법(![...](...))을 실제 <img> 태그로 변환
     const content = document.querySelector('.prose') || document.querySelector('article') || document.body;
     if (content) {
-      const regex = /!\[([^\]]*)\]\(([^)]+)\)/g;
+      // 괄호 (13), (30) 등이 포함된 이미지 경로를 확장자(.png, .jpg 등) 끝 닫는 괄호까지 정확히 포착
+      const regex = /!\[([^\]]*)\]\((.*?\/images\/tech-photo\/[^\n\r]+\.(?:png\vert{}jpe?g\vert{}webp\vert{}gif\vert{}avif))\)/gi;
       content.innerHTML = content.innerHTML.replace(regex, (match, alt, src) => {
-        const cleanSrc = encodeURI(src.trim());
-        return `<img src="${cleanSrc}" alt="${alt}" class="mx-auto rounded-md shadow-lg my-6 max-w-full h-auto" />`;
+        return `<img src="${encodeURI(src.trim())}" alt="${alt}" class="mx-auto rounded-md shadow-lg my-6 max-w-full h-auto" />`;
       });
     }
 
-    // 2. 주소에 공백/괄호가 포함되어 깨진 기존 <img> 태그 복구
-    const images = document.querySelectorAll('img');
-    images.forEach(img => {
+    // 이미 생성된 img 태그 중 공백/특수문자가 있는 주소 교정
+    document.querySelectorAll('img').forEach(img => {
       const src = img.getAttribute('src');
       if (src && (src.includes(' ') || src.includes('(') || src.includes(')'))) {
         img.src = encodeURI(src);
