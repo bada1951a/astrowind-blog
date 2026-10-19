@@ -1,0 +1,77 @@
+name: Update Blog Images Automatically
+
+on:
+  workflow_dispatch: # 깃허브 웹에서 버튼 하나로 수동 실행할 수 있는 옵션
+
+jobs:
+  update-images:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 깃허브 코드 가져오기
+        uses: actions/checkout@v3
+
+      - name: 파이썬 설정
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: 이미지 일괄 교체 스크립트 실행
+        run: |
+          python -c "
+          import os
+          import random
+          from pathlib import Path
+
+          posts_dir = Path('src/data/post')
+          images_root = Path('public/images')
+
+          category_folders = {
+              'ram': ['ram', '메모리', '램'],
+              'storage': ['storage', 'ssd', 'hdd', '저장장치', '스토리지'],
+              'bsod': ['bsod', '블루스크린', '오류', 'error', 'crash'],
+              'display': ['display', '모니터', '화면', '디스플레이'],
+              'keyboard': ['keyboard', '키보드', '타이핑'],
+              'system': ['system', '시스템', '부팅'],
+              'tech-photo': ['tech-photo', '테크', 'IT']
+          }
+
+          count = 0
+          for md_file in posts_dir.glob('*.md'):
+              with open(md_file, 'r', encoding='utf-8') as f:
+                  content = f.read()
+              
+              file_lower = md_file.name.lower()
+              content_lower = content.lower()
+              
+              selected_folder_name = 'tech-photo'
+              for folder_name, keywords in category_folders.items():
+                  if any(kw in file_lower or kw in content_lower for kw in keywords):
+                      if (images_root / folder_name).exists():
+                          selected_folder_name = folder_name
+                          break
+                          
+              target_img_dir = images_root / selected_folder_name
+              if target_img_dir.exists():
+                  available_images = [img.name for img in target_img_dir.glob('*.*') if img.suffix.lower() in ('.jpg', '.jpeg', '.png', '.webp')]
+                  
+                  if available_images:
+                      chosen_img = random.choice(available_images)
+                      new_img_path = f'/images/{selected_folder_name}/{chosen_img}'
+                      
+                      import re
+                      new_content = re.sub(r'!\[.*?\]\(.*?\)', f'![image]({new_img_path})', content)
+                      
+                      if new_content != content:
+                          with open(md_file, 'w', encoding='utf-8') as f:
+                              f.write(new_content)
+                          count += 1
+                          print(f'[{md_file.name}] -> {selected_folder_name}/{chosen_img}')
+
+          print(f'총 {count}개 포스트 이미지 교체 완료!')
+          "
+
+      - name: 변경된 파일 깃허브에 자동 저장(Commit)
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: "Auto update post images based on categories"
+          branch: main
