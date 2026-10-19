@@ -106,12 +106,13 @@ const { post, url } = Astro.props;
 </section>
 
 <script>
-  function fixBrokenMarkdownImages() {
-    const content = document.querySelector('.prose') || document.querySelector('article') || document.body;
+  function fixContentImages() {
+    // 1. 본문 영역만 타겟팅 (상단 대표 이미지는 절대 건드리지 않음)
+    const content = document.querySelector('.prose');
     if (!content) return;
 
-    // 본문 전체 텍스트에서 ![...](...keyboard (13).png) 형태를 완벽하게 탐색해 치환
-    const regex = /!\[([^\]]*)\][\s\r\n]*\(\s*(\/images\/tech-photo\/[^\n\r)]+?\.(?:png\vert{}jpe?g\vert{}webp\vert{}gif\vert{}avif))\s*\)/gi;
+    // 2. 닫는 괄호가 ]든 )든 상관없이 본문에 노출된 텍스트를 정확히 잡아 img 태그로 치환
+    const regex = /!\[([^\]\)\r\n]+)[\]\)]\s*\(\s*(\/images\/tech-photo\/[^\n\r]+?\.(?:png\vert{}jpe?g\vert{}webp\vert{}gif\vert{}avif))\s*\)/gi;
     
     if (regex.test(content.innerHTML)) {
       content.innerHTML = content.innerHTML.replace(regex, (match, alt, rawSrc) => {
@@ -120,23 +121,20 @@ const { post, url } = Astro.props;
       });
     }
 
-    // 이미 생성된 img 태그 중 공백/괄호 인코딩 누락 복구
-    document.querySelectorAll('img').forEach(img => {
+    // 3. 본문(.prose) 내부의 img 태그만 안전하게 인코딩 보정
+    content.querySelectorAll('img').forEach(img => {
       const src = img.getAttribute('src');
-      if (src && (src.includes(' ') || src.includes('(') || src.includes(')'))) {
+      if (src && src.startsWith('/images/tech-photo/') && (src.includes(' ') || src.includes('(') || src.includes(')'))) {
         img.src = encodeURI(src);
       }
     });
   }
 
-  // 일반 접속 및 새로고침 시 실행
+  // 브라우저 로딩 및 Astro 페이지 전환 시 즉시 실행
   if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', fixBrokenMarkdownImages);
+    document.addEventListener('DOMContentLoaded', fixContentImages);
   } else {
-    fixBrokenMarkdownImages();
+    fixContentImages();
   }
-
-  // Astro 페이지 이동(SPA 방식) 시에도 무조건 강제 실행
-  document.addEventListener('astro:page-load', fixBrokenMarkdownImages);
-  window.addEventListener('load', fixBrokenMarkdownImages);
+  document.addEventListener('astro:page-load', fixContentImages);
 </script>
