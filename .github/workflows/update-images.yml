@@ -1,7 +1,7 @@
 name: Update Blog Images Automatically
 
 on:
-  workflow_dispatch: # 깃허브 웹에서 버튼 하나로 수동 실행할 수 있는 옵션
+  workflow_dispatch: # 깃허브 웹에서 버튼 하나로 수동 실행
 
 jobs:
   update-images:
@@ -15,63 +15,65 @@ jobs:
         with:
           python-version: '3.10'
 
-      - name: 이미지 일괄 교체 스크립트 실행
+      - name: 기존 이미지 교체 및 tech-photo 사진 삽입 로직 실행
         run: |
           python -c "
           import os
           import random
+          import re
           from pathlib import Path
 
           posts_dir = Path('src/data/post')
-          images_root = Path('public/images')
+          target_img_dir = Path('public/images/tech-photo')
 
-          category_folders = {
-              'ram': ['ram', '메모리', '램'],
-              'storage': ['storage', 'ssd', 'hdd', '저장장치', '스토리지'],
-              'bsod': ['bsod', '블루스크린', '오류', 'error', 'crash'],
-              'display': ['display', '모니터', '화면', '디스플레이'],
-              'keyboard': ['keyboard', '키보드', '타이핑'],
-              'system': ['system', '시스템', '부팅'],
-              'tech-photo': ['tech-photo', '테크', 'IT']
-          }
+          available_images = []
+          if target_img_dir.exists():
+              available_images = [img.name for img in target_img_dir.glob('*.*') if img.suffix.lower() in ('.jpg', '.jpeg', '.png', '.webp')]
 
-          count = 0
-          for md_file in posts_dir.glob('*.md'):
-              with open(md_file, 'r', encoding='utf-8') as f:
-                  content = f.read()
-              
-              file_lower = md_file.name.lower()
-              content_lower = content.lower()
-              
-              selected_folder_name = 'tech-photo'
-              for folder_name, keywords in category_folders.items():
-                  if any(kw in file_lower or kw in content_lower for kw in keywords):
-                      if (images_root / folder_name).exists():
-                          selected_folder_name = folder_name
-                          break
-                          
-              target_img_dir = images_root / selected_folder_name
-              if target_img_dir.exists():
-                  available_images = [img.name for img in target_img_dir.glob('*.*') if img.suffix.lower() in ('.jpg', '.jpeg', '.png', '.webp')]
+          if available_images:
+              random.shuffle(available_images)
+              pool_index = 0
+              total_imgs = len(available_images)
+
+              count = 0
+              for md_file in posts_dir.glob('*.md'):
+                  with open(md_file, 'r', encoding='utf-8') as f:
+                      content = f.read()
                   
-                  if available_images:
-                      chosen_img = random.choice(available_images)
-                      new_img_path = f'/images/{selected_folder_name}/{chosen_img}'
-                      
-                      import re
-                      new_content = re.sub(r'!\[.*?\]\(.*?\)', f'![image]({new_img_path})', content)
-                      
-                      if new_content != content:
-                          with open(md_file, 'w', encoding='utf-8') as f:
-                              f.write(new_content)
-                          count += 1
-                          print(f'[{md_file.name}] -> {selected_folder_name}/{chosen_img}')
+                  # 1. 기존에 들어가 있던 모든 마크다운 이미지(![...](...)) 또는 HTML 이미지(<img ...>) 태그 제거
+                  content_clean = re.sub(r'!\[.*?\]\(.*?\)', '', content)
+                  content_clean = re.sub(r'<img[^>]*>', '', content_clean)
+                  
+                  # 2. 새로운 tech-photo 이미지 선택 (순환 로직 적용)
+                  chosen_img = available_images[pool_index]
+                  pool_index = (pool_index + 1) % total_imgs
+                  new_img_tag = f'\n\n![image](/images/tech-photo/{chosen_img})\n\n'
+                  
+                  # 3. 본문 상단(frontmatter 바로 다음 혹은 첫 번째 줄)에 새 이미지 삽입
+                  # YAML Frontmatter(---로 감싸진 메타데이터) 바로 아래에 이미지가 들어가도록 처리
+                  if '---' in content_clean:
+                      parts = content_clean.split('---', 2)
+                      if len(parts) >= 3:
+                          # frontmatter 뒤에 이미지 삽입
+                          new_content = parts[0] + '---' + parts[1] + '---' + new_img_tag + parts[2]
+                      else:
+                          new_content = new_img_tag + content_clean
+                  else:
+                      new_content = new_img_tag + content_clean
+                  
+                  if new_content != content:
+                      with open(md_file, 'w', encoding='utf-8') as f:
+                          f.write(new_content)
+                      count += 1
+                      print(f'[{md_file.name}] -> tech-photo/{chosen_img} 삽입 완료')
 
-          print(f'총 {count}개 포스트 이미지 교체 완료!')
+              print(f'총 {count}개 포스트 이미지 교체 및 삽입 완료!')
+          else:
+              print('public/images/tech-photo 폴더에 사용 가능한 이미지가 없습니다.')
           "
 
-      - name: 변경된 파일 깃허브에 자동 저장(Commit)
+      - name: 변경된 파일 한 번에 깃허브에 자동 저장(Commit)
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          commit_message: "Auto update post images based on categories"
+          commit_message: "Update: Replace old images with balanced tech-photo images"
           branch: main
