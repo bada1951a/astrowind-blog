@@ -109,14 +109,16 @@ const { post, url } = Astro.props;
   document.addEventListener('DOMContentLoaded', () => {
     const content = document.querySelector('.prose') || document.querySelector('article') || document.body;
     if (content) {
-      // 괄호 (13), (30) 등이 포함된 이미지 경로를 확장자(.png, .jpg 등) 끝 닫는 괄호까지 정확히 포착
-      const regex = /!\[([^\]]*)\]\((.*?\/images\/tech-photo\/[^\n\r]+\.(?:png\vert{}jpe?g\vert{}webp\vert{}gif\vert{}avif))\)/gi;
-      content.innerHTML = content.innerHTML.replace(regex, (match, alt, src) => {
-        return `<img src="${encodeURI(src.trim())}" alt="${alt}" class="mx-auto rounded-md shadow-lg my-6 max-w-full h-auto" />`;
+      // 1. 중간에 엔터/줄바꿈(\s*)이 들어가 두 줄로 쪼개진 마크다운 이미지까지 완벽하게 태그로 변환
+      const regex = /!\[([^\]]*)\]\s*\(\s*(.*?\/images\/tech-photo\/[^\n\r)]+?\.(?:png\vert{}jpe?g\vert{}webp\vert{}gif\vert{}avif))\s*\)/gi;
+      
+      content.innerHTML = content.innerHTML.replace(regex, (match, alt, rawSrc) => {
+        const cleanSrc = encodeURI(rawSrc.trim());
+        return `<img src="${cleanSrc}" alt="${alt.trim()}" class="mx-auto rounded-md shadow-lg my-6 max-w-full h-auto" />`;
       });
     }
 
-    // 이미 생성된 img 태그 중 공백/특수문자가 있는 주소 교정
+    // 2. 이미 img 태그로 생성되었으나 파일명 공백/특수문자로 깨진 이미지 주소 복구
     document.querySelectorAll('img').forEach(img => {
       const src = img.getAttribute('src');
       if (src && (src.includes(' ') || src.includes('(') || src.includes(')'))) {
