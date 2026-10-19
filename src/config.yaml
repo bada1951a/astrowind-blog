@@ -1,5 +1,5 @@
 site:
-  name: '데일리 인사이트'
+  name: 'Daily Insight'
   site: 'https://storydailyview.com'
   base: '/'
   trailingSlash: false
@@ -10,18 +10,18 @@ site:
 # Metadata
 metadata:
   title:
-    default: '데일리 인사이트'
-    template: '%s — 데일리 인사이트'
-  description: '매일 만나는 알짜 핫이슈와 유용한 정보 큐레이션'
+    default: 'Daily Insight'
+    template: '%s — Daily Insight'
+  description: 'Daily curated tech insights and troubleshooting guides'
   robots:
     index: true
     follow: true
   openGraph:
-    site_name: '데일리 인사이트'
+    site_name: 'Daily Insight'
     type: website
 
 i18n:
-  language: ko
+  language: en
   textDirection: ltr
 
 apps:
