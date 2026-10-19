@@ -2,7 +2,7 @@
 title: "Mengatasi Blue Screen 0x0000000a: Solusi Cepat Diagnostik Memori dan Driver Rollback"
 description: "Panduan praktis menangani Blue Screen error 0x0000000a di lingkungan kerja IT Jakarta. Mulai dari cek RAM hingga rollback driver."
 publishDate: 2026-10-17T21:00:00.000Z
-image: "https://picsum.photos/seed/tech137/900/600"
+image: "/images/tech-photo/tech-photo (33).jpg"
 category: 'tech'
 tags: ["Windows", "Troubleshooting", "Blue Screen", "IT Support", "Driver"]
 theme: "Solarized Amber Warm"

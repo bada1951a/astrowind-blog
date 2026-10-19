@@ -2,7 +2,7 @@
 title: "How to Fix Windows 11 Taskbar Frozen and Not Clicking: A Field Guide"
 description: "Quickly fix a frozen Windows 11 taskbar that is not clicking with proven restart steps, shell commands, and explorer workarounds."
 publishDate: 2026-10-16T09:45:00.000Z
-image: "https://picsum.photos/seed/tech455/900/600"
+image: "/images/tech-photo/tech-photo (28).jpg"
 category: 'tech'
 tags: ["Windows 11", "Troubleshooting", "Taskbar", "IT Support", "Productivity"]
 theme: "Pure Titanium Clean"

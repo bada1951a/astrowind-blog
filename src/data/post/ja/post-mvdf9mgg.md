@@ -2,7 +2,7 @@
 title: "Windows 11のアップデートが100%でフリーズした時の解決策！キャッシュフォルダをリセットする手順"
 description: "渋谷のオフィスでプロジェクト納品直前に発生したWindows 11のアップデート地獄。100%で止まった進捗バーをサクッと脱出するためのキャッシュフォルダクリア手順を現役エンジニアが徹底解説。"
 publishDate: 2026-10-18T11:00:00.000Z
-image: "https://picsum.photos/seed/tech860/900/600"
+image: "/images/tech-photo/tech-photo (27).jpg"
 category: 'tech'
 tags: ["Windows11", "トラブルシューティング", "アップデート", "ITエンジニア", "PC高速化"]
 theme: "Electric Cyan Speed"

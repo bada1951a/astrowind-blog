@@ -2,7 +2,7 @@
 title: "Windows 11 Taakbalk Bevroren? Zo Los Je Het Direct Op"
 description: "Ergert je die vastgelopen Windows 11 taakbalk op je tech-campus in Eindhoven of Amsterdam? Ontdek de snelle fixes om je workflow direct te herstellen."
 publishDate: 2026-10-16T18:30:00.000Z
-image: "https://picsum.photos/seed/tech966/900/600"
+image: "/images/tech-photo/tech-photo (11).jpg"
 category: 'tech'
 tags: ["Windows 11", "Troubleshooting", "IT-Support", "Nederland"]
 theme: "Graphite Technical Paper"

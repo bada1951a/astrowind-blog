@@ -2,7 +2,7 @@
 title: "Schwarzer Bildschirm, Lüfter drehen: Wenn der RAM wieder Geister hostet"
 description: "Rechner läuft, Monitor bleibt schwarz? Wie du RAM-Kontakte reinigst und Slots debuggst wie ein echter Sysadmin."
 publishDate: 2026-10-14T12:15:00.000Z
-image: "https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1200&h=675&q=85"
+image: "/images/tech-photo/tech-photo (10).jpg"
 category: 'tech'
 tags: ["Sysadmin", "Hardware", "Troubleshooting", "RAM"]
 theme: "Retro Monokai"

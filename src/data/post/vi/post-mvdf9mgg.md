@@ -2,7 +2,7 @@
 title: "Sửa lỗi Windows 11 kẹt 100% khi update: Xóa và reset thư mục cache ngay"
 description: "Hướng dẫn thực chiến từ kỹ sư IT tại Đà Nẵng giúp bạn xử lý triệt để tình trạng Windows 11 bị kẹt ở 100% khi cập nhật bằng cách reset thư mục cache."
 publishDate: 2026-10-18T22:15:00.000Z
-image: "https://picsum.photos/seed/tech517/900/600"
+image: "/images/tech-photo/tech-photo (22).jpg"
 category: 'tech'
 tags: ["Windows 11", "Troubleshooting", "System Optimization", "IT Support"]
 theme: "Mint Fresh Engineering"

@@ -2,7 +2,7 @@
 title: "Mijn PC start weer op als een raket: Weg met die trage opstarttijd"
 description: "Ergert u zich ook kapot aan een trage Windows-pc? Leer als een echte IT-specialist hoe u uw opstarttijd minimaliseert."
 publishDate: 2026-10-14T18:30:00.000Z
-image: "https://picsum.photos/seed/tech-334/1200/630"
+image: "/images/tech-photo/tech-photo (39).jpg"
 category: "Hardware"
 tags: ["Windows", "Opstarttijd", "Troubleshooting", "Systeemprestaties"]
 theme: "Modern Minimalist Slate"

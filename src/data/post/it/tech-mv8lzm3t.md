@@ -2,7 +2,7 @@
 title: "Guida pratica: ripulire i programmi all'avvio per resuscitare un PC lento"
 description: "Guida da ingegnere sistemista per ripulire i programmi all'avvio ed eliminare i colli di bottiglia hardware su Windows."
 publishDate: 2026-10-14T16:00:00.000Z
-image: "https://picsum.photos/seed/tech-188/1200/630"
+image: "/images/tech-photo/tech-photo (13).jpg"
 category: "Hardware"
 tags: ["Windows", "Troubleshooting", "SystemAdmin", "Cyberpunk"]
 theme: "Cyberpunk Terminal"

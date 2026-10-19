@@ -2,7 +2,7 @@
 title: "Windows 10 Lento all'Avvio: Disattiva i Programmi in 1 Minuto"
 description: "Il tuo PC ci mette una vita a partire? Risolvi subito il problema dell'avvio lento su Windows 10 disattivando i programmi inutili in meno di 60 secondi."
 publishDate: 2026-10-16T16:00:00.000Z
-image: "https://picsum.photos/seed/tech424/900/600"
+image: "/images/tech-photo/tech-photo (12).jpg"
 category: 'tech'
 tags: ["Windows 10", "Ottimizzazione PC", "Guide IT", "Produttività"]
 theme: "Deep Indigo System"

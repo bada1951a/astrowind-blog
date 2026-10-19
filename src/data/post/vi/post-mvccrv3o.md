@@ -2,7 +2,7 @@
 title: "Xử lý triệt để lỗi Màn hình xanh 0x0000000a: Chẩn đoán RAM và Rollback Driver"
 description: "Hướng dẫn thực chiến từ chuyên gia IT tại Hà Nội để khắc phục lỗi Blue Screen 0x0000000a bằng cách kiểm tra RAM và hoàn tác driver."
 publishDate: 2026-10-17T22:15:00.000Z
-image: "https://picsum.photos/seed/tech210/900/600"
+image: "/images/tech-photo/tech-photo (20).jpg"
 category: 'tech'
 tags: ["BlueScreen", "WindowsFix", "RAMDiagnostic", "DriverRollback", "ITSupport"]
 theme: "Teal Matrix Digital"

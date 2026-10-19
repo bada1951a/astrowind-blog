@@ -2,7 +2,7 @@
 title: "O PC liga mas não dá vídeo: A saga do pente de RAM oxidado e o infalível teste de bancada"
 description: "Aprenda a diagnosticar e resolver o clássico problema de computador que liga mas não dá vídeo focando em oxidação de memória RAM e slots."
 publishDate: 2026-10-14T17:15:00.000Z
-image: "https://picsum.photos/seed/tech-376/1200/630"
+image: "/images/tech-photo/tech-photo (9).jpg"
 category: "Hardware"
 tags: ["Manutenção", "Hardware", "Suporte TI", "Dicas de TI"]
 theme: "Graphite Technical Paper"

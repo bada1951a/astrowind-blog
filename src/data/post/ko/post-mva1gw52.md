@@ -2,7 +2,7 @@
 title: "윈도우 11 C드라이브 용량 부족 해결: 임시 파일 안전하게 삭제하는 실무 가이드"
 description: "판교 IT 기업 실무자가 알려주는 윈도우 11 C드라이브 빨간불 긴급 복구법! 임시 파일 안전 삭제부터 디스크 정리 꿀팁까지 완벽 정리."
 publishDate: 2026-10-15T08:30:00.000Z
-image: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?auto=format&fit=crop&w=1200&h=675&q=85"
+image: "/images/tech-photo/tech-photo (4).jpg"
 category: 'tech'
 tags: ["Windows11", "C드라이브용량부족", "디스크정리", "임시파일삭제", "IT튜토리얼"]
 theme: "Crimson Emergency Field"

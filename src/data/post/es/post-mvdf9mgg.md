@@ -2,7 +2,7 @@
 title: "Windows 11 bloqueado al 100 por ciento en la actualización: Cómo vaciar la caché"
 description: "Soluciona el bloqueo de Windows 11 al 100% en actualizaciones vaciando la carpeta SoftwareDistribution en nuestra oficina de Barcelona."
 publishDate: 2026-10-18T14:45:00.000Z
-image: "https://picsum.photos/seed/tech79/900/600"
+image: "/images/tech-photo/tech-photo (32).jpg"
 category: 'tech'
 tags: ["Windows11", "SoporteIT", "ResoluciónDeFallos", "SysAdmin"]
 theme: "Solarized Amber Warm"

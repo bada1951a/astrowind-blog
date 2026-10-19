@@ -2,7 +2,7 @@
 title: "Fixing Laptop Dual Monitor Black Screens and Flickering: The Complete Driver Reset Protocol"
 description: "A battle-tested field guide to resolving laptop dual-monitor 'No Signal' errors, intermittent black screens, and flickering via deep driver teardowns."
 publishDate: 2026-10-14T09:45:00.000Z
-image: "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=1200&h=630&q=85"
+image: "/images/tech-photo/tech-photo (20).jpg"
 category: "Hardware"
 tags: ["Tech", "Troubleshooting", "Hardware"]
 theme: "Sunset Horizon Coral"

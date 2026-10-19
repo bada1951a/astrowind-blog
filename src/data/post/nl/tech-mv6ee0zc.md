@@ -2,7 +2,7 @@
 title: "Mechanisch toetsenbord repareren: Haperende toetsen en dubbele invoer (chattering) oplossen"
 description: "Praktische handleiding van een IT-specialist voor het oplossen van chattering en weigerende mechanische switches met contactspray en firmware-tuning."
 publishDate: 2026-10-13T18:30:00.000Z
-image: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?auto=format&fit=crop&w=1200&h=630&q=85"
+image: "/images/tech-photo/tech-photo (6).jpg"
 category: "Hardware"
 tags: ["Tech", "Troubleshooting", "Hardware"]
 theme: "Pastel Lavender Tech"

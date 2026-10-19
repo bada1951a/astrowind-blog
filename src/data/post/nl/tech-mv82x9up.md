@@ -2,7 +2,7 @@
 title: "Geen beeld, wel stroom? Hoe je RAM-reiniging en slot-diagnostiek je pc redden"
 description: "Paniek op de werkvloer: de pc start wel op, maar het scherm blijft zwart. Praktische gids voor RAM-reiniging en slot-diagnostiek in native Nederlandse IT-stijl."
 publishDate: 2026-10-14T18:30:00.000Z
-image: "https://picsum.photos/seed/tech-449/1200/630"
+image: "/images/tech-photo/tech-photo (16).jpg"
 category: "Hardware"
 tags: ["Tech", "Troubleshooting", "Hardware", "RAM", "Infrastructuur"]
 theme: "Dracula Purple Dev"

@@ -2,7 +2,7 @@
 title: "RAM Seating Failure: Fixing the Black Screen of Death Before Deadline"
 description: "A Silicon Valley senior engineer's raw war story on fixing RAM contact failures and slot diagnostics when your PC powers on but displays nothing."
 publishDate: 2026-10-14T09:45:00.000Z
-image: "https://picsum.photos/seed/tech-938/1200/630"
+image: "/images/tech-photo/tech-photo (24).jpg"
 category: "Hardware"
 tags: ["Hardware Troubleshooting", "RAM Seating", "PC Repair", "System Maintenance"]
 theme: "Mint Fresh Engineering"

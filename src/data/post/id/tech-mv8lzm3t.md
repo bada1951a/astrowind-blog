@@ -2,7 +2,7 @@
 title: "Laptop Kantor Ngadat Pas Mau Presentasi? Ini Cara Bersihin Startup Program Biar Sat-Set Lagi"
 description: "Pengalaman nyata teknisi IT kantor ngadepin laptop user lemot gara-gara aplikasi sampah startup. Panduan praktis ngebutin PC ala anak IT."
 publishDate: 2026-10-14T21:00:00.000Z
-image: "https://picsum.photos/seed/tech-480/1200/630"
+image: "/images/tech-photo/tech-photo (9).jpg"
 category: "Hardware"
 tags: ["IT Support", "Troubleshooting", "Windows 11", "Performance"]
 theme: "Retro Monokai"

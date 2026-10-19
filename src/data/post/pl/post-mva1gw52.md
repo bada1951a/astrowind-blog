@@ -2,7 +2,7 @@
 title: "Jak zwolnić dysk C w Windows 11: Bezpieczne czyszczenie plików Temp"
 description: "Walczysz z czerwonym paskiem zapełnienia dysku C w Windows 11? Sprawdzone, bezpieczne metody na czyszczenie plików tymczasowych wrocławskiego eksperta IT."
 publishDate: 2026-10-15T19:45:00.000Z
-image: "https://picsum.photos/seed/tech344/900/600"
+image: "/images/tech-photo/tech-photo (38).jpg"
 category: 'tech'
 tags: ["Windows 11", "Optymalizacja", "IT", "Poradnik"]
 theme: "Tokyo Neon Violet"

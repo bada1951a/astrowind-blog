@@ -2,7 +2,7 @@
 title: "Windows 11 Taskleiste friert ein? So lösen Sie das Problem im Berliner Tech-Hub"
 description: "Praxisnaher Leitfaden zur schnellen Fehlerbehebung, wenn die Windows 11 Taskleiste nicht mehr reagiert. Ohne langes Suchen, direkt anwendbar."
 publishDate: 2026-10-16T12:15:00.000Z
-image: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?auto=format&fit=crop&w=1200&h=675&q=85"
+image: "/images/tech-photo/tech-photo (1).jpg"
 category: 'tech'
 tags: ["Windows11", "Troubleshooting", "ITSupport", "BerlinTech", "Systemoptimierung"]
 theme: "Industrial Blueprint"

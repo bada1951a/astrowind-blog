@@ -2,7 +2,7 @@
 title: "L'enfer du boot lent : guide de survie pour nettoyer ces fichus programmes au démarrage"
 description: "Mon PC mettait 15 minutes à booter avant ma prez client. Voici comment j'ai nettoyé ce bordel avec les outils natifs Windows."
 publishDate: 2026-10-14T13:30:00.000Z
-image: "https://picsum.photos/seed/tech-42/1200/630"
+image: "/images/tech-photo/tech-photo (34).jpg"
 category: "Hardware"
 tags: ["Tech", "Troubleshooting", "Hardware"]
 theme: "Matte Black stealth"

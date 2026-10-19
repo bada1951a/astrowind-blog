@@ -2,7 +2,7 @@
 title: "Bécane noire, écran noir : Chronique d'une barrette de RAM récalcitrante un vendredi de prod"
 description: "Le ventilo tourne, la LED brille, mais le moniteur reste désespérément muet ? Guide de survie d'un ingénieur système pour décrasser sa RAM."
 publishDate: 2026-10-14T13:30:00.000Z
-image: "https://picsum.photos/seed/tech-157/1200/630"
+image: "/images/tech-photo/tech-photo (22).jpg"
 category: "Hardware"
 tags: ["SysAdmin", "Hardware", "Troubleshooting", "RAM", "LinuxWindows"]
 theme: "Steel Silver Metallic"

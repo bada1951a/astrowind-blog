@@ -2,7 +2,7 @@
 title: "Guía de Diagnóstico y Reparación de Chattering y Fallos de Pulsación en Teclados Mecánicos"
 description: "Procedimiento estándar para solucionar pulsaciones fantasma, rebotes (chattering) y switches atascados en teclados mecánicos mediante limpiador de contactos dieléctrico."
 publishDate: 2026-10-13T14:45:00.000Z
-image: "https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?auto=format&fit=crop&w=1200&h=630&q=85"
+image: "/images/tech-photo/tech-photo (4).jpg"
 category: "Hardware"
 tags: ["Hardware", "Mantenimiento TI", "Periféricos", "Soporte Técnico"]
 theme: "Deep Ocean Cobalt"

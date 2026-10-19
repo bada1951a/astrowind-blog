@@ -2,7 +2,7 @@
 title: "Màn hình đen thui dù quạt tản nhiệt vẫn hú: Kinh nghiệm xương máu xử lý lỗi RAM doanh nghiệp"
 description: "Sự cố mở nguồn lên nhưng màn hình không tín hiệu tại văn phòng và cách xử lý RAM, khe cắm chuẩn kỹ sư IT thực chiến."
 publishDate: 2026-10-14T22:15:00.000Z
-image: "https://picsum.photos/seed/tech-668/1200/630"
+image: "/images/tech-photo/tech-photo (12).jpg"
 category: "Hardware"
 tags: ["IT Troubleshooting", "RAM Fix", "Hardware Repair", "Doanh Nghiệp"]
 theme: "Rosewood Hardware Guide"

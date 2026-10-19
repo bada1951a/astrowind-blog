@@ -2,7 +2,7 @@
 title: "Guía de Parcheo BIOS y Startup: Rescatando PCs de Oficina Lentas al Estilo Hacker Space"
 description: "Anécdota de soporte TI sobre ordenadores de oficina lentos. Domina la optimización de inicio, servicios y GitHub tools con estilo hacker."
 publishDate: 2026-10-14T14:45:00.000Z
-image: "https://picsum.photos/seed/tech-115/1200/630"
+image: "/images/tech-photo/tech-photo (3).jpg"
 category: "Hardware"
 tags: ["Soporte TI", "Optimización", "Windows", "GitHub", "Sysinternals"]
 theme: "Acid Lime Hacker Space"

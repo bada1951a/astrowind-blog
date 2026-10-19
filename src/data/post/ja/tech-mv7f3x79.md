@@ -2,7 +2,7 @@
 title: "ノートPCのデュアルモニター「信号なし・画面のチラつき」を根治する：現場叩き上げエンジニアのディスプレイドライバー完全再構築手順"
 description: "ノートPCに外部モニターを接続した際の「信号なし（No Signal）」や断続的な画面点滅・チラつきを根本から解消。社内情シス・インフラエンジニアが実践するドライバ完全初期化と再設定の全手順。"
 publishDate: 2026-10-14T11:00:00.000Z
-image: "https://images.unsplash.com/photo-1546776310-eef45dd6d63c?auto=format&fit=crop&w=1200&h=630&q=85"
+image: "/images/tech-photo/tech-photo (14).jpg"
 category: "Hardware"
 tags: ["Tech", "Troubleshooting", "Hardware"]
 theme: "Dark Velvet Obsidian"

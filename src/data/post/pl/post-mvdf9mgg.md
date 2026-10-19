@@ -2,7 +2,7 @@
 title: "Windows 11 zawiesił się na 100 procent aktualizacji? Jak zresetować folder pamięci podręcznej"
 description: "Praktyczny poradnik administratora: jak szybko rozwiązać problem zacinającej się aktualizacji Windows 11 na 100% poprzez reset folderu SoftwareDistribution."
 publishDate: 2026-10-18T19:45:00.000Z
-image: "https://picsum.photos/seed/tech371/900/600"
+image: "/images/tech-photo/tech-photo (33).jpg"
 category: 'tech'
 tags: ["Windows 11", "Aktualizacja", "IT Support", "SoftwareDistribution", "Poradnik"]
 theme: "Forest Emerald Bio"

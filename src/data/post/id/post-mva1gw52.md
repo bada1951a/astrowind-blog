@@ -2,7 +2,7 @@
 title: "Cara Mengatasi Drive C Penuh di Windows 11 dan Menghapus File Temp dengan Aman"
 description: "Panduan praktis teknisi IT startup Jakarta untuk mengatasi masalah drive C penuh di Windows 11 dan membersihkan file temp tanpa risiko kehilangan data penting."
 publishDate: 2026-10-15T21:00:00.000Z
-image: "https://picsum.photos/seed/tech417/900/600"
+image: "/images/tech-photo/tech-photo (35).jpg"
 category: 'tech'
 tags: ["Windows 11", "IT Support", "Troubleshooting", "Tips Teknologi"]
 theme: "Graphite Technical Paper"

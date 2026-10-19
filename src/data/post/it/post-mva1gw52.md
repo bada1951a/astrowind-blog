@@ -2,7 +2,7 @@
 title: "Disco C Pieno su Windows 11: Come Liberare Spazio e Cancellare i File Temporanei in Sicurezza"
 description: "Guida pratica da Milano: risolvi il problema del disco C pieno su Windows 11 eliminando file temporanei e ottimizzando l'infrastruttura IT."
 publishDate: 2026-10-15T16:00:00.000Z
-image: "https://picsum.photos/seed/tech125/900/600"
+image: "/images/tech-photo/tech-photo (20).jpg"
 category: 'tech'
 tags: ["Windows 11", "IT Support", "Ottimizzazione", "Milano"]
 theme: "Cobalt Enterprise Lab"

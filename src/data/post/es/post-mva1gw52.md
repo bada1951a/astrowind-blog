@@ -2,7 +2,7 @@
 title: "Cómo solucionar la unidad C llena en Windows 11 y borrar archivos temporales sin riesgo"
 description: "Guía práctica para liberar espacio en el disco C de Windows 11 de forma segura, eliminando archivos temporales y optimizando tu PC en minutos."
 publishDate: 2026-10-15T14:45:00.000Z
-image: "https://picsum.photos/seed/tech52/900/600"
+image: "/images/tech-photo/tech-photo (31).jpg"
 category: 'tech'
 tags: ["Windows 11", "Mantenimiento PC", "Optimización", "Tutoriales IT"]
 theme: "Electric Cyan Speed"

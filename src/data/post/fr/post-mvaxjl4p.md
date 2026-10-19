@@ -2,7 +2,7 @@
 title: "Windows 10 lent au démarrage : Désactiver les applications au lancement en 1 minute"
 description: "Comment résoudre un PC Windows 10 qui rame au démarrage en plein sprint à Paris. Guide rapide et technique."
 publishDate: 2026-10-16T13:30:00.000Z
-image: "https://picsum.photos/seed/tech278/900/600"
+image: "/images/tech-photo/tech-photo (2).jpg"
 category: 'tech'
 tags: ["Windows 10", "Optimisation", "Productivite", "Astuce IT", "Bureau Paris"]
 theme: "Cyberpunk Terminal"

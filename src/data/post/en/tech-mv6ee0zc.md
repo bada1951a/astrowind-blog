@@ -2,7 +2,7 @@
 title: "Fixing Mechanical Keyboard Chatter and Missed Keystrokes: A Field Guide to Switch Triage and Contact Cleaners"
 description: "Diagnose and repair mechanical keyboard key chatter and dropped keystrokes using targeted contact cleaner flushes and leaf recalibration."
 publishDate: 2026-10-13T09:45:00.000Z
-image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&h=630&q=85"
+image: "/images/tech-photo/tech-photo (21).jpg"
 category: "Hardware"
 tags: ["Tech", "Troubleshooting", "Hardware"]
 theme: "Nordic Clean Ice"

@@ -2,7 +2,7 @@
 title: "Wolny start Windows 10? Wyłącz programy startowe w 1 minutę"
 description: "Twój komputer włącza się wieki? Sprawdź, jak błyskawicznie oczyścić autostart w Windows 10 i przyspieszyć uruchomienie systemu w 60 sekund."
 publishDate: 2026-10-16T19:45:00.000Z
-image: "https://picsum.photos/seed/tech643/900/600"
+image: "/images/tech-photo/tech-photo (17).jpg"
 category: 'tech'
 tags: ["Windows 10", "Optymalizacja", "IT", "Wydajność", "Poradnik"]
 theme: "Teal Matrix Digital"

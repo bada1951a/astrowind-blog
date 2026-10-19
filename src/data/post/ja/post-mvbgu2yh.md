@@ -2,7 +2,7 @@
 title: "Windows 11のタスクバーが突然フリーズしてクリックできない時の即効対処法"
 description: "渋谷のオフィスで納品直前にWindows 11のタスクバーが固まった！エクスプローラーの再起動から根本的な解決策まで、現役エンジニアが現場で使える手順を徹底解説。"
 publishDate: 2026-10-16T11:00:00.000Z
-image: "https://picsum.photos/seed/tech528/900/600"
+image: "/images/tech-photo/tech-photo (19).jpg"
 category: 'tech'
 tags: ["Windows11", "Troubleshooting", "Productivity", "ITSupport"]
 theme: "Teal Matrix Digital"

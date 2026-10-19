@@ -2,7 +2,7 @@
 title: "Windows 11が重い？バックグラウンドアプリと視覚効果をサクッと最適化して爆速にする方法"
 description: "丸の内のオフィスでプレゼン直前なのにPCがフリーズ！Windows 11の重さを解消するバックグラウンドアプリの停止と視覚効果の最適化手順を分かりやすく解説します。"
 publishDate: 2026-10-15T11:00:00.000Z
-image: "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=1200&auto=format&fit=crop&q=80"
+image: "/images/tech-photo/tech-photo (39).jpg"
 category: "PCトラブル解決"
 tags: ["Windows11", "動作が重い", "PC最適化", "仕事効率化"]
 theme: "Pastel Lavender Tech"

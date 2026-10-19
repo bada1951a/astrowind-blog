@@ -2,7 +2,7 @@
 title: "Windows 10 Slow Boot: Disable Startup Programs in 1 Minute"
 description: "Fix a sluggish Windows 10 boot time in under 60 seconds before your next NYC corporate sync using this quick startup app cleanup guide."
 publishDate: 2026-10-16T09:45:00.000Z
-image: "https://picsum.photos/seed/tech59/900/600"
+image: "/images/tech-photo/tech-photo (5).jpg"
 category: 'tech'
 tags: ["Windows 10", "PC Performance", "Productivity", "IT Guide"]
 theme: "High-Contrast Charcoal"

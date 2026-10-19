@@ -2,7 +2,7 @@
 title: "Windows 11 update vast op 100 procent? Zo los je de cache-map direct op"
 description: "Ervaar je acute prestatieproblemen op de tech campus in Eindhoven of Amsterdam? Zo los je een vastgelopen Windows 11 update op door de cache-map te resetten."
 publishDate: 2026-10-18T18:30:00.000Z
-image: "https://picsum.photos/seed/tech298/900/600"
+image: "/images/tech-photo/tech-photo (18).jpg"
 category: 'tech'
 tags: ["Windows 11", "Troubleshooting", "IT Support", "Systeembeheer"]
 theme: "Acid Lime Hacker Space"

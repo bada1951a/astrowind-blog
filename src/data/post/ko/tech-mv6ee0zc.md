@@ -2,7 +2,7 @@
 title: "기계식 키보드 채터링 및 키 씹힘 완벽 해결 가이드: 접점 부활제 실무 정비 프로토콜"
 description: "기계식 키보드 채터링(중복 입력)과 씹힘 현상의 하드웨어 회로 원인을 규명하고, BW-100 접점 부활제를 활용한 정밀 세척 및 핫스왑 수리 공정을 다룹니다."
 publishDate: 2026-10-13T08:30:00.000Z
-image: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=1200&h=675&q=85"
+image: "/images/tech-photo/tech-photo (12).jpg"
 category: 'tech'
 tags: ["Tech", "Troubleshooting", "Hardware"]
 theme: "Industrial Blueprint"

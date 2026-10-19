@@ -2,7 +2,7 @@
 title: "C-Laufwerk voll? So löschst du versteckte temporäre Dateien unter Windows richtig"
 description: "Roter Balken im Explorer mitten im Frankfurter Büroalltag? Erfahre, wie du unsichtbare Temp-Dateien restlos entfernst und dein System rettest."
 publishDate: 2026-10-15T12:15:00.000Z
-image: "https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?auto=format&fit=crop&w=1200&h=675&q=85"
+image: "/images/tech-photo/tech-photo (39).jpg"
 category: 'tech'
 tags: ["Windows", "C-Laufwerk", "Speicherplatz", "Troubleshooting", "Frankfurt"]
 theme: "High-Contrast Charcoal"

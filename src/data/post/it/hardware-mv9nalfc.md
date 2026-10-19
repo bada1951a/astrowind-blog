@@ -2,7 +2,7 @@
 title: "Disco C Pieno e Crash improvvisi: Guida Definitiva per Cancellare i File Temporanei"
 description: "Risolvi l'emergenza di Windows bloccato per spazio esaurito sul disco C. Guida pratica dal banco di lavoro per eliminare file temporanei e spazzatura in sicurezza."
 publishDate: 2026-10-15T16:00:00.000Z
-image: "https://picsum.photos/seed/hardware345/900/600"
+image: "/images/tech-photo/tech-photo (4).jpg"
 category: "Hardware"
 tags: ["PC", "Hardware", "Troubleshooting", "Windows", "Manutenzione"]
 theme: "Midnight Navy Royal"

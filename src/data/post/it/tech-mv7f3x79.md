@@ -2,7 +2,7 @@
 title: "Monitor Esterno su Laptop: Risolvere Assenza di Segnale e Sfarfallio con il Reset dei Driver Grafici"
 description: "Guida tecnica sistemistica per eliminare sfarfallio e schermo nero su laptop multimonitor tramite diagnosi hardware e reinstallazione pulita dei driver."
 publishDate: 2026-10-14T16:00:00.000Z
-image: "https://images.unsplash.com/photo-1614064641938-3bbee52942c7?auto=format&fit=crop&w=1200&h=630&q=85"
+image: "/images/tech-photo/tech-photo (3).jpg"
 category: "Hardware"
 tags: ["Tech", "Troubleshooting", "Hardware"]
 theme: "Nordic Clean Ice"

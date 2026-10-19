@@ -2,7 +2,7 @@
 title: "Resolvendo a Tela Azul 0x0000000a: Diagnóstico de Memória e Reversão de Driver"
 description: "Guia prático para resolver o erro crítico de tela azul 0x0000000a em estações de trabalho de alta performance."
 publishDate: 2026-10-17T17:15:00.000Z
-image: "https://picsum.photos/seed/tech918/900/600"
+image: "/images/tech-photo/tech-photo (17).jpg"
 category: 'tech'
 tags: ["Windows", "Hardware", "Drivers", "Suporte TI"]
 theme: "Industrial Blueprint"

@@ -2,7 +2,7 @@
 title: "Windows 11 Update Tertahan di 100 Persen: Cara Bersihkan Folder Cache"
 description: "Panduan praktis mengatasi Windows 11 update yang nyangkut di 100 persen dengan cara mereset folder cache sistem secara aman."
 publishDate: 2026-10-18T21:00:00.000Z
-image: "https://picsum.photos/seed/tech444/900/600"
+image: "/images/tech-photo/tech-photo (17).jpg"
 category: 'tech'
 tags: ["Windows 11", "Troubleshooting", "IT Support", "Software Update"]
 theme: "Rosewood Hardware Guide"

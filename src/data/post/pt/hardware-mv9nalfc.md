@@ -2,7 +2,7 @@
 title: "Como resolver o erro de espaço insuficiente no C e apagar arquivos temporários"
 description: "Aprenda a liberar espaço no drive C limpando arquivos temporários e resolvendo o erro de leitura em SSD NVMe externo no escritório."
 publishDate: 2026-10-15T17:15:00.000Z
-image: "https://picsum.photos/seed/hardware418/900/600"
+image: "/images/tech-photo/tech-photo (35).jpg"
 category: "Hardware"
 tags: ["Windows", "SSD", "Manutencao", "DicasPC"]
 theme: "Sandstone Desert Minimal"

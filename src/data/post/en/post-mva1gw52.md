@@ -2,7 +2,7 @@
 title: "Fix Windows 11 C Drive Full: Safe Temp File Deletion Guide"
 description: "Recover massive storage space on Windows 11. Learn how to safely delete temp files and fix a full C drive before your next big deadline."
 publishDate: 2026-10-15T09:45:00.000Z
-image: "https://picsum.photos/seed/tech760/900/600"
+image: "/images/tech-photo/tech-photo (2).jpg"
 category: 'tech'
 tags: ["Windows 11", "Storage", "IT Support", "Troubleshooting"]
 theme: "Industrial Blueprint"

@@ -2,7 +2,7 @@
 title: "Windows 11 C-schijf vol? Zo ruim je tijdelijke bestanden veilig op"
 description: "Ervaar je acute prestatieproblemen op je C-schijf vanuit ons tech-kantoor in Amsterdam of Eindhoven? Leer hoe je snel en veilig temp-bestanden opruimt."
 publishDate: 2026-10-15T18:30:00.000Z
-image: "https://picsum.photos/seed/tech271/900/600"
+image: "/images/tech-photo/tech-photo (1).jpg"
 category: 'tech'
 tags: ["Windows 11", "Schoonmaak", "IT Tips", "Prestaties"]
 theme: "Warm Coffee Latte"

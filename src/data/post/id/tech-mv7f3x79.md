@@ -2,7 +2,7 @@
 title: "Solusi Layar Blank dan Flickering Dual Monitor Laptop: Prosedur Reset Driver Standar IT Enterprise"
 description: "Panduan teknis mengatasi monitor eksternal no signal dan berkedip saat terhubung ke laptop melalui reset display driver dan kalibrasi refresh rate."
 publishDate: 2026-10-14T21:00:00.000Z
-image: "https://images.unsplash.com/photo-1629654297299-c8506221ca97?auto=format&fit=crop&w=1200&h=630&q=85"
+image: "/images/tech-photo/tech-photo (37).jpg"
 category: "Hardware"
 tags: ["Tech", "Troubleshooting", "Hardware"]
 theme: "Deep Ocean Cobalt"

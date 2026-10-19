@@ -2,7 +2,7 @@
 title: "Guia de Bancada: Eliminando Chattering e Falhas de Acionamento em Teclados Mecânicos com Limpa-Contato"
 description: "Diagnóstico técnico e reparo prático de chattering e teclas fantasmas em teclados mecânicos. Aprenda a usar limpa-contato sem danificar o PCB."
 publishDate: 2026-10-13T17:15:00.000Z
-image: "https://images.unsplash.com/photo-1517059224940-d4af9eec41b7?auto=format&fit=crop&w=1200&h=630&q=85"
+image: "/images/tech-photo/tech-photo (25).jpg"
 category: "Hardware"
 tags: ["Tech", "Troubleshooting", "Hardware"]
 theme: "Cyberpunk Terminal"

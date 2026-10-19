@@ -2,7 +2,7 @@
 title: "メカニカルキーボードのチャタリング・入力抜けを自力で直す｜接点復活剤の正しい選定と現場直伝のメンテ術"
 description: "メカニカルキーボードの特定のキーで発生するチャタリングや入力抜け（認識不良）を根本から解決する実践ガイド。現場での接点復活剤の安全な塗布法や診断手順をエンジニア目線で解説します。"
 publishDate: 2026-10-13T11:00:00.000Z
-image: "https://images.unsplash.com/photo-1587202372775-e229f172b9d7?auto=format&fit=crop&w=1200&h=630&q=85"
+image: "/images/tech-photo/tech-photo (29).jpg"
 category: "Hardware"
 tags: ["Tech", "Troubleshooting", "Hardware"]
 theme: "Dracula Purple Dev"

@@ -2,7 +2,7 @@
 title: "Blocage de Windows 11 à 100 pourcent : Comment vider le dossier SoftwareDistribution"
 description: "Votre mise à jour Windows 11 est bloquée à 100 pourcent en plein sprint ? Guide pratique pour nettoyer le cache et relancer le système."
 publishDate: 2026-10-18T13:30:00.000Z
-image: "https://picsum.photos/seed/tech6/900/600"
+image: "/images/tech-photo/tech-photo (30).jpg"
 category: 'tech'
 tags: ["Windows 11", "Depannage IT", "Mise a jour", "Systeme", "Astuce Tech"]
 theme: "Bronze Artisan Workshop"

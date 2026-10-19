@@ -2,7 +2,7 @@
 title: "Windows 11 ronge votre PC : Comment neutraliser les applications en arrière-plan et les effets visuels superflus"
 description: "Journal de bord d'un technicien support à La Défense : comment j'ai sauvé mon PC portable avant une réunion tendue dans le TGV Paris-Lyon."
 publishDate: 2026-10-15T13:30:00.000Z
-image: "https://picsum.photos/seed/tech734/900/600"
+image: "/images/tech-photo/tech-photo (21).jpg"
 category: "tech"
 tags: ["Windows 11", "Optimisation", "Support IT", "Productivité"]
 theme: "Midnight Navy Royal"

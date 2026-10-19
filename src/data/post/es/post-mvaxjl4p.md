@@ -2,7 +2,7 @@
 title: "Windows 10 tardando una eternidad en arrancar: Desactiva los programas de inicio en 1 minuto"
 description: "Aprende a solucionar el arranque lento de Windows 10 desactivando los programas de inicio innecesarios en menos de un minuto para recuperar el rendimiento de tu PC."
 publishDate: 2026-10-16T14:45:00.000Z
-image: "https://picsum.photos/seed/tech351/900/600"
+image: "/images/tech-photo/tech-photo (13).jpg"
 category: 'tech'
 tags: ["Windows 10", "Rendimiento PC", "Optimización", "Trucos IT"]
 theme: "Pastel Lavender Tech"

@@ -2,7 +2,7 @@
 title: "Windows 10 Lento na Inicialização? Como Desativar Programas de Inicialização em 1 Minuto"
 description: "Resolva a lentidão do Windows 10 no hub de tecnologia em São Paulo com um guia prático para desativar programas de inicialização rapidamente."
 publishDate: 2026-10-16T17:15:00.000Z
-image: "https://picsum.photos/seed/tech497/900/600"
+image: "/images/tech-photo/tech-photo (14).jpg"
 category: 'tech'
 tags: ["Windows 10", "Produtividade", "Otimizacao", "TI", "Dicas Tech"]
 theme: "High-Contrast Charcoal"

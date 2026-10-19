@@ -2,7 +2,7 @@
 title: "Windows 11のCドライブ容量不足を安全に解消！一時ファイルを一掃する完全ガイド"
 description: "渋谷のオフィスでプロジェクト納品直前にCドライブが突然パンク！安全かつ確実な一時ファイルの削除方法と、容量不足を根本から防ぐ設定手順を現役エンジニアが徹底解説。"
 publishDate: 2026-10-15T11:00:00.000Z
-image: "https://picsum.photos/seed/tech833/900/600"
+image: "/images/tech-photo/tech-photo (18).jpg"
 category: 'tech'
 tags: ["Windows11", "Cドライブ容量不足", "一時ファイル", "トラブルシューティング", "ITエンジニア"]
 theme: "Rosewood Hardware Guide"

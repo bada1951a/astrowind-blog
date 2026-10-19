@@ -2,7 +2,7 @@
 title: "Help, een Blauw Scherm! Zo los je STOP 0x0000000a op in Amsterdam"
 description: "Er is niets zo frustrerend als een plotseling BSOD tijdens een spoedklus op onze tech campus in Amsterdam. Tijd voor een concrete fix!"
 publishDate: 2026-10-17T18:30:00.000Z
-image: "https://picsum.photos/seed/tech991/900/600"
+image: "/images/tech-photo/tech-photo (26).jpg"
 category: 'tech'
 tags: ["Windows", "Troubleshooting", "BSOD", "Geheugen", "IT Support"]
 theme: "Cobalt Enterprise Lab"

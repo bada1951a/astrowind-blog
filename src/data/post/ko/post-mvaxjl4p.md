@@ -2,7 +2,7 @@
 title: "윈도우 10 부팅 속도 개선: 1분 만에 시작 프로그램 비활성화하는 방법"
 description: "판교 IT 기업 사무실에서 겪은 부팅 지연 대란! 윈도우 10 시작 프로그램 관리로 1분 만에 부팅 속도를 극적으로 끌어올리는 실무 가이드."
 publishDate: 2026-10-16T08:30:00.000Z
-image: "https://images.unsplash.com/photo-1580927752452-89d86da3fa0a?auto=format&fit=crop&w=1200&h=675&q=85"
+image: "/images/tech-photo/tech-photo (31).jpg"
 category: 'tech'
 tags: ["Windows10", "PCOptimization", "ITTips", "Productivity"]
 theme: "Sunset Horizon Coral"

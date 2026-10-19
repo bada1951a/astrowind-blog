@@ -2,7 +2,7 @@
 title: "Monitor Sem Sinal e Tela Piscando no Notebook: Guia Técnico de Reset de Driver e Otimização"
 description: "Resolva telas piscando e erro de sem sinal no segundo monitor do notebook. Passo a passo com DDU, handshake EDID e ajustes finos de latência."
 publishDate: 2026-10-14T17:15:00.000Z
-image: "https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?auto=format&fit=crop&w=1200&h=630&q=85"
+image: "/images/tech-photo/tech-photo (33).jpg"
 category: "Hardware"
 tags: ["Hardware", "Notebook", "Monitores", "Drivers", "Troubleshooting"]
 theme: "Tokyo Neon Violet"

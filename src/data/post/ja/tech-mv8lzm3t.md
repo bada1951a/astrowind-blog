@@ -2,7 +2,7 @@
 title: "「おい、再起動が終わらんぞ」：修羅場を乗り切るITインフラエンジニア流・Windows起動爆速化の極意"
 description: "朝礼5分前、死活問題となったPCの超重起動。タスクマネージャーの肥大化と常駐アプリの闇を暴き、現場で使えるコマンドと手順で爆速化させるインフラエンジニアのリアルなトラブルシューティング録。"
 publishDate: 2026-10-14T11:00:00.000Z
-image: "https://picsum.photos/seed/tech-896/1200/630"
+image: "/images/tech-photo/tech-photo (10).jpg"
 category: "Hardware"
 tags: ["Windows", "Troubleshooting", "Infrastructure", "Performance Tuning"]
 theme: "High-Contrast Charcoal"

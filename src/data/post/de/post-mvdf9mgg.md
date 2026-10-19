@@ -2,7 +2,7 @@
 title: "Windows 11 Update bei 100 Prozent eingefroren? So löst du das Cache-Problem"
 description: "Hängt dein Windows 11 Update bei genau 100 Prozent fest? Erfahre, wie du den SoftwareDistribution-Cache per Terminal bereinigst und das System rettest."
 publishDate: 2026-10-18T12:15:00.000Z
-image: "https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?auto=format&fit=crop&w=1200&h=675&q=85"
+image: "/images/tech-photo/tech-photo (26).jpg"
 category: 'tech'
 tags: ["Windows 11", "Troubleshooting", "IT-Support", "Systemupdate", "BerlinTech"]
 theme: "Matte Black stealth"

@@ -2,7 +2,7 @@
 title: "Como liberar espacio en el disco C: eliminando archivos temporales en Windows"
 description: "Aprende a solucionar el problema de falta de espacio en el disco C: borrando archivos temporales y basura del sistema paso a paso."
 publishDate: 2026-10-15T14:45:00.000Z
-image: "https://picsum.photos/seed/hardware272/900/600"
+image: "/images/tech-photo/tech-photo (8).jpg"
 category: "Hardware"
 tags: ["PC", "Hardware", "Troubleshooting", "Windows", "Almacenamiento"]
 theme: "Deep Indigo System"

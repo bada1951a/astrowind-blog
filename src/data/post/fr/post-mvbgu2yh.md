@@ -2,7 +2,7 @@
 title: "Comment réparer la barre des tâches Windows 11 bloquée"
 description: "Guide expert pour résoudre le bug de la barre des tâches figée et non cliquable sous Windows 11 en plein sprint technique."
 publishDate: 2026-10-16T13:30:00.000Z
-image: "https://picsum.photos/seed/tech674/900/600"
+image: "/images/tech-photo/tech-photo (23).jpg"
 category: 'tech'
 tags: ["Windows 11", "Depannage", "Productivite", "IT Support"]
 theme: "Cobalt Enterprise Lab"

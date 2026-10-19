@@ -2,7 +2,7 @@
 title: "El PC enciende pero no da vídeo: Resurrección de RAM al estilo sysadmin"
 description: "Guía de campo de un soporte TI: Cómo revivir un PC que enciende sin vídeo limpiando y reubicando la memoria RAM como un profesional."
 publishDate: 2026-10-14T14:45:00.000Z
-image: "https://picsum.photos/seed/tech-230/1200/630"
+image: "/images/tech-photo/tech-photo (6).jpg"
 category: "Hardware"
 tags: ["SoporteTI", "Hardware", "Troubleshooting", "RAM"]
 theme: "Cyberpunk Terminal"

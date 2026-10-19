@@ -2,7 +2,7 @@
 title: "Il PC si accende ma lo schermo è nero: come resuscitare la RAM e i banchi"
 description: "Guida pratica da Ingegnere Sistemista Hardware per risolvere il problema del PC che si accende senza video a causa della RAM."
 publishDate: 2026-10-14T16:00:00.000Z
-image: "https://picsum.photos/seed/tech-303/1200/630"
+image: "/images/tech-photo/tech-photo (32).jpg"
 category: "Hardware"
 tags: ["Hardware", "Troubleshooting", "RAM", "Manutenzione"]
 theme: "Sandstone Desert Minimal"

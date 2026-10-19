@@ -2,7 +2,7 @@
 title: "Guida Sistemistica al Chattering e Mancata Risposta nei Tasti Meccanici: Diagnostica e Uso del Disossidante"
 description: "Risolvi chattering e tasti non registrati sulla tastiera meccanica. Analisi hardware, test firmware e protocollo con disossidante per contatti a secco."
 publishDate: 2026-10-13T16:00:00.000Z
-image: "https://images.unsplash.com/photo-1629654297299-c8506221ca97?auto=format&fit=crop&w=1200&h=630&q=85"
+image: "/images/tech-photo/tech-photo (24).jpg"
 category: "Hardware"
 tags: ["Tech", "Troubleshooting", "Hardware"]
 theme: "Mint Fresh Engineering"

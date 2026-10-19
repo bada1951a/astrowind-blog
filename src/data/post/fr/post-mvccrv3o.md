@@ -2,7 +2,7 @@
 title: "Erreur 0x0000000a : Guide de survie pour sauver votre sprint en plein cœur de Paris"
 description: "Éliminez l'écran bleu 0x0000000a grâce à un diagnostic mémoire rigoureux et un retour arrière de pilote maîtrisé en bureau parisien."
 publishDate: 2026-10-17T13:30:00.000Z
-image: "https://picsum.photos/seed/tech699/900/600"
+image: "/images/tech-photo/tech-photo (36).jpg"
 category: 'tech'
 tags: ["Windows", "BlueScreen", "Hardware", "Depannage", "DevOps"]
 theme: "High-Contrast Charcoal"

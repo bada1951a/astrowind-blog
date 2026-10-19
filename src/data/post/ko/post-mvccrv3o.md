@@ -2,7 +2,7 @@
 title: "블루스크린 0x0000000a 완벽 해결 가이드: 메모리 진단부터 드라이버 롤백까지"
 description: "판교 IT 기업 실무 현장에서 겪은 블루스크린 IRQL_NOT_LESS_OR_EQUAL 에러의 원인 분석과 메모리 진단, 드라이버 롤백을 통한 즉각적인 시스템 복구 가이드."
 publishDate: 2026-10-17T08:30:00.000Z
-image: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=1200&h=675&q=85"
+image: "/images/tech-photo/tech-photo (3).jpg"
 category: 'tech'
 tags: ["BlueScreen", "WindowsTroubleshooting", "MemoryDiagnostic", "DriverRollback", "ITSupport"]
 theme: "Deep Ocean Cobalt"

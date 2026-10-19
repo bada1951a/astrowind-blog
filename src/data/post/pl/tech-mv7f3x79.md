@@ -2,7 +2,7 @@
 title: "Brak sygnału i migotanie monitora w laptopie: Zaawansowana naprawa sterowników i rejestru"
 description: "Praktyczny przewodnik inżyniera IT: diagnoza konfliktów WDDM, analiza identyfikatorów Hardware ID oraz czyszczenie rejestru EDID przy problemach z dwoma monitorami."
 publishDate: 2026-10-14T19:45:00.000Z
-image: "https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?auto=format&fit=crop&w=1200&h=630&q=85"
+image: "/images/tech-photo/tech-photo (21).jpg"
 category: "Hardware"
 tags: ["Tech", "Troubleshooting", "Hardware"]
 theme: "Deep Indigo System"

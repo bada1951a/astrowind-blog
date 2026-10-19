@@ -2,7 +2,7 @@
 title: "Windows 10 trage opstart: Schakel opstartprogramma's uit in 1 minuut"
 description: "Los een trage Windows 10 opstart direct op. Stop achtergrondprocessen en versnel je pc op de tech campus in Eindhoven of Amsterdam binnen 60 seconden."
 publishDate: 2026-10-16T18:30:00.000Z
-image: "https://picsum.photos/seed/tech570/900/600"
+image: "/images/tech-photo/tech-photo (19).jpg"
 category: 'tech'
 tags: ["Windows10", "PCVersnellen", "ITTips", "Productiviteit"]
 theme: "Steel Silver Metallic"

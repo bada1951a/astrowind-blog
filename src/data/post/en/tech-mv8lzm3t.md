@@ -2,7 +2,7 @@
 title: "Exorcising the Startup Bloat: Why Your Work Rig Boots Like a 56k Modem"
 description: "A senior systems engineer's field guide to ruthlessly purging startup bloatware, reclaiming I/O throughput, and fixing sluggish boot times."
 publishDate: 2026-10-14T09:45:00.000Z
-image: "https://picsum.photos/seed/tech-823/1200/630"
+image: "/images/tech-photo/tech-photo (36).jpg"
 category: "Hardware"
 tags: ["Tech", "Troubleshooting", "Hardware", "Performance"]
 theme: "Cyberpunk Terminal"

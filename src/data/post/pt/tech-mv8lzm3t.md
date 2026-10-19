@@ -2,7 +2,7 @@
 title: "O PC tá demorando mais que estagiário pra ligar? Guia de sobrevivência e auditoria de boot"
 description: "Sua máquina virou uma carroça para iniciar? Relatório de bancada com o passo a passo definitivo para limpar o Windows sem formatar."
 publishDate: 2026-10-14T17:15:00.000Z
-image: "https://picsum.photos/seed/tech-261/1200/630"
+image: "/images/tech-photo/tech-photo (38).jpg"
 category: "Hardware"
 tags: ["Windows", "Otimização", "Suporte TI", "Hardware"]
 theme: "Cobalt Enterprise Lab"

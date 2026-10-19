@@ -2,7 +2,7 @@
 title: "Mẹo xử lý máy tính khởi động rùa bò: Cẩm nang thực chiến cứu nguy deadline"
 description: "Hướng dẫn thực chiến từ kỹ sư IT cách dọn dẹp Startup, tối ưu tốc độ boot máy tính Windows cực nhanh và hiệu quả cho dân văn phòng."
 publishDate: 2026-10-14T22:15:00.000Z
-image: "https://picsum.photos/seed/tech-553/1200/630"
+image: "/images/tech-photo/tech-photo (24).jpg"
 category: "Hardware"
 tags: ["Tech", "Troubleshooting", "Hardware"]
 theme: "Pure Titanium Clean"

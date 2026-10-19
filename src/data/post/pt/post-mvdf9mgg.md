@@ -2,7 +2,7 @@
 title: "Windows 11 Travado em 100 porcento na Atualizacao: Como Resolver limpando o Cache"
 description: "Resolva o Windows 11 travado em 100 porcento na atualizacao reiniciando a pasta SoftwareDistribution com este guia pratico direto de Sao Paulo."
 publishDate: 2026-10-18T17:15:00.000Z
-image: "https://picsum.photos/seed/tech225/900/600"
+image: "/images/tech-photo/tech-photo (7).jpg"
 category: 'tech'
 tags: ["Windows 11", "Suporte TI", "Dicas de Tecnologia", "Produtividade"]
 theme: "Graphite Technical Paper"

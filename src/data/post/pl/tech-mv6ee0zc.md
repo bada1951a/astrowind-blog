@@ -2,7 +2,7 @@
 title: "Jak naprawić chattering i zacinające się klawisze w klawiaturze mechanicznej: Praktyczny poradnik DIY"
 description: "Praktyczny poradnik IT: diagnostyka chatteringu, usuwanie podwójnego kliku i bezpieczna regeneracja switchy preparatem do styków bez lutowania."
 publishDate: 2026-10-13T19:45:00.000Z
-image: "https://images.unsplash.com/photo-1591488320449-011701bb6704?auto=format&fit=crop&w=1200&h=630&q=85"
+image: "/images/tech-photo/tech-photo (7).jpg"
 category: "Hardware"
 tags: ["Tech", "Troubleshooting", "Hardware"]
 theme: "Sunset Horizon Coral"

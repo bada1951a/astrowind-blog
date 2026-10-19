@@ -2,7 +2,7 @@
 title: "윈도우 11 업데이트 100% 무한 멈춤 현상 완벽 해결 방법: 캐시 폴더 초기화의 모든 것"
 description: "서울/판교 IT 기업 실무에서 겪은 윈도우 11 업데이트 100% 멈춤 현상. SoftwareDistribution 캐시 초기화로 단 5분 만에 해결하는 실전 가이드입니다."
 publishDate: 2026-10-18T08:30:00.000Z
-image: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=1200&h=675&q=85"
+image: "/images/tech-photo/tech-photo (8).jpg"
 category: 'tech'
 tags: ["Windows11", "Troubleshooting", "ITGuide", "SystemOptimization"]
 theme: "Forest Emerald Bio"

@@ -2,7 +2,7 @@
 title: "Schermata Blu 0x0000000a: Come Risolvere con Diagnostica Memoria e Rollback"
 description: "Guida pratica dalla nostra azienda IT a Milano per risolvere l'errore IRQL_NOT_LESS_OR_EQUAL tramite diagnostica RAM e rollback dei driver."
 publishDate: 2026-10-17T16:00:00.000Z
-image: "https://picsum.photos/seed/tech845/900/600"
+image: "/images/tech-photo/tech-photo (8).jpg"
 category: 'tech'
 tags: ["Windows", "Hardware", "Troubleshooting", "Driver", "Milano"]
 theme: "Bronze Artisan Workshop"

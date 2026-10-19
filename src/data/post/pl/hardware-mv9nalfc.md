@@ -2,7 +2,7 @@
 title: "Brak miejsca na dysku C? Jak bezpiecznie usunąć ukryte pliki tymczasowe w Windows"
 description: "Walczysz z czerwoną ikoną dysku C w warszawskim biurowcu? Oto szybki przewodnik jak odzyskać dziesiątki gigabajtów."
 publishDate: 2026-10-15T19:45:00.000Z
-image: "https://picsum.photos/seed/hardware564/900/600"
+image: "/images/tech-photo/tech-photo (9).jpg"
 category: "Hardware"
 tags: ["Windows", "Dysk C", "Optymalizacja", "Poradnik PC"]
 theme: "Cyberpunk Terminal"

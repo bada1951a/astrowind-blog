@@ -2,7 +2,7 @@
 title: "Panik Jam 5 Sore: PC Nyala tapi Layar Gelap, Masalah RAM Langsung Beres"
 description: "Pengalaman nyata teknisi IT menghadapi PC kantor nyala tapi monitor no signal. Bongkar trik bersihin RAM dan cek slot ala hacker hardware!"
 publishDate: 2026-10-14T21:00:00.000Z
-image: "https://picsum.photos/seed/tech-595/1200/630"
+image: "/images/tech-photo/tech-photo (23).jpg"
 category: "Hardware"
 tags: ["IT Support", "Troubleshooting PC", "RAM Kotor", "Hardware Maintenance"]
 theme: "Acid Lime Hacker Space"

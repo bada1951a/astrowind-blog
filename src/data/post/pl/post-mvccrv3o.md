@@ -2,7 +2,7 @@
 title: "Walka z BSoD 0x0000000a: Diagnostyka pamięci i cofanie sterowników w praktyce"
 description: "Poradnik administratora: jak szybko zdiagnozować błąd Blue Screen 0x0000000a, przetestować pamięć RAM i bezpiecznie cofnąć feralny sterownik."
 publishDate: 2026-10-17T19:45:00.000Z
-image: "https://picsum.photos/seed/tech64/900/600"
+image: "/images/tech-photo/tech-photo (37).jpg"
 category: 'tech'
 tags: ["Windows", "BSoD", "Diagnostyka", "Administrator", "Hardware"]
 theme: "Deep Indigo System"

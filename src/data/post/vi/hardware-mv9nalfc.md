@@ -2,7 +2,7 @@
 title: "Sửa lỗi ổ cứng ngoài không nhận và dọn sạch ổ C đầy dung lượng tại văn phòng TP.HCM"
 description: "Mẹo thực chiến khắc phục nhanh lỗi ổ cứng ngoài không nhận trước giờ họp ở TP.HCM và cách dọn sạch file rác ổ C chỉ trong 3 bước."
 publishDate: 2026-10-15T22:15:00.000Z
-image: "https://picsum.photos/seed/hardware710/900/600"
+image: "/images/tech-photo/tech-photo (36).jpg"
 category: "Hardware"
 tags: ["PC", "Hardware", "Troubleshooting", "Windows", "Ho Chi Minh City"]
 theme: "Midnight Navy Royal"

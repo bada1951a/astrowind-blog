@@ -2,7 +2,7 @@
 title: "Rechner braucht ewig zum Hochfahren? Autostart-Müll endlich radikal aussortieren"
 description: "Der PC kriecht beim Booten? Als Admin zeige ich dir, wie du den Autostart und Task-Manager kompromisslos aufräumst und die Kiste wieder flottmachst."
 publishDate: 2026-10-14T12:15:00.000Z
-image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1200&h=675&q=85"
+image: "/images/tech-photo/tech-photo (16).jpg"
 category: 'tech'
 tags: ["Tech", "Troubleshooting", "Hardware"]
 theme: "Pure Titanium Clean"

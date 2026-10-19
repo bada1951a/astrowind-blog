@@ -2,7 +2,7 @@
 title: "Como Corrigir a Barra de Tarefas do Windows 11 Travada e Sem Responder"
 description: "Guia prático para resolver o travamento da barra de tarefas do Windows 11 rapidamente. Métodos testados direto do nosso hub em São Paulo."
 publishDate: 2026-10-16T17:15:00.000Z
-image: "https://picsum.photos/seed/tech893/900/600"
+image: "/images/tech-photo/tech-photo (10).jpg"
 category: 'tech'
 tags: ["Windows 11", "Produtividade", "Suporte TI", "Dicas de Tecnologia"]
 theme: "Deep Ocean Cobalt"

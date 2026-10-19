@@ -2,7 +2,7 @@
 title: "Windows 10 Start stoppen: Autostart aufräumen in unter einer Minute"
 description: "Dein Windows 10 Laptop braucht ewig zum Hochfahren vor dem nächsten Rollout? So entrümpelst du den Autostart blitzschnell im Berliner Tech-Hub."
 publishDate: 2026-10-16T12:15:00.000Z
-image: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=1200&h=675&q=85"
+image: "/images/tech-photo/tech-photo (18).jpg"
 category: 'tech'
 tags: ["Windows 10", "Performance", "Autostart", "IT-Tipps", "Produktivität"]
 theme: "Warm Coffee Latte"

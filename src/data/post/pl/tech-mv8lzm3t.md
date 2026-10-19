@@ -2,7 +2,7 @@
 title: "Mój lapek wstawał dłużej niż ja w poniedziałek: Jak opanowałem chaos w autostarcie"
 description: "Prawdziwy manual inżyniera IT: bez litości czścimy autostart Windowsa i przywracamy maszyny do żywych."
 publishDate: 2026-10-14T19:45:00.000Z
-image: "https://picsum.photos/seed/tech-407/1200/630"
+image: "/images/tech-photo/tech-photo (23).jpg"
 category: "Hardware"
 tags: ["Tech", "Troubleshooting", "Windows", "Autostart"]
 theme: "Crimson Emergency Field"

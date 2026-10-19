@@ -2,7 +2,7 @@
 title: "Nhật Ký Xử Lý Sự Cố Ca Đêm: Khắc Phục Triệt Để Phím Cơ Bị Chattering Và Nuốt Phím Bằng Chai Phục Hồi Tiếp Điểm"
 description: "Cẩm nang chuyên sâu xử lý lỗi bàn phím cơ bị double phím hoặc liệt nút bằng dung dịch phục hồi tiếp điểm chuyên dụng từ kinh nghiệm IT Helpdesk ca đêm."
 publishDate: 2026-10-13T22:15:00.000Z
-image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&h=630&q=85"
+image: "/images/tech-photo/tech-photo (5).jpg"
 category: "Hardware"
 tags: ["Tech", "Troubleshooting", "Hardware"]
 theme: "Midnight Navy Royal"

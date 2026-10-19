@@ -2,7 +2,7 @@
 title: "Cómo solucionar la barra de tareas de Windows 11 congelada y sin respuesta"
 description: "Guía práctica de un especialista en IT para revivir la barra de tareas de Windows 11 en tu oficina de Barcelona o Madrid sin formatear."
 publishDate: 2026-10-16T14:45:00.000Z
-image: "https://picsum.photos/seed/tech747/900/600"
+image: "/images/tech-photo/tech-photo (12).jpg"
 category: 'tech'
 tags: ["Windows 11", "Productividad", "Soporte IT", "Trucos Windows"]
 theme: "Modern Minimalist Slate"

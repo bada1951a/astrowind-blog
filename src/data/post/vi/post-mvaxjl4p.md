@@ -2,7 +2,7 @@
 title: "Khắc phục lỗi Windows 10 khởi động chậm: Tắt ứng dụng khởi động ngầm trong 1 phút"
 description: "Hướng dẫn thực chiến từ chuyên gia IT tại Hà Nội giúp xử lý dứt điểm tình trạng Windows 10 khởi động chậm, tối ưu hiệu năng chỉ trong 1 phút."
 publishDate: 2026-10-16T22:15:00.000Z
-image: "https://picsum.photos/seed/tech789/900/600"
+image: "/images/tech-photo/tech-photo (34).jpg"
 category: 'tech'
 tags: ["Windows 10", "Tối ưu hóa", "Thủ thuật IT", "Hiệu năng", "Dracula Dev"]
 theme: "Dracula Purple Dev"

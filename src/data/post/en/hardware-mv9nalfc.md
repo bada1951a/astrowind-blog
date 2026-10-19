@@ -2,7 +2,7 @@
 title: "Stop C Drive Panic: How to Purge Hidden Temporary Files Like a Silicon Valley Pro"
 description: "Running out of C drive space right before a major project handoff? Here is how to safely hunt down and delete hidden temp files in Windows."
 publishDate: 2026-10-15T09:45:00.000Z
-image: "https://picsum.photos/seed/hardware980/900/600"
+image: "/images/tech-photo/tech-photo (30).jpg"
 category: "Hardware"
 tags: ["PC", "Hardware", "Troubleshooting", "Windows", "Storage"]
 theme: "Dark Velvet Obsidian"

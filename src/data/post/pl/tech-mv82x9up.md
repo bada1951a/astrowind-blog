@@ -2,7 +2,7 @@
 title: "Czarna mafia w biurze, czyli dlaczego komputer wstaje bez monitora i jak zmusić RAM do współpracy"
 description: "Prawdziwa historia polskiego inżyniera IT o reanimacji zgliszczy: jak domowymi sposobami uleczyć martwy ekran, gdy pamięć RAM łapie fochy."
 publishDate: 2026-10-14T19:45:00.000Z
-image: "https://picsum.photos/seed/tech-522/1200/630"
+image: "/images/tech-photo/tech-photo (28).jpg"
 category: "Hardware"
 tags: ["IT Support", "Hardware", "RAM", "Troubleshooting", "Warszawa"]
 theme: "Warm Coffee Latte"

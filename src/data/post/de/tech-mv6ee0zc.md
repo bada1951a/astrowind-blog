@@ -2,7 +2,7 @@
 title: "Tasten-Chattering und Aussetzer beheben: Sysadmin-Leitfaden zur Reparatur mechanischer Tastaturen"
 description: "Mechanische Tastatur prellt oder schluckt Tastenanschläge? Praxiserprobte Anleitung zur Switch-Diagnose und Instandsetzung mittels Kontaktreiniger."
 publishDate: 2026-10-13T12:15:00.000Z
-image: "https://images.unsplash.com/photo-1587202372775-e229f172b9d7?auto=format&fit=crop&w=1200&h=675&q=85"
+image: "/images/tech-photo/tech-photo (19).jpg"
 category: 'tech'
 tags: ["Hardware", "Troubleshooting", "Mechanische Tastatur", "Peripherie"]
 theme: "Midnight Navy Royal"

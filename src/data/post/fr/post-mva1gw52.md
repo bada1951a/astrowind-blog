@@ -2,7 +2,7 @@
 title: "Windows 11 saturé : Comment nettoyer le lecteur C et purger les fichiers temporaires"
 description: "Guide pratique pour libérer de l'espace sur votre lecteur C sous Windows 11 en toute sécurité lors d'un sprint critique."
 publishDate: 2026-10-15T13:30:00.000Z
-image: "https://picsum.photos/seed/tech979/900/600"
+image: "/images/tech-photo/tech-photo (28).jpg"
 category: 'tech'
 tags: ["Windows 11", "Nettoyage", "Stockage", "Optimisation"]
 theme: "Pastel Lavender Tech"

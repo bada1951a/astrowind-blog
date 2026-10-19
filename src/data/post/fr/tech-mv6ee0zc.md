@@ -2,7 +2,7 @@
 title: "Dépannage matériel : Corriger le chattering et les ratés d'un clavier mécanique"
 description: "Guide d'ingénieur pour réparer le rebond de touche (chattering) et les faux contacts sur clavier mécanique grâce au nettoyant contact diélectrique."
 publishDate: 2026-10-13T13:30:00.000Z
-image: "https://images.unsplash.com/photo-1563770660941-20978e870e26?auto=format&fit=crop&w=1200&h=630&q=85"
+image: "/images/tech-photo/tech-photo (37).jpg"
 category: "Hardware"
 tags: ["Tech", "Troubleshooting", "Hardware"]
 theme: "Pure Titanium Clean"

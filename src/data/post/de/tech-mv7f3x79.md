@@ -2,7 +2,7 @@
 title: "Kein Signal & Bildschirmflackern am Laptop-Zweitmonitor: Der ultimative Guide zur Treiber-Wiederherstellung"
 description: "Schluss mit schwarzem Bildschirm und Flackern bei Multi-Monitor-Setups. Ein Sysadmin zeigt Schritt für Schritt, wie Sie Grafiktreiber sauber zurücksetzen."
 publishDate: 2026-10-14T12:15:00.000Z
-image: "https://images.unsplash.com/photo-1591488320449-011701bb6704?auto=format&fit=crop&w=1200&h=675&q=85"
+image: "/images/tech-photo/tech-photo (25).jpg"
 category: 'tech'
 tags: ["Tech", "Troubleshooting", "Hardware"]
 theme: "Dracula Purple Dev"

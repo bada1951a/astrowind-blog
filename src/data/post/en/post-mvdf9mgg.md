@@ -2,7 +2,7 @@
 title: "Fix Windows 11 Update Stuck at 100 Percent: Reset Cache Folder"
 description: "Quickly fix a Windows 11 update stuck at 100 percent by stopping Windows Update services and resetting the SoftwareDistribution cache folder."
 publishDate: 2026-10-18T09:45:00.000Z
-image: "https://picsum.photos/seed/tech787/900/600"
+image: "/images/tech-photo/tech-photo (34).jpg"
 category: 'tech'
 tags: ["Windows11", "Troubleshooting", "ITSupport", "TechTips"]
 theme: "Electric Cyan Speed"

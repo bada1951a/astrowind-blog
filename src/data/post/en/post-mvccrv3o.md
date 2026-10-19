@@ -2,7 +2,7 @@
 title: "Fixing Blue Screen 0x0000000a: A Silicon Valley Tech Guide to Memory Diagnostics and Driver Rollbacks"
 description: "Resolve Windows Stop Code 0x0000000a like a pro. Step-by-step troubleshooting for memory corruption and faulty drivers before your next deadline."
 publishDate: 2026-10-17T09:45:00.000Z
-image: "https://picsum.photos/seed/tech480/900/600"
+image: "/images/tech-photo/tech-photo (22).jpg"
 category: 'tech'
 tags: ["Windows", "BlueScreen", "Troubleshooting", "SiliconValley", "ITSupport"]
 theme: "Pastel Lavender Tech"

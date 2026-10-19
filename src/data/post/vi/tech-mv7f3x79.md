@@ -2,7 +2,7 @@
 title: "Khắc Phục Triệt Để Lỗi Laptop Không Nhận Màn Hình Phụ Và Chớp Nháy: Quy Trình QA Lab Doanh Nghiệp"
 description: "Hướng dẫn kỹ thuật chuyên sâu xử lý lỗi No Signal và màn hình phụ nhấp nháy khi kết nối laptop. Phân tích nguyên nhân và quy trình reset driver chuẩn IT Lab."
 publishDate: 2026-10-14T22:15:00.000Z
-image: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?auto=format&fit=crop&w=1200&h=630&q=85"
+image: "/images/tech-photo/tech-photo (4).jpg"
 category: "Hardware"
 tags: ["Tech", "Troubleshooting", "Hardware"]
 theme: "Cobalt Enterprise Lab"

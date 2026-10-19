@@ -2,7 +2,7 @@
 title: "Panduan Teknisi: Mengatasi Keyboard Mekanikal Chattering dan Miss-Click Menggunakan Contact Cleaner"
 description: "Solusi mandiri mengatasi keyboard mekanikal double-click (chattering) dan tombol tidak merespons menggunakan contact cleaner secara aman dan efektif."
 publishDate: 2026-10-13T21:00:00.000Z
-image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&h=630&q=85"
+image: "/images/tech-photo/tech-photo (14).jpg"
 category: "Hardware"
 tags: ["Keyboard Mekanikal", "Troubleshooting", "Hardware", "DIY Repair"]
 theme: "Sandstone Desert Minimal"

@@ -2,7 +2,7 @@
 title: "Windows 11: Barra delle applicazioni bloccata? Ecco come risolverla"
 description: "La barra delle applicazioni di Windows 11 non risponde ai clic? Guida pratica per risolvere il blocco in pochi minuti."
 publishDate: 2026-10-16T16:00:00.000Z
-image: "https://picsum.photos/seed/tech820/900/600"
+image: "/images/tech-photo/tech-photo (22).jpg"
 category: 'tech'
 tags: ["Windows 11", "Troubleshooting", "IT Support", "Produttività"]
 theme: "Sunset Horizon Coral"

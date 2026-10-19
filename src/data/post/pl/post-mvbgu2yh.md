@@ -2,7 +2,7 @@
 title: "Jak naprawić zablokowany pasek zadań w Windows 11"
 description: "Praktyczny poradnik inżynierski: sprawdzone metody na zawieszony pasek zadań i brak reakcji na kliknięcia w Windows 11."
 publishDate: 2026-10-16T19:45:00.000Z
-image: "https://picsum.photos/seed/tech39/900/600"
+image: "/images/tech-photo/tech-photo (35).jpg"
 category: 'tech'
 tags: ["Windows 11", "IT Support", "Rozwiązywanie problemów", "Pasek zadań"]
 theme: "Graphite Technical Paper"

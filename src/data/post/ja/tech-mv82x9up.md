@@ -2,7 +2,7 @@
 title: "「ファンは回るのに画面が暗黒」…修羅場のITインフラ屋が教える、死んだRAMを生き返らせる禁断の接点復活手順"
 description: "金曜夜のデプロイ直前にPCが突然の画面ブラックアウト。通電するのにPOSTすら通過しない恐怖の「RAM接触不良」を、現場のノウハウで秒速解決する実践的リカバリ手順を徹底解説。"
 publishDate: 2026-10-14T11:00:00.000Z
-image: "https://picsum.photos/seed/tech-11/1200/630"
+image: "/images/tech-photo/tech-photo (15).jpg"
 category: "Hardware"
 tags: ["ITインフラ", "トラブルシューティング", "RAM", "ハードウェア保守"]
 theme: "Teal Matrix Digital"

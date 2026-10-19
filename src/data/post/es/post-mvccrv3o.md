@@ -2,7 +2,7 @@
 title: "Cómo solucionar el pantallazo azul 0x0000000a: Diagnóstico de memoria y reversión de drivers"
 description: "Guía práctica para resolver el error IRQL_NOT_LESS_OR_EQUAL en estaciones de trabajo y entornos de desarrollo críticos."
 publishDate: 2026-10-17T14:45:00.000Z
-image: "https://picsum.photos/seed/tech772/900/600"
+image: "/images/tech-photo/tech-photo (11).jpg"
 category: 'tech'
 tags: ["Windows", "Debugging", "Hardware", "SysAdmin"]
 theme: "Dark Velvet Obsidian"

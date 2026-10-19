@@ -2,7 +2,7 @@
 title: "Fallo de señal y parpadeo en monitor dual: Guía de reconfiguración y purga de drivers"
 description: "Soluciona la pérdida de señal y parpadeos en pantallas externas conectadas a portátiles mediante análisis de circuito y reinstalación limpia de controladores."
 publishDate: 2026-10-14T14:45:00.000Z
-image: "https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?auto=format&fit=crop&w=1200&h=630&q=85"
+image: "/images/tech-photo/tech-photo (1).jpg"
 category: "Hardware"
 tags: ["Hardware", "Display", "Troubleshooting", "Windows 11"]
 theme: "Industrial Blueprint"

@@ -2,7 +2,7 @@
 title: "Blue Screen 0x0000000a beheben: RAM-Diagnose und Treiber-Rollback"
 description: "Praxisnaher Leitfaden zur schnellen Behebung des IRQL_NOT_LESS_OR_EQUAL Bluescreens im Berliner Tech-Hub vor dem Release."
 publishDate: 2026-10-17T12:15:00.000Z
-image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&h=675&q=85"
+image: "/images/tech-photo/tech-photo (27).jpg"
 category: 'tech'
 tags: ["Windows", "Bluescreen", "Troubleshooting", "Hardware", "Treiber"]
 theme: "Nordic Clean Ice"

@@ -2,7 +2,7 @@
 title: "Windows 11 bloccato al 100% durante gli aggiornamenti: Come risolvere"
 description: "Il tuo aggiornamento di Windows 11 è bloccato al 100%? Guida pratica per svuotare la cartella SoftwareDistribution e sbloccare il PC."
 publishDate: 2026-10-18T16:00:00.000Z
-image: "https://picsum.photos/seed/tech152/900/600"
+image: "/images/tech-photo/tech-photo (31).jpg"
 category: 'tech'
 tags: ["Windows 11", "Troubleshooting", "IT Support", "Risoluzione Problemi"]
 theme: "Sunset Horizon Coral"

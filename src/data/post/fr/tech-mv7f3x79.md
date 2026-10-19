@@ -2,7 +2,7 @@
 title: "Diagnostic et résolution des pannes d'affichage double écran : Absence de signal et scintillement sous Windows"
 description: "Guide technique d'ingénierie système pour diagnostiquer et réinitialiser les pilotes graphiques lors de coupures ou scintillements en double écran."
 publishDate: 2026-10-14T13:30:00.000Z
-image: "https://images.unsplash.com/photo-1579546929518-9e396f3cc809?auto=format&fit=crop&w=1200&h=630&q=85"
+image: "/images/tech-photo/tech-photo (24).jpg"
 category: "Hardware"
 tags: ["Dépannage", "Pilotes Graphiques", "Double Écran", "Windows", "Hardware"]
 theme: "Graphite Technical Paper"

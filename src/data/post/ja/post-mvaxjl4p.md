@@ -2,7 +2,7 @@
 title: "渋谷のITオフィス発：Windows 10の起動が劇的に速くなる！スタートアップ無効化の裏技"
 description: "プロジェクト納品直前の緊迫した現場で、重くなったWindows 10の起動を1分で劇的に改善するスタートアップ無効化の具体的な手順を現役エンジニアが徹底解説。"
 publishDate: 2026-10-16T11:00:00.000Z
-image: "https://picsum.photos/seed/tech132/900/600"
+image: "/images/tech-photo/tech-photo (26).jpg"
 category: 'tech'
 tags: ["Windows10", "PC高速化", "業務効率化", "トラブルシューティング"]
 theme: "Tokyo Neon Violet"

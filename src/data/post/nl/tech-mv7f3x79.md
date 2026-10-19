@@ -2,7 +2,7 @@
 title: "Laptop Tweede Scherm Knippert of Geeft Geen Signaal: Systeembeheerder Gids voor Driverherstel"
 description: "Praktische handleiding van een IT-infrastructuurspecialist voor het oplossen van 'Geen Signaal' en knipperende externe schermen via geavanceerd driverherstel."
 publishDate: 2026-10-14T18:30:00.000Z
-image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1200&h=630&q=85"
+image: "/images/tech-photo/tech-photo (27).jpg"
 category: "Hardware"
 tags: ["Tech", "Troubleshooting", "Hardware"]
 theme: "Midnight Navy Royal"

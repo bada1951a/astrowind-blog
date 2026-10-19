@@ -2,7 +2,7 @@
 title: "Cứu ngay ổ C Windows 11 đỏ rực: Dọn file rác an toàn không sợ lỗi hệ thống"
 description: "Hướng dẫn thực chiến từ kỹ sư IT tại Đà Nẵng giúp xử lý tận gốc tình trạng ổ C đầy đỏ rực trên Windows 11 và dọn dẹp tệp tạm an toàn tuyệt đối."
 publishDate: 2026-10-15T22:15:00.000Z
-image: "https://picsum.photos/seed/tech490/900/600"
+image: "/images/tech-photo/tech-photo (30).jpg"
 category: 'tech'
 tags: ["Windows 11", "Toi ưu he thong", "Don dep o C", "Thu thuat IT"]
 theme: "High-Contrast Charcoal"

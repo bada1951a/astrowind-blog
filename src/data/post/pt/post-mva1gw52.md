@@ -2,7 +2,7 @@
 title: "Windows 11 com Disco C: Cheio? Como Limpar Arquivos Temporários com Segurança"
 description: "Aprenda a liberar espaço no drive C do Windows 11 de forma definitiva e segura, eliminando arquivos temporários sem riscos ao sistema."
 publishDate: 2026-10-15T17:15:00.000Z
-image: "https://picsum.photos/seed/tech198/900/600"
+image: "/images/tech-photo/tech-photo (15).jpg"
 category: 'tech'
 tags: ["Windows 11", "Otimização", "Dicas de TI", "Produtividade", "Manutenção"]
 theme: "Teal Matrix Digital"

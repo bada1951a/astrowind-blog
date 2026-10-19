@@ -2,7 +2,7 @@
 title: "C-schijf bijna vol in Amsterdam? Zo ruim je verborgen rommel op"
 description: "Kampt je laptop op de Zuidas met een volle C-schijf? Ontdek hoe je in een paar stappen al je tijdelijke bestanden wist en gigabytes aan ruimte terugwint."
 publishDate: 2026-10-15T18:30:00.000Z
-image: "https://picsum.photos/seed/hardware491/900/600"
+image: "/images/tech-photo/tech-photo (29).jpg"
 category: "Hardware"
 tags: ["Windows", "PC", "Opslag", "Schoonmaak"]
 theme: "Sunset Horizon Coral"
