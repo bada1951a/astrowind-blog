@@ -107,30 +107,56 @@ const { post, url } = Astro.props;
 
 <script>
   function fixContentImages() {
-    // 1. 본문 영역만 타겟팅 (상단 대표 이미지는 절대 건드리지 않음)
     const content = document.querySelector('.prose');
     if (!content) return;
 
-    // 2. 닫는 괄호가 ]든 )든 상관없이 본문에 노출된 텍스트를 정확히 잡아 img 태그로 치환
-    const regex = /!\[([^\]\)\r\n]+)[\]\)]\s*\(\s*(\/images\/tech-photo\/[^\n\r]+?\.(?:png\vert{}jpe?g\vert{}webp\vert{}gif\vert{}avif))\s*\)/gi;
-    
-    if (regex.test(content.innerHTML)) {
-      content.innerHTML = content.innerHTML.replace(regex, (match, alt, rawSrc) => {
-        const cleanSrc = encodeURI(rawSrc.trim());
-        return `<p class="my-6 text-center"><img src="${cleanSrc}" alt="${alt.trim()}" class="mx-auto rounded-md shadow-lg max-w-full h-auto inline-block" /></p>`;
-      });
-    }
+    // 1. Astro에 의해 <p> 태그 2개로 쪼개진 마크다운 이미지 문법 완벽 결합 및 교체
+    const pElements = Array.from(content.querySelectorAll('p'));
+    for (let i = 0; i < pElements.length; i++) {
+      const p1 = pElements[i];
+      const text1 = p1.textContent.trim();
 
-    // 3. 본문(.prose) 내부의 img 태그만 안전하게 인코딩 보정
-    content.querySelectorAll('img').forEach(img => {
-      const src = img.getAttribute('src');
-      if (src && src.startsWith('/images/tech-photo/') && (src.includes(' ') || src.includes('(') || src.includes(')'))) {
-        img.src = encodeURI(src);
+      // 첫 번째 문단이 ![... 로 시작하는 경우
+      if (text1.startsWith('![') && (text1.endsWith(']') || text1.endsWith(')'))) {
+        let altText = text1.replace(/^!\[/, '').replace(/[\]\)]$/, '').trim();
+        
+        // 다음 문단이 (/images/tech-photo/...) 로 시작하는 경우
+        if (i + 1 < pElements.length) {
+          const p2 = pElements[i + 1];
+          const text2 = p2.textContent.trim();
+          
+          if (text2.startsWith('(') && text2.endsWith(')') && text2.includes('/images/tech-photo/')) {
+            const rawSrc = text2.slice(1, -1).trim();
+            const cleanSrc = encodeURI(rawSrc);
+
+            // 이미지 태그 생성 및 교체
+            const imgP = document.createElement('p');
+            imgP.className = 'my-6 text-center';
+            imgP.innerHTML = `<img src="${cleanSrc}" alt="${altText}" class="mx-auto rounded-md shadow-lg max-w-full h-auto inline-block" />`;
+            
+            p1.parentNode.insertBefore(imgP, p1);
+            p1.remove();
+            p2.remove();
+            i++; // p2까지 처리했으므로 건너뜀
+            continue;
+          }
+        }
       }
-    });
+
+      // 한 문단 안에 ![...](...)가 통째로 들어있는 경우 처리
+      if (text1.startsWith('![') && text1.includes('/images/tech-photo/') && text1.endsWith(')')) {
+        const match = text1.match(/^!\[(.*?)\]\s*\((.*?)\)$/);
+        if (match) {
+          const altText = match[1].trim();
+          const cleanSrc = encodeURI(match[2].trim());
+          p1.className = 'my-6 text-center';
+          p1.innerHTML = `<img src="${cleanSrc}" alt="${altText}" class="mx-auto rounded-md shadow-lg max-w-full h-auto inline-block" />`;
+        }
+      }
+    }
   }
 
-  // 브라우저 로딩 및 Astro 페이지 전환 시 즉시 실행
+  // 화면 렌더링 즉시 실행 (일반 로드 + Astro 페이지 이동 대응)
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', fixContentImages);
   } else {
