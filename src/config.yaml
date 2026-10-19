@@ -1,5 +1,5 @@
 site:
-  name: 'Daily Insight'
+  name: '데일리 인사이트'
   site: 'https://storydailyview.com'
   base: '/'
   trailingSlash: false
