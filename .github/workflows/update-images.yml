@@ -15,7 +15,7 @@ jobs:
         with:
           python-version: '3.10'
 
-      - name: 기존 이미지 교체 및 tech-photo 사진 삽입 로직 실행
+      - name: 메타데이터 image 속성 교체 및 순환 로직 실행
         run: |
           python -c "
           import os
@@ -40,34 +40,22 @@ jobs:
                   with open(md_file, 'r', encoding='utf-8') as f:
                       content = f.read()
                   
-                  # 1. 기존에 들어가 있던 모든 마크다운 이미지(![...](...)) 또는 HTML 이미지(<img ...>) 태그 제거
-                  content_clean = re.sub(r'!\[.*?\]\(.*?\)', '', content)
-                  content_clean = re.sub(r'<img[^>]*>', '', content_clean)
-                  
-                  # 2. 새로운 tech-photo 이미지 선택 (순환 로직 적용)
+                  # 선택될 새로운 tech-photo 이미지 (순환 로직)
                   chosen_img = available_images[pool_index]
                   pool_index = (pool_index + 1) % total_imgs
-                  new_img_tag = f'\n\n![image](/images/tech-photo/{chosen_img})\n\n'
+                  new_img_path = f'/images/tech-photo/{chosen_img}'
                   
-                  # 3. 본문 상단(frontmatter 바로 다음 혹은 첫 번째 줄)에 새 이미지 삽입
-                  # YAML Frontmatter(---로 감싸진 메타데이터) 바로 아래에 이미지가 들어가도록 처리
-                  if '---' in content_clean:
-                      parts = content_clean.split('---', 2)
-                      if len(parts) >= 3:
-                          # frontmatter 뒤에 이미지 삽입
-                          new_content = parts[0] + '---' + parts[1] + '---' + new_img_tag + parts[2]
-                      else:
-                          new_content = new_img_tag + content_clean
-                  else:
-                      new_content = new_img_tag + content_clean
+                  # Frontmatter 내의 image: "..." 또는 image: '...' 부분을 찾아 교체
+                  # 예: image: "https://..." -> image: "/images/tech-photo/파일명.jpg"
+                  new_content, num_subs = re.subn(r'(image:\s*[\"\']).*?([\"\'])', rf'\1{new_img_path}\2', content)
                   
-                  if new_content != content:
+                  if num_subs > 0 and new_content != content:
                       with open(md_file, 'w', encoding='utf-8') as f:
                           f.write(new_content)
                       count += 1
-                      print(f'[{md_file.name}] -> tech-photo/{chosen_img} 삽입 완료')
+                      print(f'[{md_file.name}] 대표 이미지 메타데이터 -> tech-photo/{chosen_img} 교체 완료')
 
-              print(f'총 {count}개 포스트 이미지 교체 및 삽입 완료!')
+              print(f'총 {count}개 포스트 대표 이미지 교체 완료!')
           else:
               print('public/images/tech-photo 폴더에 사용 가능한 이미지가 없습니다.')
           "
@@ -75,5 +63,5 @@ jobs:
       - name: 변경된 파일 한 번에 깃허브에 자동 저장(Commit)
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          commit_message: "Update: Replace old images with balanced tech-photo images"
+          commit_message: "Update: Replace frontmatter image with balanced tech-photo images"
           branch: main
