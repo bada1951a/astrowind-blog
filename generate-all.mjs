@@ -14,7 +14,7 @@ const TOPICS_FILE = path.resolve('topics.txt');
 const PHOTO_DIR = path.resolve('public/images/tech-photo');
 
 // =========================================================================
-// [1호기 전용] public/images/tech-photo 로컬 이미지 자동 셔플 풀 구축
+// [1호기 전용] public/images/tech-photo 로컬 이미지 자동 셔플 (URL 인코딩 안전 처리)
 // =========================================================================
 const IMAGE_EXTS = /\.(jpe?g|png|webp|gif|avif)$/i;
 
@@ -23,9 +23,10 @@ if (!fs.existsSync(PHOTO_DIR)) {
 }
 
 const localFiles = fs.readdirSync(PHOTO_DIR).filter(file => IMAGE_EXTS.test(file));
-let localImages = localFiles.map(file => `/images/tech-photo/${file}`);
 
-// 폴더에 사진이 없을 경우를 대비한 안전 대체 경로
+// 공백 및 특수문자(괄호 등) 마크다운 깨짐 방지를 위한 encodeURI 적용
+let localImages = localFiles.map(file => encodeURI(`/images/tech-photo/${file}`));
+
 if (localImages.length === 0) {
   console.warn("⚠️ public/images/tech-photo 에 이미지가 없습니다. 기본 이미지를 사용합니다.");
   localImages = ['/images/default-tech.jpg'];
@@ -144,7 +145,6 @@ async function generateSinglePost(lang, index) {
 
   console.log(`\n🚀 [${index + 1}/12] ${lang.name} (${lang.code}) 1호기 메인 IT 포스팅 생성 중... (적용 테마: ${selectedTheme.name})`);
 
-  // 로컬 사진 셔플 풀에서 이미지 배정
   const { coverUrl, bodyUrl } = getPostImages(index);
 
   const postDate = new Date();
@@ -259,7 +259,8 @@ theme: "${selectedTheme.name}"
       // 대표 이미지 경로 강제 동기화
       frontmatter = frontmatter.replace(/image:\s*["'][^"']*["']/i, `image: '${coverUrl}'`);
 
-      const middleImageMarkdown = `\n\n![${currentTopic} Tech Guide](${bodyUrl})\n\n`;
+      // 본문 중간 이미지 태그 (앞뒤 줄바꿈을 2개씩 두어 온전한 이미지 블록으로 인식되도록 처리)
+      const middleImageMarkdown = `\n\n![Tech Troubleshooting Guide](${bodyUrl})\n\n`;
       if (body.includes('## 2.') || body.includes('### 2.')) {
         body = body.replace(/(#{2,3}\s*2\.[^\n]+)/, `${middleImageMarkdown}$1`);
       } else {
