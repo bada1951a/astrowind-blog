@@ -1,7 +1,7 @@
 ---
 title: "Windows 11 łapie zwiechy? Jak namierzyć winowajcę w Podglądzie Zdarzeń"
 description: "Komputer zamarza w najmniej odpowiednim momencie? Zobacz, jak krok po kroku przeszukać Podgląd Zdarzeń w Windows 11 i uratować sytuację."
-publishDate: 2026-10-20T19:45:00.000Z
+publishDate: 2026-10-21T00:00:00Z
 image: '/images/tech-photo/tech-photos%20(35).jpg'
 category: 'tech'
 tags: ["Windows 11", "Podgląd Zdarzeń", "Serwis PC", "Hardware", "Naprawa Komputera"]
