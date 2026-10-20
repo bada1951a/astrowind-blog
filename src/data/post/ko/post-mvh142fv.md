@@ -1,7 +1,7 @@
 ---
 title: "윈도우 11 갑자기 멈춤 현상, 이벤트 뷰어로 원인 칼같이 잡는 법"
 description: "중요한 프레젠테이션 직전 윈도우 11 PC가 멈추는 프리징 현상으로 식은땀 흘리셨나요? 이벤트 뷰어를 통해 원인을 추적하고 해결하는 실전 가이드를 소개합니다."
-publishDate: 2026-10-20T08:30:00.000Z
+publishDate: 2026-10-21T00:00:00Z
 image: '/images/tech-photo/tech-photo%20(12).jpg'
 category: 'tech'
 tags: ["Tech Tips", "Hardware", "Troubleshooting", "PC Fix"]
