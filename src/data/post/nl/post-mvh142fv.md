@@ -1,7 +1,7 @@
 ---
 title: "Windows 11 loopt willekeurig vast? Zo vind je de echte boosdoener via Logboeken"
 description: "Paniek op de Zuidas? Computer bevriest tijdens een presentatie? Ontdek stap voor stap hoe je de oorzaak vindt met Windows Logboeken."
-publishDate: 2026-10-20T18:30:00.000Z
+publishDate: 2026-10-21T00:00:00Z
 image: '/images/tech-photo/ram%20(4).png'
 category: 'tech'
 tags: ["Windows 11", "Hardware", "Storingsanalyse", "PC Fix"]
