@@ -11,8 +11,8 @@ export const headerData = {
       href: getBlogPermalink(),
     },
     {
-      text: 'Tech & IT',
-      href: getPermalink('/category/hardware'),
+      text: 'Tech',
+      href: getPermalink('/category/tech'),
     },
   ],
   actions: [{ text: 'Explore Articles', href: getBlogPermalink() }],
@@ -24,7 +24,7 @@ export const footerData = {
       title: 'Categories',
       links: [
         { text: 'All Articles', href: getBlogPermalink() },
-        { text: 'Tech & IT', href: getPermalink('/category/hardware') },
+        { text: 'Tech', href: getPermalink('/category/tech') },
       ],
     },
     {
