@@ -1,7 +1,7 @@
 ---
 title: "Sửa lỗi máy tính Windows 11 đơ cứng ngẫu nhiên bằng Event Viewer"
 description: "Hướng dẫn kỹ thuật viên xử lý triệt để tình trạng Windows 11 random freezing, tra cứu lỗi phần cứng và phần mềm chính xác qua Event Viewer."
-publishDate: 2026-10-20T22:15:00.000Z
+publishDate: 2026-10-21T00:00:00Z
 image: '/images/tech-photo/ram%20(7).png'
 category: 'tech'
 tags: ["Tech Tips", "Hardware", "Troubleshooting", "PC Fix"]
