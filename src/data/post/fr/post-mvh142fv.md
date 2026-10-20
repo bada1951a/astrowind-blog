@@ -1,7 +1,7 @@
 ---
 title: "Figeages aléatoires sous Windows 11 : comment pister la panne avec l'Observateur d'événements"
 description: "Guide pratique de dépannage informatique pour identifier et résoudre les gels et plantages aléatoires de Windows 11 à La Défense."
-publishDate: 2026-10-20T13:30:00.000Z
+publishDate: 2026-10-21T00:00:00Z
 image: '/images/tech-photo/display%20(20).png'
 category: 'tech'
 tags: ["Tech Tips", "Hardware", "Troubleshooting", "PC Fix"]
