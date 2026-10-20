@@ -1,7 +1,7 @@
 ---
 title: "Windows 11 Zufriedene Freezes: So finden Sie die Ursache mit der Ereignisanzeige"
 description: "Panik im Bankenviertel: Wenn Windows 11 vor der Kundenpräsentation einfriert. So analysieren Sie Freezes wie ein Profi mit der Ereignisanzeige."
-publishDate: 2026-10-20T12:15:00.000Z
+publishDate: 2026-10-21T00:00:00Z
 image: '/images/tech-photo/keyboard%20(10).png'
 category: 'tech'
 tags: ["Windows 11", "Ereignisanzeige", "Troubleshooting", "Hardware", "Systemabsturz"]
