@@ -1,7 +1,7 @@
 ---
 title: "Guia rapida de reparacion: Como cazar bloqueos aleatorios en Windows 11 usando el Visor de eventos"
 description: "Aprende a diagnosticar congelamientos aleatorios en Windows 11 durante entregas criticas usando el Visor de eventos sin perder la calma."
-publishDate: 2026-10-20T14:45:00.000Z
+publishDate: 2026-10-21T00:00:00Z
 image: '/images/tech-photo/storage%20(12).png'
 category: 'tech'
 tags: ["Soporte Tecnico", "Hardware", "Windows 11", "Visor de Eventos"]
