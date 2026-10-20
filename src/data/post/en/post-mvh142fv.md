@@ -1,7 +1,7 @@
 ---
 title: "Windows 11 Random Freezing: Trace Causes Using Event Viewer Like a Pro"
 description: "Stop guessing why your Windows 11 PC freezes. Learn how to track down root hardware and driver causes using Event Viewer before your next big meeting."
-publishDate: 2026-10-20T09:45:00.000Z
+publishDate: 2026-10-21T00:00:00Z
 image: '/images/tech-photo/storage%20(9).png'
 category: 'tech'
 tags: ["Tech Tips", "Hardware", "Troubleshooting", "PC Fix", "Windows 11"]
