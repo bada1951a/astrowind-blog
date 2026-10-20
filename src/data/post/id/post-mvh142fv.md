@@ -1,7 +1,7 @@
 ---
 title: "Mengatasi Windows 11 Random Freezing Menggunakan Event Viewer"
 description: "Panduan praktis teknisi IT melacak penyebab PC nge-freeze mendadak di Windows 11 menggunakan Event Viewer tanpa tebak-tebakan."
-publishDate: 2026-10-20T21:00:00.000Z
+publishDate: 2026-10-21T00:00:00Z
 image: '/images/tech-photo/tech-photos%20(3).jpg'
 category: 'tech'
 tags: ["Windows 11", "Troubleshooting", "Event Viewer", "Hardware PC"]
