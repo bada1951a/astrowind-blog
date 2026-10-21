@@ -1,7 +1,7 @@
 ---
 title: "Como Restaurar o Menu de Contexto Classico no Windows 11 em Segundos"
 description: "Aprenda a trazer o menu de botao direito antigo do Windows 11 de volta sem instalador externo. Guia pratico para suporte de TI e produtividade."
-publishDate: 2026-10-21T17:15:00.000Z
+publishDate: 2026-10-21T18:00:00.000Z
 image: '/images/tech-photo/display%20(4).png'
 category: 'tech'
 tags: ["Windows 11", "Dicas de TI", "Produtividade", "Suporte Tecnico"]
