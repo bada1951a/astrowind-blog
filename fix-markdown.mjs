@@ -6,20 +6,14 @@ const POSTS_BASE_DIR = path.resolve('src/data/post');
 function sanitizeMarkdownFormatting(content) {
   let cleaned = content;
 
-  // 1) 3개 이상 연달아 붙은 별표(***) 정제 -> **로 통일
   cleaned = cleaned.replace(/\*{3,}/g, '**');
-
-  // 2) 별표 안쪽에 특수기호나 따옴표가 갇힌 패턴 안전하게 밖으로 빼기
   cleaned = cleaned.replace(/\*\*\[([^\]]+)\]\*\*/g, '[**$1**]');
   cleaned = cleaned.replace(/\*\*"([^"]+)"\*\*/g, '"**$1**"');
   cleaned = cleaned.replace(/\*\*'([^']+)'\*\*/g, '\'**$1**\'');
-
-  // 3) 별표 시작/끝 바로 안쪽에 공백이 있어 파싱되지 않는 경우 정제
   cleaned = cleaned.replace(/\*\*\s+([^\*\n]+?)\s+\*\*/g, '**$1**');
   cleaned = cleaned.replace(/\*\*\s+([^\*\n]+?)\*\*/g, '**$1**');
   cleaned = cleaned.replace(/\*\*([^\*\n]+?)\s+\*\*/g, '**$1**');
 
-  // 4) 짝이 맞지 않는 고립된 단일 ** 제거 (홀수 개수 방지)
   const lines = cleaned.split('\n');
   const fixedLines = lines.map(line => {
     if (line.trim().startsWith('```') || line.trim().startsWith('`')) return line;
