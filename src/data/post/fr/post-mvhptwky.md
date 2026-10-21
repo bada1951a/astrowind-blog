@@ -1,7 +1,7 @@
 ---
 title: "Restaurer le menu contextuel classique de Windows 11"
 description: "Guide pratique pour retrouver le menu clic-droit complet sur Windows 11 sans passer par l'option 'Afficher plus d'options'."
-publishDate: 2026-10-21T13:30:00.000Z
+publishDate: 2026-10-21T18:00:00.000Z
 image: '/images/tech-photo/bsod%20(12).png'
 category: 'tech'
 tags: ["Windows 11", "Productivite", "Astuces PC", "Support IT"]
