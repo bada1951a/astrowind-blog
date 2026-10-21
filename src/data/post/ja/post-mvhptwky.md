@@ -1,7 +1,7 @@
 ---
 title: "Windows 11の右クリックメニューを「従来の表示」に戻す方法"
 description: "東京・丸の内のオフィスで月次報告書の送信直前に起きたPCトラブル。Windows 11の使いにくい新しい右クリックメニューを一発で従来のクラシック表示に戻す実戦的な手順を現場のSEが徹底解説。"
-publishDate: 2026-10-21T11:00:00.000Z
+publishDate: 2026-10-21T18:00:00.000Z
 image: '/images/tech-photo/tech-photo%20(10).jpg'
 category: 'tech'
 tags: ["Windows 11", "Troubleshooting", "PC Tips", "Registry"]
