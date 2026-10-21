@@ -1,7 +1,7 @@
 ---
 title: "Windows 11 Klassiek Contextmenu Terugzetten: Zo Red Je Die Belangrijke Presentatie"
 description: "Ergernis op de Zuidas? Ontdek hoe je in een paar simpele stappen het klassieke rechtermuisknop menu in Windows 11 terugzet zonder gedoe."
-publishDate: 2026-10-21T18:30:00.000Z
+publishDate: 2026-10-21T18:00:00.000Z
 image: '/images/tech-photo/tech-photo%20(26).jpg'
 category: 'tech'
 tags: ["Windows 11", "Systeembeheer", "Productiviteit", "PC Tips"]
