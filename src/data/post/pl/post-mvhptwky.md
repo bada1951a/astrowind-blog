@@ -1,7 +1,7 @@
 ---
 title: "Jak przywrócić klasyczne menu kontekstowe w Windows 11"
 description: "Poradnik inżyniera IT: Jak szybko i bezpiecznie odzyskać klasyczne menu prawego przycisku myszy w systemie Windows 11 bez szukania opcji Pokaż więcej."
-publishDate: 2026-10-21T18:00:00.000Z
+publishDate: 2026-10-22T03:00:00.000Z
 image: '/images/tech-photo/tech-photos%20(29).jpg'
 category: 'tech'
 tags: ["Windows 11", "IT Support", "Optymalizacja", "Porady PC"]
