@@ -63,11 +63,11 @@ Prima di procedere con solventi chimici o saldatori, è obbligatorio isolare il 
 ### Passo 1: Diagnostica Logica ed Esclusione del Driver Host
 Prima di intervenire fisicamente, verifichiamo che il sottosistema USB di Windows non sia compromesso da conflitti di polling rate o risparmio energetico:
 
-1. Premi `Tasto Windows + X` e seleziona **Gestione dispositivi**.
-2. Espandi il nodo **Tastiere**e poi**Controller USB (Universal Serial Bus)**.
-3. Fai clic destro sul dispositivo relativo alla tastiera (spesso elencato come *Dispositivo tastiera HID*) e seleziona **Proprietà**.
-4. Nella scheda **Risparmio energia** (se presente), deseleziona l'opzione: *Consenti al computer di spegnere il dispositivo per risparmiare energia*.
-5. Apri il **Prompt dei comandi** con privilegi elevati (Esegui come amministratore) per verificare che l'input non sia alterato da ritardi di buffer di sistema:
+1. Premi `Tasto Windows + X` e seleziona Gestione dispositivi.
+2. Espandi il nodo Tastieree poiController USB (Universal Serial Bus).
+3. Fai clic destro sul dispositivo relativo alla tastiera (spesso elencato come *Dispositivo tastiera HID*) e seleziona Proprietà.
+4. Nella scheda Risparmio energia (se presente), deseleziona l'opzione: *Consenti al computer di spegnere il dispositivo per risparmiare energia*.
+5. Apri il Prompt dei comandi con privilegi elevati (Esegui come amministratore) per verificare che l'input non sia alterato da ritardi di buffer di sistema:
 ```cmd
 reg query "HKCU\Control Panel\Keyboard" /v KeyboardSpeed
 reg query "HKCU\Control Panel\Keyboard" /v KeyboardDelay
@@ -79,14 +79,14 @@ reg query "HKCU\Control Panel\Keyboard" /v KeyboardDelay
 </div>
 
 ### Passo 2: Isolamento Fisico del Tasto Compromesso
-1. **Scollega fisicamente il cavo USB** dalla macchina. Lavorare sotto tensione su un circuito a 5V con liquidi volatili può causare cortocircuiti sul controller logico.
+1. Scollega fisicamente il cavo USB dalla macchina. Lavorare sotto tensione su un circuito a 5V con liquidi volatili può causare cortocircuiti sul controller logico.
 2. Utilizzando un estrattore per copritasti ad anello (*wire keycap puller*), estrai il tasto interessato tirando perpendicolarmente verso l'alto per non rompere la crociera dello stelo.
 3. Rimuovi la polvere perimetrale con un soffiatore manuale o una bomboletta di aria compressa, tenendo l'ugello ad almeno 10 cm di distanza per evitare condensa criogenica.
 
 ---
 
 ### Passo 3: Trattamento Mirato con Disossidante per Contatti Elettrici
-Il prodotto da utilizzare deve essere **rigorosamente un disossidante per contatti elettronici a secco, a rapida evaporazione e a residuo zero** (es. *WD-40 Specialist Detergente Contatti*, *Kontakt Chemie 60/61*, o *CRC QD Electronic Cleaner*).
+Il prodotto da utilizzare deve essere rigorosamente un disossidante per contatti elettronici a secco, a rapida evaporazione e a residuo zero (es. *WD-40 Specialist Detergente Contatti*, *Kontakt Chemie 60/61*, o *CRC QD Electronic Cleaner*).
 
 <div style="border-left: 4px solid #dc2626; padding: 12px 16px; margin: 20px 0; background-color: rgba(220, 38, 38, 0.05); border-radius: 4px;">
   <strong>ATTENZIONE CRITICA:</strong> Non usare MAI il classico WD-40 multifunzione o spray sbloccanti oleosi. Contengono oli minerali idrocarburici conduttivi che distruggono la plastica (POM/policarbonato) degli switch e attraggono polvere, trasformando il contatto in una pasta isolante permanente.
@@ -95,9 +95,9 @@ Il prodotto da utilizzare deve essere **rigorosamente un disossidante per contat
 1. Inserisci la cannuccia di precisione sull'erogatore dello spray.
 2. Premi a fondo lo stelo centrale dello switch (usando la cannuccia stessa o un piccolo cacciavite spudger in plastica) per esporre la fessura interna tra lo stelo e la parete del corpo switch.
 3. Eroga un impulso brevissimo (frazione di secondo, uno "sbuffo"). Il liquido entrerà per capillarità nell'alloggiamento della lamella.
-4. **Ciclo di azionamento meccanico immediato:** Premi e rilascia rapidamente lo stelo per almeno 40-50 volte consecutive. Questa azione meccanica favorisce l'azione solvente, permettendo alla lamella di sfregare contro la piazzola e rimuovere le tracce di ossido o sporco.
+4. Ciclo di azionamento meccanico immediato: Premi e rilascia rapidamente lo stelo per almeno 40-50 volte consecutive. Questa azione meccanica favorisce l'azione solvente, permettendo alla lamella di sfregare contro la piazzola e rimuovere le tracce di ossido o sporco.
 5. Capovolgi la tastiera su un panno assorbente per favorire il deflusso di solvente in eccesso.
-6. **Fase di asciugatura passiva:** Attendi non meno di 15-20 minuti prima di alimentare nuovamente la periferica. Il solvente deve evaporare completamente.
+6. Fase di asciugatura passiva: Attendi non meno di 15-20 minuti prima di alimentare nuovamente la periferica. Il solvente deve evaporare completamente.
 
 ```
         [Cannuccia spray]
@@ -116,7 +116,7 @@ Il prodotto da utilizzare deve essere **rigorosamente un disossidante per contat
 ### Passo 4: Riparazione Avanzata su Tastiere Hot-Swap e Saldatura
 Se il disossidante non risolve l'anomalia, il problema risiede nell'accoppiamento elettrico a valle:
 
-1. Se la tastiera supporta l'**hot-swap**, utilizza l'estrattore per switch (*switch puller*). Aggancia le due clip di rilascio a nord e sud dello switch ed estrailo verticalmente.
+1. Se la tastiera supporta l'hot-swap, utilizza l'estrattore per switch (*switch puller*). Aggancia le due clip di rilascio a nord e sud dello switch ed estrailo verticalmente.
 2. Ispeziona i piedini metallici in rame dello switch: se risultano piegati o schiacciati, raddrizzali con una pinzetta da orologiaio prima di reinserirli.
 3. Ispeziona i fori del PCB. Se il contatto interno è allargato, comprimi leggermente le lamine del socket da dietro il PCB con un ago da sutura o una sonda metallica sottile.
 4. Se la tastiera è saldata e lo switch continua a generare chattering persistente, procedi alla dissaldatura:
@@ -130,8 +130,8 @@ Se il disossidante non risolve l'anomalia, il problema risiede nell'accoppiament
 
 Operare sulla componentistica di input richiede cautela per non convertire un semplice falso contatto in un guasto permanente della scheda madre:
 
-* **Scariche Elettrostatiche (ESD):** Quando smonti il telaio metallico o tocchi direttamente il PCB, indossa sempre un bracciale antistatico collegato a terra. I microcontrollori moderni (spesso basati su architetture ARM Cortex-M o chip ATmega32U4) hanno linee dati USB sprovviste di protezione TVS avanzata su tastiere economiche. Una scarica elettrostatica sulle piste esposte può bruciare all'istante una colonna dell'intera matrice di scansione.
-* **Compatibilità dei Solventi Chimici:** Molti produttori lubrificano gli stabilizzatori con grasso dielettrico (es. Krytox 205g0 o Permatex). Se applichi il disossidante spray in modo incontrollato su tutta la piastra, scioglierai il lubrificante degli stabilizzatori, riversandolo all'interno dei tasti adiacenti e provocando rumori metallici sgradevoli (*rattle*) e attrito viscoso anomalo.
+* Scariche Elettrostatiche (ESD): Quando smonti il telaio metallico o tocchi direttamente il PCB, indossa sempre un bracciale antistatico collegato a terra. I microcontrollori moderni (spesso basati su architetture ARM Cortex-M o chip ATmega32U4) hanno linee dati USB sprovviste di protezione TVS avanzata su tastiere economiche. Una scarica elettrostatica sulle piste esposte può bruciare all'istante una colonna dell'intera matrice di scansione.
+* Compatibilità dei Solventi Chimici: Molti produttori lubrificano gli stabilizzatori con grasso dielettrico (es. Krytox 205g0 o Permatex). Se applichi il disossidante spray in modo incontrollato su tutta la piastra, scioglierai il lubrificante degli stabilizzatori, riversandolo all'interno dei tasti adiacenti e provocando rumori metallici sgradevoli (*rattle*) e attrito viscoso anomalo.
 
 ---
 

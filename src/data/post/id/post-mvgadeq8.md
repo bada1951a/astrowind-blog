@@ -23,9 +23,9 @@ Sebelum panik berlanjut dan berujung bongkar hardware atau install ulang yang ba
 
 Sebelum kita eksekusi kodenya, mari kita pahami dulu tiga akar penyebab utama kenapa masalah ini sering muncul mendadak di lingkungan korporat:
 
-1. **Sinkronisasi KMS Server Kantor Terputus:** PC Anda biasanya terhubung ke server aktivasi internal kantor. Kalau VPN terputus atau jaringan lokal office <i>drop</i> sesaat, Windows gagal memvalidasi token dan langsung memunculkan watermark peringatan.
-2. **Update Windows Otomatis Mereset Status Lisensi:** Seringkali patch keamanan terbaru dari Microsoft mereset *cache* status aktivasi, terutama jika lisensi sebelumnya menggunakan jalur aktivasi OEM yang mulai 'lelah'.
-3. **Perubahan Hardware Signifikan:** Pergantian komponen mendadak (misalnya SSD NVMe baru atau penggantian motherboard oleh tim IT sebelumnya) membuat algoritma keamanan Windows mengira ini adalah unit PC yang berbeda.
+1. Sinkronisasi KMS Server Kantor Terputus: PC Anda biasanya terhubung ke server aktivasi internal kantor. Kalau VPN terputus atau jaringan lokal office <i>drop</i> sesaat, Windows gagal memvalidasi token dan langsung memunculkan watermark peringatan.
+2. Update Windows Otomatis Mereset Status Lisensi: Seringkali patch keamanan terbaru dari Microsoft mereset *cache* status aktivasi, terutama jika lisensi sebelumnya menggunakan jalur aktivasi OEM yang mulai 'lelah'.
+3. Perubahan Hardware Signifikan: Pergantian komponen mendadak (misalnya SSD NVMe baru atau penggantian motherboard oleh tim IT sebelumnya) membuat algoritma keamanan Windows mengira ini adalah unit PC yang berbeda.
 
 ---
 
@@ -34,13 +34,13 @@ Sebelum kita eksekusi kodenya, mari kita pahami dulu tiga akar penyebab utama ke
 Mari kita selesaikan masalah ini langsung dari balik layar sistem operasi menggunakan hak akses tertinggi. Ikuti langkah-langkah di bawah ini secara teliti:
 
 ### Langkah 1: Buka Command Promptsebagai Administrator
-* Klik tombol **Start** di pojok kiri bawah atau tekan tombol Windows di keyboard Anda.
+* Klik tombol Start di pojok kiri bawah atau tekan tombol Windows di keyboard Anda.
 * Ketik `cmd` di kolom pencarian.
-* Jangan langsung di-klik biasa. Klik kanan pada aplikasi **Command Prompt**, lalu pilih**Run as administrator**. 
-* Jika muncul jendela konfirmasi User Account Control (UAC), klik **Yes**.
+* Jangan langsung di-klik biasa. Klik kanan pada aplikasi Command Prompt, lalu pilihRun as administrator. 
+* Jika muncul jendela konfirmasi User Account Control (UAC), klik Yes.
 
 ### Langkah 2: Hentikan Layanan Lisensi yang Macet
-Di dalam jendela hitam CMD yang terbuka, kita perlu menyetop dulu layanan *Software Protection* agar tidak terjadi konflik saat kita menyegarkan token lisensi. Ketik perintah berikut lalu tekan **Enter**:
+Di dalam jendela hitam CMD yang terbuka, kita perlu menyetop dulu layanan *Software Protection* agar tidak terjadi konflik saat kita menyegarkan token lisensi. Ketik perintah berikut lalu tekan Enter:
 
 ```text
 net stop sppsvc
@@ -48,7 +48,7 @@ net stop sppsvc
 *Tunggu beberapa detik sampai muncul keterangan bahwa layanan berhasil dihentikan.*
 
 ### Langkah 3: Eksekusi Perintah Penyegar Token
-Selanjutnya, kita masukkan perintah untuk memperpanjang masa tenggang (*grace period*) aktivasi sistem operasi Anda. Ketik perintah ini di CMD lalu tekan **Enter**:
+Selanjutnya, kita masukkan perintah untuk memperpanjang masa tenggang (*grace period*) aktivasi sistem operasi Anda. Ketik perintah ini di CMD lalu tekan Enter:
 
 ```text
 slmgr -rearm
@@ -71,16 +71,16 @@ PC Anda akan melakukan *reboot* secara otomatis dalam hitungan detik. Nyala kemb
 <strong>Peringatan Penting:</strong> Perintah <code>slmgr -rearm</code> adalah fitur resmi dari Microsoft untuk memperpanjang masa evaluasi sistem. Namun, trik ini memiliki batas penggunaan (umumnya hingga 3-4 kali). Ini adalah solusi darurat kantor, bukan solusi permanen selamanya.
 </div>
 
-* **Amankan Data Dahulu:** Jangan pernah menggunakan software aktivator pihak ketiga sembarangan yang beredar di internet saat jam genting. Risiko infeksi *ransomware* atau *malware* pencuri data jauh lebih berbahaya daripada sekadar ada tulisan transparan di layar.
-* **Lapor ke Tim Helpdesk Internal:** Setelah tenggat waktu laporan Anda selesai dan situasi sudah aman, segera laporkan nomor inventaris PC Anda ke departemen IT internal agar lisensi digital korporat bisa diinjeksikan secara permanen melalui KMS server resmi perusahaan.
+* Amankan Data Dahulu: Jangan pernah menggunakan software aktivator pihak ketiga sembarangan yang beredar di internet saat jam genting. Risiko infeksi *ransomware* atau *malware* pencuri data jauh lebih berbahaya daripada sekadar ada tulisan transparan di layar.
+* Lapor ke Tim Helpdesk Internal: Setelah tenggat waktu laporan Anda selesai dan situasi sudah aman, segera laporkan nomor inventaris PC Anda ke departemen IT internal agar lisensi digital korporat bisa diinjeksikan secara permanen melalui KMS server resmi perusahaan.
 
 ---
 
 ## Pertanyaan yang Sering Diajukan (FAQ)
 
-**Q: Apakah cara ini akan menghapus data atau file laporan saya yang belum tersimpan?**  
-A: Tidak sama sekali. Perintah CMD di atas hanya berinteraksi dengan modul manajemen lisensi Windows (*Software Licensing Service*), sehingga file dokumen Word, Excel, atau aplikasi kerja Anda di **Task Manager**tetap aman seratus persen.**Q: Kenapa setelah beberapa minggu watermarknya bisa muncul lagi?**  
+Q: Apakah cara ini akan menghapus data atau file laporan saya yang belum tersimpan?  
+A: Tidak sama sekali. Perintah CMD di atas hanya berinteraksi dengan modul manajemen lisensi Windows (*Software Licensing Service*), sehingga file dokumen Word, Excel, atau aplikasi kerja Anda di Task Managertetap aman seratus persen.Q: Kenapa setelah beberapa minggu watermarknya bisa muncul lagi?  
 A: Perintah `slmgr -rearm` sifatnya memperpanjang masa tenggang (*grace period*). Jika PC Anda tidak kunjung terhubung kembali ke server lisensi resmi kantor atau jaringan internal perusahaan, sistem akan kembali meminta validasi ulang.
 
-**Q: Apakah metode ini aman untuk laptop kantor yang terhubung domain perusahaan?**  
+Q: Apakah metode ini aman untuk laptop kantor yang terhubung domain perusahaan?  
 A: Sangat aman karena menggunakan utilitas bawaan asli Microsoft (`slmgr`). Metode ini tidak memodifikasi file sistem inti (*system files*) layaknya menggunakan *patch* ilegal atau bajakan.

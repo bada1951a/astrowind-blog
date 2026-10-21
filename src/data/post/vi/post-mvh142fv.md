@@ -15,7 +15,7 @@ Trước đây, khi gặp tình trạng này, phản xạ đầu tiên của dâ
 
 ![Tech Troubleshooting Guide](/images/tech-photo/tech-photo%20(28).jpg)
 
-Thực tế, Windows 11 lưu giữ toàn bộ "lý lịch tử vong" của hệ thống mỗi khi bị đơ cứng. Bí quyết nằm ở công cụ tích hợp sẵn mang tên **Event Viewer** (Trình xem sự kiện). Hãy cùng tôi bóc trần nguyên nhân và xử lý dứt điểm tình trạng này theo chuẩn kỹ thuật viên chuyên nghiệp.
+Thực tế, Windows 11 lưu giữ toàn bộ "lý lịch tử vong" của hệ thống mỗi khi bị đơ cứng. Bí quyết nằm ở công cụ tích hợp sẵn mang tên Event Viewer (Trình xem sự kiện). Hãy cùng tôi bóc trần nguyên nhân và xử lý dứt điểm tình trạng này theo chuẩn kỹ thuật viên chuyên nghiệp.
 
 <div style="border-left: 4px solid #475569; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Lưu ý từ chuyên gia:</strong> Lỗi đơ cứng ngẫu nhiên (random freezing) trên Windows 11 thường do xung đột driver phần cứng, ổ cứng SSD sắp hỏng hoặc thiết lập nguồn điện (Power Plan) không tương thích. Đừng vội mang máy đi sửa phần cứng khi chưa kiểm tra nhật ký hệ thống.
@@ -27,9 +27,9 @@ Thực tế, Windows 11 lưu giữ toàn bộ "lý lịch tử vong" của hệ 
 
 Trước khi mở công cụ tra cứu, chúng ta cần hiểu rõ ba nguyên nhân phổ biến nhất khiến máy tính bỗng nhiên "đóng băng" tại chỗ:
 
-1. **Lỗi Kernel-Power (Mã sự kiện Event ID 41):** Hệ thống bị ngắt nguồn đột ngột hoặc treo cứng bắt buộc phải giữ nút nguồn tắt máy. Điều này thường liên quan đến nguồn điện (Power Supply Unit), nhiệt độ CPU quá cao hoặc driver card đồ họa bị lỗi nặng.
-2. **Xung đột Driver thiết bị (Đặc biệt là Card mạng và GPU):** Các bản cập nhật Windows Update gần đây đôi khi cài đè driver không tương thích, gây nghẽn luồng xử lý ngầm (Interrupt Handling) dẫn đến treo máy toàn tập.
-3. **Ổ cứng SSD NVMe bị quá nhiệt hoặc mất kết nối chớp nhoáng:** Khi phân vùng chứa hệ điều hành bị mất tín hiệu đọc/ghi dữ liệu trong tích tắc, Windows 11 sẽ lập tức đơ cứng vì không thể truy xuất trang nhớ ảo (Pagefile).
+1. Lỗi Kernel-Power (Mã sự kiện Event ID 41): Hệ thống bị ngắt nguồn đột ngột hoặc treo cứng bắt buộc phải giữ nút nguồn tắt máy. Điều này thường liên quan đến nguồn điện (Power Supply Unit), nhiệt độ CPU quá cao hoặc driver card đồ họa bị lỗi nặng.
+2. Xung đột Driver thiết bị (Đặc biệt là Card mạng và GPU): Các bản cập nhật Windows Update gần đây đôi khi cài đè driver không tương thích, gây nghẽn luồng xử lý ngầm (Interrupt Handling) dẫn đến treo máy toàn tập.
+3. Ổ cứng SSD NVMe bị quá nhiệt hoặc mất kết nối chớp nhoáng: Khi phân vùng chứa hệ điều hành bị mất tín hiệu đọc/ghi dữ liệu trong tích tắc, Windows 11 sẽ lập tức đơ cứng vì không thể truy xuất trang nhớ ảo (Pagefile).
 
 ---
 
@@ -38,23 +38,23 @@ Trước khi mở công cụ tra cứu, chúng ta cần hiểu rõ ba nguyên nh
 Để tìm ra chính xác thủ phạm giấu mặt, hãy thực hiện tuần tự theo quy trình chuẩn sau đây ngay khi máy khởi động lại được:
 
 #### Bước 1: Mở Event Viewer và truy cập Log hệ thống
-* Nhấn phím `Windows`, gõ chữ **Event Viewer** vào thanh tìm kiếm rồi nhấn Enter.
-* Ở cột bên trái của cửa sổ vừa hiện lên, bấm đúp chuột vào mục **Windows Logs**và chọn**System**.
+* Nhấn phím `Windows`, gõ chữ Event Viewer vào thanh tìm kiếm rồi nhấn Enter.
+* Ở cột bên trái của cửa sổ vừa hiện lên, bấm đúp chuột vào mục Windows Logsvà chọnSystem.
 
 #### Bước 2: Lọc các mã lỗi nghiêm trọng (Critical & Error)
-* Nhìn sang cột thao tác (Actions) ở bên phải, bấm vào dòng **Filter Current Log...** (Lọc nhật ký hiện tại).
-* Trong hộp thoại vừa mở, tại ô **Event Level**, hãy tích chọn vào hai ô**Critical**(Nghiêm trọng) và**Error**(Lỗi), sau đó nhấn**OK**.
+* Nhìn sang cột thao tác (Actions) ở bên phải, bấm vào dòng Filter Current Log... (Lọc nhật ký hiện tại).
+* Trong hộp thoại vừa mở, tại ô Event Level, hãy tích chọn vào hai ôCritical(Nghiêm trọng) vàError(Lỗi), sau đó nhấnOK.
 
 #### Bước 3: Khoanh vùng thời điểm xảy ra sự cố
 * Nhìn vào danh sách hiển thị ở giữa, hãy dò tìm các dòng lỗi có mốc thời gian trùng khớp chính xác với phút mà máy tính của bạn vừa bị đơ cứng.
 * Click vào dòng lỗi đó và đọc phần mô tả (General) ở khung bên dưới:
-  * Nếu xuất hiện mã **Event ID 41 (Kernel-Power)**: Thủ phạm là nguồn điện, nhiệt độ hoặc ép xung không ổn định.
-  * Nếu xuất hiện mã **Event ID 10010 hoặc 7034 (DistributedCOM / Service Control Manager)**: Lỗi do phần mềm bên thứ ba hoặc dịch vụ hệ thống bị treo.
+  * Nếu xuất hiện mã Event ID 41 (Kernel-Power): Thủ phạm là nguồn điện, nhiệt độ hoặc ép xung không ổn định.
+  * Nếu xuất hiện mã Event ID 10010 hoặc 7034 (DistributedCOM / Service Control Manager): Lỗi do phần mềm bên thứ ba hoặc dịch vụ hệ thống bị treo.
 
 #### Bước 4: Khắc phục triệt để dựa trên kết quả
-* **Cập nhật hoặc gỡ bỏ Driver GPU/Chipset:**Vào**Device Manager**, tìm đến Display Adapters, click chuột phải chọn Update driver hoặc gỡ bản driver mới nhất vừa cài gây lỗi.
-* **Tắt tính năng Fast Startup:**Mở**Control Panel**-> Chọn**Power Options**-> Chọn**Choose what the power buttons do**-> Bỏ tích ô**Turn on fast startup** để tránh lỗi lưu trạng thái kernel khi khởi động lại.
-* **Kiểm tra sức khỏe ổ cứng:** Tải phần mềm CrystalDiskInfo để kiểm tra xem SSD có bị bad sector hoặc nhiệt độ vượt mức 70°C hay không.
+* Cập nhật hoặc gỡ bỏ Driver GPU/Chipset:VàoDevice Manager, tìm đến Display Adapters, click chuột phải chọn Update driver hoặc gỡ bản driver mới nhất vừa cài gây lỗi.
+* Tắt tính năng Fast Startup:MởControl Panel-> ChọnPower Options-> ChọnChoose what the power buttons do-> Bỏ tích ôTurn on fast startup để tránh lỗi lưu trạng thái kernel khi khởi động lại.
+* Kiểm tra sức khỏe ổ cứng: Tải phần mềm CrystalDiskInfo để kiểm tra xem SSD có bị bad sector hoặc nhiệt độ vượt mức 70°C hay không.
 
 ---
 
@@ -68,4 +68,4 @@ Trước khi mở công cụ tra cứu, chúng ta cần hiểu rõ ba nguyên nh
 
 ### Các câu hỏi thường gặp (FAQ)
 
-**1. Máy tính của tôi tự đơ cứng nhưng trong Event Viewer không ghi lại lỗi gì ngoài Kernel-Power (Event ID 41), tại sao vậy?**Mã Event ID 41 thực chất chỉ ghi nhận việc "Hệ thống đã khởi động lại mà không tắt đúng cách trước đó". Điều này xảy ra vì khi máy bị đơ cứng hoàn toàn, CPU không còn khả năng ghi bất kỳ thông tin lỗi nào vào ổ cứng trước lúc bạn bấm nút nguồn. Để xử lý, hãy kiểm tra lại nhiệt độ CPU/GPU bằng phần mềm HWiNFO và kiểm tra xem nguồn điện có bị sụt áp hay không.**2. Tôi đã lọc Event Viewer và thấy rất nhiều lỗi màu đỏ (Error), có phải tôi phải sửa hết tất cả không?**Không cần thiết. Windows sinh ra rất nhiều lỗi ngầm nhỏ (background errors) của các ứng dụng không quan trọng mà không làm hệ thống sập nguồn. Bạn chỉ cần tập trung vào các lỗi xảy ra**đúng tại thời điểm**máy tính bị đơ cứng thực tế.**3. Liệu việc nâng cấp RAM hoặc cài lại Windows có giải quyết được triệt để lỗi này không?**Nếu nguyên nhân đến từ phần cứng vật lý (như RAM lỏng, SSD chập chờn, nguồn yếu) thì việc cài lại Windows hoàn toàn vô tác dụng. Ngược lại, nếu Event Viewer chỉ ra lỗi do file hệ thống bị hỏng, bạn chỉ cần mở**Command Prompt (Admin)**, gõ lệnh `sfc /scannow` rồi nhấn Enter để Windows tự động sửa chữa mà không cần cài lại máy.
+1. Máy tính của tôi tự đơ cứng nhưng trong Event Viewer không ghi lại lỗi gì ngoài Kernel-Power (Event ID 41), tại sao vậy?Mã Event ID 41 thực chất chỉ ghi nhận việc "Hệ thống đã khởi động lại mà không tắt đúng cách trước đó". Điều này xảy ra vì khi máy bị đơ cứng hoàn toàn, CPU không còn khả năng ghi bất kỳ thông tin lỗi nào vào ổ cứng trước lúc bạn bấm nút nguồn. Để xử lý, hãy kiểm tra lại nhiệt độ CPU/GPU bằng phần mềm HWiNFO và kiểm tra xem nguồn điện có bị sụt áp hay không.2. Tôi đã lọc Event Viewer và thấy rất nhiều lỗi màu đỏ (Error), có phải tôi phải sửa hết tất cả không?Không cần thiết. Windows sinh ra rất nhiều lỗi ngầm nhỏ (background errors) của các ứng dụng không quan trọng mà không làm hệ thống sập nguồn. Bạn chỉ cần tập trung vào các lỗi xảy rađúng tại thời điểmmáy tính bị đơ cứng thực tế.3. Liệu việc nâng cấp RAM hoặc cài lại Windows có giải quyết được triệt để lỗi này không?Nếu nguyên nhân đến từ phần cứng vật lý (như RAM lỏng, SSD chập chờn, nguồn yếu) thì việc cài lại Windows hoàn toàn vô tác dụng. Ngược lại, nếu Event Viewer chỉ ra lỗi do file hệ thống bị hỏng, bạn chỉ cần mởCommand Prompt (Admin), gõ lệnh `sfc /scannow` rồi nhấn Enter để Windows tự động sửa chữa mà không cần cài lại máy.

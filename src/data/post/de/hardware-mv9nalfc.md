@@ -21,9 +21,9 @@ Zuerst verfiel ich in blinden Aktionismus. Ich löschte ein paar größere PDF-D
 
 Bevor wir zur Tat schreiten, müssen wir verstehen, woher dieser Datenmüll eigentlich kommt. Windows und moderne Anwendungen sind wahre Meister im Verstecken von temporären Daten.
 
-1. **Versteckte AppData- und Temp-Ordner:** Jedes Mal, wenn du ein Programm installierst, im Browser surfst oder Office-Dokumente bearbeitest, legt Windows temporäre Kopien an. Viele davon werden nach dem Schließen der App nie wieder gelöscht und müllen den Ordner `C:\Users\[Benutzername]\AppData\Local\Temp` zu.
-2. **Windows Update-Reste und alte Systemdateien:** Nach größeren Funktionsupdates speichert Windows das vorherige Betriebssystem im Hintergrund ab (`Windows.old`), falls du ein Rollback machen möchtest. Auch veraltete Installationspakete und Fehlerprotokolle fressen heimlich Dutzende Gigabyte.
-3. **Der unbarmherzige Ruhezustand und die Auslagerungsdatei:** Die Dateien `hiberfil.sys` (für den Schnellstart/Ruhezustand) und `pagefile.sys` (virtueller Arbeitsspeicher) skalieren direkt mit der Größe deines RAMs und belegen oft fix 16 bis 32 Gigabyte auf der Systempartition.
+1. Versteckte AppData- und Temp-Ordner: Jedes Mal, wenn du ein Programm installierst, im Browser surfst oder Office-Dokumente bearbeitest, legt Windows temporäre Kopien an. Viele davon werden nach dem Schließen der App nie wieder gelöscht und müllen den Ordner `C:\Users\[Benutzername]\AppData\Local\Temp` zu.
+2. Windows Update-Reste und alte Systemdateien: Nach größeren Funktionsupdates speichert Windows das vorherige Betriebssystem im Hintergrund ab (`Windows.old`), falls du ein Rollback machen möchtest. Auch veraltete Installationspakete und Fehlerprotokolle fressen heimlich Dutzende Gigabyte.
+3. Der unbarmherzige Ruhezustand und die Auslagerungsdatei: Die Dateien `hiberfil.sys` (für den Schnellstart/Ruhezustand) und `pagefile.sys` (virtueller Arbeitsspeicher) skalieren direkt mit der Größe deines RAMs und belegen oft fix 16 bis 32 Gigabyte auf der Systempartition.
 
 ---
 
@@ -32,10 +32,10 @@ Bevor wir zur Tat schreiten, müssen wir verstehen, woher dieser Datenmüll eige
 Gehen wir das Problem systematisch an. Wir nutzen dabei ausschließlich Windows-Bordmittel, die du aus dem Arbeitsalltag im Büro bestens kennst. Keine dubiosen Registry-Cleaner aus dem Internet, die am Ende mehr zerstören als helfen.
 
 ### Schritt 1: Die integrierte Windows-Speicheranalyse nutzen
-Drücke die Tastenkombination `Windows-Taste + i`, um die Einstellungen zu öffnen. Navigiere zu **System**und klicke auf**Speicher**. 
+Drücke die Tastenkombination `Windows-Taste + i`, um die Einstellungen zu öffnen. Navigiere zu Systemund klicke aufSpeicher. 
 * Hier siehst du sofort auf einen Blick, welcher Bereich (Apps, Dokumente, temporäre Dateien) deinen Speicher frisst.
-* Klicke auf **Temporäre Dateien**. Windows scannt nun das System nach veralteten Installationsdateien, Windows-Update-Bereinigungen und alten Protokollen.
-* Setze die Haken bei den Speicherfressern (wähle aber mit Bedacht, ob du deinen "Downloads"-Ordner wirklich leeren möchtest!) und klicke auf **Dateien entfernen**.
+* Klicke auf Temporäre Dateien. Windows scannt nun das System nach veralteten Installationsdateien, Windows-Update-Bereinigungen und alten Protokollen.
+* Setze die Haken bei den Speicherfressern (wähle aber mit Bedacht, ob du deinen "Downloads"-Ordner wirklich leeren möchtest!) und klicke auf Dateien entfernen.
 
 ### Schritt 2: Den versteckten AppData-Temp-Ordner manuell leeren
 Manchmal greift die automatische Bereinigung nicht tief genug. 
@@ -46,11 +46,11 @@ Manchmal greift die automatische Bereinigung nicht tief genug.
 
 ### Schritt 3: Die erweiterte Datenträgerbereinigung als Administrator
 Für alte Systemdateien brauchen wir tiefere Admin-Rechte:
-1. Öffne das Startmenü, tippe **Datenträgerverwaltung**oder besser noch**Datenträgerbereinigung** ein und starte sie. (Noch besser: Rechtsklick auf die App und als Administrator ausführen).
+1. Öffne das Startmenü, tippe Datenträgerverwaltungoder besser nochDatenträgerbereinigung ein und starte sie. (Noch besser: Rechtsklick auf die App und als Administrator ausführen).
 2. Wähle das Laufwerk `C:` aus.
-3. Klicke im neuen Fenster unten links auf **Systemdateien bereinigen**.
-4. Setze nun die Haken bei **Frühere Windows-Installation(en)**,**Windows Update-Bereinigung**und**Temporäre Installationsdateien**.
-5. Klicke auf **OK** und lass das System aufräumen. Das kann je nach Zustand ein paar Minuten dauern, bringt aber meist den entscheidenden Platz zurück.
+3. Klicke im neuen Fenster unten links auf Systemdateien bereinigen.
+4. Setze nun die Haken bei Frühere Windows-Installation(en),Windows Update-BereinigungundTemporäre Installationsdateien.
+5. Klicke auf OK und lass das System aufräumen. Das kann je nach Zustand ein paar Minuten dauern, bringt aber meist den entscheidenden Platz zurück.
 
 <div style="border-left: 4px solid #e11d48; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Wichtiger Sicherheitshinweis:</strong> Lösche niemals den gesamten Ordner `Windows` oder `System32` manuell. Das führt unweigerlich zu einem Systemabsturz, der eine Neuinstallation erfordert. Halte dich strikt an die Ordner mit der Bezeichnung `Temp` oder nutze die offiziellen Windows-Assistenten.
@@ -61,14 +61,14 @@ Für alte Systemdateien brauchen wir tiefere Admin-Rechte:
 ## Häufig gestellte Fragen (FAQ)
 
 ### 1. Kann ich den Ruhezustand (Hibernation) komplett deaktivieren, um Platz zu sparen?
-Ja, wenn du den Schnellstart oder den Ruhezustand nie nutzt. Öffne die **Eingabeaufforderung** als Administrator (Rechtsklick im Startmenü) und tippe den Befehl `powercfg /hibernate off` ein und drücke Enter. Damit verschwindet die tonnenschwere `hiberfil.sys` sofort von deinem C-Laufwerk und gibt den Speicherplatz frei.
+Ja, wenn du den Schnellstart oder den Ruhezustand nie nutzt. Öffne die Eingabeaufforderung als Administrator (Rechtsklick im Startmenü) und tippe den Befehl `powercfg /hibernate off` ein und drücke Enter. Damit verschwindet die tonnenschwere `hiberfil.sys` sofort von deinem C-Laufwerk und gibt den Speicherplatz frei.
 
 
 
 ![Tech Hardware Guide](https://images.unsplash.com/photo-1587202372775-e229f172b9d7?auto=format&fit=crop&w=1200&h=675&q=85)
 
 ### 2. Warum füllt sich mein C-Laufwerk nach dem Löschen sofort wieder?
-Das liegt meist an automatischen Hintergrundprozessen wie Windows Update, die im Moment des Aufräumens neue Installationspakete herunterladen, oder an Browsern wie Google Chrome, die riesige Caches aufbauen. Es empfiehlt sich, nach der Bereinigung einmal den **Task-Manager** zu öffnen, um zu prüfen, ob gerade ein Update-Prozess im Hintergrund läuft.
+Das liegt meist an automatischen Hintergrundprozessen wie Windows Update, die im Moment des Aufräumens neue Installationspakete herunterladen, oder an Browsern wie Google Chrome, die riesige Caches aufbauen. Es empfiehlt sich, nach der Bereinigung einmal den Task-Manager zu öffnen, um zu prüfen, ob gerade ein Update-Prozess im Hintergrund läuft.
 
 ### 3. Soll ich Drittanbieter-Tools wie CCleaner verwenden?
 Aus professioneller IT-Sicht: Besser nicht. Die modernen Windows-Bordmittel (Speicherunterstützung und Datenträgerbereinigung) erledigen diesen Job mittlerweile absolut zuverlässig und ohne das Risiko, dass wichtige Registry-Schlüssel beschädigt oder versehentlich essenzielle Log-Dateien gelöscht werden, die für die Fehlerdiagnose im Büro benötigt werden.

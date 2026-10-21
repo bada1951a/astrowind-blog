@@ -19,9 +19,9 @@ Es ist exakt 14:45 Uhr an einem Dienstag in unserem Berliner Büro am Hackeschen
 
 Nachdem ich das Problem damals in Rekordzeit gelöst hatte (und der Rollout dank Sekundengenauigkeit noch glimpflich ausging), habe ich mir die Ursachen genauer angesehen. Das Problem tritt meistens durch drei konkrete Flaschenhalse auf:
 
-1. **Absturz der Windows Shell Experience:** Die grafische Benutzeroberfläche (Shell) verklemmt sich oft nach Hintergrund-Updates oder korrumpierten Cache-Dateien.
-2. **Hängende Explorer-Prozesse:** Der klassische `explorer.exe` steuert nicht nur die Ordneransichten, sondern tiefgreifend auch die Taskleiste und den Desktop-Hintergrund.
-3. **Korrupte Xaml-Oberflächenkomponenten:** Das moderne Xaml-Framework von Windows 11 reagiert empfindlich auf RAM-Spitzen oder Treiberkonflikte, wodurch Startmenü und Taskleistenelemente unresponsive werden.
+1. Absturz der Windows Shell Experience: Die grafische Benutzeroberfläche (Shell) verklemmt sich oft nach Hintergrund-Updates oder korrumpierten Cache-Dateien.
+2. Hängende Explorer-Prozesse: Der klassische `explorer.exe` steuert nicht nur die Ordneransichten, sondern tiefgreifend auch die Taskleiste und den Desktop-Hintergrund.
+3. Korrupte Xaml-Oberflächenkomponenten: Das moderne Xaml-Framework von Windows 11 reagiert empfindlich auf RAM-Spitzen oder Treiberkonflikte, wodurch Startmenü und Taskleistenelemente unresponsive werden.
 
 ## Schritt-für-Schritt-Lösung: Schnelle Hilfe im Ernstfall
 
@@ -30,10 +30,10 @@ Wenn die Taskleiste streikt, hilft klassisches Klicken meist nicht weiter. Wir m
 ### Schritt 1: Den Windows-Explorer über den Task-Manager neu starten
 Der schnellste und oft wirksamste Weg, um die Taskleiste wieder zum Leben zu erwecken.
 
-* Drücken Sie die Tastenkombination `Strg + Umschalt + Esc`, um den **Task-Manager** direkt zu öffnen. (Sollte das nicht gehen, nutzen Sie `Strg + Alt + Entf` und wählen Sie den Task-Manager aus).
-* Klicken Sie oben rechts auf **Neuen Task ausführen** (oder nutzen Sie das entsprechende Menü).
+* Drücken Sie die Tastenkombination `Strg + Umschalt + Esc`, um den Task-Manager direkt zu öffnen. (Sollte das nicht gehen, nutzen Sie `Strg + Alt + Entf` und wählen Sie den Task-Manager aus).
+* Klicken Sie oben rechts auf Neuen Task ausführen (oder nutzen Sie das entsprechende Menü).
 * Tippen Sie im Eingabefeld exakt folgendes ein: `explorer.exe`
-* Setzen Sie den Haken bei **Diesen Task mit Administratorprivilegien erstellen**, falls verfügbar, und bestätigen Sie mit Enter.
+* Setzen Sie den Haken bei Diesen Task mit Administratorprivilegien erstellen, falls verfügbar, und bestätigen Sie mit Enter.
 * *Ergebnis:* Der Bildschirm flackert kurz auf, der Desktop baut sich neu auf – und in den allermeisten Fällen reagiert die Taskleiste sofort wieder.
 
 ### Schritt 2: PowerShell-Keulenschlag zur Neuregistrierung (Falls Schritt 1 fehlschlägt)
@@ -53,7 +53,7 @@ Get-AppxPackage -AllUsers | Foreach {Add-AppxPackage -DisableDevelopmentMode -Re
 ### Schritt 3: Systemdateien auf Integrität prüfen (SFC & DISM)
 Manchmal liegt die Ursache tiefer in beschädigten Systemdateien nach einem fehlerhaften Windows-Update.
 
-* Öffnen Sie das **Terminal**oder die**Eingabeaufforderung** als Administrator.
+* Öffnen Sie das Terminaloder dieEingabeaufforderung als Administrator.
 * Tippen Sie `sfc /scannow` ein und bestätigen Sie. Windows prüft nun alle geschützten Systemdateien und ersetzt beschädigte Versionen automatisch.
 * Nach dem Durchlauf geben Sie zusätzlich `DISM.exe /Online /Cleanup-image /Restorehealth` ein, um das Windows-Wimage zu reparieren.
 

@@ -28,9 +28,9 @@ W tym poradniku wylejemy kubeł zimnej wody na te cyfrowe pijawki. Pokażę Ci, 
 
 Zanim przejdziemy do chirurgicznego usuwania problemów, ustalmy, dlaczego Twój system zamienił się w żółwia. Oto trzy najczęstsze grzechy użytkowników i samych aplikacji:
 
-1. **Syndrom "Każda apka musi być ważna":** Instalatorzy softu (od pakietów Adobe po darmowe narzędzia PDF) domyślnie zaznaczają opcję *"Uruchom wraz z systemem Windows"*. Aplikacje te bezczelnie wrzucają swoje demony i usługi do autostartu, chociaż uruchamiasz je raz na kwartał.
-2. **Aktualizatory-Wampiry:** Każdy producent sprzętu (drukarki, myszki gamingowe, huby USB) chce sprawdzać aktualizacje co 5 minut w tle. W efekcie w pamięci wisi kilkanaście mikroprocesorów, które zjadają RAM i cenne cykle CPU.
-3. **Zapomniane pamiątki po starych programach:** Odinstalowałeś grę albo program graficzny, ale wpis w rejestrze lub harmonogram zadań został i teraz system desperacko próbuje załadować plik `.exe`, którego fizycznie już nie ma na dysku.
+1. Syndrom "Każda apka musi być ważna": Instalatorzy softu (od pakietów Adobe po darmowe narzędzia PDF) domyślnie zaznaczają opcję *"Uruchom wraz z systemem Windows"*. Aplikacje te bezczelnie wrzucają swoje demony i usługi do autostartu, chociaż uruchamiasz je raz na kwartał.
+2. Aktualizatory-Wampiry: Każdy producent sprzętu (drukarki, myszki gamingowe, huby USB) chce sprawdzać aktualizacje co 5 minut w tle. W efekcie w pamięci wisi kilkanaście mikroprocesorów, które zjadają RAM i cenne cykle CPU.
+3. Zapomniane pamiątki po starych programach: Odinstalowałeś grę albo program graficzny, ale wpis w rejestrze lub harmonogram zadań został i teraz system desperacko próbuje załadować plik `.exe`, którego fizycznie już nie ma na dysku.
 
 ---
 
@@ -41,11 +41,11 @@ Odrzucamy wszelkie szemrane programy "szuwarek-optimizer" z internetu. Zrobimy t
 ### Krok 1: Oczyszczanie Menedżera Zadania (Task Manager)
 Zapomnij o starym `msconfig`. Od czasów Windows 10 i 11 mamy do dyspozycji dedykowaną zakładkę w Menedżerze Zadań, która bezlitośnie obnaża zasobożerność startera.
 
-1. Wciśnij skrót klawiszowy **Ctrl + Shift + Esc**, aby natychmiast uruchomić**Menedżer zadań**.
-2. Jeśli widzisz uproszczony widok, kliknij **Więcej szczegółów** na dole okna.
-3. Przejdź do zakładki z ikoną licznika/miernika – **Aplikacje startowe** (lub *Autostart* w starszych wersjach).
-4. Posortuj listę według kolumny **Wpływ na uruchamianie** (*Startup impact*).
-5. Wszystko, co ma status *Wysoki* (High) i nie jest antywirusem ani sterownikiem touchpada/klawiatury, zaznaczaj prawym przyciskiem myszy i wybierz **Wyłącz** (*Disable*).
+1. Wciśnij skrót klawiszowy Ctrl + Shift + Esc, aby natychmiast uruchomićMenedżer zadań.
+2. Jeśli widzisz uproszczony widok, kliknij Więcej szczegółów na dole okna.
+3. Przejdź do zakładki z ikoną licznika/miernika – Aplikacje startowe (lub *Autostart* w starszych wersjach).
+4. Posortuj listę według kolumny Wpływ na uruchamianie (*Startup impact*).
+5. Wszystko, co ma status *Wysoki* (High) i nie jest antywirusem ani sterownikiem touchpada/klawiatury, zaznaczaj prawym przyciskiem myszy i wybierz Wyłącz (*Disable*).
 
 <div style="border-left: 4px solid #ef4444; padding: 12px 16px; margin: 20px 0; background-color: rgba(239, 68, 68, 0.05); border-radius: 4px;">
 <strong>ZŁOTA ZASADA INŻYNIERA:</strong><br>
@@ -55,7 +55,7 @@ Jeśli nie masz pewności, czym jest dany proces (np. nazwa to losowy ciąg lite
 ### Krok 2: Głębokie Cięcie przez Wiersz Polecenia (Dla ambitnych)
 Jeśli standardowy interfejs zawodzi albo podejrzewasz, że w systemie siedzi ukryty syf, sprawdźmy klucz rejestru odpowiedzialny za start systemu bezpośrednio z poziomu konsoli.
 
-1. Wciśnij **Win + R**, wpisz `cmd`, a następnie wciśnij**Ctrl + Shift + Enter**, aby uruchomić**Wiersz polecenia jako Administrator**.
+1. Wciśnij Win + R, wpisz `cmd`, a następnie wciśnijCtrl + Shift + Enter, aby uruchomićWiersz polecenia jako Administrator.
 2. Wklej poniższe polecenie, aby wyciągnąć listę aplikacji startowych z rejestru i zapisać je do pliku na pulpicie do wglądu:
    ```cmd
    reg query "HKCU\Software\Microsoft\Windows\CurrentVersion\Run" > C:\Users\%USERNAME%\Desktop\autostart_user.txt
@@ -72,10 +72,10 @@ Jeśli standardowy interfejs zawodzi albo podejrzewasz, że w systemie siedzi uk
 ### Krok 3: Harmonogram Zadań (Task Scheduler) – Ukryte Zło
 Wielu cwaniaków w branży oprogramowania omija autostart rejestru i wrzuca swoje procesy bezpośrednio do Harmonogramu Zadań, żeby uruchamiały się po zalogowaniu użytkownika.
 
-1. Wciśnij **Win + R**, wpisz `taskschd.msc` i zatwierdź Enterem.
-2. Kliknij na **Biblioteka harmonogramu zadań** w lewym panelu.
+1. Wciśnij Win + R, wpisz `taskschd.msc` i zatwierdź Enterem.
+2. Kliknij na Biblioteka harmonogramu zadań w lewym panelu.
 3. Przejrzyj pojedyncze zadania na liście. Zwróć uwagę na kolumnę *Triggery* (Wyzwalace) – szukaj wpisów z regułą *"Przy logowaniu dowolnego użytkownika"* lub *"Przy uruchomieniu"*.
-4. Kliknij prawym na zbędne zadanie i wybierz **Wyłącz** (*Disable*).
+4. Kliknij prawym na zbędne zadanie i wybierz Wyłącz (*Disable*).
 
 ---
 
@@ -83,20 +83,20 @@ Wielu cwaniaków w branży oprogramowania omija autostart rejestru i wrzuca swoj
 
 Zanim zaczniesz bezmyślnie klikać "Wyłącz", spójrz na tę krótką listę ratunkową. Ubicie tych komponentów oznacza bilet w jedną stronę do trybu awaryjnego (Safe Mode):
 
-* **Usługi Intel / AMD / Chipsetu:** Odpowiadają za poprawną komunikację procesora z płytą główną.
-* **Sterowników dźwięku (np. Realtek Audio Universal Service):** Zostaniesz bez głosu na Zoomie/Teamsach.
-* **Windows Security / Defender:** Twój jedyny bastion przed cyfrowym syfem z sieci. Zostaw go w spokoju!
-* **Oprogramowania paneli sterowania GPU (NVIDIA Container / AMD Software):** Bez tego mogą sypnąć się profile ekranu i akceleracja sprzętowa w grach oraz przeglądarkach.
+* Usługi Intel / AMD / Chipsetu: Odpowiadają za poprawną komunikację procesora z płytą główną.
+* Sterowników dźwięku (np. Realtek Audio Universal Service): Zostaniesz bez głosu na Zoomie/Teamsach.
+* Windows Security / Defender: Twój jedyny bastion przed cyfrowym syfem z sieci. Zostaw go w spokoju!
+* Oprogramowania paneli sterowania GPU (NVIDIA Container / AMD Software): Bez tego mogą sypnąć się profile ekranu i akceleracja sprzętowa w grach oraz przeglądarkach.
 
 ---
 
 ## Często Zadawane Pytania (FAQ)
 
 ### Q1: Wyłączyłem aplikację w Menedżerze zadań, a ona dalej włącza się po restarcie. O co chodzi?
-**A:** Niektóre aplikacje mają własne ustawienia wewnętrzne, które przy każdym uruchomieniu programu same dopisują się z powrotem do autostartu. Wejdź w *Ustawienia* (Settings) danej aplikacji (np. Skype, Steam, Torrenty) i tam odznacz opcję "Uruchom wraz z systemem". Dopiero wtedy zniknie na dobre.
+A: Niektóre aplikacje mają własne ustawienia wewnętrzne, które przy każdym uruchomieniu programu same dopisują się z powrotem do autostartu. Wejdź w *Ustawienia* (Settings) danej aplikacji (np. Skype, Steam, Torrenty) i tam odznacz opcję "Uruchom wraz z systemem". Dopiero wtedy zniknie na dobre.
 
 ### Q2: Czy czyszczenie autostartu jest bezpieczne dla moich danych?
-**A:**W 100% bezpieczne. Wyłączenie aplikacji w autostarcie**nie oznacza** jej odinstalowania. Programy te nadal będą działać idealnie, gdy klikniesz ich ikonkę ręcznie. Po prostu przestaną marnować zasoby komputera w momencie, gdy Ty próbujesz spokojnie zacząć pracę.
+A:W 100% bezpieczne. Wyłączenie aplikacji w autostarcienie oznacza jej odinstalowania. Programy te nadal będą działać idealnie, gdy klikniesz ich ikonkę ręcznie. Po prostu przestaną marnować zasoby komputera w momencie, gdy Ty próbujesz spokojnie zacząć pracę.
 
 ### Q3: Mój dysk to stary HDD. Czy samo wyłączenie autostartu mi pomoże?
-**A:** Pomoże, ale na krótko. Tradycyjne dyski talerzowe (HDD) mają dramatycznie niski wskaźnik IOPS (operacji wejścia/wyjścia na sekundę). Przy starcie Windowsa głowica dysku skacze w tysiące miejsc jednocześnie, próbując załadować wszystko naraz. Jeśli chcesz autentycznego kopa, jedynym trwałym rozwiązaniem jest migracja systemu na dysk SSD (M.2 NVMe lub SATA). Autostart to tylko półśrodek, choć niezwykle skuteczny na start.
+A: Pomoże, ale na krótko. Tradycyjne dyski talerzowe (HDD) mają dramatycznie niski wskaźnik IOPS (operacji wejścia/wyjścia na sekundę). Przy starcie Windowsa głowica dysku skacze w tysiące miejsc jednocześnie, próbując załadować wszystko naraz. Jeśli chcesz autentycznego kopa, jedynym trwałym rozwiązaniem jest migracja systemu na dysk SSD (M.2 NVMe lub SATA). Autostart to tylko półśrodek, choć niezwykle skuteczny na start.

@@ -45,7 +45,7 @@ Khi bạn nhấn phím, stem trượt xuống tách hoặc đẩy hai lá đồn
 * Bề mặt tiếp xúc kim loại bị oxy hóa cục bộ, khiến điện trở tiếp xúc tăng cao đột biến. Khi lá đồng chạm nhau, dòng điện chạy qua không đủ ổn định, vi điều khiển (MCU) hiểu nhầm rằng người dùng đang nhấp nhả phím nhiều lần trong một phần nghìn giây.
 
 ### 2. Thuật Toán Khử Rung Phím (Debounce Time Threshold) Gặp Lỗi
-Về mặt vật lý học, không có hai miếng kim loại nào chạm vào nhau mà dừng lại ngay lập tức; chúng luôn rung nhẹ (bounce) trước khi tiếp xúc tĩnh hoàn toàn. Firmware của bàn phím cơ luôn cài đặt một thuật toán gọi là **Debounce Time** (thời gian trễ khử rung, thường từ 5ms đến 15ms) để bỏ qua các tín hiệu dao động này. 
+Về mặt vật lý học, không có hai miếng kim loại nào chạm vào nhau mà dừng lại ngay lập tức; chúng luôn rung nhẹ (bounce) trước khi tiếp xúc tĩnh hoàn toàn. Firmware của bàn phím cơ luôn cài đặt một thuật toán gọi là Debounce Time (thời gian trễ khử rung, thường từ 5ms đến 15ms) để bỏ qua các tín hiệu dao động này. 
 Nếu switch bị lão hóa, độ đàn hồi của lá đồng suy giảm, thời gian rung vật lý vượt quá ngưỡng Debounce Time của firmware, hiện tượng gõ một ra hai (chattering) sẽ xuất hiện ngay lập tức trên hệ điều hành.
 
 ### 3. Hỏng Hóc Mối Hàn Hoặc Giãn Chân Socket Hot-swap
@@ -74,11 +74,11 @@ Quy trình chuẩn hóa dưới đây được áp dụng trực tiếp tại b�
 
 Trước khi can thiệp phần cứng, loại trừ toàn bộ nguyên nhân do driver hoặc hệ điều hành.
 
-1. Nhấn tổ hợp phím `Windows + X`, chọn **Device Manager**.
-2. Mở rộng mục **Keyboards**, nhấp chuột phải vào bàn phím đang sử dụng, chọn**Uninstall device**.
+1. Nhấn tổ hợp phím `Windows + X`, chọn Device Manager.
+2. Mở rộng mục Keyboards, nhấp chuột phải vào bàn phím đang sử dụng, chọnUninstall device.
 3. Rút cáp USB ra khỏi máy tính, cắm sang một cổng USB khác (ưu tiên cắm trực tiếp vào cổng I/O sau case máy, bỏ qua các Hub USB chia cổng). Khởi động lại hệ điều hành để Windows tự nạp driver chuẩn.
 4. Truy cập các công cụ kiểm tra switch trực tuyến hoặc tải phần mềm `Keyboard Chattering Fix` / `Switch Hitter`.
-5. Thiết lập ngưỡng phát hiện debounce trên phần mềm xuống mức **20ms**. Gõ liên tục phím lỗi khoảng 100 lần với lực gõ khác nhau. Nếu phần mềm đánh dấu đỏ kèm khoảng cách mili-giây cực ngắn giữa hai lần ấn, bạn đã xác định chính xác switch đó bị lỗi tiếp điểm cơ khí.
+5. Thiết lập ngưỡng phát hiện debounce trên phần mềm xuống mức 20ms. Gõ liên tục phím lỗi khoảng 100 lần với lực gõ khác nhau. Nếu phần mềm đánh dấu đỏ kèm khoảng cách mili-giây cực ngắn giữa hai lần ấn, bạn đã xác định chính xác switch đó bị lỗi tiếp điểm cơ khí.
 
 ---
 
@@ -92,15 +92,15 @@ Trước khi can thiệp phần cứng, loại trừ toàn bộ nguyên nhân do
   Tuyệt đối <strong>CẤM DÙNG RP7 hoặc WD-40 đa năng thông thường</strong> (loại phá rỉ sét máy móc) vì chúng chứa dầu gốc khoáng sẽ làm biến tính nhựa switch, biến bụi bẩn thành bùn dẫn điện gây chập mạch chết cả bo mạch PCB.
 </div>
 
-**Các bước thao tác chuẩn:**1.**Ngắt toàn bộ nguồn điện:** Rút cáp kết nối hoặc gạt công tắc tắt nguồn pin (nếu dùng phím Bluetooth/Wireless). Tháo pin rời nếu có.
-2. **Tháo Keycap:** Dùng dụng cụ rút phím (Keycap puller) rút phím bị lỗi theo phương thẳng đứng 90 độ, tránh bẻ nghiêng gây gãy chân stem.
-3. **Nhỏ/Xịt dung dịch vào buồng tiếp điểm:**
+Các bước thao tác chuẩn:1.Ngắt toàn bộ nguồn điện: Rút cáp kết nối hoặc gạt công tắc tắt nguồn pin (nếu dùng phím Bluetooth/Wireless). Tháo pin rời nếu có.
+2. Tháo Keycap: Dùng dụng cụ rút phím (Keycap puller) rút phím bị lỗi theo phương thẳng đứng 90 độ, tránh bẻ nghiêng gây gãy chân stem.
+3. Nhỏ/Xịt dung dịch vào buồng tiếp điểm:
    * Lắp vòi xịt mảnh đi kèm bình BW-100 / DeoxIT.
    * Dùng ngón tay nhấn giữ stem của switch xuống mức kịch kim (đáy hành trình). Lúc này bạn sẽ thấy khe hở nhỏ dẫn thẳng xuống buồng chứa lá đồng.
    * Đặt vòi xịt nghiêng góc 45 độ hướng về phía có lá đồng tiếp điểm (thường là phía có in logo thương hiệu của switch như Cherry, Gateron).
-   * **Xịt một nhịp thật dứt khoát trong vòng 0.5 giây**. Không xịt ngập ngụa bừa bãi.
-4. **Kích hoạt cơ học:**Ngay sau khi xịt, dùng ngón tay nhấp nhả stem thật nhanh liên tục từ**50 đến 70 lần**. Động tác này ép hai lá đồng cọ xát vào nhau, mượn áp lực cơ học cùng hoạt chất tẩy rửa đánh bật hoàn toàn lớp muội than oxy hóa và cuốn bụi mịn trôi ra ngoài.
-5. **Chờ khô tự nhiên:** Do dung dịch điện tử chuyên dụng bay hơi cực nhanh, hãy để yên bàn phím trong khoảng 10-15 phút ở nơi khô ráo để dung dịch phân tán và khô hoàn toàn.
+   * Xịt một nhịp thật dứt khoát trong vòng 0.5 giây. Không xịt ngập ngụa bừa bãi.
+4. Kích hoạt cơ học:Ngay sau khi xịt, dùng ngón tay nhấp nhả stem thật nhanh liên tục từ50 đến 70 lần. Động tác này ép hai lá đồng cọ xát vào nhau, mượn áp lực cơ học cùng hoạt chất tẩy rửa đánh bật hoàn toàn lớp muội than oxy hóa và cuốn bụi mịn trôi ra ngoài.
+5. Chờ khô tự nhiên: Do dung dịch điện tử chuyên dụng bay hơi cực nhanh, hãy để yên bàn phím trong khoảng 10-15 phút ở nơi khô ráo để dung dịch phân tán và khô hoàn toàn.
 
 ---
 
@@ -108,13 +108,13 @@ Trước khi can thiệp phần cứng, loại trừ toàn bộ nguyên nhân do
 
 Nếu sau khi xử lý dung dịch mà phím vẫn còn hiện tượng nuốt nút (ấn không nhận):
 
-* **Đối với bàn phím Hot-swap:**
+* Đối với bàn phím Hot-swap:
   1. Dùng Switch Puller kẹp vào hai ngàm nhựa trên và dưới của switch, kéo thẳng đứng ra khỏi mạch.
   2. Lật mặt dưới của switch, kiểm tra xem hai chân đồng dẫn điện có bị cong gập lại ép sát vào đáy nhựa không. Nếu có, dùng nhíp kỹ thuật nắn thẳng góc 90 độ.
   3. Nhìn xuống lỗ socket trên mạch PCB: Dùng đầu kim khâu hoặc nhíp nhọn khều nhẹ hai lá kim loại bên trong lỗ socket ép sát vào nhau một chút để khi cắm switch vào, ngàm kẹp chặt chân kim loại hơn.
   4. Cắm switch lại thẳng góc, nhấn dứt khoát nghe tiếng "tách".
 
-* **Đối với bàn phím Mạch hàn (Solder):**
+* Đối với bàn phím Mạch hàn (Solder):
   1. Mở vỏ bàn phím, lật mặt sau PCB.
   2. Bật mỏ hàn ở nhiệt độ 320°C - 350°C. 
   3. Chấm một lượng nhỏ thiếc hàn mới có chứa lõi trợ hàn (flux) vào hai mối hàn của switch lỗi để làm mới mối nối (solder reflow), loại bỏ triệt để hiện tượng nứt chân hàn li ti do mỏi nhiệt.
@@ -139,7 +139,7 @@ Sau khi xử lý thành công cho kỹ sư trực ca, chúng tôi đưa chiếc 
 ## Câu Hỏi Thường Gặp (FAQ)
 
 ### 1. Dùng cồn y tế 70 độ hoặc cồn đỏ để nhỏ vào switch phím cơ được không?
-**Tuyệt đối không.**Cồn y tế 70 độ chứa tới 30% là nước cất. Nước sẽ đọng lại rất lâu bên trong buồng switch kín, không thể bay hơi nhanh và sẽ thúc đẩy quá trình rỉ sét của lò xo thép cũng như lá đồng diễn ra nhanh hơn gấp nhiều lần. Nếu bất đắc dĩ không có chai xịt tiếp điểm, bạn chỉ được phép dùng cồn Isopropyl Alcohol (IPA) độ tinh khiết từ**99% trở lên** và phải để khô tối thiểu 1 tiếng trước khi cắm điện.
+Tuyệt đối không.Cồn y tế 70 độ chứa tới 30% là nước cất. Nước sẽ đọng lại rất lâu bên trong buồng switch kín, không thể bay hơi nhanh và sẽ thúc đẩy quá trình rỉ sét của lò xo thép cũng như lá đồng diễn ra nhanh hơn gấp nhiều lần. Nếu bất đắc dĩ không có chai xịt tiếp điểm, bạn chỉ được phép dùng cồn Isopropyl Alcohol (IPA) độ tinh khiết từ99% trở lên và phải để khô tối thiểu 1 tiếng trước khi cắm điện.
 
 ### 2. Tại sao sau khi xịt BW-100 thì phím dùng ngon được 1 tuần rồi lại bị chattering tiếp?
 Hiện tượng này xảy ra khi lớp mạ chống oxy hóa trên lá đồng đã bị bào mòn vật lý đến mức trơ lõi kim loại tạp chất bên dưới, hoặc lá đồng đã mất hoàn toàn lực đàn hồi (kim loại bị mỏi). Dung dịch xịt chỉ tạm thời rửa sạch cặn bẩn, nhưng kim loại mộc tiếp xúc với oxy trong không khí sẽ bị rỉ trở lại chỉ sau vài ngày. Giải pháp duy nhất lúc này là thay thế hoàn toàn switch mới.

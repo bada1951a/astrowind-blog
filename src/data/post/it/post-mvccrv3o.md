@@ -23,9 +23,9 @@ Dopo vent'anni passati a mettere le mani nei PC e nei server, ho imparato che le
 
 Prima di mettere mano a comandi e cacciaviti, capiamo cosa scatena esattamente questo blocco di sistema:
 
-1. **Driver di periferica instabili o corrotti:** Spesso un aggiornamento automatico di Windows Update installa un driver di rete, audio o chipset non perfettamente stabile, che va in conflitto con il kernel di Windows.
-2. **Problemi di integrità della RAM (Banchi difettosi o overclock aggressivo):** Se la memoria fisica presenta errori di lettura/scrittura o profili XMP/DOCP troppo spinti, il sistema operativo riceve dati corrotti a livello di interrupt request level (IRQL).
-3. **Servizi di terze parti o antivirus invasivi:** Software di sicurezza o utility di sistema non aggiornate che si agganciano profondamente al kernel possono causare violazioni di accesso alla memoria.
+1. Driver di periferica instabili o corrotti: Spesso un aggiornamento automatico di Windows Update installa un driver di rete, audio o chipset non perfettamente stabile, che va in conflitto con il kernel di Windows.
+2. Problemi di integrità della RAM (Banchi difettosi o overclock aggressivo): Se la memoria fisica presenta errori di lettura/scrittura o profili XMP/DOCP troppo spinti, il sistema operativo riceve dati corrotti a livello di interrupt request level (IRQL).
+3. Servizi di terze parti o antivirus invasivi: Software di sicurezza o utility di sistema non aggiornate che si agganciano profondamente al kernel possono causare violazioni di accesso alla memoria.
 
 ---
 
@@ -38,7 +38,7 @@ Per risolvere definitivamente il problema senza formattare, procediamo con un ap
 La prima cosa da fare è escludere un guasto fisico o un'instabilità dei moduli di memoria RAM.
 
 1. Premi la combinazione di tasti `Windows + R`, digita `mdsched.exe` e premi Invio.
-2. Seleziona l'opzione consigliata: "**Riavvia ora e individua eventuali problemi**".
+2. Seleziona l'opzione consigliata: "Riavvia ora e individua eventuali problemi".
 3. Il PC si riavvierà in modalità di diagnostica UEFI/BIOS eseguendo il test standard. 
 4. Se riscontri errori al termine del test, significa che almeno un banco RAM è difettoso o va rimosso l'overclock dal BIOS.
 
@@ -50,10 +50,10 @@ La prima cosa da fare è escludere un guasto fisico o un'instabilità dei moduli
 
 Se la RAM risulta integra al 100%, il colpevole è quasi certamente un driver corrotto installato di recente.
 
-1. Clicca sul pulsante Start, digita "**Gestione dispositivi**" e aprilo.
+1. Clicca sul pulsante Start, digita "Gestione dispositivi" e aprilo.
 2. Espandi le categorie principali (specialmente *Schede di rete*, *Controller audio, video e giochi* o *Schede video*).
-3. Clicca con il tasto destro sul driver sospetto (magari quello aggiornato poche ore prima del crash) e seleziona "**Proprietà**".
-4. Spostati sulla scheda "**Driver**" e clicca sul pulsante**"Ripristina driver" (Roll Back Driver)**, se attivo.
+3. Clicca con il tasto destro sul driver sospetto (magari quello aggiornato poche ore prima del crash) e seleziona "Proprietà".
+4. Spostati sulla scheda "Driver" e clicca sul pulsante"Ripristina driver" (Roll Back Driver), se attivo.
 5. Conferma l'operazione e riavvia il sistema.
 
 Se Windows non ti permette di fare il rollback perché il pulsante è disattivato, puoi procedere alla disinstallazione pulita del driver scaricando la versione precedente direttamente dal sito del produttore (es. NVIDIA, AMD, Realtek).
@@ -63,16 +63,16 @@ Se Windows non ti permette di fare il rollback perché il pulsante è disattivat
 ## Consigli di Prevenzione e Best Practices
 
 Nel nostro lavoro quotidiano in azienda gestiamo decine di macchine e la regola d'oro per evitare queste interruzioni è la prudenza negli aggiornamenti:
-- **Evita i driver beta:** Installa sempre driver certificati WHQL (Windows Hardware Quality Labs).
-- **Punti di ripristino regolari:** Prima di installare suite software complesse o aggiornare il BIOS della scheda madre, crea sempre un punto di ripristino manuale tramite *Strumenti di amministrazione*.
-- **Manutenzione periodica:** Mantieni puliti i contatti dei banchi RAM dalla polvere; sbalzi termici e falsi contatti possono generare errori IRQL apparentemente inspiegabili.
+- Evita i driver beta: Installa sempre driver certificati WHQL (Windows Hardware Quality Labs).
+- Punti di ripristino regolari: Prima di installare suite software complesse o aggiornare il BIOS della scheda madre, crea sempre un punto di ripristino manuale tramite *Strumenti di amministrazione*.
+- Manutenzione periodica: Mantieni puliti i contatti dei banchi RAM dalla polvere; sbalzi termici e falsi contatti possono generare errori IRQL apparentemente inspiegabili.
 
 ---
 
 ## Domande Frequenti (FAQ)
 
 ### Posso usare software di terze parti per testare la RAM in modo più approfondito?
-Sì, strumenti gratuiti come **MemTest86** avviati da una chiavetta USB bootable offrono un'analisi molto più rigorosa rispetto allo strumento integrato di Windows, ideale per scovare anche il singolo bit difettoso.
+Sì, strumenti gratuiti come MemTest86 avviati da una chiavetta USB bootable offrono un'analisi molto più rigorosa rispetto allo strumento integrato di Windows, ideale per scovare anche il singolo bit difettoso.
 
 ### Cosa faccio se il PC non si avvia nemmeno in modalità provvisoria?
 Se la schermata `0x0000000a` si presenta ciclicamente impedendo l'accesso al desktop, dovrai accedere all'ambiente di ripristino (WinRE) spegnendo il PC forzatamente per tre volte consecutive all'avvio. Da lì potrai disinstallare gli ultimi aggiornamenti di qualità o ripristinare il sistema a una data precedente.

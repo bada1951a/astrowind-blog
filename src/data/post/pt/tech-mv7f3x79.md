@@ -61,11 +61,11 @@ Na tabela técnica abaixo, comparo os cenários de conexão mais comuns que anal
 
 | Interface & Protocolo | Resolução / Taxa Alvo | Uso de Largura de Banda | Input Lag Médio | Estabilidade Operacional |
 | :--- | :--- | :--- | :--- | :--- |
-| **HDMI 1.4 Genérico** | 1080p @ 144Hz | 8.9 Gbps (Gargalo severo) | ~14.2 ms | ⚠️ Instável (Flicker frequente) |
-| **HDMI 2.0 Certificado** | 1080p @ 144Hz / 1440p @ 60Hz | 14.4 Gbps (Margem segura) | ~7.1 ms |  Excelente |
-| **HDMI 2.1 Ultra High Speed**| 1440p @ 144Hz / 4K @ 120Hz | 32.0 Gbps (Alta capacidade)| ~4.2 ms |  Perfeita |
-| **USB-C (DP 1.4 Alt Mode)** | 1440p @ 165Hz (c/ DSC) | 25.9 Gbps (Otimizado) | ~3.8 ms |  Excelente |
-| **Hub USB-C sem alimentação** | 1080p @ 60Hz + Periféricos | Compartilhado (Saturação) | ~18.5 ms | ❌ Crítico (Quedas de sinal) |
+| HDMI 1.4 Genérico | 1080p @ 144Hz | 8.9 Gbps (Gargalo severo) | ~14.2 ms | ⚠️ Instável (Flicker frequente) |
+| HDMI 2.0 Certificado | 1080p @ 144Hz / 1440p @ 60Hz | 14.4 Gbps (Margem segura) | ~7.1 ms |  Excelente |
+| HDMI 2.1 Ultra High Speed| 1440p @ 144Hz / 4K @ 120Hz | 32.0 Gbps (Alta capacidade)| ~4.2 ms |  Perfeita |
+| USB-C (DP 1.4 Alt Mode) | 1440p @ 165Hz (c/ DSC) | 25.9 Gbps (Otimizado) | ~3.8 ms |  Excelente |
+| Hub USB-C sem alimentação | 1080p @ 60Hz + Periféricos | Compartilhado (Saturação) | ~18.5 ms | ❌ Crítico (Quedas de sinal) |
 
 <div style="border-left: 4px solid #8b5cf6; padding: 14px 18px; margin: 24px 0; background-color: rgba(139, 92, 246, 0.05); border-radius: 6px;">
   <strong style="color: #8b5cf6; font-size: 1.05rem;">Diagnóstico Rápido:</strong> Se a tela do seu monitor externo só pisca quando você executa aplicações com aceleração por hardware (como Chrome, Discord ou jogos pesados), o problema quase certamente está atrelado ao <em>Multi-Plane Overlay (MPO)</em> ou a uma taxa de atualização incompatível configurada no Windows, e não ao cabo físico.
@@ -87,10 +87,10 @@ Antes de intervir no software, force o Windows a reiniciar os buffers de renderi
 
 ### Etapa 2: Análise e Limpeza no Gerenciador de Dispositivos
 
-1. Clique com o botão direito do mouse no menu Iniciar e selecione **Gerenciador de Dispositivos**.
-2. Expanda a categoria **Adaptadores de vídeo**. Identifique a placa integrada (ex: *Intel Iris Xe* ou *AMD Radeon Graphics*) e a dedicada (ex: *NVIDIA GeForce RTX*).
-3. Expanda também a seção **Monitores**. Se houver registros duplicados ou listados como "Monitor Genérico PnP" com sinal de exclamação amarelo, há conflito de perfil de cor ou EDID.
-4. Clique com o botão direito sobre os monitores genéricos com erro e selecione **Desinstalar dispositivo**.
+1. Clique com o botão direito do mouse no menu Iniciar e selecione Gerenciador de Dispositivos.
+2. Expanda a categoria Adaptadores de vídeo. Identifique a placa integrada (ex: *Intel Iris Xe* ou *AMD Radeon Graphics*) e a dedicada (ex: *NVIDIA GeForce RTX*).
+3. Expanda também a seção Monitores. Se houver registros duplicados ou listados como "Monitor Genérico PnP" com sinal de exclamação amarelo, há conflito de perfil de cor ou EDID.
+4. Clique com o botão direito sobre os monitores genéricos com erro e selecione Desinstalar dispositivo.
 
 ```
 [Gerenciador de Dispositivos]
@@ -106,14 +106,14 @@ Antes de intervir no software, force o Windows a reiniciar os buffers de renderi
 
 A reinstalação convencional via instaladores executáveis costuma falhar porque deixa resíduos no registro e arquivos de cache corrompidos. Faremos uma instalação limpa:
 
-1. Baixe a versão mais recente do utilitário **DDU (Display Driver Uninstaller)** de um portal confiável.
+1. Baixe a versão mais recente do utilitário DDU (Display Driver Uninstaller) de um portal confiável.
 2. Baixe previamente os instaladores oficiais e mais recentes da sua GPU integrada e da sua GPU dedicada no site dos respectivos fabricantes.
-3. Pressione `Win + R`, digite `msconfig` e pressione **Enter**. Na aba**Inicialização do Sistema**, marque a caixa**Inicialização segura** (Modo Mínimo) e reinicie o notebook.
+3. Pressione `Win + R`, digite `msconfig` e pressione Enter. Na abaInicialização do Sistema, marque a caixaInicialização segura (Modo Mínimo) e reinicie o notebook.
 4. No Modo de Segurança, abra o DDU:
-   - Selecione o tipo de dispositivo: **GPU**.
-   - Selecione a fabricante: **Intel / AMD** (GPU integrada primeiro).
-   - Clique em **Limpar e NÃO reiniciar**.
-   - Em seguida, selecione **NVIDIA**(GPU dedicada) e clique em**Limpar e Reiniciar**.
+   - Selecione o tipo de dispositivo: GPU.
+   - Selecione a fabricante: Intel / AMD (GPU integrada primeiro).
+   - Clique em Limpar e NÃO reiniciar.
+   - Em seguida, selecione NVIDIA(GPU dedicada) e clique emLimpar e Reiniciar.
 
 ```powershell
 # Dica pro: Desative temporariamente a busca de drivers do Windows Update
@@ -121,17 +121,17 @@ A reinstalação convencional via instaladores executáveis costuma falhar porqu
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate" /v "ExcludeWUDriversInQualityUpdate" /t REG_DWORD /d 1 /f
 ```
 
-5. O Windows reiniciará em resolução básica nativa. Instale primeiro o driver da **placa integrada**e, em seguida, o driver da**placa dedicada**. Reinicie o sistema mais uma vez.
+5. O Windows reiniciará em resolução básica nativa. Instale primeiro o driver da placa integradae, em seguida, o driver daplaca dedicada. Reinicie o sistema mais uma vez.
 
 ### Etapa 4: Alinhamento de Frequência e Profundidade de Bits
 
 Após a instalação limpa, alinhe as frequências de operação para evitar descarte de sinal:
 
-1. Pressione `Win + I` para abrir as **Configurações**.
-2. Vá em **Sistema**>**Tela**>**Configurações avançadas de tela**.
-3. No menu suspenso, selecione o **Monitor 2** (o monitor externo com problema).
-4. Em **Escolher uma taxa de atualização**, reduza temporariamente de valores extremos (ex: 165Hz) para o padrão de bancada mais seguro:**60Hz**ou**120Hz**.
-5. Verifique o campo **Formato de cor**: certifique-se de que está definido como**RGB**e a**Profundidade de bits**em**8 bits** (em vez de 10 bits HDR, que dobra a exigência de largura de banda do cabo).
+1. Pressione `Win + I` para abrir as Configurações.
+2. Vá em Sistema>Tela>Configurações avançadas de tela.
+3. No menu suspenso, selecione o Monitor 2 (o monitor externo com problema).
+4. Em Escolher uma taxa de atualização, reduza temporariamente de valores extremos (ex: 165Hz) para o padrão de bancada mais seguro:60Hzou120Hz.
+5. Verifique o campo Formato de cor: certifique-se de que está definido comoRGBe aProfundidade de bitsem8 bits (em vez de 10 bits HDR, que dobra a exigência de largura de banda do cabo).
 
 <div style="border-left: 4px solid #8b5cf6; padding: 14px 18px; margin: 24px 0; background-color: rgba(139, 92, 246, 0.05); border-radius: 6px;">
   <strong style="color: #8b5cf6; font-size: 1.05rem;">Dica de Otimização Competitiva:</strong> Se você joga com taxa de atualização alta e quer latência mínima sem oscilações, abra o <strong>Painel de Controle da NVIDIA</strong>, vá em <em>Gerenciar as configurações em 3D</em> > <em>Modo de gerenciamento de energia</em> e selecione <strong>Preferência por desempenho máximo</strong> apenas para os executáveis dos seus jogos, mantendo "Normal" no escopo global para não sobreaquecer o notebook no uso diário.
@@ -143,8 +143,8 @@ Após a instalação limpa, alinhe as frequências de operação para evitar des
 
 Se o seu monitor continua apresentando micro-piscadas pretas esporádicas ao alternar janelas ou ver vídeos no YouTube em segundo plano enquanto trabalha, desative a chave MPO do Windows:
 
-1. Abra o **Prompt de Comando** como Administrador.
-2. Copie e cole o comando abaixo, pressionando **Enter**:
+1. Abra o Prompt de Comando como Administrador.
+2. Copie e cole o comando abaixo, pressionando Enter:
 
 ```cmd
 reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "OverlayTestMode" /t REG_DWORD /d 5 /f

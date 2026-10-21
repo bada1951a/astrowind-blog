@@ -21,9 +21,9 @@ Essa cena é o pesadelo de qualquer profissional de TI ou usuário que depende d
 
 Para entender o problema e nunca mais passar raiva, precisamos olhar debaixo do capô. Os três gargalos mais comuns que causam esse travamento irritante são:
 
-1. **Cache do Windows Update Corrompido:** Os arquivos baixados para a pasta `SoftwareDistribution` vieram corrompidos por instabilidade na rede ou falha de leitura no SSD durante o download.
-2. **Serviços em Loop Infinito:** O serviço responsável por gerenciar as instalações (`wuauserv`) tenta aplicar um pacote corrompido, falha silenciosamente, reinicia o processo e fica preso em um ciclo infinito.
-3. **Conflito de Drivers de Terceiros:** Softwares de segurança agressivos ou drivers de hardware desatualizados bloqueiam a finalização da escrita de arquivos críticos no registro do sistema (`System32`).
+1. Cache do Windows Update Corrompido: Os arquivos baixados para a pasta `SoftwareDistribution` vieram corrompidos por instabilidade na rede ou falha de leitura no SSD durante o download.
+2. Serviços em Loop Infinito: O serviço responsável por gerenciar as instalações (`wuauserv`) tenta aplicar um pacote corrompido, falha silenciosamente, reinicia o processo e fica preso em um ciclo infinito.
+3. Conflito de Drivers de Terceiros: Softwares de segurança agressivos ou drivers de hardware desatualizados bloqueiam a finalização da escrita de arquivos críticos no registro do sistema (`System32`).
 
 ---
 
@@ -32,7 +32,7 @@ Para entender o problema e nunca mais passar raiva, precisamos olhar debaixo do 
 Se o seu sistema está inacessível pela interface gráfica normal, o caminho é iniciar em Modo de Segurança (Safe Mode) ou usar um ambiente de recuperação. Assumindo que você conseguiu acessar o Windows (mesmo que após um hard reset forçado) ou via Prompt de Comando na tela de Reparo Avançado, siga esta sequência exata:
 
 ### Passo 1: Parar os serviços de atualização
-Abra o **Terminal**ou o**Prompt de Comando** com privilégios de Administrador (clique com o botão direito no menu Iniciar e selecione "Terminal (Administrador)"). Digite os comandos abaixo um por um, pressionando Enter após cada linha:
+Abra o Terminalou oPrompt de Comando com privilégios de Administrador (clique com o botão direito no menu Iniciar e selecione "Terminal (Administrador)"). Digite os comandos abaixo um por um, pressionando Enter após cada linha:
 
 ```text
 net stop wuauserv
@@ -60,7 +60,7 @@ net start bits
 net start msiserver
 ```
 
-Feche a janela do terminal, reinicie o computador normalmente através das **Configurações**>**Energia**>**Reiniciar**, e verifique se o Windows 11 conclui a aplicação dos pacotes pendentes de forma limpa.
+Feche a janela do terminal, reinicie o computador normalmente através das Configurações>Energia>Reiniciar, e verifique se o Windows 11 conclui a aplicação dos pacotes pendentes de forma limpa.
 
 ---
 
@@ -70,8 +70,8 @@ Feche a janela do terminal, reinicie o computador normalmente através das **Con
 <strong>Alerta de Prevenção:</strong> Mantenha sempre um ponto de restauração ativo antes de aplicar grandes atualizações de recursos do Windows 11. Em ambientes corporativos, utilize ferramentas de gerenciamento de políticas para atrasar atualizações de grande porte até que elas estejam totalmente testadas e estáveis no mercado.
 </div>
 
-- **Espaço em Disco:** Garanta que seu SSD tenha pelo menos 20 GB livres antes de iniciar atualizações pesadas. Falta de espaço é uma causa silenciosa de travamentos na reta final (100%).
-- **Ferramenta SFC e DISM:** Se o problema persistir após limpar o cache, execute o comando `sfc /scannow` seguido de `DISM /Online /Cleanup-Image /RestoreHealth` para reparar arquivos corrompidos do sistema operacional.
+- Espaço em Disco: Garanta que seu SSD tenha pelo menos 20 GB livres antes de iniciar atualizações pesadas. Falta de espaço é uma causa silenciosa de travamentos na reta final (100%).
+- Ferramenta SFC e DISM: Se o problema persistir após limpar o cache, execute o comando `sfc /scannow` seguido de `DISM /Online /Cleanup-Image /RestoreHealth` para reparar arquivos corrompidos do sistema operacional.
 
 ---
 

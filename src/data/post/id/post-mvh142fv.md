@@ -15,7 +15,7 @@ Begitu PC dinyalakan ulang, dokumen yang dikerjakan hilang setengahnya, dan kepa
 
 ![Tech Troubleshooting Guide](/images/tech-photo/tech-photos%20(42).jpg)
 
-Sebagai teknisi infrastruktur IT yang sudah kenyang asam garam menghadapi drama kantor seperti ini, saya tahu persis apa yang dilakukan kebanyakan orang: menebak-nebak, langsung instal ulang Windows, ganti RAM, atau ganti SSD tanpa tahu akar masalahnya. Padahal, cara paling elegan dan akurat untuk melacak biang kerok *random freezing* di Windows 11 adalah dengan membuka "buku harian" si komputer itu sendiri, yaitu **Event Viewer**.
+Sebagai teknisi infrastruktur IT yang sudah kenyang asam garam menghadapi drama kantor seperti ini, saya tahu persis apa yang dilakukan kebanyakan orang: menebak-nebak, langsung instal ulang Windows, ganti RAM, atau ganti SSD tanpa tahu akar masalahnya. Padahal, cara paling elegan dan akurat untuk melacak biang kerok *random freezing* di Windows 11 adalah dengan membuka "buku harian" si komputer itu sendiri, yaitu Event Viewer.
 
 <div style="border-left: 4px solid #f59e0b; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Catatan Teknisi:</strong> Jangan pernah menebak kerusakan hardware sebelum membaca log sistem. Windows mencatat setiap detik kejadian, termasuk detik-detik terakhir sebelum PC Anda mengalami crash.
@@ -27,9 +27,9 @@ Sebagai teknisi infrastruktur IT yang sudah kenyang asam garam menghadapi drama 
 
 Sebelum masuk ke langkah teknis, mari kita bedah tiga penyebab utama kenapa Windows 11 sering mendadak tidak merespons di lingkungan kantoran:
 
-1. **Driver Grafis (GPU) Crash & Recover Gagal:** Windows 11 sangat bergantung pada akselerasi hardware. Jika driver grafis mengalami konflik sesaat dan gagal bangkit, sistem akan langsung freeze.
-2. **I/O Bottleneck pada Storage (SSD/HDD):** Sektor pada SSD yang mulai *bad sector* atau antrean tulis (Write Queue) yang penuh membuat sistem menunggu respons storage tanpa batas waktu (hang).
-3. **Ketidakstabilan Power Management (C-States / Thermal):** Fitur penghemat daya agresif di BIOS atau lonjakan suhu sesaat pada VRM motherboard sering membuat sistem menghentikan proses secara mendadak untuk melindungi komponen.
+1. Driver Grafis (GPU) Crash & Recover Gagal: Windows 11 sangat bergantung pada akselerasi hardware. Jika driver grafis mengalami konflik sesaat dan gagal bangkit, sistem akan langsung freeze.
+2. I/O Bottleneck pada Storage (SSD/HDD): Sektor pada SSD yang mulai *bad sector* atau antrean tulis (Write Queue) yang penuh membuat sistem menunggu respons storage tanpa batas waktu (hang).
+3. Ketidakstabilan Power Management (C-States / Thermal): Fitur penghemat daya agresif di BIOS atau lonjakan suhu sesaat pada VRM motherboard sering membuat sistem menghentikan proses secara mendadak untuk melindungi komponen.
 
 ---
 
@@ -38,21 +38,21 @@ Sebelum masuk ke langkah teknis, mari kita bedah tiga penyebab utama kenapa Wind
 Mari kita bedah kejadian di Sudirman tadi menggunakan langkah-langkah sistematis yang bisa Anda ikuti langsung di meja kerja Anda.
 
 #### Langkah 1: Membuka Event Viewer
-1. Klik tombol **Start**di Windows 11, ketik**Event Viewer**, lalu tekan Enter.
-2. Pada panel sebelah kiri, klik dua kali pada **Windows Logs**, lalu pilih**System**. Di sinilah semua catatan aktivitas hardware dan driver sistem disimpan.
+1. Klik tombol Startdi Windows 11, ketikEvent Viewer, lalu tekan Enter.
+2. Pada panel sebelah kiri, klik dua kali pada Windows Logs, lalu pilihSystem. Di sinilah semua catatan aktivitas hardware dan driver sistem disimpan.
 
 #### Langkah 2: Menyaring Kejadian Kritis (Critical & Error)
 Karena log sistem sangat banyak, kita tidak perlu membaca semuanya satu per satu. Kita cari waktu persis di mana PC Anda tadi freeze.
-1. Di panel sebelah kanan, klik **Filter Current Log...**
+1. Di panel sebelah kanan, klik Filter Current Log...
 2. Pada bagian *Logged*, pilih rentang waktu kejadian (misalnya: *Last 1 hour* atau *Last 24 hours*).
-3. Pada kotak centang *Event Level*, centang **Critical**dan**Error**, lalu klik**OK**.
+3. Pada kotak centang *Event Level*, centang CriticaldanError, lalu klikOK.
 
 #### Langkah 3: Berburu Kode Error (The Smoking Gun)
 Cari kejadian tepat pada menit-menit sebelum PC Anda dipaksa mati. Perhatikan beberapa Event ID yang sering menjadi tersangka utama:
 
-* **Event ID 41 (Kernel-Power):** Ini adalah catatan bahwa sistem mati secara tidak wajar. *Penting:* Ini biasanya akibat dari *paksaan* Anda menekan tombol power saat freeze, jadi cari log yang berada **beberapa detik atau menit sebelum** Event ID 41 ini muncul.
-* **Event ID 1001 (WHEA-Logger):** Menandakan adanya *Hardware Error* (bisa dari CPU, cache memory, atau PCIe bus).
-* **Event ID 4101 (Display):** Menandakan driver Display (NVIDIA/AMD/Intel) sempat berhenti merespons dan berhasil dipulihkan (atau gagal total berujung freeze).
+* Event ID 41 (Kernel-Power): Ini adalah catatan bahwa sistem mati secara tidak wajar. *Penting:* Ini biasanya akibat dari *paksaan* Anda menekan tombol power saat freeze, jadi cari log yang berada beberapa detik atau menit sebelum Event ID 41 ini muncul.
+* Event ID 1001 (WHEA-Logger): Menandakan adanya *Hardware Error* (bisa dari CPU, cache memory, atau PCIe bus).
+* Event ID 4101 (Display): Menandakan driver Display (NVIDIA/AMD/Intel) sempat berhenti merespons dan berhasil dipulihkan (atau gagal total berujung freeze).
 
 <div style="border-left: 4px solid #f59e0b; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Tips Lapangan:</strong> Jika Anda melihat Event ID 4101 secara berulang, segera buka <strong>Device Manager</strong>, lakukan *Clean Install* driver grafis menggunakan DDU (Display Driver Uninstaller). Seringkali masalah selesai seketika.
@@ -76,16 +76,16 @@ Berikut adalah tabel panduan cepat bagi Anda untuk mencocokkan gejala fisik PC d
 
 Setelah Anda menemukan biang keroknya melalui Event Viewer, lakukan langkah pengamanan berikut agar insiden di Sudirman tidak terulang:
 
-1. **Jangan Abaikan Suhu:** Gunakan aplikasi pemantau hardware gratis untuk memastikan suhu CPU tidak melewati batas aman (di bawah 80°C saat bekerja normal). Debu menumpuk di heatsink adalah pembunuh senyap nomor satu.
-2. **Rutin Cek Kesehatan Storage:** Seringkali *random freezing* di Windows 11 disebabkan oleh SSD yang mulai kehabisan *spare area*. Pastikan selalu menyisakan minimal 10-15% kapasitas kosong pada drive sistem (C:).
-3. **Update BIOS Secara Berkala:** Beberapa motherboard memiliki bug pada manajemen daya C-States yang memicu freeze acak di Windows 11. Pembaruan BIOS sering kali menjadi solusi pamungkas.
+1. Jangan Abaikan Suhu: Gunakan aplikasi pemantau hardware gratis untuk memastikan suhu CPU tidak melewati batas aman (di bawah 80°C saat bekerja normal). Debu menumpuk di heatsink adalah pembunuh senyap nomor satu.
+2. Rutin Cek Kesehatan Storage: Seringkali *random freezing* di Windows 11 disebabkan oleh SSD yang mulai kehabisan *spare area*. Pastikan selalu menyisakan minimal 10-15% kapasitas kosong pada drive sistem (C:).
+3. Update BIOS Secara Berkala: Beberapa motherboard memiliki bug pada manajemen daya C-States yang memicu freeze acak di Windows 11. Pembaruan BIOS sering kali menjadi solusi pamungkas.
 
 ---
 
 ### FAQ (Pertanyaan yang Sering Diajukan)
 
-**Q: Apakah Event Viewer bisa memperbaiki komputer secara otomatis?**A: Tidak. Event Viewer berfungsi sebagai "rekaman CCTV" atau diagnostik untuk mendeteksi letak kerusakan secara presisi, sehingga Anda tidak salah dalam mengambil tindakan perbaikan (tidak salah beli komponen atau salah instal software).**Q: Kenapa banyak sekali tulisan Error di Event Viewer padahal PC saya terasa normal?**  
+Q: Apakah Event Viewer bisa memperbaiki komputer secara otomatis?A: Tidak. Event Viewer berfungsi sebagai "rekaman CCTV" atau diagnostik untuk mendeteksi letak kerusakan secara presisi, sehingga Anda tidak salah dalam mengambil tindakan perbaikan (tidak salah beli komponen atau salah instal software).Q: Kenapa banyak sekali tulisan Error di Event Viewer padahal PC saya terasa normal?  
 A: Jangan panik. Tidak semua *Error* berakibat fatal. Windows sering kali mencatat error latar belakang (background service) yang gagal start lalu mencoba ulang secara otomatis tanpa mengganggu pengguna. Fokuskan pencarian pada jam-jam spesifik di mana PC Anda benar-benar mengalami freeze atau crash.
 
-**Q: Apa yang harus saya lakukan jika Event Viewer hanya menunjukkan Kernel-Power (ID 41) tanpa ada petunjuk error lain sebelumnya?**  
+Q: Apa yang harus saya lakukan jika Event Viewer hanya menunjukkan Kernel-Power (ID 41) tanpa ada petunjuk error lain sebelumnya?  
 A: Jika sebelum Event ID 41 sama sekali tidak ada catatan error, besar kemungkinan masalahnya murni bersumber dari suplai daya hardware (Power Supply unit yang mulai melemah, kabel power kendor, atau korsleting listrik eksternal). Cek kestabilan listrik dan kondisi fisik PSU Anda.

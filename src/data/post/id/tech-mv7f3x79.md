@@ -82,7 +82,7 @@ Sebelum membongkar konfigurasi sistem, picu restart pada *Desktop Window Manager
 ### Langkah 2: Pembersihan Cache Konfigurasi Monitor pada Registri Windows
 Jika cache konfigurasi tampilan telah korup, sistem akan terus memuat konfigurasi yang keliru meskipun kabel dicabut-pasang. Kita perlu menghapus cache ini melalui Registry Editor.
 
-1. Buka kotak dialog Run dengan menekan `Win` + `R`, ketik `regedit`, lalu tekan **Enter**.
+1. Buka kotak dialog Run dengan menekan `Win` + `R`, ketik `regedit`, lalu tekan Enter.
 2. Masuk ke direktori berikut:
    ```text
    HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\GraphicsDrivers
@@ -91,7 +91,7 @@ Jika cache konfigurasi tampilan telah korup, sistem akan terus memuat konfiguras
    * `Configuration`
    * `Connectivity`
    * `ScaleFactors`
-4. Klik kanan pada folder `Configuration`, lalu pilih **Delete**. Lakukan hal yang sama untuk folder `Connectivity` dan `ScaleFactors`.
+4. Klik kanan pada folder `Configuration`, lalu pilih Delete. Lakukan hal yang sama untuk folder `Connectivity` dan `ScaleFactors`.
 5. Jangan khawatir, folder-folder ini aman dihapus karena Windows akan otomatis membuatnya kembali dalam kondisi default (*fresh*) begitu sistem mendeteksi layar aktif.
 6. Lakukan *restart* laptop Anda.
 
@@ -106,14 +106,14 @@ Jika cache konfigurasi tampilan telah korup, sistem akan terus memuat konfiguras
 ### Langkah 3: Re-inisialisasi Melalui Device Manager
 Jika sinyal masih terputus, langkah berikutnya adalah mereset adaptor display dan driver Generic PnP Monitor langsung dari konsol manajemen perangkat.
 
-1. Klik kanan pada tombol Start Windows, pilih **Device Manager**.
-2. Buka kategori **Display adapters**.
-3. Klik kanan pada kartu grafis Anda (misalnya: *Intel(R) Iris(R) Xe Graphics* atau *AMD Radeon Graphics*), pilih **Properties**.
-4. Masuk ke tab **Driver**, lalu klik opsi**Roll Back Driver** jika opsi tersebut aktif (ini berguna jika masalah muncul tepat setelah pembaruan otomatis).
-5. Jika opsi rollback tidak aktif, kembali ke jendela utama Device Manager, klik kanan pada kartu grafis, dan pilih **Uninstall device**. 
+1. Klik kanan pada tombol Start Windows, pilih Device Manager.
+2. Buka kategori Display adapters.
+3. Klik kanan pada kartu grafis Anda (misalnya: *Intel(R) Iris(R) Xe Graphics* atau *AMD Radeon Graphics*), pilih Properties.
+4. Masuk ke tab Driver, lalu klik opsiRoll Back Driver jika opsi tersebut aktif (ini berguna jika masalah muncul tepat setelah pembaruan otomatis).
+5. Jika opsi rollback tidak aktif, kembali ke jendela utama Device Manager, klik kanan pada kartu grafis, dan pilih Uninstall device. 
    * *Perhatian:* Jangan centang opsi *"Attempt to remove the driver for this device"* pada tahap ini.
-6. Perluas juga kategori **Monitors**, klik kanan pada semua entri bertuliskan**Generic PnP Monitor**, dan pilih**Uninstall device**.
-7. Pada menu bar bagian atas Device Manager, klik ikon **Scan for hardware changes** (ikon komputer dengan kaca pembesar). Layar akan mendeteksi ulang adaptor dan monitor secara otomatis.
+6. Perluas juga kategori Monitors, klik kanan pada semua entri bertuliskanGeneric PnP Monitor, dan pilihUninstall device.
+7. Pada menu bar bagian atas Device Manager, klik ikon Scan for hardware changes (ikon komputer dengan kaca pembesar). Layar akan mendeteksi ulang adaptor dan monitor secara otomatis.
 
 ```
 Device Manager
@@ -128,16 +128,16 @@ Device Manager
 ### Langkah 4: Sinkronisasi Refresh Rate dan Matikan Variable Refresh Rate (VRR)
 Flickering parah sering kali bersumber dari ketidakcocokan frekuensi transmisi sinyal (*refresh rate*) atau fitur Variable Refresh Rate (G-Sync/FreeSync) yang mencoba berjalan pada monitor kerja biasa.
 
-1. Buka **Settings**Windows (`Win` + `I`) >**System**>**Display**.
-2. Klik monitor eksternal Anda (biasanya monitor nomor 2), lalu gulir ke bawah dan pilih **Advanced display settings** (Pengaturan Tampilan Lanjutan).
-3. Periksa nilai pada **Choose a refresh rate**. Jika terpilih nilai non-standar (seperti 59.94Hz atau 74.97Hz), ubah secara manual ke nilai bilangan bulat stabil:**60.00 Hz**.
+1. Buka SettingsWindows (`Win` + `I`) >System>Display.
+2. Klik monitor eksternal Anda (biasanya monitor nomor 2), lalu gulir ke bawah dan pilih Advanced display settings (Pengaturan Tampilan Lanjutan).
+3. Periksa nilai pada Choose a refresh rate. Jika terpilih nilai non-standar (seperti 59.94Hz atau 74.97Hz), ubah secara manual ke nilai bilangan bulat stabil:60.00 Hz.
 4. Jika monitor mendukung refresh rate tinggi (144Hz ke atas) tetapi terhubung melalui adaptor biasa, turunkan refresh rate ke 60Hz atau 100Hz untuk mengurangi beban bandwidth transmisi.
-5. Kembali ke menu Display utama, pilih opsi **Graphics**, klik**Change default graphics settings**, lalu nonaktifkan tombol**Variable refresh rate**dan**Hardware-accelerated GPU scheduling (HAGS)** untuk pengujian stabilitas.
+5. Kembali ke menu Display utama, pilih opsi Graphics, klikChange default graphics settings, lalu nonaktifkan tombolVariable refresh ratedanHardware-accelerated GPU scheduling (HAGS) untuk pengujian stabilitas.
 
 ### Langkah 5: Verifikasi Integritas File Driver via Command Prompt
 Jika driver display korup akibat kegagalan penulisan sektor SSD, perbaiki dependensi kernel Windows menggunakan utilitas bawaan:
 
-1. Buka Windows Search, ketik `cmd`, klik kanan pada **Command Prompt**, lalu pilih**Run as administrator**.
+1. Buka Windows Search, ketik `cmd`, klik kanan pada Command Prompt, lalu pilihRun as administrator.
 2. Jalankan perintah perbaikan citra sistem berikut:
    ```cmd
    DISM.exe /Online /Cleanup-image /Restorehealth
@@ -159,12 +159,12 @@ Berdasarkan tinjauan teknis di lingkungan produksi enterprise, pemulihan jangka 
   Hindari penggunaan konverter pasif multi-sambungan (seperti: Type-C ke HDMI, lalu disambung lagi HDMI ke VGA). Setiap titik terminasi pasif menyumbang degradasi sinyal sebesar 2–3 dB, yang memicu hilangnya sinkronisasi horizontal (*H-Sync collapse*). Wajibkan penggunaan kabel konverter aktif (*active adapter*) yang dilengkapi chip bridge mandiri.
 </div>
 
-1. **Batasi Driver Update dari Windows Update Otomatis:**  
+1. Batasi Driver Update dari Windows Update Otomatis:  
    Bagi workstation penting, nonaktifkan opsi pembaruan driver pihak ketiga melalui Local Group Policy Editor (`gpedit.msc`). Masuk ke `Computer Configuration > Administrative Templates > Windows Components > Windows Update > Manage updates offered from Windows Update`, lalu aktifkan kebijakan:  
    *"Do not include drivers with Windows Updates"*.  
    Selalu unduh driver grafis langsung dari portal resmi vendor OEM (Lenovo Commercial Vantage, Dell Command Update, HP Image Assistant) atau portal manufaktur silikon (Intel/NVIDIA/AMD) yang telah tervalidasi stabil (*WHQL Certified*).
 
-2. **Perhatikan Siklus Daya Docking Station:**  
+2. Perhatikan Siklus Daya Docking Station:  
    Docking station berbasis Thunderbolt atau USB-C DisplayLink memiliki kontroler mikro internal yang menyimpan muatan statis. Selalu lakukan siklus daya penuh (*flea power drain*) setidaknya sebulan sekali: cabut kabel daya dok, lepaskan koneksi ke laptop, tekan dan tahan tombol daya dok selama 15 detik untuk membuang kapasitansi sisa, lalu hubungkan kembali.
 
 ---
@@ -172,10 +172,10 @@ Berdasarkan tinjauan teknis di lingkungan produksi enterprise, pemulihan jangka 
 ## Tanya Jawab Teknis (FAQ)
 
 ### Monitor eksternal terdeteksi di Device Manager, namun layarnya tetap hitam bertuliskan "No Signal". Apa pemicunya?
-Kondisi ini menandakan bahwa jalur komunikasi kontrol I2C/DDC antara GPU dan monitor berfungsi (sehingga nama hardware terdeteksi), tetapi jalur transmisi video berkecepatan tinggi gagal melakukan *handshake*. Penyebab paling sering adalah resolusi output yang dipaksa pada level di luar batas jangkauan panel (*Out of Range*), kabel data yang tidak memiliki rating pelindung interferensi yang cukup, atau port output GPU terkunci pada status proteksi daya. Lakukan reset registri grafis sesuai **Langkah 2** untuk memaksa GPU mendeteksi ulang batas resolusi aman.
+Kondisi ini menandakan bahwa jalur komunikasi kontrol I2C/DDC antara GPU dan monitor berfungsi (sehingga nama hardware terdeteksi), tetapi jalur transmisi video berkecepatan tinggi gagal melakukan *handshake*. Penyebab paling sering adalah resolusi output yang dipaksa pada level di luar batas jangkauan panel (*Out of Range*), kabel data yang tidak memiliki rating pelindung interferensi yang cukup, atau port output GPU terkunci pada status proteksi daya. Lakukan reset registri grafis sesuai Langkah 2 untuk memaksa GPU mendeteksi ulang batas resolusi aman.
 
 ### Mengapa monitor eksternal hanya berkedip saat saya membuka browser seperti Google Chrome atau Microsoft Edge?
-Gejala ini hampir 100% dipicu oleh kegagalan fitur *Hardware Acceleration* pada aplikasi berbasis Chromium yang bertabrakan dengan driver iGPU. Browser mencoba memproses rendering halaman web melalui GPU, tetapi terjadi timeout pada tumpukan driver D3D. Buka pengaturan browser, masuk ke menu **System/Sistem**, lalu nonaktifkan opsi**Use graphics acceleration when available** (Gunakan akselerasi grafis saat tersedia), kemudian muat ulang browser.
+Gejala ini hampir 100% dipicu oleh kegagalan fitur *Hardware Acceleration* pada aplikasi berbasis Chromium yang bertabrakan dengan driver iGPU. Browser mencoba memproses rendering halaman web melalui GPU, tetapi terjadi timeout pada tumpukan driver D3D. Buka pengaturan browser, masuk ke menu System/Sistem, lalu nonaktifkan opsiUse graphics acceleration when available (Gunakan akselerasi grafis saat tersedia), kemudian muat ulang browser.
 
 ### Apakah penggunaan konverter kabel HDMI ke VGA pasif aman untuk laptop keluaran terbaru?
 Sangat tidak disarankan. Port HDMI pada laptop modern mentransmisikan sinyal digital murni (TMDS), sementara port VGA membutuhkan sinyal tegangan analog murni (RGBHV). Konverter pasif tanpa pasokan daya eksternal memaksa pin 5V pada port HDMI laptop menyuplai daya ke papan konverter analog secara berlebihan. Hal ini sering memicu trip pada sirkuit perlindungan port motherboard laptop, menyebabkan hilangnya sinyal seketika (*intermittent blanking*) dan berisiko merusak jalur daya HDMI secara permanen. Selalu gunakan konverter aktif yang memiliki sertifikasi manufaktur jelas.

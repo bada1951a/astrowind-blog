@@ -21,9 +21,9 @@ Afgelopen dinsdagochtend om kwart voor negen op de High Tech Campus in Eindhoven
 
 Waarom kruipt je pc na een paar jaar gebruik ineens over de vloer bij het opstarten? De bottleneck zit bijna nooit in Windows zelf, maar in de softwarecultuur van vandaag:
 
-1. **Stiekeme achtergrondinstallaties:** Vrijwel elke applicatie (van Spotify en Discord tot cloud-synchronisatietools en printerdrivers) vinkt standaard de optie aan om mee te starten met Windows. Ze nestelen zich ongevraagd in het geheugen.
-2. **Resource-roofdieren (Impact: Hoog):** Zodra je desktop laadt, proberen al deze programma's tegelijk te updaten en te verbinden met hun servers. Dit vreet direct al je RAM en CPU-capaciteit op.
-3. **Verouderde servicemanagers:** Veel gebruikers denken dat ze geavanceerde tools nodig hebben om dit op te lossen, terwijl Windows 10 al jaren een ingebouwde, razendsnelle manager heeft die direct inzicht geeft in de opstartimpact.
+1. Stiekeme achtergrondinstallaties: Vrijwel elke applicatie (van Spotify en Discord tot cloud-synchronisatietools en printerdrivers) vinkt standaard de optie aan om mee te starten met Windows. Ze nestelen zich ongevraagd in het geheugen.
+2. Resource-roofdieren (Impact: Hoog): Zodra je desktop laadt, proberen al deze programma's tegelijk te updaten en te verbinden met hun servers. Dit vreet direct al je RAM en CPU-capaciteit op.
+3. Verouderde servicemanagers: Veel gebruikers denken dat ze geavanceerde tools nodig hebben om dit op te lossen, terwijl Windows 10 al jaren een ingebouwde, razendsnelle manager heeft die direct inzicht geeft in de opstartimpact.
 
 ### Stap-voor-stap oplossen: In 1 minuut naar een snelle pc
 
@@ -44,8 +44,8 @@ Wees slim met wat je uitschakelt. Schakel geen essentiële drivers of beveiligin
 
 ### Veelgestelde Vragen (FAQ)
 
-**Verlies ik data of instellingen als ik een programma uitschakel bij het opstarten?**
+Verlies ik data of instellingen als ik een programma uitschakel bij het opstarten?
 Nee, absoluut niet. Je schakelt hiermee *alleen* uit dat het programma automatisch opstart op de achtergrond zodra je je pc aanzet. Je kunt de applicatie later gewoon handmatig openen via het Startmenu wanneer je hem daadwerkelijk nodig hebt.
 
-**Hoe controleer ik of mijn aanpassing effect heeft gehad?**Open na het uitschakelen van de overbodige programma's je Taakbeheer opnieuw en kijk naar de rechterbovenhoek van het tabblad Prestaties of het 'Laatste BIOS-tijd' scherm. Of herstart simpelweg je laptop en merk direct het verschil in seconden.**Waarom blijft mijn computer traag ondanks dat ik alle opstartprogramma's heb uitgezet?**
+Hoe controleer ik of mijn aanpassing effect heeft gehad?Open na het uitschakelen van de overbodige programma's je Taakbeheer opnieuw en kijk naar de rechterbovenhoek van het tabblad Prestaties of het 'Laatste BIOS-tijd' scherm. Of herstart simpelweg je laptop en merk direct het verschil in seconden.Waarom blijft mijn computer traag ondanks dat ik alle opstartprogramma's heb uitgezet?
 Als het uitschakelen van opstartprogramma's niet het gewenste effect heeft, ligt het probleem waarschijnlijk dieper. Denk aan een volgelopen harde schijf (zorg voor ten minste 15 procent vrije ruimte) of hardwarematige veroudering waarbij een upgrade naar een SSD noodzakelijk is.

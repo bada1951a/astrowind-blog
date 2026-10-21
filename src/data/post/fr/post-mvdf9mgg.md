@@ -37,7 +37,7 @@ Avant de manipuler les fichiers système, comprenons ce qui se passe sous le cap
 Pour résoudre ce problème, nous allons devoir arrêter temporairement les services de mise à jour, vider le dossier de cache corrompu, puis relancer les processus. 
 
 ### Étape 1 : Ouvrir le Terminal en mode Administrateur
-Faites un clic droit sur le bouton Démarrer de Windows 11, puis sélectionnez **Terminal (Administrateur)**ou**Invite de commandes (Admin)**. Confirmez l'invite de contrôle de compte d'utilisateur (UAC).
+Faites un clic droit sur le bouton Démarrer de Windows 11, puis sélectionnez Terminal (Administrateur)ouInvite de commandes (Admin). Confirmez l'invite de contrôle de compte d'utilisateur (UAC).
 
 ### Étape 2 : Arrêter les services de mise à jour et de cryptographie
 Pour pouvoir supprimer ou renommer les fichiers du cache, les services Windows associés doivent être stoppés. Tapez les commandes suivantes une par une en appuyant sur Entrée :
@@ -73,19 +73,19 @@ net start bits
 net start msiserver
 ```
 
-Il ne vous reste plus qu'à redémarrer votre machine, puis à vous rendre dans **Paramètres > Windows Update** pour relancer la recherche de mises à jour. Le téléchargement repartira sur des bases saines.
+Il ne vous reste plus qu'à redémarrer votre machine, puis à vous rendre dans Paramètres > Windows Update pour relancer la recherche de mises à jour. Le téléchargement repartira sur des bases saines.
 
 ---
 
 ## Précautions de l'expert et bonnes pratiques
 
-- **Sauvegardez vos travaux en cours :** Avant de manipuler les services système ou de forcer un arrêt, assurez-vous que vos modifications de code ou vos documents ouverts sont bien enregistrés (idéalement commités sur votre dépôt distant).
-- **Vérifiez l'espace disque :** Assurez-vous d'avoir au moins 15 à 20 Go d'espace libre sur votre lecteur C: avant de lancer de grosses mises à jour cumulatives Windows 11.
-- **Nettoyage post-intervention :** Une fois que votre mise à jour est passée avec succès et que votre système est stable, vous pourrez supprimer les dossiers de sauvegarde `SoftwareDistribution.old` et `catroot2.old` pour récupérer de l'espace disque.
+- Sauvegardez vos travaux en cours : Avant de manipuler les services système ou de forcer un arrêt, assurez-vous que vos modifications de code ou vos documents ouverts sont bien enregistrés (idéalement commités sur votre dépôt distant).
+- Vérifiez l'espace disque : Assurez-vous d'avoir au moins 15 à 20 Go d'espace libre sur votre lecteur C: avant de lancer de grosses mises à jour cumulatives Windows 11.
+- Nettoyage post-intervention : Une fois que votre mise à jour est passée avec succès et que votre système est stable, vous pourrez supprimer les dossiers de sauvegarde `SoftwareDistribution.old` et `catroot2.old` pour récupérer de l'espace disque.
 
 ---
 
 ## Foire aux Questions (FAQ)
 
-**1. Est-ce que renommer le dossier SoftwareDistribution efface mes fichiers personnels ?**Absolument pas. Ce dossier contient uniquement les fichiers temporaires téléchargés pour les mises à jour Windows. Vos documents, applications et paramètres personnels ne sont en aucun cas touchés.**2. Que faire si la commande `net stop wuauserv` reste bloquée sur "Arrêt en cours" ?**C'est un classique lorsque le service est totalement gelé. Ouvrez le Gestionnaire tâches (Ctrl + Maj + Échap), allez dans l'onglet**Services**, cherchez `wuauserv`, faites un clic droit dessus et choisissez**Arrêter**. Si cela ne suffit pas, un redémarrage de la machine s'impose.**3. Pourquoi Windows 11 bloque-t-il si souvent à 100 pourcent lors des mises à jour ?**
+1. Est-ce que renommer le dossier SoftwareDistribution efface mes fichiers personnels ?Absolument pas. Ce dossier contient uniquement les fichiers temporaires téléchargés pour les mises à jour Windows. Vos documents, applications et paramètres personnels ne sont en aucun cas touchés.2. Que faire si la commande `net stop wuauserv` reste bloquée sur "Arrêt en cours" ?C'est un classique lorsque le service est totalement gelé. Ouvrez le Gestionnaire tâches (Ctrl + Maj + Échap), allez dans l'ongletServices, cherchez `wuauserv`, faites un clic droit dessus et choisissezArrêter. Si cela ne suffit pas, un redémarrage de la machine s'impose.3. Pourquoi Windows 11 bloque-t-il si souvent à 100 pourcent lors des mises à jour ?
 Le blocage à 100% correspond généralement à la phase finale d'écriture dans le registre et de nettoyage des composants. Si un pilote tiers, un antivirus un peu trop zélé ou un secteur disque défectueux interrompt cette séquence, le processus s'arrête indéfiniment en attendant une réponse qui ne viendra jamais.

@@ -11,7 +11,7 @@ theme: "Pastel Lavender Tech"
 
 Als werkplekbeheerder en IT-infrastructuurspecialist krijg ik regelmatig randapparatuur op mijn werkbank die door collega's al bijna is afgeschreven. Vorige week nog stond een senior software developer aan mijn bureau: zijn op maat gemaakte mechanische toetsenbord met Cherry MX Brown switches registreerde bij de 'E'-toets willekeurig dubbele aanslagen (`ee`) en liet de spatiebalk regelmatig steken. Voor een programmeur is dit funest; één onbedoelde dubbele letter breekt variabelen en veroorzaakt syntaxfouten. 
 
-In plaats van direct een nieuw toetsenbord van tweehonderd euro uit het IT-budget te trekken of direct de soldeerbout aan te slingeren, heb ik het probleem binnen twintig minuten permanent verholpen. In deze technische handleiding deel ik de exacte diagnose- en herstelprocedure voor **chattering**(toetsstuiting of dubbelslag) en**missende aanslagen**, inclusief de veilige toepassing van elektronica-contactspray.
+In plaats van direct een nieuw toetsenbord van tweehonderd euro uit het IT-budget te trekken of direct de soldeerbout aan te slingeren, heb ik het probleem binnen twintig minuten permanent verholpen. In deze technische handleiding deel ik de exacte diagnose- en herstelprocedure voor chattering(toetsstuiting of dubbelslag) enmissende aanslagen, inclusief de veilige toepassing van elektronica-contactspray.
 
 ---
 
@@ -63,9 +63,9 @@ Volg onderstaande stappen systematisch. We beginnen met niet-invasieve softwaret
 ### Stap 1: Sluit het besturingssysteem en drivers uit
 Voordat we de fysieke hardware demonteren, controleren we of er geen driverconflicten of USB-stroombeheerproblemen zijn binnen Windows.
 
-1. Koppel het toetsenbord los en open **Apparaatbeheer** via `devmgmt.msc` in het venster Uitvoeren (`Win + R`).
-2. Vouw de categorie **Toetsenborden**uit. Klik met de rechtermuisknop op het problematische apparaat en kies**Apparaat verwijderen**.
-3. Vouw onderaan de categorie **Universal Serial Bus-controllers** uit. Controleer de eigenschappen van de USB-hoofdhubs: schakel op het tabblad *Energiebeheer* de optie *"De computer mag dit apparaat uitschakelen om energie te besparen"* uit.
+1. Koppel het toetsenbord los en open Apparaatbeheer via `devmgmt.msc` in het venster Uitvoeren (`Win + R`).
+2. Vouw de categorie Toetsenbordenuit. Klik met de rechtermuisknop op het problematische apparaat en kiesApparaat verwijderen.
+3. Vouw onderaan de categorie Universal Serial Bus-controllers uit. Controleer de eigenschappen van de USB-hoofdhubs: schakel op het tabblad *Energiebeheer* de optie *"De computer mag dit apparaat uitschakelen om energie te besparen"* uit.
 4. Koppel het toetsenbord weer aan via een directe USB-poort op het moederbord (geen ongevoede USB-hub) zodat Windows het stuurprogramma opnieuw initialiseert.
 
 <div style="border-left: 4px solid #7c3aed; background-color: #f5f3ff; padding: 14px 18px; margin: 20px 0; border-radius: 4px;">
@@ -75,25 +75,25 @@ Voordat we de fysieke hardware demonteren, controleren we of er geen driverconfl
 ### Stap 2: Grondige voorbereiding van de werkplek en materiaalkeuze
 Om de switch te herstellen zonder de printplaat te beschadigen, heb je specifiek gereedschap nodig:
 
-*   **Keycap puller** (draadmodel, voorkomt krassen op ABS/PBT plastics).
-*   **Elektronica-contactspray**: Kies voor een residuvrij product zoals *DeoxIT D5*, *Kontakt Chemie Kontakt 60 Plus* of *WD-40 Specialist Contactschoonmaker* (let op: **Specialist**, niet de blauw-gele bus!).
-*   **Isopropanol (IPA) 99,9%** voor hardnekkig vuil.
-*   **Spuitmondje/dun rietje** voor gerichte applicatie.
+*   Keycap puller (draadmodel, voorkomt krassen op ABS/PBT plastics).
+*   Elektronica-contactspray: Kies voor een residuvrij product zoals *DeoxIT D5*, *Kontakt Chemie Kontakt 60 Plus* of *WD-40 Specialist Contactschoonmaker* (let op: Specialist, niet de blauw-gele bus!).
+*   Isopropanol (IPA) 99,9% voor hardnekkig vuil.
+*   Spuitmondje/dun rietje voor gerichte applicatie.
 *   Persluchtbus of een elektrische antistatische blaasbalg.
 
 ### Stap 3: De switch flashen met contactspray (zonder desolderen)
 
 Dit is de meest effectieve methode om haperende switches en chattering op te lossen zonder te hoeven solderen:
 
-1. **Ontkoppel het toetsenbord volledig van de computer.** Laat er onder geen enkel beding stroom op staan tijdens deze procedure.
+1. Ontkoppel het toetsenbord volledig van de computer. Laat er onder geen enkel beding stroom op staan tijdens deze procedure.
 2. Verwijder de keycap van de defecte switch met de puller.
 3. Blaas met perslucht al het oppervlakkige stof en haren rondom de switchbehuizing grondig weg.
-4. **Het cruciale moment:** Druk het kruisvormige asje (*stem*) van de switch helemaal naar beneden met een pincet of een stomp voorwerp, zodat de interne contactholte zich opent.
+4. Het cruciale moment: Druk het kruisvormige asje (*stem*) van de switch helemaal naar beneden met een pincet of een stomp voorwerp, zodat de interne contactholte zich opent.
 5. Plaats het fijne spuitrietje van de contactspray direct in de opening langs de stam, gericht op de hoek waar het koperen bladveertje zich bevindt (meestal de zijde met het logo op de switchbehuizing).
-6. Geef **één zeer korte, gecontroleerde puls** (minder dan een halve seconde). De vloeistof moet naar binnen vloeien, maar de switch mag niet verzuipen.
+6. Geef één zeer korte, gecontroleerde puls (minder dan een halve seconde). De vloeistof moet naar binnen vloeien, maar de switch mag niet verzuipen.
 7. Druk direct daarna de switch 60 tot 80 keer snel en ritmisch handmatig in. Hiermee wrijft de chemische reiniger over het koperen bladveertje, waardoor de oxidatielaag microscopisch wordt weggeschuurd.
 8. Draai het toetsenbord om op een microvezeldoek en laat overtollig oplosmiddel weglopen.
-9. **Wachttijd:** Laat het toetsenbord minimaal 20 tot 30 minuten rusten op kamertemperatuur tot het drijfgas en de dragende alcohol volledig zijn verdampt.
+9. Wachttijd: Laat het toetsenbord minimaal 20 tot 30 minuten rusten op kamertemperatuur tot het drijfgas en de dragende alcohol volledig zijn verdampt.
 
 ```
 +-------------------------------------------------------------+
@@ -108,7 +108,7 @@ Dit is de meest effectieve methode om haperende switches en chattering op te los
 ### Stap 4: Hot-swap sockets herstellen en PCB-sporen inspecteren
 Heeft het flashen met contactspray geen effect? Dan ligt de fout dieper in het mechanische contact:
 
-1. Trek bij een hot-swap toetsenbord de switch recht omhoog met een **switch puller**. Verbuig de koperen pootjes niet.
+1. Trek bij een hot-swap toetsenbord de switch recht omhoog met een switch puller. Verbuig de koperen pootjes niet.
 2. Inspecteer de twee koperen pinnetjes aan de onderzijde van de switch. Zijn ze verbogen of zwart uitgeslagen? Maak ze schoon met een wattenstaafje en 99,9% IPA, of buig ze voorzichtig recht met een precisiepincet.
 3. Kijk in de opening van de PCB. De twee metalen klemmetjes in de hot-swap socket moeten strak tegen elkaar aan liggen. Gebruik een dunne naald om de klemmetjes vanuit de binnenkant heel voorzichtig iets naar elkaar toe te duwen, zodat ze weer stevig om de pootjes van de switch klemmen.
 4. Plaats de switch terug of wissel hem om met een switch van een toets die je zelden gebruikt (zoals `Scroll Lock`). Verhuist het probleem mee? Dan is de switch intern kapot en moet deze vervangen worden. Blijft het probleem op dezelfde fysieke toetslocatie? Dan is de soldeerverbinding van de socket op de PCB gescheurd.
@@ -126,7 +126,7 @@ Heeft het flashen met contactspray geen effect? Dan ligt de fout dieper in het m
 
 ## Geavanceerde workaround: Debounce via QMK / VIA aanpassen
 
-Als een switch af en toe nog licht stuitert en je geen reserveonderdelen bij de hand hebt, kun je het probleem softwarematig opvangen als jouw toetsenbord opensource firmware zoals **QMK**of**VIA** ondersteunt.
+Als een switch af en toe nog licht stuitert en je geen reserveonderdelen bij de hand hebt, kun je het probleem softwarematig opvangen als jouw toetsenbord opensource firmware zoals QMKofVIA ondersteunt.
 
 In het bronbestand `config.h` van de firmware kun je de debounce-instelling verhogen:
 

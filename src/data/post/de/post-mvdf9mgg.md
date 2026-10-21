@@ -22,16 +22,16 @@ Es ist mal wieder Freitag, kurz vor 17:00 Uhr in unserem Berliner Tech-Hub, und 
 
 Nachdem ich den Laptop im betroffenen Zustand per erzwungenem Aus-Schalter (Power-Button für 10 Sekunden gedrückt halten) in den sicheren Zustand gezwungen und die Update-Logs via Terminal (`C:\Windows\Logs\CBS\CBS.log`) analysiert hatte, kristallisierten sich drei typische Hauptursachen heraus:
 
-1. **Korrupter Download-Cache:** Die heruntergeladenen Installationspakete im Verzeichnis `SoftwareDistribution` sind beschädigt oder unvollständig, was die Integritätsprüfung im letzten Schritt fehlschlagen lässt.
-2. **Hängende Hintergrunddienste:** Der Windows Update-Dienst (`wuauserv`) sowie der Kryptografie-Dienst blockieren sich gegenseitig beim Versuch, die neuen Systemdateien final zu registrieren.
-3. **Konflikte mit Drittanbieter-Virenschutz:** Externe Sicherheitssoftware blockiert während der finalen Bereitstellungsphase den Zugriff auf kritische Registry-Schlüssel oder Systemordner.
+1. Korrupter Download-Cache: Die heruntergeladenen Installationspakete im Verzeichnis `SoftwareDistribution` sind beschädigt oder unvollständig, was die Integritätsprüfung im letzten Schritt fehlschlagen lässt.
+2. Hängende Hintergrunddienste: Der Windows Update-Dienst (`wuauserv`) sowie der Kryptografie-Dienst blockieren sich gegenseitig beim Versuch, die neuen Systemdateien final zu registrieren.
+3. Konflikte mit Drittanbieter-Virenschutz: Externe Sicherheitssoftware blockiert während der finalen Bereitstellungsphase den Zugriff auf kritische Registry-Schlüssel oder Systemordner.
 
 ### Schritt-für-Schritt-Anleitung: Den Update-Knoten lösen
 
 Um den Laptop ohne Datenverlust oder Neuinstallation wieder flottzumachen, nutzen wir einen bewährten chirurgischen Eingriff: Wir stoppen die Update-Dienste, leeren den beschädigten Cache und starten den Prozess frisch. 
 
 #### Schritt 1: Das Terminal als Administrator öffnen
-Boote das System (notfalls über den abgesicherten Modus oder direkt nach dem erzwungenen Neustart). Drücke die Tastenkombination `Windows + X` und wähle **Terminal (Administrator)**oder**Eingabeaufforderung (Administrator)** aus.
+Boote das System (notfalls über den abgesicherten Modus oder direkt nach dem erzwungenen Neustart). Drücke die Tastenkombination `Windows + X` und wähle Terminal (Administrator)oderEingabeaufforderung (Administrator) aus.
 
 #### Schritt 2: Die blockierenden Update-Dienste stoppen
 Bevor wir die Cache-Ordner bereinigen dürfen, müssen wir Windows dazu bringen, die entsprechenden Ordner freizugeben. Tippe nacheinander folgende Befehle ein und bestätige jeweils mit Enter:
@@ -68,4 +68,4 @@ net start msiserver
 
 ### Häufig gestellte Fragen (FAQ)
 
-**1. Verliere ich meine persönlichen Dateien oder installierten Apps, wenn ich den SoftwareDistribution-Ordner lösche?**Nein, überhaupt nicht. In diesem Ordner speichert Windows lediglich die temporären Installationsdateien heruntergeladener Updates. Deine persönlichen Dokumente, Einstellungen und Anwendungen bleiben vollkommen unberührt.**2. Was kann ich tun, wenn sich die Dienste (`wuauserv`) nicht stoppen lassen?**Wenn das Terminal meldet, dass der Dienst nicht angehalten werden kann, starte Windows in den abgesicherten Modus (Safe Mode). Von dort aus greifen keine störenden Hintergrundprozesse, und du kannst die Befehle problemlos ausführen.**3. Das Update hängt nach der Cache-Leerung immer noch fest. Was nun?**Sollte der Fehler hartnäckig bestehen bleiben, lade dir das offizielle**Windows 11 Media Creation Tool** herunter, starte es direkt im laufenden Betrieb und wähle die Option "Diesen PC jetzt aktualisieren" (In-Place Upgrade). Damit wird Windows repariert, ohne dass deine Daten verloren gehen.
+1. Verliere ich meine persönlichen Dateien oder installierten Apps, wenn ich den SoftwareDistribution-Ordner lösche?Nein, überhaupt nicht. In diesem Ordner speichert Windows lediglich die temporären Installationsdateien heruntergeladener Updates. Deine persönlichen Dokumente, Einstellungen und Anwendungen bleiben vollkommen unberührt.2. Was kann ich tun, wenn sich die Dienste (`wuauserv`) nicht stoppen lassen?Wenn das Terminal meldet, dass der Dienst nicht angehalten werden kann, starte Windows in den abgesicherten Modus (Safe Mode). Von dort aus greifen keine störenden Hintergrundprozesse, und du kannst die Befehle problemlos ausführen.3. Das Update hängt nach der Cache-Leerung immer noch fest. Was nun?Sollte der Fehler hartnäckig bestehen bleiben, lade dir das offizielleWindows 11 Media Creation Tool herunter, starte es direkt im laufenden Betrieb und wähle die Option "Diesen PC jetzt aktualisieren" (In-Place Upgrade). Damit wird Windows repariert, ohne dass deine Daten verloren gehen.

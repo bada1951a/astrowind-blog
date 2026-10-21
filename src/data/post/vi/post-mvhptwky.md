@@ -21,9 +21,9 @@ Chuyện quái quỷ gì đang diễn ra với cái giao diện Windows 11 này 
 
 Trước khi tìm cách bẻ khóa, chúng ta cần hiểu tại sao Microsoft lại ép người dùng phải dùng cái menu "cụt lủn" đó. Dưới đây là 3 nguyên nhân chính:
 
-1. **Thay đổi kiến trúc lập trình:** Microsoft muốn tách biệt các ứng dụng hiện đại (UWP) khỏi các phần mềm truyền thống (Win32) để tăng độ bảo mật và giảm tình trạng treo máy do các phím tắt của bên thứ ba chèn vào menu chuột phải.
-2. **Ưu tiên thiết bị di động và cảm ứng:** Giao diện mới có khoảng cách giữa các dòng rộng hơn, các icon được gom gọn để người dùng bấm bằng ngón tay dễ dàng hơn trên các dòng máy tính bảng lai (Surface).
-3. **Thiếu tính linh hoạt ban đầu:** Ở các phiên bản Windows 11 đầu tiên, Microsoft không cung cấp sẵn nút chuyển đổi trực quan trong Cài đặt (Settings), buộc người dùng phải can thiệp sâu vào hệ thống.
+1. Thay đổi kiến trúc lập trình: Microsoft muốn tách biệt các ứng dụng hiện đại (UWP) khỏi các phần mềm truyền thống (Win32) để tăng độ bảo mật và giảm tình trạng treo máy do các phím tắt của bên thứ ba chèn vào menu chuột phải.
+2. Ưu tiên thiết bị di động và cảm ứng: Giao diện mới có khoảng cách giữa các dòng rộng hơn, các icon được gom gọn để người dùng bấm bằng ngón tay dễ dàng hơn trên các dòng máy tính bảng lai (Surface).
+3. Thiếu tính linh hoạt ban đầu: Ở các phiên bản Windows 11 đầu tiên, Microsoft không cung cấp sẵn nút chuyển đổi trực quan trong Cài đặt (Settings), buộc người dùng phải can thiệp sâu vào hệ thống.
 
 Sau sự cố suýt trễ deadline chiều hôm đó, tôi đã ngồi lại nghiên cứu và tìm ra cách xử lý triệt để vấn đề này. Dưới đây là giải pháp nhanh gọn nhất dành cho anh em làm văn phòng.
 
@@ -34,11 +34,11 @@ Sau sự cố suýt trễ deadline chiều hôm đó, tôi đã ngồi lại ngh
 Chúng ta sẽ sử dụng công cụ Windows Terminal hoặc Command Prompt để can thiệp vào kho lưu trữ hệ thống Registry Editor. Đừng lo lắng, thao tác rất an toàn nếu bạn làm đúng từng bước sau đây.
 
 ### Bước 1: Mở công cụ dòng lệnh hệ thống
-Nhấn tổ hợp phím **Windows + X** trên bàn phím của bạn. Một menu nhanh sẽ hiện ra ở góc dưới bên trái màn hình. 
-- Trên các bản Windows 11 mới, hãy chọn **Terminal**hoặc**Command Prompt (Admin)**.
+Nhấn tổ hợp phím Windows + X trên bàn phím của bạn. Một menu nhanh sẽ hiện ra ở góc dưới bên trái màn hình. 
+- Trên các bản Windows 11 mới, hãy chọn TerminalhoặcCommand Prompt (Admin).
 
 ### Bước 2: Nhập lệnh kích hoạt
-Sao chép chính xác dòng lệnh dưới đây, dán vào cửa sổ Terminal vừa mở và nhấn **Enter**:
+Sao chép chính xác dòng lệnh dưới đây, dán vào cửa sổ Terminal vừa mở và nhấn Enter:
 
 ```cmd
 reg.exe add "HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\InprocServer32" /f /ve
@@ -48,9 +48,9 @@ Ngay sau khi thông báo `The operation completed successfully` hiện lên, l�
 
 ### Bước 3: Khởi động lại tiến trình Explorer (File Explorer)
 Để hệ thống cập nhật giao diện mới mà không cần khởi động lại toàn bộ máy tính (tránh làm mất các file đang soạn thảo), bạn làm như sau:
-1. Nhấn tổ hợp phím **Ctrl + Shift + Esc**để mở**Task Manager**.
-2. Tại thẻ **Processes**(Tiến trình), tìm đến mục**Windows Explorer** (có biểu tượng thư mục màu vàng).
-3. Nhấp chuột phải vào **Windows Explorer**và chọn**Restart** (Khởi động lại).
+1. Nhấn tổ hợp phím Ctrl + Shift + Escđể mởTask Manager.
+2. Tại thẻ Processes(Tiến trình), tìm đến mụcWindows Explorer (có biểu tượng thư mục màu vàng).
+3. Nhấp chuột phải vào Windows Explorervà chọnRestart (Khởi động lại).
 
 Màn hình và thanh Taskbar sẽ chớp nhẹ một cái trong vòng 1-2 giây. Bây giờ, hãy thử nhấp chuột phải bất kỳ vào một file hay màn hình nền xem kết quả. Menu cổ điển toàn diện với đầy đủ các dòng lệnh quen thuộc đã trở lại!
 
@@ -64,15 +64,15 @@ Màn hình và thanh Taskbar sẽ chớp nhẹ một cái trong vòng 1-2 giây.
 
 Việc can thiệp vào Registry tuy nhỏ nhưng bạn cần lưu ý một số điểm sau để bảo vệ dữ liệu công ty:
 
-- **Không tự ý tải phần mềm lạ:** Trên mạng có nhiều bên quảng cáo các phần mềm "One-click fix context menu". Hãy cẩn trọng vì chúng có thể đính kèm mã độc hoặc phần mềm quảng cáo (adware) làm chậm máy tính văn phòng của bạn.
-- **Sao lưu cấu hình trước khi thao tác:** Nếu máy tính của công ty có chính sách bảo mật khắt khe từ bộ phận IT trung tâm, việc thay đổi Registry có thể bị chặn hoặc bị ghi đè lại sau mỗi lần khởi động lại máy (reboot). Hãy kiểm tra lại với quản trị viên mạng nếu câu lệnh không có tác dụng.
+- Không tự ý tải phần mềm lạ: Trên mạng có nhiều bên quảng cáo các phần mềm "One-click fix context menu". Hãy cẩn trọng vì chúng có thể đính kèm mã độc hoặc phần mềm quảng cáo (adware) làm chậm máy tính văn phòng của bạn.
+- Sao lưu cấu hình trước khi thao tác: Nếu máy tính của công ty có chính sách bảo mật khắt khe từ bộ phận IT trung tâm, việc thay đổi Registry có thể bị chặn hoặc bị ghi đè lại sau mỗi lần khởi động lại máy (reboot). Hãy kiểm tra lại với quản trị viên mạng nếu câu lệnh không có tác dụng.
 
 ---
 
 ## Các câu hỏi thường gặp (FAQ)
 
 ### 1. Thủ thuật này có làm mất bảo hành hay gây lỗi hệ thống Windows 11 không?
-**Hoàn toàn không.** Đây chỉ là thao tác kích hoạt lại một lớp giao diện (GUID) cũ vẫn được Microsoft ngầm tích hợp sẵn bên trong nhân hệ thống Windows 11 để phục vụ các lập trình viên. Nó không làm tổn hại đến phần cứng hay gây mất dữ liệu của bạn.
+Hoàn toàn không. Đây chỉ là thao tác kích hoạt lại một lớp giao diện (GUID) cũ vẫn được Microsoft ngầm tích hợp sẵn bên trong nhân hệ thống Windows 11 để phục vụ các lập trình viên. Nó không làm tổn hại đến phần cứng hay gây mất dữ liệu của bạn.
 
 
 

@@ -9,7 +9,7 @@ theme: "Industrial Blueprint"
 ---
 
 
-My Slack was blowing up right in the middle of a high-stakes executive sync in our San Francisco office. We were twenty minutes away from pushing a massive client-facing build to production, and my primary workstation flashed a terrifying red warning: "**C: Drive Full. 0 bytes free.**" Visual Studio wouldn't compile, Docker containers were throwing disk space allocation errors, and Windows Update refused to budge. Instead of panicking, I had to drop everything and clean out gigabytes of digital clutter under intense pressure. If you are staring at a completely red C drive right now and wondering what is safe to delete, let me walk you through the battle-tested blueprint to reclaim your storage safely.
+My Slack was blowing up right in the middle of a high-stakes executive sync in our San Francisco office. We were twenty minutes away from pushing a massive client-facing build to production, and my primary workstation flashed a terrifying red warning: "C: Drive Full. 0 bytes free." Visual Studio wouldn't compile, Docker containers were throwing disk space allocation errors, and Windows Update refused to budge. Instead of panicking, I had to drop everything and clean out gigabytes of digital clutter under intense pressure. If you are staring at a completely red C drive right now and wondering what is safe to delete, let me walk you through the battle-tested blueprint to reclaim your storage safely.
 
 <div style="border-left: 4px solid #f59e0b; padding: 12px 16px; margin: 20px 0; background-color: rgba(245,158,11,0.08); border-radius: 4px; color: #111827;">
 <strong>Engineering Blueprint Note:</strong> Never randomly delete system folders or run unverified registry cleaner utilities. A full C drive is usually caused by predictable accumulation points that Windows safely manages if you use the right tools.
@@ -59,12 +59,12 @@ Follow these exact steps using official Windows 11 administrative utilities to s
 ### Step 1: Run Windows 11 Storage Sense (The Modern Approach)
 Skip third-party applications. Windows 11 has a robust built-in tool designed specifically for this.
 
-1. Press `Windows Key + I` to open **Settings**.
-2. Navigate to **System**>**Storage**.
-3. Toggle **Storage Sense**to**On**, then click directly on the**Storage Sense** text menu to configure it.
-4. Click **Temporary Files** and let the system scan your drive. 
-5. Check the boxes next to **Windows Update Cleanup**,**Previous Windows installations**, and**Temporary files**. 
-6. Click **Remove files**.
+1. Press `Windows Key + I` to open Settings.
+2. Navigate to System>Storage.
+3. Toggle Storage SensetoOn, then click directly on theStorage Sense text menu to configure it.
+4. Click Temporary Files and let the system scan your drive. 
+5. Check the boxes next to Windows Update Cleanup,Previous Windows installations, andTemporary files. 
+6. Click Remove files.
 
 ### Step 2: Manually Purge User and System Temp Directories
 Sometimes apps leave behind locked or stubborn temp files that standard settings miss. Let us clean them out safely via the Run dialog.
@@ -72,13 +72,13 @@ Sometimes apps leave behind locked or stubborn temp files that standard settings
 1. Press `Windows Key + R` to open the Run command box.
 2. Type `%temp%` and press Enter. This opens `C:\Users\[Username]\AppData\Local\Temp`.
 3. Press `Ctrl + A` to select all files, then press `Shift + Delete`. 
-4. *Pro Tip:* If a prompt appears saying a file is currently in use by another program, simply click **Skip**. That means an active app or background service is using it right now.
+4. *Pro Tip:* If a prompt appears saying a file is currently in use by another program, simply click Skip. That means an active app or background service is using it right now.
 5. Next, open the Run dialog again (`Windows Key + R`), type `temp` (without percentage signs), and hit Enter. Clear out everything in that directory as well.
 
 ### Step 3: Clean Up Component Store (WinSxS) via Terminal
 If you are a developer or power user, your Windows Component Store accumulates years of obsolete system packages. We can safely prune them using an elevated Command Prompt.
 
-1. Right-click the Start menu and select **Terminal (Admin)**or**Command Prompt (Admin)**.
+1. Right-click the Start menu and select Terminal (Admin)orCommand Prompt (Admin).
 2. Type the following command and press Enter:
    `DISM.exe /Online /Cleanup-Image /StartComponentCleanup`
 3. Wait for the process to hit 100 percent. This safely strips away outdated system binaries without affecting your current OS stability.
@@ -92,9 +92,9 @@ If you are a developer or power user, your Windows Component Store accumulates y
 </div>
 
 To prevent your C drive from filling up unexpectedly during critical work hours, establish these habits:
-- **Relocate Default Libraries:** Move your Documents, Downloads, and Desktop folders to a secondary data drive (D: or E:) if you have one.
-- **Docker and IDE Caches:** If you use Docker Desktop, configure its virtual disk limit in settings so it doesn't quietly swallow 60GB of your C drive.
-- **Monitor with TreeSize Free:** Install a trusted visual storage analyzer like TreeSize (run as administrator) to instantly spot which folders are consuming your disk space.
+- Relocate Default Libraries: Move your Documents, Downloads, and Desktop folders to a secondary data drive (D: or E:) if you have one.
+- Docker and IDE Caches: If you use Docker Desktop, configure its virtual disk limit in settings so it doesn't quietly swallow 60GB of your C drive.
+- Monitor with TreeSize Free: Install a trusted visual storage analyzer like TreeSize (run as administrator) to instantly spot which folders are consuming your disk space.
 
 ---
 

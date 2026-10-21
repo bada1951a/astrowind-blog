@@ -43,8 +43,8 @@ Furthermore, environmental contaminants and airborne dust settle into the switch
 The movable leaf in a Cherry-MX style switch acts as a miniature cantilever spring. Over intense repetitive use, the physical elasticity of this phosphor bronze or copper-alloy leaf degrades. 
 
 If the leaf splays outward even a fraction of a millimeter, two distinct failures happen:
-* **Missed inputs:** The travel of the stem slider is insufficient to force the contact points into firm physical engagement.
-* **Chatter:** The contact pressure drops below the threshold needed to prevent contact vibration. The points physically bounce off each other during the downward strike before settling, triggering repeated signals.
+* Missed inputs: The travel of the stem slider is insufficient to force the contact points into firm physical engagement.
+* Chatter: The contact pressure drops below the threshold needed to prevent contact vibration. The points physically bounce off each other during the downward strike before settling, triggering repeated signals.
 
 ### 3. Actuation Tolerance Drift vs. Firmware Debounce Algorithms
 All mechanical keyboards utilize a firmware-level "debounce algorithm" in their microcontroller (MCU). Because metal leaves naturally bounce for 1 to 5 milliseconds upon impact, the keyboard controller waits a predetermined time (typically 5ms to 15ms) before accepting another state change.
@@ -76,18 +76,18 @@ Before picking up any chemical solvents or tools, systematically isolate the ope
 
 ### Phase 1: Software and Interface Triage
 
-1. **Check HID Drivers in Device Manager**:
-   Press `Windows Key + X` and select **Device Manager**. Expand**Human Interface Devices**and**Keyboards**. 
-   Look for duplicate driver entries, yellow warning glyphs, or selective suspend power-saving states. Right-click your active keyboard device, choose **Properties**, navigate to**Power Management**, and uncheck *Allow the computer to turn off this device to save power*.
+1. Check HID Drivers in Device Manager:
+   Press `Windows Key + X` and select Device Manager. ExpandHuman Interface DevicesandKeyboards. 
+   Look for duplicate driver entries, yellow warning glyphs, or selective suspend power-saving states. Right-click your active keyboard device, choose Properties, navigate toPower Management, and uncheck *Allow the computer to turn off this device to save power*.
    
-2. **Execute a Clean State Test**:
+2. Execute a Clean State Test:
    Launch an administrative shell and run the system file verification tool to ensure driver subsystem integrity:
    ```cmd
    DISM /Online /Cleanup-Image /ScanHealth
    ```
-   Open a browser-based keyboard matrix visualizer (e.g., VIA Key Tester or an online switch chatter tester). Set the bounce detection threshold to **20ms**. Press the problematic key 100 times at varying strike angles and velocities. Note down the failure rate:
-   * **Chattering (Double-strike):** The interval between inputs is less than 30ms.
-   * **Skipping (Dead switch):** Inputs fail entirely under standard actuation pressure.
+   Open a browser-based keyboard matrix visualizer (e.g., VIA Key Tester or an online switch chatter tester). Set the bounce detection threshold to 20ms. Press the problematic key 100 times at varying strike angles and velocities. Note down the failure rate:
+   * Chattering (Double-strike): The interval between inputs is less than 30ms.
+   * Skipping (Dead switch): Inputs fail entirely under standard actuation pressure.
 
 ---
 ![Tech Diagnostics](https://images.unsplash.com/photo-1555680202-c86f0e12f086?auto=format&fit=crop&w=1000&h=550&q=80)
@@ -101,7 +101,7 @@ If software triage confirms that an isolated switch is dropping or chattering, t
 </div>
 
 #### Step 1: Complete Power Isolation
-Unplug the keyboard's USB cable directly from your PC. **Never attempt chemical cleaning on an active electrical circuit.** Even though electronic contact cleaners are non-conductive, the rapid drop in temperature during aerosol discharge can cause atmospheric condensation, which can short your PCB.
+Unplug the keyboard's USB cable directly from your PC. Never attempt chemical cleaning on an active electrical circuit. Even though electronic contact cleaners are non-conductive, the rapid drop in temperature during aerosol discharge can cause atmospheric condensation, which can short your PCB.
 
 #### Step 2: Keycap Removal and Housing Exposure
 Using a wire keycap puller, gently pull the affected keycap straight up to prevent side-loading the switch stem. Clear any stray dust around the switch using a brush or compressed air.
@@ -110,7 +110,7 @@ Using a wire keycap puller, gently pull the affected keycap straight up to preve
 1. Attach the micro-bore straw nozzle to the contact cleaner can.
 2. Use your finger or a plastic spudger to depress the switch stem completely into the housing. This creates a tiny gap between the stem slider and the internal contact leaf.
 3. Position the straw directly into the exposed opening beside the stem where the internal metal leaves sit.
-4. Deliver **one ultra-short burst** (roughly 0.2 to 0.5 seconds). Do not soak the entire switch. The solvent needs to reach the contact points, dissolve surface oxidation, flush away debris, and quickly evaporate.
+4. Deliver one ultra-short burst (roughly 0.2 to 0.5 seconds). Do not soak the entire switch. The solvent needs to reach the contact points, dissolve surface oxidation, flush away debris, and quickly evaporate.
 
 ```
        [Aerosol Straw]
@@ -123,7 +123,7 @@ Using a wire keycap puller, gently pull the affected keycap straight up to preve
 Immediately upon spraying—while the solvent is still wet inside the housing—press the switch stem vigorously 60 to 80 times over 15 seconds. This cycling causes the contacts to rub against each other, allowing the chemical solvent to scrub away loosened carbon buildup and flush micro-particulates out of the contact points.
 
 #### Step 5: Complete Outgassing and Evaporation
-Allow the board to sit unpowered for at least **15 to 20 minutes**. Even fast-evaporating solvents like BW-100 need time to outgas if trapped inside a sealed switch enclosure.
+Allow the board to sit unpowered for at least 15 to 20 minutes. Even fast-evaporating solvents like BW-100 need time to outgas if trapped inside a sealed switch enclosure.
 
 ---
 
@@ -156,8 +156,8 @@ If the board is soldered, you can open the switch housing *in situ* using switch
    └────────────────────────────────────────────────────────┘
 ```
 
-* **Lubricant Washout Risk:** Fast-evaporating contact cleaners dissolve fluorinated and synthetic greases (such as Krytox 205g0 or Tribosys 3203). If your keyboard has custom hand-lubricated switches, flushing a switch with contact cleaner will wash away the lubricant on the stem rails and floor, changing its acoustic profile and scratchiness. You will likely need to re-lube the stem rails with a fine detail brush afterward.
-* **Optical and Magnetic (Hall Effect) Switches:**Do**not** use this contact cleaner technique on Optical switches (e.g., Gateron Optical) or Hall Effect magnetic switches (e.g., Wooting Lekker). These switches have no physical mechanical contact leaves; their inputs are read via infrared beams or magnetic fields. Chattering in these units is caused by dust on optical sensors, damaged light guides, or loose magnets—a solvent spray will only smear debris onto the sensor lenses.
+* Lubricant Washout Risk: Fast-evaporating contact cleaners dissolve fluorinated and synthetic greases (such as Krytox 205g0 or Tribosys 3203). If your keyboard has custom hand-lubricated switches, flushing a switch with contact cleaner will wash away the lubricant on the stem rails and floor, changing its acoustic profile and scratchiness. You will likely need to re-lube the stem rails with a fine detail brush afterward.
+* Optical and Magnetic (Hall Effect) Switches:Donot use this contact cleaner technique on Optical switches (e.g., Gateron Optical) or Hall Effect magnetic switches (e.g., Wooting Lekker). These switches have no physical mechanical contact leaves; their inputs are read via infrared beams or magnetic fields. Chattering in these units is caused by dust on optical sensors, damaged light guides, or loose magnets—a solvent spray will only smear debris onto the sensor lenses.
 
 ---
 

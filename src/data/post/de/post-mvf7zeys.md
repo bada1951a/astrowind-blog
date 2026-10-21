@@ -21,9 +21,9 @@ In Panik habe ich zuerst den Laptop einfach hart ausgeschaltet – ein klassisch
 
 Bevor wir zur Tat schreiten, müssen wir verstehen, warum Windows sich selbst ausbremst. Der "System"-Prozess (PID 4) ist das Herzstück des Kernels. Wenn er 100 Prozent CPU zieht, liegt das fast nie an Windows selbst, sondern an externen Faktoren:
 
-1. **Hängende Hardware-Interrupts (ISR/DPC):** Ein treiberseitiges Problem (meist Netzwerkkarte, Chipsatz oder Grafik) erzeugt endlose Interrupt-Anfragen, die der Systemprozess abfangen muss.
-2. **Speicherlecks (Memory Leaks) durch veraltete Treiber:** Ein fehlerhafter Treiber belegt permanent RAM und zwingt das System zur exzessiven Auslagerung und Komprimierung im Kernel-Modus.
-3. **Beschädigte Windows Update-Reste oder fehlerhafte Indexierung:** Der Windows Search Indexer oder das Windows Update Modul hängen in einer Endlosschleife fest, während der Systemprozess die CPU-Zyklen verbrennt.
+1. Hängende Hardware-Interrupts (ISR/DPC): Ein treiberseitiges Problem (meist Netzwerkkarte, Chipsatz oder Grafik) erzeugt endlose Interrupt-Anfragen, die der Systemprozess abfangen muss.
+2. Speicherlecks (Memory Leaks) durch veraltete Treiber: Ein fehlerhafter Treiber belegt permanent RAM und zwingt das System zur exzessiven Auslagerung und Komprimierung im Kernel-Modus.
+3. Beschädigte Windows Update-Reste oder fehlerhafte Indexierung: Der Windows Search Indexer oder das Windows Update Modul hängen in einer Endlosschleife fest, während der Systemprozess die CPU-Zyklen verbrennt.
 
 ---
 
@@ -33,17 +33,17 @@ Lass uns das System ohne Neustart (oder mit minimalem Neustart-Aufwand) wieder s
 
 ### Schritt 1: Den wahren Verursacher im Task-Manager entlarven
 
-Öffne den **Task-Manager** (Tastenkombination `Strg` + `Shift` + `Esc`). 
-1. Klicke auf den Reiter **Prozesse**und sortiere nach der Spalte**CPU**, indem du darauf klickst.
-2. Wenn dort "System" oder "System und komprimierter Speicher" ganz oben steht, klicke mit der rechten Maustaste darauf und wähle **Details anzeigen**.
-3. Da man den Systemprozess selbst (PID 4) nicht einfach beenden kann, müssen wir tiefer graben. Öffne die **Ereignisanzeige** (Suche im Startmenü nach `Ereignisanzeige`). Navigiere zu *Windows-Protokolle* -> *System* und suche nach roten Kritisch- oder Fehler-Einträgen der letzten 10 Minuten. Meistens siehst du hier, welcher Treiber (z. B. `iaStorA.sys` für Intel RST oder ein Realtek LAN-Treiber) Amok läuft.
+Öffne den Task-Manager (Tastenkombination `Strg` + `Shift` + `Esc`). 
+1. Klicke auf den Reiter Prozesseund sortiere nach der SpalteCPU, indem du darauf klickst.
+2. Wenn dort "System" oder "System und komprimierter Speicher" ganz oben steht, klicke mit der rechten Maustaste darauf und wähle Details anzeigen.
+3. Da man den Systemprozess selbst (PID 4) nicht einfach beenden kann, müssen wir tiefer graben. Öffne die Ereignisanzeige (Suche im Startmenü nach `Ereignisanzeige`). Navigiere zu *Windows-Protokolle* -> *System* und suche nach roten Kritisch- oder Fehler-Einträgen der letzten 10 Minuten. Meistens siehst du hier, welcher Treiber (z. B. `iaStorA.sys` für Intel RST oder ein Realtek LAN-Treiber) Amok läuft.
 
 ### Schritt 2: Den fehlerhaften Treiber oder Dienst stoppen
 
 Häufig ist es der Windows-Indexierungsdienst oder ein Netzwerktreiber. 
-1. Öffne die **Einstellungen** (`Windows-Taste` + `I`).
+1. Öffne die Einstellungen (`Windows-Taste` + `I`).
 2. Gehe zu *Datenschutz und Sicherheit* -> *Durchsuchen von Windows* und schalte die indizierten Orte testweise ab oder stoppe den Dienst über die Eingabeaufforderung.
-3. Öffne die **Eingabeaufforderung** als Administrator (Rechtsklick auf Start -> *Terminal (Administrator)* oder *Eingabeaufforderung (Admin)*).
+3. Öffne die Eingabeaufforderung als Administrator (Rechtsklick auf Start -> *Terminal (Administrator)* oder *Eingabeaufforderung (Admin)*).
 4. Gib folgenden Befehl ein, um beschädigte Systemdateien zu reparieren, die den Kernel belasten:
    ```cmd
    DISM.exe /Online /Cleanup-image /Restorehealth
@@ -53,8 +53,8 @@ Häufig ist es der Windows-Indexierungsdienst oder ein Netzwerktreiber.
 
 ### Schritt 3: Den Übeltäter im Geräte-Manager zurücksetzen
 
-Wenn ein Gerätetreiber die CPU auslastet, hilft oft ein schneller Reset im **Geräte-Manager**:
-1. Drücke `Windows-Taste` + `X` und wähle **Geräte-Manager**.
+Wenn ein Gerätetreiber die CPU auslastet, hilft oft ein schneller Reset im Geräte-Manager:
+1. Drücke `Windows-Taste` + `X` und wähle Geräte-Manager.
 2. Klappe vor allem die Einträge unter *Netzwerkadapter* und *IDE ATA/ATAPI-Controller* auf.
 3. Wenn du einen Intel-Chipsatz nutzt, ist oft der Intel Rapid Storage Technology Treiber schuld. Klicke mit der rechten Maustaste darauf, wähle *Gerät deinstallieren* (keine Sorge, Windows zieht sich beim nächsten Scan einen Standardtreiber) oder aktualisiere ihn direkt.
 4. Starte den PC danach einmal sauber neu.
@@ -69,10 +69,10 @@ Wenn ein Gerätetreiber die CPU auslastet, hilft oft ein schneller Reset im **Ge
 
 | Metrik / Zustand | Vor der Optimierung (Problemfall) | Nach erfolgreicher Behebung |
 | :--- | :--- | :--- |
-| **CPU-Auslastung (System)** | Konstant 95% - 100% | 1% - 3% im Leerlauf |
-| **Lüftergeräusch** | Maximal (Turbinen-Modus) | Kaum hörbar / Silent |
-| **System-Latenz** | Starke Hänger, Mausruckler | Fließend, reaktionsschnell |
-| **Präsentations-Bereitschaft** | Panik im Bankenviertel | Entspannter Start ohne Hänger |
+| CPU-Auslastung (System) | Konstant 95% - 100% | 1% - 3% im Leerlauf |
+| Lüftergeräusch | Maximal (Turbinen-Modus) | Kaum hörbar / Silent |
+| System-Latenz | Starke Hänger, Mausruckler | Fließend, reaktionsschnell |
+| Präsentations-Bereitschaft | Panik im Bankenviertel | Entspannter Start ohne Hänger |
 
 ---
 
@@ -89,4 +89,4 @@ Nein, das geht absolut nicht. PID 4 (System) ist der Windows-Kernel selbst. Wenn
 Manchmal bleibt ein Update-Prozess im Hintergrund hängen oder der Windows Search Indexer baut nach einem Kernel-Patch die Datenbank komplett neu auf. Ein gezielter Neustart oder das temporäre Anhalten der Windows Update-Dienste über die Dienste-App (`services.msc`) löst dies in der Regel sofort.
 
 ### 3. Hilft es, die Energiesparoptionen zu ändern?
-Ja, erstaunlicherweise oft! Wenn der Energiesparmodus auf "Höchstleistung" steht, kann das bei einigen älteren Notebooks zu fehlerhaften Taktungs-Interrupts im Prozessor führen. Das Umschalten auf "Ausgeglichen" oder das Zurücksetzen der Energiesparpläne in der **Systemsteuerung** hat schon unzählige Laptops beruhigt.
+Ja, erstaunlicherweise oft! Wenn der Energiesparmodus auf "Höchstleistung" steht, kann das bei einigen älteren Notebooks zu fehlerhaften Taktungs-Interrupts im Prozessor führen. Das Umschalten auf "Ausgeglichen" oder das Zurücksetzen der Energiesparpläne in der Systemsteuerung hat schon unzählige Laptops beruhigt.

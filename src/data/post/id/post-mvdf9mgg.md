@@ -25,9 +25,9 @@ Berikut adalah panduan langkah demi langkah berbasis pengalaman lapangan yang pa
 
 Sebelum masuk ke eksekusi pembersihan, penting untuk memahami kenapa masalah ini bisa terjadi di lingkungan kerja yang dinamis:
 
-1. **Korupsi Berkas Unduhan (Download Corruption):** Koneksi internet yang sempat berfluktuasi saat mengunduh *cumulative update* menyebabkan sebagian *file* unduhan rusak saat disimpan di direktori `SoftwareDistribution`.
-2. **Layanan Windows Update Terkunci:** Layanan penting seperti *Windows Update* (`wuauserv`) dan *Cryptographic Services* masih mencoba membaca *file* yang sama secara terus-menerus, menciptakan siklus buntu (*deadlock*).
-3. **Konflik Antivirus Pihak Ketiga:** Terkadang utilitas keamanan memindai berkas instalasi yang sedang aktif di latar belakang, sehingga proses instalasi tahap akhir tertahan tanpa batas waktu.
+1. Korupsi Berkas Unduhan (Download Corruption): Koneksi internet yang sempat berfluktuasi saat mengunduh *cumulative update* menyebabkan sebagian *file* unduhan rusak saat disimpan di direktori `SoftwareDistribution`.
+2. Layanan Windows Update Terkunci: Layanan penting seperti *Windows Update* (`wuauserv`) dan *Cryptographic Services* masih mencoba membaca *file* yang sama secara terus-menerus, menciptakan siklus buntu (*deadlock*).
+3. Konflik Antivirus Pihak Ketiga: Terkadang utilitas keamanan memindai berkas instalasi yang sedang aktif di latar belakang, sehingga proses instalasi tahap akhir tertahan tanpa batas waktu.
 
 ---
 
@@ -36,7 +36,7 @@ Sebelum masuk ke eksekusi pembersihan, penting untuk memahami kenapa masalah ini
 Untuk mengatasi masalah ini secara tuntas, kita harus mematikan layanan terkait, menghapus berkas *cache* yang rusak, lalu menyalakannya kembali. Ikuti langkah-langkah di bawah ini menggunakan akun Administrator.
 
 #### Langkah 1: Masuk ke Safe Mode atau Gunakan Command Prompt
-Jika laptop masih bisa masuk ke desktop meskipun lambat, buka menu **Pengaturan**, cari**Terminal**atau**Command Prompt**, lalu klik kanan dan pilih**Run as administrator**. (Jika tidak bisa masuk desktop sama sekali, akses menu *Advanced Startup* dengan menahan tombol Shift saat mengeklik *Restart*).
+Jika laptop masih bisa masuk ke desktop meskipun lambat, buka menu Pengaturan, cariTerminalatauCommand Prompt, lalu klik kanan dan pilihRun as administrator. (Jika tidak bisa masuk desktop sama sekali, akses menu *Advanced Startup* dengan menahan tombol Shift saat mengeklik *Restart*).
 
 #### Langkah 2: Hentikan Layanan Sistem Terkait
 Ketik perintah berikut satu per satu lalu tekan Enter untuk menghentikan layanan yang sedang mengunci *folder* pembaruan:
@@ -77,8 +77,8 @@ Setelah semua perintah selesai dieksekusi dengan sukses, tutup jendela Terminal 
 
 ### Tanya Jawab Umum (FAQ)
 
-**1. Apakah menghapus folder SoftwareDistribution akan menghilangkan data pribadi saya?**Tidak sama sekali. Folder ini murni berisi berkas unduhan pembaruan sistem operasi dan aplikasi bawaan. Dokumen, foto, dan aplikasi pihak ketiga Anda aman di tempatnya.**2. Apa yang harus dilakukan jika setelah mereset *cache* pembaruan tetap gagal?**  
+1. Apakah menghapus folder SoftwareDistribution akan menghilangkan data pribadi saya?Tidak sama sekali. Folder ini murni berisi berkas unduhan pembaruan sistem operasi dan aplikasi bawaan. Dokumen, foto, dan aplikasi pihak ketiga Anda aman di tempatnya.2. Apa yang harus dilakukan jika setelah mereset *cache* pembaruan tetap gagal?  
 Anda bisa menggunakan alat bawaan Windows bernama *System File Checker*. Buka Command Prompt Administrator lalu ketik `sfc /scannow` untuk memperbaiki file sistem yang rusak secara menyeluruh.
 
-**3. Bisakah saya menghapus folder cadangan (.old) setelah pembaruan berhasil?**  
+3. Bisakah saya menghapus folder cadangan (.old) setelah pembaruan berhasil?  
 Bisa. Setelah Windows 11 berhasil melakukan *update* dan berjalan stabil selama beberapa hari, Anda dapat menghapus folder `SoftwareDistribution.old` untuk menghemat ruang penyimpanan SSD Anda.

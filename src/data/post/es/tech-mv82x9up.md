@@ -26,9 +26,9 @@ No era la tarjeta gráfica, ni el cable HDMI. El verdadero culpable estaba escon
 
 Antes de volverte loco cambiando piezas, hay que entender qué está pasando en la placa base cuando el PC enciende pero el monitor se queda en negro. 
 
-1. **Oxidación y suciedad en los contactos (Fretting corrosion):** Con las vibraciones de la oficina, los cambios térmicos (cuando el PC se calienta por la tarde y se enfría por la noche) y la humedad ambiental, se crea una microcapa de óxido o suciedad en los pines dorados de la RAM. El bus de datos pierde continuidad y la placa se niega a hacer el *Power-On Self-Test (POST)*.
-2. **Microfisuras o desplazamiento por golpes/vibraciones:** ¿Alguien le dio una patada sin querer a la torre debajo del escritorio? Un milímetro de desplazamiento basta para que los canales de memoria dejen de hacer contacto perfecto con los pines del zócalo.
-3. **Fallo en la línea de alimentación del slot (DIMM slot failure):** A veces el problema no es el módulo de memoria en sí, sino que la ranura principal de la placa base ha acumulado estática o se ha tostado por un pico de tensión, bloqueando la inicialización del hardware.
+1. Oxidación y suciedad en los contactos (Fretting corrosion): Con las vibraciones de la oficina, los cambios térmicos (cuando el PC se calienta por la tarde y se enfría por la noche) y la humedad ambiental, se crea una microcapa de óxido o suciedad en los pines dorados de la RAM. El bus de datos pierde continuidad y la placa se niega a hacer el *Power-On Self-Test (POST)*.
+2. Microfisuras o desplazamiento por golpes/vibraciones: ¿Alguien le dio una patada sin querer a la torre debajo del escritorio? Un milímetro de desplazamiento basta para que los canales de memoria dejen de hacer contacto perfecto con los pines del zócalo.
+3. Fallo en la línea de alimentación del slot (DIMM slot failure): A veces el problema no es el módulo de memoria en sí, sino que la ranura principal de la placa base ha acumulado estática o se ha tostado por un pico de tensión, bloqueando la inicialización del hardware.
 
 ---
 
@@ -46,15 +46,15 @@ Vamos a dejar los blablablás y a ensuciarnos las manos. Apaga el equipo, descon
 
 #### Paso 1: Extracción y limpieza quirúrgica de los módulos
 Abre el chasis. Presiona las pestañas de seguridad de los extremos de la ranura RAM y saca los módulos con cuidado. 
-* Pásale una **goma de borrar blanca** suavemente por los contactos dorados (pines) de la RAM para quitar la capa de grasa y óxido. 
-* Elimina los residuos de goma con un pincel antiestático o aire comprimido. **Nunca** toques los circuitos integrados (chips negros) con los dedos descalzos si hay riesgo estática.
+* Pásale una goma de borrar blanca suavemente por los contactos dorados (pines) de la RAM para quitar la capa de grasa y óxido. 
+* Elimina los residuos de goma con un pincel antiestático o aire comprimido. Nunca toques los circuitos integrados (chips negros) con los dedos descalzos si hay riesgo estática.
 
 #### Paso 2: Limpieza de slots (Zócalos DIMM)
 Usa aire comprimido en spray para soplar dentro de las ranuras de la placa base. A veces hay acumulaciones de pelusa que impiden que el módulo entre hasta el fondo.
 
 #### Paso 3: Prueba de aislamiento y reubicación
 Si tienes varios módulos, no los metas todos de golpe. 
-* Coloca **un solo módulo** en el slot primario recomendado por el fabricante (usualmente el segundo slot desde el procesador, conocido como `DIMM_A2`).
+* Coloca un solo módulo en el slot primario recomendado por el fabricante (usualmente el segundo slot desde el procesador, conocido como `DIMM_A2`).
 * Asegúrate de escuchar el clic mecánico de las pestañas cerrándose solas. Si no hace clic, no está bien sentado.
 
 #### Paso 4: Diagnóstico post-arranque (Verificación en caliente)
@@ -80,11 +80,11 @@ Además, si al encender el equipo escuchas una sinfonía de pitidos continuos (b
 
 ### Frequently Asked Questions (FAQ)
 
-**Q1: ¿Por qué el PC enciende (giran los ventiladores y encienden luces) pero la pantalla sigue negra si el problema es la RAM?**  
+Q1: ¿Por qué el PC enciende (giran los ventiladores y encienden luces) pero la pantalla sigue negra si el problema es la RAM?  
 *R:* Porque la placa base tiene energía para alimentar los periféricos básicos y ventiladores, pero el procesador no puede ejecutar el código de la BIOS (POST) sin la memoria RAM activa. Sin RAM, el sistema operativo ni siquiera empieza a cargar, por lo que la tarjeta gráfica no recibe la orden de enviar señal de vídeo al monitor.
 
-**Q2: ¿Puedo mezclar memorias RAM de diferentes marcas o frecuencias si una falló?**  
+Q2: ¿Puedo mezclar memorias RAM de diferentes marcas o frecuencias si una falló?  
 *R:* Para probar y salir del paso en una emergencia, sí, el sistema suele arrancar ajustándose a la frecuencia y latencias del módulo más lento. Sin embargo, para entornos de producción estables, es altamente recomendable usar módulos idénticos (mismo kit, frecuencia y latencia) para evitar pantallas azules (*BSOD*) por desincronización del controlador de memoria.
 
-**Q3: Limpié los contactos, cambié de slot y sigue sin dar vídeo. ¿Qué sigue?**  
+Q3: Limpié los contactos, cambié de slot y sigue sin dar vídeo. ¿Qué sigue?  
 *R:* Si ya descartaste la RAM, el siguiente sospechoso en la línea de fuego es la fuente de alimentación (que no entrega suficiente voltaje en el riel de 12V para la gráfica o el procesador) o un problema de cortocircuito en los Standoffs (separadores) de la placa base con el chasis. Desconecta todo lo secundario y prueba hacer un *Clear CMOS* para resetear la BIOS a fábrica.

@@ -19,9 +19,9 @@ Eram exatamente 14h45 em um escritório na Avenida Paulista, em São Paulo. Falt
 
 Antes de abrir qualquer ferramenta, precisamos entender o que costuma derrubar o sistema operacional de forma repentina. Na minha rotina de bancada, divido esses travamentos misteriosos em três grandes vilões:
 
-1. **Instabilidade de Driver de Vídeo:** Atualizações automáticas do Windows Update muitas vezes sobrescrevem drivers essenciais da placa gráfica (NVIDIA, AMD ou Intel), gerando conflitos que congelam a interface gráfica inteira.
-2. **Micro-falhas de Energia ou Tensão na Placa-Mãe:** Variações na linha de 12V da fonte ou perfis de memória RAM (XMP/EXPO) ligeiramente instáveis fazem o processador travar instantaneamente para evitar danos maiores.
-3. **Erros de Leitura em SSDs NVMe:** Falhas intermitentes no controlador do armazenamento principal travam o kernel do Windows ao tentar ler o arquivo de paginação.
+1. Instabilidade de Driver de Vídeo: Atualizações automáticas do Windows Update muitas vezes sobrescrevem drivers essenciais da placa gráfica (NVIDIA, AMD ou Intel), gerando conflitos que congelam a interface gráfica inteira.
+2. Micro-falhas de Energia ou Tensão na Placa-Mãe: Variações na linha de 12V da fonte ou perfis de memória RAM (XMP/EXPO) ligeiramente instáveis fazem o processador travar instantaneamente para evitar danos maiores.
+3. Erros de Leitura em SSDs NVMe: Falhas intermitentes no controlador do armazenamento principal travam o kernel do Windows ao tentar ler o arquivo de paginação.
 
 ---
 
@@ -30,10 +30,10 @@ Antes de abrir qualquer ferramenta, precisamos entender o que costuma derrubar o
 Esqueça achismos. Vamos abrir a ferramenta nativa do Windows para encontrar o código de erro exato (Event ID) que provocou o congelamento.
 
 ### Passo 1: Acessando o Visualizador de Eventos
-Pressione as teclas `Windows + X` no seu teclado e selecione **Visualizador de Eventos** (ou digite "Visualizador de Eventos" na barra de pesquisa do menu Iniciar e abra o aplicativo).
+Pressione as teclas `Windows + X` no seu teclado e selecione Visualizador de Eventos (ou digite "Visualizador de Eventos" na barra de pesquisa do menu Iniciar e abra o aplicativo).
 
 ### Passo 2: Navegando até os Logs do Windows
-Na coluna à esquerda, clique na seta ao lado de **Logs do Windows**e selecione**Sistema**. 
+Na coluna à esquerda, clique na seta ao lado de Logs do Windowse selecioneSistema. 
 
 <div style="border-left: 4px solid #0284c7; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Dica de Ouro:</strong> Como a lista de eventos é gigantesca, clique em <strong>Filtrar Log Atual...</strong> no painel à direita para refinar a busca e economizar tempo precioso.
@@ -41,12 +41,12 @@ Na coluna à esquerda, clique na seta ao lado de **Logs do Windows**e selecione*
 
 ### Passo 3: Filtrando os Erros Críticos
 No painel de filtro que vai se abrir:
-- Marque as caixas **Crítico**e**Erro**.
+- Marque as caixas CríticoeErro.
 - No campo de IDs de eventos, digite o número `41` (que indica reinicialização inesperada, o famoso Kernel-Power).
-- Clique em **OK**.
+- Clique em OK.
 
 ### Passo 4: Analisando o Culpado
-Procure pelo evento com o horário exato em que o computador travou. Na aba **Geral** na parte inferior, você verá descrições cruciais. Se aparecer o Event ID 41 com Código de Bug (BugcheckCode) diferente de zero, anote esse número. Ele é a chave para o diagnóstico preciso no Google ou nos fóruns oficiais da Microsoft.
+Procure pelo evento com o horário exato em que o computador travou. Na aba Geral na parte inferior, você verá descrições cruciais. Se aparecer o Event ID 41 com Código de Bug (BugcheckCode) diferente de zero, anote esse número. Ele é a chave para o diagnóstico preciso no Google ou nos fóruns oficiais da Microsoft.
 
 ---
 
@@ -54,9 +54,9 @@ Procure pelo evento com o horário exato em que o computador travou. Na aba **Ge
 
 Depois de identificar o rastro no Visualizador de Eventos, vale a pena checar o estado geral do hardware através de caminhos rápidos do sistema:
 
-- **Gerenciador de Dispositivos:**Pressione `Windows + X` e abra o**Gerenciador de Dispositivos**. Procure por triângulos amarelos em adaptadores de vídeo ou controladores de barramento universal (USB). Desinstale drivers corrompidos e reinstale a versão mais recente direto do fabricante.
-- **Painel de Controle Tradicional:**Vá em**Painel de Controle**>**Opções de Energia**. Altere o plano de energia para**Alto Desempenho** e desative a opção de "Inicialização Rápida" (Fast Startup), que costuma carregar arquivos corrompidos de sessão anterior e gerar travamentos no Windows 11.
-- **Configurações de Memória:**Abra**Configurações**>**Sistema**>**Recuperação** para testar se há falhas de hardware ou rode a ferramenta nativa de Diagnóstico de Memória do Windows.
+- Gerenciador de Dispositivos:Pressione `Windows + X` e abra oGerenciador de Dispositivos. Procure por triângulos amarelos em adaptadores de vídeo ou controladores de barramento universal (USB). Desinstale drivers corrompidos e reinstale a versão mais recente direto do fabricante.
+- Painel de Controle Tradicional:Vá emPainel de Controle>Opções de Energia. Altere o plano de energia paraAlto Desempenho e desative a opção de "Inicialização Rápida" (Fast Startup), que costuma carregar arquivos corrompidos de sessão anterior e gerar travamentos no Windows 11.
+- Configurações de Memória:AbraConfigurações>Sistema>Recuperação para testar se há falhas de hardware ou rode a ferramenta nativa de Diagnóstico de Memória do Windows.
 
 ---
 

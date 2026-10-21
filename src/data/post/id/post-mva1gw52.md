@@ -21,13 +21,13 @@ Layar monitor di ruang server kantor kami di kawasan SCBD mendadak menyala merah
 
 Sebelum Anda gegabah menghapus file sembarangan yang justru bisa merusak sistem operasi, mari kita identifikasi tiga pelaku utama yang kerap membuat penyimpanan utama Windows 11 cepat ludes:
 
-1. **Folder Temp Aplikasi dan Sistem yang Terlupakan**
+1. Folder Temp Aplikasi dan Sistem yang Terlupakan
    Setiap kali aplikasi seperti browser, Discord, Slack, atau Microsoft Teams berjalan, mereka menulis data sementara ke folder `AppData\Local\Temp`. Masalahnya, banyak aplikasi pihak ketiga yang malas membersihkan sisa file mereka sendiri setelah proses ditutup.
 
-2. **File Sisa Pembaruan Sistem (Windows Update Cleanup)**
+2. File Sisa Pembaruan Sistem (Windows Update Cleanup)
    Setiap kali Windows 11 mendownload *major update* atau patch keamanan bulanan, OS ini menyimpan salinan file lama (Windows.old atau paket instalasi) sebagai cadangan jika proses *rollback* diperlukan. File-file ini bisa memakan ruang hingga puluhan gigabyte.
 
-3. **Cache Hibernasi dan Virtual Memory (Pagefile.sys & Hiberfil.sys)**
+3. Cache Hibernasi dan Virtual Memory (Pagefile.sys & Hiberfil.sys)
    Jika fitur *Hibernation* aktif, Windows mencadangkan seluruh isi RAM ke dalam file sistem sebesar kapasitas RAM fisik Anda. Ditambah file *pagefile* untuk manajemen memori virtual, kedua file sistem ini otomatis mengunci ruang penyimpanan dalam jumlah masif.
 
 ---
@@ -39,13 +39,13 @@ Berikut adalah prosedur standar operasional (SOP) yang biasa kami terapkan di ka
 ### Langkah 1: Memanfaatkan Fitur Storage Sense Bawaan Windows 11
 Daripada mengunduh aplikasi pembersih pihak ketiga yang kadang membawa *bloatware* atau iklan, mari gunakan fitur bawaan yang sudah dioptimalkan oleh Microsoft.
 
-* Buka **Pengaturan (Settings)** dengan menekan kombinasi tombol `Windows + I`.
-* Navigasi ke menu **Sistem (System)**lalu pilih**Penyimpanan (Storage)**.
-* Nyalakan toggle **Storage Sense** ke posisi *On*. Fitur ini akan otomatis membersihkan file sementara secara berkala.
-* Klik pada opsi **Temporary files**. Tunggu beberapa saat hingga sistem selesai memindai rincian data.
+* Buka Pengaturan (Settings) dengan menekan kombinasi tombol `Windows + I`.
+* Navigasi ke menu Sistem (System)lalu pilihPenyimpanan (Storage).
+* Nyalakan toggle Storage Sense ke posisi *On*. Fitur ini akan otomatis membersihkan file sementara secara berkala.
+* Klik pada opsi Temporary files. Tunggu beberapa saat hingga sistem selesai memindai rincian data.
 
 ### Langkah 2: Pembersihan Manual File Temporary yang Bandel
-Terkadang Storage Sense melewatkan beberapa direktori tersembunyi. Kita bisa masuk langsung menggunakan utilitas **Run**.
+Terkadang Storage Sense melewatkan beberapa direktori tersembunyi. Kita bisa masuk langsung menggunakan utilitas Run.
 
 * Tekan `Windows + R`, ketik `%temp%` lalu tekan Enter. Ini akan membuka direktori `AppData\Local\Temp`.
 * Tekan `Ctrl + A` untuk memilih seluruh file di dalamnya, lalu tekan `Shift + Delete` untuk menghapusnya secara permanen (tanpa masuk Recycle Bin).
@@ -55,9 +55,9 @@ Terkadang Storage Sense melewatkan beberapa direktori tersembunyi. Kita bisa mas
 ### Langkah 3: Eksekusi Disk Cleanup Tingkat Lanjut (System Files)
 Untuk membersihkan file sisa pembaruan Windows yang tersembunyi, kita butuh hak akses tingkat lanjut melalui Alat Administratif.
 
-* Ketik **Disk Cleanup**di kolom pencarian taskbar, lalu pilih**Run as administrator**.
+* Ketik Disk Cleanupdi kolom pencarian taskbar, lalu pilihRun as administrator.
 * Pilih Drive `C:` dan klik OK.
-* Klik tombol **Clean up system files** di bagian bawah jendela aplikasi.
+* Klik tombol Clean up system files di bagian bawah jendela aplikasi.
 * Beri tanda centang pada kotak:
   * *Windows Update Cleanup*
   * *Previous Windows installation(s)*
@@ -72,17 +72,17 @@ Untuk membersihkan file sisa pembaruan Windows yang tersembunyi, kita butuh hak 
 <strong>Peringatan Preventif:</strong> Jangan pernah secara sembarangan menghapus folder <code>Windows.old</code> melalui tombol Delete biasa jika Anda baru saja melakukan *major upgrade* Windows 11 dalam 10 hari terakhir dan masih ingin opsi kembali ke versi sebelumnya. Gunakan selalu fitur Disk Cleanup agar sistem menghapusnya secara aman dari tingkat kernel.
 </div>
 
-Sebagai tindakan pencegahan jangka panjang, biasakan untuk memindahkan lokasi penyimpanan *default* untuk dokumen,unduhan (*Downloads*), dan media besar ke Drive D atau penyimpanan eksternal. Anda bisa mengaturnya melalui **Settings > System > Storage > Where new content is saved**.
+Sebagai tindakan pencegahan jangka panjang, biasakan untuk memindahkan lokasi penyimpanan *default* untuk dokumen,unduhan (*Downloads*), dan media besar ke Drive D atau penyimpanan eksternal. Anda bisa mengaturnya melalui Settings > System > Storage > Where new content is saved.
 
 ---
 
 ## Tanya Jawab Populer (FAQ)
 
-**1. Apakah aman menghapus seluruh isi folder di dalam direktori `%temp%`?**
+1. Apakah aman menghapus seluruh isi folder di dalam direktori `%temp%`?
 Ya, sangat aman. Folder *temp* (temporary) secara desain memang diperuntukkan bagi data buangan sementara aplikasi. File penting sistem Anda tidak akan pernah disimpan di dalam direktori ini.
 
-**2. Mengapa setelah dihapus, kapasitas kosong Drive C tidak bertambah secara signifikan?**
+2. Mengapa setelah dihapus, kapasitas kosong Drive C tidak bertambah secara signifikan?
 Kemungkinan besar ada file sistem yang terkunci atau fitur *System Protection* (Restore Point) mengalokasikan ruang yang cukup besar untuk cadangan pemulihan. Anda bisa memeriksa pengaturan *System Protection* melalui panel *Advanced system settings*.
 
-**3. Bolehkah saya menggunakan software pembersih pihak ketiga seperti CCleaner di Windows 11?**
+3. Bolehkah saya menggunakan software pembersih pihak ketiga seperti CCleaner di Windows 11?
 Untuk penggunaan profesional di lingkungan kantor, kami sangat menyarankan untuk menghindari aplikasi pembersih pihak ketiga yang agresif. Seringkali aplikasi tersebut menghapus *registry key* penting yang justru menyebabkan sistem Windows 11 menjadi tidak stabil atau *blue screen*. Gunakan utilitas bawaan OS yang jauh lebih aman.

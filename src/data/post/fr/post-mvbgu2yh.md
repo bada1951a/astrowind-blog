@@ -21,9 +21,9 @@ Il est 14h30 dans notre bureau tech à Paris, la tension est palpable. Nous somm
 
 Après avoir analysé ce comportement à plusieurs reprises lors de nos sessions de support informatique, trois coupables principaux reviennent constamment :
 
-1. **Le processus Explorateur Windows (Explorer.exe) en état de mort cérébrale :** C'est le cœur de l'interface graphique de Windows. S'il plante ou entre en boucle de charges, la barre des tâches cesse de répondre instantanément.
-2. **Le cache du menu Démarrer et des applications XAML corrompu :** Windows 11 s'appuie fortement sur des composants d'interface modernes. Une mise à jour en arrière-plan ou un plantage de processus peut corrompre ces éléments visuels.
-3. **Conflits de services tiers ou pilotes graphiques :** Une application résiduelle dans la zone de notification ou un pilote d'affichage instable peut bloquer le thread principal de la barre des tâches.
+1. Le processus Explorateur Windows (Explorer.exe) en état de mort cérébrale : C'est le cœur de l'interface graphique de Windows. S'il plante ou entre en boucle de charges, la barre des tâches cesse de répondre instantanément.
+2. Le cache du menu Démarrer et des applications XAML corrompu : Windows 11 s'appuie fortement sur des composants d'interface modernes. Une mise à jour en arrière-plan ou un plantage de processus peut corrompre ces éléments visuels.
+3. Conflits de services tiers ou pilotes graphiques : Une application résiduelle dans la zone de notification ou un pilote d'affichage instable peut bloquer le thread principal de la barre des tâches.
 
 ---
 
@@ -35,10 +35,10 @@ Voici la méthode rapide et efficace, testée et approuvée en environnement de 
 
 C'est le réflexe numéro un. Pas besoin de redémarrer toute la machine.
 
-1. Appuyez simultanément sur les touches **Ctrl + Shift + Esc**pour ouvrir le**Gestionnaire des tâches**(si le raccourci ne fonctionne pas, faites**Ctrl + Alt + Del** puis choisissez Gestionnaire des tâches).
-2. Cliquez sur l'onglet **Processus** (l'icône de jauge à gauche).
-3. Faites défiler la liste pour trouver **Explorateur Windows** (ou tapez "explorer" dans la barre de recherche en haut).
-4. Faites un clic droit dessus et sélectionnez **Redémarrer**. 
+1. Appuyez simultanément sur les touches Ctrl + Shift + Escpour ouvrir leGestionnaire des tâches(si le raccourci ne fonctionne pas, faitesCtrl + Alt + Del puis choisissez Gestionnaire des tâches).
+2. Cliquez sur l'onglet Processus (l'icône de jauge à gauche).
+3. Faites défiler la liste pour trouver Explorateur Windows (ou tapez "explorer" dans la barre de recherche en haut).
+4. Faites un clic droit dessus et sélectionnez Redémarrer. 
 
 Votre écran va clignoter une fraction de seconde, la barre des tâches va disparaître puis réapparaître. Dans 80 pour cent des cas, le problème est résolu instantanément.
 
@@ -46,10 +46,10 @@ Votre écran va clignoter une fraction de seconde, la barre des tâches va dispa
 
 Si le simple redémarrage de l'explorateur ne suffit pas, il faut réenregistrer le package d'interface utilisateur de Windows 11 via la console.
 
-1. Ouvrez le Gestionnaire des tâches (**Ctrl + Shift + Esc**).
-2. Cliquez sur le menu **Fexions** en haut à droite (ou "Exécuter une nouvelle tâche").
+1. Ouvrez le Gestionnaire des tâches (Ctrl + Shift + Esc).
+2. Cliquez sur le menu Fexions en haut à droite (ou "Exécuter une nouvelle tâche").
 3. Tapez `powershell` dans la boîte de dialogue.
-4. **Important :**Cochez la case**Créer cette tâche avec des privilèges d'administrateur**, puis validez par Entrée.
+4. Important :Cochez la caseCréer cette tâche avec des privilèges d'administrateur, puis validez par Entrée.
 5. Dans la fenêtre PowerShell qui s'ouvre, copiez-collez la commande suivante et appuyez sur Entrée :
 
 ```powershell
@@ -81,8 +81,8 @@ Si le problème persiste, des fichiers système essentiels liés à l'interface 
 
 ## Foire Aux Questions (FAQ)
 
-**1. Que faire si je ne peux même pas ouvrir le Gestionnaire des tâches avec les raccourcis clavier ?**Si le système est totalement figé, effectuez un redémarrage forcé en maintenez le bouton d'alimentation de votre PC enfoncé pendant 10 secondes. Une fois redémarré, appliquez immédiatement l'Étape 3 pour vérifier l'intégrité de vos fichiers.**2. Est-ce qu'une mise à jour de Windows peut causer ce bug de manière récurrente ?**
+1. Que faire si je ne peux même pas ouvrir le Gestionnaire des tâches avec les raccourcis clavier ?Si le système est totalement figé, effectuez un redémarrage forcé en maintenez le bouton d'alimentation de votre PC enfoncé pendant 10 secondes. Une fois redémarré, appliquez immédiatement l'Étape 3 pour vérifier l'intégrité de vos fichiers.2. Est-ce qu'une mise à jour de Windows peut causer ce bug de manière récurrente ?
 Oui. Certaines mises à jour cumulatives optionnelles ou de sécurité de Windows 11 ont parfois introduit des régressions sur le composant `ShellExperienceHost`. Pensez à vérifier dans les *Paramètres > Windows Update* si une mise à jour corrective récente est disponible.
 
-**3. Le mode sans échec résout-il le problème ?**
+3. Le mode sans échec résout-il le problème ?
 Il permet de démarrer sans les applications tierces ni les pilotes superflus. Si la barre des tâches fonctionne en mode sans échec, cela confirme qu'un logiciel tiers installé récemment (antivirus, utilitaire graphique) entre en conflit avec l'explorateur Windows.

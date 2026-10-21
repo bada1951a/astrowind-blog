@@ -58,11 +58,11 @@ Per ripristinare uno stack video corrotto non è sufficiente premere "Aggiorna d
 
 #### Fase 1: Isolamento e Rimozione Tramite Gestione Dispositivi
 
-1. Premi la combinazione di tasti `Tasto Windows + X` e seleziona **Gestione dispositivi**.
-2. Espandi la categoria **Schede video**. Qui troverai normalmente due voci (es. *Intel(R) Iris(R) Xe Graphics* e *NVIDIA GeForce RTX 4060 Laptop GPU*).
-3. Clicca con il tasto destro sul display esterno (visibile sotto la sezione **Schermi** come *Monitor generico Plug and Play*) e seleziona **Disinstalla dispositivo**.
-4. Spostati su **Schede video**, fai clic destro sulla scheda integrata e scegli**Proprietà**-> scheda**Driver**.
-5. Se il problema si è presentato dopo un aggiornamento recente di Windows Update, fai clic su **Ripristina driver**. Se il pulsante è disabilitato, procedi con la disinstallazione avanzata.
+1. Premi la combinazione di tasti `Tasto Windows + X` e seleziona Gestione dispositivi.
+2. Espandi la categoria Schede video. Qui troverai normalmente due voci (es. *Intel(R) Iris(R) Xe Graphics* e *NVIDIA GeForce RTX 4060 Laptop GPU*).
+3. Clicca con il tasto destro sul display esterno (visibile sotto la sezione Schermi come *Monitor generico Plug and Play*) e seleziona Disinstalla dispositivo.
+4. Spostati su Schede video, fai clic destro sulla scheda integrata e scegliProprietà-> schedaDriver.
+5. Se il problema si è presentato dopo un aggiornamento recente di Windows Update, fai clic su Ripristina driver. Se il pulsante è disabilitato, procedi con la disinstallazione avanzata.
 
 ```powershell
 # Esegui come Amministratore nel Prompt dei comandi o in PowerShell
@@ -76,15 +76,15 @@ Se i file del driver contengono riferimenti incoerenti nel registro di sistema (
 
 1. Scarica l'ultima build certificata del driver OEM direttamente dal portale di supporto del produttore del tuo laptop (non usare driver generici in questa fase).
 2. Scarica il tool *Display Driver Uninstaller (DDU)* ed estrailo in una cartella locale.
-3. Riavvia Windows in **Modalità provvisoria**:
-   - Apri **Prompt dei comandi** come amministratore.
+3. Riavvia Windows in Modalità provvisoria:
+   - Apri Prompt dei comandi come amministratore.
    - Digita il comando:
      ```cmd
      shutdown /r /o /t 0
      ```
    - Nella schermata blu di ripristino, naviga in: *Risoluzione dei problemi* -> *Opzioni avanzate* -> *Impostazioni di avvio* -> *Riavvia*, quindi premi `4` per avviare in Modalità Provvisoria.
-4. Esegui DDU. Imposta il tipo di dispositivo su **GPU**.
-5. Seleziona il produttore della scheda (es. Intel, AMD o NVIDIA) e clicca su **Pulisci e NON riavviare**.
+4. Esegui DDU. Imposta il tipo di dispositivo su GPU.
+5. Seleziona il produttore della scheda (es. Intel, AMD o NVIDIA) e clicca su Pulisci e NON riavviare.
 6. Se possiedi una configurazione a doppia GPU, ripeti l'operazione selezionando il secondo produttore.
 7. Al termine delle pulizie, riavvia la macchina in modalità standard.
 
@@ -95,11 +95,11 @@ pnputil /enum-drivers | findstr /I "video display graphic"
 
 #### Fase 3: Reinstallazione Pulita e Configurazione di Handshake
 
-1. Installa per primo il driver della **GPU Integrata** (gestisce l'output primario della maggior parte dei bridge interni).
+1. Installa per primo il driver della GPU Integrata (gestisce l'output primario della maggior parte dei bridge interni).
 2. Riavvia la macchina.
-3. Installa il driver della **GPU Dedicata** selezionando l'opzione *Installazione personalizzata* -> *Esegui un'installazione pulita*.
-4. Ricollega il monitor esterno. Apri **Impostazioni schermo** (`Tasto Windows + I` -> *Sistema* -> *Schermo*).
-5. Scorri verso il basso fino a **Impostazioni schermo avanzate**.
+3. Installa il driver della GPU Dedicata selezionando l'opzione *Installazione personalizzata* -> *Esegui un'installazione pulita*.
+4. Ricollega il monitor esterno. Apri Impostazioni schermo (`Tasto Windows + I` -> *Sistema* -> *Schermo*).
+5. Scorri verso il basso fino a Impostazioni schermo avanzate.
 6. Seleziona il monitor secondario e imposta manualmente una frequenza di aggiornamento standard (es. 59.94 Hz o 60.00 Hz invece di valori non standard o variabili come Dynamic Refresh Rate).
 
 ---
@@ -111,8 +111,8 @@ pnputil /enum-drivers | findstr /I "video display graphic"
 </div>
 
 Nei contesti di produzione ad alta intensità raccomando di prestare attenzione a questi dettagli operativi:
-- **Gestione dell'alimentazione USB-PD**: Assicurati che l'alimentatore della docking fornisca i Watt necessari sia al funzionamento della dock sia alla ricarica del laptop (almeno 85W-100W Power Delivery). Quando il laptop non riceve sufficiente energia, depotenzia per primo il controller PCIe Thunderbolt, provocando lo sgancio del monitor secondario durante carichi intensi della CPU.
-- **Aggiornamento Firmware MST/Thunderbolt**: Spesso il driver Windows è perfetto, ma il firmware del chip di decodifica video (es. Synaptics VMM o Intel Titan Ridge) presenta bug noti di negoziazione DisplayPort 1.4 DSC. Scarica periodicamente i pacchetti di aggiornamento firmware ufficiali del dock dal sito del produttore.
+- Gestione dell'alimentazione USB-PD: Assicurati che l'alimentatore della docking fornisca i Watt necessari sia al funzionamento della dock sia alla ricarica del laptop (almeno 85W-100W Power Delivery). Quando il laptop non riceve sufficiente energia, depotenzia per primo il controller PCIe Thunderbolt, provocando lo sgancio del monitor secondario durante carichi intensi della CPU.
+- Aggiornamento Firmware MST/Thunderbolt: Spesso il driver Windows è perfetto, ma il firmware del chip di decodifica video (es. Synaptics VMM o Intel Titan Ridge) presenta bug noti di negoziazione DisplayPort 1.4 DSC. Scarica periodicamente i pacchetti di aggiornamento firmware ufficiali del dock dal sito del produttore.
 
 ---
 
@@ -122,11 +122,11 @@ Nei contesti di produzione ad alta intensità raccomando di prestare attenzione 
 Questo comportamento conferma un problema a livello di composizione grafica gestita dal Desktop Window Manager (DWM). Quando un'applicazione richiede il rendering Direct3D, il sistema delega il calcolo alla GPU. Se vi è un'incoerenza nella commutazione degli stati energetici (stati P-State) della GPU o se l'opzione "Pianificazione GPU con accelerazione hardware" in Windows è attiva su driver non allineati, il clock video subisce micro-cali di tensione, causando il flicker.
 
 #### 2. Il monitor continua a dire "Nessun segnale", ma Windows vede lo schermo in Impostazioni. Come procedo?
-In questo scenario il bus logico comunica, ma la pipeline video ad alta velocità è bloccata. Apri **Prompt dei comandi** come amministratore e resetta il sottosistema di erogazione DisplayPort con il comando:
+In questo scenario il bus logico comunica, ma la pipeline video ad alta velocità è bloccata. Apri Prompt dei comandi come amministratore e resetta il sottosistema di erogazione DisplayPort con il comando:
 ```cmd
 dism /online /cleanup-image /restorehealth
 ```
-Subito dopo, vai in **Impostazioni schermo**, seleziona il monitor cieco, cambia temporaneamente la risoluzione su `1280x720` a `60Hz`. Questo forza la scheda grafica a richiedere una larghezza di banda minima. Se a questa risoluzione compare il segnale, il problema risiede nella larghezza di banda del cavo o nei timing video avanzati non supportati dalla dock.
+Subito dopo, vai in Impostazioni schermo, seleziona il monitor cieco, cambia temporaneamente la risoluzione su `1280x720` a `60Hz`. Questo forza la scheda grafica a richiedere una larghezza di banda minima. Se a questa risoluzione compare il segnale, il problema risiede nella larghezza di banda del cavo o nei timing video avanzati non supportati dalla dock.
 
 #### 3. È sicuro disattivare completamente la GPU integrata da Gestione dispositivi per usare solo quella dedicata?
-**No, è caldamente sconsigliato.** Sulla maggior parte dei moderni laptop con architettura mobile, il display integrato e talvolta persino le porte USB-C/DisplayPort sono collegate fisicamente ai pin di output della iGPU. Disattivando l'adattatore grafico integrato in *Gestione dispositivi*, Windows passerà forzatamente al *Microsoft Basic Display Adapter*, perdendo l'accelerazione hardware di sistema, il supporto a risoluzioni superiori a 1080p e l'output multimonitor.
+No, è caldamente sconsigliato. Sulla maggior parte dei moderni laptop con architettura mobile, il display integrato e talvolta persino le porte USB-C/DisplayPort sono collegate fisicamente ai pin di output della iGPU. Disattivando l'adattatore grafico integrato in *Gestione dispositivi*, Windows passerà forzatamente al *Microsoft Basic Display Adapter*, perdendo l'accelerazione hardware di sistema, il supporto a risoluzioni superiori a 1080p e l'output multimonitor.

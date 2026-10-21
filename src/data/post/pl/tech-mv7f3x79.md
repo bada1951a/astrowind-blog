@@ -42,10 +42,10 @@ System Windows agresywnie cachuje informacje o każdym podłączonym kiedykolwie
 
 Zanim przejdziemy do modyfikacji plików binarnych, musimy precyzyjnie ustalić, który kontroler odpowiada za błądzący port wideo.
 
-1. Uruchom narzędzie **Menedżer urządzeń**(kombinacja `Win + X` -> wybierz**Menedżer urządzeń**).
-2. Rozwiń sekcję **Karty graficzne**.
-3. Kliknij prawym przyciskiem myszy na zintegrowaną kartę (np. *Intel Iris Xe Graphics*) i wybierz **Właściwości**.
-4. W zakładce **Szczegóły**rozwiń listę**Właściwość**i wybierz**Identyfikatory sprzętu**.
+1. Uruchom narzędzie Menedżer urządzeń(kombinacja `Win + X` -> wybierzMenedżer urządzeń).
+2. Rozwiń sekcję Karty graficzne.
+3. Kliknij prawym przyciskiem myszy na zintegrowaną kartę (np. *Intel Iris Xe Graphics*) i wybierz Właściwości.
+4. W zakładce Szczegółyrozwiń listęWłaściwośći wybierzIdentyfikatory sprzętu.
 
 <div style="border-left: 4px solid #4338ca; padding: 12px 16px; margin: 20px 0; background-color: rgba(67, 56, 202, 0.04); border-radius: 4px;">
 <strong>Zapisz wartości:</strong> Zwróć uwagę na ciąg znaków w formacie:<br>
@@ -83,7 +83,7 @@ Operacja ta zmusza podsystem graficzny Windows do ponownego odpytania wszystkich
    * `Configuration`
    * `Connectivity`
    * `ScaleFactors`
-4. Kliknij prawym przyciskiem myszy na każdy z powyższych trzech podkluczy i wybierz **Usuń** (system odtworzy je automatycznie w stanie nieskażonym przy następnym wykryciu sprzętu).
+4. Kliknij prawym przyciskiem myszy na każdy z powyższych trzech podkluczy i wybierz Usuń (system odtworzy je automatycznie w stanie nieskażonym przy następnym wykryciu sprzętu).
 
 ```reg
 ; Szybki eksport zapobiegawczy z poziomu Wiersza polecenia (Administrator):
@@ -95,12 +95,12 @@ Zwykłe odinstalowanie sterownika z poziomu Menedżera urządzeń pozostawia pli
 
 1. Pobierz narzędzie Display Driver Uninstaller (DDU).
 2. Uruchom system w trybie awaryjnym:
-   * Przytrzymaj klawisz `Shift` i kliknij **Uruchom ponownie** w menu Start.
-   * Przejdź do: **Rozwiąż problemy**->**Opcje zaawansowane**->**Ustawienia uruchamiania**-> wciśnij klawisz `4` (**Włącz tryb awaryjny**).
+   * Przytrzymaj klawisz `Shift` i kliknij Uruchom ponownie w menu Start.
+   * Przejdź do: Rozwiąż problemy->Opcje zaawansowane->Ustawienia uruchamiania-> wciśnij klawisz `4` (Włącz tryb awaryjny).
 3. Uruchom DDU z uprawnieniami administratora:
-   * Jako typ urządzenia wybierz **Karta graficzna**.
-   * Wybierz producenta dedykowanego układu (np. NVIDIA) i kliknij **Wyczyść i NIE restartuj**.
-   * Następnie wybierz producenta zintegrowanego układu (Intel/AMD) i wybierz **Wyczyść i uruchom ponownie**.
+   * Jako typ urządzenia wybierz Karta graficzna.
+   * Wybierz producenta dedykowanego układu (np. NVIDIA) i kliknij Wyczyść i NIE restartuj.
+   * Następnie wybierz producenta zintegrowanego układu (Intel/AMD) i wybierz Wyczyść i uruchom ponownie.
 
 <div style="border-left: 4px solid #4338ca; padding: 12px 16px; margin: 20px 0; background-color: rgba(67, 56, 202, 0.04); border-radius: 4px;">
 <strong>Ważne:</strong> Odłącz kabel sieciowy Ethernet oraz rozłącz Wi-Fi przed restartem. Zapobiegnie to automatycznemu zaciągnięciu przestarzałego sterownika generycznego przez usługę Windows Update w trakcie rozruchu.
@@ -109,15 +109,15 @@ Zwykłe odinstalowanie sterownika z poziomu Menedżera urządzeń pozostawia pli
 #### Krok 3: Prawidłowa sekwencja instalacji pakietów sterowników
 Zainstalowanie oprogramowania w złej kolejności to najczęstszy błąd administratorów. W architekturze zintegrowanej obowiązuje rygorystyczna hierarchia:
 
-1. **Magistrala i Thunderbolt**: Zainstaluj najnowszy pakiet *Intel Serial IO Driver* oraz *Thunderbolt Controller Driver* (jeśli laptop korzysta z procesora Intel Core).
-2. **Karta zintegrowana (iGPU)**: Zainstaluj sterownik pobrany bezpośrednio ze strony Intel lub AMD, weryfikując zgodność z wcześniej zapisanym `DEV_ID`.
-3. **Karta dedykowana (dGPU)**: Na samym końcu zainstaluj sterownik NVIDIA/AMD, wybierając opcję „Czysta instalacja”.
+1. Magistrala i Thunderbolt: Zainstaluj najnowszy pakiet *Intel Serial IO Driver* oraz *Thunderbolt Controller Driver* (jeśli laptop korzysta z procesora Intel Core).
+2. Karta zintegrowana (iGPU): Zainstaluj sterownik pobrany bezpośrednio ze strony Intel lub AMD, weryfikując zgodność z wcześniej zapisanym `DEV_ID`.
+3. Karta dedykowana (dGPU): Na samym końcu zainstaluj sterownik NVIDIA/AMD, wybierając opcję „Czysta instalacja”.
 4. Dopiero po zainstalowaniu kompletu podłącz monitory do stacji lub portów USB-C.
 
 #### Krok 4: Modyfikacja tolerancji TDR w Wierszu polecenia
 Jeśli monitory nadal wykazują sporadyczne migotanie pod obciążeniem (np. przy przełączaniu okien przeglądarki z akceleracją sprzętową), należy zwiększyć margines tolerancji jądra dla opóźnień magistrali DisplayPort.
 
-Uruchom **Wiersz polecenia** jako administrator i wprowadź poniższe polecenia:
+Uruchom Wiersz polecenia jako administrator i wprowadź poniższe polecenia:
 
 ```cmd
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers" /v TdrDelay /t REG_DWORD /d 8 /f
@@ -132,16 +132,16 @@ Wartość domyślna wynosi 2 sekundy. Zwiększenie jej do 8 sekund eliminuje fa�
 
 Praca na niskopoziomowych komponentach wideo niesie za sobą ryzyko utraty obrazu na wszystkich podłączonych ekranach:
 
-* **Zasilanie stacji dokującej (Power Delivery)**: Zawsze upewnij się, że stacja USB-C/Thunderbolt ma podłączony dedykowany zasilacz o mocy minimum 100W–130W. Niedobory zasilania na magistrali powodują chwilowe spadki napięcia na liniach sygnałowych High-Speed DisplayPort, co jest mylone przez system z awarią sterownika.
-* **Agresywne kable pasywne**: W konfiguracjach dwumonitorowych powyżej rozdzielczości 1440p (QHD) przy 60 Hz nie należy stosować tanich kabli pasywnych USB-C do HDMI. Zawsze wybieraj przewody z aktywnym konwerterem poziomu sygnału i certyfikacją DisplayPort 1.4 lub HDMI 2.1.
-* **Blokada nadpisywania przez Windows Update**: Skonfiguruj zasady grupy (`gpedit.msc`), przechodząc do: *Konfiguracja komputera* -> *Szablony administracyjne* -> *System* -> *Instalacja urządzeń* -> *Ograniczenia dotyczące instalacji urządzeń*, aby uniemożliwić systemowi automatyczną wymianę zainstalowanego ręcznie, stabilnego sterownika na wersję z repozytorium Microsoftu.
+* Zasilanie stacji dokującej (Power Delivery): Zawsze upewnij się, że stacja USB-C/Thunderbolt ma podłączony dedykowany zasilacz o mocy minimum 100W–130W. Niedobory zasilania na magistrali powodują chwilowe spadki napięcia na liniach sygnałowych High-Speed DisplayPort, co jest mylone przez system z awarią sterownika.
+* Agresywne kable pasywne: W konfiguracjach dwumonitorowych powyżej rozdzielczości 1440p (QHD) przy 60 Hz nie należy stosować tanich kabli pasywnych USB-C do HDMI. Zawsze wybieraj przewody z aktywnym konwerterem poziomu sygnału i certyfikacją DisplayPort 1.4 lub HDMI 2.1.
+* Blokada nadpisywania przez Windows Update: Skonfiguruj zasady grupy (`gpedit.msc`), przechodząc do: *Konfiguracja komputera* -> *Szablony administracyjne* -> *System* -> *Instalacja urządzeń* -> *Ograniczenia dotyczące instalacji urządzeń*, aby uniemożliwić systemowi automatyczną wymianę zainstalowanego ręcznie, stabilnego sterownika na wersję z repozytorium Microsoftu.
 
 ---
 
 ### Często zadawane pytania (FAQ)
 
-**1. Czy uszkodzony lub zbyt długi kabel może wywoływać błędy systemowe TDR w dzienniku zdarzeń?**  
+1. Czy uszkodzony lub zbyt długi kabel może wywoływać błędy systemowe TDR w dzienniku zdarzeń?  
 Tak. Jeżeli kabel ma długość przekraczającą 2 metry bez aktywnego wzmacniacza sygnału lub nie posiada odpowiedniego ekranowania, na liniach transmisyjnych pojawia się zjawisko *DisplayPort link training error*. Karta graficzna próbuje obniżyć taktowanie lub renegocjować pasmo, co zamraża potok renderowania i zmusza sterownik `dxgkrnl.sys` do zainicjowania procedury naprawczej TDR.
 
-**2. Dlaczego pojedynczy monitor działa perfekcyjnie, a problem pojawia się dopiero po wpięciu drugiego ekranu?**Obsługa dwóch monitorów wymaga podwojenia przepustowości na współdzielonym łączu PCIe oraz aktywacji technologii MST (Multi-Stream Transport). Wielu tańszych producentów stacji dokujących implementuje huby MST, które wchodzą w konflikt z mechanizmem zarządzania energią ASPM (Active State Power Management) w laptopie. W efekcie kontroler odcina zasilanie drugiego strumienia wideo przy braku gwałtownych zmian obrazu.**3. Czy wyłączenie zintegrowanej karty graficznej (iGPU) w Menedżerze urządzeń rozwiąże konflikt?**  
+2. Dlaczego pojedynczy monitor działa perfekcyjnie, a problem pojawia się dopiero po wpięciu drugiego ekranu?Obsługa dwóch monitorów wymaga podwojenia przepustowości na współdzielonym łączu PCIe oraz aktywacji technologii MST (Multi-Stream Transport). Wielu tańszych producentów stacji dokujących implementuje huby MST, które wchodzą w konflikt z mechanizmem zarządzania energią ASPM (Active State Power Management) w laptopie. W efekcie kontroler odcina zasilanie drugiego strumienia wideo przy braku gwałtownych zmian obrazu.3. Czy wyłączenie zintegrowanej karty graficznej (iGPU) w Menedżerze urządzeń rozwiąże konflikt?  
 W żadnym wypadku nie wolno tego robić w laptopach bez sprzętowego przełącznika MUX switch. W większości konstrukcji matryca laptopa oraz porty wyjściowe są fizycznie podpięte pod piny wyjściowe iGPU. Wyłączenie zintegrowanego układu w Menedżerze urządzeń spowoduje całkowite wyłączenie akceleracji sprzętowej, spadek rozdzielczości do trybu podstawowego Microsoft Basic Display Driver i brak możliwości wyprowadzenia sygnału na jakiekolwiek ekrany zewnętrzne.

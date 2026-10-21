@@ -21,9 +21,9 @@ Na wat trial-and-error en het analyseren van de logs, werd de root bottleneck al
 
 ### De drie hoofdoorzaken van een vastgelopen update
 
-1. **Corrupte downloadcache:** Tijdelijke updatebestanden zijn beschadigd geraakt tijdens het binnenhalen via de Microsoft-servers.
-2. **Conflicterende achtergrondservices:** Diensten zoals Background Intelligent Transfer Service (BITS) blijven hangen in een hangende status.
-3. **Rechtenproblemen of NTFS-lock:** Windows weigert bestanden in de System32-omgeving te overschrijven omdat een actieve thread ze blijft vasthouden.
+1. Corrupte downloadcache: Tijdelijke updatebestanden zijn beschadigd geraakt tijdens het binnenhalen via de Microsoft-servers.
+2. Conflicterende achtergrondservices: Diensten zoals Background Intelligent Transfer Service (BITS) blijven hangen in een hangende status.
+3. Rechtenproblemen of NTFS-lock: Windows weigert bestanden in de System32-omgeving te overschrijven omdat een actieve thread ze blijft vasthouden.
 
 ---
 
@@ -32,7 +32,7 @@ Na wat trial-and-error en het analyseren van de logs, werd de root bottleneck al
 Geen paniek, we gaan dit direct oplossen via de command-line. Volg deze stappen nauwkeurig om de boel te bevrijden.
 
 #### Stap 1: Open de Terminal als Administrator
-Ga naar je Windows-zoekbalk, typ `Terminal` of `cmd`, klik met je rechtermuisknop op het resultaat en kies **Als administrator uitvoeren**.
+Ga naar je Windows-zoekbalk, typ `Terminal` of `cmd`, klik met je rechtermuisknop op het resultaat en kies Als administrator uitvoeren.
 
 #### Stap 2: Stop de update-gerelateerde services
 Voordat we de mappen kunnen legen, moeten we de actieve services die bestanden vergrendelen tijdelijk stoppen. Voer de volgende commando's één voor één uit:
@@ -72,8 +72,8 @@ Herstart hierna direct je laptop. Je zult zien dat de update-status opnieuw word
 
 ### Veelgestelde vragen (FAQ)
 
-**Verlies ik persoonlijke bestanden als ik de SoftwareDistribution map hernoem?**Nee, absoluut niet. Deze map bevat uitsluitend tijdelijke installatiebestanden en updates die gedownload zijn. Je documenten, apps en persoonlijke instellingen blijven volledig intact.**Kan ik dit ook via de grafische interface (GUI) doen i.p.v. de terminal?**
+Verlies ik persoonlijke bestanden als ik de SoftwareDistribution map hernoem?Nee, absoluut niet. Deze map bevat uitsluitend tijdelijke installatiebestanden en updates die gedownload zijn. Je documenten, apps en persoonlijke instellingen blijven volledig intact.Kan ik dit ook via de grafische interface (GUI) doen i.p.v. de terminal?
 Dat kan via *Instellingen > Systeem > Opslag*, maar het handmatig stoppen van de services via de Terminal heeft de voorkeur omdat Windows anders direct weer bestanden vergrendelt tijdens het proces.
 
-**Wat moet ik doen als de update hierna alsnog vastloopt?**
+Wat moet ik doen als de update hierna alsnog vastloopt?
 Gebruik in dat geval de officiële offline Windows 11 Installation Assistant vanaf de Microsoft-website om de update direct overheen te installeren, of controleer je schijf op fouten via het hulpprogramma `chkdsk` in de beheerprogramma's.

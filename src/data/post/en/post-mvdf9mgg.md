@@ -23,16 +23,16 @@ After getting past the panic and successfully unfreezing the system, I dug into 
 
 Here are the three most common culprits behind this frustrating bottleneck:
 
-1. **Corrupted SoftwareDistribution Cache:** The temporary holding directory where Windows downloads and stages update files gets corrupted, creating a permanent loop where the installer tries to parse damaged payload data indefinitely.
-2. **Hung Background Services:** Core system services like the Windows Update service (`wuauserv`) or Cryptographic Services (`CryptSvc`) hang up while trying to register updated DLLs in the registry.
-3. **Pending Component Store Locks:** The Component Based Servicing (CBS) manifest holds onto file locks because another background task or security scanner is inspecting the newly unpacked binaries simultaneously.
+1. Corrupted SoftwareDistribution Cache: The temporary holding directory where Windows downloads and stages update files gets corrupted, creating a permanent loop where the installer tries to parse damaged payload data indefinitely.
+2. Hung Background Services: Core system services like the Windows Update service (`wuauserv`) or Cryptographic Services (`CryptSvc`) hang up while trying to register updated DLLs in the registry.
+3. Pending Component Store Locks: The Component Based Servicing (CBS) manifest holds onto file locks because another background task or security scanner is inspecting the newly unpacked binaries simultaneously.
 
 ## Step-by-Step Resolution: Clearing the Update Cache
 
 To break the deadlock safely, we need to manually stop the update services, clear out the corrupted staging files, and let Windows spin up a clean session. We will use the terminal with administrator privileges to bypass any GUI locks.
 
 ### Step 1: Terminate Active Update Services via Terminal
-Hit your Windows key, type `Terminal` or `Command Prompt`, right-click it, and select **Run as administrator**. We need to halt the services responsible for managing update packages so we can modify their working directory.
+Hit your Windows key, type `Terminal` or `Command Prompt`, right-click it, and select Run as administrator. We need to halt the services responsible for managing update packages so we can modify their working directory.
 
 Run these commands one by one:
 ```cmd
@@ -64,13 +64,13 @@ net start bits
 net start msiserver
 ```
 
-Reboot your machine normally, head back into **Settings > Windows Update**, and hit**Check for updates**. Windows will re-verify the system state and breeze past that 100 percent mark in a fraction of the time.
+Reboot your machine normally, head back into Settings > Windows Update, and hitCheck for updates. Windows will re-verify the system state and breeze past that 100 percent mark in a fraction of the time.
 
 ## Expert Warning & Best Practices
 
 When dealing with low-level OS components, a few precautions will save you from a full system re-image:
-- **Avoid Third-Party "Registry Cleaners":** They often strip critical permission ACLs from the `SoftwareDistribution` folder, making future updates impossible without a manual permissions reset.
-- **Run DISM Before Re-trying:** If a fresh cache download still hangs, run `DISM.exe /Online /Cleanup-image /Restorehealth` followed by `sfc /scannow` in your admin terminal to repair the underlying system image before attempting the update again.
+- Avoid Third-Party "Registry Cleaners": They often strip critical permission ACLs from the `SoftwareDistribution` folder, making future updates impossible without a manual permissions reset.
+- Run DISM Before Re-trying: If a fresh cache download still hangs, run `DISM.exe /Online /Cleanup-image /Restorehealth` followed by `sfc /scannow` in your admin terminal to repair the underlying system image before attempting the update again.
 
 ## Frequently Asked Questions
 

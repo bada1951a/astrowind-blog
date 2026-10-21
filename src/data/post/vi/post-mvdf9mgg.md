@@ -19,9 +19,9 @@ Sáng nay vừa bước chân vào văn phòng ở khu công nghệ phần mềm
 
 Sau nhiều năm bám trụ với nghề tối ưu hệ thống, tôi nhận ra thủ phạm đứng sau tình trạng này hiếm khi nằm ở phần cứng, mà thường xuất phát từ ba nguyên nhân chính sau:
 
-1. **Xung đột gói tin trong thư mục SoftwareDistribution:** Đây là nơi Windows lưu trữ tạm thời các file cài đặt tải về. Khi một file nào đó bị lỗi checksum hoặc bị treo quyền đọc/ghi, tiến trình giải nén sẽ đứng hình vĩnh viễn ở mốc cuối cùng.
-2. **Tiến trình ngầm Windows Update (wuauserv) bị kẹt:** Dịch vụ quản lý cập nhật bị treo trạng thái "Stopping" hoặc "Starting", làm tắc nghẽn toàn bộ luồng xử lý của hệ thống.
-3. **Lỗi phân quyền file hệ thống (ACLs):** Một số bản vá yêu cầu quyền truy cập đặc biệt nhưng các bản cập nhật cũ để lại phân quyền cũ kỹ, khiến bộ cài không thể ghi đè file cốt lõi.
+1. Xung đột gói tin trong thư mục SoftwareDistribution: Đây là nơi Windows lưu trữ tạm thời các file cài đặt tải về. Khi một file nào đó bị lỗi checksum hoặc bị treo quyền đọc/ghi, tiến trình giải nén sẽ đứng hình vĩnh viễn ở mốc cuối cùng.
+2. Tiến trình ngầm Windows Update (wuauserv) bị kẹt: Dịch vụ quản lý cập nhật bị treo trạng thái "Stopping" hoặc "Starting", làm tắc nghẽn toàn bộ luồng xử lý của hệ thống.
+3. Lỗi phân quyền file hệ thống (ACLs): Một số bản vá yêu cầu quyền truy cập đặc biệt nhưng các bản cập nhật cũ để lại phân quyền cũ kỹ, khiến bộ cài không thể ghi đè file cốt lõi.
 
 ## Giải pháp thực chiến: Dọn dẹp và Reset thư mục Cache Update
 
@@ -29,9 +29,9 @@ Thay vì ngồi chờ đợi trong vô vọng hoặc cài lại win mất cả b
 
 ### Bước 1: Truy cập vào môi trường khôi phục (WinRE)
 Nếu máy tính của bạn không thể boot vào màn hình chính:
-- Khởi động lại máy, ngay khi logo hãng xuất hiện, hãy nhấn giữ nút nguồn để tắt đột ngột. Lặp lại quá trình này **3 lần**.
-- Ở lần khởi động thứ 4, Windows sẽ tự động kích hoạt chế độ **Automatic Repair**.
-- Chọn **Advanced options**->**Troubleshoot**->**Advanced options**->**Command Prompt**.
+- Khởi động lại máy, ngay khi logo hãng xuất hiện, hãy nhấn giữ nút nguồn để tắt đột ngột. Lặp lại quá trình này 3 lần.
+- Ở lần khởi động thứ 4, Windows sẽ tự động kích hoạt chế độ Automatic Repair.
+- Chọn Advanced options->Troubleshoot->Advanced options->Command Prompt.
 
 ### Bước 2: Dừng các dịch vụ cập nhật hệ thống
 Khi đã mở được cửa sổ Command Prompt (hoặc bạn có thể mở Terminal với quyền Admin từ Safe Mode), chúng ta cần vô hiệu hóa tạm thời các tiến trình đang chiếm giữ thư mục cache bằng các lệnh sau:

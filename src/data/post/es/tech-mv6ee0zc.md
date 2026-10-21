@@ -64,22 +64,22 @@ Los microcontroladores integrados (ARM Cortex-M0, ATmega32U4, etc.) ejecutan un 
 ### Fase 1: Diagnóstico lógico en el sistema operativo
 Antes de desmontar elementos, debemos aislar el problema respecto al subsistema de software de Windows.
 
-1. **Inspección en el Administrador de dispositivos:**- Presione `Windows + R`, escriba `devmgmt.msc` y pulse Intro para abrir el**Administrador de dispositivos**.
-   - Despliegue el nodo **Dispositivos de interfaz de usuario (HID)**y**Teclados**.
-   - Verifique que ningún controlador presente advertencias triangulares amarillas. Si existen duplicados huérfanos provocados por hubs USB, haga clic derecho sobre el dispositivo y seleccione **Desinstalar el dispositivo**.
+1. Inspección en el Administrador de dispositivos:- Presione `Windows + R`, escriba `devmgmt.msc` y pulse Intro para abrir elAdministrador de dispositivos.
+   - Despliegue el nodo Dispositivos de interfaz de usuario (HID)yTeclados.
+   - Verifique que ningún controlador presente advertencias triangulares amarillas. Si existen duplicados huérfanos provocados por hubs USB, haga clic derecho sobre el dispositivo y seleccione Desinstalar el dispositivo.
    
-2. **Validación de la pila de entrada vía consola:**- Abra el**Símbolo del sistema** (`cmd.exe`) o PowerShell con privilegios elevados y reinicie el servicio de entrada de interfaz humana para purgar colas de eventos en memoria:
+2. Validación de la pila de entrada vía consola:- Abra elSímbolo del sistema (`cmd.exe`) o PowerShell con privilegios elevados y reinicie el servicio de entrada de interfaz humana para purgar colas de eventos en memoria:
    ```cmd
    net stop hidserv && net start hidserv
    ```
 
-3. **Prueba de latencia y registro de matrices:**
+3. Prueba de latencia y registro de matrices:
    - Utilice utilidades de diagnóstico especializadas (como el software de prueba de hardware de su fabricante o herramientas de testeo de eventos de teclado en navegador como *Keyboard Switch Tester* o *Switch Hitter*).
    - Configure el umbral de detección en 30 ms. Si al presionar la tecla conflictiva el monitor muestra múltiples eventos en un intervalo inferior a 20 ms, el fallo es estrictamente de hardware (rebote mecánico no filtrable).
 
 ### Fase 2: Preparación del conmutador
-1. **Desconexión física:** Extraiga el conector USB-C/USB-A del concentrador o torre.
-2. **Extracción del capuchón (*Keycap*):** Utilice un extractor de teclas de alambre (*wire keycap puller*). Evite las pinzas de plástico rígido, ya que rayan los laterales de teclas de policarbonato o PBT. Tire verticalmente hacia arriba a 90 grados exactos para no doblar el vástago cruzado del conmutador.
+1. Desconexión física: Extraiga el conector USB-C/USB-A del concentrador o torre.
+2. Extracción del capuchón (*Keycap*): Utilice un extractor de teclas de alambre (*wire keycap puller*). Evite las pinzas de plástico rígido, ya que rayan los laterales de teclas de policarbonato o PBT. Tire verticalmente hacia arriba a 90 grados exactos para no doblar el vástago cruzado del conmutador.
 
 ```
        [ Extractor de Alambre ]
@@ -91,7 +91,7 @@ Antes de desmontar elementos, debemos aislar el problema respecto al subsistema 
 ```
 
 ### Fase 3: Tratamiento mediante limpiador de contactos dieléctrico
-Para esta intervención se requiere exclusivamente un **limpiador de contactos de residuo cero de secado rápido** (como *WD-40 Specialist Limpiador de Contactos Dieléctrico* o *CRC Electronic Cleaner*). 
+Para esta intervención se requiere exclusivamente un limpiador de contactos de residuo cero de secado rápido (como *WD-40 Specialist Limpiador de Contactos Dieléctrico* o *CRC Electronic Cleaner*). 
 
 <div style="border-left: 4px solid #2563eb; padding: 12px 16px; margin: 20px 0; background-color: rgba(37, 99, 235, 0.04); border-radius: 4px;">
 <strong>ATENCIÓN:</strong> Bajo ninguna circunstancia utilice lubricante multiusos convencional (ej. WD-40 clásico en bote azul/amarillo). Este producto contiene aceites protectores minerales conductores o dieléctricos pesados que atraen polvo, degradan el plástico POM/nailon y destruyen el conmutador de forma permanente.
@@ -110,11 +110,11 @@ Para esta intervención se requiere exclusivamente un **limpiador de contactos d
          +---------------+     y la carcasa superior
 ```
 
-1. **Hundimiento mecánico del vástago:** Con una herramienta no metálica o su propio dedo, presione el vástago del conmutador hasta el tope de su recorrido (aproximadamente 4 mm).
-2. **Aplicación controlada:** Inserte la cánula de precisión en la holgura existente entre el vástago y la carcasa superior (*housing*), orientándola hacia la zona interna donde se alojan las láminas de contacto (habitualmente el lado superior del switch, identificable por la muesca del LED).
-3. **Inyección en ráfaga:**Administre una ráfaga extremadamente corta, de no más de**medio segundo**. La presión del disolvente desplazará los micro-residuos y disolverá películas oxidadas.
-4. **Ciclo de purga mecánica:**De inmediato, libere el aerosol y comience a pulsar repetidamente y a fondo el vástago del conmutador entre**60 y 80 veces consecutivas**. Esta acción de fricción dinámica fuerza a las láminas de contacto a frotarse entre sí, permitiendo que el solvente en evaporación arrastre mecánicamente las partículas hacia el fondo inerte o las disuelva por fricción galvánica.
-5. **Tiempo de evaporación y desgasificación:**Deje reposar la unidad durante un mínimo de**15 a 20 minutos**. El vehículo solvente debe evaporarse por completo para garantizar una constante dieléctrica idónea y eliminar cualquier condensación térmica inducida por el gas propelente.
+1. Hundimiento mecánico del vástago: Con una herramienta no metálica o su propio dedo, presione el vástago del conmutador hasta el tope de su recorrido (aproximadamente 4 mm).
+2. Aplicación controlada: Inserte la cánula de precisión en la holgura existente entre el vástago y la carcasa superior (*housing*), orientándola hacia la zona interna donde se alojan las láminas de contacto (habitualmente el lado superior del switch, identificable por la muesca del LED).
+3. Inyección en ráfaga:Administre una ráfaga extremadamente corta, de no más demedio segundo. La presión del disolvente desplazará los micro-residuos y disolverá películas oxidadas.
+4. Ciclo de purga mecánica:De inmediato, libere el aerosol y comience a pulsar repetidamente y a fondo el vástago del conmutador entre60 y 80 veces consecutivas. Esta acción de fricción dinámica fuerza a las láminas de contacto a frotarse entre sí, permitiendo que el solvente en evaporación arrastre mecánicamente las partículas hacia el fondo inerte o las disuelva por fricción galvánica.
+5. Tiempo de evaporación y desgasificación:Deje reposar la unidad durante un mínimo de15 a 20 minutos. El vehículo solvente debe evaporarse por completo para garantizar una constante dieléctrica idónea y eliminar cualquier condensación térmica inducida por el gas propelente.
 
 ---
 
@@ -122,9 +122,9 @@ Para esta intervención se requiere exclusivamente un **limpiador de contactos d
 
 Como política técnica corporativa para estaciones de trabajo de alto rendimiento, deben adoptarse las siguientes directrices preventivas:
 
-* **Incompatibilidad de lubricantes convencionales:** Si el switch es de tipo lineal o táctil lubricado artesanalmente por el usuario (*lube* tipo Krytox GPL 205g0), el limpiador de contactos disolverá y lavará dicho lubricante. Si la tecla tratada queda con un sonido "rasposo", será necesario aplicar una microgota de lubricante dieléctrico fluorado específico mediante pincel del calibre 00.
-* **Límite de intervenciones:** Si un switch requiere más de dos tratamientos con limpiador de contactos en un lapso de tres meses, la lámina ha perdido sus propiedades metalúrgicas de tensión (fatiga de material). En teclados con placa base *Hot-Swap* (con zócalos Kailh o Gateron), la política estándar debe ser la sustitución física del conmutador por una unidad nueva.
-* **Riesgo en conmutadores soldados:** En teclados donde los conmutadores están soldados directamente al circuito impreso (PCB), la inundación excesiva de disolvente puede degradar la máscara de soldadura o arrastrar flux residual hacia los pines del diodo SMD de la matriz. Aplique siempre cantidades mínimas.
+* Incompatibilidad de lubricantes convencionales: Si el switch es de tipo lineal o táctil lubricado artesanalmente por el usuario (*lube* tipo Krytox GPL 205g0), el limpiador de contactos disolverá y lavará dicho lubricante. Si la tecla tratada queda con un sonido "rasposo", será necesario aplicar una microgota de lubricante dieléctrico fluorado específico mediante pincel del calibre 00.
+* Límite de intervenciones: Si un switch requiere más de dos tratamientos con limpiador de contactos en un lapso de tres meses, la lámina ha perdido sus propiedades metalúrgicas de tensión (fatiga de material). En teclados con placa base *Hot-Swap* (con zócalos Kailh o Gateron), la política estándar debe ser la sustitución física del conmutador por una unidad nueva.
+* Riesgo en conmutadores soldados: En teclados donde los conmutadores están soldados directamente al circuito impreso (PCB), la inundación excesiva de disolvente puede degradar la máscara de soldadura o arrastrar flux residual hacia los pines del diodo SMD de la matriz. Aplique siempre cantidades mínimas.
 
 ---
 

@@ -23,9 +23,9 @@ Zanim wpadniemy w panikę i zaczniemy zamawiać nowe podzespoły za tysiące zł
 <strong>Uwaga Inżyniera:</strong> W ponad 70% przypadków "czarnego ekranu przy działających wiatrakach" winny jest nie tyle sam brak kontaktu, ile mikroskopijna warstwa utlenionej miedzi na stykach pamięci RAM lub spuchnięty BIOS po skoku napięcia.
 </div>
 
-1. **Zasniedziałe styki RAM (tzw. "zaśniedziały kontakt"):** Wilgoć z klimatyzacji, kurz z biura i lata pracy sprawiają, że złote blaszki na kościach RAM tracą przewodność. Płyta główna próbuje zainicjalizować pamięć podczas procedury POST (Power-On Self-Test), natrafia na ścianę i zatrzymuje proces *zanim* zdąży przekazać sygnał do karty graficznej.
-2. **Luźny slot pamięci (Bank RAM):** Zatrzaski na płycie głównej potrafią się wyrobić, zwłaszcza pod wpływem ciągłych drgań podłogi w open space. Kość wysuwa się o ułamek milimetra – wystarczająco, by stracić linię danych.
-3. **Problem z kompensacją napięcia CMOS:** Czasami BIOS po prostu "głupieje" i trzyma w pamięci podręcznej błędne ustawienia timingów pamięci, uniemożliwiając stabilne uruchomienie kontrolera w procesorze.
+1. Zasniedziałe styki RAM (tzw. "zaśniedziały kontakt"): Wilgoć z klimatyzacji, kurz z biura i lata pracy sprawiają, że złote blaszki na kościach RAM tracą przewodność. Płyta główna próbuje zainicjalizować pamięć podczas procedury POST (Power-On Self-Test), natrafia na ścianę i zatrzymuje proces *zanim* zdąży przekazać sygnał do karty graficznej.
+2. Luźny slot pamięci (Bank RAM): Zatrzaski na płycie głównej potrafią się wyrobić, zwłaszcza pod wpływem ciągłych drgań podłogi w open space. Kość wysuwa się o ułamek milimetra – wystarczająco, by stracić linię danych.
+3. Problem z kompensacją napięcia CMOS: Czasami BIOS po prostu "głupieje" i trzyma w pamięci podręcznej błędne ustawienia timingów pamięci, uniemożliwiając stabilne uruchomienie kontrolera w procesorze.
 
 ---
 
@@ -34,11 +34,11 @@ Zanim wpadniemy w panikę i zaczniemy zamawiać nowe podzespoły za tysiące zł
 Oto procedura operacyjna, którą stosuję w biurze, gdy dyrektor finansowy stoi nade mną z zegarkiem w ręku. Bez owijania w bawełnę – robimy to chirurgicznie.
 
 ### Krok 1: Bezpieczne odcięcie zasilania i uziemienie
-Wyłącz komputer trzymający przycisk zasilania przez 5 sekund, a następnie **koniecznie wyciągnij wtyczkę z gniazdka ściennego**. Dotknij metalowego elementu obudowy, aby odprowadzić ładunki elektrostatyczne (ESD) ze swojego ciała – chyba że chcesz uwalić płytę główną za pomocą własnego swetra.
+Wyłącz komputer trzymający przycisk zasilania przez 5 sekund, a następnie koniecznie wyciągnij wtyczkę z gniazdka ściennego. Dotknij metalowego elementu obudowy, aby odprowadzić ładunki elektrostatyczne (ESD) ze swojego ciała – chyba że chcesz uwalić płytę główną za pomocą własnego swetra.
 
 ### Krok 2: Demontaż kości RAM (Procedura czyszczenia)
 Otwórz bok obudowy. Znajdź moduły pamięci RAM. Odchyl plastikowe zatrzaski na obu końcach slotu, a kość wyskoczy sama. 
-* Weź zwykłą, szkolną **białą gumkę do ścierania** (taką do ołówka, żadnych kolorowych z brokatem!).
+* Weź zwykłą, szkolną białą gumkę do ścierania (taką do ołówka, żadnych kolorowych z brokatem!).
 * Delikatnie przetrzyj złote styki (finger prints) na kości RAM, usuwając szarawy nalot.
 * Oczyść sloty pędzelkiem z miękkiego włosia lub po prostu mocno dmuchnij, by pozbyć się kurzu (uwaga na ślinę!).
 
@@ -62,11 +62,11 @@ mdsched.exe
 <strong>Złota zasada serwisu:</strong> Nigdy nie używaj metalowych narzędzi (śrubokrętów, penset) do czyszczenia styków RAM ani nie dotykaj układów scalonych na kości gołymi palcami, jeśli nie masz maty antystatycznej. Jeden przeskok statyczny i pamięć nadaje się do utylizacji.
 </div>
 
-Dodatkowo, jeśli komputer ma cztery sloty na RAM (np. 2 czarne, 2 szare), a Ty wyciągnąłeś dwie kości, **nie wkładaj ich byle gdzie**. Płyta główna wymaga zachowania tzw. trybu dwukanałowego (Dual Channel). Zazwyczaj obsadzamy sloty drugie i czwarte (licząc od procesora). Wrzucenie ich w sąsiednie sloty skończy się tym, że ekran znowu zgaśnie, a Ty spędzisz kolejne dwie godziny na szukaniu błędu.
+Dodatkowo, jeśli komputer ma cztery sloty na RAM (np. 2 czarne, 2 szare), a Ty wyciągnąłeś dwie kości, nie wkładaj ich byle gdzie. Płyta główna wymaga zachowania tzw. trybu dwukanałowego (Dual Channel). Zazwyczaj obsadzamy sloty drugie i czwarte (licząc od procesora). Wrzucenie ich w sąsiednie sloty skończy się tym, że ekran znowu zgaśnie, a Ty spędzisz kolejne dwie godziny na szukaniu błędu.
 
 ---
 
 ## Często Zadawane Pytania (FAQ)
 
-**1. Czy mogę użyć alkoholu izopropylowego (IPA) zamiast gumki do ścierania?**Jasne, IPA to inżynieryjny klasyk do czyszczenia elektroniki. Jeśli masz pod ręką wacik bezpyłowy i czysty alkohol izopropylowy (min. 99%), przetrzyj nim styki. Gumka do ścierania jest jednak świetnym, szybkim rozwiązaniem mechanicznym, gdy nie ma pod ręką chemii.**2. Komputer wstał, ale po ponownym uruchomieniu znowu jest czarny ekran. Co jest grane?**To klasyczny objaw uszkodzonego zatrzasku w slocie RAM lub samej kości, która poluzowała się pod wpływem drgań wentylatora. Sprawdź, czy zatrzask "kliknął" podczas wpinania. Jeśli problem wraca, zamień kości miejscami lub przetestuj je pojedynczo w pierwszym slocie.**3. Czy zepsuty RAM może uszkodzić procesor lub płytę główną?**
+1. Czy mogę użyć alkoholu izopropylowego (IPA) zamiast gumki do ścierania?Jasne, IPA to inżynieryjny klasyk do czyszczenia elektroniki. Jeśli masz pod ręką wacik bezpyłowy i czysty alkohol izopropylowy (min. 99%), przetrzyj nim styki. Gumka do ścierania jest jednak świetnym, szybkim rozwiązaniem mechanicznym, gdy nie ma pod ręką chemii.2. Komputer wstał, ale po ponownym uruchomieniu znowu jest czarny ekran. Co jest grane?To klasyczny objaw uszkodzonego zatrzasku w slocie RAM lub samej kości, która poluzowała się pod wpływem drgań wentylatora. Sprawdź, czy zatrzask "kliknął" podczas wpinania. Jeśli problem wraca, zamień kości miejscami lub przetestuj je pojedynczo w pierwszym slocie.3. Czy zepsuty RAM może uszkodzić procesor lub płytę główną?
 Bardzo rzadko. Najczęściej płyta główna po prostu zablokuje rozruch (włączając diodę DEBUG LED z napisem DRAM) lub wyda serię piknięć alarmowych z głośniczka systemowego (tzw. beepera), zanim dojdzie do jakichkolwiek uszkodzeń termicznych czy elektrycznych.

@@ -21,20 +21,20 @@ Okazało się, że Windows 11 po ostatniej dużej aktualizacji i intensywnych te
 
 Zanim przejdziemy do klikania, warto zrozumieć, dlaczego Windows 11 tak szybko zjada gigabajty. Oto trzy najczęstsze "czarne dziury" pamięci masowej w środowisku biurowym i deweloperskim:
 
-*   **Pozostałości po aktualizacjach i folder Windows.old:** System trzyma kopie zapasowe poprzedniej wersji przez 10 dni na wypadek awarii, co potrafi zająć od 15 do nawet 30 GB.
-*   **Ukryte pliki Temp i pamięć podręczna aplikacji:** Programy takie jak Teams, Slack czy przeglądarki zostawiają gigabajty danych w folderach `AppData`, do których rzadko zaglądamy.
-*   **Punkty przywracania systemu (System Restore):** Automatyczne snapshotsy potrafią w tle pożreć przydzieloną pulę gigabajtów bez wiedzy użytkownika.
+*   Pozostałości po aktualizacjach i folder Windows.old: System trzyma kopie zapasowe poprzedniej wersji przez 10 dni na wypadek awarii, co potrafi zająć od 15 do nawet 30 GB.
+*   Ukryte pliki Temp i pamięć podręczna aplikacji: Programy takie jak Teams, Slack czy przeglądarki zostawiają gigabajty danych w folderach `AppData`, do których rzadko zaglądamy.
+*   Punkty przywracania systemu (System Restore): Automatyczne snapshotsy potrafią w tle pożreć przydzieloną pulę gigabajtów bez wiedzy użytkownika.
 
 ## Krok po kroku: Jak bezpiecznie odzyskać przestrzeń
 
 Nie musisz instalować żadnych podejrzanych programów "optymalizujących", które często przynoszą więcej szkody niż pożytku. Windows 11 ma do tego świetne, wbudowane narzędzia.
 
 ### 1. Użycie funkcji "Czyszczenie pamięci" (Storage Sense)
-Wejdź w menu **Ustawienia**(skrót Windows + I), przejdź do zakładki**System**, a następnie**Pamięć**. 
-- Kliknij na **Pliki tymczasowe**.
+Wejdź w menu Ustawienia(skrót Windows + I), przejdź do zakładkiSystem, a następniePamięć. 
+- Kliknij na Pliki tymczasowe.
 - System chwilę skanuje dysk w poszukiwaniu zbędnych danych.
 - Zaznacz pola takie jak: *Poprzednie instalacje systemu Windows*, *Pobierane pliki* (jeśli nie masz tam nic ważnego), *Tymczasowe pliki internetowe* oraz *Wyrzucone elementy z Kosza*.
-- Kliknij **Usuń pliki**. To w pełni bezpieczna procedura akceptowana przez Microsoft.
+- Kliknij Usuń pliki. To w pełni bezpieczna procedura akceptowana przez Microsoft.
 
 
 
@@ -42,16 +42,16 @@ Wejdź w menu **Ustawienia**(skrót Windows + I), przejdź do zakładki**System*
 
 ### 2. Ręczne czyszczenie folderu Temp przez okno Uruchom
 Często instalatory programów zostawiają śmieci w folderach użytkownika.
-- Wciśnij kombinację klawiszy **Windows + R**, wpisz `%temp%` i wciśnij Enter.
-- Zaznacz wszystko (**Ctrl + A**) i wciśnij**Shift + Delete** (by ominąć Kosz).
+- Wciśnij kombinację klawiszy Windows + R, wpisz `%temp%` i wciśnij Enter.
+- Zaznacz wszystko (Ctrl + A) i wciśnijShift + Delete (by ominąć Kosz).
 - *Uwaga:* Jeśli wyskoczy komunikat, że plik jest aktualnie używany przez inny program, po prostu kliknij "Pomiń" dla tych konkretnych plików.
 - Następnie powtórz operację, wpisując w oknie Uruchom zwykłe `temp` (bez procentów) i wyczyść ten folder jako administrator.
 
 ### 3. Oczyszczanie dysku z uprawnieniami administratora
 Dla głębszego czyszczenia użyjmy klasycznego, niezawodnego narzędzia systemowego:
-- Wpisz w menu Start **Oczyszczanie dysku** (Disk Cleanup).
+- Wpisz w menu Start Oczyszczanie dysku (Disk Cleanup).
 - Uruchom je jako administrator.
-- Wybierz dysk C, a następnie kliknij przycisk **Oczyszczaj pliki systemowe**.
+- Wybierz dysk C, a następnie kliknij przycisk Oczyszczaj pliki systemowe.
 - Zaznacz pozycje takie jak *Pliki dziennika aktualizacji systemu Windows* oraz *Poprzednie instalacje systemu*. Zatwierdź operację.
 
 ---

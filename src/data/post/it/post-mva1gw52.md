@@ -19,9 +19,9 @@ Ore 09:15 in punto, lunedì mattina. Ricevo una chiamata urgente da una collega 
 
 Prima di agire a tentoni cancellando cartelle a caso, capiamo cosa sta effettivamente soffocando il sistema operativo:
 
-1. **Accumulo smodato di File Temporanei (Temp):** Windows 11, le app installate e i browser creano continuamente file di cache che spesso non vengono eliminati alla chiusura. In pochi mesi possono occupare decine di gigabyte.
-2. **File di Aggiornamento Residui e Windows.old:** Dopo un grande aggiornamento di sistema (o una patch cumulativa corposa), Windows conserva le vecchie versioni per permettere il rollback. Spesso pesano tra i 15 e i 30 GB.
-3. **Punti di Ripristino e Shadow Copies:** Il sistema di protezione di Windows crea copie di sicurezza dei file di sistema. Se non impostate con un limite di spazio, divorano letteralmente l'SSD.
+1. Accumulo smodato di File Temporanei (Temp): Windows 11, le app installate e i browser creano continuamente file di cache che spesso non vengono eliminati alla chiusura. In pochi mesi possono occupare decine di gigabyte.
+2. File di Aggiornamento Residui e Windows.old: Dopo un grande aggiornamento di sistema (o una patch cumulativa corposa), Windows conserva le vecchie versioni per permettere il rollback. Spesso pesano tra i 15 e i 30 GB.
+3. Punti di Ripristino e Shadow Copies: Il sistema di protezione di Windows crea copie di sicurezza dei file di sistema. Se non impostate con un limite di spazio, divorano letteralmente l'SSD.
 
 ---
 
@@ -31,10 +31,10 @@ Non servono software di terze parti a pagamento che promettono miracoli ma spess
 
 ### 1. Sfruttare Sensore Memoria (Storage Sense)
 Il metodo più rapido e sicuro integrato in Windows 11.
-- Clicca su **Start**e apri le**Impostazioni** (icona a forma di ingranaggio).
-- Vai su **Sistema**e poi seleziona**Archiviazione**.
-- Attiva l'interruttore di **Sensore memoria** e clicca sulla riga stessa per configurarlo.
-- Clicca sul pulsante **Elimina file temporanei ora** per avviare una scansione approfondita.
+- Clicca su Starte apri leImpostazioni (icona a forma di ingranaggio).
+- Vai su Sistemae poi selezionaArchiviazione.
+- Attiva l'interruttore di Sensore memoria e clicca sulla riga stessa per configurarlo.
+- Clicca sul pulsante Elimina file temporanei ora per avviare una scansione approfondita.
 
 
 
@@ -44,7 +44,7 @@ Il metodo più rapido e sicuro integrato in Windows 11.
 Per eliminare residui che il Sensore Memoria potrebbe ignorare, usiamo lo storico ma potentissimo strumento di amministrazione.
 - Premi la combinazione di tasti `Windows + R`, digita `cleanmgr` e premi Invio.
 - Seleziona l'unità `C:` e clicca su OK.
-- Nella finestra che si apre, clicca sul pulsante **Pulizia file di sistema** (autorizzando i privilegi amministrativi).
+- Nella finestra che si apre, clicca sul pulsante Pulizia file di sistema (autorizzando i privilegi amministrativi).
 - Spunta le caselle relative a:
   - *File di log degli aggiornamenti di Windows*
   - *File temporanei di installazione di Windows*
@@ -69,9 +69,9 @@ Se vuoi fare una pulizia di precisione chirurgica:
 
 Gestire lo spazio su disco non deve diventare un impegno settimanale. Ecco alcune regole d'oro da applicare subito:
 
-- **Sposta le cartelle utente:** Se utilizzi un SSD principale piccolo (es. 256GB o 512GB), sposta le cartelle *Download*, *Documenti* e *Desktop* su un secondo disco secondario (HDD o SSD più capiente) tramite le proprietà della cartella nella scheda "Percorso".
-- **Gestisci la cache del browser:** Chrome, Edge e Firefox accumulano gigabyte di dati di navigazione. Svuota regolarmente la cache direttamente dalle impostazioni dei singoli browser.
-- **Imposta un limite per i Punti di Ripristino:**Apri il**Pannello di controllo**, vai su *Sistema* -> *Protezione sistema*, seleziona l'unità C:, clicca su *Configura* e regola il cursore dell'utilizzo dello spazio massimo (un 5% o 10% è solitamente più che sufficiente).
+- Sposta le cartelle utente: Se utilizzi un SSD principale piccolo (es. 256GB o 512GB), sposta le cartelle *Download*, *Documenti* e *Desktop* su un secondo disco secondario (HDD o SSD più capiente) tramite le proprietà della cartella nella scheda "Percorso".
+- Gestisci la cache del browser: Chrome, Edge e Firefox accumulano gigabyte di dati di navigazione. Svuota regolarmente la cache direttamente dalle impostazioni dei singoli browser.
+- Imposta un limite per i Punti di Ripristino:Apri ilPannello di controllo, vai su *Sistema* -> *Protezione sistema*, seleziona l'unità C:, clicca su *Configura* e regola il cursore dell'utilizzo dello spazio massimo (un 5% o 10% è solitamente più che sufficiente).
 
 ---
 
@@ -81,7 +81,7 @@ Gestire lo spazio su disco non deve diventare un impegno settimanale. Ecco alcun
 Sì, assolutamente. La cartella Temp contiene esclusivamente file temporanei creati da programmi e installer durante il loro funzionamento. Se un file è attualmente in uso da un'app aperta, Windows impedirà semplicemente la sua cancellazione, proteggendo la stabilità del sistema.
 
 ### Come faccio a capire quale applicazione occupa più spazio su Windows 11?
-Vai in **Impostazioni > Sistema > Archiviazione**. Clicca sulla voce**App e funzionalità** (o "Installate"). Da qui puoi ordinare l'elenco dei software installati in base alle dimensioni, individuando subito i programmi più pesanti che non usi più e che puoi disinstallare.
+Vai in Impostazioni > Sistema > Archiviazione. Clicca sulla voceApp e funzionalità (o "Installate"). Da qui puoi ordinare l'elenco dei software installati in base alle dimensioni, individuando subito i programmi più pesanti che non usi più e che puoi disinstallare.
 
 ### Cosa succede se elimino i file della cartella Windows.old?
 La cartella `Windows.old` viene creata sul disco C quando si effettua un aggiornamento maggiore di Windows (ad esempio passando da una versione precedente alla nuova build di Windows 11). Cancellandola libererai da 15 a 30 GB di spazio prezioso, ma perderai la possibilità di ripristinare la versione precedente di Windows tramite le impostazioni di sistema. Fallo solo se il PC è stabile e funziona perfettamente da qualche giorno.
