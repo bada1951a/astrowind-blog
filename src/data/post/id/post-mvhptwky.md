@@ -1,7 +1,7 @@
 ---
 title: "Cara Mengembalikan Klik Kanan Klasik Windows 11 Tanpa Ribet"
 description: "Panduan praktis teknisi IT mengembalikan menu klik kanan klasik di Windows 11 untuk efisiensi kerja tanpa aplikasi tambahan."
-publishDate: 2026-10-21T21:00:00.000Z
+publishDate: 2026-10-21T18:00:00.000Z
 image: '/images/tech-photo/tech-photos%20(15).jpg'
 category: 'tech'
 tags: ["Windows 11", "Troubleshooting", "IT Support", "Tips PC"]
