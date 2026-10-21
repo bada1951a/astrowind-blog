@@ -64,7 +64,7 @@ Prima di procedere con solventi chimici o saldatori, è obbligatorio isolare il 
 Prima di intervenire fisicamente, verifichiamo che il sottosistema USB di Windows non sia compromesso da conflitti di polling rate o risparmio energetico:
 
 1. Premi `Tasto Windows + X` e seleziona **Gestione dispositivi**.
-2. Espandi il nodo **Tastiere** e poi **Controller USB (Universal Serial Bus)**.
+2. Espandi il nodo **Tastiere**e poi**Controller USB (Universal Serial Bus)**.
 3. Fai clic destro sul dispositivo relativo alla tastiera (spesso elencato come *Dispositivo tastiera HID*) e seleziona **Proprietà**.
 4. Nella scheda **Risparmio energia** (se presente), deseleziona l'opzione: *Consenti al computer di spegnere il dispositivo per risparmiare energia*.
 5. Apri il **Prompt dei comandi** con privilegi elevati (Esegui come amministratore) per verificare che l'input non sia alterato da ritardi di buffer di sistema:

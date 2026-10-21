@@ -31,8 +31,8 @@ Geen paniek dus, we gaan dit handmatig en grondig oplossen. Volg deze stappen na
 
 #### Stap 1: Gebruik de ingebouwde Opslag-instellingen
 We beginnen met de slimste methode die Windows zelf te bieden heeft. 
-* Klik op de **Startknop** en open de **Instellingen** (het tandwielicoon).
-* Ga naar **Systeem** en kies vervolgens voor **Opslag**.
+* Klik op de **Startknop**en open de**Instellingen** (het tandwielicoon).
+* Ga naar **Systeem**en kies vervolgens voor**Opslag**.
 * Wacht heel even tot Windows een analyse heeft gemaakt van je harde schijf. Klik daarna op **Tijdelijke bestanden**.
 
 <div style="border-left: 4px solid #f97316; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
@@ -50,7 +50,7 @@ Voor de diepere lagen gebruiken we de klassieke tool die al jaren meegaat in Win
 Soms blijft er in de diepe krochten van Windows wat achter in de tijdelijke mappen. Die gaan we nu direct aanpakken.
 * Open opnieuw het uitvoervenster via **Windows-toets + R**.
 * Typ `%temp%` en druk op Enter. De Windows Verkenner opent nu een map vol tijdelijke bestanden.
-* Druk op **Ctrl + A** om alles te selecteren en druk op **Shift + Delete** om ze permanent te verwijderen. 
+* Druk op **Ctrl + A**om alles te selecteren en druk op**Shift + Delete** om ze permanent te verwijderen. 
 * Krijg je een melding dat een bestand in gebruik is? Klik dan simpelweg op 'Overslaan' of 'Alles overslaan' – dat zijn actieve processen van openstaande apps.
 
 ---
@@ -69,11 +69,5 @@ Om je een idee te geven van het verschil dat dit oplevert op een gemiddelde kant
 
 ### Veelgestelde Vragen (FAQ)
 
-**1. Kan ik zomaar alle bestanden in de map %temp% verwijderen zonder dat mijn pc stukgaat?**
-Ja, absoluut. Deze map is uitsluitend bedoeld voor tijdelijke rommel die apps tijdelijk parkeren. Bestanden die op dat moment door actieve programma's worden gebruikt, worden automatisch overgeslagen door Windows. Je systeem kan hierdoor dus nooit beschadigen.
-
-**2. Wat moet ik doen als mijn schijf na deze stappen binnen de kortste keren weer volloopt?**
-Als je schijf snel volloopt ondanks deze opschoning, is de kans groot dat je te maken hebt met een groeiende map van een cloudservice (zoals OneDrive of Dropbox die onbeperkt lokaal synchroniseren) of dat je downloadmap uitpuilt met zware installatiebestanden. Verplaats grote persoonlijke media naar een externe schijf of de cloud.
-
-**3. Is het verstandig om gratis opschoonsoftware van derden te downloaden?**
+**1. Kan ik zomaar alle bestanden in de map %temp% verwijderen zonder dat mijn pc stukgaat?**Ja, absoluut. Deze map is uitsluitend bedoeld voor tijdelijke rommel die apps tijdelijk parkeren. Bestanden die op dat moment door actieve programma's worden gebruikt, worden automatisch overgeslagen door Windows. Je systeem kan hierdoor dus nooit beschadigen.**2. Wat moet ik doen als mijn schijf na deze stappen binnen de kortste keren weer volloopt?**Als je schijf snel volloopt ondanks deze opschoning, is de kans groot dat je te maken hebt met een groeiende map van een cloudservice (zoals OneDrive of Dropbox die onbeperkt lokaal synchroniseren) of dat je downloadmap uitpuilt met zware installatiebestanden. Verplaats grote persoonlijke media naar een externe schijf of de cloud.**3. Is het verstandig om gratis opschoonsoftware van derden te downloaden?**
 Over het algemeen raden we dit af voor de doorsnee gebruiker. Veel van dit soort programma's zitten vol met agressieve reclame, bundleware of onnodige achtergrondprocessen die je systeem juist vertragen. De ingebouwde Windows-tools zoals *Opslag* en *Schijfopruiming* zijn meer dan voldoende en volledig veilig.

@@ -41,7 +41,7 @@ Este é o método mais rápido e eficiente para recuperar a barra de tarefas sem
 
 1. Abra o **Gerenciador de Tarefas** (pressione `Ctrl + Shift + Esc`).
 2. Se ele abrir no modo compacto, clique em **Mais detalhes** (ou no ícone de engrenagem/processos na lateral esquerda, dependendo da sua versão do Windows 11).
-3. Na aba **Processos**, role a lista para baixo até encontrar o item **Explorador de Arquivos** (ou `explorer.exe`).
+3. Na aba **Processos**, role a lista para baixo até encontrar o item**Explorador de Arquivos** (ou `explorer.exe`).
 4. Clique com o botão direito em cima dele e selecione **Reiniciar**.
 5. *O que acontece agora:* A barra de tarefas sumirá por um segundo junto com a área de trabalho e voltará a funcionar normalmente, já limpa e reestabilizada.
 
@@ -68,7 +68,7 @@ Get-AppXPackage -AllUsers -Name Microsoft.Windows.ShellExperienceHost | Foreach 
 
 Se o travamento for recorrente ao longo dos dias, arquivos do sistema podem estar corrompidos. Vamos rodar uma varredura rápida pelo **Terminal** do Windows.
 
-1. Clique com o botão direito no menu Iniciar (ou use o atalho `Win + X`) e selecione **Terminal (Administrador)** ou **Prompt de Comando (Administrador)**.
+1. Clique com o botão direito no menu Iniciar (ou use o atalho `Win + X`) e selecione **Terminal (Administrador)**ou**Prompt de Comando (Administrador)**.
 2. Digite o seguinte comando e aperte Enter:
    ```cmd
    sfc /scannow
@@ -88,11 +88,5 @@ Evite também softwares de terceiros que prometem modificar profundamente o visu
 
 ## ❓ Perguntas Frequentes (FAQ)
 
-**1. O que fazer se nem o Gerenciador de Tarefas abrir pelo atalho?**
-Se o sistema estiver totalmente travado a ponto de ignorar `Ctrl + Shift + Esc`, pressione `Ctrl + Alt + Del`, clique em **Sair** ou use o botão físico de energia do gabinete/notebook para reiniciar a máquina de forma forçada. Em seguida, aplique o Método 3 para checar se houve corrupção de arquivos.
-
-**2. Esse problema de travamento da barra de tarefas é um vírus?**
-Raramente. Na grande maioria dos casos, trata-se de um bug legítimo do próprio processo gráfico do Windows 11 (`explorer.exe`) ou conflito após uma atualização recente. Manter o Windows Defender ou seu antivírus corporativo atualizado garante que não há ameaças reais.
-
-**3. Posso usar softwares de terceiros para substituir a barra de tarefas do Windows 11?**
+**1. O que fazer se nem o Gerenciador de Tarefas abrir pelo atalho?**Se o sistema estiver totalmente travado a ponto de ignorar `Ctrl + Shift + Esc`, pressione `Ctrl + Alt + Del`, clique em**Sair**ou use o botão físico de energia do gabinete/notebook para reiniciar a máquina de forma forçada. Em seguida, aplique o Método 3 para checar se houve corrupção de arquivos.**2. Esse problema de travamento da barra de tarefas é um vírus?**Raramente. Na grande maioria dos casos, trata-se de um bug legítimo do próprio processo gráfico do Windows 11 (`explorer.exe`) ou conflito após uma atualização recente. Manter o Windows Defender ou seu antivírus corporativo atualizado garante que não há ameaças reais.**3. Posso usar softwares de terceiros para substituir a barra de tarefas do Windows 11?**
 Sim, existem ferramentas populares no mercado, mas lembre-se: quanto mais camadas de software você adiciona sobre a interface nativa do Windows 11, maior é a chance de instabilidade após grandes atualizações do sistema operacional. Prefira sempre usar os recursos nativos sempre que possível.

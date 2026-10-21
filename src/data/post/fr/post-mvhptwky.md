@@ -25,7 +25,7 @@ Avant de plonger dans le cambouis technique, comprenons ce qui se passe sous le 
 
 - **Le cloisonnement des applications tierces :** Microsoft force les éditeurs de logiciels à utiliser une nouvelle API UWP pour intégrer leurs raccourcis. Tant que les développeurs ne mettent pas à jour leurs outils, leurs fonctions se retrouvent cachées dans le sous-menu "Afficher plus d'options".
 - **La perte de temps comportementale :** Ajouter un clic supplémentaire (le fameux clic de trop) sur des centaines d'actions quotidiennes génère des troubles musculo-squelettiques et une fatigue mentale évitable.
-- **L'absence d'option native visible :** Aucun interrupteur simple dans l'application **Paramètres** ne permet de basculer l'affichage de manière permanente, obligeant à modifier le registre système ou à passer par des commandes ciblées.
+- **L'absence d'option native visible :**Aucun interrupteur simple dans l'application**Paramètres** ne permet de basculer l'affichage de manière permanente, obligeant à modifier le registre système ou à passer par des commandes ciblées.
 
 ---
 
@@ -34,7 +34,7 @@ Avant de plonger dans le cambouis technique, comprenons ce qui se passe sous le 
 Pour résoudre définitivement ce problème sur votre poste de travail, nous allons utiliser une commande rapide via le terminal ou une modification propre de la base de registre. Pas de panique, c'est sans danger si vous suivez la procédure à la lettre.
 
 ### Étape 1 : Ouvrir le Terminal Windows en administrateur
-Faites un clic droit sur le bouton Démarrer (ou utilisez le raccourci clavier `Windows + X`) et sélectionnez **Terminal** ou **Invite de commandes (Admin)**.
+Faites un clic droit sur le bouton Démarrer (ou utilisez le raccourci clavier `Windows + X`) et sélectionnez **Terminal**ou**Invite de commandes (Admin)**.
 
 ### Étape 2 : Exécuter la commande de modification du registre
 Copiez et collez la ligne de commande suivante dans votre fenêtre de terminal, puis appuyez sur Entrée :
@@ -71,11 +71,5 @@ En tant que spécialiste de la maintenance, je vois souvent des scripts ou des l
 
 ## Foire Aux Questions (FAQ)
 
-**1. Cette manipulation est-elle réversible si je souhaite revenir au menu par défaut de Windows 11 ?**
-Absolument. Il suffit d'ouvrir à nouveau le Terminal en administrateur et de supprimer la clé avec la commande suivante : `reg.exe delete "HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}" /f`, puis de redémarrer l'Explorateur Windows via le Gestionnaire des tâches.
-
-**2. Est-ce que cela fonctionne sur toutes les versions de Windows 11 ?**
-Oui, cette astuce fonctionne sur les versions initiales ainsi que sur les mises à jour récentes (22H2, 23H2 et ultérieures). Microsoft n'a pas bloqué cette clé de contournement, car elle est tolérée pour des raisons de rétrocompatibilité.
-
-**3. Vais-je perdre mes applications récentes dans le menu ?**
+**1. Cette manipulation est-elle réversible si je souhaite revenir au menu par défaut de Windows 11 ?**Absolument. Il suffit d'ouvrir à nouveau le Terminal en administrateur et de supprimer la clé avec la commande suivante : `reg.exe delete "HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}" /f`, puis de redémarrer l'Explorateur Windows via le Gestionnaire des tâches.**2. Est-ce que cela fonctionne sur toutes les versions de Windows 11 ?**Oui, cette astuce fonctionne sur les versions initiales ainsi que sur les mises à jour récentes (22H2, 23H2 et ultérieures). Microsoft n'a pas bloqué cette clé de contournement, car elle est tolérée pour des raisons de rétrocompatibilité.**3. Vais-je perdre mes applications récentes dans le menu ?**
 Non. Vos logiciels habituels (comme 7-Zip, Notepad++, ou vos outils de gestion de documents) réapparaîtront directement au premier clic, sans que vous ayez besoin de chercher dans les sous-menus.

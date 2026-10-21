@@ -34,9 +34,9 @@ Jangan terburu-buru melakukan *restart* paksa atau instal ulang sistem. Mari kit
 ### Langkah 1: Mulai Ulang Proses Windows Explorer
 Ini adalah jurus pamungkas tercepat yang biasa digunakan oleh *admin system* untuk memulihkan *taskbar* dalam hitungan detik.
 
-1. Tekan kombinasi tombol **Ctrl + Shift + Esc** secara bersamaan untuk membuka **Task Manager**.
+1. Tekan kombinasi tombol **Ctrl + Shift + Esc**secara bersamaan untuk membuka**Task Manager**.
 2. Jika Task Manager terbuka dalam tampilan sederhana, klik **More details** di bagian bawah untuk melihat daftar lengkap proses.
-3. Gulir ke bawah pada tab **Processes** hingga Anda menemukan proses bernama **Windows Explorer** (atau *explorer.exe*).
+3. Gulir ke bawah pada tab **Processes**hingga Anda menemukan proses bernama**Windows Explorer** (atau *explorer.exe*).
 4. Klik kanan pada proses tersebut, lalu pilih tombol **Restart** di pojok kanan bawah.
 5. Layar Anda akan berkedip hitam sejenak—ini normal karena sistem sedang memuat ulang antarmuka grafis dan *taskbar* Anda akan kembali normal serta bisa diklik kembali.
 
@@ -45,7 +45,7 @@ Jika langkah pertama belum membuahkan hasil, kita perlu mendaftarkan ulang kompo
 
 1. Tekan kombinasi tombol **Ctrl + Shift + Esc** lagi untuk membuka Task Manager (jika *taskbar* masih bermasalah).
 2. Klik menu **Run new task** di bagian atas jendela Task Manager.
-3. Ketik `cmd` pada kolom yang tersedia, centang kotak **Create this task with administrative privileges**, lalu tekan **Enter**.
+3. Ketik `cmd` pada kolom yang tersedia, centang kotak **Create this task with administrative privileges**, lalu tekan**Enter**.
 4. Salin dan tempel perintah pemulihan berikut ke dalam jendela Command Prompt, lalu tekan Enter:
    `Get-AppXPackage -AllUsers | Foreach {Add-AppxPackage -DisableDevelopmentMode -Register "(_.InstallLocation)\AppXManifest.xml"}`
 5. Biarkan proses berjalan hingga selesai, lalu *restart* perangkat komputer Anda.
@@ -53,7 +53,7 @@ Jika langkah pertama belum membuahkan hasil, kita perlu mendaftarkan ulang kompo
 ### Langkah 3: Memeriksa Pembaruan Sistem dan Driver Grafis
 Terkadang, ketidakcocokan antara *driver* grafis bawaan dengan pembaruan kumulatif Windows memicu *freeze* pada bilah tugas.
 
-1. Buka menu **Pengaturan (Settings)** dengan menekan tombol **Windows + I**.
+1. Buka menu **Pengaturan (Settings)**dengan menekan tombol**Windows + I**.
 2. Pilih menu **Windows Update** di panel sebelah kiri.
 3. Klik **Check for updates** dan pastikan tidak ada pembaruan tertunda yang gagal terpasang.
 4. Periksa juga pembaruan *driver* melalui **Alat Administratif (Device Manager)** untuk memastikan kartu grafis Anda berjalan pada versi yang stabil.

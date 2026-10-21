@@ -11,7 +11,7 @@ theme: "Retro Monokai"
 
 Erano le 17:45 in un frenetico lunedì pomeriggio in un ufficio del Centro direzionale di Milano. Mancavano quindici minuti alla scadenza tassativa per l'invio del report trimestrale alla direzione centrale, e la mia postazione principale aveva deciso di fare le bizze. Sull'angolo in basso a destra dello schermo, campeggiava fissa l'odiata scritta "Attiva Windows". Fin qui niente di tragico, se non fosse che il software aziendale per la compilazione dei PDF aveva deciso di andare in conflitto con quell'overlay grafico, bloccando l'esportazione del file e coprendo parte dei pulsanti di invio. Il panico totale: il cliente che chiama per sollecitare, il capo che passa dietro la scrivania e il sistema piantato. 
 
-Nei primi minuti di panico totale ho fatto l'errore classico: ho iniziato a cliccare a caso nelle **Impostazioni** di Windows cercando una scorciatoia rapida, riavviando il servizio di Esplora risorse da **Gestione attività** e persino smanettando nel **Pannello di controllo**. Risultato? Dieci minuti buttati nel wc, il report ancora bloccato e quella filigrana trasparente ma fastidiosa sempre lì, pronta a coprire i dati critici della tabella finanziaria che stavo per inviare. 
+Nei primi minuti di panico totale ho fatto l'errore classico: ho iniziato a cliccare a caso nelle **Impostazioni**di Windows cercando una scorciatoia rapida, riavviando il servizio di Esplora risorse da**Gestione attività**e persino smanettando nel**Pannello di controllo**. Risultato? Dieci minuti buttati nel wc, il report ancora bloccato e quella filigrana trasparente ma fastidiosa sempre lì, pronta a coprire i dati critici della tabella finanziaria che stavo per inviare. 
 
 ![Tech Troubleshooting Guide](/images/tech-photo/tech-photos%20(20).jpg)
 
@@ -32,8 +32,7 @@ Ecco la procedura passo-passo che ho testato sul campo per risolvere definitivam
 
 ### Procedura passo-passo tramite CMD
 
-1. **Apri il Prompt dei comandi come Amministratore:** 
-   Premi il tasto Windows sulla tastiera, digita `cmd`, fai clic con il tasto destro su **Prompt dei comandi** nei risultati della ricerca e seleziona **Esegui come amministratore**.
+1. **Apri il Prompt dei comandi come Amministratore:**Premi il tasto Windows sulla tastiera, digita `cmd`, fai clic con il tasto destro su**Prompt dei comandi**nei risultati della ricerca e seleziona**Esegui come amministratore**.
 2. **Verifica lo stato della licenza:**
    Nella finestra nera del terminale, digita il comando di controllo della licenza per identificare il canale di attivazione:
    ```cmd
@@ -61,11 +60,5 @@ Prima di metter mano a qualsiasi modifica via riga di comando su PC aziendali, v
 
 ### Domande Frequenti (FAQ)
 
-**D: La rimozione della filigrana tramite CMD è permanente o devo ripeterla ogni volta che accendo il PC?**
-R: Il comando `slmgr /rearm` estende il periodo di valutazione per un numero limitato di volte (solitamente fino a 3 volte a seconda della build di Windows). Non è una soluzione di attivazione definitiva, ma un cuscinetto di emergenza ideale per completare attività urgenti senza blocchi visivi.
-
-**D: Posso usare questa procedura su qualsiasi versione di Windows 10 e Windows 11?**
-R: Sì, il comando `slmgr` è nativo in tutte le edizioni Pro, Enterprise ed Home di Windows, sebbene le edizioni Home abbiano limitazioni più rigide sulla gestione remota delle licenze tramite script avanzati.
-
-**D: Cosa devo fare se il comando mi restituisce un errore di accesso negato?**
+**D: La rimozione della filigrana tramite CMD è permanente o devo ripeterla ogni volta che accendo il PC?**R: Il comando `slmgr /rearm` estende il periodo di valutazione per un numero limitato di volte (solitamente fino a 3 volte a seconda della build di Windows). Non è una soluzione di attivazione definitiva, ma un cuscinetto di emergenza ideale per completare attività urgenti senza blocchi visivi.**D: Posso usare questa procedura su qualsiasi versione di Windows 10 e Windows 11?**R: Sì, il comando `slmgr` è nativo in tutte le edizioni Pro, Enterprise ed Home di Windows, sebbene le edizioni Home abbiano limitazioni più rigide sulla gestione remota delle licenze tramite script avanzati.**D: Cosa devo fare se il comando mi restituisce un errore di accesso negato?**
 R: Significa che non hai aperto il Prompt dei comandi con i privilegi elevati. Assicurati di fare clic destro su `cmd` e selezionare esplicitamente "Esegui come amministratore" prima di digitare qualsiasi stringa.

@@ -34,11 +34,11 @@ Oto ścieżka, którą podążam w każdych kryzysowych warunkach:
 1. W lewym panelu rozwiń gałąź **Dzienniki systemu Windows** (Windows Logs).
 2. Kliknij na **System**. To tutaj trafiają informacje o awariach sprzętowych i sterowników.
 3. Spójrz na prawy panel i wybierz **Filtruj bieżący dziennik...** (Filter Current Log).
-4. W polu zaznaczenia poziomów zdarzeń zaznacz ptaszkami opcje: **Krytyczny** (Critical) oraz **Błąd** (Error). Zatwierdź przyciskiem OK.
+4. W polu zaznaczenia poziomów zdarzeń zaznacz ptaszkami opcje: **Krytyczny**(Critical) oraz**Błąd** (Error). Zatwierdź przyciskiem OK.
 
 Teraz lista skurczyła się do najważniejszych problemów. Szukaj zdarzeń oznaczonych krytycznym identyfikatorem **Kernel-Power (ID 41)**. Oznacza on, że system nie zamknął się poprawnie, co potwierdza nasz twardy reset. 
 
-Jednak prawdziwego winowajcy szukaj tuż *przed* tym wpisem. Zwróć uwagę na błędy z źródłem **WHEA-Logger (ID 18)** – to ewidentny znak niestabilności procesora lub pamięci RAM (często winne jest zbyt agresywne XMP/EXPO). Z kolei błędy **Stornvme** lub **Disk** wskazują na problemy z dyskiem systemowym.
+Jednak prawdziwego winowajcy szukaj tuż *przed* tym wpisem. Zwróć uwagę na błędy z źródłem **WHEA-Logger (ID 18)**– to ewidentny znak niestabilności procesora lub pamięci RAM (często winne jest zbyt agresywne XMP/EXPO). Z kolei błędy**Stornvme**lub**Disk** wskazują na problemy z dyskiem systemowym.
 
 ```
 [Przykładowa ścieżka diagnostyczna]
@@ -59,11 +59,5 @@ Gdy wiesz już z Podglądu Zdarzeń, co powoduje ból głowy, czas na konkretne 
 
 ### Najczęściej zadawane pytania (FAQ)
 
-**1. W Podglądzie Zdarzeń widzę mnóstwo błędów "DistributedCOM" (ID 10016). Czy to przez to komputer mi się zawiesza?**
-Nie. Błędy DistributedCOM to zmora niemal każdego czystego Windowsa 11. Dotyczą uprawnień dostępu DCOM dla aplikacji w tle i w 99% przypadków nie powodują zamrażania systemu. Możesz je spokojnie zignorować.
-
-**2. Co zrobić, jeśli Podgląd Zdarzeń pokazuje tylko "Kernel-Power ID 41" bez żadnych błędów poprzedzających?**
-To klasyczny objaw nagłego odcięcia zasilania, problemu z samym zasilaczem (PSU) lub przegrzania procesora, które natychmiast wyłącza czujniki bezpieczeństwa. Sprawdź temperatury pod obciążeniem za pomocą programów diagnostycznych oraz upewnij się, że kable zasilające w obudowie są solidnie wpięte.
-
-**3. Czy ponowna instalacja Windows 11 pomoże na losowe zwiechy?**
+**1. W Podglądzie Zdarzeń widzę mnóstwo błędów "DistributedCOM" (ID 10016). Czy to przez to komputer mi się zawiesza?**Nie. Błędy DistributedCOM to zmora niemal każdego czystego Windowsa 11. Dotyczą uprawnień dostępu DCOM dla aplikacji w tle i w 99% przypadków nie powodują zamrażania systemu. Możesz je spokojnie zignorować.**2. Co zrobić, jeśli Podgląd Zdarzeń pokazuje tylko "Kernel-Power ID 41" bez żadnych błędów poprzedzających?**To klasyczny objaw nagłego odcięcia zasilania, problemu z samym zasilaczem (PSU) lub przegrzania procesora, które natychmiast wyłącza czujniki bezpieczeństwa. Sprawdź temperatury pod obciążeniem za pomocą programów diagnostycznych oraz upewnij się, że kable zasilające w obudowie są solidnie wpięte.**3. Czy ponowna instalacja Windows 11 pomoże na losowe zwiechy?**
 Tylko wtedy, gdy przyczyną był uszkodzony sterownik lub zapętlone pliki systemowe. Jeśli problem tkwi w niestabilnym profilu pamięci RAM (XMP) lub wadliwym dysku SSD, czysta instalacja systemu przyniesie ulgę tylko na kilka godzin, a problem powróci przy pierwszym większym obciążeniu sprzętu.

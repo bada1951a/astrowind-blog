@@ -37,8 +37,8 @@ Ecco la procedura testata sul campo che utilizzo regolarmente nel nostro ufficio
 
 Questo è il rimedio più rapido ed efficace.
 
-1. Premi la combinazione di tasti **Ctrl + Maiusc + Esc** per aprire direttamente **Gestione attività** (Task Manager). Se la tastiera non risponde bene, usa **Ctrl + Alt + Canc** e seleziona Gestione attività.
-2. Cerca la scheda **Processi** e scorri l'elenco fino a trovare **Esplora risorse** (o *Windows Explorer*).
+1. Premi la combinazione di tasti **Ctrl + Maiusc + Esc**per aprire direttamente**Gestione attività**(Task Manager). Se la tastiera non risponde bene, usa**Ctrl + Alt + Canc** e seleziona Gestione attività.
+2. Cerca la scheda **Processi**e scorri l'elenco fino a trovare**Esplora risorse** (o *Windows Explorer*).
 3. Fai clic destro su di esso e seleziona **Riavvia**. 
 4. Lo schermo lampeggerà per un secondo: la barra delle applicazioni tornerà a funzionare correttamente e a rispondere ai clic.
 
@@ -46,7 +46,7 @@ Questo è il rimedio più rapido ed efficace.
 
 Se la GUI del Task Manager fa i capricci, passiamo alla riga di comando.
 
-1. Premi la combinazione **Ctrl + Maiusc + Esc** per aprire il Task Manager (oppure usa **Win + R** se il tasto Windows funziona).
+1. Premi la combinazione **Ctrl + Maiusc + Esc**per aprire il Task Manager (oppure usa**Win + R** se il tasto Windows funziona).
 2. Clicca su **Esegui nuova attività** in alto.
 3. Digita `cmd` e spunta la casella "Crea questa attività con privilegi amministrativi", quindi premi Invio.
 4. Nella finestra del terminale, digita il comando per terminare il processo:
@@ -78,11 +78,5 @@ Evita di installare personalizzazioni di terze parti invasive per la taskbar (co
 
 ## Domande Frequenti (FAQ)
 
-**1. Perché la barra delle applicazioni si blocca sempre dopo l'avvio del PC?**
-Spesso è colpa di un'applicazione di terze parti che si avvia in background e va in conflitto con la shell di Windows (spesso antivirus aggressivi o utility di personalizzazione estetica). Prova a disabilitare le app superflue dalla scheda "App di avvio" nel Task Manager.
-
-**2. Posso usare il prompt dei comandi se il menu Start non si apre?**
-Certamente. Anche se il menu Start e la taskbar sono totalmente bloccati, le scorciatoie da tastiera come **Ctrl + Maiusc + Esc** (per il Task Manager) o **Win + R** (per la finestra Esegui) continuano a funzionare nella maggior parte dei casi.
-
-**3. Questo problema cancella i miei file o le applicazioni aperte?**
+**1. Perché la barra delle applicazioni si blocca sempre dopo l'avvio del PC?**Spesso è colpa di un'applicazione di terze parti che si avvia in background e va in conflitto con la shell di Windows (spesso antivirus aggressivi o utility di personalizzazione estetica). Prova a disabilitare le app superflue dalla scheda "App di avvio" nel Task Manager.**2. Posso usare il prompt dei comandi se il menu Start non si apre?**Certamente. Anche se il menu Start e la taskbar sono totalmente bloccati, le scorciatoie da tastiera come**Ctrl + Maiusc + Esc**(per il Task Manager) o**Win + R**(per la finestra Esegui) continuano a funzionare nella maggior parte dei casi.**3. Questo problema cancella i miei file o le applicazioni aperte?**
 No. Riavviare *explorer.exe* interrompe unicamente l'interfaccia grafica del desktop e della barra delle applicazioni, lasciando intatte tutte le applicazioni di lavoro aperte e i documenti in corso.

@@ -140,7 +140,7 @@ Now we rebuild the physical display link without triggering an MST sync error.
 
 1. Connect your dock or primary USB-C cable to the laptop **with no monitors plugged into the dock**.
 2. Connect **Monitor 1** using your certified cable. Wait five seconds for the Windows plug-and-play chime to sound.
-3. Open **Device Manager** (`Win + X` > `Device Manager`). Expand **Monitors** and confirm your panel shows its actual model name rather than "Generic PnP Monitor". If it displays Generic PnP, right-click and hit *Update driver* > *Search automatically*.
+3. Open **Device Manager**(`Win + X` > `Device Manager`). Expand**Monitors** and confirm your panel shows its actual model name rather than "Generic PnP Monitor". If it displays Generic PnP, right-click and hit *Update driver* > *Search automatically*.
 4. Connect **Monitor 2**.
 5. Press `Win + I` to open **Settings**, go to `System` > `Display` > `Advanced display`.
 6. Select each monitor individually from the top drop-down menu and lock down their refresh rates:

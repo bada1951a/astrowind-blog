@@ -32,14 +32,14 @@ Không cần cài đặt những phần mềm cứu hộ phức tạp, chúng ta
 ### Bước 1: Kiểm tra và vô hiệu hóa nhanh Interrupts trong Task Manager
 Tiến trình System Process thường gánh luôn cả các ngắt phần cứng (Hardware Interrupts). Để xác định chính xác:
 1. Nhấn tổ hợp phím `Ctrl + Shift + Esc` để mở **Task Manager**.
-2. Chuyển sang tab **Processes**, cuộn xuống tìm tiến trình có tên là **System** hoặc **System and compressed memory**.
+2. Chuyển sang tab **Processes**, cuộn xuống tìm tiến trình có tên là**System**hoặc**System and compressed memory**.
 3. Nếu thấy mức sử dụng CPU vượt quá 50 phần trăm một cách phi lý, hãy click chuột phải vào nó và chọn **Go to details** để xem mã PID chi tiết.
 4. Tạm thời vô hiệu hóa các thiết bị ngoại vi không cần thiết đang cắm qua cổng USB như chuột rời phụ, bàn phím cơ Led rực rỡ, hoặc Hub chuyển đổi để loại trừ xung đột phần cứng ngoại vi.
 
 ### Bước 2: Chạy lệnh quét và phục hồi tệp hệ thống bằng SFC và DISM
 Đây là cứu cánh nhanh nhất khi file hệ thống bị lỗi ngầm do xung đột phần mềm:
 1. Nhấn phím `Windows`, gõ từ khóa `cmd` vào thanh tìm kiếm.
-2. Click chuột phải vào **Command Prompt** và chọn **Run as administrator** (Chạy với quyền quản trị viên).
+2. Click chuột phải vào **Command Prompt**và chọn**Run as administrator** (Chạy với quyền quản trị viên).
 3. Trong cửa sổ đen hiện ra, gõ chính xác dòng lệnh sau rồi nhấn Enter:
    `sfc /scannow`
 4. Ngồi chờ khoảng 5 đến 10 phút để Windows tự động tìm kiếm và vá lại các tệp hệ thống bị hỏng.
@@ -51,8 +51,8 @@ Tiến trình System Process thường gánh luôn cả các ngắt phần cứn
 Nhiều trường hợp tiến trình System cố gắng tải xuống hoặc cài đặt bản cập nhật lỗi ngầm:
 1. Nhấn tổ hợp phím `Windows + R`, gõ `services.msc` rồi nhấn Enter để mở bảng **Cài đặt Dịch vụ**.
 2. Cuộn tìm đến dịch vụ có tên **Windows Update**, click đúp vào đó.
-3. Tại ô *Startup type*, chọn **Disabled**, sau đó bấm nút **Stop** để dừng hẳn tiến trình đang kẹt.
-4. Tìm tiếp dịch vụ **SysMain** (trước đây là Superfetch), làm tương tự: chọn **Disabled** và bấm **Stop** để giảm tải tối đa cho ổ cứng và CPU.
+3. Tại ô *Startup type*, chọn **Disabled**, sau đó bấm nút**Stop** để dừng hẳn tiến trình đang kẹt.
+4. Tìm tiếp dịch vụ **SysMain**(trước đây là Superfetch), làm tương tự: chọn**Disabled**và bấm**Stop** để giảm tải tối đa cho ổ cứng và CPU.
 
 <div style="border-left: 4px solid #3b82f6; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Lời khuyên từ chuyên gia phần cứng:</strong> Nếu bạn đang dùng ổ cứng cơ HDD đời cũ cho máy văn phòng, việc nâng cấp lên ổ cứng thể rắn SSD chuẩn NVMe không chỉ giải quyết triệt để lỗi 100 phần trăm CPU do System Process mà còn tăng tốc độ khởi động máy lên gấp 10 lần.

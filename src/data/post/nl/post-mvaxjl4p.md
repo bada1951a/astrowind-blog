@@ -47,8 +47,5 @@ Wees slim met wat je uitschakelt. Schakel geen essentiële drivers of beveiligin
 **Verlies ik data of instellingen als ik een programma uitschakel bij het opstarten?**
 Nee, absoluut niet. Je schakelt hiermee *alleen* uit dat het programma automatisch opstart op de achtergrond zodra je je pc aanzet. Je kunt de applicatie later gewoon handmatig openen via het Startmenu wanneer je hem daadwerkelijk nodig hebt.
 
-**Hoe controleer ik of mijn aanpassing effect heeft gehad?**
-Open na het uitschakelen van de overbodige programma's je Taakbeheer opnieuw en kijk naar de rechterbovenhoek van het tabblad Prestaties of het 'Laatste BIOS-tijd' scherm. Of herstart simpelweg je laptop en merk direct het verschil in seconden.
-
-**Waarom blijft mijn computer traag ondanks dat ik alle opstartprogramma's heb uitgezet?**
+**Hoe controleer ik of mijn aanpassing effect heeft gehad?**Open na het uitschakelen van de overbodige programma's je Taakbeheer opnieuw en kijk naar de rechterbovenhoek van het tabblad Prestaties of het 'Laatste BIOS-tijd' scherm. Of herstart simpelweg je laptop en merk direct het verschil in seconden.**Waarom blijft mijn computer traag ondanks dat ik alle opstartprogramma's heb uitgezet?**
 Als het uitschakelen van opstartprogramma's niet het gewenste effect heeft, ligt het probleem waarschijnlijk dieper. Denk aan een volgelopen harde schijf (zorg voor ten minste 15 procent vrije ruimte) of hardwarematige veroudering waarbij een upgrade naar een SSD noodzakelijk is.

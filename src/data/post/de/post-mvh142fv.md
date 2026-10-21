@@ -15,7 +15,7 @@ Es ist 14:45 Uhr im Frankfurter Bankenviertel. Um 15:30 Uhr soll die wichtigste 
 Bevor wir blind anfangen, Teile auszutauschen oder das Betriebssystem komplett neu zu installieren, schauen wir uns an, was Windows im Hintergrund protokolliert hat. Als Werkzeuge nutzen wir heute:
 - **Ereignisanzeige** (Event Viewer) für die Spurensuche
 - **Zuverlässigkeitsüberwachung** für eine grafische Zeitleiste
-- **Task-Manager** und **Geräte-Manager** für die Hardware-Kontrolle
+- **Task-Manager**und**Geräte-Manager** für die Hardware-Kontrolle
 
 ![Tech Troubleshooting Guide](/images/tech-photo/system%20(8).png)
 
@@ -59,7 +59,7 @@ Wichtige Event-IDs für die Diagnose:
 ```
 
 #### Schritt 4: Die Minutenzahl vor dem Event-ID 41 prüfen
-Suchen Sie im System-Log exakt nach dem Eintrag **Event-ID 41** (Das war Ihr erzwungener Neustart). Gehen Sie nun in der Liste genau **2 bis 5 Minuten vor** diesen Zeitstempel. Welche Warnungen oder Fehler stehen dort? 
+Suchen Sie im System-Log exakt nach dem Eintrag **Event-ID 41**(Das war Ihr erzwungener Neustart). Gehen Sie nun in der Liste genau**2 bis 5 Minuten vor** diesen Zeitstempel. Welche Warnungen oder Fehler stehen dort? 
 - Taucht dort ein Fehler mit der Quelle `WHEA-Logger` (Event-ID 18 oder 19) auf? Herzlichen Glückwunsch, Sie haben ein Hardware- oder CPU-Stabilitätsproblem.
 - Taucht dort ein Fehler des Treibers auf? Dann wissen wir, welcher Komponententreiber spinnt.
 
@@ -81,10 +81,7 @@ Haben Sie den Verdächtigen identifiziert, greifen folgende Sofortmaßnahmen:
 
 ### Häufig gestellte Fragen (FAQ)
 
-**1. Warum taucht in der Ereignisanzeige direkt vor dem Freeze überhaupt kein Fehler auf?**
-Wenn ein PC komplett einfriert (Hard Freeze), hat das Betriebssystem oft keine Millisekunde mehr Zeit, den Fehler auf die Festplatte zu schreiben. Der letzte Log-Eintrag liegt dann oft Minuten zurück. In diesem Fall liegt zu 90% ein handfestes Hardware-Problem vor (RAM, Netzteil, CPU-Spannung oder überhitzte Chipsätze).
-
-**2. Was bedeutet der berüchtigte WHEA-Logger Fehler in den Protokollen?**
+**1. Warum taucht in der Ereignisanzeige direkt vor dem Freeze überhaupt kein Fehler auf?**Wenn ein PC komplett einfriert (Hard Freeze), hat das Betriebssystem oft keine Millisekunde mehr Zeit, den Fehler auf die Festplatte zu schreiben. Der letzte Log-Eintrag liegt dann oft Minuten zurück. In diesem Fall liegt zu 90% ein handfestes Hardware-Problem vor (RAM, Netzteil, CPU-Spannung oder überhitzte Chipsätze).**2. Was bedeutet der berüchtigte WHEA-Logger Fehler in den Protokollen?**
 WHEA steht für *Windows Hardware Error Architecture*. Wenn Sie hier Einträge finden, meldet die CPU oder das PCIe-Subsystem einen Hardware-internen Paritäts- oder Bus-Fehler. Das ist ein ernstes Indiz für instabile Spannungen, defekten RAM oder beschädigte CPU-Kerne.
 
 **3. Soll ich Windows 11 einfach komplett neu installieren?**

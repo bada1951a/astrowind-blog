@@ -64,13 +64,11 @@ Los microcontroladores integrados (ARM Cortex-M0, ATmega32U4, etc.) ejecutan un 
 ### Fase 1: Diagnóstico lógico en el sistema operativo
 Antes de desmontar elementos, debemos aislar el problema respecto al subsistema de software de Windows.
 
-1. **Inspección en el Administrador de dispositivos:**
-   - Presione `Windows + R`, escriba `devmgmt.msc` y pulse Intro para abrir el **Administrador de dispositivos**.
-   - Despliegue el nodo **Dispositivos de interfaz de usuario (HID)** y **Teclados**.
+1. **Inspección en el Administrador de dispositivos:**- Presione `Windows + R`, escriba `devmgmt.msc` y pulse Intro para abrir el**Administrador de dispositivos**.
+   - Despliegue el nodo **Dispositivos de interfaz de usuario (HID)**y**Teclados**.
    - Verifique que ningún controlador presente advertencias triangulares amarillas. Si existen duplicados huérfanos provocados por hubs USB, haga clic derecho sobre el dispositivo y seleccione **Desinstalar el dispositivo**.
    
-2. **Validación de la pila de entrada vía consola:**
-   - Abra el **Símbolo del sistema** (`cmd.exe`) o PowerShell con privilegios elevados y reinicie el servicio de entrada de interfaz humana para purgar colas de eventos en memoria:
+2. **Validación de la pila de entrada vía consola:**- Abra el**Símbolo del sistema** (`cmd.exe`) o PowerShell con privilegios elevados y reinicie el servicio de entrada de interfaz humana para purgar colas de eventos en memoria:
    ```cmd
    net stop hidserv && net start hidserv
    ```
@@ -114,9 +112,9 @@ Para esta intervención se requiere exclusivamente un **limpiador de contactos d
 
 1. **Hundimiento mecánico del vástago:** Con una herramienta no metálica o su propio dedo, presione el vástago del conmutador hasta el tope de su recorrido (aproximadamente 4 mm).
 2. **Aplicación controlada:** Inserte la cánula de precisión en la holgura existente entre el vástago y la carcasa superior (*housing*), orientándola hacia la zona interna donde se alojan las láminas de contacto (habitualmente el lado superior del switch, identificable por la muesca del LED).
-3. **Inyección en ráfaga:** Administre una ráfaga extremadamente corta, de no más de **medio segundo**. La presión del disolvente desplazará los micro-residuos y disolverá películas oxidadas.
-4. **Ciclo de purga mecánica:** De inmediato, libere el aerosol y comience a pulsar repetidamente y a fondo el vástago del conmutador entre **60 y 80 veces consecutivas**. Esta acción de fricción dinámica fuerza a las láminas de contacto a frotarse entre sí, permitiendo que el solvente en evaporación arrastre mecánicamente las partículas hacia el fondo inerte o las disuelva por fricción galvánica.
-5. **Tiempo de evaporación y desgasificación:** Deje reposar la unidad durante un mínimo de **15 a 20 minutos**. El vehículo solvente debe evaporarse por completo para garantizar una constante dieléctrica idónea y eliminar cualquier condensación térmica inducida por el gas propelente.
+3. **Inyección en ráfaga:**Administre una ráfaga extremadamente corta, de no más de**medio segundo**. La presión del disolvente desplazará los micro-residuos y disolverá películas oxidadas.
+4. **Ciclo de purga mecánica:**De inmediato, libere el aerosol y comience a pulsar repetidamente y a fondo el vástago del conmutador entre**60 y 80 veces consecutivas**. Esta acción de fricción dinámica fuerza a las láminas de contacto a frotarse entre sí, permitiendo que el solvente en evaporación arrastre mecánicamente las partículas hacia el fondo inerte o las disuelva por fricción galvánica.
+5. **Tiempo de evaporación y desgasificación:**Deje reposar la unidad durante un mínimo de**15 a 20 minutos**. El vehículo solvente debe evaporarse por completo para garantizar una constante dieléctrica idónea y eliminar cualquier condensación térmica inducida por el gas propelente.
 
 ---
 

@@ -30,8 +30,8 @@ Voordat we ingrijpen, is het handig om te begrijpen waarom Windows opeens begint
 Geen ingewikkelde hacks of vage downloadprogramma's van het internet die je systeem alleen maar infecteren met malware. We gebruiken gewoon de ingebouwde beheertools van Windows zelf. Volg deze stappen exact op:
 
 ### Stap 1: Open de Opdrachtprompt als Administrator
-Klik op de **Startknop** (of druk op de Windows-toets) en typ direct **`cmd`**. 
-In plaats van er meteen op te klikken, klik je er met je **rechtermuisknop** op en kies je voor **"Als administrator uitvoeren"**. Dit is cruciaal, want zonder verhoogde rechten kun je de systeemservices niet aanpassen.
+Klik op de **Startknop**(of druk op de Windows-toets) en typ direct**`cmd`**. 
+In plaats van er meteen op te klikken, klik je er met je **rechtermuisknop**op en kies je voor "**Als administrator uitvoeren**". Dit is cruciaal, want zonder verhoogde rechten kun je de systeemservices niet aanpassen.
 
 ### Stap 2: Stop tijdelijk de licentieservice
 In het zwarte venster dat nu op scherm verschijnt, typ je het volgende commando om de Software Protection-service te pauzeren, zodat we schone instellingen kunnen afdwingen:
@@ -59,11 +59,4 @@ Zie deze CMD-truc als een effectieve noodremedie (een pleister op de wond) voor 
 
 ## Veelgestelde vragen (FAQ)
 
-**1. Is het gebruiken van `slmgr /rearm` illegaal of schadelijk voor mijn PC?**
-Nee zeker niet. `slmgr` (Software License Management Tool) is een officieel, legitiem hulpprogramma van Microsoft zelf dat beheerders gebruiken om licenties te beheren en testperiodes te resetten binnen de toegestane limieten van het besturingssysteem.
-
-**2. Kan ik dit ook doen op een Windows Home-editie?**
-De meeste geavanceerde KMS- en rearm-commando's werken optimaal op Windows Pro en Enterprise versies die binnen bedrijfsnetwerken worden ingezet. Bij een reguliere Home-editie is het vaak beter om direct in te loggen met een gekoppeld Microsoft-account om de digitale licentie op te halen.
-
-**3. Wat moet ik doen als het watermerk na een herstart toch weer terugkomt?**
-Als het watermerk snel terugkeert,blokkeert de firewall of het bedrijfsnetwerk de communicatie met de activatieserver. Controleer via **Instellingen > Systeem > Activering** de exacte foutcode (bijvoorbeeld 0x80070002) en neem contact op met je interne IT-helpdesk om de VPN- of domeinverbinding te verversen.
+**1. Is het gebruiken van `slmgr /rearm` illegaal of schadelijk voor mijn PC?**Nee zeker niet. `slmgr` (Software License Management Tool) is een officieel, legitiem hulpprogramma van Microsoft zelf dat beheerders gebruiken om licenties te beheren en testperiodes te resetten binnen de toegestane limieten van het besturingssysteem.**2. Kan ik dit ook doen op een Windows Home-editie?**De meeste geavanceerde KMS- en rearm-commando's werken optimaal op Windows Pro en Enterprise versies die binnen bedrijfsnetwerken worden ingezet. Bij een reguliere Home-editie is het vaak beter om direct in te loggen met een gekoppeld Microsoft-account om de digitale licentie op te halen.**3. Wat moet ik doen als het watermerk na een herstart toch weer terugkomt?**Als het watermerk snel terugkeert,blokkeert de firewall of het bedrijfsnetwerk de communicatie met de activatieserver. Controleer via**Instellingen > Systeem > Activering** de exacte foutcode (bijvoorbeeld 0x80070002) en neem contact op met je interne IT-helpdesk om de VPN- of domeinverbinding te verversen.

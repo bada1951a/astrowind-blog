@@ -35,16 +35,16 @@ Bevor wir blind anfangen, Schraubenzieher zu schwingen oder das System neu aufzu
 Da der Fehler oft durch Speicherzugriffsverletzungen ausgelöst wird, testen wir zuerst den Arbeitsspeicher direkt über die integrierten Windows-Bordmittel.
 
 1. Drücken Sie die Tastenkombination `Windows + R`, tippen Sie `mdsched.exe` ein und bestätigen Sie mit Enter.
-2. Wählen Sie die Option **"Jetzt neu starten und nach Problemen suchen (empfohlen)"**.
+2. Wählen Sie die Option "**Jetzt neu starten und nach Problemen suchen (empfohlen)**".
 3. Der PC bootet neu und führt die Windows-Speicherdiagnose aus. Lassen Sie den Test im Standard-Modus durchlaufen. Sollten hier Fehler angezeigt werden, wissen Sie sofort, dass ein RAM-Riegel defekt ist oder nicht richtig im Slot sitzt.
 
 ### Schritt 2: Der rettende Treiber-Rollback im Gerätemanager
 Wenn der Speicher fehlerfrei ist, liegt es zu 90 Prozent an einem kürzlich installierten Treiber. 
 
-1. Starten Sie Windows im **Abgesicherten Modus** (falls der normale Start fehlschlägt), oder öffnen Sie direkt die **Verwaltungstools** über das Startmenü.
+1. Starten Sie Windows im **Abgesicherten Modus**(falls der normale Start fehlschlägt), oder öffnen Sie direkt die**Verwaltungstools** über das Startmenü.
 2. Öffnen Sie den **Gerätemanager** (Rechtsklick auf das Startmenü -> Gerätemanager).
 3. Überprüfen Sie insbesondere neu installierte Komponenten (Netzwerkkarten, Grafiktreiber, Chipsatz).
-4. Machen Sie einen Rechtsklick auf den verdächtigen Treiber, wählen Sie **Eigenschaften** und wechseln Sie auf den Reiter **Treiber**.
+4. Machen Sie einen Rechtsklick auf den verdächtigen Treiber, wählen Sie **Eigenschaften**und wechseln Sie auf den Reiter**Treiber**.
 5. Klicken Sie auf **Vorheriger Treiber** (Rollback), falls dieser Button aktiv ist. Das setzt die problematische Aktualisierung sofort zurück.
 
 <div style="border-left: 4px solid #0284c7; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
@@ -54,7 +54,7 @@ Wenn der Speicher fehlerfrei ist, liegt es zu 90 Prozent an einem kürzlich inst
 ### Schritt 3: Systemdateien auf Integrität prüfen
 Manchmal hinterlässt der Absturz beschädigte Systemdateien. Das lässt sich schnell über die Eingabeaufforderung reparieren:
 
-1. Öffnen Sie das **Terminal** oder die **Eingabeaufforderung** als Administrator.
+1. Öffnen Sie das **Terminal**oder die**Eingabeaufforderung** als Administrator.
 2. Tippen Sie den Befehl `DISM.exe /Online /Cleanup-image /Restorehealth` ein und drücken Sie Enter.
 3. Geben Sie im Anschluss den Klassiker ein: `sfc /scannow`. 
 4. Warten Sie, bis der Scan abgeschlossen ist, und starten Sie das System neu.

@@ -32,7 +32,7 @@ Zanim przejdziemy do naprawy, warto zrozumieć root cause tego fenomenu. Dlaczeg
 Skoro standardowe metody zawiodły, musimy wymusić na systemie porzucenie uszkodzonego bufora i wyczyszczenie koleki zadań. Robimy to z poziomu uprawnień administratora.
 
 ### Krok 1: Uruchomienie Terminala jako Administrator
-Kliknij prawym przyciskiem myszy na menu Start i wybierz **Terminal (Administrator)** lub **Wiersz polecenia (Administrator)**. 
+Kliknij prawym przyciskiem myszy na menu Start i wybierz **Terminal (Administrator)**lub**Wiersz polecenia (Administrator)**. 
 
 ### Krok 2: Zatrzymanie usług odpowiedzialnych za aktualizacje
 Zanim usuniemy pliki, musimy upewnić się, że żadna usługa nie korzysta z folderu `SoftwareDistribution` oraz `catroot2`. Wpisz w konsoli następujące komendy i zatwierdź każdą klawiszem Enter:
@@ -72,11 +72,5 @@ Na koniec zrestartuj komputer tradycyjną komendą `shutdown /r /t 0`. Po ponown
 
 ## Często Zadawane Pytania (FAQ)
 
-**1. Czy utracę moje osobiste pliki lub aplikacje po zmianie nazwy folderu SoftwareDistribution?**  
-Absolutnie nie. Folder `SoftwareDistribution` przechowuje wyłącznie tymczasowe pliki instalacyjne pobrane z serwerów Microsoftu oraz logi. Twoje dokumenty, aplikacje i konfiguracje pozostaną całkowicie nienaruszone.
-
-**2. Co zrobić, jeśli polecenie `net stop wuauserv` zwraca błąd o odmowie dostępu?**  
-Upewnij się, że uruchomiłeś Wiersz polecenia lub Terminal, klikając na ikonę prawym przyciskiem myszy i wybierając opcję „Uruchom jako administrator”. Zwykłe konto użytkownika nie posiada uprawnień do zarządzania kluczowymi usługami systemowymi.
-
-**3. Czy po wykonaniu tego zabiegu system będzie pobierał aktualizacje od nowa?**  
+**1. Czy utracę moje osobiste pliki lub aplikacje po zmianie nazwy folderu SoftwareDistribution?**Absolutnie nie. Folder `SoftwareDistribution` przechowuje wyłącznie tymczasowe pliki instalacyjne pobrane z serwerów Microsoftu oraz logi. Twoje dokumenty, aplikacje i konfiguracje pozostaną całkowicie nienaruszone.**2. Co zrobić, jeśli polecenie `net stop wuauserv` zwraca błąd o odmowie dostępu?**Upewnij się, że uruchomiłeś Wiersz polecenia lub Terminal, klikając na ikonę prawym przyciskiem myszy i wybierając opcję „Uruchom jako administrator”. Zwykłe konto użytkownika nie posiada uprawnień do zarządzania kluczowymi usługami systemowymi.**3. Czy po wykonaniu tego zabiegu system będzie pobierał aktualizacje od nowa?**  
 Tak. Ponieważ stary, uszkodzony bufor został zarchiwizowany w folderze `.bak`, Windows 11 pobierze pakiety aktualizacyjne całkowicie na świeżo z serwerów Microsoft Update. Zalecamy wykonanie tej operacji przy stabilnym i szybkim połączeniu internetowym.

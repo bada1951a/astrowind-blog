@@ -36,8 +36,8 @@ Fortunatamente, non dobbiamo convivere per forza con questa limitazione. Esiston
 ### Metodo Rapido via Riga di Comando (Consigliato)
 
 1. Cliccate sul pulsante **Start** o premete i tasti della tastiera corrispondenti.
-2. Digitate **Gestione attività** (utile se dovete riavviare explorer.exe) oppure cercate direttamente **Terminale**.
-3. Aprite il **Terminale** (o il Prompt dei comandi) facendo clic con il tasto destro e selezionando **Esegui come amministratore**.
+2. Digitate **Gestione attività**(utile se dovete riavviare explorer.exe) oppure cercate direttamente**Terminale**.
+3. Aprite il **Terminale**(o il Prompt dei comandi) facendo clic con il tasto destro e selezionando**Esegui come amministratore**.
 4. Copiate e incololate questa stringa esatta all'interno della finestra nera del terminale e premete **Invio**:
 
 ```cmd
@@ -57,7 +57,7 @@ In meno di dieci secondi, la barra delle applicazioni e il desktop lampeggeranno
 
 Quando si mettono le mani sul registro di sistema o sulle impostazioni avanzate di Windows 11, ci sono alcune regole d'oro da seguire per evitare spiacevoli sorprese sui PC aziendali:
 
-* **Backup periodico:** Prima di effettuare modifiche di questo tipo sui PC di reparto o dei clienti, create sempre un punto di ripristino tramite il **Pannello di controllo** alla voce *Ripristino*.
+* **Backup periodico:**Prima di effettuare modifiche di questo tipo sui PC di reparto o dei clienti, create sempre un punto di ripristino tramite il**Pannello di controllo** alla voce *Ripristino*.
 * **Aggiornamenti di Windows:** Microsoft potrebbe rilasciare aggiornamenti cumulativi importanti che in rari casi resettano queste chiavi di registro personalizzate. Tenete a portata di mano questo script in caso la modifica dovesse decadere dopo un update maggiore del sistema operativo.
 * **Supporto alle app moderne:** Se in futuro decidete di tornare sui vostri passi (ad esempio per sfruttare le nuove integrazioni cloud di Windows 11), vi basterà eliminare la chiave di registro creata in precedenza invertendo il comando con un `reg.exe delete`.
 

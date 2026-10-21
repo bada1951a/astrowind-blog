@@ -45,9 +45,9 @@ Nggak perlu pake software cleaner abal-abal yang malah bikin laptop lu kena *adw
 
 Ini cara paling cepet dan manjur buat nendang aplikasi yang nggak penting dari antrian booting.
 
-*   Tekan kombinasi hotkey **`Ctrl` + `Shift` + `Esc`** secara bersamaan untuk langsung membuka **Task Manager**.
-*   Kalau tampilannya masih ringkas, klik **"More details"** di bagian bawah.
-*   Pindah ke tab **"Startup"** (ikon speedometer/gauge di Windows 10/11).
+*   Tekan kombinasi hotkey **`Ctrl` + `Shift` + `Esc`**secara bersamaan untuk langsung membuka**Task Manager**.
+*   Kalau tampilannya masih ringkas, klik "**More details**" di bagian bawah.
+*   Pindah ke tab "**Startup**" (ikon speedometer/gauge di Windows 10/11).
 *   Di sini lu bakal lihat daftar aplikasi yang otomatis jalan pas Windows nyala lengkap dengan **Startup impact**-nya (*High, Medium, Low, Not measured*).
 
 <div style="border-left: 4px solid #f92672; padding: 12px 16px; margin: 20px 0; background-color: #272822; color: #f8f8f2; border-radius: 4px;">
@@ -65,9 +65,9 @@ Buat mastiin nggak ada service siluman yang lolos dari pengamatan Task Manager, 
 *   Tekan **`Windows Key` + `R`** untuk memunculkan kotak dialog Run.
 *   Ketik `msconfig` lalu tekan **Enter**.
 *   Masuk ke tab **Services**.
-*   **PENTING:** Centang dulu kotak **"Hide all Microsoft services"** di bagian bawah (biar lu nggak nggak sengaja mematikan sistem inti Windows).
+*   **PENTING:**Centang dulu kotak "**Hide all Microsoft services**" di bagian bawah (biar lu nggak nggak sengaja mematikan sistem inti Windows).
 *   Lihat daftar service yang tersisa. Hilangkan centang pada service aplikasi yang nggak butuh jalan otomatis (contoh: *Adobe Acrobat Update Service*, *Google Update Service*, dll).
-*   Klik **Apply** lalu **OK**. Restart laptop lu dan rasakan bedanya.
+*   Klik **Apply**lalu**OK**. Restart laptop lu dan rasakan bedanya.
 
 ---
 
@@ -96,8 +96,5 @@ Kadang masalah booting lemot bukan cuma dari software startup, tapi fisik HDD/SS
 **1. Apakah mendisable aplikasi di Startup bakal bikin aplikasinya ke-hapus?**
 Nggak sama sekali. *Disable* cuma berarti aplikasi tersebut nggak bakal otomatis jalan di latar belakang pas laptop dinyalain. Lu tetep bisa buka aplikasinya secara manual lewat shortcut desktop atau menu Start kapan pun lu butuh.
 
-**2. Kenapa laptop gue masih lemot padahal startup udah bersih semua?**
-Kalau startup udah bersih tapi booting tetap memakan waktu lebih dari 2-3 menit, besar kemungkinan media penyimpanan lu masih menggunakan Hard Disk Drive (HDD) jadul, atau kesehatan (Health) SSD lu udah drop di bawah 50%. Solusi permanennya adalah migrasi sistem operasi ke SSD NVMe/SATA.
-
-**3. Amankah mematikan semua service non-Microsoft di msconfig?**
+**2. Kenapa laptop gue masih lemot padahal startup udah bersih semua?**Kalau startup udah bersih tapi booting tetap memakan waktu lebih dari 2-3 menit, besar kemungkinan media penyimpanan lu masih menggunakan Hard Disk Drive (HDD) jadul, atau kesehatan (Health) SSD lu udah drop di bawah 50%. Solusi permanennya adalah migrasi sistem operasi ke SSD NVMe/SATA.**3. Amankah mematikan semua service non-Microsoft di msconfig?**
 Aman, asalkan aplikasi tersebut adalah aplikasi tambahan pihak ketiga (seperti updater game atau utility printer tambahan). Tapi kalau ragu dengan nama servicenya, biarkan default atau cari tahu dulu fungsi service tersebut di internet sebelum di-disable.

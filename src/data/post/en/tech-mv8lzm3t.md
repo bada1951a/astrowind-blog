@@ -88,10 +88,7 @@ When cleaning up startup items, resist the urge to nuke everything blindly. Disa
 
 ### Frequently Asked Questions (FAQ)
 
-**Q: Will disabling startup apps delete my files or uninstall my programs?**  
-A: Absolutely not. Disabling an app from startup simply prevents it from launching automatically in the background when your operating system boots up. You can still launch any application manually via the Start Menu whenever you actually need it.
-
-**Q: How can I check my exact boot duration down to the millisecond?**  
+**Q: Will disabling startup apps delete my files or uninstall my programs?**A: Absolutely not. Disabling an app from startup simply prevents it from launching automatically in the background when your operating system boots up. You can still launch any application manually via the Start Menu whenever you actually need it.**Q: How can I check my exact boot duration down to the millisecond?**  
 A: Open PowerShell as an administrator and run:  
 `Get-WinEvent -ProviderName Microsoft-Windows-Diagnostics-Performance -MaxEvents 20 | Where-Object { $_.Id -eq 100 }`  
 This query pulls the exact Event Viewer telemetry log detailing how many milliseconds your system took to complete the last boot sequence.

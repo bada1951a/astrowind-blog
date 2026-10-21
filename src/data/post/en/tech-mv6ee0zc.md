@@ -77,8 +77,8 @@ Before picking up any chemical solvents or tools, systematically isolate the ope
 ### Phase 1: Software and Interface Triage
 
 1. **Check HID Drivers in Device Manager**:
-   Press `Windows Key + X` and select **Device Manager**. Expand **Human Interface Devices** and **Keyboards**. 
-   Look for duplicate driver entries, yellow warning glyphs, or selective suspend power-saving states. Right-click your active keyboard device, choose **Properties**, navigate to **Power Management**, and uncheck *Allow the computer to turn off this device to save power*.
+   Press `Windows Key + X` and select **Device Manager**. Expand**Human Interface Devices**and**Keyboards**. 
+   Look for duplicate driver entries, yellow warning glyphs, or selective suspend power-saving states. Right-click your active keyboard device, choose **Properties**, navigate to**Power Management**, and uncheck *Allow the computer to turn off this device to save power*.
    
 2. **Execute a Clean State Test**:
    Launch an administrative shell and run the system file verification tool to ensure driver subsystem integrity:
@@ -157,7 +157,7 @@ If the board is soldered, you can open the switch housing *in situ* using switch
 ```
 
 * **Lubricant Washout Risk:** Fast-evaporating contact cleaners dissolve fluorinated and synthetic greases (such as Krytox 205g0 or Tribosys 3203). If your keyboard has custom hand-lubricated switches, flushing a switch with contact cleaner will wash away the lubricant on the stem rails and floor, changing its acoustic profile and scratchiness. You will likely need to re-lube the stem rails with a fine detail brush afterward.
-* **Optical and Magnetic (Hall Effect) Switches:** Do **not** use this contact cleaner technique on Optical switches (e.g., Gateron Optical) or Hall Effect magnetic switches (e.g., Wooting Lekker). These switches have no physical mechanical contact leaves; their inputs are read via infrared beams or magnetic fields. Chattering in these units is caused by dust on optical sensors, damaged light guides, or loose magnets—a solvent spray will only smear debris onto the sensor lenses.
+* **Optical and Magnetic (Hall Effect) Switches:**Do**not** use this contact cleaner technique on Optical switches (e.g., Gateron Optical) or Hall Effect magnetic switches (e.g., Wooting Lekker). These switches have no physical mechanical contact leaves; their inputs are read via infrared beams or magnetic fields. Chattering in these units is caused by dust on optical sensors, damaged light guides, or loose magnets—a solvent spray will only smear debris onto the sensor lenses.
 
 ---
 

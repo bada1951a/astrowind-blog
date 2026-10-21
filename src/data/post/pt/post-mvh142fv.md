@@ -33,7 +33,7 @@ Esqueça achismos. Vamos abrir a ferramenta nativa do Windows para encontrar o c
 Pressione as teclas `Windows + X` no seu teclado e selecione **Visualizador de Eventos** (ou digite "Visualizador de Eventos" na barra de pesquisa do menu Iniciar e abra o aplicativo).
 
 ### Passo 2: Navegando até os Logs do Windows
-Na coluna à esquerda, clique na seta ao lado de **Logs do Windows** e selecione **Sistema**. 
+Na coluna à esquerda, clique na seta ao lado de **Logs do Windows**e selecione**Sistema**. 
 
 <div style="border-left: 4px solid #0284c7; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Dica de Ouro:</strong> Como a lista de eventos é gigantesca, clique em <strong>Filtrar Log Atual...</strong> no painel à direita para refinar a busca e economizar tempo precioso.
@@ -41,7 +41,7 @@ Na coluna à esquerda, clique na seta ao lado de **Logs do Windows** e selecione
 
 ### Passo 3: Filtrando os Erros Críticos
 No painel de filtro que vai se abrir:
-- Marque as caixas **Crítico** e **Erro**.
+- Marque as caixas **Crítico**e**Erro**.
 - No campo de IDs de eventos, digite o número `41` (que indica reinicialização inesperada, o famoso Kernel-Power).
 - Clique em **OK**.
 
@@ -54,9 +54,9 @@ Procure pelo evento com o horário exato em que o computador travou. Na aba **Ge
 
 Depois de identificar o rastro no Visualizador de Eventos, vale a pena checar o estado geral do hardware através de caminhos rápidos do sistema:
 
-- **Gerenciador de Dispositivos:** Pressione `Windows + X` e abra o **Gerenciador de Dispositivos**. Procure por triângulos amarelos em adaptadores de vídeo ou controladores de barramento universal (USB). Desinstale drivers corrompidos e reinstale a versão mais recente direto do fabricante.
-- **Painel de Controle Tradicional:** Vá em **Painel de Controle** > **Opções de Energia**. Altere o plano de energia para **Alto Desempenho** e desative a opção de "Inicialização Rápida" (Fast Startup), que costuma carregar arquivos corrompidos de sessão anterior e gerar travamentos no Windows 11.
-- **Configurações de Memória:** Abra **Configurações** > **Sistema** > **Recuperação** para testar se há falhas de hardware ou rode a ferramenta nativa de Diagnóstico de Memória do Windows.
+- **Gerenciador de Dispositivos:**Pressione `Windows + X` e abra o**Gerenciador de Dispositivos**. Procure por triângulos amarelos em adaptadores de vídeo ou controladores de barramento universal (USB). Desinstale drivers corrompidos e reinstale a versão mais recente direto do fabricante.
+- **Painel de Controle Tradicional:**Vá em**Painel de Controle**>**Opções de Energia**. Altere o plano de energia para**Alto Desempenho** e desative a opção de "Inicialização Rápida" (Fast Startup), que costuma carregar arquivos corrompidos de sessão anterior e gerar travamentos no Windows 11.
+- **Configurações de Memória:**Abra**Configurações**>**Sistema**>**Recuperação** para testar se há falhas de hardware ou rode a ferramenta nativa de Diagnóstico de Memória do Windows.
 
 ---
 

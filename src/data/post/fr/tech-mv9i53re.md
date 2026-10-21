@@ -9,7 +9,7 @@ theme: "Midnight Navy Royal"
 ---
 
 
-Il est 7h45 ce mardi matin. Je suis assis à mon bureau dans une tour de verre à **La Défense**, le souffle court, les yeux rivés sur mon écran qui refuse obstanément d'ouvrir PowerPoint. À 9h, je dois monter dans le **TGV en direction de Lyon** pour une réunion matinale extrêmement tendue avec un client historique. Mon PC portable souffre d'une lenteur maladive : le ventilateur hurle à la mort, le curseur de la souris saccade, et chaque clic déclenche cette fichue roue de chargement bleue. Le coupable ? Windows 11 qui, dans sa grande générosité, décide de synchroniser le monde entier en tâche de fond pendant que j'essaie simplement de bosser.
+Il est 7h45 ce mardi matin. Je suis assis à mon bureau dans une tour de verre à **La Défense**, le souffle court, les yeux rivés sur mon écran qui refuse obstanément d'ouvrir PowerPoint. À 9h, je dois monter dans le**TGV en direction de Lyon** pour une réunion matinale extrêmement tendue avec un client historique. Mon PC portable souffre d'une lenteur maladive : le ventilateur hurle à la mort, le curseur de la souris saccade, et chaque clic déclenche cette fichue roue de chargement bleue. Le coupable ? Windows 11 qui, dans sa grande générosité, décide de synchroniser le monde entier en tâche de fond pendant que j'essaie simplement de bosser.
 
 Ce genre de panne n'attend jamais le bon moment. Si vous aussi, votre bécane a l'air de traîner un boulet invisible alors que vous avez juste besoin d'efficacité immédiate, sortez votre carnet de notes. Voici le journal de bord de mon intervention d'urgence, heure par heure, pour redonner vie à un Windows 11 essoufflé.
 
@@ -41,7 +41,7 @@ Pas besoin d'être ingénieur système pour régler ça. Voici la procédure exa
 Par défaut, Windows autorise presque tout le monde à s'activer en cachette. On va siffler la fin de la récréation.
 
 - Ouvrez les **Paramètres** de Windows (raccourci clavier : `Touche Windows + I`).
-- Allez dans l'onglet **Applications**, puis cliquez sur **Applications installées**.
+- Allez dans l'onglet **Applications**, puis cliquez sur**Applications installées**.
 - Faites défiler la liste pour traquer les applications superflues (celles dont vous ne vous servez jamais).
 - Cliquez sur les trois petits points à droite du nom de l'application, puis sélectionnez **Options avancées**.
 - Repérez la section **Autorisations des applications en arrière-plan** et changez le menu déroulant de *Toujours* ou *Optimisé par l'alimentation* vers **Jamais**.
@@ -54,11 +54,11 @@ Par défaut, Windows autorise presque tout le monde à s'activer en cachette. On
 On retire le maquillage inutile pour privilégier la performance pure.
 
 - Ouvrez à nouveau les **Paramètres** (`Touche Windows + I`).
-- Naviguez vers **Système** > **À propos de** (ou tapez directement "Performance" dans la barre de recherche du menu Démarrer).
+- Naviguez vers **Système**>**À propos de** (ou tapez directement "Performance" dans la barre de recherche du menu Démarrer).
 - Cliquez sur **Paramètres système avancés** (une petite fenêtre pop-up va s'ouvrir).
 - Dans l'onglet *Paramètres avancés*, sous la section *Performances*, cliquez sur le bouton **Paramètres**.
 - Dans l'onglet *Effets visuels*, cochez l'option **Ajuster pour obtenir les meilleures performances** (ou décochez manuellement les animations de fenêtres et les effets de transparence si vous souhaitez garder un design un minimum propre).
-- Cliquez sur **Appliquer**, puis sur **OK**. Vos fenêtres vont s'ouvrir instantanément, sans fioritures.
+- Cliquez sur **Appliquer**, puis sur**OK**. Vos fenêtres vont s'ouvrir instantanément, sans fioritures.
 
 ---
 
@@ -74,11 +74,5 @@ Pour ne plus jamais vous retrouver bloqué la sueur au front avant une réunion 
 
 ### Foire Aux Questions (FAQ)
 
-**Q1 : Est-ce que désactiver les effets visuels va rendre mon écran moche ?**
-R : Ça enlève les effets de transparence "verre dépoli" et les animations de glissement lorsque vous fermez ou ouvrez une fenêtre. Le rendu devient un peu plus brut, semblable à Windows 10, mais le gain de réactivité sur un PC de bureau ou un portable professionnel est immédiat et flagrant.
-
-**Q2 : Si je bloque les applications en arrière-plan, est-ce que je risque de rater des notifications importantes ?**
-R : Uniquement pour les applications secondaires que vous aurez ciblées (comme l'application Météo ou des jeux). Vos logiciels de messagerie principaux (comme Outlook ou Teams si configurés correctement) resteront actifs lorsqu'ils sont ouverts au premier plan.
-
-**Q3 : Pourquoi mon PC redevient-il lent après quelques mois malgré cette optimisation ?**
+**Q1 : Est-ce que désactiver les effets visuels va rendre mon écran moche ?**R : Ça enlève les effets de transparence "verre dépoli" et les animations de glissement lorsque vous fermez ou ouvrez une fenêtre. Le rendu devient un peu plus brut, semblable à Windows 10, mais le gain de réactivité sur un PC de bureau ou un portable professionnel est immédiat et flagrant.**Q2 : Si je bloque les applications en arrière-plan, est-ce que je risque de rater des notifications importantes ?**R : Uniquement pour les applications secondaires que vous aurez ciblées (comme l'application Météo ou des jeux). Vos logiciels de messagerie principaux (comme Outlook ou Teams si configurés correctement) resteront actifs lorsqu'ils sont ouverts au premier plan.**Q3 : Pourquoi mon PC redevient-il lent après quelques mois malgré cette optimisation ?**
 R : Windows réinstalle parfois des applications par défaut lors des grosses mises à jour semestrielles, et le cache accumulé par votre navigateur web finit par peser lourd. Un petit nettoyage trimestriel des applications installées s'impose pour garder une machine saine.

@@ -72,10 +72,7 @@ Herstart hierna direct je laptop. Je zult zien dat de update-status opnieuw word
 
 ### Veelgestelde vragen (FAQ)
 
-**Verlies ik persoonlijke bestanden als ik de SoftwareDistribution map hernoem?**
-Nee, absoluut niet. Deze map bevat uitsluitend tijdelijke installatiebestanden en updates die gedownload zijn. Je documenten, apps en persoonlijke instellingen blijven volledig intact.
-
-**Kan ik dit ook via de grafische interface (GUI) doen i.p.v. de terminal?**
+**Verlies ik persoonlijke bestanden als ik de SoftwareDistribution map hernoem?**Nee, absoluut niet. Deze map bevat uitsluitend tijdelijke installatiebestanden en updates die gedownload zijn. Je documenten, apps en persoonlijke instellingen blijven volledig intact.**Kan ik dit ook via de grafische interface (GUI) doen i.p.v. de terminal?**
 Dat kan via *Instellingen > Systeem > Opslag*, maar het handmatig stoppen van de services via de Terminal heeft de voorkeur omdat Windows anders direct weer bestanden vergrendelt tijdens het proces.
 
 **Wat moet ik doen als de update hierna alsnog vastloopt?**

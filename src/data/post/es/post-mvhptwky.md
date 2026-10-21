@@ -36,7 +36,7 @@ Para entender por que ocurre esto y como solucionarlo de raiz sin alterar la est
 Como tecnico de sistemas, detesto las soluciones complejas que requieren instalar software de terceros dudoso. Vamos a solucionarlo mediante un comando limpio directamente en la consola del sistema.
 
 #### Paso 1: Abrir la Terminal o Símbolo del sistema con privilegios
-Haz clic en el boton de Inicio, escribe `Terminal` o `cmd`, haz clic derecho sobre la aplicacion y selecciona **"Ejecutar como administrador"**.
+Haz clic en el boton de Inicio, escribe `Terminal` o `cmd`, haz clic derecho sobre la aplicacion y selecciona "**Ejecutar como administrador**".
 
 #### Paso 2: Ejecutar el comando de restauracion del Registro
 Copia y pega el siguiente comando exacto en la ventana negra que acaba de aparecer y presiona Intro:
@@ -46,7 +46,7 @@ reg.exe add "HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\
 ```
 
 #### Paso 3: Reiniciar el proceso del Explorador de archivos
-Para que los cambios surtan efecto de inmediato sin necesidad de reiniciar todo el ordenador, abre el **Administrador de tareas** (puedes usar el acceso directo Ctrl + Shift + Esc), busca la aplicacion llamada **Explorador de archivos** en la lista, haz clic derecho sobre ella y selecciona **Reiniciar**.
+Para que los cambios surtan efecto de inmediato sin necesidad de reiniciar todo el ordenador, abre el **Administrador de tareas**(puedes usar el acceso directo Ctrl + Shift + Esc), busca la aplicacion llamada**Explorador de archivos**en la lista, haz clic derecho sobre ella y selecciona**Reiniciar**.
 
 <div style="border-left: 4px solid #f97316; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Consejo Pro:</strong> Si en el futuro necesitas volver al menu predeterminado de Windows 11 por motivos de auditoria o conformidad corporativa, solo debes abrir de nuevo la terminal como administrador y ejecutar: <code>reg.exe delete "HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}" /f</code>
@@ -76,11 +76,5 @@ Modificar el Registro de Windows es un procedimiento seguro si se siguen los pas
 
 ### Preguntas Frecuentes (FAQ)
 
-**1. ¿Este cambio afecta a la estabilidad general de Windows 11?**
-Absolutamente no. Este comando simplemente habilita una clave de CLSID nativa que Microsoft mantuvo en el codigo del sistema operativo para facilitar la transicion, por lo que no genera errores ni pantallazos azules.
-
-**2. ¿ tendre que repetir este proceso despues de cada actualizacion grande de Windows?**
-En la gran mayoria de las actualizaciones acumulativas mensuales el ajuste se mantiene intacto. Sin embargo, en actualizaciones mayores de caracteristicas anuales, existe una pequeña posibilidad de que Microsoft restablezca el valor por defecto y debas volver a ejecutar el comando.
-
-**3. ¿Puedo aplicar este truco en equipos portatiles y de sobremesa por igual?**
+**1. ¿Este cambio afecta a la estabilidad general de Windows 11?**Absolutamente no. Este comando simplemente habilita una clave de CLSID nativa que Microsoft mantuvo en el codigo del sistema operativo para facilitar la transicion, por lo que no genera errores ni pantallazos azules.**2. ¿ tendre que repetir este proceso despues de cada actualizacion grande de Windows?**En la gran mayoria de las actualizaciones acumulativas mensuales el ajuste se mantiene intacto. Sin embargo, en actualizaciones mayores de caracteristicas anuales, existe una pequeña posibilidad de que Microsoft restablezca el valor por defecto y debas volver a ejecutar el comando.**3. ¿Puedo aplicar este truco en equipos portatiles y de sobremesa por igual?**
 Si, funciona de manera identica en cualquier ediciones de Windows 11 (Home, Pro o Enterprise), ya que el funcionamiento interno del Explorador de archivos es exactamente el mismo en todas las arquitecturas compatibles.

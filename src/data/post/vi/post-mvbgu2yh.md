@@ -33,9 +33,9 @@ Trước khi mổ xẻ các bước fix lỗi, hãy điểm qua lý do tại sao
 
 Khi Taskbar không click được, việc đầu tiên bạn cần làm là ép tiến trình giao diện khởi động lại. Dùng phím tắt là chìa khóa vì chuột lúc này gần như vô tác dụng.
 
-* Nhấn tổ hợp phím **Ctrl + Shift + Esc** để mở **Task Manager** (Quản lý tác vụ).
+* Nhấn tổ hợp phím **Ctrl + Shift + Esc**để mở**Task Manager** (Quản lý tác vụ).
 * Nếu Task Manager không hiện lên, hãy bấm **Ctrl + Alt + Delete** rồi chọn Task Manager.
-* Trong tab **Processes** (Tiến trình), cuộn tìm mục **Windows Explorer** (hoặc tìm chữ "Explorer").
+* Trong tab **Processes**(Tiến trình), cuộn tìm mục**Windows Explorer** (hoặc tìm chữ "Explorer").
 * Click chuột phải vào nó và chọn **Restart** (Khởi động lại). 
 * Màn hình sẽ chớp đen một cái trong vòng 1-2 giây, thanh Taskbar sẽ được tái tạo và hoạt động trở lại bình thường.
 
@@ -45,7 +45,7 @@ Nếu khởi động lại Explorer mà vài phút sau Taskbar lại bị đơ, 
 
 * Nhấn tổ hợp phím **Ctrl + Shift + Esc** để mở lại Task Manager.
 * Trên menu phía trên, bấm vào **Run new task** (Chạy tác vụ mới).
-* Gõ vào ô trống chữ `powershell`, tích chọn ô **Create this task with administrative privileges** (Chạy với quyền quản trị), rồi nhấn **Enter**.
+* Gõ vào ô trống chữ `powershell`, tích chọn ô **Create this task with administrative privileges**(Chạy với quyền quản trị), rồi nhấn**Enter**.
 * Copy và paste đoạn lệnh "thần thánh" sau đây vào cửa sổ PowerShell vừa hiện ra, sau đó nhấn **Enter**:
 
 ```powershell
@@ -60,7 +60,7 @@ Nhiều anh em kỹ thuật tại văn phòng sau khi dính update KB mới nh�
 
 1. Mở Cài đặt bằng phím tắt **Windows + I**.
 2. Chọn **Windows Update** ở cột bên trái.
-3. Chọn tiếp **Update history** -> Cuộn xuống dưới chọn **Uninstall updates**.
+3. Chọn tiếp **Update history**-> Cuộn xuống dưới chọn**Uninstall updates**.
 4. Tìm bản cập nhật gần nhất được cài vào ngày máy bắt đầu lỗi và bấm **Uninstall**.
 
 ---
@@ -82,7 +82,7 @@ Nhiều anh em kỹ thuật tại văn phòng sau khi dính update KB mới nh�
 ## Câu hỏi thường gặp (FAQ)
 
 ### 1. Nếu tôi không thể mở được Task Manager bằng phím tắt Ctrl + Shift + Esc thì phải làm sao?
-Trong trường hợp phím tắt bị khóa hoặc máy đơ toàn tập, hãy bấm **Ctrl + Alt + Delete**, sau đó chọn **Sign out** (Đăng xuất) rồi đăng nhập lại, hoặc giữ nút nguồn cứng 5 giây để tắt hẳn máy và khởi động nguội (Cold Boot).
+Trong trường hợp phím tắt bị khóa hoặc máy đơ toàn tập, hãy bấm **Ctrl + Alt + Delete**, sau đó chọn**Sign out** (Đăng xuất) rồi đăng nhập lại, hoặc giữ nút nguồn cứng 5 giây để tắt hẳn máy và khởi động nguội (Cold Boot).
 
 
 

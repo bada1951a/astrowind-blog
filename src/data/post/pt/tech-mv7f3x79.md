@@ -108,12 +108,12 @@ A reinstalação convencional via instaladores executáveis costuma falhar porqu
 
 1. Baixe a versão mais recente do utilitário **DDU (Display Driver Uninstaller)** de um portal confiável.
 2. Baixe previamente os instaladores oficiais e mais recentes da sua GPU integrada e da sua GPU dedicada no site dos respectivos fabricantes.
-3. Pressione `Win + R`, digite `msconfig` e pressione **Enter**. Na aba **Inicialização do Sistema**, marque a caixa **Inicialização segura** (Modo Mínimo) e reinicie o notebook.
+3. Pressione `Win + R`, digite `msconfig` e pressione **Enter**. Na aba**Inicialização do Sistema**, marque a caixa**Inicialização segura** (Modo Mínimo) e reinicie o notebook.
 4. No Modo de Segurança, abra o DDU:
    - Selecione o tipo de dispositivo: **GPU**.
    - Selecione a fabricante: **Intel / AMD** (GPU integrada primeiro).
    - Clique em **Limpar e NÃO reiniciar**.
-   - Em seguida, selecione **NVIDIA** (GPU dedicada) e clique em **Limpar e Reiniciar**.
+   - Em seguida, selecione **NVIDIA**(GPU dedicada) e clique em**Limpar e Reiniciar**.
 
 ```powershell
 # Dica pro: Desative temporariamente a busca de drivers do Windows Update
@@ -121,17 +121,17 @@ A reinstalação convencional via instaladores executáveis costuma falhar porqu
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate" /v "ExcludeWUDriversInQualityUpdate" /t REG_DWORD /d 1 /f
 ```
 
-5. O Windows reiniciará em resolução básica nativa. Instale primeiro o driver da **placa integrada** e, em seguida, o driver da **placa dedicada**. Reinicie o sistema mais uma vez.
+5. O Windows reiniciará em resolução básica nativa. Instale primeiro o driver da **placa integrada**e, em seguida, o driver da**placa dedicada**. Reinicie o sistema mais uma vez.
 
 ### Etapa 4: Alinhamento de Frequência e Profundidade de Bits
 
 Após a instalação limpa, alinhe as frequências de operação para evitar descarte de sinal:
 
 1. Pressione `Win + I` para abrir as **Configurações**.
-2. Vá em **Sistema** > **Tela** > **Configurações avançadas de tela**.
+2. Vá em **Sistema**>**Tela**>**Configurações avançadas de tela**.
 3. No menu suspenso, selecione o **Monitor 2** (o monitor externo com problema).
-4. Em **Escolher uma taxa de atualização**, reduza temporariamente de valores extremos (ex: 165Hz) para o padrão de bancada mais seguro: **60Hz** ou **120Hz**.
-5. Verifique o campo **Formato de cor**: certifique-se de que está definido como **RGB** e a **Profundidade de bits** em **8 bits** (em vez de 10 bits HDR, que dobra a exigência de largura de banda do cabo).
+4. Em **Escolher uma taxa de atualização**, reduza temporariamente de valores extremos (ex: 165Hz) para o padrão de bancada mais seguro:**60Hz**ou**120Hz**.
+5. Verifique o campo **Formato de cor**: certifique-se de que está definido como**RGB**e a**Profundidade de bits**em**8 bits** (em vez de 10 bits HDR, que dobra a exigência de largura de banda do cabo).
 
 <div style="border-left: 4px solid #8b5cf6; padding: 14px 18px; margin: 24px 0; background-color: rgba(139, 92, 246, 0.05); border-radius: 6px;">
   <strong style="color: #8b5cf6; font-size: 1.05rem;">Dica de Otimização Competitiva:</strong> Se você joga com taxa de atualização alta e quer latência mínima sem oscilações, abra o <strong>Painel de Controle da NVIDIA</strong>, vá em <em>Gerenciar as configurações em 3D</em> > <em>Modo de gerenciamento de energia</em> e selecione <strong>Preferência por desempenho máximo</strong> apenas para os executáveis dos seus jogos, mantendo "Normal" no escopo global para não sobreaquecer o notebook no uso diário.

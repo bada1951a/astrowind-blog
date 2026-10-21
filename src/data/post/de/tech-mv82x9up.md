@@ -72,11 +72,5 @@ Falls Windows wider Erwarten hochfährt, werfen wir noch einen Blick in den **Ge
 
 ## Häufig gestellte Fragen (FAQ)
 
-**1. Meine Mainboard-LED (EZ Debug LED) leuchtet permanent bei "CPU" oder "RAM", obwohl ich den RAM gereinigt habe. Was nun?**
-Das kann an einem zu fest angezogenen CPU-Kühler liegen. Manchmal verzieht sich das PCB des Mainboards minimal, wodurch Pins im CPU-Sockel den Kontakt zu den PCIe- oder RAM-Lanzen verlieren. Löse die Schrauben des CPU-Kühlers um eine halbe Umdrehung.
-
-**2. Der PC bootet nur noch, wenn der RAM im falschen Slot steckt (Single Channel statt Dual Channel). Ist der Slot hinüber?**
-Nicht zwangsläufig. Oft hat sich nur etwas leitfähiger Staub im CPU-Sockel unter den Pins verfangen, oder der Speichercontroller in der CPU hat einen Schuss weg. CPU ausbauen, Sockel mit Druckluft reinigen, wieder einsetzen.
-
-**3. Lohnt sich der Einsatz von Kontaktspray bei alten DDR3/DDR4-Modulen überhaupt noch?**
+**1. Meine Mainboard-LED (EZ Debug LED) leuchtet permanent bei "CPU" oder "RAM", obwohl ich den RAM gereinigt habe. Was nun?**Das kann an einem zu fest angezogenen CPU-Kühler liegen. Manchmal verzieht sich das PCB des Mainboards minimal, wodurch Pins im CPU-Sockel den Kontakt zu den PCIe- oder RAM-Lanzen verlieren. Löse die Schrauben des CPU-Kühlers um eine halbe Umdrehung.**2. Der PC bootet nur noch, wenn der RAM im falschen Slot steckt (Single Channel statt Dual Channel). Ist der Slot hinüber?**Nicht zwangsläufig. Oft hat sich nur etwas leitfähiger Staub im CPU-Sockel unter den Pins verfangen, oder der Speichercontroller in der CPU hat einen Schuss weg. CPU ausbauen, Sockel mit Druckluft reinigen, wieder einsetzen.**3. Lohnt sich der Einsatz von Kontaktspray bei alten DDR3/DDR4-Modulen überhaupt noch?**
 Bei kommerziellen Büro-PCs lohnt der Aufwand meist nicht. Wenn Reinigen mit Isopropanol oder dem Radiergummi nicht hilft, ist der Riegel oder der Slot thermisch gealtert. Ab in den Elektroschrott damit und neu kaufen.

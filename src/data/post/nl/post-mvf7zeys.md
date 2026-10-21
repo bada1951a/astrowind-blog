@@ -55,7 +55,7 @@ Als het een hardware-interrupt is, lossen we dat op via de driver-laag.
 
 #### Stap 3: Systeembestanden herstellen via Instellingen en Terminal
 Soms is de kernel zelf beschadigd door een onvoltooide update. Dit herstellen we met twee simpele commando's.
-1. Klik op Start, typ `cmd`, klik met rechts op **Opdrachtprompt** en kies **Als administrator uitvoeren**.
+1. Klik op Start, typ `cmd`, klik met rechts op **Opdrachtprompt**en kies**Als administrator uitvoeren**.
 2. Typ het volgende commando in en druk op Enter:
    `DISM.exe /Online /Cleanup-image /Restorehealth`
 3. Wacht tot dit klaar is en typ dan het tweede reddingsmiddel in:
@@ -70,11 +70,5 @@ Soms is de kernel zelf beschadigd door een onvoltooide update. Dit herstellen we
 
 ### Veelgestelde Vragen (FAQ)
 
-**1. Kan ik het 'Systeem'-proces zomaar beëindigen in Taakbeheer?**
-Nee, absoluut niet. Als je probeert om het `System`-proces te beeindigen, dwing je een directe kernel-crash af. Je krijgt dan een blauw scherm (BSOD) en al je niet-opgeslagen werk ben je direct kwijt. Gebruik altijd de bovenstaande methoden via de opdrachtprompt of apparaatbeheer.
-
-**2. Mijn laptop blijft loeien, ook na een reboot. Loopt de koelpasta soms stuk?**
-Dat kan op termijn, maar als Taakbeheer aangeeft dat de CPU op 100% draait, ligt het primair aan softwarematige belasting en niet direct aan uitgedroogde koelpasta. Zodra het Systeem-proces is gekalmeerd, zakken de temperaturen binnen 30 seconden naar een gezonde 40 tot 50 graden.
-
-**3. Heeft het uitschakelen van 'SysMain' (voorheen Superfetch) zin?**
+**1. Kan ik het 'Systeem'-proces zomaar beëindigen in Taakbeheer?**Nee, absoluut niet. Als je probeert om het `System`-proces te beeindigen, dwing je een directe kernel-crash af. Je krijgt dan een blauw scherm (BSOD) en al je niet-opgeslagen werk ben je direct kwijt. Gebruik altijd de bovenstaande methoden via de opdrachtprompt of apparaatbeheer.**2. Mijn laptop blijft loeien, ook na een reboot. Loopt de koelpasta soms stuk?**Dat kan op termijn, maar als Taakbeheer aangeeft dat de CPU op 100% draait, ligt het primair aan softwarematige belasting en niet direct aan uitgedroogde koelpasta. Zodra het Systeem-proces is gekalmeerd, zakken de temperaturen binnen 30 seconden naar een gezonde 40 tot 50 graden.**3. Heeft het uitschakelen van 'SysMain' (voorheen Superfetch) zin?**
 Ja, in heel veel gevallen wel. SysMain probeert apps voor te laden in het geheugen, maar dit kan bij intensief gebruik van de SSD of HDD zorgen voor extreme achtergrondactiviteit in het Systeem-proces. Je schakelt dit uit door in de zoekbalk `Services` te typen, naar SysMain te scrollen, rechts te klikken op *Eigenschappen* en het op *Uitgeschakeld* te zetten.

@@ -40,7 +40,7 @@ Berikut adalah prosedur standar operasional (SOP) yang biasa kami terapkan di ka
 Daripada mengunduh aplikasi pembersih pihak ketiga yang kadang membawa *bloatware* atau iklan, mari gunakan fitur bawaan yang sudah dioptimalkan oleh Microsoft.
 
 * Buka **Pengaturan (Settings)** dengan menekan kombinasi tombol `Windows + I`.
-* Navigasi ke menu **Sistem (System)** lalu pilih **Penyimpanan (Storage)**.
+* Navigasi ke menu **Sistem (System)**lalu pilih**Penyimpanan (Storage)**.
 * Nyalakan toggle **Storage Sense** ke posisi *On*. Fitur ini akan otomatis membersihkan file sementara secara berkala.
 * Klik pada opsi **Temporary files**. Tunggu beberapa saat hingga sistem selesai memindai rincian data.
 
@@ -55,7 +55,7 @@ Terkadang Storage Sense melewatkan beberapa direktori tersembunyi. Kita bisa mas
 ### Langkah 3: Eksekusi Disk Cleanup Tingkat Lanjut (System Files)
 Untuk membersihkan file sisa pembaruan Windows yang tersembunyi, kita butuh hak akses tingkat lanjut melalui Alat Administratif.
 
-* Ketik **Disk Cleanup** di kolom pencarian taskbar, lalu pilih **Run as administrator**.
+* Ketik **Disk Cleanup**di kolom pencarian taskbar, lalu pilih**Run as administrator**.
 * Pilih Drive `C:` dan klik OK.
 * Klik tombol **Clean up system files** di bagian bawah jendela aplikasi.
 * Beri tanda centang pada kotak:

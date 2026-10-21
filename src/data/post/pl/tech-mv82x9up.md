@@ -68,11 +68,5 @@ Dodatkowo, jeśli komputer ma cztery sloty na RAM (np. 2 czarne, 2 szare), a Ty 
 
 ## Często Zadawane Pytania (FAQ)
 
-**1. Czy mogę użyć alkoholu izopropylowego (IPA) zamiast gumki do ścierania?**
-Jasne, IPA to inżynieryjny klasyk do czyszczenia elektroniki. Jeśli masz pod ręką wacik bezpyłowy i czysty alkohol izopropylowy (min. 99%), przetrzyj nim styki. Gumka do ścierania jest jednak świetnym, szybkim rozwiązaniem mechanicznym, gdy nie ma pod ręką chemii.
-
-**2. Komputer wstał, ale po ponownym uruchomieniu znowu jest czarny ekran. Co jest grane?**
-To klasyczny objaw uszkodzonego zatrzasku w slocie RAM lub samej kości, która poluzowała się pod wpływem drgań wentylatora. Sprawdź, czy zatrzask "kliknął" podczas wpinania. Jeśli problem wraca, zamień kości miejscami lub przetestuj je pojedynczo w pierwszym slocie.
-
-**3. Czy zepsuty RAM może uszkodzić procesor lub płytę główną?**
+**1. Czy mogę użyć alkoholu izopropylowego (IPA) zamiast gumki do ścierania?**Jasne, IPA to inżynieryjny klasyk do czyszczenia elektroniki. Jeśli masz pod ręką wacik bezpyłowy i czysty alkohol izopropylowy (min. 99%), przetrzyj nim styki. Gumka do ścierania jest jednak świetnym, szybkim rozwiązaniem mechanicznym, gdy nie ma pod ręką chemii.**2. Komputer wstał, ale po ponownym uruchomieniu znowu jest czarny ekran. Co jest grane?**To klasyczny objaw uszkodzonego zatrzasku w slocie RAM lub samej kości, która poluzowała się pod wpływem drgań wentylatora. Sprawdź, czy zatrzask "kliknął" podczas wpinania. Jeśli problem wraca, zamień kości miejscami lub przetestuj je pojedynczo w pierwszym slocie.**3. Czy zepsuty RAM może uszkodzić procesor lub płytę główną?**
 Bardzo rzadko. Najczęściej płyta główna po prostu zablokuje rozruch (włączając diodę DEBUG LED z napisem DRAM) lub wyda serię piknięć alarmowych z głośniczka systemowego (tzw. beepera), zanim dojdzie do jakichkolwiek uszkodzeń termicznych czy elektrycznych.

@@ -39,7 +39,7 @@ Vamos direto ao ponto crítico. Para realizar este procedimento sem erros, siga 
 
 #### Passo 1: Acessar o Prompt de Comando com privilégios elevados
 Vá até a barra de pesquisa do Windows (ou pressione as teclas `Windows + S`), digite **CMD**. 
-Não clique direto. Clique com o botão direito em cima do **Prompt de Comando** e selecione **"Executar como Administrador"**. 
+Não clique direto. Clique com o botão direito em cima do **Prompt de Comando**e selecione "**Executar como Administrador**". 
 
 *Dica de ouro:* Se você estiver em uma máquina corporativa com bloqueios restritos, certifique-se de que sua conta possui privilégios de Administrador local.
 
@@ -63,7 +63,7 @@ Uma janela de diálogo do Windows Script Host aparecerá na tela informando que 
 #### Passo 4: Reiniciar o Explorador de Arquivos (Explorer.exe)
 Para fazer a marca d'água sumir instantaneamente da tela sem precisar reiniciar o computador inteiro (o que salvaria seus minutos preciosos antes da reunião), abra o **Gerenciador de Tarefas** (pressione `Ctrl + Shift + Esc`).
 
-1. Na aba **Processos**, role a lista para baixo até encontrar **Explorador de Windows** (ou *Windows Explorer*).
+1. Na aba **Processos**, role a lista para baixo até encontrar**Explorador de Windows** (ou *Windows Explorer*).
 2. Clique com o botão direito nele e selecione **Reiniciar**.
 3. A barra de tarefas e a área de trabalho vão sumir por um segundo e retornar limpas. A marca d'água terá desaparecido.
 
@@ -76,17 +76,11 @@ Para fazer a marca d'água sumir instantaneamente da tela sem precisar reiniciar
 </div>
 
 * **Verifique a Rede:** Se a máquina for da empresa, reconecte o cabo de rede ou reinicie a VPN corporativa logo após a reunião para que o licenciamento oficial seja aplicado de forma definitiva.
-* **Logs de Eventos:** Se o problema persistir diariamente, verifique o **Visualizador de Eventos** do Windows na seção *Logs do Aplicativo* procurando por erros relacionados ao componente `Microsoft-Windows-Security-Licensing-Manager`.
+* **Logs de Eventos:**Se o problema persistir diariamente, verifique o**Visualizador de Eventos** do Windows na seção *Logs do Aplicativo* procurando por erros relacionados ao componente `Microsoft-Windows-Security-Licensing-Manager`.
 
 ---
 
 ### Perguntas Frequentes (FAQ)
 
-**1. Esse procedimento funciona no Windows 11 Pro e Home?**
-Sim, os comandos baseados no `slmgr.vbs` e a manipulação do serviço `sppsvc` funcionam tanto no Windows 10 quanto no Windows 11. No entanto, edições Home possuem limitações quanto à conexão com servidores de volume KMS corporativo.
-
-**2. A marca d'água vai voltar depois que eu reiniciar o computador?**
-Depende. Se o computador voltar a se comunicar com o servidor de licenças da empresa ou se a chave digital original for revalidada, ela continuará sumida. Caso contrário, após alguns dias ou após novas atualizações do sistema, o aviso poderá retornar, exigindo a inserção da chave definitiva de ativação nas **Configurações**.
-
-**3. O comando `/rearm` afeta meus arquivos ou programas instalados?**
+**1. Esse procedimento funciona no Windows 11 Pro e Home?**Sim, os comandos baseados no `slmgr.vbs` e a manipulação do serviço `sppsvc` funcionam tanto no Windows 10 quanto no Windows 11. No entanto, edições Home possuem limitações quanto à conexão com servidores de volume KMS corporativo.**2. A marca d'água vai voltar depois que eu reiniciar o computador?**Depende. Se o computador voltar a se comunicar com o servidor de licenças da empresa ou se a chave digital original for revalidada, ela continuará sumida. Caso contrário, após alguns dias ou após novas atualizações do sistema, o aviso poderá retornar, exigindo a inserção da chave definitiva de ativação nas**Configurações**.**3. O comando `/rearm` afeta meus arquivos ou programas instalados?**
 De forma alguma. O comando `slmgr.vbs /rearm` apenas redefine o estado de licenciamento do sistema operacional e limpa o cache de notificações visuais. Seus arquivos pessoais, planilhas, softwares instalados e configurações de usuário permanecem absolutamente intactos.

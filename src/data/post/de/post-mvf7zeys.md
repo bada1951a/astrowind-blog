@@ -34,7 +34,7 @@ Lass uns das System ohne Neustart (oder mit minimalem Neustart-Aufwand) wieder s
 ### Schritt 1: Den wahren Verursacher im Task-Manager entlarven
 
 Öffne den **Task-Manager** (Tastenkombination `Strg` + `Shift` + `Esc`). 
-1. Klicke auf den Reiter **Prozesse** und sortiere nach der Spalte **CPU**, indem du darauf klickst.
+1. Klicke auf den Reiter **Prozesse**und sortiere nach der Spalte**CPU**, indem du darauf klickst.
 2. Wenn dort "System" oder "System und komprimierter Speicher" ganz oben steht, klicke mit der rechten Maustaste darauf und wähle **Details anzeigen**.
 3. Da man den Systemprozess selbst (PID 4) nicht einfach beenden kann, müssen wir tiefer graben. Öffne die **Ereignisanzeige** (Suche im Startmenü nach `Ereignisanzeige`). Navigiere zu *Windows-Protokolle* -> *System* und suche nach roten Kritisch- oder Fehler-Einträgen der letzten 10 Minuten. Meistens siehst du hier, welcher Treiber (z. B. `iaStorA.sys` für Intel RST oder ein Realtek LAN-Treiber) Amok läuft.
 

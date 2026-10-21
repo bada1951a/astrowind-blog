@@ -75,7 +75,7 @@ Bevor wir zur Flasche mit dem Kontaktreiniger greifen, stellen wir sicher, dass 
 2. **Keycap entfernen:** Ziehen Sie die Tastenkappe der betroffenen Taste mit einem Draht-Keycap-Puller senkrecht nach oben ab. Verwenden Sie keinen Schraubendreher, um die Haltenasen des Stempels nicht zu beschädigen.
 3. **Stempel herabdrücken:** Drücken Sie den Schalterstempel mit einer Pinzette oder einem Zahnstocher vollständig nach unten, sodass die Öffnung zum Schalterinneren freigelegt wird.
 4. **Dosierung:** Setzen Sie das feine Sprühröhrchen des Kontaktreinigers schräg an den Rand des Stempels an – genau dort, wo die interne Blattfeder sitzt.
-5. **Applikation:** Geben Sie **einen einzigen, ultrakurzen Sprühstoß** (weniger als eine halbe Sekunde) in den Schalter. Der Schalter soll nicht "ertrinken".
+5. **Applikation:**Geben Sie**einen einzigen, ultrakurzen Sprühstoß** (weniger als eine halbe Sekunde) in den Schalter. Der Schalter soll nicht "ertrinken".
 6. **Einarbeiten:** Betätigen Sie den Switch sofort danach 50 bis 80 Mal schnell hintereinander mit dem Finger. Dadurch reibt sich der Schmutz von den Kontaktzungen ab, und das Lösungsmittel verteilt sich über die gesamte Oberfläche.
 7. **Verdunstungszeit einhalten:** Warten Sie mindestens 20 bis 30 Minuten, bis das Lösungsmittel restlos verflüchtigt ist. Nutzen Sie ggf. Druckluftspray aus der Dose, um Reste herauszublasen.
 
@@ -123,7 +123,7 @@ Im RZ-Betrieb gelten strenge Richtlinien für Flüssigkeiten und Gase. Bei Heim-
 Im industriellen IT-Betrieb endet kein Incident ohne Vorbeugemaßnahmen. Um erneute Ausfälle zu verhindern:
 
 1. **Staubschutzabdeckung etablieren:** Bei längerer Nichtbenutzung der Workstation eine Acryl-Abdeckung über die Tastatur legen. Das verhindert 90 % aller Partikeleinträge.
-2. **QMK/VIA Debounce-Konfiguration anpassen:** Wenn Ihre Tastatur Open-Source-Firmware (QMK/ZMK) unterstützt, flashen Sie ein Profil mit angepasstem Entprell-Algorithmus. Wechseln Sie vom aggressiven `sym_defer_g` auf `asym_eager_defer_pk` mit einer Zeitspanne von **8 bis 10 ms**. Dies maskiert Alterungserscheinungen der Feder komplett, ohne dass eine spürbare Latenz entsteht.
+2. **QMK/VIA Debounce-Konfiguration anpassen:**Wenn Ihre Tastatur Open-Source-Firmware (QMK/ZMK) unterstützt, flashen Sie ein Profil mit angepasstem Entprell-Algorithmus. Wechseln Sie vom aggressiven `sym_defer_g` auf `asym_eager_defer_pk` mit einer Zeitspanne von**8 bis 10 ms**. Dies maskiert Alterungserscheinungen der Feder komplett, ohne dass eine spürbare Latenz entsteht.
 3. **Firmware-Updates einspielen:** Hersteller wie Ducky, Corsair oder Razer veröffentlichen regelmäßig Firmware-Patches, die gezielt die Debounce-Filterung für prellende Schalterserien optimieren.
 
 ---

@@ -32,7 +32,7 @@ Bevor wir zur Tat schreiten, müssen wir verstehen, woher dieser Datenmüll eige
 Gehen wir das Problem systematisch an. Wir nutzen dabei ausschließlich Windows-Bordmittel, die du aus dem Arbeitsalltag im Büro bestens kennst. Keine dubiosen Registry-Cleaner aus dem Internet, die am Ende mehr zerstören als helfen.
 
 ### Schritt 1: Die integrierte Windows-Speicheranalyse nutzen
-Drücke die Tastenkombination `Windows-Taste + i`, um die Einstellungen zu öffnen. Navigiere zu **System** und klicke auf **Speicher**. 
+Drücke die Tastenkombination `Windows-Taste + i`, um die Einstellungen zu öffnen. Navigiere zu **System**und klicke auf**Speicher**. 
 * Hier siehst du sofort auf einen Blick, welcher Bereich (Apps, Dokumente, temporäre Dateien) deinen Speicher frisst.
 * Klicke auf **Temporäre Dateien**. Windows scannt nun das System nach veralteten Installationsdateien, Windows-Update-Bereinigungen und alten Protokollen.
 * Setze die Haken bei den Speicherfressern (wähle aber mit Bedacht, ob du deinen "Downloads"-Ordner wirklich leeren möchtest!) und klicke auf **Dateien entfernen**.
@@ -46,10 +46,10 @@ Manchmal greift die automatische Bereinigung nicht tief genug.
 
 ### Schritt 3: Die erweiterte Datenträgerbereinigung als Administrator
 Für alte Systemdateien brauchen wir tiefere Admin-Rechte:
-1. Öffne das Startmenü, tippe **Datenträgerverwaltung** oder besser noch **Datenträgerbereinigung** ein und starte sie. (Noch besser: Rechtsklick auf die App und als Administrator ausführen).
+1. Öffne das Startmenü, tippe **Datenträgerverwaltung**oder besser noch**Datenträgerbereinigung** ein und starte sie. (Noch besser: Rechtsklick auf die App und als Administrator ausführen).
 2. Wähle das Laufwerk `C:` aus.
 3. Klicke im neuen Fenster unten links auf **Systemdateien bereinigen**.
-4. Setze nun die Haken bei **Frühere Windows-Installation(en)**, **Windows Update-Bereinigung** und **Temporäre Installationsdateien**.
+4. Setze nun die Haken bei **Frühere Windows-Installation(en)**,**Windows Update-Bereinigung**und**Temporäre Installationsdateien**.
 5. Klicke auf **OK** und lass das System aufräumen. Das kann je nach Zustand ein paar Minuten dauern, bringt aber meist den entscheidenden Platz zurück.
 
 <div style="border-left: 4px solid #e11d48; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">

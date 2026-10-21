@@ -9,7 +9,7 @@ theme: "Acid Lime Hacker Space"
 ---
 
 
-Jam sudah menunjukkan pukul 16:50 WIB. Hari Jumat sore, minggu penutupan laporan bulanan, dan *big boss* baru saja kirim pesan singkat via WhatsApp: *"Meeting jam 5 sore ini kita pakai ruang utama ya, presentasi data lo udah siap kan?"* Jantung langsung copot. Pas saya buru-buru pencet tombol power PC meja kerja, kipas *case* nyala bergemuruh, lampu RGB *motherboard* kedap-kedip sok ganteng, tapi... layar monitor *dead silent*. Kosong melompong dengan tulisan ikonik: **"No Signal"**. 
+Jam sudah menunjukkan pukul 16:50 WIB. Hari Jumat sore, minggu penutupan laporan bulanan, dan *big boss* baru saja kirim pesan singkat via WhatsApp: *"Meeting jam 5 sore ini kita pakai ruang utama ya, presentasi data lo udah siap kan?"* Jantung langsung copot. Pas saya buru-buru pencet tombol power PC meja kerja, kipas *case* nyala bergemuruh, lampu RGB *motherboard* kedap-kedip sok ganteng, tapi... layar monitor *dead silent*. Kosong melompong dengan tulisan ikonik: "**No Signal**". 
 
 Mau teriak tapi malu sama anak-anak *dev* sebelah. Mau reboot paksa sampai lima kali hasilnya tetap sama: mesin hidup, angin AC CPU muter kenceng, tapi display nihil. Buat ukuran anak IT lapangan, pemandangan kayak gini tuh udah biasa bikin asam lambung naik seketika.
 
@@ -81,8 +81,5 @@ Karena kita lagi ngejar deadline mepet, nggak usah pusing buka-buka command prom
 **Q: Kenapa PC nyala, kipas muter, tapi nggak ada suara *beep* sama sekali dari speaker internal?**
 > A: Kalau tidak ada suara *beep* sama sekali (bahkan beep pendek tanda normal), biasanya masalahnya ada di suplai daya utama (Power Supply / PSU) atau korsleting di jalur 12V CPU, bukan cuma di RAM. Tapi kalau ada bunyi *beep* berulang (misal *beep* panjang 3 kali), itu fix masalah RAM atau VGA card kurang nancap.
 
-**Q: Apakah aman membersihkan pin RAM menggunakan amplas halus?**
-> A: **HARAM!** Jangan pernah pakai amplas, cutter, atau benda tajam buat ngilangin oksidasi di kuningan RAM. Lapisan emas tipis di pin itu gampang banget terkelupas. Kalau lapisan emasnya abis, RAM bakal permanen rusak dan nggak bakal terbaca sama sekali. Cukup pakai penghapus pensil karet.
-
-**Q: Setelah RAM dibersihkan dan dipasang lagi, kenapa PC malah bunyi *beep* panjang terus-menerus?**
+**Q: Apakah aman membersihkan pin RAM menggunakan amplas halus?**> A:**HARAM!**Jangan pernah pakai amplas, cutter, atau benda tajam buat ngilangin oksidasi di kuningan RAM. Lapisan emas tipis di pin itu gampang banget terkelupas. Kalau lapisan emasnya abis, RAM bakal permanen rusak dan nggak bakal terbaca sama sekali. Cukup pakai penghapus pensil karet.**Q: Setelah RAM dibersihkan dan dipasang lagi, kenapa PC malah bunyi *beep* panjang terus-menerus?**
 > A: Itu tandanya posisi pasang RAM lo kurang masuk atau posisinya miring. Pastikan kaitan pengunci di kiri-kanan slot berbunyi "klik" secara otomatis waktu RAM didorong ke bawah. Kalau klipnya belum ngunci sendiri, berarti kontak pin belum pas seratus persen.

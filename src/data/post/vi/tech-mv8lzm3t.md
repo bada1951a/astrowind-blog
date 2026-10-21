@@ -37,9 +37,9 @@ Trước khi vung dao mổ xẻ, phải bắt đúng bệnh thì mới trị d�
 
 Đây là việc cần làm ngay lập tức để giải cứu RAM và CPU lúc boot máy.
 
-*   Nhấn tổ hợp phím **Ctrl + Shift + Esc** để mở **Task Manager**.
+*   Nhấn tổ hợp phím **Ctrl + Shift + Esc**để mở**Task Manager**.
 *   Click vào biểu tượng **Startup apps** (hình đồng hồ tốc độ ở thanh menu bên trái đối với Win 11, hoặc tab *Startup* ở Win 10).
-*   Nhìn vào cột **Startup impact** (Tác động khởi động), lọc ra những app nào có mức độ **High** hoặc **Medium**.
+*   Nhìn vào cột **Startup impact**(Tác động khởi động), lọc ra những app nào có mức độ**High**hoặc**Medium**.
 *   Chuột phải vào các ứng dụng không cần thiết (Zalo, Skype, Discord, Cortana, OneDrive...) và chọn **Disable**. 
 *   *Lưu ý:* Chỉ Disable các phần mềm chat, tiện ích cá nhân. Giữ lại các service của hãng sản xuất như Realtek Audio, Windows Security.
 
@@ -47,7 +47,7 @@ Trước khi vung dao mổ xẻ, phải bắt đúng bệnh thì mới trị d�
 
 Ổ cứng chập chờn cũng là nguyên nhân khiến máy ì ạch. Ta sẽ dùng công cụ dòng lệnh để quét lỗi nhanh:
 
-*   Nhấn tổ hợp **Win + R**, gõ `cmd`, sau đó nhấn **Ctrl + Shift + Enter** để chạy với quyền **Administrator**.
+*   Nhấn tổ hợp **Win + R**, gõ `cmd`, sau đó nhấn**Ctrl + Shift + Enter**để chạy với quyền**Administrator**.
 *   Gõ lệnh kiểm tra và sửa lỗi ổ cứng cơ bản:
     ```cmd
     chkdsk C: /f /r
@@ -59,10 +59,10 @@ Trước khi vung dao mổ xẻ, phải bắt đúng bệnh thì mới trị d�
 
 Tính năng này giúp Windows lưu trạng thái kernel vào một file hibernation khi tắt máy, giúp lần bật sau nhanh hơn đáng kể.
 
-*   Mở **Control Panel** -> Chọn **Power Options**.
+*   Mở **Control Panel**-> Chọn**Power Options**.
 *   Click vào mục **Choose what the power buttons do** ở cột bên trái.
 *   Nhấn vào dòng **Change settings that are currently unavailable** (cần quyền Admin).
-*   Tích chọn vào ô **Turn on fast startup (recommended)**, sau đó nhấn **Save changes**.
+*   Tích chọn vào ô **Turn on fast startup (recommended)**, sau đó nhấn**Save changes**.
 
 ---
 
@@ -76,11 +76,5 @@ Tính năng này giúp Windows lưu trạng thái kernel vào một file hiberna
 
 ### Câu hỏi thường gặp (FAQ)
 
-**1. Tôi đã tắt hết Startup mà máy vẫn khởi động lâu, phải làm sao nữa?**
-> Khả năng cao máy bạn vẫn đang dùng ổ cứng cơ HDD truyền thống. Giải pháp duy nhất và đáng tiền nhất lúc này là nâng cấp lên ổ cứng SSD NVMe. Tốc độ sẽ cải thiện từ 5 đến 10 lần, bấm nút lên nguồn là vào Win trong vòng 10 giây.
-
-**2. Tính năng Fast Startup có gây hại gì cho máy không?**
-> Fast Startup hoàn toàn an toàn, tuy nhiên đôi khi nó gây lỗi hiển thị hoặc xung đột driver phần cứng đời cũ (đặc biệt là card màn hình Nvidia). Nếu máy bạn thỉnh thoảng bị treo logo khi bật lên, hãy thử tắt Fast Startup đi để kiểm tra.
-
-**3. Có nên dùng các phần mềm bên thứ ba như CCleaner để tối ưu khởi động không?**
+**1. Tôi đã tắt hết Startup mà máy vẫn khởi động lâu, phải làm sao nữa?**> Khả năng cao máy bạn vẫn đang dùng ổ cứng cơ HDD truyền thống. Giải pháp duy nhất và đáng tiền nhất lúc này là nâng cấp lên ổ cứng SSD NVMe. Tốc độ sẽ cải thiện từ 5 đến 10 lần, bấm nút lên nguồn là vào Win trong vòng 10 giây.**2. Tính năng Fast Startup có gây hại gì cho máy không?**> Fast Startup hoàn toàn an toàn, tuy nhiên đôi khi nó gây lỗi hiển thị hoặc xung đột driver phần cứng đời cũ (đặc biệt là card màn hình Nvidia). Nếu máy bạn thỉnh thoảng bị treo logo khi bật lên, hãy thử tắt Fast Startup đi để kiểm tra.**3. Có nên dùng các phần mềm bên thứ ba như CCleaner để tối ưu khởi động không?**
 > Tuyệt đối hạn chế. Các phần mềm tối ưu bên thứ ba thường quét sâu vào Registry, đôi khi xóa nhầm các khóa quan trọng khiến hệ điều hành lỗi nặng. Hãy tận dụng các công cụ native sẵn có của Windows như Task Manager và Command Prompt là quá đủ dùng cho một kỹ sư chuyên nghiệp.

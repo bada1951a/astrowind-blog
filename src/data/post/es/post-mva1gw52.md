@@ -36,7 +36,7 @@ Para salir del apuro sin arriesgar la estabilidad del sistema, aplicaremos un m�
 Esta es la ruta más segura para recuperar espacio al instante sin tocar archivos del sistema por error.
 
 * Presiona las teclas `Windows + I` para abrir la **Configuración**.
-* Ve a **Sistema** en el menú de la izquierda y haz clic en **Almacenamiento**.
+* Ve a **Sistema**en el menú de la izquierda y haz clic en**Almacenamiento**.
 * Espera unos segundos a que el sistema analice el uso del disco. Verás un desglose detallado de aplicaciones, documentos y archivos temporales.
 * Haz clic en **Archivos temporales**. Windows escaneará los elementos que se pueden borrar sin peligro.
 * Marca las casillas correspondientes: *Instalaciones anteriores de Windows*, *Archivos temporales de Internet*, *Caché de sombreado de DirectX* y **Archivos de registro de actualización de Windows**.
@@ -54,7 +54,7 @@ Si la fase anterior no ha liberado suficiente espacio, necesitamos acceder manua
 2. Selecciona todo con `Ctrl + E` y bórralo con `Shift + Supr` (para eliminarlo permanentemente sin pasar por la papelera). 
    * *Nota:* Si Windows te avisa de que un archivo está abierto en otra aplicación, simplemente haz clic en "Omitir".
 3. Vuelve a presionar `Windows + R`, escribe esta vez `temp` (sin porcentajes) y pulsa Intro. Repite el proceso de selección y borrado para los temporales del sistema (te pedirá permisos de Administrador).
-4. Finalmente, abre el menú Inicio, escribe **Terminal** o **Símbolo del sistema**, haz clic derecho sobre él y selecciona **Ejecutar como administrador**. Ejecuta el siguiente comando para limpiar el almacenamiento reservado del sistema si es necesario:
+4. Finalmente, abre el menú Inicio, escribe **Terminal**o**Símbolo del sistema**, haz clic derecho sobre él y selecciona**Ejecutar como administrador**. Ejecuta el siguiente comando para limpiar el almacenamiento reservado del sistema si es necesario:
    `Dism.exe /Online /Cleanup-Image /StartComponentCleanup`
 
 ---
@@ -63,17 +63,11 @@ Si la fase anterior no ha liberado suficiente espacio, necesitamos acceder manua
 
 * **Cuidado con los limpiadores de terceros:** Evita usar programas milagrosos descargados de fuentes dudosas que prometen limpiar el registro con un clic. Muchas veces eliminan claves necesarias y rompen dependencias de software.
 * **Puntos de restauración:** Si necesitas liberar una cantidad masiva de espacio de golpe, puedes configurar la protección del sistema para reducir el porcentaje de disco asignado a las copias de seguridad, pero ten en cuenta que perderás puntos de restauración antiguos.
-* **Mantenimiento preventivo:** Configura el **Sensor de almacenamiento** en la configuración de Windows 11 para que elimine automáticamente los archivos temporales de la papelera y la carpeta de descargas cada cierto tiempo.
+* **Mantenimiento preventivo:**Configura el**Sensor de almacenamiento** en la configuración de Windows 11 para que elimine automáticamente los archivos temporales de la papelera y la carpeta de descargas cada cierto tiempo.
 
 ---
 
 ### Preguntas frecuentes (FAQ)
 
-**¿Es seguro borrar todo el contenido de la carpeta Temp (%temp%)?**
-Sí, es completamente seguro. Los archivos que están en uso activo por el sistema o aplicaciones abiertas no se dejarán borrar y recibirás un aviso, por lo que no hay riesgo de corromper el sistema operativo.
-
-**¿Qué hago si mi disco C se vuelve a llenar inmediatamente después de limpiarlo?**
-Lo más probable es que tengas una aplicación configurada para descargar archivos pesados en el disco principal (como herramientas de edición de vídeo o clientes de torrents), o que la caché de actualizaciones de Windows esté corrupta. Revisa el uso de almacenamiento por aplicación en la configuración para identificar al responsable.
-
-**¿Puedo mover la carpeta de Usuarios o Archivos de Programa al disco D para liberar el C?**
+**¿Es seguro borrar todo el contenido de la carpeta Temp (%temp%)?**Sí, es completamente seguro. Los archivos que están en uso activo por el sistema o aplicaciones abiertas no se dejarán borrar y recibirás un aviso, por lo que no hay riesgo de corromper el sistema operativo.**¿Qué hago si mi disco C se vuelve a llenar inmediatamente después de limpiarlo?**Lo más probable es que tengas una aplicación configurada para descargar archivos pesados en el disco principal (como herramientas de edición de vídeo o clientes de torrents), o que la caché de actualizaciones de Windows esté corrupta. Revisa el uso de almacenamiento por aplicación en la configuración para identificar al responsable.**¿Puedo mover la carpeta de Usuarios o Archivos de Programa al disco D para liberar el C?**
 Aunque técnicamente es posible mediante enlaces simbólicos o modificaciones avanzadas del registro, no se recomienda para la carpeta de Archivos de Programa, ya que puede romper futuras actualizaciones de software. Es mucho más seguro mover las carpetas personales (Documentos, Descargas, Imágenes) haciendo clic derecho en ellas, seleccionando *Propiedades*, y luego en la pestaña *Ubicación*.

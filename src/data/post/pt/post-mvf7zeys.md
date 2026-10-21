@@ -39,7 +39,7 @@ Esqueça teorias complexas. Vamos direto aos comandos e cliques que funcionam no
 
 #### Passo 1: Identificando o culpado no Gerenciador de Tarefas
 Pressione `Ctrl + Shift + Esc` para abrir o **Gerenciador de Tarefas**. 
-* Vá na aba **Processos** e clique na coluna **CPU** para ordenar do maior para o menor uso.
+* Vá na aba **Processos**e clique na coluna**CPU** para ordenar do maior para o menor uso.
 * Se o processo que consome 100% se chamar *Sistema* (System), *Serviço de Host* ou *Interrupções de Sistema*, anote o nome exato.
 * Clique com o botão direito sobre o processo problemático e selecione **Ir para Serviços** para ver qual serviço exato está atrelado a ele.
 
@@ -54,13 +54,13 @@ Muitas vezes, interromper os serviços que gerenciam atualizações e buscas res
 #### Passo 3: Limpando o Cache de Atualizações corrompidas
 Se o passo anterior aliviou o problema, precisamos limpar a pasta onde o Windows guarda os arquivos temporários de update corrompidos.
 1. Abra o **Explorador de Arquivos** e vá até `C:\Windows\SoftwareDistribution`.
-2. Apague todo o conteúdo de dentro das pastas **Download** e **DataStore**. (Se o sistema disser que algum arquivo está em uso, pare o serviço do Windows Update novamente pelo `services.msc` e tente de novo).
+2. Apague todo o conteúdo de dentro das pastas **Download**e**DataStore**. (Se o sistema disser que algum arquivo está em uso, pare o serviço do Windows Update novamente pelo `services.msc` e tente de novo).
 3. Reinicie a máquina normalmente.
 
 #### Passo 4: Verificando drivers no Gerenciador de Dispositivos
 Se o processo *Interrupções de Sistema* continua sugando o processador, o problema é hardware ou driver.
 1. Clique com o botão direito no menu Iniciar e selecione **Gerenciador de Dispositivos**.
-2. Expanda itens como **Controladoras IDE ATA/ATAPI** ou **Adaptadores de Rede**.
+2. Expanda itens como **Controladoras IDE ATA/ATAPI**ou**Adaptadores de Rede**.
 3. Se houver algum dispositivo com um ponto de exclamação amarelo, clique com o botão direito, selecione **Atualizar driver** ou desinstale o dispositivo e reinicie para que o Windows reinstale o driver padrão limpo.
 
 ---
@@ -75,11 +75,4 @@ Se o processo *Interrupções de Sistema* continua sugando o processador, o prob
 
 ### Perguntas Frequentes (FAQ)
 
-**1. Posso simplesmente desativar o Windows Update para o problema nunca mais voltar?**
-Não é recomendado. Embora desativar impeça novos loops de atualização temporariamente, você deixará a máquina vulnerável a falhas de segurança críticas. O ideal é limpar o cache corrompido conforme ensinado no Passo 3 e deixar o sistema atualizar de forma limpa fora do expediente.
-
-**2. O uso de 100% de CPU pode queimar o processador do computador?**
-Processadores modernos possuem mecanismos de proteção térmica (Thermal Throttling) que reduzem a velocidade de clock ou desligam a máquina automaticamente antes que ocorra dano físico permanente. No entanto, deixar a CPU em estresse máximo constante reduz a vida útil da pasta térmica e força os componentes da placa-mãe desnecessariamente.
-
-**3. O que fazer se nenhuma dessas dicas baixar o uso da CPU?**
-Se após parar os serviços e limpar os caches o problema persistir, abra as **Configurações** (`Windows + I`), vá em **Atualização e Segurança > Recuperação** e utilize a ferramenta para redefinir o PC mantendo os arquivos pessoais, ou execute o comando `sfc /scannow` no Prompt de Comando (como Administrador) para reparar arquivos corrompidos do núcleo do Windows.
+**1. Posso simplesmente desativar o Windows Update para o problema nunca mais voltar?**Não é recomendado. Embora desativar impeça novos loops de atualização temporariamente, você deixará a máquina vulnerável a falhas de segurança críticas. O ideal é limpar o cache corrompido conforme ensinado no Passo 3 e deixar o sistema atualizar de forma limpa fora do expediente.**2. O uso de 100% de CPU pode queimar o processador do computador?**Processadores modernos possuem mecanismos de proteção térmica (Thermal Throttling) que reduzem a velocidade de clock ou desligam a máquina automaticamente antes que ocorra dano físico permanente. No entanto, deixar a CPU em estresse máximo constante reduz a vida útil da pasta térmica e força os componentes da placa-mãe desnecessariamente.**3. O que fazer se nenhuma dessas dicas baixar o uso da CPU?**Se após parar os serviços e limpar os caches o problema persistir, abra as**Configurações**(`Windows + I`), vá em**Atualização e Segurança > Recuperação** e utilize a ferramenta para redefinir o PC mantendo os arquivos pessoais, ou execute o comando `sfc /scannow` no Prompt de Comando (como Administrador) para reparar arquivos corrompidos do núcleo do Windows.

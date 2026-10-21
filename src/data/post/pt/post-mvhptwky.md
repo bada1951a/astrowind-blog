@@ -37,7 +37,7 @@ Como sou adepto de soluções limpas e que não exigem softwares de terceiros pe
 
 ### Passo 1: Acessando o Terminal com Poderes de Administrador
 1. Vá até a barra de tarefas e clique no menu Iniciar.
-2. Digite **Terminal** ou **Prompt de Comando**.
+2. Digite **Terminal**ou**Prompt de Comando**.
 3. Clique com o botão direito sobre o aplicativo e selecione **Executar como Administrador**. (Se o Controle de Conta de Usuário perguntar se permite alterações, clique em Sim).
 
 ### Passo 2: Injetando a Chave de Correção do Registro
@@ -53,8 +53,8 @@ reg.exe add "HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\
 
 ### Passo 3: Reiniciando o Explorador de Arquivos
 Para que a alteração tenha efeito imediato sem precisar reiniciar a máquina inteira (o que nos faria perder a reunião), finalize o processo do shell gráfico:
-1. Pressione **Ctrl + Shift + Esc** para abrir o **Gerenciador de Tarefas**.
-2. Na aba **Processos**, role a lista até encontrar o **Explorador de Windows** (ou *explorer.exe*).
+1. Pressione **Ctrl + Shift + Esc**para abrir o**Gerenciador de Tarefas**.
+2. Na aba **Processos**, role a lista até encontrar o**Explorador de Windows** (ou *explorer.exe*).
 3. Clique com o botão direito nele e selecione **Reiniciar**.
 
 Pronto! A barra de tarefas vai sumir e piscar por um segundo, e ao clicar com o botão direito em qualquer arquivo ou na Área de Trabalho, o menu clássico completo estará lá, tal como nos bons tempos.

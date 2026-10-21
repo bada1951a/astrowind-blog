@@ -34,8 +34,8 @@ We gaan nu methodisch te werk. Geen rommelige derde-partij "downloader-apps" met
 ### Stap 1: Gebruik de ingebouwde Opslag-inzichten (Storage Sense)
 We beginnen met de modernste en veiligste methode in Windows 11.
 
-1. Klik op **Start** en open **Instellingen** (het tandwielicoon).
-2. Ga naar **Systeem** en kies vervolgens voor **Opslag**.
+1. Klik op **Start**en open**Instellingen** (het tandwielicoon).
+2. Ga naar **Systeem**en kies vervolgens voor**Opslag**.
 3. Klik bovenaan op **Tijdelijke bestanden**. Windows scant nu je hele systeem op overbodige data zoals Windows Update-opschoning, logboeken van fouten en eerdere installaties.
 4. Vink de items aan die je wilt verwijderen (laat persoonlijke downloads eventueel staan als je die nog wilt controleren).
 5. Klik op **Bestanden verwijderen**.
@@ -46,7 +46,7 @@ Voor het échte oude hang- en sluitwerk pakken we het klassieke hulpprogramma er
 1. Druk op de toetsencombinatie **Windows-toets + R**, typ `cleanmgr` en druk op Enter.
 2. Selecteer je C-schijf en klik op OK.
 3. Klik in het volgende venster direct op de knop **Systeembestanden opschonen**. Dit zorgt ervoor dat ook oude update-installaties worden meegenomen in de scan.
-4. Vink in de lijst onder andere **Vorige Windows-installatie(s)** en **Windows Update-opschoning** aan. 
+4. Vink in de lijst onder andere **Vorige Windows-installatie(s)**en**Windows Update-opschoning** aan. 
 5. Klik op OK en laat de tool zijn werk doen. Dit kan even duren.
 
 <div style="border-left: 4px solid #78350f; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
@@ -64,11 +64,7 @@ Heb je na de opschoning nog steeds te weinig ademruimte? Dan wordt het tijd om g
 
 ## Veelgestelde Vragen (FAQ)
 
-**1. Kan ik zomaar alle bestanden in de map `%temp%` handmatig verwijderen?**
-Ja, in principe wel. Druk op `Windows + R`, typ `%temp%` en selecteer alles met `Ctrl + A` om het te wissen. Bestanden die momenteel door een openstaand programma worden gebruikt, kun je simpelweg overslaan ("overslaan" kiezen als Windows daarom vraagt).
-
-**2. Wat gebeurt er als ik de map `Windows.old` permanent verwijder?**
+**1. Kan ik zomaar alle bestanden in de map `%temp%` handmatig verwijderen?**Ja, in principe wel. Druk op `Windows + R`, typ `%temp%` en selecteer alles met `Ctrl + A` om het te wissen. Bestanden die momenteel door een openstaand programma worden gebruikt, kun je simpelweg overslaan ("overslaan" kiezen als Windows daarom vraagt).**2. Wat gebeurt er als ik de map `Windows.old` permanent verwijder?**
 Deze map wordt gebruikt om terug te keren naar een eerdere versie van Windows 11 als een update mislukt. Als je computer nu stabiel werkt en je hebt de schijfruimte hard nodig, kun je deze map veilig wissen via *Schijfopruiming*. Je kunt daarna alleen niet meer eenvoudig terugkeren naar de vorige OS-versie.
 
-**3. Hoe voorkom ik dat mijn C-schijf in de toekomst weer plotseling volloopt?**
-Zet in de opslaginstellingen de functie **Opslag-inzichten** aan. Windows ruimt dan automatisch tijdelijke bestanden en prullenbak-items op op de achtergrond, zodat jij je kunt focussen op je echte werk in plaats van op harddisk-management.
+**3. Hoe voorkom ik dat mijn C-schijf in de toekomst weer plotseling volloopt?**Zet in de opslaginstellingen de functie**Opslag-inzichten** aan. Windows ruimt dan automatisch tijdelijke bestanden en prullenbak-items op op de achtergrond, zodat jij je kunt focussen op je echte werk in plaats van op harddisk-management.

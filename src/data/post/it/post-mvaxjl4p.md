@@ -35,9 +35,9 @@ Ecco la sequenza esatta da seguire per ripulire l'avvio in meno di sessanta seco
 
 1. **Apri il Task Manager:** Premi la combinazione di tasti `Ctrl + Shift + Esc` (oppure clicca con il tasto destro sulla barra delle applicazioni e seleziona "Gestione attività").
 2. **Espandi la finestra:** Se vedi una visualizzazione ridotta, clicca su "Più dettagli" in basso a sinistra per accedere alla vista avanzata.
-3. **Vai alla scheda Avvio:** Clicca sulla scheda **Avvio** nella barra superiore. Qui vedrai la lista completa dei programmi configurati per avviarsi insieme a Windows 10.
+3. **Vai alla scheda Avvio:**Clicca sulla scheda**Avvio** nella barra superiore. Qui vedrai la lista completa dei programmi configurati per avviarsi insieme a Windows 10.
 4. **Analizza l'Impatto di avvio:** Guarda la colonna "Impatto di avvio". I programmi etichettati come *Alto* o *Medio* sono i principali indiziati del tuo rallentamento.
-5. **Disattiva il superfluo:** Clicca con il tasto destro sul programma che non ti serve immediatamente all'avvio (ad esempio Cortana, Steam, updater vari) e seleziona **Disattiva**.
+5. **Disattiva il superfluo:**Clicca con il tasto destro sul programma che non ti serve immediatamente all'avvio (ad esempio Cortana, Steam, updater vari) e seleziona**Disattiva**.
 
 <div style="border-left: 4px solid #4338ca; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Consiglio Pro dall'Infrastruttura:</strong> Non toccare mai i driver hardware essenziali o i software di sicurezza come il tuo antivirus (Windows Defender o soluzioni aziendali). Concentrati solo sulle applicazioni di consumo e sui tool di terze parti.
@@ -53,11 +53,5 @@ Se dopo questa pulizia noti ancora lentezze anomale, ti consiglio di verificare 
 
 ## Domande Frequenti (FAQ)
 
-**1. Disattivando un programma dall'avvio, perderò i miei dati o smetterà di funzionare?**
-Assolutamente no. Disattivare un programma nella scheda Avvio significa semplicemente impedirgli di aprirsi automaticamente in background quando accendi il PC. Potrai comunque avviarlo manualmente facendo clic sulla sua icona quando ti serve davvero.
-
-**2. Quali programmi posso disattivare senza rischi?**
-Puoi disattivare tranquillamente i launcher di giochi (Steam, Epic Games), le app di chat che non usi subito (Discord, Skype), i lettori multimediali e i vari assistenti di aggiornamento di produttori terzi (Adobe Updater, Java Update, ecc.). Lascia attivi solo l'antivirus e i driver audio/touchpad.
-
-**3. Devo riavviare il computer dopo aver fatto le modifiche?**
+**1. Disattivando un programma dall'avvio, perderò i miei dati o smetterà di funzionare?**Assolutamente no. Disattivare un programma nella scheda Avvio significa semplicemente impedirgli di aprirsi automaticamente in background quando accendi il PC. Potrai comunque avviarlo manualmente facendo clic sulla sua icona quando ti serve davvero.**2. Quali programmi posso disattivare senza rischi?**Puoi disattivare tranquillamente i launcher di giochi (Steam, Epic Games), le app di chat che non usi subito (Discord, Skype), i lettori multimediali e i vari assistenti di aggiornamento di produttori terzi (Adobe Updater, Java Update, ecc.). Lascia attivi solo l'antivirus e i driver audio/touchpad.**3. Devo riavviare il computer dopo aver fatto le modifiche?**
 Sì, per verificare l'effettivo miglioramento dei tempi di boot e liberare la memoria, ti consiglio di riavviare il sistema una volta completata la selezione nel Task Manager. Noterai subito la differenza alla schermata di login.

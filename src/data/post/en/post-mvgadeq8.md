@@ -23,7 +23,7 @@ In front of a room full of venture capitalists and board members, projecting a m
 
 When faced with this annoying overlay, most panicked sysadmins or office workers make classic mistakes that waste precious minutes:
 
-1. **Wasting Time in Settings:** Clicking frantically through **Settings > Update & Security > Activation** only to find a generic error code because the corporate VPN hasn't synced with the KMS host yet.
+1. **Wasting Time in Settings:**Clicking frantically through**Settings > Update & Security > Activation** only to find a generic error code because the corporate VPN hasn't synced with the KMS host yet.
 2. **Downloading Shady Third-Party Tools:** Grabbing sketchy "watermark remover" executables from random internet forums, which immediately trigger Windows Defender or, worse, inject unwanted adware right before a high-stakes meeting.
 3. **Endless Reboots:** Restarting the Explorer process or rebooting the machine repeatedly, hoping the desktop rendering engine will magically drop the overlay layer. 
 
@@ -46,7 +46,7 @@ Before running any quick fixes, it helps to understand why Windows decides to sl
 Instead of risking third-party software, we can use a native script method via Command Prompt to temporarily halt the notification trigger and clear the display layer. Follow these exact steps:
 
 ### Step 1: Open Command Prompt with Administrator Privileges
-Click the Windows Start button, type `cmd`, and instead of just hitting Enter, right-click on **Command Prompt** and select **Run as administrator**. 
+Click the Windows Start button, type `cmd`, and instead of just hitting Enter, right-click on **Command Prompt**and select**Run as administrator**. 
 
 <div style="border-left: 4px solid #64748b; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Pro Tip:</strong> You can also use the shortcut keys `Ctrl + Shift + Enter` after searching for CMD to instantly launch it with elevated admin rights.

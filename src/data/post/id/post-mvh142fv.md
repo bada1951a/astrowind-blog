@@ -38,14 +38,14 @@ Sebelum masuk ke langkah teknis, mari kita bedah tiga penyebab utama kenapa Wind
 Mari kita bedah kejadian di Sudirman tadi menggunakan langkah-langkah sistematis yang bisa Anda ikuti langsung di meja kerja Anda.
 
 #### Langkah 1: Membuka Event Viewer
-1. Klik tombol **Start** di Windows 11, ketik **Event Viewer**, lalu tekan Enter.
-2. Pada panel sebelah kiri, klik dua kali pada **Windows Logs**, lalu pilih **System**. Di sinilah semua catatan aktivitas hardware dan driver sistem disimpan.
+1. Klik tombol **Start**di Windows 11, ketik**Event Viewer**, lalu tekan Enter.
+2. Pada panel sebelah kiri, klik dua kali pada **Windows Logs**, lalu pilih**System**. Di sinilah semua catatan aktivitas hardware dan driver sistem disimpan.
 
 #### Langkah 2: Menyaring Kejadian Kritis (Critical & Error)
 Karena log sistem sangat banyak, kita tidak perlu membaca semuanya satu per satu. Kita cari waktu persis di mana PC Anda tadi freeze.
 1. Di panel sebelah kanan, klik **Filter Current Log...**
 2. Pada bagian *Logged*, pilih rentang waktu kejadian (misalnya: *Last 1 hour* atau *Last 24 hours*).
-3. Pada kotak centang *Event Level*, centang **Critical** dan **Error**, lalu klik **OK**.
+3. Pada kotak centang *Event Level*, centang **Critical**dan**Error**, lalu klik**OK**.
 
 #### Langkah 3: Berburu Kode Error (The Smoking Gun)
 Cari kejadian tepat pada menit-menit sebelum PC Anda dipaksa mati. Perhatikan beberapa Event ID yang sering menjadi tersangka utama:
@@ -84,10 +84,7 @@ Setelah Anda menemukan biang keroknya melalui Event Viewer, lakukan langkah peng
 
 ### FAQ (Pertanyaan yang Sering Diajukan)
 
-**Q: Apakah Event Viewer bisa memperbaiki komputer secara otomatis?**  
-A: Tidak. Event Viewer berfungsi sebagai "rekaman CCTV" atau diagnostik untuk mendeteksi letak kerusakan secara presisi, sehingga Anda tidak salah dalam mengambil tindakan perbaikan (tidak salah beli komponen atau salah instal software).
-
-**Q: Kenapa banyak sekali tulisan Error di Event Viewer padahal PC saya terasa normal?**  
+**Q: Apakah Event Viewer bisa memperbaiki komputer secara otomatis?**A: Tidak. Event Viewer berfungsi sebagai "rekaman CCTV" atau diagnostik untuk mendeteksi letak kerusakan secara presisi, sehingga Anda tidak salah dalam mengambil tindakan perbaikan (tidak salah beli komponen atau salah instal software).**Q: Kenapa banyak sekali tulisan Error di Event Viewer padahal PC saya terasa normal?**  
 A: Jangan panik. Tidak semua *Error* berakibat fatal. Windows sering kali mencatat error latar belakang (background service) yang gagal start lalu mencoba ulang secara otomatis tanpa mengganggu pengguna. Fokuskan pencarian pada jam-jam spesifik di mana PC Anda benar-benar mengalami freeze atau crash.
 
 **Q: Apa yang harus saya lakukan jika Event Viewer hanya menunjukkan Kernel-Power (ID 41) tanpa ada petunjuk error lain sebelumnya?**  

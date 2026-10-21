@@ -38,14 +38,14 @@ Let's clear out that storage safely using native Windows tools. No sketchy third
 #### Step 1: Run Windows Storage Sense and Built-in Cleanup
 Instead of downloading unverified registry cleaners, use the heavy-duty utility built directly into Windows.
 * Press `Windows Key + I` to open **Settings**.
-* Navigate to **System** > **Storage**.
+* Navigate to **System**>**Storage**.
 * Click on **Temporary files** and let Windows scan your system. This might take a minute.
-* Check the boxes for **Previous Windows installations**, **Windows Update Cleanup**, **Temporary files**, and **Delivery Optimization Files**. 
+* Check the boxes for **Previous Windows installations**,**Windows Update Cleanup**,**Temporary files**, and**Delivery Optimization Files**. 
 * Click **Remove files**. This alone usually recovers anywhere from 5GB to 30GB instantly.
 
 #### Step 2: Purge the Hidden User Temp Folders via PowerShell
 Now it is time to hit the deep hidden directories where applications dump their daily trash.
-* Press `Windows Key + X` and select **Terminal** or **PowerShell** (run as Administrator).
+* Press `Windows Key + X` and select **Terminal**or**PowerShell** (run as Administrator).
 * Type the following command to open your user temp folder directly in File Explorer:
   `explorer %temp%`
 * Once the folder opens, press `Ctrl + A` to select all files, then press `Shift + Delete` to permanently remove them. 
@@ -66,11 +66,4 @@ Next, let's tackle the system-wide temporary repository.
 
 ### Expert FAQ: Common Questions Answered
 
-**Q: Is it safe to delete everything inside the `%temp%` folder?**
-A: Yes! The contents of temporary folders are strictly meant to be short-term storage for running applications and installers. If a file is currently being used by an active program, Windows will simply block you from deleting it, keeping your system safe from crashes.
-
-**Q: How can I prevent my C drive from filling up again next month?**
-A: Turn on **Storage Sense** in your Windows Settings (`System > Storage > Storage Sense`). Set it to automatically run during low-disk situations and configure it to purge your Recycle Bin and temporary cloud-content files on a regular schedule.
-
-**Q: My drive is still full even after deleting temp files. What should I check next?**
-A: Download and run **TreeSize Free** or **WizTree**. These lightweight tools instantly scan your C drive and visually map out every single folder by file size, allowing you to easily spot massive forgotten video files, virtual machine disks, or old game installations hiding in obscure directories.
+**Q: Is it safe to delete everything inside the `%temp%` folder?**A: Yes! The contents of temporary folders are strictly meant to be short-term storage for running applications and installers. If a file is currently being used by an active program, Windows will simply block you from deleting it, keeping your system safe from crashes.**Q: How can I prevent my C drive from filling up again next month?**A: Turn on**Storage Sense**in your Windows Settings (`System > Storage > Storage Sense`). Set it to automatically run during low-disk situations and configure it to purge your Recycle Bin and temporary cloud-content files on a regular schedule.**Q: My drive is still full even after deleting temp files. What should I check next?**A: Download and run**TreeSize Free**or**WizTree**. These lightweight tools instantly scan your C drive and visually map out every single folder by file size, allowing you to easily spot massive forgotten video files, virtual machine disks, or old game installations hiding in obscure directories.

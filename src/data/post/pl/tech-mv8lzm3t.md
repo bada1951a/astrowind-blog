@@ -41,7 +41,7 @@ Odrzucamy wszelkie szemrane programy "szuwarek-optimizer" z internetu. Zrobimy t
 ### Krok 1: Oczyszczanie Menedżera Zadania (Task Manager)
 Zapomnij o starym `msconfig`. Od czasów Windows 10 i 11 mamy do dyspozycji dedykowaną zakładkę w Menedżerze Zadań, która bezlitośnie obnaża zasobożerność startera.
 
-1. Wciśnij skrót klawiszowy **Ctrl + Shift + Esc**, aby natychmiast uruchomić **Menedżer zadań**.
+1. Wciśnij skrót klawiszowy **Ctrl + Shift + Esc**, aby natychmiast uruchomić**Menedżer zadań**.
 2. Jeśli widzisz uproszczony widok, kliknij **Więcej szczegółów** na dole okna.
 3. Przejdź do zakładki z ikoną licznika/miernika – **Aplikacje startowe** (lub *Autostart* w starszych wersjach).
 4. Posortuj listę według kolumny **Wpływ na uruchamianie** (*Startup impact*).
@@ -55,7 +55,7 @@ Jeśli nie masz pewności, czym jest dany proces (np. nazwa to losowy ciąg lite
 ### Krok 2: Głębokie Cięcie przez Wiersz Polecenia (Dla ambitnych)
 Jeśli standardowy interfejs zawodzi albo podejrzewasz, że w systemie siedzi ukryty syf, sprawdźmy klucz rejestru odpowiedzialny za start systemu bezpośrednio z poziomu konsoli.
 
-1. Wciśnij **Win + R**, wpisz `cmd`, a następnie wciśnij **Ctrl + Shift + Enter**, aby uruchomić **Wiersz polecenia jako Administrator**.
+1. Wciśnij **Win + R**, wpisz `cmd`, a następnie wciśnij**Ctrl + Shift + Enter**, aby uruchomić**Wiersz polecenia jako Administrator**.
 2. Wklej poniższe polecenie, aby wyciągnąć listę aplikacji startowych z rejestru i zapisać je do pliku na pulpicie do wglądu:
    ```cmd
    reg query "HKCU\Software\Microsoft\Windows\CurrentVersion\Run" > C:\Users\%USERNAME%\Desktop\autostart_user.txt
@@ -96,7 +96,7 @@ Zanim zaczniesz bezmyślnie klikać "Wyłącz", spójrz na tę krótką listę r
 **A:** Niektóre aplikacje mają własne ustawienia wewnętrzne, które przy każdym uruchomieniu programu same dopisują się z powrotem do autostartu. Wejdź w *Ustawienia* (Settings) danej aplikacji (np. Skype, Steam, Torrenty) i tam odznacz opcję "Uruchom wraz z systemem". Dopiero wtedy zniknie na dobre.
 
 ### Q2: Czy czyszczenie autostartu jest bezpieczne dla moich danych?
-**A:** W 100% bezpieczne. Wyłączenie aplikacji w autostarcie **nie oznacza** jej odinstalowania. Programy te nadal będą działać idealnie, gdy klikniesz ich ikonkę ręcznie. Po prostu przestaną marnować zasoby komputera w momencie, gdy Ty próbujesz spokojnie zacząć pracę.
+**A:**W 100% bezpieczne. Wyłączenie aplikacji w autostarcie**nie oznacza** jej odinstalowania. Programy te nadal będą działać idealnie, gdy klikniesz ich ikonkę ręcznie. Po prostu przestaną marnować zasoby komputera w momencie, gdy Ty próbujesz spokojnie zacząć pracę.
 
 ### Q3: Mój dysk to stary HDD. Czy samo wyłączenie autostartu mi pomoże?
 **A:** Pomoże, ale na krótko. Tradycyjne dyski talerzowe (HDD) mają dramatycznie niski wskaźnik IOPS (operacji wejścia/wyjścia na sekundę). Przy starcie Windowsa głowica dysku skacze w tysiące miejsc jednocześnie, próbując załadować wszystko naraz. Jeśli chcesz autentycznego kopa, jedynym trwałym rozwiązaniem jest migracja systemu na dysk SSD (M.2 NVMe lub SATA). Autostart to tylko półśrodek, choć niezwykle skuteczny na start.

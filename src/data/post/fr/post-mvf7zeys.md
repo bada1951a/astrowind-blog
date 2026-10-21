@@ -53,8 +53,8 @@ Puisque le problème touche le cœur du système d'exploitation, nous allons uti
 Si le problème persiste après le redémarrage, le coupable est souvent un service en conflit :
 1. Appuyez sur `Windows + R`, tapez `services.msc` et validez.
 2. Faites défiler la liste pour trouver **Windows Search**.
-3. Faites un clic droit dessus, choisissez **Propriétés**, puis cliquez sur **Arrêter**. 
-4. Passez le type de démarrage sur **Désactivé** temporairement pour voir si votre utilisation du CPU redescend instantanément sous les 10%. Faites de même pour **Windows Update** si une mise à jour est plantée.
+3. Faites un clic droit dessus, choisissez **Propriétés**, puis cliquez sur**Arrêter**. 
+4. Passez le type de démarrage sur **Désactivé**temporairement pour voir si votre utilisation du CPU redescend instantanément sous les 10%. Faites de même pour**Windows Update** si une mise à jour est plantée.
 
 ---
 
@@ -69,11 +69,5 @@ En tant que technicien support, voici quelques règles d'or pour éviter que cel
 
 ### Foire Aux Questions (FAQ)
 
-**Q1 : Mon PC freeze tellement que je ne peux même pas ouvrir le Gestionnaire des tâches, que faire ?**
-R1 : Utilisez le raccourci d'urgence `Ctrl + Alt + Suppr` qui possède un canal prioritaire dans le noyau Windows. De là, cliquez sur "Gestionnaire des tâches" ou, en dernier recours, maintenez le bouton physique d'alimentation de votre tour ou portable pendant 5 secondes pour forcer l'extinction, puis redémarrez.
-
-**Q2 : Est-ce que réinitialiser mon PC est indispensable si le processus Système recommence ?**
-R2 : Non, dans 90% des cas, un nettoyage des pilotes réseau et une désactivation temporaire de l'indexation Windows suffisent amplement à régler le problème définitivement sans formater.
-
-**Q3 : Pourquoi le ventilateur fait-il autant de bruit quand le CPU est à 100 pourcent ?**
+**Q1 : Mon PC freeze tellement que je ne peux même pas ouvrir le Gestionnaire des tâches, que faire ?**R1 : Utilisez le raccourci d'urgence `Ctrl + Alt + Suppr` qui possède un canal prioritaire dans le noyau Windows. De là, cliquez sur "Gestionnaire des tâches" ou, en dernier recours, maintenez le bouton physique d'alimentation de votre tour ou portable pendant 5 secondes pour forcer l'extinction, puis redémarrez.**Q2 : Est-ce que réinitialiser mon PC est indispensable si le processus Système recommence ?**R2 : Non, dans 90% des cas, un nettoyage des pilotes réseau et une désactivation temporaire de l'indexation Windows suffisent amplement à régler le problème définitivement sans formater.**Q3 : Pourquoi le ventilateur fait-il autant de bruit quand le CPU est à 100 pourcent ?**
 R3 : C'est une réaction physique normale. Lorsque l'utilisation du processeur atteint son maximum, la dissipation thermique augmente fortement. Le BIOS accélère automatiquement la ventilation pour éviter la surchauffe et la fusion des composants.

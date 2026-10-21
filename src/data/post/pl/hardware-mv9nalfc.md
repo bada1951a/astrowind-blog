@@ -31,7 +31,7 @@ Zanim przejdziemy do czyszczenia, warto zrozumieć, dlaczego dysk C puchnie bez 
 
 ## Krok po kroku: Jak skutecznie oczyścić dysk C
 
-Do diagnostyki i szybkiego czyszczenia wykorzystamy wbudowane narzędzia systemowe, takie jak **Menedżer zadań**, **Wiersz polecenia** oraz klasyczne menu oczyszczania dysku.
+Do diagnostyki i szybkiego czyszczenia wykorzystamy wbudowane narzędzia systemowe, takie jak **Menedżer zadań**,**Wiersz polecenia** oraz klasyczne menu oczyszczania dysku.
 
 ### Krok 1: Wstępna diagnoza i zamknięcie procesów w tle
 Zanim skasujesz cokolwiek, upewnij się, że żadna zawieszona aplikacja nie zapisuje właśnie gigantycznego pliku dziennika (logów).

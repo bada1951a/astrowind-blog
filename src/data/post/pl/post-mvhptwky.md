@@ -27,7 +27,7 @@ Zanim przejdziemy do naprawy, rzućmy okiem na to, z czym dokładnie walczymy. D
 
 1. **Warstwa abstrakcji XAML:** Nowe menu renderowane jest w nowym silniku wizualnym, który dba o estetykę, ale drastycznie obniża czas reakcji (tzw. input lag) przy szybkich operacjach na plikach.
 2. **Ukrywanie rozszerzeń powłoki (Shell Extensions):** Programy takie jak 7-Zip, Notepad++, czy klient sieci VPN automatycznie rejestrują się w systemie. W Windows 11 ich wpisy trafiają do podmenu "Pokaż więcej opcji", zmuszając użytkownika do wykonywania zbędnych ruchów kursorem.
-3. **Brak konfigurowalności:** Microsoft domyślnie nie daje prostego przełącznika w klasycznej aplikacji **Ustawienia**, co zmusza nas do grzebania w rejestrze systemowym (`Regedit`).
+3. **Brak konfigurowalności:**Microsoft domyślnie nie daje prostego przełącznika w klasycznej aplikacji**Ustawienia**, co zmusza nas do grzebania w rejestrze systemowym (`Regedit`).
 
 ---
 
@@ -41,13 +41,13 @@ Nie potrzebujemy do tego żadnych zewnętrznych programów instalowanych z podej
 2. W pasku adresowym na górze edytora wklej poniższą ścieżkę i zatwierdź Enterem:
    `HKEY_CURRENT_USER\Software\Classes\CLSID`
    *(Alternatywnie możesz przeklikać się ręcznie przez gałęzie drzewa po lewej stronie).*
-3. Kliknij prawym przyciskiem myszy na klucz `CLSID`, wybierz **Nowy** -> **Klucz**, a następnie nadaj nowemu folderowi dokładnie taką nazwę (najlepiej skopiuj ją stąd, aby uniknąć literówki):
+3. Kliknij prawym przyciskiem myszy na klucz `CLSID`, wybierz **Nowy**->**Klucz**, a następnie nadaj nowemu folderowi dokładnie taką nazwę (najlepiej skopiuj ją stąd, aby uniknąć literówki):
    `{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}`
-4. Teraz kliknij prawym przyciskiem myszy na nowo utworzony klucz `{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}`, wybierz **Nowy** -> **Klucz** i nazwij go:
+4. Teraz kliknij prawym przyciskiem myszy na nowo utworzony klucz `{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}`, wybierz **Nowy**->**Klucz** i nazwij go:
    `InprocServer32`
 5. Wewnątrz klucza `InprocServer32` spójrz na prawą stronę ekranu. Kliknij dwukrotnie na domyślną wartość **(Domyślna)** (Default).
 6. Upewnij się, że pole "Dane wartości" jest całkowicie puste, po czym kliknij **OK**. Wartość domyślna powinna przyjąć stan `(wartość nie ustawiona)`.
-7. Ostatni krok techniczny to restart interfejsu systemowego. Otwórz **Menedżer zadań** (skrót `Ctrl + Shift + Esc`), znajdź na liście procesów **Eksplorator Windows** (Windows Explorer), kliknij na niego prawym przyciskiem myszy i wybierz **Uruchom ponownie**.
+7. Ostatni krok techniczny to restart interfejsu systemowego. Otwórz **Menedżer zadań**(skrót `Ctrl + Shift + Esc`), znajdź na liście procesów**Eksplorator Windows**(Windows Explorer), kliknij na niego prawym przyciskiem myszy i wybierz**Uruchom ponownie**.
 
 <div style="border-left: 4px solid #f59e0b; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Wskazówka inżyniera:</strong> Po ponownym uruchomieniu Eksploratora pasek zadań na chwilę zniknie i pojawi się ponownie to całkowicie normalne. Oznacza to, że proces explorer.exe pomyślnie załadował nowe ustawienia rejestru.
@@ -82,8 +82,5 @@ Podczas pracy z edycją rejestru systemowego łatwo o pomyłkę, która może sk
 **1. Czy ta metoda działa w najnowszej wersji Windows 11 (24H2)?**
 Tak. Klucz rejestru `86ca1aa0-34aa-4e8b-a509-50c905bae2a2` został zaprojektowany przez Microsoft jako ukryty przełącznik wsteczny (ang. *fallback*) i działa niezawodnie również w wydaniach 24H2.
 
-**2. Co zrobić, jeśli chcę w przyszłości wrócić do domyślnego menu Windows 11?**
-To bardzo proste. Wystarczy, że wejdziesz do Edytora rejestru pod klucz `HKEY_CURRENT_USER\Software\Classes\CLSID` i całkowicie usuniesz utworzony wcześniej folder `{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}` wraz z jego podkluczem `InprocServer32`. Po ponownym uruchomieniu Eksploratora Windows system wróci do ustawień fabrycznych.
-
-**3. Czy ta modyfikacja wpłynie na stabilność stabilność komputera lub bezpieczeństwo danych?**
+**2. Co zrobić, jeśli chcę w przyszłości wrócić do domyślnego menu Windows 11?**To bardzo proste. Wystarczy, że wejdziesz do Edytora rejestru pod klucz `HKEY_CURRENT_USER\Software\Classes\CLSID` i całkowicie usuniesz utworzony wcześniej folder `{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}` wraz z jego podkluczem `InprocServer32`. Po ponownym uruchomieniu Eksploratora Windows system wróci do ustawień fabrycznych.**3. Czy ta modyfikacja wpłynie na stabilność stabilność komputera lub bezpieczeństwo danych?**
 Absolutnie nie. Modyfikacja dotyczy wyłącznie sposobu renderowania interfejsu graficznego powłoki systemu (Shell). Nie ma żadnego wpływu na integralność plików systemowych, sterowniki sprzętowe ani bezpieczeństwo danych przechowywanych na dysku twardym.

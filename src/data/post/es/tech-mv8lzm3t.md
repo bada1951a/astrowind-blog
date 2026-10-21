@@ -63,7 +63,7 @@ Muchos servicios de Windows vienen activados por defecto ("Automático") sin que
 
 1. Presiona `Win + R`, escribe `services.msc` y pulsa Enter.
 2. Busca servicios como *SysMain* (antes Superfetch) si el equipo usa un SSD rápido (a veces genera picos de I/O innecesarios), o servicios de telemetría agresiva que consumen ciclos de CPU al arrancar.
-3. Cámbiales el tipo de inicio a **Manual** o **Deshabilitado** según las políticas de seguridad de tu organización.
+3. Cámbiales el tipo de inicio a **Manual**o**Deshabilitado** según las políticas de seguridad de tu organización.
 
 <div style="border-left: 4px solid #84cc16; padding: 12px 16px; margin: 20px 0; background-color: rgba(132, 204, 22, 0.05); border-radius: 4px;">
 <strong>💡 Nota del Ingeniero:</strong> Antes de modificar claves en el registro o desactivar servicios críticos, asegúrate de crear un punto de restauración o una imagen de respaldo con herramientas open-source como <em>Clonezilla</em> si estás manejando estaciones de alta criticidad.
@@ -73,11 +73,5 @@ Muchos servicios de Windows vienen activados por defecto ("Automático") sin que
 
 ## FAQ: Dudas de trinchera sobre optimización de equipos
 
-**P: ¿Desactivar aplicaciones en el inicio afecta a su funcionamiento normal cuando las abro manualmente?**
-R: Para nada. Lo único que evitas es que el programa cargue su proceso en segundo plano desde el preciso instante en que enciendes el ordenador. Se abrirá un poco más lento la primera vez que lo invoques, pero liberarás memoria RAM y ciclos de CPU críticos durante el boot.
-
-**P: ¿Es recomendable usar scripts de GitHub que prometen "optimizar Windows con un solo clic"?**
-R: Depende del repositorio. Muchos scripts públicos en GitHub automatizan tareas excelentes (eliminación de bloatware, desactivación de telemetría), pero debes revisar el código fuente antes de ejecutarlo en entornos de producción para evitar que rompan políticas de dominio de Active Directory o rompan la VPN corporativa.
-
-**P: ¿Por qué mi SSD sigue lento incluso después de limpiar el inicio y formatear?**
+**P: ¿Desactivar aplicaciones en el inicio afecta a su funcionamiento normal cuando las abro manualmente?**R: Para nada. Lo único que evitas es que el programa cargue su proceso en segundo plano desde el preciso instante en que enciendes el ordenador. Se abrirá un poco más lento la primera vez que lo invoques, pero liberarás memoria RAM y ciclos de CPU críticos durante el boot.**P: ¿Es recomendable usar scripts de GitHub que prometen "optimizar Windows con un solo clic"?**R: Depende del repositorio. Muchos scripts públicos en GitHub automatizan tareas excelentes (eliminación de bloatware, desactivación de telemetría), pero debes revisar el código fuente antes de ejecutarlo en entornos de producción para evitar que rompan políticas de dominio de Active Directory o rompan la VPN corporativa.**P: ¿Por qué mi SSD sigue lento incluso después de limpiar el inicio y formatear?**
 R: Si el software está limpio y el arranque sigue siendo lento, el problema ya es hardware puro: celdas NAND flash degradadas, falta de actualización de la BIOS/UEFI de la placa base, o un perfil XMP/EXPO mal configurado en la memoria RAM que obliga al controlador a trabajar en frecuencias de seguridad por defecto.

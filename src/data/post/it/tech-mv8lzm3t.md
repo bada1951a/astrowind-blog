@@ -69,10 +69,7 @@ Se l'output restituisce qualcosa di diverso da `OK`, preparati a sostituire l'un
 
 ### Domande Frequenti (FAQ)
 
-**D: Disabilitare i programmi dall'avvio mi impedisce di usarli in seguito?**  
-R: Assolutamente no. Significa solo che l'applicazione non si caricherà in background non appena accendi il computer. Potrai avviarla normalmente cliccando sulla sua icona quando ti serve davvero, risparmiando risorse preziose durante il boot.
-
-**D: Ho disabilitato un servizio per errore e ora Windows fa i capricci, come ripristino?**  
+**D: Disabilitare i programmi dall'avvio mi impedisce di usarli in seguito?**R: Assolutamente no. Significa solo che l'applicazione non si caricherà in background non appena accendi il computer. Potrai avviarla normalmente cliccando sulla sua icona quando ti serve davvero, risparmiando risorse preziose durante il boot.**D: Ho disabilitato un servizio per errore e ora Windows fa i capricci, come ripristino?**  
 R: Niente panico. Premi `Win + R`, digita `msconfig`, vai alla scheda *Servizi*, spunta la casella "Nascondi tutti i servizi Microsoft" e clicca su "Abilita tutto". Riavvia la macchina e tornerà tutto allo stato originale.
 
 **D: Conviene usare software di ottimizzazione "one-click" scaricati dal web?**  

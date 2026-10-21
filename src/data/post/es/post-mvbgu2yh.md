@@ -40,7 +40,7 @@ Dado que no puedes acceder al Administrador de tareas de la forma habitual hacie
 
 1. Pulsa las teclas `Ctrl` + `Shift` + `Esc` simultáneamente para abrir el **Administrador de tareas**.
 2. Si se abre en vista compacta, haz clic en **Más detalles** en la esquina inferior.
-3. Desplázate por la pestaña **Procesos** hasta encontrar **Explorador de Windows** (o busca `explorer.exe`).
+3. Desplázate por la pestaña **Procesos**hasta encontrar**Explorador de Windows** (o busca `explorer.exe`).
 4. Haz clic derecho sobre él y selecciona **Reiniciar**. 
 
 *Verás que la pantalla parpadea durante un segundo y la barra de tareas vuelve a la vida.*
@@ -75,11 +75,5 @@ Si el fallo persiste cada vez que reinicias el ordenador, el problema está en l
 
 ### Preguntas Frecuentes (FAQ)
 
-**1. ¿Perderé mis archivos abiertos si reinicio el Explorador de Windows?**
-No. Reiniciar `explorer.exe` solo afecta a la interfaz gráfica (barra de tareas, iconos del escritorio y carpetas abiertas). Los documentos de Word, Excel o las pestañas del navegador que tengas en uso no se cerrarán ni perderán su progreso.
-
-**2. ¿Qué hago si el comando de PowerShell da errores en rojo?**
-Es totalmente normal. PowerShell intentará re registrar todos los paquetes nativos de Windows; aquellos que estén abiertos o bloqueados en ese momento mostrarán un aviso en rojo que puedes ignorar por completo. Lo importante es que el script complete el ciclo.
-
-**3. ¿Es recomendable usar puntos de restauración del sistema para esto?**
+**1. ¿Perderé mis archivos abiertos si reinicio el Explorador de Windows?**No. Reiniciar `explorer.exe` solo afecta a la interfaz gráfica (barra de tareas, iconos del escritorio y carpetas abiertas). Los documentos de Word, Excel o las pestañas del navegador que tengas en uso no se cerrarán ni perderán su progreso.**2. ¿Qué hago si el comando de PowerShell da errores en rojo?**Es totalmente normal. PowerShell intentará re registrar todos los paquetes nativos de Windows; aquellos que estén abiertos o bloqueados en ese momento mostrarán un aviso en rojo que puedes ignorar por completo. Lo importante es que el script complete el ciclo.**3. ¿Es recomendable usar puntos de restauración del sistema para esto?**
 Solo como última alternativa si los comandos anteriores fallan. Por lo general, un fallo en la barra de tareas es un problema de servicios locales que se resuelve limpiando la caché o reiniciando el proceso del explorador, sin necesidad de retroceder el estado del sistema.

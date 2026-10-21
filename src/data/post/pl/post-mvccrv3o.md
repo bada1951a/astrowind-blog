@@ -33,7 +33,7 @@ Zanim przejdziesz do bezmyślnego formatowania dysku, warto zrozumieć, co dokł
 Zanim zaczniemy szukać winnych w oprogramowaniu, wykluczmy kwestie fizyczne. 
 
 1. Wciśnij kombinację klawiszy `Windows + R`, wpisz `mdsched.exe` i zatwierdź Enterem.
-2. Wybierz opcję **"Uruchom ponownie teraz i sprawdź występowanie problemów (zalecane)"**.
+2. Wybierz opcję "**Uruchom ponownie teraz i sprawdź występowanie problemów (zalecane)**".
 3. Komputer uruchomi się ponownie w trybie diagnostycznym Windows Memory Diagnostic. Jeśli standardowy test wykryje błędy, wejdź do BIOS-u, wyłącz profil XMP/DOCP i przetestuj komputer ponownie na domyślnych taktowaniach płyty głównej.
 
 ### Krok 2: Identyfikacja winowajcy w zrzutach pamięci (Minidump)
@@ -41,7 +41,7 @@ Potrzebujemy dowodów. System zapisuje pliki zrzutów za każdym razem, gdy wyst
 
 1. Przejdź do folderu `C:\Windows\Minidump`.
 2. Skopiuj najnowszy plik `.dmp` na pulpit (żeby ominąć uprawnienia administratora przy odczycie).
-3. Pobierz lekki, darmowy program **BlueScreenView** lub użyj narzędzia **WinDbg** z pakietu Windows SDK.
+3. Pobierz lekki, darmowy program **BlueScreenView**lub użyj narzędzia**WinDbg** z pakietu Windows SDK.
 4. Otwórz plik zrzutu i spójrz na linię **Caused By Driver**. Jeśli widnieje tam nazwa sterownika trzeciego (np. `nvlddmkm.sys`, `extend_net.sys`), masz bezpośredniego sprawcę.
 
 ### Krok 3: Cofnięcie feralnego sterownika (Driver Rollback)
@@ -49,7 +49,7 @@ Jeśli system pozwala na uruchomienie w trybie awaryjnym (Safe Mode), czas na co
 
 1. Kliknij prawym przyciskiem myszy na Start i wybierz **Menedżer urządzeń** (Device Manager).
 2. Rozwiń gałąź urządzenia, które niedawno aktualizowano (najczęściej karty sieciowe, kontrolery IDE ATA/ATAPI lub karty graficzne).
-3. Kliknij urządzenie prawym przyciskiem myszy, wybierz **Właściwości**, a następnie przejdź do zakładki **Sterownik**.
+3. Kliknij urządzenie prawym przyciskiem myszy, wybierz **Właściwości**, a następnie przejdź do zakładki**Sterownik**.
 4. Kliknij przycisk **Przywróć sterownik** (Roll Back Driver), jeśli jest podświetlony. System natychmiast podmieni wadliwą binarkę na poprzednią, stabilną wersję.
 
 <div style="border-left: 4px solid #4338ca; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">

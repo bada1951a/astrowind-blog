@@ -36,7 +36,7 @@ Prima di sporcarci le mani con i comandi, capiamo cosa sta succedendo sotto il c
 Per sbloccare la situazione senza fare danni, dobbiamo interrompere temporaneamente i servizi di aggiornamento, ripulire i file temporanei bloccati e riavviare il processo. Ecco come procedere in modo sicuro.
 
 #### 1. Aprire il Terminale con privilegi amministrativi
-Clicca sul menu **Start**, digita `Terminale` (o `Prompt dei comandi`), fai clic destro sull'applicazione e seleziona **Esegui come amministratore**.
+Clicca sul menu **Start**, digita `Terminale` (o `Prompt dei comandi`), fai clic destro sull'applicazione e seleziona**Esegui come amministratore**.
 
 #
 
@@ -70,7 +70,7 @@ net start bits
 net start msiserver
 ```
 
-A questo punto, chiudi il terminale, riavvia normalmente il computer tramite il menu **Impostazioni > Arresta o riavvia** e torna in **Windows Update**. Noterai che il download e l'installazione ripartiranno da zero, ma questa volta senza intoppi.
+A questo punto, chiudi il terminale, riavvia normalmente il computer tramite il menu **Impostazioni > Arresta o riavvia**e torna in**Windows Update**. Noterai che il download e l'installazione ripartiranno da zero, ma questa volta senza intoppi.
 
 ---
 
@@ -93,11 +93,5 @@ A questo punto, chiudi il terminale, riavvia normalmente il computer tramite il 
 
 ### Domande Frequenti (FAQ)
 
-**Posso perdere i miei file personali cancellando la cartella SoftwareDistribution?**
-Assolutamente no. La cartella `SoftwareDistribution` contiene unicamente i file temporanei necessari per scaricare e installare gli aggiornamenti di Windows. I tuoi documenti, le foto e le applicazioni installate non verranno toccati in alcun modo.
-
-**Cosa devo fare se il comando `ren` restituisce un errore di file in uso?**
-Significa che uno dei servizi di Windows Update non si è chiuso correttamente. Riavvia il computer in **Modalità Provvisoria** (Modalità sicura) e ripeti la procedura da lì; in questo modo nessun processo di background potrà bloccare i file.
-
-**Quanto tempo devo aspettare prima di considerare l'aggiornamento bloccato?**
+**Posso perdere i miei file personali cancellando la cartella SoftwareDistribution?**Assolutamente no. La cartella `SoftwareDistribution` contiene unicamente i file temporanei necessari per scaricare e installare gli aggiornamenti di Windows. I tuoi documenti, le foto e le applicazioni installate non verranno toccati in alcun modo.**Cosa devo fare se il comando `ren` restituisce un errore di file in uso?**Significa che uno dei servizi di Windows Update non si è chiuso correttamente. Riavvia il computer in**Modalità Provvisoria**(Modalità sicura) e ripeti la procedura da lì; in questo modo nessun processo di background potrà bloccare i file.**Quanto tempo devo aspettare prima di considerare l'aggiornamento bloccato?**
 In genere, un aggiornamento cumulativo standard non dovrebbe impiegare più di 30-45 minuti per completarsi. Se la percentuale rimane fissa al 100% per oltre un'ora e mezza e l'indicatore di attività del disco è completamente spento, puoi procedere tranquillamente con questa guida.

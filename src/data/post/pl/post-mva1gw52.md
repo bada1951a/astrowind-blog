@@ -30,7 +30,7 @@ Zanim przejdziemy do klikania, warto zrozumieć, dlaczego Windows 11 tak szybko 
 Nie musisz instalować żadnych podejrzanych programów "optymalizujących", które często przynoszą więcej szkody niż pożytku. Windows 11 ma do tego świetne, wbudowane narzędzia.
 
 ### 1. Użycie funkcji "Czyszczenie pamięci" (Storage Sense)
-Wejdź w menu **Ustawienia** (skrót Windows + I), przejdź do zakładki **System**, a następnie **Pamięć**. 
+Wejdź w menu **Ustawienia**(skrót Windows + I), przejdź do zakładki**System**, a następnie**Pamięć**. 
 - Kliknij na **Pliki tymczasowe**.
 - System chwilę skanuje dysk w poszukiwaniu zbędnych danych.
 - Zaznacz pola takie jak: *Poprzednie instalacje systemu Windows*, *Pobierane pliki* (jeśli nie masz tam nic ważnego), *Tymczasowe pliki internetowe* oraz *Wyrzucone elementy z Kosza*.
@@ -43,7 +43,7 @@ Wejdź w menu **Ustawienia** (skrót Windows + I), przejdź do zakładki **Syste
 ### 2. Ręczne czyszczenie folderu Temp przez okno Uruchom
 Często instalatory programów zostawiają śmieci w folderach użytkownika.
 - Wciśnij kombinację klawiszy **Windows + R**, wpisz `%temp%` i wciśnij Enter.
-- Zaznacz wszystko (**Ctrl + A**) i wciśnij **Shift + Delete** (by ominąć Kosz).
+- Zaznacz wszystko (**Ctrl + A**) i wciśnij**Shift + Delete** (by ominąć Kosz).
 - *Uwaga:* Jeśli wyskoczy komunikat, że plik jest aktualnie używany przez inny program, po prostu kliknij "Pomiń" dla tych konkretnych plików.
 - Następnie powtórz operację, wpisując w oknie Uruchom zwykłe `temp` (bez procentów) i wyczyść ten folder jako administrator.
 

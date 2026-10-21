@@ -41,10 +41,9 @@ Mettiamoci all'opera. Non serve installare software di terze parti pesanti o ris
 Premi la combinazione di tasti `Windows + X` sulla tastiera e seleziona **Visualizzatore eventi** dal menu rapido che compare in basso a sinistra (in alternativa, premi `Windows + R`, digita `eventvwr.msc` e premi Invio).
 
 #### Passo 2: Puntare dritti al registro critico
-Nella colonna di sinistra, espandi la voce **Registri di Windows** e clicca su **Sistema**. Qui dentro ci sono migliaia di eventi registrati dal sistema operativo, ma noi cerchiamo un ago nel pagliaio. Per filtrare il rumore di fondo:
-- Guarda nella colonna di destra e clicca su **Filtro registro attuale...**
-- Nella finestra che si apre, individua il menu a tendina **Livello evento**.
-- Spunta le caselle **Critico** e **Errore**, quindi clicca su **OK**.
+Nella colonna di sinistra, espandi la voce **Registri di Windows**e clicca su**Sistema**. Qui dentro ci sono migliaia di eventi registrati dal sistema operativo, ma noi cerchiamo un ago nel pagliaio. Per filtrare il rumore di fondo:
+- Guarda nella colonna di destra e clicca su **Filtro registro attuale...**- Nella finestra che si apre, individua il menu a tendina**Livello evento**.
+- Spunta le caselle **Critico**e**Errore**, quindi clicca su**OK**.
 
 #### Passo 3: Cacciare l'evento Kernel-Power (ID 41)
 Il sintomo principale di un blocco improvviso (in cui hai dovuto spegnere il PC tenendo premuto il bottone) è l'evento **Kernel-Power, ID 41**. Questo evento ti dice semplicemente che *il sistema è stato riavviato senza prima essere stato arrestato correttamente*. 
@@ -62,15 +61,14 @@ Cerca eventi con origini sospette come:
 
 Una volta individuato il driver o il componente problematico grazie al registro, passiamo alle contromisure pratiche.
 
-1. **Aggiornamento o rollback dei driver:** 
-   - Clicca col tasto destro sul pulsante Start e apri **Gestione dispositivi**.
+1. **Aggiornamento o rollback dei driver:**- Clicca col tasto destro sul pulsante Start e apri**Gestione dispositivi**.
    - Se il Visualizzatore Eventi ti ha segnalato un errore legato alla scheda di rete, al controller disco o alla GPU, espandi la categoria corrispondente.
-   - Clicca col tasto destro sul dispositivo, seleziona **Proprietà**, vai sulla scheda **Driver** e verifica se il pulsante **Ripristina driver** è attivo. Se hai aggiornato di recente e sono iniziati i blocchi, usalo subito.
+   - Clicca col tasto destro sul dispositivo, seleziona **Proprietà**, vai sulla scheda**Driver**e verifica se il pulsante**Ripristina driver** è attivo. Se hai aggiornato di recente e sono iniziati i blocchi, usalo subito.
 
 2. **Disattivare l'Avvio Rapido (Fast Startup):**
    Spesso l'Avvio Rapido di Windows 11 mantiene in memoria uno stato corrotto del kernel tra un riavvio e l'altro. 
    - Apri il **Pannello di controllo** (puoi cercarlo nella barra di ricerca).
-   - Vai su **Opzioni risparmio energia** > **Specifica comportamento pulsanti di alimentazione**.
+   - Vai su **Opzioni risparmio energia**>**Specifica comportamento pulsanti di alimentazione**.
    - Clicca su *"Modifica le impostazioni attualmente non disponibili"* in alto.
    - Deseleziona la casella **Attiva avvio rapido (consigliato)** e salva i cambiamenti.
 
@@ -78,11 +76,5 @@ Una volta individuato il driver o il componente problematico grazie al registro,
 
 ### Domande Frequenti (FAQ)
 
-**D: Il Visualizzatore Eventi mostra sempre la causa esatta del blocco?**
-R: Non sempre in modo esplicito. Nei freeze totali causati da problemi hardware profondi (come una micro-interruzione di corrente sulla scheda madre o una tensione instabile dell'alimentatore), Windows si blocca così istantaneamente da non riuscire neppure a scrivere l'ultimo log su disco. In quel caso, l'assenza di un log specifico è già un indizio che punta verso l'hardware puro o l'alimentazione.
-
-**D: Come faccio a distinguere un problema software da un guasto hardware?**
-R: Se dopo aver reinstallato Windows da zero e aggiornato tutti i driver ufficiali il PC continua a bloccarsi casualmente, la probabilità che si tratti di un problema hardware (RAM difettosa, SSD che perde colpi o surriscaldamento) sale al 95%.
-
-**D: I test della RAM come MemTest86 sono ancora affidabili su Windows 11?**
+**D: Il Visualizzatore Eventi mostra sempre la causa esatta del blocco?**R: Non sempre in modo esplicito. Nei freeze totali causati da problemi hardware profondi (come una micro-interruzione di corrente sulla scheda madre o una tensione instabile dell'alimentatore), Windows si blocca così istantaneamente da non riuscire neppure a scrivere l'ultimo log su disco. In quel caso, l'assenza di un log specifico è già un indizio che punta verso l'hardware puro o l'alimentazione.**D: Come faccio a distinguere un problema software da un guasto hardware?**R: Se dopo aver reinstallato Windows da zero e aggiornato tutti i driver ufficiali il PC continua a bloccarsi casualmente, la probabilità che si tratti di un problema hardware (RAM difettosa, SSD che perde colpi o surriscaldamento) sale al 95%.**D: I test della RAM come MemTest86 sono ancora affidabili su Windows 11?**
 R: Assolutamente sì. Se i log di sistema mostrano errori legati alla memoria o se non trovi un colpevole software chiaro, lascia girare MemTest86 da una chiavetta USB per qualche ora prima di dichiararti sconfitto.

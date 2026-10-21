@@ -38,7 +38,7 @@ Per risolvere definitivamente il problema senza formattare, procediamo con un ap
 La prima cosa da fare è escludere un guasto fisico o un'instabilità dei moduli di memoria RAM.
 
 1. Premi la combinazione di tasti `Windows + R`, digita `mdsched.exe` e premi Invio.
-2. Seleziona l'opzione consigliata: **"Riavvia ora e individua eventuali problemi"**.
+2. Seleziona l'opzione consigliata: "**Riavvia ora e individua eventuali problemi**".
 3. Il PC si riavvierà in modalità di diagnostica UEFI/BIOS eseguendo il test standard. 
 4. Se riscontri errori al termine del test, significa che almeno un banco RAM è difettoso o va rimosso l'overclock dal BIOS.
 
@@ -50,10 +50,10 @@ La prima cosa da fare è escludere un guasto fisico o un'instabilità dei moduli
 
 Se la RAM risulta integra al 100%, il colpevole è quasi certamente un driver corrotto installato di recente.
 
-1. Clicca sul pulsante Start, digita **"Gestione dispositivi"** e aprilo.
+1. Clicca sul pulsante Start, digita "**Gestione dispositivi**" e aprilo.
 2. Espandi le categorie principali (specialmente *Schede di rete*, *Controller audio, video e giochi* o *Schede video*).
-3. Clicca con il tasto destro sul driver sospetto (magari quello aggiornato poche ore prima del crash) e seleziona **"Proprietà"**.
-4. Spostati sulla scheda **"Driver"** e clicca sul pulsante **"Ripristina driver" (Roll Back Driver)**, se attivo.
+3. Clicca con il tasto destro sul driver sospetto (magari quello aggiornato poche ore prima del crash) e seleziona "**Proprietà**".
+4. Spostati sulla scheda "**Driver**" e clicca sul pulsante**"Ripristina driver" (Roll Back Driver)**, se attivo.
 5. Conferma l'operazione e riavvia il sistema.
 
 Se Windows non ti permette di fare il rollback perché il pulsante è disattivato, puoi procedere alla disinstallazione pulita del driver scaricando la versione precedente direttamente dal sito del produttore (es. NVIDIA, AMD, Realtek).

@@ -34,16 +34,16 @@ Antes de aplicar a faca cirúrgica no sistema, vale a pena entender a raiz do pr
 Esqueça softwares de terceiros milagrosos que prometem otimizações mágicas. O próprio Windows 10 possui uma ferramenta nativa, rápida e extremamente eficiente para gerenciar isso. Vamos direto ao ponto:
 
 ### Passo 1: Acesse o Gerenciador de Tarefas
-Pressione as teclas **Ctrl + Shift + Esc** simultaneamente no seu teclado. Esse é o atalho mais rápido para abrir o **Gerenciador de Tarefas**. 
+Pressione as teclas **Ctrl + Shift + Esc**simultaneamente no seu teclado. Esse é o atalho mais rápido para abrir o**Gerenciador de Tarefas**. 
 
 *(Caso ele abra no modo compacto, clique em "Mais detalhes" na parte inferior da janela).*
 
 ### Passo 2: Navegue até a Aba Inicializar
-Na barra superior do Gerenciador de Tarefas, clique na aba **"Inicializar"**. 
-Você verá uma lista completa de todos os softwares configurados para abrir automaticamente junto com o Windows 10. Preste muita atenção na coluna **"Impacto na inicialização"**, que classifica os processos em *Alto*, *Médio*, *Baixo* ou *Nenhum*.
+Na barra superior do Gerenciador de Tarefas, clique na aba "**Inicializar**". 
+Você verá uma lista completa de todos os softwares configurados para abrir automaticamente junto com o Windows 10. Preste muita atenção na coluna "**Impacto na inicialização**", que classifica os processos em *Alto*, *Médio*, *Baixo* ou *Nenhum*.
 
 ### Passo 3: Desative os Intrusos
-Clique com o botão direito em cima do aplicativo que você **não** precisa que rode em segundo plano logo na inicialização (por exemplo: utilitários de fabricantes que você nunca usa, players de música, launchers de jogos) e selecione **"Desativar"**.
+Clique com o botão direito em cima do aplicativo que você **não**precisa que rode em segundo plano logo na inicialização (por exemplo: utilitários de fabricantes que você nunca usa, players de música, launchers de jogos) e selecione "**Desativar**".
 
 <div style="border-left: 4px solid #e11d48; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Dica de Ouro de Engenharia:</strong> Não saia desativando tudo de forma cega. Mantenha ativos apenas o seu antivírus principal e drivers essenciais (como painéis de controle de placa de vídeo ou touchpad). Se tiver dúvida sobre um processo com nome estranho, clique com o botão direito nele e selecione "Pesquisar online" para verificar se é seguro desativá-lo.
@@ -62,11 +62,5 @@ Limpar a inicialização vai devolver agilidade ao seu fluxo de trabalho, mas va
 
 ## Perguntas Frequentes (FAQ)
 
-**1. Desativar programas na inicialização pode danificar o Windows?**
-De forma alguma. A aba "Inicializar" do Gerenciador de Tarefas lida apenas com aplicativos de usuário e utilitários opcionais. O Windows protege seus arquivos e serviços essenciais de sistema, impedindo que você desative algo crítico por engano nessa tela.
-
-**2. O que acontece se eu desativar um programa por engano?**
-Nada grave. Se você notar que algum aplicativo que você usa com frequência deixou de abrir sozinho, basta voltar ao Gerenciador de Tarefas (Ctrl + Shift + Esc), ir na aba "Inicializar", clicar com o botão direito nele e selecionar "Habilitar".
-
-**3. Preciso reiniciar o computador imediatamente após fazer isso?**
+**1. Desativar programas na inicialização pode danificar o Windows?**De forma alguma. A aba "Inicializar" do Gerenciador de Tarefas lida apenas com aplicativos de usuário e utilitários opcionais. O Windows protege seus arquivos e serviços essenciais de sistema, impedindo que você desative algo crítico por engano nessa tela.**2. O que acontece se eu desativar um programa por engano?**Nada grave. Se você notar que algum aplicativo que você usa com frequência deixou de abrir sozinho, basta voltar ao Gerenciador de Tarefas (Ctrl + Shift + Esc), ir na aba "Inicializar", clicar com o botão direito nele e selecionar "Habilitar".**3. Preciso reiniciar o computador imediatamente após fazer isso?**
 Não é obrigatório para que a alteração seja salva, mas é altamente recomendável reiniciar a máquina logo em seguida para testar o novo tempo de boot e sentir a diferença na prática.

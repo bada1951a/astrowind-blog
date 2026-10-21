@@ -33,13 +33,13 @@ Zum Glück lässt sich das Verhalten mit einem einfachen Registry-Eintrag oder e
 
 #### Methode 1: Der Express-Weg über das Terminal (Empfohlen)
 
-1. Drücken Sie die Tastenkombination **Windows + X** und öffnen Sie das **Terminal** (oder die *Eingabeaufforderung* als Administrator).
+1. Drücken Sie die Tastenkombination **Windows + X**und öffnen Sie das**Terminal** (oder die *Eingabeaufforderung* als Administrator).
 2. Kopieren Sie den folgenden Befehl und fügen Sie ihn ein:
    ```cmd
    reg add "HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\InprocServer32" /f /ve
    ```
 3. Drücken Sie Enter. Die Meldung "Der Vorgang wurde erfolgreich abgeschlossen" bestätigt den Erfolg.
-4. Starten Sie nun den **Task-Manager** (Strg + Shift + Esc), suchen Sie in der Liste nach dem Prozess **Windows-Explorer**, machen Sie einen Rechtsklick darauf und wählen Sie **Neu starten**.
+4. Starten Sie nun den **Task-Manager**(Strg + Shift + Esc), suchen Sie in der Liste nach dem Prozess**Windows-Explorer**, machen Sie einen Rechtsklick darauf und wählen Sie**Neu starten**.
 
 Boom! Sobald der Explorer neu geladen ist, haben Sie bei jedem Rechtsklick sofort wieder das klassische, voll funktionsfähige Kontextmenü vor sich – ohne den Umweg über "Weitere Optionen anzeigen".
 
@@ -58,10 +58,7 @@ Wer es lieber visuell mag, macht das Ganze über den Editor:
 
 ### Häufig gestellte Fragen (FAQ)
 
-**1. Verliere ich durch diesen Registry-Hack Windows-Updates oder Stabilität?**
-Nein. Dieser Registry-Schlüssel nutzt eine offiziell verbliebene Rückfalloption (Fallback-ID) von Microsoft selbst, die für Entwickler gedacht ist. Das System bleibt absolut stabil und Updates laufen problemlos durch.
-
-**2. Wie mache ich die Änderung wieder rückgängig, falls es mir nicht gefällt?**
+**1. Verliere ich durch diesen Registry-Hack Windows-Updates oder Stabilität?**Nein. Dieser Registry-Schlüssel nutzt eine offiziell verbliebene Rückfalloption (Fallback-ID) von Microsoft selbst, die für Entwickler gedacht ist. Das System bleibt absolut stabil und Updates laufen problemlos durch.**2. Wie mache ich die Änderung wieder rückgängig, falls es mir nicht gefällt?**
 Öffnen Sie erneut das *Terminal* als Administrator und geben Sie diesen Befehl ein, um den Schlüssel zu löschen:
 `reg delete "HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}" /f`
 Danach den Explorer im *Task-Manager* neustarten, und Windows 11 verhält sich wieder im Auslieferungszustand.

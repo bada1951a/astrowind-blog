@@ -40,7 +40,7 @@ Para solucionar esto de manera segura y profesional, vamos a utilizar las herram
 #### Paso 1: Usar el Sensor de almacenamiento de Windows
 Olvídate de buscar carpeta por carpeta. Windows incluye una utilidad fantástica para esto:
 1. Haz clic en el botón de Inicio y entra en la **Configuración** (el icono de la rueda dentada).
-2. Ve a **Sistema** y luego haz clic en **Almacenamiento**.
+2. Ve a **Sistema**y luego haz clic en**Almacenamiento**.
 3. Verás una barra que desglosa qué está ocupando tu disco. Haz clic en **Archivos temporales**.
 4. Deja que el sistema escanee. Te mostrará casillas seleccionables como "Versiones anteriores de Windows", "Archivos de registro de actualizaciones", "Caché de sombreado de DirectX" y la "Papelera de reciclaje".
 5. Marca con confianza las casillas que tengan mayor peso (especialmente actualizaciones anteriores y archivos temporales) y haz clic en **Quitar archivos**.
@@ -71,11 +71,5 @@ Si aún necesitas raspar más gigabytes, vamos a limpiar los directorios de usua
 
 ### Preguntas frecuentes (FAQ)
 
-**¿Es seguro borrar todo lo que aparece en la carpeta Temp?**
-Sí, al 100%. Los archivos dentro de las carpetas Temp son únicamente residuos temporales que los programas ya terminaron de utilizar. Si un archivo está siendo usado activamente por una aplicación abierta, Windows simplemente te impedirá borrarlo, por lo que no hay riesgo de dañar el sistema operativo.
-
-**¿Por qué mi disco C: se vuelve a llenar solo a los pocos días?**
-Esto suele deberse a descargas pesadas automáticas de actualizaciones de Windows Update o a la caché acumulada de aplicaciones de streaming y navegadores. Te recomiendo revisar periódicamente el Sensor de almacenamiento y configurar tu navegador para que borre los datos de navegación al cerrar.
-
-**¿Qué hago si después de limpiar sigo sin espacio en el disco C?**
+**¿Es seguro borrar todo lo que aparece en la carpeta Temp?**Sí, al 100%. Los archivos dentro de las carpetas Temp son únicamente residuos temporales que los programas ya terminaron de utilizar. Si un archivo está siendo usado activamente por una aplicación abierta, Windows simplemente te impedirá borrarlo, por lo que no hay riesgo de dañar el sistema operativo.**¿Por qué mi disco C: se vuelve a llenar solo a los pocos días?**Esto suele deberse a descargas pesadas automáticas de actualizaciones de Windows Update o a la caché acumulada de aplicaciones de streaming y navegadores. Te recomiendo revisar periódicamente el Sensor de almacenamiento y configurar tu navegador para que borre los datos de navegación al cerrar.**¿Qué hago si después de limpiar sigo sin espacio en el disco C?**
 Si ya borraste los temporales y sigues al límite, el siguiente paso lógico es usar una herramienta gratuita y confiable como *WizTree* o *WinDirStat* para visualizar gráficamente qué carpetas o archivos exactos son los que están devorando el almacenamiento de tu equipo, permitiéndote mover archivos personales pesados (como vídeos o fotos) a un disco duro externo o secundario.

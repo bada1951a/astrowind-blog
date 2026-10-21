@@ -9,7 +9,7 @@ theme: "Dark Velvet Obsidian"
 ---
 
 
-Eran las 18:30 en nuestra oficina del 22@ en Barcelona. Estábamos a menos de cuarenta y ocho horas del despliegue final de nuestra plataforma SaaS principal antes del lanzamiento oficial, cuando la estación de trabajo principal del equipo de arquitectura se quedó completamente congelada. De repente, el monitor principal se volvió de un azul intenso y apareció el temido código de error: **IRQL_NOT_LESS_OR_EQUAL** con el identificador **0x0000000a**. Justo en medio de una compilación pesada y con el cliente respirándonos en la nuca a través de Slack, el equipo se quedó en silencio. No podíamos permitirnos formatear ni perder los entornos de contenedores configurados para la demo del día siguiente.
+Eran las 18:30 en nuestra oficina del 22@ en Barcelona. Estábamos a menos de cuarenta y ocho horas del despliegue final de nuestra plataforma SaaS principal antes del lanzamiento oficial, cuando la estación de trabajo principal del equipo de arquitectura se quedó completamente congelada. De repente, el monitor principal se volvió de un azul intenso y apareció el temido código de error: **IRQL_NOT_LESS_OR_EQUAL**con el identificador**0x0000000a**. Justo en medio de una compilación pesada y con el cliente respirándonos en la nuca a través de Slack, el equipo se quedó en silencio. No podíamos permitirnos formatear ni perder los entornos de contenedores configurados para la demo del día siguiente.
 
 <div style="border-left: 4px solid #a855f7; padding: 12px 16px; margin: 20px 0; background-color: #f3e8ff; border-radius: 4px; color: #111827;">
 <strong>Atención SysAdmins:</strong> El error 0x0000000a indica que un proceso en modo kernel o un controlador (driver) intentó acceder a una dirección de memoria sin la autorización o el nivel de IRQL adecuado. Casi siempre apunta a una incompatibilidad de controladores tras una actualización o a una celda de memoria RAM degradada.
@@ -34,7 +34,7 @@ Dado que el sistema entraba en bucle al arrancar de forma normal, tuvimos que ac
 ### Paso 1: Entrar en Modo Seguro y aislar el volcado de memoria (Dump)
 Si el equipo te permite llegar al escritorio unos segundos antes de colapsar, o si puedes entrar mediante el menú de recuperación avanzada (Reiniciar manteniendo presionada la tecla Shift):
 - Navega a **Configuración > Actualización y seguridad > Recuperación > Inicio avanzado**.
-- Selecciona **Solucionar problemas > Opciones avanzadas > Configuración de inicio** y reinicia. Pulsa la tecla `4` o `F4` para habilitar el **Modo seguro**.
+- Selecciona **Solucionar problemas > Opciones avanzadas > Configuración de inicio**y reinicia. Pulsa la tecla `4` o `F4` para habilitar el**Modo seguro**.
 
 Una vez dentro, necesitamos analizar el archivo de volcado (`C:\Windows\Minidump\*.dmp`) con herramientas como *BlueScreenView* o WinDbg para ver exactamente qué archivo DLL o SYS provocó el fallo (habitualmente asociado a `ntoskrnl.exe` o drivers gráficos).
 
@@ -52,7 +52,7 @@ Descartemos primero el hardware. No puedes solucionar un problema de drivers si 
 Si la memoria está perfecta, el problema es indudablemente software. Para revertir el driver conflictivo que se instaló antes del fallo:
 1. Haz clic derecho en el menú de inicio y abre **Administrador de dispositivos**.
 2. Despliega la categoría sospechosa (habitualmente Adaptadores de red, Controladoras de sonido o Tarjetas gráficas).
-3. Haz doble clic sobre el dispositivo problemático, ve a la pestaña **Controlador** y haz clic en **Revertir al controlador anterior** (si el botón está habilitado).
+3. Haz doble clic sobre el dispositivo problemático, ve a la pestaña **Controlador**y haz clic en**Revertir al controlador anterior** (si el botón está habilitado).
 4. Si el botón está desactivado, selecciona **Desinstalar el dispositivo**, marca la casilla *Intentar quitar el controlador de este equipo* y reinicia inmediatamente para que Windows cargue un driver genérico estable.
 
 ---

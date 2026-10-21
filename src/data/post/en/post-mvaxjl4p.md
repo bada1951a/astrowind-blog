@@ -32,7 +32,7 @@ Before we jump into the quick fix, let's look at why your machine behaves like i
 We are going to use the native Windows Task Manager. No command line, no extra downloads, just pure, direct OS management.
 
 ### Step 1: Open Task Manager
-Press **Ctrl + Shift + Esc** simultaneously on your keyboard. If the Task Manager opens in its compact view, click **More details** at the bottom of the window to expand the full dashboard.
+Press **Ctrl + Shift + Esc**simultaneously on your keyboard. If the Task Manager opens in its compact view, click**More details** at the bottom of the window to expand the full dashboard.
 
 ### Step 2: Navigate to the Startup Tab
 At the top menu of the Task Manager window, look across the tabs (Processes, Performance, App history) and click on **Startup**. 

@@ -31,14 +31,14 @@ Para contornar o problema sem perder dados e garantir que a entrega aconteça no
 
 ### Passo 1: Inicialização em Modo de Segurança (Safe Mode)
 Se o Windows sequer estabiliza na Área de Trabalho, force o desligamento físico duas vezes seguidas segurando o botão Power. Na terceira vez, o sistema abrirá o Ambiente de Recuperação do Windows (WinRE).
-* Vá em **Solucionar problemas** > **Opções avançadas** > **Configurações de Inicialização** > **Reiniciar**.
+* Vá em **Solucionar problemas**>**Opções avançadas**>**Configurações de Inicialização**>**Reiniciar**.
 * Pressione a tecla 4 ou F4 para habilitar o **Modo de Segurança**.
 
 ### Passo 2: Reversão do Driver Problemático (Driver Rollback)
 No meu caso na Paulista, o culpado foi o driver da placa de rede Wi-Fi atualizado automaticamente horas antes.
 * Pressione as teclas `Windows + X` e abra o **Gerenciador de Dispositivos**.
 * Localize o componente suspeito (geralmente adaptadores de rede, controladoras de vídeo ou áudio).
-* Clique com o botão direito, selecione **Propriedades**, vá até a aba **Driver** e clique no botão **Reverter Driver** (Driver Rollback).
+* Clique com o botão direito, selecione **Propriedades**, vá até a aba**Driver**e clique no botão**Reverter Driver** (Driver Rollback).
 * Reinicie o computador normalmente.
 
 ### Passo 3: Diagnóstico de Memória do Windows (Windows Memory Diagnostic)
@@ -67,11 +67,5 @@ Se a reversão de drivers não estabilizar o sistema, o problema pode ser físic
 
 ## Perguntas Frequentes (FAQ)
 
-**1. O erro 0x0000000a pode queimar permanentemente o meu processador ou memória?**
-Não. Trata-se de uma exceção de software em nível de kernel (Interruption Request Level). O Windows gera a Tela Azul justamente para proteger o hardware e evitar a corrupção permanente de dados em disco.
-
-**2. Posso usar ferramentas de terceiros para testar a memória RAM?**
-Sim. Embora o Diagnóstico de Memória nativo do Windows seja excelente para checagem rápida, em cenários avançados recomendamos criar um pendrive bootável com o software **MemTest86** para uma análise minuciosa de cada célula de memória.
-
-**3. O que devo fazer se o Windows entrar em loop infinito de Tela Azul?**
+**1. O erro 0x0000000a pode queimar permanentemente o meu processador ou memória?**Não. Trata-se de uma exceção de software em nível de kernel (Interruption Request Level). O Windows gera a Tela Azul justamente para proteger o hardware e evitar a corrupção permanente de dados em disco.**2. Posso usar ferramentas de terceiros para testar a memória RAM?**Sim. Embora o Diagnóstico de Memória nativo do Windows seja excelente para checagem rápida, em cenários avançados recomendamos criar um pendrive bootável com o software**MemTest86**para uma análise minuciosa de cada célula de memória.**3. O que devo fazer se o Windows entrar em loop infinito de Tela Azul?**
 Se nem o Modo de Segurança puder ser acessado, utilize uma mídia de instalação do Windows via pendrive, acesse o Prompt de Comando no WinRE e execute o comando `sfc /scannow` combinado com `DISM /Online /Cleanup-Image /RestoreHealth` para reparar arquivos corrompidos do sistema operacional.

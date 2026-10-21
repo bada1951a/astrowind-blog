@@ -32,7 +32,7 @@ Para entender o problema e nunca mais passar raiva, precisamos olhar debaixo do 
 Se o seu sistema está inacessível pela interface gráfica normal, o caminho é iniciar em Modo de Segurança (Safe Mode) ou usar um ambiente de recuperação. Assumindo que você conseguiu acessar o Windows (mesmo que após um hard reset forçado) ou via Prompt de Comando na tela de Reparo Avançado, siga esta sequência exata:
 
 ### Passo 1: Parar os serviços de atualização
-Abra o **Terminal** ou o **Prompt de Comando** com privilégios de Administrador (clique com o botão direito no menu Iniciar e selecione "Terminal (Administrador)"). Digite os comandos abaixo um por um, pressionando Enter após cada linha:
+Abra o **Terminal**ou o**Prompt de Comando** com privilégios de Administrador (clique com o botão direito no menu Iniciar e selecione "Terminal (Administrador)"). Digite os comandos abaixo um por um, pressionando Enter após cada linha:
 
 ```text
 net stop wuauserv
@@ -60,7 +60,7 @@ net start bits
 net start msiserver
 ```
 
-Feche a janela do terminal, reinicie o computador normalmente através das **Configurações** > **Energia** > **Reiniciar**, e verifique se o Windows 11 conclui a aplicação dos pacotes pendentes de forma limpa.
+Feche a janela do terminal, reinicie o computador normalmente através das **Configurações**>**Energia**>**Reiniciar**, e verifique se o Windows 11 conclui a aplicação dos pacotes pendentes de forma limpa.
 
 ---
 

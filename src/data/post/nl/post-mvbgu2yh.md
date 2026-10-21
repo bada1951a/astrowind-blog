@@ -38,14 +38,14 @@ Als je geen taakbalk hebt om Taakbeheer te openen, gebruiken we de ultieme snelt
 2. Zie je alleen een klein schermpje? Klik rechtsonder op **Meer details** (More details).
 3. Scroll in het tabblad *Processen* naar beneden tot je **Windows-verkenner** (of *Windows Explorer*) tegenkomt.
 4. Klik er met je rechtermuisknop op en kies **Taak beëindigen** (End task). Je scherm wordt nu heel even leeg (geen bureaublad of taakbalk meer, geen paniek!).
-5. Klik linksboven in Taakbeheer op **Bestand** > **Nieuwe taak uitvoeren** (Run new task).
+5. Klik linksboven in Taakbeheer op **Bestand**>**Nieuwe taak uitvoeren** (Run new task).
 6. Typ in het venster exact `explorer.exe` en druk op Enter. De taakbalk en je bureaublad laden direct opnieuw.
 
 ### Stap 2: Het Windows Systeemherstel via Terminal (Als Stap 1 niet helpt)
 Blijft de taakbalk hardnekkig weigeren of crasht hij direct opnieuw? Dan moeten we mogelijke corrupte systeembestanden aanpakken.
 
 1. Open Taakbeheer opnieuw via `Ctrl + Shift + Esc`.
-2. Klik op **Bestand** > **Nieuwe taak uitvoeren**, typ `wt` of `cmd`, vink het hokje aan voor **"Deze taak uitvoeren met beheerdersrechten"** en druk op Enter.
+2. Klik op **Bestand**>**Nieuwe taak uitvoeren**, typ `wt` of `cmd`, vink het hokje aan voor "**Deze taak uitvoeren met beheerdersrechten**" en druk op Enter.
 3. Plak het volgende commando in de opdrachtprompt en druk op Enter:
    `DISM.exe /Online /Cleanup-image /Restorehealth`
 4. Wacht tot dit proces op 100% staat. Plak daarna het volgende commando om je systeembestanden te controleren en te repareren:
@@ -74,11 +74,5 @@ Om herhaling te voorkomen, raad ik aan om te controleren of je optionele Windows
 
 ## Veelgestelde Vragen (FAQ)
 
-**1. Wat moet ik doen als zelfs `Ctrl + Shift + Esc` niet werkt om Taakbeheer te openen?**
-Als je hele systeem zo diep hangt dat sneltoetsen niet meer reageren, zit er niets anders op dan een harde reset: houd de aan/uit-knop van je laptop of pc ongeveer 10 seconden ingedrukt to पूरी तरह uitgaat, wacht 5 seconden en zet hem weer aan.
-
-**2. Kan een virus of malware ervoor zorgen dat mijn taakbalk bevriest?**
-Ja, dat is mogelijk. Sommige malware verstopt zich in achtergrondprocessen die lijken op legitieme Windows-services, waardoor systemen vastlopen. Voer na een herstart voor de zekerheid een snelle scan uit via Windows Defender of je enterprise antivirusoplossing.
-
-**3. Waarom gebeurt dit zo vaak specifiek op Windows 11 en niet op Windows 10?**
+**1. Wat moet ik doen als zelfs `Ctrl + Shift + Esc` niet werkt om Taakbeheer te openen?**Als je hele systeem zo diep hangt dat sneltoetsen niet meer reageren, zit er niets anders op dan een harde reset: houd de aan/uit-knop van je laptop of pc ongeveer 10 seconden ingedrukt to पूरी तरह uitgaat, wacht 5 seconden en zet hem weer aan.**2. Kan een virus of malware ervoor zorgen dat mijn taakbalk bevriest?**Ja, dat is mogelijk. Sommige malware verstopt zich in achtergrondprocessen die lijken op legitieme Windows-services, waardoor systemen vastlopen. Voer na een herstart voor de zekerheid een snelle scan uit via Windows Defender of je enterprise antivirusoplossing.**3. Waarom gebeurt dit zo vaak specifiek op Windows 11 en niet op Windows 10?**
 Windows 11 maakt gebruik van een volledig vernieuwde, modernere grafische schil gebouwd op XAML en WinUI. Hoewel dit er geliktheid uitziet, is het gevoeliger voor conflicten met achtergrondsoftware en grafische stuurprogramma's dan de oudere Win32-architectuur van Windows 10.

@@ -34,7 +34,7 @@ Gehen wir die Sache systematisch an. Wir nutzen ausschließlich die offiziellen 
 ### Schritt 1: Die offizielle Speicher-Übersicht und temporäre Dateien nutzen
 
 1. Öffne die Windows-Einstellungen über die Tastenkombination **Windows + I**.
-2. Navigiere auf der linken Seite zu **System** und klicke rechts auf **Speicher**.
+2. Navigiere auf der linken Seite zu **System**und klicke rechts auf**Speicher**.
 3. Klicke direkt oben auf **Temporäre Dateien**. Windows scannt nun das System nach nicht mehr benötigten Daten.
 4. Setze die Haken bei den zu löschenden Kategorien. Achte besonders auf:
    - *Windows Update-Bereinigung* (gibt oft mehrere Gigabyte frei)
@@ -48,7 +48,7 @@ Manchmal bleibt in den AppData-Ordnern hartnäckiger Müll zurück. Den räumen 
 
 1. Drücke **Windows + R**, tippe `%temp%` ein und drücke Enter.
 2. Der Datei-Explorer öffnet den Ordner `C:\Users\[DeinBenutzername]\AppData\Local\Temp`.
-3. Drücke **Strg + A**, um alle Dateien zu markieren, und lösche sie mit **Entf**.
+3. Drücke **Strg + A**, um alle Dateien zu markieren, und lösche sie mit**Entf**.
 4. **Wichtiger Hinweis:** Dateien, die aktuell von offenen Programmen (wie Browsern oder IDEs) verwendet werden, kannst du nicht löschen. Klicke hier einfach auf *Überspringen*.
 5. Leere im Anschluss den Papierkorb auf dem Desktop.
 

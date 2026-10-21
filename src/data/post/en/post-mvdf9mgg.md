@@ -64,7 +64,7 @@ net start bits
 net start msiserver
 ```
 
-Reboot your machine normally, head back into **Settings > Windows Update**, and hit **Check for updates**. Windows will re-verify the system state and breeze past that 100 percent mark in a fraction of the time.
+Reboot your machine normally, head back into **Settings > Windows Update**, and hit**Check for updates**. Windows will re-verify the system state and breeze past that 100 percent mark in a fraction of the time.
 
 ## Expert Warning & Best Practices
 

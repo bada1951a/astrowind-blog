@@ -35,7 +35,7 @@ Chúng ta sẽ sử dụng công cụ Windows Terminal hoặc Command Prompt đ�
 
 ### Bước 1: Mở công cụ dòng lệnh hệ thống
 Nhấn tổ hợp phím **Windows + X** trên bàn phím của bạn. Một menu nhanh sẽ hiện ra ở góc dưới bên trái màn hình. 
-- Trên các bản Windows 11 mới, hãy chọn **Terminal** hoặc **Command Prompt (Admin)**.
+- Trên các bản Windows 11 mới, hãy chọn **Terminal**hoặc**Command Prompt (Admin)**.
 
 ### Bước 2: Nhập lệnh kích hoạt
 Sao chép chính xác dòng lệnh dưới đây, dán vào cửa sổ Terminal vừa mở và nhấn **Enter**:
@@ -48,9 +48,9 @@ Ngay sau khi thông báo `The operation completed successfully` hiện lên, l�
 
 ### Bước 3: Khởi động lại tiến trình Explorer (File Explorer)
 Để hệ thống cập nhật giao diện mới mà không cần khởi động lại toàn bộ máy tính (tránh làm mất các file đang soạn thảo), bạn làm như sau:
-1. Nhấn tổ hợp phím **Ctrl + Shift + Esc** để mở **Task Manager**.
-2. Tại thẻ **Processes** (Tiến trình), tìm đến mục **Windows Explorer** (có biểu tượng thư mục màu vàng).
-3. Nhấp chuột phải vào **Windows Explorer** và chọn **Restart** (Khởi động lại).
+1. Nhấn tổ hợp phím **Ctrl + Shift + Esc**để mở**Task Manager**.
+2. Tại thẻ **Processes**(Tiến trình), tìm đến mục**Windows Explorer** (có biểu tượng thư mục màu vàng).
+3. Nhấp chuột phải vào **Windows Explorer**và chọn**Restart** (Khởi động lại).
 
 Màn hình và thanh Taskbar sẽ chớp nhẹ một cái trong vòng 1-2 giây. Bây giờ, hãy thử nhấp chuột phải bất kỳ vào một file hay màn hình nền xem kết quả. Menu cổ điển toàn diện với đầy đủ các dòng lệnh quen thuộc đã trở lại!
 

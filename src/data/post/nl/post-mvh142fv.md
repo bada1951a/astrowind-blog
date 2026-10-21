@@ -42,11 +42,11 @@ In het linkerdeelvenster zie je een boomstructuur.
 ### Stap 3: Filter op de exacte crash-tijd
 Omdat je pc zojuist is vastgelopen en je hem met de knop hebt moeten herstarten, is er direct na het opnieuw opstarten een specifieke gebeurtenis weggeschreven.
 *   Kijk in het rechterdeelvenster en klik op **Huidig logboek filteren...**
-*   Vink bij het vakje **Gebeurtenisniveaus** in ieder geval **Kritiek** en **Fout** aan.
+*   Vink bij het vakje **Gebeurtenisniveaus**in ieder geval**Kritiek**en**Fout** aan.
 *   Bevestig met OK.
 
 ### Stap 4: Speur naar de beruchte Gebeurtenis-ID 41
-Scroll door de gefilterde lijst naar het tijdstip waarop je computer net bevroor. Zoek naar **Bron: Kernel-Power** met **Gebeurtenis-ID (Event ID): 41**. 
+Scroll door de gefilterde lijst naar het tijdstip waarop je computer net bevroor. Zoek naar **Bron: Kernel-Power**met**Gebeurtenis-ID (Event ID): 41**. 
 
 <div style="border-left: 4px solid #ef4444; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Belangrijke technische tip:</strong> Gebeurtenis 41 ("Het systeem is opnieuw opgestart zonder dat het eerst correct is afgesloten") vertelt je alleen dat de pc hard is uitgeschakeld. Kijk daarom ook naar de meldingen die *direct daarboven* (dus een paar seconden vóór de crash) in de lijst staan. Daar vind je de échte oorzaak, zoals een falende stuurprogrammanummering (bijvoorbeeld een nvlddmkm.sys fout voor grafische kaarten) of een disk-timeout.
@@ -56,7 +56,7 @@ Scroll door de gefilterde lijst naar het tijdstip waarop je computer net bevroor
 
 ## Preventieve maatregelen en professioneel advies
 
-Als je eenmaal via het logboek hebt ontdekt waar de schoen wringt, kun je actie ondernemen. Zie je veel geheugenwaarschuwingen? Duik dan de BIOS in en zet het overgeklokte XMP- of EXPO-geheugenprofiel eens tijdelijk uit op de standaardkloksnelheid. Krijg je constante Kernel-Power fouten? Open dan het **Configuratiescherm**, ga naar **Energiebeheer**, kies voor 'De werking van de aan/uit-knoppen bepalen' en **vink "Snel opstarten inschakelen" uit**. Deze beruchte Windows-functie veroorzaakt op moderne hardware vaak corrupte slaapstandbestanden die willekeurige freezes uitlokken.
+Als je eenmaal via het logboek hebt ontdekt waar de schoen wringt, kun je actie ondernemen. Zie je veel geheugenwaarschuwingen? Duik dan de BIOS in en zet het overgeklokte XMP- of EXPO-geheugenprofiel eens tijdelijk uit op de standaardkloksnelheid. Krijg je constante Kernel-Power fouten? Open dan het **Configuratiescherm**, ga naar**Energiebeheer**, kies voor 'De werking van de aan/uit-knoppen bepalen' en**vink "Snel opstarten inschakelen" uit**. Deze beruchte Windows-functie veroorzaakt op moderne hardware vaak corrupte slaapstandbestanden die willekeurige freezes uitlokken.
 
 Zorg er daarnaast voor dat je via **Apparaatbeheer** je netwerk- en videodrivers up-to-date houdt, maar installeer nooit zomaar vage "driver update" programma's van derden; haal ze altijd direct bij de fabrikant (zoals Intel, AMD of de laptopfabrikant).
 
@@ -65,7 +65,7 @@ Zorg er daarnaast voor dat je via **Apparaatbeheer** je netwerk- en videodrivers
 ## Veelgestelde vragen (FAQ)
 
 ### 1. Mijn Logboeken staat vol met duizenden gele waarschuwingen. Moet ik me daar zorgen over maken?
-Nee, absoluut niet. Windows genereert continu achtergrondwaarschuwingen en niet-kritieke fouten over randapparatuur of achtergrondservices die tijdelijk niet reageren. Focus je bij vastlopers uitsluitend op de rode categorieën **Kritiek** en **Fout** rond het exacte tijdstip van de crash.
+Nee, absoluut niet. Windows genereert continu achtergrondwaarschuwingen en niet-kritieke fouten over randapparatuur of achtergrondservices die tijdelijk niet reageren. Focus je bij vastlopers uitsluitend op de rode categorieën **Kritiek**en**Fout** rond het exacte tijdstip van de crash.
 
 
 
@@ -75,4 +75,4 @@ Nee, absoluut niet. Windows genereert continu achtergrondwaarschuwingen en niet-
 Als het logboek op het moment van de freeze een abrupt gat van enkele minuten vertoont en er direct na de herstart geen Kernel-Power 41 melding te vinden is, dan wijst dit vrijwel altijd op een diepere hardwarestoring. Denk hierbij aan een defecte SSD die spontaan verdwijnt uit het systeem, een processor die oververhit raakt, of een instabiele voeding.
 
 ### 3. Kan ik deze logboeken ook exporteren om naar een IT-helpdesk te sturen?
-Jazeker. Klik met de rechtermuisknop op **Systeem** in het linkerdeelvenster, kies voor **Alle taken** en vervolgens voor **Huidig logboek opslaan...**. Je kunt dit bestandje dan als beveiligd `.evtx`-bestand doorsturen naar je interne systeembeheerder zodat zij de exacte foutcodes kunnen analyseren zonder dat jij hoeft te gissen.
+Jazeker. Klik met de rechtermuisknop op **Systeem**in het linkerdeelvenster, kies voor**Alle taken**en vervolgens voor**Huidig logboek opslaan...**. Je kunt dit bestandje dan als beveiligd `.evtx`-bestand doorsturen naar je interne systeembeheerder zodat zij de exacte foutcodes kunnen analyseren zonder dat jij hoeft te gissen.

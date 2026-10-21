@@ -51,7 +51,7 @@ Vergeet de oude `msconfig`-trucs; sinds Windows 10 en 11 regelen we dit direct v
 
 Soms zit het dieper en is de opstartsector of de harde schijf zelf vervuild. Laten we de **Opdrachtprompt (Command Prompt)** erbij pakken als Administrator.
 
-1. Druk op de Windows-toets, typ `cmd`, klik met rechts op **Opdrachtprompt** en kies **Als administrator uitvoeren**.
+1. Druk op de Windows-toets, typ `cmd`, klik met rechts op **Opdrachtprompt**en kies**Als administrator uitvoeren**.
 2. Typ het volgende commando om de integriteit van je systeembestanden te controleren:
    ```cmd
    DISM.exe /Online /Cleanup-image /Restorehealth
@@ -68,7 +68,7 @@ Soms zit het dieper en is de opstartsector of de harde schijf zelf vervuild. Lat
 Windows gebruikt een hybride slaapstand genaamd *Fast Startup*. Handig, tenzij het crasht.
 
 1. Open het **Configuratiescherm** (Control Panel) via het startmenu.
-2. Ga naar **Energiebeheer** (Power Options) -> **Het gedrag van de aan/uit-knop bepalen**.
+2. Ga naar **Energiebeheer**(Power Options) ->**Het gedrag van de aan/uit-knop bepalen**.
 3. Klik op *Instellingen wijzigen die momenteel niet beschikbaar zijn* (administratorrechten vereist).
 4. Vink **Snel opstarten inschakelen (aanbevolen)** tijdelijk uit, sla op, herstart je pc, en zet hem daarna weer *aan*. Dit forceert een schone register-reset van de boot-loader.
 
@@ -85,11 +85,5 @@ Als IT'er zie ik regelmatig collega's of gebruikers hun systeem om zeep helpen m
 
 ## Veelgestelde Vragen (FAQ)
 
-**1. Mijn pc start na het uitschakelen van apps nog steeds langzaam op. Wat nu?**
-Grote kans dat je nog een oude HDD (harde schijf) gebruikt in plaats van een SSD. Een traditionele schijf trekt de trage opstarttijden van moderne besturingssystemen simpelweg niet meer. Overstap naar een SSD is in dit geval de enige echte remedie.
-
-**2. Kan ik alle opstart-apps uitschakelen zonder dat Windows crasht?**
-Ja. Windows beschermt zichzelf en laat essentiële systeemprocessen niet toe in de lijst van opstart-apps. Alles wat je daar ziet, is door derde partijen toegevoegd.
-
-**3. Waarom blijft mijn virusscanner zo lang hangen bij het opstarten?**
+**1. Mijn pc start na het uitschakelen van apps nog steeds langzaam op. Wat nu?**Grote kans dat je nog een oude HDD (harde schijf) gebruikt in plaats van een SSD. Een traditionele schijf trekt de trage opstarttijden van moderne besturingssystemen simpelweg niet meer. Overstap naar een SSD is in dit geval de enige echte remedie.**2. Kan ik alle opstart-apps uitschakelen zonder dat Windows crasht?**Ja. Windows beschermt zichzelf en laat essentiële systeemprocessen niet toe in de lijst van opstart-apps. Alles wat je daar ziet, is door derde partijen toegevoegd.**3. Waarom blijft mijn virusscanner zo lang hangen bij het opstarten?**
 Veel security-suites scannen direct bij de boot alle actieve processen en het geheugen. Dat hoort zo voor de veiligheid, maar als je merkt dat Windows hierdoor tien minuten vastzit, kun je in de instellingen van je antivirussoftware kijken of er een "snelle scan bij opstarten" optie is die minder agressief is.

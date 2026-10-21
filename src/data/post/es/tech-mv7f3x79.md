@@ -92,7 +92,7 @@ Para garantizar que no queden residuos en las claves del registro, debemos recur
 2. Descarga la versión portable de DDU.
 3. Desconecta el portátil de Internet (apaga el Wi-Fi y retira el cable Ethernet RJ-45) para evitar que Windows Update intente autodescargar un driver genérico en cuanto reiniciemos.
 4. Pulsa `Win` + `R`, escribe `msconfig` y presiona Intro.
-5. En la pestaña **Arranque**, marca la casilla **Arranque a prueba de errores** con la opción **Mínimo**. Aplica y reinicia el sistema.
+5. En la pestaña **Arranque**, marca la casilla**Arranque a prueba de errores**con la opción**Mínimo**. Aplica y reinicia el sistema.
 6. Una vez dentro del Modo Seguro:
    - Ejecuta DDU como Administrador.
    - Selecciona el tipo de dispositivo: **GPU**.
@@ -104,9 +104,9 @@ Para garantizar que no queden residuos en las claves del registro, debemos recur
 1. Tras reiniciar en modo normal (recuerda desactivar el arranque a prueba de errores en `msconfig` si no se quitó automáticamente), instala primero el controlador de la **gráfica integrada (iGPU)** y reinicia.
 2. Instala a continuación el controlador de la **gráfica dedicada (dGPU)** y reinicia de nuevo.
 3. Conecta el segundo monitor.
-4. Pulsa `Win` + `I` para abrir **Configuración** > **Sistema** > **Pantalla**.
-5. Selecciona el monitor problemático, baja hasta **Pantalla avanzada** y revisa el apartado **Frecuencia de actualización**.
-   - Si está configurado a una tasa de refresco ultraalta (por ejemplo, 144 Hz o 165 Hz) sobre una conexión HDMI 1.4 o USB-C básico, baja la frecuencia manualmente a **60 Hz** o **59.94 Hz**.
+4. Pulsa `Win` + `I` para abrir **Configuración**>**Sistema**>**Pantalla**.
+5. Selecciona el monitor problemático, baja hasta **Pantalla avanzada**y revisa el apartado**Frecuencia de actualización**.
+   - Si está configurado a una tasa de refresco ultraalta (por ejemplo, 144 Hz o 165 Hz) sobre una conexión HDMI 1.4 o USB-C básico, baja la frecuencia manualmente a **60 Hz**o**59.94 Hz**.
    - Comprueba si el espacio de color está configurado en **RGB 8-bit** en lugar de YCbCr422/420. La reducción de la profundidad de color libera de inmediato ancho de banda en el bus de datos, eliminando el parpadeo en enlaces saturados.
 
 ```cmd

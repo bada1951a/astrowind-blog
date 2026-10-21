@@ -81,7 +81,7 @@ Si le scintillement persiste, une corruption profonde de la bibliothèque de lie
 1. Téléchargez la dernière version stable de **DDU** ainsi que le package complet du pilote graphique constructeur (privilégiez le pilote OEM validé par le fabricant de votre PC portable : Lenovo, Dell, HP, etc., ou le dernier package WHQL d'Intel/NVIDIA).
 2. Lancez Windows en **Mode sans échec** :
    * Maintenez la touche `Shift` enfoncée tout en cliquant sur **Redémarrer** dans le menu Démarrer.
-   * Accédez à **Dépannage** > **Options avancées** > **Paramètres** > **Redémarrer**, puis choisissez l'option `4` ou `F4` (Activer le mode sans échec).
+   * Accédez à **Dépannage**>**Options avancées**>**Paramètres**>**Redémarrer**, puis choisissez l'option `4` ou `F4` (Activer le mode sans échec).
 3. Exécutez DDU avec les privilèges administrateur.
 4. Sélectionnez le type de périphérique (**GPU**), puis choisissez la marque de votre carte (Intel, AMD ou NVIDIA).
 5. Cliquez sur **Nettoyer et redémarrer**.
@@ -97,11 +97,11 @@ Si le scintillement persiste, une corruption profonde de la bibliothèque de lie
 
 Une fois le pilote réinstallé, raccordez votre second moniteur et procédez aux ajustements de synchronisation temporelle :
 
-1. Ouvrez les **Paramètres** Windows (`Win + I`), puis naviguez vers **Système** > **Écran** > **Paramètres d'affichage avancés**.
+1. Ouvrez les **Paramètres**Windows (`Win + I`), puis naviguez vers**Système**>**Écran**>**Paramètres d'affichage avancés**.
 2. Sélectionnez votre moniteur externe dans la liste déroulante supérieure.
 3. Vérifiez la valeur du champ **Choisir une fréquence d'actualisation**.
 4. Si la dalle est configurée sur une valeur non standard (ex. : 59,94 Hz ou 75 Hz instable), basculez-la manuellement sur un palier standard strict : **60,00 Hz**.
-5. Ouvrez le **Gestionnaire de périphériques**, développez la section **Moniteurs**, effectuez un clic droit sur l'écran identifié comme *Moniteur Plug-and-Play générique*, puis sélectionnez **Mettre à jour le pilote** > **Rechercher automatiquement les pilotes**.
+5. Ouvrez le **Gestionnaire de périphériques**, développez la section**Moniteurs**, effectuez un clic droit sur l'écran identifié comme *Moniteur Plug-and-Play générique*, puis sélectionnez **Mettre à jour le pilote**>**Rechercher automatiquement les pilotes**.
 
 ---
 

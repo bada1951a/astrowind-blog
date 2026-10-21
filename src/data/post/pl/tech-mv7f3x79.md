@@ -42,10 +42,10 @@ System Windows agresywnie cachuje informacje o każdym podłączonym kiedykolwie
 
 Zanim przejdziemy do modyfikacji plików binarnych, musimy precyzyjnie ustalić, który kontroler odpowiada za błądzący port wideo.
 
-1. Uruchom narzędzie **Menedżer urządzeń** (kombinacja `Win + X` -> wybierz **Menedżer urządzeń**).
+1. Uruchom narzędzie **Menedżer urządzeń**(kombinacja `Win + X` -> wybierz**Menedżer urządzeń**).
 2. Rozwiń sekcję **Karty graficzne**.
 3. Kliknij prawym przyciskiem myszy na zintegrowaną kartę (np. *Intel Iris Xe Graphics*) i wybierz **Właściwości**.
-4. W zakładce **Szczegóły** rozwiń listę **Właściwość** i wybierz **Identyfikatory sprzętu**.
+4. W zakładce **Szczegóły**rozwiń listę**Właściwość**i wybierz**Identyfikatory sprzętu**.
 
 <div style="border-left: 4px solid #4338ca; padding: 12px 16px; margin: 20px 0; background-color: rgba(67, 56, 202, 0.04); border-radius: 4px;">
 <strong>Zapisz wartości:</strong> Zwróć uwagę na ciąg znaków w formacie:<br>
@@ -96,7 +96,7 @@ Zwykłe odinstalowanie sterownika z poziomu Menedżera urządzeń pozostawia pli
 1. Pobierz narzędzie Display Driver Uninstaller (DDU).
 2. Uruchom system w trybie awaryjnym:
    * Przytrzymaj klawisz `Shift` i kliknij **Uruchom ponownie** w menu Start.
-   * Przejdź do: **Rozwiąż problemy** -> **Opcje zaawansowane** -> **Ustawienia uruchamiania** -> wciśnij klawisz `4` (**Włącz tryb awaryjny**).
+   * Przejdź do: **Rozwiąż problemy**->**Opcje zaawansowane**->**Ustawienia uruchamiania**-> wciśnij klawisz `4` (**Włącz tryb awaryjny**).
 3. Uruchom DDU z uprawnieniami administratora:
    * Jako typ urządzenia wybierz **Karta graficzna**.
    * Wybierz producenta dedykowanego układu (np. NVIDIA) i kliknij **Wyczyść i NIE restartuj**.
@@ -143,8 +143,5 @@ Praca na niskopoziomowych komponentach wideo niesie za sobą ryzyko utraty obraz
 **1. Czy uszkodzony lub zbyt długi kabel może wywoływać błędy systemowe TDR w dzienniku zdarzeń?**  
 Tak. Jeżeli kabel ma długość przekraczającą 2 metry bez aktywnego wzmacniacza sygnału lub nie posiada odpowiedniego ekranowania, na liniach transmisyjnych pojawia się zjawisko *DisplayPort link training error*. Karta graficzna próbuje obniżyć taktowanie lub renegocjować pasmo, co zamraża potok renderowania i zmusza sterownik `dxgkrnl.sys` do zainicjowania procedury naprawczej TDR.
 
-**2. Dlaczego pojedynczy monitor działa perfekcyjnie, a problem pojawia się dopiero po wpięciu drugiego ekranu?**  
-Obsługa dwóch monitorów wymaga podwojenia przepustowości na współdzielonym łączu PCIe oraz aktywacji technologii MST (Multi-Stream Transport). Wielu tańszych producentów stacji dokujących implementuje huby MST, które wchodzą w konflikt z mechanizmem zarządzania energią ASPM (Active State Power Management) w laptopie. W efekcie kontroler odcina zasilanie drugiego strumienia wideo przy braku gwałtownych zmian obrazu.
-
-**3. Czy wyłączenie zintegrowanej karty graficznej (iGPU) w Menedżerze urządzeń rozwiąże konflikt?**  
+**2. Dlaczego pojedynczy monitor działa perfekcyjnie, a problem pojawia się dopiero po wpięciu drugiego ekranu?**Obsługa dwóch monitorów wymaga podwojenia przepustowości na współdzielonym łączu PCIe oraz aktywacji technologii MST (Multi-Stream Transport). Wielu tańszych producentów stacji dokujących implementuje huby MST, które wchodzą w konflikt z mechanizmem zarządzania energią ASPM (Active State Power Management) w laptopie. W efekcie kontroler odcina zasilanie drugiego strumienia wideo przy braku gwałtownych zmian obrazu.**3. Czy wyłączenie zintegrowanej karty graficznej (iGPU) w Menedżerze urządzeń rozwiąże konflikt?**  
 W żadnym wypadku nie wolno tego robić w laptopach bez sprzętowego przełącznika MUX switch. W większości konstrukcji matryca laptopa oraz porty wyjściowe są fizycznie podpięte pod piny wyjściowe iGPU. Wyłączenie zintegrowanego układu w Menedżerze urządzeń spowoduje całkowite wyłączenie akceleracji sprzętowej, spadek rozdzielczości do trybu podstawowego Microsoft Basic Display Driver i brak możliwości wyprowadzenia sygnału na jakiekolwiek ekrany zewnętrzne.

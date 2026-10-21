@@ -59,7 +59,7 @@ Avant de toucher au matériel, il faut s'assurer qu'aucun conflit de pilote ou p
 
 1. Débranchez les autres périphériques d'entrée pour éviter les conflits d'interruptions.
 2. Ouvrez le **Gestionnaire de périphériques** (raccourci `Win + X` puis sélectionnez l'entrée correspondante).
-3. Déroulez la section **Périphériques d'interface utilisateur** (HID) ainsi que la section **Claviers**.
+3. Déroulez la section **Périphériques d'interface utilisateur**(HID) ainsi que la section**Claviers**.
 4. Repérez votre équipement, faites un clic droit puis sélectionnez **Désinstaller l'appareil**. Redémarrez le poste pour forcer la réinitialisation de la pile de pilotes génériques Windows.
 5. Ouvrez une **Invite de commandes** en mode administrateur et vérifiez que les touches filtres ne sont pas compromises via le panneau d'accessibilité.
 
@@ -126,7 +126,7 @@ L'application de dégrippant universel standard (WD-40 classique), d'huile de si
 </p>
 </div>
 
-* **Interrupteurs optiques ou à effet Hall :** Attention, ce guide s'adresse **exclusivement** aux commutateurs électromécaniques traditionnels à contacts métalliques. Si vous possédez un clavier équipé de switchs magnétiques (effet Hall) ou optiques (détection par faisceau infrarouge), l'application de spray contact est rigoureusement inutile et peut opacifier les prismes optiques ou endommager les capteurs de flux magnétique. Les problèmes de ces claviers se règlent par étalonnage logiciel ou simple nettoyage à sec des capteurs de poussière.
+* **Interrupteurs optiques ou à effet Hall :**Attention, ce guide s'adresse**exclusivement** aux commutateurs électromécaniques traditionnels à contacts métalliques. Si vous possédez un clavier équipé de switchs magnétiques (effet Hall) ou optiques (détection par faisceau infrarouge), l'application de spray contact est rigoureusement inutile et peut opacifier les prismes optiques ou endommager les capteurs de flux magnétique. Les problèmes de ces claviers se règlent par étalonnage logiciel ou simple nettoyage à sec des capteurs de poussière.
 * **Dégradation du lubrifiant d'origine :** L'usage d'un solvant contact désoxydant va inévitablement dissoudre une partie de la graisse diélectrique appliquée en usine (comme le Krytox GPL 205g0). Le switch pourra sembler légèrement plus bruyant ou plus rêche au toucher après l'opération. Si vous recherchez une sensation de frappe optimale, prévoyez une micro-application de lubrifiant pour stabilisateurs et commutateurs après désoxydation.
 
 ---

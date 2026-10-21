@@ -36,7 +36,7 @@ Sebelum masuk ke eksekusi pembersihan, penting untuk memahami kenapa masalah ini
 Untuk mengatasi masalah ini secara tuntas, kita harus mematikan layanan terkait, menghapus berkas *cache* yang rusak, lalu menyalakannya kembali. Ikuti langkah-langkah di bawah ini menggunakan akun Administrator.
 
 #### Langkah 1: Masuk ke Safe Mode atau Gunakan Command Prompt
-Jika laptop masih bisa masuk ke desktop meskipun lambat, buka menu **Pengaturan**, cari **Terminal** atau **Command Prompt**, lalu klik kanan dan pilih **Run as administrator**. (Jika tidak bisa masuk desktop sama sekali, akses menu *Advanced Startup* dengan menahan tombol Shift saat mengeklik *Restart*).
+Jika laptop masih bisa masuk ke desktop meskipun lambat, buka menu **Pengaturan**, cari**Terminal**atau**Command Prompt**, lalu klik kanan dan pilih**Run as administrator**. (Jika tidak bisa masuk desktop sama sekali, akses menu *Advanced Startup* dengan menahan tombol Shift saat mengeklik *Restart*).
 
 #### Langkah 2: Hentikan Layanan Sistem Terkait
 Ketik perintah berikut satu per satu lalu tekan Enter untuk menghentikan layanan yang sedang mengunci *folder* pembaruan:
@@ -77,10 +77,7 @@ Setelah semua perintah selesai dieksekusi dengan sukses, tutup jendela Terminal 
 
 ### Tanya Jawab Umum (FAQ)
 
-**1. Apakah menghapus folder SoftwareDistribution akan menghilangkan data pribadi saya?**  
-Tidak sama sekali. Folder ini murni berisi berkas unduhan pembaruan sistem operasi dan aplikasi bawaan. Dokumen, foto, dan aplikasi pihak ketiga Anda aman di tempatnya.
-
-**2. Apa yang harus dilakukan jika setelah mereset *cache* pembaruan tetap gagal?**  
+**1. Apakah menghapus folder SoftwareDistribution akan menghilangkan data pribadi saya?**Tidak sama sekali. Folder ini murni berisi berkas unduhan pembaruan sistem operasi dan aplikasi bawaan. Dokumen, foto, dan aplikasi pihak ketiga Anda aman di tempatnya.**2. Apa yang harus dilakukan jika setelah mereset *cache* pembaruan tetap gagal?**  
 Anda bisa menggunakan alat bawaan Windows bernama *System File Checker*. Buka Command Prompt Administrator lalu ketik `sfc /scannow` untuk memperbaiki file sistem yang rusak secara menyeluruh.
 
 **3. Bisakah saya menghapus folder cadangan (.old) setelah pembaruan berhasil?**  

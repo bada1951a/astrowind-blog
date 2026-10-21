@@ -41,7 +41,7 @@ Tidak perlu instal software tambahan atau masuk ke pengaturan BIOS yang ribet. C
 Tekan kombinasi tombol **Ctrl + Shift + Esc** secara bersamaan di keyboard Anda. Cara ini adalah jalan pintas paling cepat untuk memanggil Task Manager tanpa harus klik kanan *taskbar*.
 
 #### Langkah 2: Masuk ke Tab "Startup"
-Pada jendela Task Manager yang muncul, klik tab **Startup** (biasanya berada di bagian atas, berikon speedometer atau meteran). Jika Anda tidak melihat tab tersebut, klik **More details** di bagian bawah jendela terlebih dahulu.
+Pada jendela Task Manager yang muncul, klik tab **Startup**(biasanya berada di bagian atas, berikon speedometer atau meteran). Jika Anda tidak melihat tab tersebut, klik**More details** di bagian bawah jendela terlebih dahulu.
 
 #### Langkah 3: Nonaktifkan Aplikasi yang Tidak Perlu
 Anda akan melihat daftar panjang aplikasi yang berjalan otomatis. Cari aplikasi yang berstatus **Enabled** namun jarang Anda gunakan saat pertama kali menyalakan laptop. 

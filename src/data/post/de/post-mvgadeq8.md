@@ -15,7 +15,7 @@ Es ist 14:45 Uhr im Frankfurter Bankenviertel. Um 15:30 Uhr haben wir eine entsc
 
 ![Tech Troubleshooting Guide](/images/tech-photo/tech-photos%20(12).jpg)
 
-Zuerst verfällt man natürlich in blinden Aktionismus. Man klickt sich panisch durch die **Einstellungen** und die **Systemsteuerung**, tippt wild irgendwelche Befehle ein, die man vor Jahren mal in einem Forum aufgeschnappt hat, oder versucht, den Explorer.exe-Prozess über den **Task-Manager** neu zu starten – was natürlich beim Wasserzeichen rein gar nichts bringt, da es direkt vom Desktop Window Manager gerendert wird. Das Ergebnis: Zehn Minuten kostbare Zeit verschwendet, der Puls auf 180 und das Wasserzeichen leuchtet fröhlich weiter.
+Zuerst verfällt man natürlich in blinden Aktionismus. Man klickt sich panisch durch die **Einstellungen**und die**Systemsteuerung**, tippt wild irgendwelche Befehle ein, die man vor Jahren mal in einem Forum aufgeschnappt hat, oder versucht, den Explorer.exe-Prozess über den**Task-Manager** neu zu starten – was natürlich beim Wasserzeichen rein gar nichts bringt, da es direkt vom Desktop Window Manager gerendert wird. Das Ergebnis: Zehn Minuten kostbare Zeit verschwendet, der Puls auf 180 und das Wasserzeichen leuchtet fröhlich weiter.
 
 <div style="border-left: 4px solid #be123c; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Profi-Hinweis aus dem Banken-Support:</strong> Finger weg von zwielichtigen "Activator"-Tools aus dem Netz! Auf Firmen-Laptops triggern solche .exe-Dateien sofort die Endpoint Protection (EDC/SIEM) und alarmieren das Security Operations Center. Wir lösen das hier absolut sauber, transparent und richtliniendokumentiert über die integrierte Windows-Eingabeaufforderung.
@@ -36,7 +36,7 @@ Bevor wir den Befehl absetzen, müssen wir verstehen, warum das System überhaup
 Da wir die offizielle Volumenlizenz für den Kunden natürlich besitzen, sie aber akut gerade nicht online verifizieren können, stoppen wir für die Präsentation den zuständigen Dienst beziehungsweise setzen den Benachrichtigungstimer zurück. 
 
 #### Schritt 1: Eingabeaufforderung als Administrator öffnen
-Drücken Sie die Windows-Taste auf Ihrer Tastatur, tippen Sie `cmd` ein, machen Sie einen Rechtsklick auf die **Eingabeaufforderung** und wählen Sie im Kontextmenü **Als Administrator ausführen** aus. Bestätigen Sie die Sicherheitsabfrage der Benutzerkontensteuerung.
+Drücken Sie die Windows-Taste auf Ihrer Tastatur, tippen Sie `cmd` ein, machen Sie einen Rechtsklick auf die **Eingabeaufforderung**und wählen Sie im Kontextmenü**Als Administrator ausführen** aus. Bestätigen Sie die Sicherheitsabfrage der Benutzerkontensteuerung.
 
 #### Schritt 2: Den Lizenzstatus-Befehl ausführen
 Um den aktuellen Status zu prüfen und den Aussetzer zu kaschieren, nutzen wir das Windows-Skript für Software Licensing Management (`slmgr.vbs`). Tippen Sie folgenden Befehl ein und drücken Sie Enter:
@@ -62,11 +62,5 @@ Schließen Sie alle Fenster und starten Sie das System über das Startmenü neu.
 
 ### Häufig gestellte Fragen (FAQ)
 
-**F: Verliere ich durch diesen CMD-Befehl meine gespeicherten Daten oder Einstellungen?**
-A: Nein, absolut nicht. Der Befehl greift ausschließlich in den Software Licensing Service (`sppsvc`) ein. Ihre Dokumente, installierten Programme und persönlichen Einstellungen im Benutzerprofil bleiben zu 100% unberührt.
-
-**F: Was tun, wenn die Fehlermeldung "Der Befehl ist ungültig" in der CMD erscheint?**
-A: Überprüfen Sie, ob Sie die Eingabeaufforderung tatsächlich **als Administrator** geöffnet haben. Ohne administrative Rechte verweigert Windows jeglichen Zugriff auf die Lizenzierungsskripte. Achten Sie zudem auf die exakte Schreibweise inklusive der Dateiendung `.vbs`.
-
-**F: Funktioniert dieser Trick auch bei Windows 11 Pro und Enterprise?**
+**F: Verliere ich durch diesen CMD-Befehl meine gespeicherten Daten oder Einstellungen?**A: Nein, absolut nicht. Der Befehl greift ausschließlich in den Software Licensing Service (`sppsvc`) ein. Ihre Dokumente, installierten Programme und persönlichen Einstellungen im Benutzerprofil bleiben zu 100% unberührt.**F: Was tun, wenn die Fehlermeldung "Der Befehl ist ungültig" in der CMD erscheint?**A: Überprüfen Sie, ob Sie die Eingabeaufforderung tatsächlich**als Administrator**geöffnet haben. Ohne administrative Rechte verweigert Windows jeglichen Zugriff auf die Lizenzierungsskripte. Achten Sie zudem auf die exakte Schreibweise inklusive der Dateiendung `.vbs`.**F: Funktioniert dieser Trick auch bei Windows 11 Pro und Enterprise?**
 A: Ja, der zugrundeliegende Windows-Lizenzierungsmanager verhält sich bei Windows 10 und Windows 11 identisch. Auch hier gilt jedoch: Es handelt sich um eine administrative Überbrückung, keine dauerhafte Freischaltung ohne gültigen Key.

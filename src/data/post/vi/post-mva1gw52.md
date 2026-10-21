@@ -35,9 +35,9 @@ Chúng ta sẽ không dùng mấy phần mềm dọn rác bên thứ ba trôi n�
 
 Hãy để Windows tự động làm việc thay vì mò mẫm thủ công từng thư mục.
 
-* Nhấn tổ hợp phím **Windows + i** để mở ứng dụng **Cài đặt (Settings)**.
-* Chọn mục **Hệ thống (System)** ở cột bên trái, sau đó nhấn vào **Bộ nhớ (Storage)**.
-* Bật công tắc **Storage Sense** sang trạng thái **Bật (On)**. Tính năng này sẽ tự động xóa các file rác cũ khi ổ đĩa gần đầy.
+* Nhấn tổ hợp phím **Windows + i**để mở ứng dụng**Cài đặt (Settings)**.
+* Chọn mục **Hệ thống (System)**ở cột bên trái, sau đó nhấn vào**Bộ nhớ (Storage)**.
+* Bật công tắc **Storage Sense**sang trạng thái**Bật (On)**. Tính năng này sẽ tự động xóa các file rác cũ khi ổ đĩa gần đầy.
 * Click vào dòng **Tệp tạm thời (Temporary files)**. Đợi hệ thống quét khoảng 1-2 phút.
 
 <div style="border-left: 4px solid #111827; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
@@ -57,10 +57,10 @@ Công cụ kinh điển này đôi khi tìm thấy những thứ mà giao diện
 
 Đây là cách triệt để nhất để bảo vệ ổ C trong dài hạn đối với anh em làm văn phòng hay kỹ thuật:
 
-1. Mở **File Explorer**, nhìn sang cột bên trái, nhấn chuột phải vào thư mục **Downloads** chọn **Thuộc tính (Properties)**.
-2. Chuyển sang tab **Đường dẫn (Location)** và bấm vào nút **Di chuyển (Move...)**.
+1. Mở **File Explorer**, nhìn sang cột bên trái, nhấn chuột phải vào thư mục**Downloads**chọn**Thuộc tính (Properties)**.
+2. Chuyển sang tab **Đường dẫn (Location)**và bấm vào nút**Di chuyển (Move...)**.
 3. Chọn một phân vùng ổ đĩa khác (ví dụ ổ D hoặc ổ E), tạo một thư mục mới tên là `Downloads` rồi bấm **Chọn thư mục (Select Folder)**.
-4. Nhấn **Apply** -> Bấm **Yes** ở bảng xác nhận để Windows tự động chuyển toàn bộ dữ liệu cũ sang nơi an toàn.
+4. Nhấn **Apply**-> Bấm**Yes** ở bảng xác nhận để Windows tự động chuyển toàn bộ dữ liệu cũ sang nơi an toàn.
 
 ---
 
@@ -80,7 +80,7 @@ Công cụ kinh điển này đôi khi tìm thấy những thứ mà giao diện
 Tuyệt đối không. Thư mục `Windows.old` chỉ chứa hệ điều hành cũ của lần cập nhật gần nhất nhằm cho phép bạn quay lùi phiên bản (Rollback) nếu bản mới bị lỗi. Sau khi hệ thống chạy ổn định tầm 10 ngày, bạn hoàn toàn có thể xóa sạch nó để tiết kiệm từ 15GB đến 30GB dung lượng ổ C.
 
 ### Tại sao tôi đã xóa nhiều file nhưng dung lượng ổ C trống ra không đáng kể?
-Có thể các file bạn vừa xóa vẫn đang nằm ẩn trong **Thùng rác (Recycle Bin)** hoặc tính năng **System Protection (Restore Points)** đang ngốn dung lượng để lưu các bản sao lưu hệ thống cũ. Hãy vào System Properties -> System Protection để cấu hình lại dung lượng tối đa cho phép các điểm khôi phục này sử dụng.
+Có thể các file bạn vừa xóa vẫn đang nằm ẩn trong **Thùng rác (Recycle Bin)**hoặc tính năng**System Protection (Restore Points)** đang ngốn dung lượng để lưu các bản sao lưu hệ thống cũ. Hãy vào System Properties -> System Protection để cấu hình lại dung lượng tối đa cho phép các điểm khôi phục này sử dụng.
 
 ### Có nên dùng phần mềm bên thứ ba như CCleaner để dọn rác Windows 11 không?
 Theo kinh nghiệm thực chiến của tôi, đối với Windows 11 hiện đại, các công cụ tích hợp sẵn như Storage Sense và Disk Cleanup đã làm quá tốt nhiệm vụ của mình. Việc dùng các phần mềm bên ngoài đôi khi can thiệp sâu vào Registry gây lỗi không đáng có hoặc cài chèn các tiến trình chạy ngầm làm giảm hiệu năng máy.

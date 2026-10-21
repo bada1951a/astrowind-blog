@@ -36,17 +36,17 @@ Pourquoi Windows 10 finit-il par s'effondrer au boot après quelques mois d'util
 Pas besoin de scripts PowerShell complexes ou de réinstaller tout le système. Voici la méthode officielle et directe pour reprendre le contrôle de votre machine, validée par notre équipe support.
 
 ### Étape 1 : Ouvrir le Gestionnaire des tâches
-Faites le raccourci clavier universel **Ctrl + Shift + Échap** pour lancer directement le Gestionnaire des tâches. Si la fenêtre s'ouvre en mode réduit, cliquez sur **"Plus de détails"** tout en bas pour afficher l'interface complète.
+Faites le raccourci clavier universel **Ctrl + Shift + Échap**pour lancer directement le Gestionnaire des tâches. Si la fenêtre s'ouvre en mode réduit, cliquez sur "**Plus de détails**" tout en bas pour afficher l'interface complète.
 
 ### Étape 2 : Naviguer vers l'onglet Démarrage
-Repérez l'onglet **"Démarrage"** dans la barre supérieure (généralement la quatrième icône en partant de la gauche). Vous y découvrirez la liste exhaustive de tous les logiciels programmés pour s'exécuter dès que vous entrez votre mot de passe Windows.
+Repérez l'onglet "**Démarrage**" dans la barre supérieure (généralement la quatrième icône en partant de la gauche). Vous y découvrirez la liste exhaustive de tous les logiciels programmés pour s'exécuter dès que vous entrez votre mot de passe Windows.
 
 ### Étape 3 : Traquer l'impact et désactiver
-Regardez la colonne **"Impact du démarrage"**. C'est votre indicateur clé :
+Regardez la colonne "**Impact du démarrage**". C'est votre indicateur clé :
 - **Élevé :** À neutraliser d'urgence si vous ne vous en servez pas immédiatement.
 - **Faible / Aucun :** Peut rester actif sans impacter votre productivité.
 
-Faites un clic droit sur les applications superflues (par exemple : Cortana, applications de synchronisation cloud inutiles, lanceurs de jeux, assistants de marques) et sélectionnez **"Désactiver"**. 
+Faites un clic droit sur les applications superflues (par exemple : Cortana, applications de synchronisation cloud inutiles, lanceurs de jeux, assistants de marques) et sélectionnez "**Désactiver**". 
 
 *Attention : Ne touchez pas aux pilotes essentiels comme le gestionnaire audio Realtek ou votre antivirus principal (Windows Defender / l'icône de sécurité de votre éditeur tiers).*
 
@@ -64,11 +64,5 @@ Pour éviter de retomber dans les mêmes travers lors des prochains sprints :
 
 ## Foire Aux Questions (FAQ)
 
-**1. Est-ce dangereux de désactiver des éléments dans l'onglet Démarrage ?**
-Non, absolument pas. Désactiver une application ici signifie simplement qu'elle ne se lancera plus toute seule en arrière-plan. Vous pourrez toujours l'ouvrir manuellement en double-cliquant sur son icône quand vous en aurez réellement besoin.
-
-**2. Que faire si certaines applications persistent à se lancer malgré la désactivation ?**
-Certains logiciels récalcitrants possèdent leurs propres paramètres internes de lancement automatique. Ouvrez les préférences ou les paramètres de l'application concernée (comme Discord ou Steam) et décochez l'option "Lancer au démarrage de l'ordinateur" dans l'interface du logiciel lui-même.
-
-**3. Pourquoi mon PC reste-t-il lent malgré le nettoyage du démarrage ?**
+**1. Est-ce dangereux de désactiver des éléments dans l'onglet Démarrage ?**Non, absolument pas. Désactiver une application ici signifie simplement qu'elle ne se lancera plus toute seule en arrière-plan. Vous pourrez toujours l'ouvrir manuellement en double-cliquant sur son icône quand vous en aurez réellement besoin.**2. Que faire si certaines applications persistent à se lancer malgré la désactivation ?**Certains logiciels récalcitrants possèdent leurs propres paramètres internes de lancement automatique. Ouvrez les préférences ou les paramètres de l'application concernée (comme Discord ou Steam) et décochez l'option "Lancer au démarrage de l'ordinateur" dans l'interface du logiciel lui-même.**3. Pourquoi mon PC reste-t-il lent malgré le nettoyage du démarrage ?**
 Si le temps de boot reste anormalement long après cette manipulation, le problème est probablement matériel. Un disque système (C:) saturé à plus de 90% ou un disque dur mécanique (HDD) en fin de vie provoquent ces symptômes. L'achat et l'installation d'un SSD NVMe résoudront définitivement le problème.

@@ -61,7 +61,7 @@ Per ripristinare uno stack video corrotto non è sufficiente premere "Aggiorna d
 1. Premi la combinazione di tasti `Tasto Windows + X` e seleziona **Gestione dispositivi**.
 2. Espandi la categoria **Schede video**. Qui troverai normalmente due voci (es. *Intel(R) Iris(R) Xe Graphics* e *NVIDIA GeForce RTX 4060 Laptop GPU*).
 3. Clicca con il tasto destro sul display esterno (visibile sotto la sezione **Schermi** come *Monitor generico Plug and Play*) e seleziona **Disinstalla dispositivo**.
-4. Spostati su **Schede video**, fai clic destro sulla scheda integrata e scegli **Proprietà** -> scheda **Driver**.
+4. Spostati su **Schede video**, fai clic destro sulla scheda integrata e scegli**Proprietà**-> scheda**Driver**.
 5. Se il problema si è presentato dopo un aggiornamento recente di Windows Update, fai clic su **Ripristina driver**. Se il pulsante è disabilitato, procedi con la disinstallazione avanzata.
 
 ```powershell

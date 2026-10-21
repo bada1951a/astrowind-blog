@@ -27,7 +27,7 @@ Tras rescatar el equipo mediante un reinicio forzoso y revisar los registros del
 
 ## Pasos para la solución: Vaciado de la caché y reseteo de servicios
 
-Para salir de este apuro sin tener que formatear ni perder la configuración de desarrollo, vamos a detener los servicios críticos de actualización mediante la Terminal y a vaciar manualmente la caché corrupta. Abre el menú Inicio, escribe **Terminal** (o Símbolo del sistema), haz clic derecho y selecciona **Ejecutar como administrador**.
+Para salir de este apuro sin tener que formatear ni perder la configuración de desarrollo, vamos a detener los servicios críticos de actualización mediante la Terminal y a vaciar manualmente la caché corrupta. Abre el menú Inicio, escribe **Terminal**(o Símbolo del sistema), haz clic derecho y selecciona**Ejecutar como administrador**.
 
 ### Paso 1: Detener los servicios de actualización
 Copia y pega los siguientes comandos para apagar los procesos que están bloqueando los archivos:
@@ -71,11 +71,5 @@ Para evitar que este susto se repita en mitad de un despliegue importante, te su
 
 ## Preguntas Frecuentes (FAQ)
 
-**¿Pierdo datos personales o aplicaciones instaladas al renombrar SoftwareDistribution?**
-No. Esta carpeta almacena únicamente los paquetes temporales de instalación descargados desde los servidores de Microsoft. Tus documentos, programas y configuraciones de usuario permanecen completamente intactos.
-
-**¿Qué hago si el comando `net stop wuauserv` se queda en "El servicio se está deteniendo..." indefinidamente?**
-Es un síntoma clásico de que un subproceso se ha quedado colgado en el Kernel. La solución más rápida es abrir el Administrador de tareas (Ctrl + Shift + Esc), buscar el proceso de Windows Update en la pestaña Detalles, hacer clic derecho y seleccionar **Finalizar árbol de procesos**.
-
-**¿Es seguro eliminar las carpetas `.bak` que hemos creado?**
+**¿Pierdo datos personales o aplicaciones instaladas al renombrar SoftwareDistribution?**No. Esta carpeta almacena únicamente los paquetes temporales de instalación descargados desde los servidores de Microsoft. Tus documentos, programas y configuraciones de usuario permanecen completamente intactos.**¿Qué hago si el comando `net stop wuauserv` se queda en "El servicio se está deteniendo..." indefinidamente?**Es un síntoma clásico de que un subproceso se ha quedado colgado en el Kernel. La solución más rápida es abrir el Administrador de tareas (Ctrl + Shift + Esc), buscar el proceso de Windows Update en la pestaña Detalles, hacer clic derecho y seleccionar**Finalizar árbol de procesos**.**¿Es seguro eliminar las carpetas `.bak` que hemos creado?**
 Sí, pero te recomiendo esperar un par de días y comprobar que tu sistema arranca, apaga y actualiza sin problemas antes de borrarlas definitivamente para liberar espacio en el disco C.

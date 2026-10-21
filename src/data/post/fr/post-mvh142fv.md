@@ -33,7 +33,7 @@ Puisque le plantage vient de se produire, nous allons utiliser l'outil natif de 
 
 ### 1. Ouvrir l'Observateur d'événements
 Cliquez sur le menu Démarrer, tapez **Observateur d'événements** (Event Viewer) et validez. 
-Dans la colonne de gauche, développez l'arborescence : **Journaux Windows** -> **Système**.
+Dans la colonne de gauche, développez l'arborescence : **Journaux Windows**->**Système**.
 
 
 
@@ -60,9 +60,9 @@ Filtrez ou lisez les avertissements et erreurs juste avant le plantage. Voici ce
 
 Une fois la piste identifiée dans les journaux, passons à la résolution pratique via les outils de configuration de Windows 11 :
 
-1.  **Mise à jour ou réinstallation propre du pilote graphique :** Ouvrez le **Gestionnaire de périphériques**, allez dans *Cartes graphique*, faites un clic droit sur votre GPU et choisissez *Désinstaller l'appareil*. Redémarrez et installez le dernier pilote stable téléchargé directement depuis le site du fabricant (Intel, AMD ou NVIDIA).
+1.  **Mise à jour ou réinstallation propre du pilote graphique :**Ouvrez le**Gestionnaire de périphériques**, allez dans *Cartes graphique*, faites un clic droit sur votre GPU et choisissez *Désinstaller l'appareil*. Redémarrez et installez le dernier pilote stable téléchargé directement depuis le site du fabricant (Intel, AMD ou NVIDIA).
 2.  **Vérification de l'intégrité du système :** Ouvrez un terminal en mode administrateur (via le menu contextuel du bouton Démarrer) et lancez la commande `sfc /scannow`, suivie de `DISM /Online /Cleanup-Image /RestoreHealth`. Cela répare les fichiers système corrompus qui font planter le gestionnaire de fenêtres.
-3.  **Ajustement du plan d'alimentation :** Allez dans le **Panneau de configuration**, puis *Options d'alimentation*. Si vous utilisez un profil d'économie d'énergie agressive, passez sur le mode *Performances élevées* pour tester si les freezes persistent.
+3.  **Ajustement du plan d'alimentation :**Allez dans le**Panneau de configuration**, puis *Options d'alimentation*. Si vous utilisez un profil d'économie d'énergie agressive, passez sur le mode *Performances élevées* pour tester si les freezes persistent.
 
 ---
 
@@ -77,11 +77,6 @@ Quand un PC se fige de manière aléatoire, le système de fichiers (surtout si 
 
 ## Foire Aux Questions (FAQ)
 
-**Q1 : Mon Observateur d'événements affiche des dizaines d'erreurs au démarrage, est-ce normal ?**  
-**R :** Oui, Windows génère de nombreux avertissements non critiques (services non démarrés à temps, timeouts mineurs) dès le boot. Ne paniquez pas. Concentrez-vous uniquement sur l'horodatage exact correspondant à la minute qui précède votre gel d'écran.
+**Q1 : Mon Observateur d'événements affiche des dizaines d'erreurs au démarrage, est-ce normal ?** **R :**Oui, Windows génère de nombreux avertissements non critiques (services non démarrés à temps, timeouts mineurs) dès le boot. Ne paniquez pas. Concentrez-vous uniquement sur l'horodatage exact correspondant à la minute qui précède votre gel d'écran.**Q2 : Est-ce qu'une barrette de RAM défectueuse peut provoquer ces blocages sans afficher d'écran bleu ?** **R :** Tout à fait. Une erreur mémoire silencieuse corrompt instantanément l'espace d'adressage de l'OS, ce qui gèle le processus principal de Windows au lieu de déclencher un plantage avec écran bleu. Utilisez l'outil natif *Diagnostic de la mémoire Windows* pour vérifier cela.
 
-**Q2 : Est-ce qu'une barrette de RAM défectueuse peut provoquer ces blocages sans afficher d'écran bleu ?**  
-**R :** Tout à fait. Une erreur mémoire silencieuse corrompt instantanément l'espace d'adressage de l'OS, ce qui gèle le processus principal de Windows au lieu de déclencher un plantage avec écran bleu. Utilisez l'outil natif *Diagnostic de la mémoire Windows* pour vérifier cela.
-
-**Q3 : Comment savoir si le SSD est responsable des freezes ?**  
-**R :** Si vos freezes s'accompagnent d'un ralentissement extrême où le gestionnaire des tâches indique 100% d'utilisation du disque avec un temps de réponse de plusieurs milliers de millisecondes, téléchargez le logiciel de diagnostic officiel de la marque de votre SSD (Samsung Magician, CrystalDiskInfo, etc.) pour vérifier son état de santé global et mettre à jour son firmware.
+**Q3 : Comment savoir si le SSD est responsable des freezes ?** **R :** Si vos freezes s'accompagnent d'un ralentissement extrême où le gestionnaire des tâches indique 100% d'utilisation du disque avec un temps de réponse de plusieurs milliers de millisecondes, téléchargez le logiciel de diagnostic officiel de la marque de votre SSD (Samsung Magician, CrystalDiskInfo, etc.) pour vérifier son état de santé global et mettre à jour son firmware.

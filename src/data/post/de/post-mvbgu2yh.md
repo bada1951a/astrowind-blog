@@ -53,7 +53,7 @@ Get-AppxPackage -AllUsers | Foreach {Add-AppxPackage -DisableDevelopmentMode -Re
 ### Schritt 3: Systemdateien auf Integrität prüfen (SFC & DISM)
 Manchmal liegt die Ursache tiefer in beschädigten Systemdateien nach einem fehlerhaften Windows-Update.
 
-* Öffnen Sie das **Terminal** oder die **Eingabeaufforderung** als Administrator.
+* Öffnen Sie das **Terminal**oder die**Eingabeaufforderung** als Administrator.
 * Tippen Sie `sfc /scannow` ein und bestätigen Sie. Windows prüft nun alle geschützten Systemdateien und ersetzt beschädigte Versionen automatisch.
 * Nach dem Durchlauf geben Sie zusätzlich `DISM.exe /Online /Cleanup-image /Restorehealth` ein, um das Windows-Wimage zu reparieren.
 

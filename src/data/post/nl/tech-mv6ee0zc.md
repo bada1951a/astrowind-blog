@@ -11,7 +11,7 @@ theme: "Pastel Lavender Tech"
 
 Als werkplekbeheerder en IT-infrastructuurspecialist krijg ik regelmatig randapparatuur op mijn werkbank die door collega's al bijna is afgeschreven. Vorige week nog stond een senior software developer aan mijn bureau: zijn op maat gemaakte mechanische toetsenbord met Cherry MX Brown switches registreerde bij de 'E'-toets willekeurig dubbele aanslagen (`ee`) en liet de spatiebalk regelmatig steken. Voor een programmeur is dit funest; één onbedoelde dubbele letter breekt variabelen en veroorzaakt syntaxfouten. 
 
-In plaats van direct een nieuw toetsenbord van tweehonderd euro uit het IT-budget te trekken of direct de soldeerbout aan te slingeren, heb ik het probleem binnen twintig minuten permanent verholpen. In deze technische handleiding deel ik de exacte diagnose- en herstelprocedure voor **chattering** (toetsstuiting of dubbelslag) en **missende aanslagen**, inclusief de veilige toepassing van elektronica-contactspray.
+In plaats van direct een nieuw toetsenbord van tweehonderd euro uit het IT-budget te trekken of direct de soldeerbout aan te slingeren, heb ik het probleem binnen twintig minuten permanent verholpen. In deze technische handleiding deel ik de exacte diagnose- en herstelprocedure voor **chattering**(toetsstuiting of dubbelslag) en**missende aanslagen**, inclusief de veilige toepassing van elektronica-contactspray.
 
 ---
 
@@ -64,7 +64,7 @@ Volg onderstaande stappen systematisch. We beginnen met niet-invasieve softwaret
 Voordat we de fysieke hardware demonteren, controleren we of er geen driverconflicten of USB-stroombeheerproblemen zijn binnen Windows.
 
 1. Koppel het toetsenbord los en open **Apparaatbeheer** via `devmgmt.msc` in het venster Uitvoeren (`Win + R`).
-2. Vouw de categorie **Toetsenborden** uit. Klik met de rechtermuisknop op het problematische apparaat en kies **Apparaat verwijderen**.
+2. Vouw de categorie **Toetsenborden**uit. Klik met de rechtermuisknop op het problematische apparaat en kies**Apparaat verwijderen**.
 3. Vouw onderaan de categorie **Universal Serial Bus-controllers** uit. Controleer de eigenschappen van de USB-hoofdhubs: schakel op het tabblad *Energiebeheer* de optie *"De computer mag dit apparaat uitschakelen om energie te besparen"* uit.
 4. Koppel het toetsenbord weer aan via een directe USB-poort op het moederbord (geen ongevoede USB-hub) zodat Windows het stuurprogramma opnieuw initialiseert.
 
@@ -126,7 +126,7 @@ Heeft het flashen met contactspray geen effect? Dan ligt de fout dieper in het m
 
 ## Geavanceerde workaround: Debounce via QMK / VIA aanpassen
 
-Als een switch af en toe nog licht stuitert en je geen reserveonderdelen bij de hand hebt, kun je het probleem softwarematig opvangen als jouw toetsenbord opensource firmware zoals **QMK** of **VIA** ondersteunt.
+Als een switch af en toe nog licht stuitert en je geen reserveonderdelen bij de hand hebt, kun je het probleem softwarematig opvangen als jouw toetsenbord opensource firmware zoals **QMK**of**VIA** ondersteunt.
 
 In het bronbestand `config.h` van de firmware kun je de debounce-instelling verhogen:
 

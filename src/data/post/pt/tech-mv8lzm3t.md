@@ -53,7 +53,7 @@ Muitos serviços inúteis continuam rodando no talo em segundo plano. Vamos desa
 
 1. Pressione `Windows + R`, digite `services.msc` e dê Enter.
 2. Procure por serviços pesados que você não usa no dia a dia corporativo ou pessoal (ex: *SysMain* em alguns cenários de SSD antigo, *Windows Search* se sua máquina for muito fraca, ou updaters automáticos de programas específicos).
-3. Clique duas vezes no serviço, mude o **Tipo de inicialização** para **Desativado** ou **Manual**, e clique em **Parar**.
+3. Clique duas vezes no serviço, mude o **Tipo de inicialização**para**Desativado**ou**Manual**, e clique em**Parar**.
 
 #### Passo 3: Faxina Profunda via Prompt de Comando (CMD) e Limpeza de Disco
 Agora vamos rodar a artilharia pesada para varrer o lixo acumulado que corrompe o registro e atrasa o carregamento dos arquivos do sistema.
@@ -68,7 +68,7 @@ Agora vamos rodar a artilharia pesada para varrer o lixo acumulado que corrompe 
    ```cmd
    sfc /scannow
    ```
-4. Para finalizar a limpeza física de arquivos temporários de boot, abra o menu Iniciar, digite **Limpeza de Disco** (`cleanmgr`), selecione a unidade `C:`, marque todas as caixas de arquivos temporários, despejo de memória e cache, e clique em **Limpar arquivos do sistema**.
+4. Para finalizar a limpeza física de arquivos temporários de boot, abra o menu Iniciar, digite **Limpeza de Disco**(`cleanmgr`), selecione a unidade `C:`, marque todas as caixas de arquivos temporários, despejo de memória e cache, e clique em**Limpar arquivos do sistema**.
 
 ---
 
@@ -83,11 +83,5 @@ Nunca desative drivers essenciais de chipset, controladoras de armazenamento (co
 
 ### FAQ Técnico: Dúvidas Comuns da Bancada
 
-**1. Trocar o HD mecânico por um SSD resolve o problema de boot de vez?**
-Com toda certeza. Enquanto um HD tradicional (7200 RPM) pena para entregar 100 MB/s de leitura sequencial com alto tempo de busca, um SSD SATA básico entrega cerca de 550 MB/s, e um NVMe moderno ultrapassa facilmente os 3500 MB/s. É a mudança com melhor custo-benefício que existe na computação moderna.
-
-**2. Devo usar programas milagrosos de otimization da internet?**
-Evite ao máximo. A maioria desses softwares chamados "Game Boosters" ou "PC Cleaners" genéricos só serve para entupir o sistema de adware, rodar scripts inúteis e, ironicamente, adicionar mais processos residentes em segundo plano que deixam o computador ainda mais lento. O ecossistema nativo do Windows já possui ferramentas suficientes.
-
-**3. O relatório de inicialização do Gerenciador de Tarefas mostra "Tempo da última BIOS: X segundos". O que isso significa?**
+**1. Trocar o HD mecânico por um SSD resolve o problema de boot de vez?**Com toda certeza. Enquanto um HD tradicional (7200 RPM) pena para entregar 100 MB/s de leitura sequencial com alto tempo de busca, um SSD SATA básico entrega cerca de 550 MB/s, e um NVMe moderno ultrapassa facilmente os 3500 MB/s. É a mudança com melhor custo-benefício que existe na computação moderna.**2. Devo usar programas milagrosos de otimization da internet?**Evite ao máximo. A maioria desses softwares chamados "Game Boosters" ou "PC Cleaners" genéricos só serve para entupir o sistema de adware, rodar scripts inúteis e, ironicamente, adicionar mais processos residentes em segundo plano que deixam o computador ainda mais lento. O ecossistema nativo do Windows já possui ferramentas suficientes.**3. O relatório de inicialização do Gerenciador de Tarefas mostra "Tempo da última BIOS: X segundos". O que isso significa?**
 Isso indica o tempo que a placa-mãe leva para fazer o autoteste (POST) e inicializar o firmware antes de passar o bastão para o Windows. Se esse tempo estiver muito alto (acima de 15-20 segundos sem justificativa), pode ser hora de atualizar a BIOS da placa-mãe ou desativar dispositivos de hardware legados que não são mais utilizados nas portas USB/PCIe.

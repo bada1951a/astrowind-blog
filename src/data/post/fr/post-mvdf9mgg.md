@@ -37,7 +37,7 @@ Avant de manipuler les fichiers système, comprenons ce qui se passe sous le cap
 Pour résoudre ce problème, nous allons devoir arrêter temporairement les services de mise à jour, vider le dossier de cache corrompu, puis relancer les processus. 
 
 ### Étape 1 : Ouvrir le Terminal en mode Administrateur
-Faites un clic droit sur le bouton Démarrer de Windows 11, puis sélectionnez **Terminal (Administrateur)** ou **Invite de commandes (Admin)**. Confirmez l'invite de contrôle de compte d'utilisateur (UAC).
+Faites un clic droit sur le bouton Démarrer de Windows 11, puis sélectionnez **Terminal (Administrateur)**ou**Invite de commandes (Admin)**. Confirmez l'invite de contrôle de compte d'utilisateur (UAC).
 
 ### Étape 2 : Arrêter les services de mise à jour et de cryptographie
 Pour pouvoir supprimer ou renommer les fichiers du cache, les services Windows associés doivent être stoppés. Tapez les commandes suivantes une par une en appuyant sur Entrée :
@@ -87,11 +87,5 @@ Il ne vous reste plus qu'à redémarrer votre machine, puis à vous rendre dans 
 
 ## Foire aux Questions (FAQ)
 
-**1. Est-ce que renommer le dossier SoftwareDistribution efface mes fichiers personnels ?**
-Absolument pas. Ce dossier contient uniquement les fichiers temporaires téléchargés pour les mises à jour Windows. Vos documents, applications et paramètres personnels ne sont en aucun cas touchés.
-
-**2. Que faire si la commande `net stop wuauserv` reste bloquée sur "Arrêt en cours" ?**
-C'est un classique lorsque le service est totalement gelé. Ouvrez le Gestionnaire tâches (Ctrl + Maj + Échap), allez dans l'onglet **Services**, cherchez `wuauserv`, faites un clic droit dessus et choisissez **Arrêter**. Si cela ne suffit pas, un redémarrage de la machine s'impose.
-
-**3. Pourquoi Windows 11 bloque-t-il si souvent à 100 pourcent lors des mises à jour ?**
+**1. Est-ce que renommer le dossier SoftwareDistribution efface mes fichiers personnels ?**Absolument pas. Ce dossier contient uniquement les fichiers temporaires téléchargés pour les mises à jour Windows. Vos documents, applications et paramètres personnels ne sont en aucun cas touchés.**2. Que faire si la commande `net stop wuauserv` reste bloquée sur "Arrêt en cours" ?**C'est un classique lorsque le service est totalement gelé. Ouvrez le Gestionnaire tâches (Ctrl + Maj + Échap), allez dans l'onglet**Services**, cherchez `wuauserv`, faites un clic droit dessus et choisissez**Arrêter**. Si cela ne suffit pas, un redémarrage de la machine s'impose.**3. Pourquoi Windows 11 bloque-t-il si souvent à 100 pourcent lors des mises à jour ?**
 Le blocage à 100% correspond généralement à la phase finale d'écriture dans le registre et de nettoyage des composants. Si un pilote tiers, un antivirus un peu trop zélé ou un secteur disque défectueux interrompt cette séquence, le processus s'arrête indéfiniment en attendant une réponse qui ne viendra jamais.

@@ -33,7 +33,7 @@ Không cần dùng phần mềm bên thứ ba rườm rà hay chỉnh sửa Regi
 Bấm tổ hợp phím **Ctrl + Shift + Esc** trên bàn phím. Đây là cách nhanh nhất để mở thẳng trình quản lý tác vụ mà không cần thông qua màn hình khóa.
 
 ### Bước 2: Truy cập tab Startup
-Trong giao diện Task Manager, nếu bạn chỉ thấy một bảng nhỏ gọn, hãy bấm vào dòng chữ **More details** ở góc dưới bên trái. Sau đó, tìm và bấm chọn tab **Startup** (có biểu tượng hình đồng hồ đo tốc độ).
+Trong giao diện Task Manager, nếu bạn chỉ thấy một bảng nhỏ gọn, hãy bấm vào dòng chữ **More details**ở góc dưới bên trái. Sau đó, tìm và bấm chọn tab**Startup** (có biểu tượng hình đồng hồ đo tốc độ).
 
 ### Bước 3: Vô hiệu hóa ứng dụng không cần thiết
 Tại đây, bạn sẽ thấy danh sách toàn bộ ứng dụng tự khởi động kèm theo mức độ ảnh hưởng của chúng ở cột **Startup impact** (High, Medium, Low hoặc Not measured).

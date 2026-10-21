@@ -35,13 +35,13 @@ Genug geredet, machen wir Nägel mit Köpfen. Wir lösen das Problem direkt übe
 Drücke die Tastenkombination `Strg + Umschalt + Esc`, um den **Task-Manager** direkt zu öffnen. (Alternativ kannst du auch mit der rechten Maustaste auf die Taskleiste klicken und den Task-Manager auswählen).
 
 #### Schritt 2: Den Autostart-Reiter finden
-Falls sich der Task-Manager in der kompakten Ansicht öffnet, klicke unten links auf **"Mehr Details"**. Navigiere nun oben in der Reiterleiste zum Tab **"Autostart"** (das Symbol sieht aus wie ein kleines Tachometer oder ein Chip).
+Falls sich der Task-Manager in der kompakten Ansicht öffnet, klicke unten links auf "**Mehr Details**". Navigiere nun oben in der Reiterleiste zum Tab "**Autostart**" (das Symbol sieht aus wie ein kleines Tachometer oder ein Chip).
 
 #### Schritt 3: Übeltäter identifizieren und deaktivieren
 Du siehst nun eine Liste aller Programme, die beim Start von Windows 10 automatisch geladen werden. In der Spalte "Startstatus" siehst du, was aktiv ist. In der Spalte "Startauswirkung" zeigt dir Windows an, wie stark das jeweilige Tool den Bootvorgang belastet (Hoch, Mittel, Niedrig).
 
 1. Klicke mit der rechten Maustaste auf ein Programm, das du beim Systemstart nicht zwingend brauchst (zum Beispiel den Epic Games Launcher, Cortana, Spotify oder diverse Drucker-Helfer).
-2. Wähle im Kontextmenü **"Deaktivieren"**.
+2. Wähle im Kontextmenü "**Deaktivieren**".
 3. Wiederhole das für alle nicht essenziellen Anwendungen.
 
 <div style="border-left: 4px solid #78350f; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
@@ -55,8 +55,5 @@ Du siehst nun eine Liste aller Programme, die beim Start von Windows 10 automati
 **1. Was passiert, wenn ich ein wichtiges Programm im Autostart deaktiviere?**
 Keine Sorge, du machst damit nichts kaputt. Deaktivieren bedeutet lediglich, dass das Programm nicht mehr *automatisch* beim Hochfahren startet. Du kannst es jederzeit ganz normal über das Startmenü oder einen Desktop-Shortcut öffnen, wenn du es wirklich brauchst.
 
-**2. Sollte ich zusätzliche Tuning-Tools aus dem Internet herunterladen?**
-In den allermeisten Fällen: Nein. Früher gab es zig Registry-Cleaner und Optimierungs-Suiten. Unter Windows 10 hast du mit dem Task-Manager und den Windows-Einstellungen bereits alle Werkzeuge an Bord, die du für eine saubere und sichere Systempflege benötigst. Zusätzliche Tools bringen oft nur unnötigen Bloatware-Müll mit.
-
-**3. Mein Rechner ist trotz deaktivierter Autostarts immer noch langsam. Was nun?**
+**2. Sollte ich zusätzliche Tuning-Tools aus dem Internet herunterladen?**In den allermeisten Fällen: Nein. Früher gab es zig Registry-Cleaner und Optimierungs-Suiten. Unter Windows 10 hast du mit dem Task-Manager und den Windows-Einstellungen bereits alle Werkzeuge an Bord, die du für eine saubere und sichere Systempflege benötigst. Zusätzliche Tools bringen oft nur unnötigen Bloatware-Müll mit.**3. Mein Rechner ist trotz deaktivierter Autostarts immer noch langsam. Was nun?**
 Wenn der Autostart aufgeräumt ist, aber der Bootvorgang weiterhin schleppend verläuft, liegt das Problem oft an der Hardware (z. B. wenn Windows noch auf einer alten, langsamen HDD statt auf einer modernen SSD läuft) oder an voll gelaufenen temporären Systemdateien. Ein Blick in die Windows-Einstellungen unter "System > Speicher" schafft hier meist schnell Abhilfe.

@@ -76,11 +76,5 @@ Kies in het pop-upvenster voor *Nu opnieuw opstarten en naar problemen zoeken (a
 
 ### Veelgestelde Vragen (FAQ)
 
-**1. Mijn pc start nog steeds niet op na het schoonmaken en het herplaatsen van het RAM. Wat nu?**
-Grote kans dat het niet aan het RAM ligt, maar aan de grafische kaart (GPU) of de CMOS-batterij. Probeer de CMOS te resetten door de knoopcelbatterij op het moederbord er voor 5 minuten uit te halen, of gebruik de `CLR_CMOS` jumper om het BIOS terug te zetten naar fabrieksinstellingen.
-
-**2. Moet ik de RAM-sticks in specifieke slots terugplaatsen?**
-Ja, absoluut. Als je twee sticks hebt, moeten ze in de meeste moderne moederborden (dual-channel configuratie) in slot 2 en 4 geplaatst worden (geteld vanaf de processor). Raadpleeg altijd even de handleiding van je moederbord; verkeerde plaatsing kan leiden tot het ontbreken van POST-signaal.
-
-**3. Hoe weet ik zeker dat mijn RAM permanent defect is en niet het moederbord?**
+**1. Mijn pc start nog steeds niet op na het schoonmaken en het herplaatsen van het RAM. Wat nu?**Grote kans dat het niet aan het RAM ligt, maar aan de grafische kaart (GPU) of de CMOS-batterij. Probeer de CMOS te resetten door de knoopcelbatterij op het moederbord er voor 5 minuten uit te halen, of gebruik de `CLR_CMOS` jumper om het BIOS terug te zetten naar fabrieksinstellingen.**2. Moet ik de RAM-sticks in specifieke slots terugplaatsen?**Ja, absoluut. Als je twee sticks hebt, moeten ze in de meeste moderne moederborden (dual-channel configuratie) in slot 2 en 4 geplaatst worden (geteld vanaf de processor). Raadpleeg altijd even de handleiding van je moederbord; verkeerde plaatsing kan leiden tot het ontbreken van POST-signaal.**3. Hoe weet ik zeker dat mijn RAM permanent defect is en niet het moederbord?**
 Test de verdachte RAM-stick in een ander, werkend slot op hetzelfde moederbord. Verhuist het probleem mee naar dat andere slot, dan is de stick stuk. Blijft het probleem op hetzelfde slot hangen, dan is de geheugencontroller op het moederbord of de CPU waarschijnlijk beschadigd.

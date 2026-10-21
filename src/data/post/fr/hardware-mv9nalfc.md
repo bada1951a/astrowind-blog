@@ -35,7 +35,7 @@ Voici la procédure exacte que j'applique sur les postes de bureau quand l'espac
 
 ### Étape 1 : Utiliser le Nettoyeur de disque natif en mode administrateur
 Oubliez les applications mystérieuses téléchargées sur le web. Windows intègre un outil redoutable.
-- Appuyez sur la touche Windows de votre clavier, tapez **Nettoyeur de disque**, puis faites un clic droit dessus pour **Exécuter en tant qu'administrateur**.
+- Appuyez sur la touche Windows de votre clavier, tapez **Nettoyeur de disque**, puis faites un clic droit dessus pour**Exécuter en tant qu'administrateur**.
 - Sélectionnez votre lecteur `C:` et validez.
 - Dans la fenêtre qui s'ouvre, cliquez sur le bouton **Nettoyer les fichiers système** (c'est l'étape cruciale pour récupérer les anciennes mises à jour).
 - Cochez toutes les cases importantes : *Fichiers journal de mise à jour Windows*, *Fichiers temporaires d'installation*, *Windows Defender*, *Fichiers Internet temporaires*, etc.
@@ -44,7 +44,7 @@ Oubliez les applications mystérieuses téléchargées sur le web. Windows intè
 ### Étape 2 : Activer le Senseur de stockage (Storage Sense)
 Pour éviter que le problème ne revienne sournoisement le mois prochain, automatisons le nettoyage.
 - Ouvrez les **Paramètres** de Windows (`Windows + I`).
-- Allez dans **Système** > **Stockage**.
+- Allez dans **Système**>**Stockage**.
 - Activez l'option **Senseur de stockage**.
 - Cliquez dessus pour configurer la fréquence : demandez à Windows de supprimer automatiquement les fichiers temporaires que vos applications n'utilisent pas et de vider la corbeille régulièrement.
 
@@ -70,16 +70,13 @@ Voici concrètement ce que vous pouvez espérer récupérer sur un PC de bureau 
 | Cache des navigateurs web & applications | 5 à 15 Go | Aucun (simple reconnexion aux sites web parfois) |
 | Anciens fichiers de mise à jour Windows (`WinSxS`) | 15 à 30 Go | Aucun |
 | Corbeille système | 2 à 10 Go | Aucun |
-| **Total récupéré estimé** | **25 à 63 Go** | **100% Sécurisé** |
+| **Total récupéré estimé**|**25 à 63 Go**|**100% Sécurisé** |
 
 ---
 
 ## Questions Fréquemment Posées (FAQ)
 
-**Q1 : Est-ce que vider le dossier `%temp%` risque de supprimer mes documents de travail ?**
-R : Absolument pas. Le dossier `Temp` porte bien son nom : il ne contient que des données éphémères générées par les logiciels pour fonctionner. Vos documents personnels (Word, Excel, PDF, photos) stockés dans Documents ou Bureau ne sont jamais touchés.
-
-**Q2 : Que faire si mon disque C se remplit à nouveau tout seul en quelques jours ?**
+**Q1 : Est-ce que vider le dossier `%temp%` risque de supprimer mes documents de travail ?**R : Absolument pas. Le dossier `Temp` porte bien son nom : il ne contient que des données éphémères générées par les logiciels pour fonctionner. Vos documents personnels (Word, Excel, PDF, photos) stockés dans Documents ou Bureau ne sont jamais touchés.**Q2 : Que faire si mon disque C se remplit à nouveau tout seul en quelques jours ?**
 R : C'est souvent le signe d'un cache applicatif qui s'emballe (souvent un logiciel de visioconférence, un client de téléchargement de jeux ou un outil de synchronisation cloud mal configuré). Utilisez un outil gratuit comme *WizTree* ou *WinDirStat* pour identifier visuellement quel dossier pèse le plus lourd sur votre SSD.
 
 **Q3 : Pourquoi mon SSD externe n'était-il pas détecté au début de ma panne ?**

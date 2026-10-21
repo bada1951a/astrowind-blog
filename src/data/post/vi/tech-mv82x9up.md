@@ -45,11 +45,10 @@ Tắt nguồn hoàn toàn, rút dây nguồn PSU phía sau. Quan trọng nhất:
 
 Ngay khi máy boot vào được Windows, đừng vội mừng mà tắt máy đi ngủ. Anh em cần chẩn đoán xem hệ thống có bị lỗi phần mềm đi kèm hay không bằng cách tận dụng các công cụ native của Windows:
 
-1. **Kiểm tra trạng thái thiết bị:** Nhấn tổ hợp phím `Windows + X` chọn **Device Manager**, kiểm tra xem có dấu chấm vàng nào ở phần System Devices hay bộ nhớ không.
-2. **Chẩn đoán bộ nhớ Windows (Windows Memory Diagnostic):** 
-   - Mở **Command Prompt** bằng quyền Administrator (`cmd` -> Run as Administrator).
+1. **Kiểm tra trạng thái thiết bị:**Nhấn tổ hợp phím `Windows + X` chọn**Device Manager**, kiểm tra xem có dấu chấm vàng nào ở phần System Devices hay bộ nhớ không.
+2. **Chẩn đoán bộ nhớ Windows (Windows Memory Diagnostic):**- Mở**Command Prompt** bằng quyền Administrator (`cmd` -> Run as Administrator).
    - Gõ lệnh: `mdsched.exe` để tiến hành quét lỗi phần cứng RAM toàn diện khi máy khởi động lại lần tiếp theo.
-3. **Quản lý ổ đĩa & phân vùng (Disk Management):** Nhấn `Windows + X` -> chọn **Disk Management** để kiểm tra chắc chắn các ổ cứng cơ hoặc NVMe vẫn nhận đủ phân vùng, không bị ảnh hưởng bởi cú sốc phần cứng vừa rồi.
+3. **Quản lý ổ đĩa & phân vùng (Disk Management):**Nhấn `Windows + X` -> chọn**Disk Management** để kiểm tra chắc chắn các ổ cứng cơ hoặc NVMe vẫn nhận đủ phân vùng, không bị ảnh hưởng bởi cú sốc phần cứng vừa rồi.
 
 ---
 

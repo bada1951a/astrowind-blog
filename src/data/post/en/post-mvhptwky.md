@@ -38,13 +38,13 @@ You do not need to install sketchy third-party software or pay for registry twea
 #### Method 1: The Instant Command Line Script (Recommended for IT Admins)
 You can apply this fix via PowerShell or Command Prompt. It creates the necessary registry hive override without requiring manual registry navigation.
 
-1. Click on your Start menu, type `cmd`, right-click on **Command Prompt**, and select **Run as administrator**.
+1. Click on your Start menu, type `cmd`, right-click on **Command Prompt**, and select**Run as administrator**.
 2. Copy and paste the following command into the terminal window:
    ```cmd
    reg add "HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\InprocServer32" /f /ve
    ```
 3. Press **Enter**. You should see the message: `The operation completed successfully.`
-4. Restart Windows Explorer to apply the changes immediately. Open **Task Manager** (Ctrl + Shift + Esc), find **Windows Explorer** in the processes list, right-click it, and select **Restart**.
+4. Restart Windows Explorer to apply the changes immediately. Open **Task Manager**(Ctrl + Shift + Esc), find**Windows Explorer**in the processes list, right-click it, and select**Restart**.
 
 <div style="border-left: 4px solid #f59e0b; padding: 12px 16px; margin: 20px 0; background-color: rgba(245,158,11,0.08); border-radius: 4px; color: #111827;">
 <strong>Pro Tip:</strong> If you ever want to revert back to the default Windows 11 modern context menu for testing or compliance reasons, simply run this rollback command in admin CMD:
@@ -59,11 +59,11 @@ If you prefer doing things manually or need to verify the registry key yourself,
 2. Type `regedit` and press **Enter** (approve any User Account Control prompts).
 3. Navigate through the left-hand tree structure to:
    `HKEY_CURRENT_USER \ Software \ Classes \ CLSID`
-4. Right-click the **CLSID** key, select **New > Key**, and name the new key exactly this:
+4. Right-click the **CLSID**key, select**New > Key**, and name the new key exactly this:
    `{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}`
 5. Inside that new key, right-click the default sub-key folder, select **New > Key**, and name it:
    `InprocServer32`
-6. Click on **InprocServer32**, look at the right-hand pane, double-click the **(Default)** value, ensure the Value data field is completely blank, and click **OK**.
+6. Click on **InprocServer32**, look at the right-hand pane, double-click the**(Default)**value, ensure the Value data field is completely blank, and click**OK**.
 7. Restart **Windows Explorer** via Task Manager as outlined in Method 1.
 
 ---
@@ -80,11 +80,5 @@ Before rolling this out across your entire enterprise domain via Group Policy or
 
 ### Frequently Asked Questions (FAQ)
 
-**Q1: Does this tweak require a full system reboot?**
-A1: No reboot is necessary. Simply restarting the `explorer.exe` process via Task Manager is enough to refresh the shell and make the classic context menu appear instantly.
-
-**Q2: Will this break any native Windows 11 features?**
-A2: No. Features like casting to device, modern sharing options, and pin-to-access remain fully functional. You are simply bypassing the extra "Show more options" submenu wrapper.
-
-**Q3: Can I deploy this via Microsoft Intune or Group Policy for 500+ machines?**
+**Q1: Does this tweak require a full system reboot?**A1: No reboot is necessary. Simply restarting the `explorer.exe` process via Task Manager is enough to refresh the shell and make the classic context menu appear instantly.**Q2: Will this break any native Windows 11 features?**A2: No. Features like casting to device, modern sharing options, and pin-to-access remain fully functional. You are simply bypassing the extra "Show more options" submenu wrapper.**Q3: Can I deploy this via Microsoft Intune or Group Policy for 500+ machines?**
 A3: Absolutely. You can package the registry command into a PowerShell script and deploy it as a Win32 app via Microsoft Intune, or push the registry hive modification directly through Group Policy Preferences (GPP).

@@ -44,7 +44,7 @@ Se avete più banchi di RAM, **non** rimetteteli subito tutti dentro. Provate a 
 #### Passo 3: Verifica Software e Log di Sistema (Post-Boot)
 Una volta ripristinato il segnale video ed entrati nel sistema operativo (che sia Windows o una distribuzione Linux), è fondamentale verificare che la memoria venga letta correttamente dal kernel. 
 
-* **Per Windows:** Aprite **Gestione dispositivi** (`devmgmt.msc`) per controllare eventuali conflitti hardware, oppure lanciate il **Prompt dei comandi** come amministratore e digitate `wmic memorychip get capacity, speed, partnumber` per verificare che tutti i moduli siano attivi e riconosciuti alla giusta frequenza.
+* **Per Windows:**Aprite**Gestione dispositivi**(`devmgmt.msc`) per controllare eventuali conflitti hardware, oppure lanciate il**Prompt dei comandi** come amministratore e digitate `wmic memorychip get capacity, speed, partnumber` per verificare che tutti i moduli siano attivi e riconosciuti alla giusta frequenza.
 * **Per Linux:** Aprite il terminale e lanciate `sudo lshw -C memory` o `free -h` per un controllo immediato dello stack di memoria.
 
 ---

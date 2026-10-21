@@ -9,7 +9,7 @@ theme: "Pure Titanium Clean"
 ---
 
 
-Erano le 17:50 di un martedì infernale nel nostro ufficio al Centro direzionale di Milano. Mancavano dieci minuti alla deadline tassativa per l'invio del report trimestrale al board europeo, e la postazione principale del controllo di gestione si è letteralmente congelata. La ventola del PC sembrava stesse per decollare verso Linate, lo schermo rispondeva ai click con minuti di ritardo e il cursore si muoveva a scatti. Ho aperto di scatto *Gestione attività* usando la combinazione rapida Ctrl+Maiusc+Esc, e lo spettacolo era impietoso: l'utilizzo della CPU inchiodato al 100%, con il famigerato processo di sistema **"System"** (e il relativo modulo `ntoskrnl.exe`) che divorava ogni singolo ciclo di clock disponibile. 
+Erano le 17:50 di un martedì infernale nel nostro ufficio al Centro direzionale di Milano. Mancavano dieci minuti alla deadline tassativa per l'invio del report trimestrale al board europeo, e la postazione principale del controllo di gestione si è letteralmente congelata. La ventola del PC sembrava stesse per decollare verso Linate, lo schermo rispondeva ai click con minuti di ritardo e il cursore si muoveva a scatti. Ho aperto di scatto *Gestione attività* usando la combinazione rapida Ctrl+Maiusc+Esc, e lo spettacolo era impietoso: l'utilizzo della CPU inchiodato al 100%, con il famigerato processo di sistema "**System**" (e il relativo modulo `ntoskrnl.exe`) che divorava ogni singolo ciclo di clock disponibile. 
 
 All'inizio il panico ha quasi preso il sopravvento. La prima reazione istintiva di chiunque sarebbe stata quella di tenere premuto il tasto di accensione per un hard reset brutale. Ma spegnere la macchina in quel momento esatto significava perdere gli ultimi dati non salvati del foglio di calcolo, corrompere il file di database locale e mancare la consegna al board. 
 
@@ -44,7 +44,7 @@ Prima di agire a tentoni, verifichiamo quale componente hardware sta sovraccaric
 - Premi `Windows + R`, digita `resmon` e premi Invio per aprire **Monitoraggio risorse**.
 - Vai sulla scheda **CPU**.
 - Espandi la sezione **Processi con attività della CPU** e individua `System`.
-- Spostati subito sotto nella sezione **Servitù associate** o **Interrupt** per vedere quale modulo driver (spesso finisce in `.sys`, come `dxgkrnl.sys` o driver di rete) sta generando un volume anomalo di chiamate.
+- Spostati subito sotto nella sezione **Servitù associate**o**Interrupt** per vedere quale modulo driver (spesso finisce in `.sys`, come `dxgkrnl.sys` o driver di rete) sta generando un volume anomalo di chiamate.
 
 #### Passo 2: Aggiornare o disabilitare i driver di rete e chipset da Gestione dispositivi
 Nel caso specifico di Milano, il colpevole era il driver della scheda di rete cablata che andava in timeout continuo con il server aziendale.
@@ -80,10 +80,7 @@ Prima di mettere mano a driver di basso livello o eseguire comandi di ripristino
 
 ### Domande Frequenti (FAQ)
 
-**D: Posso semplicemente terminare il processo System da Gestione attività per far respirare il PC?**
-R: No. Windows protegge i processi del kernel (`System` e `System Idle Process`). Se provi a terminarlo forzatamente, il sistema genererà immediatamente una schermata blu di errore (BSOD) e si riavvierà perdendo qualsiasi lavoro non salvato.
-
-**D: Come faccio a capire se il problema è causato da un aggiornamento di Windows Update bloccato?**
+**D: Posso semplicemente terminare il processo System da Gestione attività per far respirare il PC?**R: No. Windows protegge i processi del kernel (`System` e `System Idle Process`). Se provi a terminarlo forzatamente, il sistema genererà immediatamente una schermata blu di errore (BSOD) e si riavvierà perdendo qualsiasi lavoro non salvato.**D: Come faccio a capire se il problema è causato da un aggiornamento di Windows Update bloccato?**
 R: Apri *Impostazioni* -> *Windows Update*. Se vedi un aggiornamento fermo allo 0% o in errore continuo, vai su *Servizi* (digita `services.msc` da Esegui), individua il servizio **Windows Update**, clicca col destro e seleziona *Arresta*. Dopodiché pulisci la cartella `C:\Windows\SoftwareDistribution` e riavvia il servizio.
 
 **D: Questo problema può essere causato da un guasto fisico dell'hardware (SSD o RAM)?**

@@ -77,9 +77,9 @@ Als de snelle reset het probleem niet verhelpt, is het stuurprogramma in een ong
   <strong>Let op bij laptops met hybride graphics (NVIDIA Optimus / AMD Switchable):</strong> De fysieke beeldschermpoorten en de USB-C DisplayPort-lijnen worden bij vrijwel alle laptops direct gerouteerd via de <em>geïntegreerde</em> processor (iGPU). Zelfs als je games of zware software draait op de discrete GPU, verzorgt de iGPU de beelduitvoer naar je dockingstation. Richt je pijlen bij signaalverlies daarom altijd eerst op de Intel- of AMD-driver!
 </div>
 
-4. Klap tevens de categorie **Beeldschermen** (Monitors) uit in Apparaatbeheer. Klik in de menubalk op **Beeld** -> **Verborgen apparaten weergeven**.
+4. Klap tevens de categorie **Beeldschermen**(Monitors) uit in Apparaatbeheer. Klik in de menubalk op**Beeld**->**Verborgen apparaten weergeven**.
 5. Verwijder alle grijs weergegeven schermen (dit zijn zogeheten "ghost monitors" met verouderde EDID-caches) door met de rechtermuisknop te klikken en te kiezen voor **Apparaat verwijderen**.
-6. Klik met de rechtermuisknop op je primaire geïntegreerde beeldschermadapter en kies **Stuurprogramma bijwerken** -> **Op mijn computer naar stuurprogramma's zoeken** -> **Ik wil kiezen uit een lijst met stuurprogramma's op mijn computer**. Selecteer de vorige stabiele driverversie indien beschikbaar en voltooi de wizard.
+6. Klik met de rechtermuisknop op je primaire geïntegreerde beeldschermadapter en kies **Stuurprogramma bijwerken**->**Op mijn computer naar stuurprogramma's zoeken**->**Ik wil kiezen uit een lijst met stuurprogramma's op mijn computer**. Selecteer de vorige stabiele driverversie indien beschikbaar en voltooi de wizard.
 
 #### Stap 3: Uitvoeren van een Schone Driverinstallatie (DDU Methode)
 Wanneer Windows Update de stuurprogrammacache heeft beschadigd, biedt alleen een rigoureuze schoonmaak uitkomst.
@@ -108,11 +108,11 @@ Herstart de laptop direct na het uitvoeren van deze opdrachten. Windows zal de d
 #### Stap 5: Handmatige Synchronisatie van de Vernieuwingsfrequentie (Hz)
 Knipperende schermen ontstaan vaak doordat Windows probeert een paneel aan te sturen op 59.94 Hz terwijl de interne scaler van de monitor rekent op exact 60.00 Hz, of wanneer variabele vernieuwingsfrequentie (VRR/G-Sync) actief is op een dock dat dit niet ondersteunt.
 
-1. Open **Instellingen** (Windows-toets + I) -> **Systeem** -> **Beeldscherm**.
+1. Open **Instellingen**(Windows-toets + I) ->**Systeem**->**Beeldscherm**.
 2. Scroll naar beneden en klik op **Geavanceerde beeldscherminstellingen**.
 3. Selecteer het problematische externe scherm in het dropdown-menu.
 4. Kijk naar de **Vernieuwingsfrequentie kiezen** (Refresh rate).
-5. Schakel een eventuele variabele vernieuwingsfrequentie direct uit. Zet de waarde vast op **60 Hz** of **50 Hz** (of verlaag deze tijdelijk naar 30 Hz als diagnostische test). Als het knipperen bij 30 Hz stopt, is er definitief sprake van een kabel- of poortbandbreedtetekort.
+5. Schakel een eventuele variabele vernieuwingsfrequentie direct uit. Zet de waarde vast op **60 Hz**of**50 Hz** (of verlaag deze tijdelijk naar 30 Hz als diagnostische test). Als het knipperen bij 30 Hz stopt, is er definitief sprake van een kabel- of poortbandbreedtetekort.
 
 ---
 

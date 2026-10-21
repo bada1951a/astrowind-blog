@@ -28,7 +28,7 @@ Get-WmiObject Win32_Keyboard | Format-Table Name, Description, DeviceID
 
 Em um ambiente corporativo crítico ou em uma estação de trabalho de infraestrutura, um periférico de entrada não é apenas um acessório: é a interface primária entre o engenheiro e o núcleo do sistema operacional. Já passei pela situação frustrante de ter um teclado mecânico de ponta falhando durante uma janela de manutenção de emergência às 02h00 da madrugada. Eu precisava executar comandos encadeados e, de repente, a tecla `Enter` ou a barra de espaço registrava dois ou três toques involuntários para cada pulso físico. Pior ainda: em comandos de deleção ou migração de containers, a perda de precisão pode ser catastrófica.
 
-Esse comportamento errático — conhecido no meio técnico como **key chattering** (repique ou duplicação de toques) e **key skipping** (falha intermitente de acionamento) — é comum em teclados com switches mecânicos tradicionais baseados em lâminas de contato metálicas (folhas de cobre/ouro). O usuário leigo costuma presumir que a controladora queimou ou que o switch morreu definitivamente. Na maioria esmagadora das vezes em que atendi chamados de bancada, tratava-se de oxidação superficial microscópica, poeira dielétrica ou degradação na leitura do algoritmo de debounce. 
+Esse comportamento errático — conhecido no meio técnico como **key chattering**(repique ou duplicação de toques) e**key skipping** (falha intermitente de acionamento) — é comum em teclados com switches mecânicos tradicionais baseados em lâminas de contato metálicas (folhas de cobre/ouro). O usuário leigo costuma presumir que a controladora queimou ou que o switch morreu definitivamente. Na maioria esmagadora das vezes em que atendi chamados de bancada, tratava-se de oxidação superficial microscópica, poeira dielétrica ou degradação na leitura do algoritmo de debounce. 
 
 Neste guia prático de laboratório, mostro o protocolo exato que utilizo para diagnosticar, isolar e reparar esses switches em nível cirúrgico, fazendo uso correto de produtos químicos de grau eletrônico sem destruir as propriedades dos plásticos internos.
 
@@ -80,7 +80,7 @@ Antes de desmontar qualquer peça, certifique-se de que a falha não é decorren
    ```cmd
    devmgmt.msc
    ```
-3. No **Gerenciador de Dispositivos**, expanda a categoria **Teclados**.
+3. No **Gerenciador de Dispositivos**, expanda a categoria**Teclados**.
 4. Localize todas as instâncias de "Teclado Padrão PS/2" ou "Dispositivo de Teclado HID", clique com o botão direito e selecione **Desinstalar dispositivo**.
 5. Desconecte o cabo USB do teclado, aguarde 10 segundos e reconecte em uma porta USB traseira direta da placa-mãe (evite hubs ou extensores). O Windows reinstalará os drivers padrão limpos.
 6. Abra um software de teste de latência e repique (como *Keyboard Chattering Fix Tool* ou *Switch Hitter*). Pressione a tecla defeituosa 100 vezes seguidas em cadência moderada. Se o log acusar repiques com intervalos inferiores a 30 milissegundos, o problema é comprovadamente físico.
@@ -132,8 +132,8 @@ Se o método do limpa-contato não resolver (indicando desgaste físico irrevers
 PERIGO: Nunca utilize WD-40 Multiuso tradicional, óleos lubrificantes, desengripantes mecânicos ou álcool etílico 70%.
 </div>
 
-* **WD-40 Tradicional (Lata Azul):** Este produto contém destilados de petróleo e óleos minerais projetados para soltar parafusos e proteger metais pesados. Ele deixa uma camada viscosa persistente no interior do switch. Em poucas semanas, essa camada atrai poeira em suspensão, transformando o interior do componente em uma pasta abrasiva condutora que inutilizará o switch e destruirá a sensação tátil. Use exclusivamente sprays rotulados explicitamente como **"Limpa-Contato Eletrônico Não Oleoso / Secagem Rápida"**.
-* **Álcool 70% Hidratado:** O álcool 70% vendido em farmácias contém 30% de água destilada. A água evapora lentamente, acumula-se sob o PCB e oxida os contatos metálicos finos, além de provocar curto-circuito imediato se a placa for ligada úmida. Se for usar álcool, recorra unicamente ao **Álcool Isopropílico 99,8%** (isopropanol absoluto).
+* **WD-40 Tradicional (Lata Azul):**Este produto contém destilados de petróleo e óleos minerais projetados para soltar parafusos e proteger metais pesados. Ele deixa uma camada viscosa persistente no interior do switch. Em poucas semanas, essa camada atrai poeira em suspensão, transformando o interior do componente em uma pasta abrasiva condutora que inutilizará o switch e destruirá a sensação tátil. Use exclusivamente sprays rotulados explicitamente como "**Limpa-Contato Eletrônico Não Oleoso / Secagem Rápida**".
+* **Álcool 70% Hidratado:**O álcool 70% vendido em farmácias contém 30% de água destilada. A água evapora lentamente, acumula-se sob o PCB e oxida os contatos metálicos finos, além de provocar curto-circuito imediato se a placa for ligada úmida. Se for usar álcool, recorra unicamente ao**Álcool Isopropílico 99,8%** (isopropanol absoluto).
 * **Sobrecarga de Pressão:** Não utilize sopradores térmicos nem secadores de cabelo com ar quente na tentativa de secar o solvente mais rápido. As carcaças dos switches e as keycaps (especialmente as fabricadas em plástico ABS) empenam em temperaturas a partir de 60°C a 70°C, inutilizando o alinhamento da haste.
 
 ---

@@ -52,10 +52,10 @@ Zjawisko *key chatteringu* (odbijania styków) oraz gubienia wciśnięć (*key s
 
 Zanim rozbierzesz klawiaturę, musimy wykluczyć usterki po stronie warstwy systemowej i sterowników HID.
 
-1. Otwórz **Menedżer urządzeń** (skrót `Win + X` → wybierz **Menedżer urządzeń**).
+1. Otwórz **Menedżer urządzeń**(skrót `Win + X` → wybierz**Menedżer urządzeń**).
 2. Rozwiń sekcję **Klawiatury**.
 3. Odszukaj wpisy o nazwie *Klawiatura zgodna z HID* lub dedykowane urządzenie producenta. Kliknij prawym przyciskiem myszy i wybierz **Odinstaluj urządzenie**.
-4. W menu górnym kliknij **Akcja** → **Skanuj w poszukiwaniu zmian sprzętu**, aby system Windows ponownie zainicjalizował sterownik magistrali USB.
+4. W menu górnym kliknij **Akcja**→**Skanuj w poszukiwaniu zmian sprzętu**, aby system Windows ponownie zainicjalizował sterownik magistrali USB.
 
 Następnie uruchom przeglądarkowy tester klawiatury (np. *Keyboard Event Viewer* lub *Keyboard Chatter Strip*) albo otwórz **Wiersz polecenia** (`cmd.exe`) i wykonaj serię 50 szybkich, powtarzalnych uderzeń w felerny klawisz. Zwróć uwagę na czas powrotu (*bounce time*). Czas rejestracji poniżej 15–20 ms z wielokrotnym wpisem jednoznacznie wskazuje na usterkę sprzętową switcha.
 
@@ -75,7 +75,7 @@ Do tego celu najlepiej sprawdza się schemat dwuetapowy: preparat rozpuszczając
 
 1. **Wciśnięcie trzpienia:** Wciśnij plastikowy trzonek (*stem*) do oporu w dół za pomocą małego wkrętaka lub pęsety, odsłaniając szczelinę prowadnicy, pod którą ukryte są miedziane blaszki.
 2. **Precyzyjny wtrysk:** Załóż cienką rurkę na zawór puszki preparatu do czyszczenia styków. Przystaw końcówkę do krawędzi wciśniętego trzpienia po stronie, gdzie znajdują się blaszki (zazwyczaj strona z logo producenta switcha).
-3. **Mikrodawka:** Zaaplikuj dosłownie **ułamek sekundy** aerozolu – wystarczy jedna mikrokropla. Zbyt duża ilość chemii wypłucze fabryczny smar prowadnic i zaleje wnętrze obudowy.
+3. **Mikrodawka:**Zaaplikuj dosłownie**ułamek sekundy** aerozolu – wystarczy jedna mikrokropla. Zbyt duża ilość chemii wypłucze fabryczny smar prowadnic i zaleje wnętrze obudowy.
 4. **Aktywacja mechaniczna:** Natychmiast po wstrzyknięciu środka zacznij energicznie i rytmicznie wciskać trzonek klawisza (około 60–80 razy w ciągu 30 sekund). Ruch ten powoduje mechaniczne przetarcie blaszek w obecności rozpuszczalnika, zrywając patynę i emulgując brud.
 5. **Wypłukanie (opcjonalnie, ale zalecane):** Po 5 minutach odparowania powtórz procedurę z użyciem *Kontaktu U* lub czystego alkoholu izopropylowego w celu usunięcia chemicznie agresywnych resztek rozpuszczalnika siarczków.
 

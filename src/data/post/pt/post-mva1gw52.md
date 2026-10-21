@@ -33,7 +33,7 @@ Para resolver o problema a tempo da nossa reunião em São Paulo, ignorei softwa
 O Windows 11 possui uma ferramenta nativa excelente para gerenciar lixo digital sem riscos.
 
 * Pressione as teclas `Windows + I` para abrir as **Configurações**.
-* Vá em **Sistema** e clique em **Armazenamento**.
+* Vá em **Sistema**e clique em**Armazenamento**.
 * Ative o **Sensor de Armazenamento** (Storage Sense) caso esteja desligado.
 * Clique em **Arquivos Temporários**. O sistema fará uma varredura profunda.
 
@@ -85,4 +85,4 @@ Sim, desde que seu computador esteja funcionando perfeitamente após a última a
 O ideal é revisar o **Sensor de Armazenamento** a cada 30 ou 60 dias. Se você trabalha com edição de vídeos, desenvolvimento de software ou design, os arquivos de cache acumulam muito mais rápido, exigindo uma limpeza quinzenal.
 
 ### 3. O que fazer se o espaço continuar acabando mesmo após apagar os arquivos temporários?
-Se os arquivos temporários já foram limpos e o disco continua cheio, o problema geralmente são arquivos grandes esquecidos (como vídeos, máquinas virtuais ou arquivos ISO) ou a pasta de cache do seu navegador. Utilize uma ferramenta confiável e gratuita como o **WizTree** ou **WinDirStat** para mapear visualmente quais pastas estão consumindo mais espaço no seu SSD.
+Se os arquivos temporários já foram limpos e o disco continua cheio, o problema geralmente são arquivos grandes esquecidos (como vídeos, máquinas virtuais ou arquivos ISO) ou a pasta de cache do seu navegador. Utilize uma ferramenta confiável e gratuita como o **WizTree**ou**WinDirStat** para mapear visualmente quais pastas estão consumindo mais espaço no seu SSD.

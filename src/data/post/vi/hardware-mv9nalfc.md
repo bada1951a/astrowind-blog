@@ -31,8 +31,8 @@ Không cần cài thêm phần mềm bên thứ ba rườm rà, chúng ta sẽ t
 
 ### Bước 1: Tổng vệ sinh file rác hệ thống bằng Storage Sense và lệnh Temp
 Đừng mất thời gian xóa từng file thủ công. Hãy làm theo đường dẫn nhanh sau đây để dọn dẹp hàng gigabyte rác:
-- Mở **Settings** (Nhấn phím Windows + I) > Chọn **System** > Chọn **Storage**.
-- Bật tính năng **Storage Sense** và bấm vào **Temporary files**.
+- Mở **Settings**(Nhấn phím Windows + I) > Chọn**System**> Chọn**Storage**.
+- Bật tính năng **Storage Sense**và bấm vào**Temporary files**.
 - Tích chọn vào các mục: *Windows Update Cleanup, Temporary Files, Delivery Optimization Files, và Recycle Bin*.
 - Nhấn **Remove files**. 
 
@@ -45,7 +45,7 @@ Tiếp theo, để dọn tận gốc rác ẩn, nhấn tổ hợp phím **Window
 ### Bước 2: Đánh thức ổ cứng ngoài thông qua Device Manager và Quản lý ổ đĩa
 Ngay sau khi ổ C đã có không gian trống, việc kết nối ổ cứng ngoài sẽ trở nên khả thi hơn. Hãy thực hiện các bước sau để ép Windows nhận diện thiết bị:
 - Nhấp chuột phải vào nút Start, chọn **Device Manager** (Quản lý thiết bị).
-- Tìm đến mục **Universal Serial Bus controllers**, nhấp chuột phải vào từng dòng *USB Root Hub* (hoặc *Extensible Host Controller*), chọn **Properties** > Thẻ **Power Management** > **Bỏ tích** ở ô *"Allow the computer to turn off this device to save power"*. Thao tác này đảm bảo cổng USB luôn cấp đủ điện 5V cho ổ cứng ngoài.
+- Tìm đến mục **Universal Serial Bus controllers**, nhấp chuột phải vào từng dòng *USB Root Hub* (hoặc *Extensible Host Controller*), chọn **Properties**> Thẻ**Power Management**>**Bỏ tích** ở ô *"Allow the computer to turn off this device to save power"*. Thao tác này đảm bảo cổng USB luôn cấp đủ điện 5V cho ổ cứng ngoài.
 - Tiếp tục nhấn chuột phải vào Start, chọn **Disk Management** (Quản lý ổ đĩa). Kéo xuống danh sách phía dưới để tìm ổ cứng ngoài của bạn (thường hiển thị ở trạng thái *Unallocated* hoặc thiếu tên ký tự). Nhấp chuột phải vào phân vùng của ổ cứng ngoài, chọn **Change Drive Letter and Paths...** rồi gán cho nó một ký tự mới (ví dụ ổ Z hoặc ổ H).
 
 ### Bước 3: Kiểm tra hệ thống file bằng Command Prompt (Chống lỗi Bad Sector)
@@ -57,7 +57,7 @@ Ngay sau khi ổ C đã có không gian trống, việc kết nối ổ cứng n
 
 ## Cảnh báo từ chuyên gia phần cứng
 
-> **Lưu ý quan trọng:** Không bao giờ dùng các phần mềm "dọn rác tự động" trôi nổi trên mạng tải về từ các link quảng cáo khi bạn đang gặp sự cố gấp. Chúng có thể cài thêm mã độc hoặc xóa nhầm file hệ thống (System32). Luôn ưu tiên dùng công cụ gốc của Windows (`Disk Cleanup`, `Storage Sense`, `chkdsk`). Ngoài ra, với ổ cứng di động, hãy luôn thao tác tính năng **Safely Remove Hardware** trước khi rút cáp để tránh làm hỏng mạch điều khiển bên trong.
+> **Lưu ý quan trọng:**Không bao giờ dùng các phần mềm "dọn rác tự động" trôi nổi trên mạng tải về từ các link quảng cáo khi bạn đang gặp sự cố gấp. Chúng có thể cài thêm mã độc hoặc xóa nhầm file hệ thống (System32). Luôn ưu tiên dùng công cụ gốc của Windows (`Disk Cleanup`, `Storage Sense`, `chkdsk`). Ngoài ra, với ổ cứng di động, hãy luôn thao tác tính năng**Safely Remove Hardware** trước khi rút cáp để tránh làm hỏng mạch điều khiển bên trong.
 
 ---
 
