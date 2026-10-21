@@ -1,7 +1,7 @@
 ---
 title: "Windows 11: Klassisches Kontextmenü zurückbringen – So geht's"
 description: "Echtzeit-Anleitung für Administratoren: Das nervige neue Windows 11 Rechtsklick-Menü in Sekundenschnelle auf die klassische Ansicht zurücksetzen."
-publishDate: 2026-10-21T12:15:00.000Z
+publishDate: 2026-10-21T18:00:00.000Z
 image: '/images/tech-photo/storage%20(17).png'
 category: 'tech'
 tags: ["Windows 11", "Tech Tips", "Registry", "Troubleshooting", "PC Fix"]
