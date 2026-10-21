@@ -1,7 +1,7 @@
 ---
 title: "How to Restore the Classic Right Click Context Menu in Windows 11"
 description: "Fix Windows 11 right-click fatigue. Step-by-step registry and command-line guides to bring back the full classic context menu instantly."
-publishDate: exactly-set
+publishDate: 2026-10-22T03:00:00.000Z
 image: '/images/tech-photo/display%20(15).png'
 category: 'tech'
 tags: ["Windows 11", "Productivity", "Registry Fix", "IT Support"]
