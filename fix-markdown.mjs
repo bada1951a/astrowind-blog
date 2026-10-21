@@ -3,29 +3,17 @@ import path from 'path';
 
 const POSTS_BASE_DIR = path.resolve('src/data/post');
 
-function sanitizeMarkdownFormatting(content) {
+function cleanBrokenMarkdown(content) {
   let cleaned = content;
 
-  cleaned = cleaned.replace(/\*{3,}/g, '**');
-  cleaned = cleaned.replace(/\*\*\[([^\]]+)\]\*\*/g, '[**$1**]');
-  cleaned = cleaned.replace(/\*\*"([^"]+)"\*\*/g, '"**$1**"');
-  cleaned = cleaned.replace(/\*\*'([^']+)'\*\*/g, '\'**$1**\'');
-  cleaned = cleaned.replace(/\*\*\s+([^\*\n]+?)\s+\*\*/g, '**$1**');
-  cleaned = cleaned.replace(/\*\*\s+([^\*\n]+?)\*\*/g, '**$1**');
-  cleaned = cleaned.replace(/\*\*([^\*\n]+?)\s+\*\*/g, '**$1**');
+  // 1) Q1, Q2, Q3, A1, A2, A3 앞에 줄바꿈이 없어서 한 줄로 뭉친 경우 분리
+  cleaned = cleaned.replace(/([^\n])\s*(Q[1-3]\.)/g, '$1\n\n$2');
+  cleaned = cleaned.replace(/([^\n])\s*(A[1-3]\.)/g, '$1\n\n$2');
 
-  const lines = cleaned.split('\n');
-  const fixedLines = lines.map(line => {
-    if (line.trim().startsWith('```') || line.trim().startsWith('`')) return line;
-    const matches = line.match(/\*\*/g);
-    if (matches && matches.length % 2 !== 0) {
-      const lastIdx = line.lastIndexOf('**');
-      return line.slice(0, lastIdx) + line.slice(lastIdx + 2);
-    }
-    return line;
-  });
+  // 2) 본문에 흉하게 노출되는 모든 별표(** 및 ***) 기호 완전 제거
+  cleaned = cleaned.replace(/\*{2,}/g, '');
 
-  return fixedLines.join('\n');
+  return cleaned;
 }
 
 function processDirectory(dirPath) {
@@ -43,7 +31,7 @@ function processDirectory(dirPath) {
       if (fmMatch) {
         const frontmatter = fmMatch[0];
         const body = fileContent.slice(frontmatter.length);
-        const cleanedBody = sanitizeMarkdownFormatting(body);
+        const cleanedBody = cleanBrokenMarkdown(body);
 
         if (body !== cleanedBody) {
           fs.writeFileSync(fullPath, `${frontmatter}${cleanedBody}`, 'utf-8');
@@ -54,6 +42,6 @@ function processDirectory(dirPath) {
   }
 }
 
-console.log("🚀 전체 포스트 마크다운 ** 서식 일괄 정제 시작...");
+console.log("🚀 전체 포스트 마크다운 ** 제거 및 FAQ 줄바꿈 정제 시작...");
 processDirectory(POSTS_BASE_DIR);
-console.log("🎉 모든 글의 서식 정제가 완료되었습니다!");
+console.log("🎉 모든 글의 정제가 완료되었습니다!");
