@@ -1,7 +1,7 @@
 ---
 title: "Mẹo khôi phục menu chuột phải cổ điển trên Windows 11 trong 2 phút"
 description: "Hướng dẫn cách mang menu chuột phải quen thuộc trở lại trên Windows 11 mà không cần phần mềm phức tạp, cứu nguy cho dân văn phòng."
-publishDate: 2026-10-21T22:15:00.000Z
+publishDate: 2026-10-21T18:00:00.000Z
 image: '/images/tech-photo/tech-photo%20(14).jpg'
 category: 'tech'
 tags: ["Windows 11", "Meo May Tinh", "Thu Thuat IT", "Van Phong"]
