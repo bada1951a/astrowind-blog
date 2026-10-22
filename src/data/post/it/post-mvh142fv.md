@@ -76,5 +76,14 @@ Una volta individuato il driver o il componente problematico grazie al registro,
 
 ### Domande Frequenti (FAQ)
 
-D: Il Visualizzatore Eventi mostra sempre la causa esatta del blocco?R: Non sempre in modo esplicito. Nei freeze totali causati da problemi hardware profondi (come una micro-interruzione di corrente sulla scheda madre o una tensione instabile dell'alimentatore), Windows si blocca così istantaneamente da non riuscire neppure a scrivere l'ultimo log su disco. In quel caso, l'assenza di un log specifico è già un indizio che punta verso l'hardware puro o l'alimentazione.D: Come faccio a distinguere un problema software da un guasto hardware?R: Se dopo aver reinstallato Windows da zero e aggiornato tutti i driver ufficiali il PC continua a bloccarsi casualmente, la probabilità che si tratti di un problema hardware (RAM difettosa, SSD che perde colpi o surriscaldamento) sale al 95%.D: I test della RAM come MemTest86 sono ancora affidabili su Windows 11?
+D: Il Visualizzatore Eventi mostra sempre la causa esatta del blocco?
+
+R: Non sempre in modo esplicito. Nei freeze totali causati da problemi hardware profondi (come una micro-interruzione di corrente sulla scheda madre o una tensione instabile dell'alimentatore), Windows si blocca così istantaneamente da non riuscire neppure a scrivere l'ultimo log su disco. In quel caso, l'assenza di un log specifico è già un indizio che punta verso l'hardware puro o l'alimentazione.
+
+D: Come faccio a distinguere un problema software da un guasto hardware?
+
+R: Se dopo aver reinstallato Windows da zero e aggiornato tutti i driver ufficiali il PC continua a bloccarsi casualmente, la probabilità che si tratti di un problema hardware (RAM difettosa, SSD che perde colpi o surriscaldamento) sale al 95%.
+
+D: I test della RAM come MemTest86 sono ancora affidabili su Windows 11?
+
 R: Assolutamente sì. Se i log di sistema mostrano errori legati alla memoria o se non trovi un colpevole software chiaro, lascia girare MemTest86 da una chiavetta USB per qualche ora prima di dichiararti sconfitto.

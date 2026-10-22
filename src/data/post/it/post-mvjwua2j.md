@@ -59,5 +59,14 @@ Spesso il driver sta bene, ma il "cervello" audio di Windows si è addormentato.
 
 ## Domande Frequenti (FAQ)
 
-D: Ho seguito tutti i passaggi ma l'icona dell'audio ha ancora una X rossa e dice "Nessun dispositivo audio installato". Che faccio?R: Questo è un classico sintomo di blocco temporaneo del chipset della scheda madre dovuto a un picco di corrente sulle porte USB o a un aggiornamento di Windows Update installato a metà. Spegni completamente il PC, stacca il cavo di alimentazione (o tieni premuto il tasto di accensione per 30 secondi se sei su notebook per azzerare i condensatori), riaccendi e controlla di nuovo in [Gestione dispositivi].D: Dopo ogni aggiornamento di Windows 11 perdo l'audio delle casse integrate. Come evito che accada?R: Gli aggiornamenti cumulativi di Windows spesso sovrascrivono i driver Realtek con versioni generiche Microsoft che funzionano male. La soluzione definitiva è scaricare il pacchetto driver proprietario direttamente dal sito del produttore del tuo PC (Dell, Lenovo, HP, ecc.) e disabilitare temporaneamente l'installazione automatica dei driver tramite Windows Update.D: Le cuffie funzionano su YouTube ma muoiono appena apro il software gestionale dell'azienda. Perché?
+D: Ho seguito tutti i passaggi ma l'icona dell'audio ha ancora una X rossa e dice "Nessun dispositivo audio installato". Che faccio?
+
+R: Questo è un classico sintomo di blocco temporaneo del chipset della scheda madre dovuto a un picco di corrente sulle porte USB o a un aggiornamento di Windows Update installato a metà. Spegni completamente il PC, stacca il cavo di alimentazione (o tieni premuto il tasto di accensione per 30 secondi se sei su notebook per azzerare i condensatori), riaccendi e controlla di nuovo in [Gestione dispositivi].
+
+D: Dopo ogni aggiornamento di Windows 11 perdo l'audio delle casse integrate. Come evito che accada?
+
+R: Gli aggiornamenti cumulativi di Windows spesso sovrascrivono i driver Realtek con versioni generiche Microsoft che funzionano male. La soluzione definitiva è scaricare il pacchetto driver proprietario direttamente dal sito del produttore del tuo PC (Dell, Lenovo, HP, ecc.) e disabilitare temporaneamente l'installazione automatica dei driver tramite Windows Update.
+
+D: Le cuffie funzionano su YouTube ma muoiono appena apro il software gestionale dell'azienda. Perché?
+
 R: Significa che il software gestionale o la piattaforma di Unified Communication sta monopolizzando l'uso esclusivo della scheda audio. Vai nelle impostazioni avanzate dell'app che causa il blocco e disabilita l'opzione "Consenti alle applicazioni di assumere il controllo esclusivo del dispositivo" nel pannello classico dei suoni (`mmsys.cpl`, tab Proprietà del dispositivo -> Avanzate).

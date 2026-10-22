@@ -80,8 +80,16 @@ Prima di mettere mano a driver di basso livello o eseguire comandi di ripristino
 
 ### Domande Frequenti (FAQ)
 
-D: Posso semplicemente terminare il processo System da Gestione attività per far respirare il PC?R: No. Windows protegge i processi del kernel (`System` e `System Idle Process`). Se provi a terminarlo forzatamente, il sistema genererà immediatamente una schermata blu di errore (BSOD) e si riavvierà perdendo qualsiasi lavoro non salvato.D: Come faccio a capire se il problema è causato da un aggiornamento di Windows Update bloccato?
+D: Posso semplicemente terminare il processo System da Gestione attività per far respirare il PC?
+
+R: No. Windows protegge i processi del kernel (`System` e `System Idle Process`). Se provi a terminarlo forzatamente, il sistema genererà immediatamente una schermata blu di errore (BSOD) e si riavvierà perdendo qualsiasi lavoro non salvato.
+
+D: Come faccio a capire se il problema è causato da un aggiornamento di Windows Update bloccato?
+
 R: Apri *Impostazioni* -> *Windows Update*. Se vedi un aggiornamento fermo allo 0% o in errore continuo, vai su *Servizi* (digita `services.msc` da Esegui), individua il servizio Windows Update, clicca col destro e seleziona *Arresta*. Dopodiché pulisci la cartella `C:\Windows\SoftwareDistribution` e riavvia il servizio.
 
 D: Questo problema può essere causato da un guasto fisico dell'hardware (SSD o RAM)?
-R: Assolutamente sì. Un SSD che sta cedendo o che ha settori danneggiati costringe il controller e il kernel a ripetere i tentativi di lettura all'infinito, facendo schizzare la CPU al 100% sul processo System. Ti consiglio di scaricare uno strumento S.M.A.R.T. gratuito come CrystalDiskInfo per verificare subito lo stato di salute dei dischi.
+
+R: Assolutamente sì. Un SSD che sta cedendo o che ha settori danneggiati costringe il controller e il kernel a ripetere i tentativi di lettura all'infinito, facendo schizzare la CPU al 100% sul processo System. Ti consiglio di scaricare uno strumento S.M.
+
+A.R.T. gratuito come CrystalDiskInfo per verificare subito lo stato di salute dei dischi.

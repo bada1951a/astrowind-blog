@@ -135,7 +135,9 @@ Operare sulla componentistica di input richiede cautela per non convertire un se
 
 ---
 
-## 4. Domande Frequenti (FAQ)
+## 4.
+
+Domande Frequenti (FAQ)
 
 ### Posso usare l'alcol isopropilico (IPA) al 99.9% al posto dello spray per contatti dedicato?
 Sì, ma solo con somministrazione manuale controllata tramite pipetta o siringa (non più di una o due gocce). L'isopropanolo è un ottimo sgrassante e non lascia residui, tuttavia non contiene gli additivi tensioattivi dei disossidanti specifici per contatti elettrici che disgregano l'ossido metallico per via chimica. Inoltre, un bagno d'alcol eccessivo può opacizzare irreversibilmente le plastiche in policarbonato trasparente (*housing RGB*) di alcuni switch moderni.

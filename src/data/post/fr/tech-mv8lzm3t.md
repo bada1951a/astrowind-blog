@@ -69,7 +69,9 @@ Un boot lent peut aussi cacher un SSD en fin de vie ou un système de fichiers c
 ```powershell
 sfc /scannow
 ```
-3. Vérifiez l'état S.M.A.R.T de votre SSD pour être sûr qu'il ne rende pas l'âme :
+3. Vérifiez l'état S.M.
+
+A.R.T de votre SSD pour être sûr qu'il ne rende pas l'âme :
 ```powershell
 Get-PhysicalDisk | Select-Object FriendlyName, OperationalStatus, HealthStatus
 ```

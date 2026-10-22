@@ -60,5 +60,14 @@ Prima di metter mano a qualsiasi modifica via riga di comando su PC aziendali, v
 
 ### Domande Frequenti (FAQ)
 
-D: La rimozione della filigrana tramite CMD è permanente o devo ripeterla ogni volta che accendo il PC?R: Il comando `slmgr /rearm` estende il periodo di valutazione per un numero limitato di volte (solitamente fino a 3 volte a seconda della build di Windows). Non è una soluzione di attivazione definitiva, ma un cuscinetto di emergenza ideale per completare attività urgenti senza blocchi visivi.D: Posso usare questa procedura su qualsiasi versione di Windows 10 e Windows 11?R: Sì, il comando `slmgr` è nativo in tutte le edizioni Pro, Enterprise ed Home di Windows, sebbene le edizioni Home abbiano limitazioni più rigide sulla gestione remota delle licenze tramite script avanzati.D: Cosa devo fare se il comando mi restituisce un errore di accesso negato?
+D: La rimozione della filigrana tramite CMD è permanente o devo ripeterla ogni volta che accendo il PC?
+
+R: Il comando `slmgr /rearm` estende il periodo di valutazione per un numero limitato di volte (solitamente fino a 3 volte a seconda della build di Windows). Non è una soluzione di attivazione definitiva, ma un cuscinetto di emergenza ideale per completare attività urgenti senza blocchi visivi.
+
+D: Posso usare questa procedura su qualsiasi versione di Windows 10 e Windows 11?
+
+R: Sì, il comando `slmgr` è nativo in tutte le edizioni Pro, Enterprise ed Home di Windows, sebbene le edizioni Home abbiano limitazioni più rigide sulla gestione remota delle licenze tramite script avanzati.
+
+D: Cosa devo fare se il comando mi restituisce un errore di accesso negato?
+
 R: Significa che non hai aperto il Prompt dei comandi con i privilegi elevati. Assicurati di fare clic destro su `cmd` e selezionare esplicitamente "Esegui come amministratore" prima di digitare qualsiasi stringa.
