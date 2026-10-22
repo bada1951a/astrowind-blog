@@ -48,7 +48,7 @@ function getPostImages(index) {
 }
 
 // =========================================================================
-// 한국 시간(KST) 기준 안전한 당일 발행 날짜 생성 함수
+// 한국 시간(KST) 기준 당일 발행 날짜 생성
 // =========================================================================
 function getKstPublishDateIso(index) {
   const now = new Date();
@@ -56,14 +56,30 @@ function getKstPublishDateIso(index) {
   const year = kstTime.getUTCFullYear();
   const month = String(kstTime.getUTCMonth() + 1).padStart(2, '0');
   const day = String(kstTime.getUTCDate()).padStart(2, '0');
-
   const minute = String((index * 5) % 60).padStart(2, '0');
   return `${year}-${month}-${day}T03:${minute}:00.000Z`;
 }
 
 // =========================================================================
-// 주제 확인
+// [초경량 고속 정제 함수] 렉 유발 패턴 제거 및 즉각 처리
 // =========================================================================
+function sanitizeMarkdownFormatting(content) {
+  // 1) 볼드 기호(**) 일괄 제거
+  let cleaned = content.replace(/\*\*/g, '');
+
+  // 2) 물음표 뒤 띄어쓰기 누락 보정 (? 뒤 공백 없이 문자가 바로 붙을 때)
+  cleaned = cleaned.replace(/\?([A-Za-z\u00C0-\u024F\u1EA0-\u1EF9])/g, '? $1');
+
+  // 3) 문장 끝 부호 뒤에 번호 목록이 바로 붙는 현상 강제 줄바꿈 (예: "완료.2. 다음" -> "완료.\n\n2. 다음")
+  cleaned = cleaned.replace(/([.?!])\s*([0-9]+\.\s+)/g, '$1\n\n$2');
+
+  // 4) FAQ/Q&A 헤더 앞뒤 개행 강제 확보
+  cleaned = cleaned.replace(/([^\n])\s*(Q[1-9]\.|R[1-9]\.|A[1-9]\.|D[1-9]\.)/g, '$1\n\n$2');
+  cleaned = cleaned.replace(/([.?!])\s*(Q[0-9]*\.|D:|R:|Risposta|Domande)/gi, '$1\n\n$2');
+
+  return cleaned;
+}
+
 if (!fs.existsSync(TOPICS_FILE)) {
   console.error("❌ topics.txt 파일이 존재하지 않습니다.");
   process.exit(1);
@@ -80,9 +96,6 @@ if (lines.length === 0) {
 const currentTopic = lines[0];
 console.log(`📌 오늘 처리할 주제 (1호기 메인 IT/Tech): "${currentTopic}"`);
 
-// =========================================================================
-// [도입부 다양화] 기계적 반복 방지: 현실적인 직장인 IT 위기 시나리오 30개 풀
-// =========================================================================
 const IT_CRISIS_SCENARIOS_30 = [
   "금요일 퇴근 15분 전, 팀장님과 임원진에게 주간 최종 결산 보고서를 메일로 막 발송하려던 순간",
   "월요일 출근 직후 오전 9시, 전사 주간 정례 킥오프 회의 시작을 앞두고 PC를 켠 순간",
@@ -156,7 +169,7 @@ const TARGET_LANGS = [
   { code: 'de', name: 'German', persona: 'Erfahrener IT-Systemadministrator und Hardware-Diagnostiker', osUi: 'Task-Manager, Systemsteuerung, Geräte-Manager, Ereignisanzeige, Einstellungen', localeContext: 'Frankfurter Bankenviertel und Münchner Technologie-Campus' },
   { code: 'fr', name: 'French', persona: 'Ingénieur support informatique et spécialiste de la maintenance PC', osUi: 'Gestionnaire des tâches, Panneau de configuration, Gestionnaire de périphériques, Paramètres', localeContext: 'Siège d\'entreprise à Paris La Défense' },
   { code: 'es', name: 'Spanish', persona: 'Técnico especialista en sistemas informáticos y soporte de hardware', osUi: 'Administrador de tareas, Panel de control, Administrador de dispositivos, Configuración', localeContext: 'Distrito financiero y corporativo en Madrid' },
-  { code: 'it', name: 'Italian', persona: 'Tecnico informatico sistemista con ampia esperienza sul campo', osUi: 'Gestione attività, Pannello di controllo, Gestione dispositivi, Impostazioni', localeContext: 'Centro direzionale e poli produttivi a Milano' },
+  { code: 'it', name: 'Italian', persona: 'Tecnico informatico sistemista con ampia experiencia sul campo', osUi: 'Gestione attività, Pannello di controllo, Gestione dispositivi, Impostazioni', localeContext: 'Centro direzionale e poli produttivi a Milano' },
   { code: 'pt', name: 'Portuguese', persona: 'Especialista em manutenção de TI, redes e hardware computacional', osUi: 'Gerenciador de Tarefas, Painel de Controle, Gerenciador de Dispositivos, Configurações', localeContext: 'Avenida Paulista e centros empresariais em São Paulo' },
   { code: 'nl', name: 'Dutch', persona: 'Allround IT-systeembeheerder en computer hardware specialist', osUi: 'Taakbeheer, Configuratiescherm, Apparaatbeheer, Instellingen', localeContext: 'Zuidas zakendistrict in Amsterdam' },
   { code: 'pl', name: 'Polish', persona: 'Inżynier wsparcia IT i serwisant sprzętu komputerowego', osUi: 'Menedżer zadań, Panel sterowania, Menedżer urządzeń, Ustawienia', localeContext: 'Warszawskie centrum biznesowe i technologiczne' },
@@ -167,7 +180,8 @@ const TARGET_LANGS = [
 const delay = (ms) => new Promise((res) => setTimeout(res, ms));
 const fileSlug = `post-${Date.now().toString(36)}`;
 
-async function fetchWithRetry(prompt, maxRetries = 15, delayMs = 20000) {
+// 지연 시간 단축 (20초 대기 -> 5초 대기, 최대 재시도 5회로 축소)
+async function fetchWithRetry(prompt, maxRetries = 5, delayMs = 5000) {
   for (let attempt = 1; attempt <= maxRetries; attempt++) {
     try {
       const response = await ai.models.generateContent({
@@ -176,45 +190,11 @@ async function fetchWithRetry(prompt, maxRetries = 15, delayMs = 20000) {
       });
       return response.text;
     } catch (error) {
-      console.warn(`⚠️ [호출 지연/에러] 시도 ${attempt}/${maxRetries}:${error.message}`);
+      console.warn(`⚠️ [호출 재시도] ${attempt}/${maxRetries}: ${error.message}`);
       if (attempt === maxRetries) { throw error; }
-      console.log(`⏳ ${delayMs / 1000}초 동안 대기 후 다시 시도합니다...`);
       await delay(delayMs);
     }
   }
-}
-
-// =========================================================================
-// 본문 마크다운 볼드(**) 기호 제거 및 다국어 엉킴/공백 완벽 정제 함수 (최종 수정본)
-// =========================================================================
-function sanitizeMarkdownFormatting(content) {
-  let cleaned = content;
-
-  // 1) 마크다운 볼드(**) 기호 완전 제거
-  const lines = cleaned.split('\n');
-  const clearedLines = lines.map(line => {
-    let trimmed = line.trim();
-    if (trimmed === '**') return '';
-    if (trimmed.startsWith('```') || trimmed.startsWith('`')) return line;
-    return line.replace(/\*\*/g, '');
-  });
-  cleaned = clearedLines.join('\n');
-
-  // 2) 물음표(?) 또는 마침표(.) 뒤에 띄어쓰기 없이 바로 글자가 붙는 현상 강제 띄어쓰기 보정
-  cleaned = cleaned.replace(/([?])([A-ZÀ-ÖØ-ßa-zà-öø-ÿ])/g, '$1 $2');
-
-  // 3) 문장 끝과 다음 번호(예: "sprzętu.2." 또는 "sprzętu. 2.") 사이에 강제 두 줄 개행 삽입
-  cleaned = cleaned.replace(/([.?!])\s*([0-9]+\.\s+[A-ZÀ-ÖØ-ßa-zà-öø-ÿ])/g, '$1\n\n$2');
-
-  // 4) 다국어 환경에서 물음표나 마침표 뒤에 문장이나 번호가 붙을 때 무조건 강제 개행
-  cleaned = cleaned.replace(/([.?!])\s+(Najskuteczniejszą|Podłączyłem|To klasyczny|Czy narzędzie|W Windows|Co zrobić|Que faire|¿Qué|Miin|Kan|Zagrożenie|Warto|Przypadku|Ważne)/g, '$1\n\n$2');
-
-  // 5) Q와 A, 다국어 패턴 앞 줄바꿈 강제 확보
-  cleaned = cleaned.replace(/([^\n])\s*(Q[1-9]\.|R[1-9]\.|A[1-9]\.)/g, '$1\n\n$2');
-  cleaned = cleaned.replace(/([.?!])\s*(D:|Q[0-9]*\.|Domande)/gi, '$1\n\n$2');
-  cleaned = cleaned.replace(/([.?!])\s*(R:|Risposta|A[0-9]*\.)/gi, '$1\n\n$2');
-
-  return cleaned;
 }
 
 async function generateSinglePost(lang, index) {
@@ -222,7 +202,6 @@ async function generateSinglePost(lang, index) {
   const selectedScenario = IT_CRISIS_SCENARIOS_30[Math.floor(Math.random() * IT_CRISIS_SCENARIOS_30.length)];
 
   console.log(`\n🚀 [${index + 1}/12] ${lang.name} (${lang.code}) 1호기 메인 IT 포스팅 생성 중... (테마: ${selectedTheme.name})`);
-  console.log(`    🎭 선택된 도입부 시나리오: "${selectedScenario.slice(0, 30)}..."`);
 
   const { coverUrl, bodyUrl } = getPostImages(index);
   const pubDateIso = getKstPublishDateIso(index);
@@ -254,19 +233,16 @@ ${currentTopic}
 
 [MANDATORY OPENING VARIATION RULE - ZERO CLICHE REPETITION]
 - You MUST start the opening story based strictly on the assigned scenario: "${selectedScenario}".
-- ABSOLUTELY FORBIDDEN: Do NOT default to a generic "presentation in 30 minutes" or "board meeting" unless specifically assigned. If the assigned scenario is about night shifts, café working, travel, or rebooting after updates, you MUST craft the opening incident around that specific context!
-- Adapt the situation naturally to the business culture of ${lang.name} and ${lang.localeContext}.
+- ABSOLUTELY FORBIDDEN: Do NOT default to a generic "presentation in 30 minutes" or "board meeting" unless specifically assigned. Adapt naturally to the context.
 
 [STRICT MARKDOWN & FORMATTING RULES - NO RENDERING GLITCHES]
 1. BOLD FORMATTING RULE:
-    - Standard markdown bold is strictly: **Word**
-    - NEVER put brackets or quotes inside asterisks (FORBIDDEN: **[Word]**, **"Word"**). Instead write: [**Word**] or "**Word**".
-    - NEVER leave space inside asterisks (FORBIDDEN: ** Word **).
+    - Absolutely DO NOT use markdown bold asterisks anywhere in the body text or FAQ. Keep all text in plain standard format.
 2. COMMANDS & CODE BLOCKS:
-    - Always wrap long terminal/registry commands (like reg.exe add, slmgr, PowerShell scripts) in standard 3-backtick code blocks (\`\`\`cmd or \`\`\`bash) so they never overflow horizontally on mobile screens.
+    - Always wrap long terminal/registry commands (like reg.exe add, slmgr, PowerShell scripts) in standard 3-backtick code blocks (\`\`\`cmd or \`\`\`bash).
 3. NO LATEX & NO TILDE:
     - ABSOLUTELY FORBIDDEN: NEVER use LaTeX math delimiters ($ or $$).
-    - ABSOLUTELY FORBIDDEN: NEVER use tilde (~) for ranges (e.g., NEVER write "10~20%"). Always use a hyphen (e.g., "10-20%").
+    - ABSOLUTELY FORBIDDEN: NEVER use tilde (~) for ranges. Always use a hyphen (e.g., "10-20%").
 
 [Design Theme & Layout Dynamic Rules (MANDATORY)]
 - Assigned Theme: "${selectedTheme.name}"
@@ -274,24 +250,22 @@ ${currentTopic}
 - Layout Characteristic: ${selectedTheme.layout}
 - You MUST incorporate native Markdown and inline styled HTML callouts tailored to this theme.
 - Use custom styled tip/warning boxes (e.g., <div style="border-left: 4px solid ${selectedTheme.primaryColor}; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">...</div>).
-  * CRITICAL: All text inside callout/tip/warning boxes MUST be crisp dark charcoal/black (color: #111827) so it is 100% legible against any background.
+  * CRITICAL: All text inside callout/tip/warning boxes MUST be crisp dark charcoal/black (color: #111827).
 
 [Tone & Writing Style Rules (STRICT - NO AI VIBE)]
 1. Mandatory Opening:
-    - Absolutely FORBIDDEN: Boring textbook intros like "Hello", "In this post", "Today we will explore".
     - Start immediately with an intense, relatable workplace emergency scenario strictly about [Topic] based on the assigned incident.
 2. Tone & Voice:
     - Write like a real colleague sharing an honest, battle-tested solution on a professional community.
 3. Fast-Paced 3-Step Narrative:
-    - Step 1: Sudden workflow panic regarding [Topic] set in the assigned incident.
+    - Step 1: Sudden workflow panic regarding [Topic].
     - Step 2: Wasted manual effort and trial-and-error.
     - Step 3: The breakthrough actionable tip & clear step-by-step setup.
 
 [Content & Structure (AdSense E-E-A-T Compliant)]
 1. Opening Story: Intense real workplace incident strictly regarding this topic based on the assigned scenario.
- 2. Root Cause Breakdown: Clearly explain 3 realistic root causes behind the bottleneck or error.
-3. Step-by-Step Resolution:
-    - Provide exact clicks matching "${lang.osUi}".
+2. Root Cause Breakdown: Clearly explain 3 realistic root causes behind the bottleneck or error.
+3. Step-by-Step Resolution: Provide exact clicks matching "${lang.osUi}".
 4. Expert Warning / Advice: Practical precautions regarding hardware, power, or data safety.
 5. Frequently Asked Questions (FAQ): Exactly 3 realistic, high-value Q&As that everyday users would ask. (CRITICAL: Every Q and A must start on a fresh new line without markdown bolding like Q1. ... and A1.).
 
@@ -342,10 +316,9 @@ theme: "${selectedTheme.name}"
                                .replace(/category:\s*[^\n\r]+/i, "category: 'tech'");
 
       frontmatter = frontmatter.replace(/publishDate:\s*[^\n\r]+/i, `publishDate: ${pubDateIso}`);
-
       frontmatter = frontmatter.replace(/image:\s*["'][^"']*["']/i, `image: '${coverUrl}'`);
 
-      // 본문 볼드체 제거 및 다국어 공백/줄바꿈 정제 적용
+      // 고속 단일 패스 정제 적용
       body = sanitizeMarkdownFormatting(body);
 
       const middleImageMarkdown = `\n\n![Tech Troubleshooting Guide](${bodyUrl})\n\n`;
@@ -381,7 +354,7 @@ theme: "${selectedTheme.name}"
 
 async function run() {
   console.log("==================================================");
-  console.log("⚡ 1호기 Tech/IT 12개국 30개 시나리오 기반 자동 포스팅 시작");
+  console.log("⚡ 1호기 Tech/IT 12개국 최적화 고속 자동 포스팅 시작");
   console.log("==================================================");
 
   let successCount = 0;
@@ -390,7 +363,7 @@ async function run() {
     const isSuccess = await generateSinglePost(TARGET_LANGS[i], i);
     if (isSuccess) successCount++;
     if (i < TARGET_LANGS.length - 1) {
-      await delay(5000);
+      await delay(2000); // 딜레이를 2초로 단축해 전체 처리 속도 대폭 개선
     }
   }
 
