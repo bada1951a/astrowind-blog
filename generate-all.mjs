@@ -84,7 +84,6 @@ console.log(`📌 오늘 처리할 주제 (1호기 메인 IT/Tech): "${currentTo
 // [도입부 다양화] 기계적 반복 방지: 현실적인 직장인 IT 위기 시나리오 30개 풀
 // =========================================================================
 const IT_CRISIS_SCENARIOS_30 = [
-  // [1~8: 시간대별 위기]
   "금요일 퇴근 15분 전, 팀장님과 임원진에게 주간 최종 결산 보고서를 메일로 막 발송하려던 순간",
   "월요일 출근 직후 오전 9시, 전사 주간 정례 킥오프 회의 시작을 앞두고 PC를 켠 순간",
   "야간에 사무실에 홀로 남아 내일 배포할 핵심 시스템 및 데이터 마이그레이션 작업을 진행하던 새벽 1시",
@@ -93,8 +92,6 @@ const IT_CRISIS_SCENARIOS_30 = [
   "나른한 목요일 오후 4시, 집중해서 작성하던 중간 납품 검수 문서를 정리하던 순간",
   "휴일 직전 연휴 시작 30분 전, 남은 사내 결재 문서를 모두 승인 처리하려던 타이밍",
   "주말 당직 근무 중 예기치 못한 사내 시스템 에러 알림을 받고 긴급히 PC에 로그인한 상황",
-
-  // [9~16: 장소 및 원격 환경 위기]
   "해외 출장지 호텔 로비에서 노트북 배터리가 18% 남은 상태로 급히 본사 공유 문서를 열람하던 상황",
   "카페에서 스마트폰 핫스팟(테더링)을 연결해 외부 고객 미팅용 견적서와 설계 도면을 수정하던 오후",
   "재택근무 중 사내 VPN 보안 연결을 걸고 중요한 화상회의(Zoom/Teams) 접속 5분 전",
@@ -103,8 +100,6 @@ const IT_CRISIS_SCENARIOS_30 = [
   "고객사 본사 회의실에 방문하여 현장 실무진과 실시간 시스템 화면을 공유하며 시연하기 직전",
   "공항 출국장 라운지에서 탑승 직전 20분을 남겨두고 최종 승인 문서를 전송해야 하는 급박한 상황",
   "스마트오피스 자율좌석에서 처음 연결해 보는 도킹 스테이션과 듀얼 모니터를 세팅하던 아침",
-
-  // [17~24: 실무 작업 및 데이터 위기]
   "월간 데이터 백업을 위해 2TB 분량의 핵심 업무 파일을 외장 SSD와 나스(NAS)로 전송하던 중",
   "사내 IT 보안 감사팀의 분기별 PC 점검 마감 30분 전, 자체 진단 리포트를 생성해 제출해야 하는 상황",
   "새로 지급받은 고사양 개발 및 그래픽 작업용 PC에 필수 사내 라이선스 툴들을 처음 세팅하던 날",
@@ -113,8 +108,6 @@ const IT_CRISIS_SCENARIOS_30 = [
   "대규모 고객 데이터베이스(DB) 쿼리를 실행해 두고 모니터링 창을 지켜보던 긴박한 순간",
   "사내 메신저로 급한 오류 수정 요청이 쏟아져 동시에 5개의 실무 툴을 띄워놓고 멀티태스킹을 하던 중",
   "외부 협력업체에서 보내온 압축 파일과 도면 데이터를 다운로드받아 사내 검사를 진행하려던 찰나",
-
-  // [25~30: 시스템 이벤트 및 예기치 못한 충돌]
   "어젯밤 진행된 윈도우 대규모 누적 보안 업데이트 이후 첫 부팅을 마치고 업무를 시작하려던 아침",
   "메인보드 바이오스(BIOS) 펌웨어를 최신 버전으로 올린 뒤 윈도우 진입 화면에서 평소와 다른 증상을 마주한 순간",
   "작업 도중 원인 모를 블루스크린(BSOD)이 스쳐 지나가며 강제 재부팅된 직후의 당혹스러운 상황",
@@ -176,6 +169,7 @@ const TARGET_LANGS = [
 const delay = (ms) => new Promise((res) => setTimeout(res, ms));
 const fileSlug = `post-${Date.now().toString(36)}`;
 
+// ⚡ 최신 경량화 모델 적용 완료 (404 에러 방지)
 async function fetchWithRetry(prompt, maxRetries = 15, delayMs = 20000) {
   for (let attempt = 1; attempt <= maxRetries; attempt++) {
     try {
@@ -194,7 +188,7 @@ async function fetchWithRetry(prompt, maxRetries = 15, delayMs = 20000) {
 }
 
 // =========================================================================
-// 본문 마크다운 별표(**) 및 서식 깨짐 원천 정제 함수
+// 본문 마크다운 별표(**) 및 FAQ 붙어 깨짐 현상 원천 정제 함수
 // =========================================================================
 function sanitizeMarkdownFormatting(content) {
   let cleaned = content;
@@ -206,6 +200,9 @@ function sanitizeMarkdownFormatting(content) {
   cleaned = cleaned.replace(/\*\*\s+([^\*\n]+?)\s+\*\*/g, '**$1**');
   cleaned = cleaned.replace(/\*\*\s+([^\*\n]+?)\*\*/g, '**$1**');
   cleaned = cleaned.replace(/\*\*([^\*\n]+?)\s+\*\*/g, '**$1**');
+
+  // ⚡ FAQ 영역에서 **Q1... **A1... 형태로 한 줄에 붙어 깨지는 현상 자동 줄바꿈 교정
+  cleaned = cleaned.replace(/\*\*Q([0-9]+)\.\s*([^\*]+)\*\*A\1\./g, '**Q$1. $2**\n\n**A$1.**');
 
   const lines = cleaned.split('\n');
   const fixedLines = lines.map(line => {
@@ -299,7 +296,7 @@ ${currentTopic}
 3. Step-by-Step Resolution:
     - Provide exact clicks matching "${lang.osUi}".
 4. Expert Warning / Advice: Practical precautions regarding hardware, power, or data safety.
-5. Frequently Asked Questions (FAQ): Exactly 3 realistic, high-value Q&As that everyday users would ask.
+5. Frequently Asked Questions (FAQ): Exactly 3 realistic, high-value Q&As that everyday users would ask. (CRITICAL: Every Q and A must start on a fresh new line with proper markdown bolding like **Q1. ...** and **A1.**).
 
 [Length & Richness Rules]
 - Korean (ko): Minimum 2,500 characters of rich, deep, non-repetitive text.
@@ -355,7 +352,7 @@ theme: "${selectedTheme.name}"
       // 대표 이미지 경로 강제 동기화
       frontmatter = frontmatter.replace(/image:\s*["'][^"']*["']/i, `image: '${coverUrl}'`);
 
-      // 본문 별표(**) 서식 오류 정제
+      // 본문 별표(**) 및 FAQ 서식 오류 정제
       body = sanitizeMarkdownFormatting(body);
 
       // 본문 중간 이미지 태그 (앞뒤 줄바꿈을 2개씩 두어 온전한 이미지 블록으로 인식되도록 처리)
