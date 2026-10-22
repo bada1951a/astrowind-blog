@@ -116,7 +116,6 @@ const IT_CRISIS_SCENARIOS_30 = [
   "중요한 화상 발표 도중 마이크와 웹캠이 간헐적으로 끊기며 시스템 지연(DPC Latency)이 발생하던 상황"
 ];
 
-// 30가지 고유 시각 스타일 및 글 구조 테마 프리셋
 const THEME_PRESETS = [
   { id: 1, name: "Cyberpunk Terminal", primaryColor: "#00ffcc", bgColor: "#111827", layout: "CLI/터미널 스타일, 자동화 단축 경로 최상단 배치" },
   { id: 2, name: "Modern Minimalist Slate", primaryColor: "#3b82f6", bgColor: "#f8fafc", layout: "미니멀 가이드 스타일, 여백 중심의 깔끔한 단계별 넘버링, 직관적 핵심 요약" },
@@ -150,7 +149,6 @@ const THEME_PRESETS = [
   { id: 30, name: "Pure Titanium Clean", primaryColor: "#334155", bgColor: "#ffffff", layout: "초고화질 매뉴얼 스타일, 볼드 타이포그래피 강조, 깔끔한 구분선" }
 ];
 
-// 글로벌 12개국 페르소나 및 실무 환경
 const TARGET_LANGS = [
   { code: 'ko', name: 'Korean', persona: '친절하고 경험 많은 PC/IT 하드웨어 트러블슈팅 전문가 (현직 테크 엔지니어)', osUi: '작업 관리자, 제어판, 장치 관리자, 이벤트 뷰어, 설정', localeContext: '서울/수도권 IT 및 기업 오피스' },
   { code: 'en', name: 'English', persona: 'Senior IT systems engineer and enterprise tech troubleshooter', osUi: 'Task Manager, Control Panel, Device Manager, Event Viewer, Settings', localeContext: 'Silicon Valley tech enterprise / New York corporate finance office' },
@@ -187,42 +185,28 @@ async function fetchWithRetry(prompt, maxRetries = 15, delayMs = 20000) {
 }
 
 // =========================================================================
-// 본문 마크다운 별표(**) 및 FAQ 붙어 깨짐 현상 원천 정제 함수 (완벽 강화 버전)
+// 본문 마크다운 볼드(**) 기호 완전 제거 및 FAQ 줄바꿈 정제 함수 (최종 수정본)
 // =========================================================================
 function sanitizeMarkdownFormatting(content) {
   let cleaned = content;
 
-  cleaned = cleaned.replace(/\*{3,}/g, '**');
-  cleaned = cleaned.replace(/\*\*\[([^\]]+)\]\*\*/g, '[**$1**]');
-  cleaned = cleaned.replace(/\*\*"([^"]+)"\*\*/g, '"**$1**"');
-  cleaned = cleaned.replace(/\*\*'([^']+)'\*\*/g, '\'**$1**\'');
-  cleaned = cleaned.replace(/\*\*\s+([^\*\n]+?)\s+\*\*/g, '**$1**');
-  cleaned = cleaned.replace(/\*\*\s+([^\*\n]+?)\*\*/g, '**$1**');
-  cleaned = cleaned.replace(/\*\*([^\*\n]+?)\s+\*\*/g, '**$1**');
+  // 1) Q와 A 사이에 문장이 붙어 있는 경우 강제 두 줄 개행
+  cleaned = cleaned.replace(/([^\n])\s*(Q[1-9]\.)/g, '$1\n\n$2');
+  cleaned = cleaned.replace(/([^\n])\s*(A[1-9]\.)/g, '$1\n\n$2');
 
-  // ⚡ FAQ 영역에서 Q와 A 사이에 공백이나 줄바꿈이 어떻게 꼬여 있든 완벽한 2줄 개행으로 강제 분리
+  // 2) FAQ 영역에서 Q와 A 블록이 꼬인 경우 완벽한 2줄 개행으로 정제
   cleaned = cleaned.replace(/\*\*Q([0-9]+)\.\s*([\s\S]*?)\*\*A\1\./g, (match, qNum, qText) => {
-    return `**Q${qNum}. ${qText.trim()}**\n\n**A${qNum}.**`;
+    return `Q${qNum}. ${qText.trim()}\n\nA${qNum}.`;
   });
 
-  const lines = cleaned.split('\n');
-  const fixedLines = lines.map(line => {
-    if (line.trim().startsWith('```') || line.trim().startsWith('`')) return line;
-    const matches = line.match(/\*\*/g);
-    if (matches && matches.length % 2 !== 0) {
-      const lastIdx = line.lastIndexOf('**');
-      return line.slice(0, lastIdx) + line.slice(lastIdx + 2);
-    }
-    return line;
-  });
+  // 3) 골칫거리인 모든 마크다운 볼드(**) 기호를 완전히 제거 (대제목/소제목 #은 안전하게 유지됨)
+  cleaned = cleaned.replace(/\*\*/g, '');
 
-  return fixedLines.join('\n');
+  return cleaned;
 }
 
 async function generateSinglePost(lang, index) {
   const selectedTheme = THEME_PRESETS[Math.floor(Math.random() * THEME_PRESETS.length)];
-  
-  // 🎯 30개 시나리오 중 무작위 1개 선택 (글마다 완벽한 오프닝 차별화)
   const selectedScenario = IT_CRISIS_SCENARIOS_30[Math.floor(Math.random() * IT_CRISIS_SCENARIOS_30.length)];
 
   console.log(`\n🚀 [${index + 1}/12] ${lang.name} (${lang.code}) 1호기 메인 IT 포스팅 생성 중... (테마: ${selectedTheme.name})`);
@@ -297,7 +281,7 @@ ${currentTopic}
 3. Step-by-Step Resolution:
     - Provide exact clicks matching "${lang.osUi}".
 4. Expert Warning / Advice: Practical precautions regarding hardware, power, or data safety.
-5. Frequently Asked Questions (FAQ): Exactly 3 realistic, high-value Q&As that everyday users would ask. (CRITICAL: Every Q and A must start on a fresh new line with proper markdown bolding like **Q1. ...** and **A1.**).
+5. Frequently Asked Questions (FAQ): Exactly 3 realistic, high-value Q&As that everyday users would ask. (CRITICAL: Every Q and A must start on a fresh new line without markdown bolding like Q1. ... and A1.).
 
 [Length & Richness Rules]
 - Korean (ko): Minimum 2,500 characters of rich, deep, non-repetitive text.
@@ -328,7 +312,6 @@ theme: "${selectedTheme.name}"
                .replace(/\\circ/g, '°')
                .replace(/\\approx/g, '≈');
 
-    // [취소선 버그 원천 차단 후처리]
     text = text.replace(/(\S)\s*~\s*(\S)/g, '$1 - $2');
     text = text.replace(/~/g, '-');
 
@@ -343,20 +326,16 @@ theme: "${selectedTheme.name}"
       let body = text.slice(frontmatter.length).trim();
       body = body.replace(/^#\s+[^\n]+\n+/, '');
 
-      // 1호기 영구 고정 규칙: category: 'tech'
       frontmatter = frontmatter.replace(/category:\s*["'][^"']*["']/i, "category: 'tech'")
                                .replace(/category:\s*[^\n\r]+/i, "category: 'tech'");
 
-      // Cloudflare 빌드 실패 및 날짜 깨짐 방지: 정확한 KST 기반 ISO 날짜 강제 주입
       frontmatter = frontmatter.replace(/publishDate:\s*[^\n\r]+/i, `publishDate: ${pubDateIso}`);
 
-      // 대표 이미지 경로 강제 동기화
       frontmatter = frontmatter.replace(/image:\s*["'][^"']*["']/i, `image: '${coverUrl}'`);
 
-      // 본문 별표(**) 및 FAQ 서식 오류 정제
+      // 본문 볼드체 제거 및 FAQ 서식 정제 적용
       body = sanitizeMarkdownFormatting(body);
 
-      // 본문 중간 이미지 태그 (앞뒤 줄바꿈을 2개씩 두어 온전한 이미지 블록으로 인식되도록 처리)
       const middleImageMarkdown = `\n\n![Tech Troubleshooting Guide](${bodyUrl})\n\n`;
       if (body.includes('## 2.') || body.includes('### 2.')) {
         body = body.replace(/(#{2,3}\s*2\.[^\n]+)/, `${middleImageMarkdown}$1`);
@@ -380,7 +359,7 @@ theme: "${selectedTheme.name}"
 
     const filePath = path.join(targetDir, `${fileSlug}.md`);
     fs.writeFileSync(filePath, text, 'utf-8');
-    console.log(`✅ [성공] 1호기 저장 완료: src/data/post/${lang.code}/${fileSlug}.md (30개 시나리오 다양화 + 서식 정제)`);
+    console.log(`✅ [성공] 1호기 저장 완료: src/data/post/${lang.code}/${fileSlug}.md`);
     return true;
   } catch (error) {
     console.error(`❌ [최종 실패] ${lang.name} 생성 실패:`, error.message);
