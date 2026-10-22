@@ -185,22 +185,34 @@ async function fetchWithRetry(prompt, maxRetries = 15, delayMs = 20000) {
 }
 
 // =========================================================================
-// 본문 마크다운 볼드(**) 기호 완전 제거 및 FAQ 줄바꿈 정제 함수 (최종 수정본)
+// 본문 마크다운 볼드(**) 기호 제거 및 다국어 엉킴/공백 완벽 정제 함수 (최종 수정본)
 // =========================================================================
 function sanitizeMarkdownFormatting(content) {
   let cleaned = content;
 
-  // 1) Q와 A 사이에 문장이 붙어 있는 경우 강제 두 줄 개행
-  cleaned = cleaned.replace(/([^\n])\s*(Q[1-9]\.)/g, '$1\n\n$2');
-  cleaned = cleaned.replace(/([^\n])\s*(A[1-9]\.)/g, '$1\n\n$2');
-
-  // 2) FAQ 영역에서 Q와 A 블록이 꼬인 경우 완벽한 2줄 개행으로 정제
-  cleaned = cleaned.replace(/\*\*Q([0-9]+)\.\s*([\s\S]*?)\*\*A\1\./g, (match, qNum, qText) => {
-    return `Q${qNum}. ${qText.trim()}\n\nA${qNum}.`;
+  // 1) 마크다운 볼드(**) 기호 완전 제거
+  const lines = cleaned.split('\n');
+  const clearedLines = lines.map(line => {
+    let trimmed = line.trim();
+    if (trimmed === '**') return '';
+    if (trimmed.startsWith('```') || trimmed.startsWith('`')) return line;
+    return line.replace(/\*\*/g, '');
   });
+  cleaned = clearedLines.join('\n');
 
-  // 3) 골칫거리인 모든 마크다운 볼드(**) 기호를 완전히 제거 (대제목/소제목 #은 안전하게 유지됨)
-  cleaned = cleaned.replace(/\*\*/g, '');
+  // 2) 물음표(?) 또는 마침표(.) 뒤에 띄어쓰기 없이 바로 글자가 붙는 현상 강제 띄어쓰기 보정
+  cleaned = cleaned.replace(/([?])([A-ZÀ-ÖØ-ßa-zà-öø-ÿ])/g, '$1 $2');
+
+  // 3) 문장 끝과 다음 번호(예: "sprzętu.2." 또는 "sprzętu. 2.") 사이에 강제 두 줄 개행 삽입
+  cleaned = cleaned.replace(/([.?!])\s*([0-9]+\.\s+[A-ZÀ-ÖØ-ßa-zà-öø-ÿ])/g, '$1\n\n$2');
+
+  // 4) 다국어 환경에서 물음표나 마침표 뒤에 문장이나 번호가 붙을 때 무조건 강제 개행
+  cleaned = cleaned.replace(/([.?!])\s+(Najskuteczniejszą|Podłączyłem|To klasyczny|Czy narzędzie|W Windows|Co zrobić|Que faire|¿Qué|Miin|Kan|Zagrożenie|Warto|Przypadku|Ważne)/g, '$1\n\n$2');
+
+  // 5) Q와 A, 다국어 패턴 앞 줄바꿈 강제 확보
+  cleaned = cleaned.replace(/([^\n])\s*(Q[1-9]\.|R[1-9]\.|A[1-9]\.)/g, '$1\n\n$2');
+  cleaned = cleaned.replace(/([.?!])\s*(D:|Q[0-9]*\.|Domande)/gi, '$1\n\n$2');
+  cleaned = cleaned.replace(/([.?!])\s*(R:|Risposta|A[0-9]*\.)/gi, '$1\n\n$2');
 
   return cleaned;
 }
@@ -210,7 +222,7 @@ async function generateSinglePost(lang, index) {
   const selectedScenario = IT_CRISIS_SCENARIOS_30[Math.floor(Math.random() * IT_CRISIS_SCENARIOS_30.length)];
 
   console.log(`\n🚀 [${index + 1}/12] ${lang.name} (${lang.code}) 1호기 메인 IT 포스팅 생성 중... (테마: ${selectedTheme.name})`);
-  console.log(`   🎭 선택된 도입부 시나리오: "${selectedScenario.slice(0, 30)}..."`);
+  console.log(`    🎭 선택된 도입부 시나리오: "${selectedScenario.slice(0, 30)}..."`);
 
   const { coverUrl, bodyUrl } = getPostImages(index);
   const pubDateIso = getKstPublishDateIso(index);
@@ -277,7 +289,7 @@ ${currentTopic}
 
 [Content & Structure (AdSense E-E-A-T Compliant)]
 1. Opening Story: Intense real workplace incident strictly regarding this topic based on the assigned scenario.
-2. Root Cause Breakdown: Clearly explain 3 realistic root causes behind the bottleneck or error.
+ 2. Root Cause Breakdown: Clearly explain 3 realistic root causes behind the bottleneck or error.
 3. Step-by-Step Resolution:
     - Provide exact clicks matching "${lang.osUi}".
 4. Expert Warning / Advice: Practical precautions regarding hardware, power, or data safety.
@@ -333,7 +345,7 @@ theme: "${selectedTheme.name}"
 
       frontmatter = frontmatter.replace(/image:\s*["'][^"']*["']/i, `image: '${coverUrl}'`);
 
-      // 본문 볼드체 제거 및 FAQ 서식 정제 적용
+      // 본문 볼드체 제거 및 다국어 공백/줄바꿈 정제 적용
       body = sanitizeMarkdownFormatting(body);
 
       const middleImageMarkdown = `\n\n![Tech Troubleshooting Guide](${bodyUrl})\n\n`;
