@@ -61,21 +61,29 @@ function getKstPublishDateIso(index) {
 }
 
 // =========================================================================
-// [초경량 고속 정제 함수] 렉 유발 패턴 제거 및 즉각 처리
+// [최종 안정형 마크다운 정제 함수] 단어 쪼개짐 방지 + Q&A 개행 완전 보장
 // =========================================================================
 function sanitizeMarkdownFormatting(content) {
-  // 1) 볼드 기호(**) 일괄 제거
-  let cleaned = content.replace(/\*\*/g, '');
+  let cleaned = content;
 
-  // 2) 물음표 뒤 띄어쓰기 누락 보정 (? 뒤 공백 없이 문자가 바로 붙을 때)
-  cleaned = cleaned.replace(/\?([A-Za-z\u00C0-\u024F\u1EA0-\u1EF9])/g, '? $1');
+  // 1) 마크다운 볼드(**) 기호 일괄 제거
+  cleaned = cleaned.replace(/\*\*/g, '');
 
-  // 3) 문장 끝 부호 뒤에 번호 목록이 바로 붙는 현상 강제 줄바꿈 (예: "완료.2. 다음" -> "완료.\n\n2. 다음")
-  cleaned = cleaned.replace(/([.?!])\s*([0-9]+\.\s+)/g, '$1\n\n$2');
+  // 2) 스페인어 특수 부호(¿, ¡) 앞 문장 끝 부호 뭉침 방지 (예: intactos.¿Qué -> intactos.\n\n¿Qué)
+  cleaned = cleaned.replace(/([.?!])\s*([¿¡])/g, '$1\n\n$2');
 
-  // 4) FAQ/Q&A 헤더 앞뒤 개행 강제 확보
-  cleaned = cleaned.replace(/([^\n])\s*(Q[1-9]\.|R[1-9]\.|A[1-9]\.|D[1-9]\.)/g, '$1\n\n$2');
-  cleaned = cleaned.replace(/([.?!])\s*(Q[0-9]*\.|D:|R:|Risposta|Domande)/gi, '$1\n\n$2');
+  // 3) 물음표 뒤 띄어쓰기 누락 보정 (?단어 -> ? 단어)
+  cleaned = cleaned.replace(/\?([A-Za-z\u00C0-\u024F\u1EA0-\u1EF9가-힣])/g, '? $1');
+
+  // 4) 물음표 뒤에 대문자 Q/A(Q:, A:, Q1:, A1: 등)가 올 때 강제 2줄 개행 (소문자 a.는 건드리지 않음)
+  cleaned = cleaned.replace(/\?\s*([QA][0-9]*\s*[:.])/g, '?\n\n$1');
+
+  // 5) 문장 끝 부호(.!) 뒤에 대문자 Q/A 또는 번호 목록(1., 2.)이 올 때 강제 2줄 개행
+  cleaned = cleaned.replace(/([.!])\s*([QA][0-9]*\s*[:.]|[0-9]+\.\s+)/g, '$1\n\n$2');
+
+  // 6) 줄바꿈 없이 본문 중에 들어간 대문자 Q/A 머리말 줄바꿈 확보
+  cleaned = cleaned.replace(/([^\n])\s+([QA][0-9]*\s*[:.])/g, '$1\n\n$2');
+  cleaned = cleaned.replace(/([.!])\s*(D:|R:|Risposta|Domande)/gi, '$1\n\n$2');
 
   return cleaned;
 }
@@ -174,13 +182,12 @@ const TARGET_LANGS = [
   { code: 'nl', name: 'Dutch', persona: 'Allround IT-systeembeheerder en computer hardware specialist', osUi: 'Taakbeheer, Configuratiescherm, Apparaatbeheer, Instellingen', localeContext: 'Zuidas zakendistrict in Amsterdam' },
   { code: 'pl', name: 'Polish', persona: 'Inżynier wsparcia IT i serwisant sprzętu komputerowego', osUi: 'Menedżer zadań, Panel sterowania, Menedżer urządzeń, Ustawienia', localeContext: 'Warszawskie centrum biznesowe i technologiczne' },
   { code: 'id', name: 'Indonesian', persona: 'Teknisi senior infrastruktur IT dan troubleshoot hardware komputer', osUi: 'Task Manager, Control Panel, Device Manager, Pengaturan', localeContext: 'Kawasan bisnis Sudirman Central Business District (SCBD) Jakarta' },
-  { code: 'vi', name: 'Vietnamese', persona: 'Kỹ sư công nghệ thông tin chuyên xử lý sự cố máy tính và phần cứng', osUi: 'Task Manager, Control Panel, Device Manager, Cài đặt', localeContext: 'Tòa nhà văn phòng trung tâm Quận 1, TP. Hồ Chí Minh' }
+  { code: 'vi', name: 'Vietnamese', persona: 'Kỹ sư công nghệ thông tin chuyên xử lý sự cố máy tính và phần 구성', osUi: 'Task Manager, Control Panel, Device Manager, Cài đặt', localeContext: 'Tòa nhà văn phòng trung tâm Quận 1, TP. Hồ Chí Minh' }
 ];
 
 const delay = (ms) => new Promise((res) => setTimeout(res, ms));
 const fileSlug = `post-${Date.now().toString(36)}`;
 
-// 지연 시간 단축 (20초 대기 -> 5초 대기, 최대 재시도 5회로 축소)
 async function fetchWithRetry(prompt, maxRetries = 5, delayMs = 5000) {
   for (let attempt = 1; attempt <= maxRetries; attempt++) {
     try {
@@ -318,7 +325,7 @@ theme: "${selectedTheme.name}"
       frontmatter = frontmatter.replace(/publishDate:\s*[^\n\r]+/i, `publishDate: ${pubDateIso}`);
       frontmatter = frontmatter.replace(/image:\s*["'][^"']*["']/i, `image: '${coverUrl}'`);
 
-      // 고속 단일 패스 정제 적용
+      // 안전 정제 함수 적용
       body = sanitizeMarkdownFormatting(body);
 
       const middleImageMarkdown = `\n\n![Tech Troubleshooting Guide](${bodyUrl})\n\n`;
@@ -363,7 +370,7 @@ async function run() {
     const isSuccess = await generateSinglePost(TARGET_LANGS[i], i);
     if (isSuccess) successCount++;
     if (i < TARGET_LANGS.length - 1) {
-      await delay(2000); // 딜레이를 2초로 단축해 전체 처리 속도 대폭 개선
+      await delay(2000);
     }
   }
 
