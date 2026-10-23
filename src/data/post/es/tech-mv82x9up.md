@@ -18,9 +18,7 @@ CRITICAL: POST_SCREEN_FAILURE - Display output null. RAM modules uninitialized. 
 
 ![Hardware Diagnostic & Troubleshooting](https://picsum.photos/seed/hardware-730/1000/550)
 
-No era la tarjeta gráfica, ni el cable HDMI. El verdadero culpable estaba escondido en la ranura DIMM, acumulando el polvo y el drama de tres años de oficin
-
-a. Si te ha pasado esto en medio de una urgencia, sabes perfectamente de lo que hablo. Vamos a destripar este problema como verdaderos ingenieros de sistemas.
+No era la tarjeta gráfica, ni el cable HDMI. El verdadero culpable estaba escondido en la ranura DIMM, acumulando el polvo y el drama de tres años de oficina. Si te ha pasado esto en medio de una urgencia, sabes perfectamente de lo que hablo. Vamos a destripar este problema como verdaderos ingenieros de sistemas.
 
 ---
 
@@ -91,14 +89,10 @@ Además, si al encender el equipo escuchas una sinfonía de pitidos continuos (b
 ### Frequently Asked Questions (FAQ)
 
 Q1: ¿Por qué el PC enciende (giran los ventiladores y encienden luces) pero la pantalla sigue negra si el problema es la RAM?  
-*R:* Porque la placa base tiene energía para alimentar los periféricos básicos y ventiladores, pero el procesador no puede ejecutar el código de la BIOS (POST) sin la memoria RAM activ
-
-a. Sin RAM, el sistema operativo ni siquiera empieza a cargar, por lo que la tarjeta gráfica no recibe la orden de enviar señal de vídeo al monitor.
+*R:* Porque la placa base tiene energía para alimentar los periféricos básicos y ventiladores, pero el procesador no puede ejecutar el código de la BIOS (POST) sin la memoria RAM activa. Sin RAM, el sistema operativo ni siquiera empieza a cargar, por lo que la tarjeta gráfica no recibe la orden de enviar señal de vídeo al monitor.
 
 Q2: ¿Puedo mezclar memorias RAM de diferentes marcas o frecuencias si una falló?  
-*R:* Para probar y salir del paso en una emergencia, sí, el sistema suele arrancar ajustándose a la frecuencia y latencias del módulo más lento. Sin embargo, para entornos de producción estables, es altamente recomendable usar módulos idénticos (mismo kit, frecuencia y latencia) para evitar pantallas azules (*BSOD*) por desincronización del controlador de memori
-
-a.
+*R:* Para probar y salir del paso en una emergencia, sí, el sistema suele arrancar ajustándose a la frecuencia y latencias del módulo más lento. Sin embargo, para entornos de producción estables, es altamente recomendable usar módulos idénticos (mismo kit, frecuencia y latencia) para evitar pantallas azules (*BSOD*) por desincronización del controlador de memoria.
 
 Q3: Limpié los contactos, cambié de slot y sigue sin dar vídeo. ¿Qué sigue?  
 *R:* Si ya descartaste la RAM, el siguiente sospechoso en la línea de fuego es la fuente de alimentación (que no entrega suficiente voltaje en el riel de 12V para la gráfica o el procesador) o un problema de cortocircuito en los Standoffs (separadores) de la placa base con el chasis. Desconecta todo lo secundario y prueba hacer un *Clear CMOS* para resetear la BIOS a fábric

@@ -37,9 +37,7 @@ Pourquoi un ordinateur moderne, censé être une bête de course, finit-il par r
 
 ### Guide de survie : Le plan d'action étape par étape
 
-Pas besoin d'être ingénieur système pour régler ç
-
-a. Voici la procédure exacte que j'ai appliquée à la va-vite entre deux gorgées de café serré pour sauver ma matinée.
+Pas besoin d'être ingénieur système pour régler ça. Voici la procédure exacte que j'ai appliquée à la va-vite entre deux gorgées de café serré pour sauver ma matinée.
 
 #### Étape 1 : Mettre au pas les applications en arrière-plan
 Par défaut, Windows autorise presque tout le monde à s'activer en cachette. On va siffler la fin de la récréation.

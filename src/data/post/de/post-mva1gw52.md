@@ -86,6 +86,4 @@ Ja, wenn dein Windows 11 stabil läuft und du kein Downgrade auf eine vorherige 
 Das liegt meist an virtuellen Maschinen (Hyper-V, WSL2), Docker-Images oder großen Browser-Caches. Prüfe mit einem Tool wie *TreeSize Free*, welche Ordner auf C: den tatsächlichen Speicherplatz belegen.
 
 ### Ist es sicher, den Inhalt von `%temp%` komplett zu löschen?
-J
-
-a. Alle Dateien in diesem Ordner sind rein temporärer Natur. Programme, die aktuell laufen, sperren ihre eigenen Temp-Dateien, sodass Windows diese ohnehin schützt und das Löschen verweigert.
+Ja. Alle Dateien in diesem Ordner sind rein temporärer Natur. Programme, die aktuell laufen, sperren ihre eigenen Temp-Dateien, sodass Windows diese ohnehin schützt und das Löschen verweigert.

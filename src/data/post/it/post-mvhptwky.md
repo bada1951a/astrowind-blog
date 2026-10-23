@@ -65,11 +65,7 @@ reg.exe add "HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\
 
 7. Nella scheda *Processi*, scorrete l'elenco fino a trovare Esplora risorse (explorer.exe).
 
-8. Cliccateci sopra con il tasto destro e selezionate Riavvi
-
-a.
-
-In meno di dieci secondi, la barra delle applicazioni e il desktop lampeggeranno brevemente: da questo momento in poi, cliccando con il tasto destro su un file o una cartella, apparirà direttamente il buon vecchio menu classico di Windows 10, con tutte le opzioni subito visibili.
+8. Cliccateci sopra con il tasto destro e selezionate Riavvia. In meno di dieci secondi, la barra delle applicazioni e il desktop lampeggeranno brevemente: da questo momento in poi, cliccando con il tasto destro su un file o una cartella, apparirà direttamente il buon vecchio menu classico di Windows 10, con tutte le opzioni subito visibili.
 
 ---
 

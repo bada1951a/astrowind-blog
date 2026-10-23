@@ -23,9 +23,7 @@ Panduan ini saya susun berdasarkan protokol pemeliharaan perangkat keras mandiri
 💡 <b>Inti Masalah:</b> Kerusakan switch mekanikal non-fisik hampir selalu berakar pada kotoran mikroskopis di pelat kontak atau degradasi sinyal elektrik.
 </div>
 
-Sebelum menyemprotkan cairan kimia atau membongkar perangkat, Anda wajib memahami apa yang sebenarnya terjadi di balik pelat muka (*faceplate*) keyboard And
-
-a. Masalah input pada switch mekanikal umumnya terbagi ke dalam tiga faktor utam
+Sebelum menyemprotkan cairan kimia atau membongkar perangkat, Anda wajib memahami apa yang sebenarnya terjadi di balik pelat muka (*faceplate*) keyboard Anda. Masalah input pada switch mekanikal umumnya terbagi ke dalam tiga faktor utam
 
 a:
 
@@ -44,9 +42,7 @@ a:
 Setiap mikrokontroler keyboard memiliki algoritma bawaan bernama *debounce delay*—rentang waktu toleransi (biasanya 5–15 ms) untuk menyaring getaran fisik logam saat bertumbukan agar tidak terbaca sebagai dua ketukan terpisah. Ketika pelat kontak kotor atau kehilangan elastisitasnya, getaran mekanis (*metal bouncing*) berlangsung lebih lama dari batas ambang debounce di firmware. Akibatnya, ketukan tunggal terbaca sebagai input ganda atau tripel.
 
 ### C. Retak Dingin Solderan (Cold Solder Joint) atau Pelumas Berlebih (Over-lubing)
-Jika Anda menggunakan keyboard custom yang dilumasi secara manual (*factory lubed* atau *hand lubed*), penggunaan gemuk (*grease*) sintetis seperti Krytox yang berlebihan sering kali merembes ke titik temu bilah kontak tembag
-
-a. Karakter pelumas yang bersifat isolator listrik ini memutus aliran sinyal. Selain itu, pada keyboard yang sering dipukul keras atau jatuh, titik solderan kaki switch ke PCB dapat mengalami keretakan mikro (*hairline crack*), menyebabkan input terputus-putus tergantung sudut tekanan jari And
+Jika Anda menggunakan keyboard custom yang dilumasi secara manual (*factory lubed* atau *hand lubed*), penggunaan gemuk (*grease*) sintetis seperti Krytox yang berlebihan sering kali merembes ke titik temu bilah kontak tembaga. Karakter pelumas yang bersifat isolator listrik ini memutus aliran sinyal. Selain itu, pada keyboard yang sering dipukul keras atau jatuh, titik solderan kaki switch ke PCB dapat mengalami keretakan mikro (*hairline crack*), menyebabkan input terputus-putus tergantung sudut tekanan jari And
 
 a.
 
@@ -170,9 +166,7 @@ a.
 ###
 
 Q2. Apakah penyemprotan contact cleaner akan melunturkan pelumas bawaan (lube) pada switch?
-Ya, tentu saj
-
-a. Contact cleaner diformulasikan secara kimiawi untuk melarutkan oli, gemuk (*grease*), dan minyak. Jika keyboard Anda sebelumnya telah di-*lube* menggunakan cairan seperti Krytox 205g0, semprotan ini akan melunturkan lapisan pelumas di area stem dan rail. Switch Anda mungkin akan terasa sedikit lebih berpasir (*scratchy*) setelah kering. Untuk mengatasinya, Anda disarankan melumasi ulang switch menggunakan pelumas switch khusus secara presisi setelah proses perbaikan selesai.
+Ya, tentu saja. Contact cleaner diformulasikan secara kimiawi untuk melarutkan oli, gemuk (*grease*), dan minyak. Jika keyboard Anda sebelumnya telah di-*lube* menggunakan cairan seperti Krytox 205g0, semprotan ini akan melunturkan lapisan pelumas di area stem dan rail. Switch Anda mungkin akan terasa sedikit lebih berpasir (*scratchy*) setelah kering. Untuk mengatasinya, Anda disarankan melumasi ulang switch menggunakan pelumas switch khusus secara presisi setelah proses perbaikan selesai.
 
 ###
 

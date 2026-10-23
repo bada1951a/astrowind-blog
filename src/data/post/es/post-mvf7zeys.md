@@ -15,9 +15,7 @@ Durante los primeros diez minutos, caí en el típico error de desesperación: r
 
 ![How to Fix 100 Percent CPU Usage Caused by System Process Tech Guide](/images/tech-photo/keyboard (17).png)
 
-Al ver que el reinicio en frío no servía de nada porque el problema volvía a aparecer a los dos minutos de arrancar, detuve la marcha, me puse la gorra de técnico especialista y apliqué el protocolo de emergencia que nunca fall
-
-a. Aquí te comparto exactamente cómo rescaté el equipo y cómo puedes solucionarlo sin perder la calm
+Al ver que el reinicio en frío no servía de nada porque el problema volvía a aparecer a los dos minutos de arrancar, detuve la marcha, me puse la gorra de técnico especialista y apliqué el protocolo de emergencia que nunca falla. Aquí te comparto exactamente cómo rescaté el equipo y cómo puedes solucionarlo sin perder la calm
 
 a.
 
@@ -27,9 +25,7 @@ a.
 
 ## ¿Por qué el proceso "System" devora tu CPU?
 
-Antes de pasar a los clics, entendamos brevemente qué está pasando bajo el capó. El proceso del sistema (`ntoskrnl.exe`) gestiona las tareas esenciales del núcleo de Windows, controladores y memoria físic
-
-a. Cuando se dispara al máximo, las causas más comunes son:
+Antes de pasar a los clics, entendamos brevemente qué está pasando bajo el capó. El proceso del sistema (`ntoskrnl.exe`) gestiona las tareas esenciales del núcleo de Windows, controladores y memoria física. Cuando se dispara al máximo, las causas más comunes son:
 
 - Controladores de hardware obsoletos o corruptos: Generalmente tarjetas de red (Wi-Fi/Ethernet) o controladores de almacenamiento NVMe que entran en bucle infinito de interrupciones.
 - Servicios de Windows en conflicto: El Administrador de impresión, Windows Update o el sistema de indexación de archivos (`Windows Search`) intentando reparar un índice dañado.
@@ -41,9 +37,7 @@ a.
 
 ## Guía paso a paso para solucionar el bloqueo
 
-Sigue estos pasos de forma ordenad
-
-a. No saltes al paso final sin antes revisar el estado de tus controladores.
+Sigue estos pasos de forma ordenada. No saltes al paso final sin antes revisar el estado de tus controladores.
 
 ### Paso 1: Aislar el conflicto mediante el Administrador de tareas avanzado
 No te quedes solo en la pestaña de Procesos. Vamos a ver qué hilo exacto está quemando el procesador.
@@ -56,9 +50,7 @@ No te quedes solo en la pestaña de Procesos. Vamos a ver qué hilo exacto está
 
 a.
 
-4. Se abrirá una ventana emergente que te mostrará qué otros procesos o servicios están bloqueando los hilos del sistem
-
-a. Si ves algún servicio de terceros o controlador de audio/red en esa lista, anota su nombre.
+4. Se abrirá una ventana emergente que te mostrará qué otros procesos o servicios están bloqueando los hilos del sistema. Si ves algún servicio de terceros o controlador de audio/red en esa lista, anota su nombre.
 
 ### Paso 2: Actualizar o deshabilitar controladores desde el Administrador de dispositivos
 En nuestro incidente de Madrid, el culpable resultó ser un driver de la controladora de red Ethernet que se había corrompido tras una actualización nocturna desatendid

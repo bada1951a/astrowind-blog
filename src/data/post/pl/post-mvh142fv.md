@@ -9,11 +9,7 @@ theme: "High-Contrast Charcoal"
 ---
 
 
-Była dokładnie 10:45 rano, a w warszawskim centrum biznesowym przy Rondzie Daszyńskiego panowała gęsta atmosfer
-
-a. Za kwadrans miało ruszyć kluczowe spotkanie zarządu z inwestorami z Frankfurtu, a stacja robocizna naszego głównego analityka finansowego zamarzła na amen. Ekran zamroził się w bezruchu, kursor myszy nie reagował, a twardy reset przyciskiem na obudowie to była jedyna deska ratunku. Najgorsze było to, że to nie pierwszy taki zwis w tym tygodniu. Klient patrzył na mnie z paniką w oczach, pytając, czy jego modele finansowe przetrwały. Jako inżynier wsparcia IT wiedziałem, że bezmyślne przeinstalowywanie systemu nic tu nie d
-
-a. Czas było wreszcie sprawdzić, co tak naprawdę boli ten komputer.
+Była dokładnie 10:45 rano, a w warszawskim centrum biznesowym przy Rondzie Daszyńskiego panowała gęsta atmosfera. Za kwadrans miało ruszyć kluczowe spotkanie zarządu z inwestorami z Frankfurtu, a stacja robocizna naszego głównego analityka finansowego zamarzła na amen. Ekran zamroził się w bezruchu, kursor myszy nie reagował, a twardy reset przyciskiem na obudowie to była jedyna deska ratunku. Najgorsze było to, że to nie pierwszy taki zwis w tym tygodniu. Klient patrzył na mnie z paniką w oczach, pytając, czy jego modele finansowe przetrwały. Jako inżynier wsparcia IT wiedziałem, że bezmyślne przeinstalowywanie systemu nic tu nie da. Czas było wreszcie sprawdzić, co tak naprawdę boli ten komputer.
 
 ### Trzy najczęstsze powody losowych zwiech w Windows 11
 
@@ -30,9 +26,7 @@ Zanim przejdziemy do diagnostyki, warto zrozumieć, dlaczego nowoczesny sprzęt 
 <div style="border-left: 4px solid #e11d48; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Wskazówka serwisow
 
-a:</strong> Zanim zaczniesz grzebać w systemie, upewnij się, że masz wyłączoną "Szybką uruchamianie" (Fast Startup) w Panelu sterowani
-
-a. Ta funkcja często przenosi uszkodzone stany jądra systemu z poprzedniej sesji, powodując powtarzające się zwiechy.
+a:</strong> Zanim zaczniesz grzebać w systemie, upewnij się, że masz wyłączoną "Szybką uruchamianie" (Fast Startup) w Panelu sterowania. Ta funkcja często przenosi uszkodzone stany jądra systemu z poprzedniej sesji, powodując powtarzające się zwiechy.
 </div>
 
 ### Krok po kroku: Jak czytać Podgląd Zdarzeń jak zawodowiec
@@ -78,9 +72,7 @@ a: Otwórz *Ustawienia* -> *Zasilanie i bateria*, a następnie zmień plan zasil
 
 1. W Podglądzie Zdarzeń widzę mnóstwo błędów "DistributedCOM" (ID 10016). Czy to przez to komputer mi się zawiesza? Nie. Błędy DistributedCOM to zmora niemal każdego czystego Windowsa 11. Dotyczą uprawnień dostępu DCOM dla aplikacji w tle i w 99% przypadków nie powodują zamrażania systemu. Możesz je spokojnie zignorować.
 
-2. Co zrobić, jeśli Podgląd Zdarzeń pokazuje tylko "Kernel-Power ID 41" bez żadnych błędów poprzedzających? To klasyczny objaw nagłego odcięcia zasilania, problemu z samym zasilaczem (PSU) lub przegrzania procesora, które natychmiast wyłącza czujniki bezpieczeństw
-
-a. Sprawdź temperatury pod obciążeniem za pomocą programów diagnostycznych oraz upewnij się, że kable zasilające w obudowie są solidnie wpięte.
+2. Co zrobić, jeśli Podgląd Zdarzeń pokazuje tylko "Kernel-Power ID 41" bez żadnych błędów poprzedzających? To klasyczny objaw nagłego odcięcia zasilania, problemu z samym zasilaczem (PSU) lub przegrzania procesora, które natychmiast wyłącza czujniki bezpieczeństwa. Sprawdź temperatury pod obciążeniem za pomocą programów diagnostycznych oraz upewnij się, że kable zasilające w obudowie są solidnie wpięte.
 
 3. Czy ponowna instalacja Windows 11 pomoże na losowe zwiechy?
 Tylko wtedy, gdy przyczyną był uszkodzony sterownik lub zapętlone pliki systemowe. Jeśli problem tkwi w niestabilnym profilu pamięci RAM (XMP) lub wadliwym dysku SSD, czysta instalacja systemu przyniesie ulgę tylko na kilka godzin, a problem powróci przy pierwszym większym obciążeniu sprzętu.

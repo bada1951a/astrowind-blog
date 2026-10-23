@@ -9,24 +9,14 @@ theme: "Modern Minimalist Slate"
 ---
 
 
-Eran las 18:45 en nuestra oficina tecnológica en el distrito 22@ de Barcelon
+Eran las 18:45 en nuestra oficina tecnológica en el distrito 22@ de Barcelona. Faltaban apenas quince horas para el lanzamiento crítico de un software en el que habíamos estado trabajando durante meses con el equipo de Madrid. El estrés en el canal de Slack era palpable y las notificaciones no paraban de llover. De repente, fui a hacer clic en el menú de Inicio de Windows 11 para abrir la consola de comandos y... nada. La barra de tareas entera se había quedado completamente congelada. El cursor se movía por el escritorio, pero ni el icono de Windows, ni los accesos directos, ni el reloj respondían a los clics. Reiniciar de la manera tradicional era imposible porque el menú estaba bloqueado, y un reinicio forzoso con el botón físico corría el riesgo de corromper un despliegue local crítico. Tenía que solucionarlo en cuestión de minutos.
 
-a. Faltaban apenas quince horas para el lanzamiento crítico de un software en el que habíamos estado trabajando durante meses con el equipo de Madrid. El estrés en el canal de Slack era palpable y las notificaciones no paraban de llover. De repente, fui a hacer clic en el menú de Inicio de Windows 11 para abrir la consola de comandos y... nad
-
-a. La barra de tareas entera se había quedado completamente congelad
-
-a. El cursor se movía por el escritorio, pero ni el icono de Windows, ni los accesos directos, ni el reloj respondían a los clics. Reiniciar de la manera tradicional era imposible porque el menú estaba bloqueado, y un reinicio forzoso con el botón físico corría el riesgo de corromper un despliegue local crítico. Tenía que solucionarlo en cuestión de minutos.
-
-Si te ha pasado lo mismo justo cuando más prisa tienes, sabes la frustración que gener
-
-a. Vamos a ir directos al grano con los métodos reales que utilizamos los ingenieros de soporte para solucionar este fallo clásico de Windows 11 sin perder la paciencia ni los datos.
+Si te ha pasado lo mismo justo cuando más prisa tienes, sabes la frustración que genera. Vamos a ir directos al grano con los métodos reales que utilizamos los ingenieros de soporte para solucionar este fallo clásico de Windows 11 sin perder la paciencia ni los datos.
 
 ![Tech & IT Solution Guide](https://picsum.photos/seed/computer247/1000/550)
 
 <div style="border-left: 4px solid #3b82f6; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
-<strong>Nota rápida del experto:</strong> No pierdas tiempo intentando hacer clic repetidamente o cambiando la resolución de pantall
-
-a. El problema casi siempre radica en el Explorador de archivos (explorer.exe) o en un conflicto temporal con el servicio de interfaz de usuario de Windows (XamlShell).
+<strong>Nota rápida del experto:</strong> No pierdas tiempo intentando hacer clic repetidamente o cambiando la resolución de pantalla. El problema casi siempre radica en el Explorador de archivos (explorer.exe) o en un conflicto temporal con el servicio de interfaz de usuario de Windows (XamlShell).
 </div>
 
 ---

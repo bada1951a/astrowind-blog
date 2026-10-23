@@ -72,9 +72,7 @@ Buat mastiin nggak ada service siluman yang lolos dari pengamatan Task Manager, 
 *   Ketik `msconfig` lalu tekan Enter.
 *   Masuk ke tab Services.
 *   PENTING:Centang dulu kotak "Hide all Microsoft services" di bagian bawah (biar lu nggak nggak sengaja mematikan sistem inti Windows).
-*   Lihat daftar service yang tersis
-
-a. Hilangkan centang pada service aplikasi yang nggak butuh jalan otomatis (contoh: *Adobe Acrobat Update Service*, *Google Update Service*, dll).
+*   Lihat daftar service yang tersisa. Hilangkan centang pada service aplikasi yang nggak butuh jalan otomatis (contoh: *Adobe Acrobat Update Service*, *Google Update Service*, dll).
 *   Klik ApplylaluOK. Restart laptop lu dan rasakan bedany
 
 a.

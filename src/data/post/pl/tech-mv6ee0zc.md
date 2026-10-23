@@ -9,15 +9,9 @@ theme: "Sunset Horizon Coral"
 ---
 
 
-Jako inżynier wsparcia IT w środowisku korporacyjnym widziałem już setki peryferiów skazanych na przedwczesną utylizację. W zeszły piątek na mój stół warsztatowy trafiła klawiatura jednego z naszych senior developerów – customowy mechanik na przełącznikach Gateron Yellow, w którym klawisze `W` oraz `E` naprzemiennie gubiły wciśnięcia albo generowały irytujący podwójny klik (*chattering*). Zamiast wpisać prostą komendę w terminalu, system rejestrował `wwweee`. Użytkownik był przekonany, że kontroler na płytce PCB uległ uszkodzeniu, a sprzęt nadaje się wyłącznie do kosz
+Jako inżynier wsparcia IT w środowisku korporacyjnym widziałem już setki peryferiów skazanych na przedwczesną utylizację. W zeszły piątek na mój stół warsztatowy trafiła klawiatura jednego z naszych senior developerów – customowy mechanik na przełącznikach Gateron Yellow, w którym klawisze `W` oraz `E` naprzemiennie gubiły wciśnięcia albo generowały irytujący podwójny klik (*chattering*). Zamiast wpisać prostą komendę w terminalu, system rejestrował `wwweee`. Użytkownik był przekonany, że kontroler na płytce PCB uległ uszkodzeniu, a sprzęt nadaje się wyłącznie do kosza. Rzeczywistość w 90% takich przypadków jest znacznie bardziej prozaiczn
 
-a.
-
-Rzeczywistość w 90% takich przypadków jest znacznie bardziej prozaiczn
-
-a: zanieczyszczenia mikroskopowe, utlenienie styków lub chwilowa utrata elastyczności blaszki kontaktowej wewnątrz samego switch
-
-a. Zanim wydasz kilkaset złotych na nowy zestaw przełączników lub nową klawiaturę, możesz przeprowadzić skuteczną regenerację w ramach weekendowego serwisu DIY. Poniżej przedstawiam sprawdzoną w bojach procedurę czyszczenia i chemicznej rewitalizacji przełączników mechanicznych.
+a: zanieczyszczenia mikroskopowe, utlenienie styków lub chwilowa utrata elastyczności blaszki kontaktowej wewnątrz samego switcha. Zanim wydasz kilkaset złotych na nowy zestaw przełączników lub nową klawiaturę, możesz przeprowadzić skuteczną regenerację w ramach weekendowego serwisu DIY. Poniżej przedstawiam sprawdzoną w bojach procedurę czyszczenia i chemicznej rewitalizacji przełączników mechanicznych.
 
 ---
 
@@ -43,9 +37,7 @@ a:</strong> dedykowany preparat do regeneracji styków elektrycznych (np. <em>Ko
 Zjawisko *key chatteringu* (odbijania styków) oraz gubienia wciśnięć (*key skipping*) wynika bezpośrednio z mechaniki działania tradycyjnego przełącznika stykowego (Cherry MX, Kailh, Gateron, Outemu). Każdy taki element opiera się na fizycznym zwarciu dwóch miniaturowych blaszek ze stopu miedzi.
 
 1. Utlenianie i powstawanie mikroskopijnej patyny na stykach  
-   Złocenie lub niklowanie punktów stykowych w tańszych i średniopółkowych przełącznikach z czasem ulega mikroskopijnym przetarciom pod wpływem tarci
-
-a. Wilgoć z otoczenia prowadzi do powolnego utleniania metalu. Utleniona warstwa działa jak niepożądany rezystor – sygnał staje się niestabilny, a mikrokontroler klawiatury odczytuje spadek napięcia jako serię błyskawicznych, fałszywych rozłączeń i ponownych zwarć.
+   Złocenie lub niklowanie punktów stykowych w tańszych i średniopółkowych przełącznikach z czasem ulega mikroskopijnym przetarciom pod wpływem tarcia. Wilgoć z otoczenia prowadzi do powolnego utleniania metalu. Utleniona warstwa działa jak niepożądany rezystor – sygnał staje się niestabilny, a mikrokontroler klawiatury odczytuje spadek napięcia jako serię błyskawicznych, fałszywych rozłączeń i ponownych zwarć.
 
 2. Ciała obce i mikrozanieczyszczenia (kurz, naskórek, resztki fabrycznego smaru)  
    Nawet szczelnie wyglądająca obudowa klawiatury nie chroni przed drobinami kurzu wpadającymi wzdłuż trzpienia (*stem*). Gdy twardy pyłek osiądzie bezpośrednio na powierzchni styku, switch przy wciśnięciu nie domyka obwodu (gubienie liter). Czasami problemem jest nadmiar fabrycznego smaru teflonowego, który po miesiącach pracy spływa w dół korpusu i wnika między blaszki, działając jak izolator dielektryczny.
@@ -66,9 +58,7 @@ Zanim rozbierzesz klawiaturę, musimy wykluczyć usterki po stronie warstwy syst
 
 2. Rozwiń sekcję Klawiatury.
 
-3. Odszukaj wpisy o nazwie *Klawiatura zgodna z HID* lub dedykowane urządzenie producent
-
-a. Kliknij prawym przyciskiem myszy i wybierz Odinstaluj urządzenie.
+3. Odszukaj wpisy o nazwie *Klawiatura zgodna z HID* lub dedykowane urządzenie producenta. Kliknij prawym przyciskiem myszy i wybierz Odinstaluj urządzenie.
 
 4. W menu górnym kliknij Akcja→Skanuj w poszukiwaniu zmian sprzętu, aby system Windows ponownie zainicjalizował sterownik magistrali USB.
 
@@ -102,9 +92,7 @@ a: Wciśnij plastikowy trzonek (*stem*) do oporu w dół za pomocą małego wkr�
 
 3. Mikrodawk
 
-a:Zaaplikuj dosłownieułamek sekundy aerozolu – wystarczy jedna mikrokropl
-
-a. Zbyt duża ilość chemii wypłucze fabryczny smar prowadnic i zaleje wnętrze obudowy.
+a:Zaaplikuj dosłownieułamek sekundy aerozolu – wystarczy jedna mikrokropla. Zbyt duża ilość chemii wypłucze fabryczny smar prowadnic i zaleje wnętrze obudowy.
 
 4. Aktywacja mechaniczn
 

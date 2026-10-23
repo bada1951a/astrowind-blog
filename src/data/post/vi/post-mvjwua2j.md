@@ -13,9 +13,7 @@ theme: "Nordic Clean Ice"
 Đang là thời điểm nước rút chuẩn bị cho kỳ khóa sổ kế toán cuối năm. Ngồi cặm cụi đối chiếu từng trang bảng tính Excel khối lượng dữ liệu khổng lồ với hệ thống phần mềm ERP của công ty tại văn phòng ở một tòa nhà trung tâm Quận 1, TP. Hồ Chí Minh. Tôi chuẩn bị gọi cuộc họp trực tuyến khẩn cấp với các bộ phận để chốt số liệu thì hỡi ôi, biểu tượng loa góc phải màn hình xuất hiện dấu nhân đỏ chói lọi. Không một âm thanh phát ra, thông báo lỗi thiết bị đầu ra biến mất hoàn toàn ngay trước giờ G.
 </div>
 
-Là một kỹ sư công nghệ thông tin phụ trách kỹ thuật tại chỗ, tôi hiểu rõ sự hoảng loạn khi hệ thống âm thanh "đình công" vào những khoảnh khắc sống còn như thế này. Đừng cuống cuồng khởi động lại máy hay đập tay vào thùng CPU nữ
-
-a. Dưới đây là quy trình xử lý thực chiến giúp bạn lấy lại âm thanh trên Windows 11 chỉ trong vòng vài phút ngắn ngủi.
+Là một kỹ sư công nghệ thông tin phụ trách kỹ thuật tại chỗ, tôi hiểu rõ sự hoảng loạn khi hệ thống âm thanh "đình công" vào những khoảnh khắc sống còn như thế này. Đừng cuống cuồng khởi động lại máy hay đập tay vào thùng CPU nữa. Dưới đây là quy trình xử lý thực chiến giúp bạn lấy lại âm thanh trên Windows 11 chỉ trong vòng vài phút ngắn ngủi.
 
 ![Tech Troubleshooting Guide](/images/tech-photo/display%20(13).png)
 

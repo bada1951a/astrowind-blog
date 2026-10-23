@@ -200,9 +200,7 @@ Berdasarkan tinjauan teknis di lingkungan produksi enterprise, pemulihan jangka 
 ## Tanya Jawab Teknis (FAQ)
 
 ### Monitor eksternal terdeteksi di Device Manager, namun layarnya tetap hitam bertuliskan "No Signal". Apa pemicunya?
-Kondisi ini menandakan bahwa jalur komunikasi kontrol I2C/DDC antara GPU dan monitor berfungsi (sehingga nama hardware terdeteksi), tetapi jalur transmisi video berkecepatan tinggi gagal melakukan *handshake*. Penyebab paling sering adalah resolusi output yang dipaksa pada level di luar batas jangkauan panel (*Out of Range*), kabel data yang tidak memiliki rating pelindung interferensi yang cukup, atau port output GPU terkunci pada status proteksi day
-
-a. Lakukan reset registri grafis sesuai Langkah 2 untuk memaksa GPU mendeteksi ulang batas resolusi aman.
+Kondisi ini menandakan bahwa jalur komunikasi kontrol I2C/DDC antara GPU dan monitor berfungsi (sehingga nama hardware terdeteksi), tetapi jalur transmisi video berkecepatan tinggi gagal melakukan *handshake*. Penyebab paling sering adalah resolusi output yang dipaksa pada level di luar batas jangkauan panel (*Out of Range*), kabel data yang tidak memiliki rating pelindung interferensi yang cukup, atau port output GPU terkunci pada status proteksi daya. Lakukan reset registri grafis sesuai Langkah 2 untuk memaksa GPU mendeteksi ulang batas resolusi aman.
 
 ### Mengapa monitor eksternal hanya berkedip saat saya membuka browser seperti Google Chrome atau Microsoft Edge?
 Gejala ini hampir 100% dipicu oleh kegagalan fitur *Hardware Acceleration* pada aplikasi berbasis Chromium yang bertabrakan dengan driver iGPU. Browser mencoba memproses rendering halaman web melalui GPU, tetapi terjadi timeout pada tumpukan driver D3D. Buka pengaturan browser, masuk ke menu System/Sistem, lalu nonaktifkan opsiUse graphics acceleration when available (Gunakan akselerasi grafis saat tersedia), kemudian muat ulang browser.

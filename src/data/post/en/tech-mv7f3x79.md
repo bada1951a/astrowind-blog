@@ -193,8 +193,6 @@ The discrete GPU functions primarily as a compute accelerator, rendering frames 
 ####
 
 Q3: Can a damaged or cheap cable actually simulate a display driver crash?
-Yes. Modern high-resolution displays push massive amounts of dat
-
-a. Dual 4K at 60Hz requires significant bandwidth, demanding strict physical link integrity. Cheap or worn cables suffer from signal attenuation, impedance mismatches, and electromagnetic interference. 
+Yes. Modern high-resolution displays push massive amounts of data. Dual 4K at 60Hz requires significant bandwidth, demanding strict physical link integrity. Cheap or worn cables suffer from signal attenuation, impedance mismatches, and electromagnetic interference. 
 
 When signal packets drop, the GPU interprets the communication silence as a disconnected or unresponsive device. Windows responds by firing a display engine reset (TDR—Timeout Detection and Recovery), causing your entire desktop to freeze and flash black while it tries to restart the driver stack. Ensure all cables are certified for DisplayPort 1.4 or HDMI 2.1 specs.

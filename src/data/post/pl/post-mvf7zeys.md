@@ -9,11 +9,7 @@ theme: "Pure Titanium Clean"
 ---
 
 
-Godzina 8:45 rano, warszawskie centrum biznesowe na Mokotowie. Za piętnaście minut kluczowa telekonferencja zarządu z inwestorami, a stacja robocza dyrektora finansowego wydaje z siebie dźwięk startującego odrzutowc
-
-a. Wentylatory wyją na maksymalnych obrotach, kursor myszy skacze po ekranie jak szalony, a w Menedżerze zadań proces „System”lub„System i przerwania”dumnie wyświetla równe100% użycia procesor
-
-a. Ekran zamarza przy próbie otwarcia prezentacji PowerPoint. Panika w oczach użytkownika sięga zenitu, a ja wkraczam do akcji z walizką serwisową.
+Godzina 8:45 rano, warszawskie centrum biznesowe na Mokotowie. Za piętnaście minut kluczowa telekonferencja zarządu z inwestorami, a stacja robocza dyrektora finansowego wydaje z siebie dźwięk startującego odrzutowca. Wentylatory wyją na maksymalnych obrotach, kursor myszy skacze po ekranie jak szalony, a w Menedżerze zadań proces „System”lub„System i przerwania”dumnie wyświetla równe100% użycia procesora. Ekran zamarza przy próbie otwarcia prezentacji PowerPoint. Panika w oczach użytkownika sięga zenitu, a ja wkraczam do akcji z walizką serwisową.
 
 Znam ten ból na pamięć. Zanim wpadłem na właściwy trop, straciłem mnóstwo czasu na bezmyślne restarty komputera, odinstalowywanie pakietu Office czy skanowanie antywirusem, które w tym konkretnym scenariuszu nie dawały absolutnie nic. Problem leżał głębiej – w sterownikach, uszkodzonej usłudze Windows Update lub konflikcie podzespołów. 
 
@@ -39,9 +35,7 @@ Zanim klikniemy cokolwiek w systemie, warto zrozumieć, z czym walczymy. Proces 
 
 a: Krok po kroku do stabilnego systemu
 
-Do działania potrzebujemy pełnych uprawnień administrator
-
-a. Otwórzmy Menedżer zadań, przejdźmy do Panelu sterowania i Menedżera urządzeń. Oto co robimy po kolei.
+Do działania potrzebujemy pełnych uprawnień administratora. Otwórzmy Menedżer zadań, przejdźmy do Panelu sterowania i Menedżera urządzeń. Oto co robimy po kolei.
 
 <div style="border-left: 4px solid #334155; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Złota zasada serwisu:</strong> Zanim zaczniesz grzebać w sterownikach, odłącz wszystkie niepotrzebne urządzenia zewnętrzne (stacje dokujące USB-C, pendrive'y, drukarki sieciowe). Często to wadliwy hub USB powoduje 100% obciążenia procesora przez przerwania systemowe!
@@ -95,9 +89,7 @@ Jeżeli reset Windows Update nie pomógł, winny jest najpewniej sterownik sprz�
 ### Ważne ostrzeżenie serwisowe i dobre praktyki
 
 <div style="border-left: 4px solid #334155; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
-<strong>Uwaga dotyczące zasilania i temperatur:</strong> Długotrwałe utrzymywanie się 100% obciążenia procesora drastycznie podnosi temperaturę układu (często powyżej 85-90°C w laptopach). Upewnij się, że otwory wentylacyjne nie są zablokowane, a pasta termoprzewodząca nie wyschł
-
-a. Przegrzewający się procesor włączy tzw. thermal throttling, drastycznie obniżając taktowanie i uniemożliwiając normalną pracę.
+<strong>Uwaga dotyczące zasilania i temperatur:</strong> Długotrwałe utrzymywanie się 100% obciążenia procesora drastycznie podnosi temperaturę układu (często powyżej 85-90°C w laptopach). Upewnij się, że otwory wentylacyjne nie są zablokowane, a pasta termoprzewodząca nie wyschła. Przegrzewający się procesor włączy tzw. thermal throttling, drastycznie obniżając taktowanie i uniemożliwiając normalną pracę.
 </div>
 
 ---
@@ -109,6 +101,4 @@ a. Przegrzewający się procesor włączy tzw. thermal throttling, drastycznie o
 2. Co zrobić, jeśli po restrykcyjnym skanowaniu antywirusem problem nadal występuje? Jeśli program antywirusowy nie wykrył zagrożeń, a proces systemowy nadal dusi procesor, problem na 99% nie wynika z infekcji złośliwym oprogramowaniem. Skup się na aktualizacji BIOS-u płyty głównej oraz sterowników chipsetu (szczególnie sterowników Intel Management Engine lub AMD Chipset Drivers).
 
 3. Czy wyłączenie szybkiego uruchamiania (Fast Startup) w Panelu sterowania może pomóc?
-Tak! Funkcja szybkiego uruchamiania w Windows często zapisuje uszkodzony stan jądra systemowego do pliku hibernacji podczas zamykania komputer
-
-a. Aby to wyłączyć, wejdź w *Panel sterowania -> Opcje zasilania -> Wybierz działanie przycisków zasilania*, odznacz *Włącz szybkie uruchamianie* i zrestartuj komputer. To rozwiązuje problem w co trzecim przypadków biurowych stacji roboczych.
+Tak! Funkcja szybkiego uruchamiania w Windows często zapisuje uszkodzony stan jądra systemowego do pliku hibernacji podczas zamykania komputera. Aby to wyłączyć, wejdź w *Panel sterowania -> Opcje zasilania -> Wybierz działanie przycisków zasilania*, odznacz *Włącz szybkie uruchamianie* i zrestartuj komputer. To rozwiązuje problem w co trzecim przypadków biurowych stacji roboczych.

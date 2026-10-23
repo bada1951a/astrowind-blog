@@ -35,9 +35,7 @@ When a system locks up completely without a Blue Screen of Death (BSOD), it usua
 
 ### Step-by-Step Resolution: Hunting the Ghost in Event Viewer
 
-Let's dive into the operating system and pull the forensic dat
-
-a. You do not need third-party diagnostic bloatware for this; Windows 11 has everything built right in.
+Let's dive into the operating system and pull the forensic data. You do not need third-party diagnostic bloatware for this; Windows 11 has everything built right in.
 
 #### Step 1: Open Event Viewer and Target System Logs
 Click on the Start menu, type Event Viewer, and hit Enter.

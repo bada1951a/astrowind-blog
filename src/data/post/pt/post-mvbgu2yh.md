@@ -115,9 +115,7 @@ Evite também softwares de terceiros que prometem modificar profundamente o visu
 
 ## ❓ Perguntas Frequentes (FAQ)
 
-1. O que fazer se nem o Gerenciador de Tarefas abrir pelo atalho? Se o sistema estiver totalmente travado a ponto de ignorar `Ctrl + Shift + Esc`, pressione `Ctrl + Alt + Del`, clique emSairou use o botão físico de energia do gabinete/notebook para reiniciar a máquina de forma forçad
-
-a. Em seguida, aplique o Método 3 para checar se houve corrupção de arquivos.
+1. O que fazer se nem o Gerenciador de Tarefas abrir pelo atalho? Se o sistema estiver totalmente travado a ponto de ignorar `Ctrl + Shift + Esc`, pressione `Ctrl + Alt + Del`, clique emSairou use o botão físico de energia do gabinete/notebook para reiniciar a máquina de forma forçada. Em seguida, aplique o Método 3 para checar se houve corrupção de arquivos.
 
 2. Esse problema de travamento da barra de tarefas é um vírus? Raramente. Na grande maioria dos casos, trata-se de um bug legítimo do próprio processo gráfico do Windows 11 (`explorer.exe`) ou conflito após uma atualização recente. Manter o Windows Defender ou seu antivírus corporativo atualizado garante que não há ameaças reais.
 

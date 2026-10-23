@@ -9,17 +9,11 @@ theme: "Industrial Blueprint"
 ---
 
 
-Suasana di salah satu gedung perkantoran kawasan Sudirman, Jakarta, mendadak mencekam. Jam menunjukkan pukul 16:45 WIB, tepat lima belas menit sebelum tenggat waktu pengiriman laporan keuangan kuartalan ke direksi. Tiba-tiba, layar monitor manajer operasional nge-freeze total. Mouse tidak bergerak, tombol Caps Lock ditekan tidak merespons, dan angka-angka laporan di Excel seolah mengejek dari balik layar yang membeku. Panik melanda karena belum sempat *save*. Dengan terpaksa, tombol *power* ditahan selama lima detik hingga PC mati paks
-
-a.
-
-Begitu PC dinyalakan ulang, dokumen yang dikerjakan hilang setengahnya, dan kepanikan berubah menjadi kejengkelan karena masalah *random freezing* seperti ini sudah terjadi tiga kali dalam seminggu terakhir.
+Suasana di salah satu gedung perkantoran kawasan Sudirman, Jakarta, mendadak mencekam. Jam menunjukkan pukul 16:45 WIB, tepat lima belas menit sebelum tenggat waktu pengiriman laporan keuangan kuartalan ke direksi. Tiba-tiba, layar monitor manajer operasional nge-freeze total. Mouse tidak bergerak, tombol Caps Lock ditekan tidak merespons, dan angka-angka laporan di Excel seolah mengejek dari balik layar yang membeku. Panik melanda karena belum sempat *save*. Dengan terpaksa, tombol *power* ditahan selama lima detik hingga PC mati paksa. Begitu PC dinyalakan ulang, dokumen yang dikerjakan hilang setengahnya, dan kepanikan berubah menjadi kejengkelan karena masalah *random freezing* seperti ini sudah terjadi tiga kali dalam seminggu terakhir.
 
 ![Tech Troubleshooting Guide](/images/tech-photo/tech-photos%20(42).jpg)
 
-Sebagai teknisi infrastruktur IT yang sudah kenyang asam garam menghadapi drama kantor seperti ini, saya tahu persis apa yang dilakukan kebanyakan orang: menebak-nebak, langsung instal ulang Windows, ganti RAM, atau ganti SSD tanpa tahu akar masalahny
-
-a. Padahal, cara paling elegan dan akurat untuk melacak biang kerok *random freezing* di Windows 11 adalah dengan membuka "buku harian" si komputer itu sendiri, yaitu Event Viewer.
+Sebagai teknisi infrastruktur IT yang sudah kenyang asam garam menghadapi drama kantor seperti ini, saya tahu persis apa yang dilakukan kebanyakan orang: menebak-nebak, langsung instal ulang Windows, ganti RAM, atau ganti SSD tanpa tahu akar masalahnya. Padahal, cara paling elegan dan akurat untuk melacak biang kerok *random freezing* di Windows 11 adalah dengan membuka "buku harian" si komputer itu sendiri, yaitu Event Viewer.
 
 <div style="border-left: 4px solid #f59e0b; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Catatan Teknisi:</strong> Jangan pernah menebak kerusakan hardware sebelum membaca log sistem. Windows mencatat setiap detik kejadian, termasuk detik-detik terakhir sebelum PC Anda mengalami crash.
@@ -112,9 +106,7 @@ A: Tidak. Event Viewer berfungsi sebagai "rekaman CCTV" atau diagnostik untuk me
 
 Q: Kenapa banyak sekali tulisan Error di Event Viewer padahal PC saya terasa normal?
 
-A: Jangan panik. Tidak semua *Error* berakibat fatal. Windows sering kali mencatat error latar belakang (background service) yang gagal start lalu mencoba ulang secara otomatis tanpa mengganggu penggun
-
-a. Fokuskan pencarian pada jam-jam spesifik di mana PC Anda benar-benar mengalami freeze atau crash.
+A: Jangan panik. Tidak semua *Error* berakibat fatal. Windows sering kali mencatat error latar belakang (background service) yang gagal start lalu mencoba ulang secara otomatis tanpa mengganggu pengguna. Fokuskan pencarian pada jam-jam spesifik di mana PC Anda benar-benar mengalami freeze atau crash.
 
 Q: Apa yang harus saya lakukan jika Event Viewer hanya menunjukkan Kernel-Power (ID 41) tanpa ada petunjuk error lain sebelumnya?
 

@@ -61,9 +61,7 @@ net stop msiserver
 ```
 
 #### 3. Rinominare o ripulire la cartella SoftwareDistribution
-Questa è la vera chiave di volt
-
-a. Invece di cancellare brutalmente i file, è più sicuro rinominare la cartella di cache in modo che Windows ne crei una nuova e pulita automaticamente. Esegui questi comandi nel terminale:
+Questa è la vera chiave di volta. Invece di cancellare brutalmente i file, è più sicuro rinominare la cartella di cache in modo che Windows ne crei una nuova e pulita automaticamente. Esegui questi comandi nel terminale:
 
 ```text
 ren C:\Windows\SoftwareDistribution SoftwareDistribution.old

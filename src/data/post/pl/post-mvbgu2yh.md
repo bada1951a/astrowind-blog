@@ -9,9 +9,7 @@ theme: "Graphite Technical Paper"
 ---
 
 
-Siedzę w naszym biurze we wrocławskim parku technologicznym, zegar wskazuje za pięć dwunasta, a za dokładnie trzydzieści minut zaczynamy kluczowy audyt stabilności infrastruktury przed wejściem zewnętrznego klient
-
-a. W tym momencie, jak na złość, główna stacja robocza odmawia posłuszeństwa – dolny pasek zadań w Windows 11 zamroził się na amen. Klikam w menu Start, próbuję przełączyć okna, macham kursorem nad ikoną Wi-Fi – zero reakcji. Ekran niby żyje, aplikacje w tle działają, ale sam pasek zadań wygląda, jakby zastygł w betonie. Resetowanie komputera w ciemno nie wchodzi w grę, bo w tle trwają niezapisane sesje diagnostyczne. Trzeba działać chirurgicznie.
+Siedzę w naszym biurze we wrocławskim parku technologicznym, zegar wskazuje za pięć dwunasta, a za dokładnie trzydzieści minut zaczynamy kluczowy audyt stabilności infrastruktury przed wejściem zewnętrznego klienta. W tym momencie, jak na złość, główna stacja robocza odmawia posłuszeństwa – dolny pasek zadań w Windows 11 zamroził się na amen. Klikam w menu Start, próbuję przełączyć okna, macham kursorem nad ikoną Wi-Fi – zero reakcji. Ekran niby żyje, aplikacje w tle działają, ale sam pasek zadań wygląda, jakby zastygł w betonie. Resetowanie komputera w ciemno nie wchodzi w grę, bo w tle trwają niezapisane sesje diagnostyczne. Trzeba działać chirurgicznie.
 
 <div style="border-left: 4px solid #475569; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Kontekst inżynierski:</strong> W środowiskach produkcyjnych restart całego systemu operacyjnego z powodu zamrożonego GUI to ostateczność. Poniższe metody pozwalają zresetować sam silnik powłoki graficznej Windows w niecałą minutę.
@@ -63,9 +61,7 @@ a:
    `taskkill /f /im explorer.exe`
 4. Następnie uruchom go ponownie, wpisując:
    `start explorer.exe`
-5. Zamknij okno terminal
-
-a. Pasek zadań jest z powrotem pod Twoją kontrolą.
+5. Zamknij okno terminala. Pasek zadań jest z powrotem pod Twoją kontrolą.
 
 #### Krok 3: Rejestracja powłoki systemowej przez PowerShell (Gdy nic innego nie pomaga)
 Jeśli problem powraca jak bumerang, konieczna może być ponowna rejestracja pakietów interfejsu użytkownika Windows 11.
@@ -101,6 +97,4 @@ Jeśli system całkowicie przestał reagować na skróty klawiszowe, wciśnij `C
 2. Czy restart Eksploratora Windows usuwa niezapisaną pracę w aplikacjach? Nie. Restart procesu `explorer.exe` dotyczy wyłącznie warstwy wizualnej pulpitu, paska zadań i okien folderów. Uruchomione aplikacje robocze (takie jak edytory tekstu, przeglądarki czy IDE programistyczne) działają w osobnych procesach i nie zostaną zamknięte.
 
 3. Dlaczego problem z zamrożonym paskiem zadań powraca po każdym włączeniu komputera?
-Jeśli usterka występuje cyklicznie, zazwyczaj winny jest konkretny program startowy lub uszkodzony profil użytkownik
-
-a. Uruchom menedżer zadań, przejdź do zakładki *Aplikacje startowe* i wyłącz podejrzane programy firm trzecich (szczególnie nakładki graficzne, programy antywirusowe starej generacji lub narzędzia optymalizujące).
+Jeśli usterka występuje cyklicznie, zazwyczaj winny jest konkretny program startowy lub uszkodzony profil użytkownika. Uruchom menedżer zadań, przejdź do zakładki *Aplikacje startowe* i wyłącz podejrzane programy firm trzecich (szczególnie nakładki graficzne, programy antywirusowe starej generacji lub narzędzia optymalizujące).

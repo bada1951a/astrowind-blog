@@ -19,14 +19,10 @@ a: reiniciar el explorador de archivos desde el Administrador de tareas, buscar 
 
 ![Tech Troubleshooting Guide](/images/tech-photo/tech-photos%20(5).jpg)
 
-Por suerte, como técnico especialista, recordé un procedimiento rápido, limpio y nativo mediante la consola de comandos que nos salvó la entrega sin tocar programas de terceros ni poner en riesgo la seguridad de la red de la empres
-
-a. Aquí te comparto el paso a paso exacto para salir de este apuro de inmediato.
+Por suerte, como técnico especialista, recordé un procedimiento rápido, limpio y nativo mediante la consola de comandos que nos salvó la entrega sin tocar programas de terceros ni poner en riesgo la seguridad de la red de la empresa. Aquí te comparto el paso a paso exacto para salir de este apuro de inmediato.
 
 <div style="border-left: 4px solid #ef4444; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
-<strong>¡Aviso de Emergencia IT!</strong> No descargues activadores piratas de internet en equipos de oficin
-
-a. Pones en riesgo la red corporativa entera frente a ransomware y troyanos. Usa siempre métodos limpios basados en consola oficial.
+<strong>¡Aviso de Emergencia IT!</strong> No descargues activadores piratas de internet en equipos de oficina. Pones en riesgo la red corporativa entera frente a ransomware y troyanos. Usa siempre métodos limpios basados en consola oficial.
 </div>
 
 ---
@@ -47,11 +43,7 @@ a.
 
 ### Pasos rápidos para limpiar la marca de agua mediante CMD
 
-Para solucionar este inconveniente sin instalar herramientas peligrosas, vamos a detener temporalmente los servicios de evaluación y reiniciar el temporizador de licencias de forma nativ
-
-a. 
-
-Sigue estos clics y comandos con atención:
+Para solucionar este inconveniente sin instalar herramientas peligrosas, vamos a detener temporalmente los servicios de evaluación y reiniciar el temporizador de licencias de forma nativa. Sigue estos clics y comandos con atención:
 
 #### Paso 1: Abrir la consola con privilegios de administrador
 1. Dirígete al menú de inicio de Windows.

@@ -23,9 +23,7 @@ Ce genre de galère, en tant qu'ingénieur système, ça me met hors de moi. On 
 
 ### Pourquoi votre machine met trois plombes à démarrer ?
 
-Avant de tout casser, faisons un état des lieux de la cat
-
-a. Si votre poste met un temps infini à afficher le bureau, c'est généralement l'accumulation de trois facteurs critiques :
+Avant de tout casser, faisons un état des lieux de la cata. Si votre poste met un temps infini à afficher le bureau, c'est généralement l'accumulation de trois facteurs critiques :
 
 1. L'effet "Chnouck" des installeurs véreux : Chaque fois que vous installez un utilitaire (Discord, Steam, Teams, Adobe Creative Cloud, le driver à la con de votre imprimante), le dev a estimé que *son* application était le centre du monde et l'a calée en arrière-plan au démarrage.
 

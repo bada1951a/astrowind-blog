@@ -102,9 +102,7 @@ Nunca desative drivers essenciais de chipset, controladoras de armazenamento (co
 
 ### FAQ Técnico: Dúvidas Comuns da Bancada
 
-1. Trocar o HD mecânico por um SSD resolve o problema de boot de vez? Com toda certez
-
-a. Enquanto um HD tradicional (7200 RPM) pena para entregar 100 MB/s de leitura sequencial com alto tempo de busca, um SSD SATA básico entrega cerca de 550 MB/s, e um NVMe moderno ultrapassa facilmente os 3500 MB/s. É a mudança com melhor custo-benefício que existe na computação modern
+1. Trocar o HD mecânico por um SSD resolve o problema de boot de vez? Com toda certeza. Enquanto um HD tradicional (7200 RPM) pena para entregar 100 MB/s de leitura sequencial com alto tempo de busca, um SSD SATA básico entrega cerca de 550 MB/s, e um NVMe moderno ultrapassa facilmente os 3500 MB/s. É a mudança com melhor custo-benefício que existe na computação modern
 
 a.
 

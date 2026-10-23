@@ -9,15 +9,11 @@ theme: "Cyberpunk Terminal"
 ---
 
 
-Siedzę w biurowcu w samym sercu Warszawy, za oknem szarość, a na moim monitorze miga przerażający komunikat: "Mało miejsca na dysku (C:)". Masakr
-
-a. Za dokładnie dwie godziny mamy wysłać kluczowy pakiet danych do klienta, a mój dysk zewnętrzny właśnie postanowił wyzionąć ducha i odmawia współpracy. System niespodziewanie zablokował się przy próbie skopiowania gigantycznego projektu, bo na partycji systemowej zostało równe 420 megabajtów wolnej przestrzeni. W takich momentach człowiek czuje, jak pot spływa po plecach, a wszystkie nerwy z lat pracy z IT kumulują się w jednym punkcie.
+Siedzę w biurowcu w samym sercu Warszawy, za oknem szarość, a na moim monitorze miga przerażający komunikat: "Mało miejsca na dysku (C:)". Masakra. Za dokładnie dwie godziny mamy wysłać kluczowy pakiet danych do klienta, a mój dysk zewnętrzny właśnie postanowił wyzionąć ducha i odmawia współpracy. System niespodziewanie zablokował się przy próbie skopiowania gigantycznego projektu, bo na partycji systemowej zostało równe 420 megabajtów wolnej przestrzeni. W takich momentach człowiek czuje, jak pot spływa po plecach, a wszystkie nerwy z lat pracy z IT kumulują się w jednym punkcie.
 
 Próbowałem na szybko odinstalować kilka programów, ale deinstalatory domagają się wolnego miejsca do utworzenia własnych kopii zapasowych. Klasyczny bloker systemowy. Godzina ucieka, dysk zewnętrzny dalej leży martwy na biurku, a ja bezskutecznie szukam, gdzie system ukrył te wszystkie gigabajty śmieci. 
 
-Przełom nastąpił, gdy w desperacji porzuciłem klikanie w myszkę, odpaliłem terminal z uprawnieniami administratora i zacząłem bezlitośnie kopać w ukrytych folderach pamięci podręcznej. Okazało się, że Windows przez miesiące składował gigantyczne pliki tymczasowe, stare raporty aktualizacji i śmieci po przeglądarkach w miejscach, do których zwykły użytkownik nawet nie zagląd
-
-a. W pięć minut odzyskałem 45 GB wolnego miejsca, spakowałem dane i uratowałem kontrakt. Chcesz wiedzieć, jak to zrobić bez żadnych płatnych programów "cud"? Oto moja instrukcja krok po kroku.
+Przełom nastąpił, gdy w desperacji porzuciłem klikanie w myszkę, odpaliłem terminal z uprawnieniami administratora i zacząłem bezlitośnie kopać w ukrytych folderach pamięci podręcznej. Okazało się, że Windows przez miesiące składował gigantyczne pliki tymczasowe, stare raporty aktualizacji i śmieci po przeglądarkach w miejscach, do których zwykły użytkownik nawet nie zagląda. W pięć minut odzyskałem 45 GB wolnego miejsca, spakowałem dane i uratowałem kontrakt. Chcesz wiedzieć, jak to zrobić bez żadnych płatnych programów "cud"? Oto moja instrukcja krok po kroku.
 
 <div style="border-left: 4px solid #00ffcc; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>STATUS SYSTEMU:</strong> Krytyczny poziom zapełnienia dysku C. Poniższa procedura pozwala na natychmiastowe odzyskanie przestrzeni dyskowej bez użycia zewnętrznego oprogramowania szpiegowskiego czy wątpliwych optymalizatorów.

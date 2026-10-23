@@ -14,20 +14,14 @@ Eran las 8:55 AM, a solo cinco minutos de que el *Director General* entrara a la
 a: su ThinkPad se había quedado congelado en la pantalla de bienvenida con la rueda de carga dando vueltas eternas. El ventilador parecía un motor de Boeing 747 a punto de despegar, y el tipo sudaba frío mirando el reloj. Si esa máquina no arrancaba en tres minutos, la reunión se caía y mi cabeza rodaba por el pasillo.
 
 <div style="border-left: 4px solid #84cc16; padding: 12px 16px; margin: 20px 0; background-color: rgba(132, 204, 22, 0.05); border-radius: 4px;">
-<strong>⚠️ Alerta de Emergencia TI:</strong> Un arranque lento en entornos corporativos no es solo molestia; es pérdida de productividad en mas
-
-a. Olvídate de reiniciar a lo loco; aquí aplicamos ingeniería inversa al problema con herramientas de sysadmin veterano.
+<strong>⚠️ Alerta de Emergencia TI:</strong> Un arranque lento en entornos corporativos no es solo molestia; es pérdida de productividad en masa. Olvídate de reiniciar a lo loco; aquí aplicamos ingeniería inversa al problema con herramientas de sysadmin veterano.
 </div>
 
 ![Hardware Diagnostic & Troubleshooting](https://picsum.photos/seed/hardware-615/1000/550)
 
 ## El Calvario del "Todo se Carga al Inicio"
 
-¿Qué pasó realmente en ese ordenador? No fue un virus extraterrestre ni magia negr
-
-a. Fue el clásico combo de desidia corporativa y software basur
-
-a. Después de apagar el fuego con Carlos (sacando un pendrive de rescate y matando procesos a la fuerza), me puse a investigar la causa raíz en mi propio banco de pruebas. 
+¿Qué pasó realmente en ese ordenador? No fue un virus extraterrestre ni magia negra. Fue el clásico combo de desidia corporativa y software basura. Después de apagar el fuego con Carlos (sacando un pendrive de rescate y matando procesos a la fuerza), me puse a investigar la causa raíz en mi propio banco de pruebas. 
 
 En el mundo real de la oficina, los cuellos de botella del arranque se deben casi siempre a tres villanos habituales:
 1. La plaga de daemons residentes: Cada aplicación que instalas (Teams, Slack, Adobe Updater, OneDrive, el maldito gestor de la impresora HP) cree que es el centro del universo y se auto-añade al registro de Windows para ejecutarse en segundo plano antes de que el usuario siquiera toque el teclado.
@@ -43,9 +37,7 @@ En el mundo real de la oficina, los cuellos de botella del arranque se deben cas
 Para evitar que esto vuelva a ocurrir en el parque informático de la empresa, diseñé un procedimiento basado en utilidades de código abierto y herramientas oficiales de Windows, emulando un parche de firmware digno de un *hacker space*.
 
 ### Paso 1: Diagnóstico Quirúrgico con el Administrador de Tareas y Autoruns
-No uses CCleaner ni herramientas milagrosas de dudosa procedenci
-
-a. Vamos directo al núcleo del sistema operativo.
+No uses CCleaner ni herramientas milagrosas de dudosa procedencia. Vamos directo al núcleo del sistema operativo.
 
 1. Presiona `Ctrl + Shift + Esc` para abrir el Administrador de tareas.
 
@@ -97,9 +89,7 @@ Q: Dudas de trinchera sobre optimización de equipos
 
 P: ¿Desactivar aplicaciones en el inicio afecta a su funcionamiento normal cuando las abro manualmente?
 
-R: Para nad
-
-a. Lo único que evitas es que el programa cargue su proceso en segundo plano desde el preciso instante en que enciendes el ordenador. Se abrirá un poco más lento la primera vez que lo invoques, pero liberarás memoria RAM y ciclos de CPU críticos durante el boot.P: ¿Es recomendable usar scripts de GitHub que prometen "optimizar Windows con un solo clic"?
+R: Para nada. Lo único que evitas es que el programa cargue su proceso en segundo plano desde el preciso instante en que enciendes el ordenador. Se abrirá un poco más lento la primera vez que lo invoques, pero liberarás memoria RAM y ciclos de CPU críticos durante el boot.P: ¿Es recomendable usar scripts de GitHub que prometen "optimizar Windows con un solo clic"?
 
 R: Depende del repositorio. Muchos scripts públicos en GitHub automatizan tareas excelentes (eliminación de bloatware, desactivación de telemetría), pero debes revisar el código fuente antes de ejecutarlo en entornos de producción para evitar que rompan políticas de dominio de Active Directory o rompan la VPN corporativ
 

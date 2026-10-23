@@ -69,9 +69,7 @@ Dla głębszego czyszczenia użyjmy klasycznego, niezawodnego narzędzia systemo
 ## Często zadawane pytania (FAQ)
 
 ### Czy bezpiecznie jest usuwać zawartość folderu `%temp%`?
-Tak, w 100%. Folder ten służy aplikacjom wyłącznie do przechowywania plików roboczych i tymczasowych podczas ich działani
-
-a. Jeśli program jest zamknięty, te pliki nie są do niczego potrzebne.
+Tak, w 100%. Folder ten służy aplikacjom wyłącznie do przechowywania plików roboczych i tymczasowych podczas ich działania. Jeśli program jest zamknięty, te pliki nie są do niczego potrzebne.
 
 ### Co zrobić, jeśli dysk C znowu zapełni się za kilka dni?
 Najczęstszą przyczynami są rosnąca pamięć podręczna przeglądarki lub pliki pobierane bezpośrednio na pulpit. Warto zmienić domyślną lokalizację folderu Pobrane (Downloads) na dysk D lub E, jeśli taki posiadasz.

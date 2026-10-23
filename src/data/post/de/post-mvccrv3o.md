@@ -84,9 +84,7 @@ Vorsicht bei automatischen "Treiber-Update-Tools" aus dem Internet! Solche Softw
 
 F: Kann ich den PC im abgesicherten Modus starten, wenn der Bluescreen sofort beim Hochfahren auftritt?
 
-A: J
-
-a. Schalten Sie den PC während des Bootvorgangs zweimal hintereinander hart aus (Netzstecker ziehen oder Powertaste gedrückt halten). Beim dritten Mal startet die automatische Windows-Reparaturumgebung. Navigieren Sie dort zu *Problembehandlung > Erweiterte Optionen > Startup Settings (Starteinstellungen)* und wählen Sie Neustart. Nach dem Neustart drücken Sie F4 oder 4 für den abgesicherten Modus.
+A: Ja. Schalten Sie den PC während des Bootvorgangs zweimal hintereinander hart aus (Netzstecker ziehen oder Powertaste gedrückt halten). Beim dritten Mal startet die automatische Windows-Reparaturumgebung. Navigieren Sie dort zu *Problembehandlung > Erweiterte Optionen > Startup Settings (Starteinstellungen)* und wählen Sie Neustart. Nach dem Neustart drücken Sie F4 oder 4 für den abgesicherten Modus.
 
 F: Woran erkenne ich, welcher Treiber den Fehler exakt verursacht hat?
 

@@ -43,9 +43,7 @@ Para intervir com precisão cirúrgica sem perder tempo trocando peças à toa, 
 ```
 
 ### 1. Quebra de Handshake HDCP e Corrupção de Metadados EDID
-Ao conectar o cabo HDMI ou DisplayPort (via USB-C Alt Mode), a GPU e o monitor trocam pacotes de identificação (*Extended Display Identification Data* - EDID) e negociam chaves de proteção HDCP. Se o notebook estiver alternando estados de energia ou se a iGPU assumir a interface externa enquanto a dGPU tenta renderizar a cena, essa troca de chaves falh
-
-a. O monitor perde a sincronia de clock pixel a pixel, desliga a luz de fundo por proteção e tenta reconectar segundos depois, gerando o efeito de tela piscando em loop.
+Ao conectar o cabo HDMI ou DisplayPort (via USB-C Alt Mode), a GPU e o monitor trocam pacotes de identificação (*Extended Display Identification Data* - EDID) e negociam chaves de proteção HDCP. Se o notebook estiver alternando estados de energia ou se a iGPU assumir a interface externa enquanto a dGPU tenta renderizar a cena, essa troca de chaves falha. O monitor perde a sincronia de clock pixel a pixel, desliga a luz de fundo por proteção e tenta reconectar segundos depois, gerando o efeito de tela piscando em loop.
 
 
 
@@ -142,11 +140,7 @@ a:
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate" /v "ExcludeWUDriversInQualityUpdate" /t REG_DWORD /d 1 /f
 ```
 
-5. O Windows reiniciará em resolução básica nativ
-
-a. Instale primeiro o driver da placa integradae, em seguida, o driver daplaca dedicad
-
-a. Reinicie o sistema mais uma vez.
+5. O Windows reiniciará em resolução básica nativa. Instale primeiro o driver da placa integradae, em seguida, o driver daplaca dedicada. Reinicie o sistema mais uma vez.
 
 ### Etapa 4: Alinhamento de Frequência e Profundidade de Bits
 
@@ -203,14 +197,10 @@ reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "OverlayTestMode" /t REG_DWORD 
 ## Perguntas Frequentes (FAQ)
 
 ### 1. Meu monitor funciona perfeitamente em 60Hz, mas pisca ininterruptamente em 144Hz ou 165Hz. O que é?
-Esse é o sintoma clássico de saturação de banda do cabo ou da porta de saíd
-
-a. Em 1080p ou 1440p a 144Hz+, o fluxo de dados exige condutores de alta pureza e blindagem contra interferência eletromagnética (EMI). Se o cabo for HDMI 1.4 antigo ou um cabo USB-C sem certificação DP 1.4 com suporte a HBR3, os pacotes sofrerão descarte contínuo. Substitua o cabo por um modelo HDMI 2.0/2.1 certificado ou um cabo USB-C para DisplayPort com suporte a 32.4 Gbps.
+Esse é o sintoma clássico de saturação de banda do cabo ou da porta de saída. Em 1080p ou 1440p a 144Hz+, o fluxo de dados exige condutores de alta pureza e blindagem contra interferência eletromagnética (EMI). Se o cabo for HDMI 1.4 antigo ou um cabo USB-C sem certificação DP 1.4 com suporte a HBR3, os pacotes sofrerão descarte contínuo. Substitua o cabo por um modelo HDMI 2.0/2.1 certificado ou um cabo USB-C para DisplayPort com suporte a 32.4 Gbps.
 
 ### 2. O atalho `Win + Ctrl + Shift + B` resolve o problema de tela preta permanentemente?
-Não. Esse atalho funciona apenas como um alívio imediato para reiniciar o buffer do driver de vídeo em memóri
-
-a. Se a causa subjacente for um driver corrompido, sobreposição quebrada de MPO ou cabo com perda de pacotes, a tela voltará a piscar assim que o subsistema for exigido novamente por cargas gráficas mais altas. A solução definitiva requer a limpeza com DDU e a fixação das taxas corretas de transmissão.
+Não. Esse atalho funciona apenas como um alívio imediato para reiniciar o buffer do driver de vídeo em memória. Se a causa subjacente for um driver corrompido, sobreposição quebrada de MPO ou cabo com perda de pacotes, a tela voltará a piscar assim que o subsistema for exigido novamente por cargas gráficas mais altas. A solução definitiva requer a limpeza com DDU e a fixação das taxas corretas de transmissão.
 
 ### 3. Usar um hub USB-C multipor portas comuns aumenta o input lag em jogos competitivos?
 Sim. Docks e adaptadores simples que não utilizam linhas DisplayPort diretas (DisplayPort Alternate Mode) processam o sinal por meio de controladores intermediários (como chipsets DisplayLink genéricos) baseados em compressão por software via CPU. Isso adiciona uma fila de renderização com atraso de sinal de 15 a 35 milissegundos, gerando uma sensação perceptível de atraso no mouse (*mouse drift*). Para jogos competitivos, conecte o monitor diretamente a uma porta USB-C com saída nativa para a dGPU ou à porta HDMI nativa do notebook.

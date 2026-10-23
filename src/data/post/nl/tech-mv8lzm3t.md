@@ -91,9 +91,7 @@ Windows gebruikt een hybride slaapstand genaamd *Fast Startup*. Handig, tenzij h
 
 Als IT'er zie ik regelmatig collega's of gebruikers hun systeem om zeep helpen met goedbedoelde "speed up your pc"-software van schimmige websites. 
 
-- Installeer geen "Registry Cleaners": Windows beheert zijn eigen register prim
-
-a. Externe cleaners wissen vaak sleutels die cruciaal zijn voor drivers, wat leidt tot een Blue Screen of Death (BSOD).
+- Installeer geen "Registry Cleaners": Windows beheert zijn eigen register prima. Externe cleaners wissen vaak sleutels die cruciaal zijn voor drivers, wat leidt tot een Blue Screen of Death (BSOD).
 - Pas op met SSD-defragmentatie: Als je een moderne NVMe of SATA SSD hebt, moet je *nooit* traditionele defragmentatie draaien. Gebruik alleen Schijfoptimalisatie (Optimize Drives) om TRIM uit te voeren. Anders slijt je SSD nodeloos snel door.
 
 ---
@@ -102,9 +100,7 @@ a. Externe cleaners wissen vaak sleutels die cruciaal zijn voor drivers, wat lei
 
 1. Mijn pc start na het uitschakelen van apps nog steeds langzaam op. Wat nu? Grote kans dat je nog een oude HDD (harde schijf) gebruikt in plaats van een SSD. Een traditionele schijf trekt de trage opstarttijden van moderne besturingssystemen simpelweg niet meer. Overstap naar een SSD is in dit geval de enige echte remedie.
 
-2. Kan ik alle opstart-apps uitschakelen zonder dat Windows crasht? J
-
-a. Windows beschermt zichzelf en laat essentiële systeemprocessen niet toe in de lijst van opstart-apps. Alles wat je daar ziet, is door derde partijen toegevoegd.
+2. Kan ik alle opstart-apps uitschakelen zonder dat Windows crasht? Ja. Windows beschermt zichzelf en laat essentiële systeemprocessen niet toe in de lijst van opstart-apps. Alles wat je daar ziet, is door derde partijen toegevoegd.
 
 3. Waarom blijft mijn virusscanner zo lang hangen bij het opstarten?
 Veel security-suites scannen direct bij de boot alle actieve processen en het geheugen. Dat hoort zo voor de veiligheid, maar als je merkt dat Windows hierdoor tien minuten vastzit, kun je in de instellingen van je antivirussoftware kijken of er een "snelle scan bij opstarten" optie is die minder agressief is.

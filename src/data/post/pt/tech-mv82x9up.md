@@ -21,9 +21,7 @@ a.
 
 ## 1. Mapeamento de Causas Raiz (Hipóteses e Diagnóstico)
 
-Antes de sair trocando peça ou chorando no cantinho da copa, precisamos isolar o problem
-
-a. Em ambientes de escritório com ar-condicionado oscilante e maresia (para quem é do litoral), os problemas de hardware costumam seguir um padrão bem previsível:
+Antes de sair trocando peça ou chorando no cantinho da copa, precisamos isolar o problema. Em ambientes de escritório com ar-condicionado oscilante e maresia (para quem é do litoral), os problemas de hardware costumam seguir um padrão bem previsível:
 
 *   Oxidação nos Contatos (Greve dos Pinos): Camada microscópica de zinabre ou poeira acumulada nos contatos dourados do pente de RAM. O barramento de dados perde a continuidade e a placa-mãe paralisa o POST.
 *   Microfissuras ou Sujeira no Slot DIMM: Acúmulo de detritos dentro do slot da placa-mãe ou empenamento leve causado pelo cooler stock apertado demais.
@@ -37,16 +35,12 @@ a: O ciclo de liga/desliga expande e contrai a placa-mãe, fazendo o pente "anda
 
 ## 2. Metodologia de Resolução Passo a Passo (O Guia Definitivo)
 
-Esquece tentativa e erro aleatóri
-
-a. Vamos tratar isso como um procedimento cirúrgico de bancad
+Esquece tentativa e erro aleatória. Vamos tratar isso como um procedimento cirúrgico de bancad
 
 a.
 
 ### Passo 1: Desenergização Total (Segurança em Primeiro Lugar)
-Desligue o cabo de força da tomad
-
-a. Abra o gabinete e pressione o botão Power por 10 segundos com o PC fora da tomada para descarregar os capacitores da placa-mãe. Se você pular isso, pode fechar curto nos trilhos de 3.3V/5V da RAM.
+Desligue o cabo de força da tomada. Abra o gabinete e pressione o botão Power por 10 segundos com o PC fora da tomada para descarregar os capacitores da placa-mãe. Se você pular isso, pode fechar curto nos trilhos de 3.3V/5V da RAM.
 
 ### Passo 2: Remoção e Limpeza Cirúrgica da RAM
 1. Puxe as travas laterais do slot e retire o(s) pente(s) de memória com cuidado.
@@ -77,9 +71,7 @@ Escolha a opção para reiniciar imediatamente e verificar problemas na próxima
 
 ## 3. Precauções Críticas do Engenheiro de TI
 
-*   Eletricidade Estática (ESD): Sempre toque na carcaça de metal da fonte (ainda ligada na tomada desligada, se o aterramento for confiável) antes de mexer nos componentes internos, ou use pulseira antiestátic
-
-a. Uma descarga de ESD invisível pode fritar o controlador de memória integrado à CPU.
+*   Eletricidade Estática (ESD): Sempre toque na carcaça de metal da fonte (ainda ligada na tomada desligada, se o aterramento for confiável) antes de mexer nos componentes internos, ou use pulseira antiestática. Uma descarga de ESD invisível pode fritar o controlador de memória integrado à CPU.
 *   Força Bruta Excessiv
 
 a: Placas-mãe modernas flexionam bastante. Ao encaixar a RAM, apoie o dedo indicador por baixo do PCB da placa-mãe para contra-apoiar a pressão exercida ao encaixar o pente.
@@ -88,11 +80,7 @@ a: Placas-mãe modernas flexionam bastante. Ao encaixar a RAM, apoie o dedo indi
 
 P: Posso usar limpa-contatos em spray direto nos slots de RAM?
 
-R: Apenas se for um limpa-contatos específicosem lubrificante(seco) e com evaporção instantâne
-
-a. Se usar spray oleoso, ele vai atrair poeira e transformar o slot numa pasta condutora corrosiv
-
-a. O ideal para os slots é usar ar comprimido ou um pincel de cerdas firmes.P: O cooler gira, acende os LEDs, mas o teclado e o mouse não piscam. O problema é certeza que é RAM?
+R: Apenas se for um limpa-contatos específicosem lubrificante(seco) e com evaporção instantânea. Se usar spray oleoso, ele vai atrair poeira e transformar o slot numa pasta condutora corrosiva. O ideal para os slots é usar ar comprimido ou um pincel de cerdas firmes.P: O cooler gira, acende os LEDs, mas o teclado e o mouse não piscam. O problema é certeza que é RAM?
 
 R: É o suspeito número um. Quando o teclado e o mouse não inicializam (as luzes NumLock/Caps Lock não acendem ao apertar), significa que o teste POST travou antes de carregar os controladores USB, o que reforça uma falha de comunicação na inicialização da memória ou do processador.P: Se eu limpar a RAM e o PC funcionar por 2 dias e morrer de novo, o que pode ser?
 

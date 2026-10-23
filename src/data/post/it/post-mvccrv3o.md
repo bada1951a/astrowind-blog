@@ -9,13 +9,7 @@ theme: "Bronze Artisan Workshop"
 ---
 
 
-Erano le 17:30 di un giovedì caotico nel nostro ufficio di consulenza IT in zona Porta Nuova a Milano. Stavamo ultimando l'ottimizzazione delle prestazioni dell'infrastruttura per un cliente del settore finanziario quando, di colpo, la mia workstation principale si è spenta mostrando la famigerata schermata blu con il codice di errore `0x0000000a` (IRQL_NOT_LESS_OR_EQUAL). Il panico iniziale è durato pochi secondi: con una deadline imminente e i log di produzione da esportare, non potevo permettermi di perdere tempo in tentativi alla ciec
-
-a. Sapevo benissimo che quel codice specifico puntava dritto a un conflitto di memoria o a un driver corrotto dopo l'ultimo aggiornamento di sistem
-
-a.
-
-Dopo vent'anni passati a mettere le mani nei PC e nei server, ho imparato che le emergenze hardware e software non si affrontano con la disperazione, ma con un metodo chirurgico, degno di una bottega artigiana digitale. In questo articolo ti mostro esattamente come ho isolato il problema e come puoi risolverlo anche tu in pochi passaggi.
+Erano le 17:30 di un giovedì caotico nel nostro ufficio di consulenza IT in zona Porta Nuova a Milano. Stavamo ultimando l'ottimizzazione delle prestazioni dell'infrastruttura per un cliente del settore finanziario quando, di colpo, la mia workstation principale si è spenta mostrando la famigerata schermata blu con il codice di errore `0x0000000a` (IRQL_NOT_LESS_OR_EQUAL). Il panico iniziale è durato pochi secondi: con una deadline imminente e i log di produzione da esportare, non potevo permettermi di perdere tempo in tentativi alla cieca. Sapevo benissimo che quel codice specifico puntava dritto a un conflitto di memoria o a un driver corrotto dopo l'ultimo aggiornamento di sistema. Dopo vent'anni passati a mettere le mani nei PC e nei server, ho imparato che le emergenze hardware e software non si affrontano con la disperazione, ma con un metodo chirurgico, degno di una bottega artigiana digitale. In questo articolo ti mostro esattamente come ho isolato il problema e come puoi risolverlo anche tu in pochi passaggi.
 
 ![Tech & IT Solution Guide](https://picsum.photos/seed/computer345/1000/550)
 
@@ -73,11 +67,7 @@ Se la RAM risulta integra al 100%, il colpevole è quasi certamente un driver co
 
 4. Spostati sulla scheda "Driver" e clicca sul pulsante"Ripristina driver" (Roll Back Driver), se attivo.
 
-5. Conferma l'operazione e riavvia il sistem
-
-a.
-
-Se Windows non ti permette di fare il rollback perché il pulsante è disattivato, puoi procedere alla disinstallazione pulita del driver scaricando la versione precedente direttamente dal sito del produttore (es. NVIDIA, AMD, Realtek).
+5. Conferma l'operazione e riavvia il sistema. Se Windows non ti permette di fare il rollback perché il pulsante è disattivato, puoi procedere alla disinstallazione pulita del driver scaricando la versione precedente direttamente dal sito del produttore (es. NVIDIA, AMD, Realtek).
 
 ---
 

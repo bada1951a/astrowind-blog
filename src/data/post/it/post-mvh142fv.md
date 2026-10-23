@@ -9,9 +9,7 @@ theme: "Dracula Purple Dev"
 ---
 
 
-Erano le 17:45 in un frenetico lunedì pomeriggio nel nostro ufficio al centro direzionale di Milano. Mancavano esattamente quindici minuti alla scadenza per l'invio del report trimestrale di bilancio alla direzione generale, quando lo schermo del mio PC principale si è improvvisamente congelato. Nessun messaggio di errore, mouse immobile, tastiera completamente disattivat
-
-a. La ventola della CPU ha continuato a girare a regime costante, come a prendersi gioco del mio panico crescente. Dopo tre minuti di attesa vana, ho dovuto procedere al famigerato reset hardware tenendo premuto il tasto di accensione. Risultato? Dieci pagine di analisi finanziaria non salvate e un cliente interno furioso.
+Erano le 17:45 in un frenetico lunedì pomeriggio nel nostro ufficio al centro direzionale di Milano. Mancavano esattamente quindici minuti alla scadenza per l'invio del report trimestrale di bilancio alla direzione generale, quando lo schermo del mio PC principale si è improvvisamente congelato. Nessun messaggio di errore, mouse immobile, tastiera completamente disattivata. La ventola della CPU ha continuato a girare a regime costante, come a prendersi gioco del mio panico crescente. Dopo tre minuti di attesa vana, ho dovuto procedere al famigerato reset hardware tenendo premuto il tasto di accensione. Risultato? Dieci pagine di analisi finanziaria non salvate e un cliente interno furioso.
 
 Nei giorni successivi, quel maledetto blocco casuale ha iniziato a ripresentarsi con una regolarità esasperante: a volte mentre aprivo Outlook, altre volte semplicemente mentre il PC era in idle. Le classiche soluzioni da bar dello sport digitale non servivano a null
 
@@ -43,17 +41,13 @@ Prima di aprire gli strumenti di diagnostica, facciamo chiarezza su cosa scatena
 
 ### Guida passo-passo: tracciare la causa con il Visualizzatore Eventi
 
-Mettiamoci all'oper
-
-a. Non serve installare software di terze parti pesanti o rischiosi. Useremo gli strumenti integrati in Windows 11.
+Mettiamoci all'opera. Non serve installare software di terze parti pesanti o rischiosi. Useremo gli strumenti integrati in Windows 11.
 
 #### Passo 1: Aprire il Visualizzatore Eventi
 Premi la combinazione di tasti `Windows + X` sulla tastiera e seleziona Visualizzatore eventi dal menu rapido che compare in basso a sinistra (in alternativa, premi `Windows + R`, digita `eventvwr.msc` e premi Invio).
 
 #### Passo 2: Puntare dritti al registro critico
-Nella colonna di sinistra, espandi la voce Registri di Windowse clicca suSistem
-
-a. Qui dentro ci sono migliaia di eventi registrati dal sistema operativo, ma noi cerchiamo un ago nel pagliaio. Per filtrare il rumore di fondo:
+Nella colonna di sinistra, espandi la voce Registri di Windowse clicca suSistema. Qui dentro ci sono migliaia di eventi registrati dal sistema operativo, ma noi cerchiamo un ago nel pagliaio. Per filtrare il rumore di fondo:
 - Guarda nella colonna di destra e clicca su Filtro registro attuale...- Nella finestra che si apre, individua il menu a tendinaLivello evento.
 - Spunta le caselle CriticoeErrore, quindi clicca suOK.
 

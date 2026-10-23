@@ -11,9 +11,7 @@ theme: "Nordic Clean Ice"
 
 Eran las siete de la tarde en las Torres Kio, en pleno distrito financiero de Madrid. Estábamos a pocas horas de cerrar el ejercicio fiscal, con la tensión cortándose en el ambiente, cuando mi equipo de contabilidad empezó a emitir alertas de voz automatizadas y pitidos de validación que de repente... enmudecieron por completo. Justo en el momento más crítico, cuando necesitábamos cruzar los datos de un año entero de hojas de cálculo de Excel con el sistema central del ERP corporativo, el ordenador principal se quedó totalmente mudo. No podíamos escuchar las alertas de discrepancias ni las llamadas de confirmación del departamento financiero.
 
-El pánico se apoderó de la oficin
-
-a. En medio del estrés por cumplir con los plazos de la auditoría, los compañeros empezaron a desconectar los auriculares, a reiniciar el PC a lo loco y a golpear ligeramente el puerto Jack de 3.5mm pensando que era un fallo físico de los cascos. Por supuesto, eso solo empeoró las cosas y nos hizo perder valiosos minutos valiosos. Como técnico de sistemas de la casa, me tocó intervenir de inmediato para aplicar una solución rápida, limpia y definitiva en Windows 11 sin perder ni un solo dato del cierre contable.
+El pánico se apoderó de la oficina. En medio del estrés por cumplir con los plazos de la auditoría, los compañeros empezaron a desconectar los auriculares, a reiniciar el PC a lo loco y a golpear ligeramente el puerto Jack de 3.5mm pensando que era un fallo físico de los cascos. Por supuesto, eso solo empeoró las cosas y nos hizo perder valiosos minutos valiosos. Como técnico de sistemas de la casa, me tocó intervenir de inmediato para aplicar una solución rápida, limpia y definitiva en Windows 11 sin perder ni un solo dato del cierre contable.
 
 ![Tech Troubleshooting Guide](/images/tech-photo/tech%20(9).jpg)
 
@@ -41,9 +39,7 @@ a.
 
 ### Guía paso a paso para recuperar el audio de inmediato
 
-Vamos a solucionar el problema usando las herramientas nativas de Windows 11: [Configuración], [Administrador de dispositivos] y los servicios del sistem
-
-a. No necesitas descargar software extraño de dudosa procedenci
+Vamos a solucionar el problema usando las herramientas nativas de Windows 11: [Configuración], [Administrador de dispositivos] y los servicios del sistema. No necesitas descargar software extraño de dudosa procedenci
 
 a.
 
@@ -103,8 +99,6 @@ Cuando trabajes bajo presión de cierre contable o financiero, evita a toda cost
 2. ¿Por qué el icono de volumen aparece con una pequeña cruz roja en Windows 11? Ese símbolo de advertencia indica que el servicio principal de audio está deshabilitado o que el controlador del dispositivo de hardware ha sufrido un fallo crítico. Ve al [Administrador de dispositivos], busca si hay algún elemento con un triángulo amarillo y aplica el proceso de reinicio de servicios que explicamos en el Paso 2.
 
 3. ¿Pueden las conexiones físicas causar este fallo repentino en la oficina?
-Sí, aunque parezca software, la acumulación de polvo en el puerto Jack frontal de la torre o un falso contacto en el conector USB de unos cascos modernos puede hacer que Windows desactive el canal de audio por motivos de protección eléctric
-
-a. Prueba siempre a conectar el dispositivo en un puerto diferente antes de modificar la configuración del sistem
+Sí, aunque parezca software, la acumulación de polvo en el puerto Jack frontal de la torre o un falso contacto en el conector USB de unos cascos modernos puede hacer que Windows desactive el canal de audio por motivos de protección eléctrica. Prueba siempre a conectar el dispositivo en un puerto diferente antes de modificar la configuración del sistem
 
 a.

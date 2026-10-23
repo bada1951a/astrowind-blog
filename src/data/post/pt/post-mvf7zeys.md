@@ -11,9 +11,7 @@ theme: "Retro Monokai"
 
 Eram exatamente 13:45 em um escritório na Avenida Paulista, São Paulo. A reunião de diretoria começaria às 14:00 em ponto, e a apresentação principal estava salva na máquina do nosso diretor financeiro. O problema? O notebook dele simplesmente congelou. As ventoinhas pareciam uma turbina de boeing tentando decolar, o cursor do mouse arrastava na tela como se estivesse na lama e, ao abrir o Gerenciador de Tarefas, lá estava a sentença de morte: o uso da CPU cravado em 100%, dominado por um misterioso processo do sistema (*System* ou *Interrupções de Sistema*). 
 
-Se você já passou por isso, sabe que o desespero bate na hor
-
-a. Reiniciar a máquina não adiantava, pois o Windows travava na tela de carregamento ou voltava com o mesmo gargalo infernal devido a indexações corrompidas, serviços de atualização travados ou conflitos de driver de hardware. 
+Se você já passou por isso, sabe que o desespero bate na hora. Reiniciar a máquina não adiantava, pois o Windows travava na tela de carregamento ou voltava com o mesmo gargalo infernal devido a indexações corrompidas, serviços de atualização travados ou conflitos de driver de hardware. 
 
 ![How to Fix 100 Percent CPU Usage Caused by System Process Tech Guide](/images/tech-photo/storage (3).png)
 
@@ -87,9 +85,7 @@ Se o processo *Interrupções de Sistema* continua sugando o processador, o prob
 <div style="border-left: 4px solid #f92672; padding: 12px 16px; margin: 20px 0; background-color: rgba(249,38,114,0.08); border-radius: 4px; color: #111827;">
 <strong>Atenção com a Temperatur
 
-a:</strong> Processadores rodando a 100% de uso contínuo ultrapassam facilmente os 85°C a 95°C em poucos minutos. Certifique-se de que o cooler do notebook ou desktop não está bloqueado por poeir
-
-a. Se a máquina desligar sozinha por superaquecimento durante um procedimento de reparo de arquivos do sistema, você pode corromper permanentemente o registro do Windows.
+a:</strong> Processadores rodando a 100% de uso contínuo ultrapassam facilmente os 85°C a 95°C em poucos minutos. Certifique-se de que o cooler do notebook ou desktop não está bloqueado por poeira. Se a máquina desligar sozinha por superaquecimento durante um procedimento de reparo de arquivos do sistema, você pode corromper permanentemente o registro do Windows.
 </div>
 
 ---

@@ -90,17 +90,11 @@ Sim. O comando afeta diretamente a estrutura de classes do shell do Windows e co
 ![Tech Troubleshooting Guide](/images/tech-photo/storage%20(15).png)
 
 ### 2. Posso reverter a alteração caso eu me arrependa?
-Com certez
-
-a. Se quiser voltar ao menu padrão do Windows 11, basta abrir o Prompt de Comando como Administrador e executar o comando para remover a chave criad
+Com certeza. Se quiser voltar ao menu padrão do Windows 11, basta abrir o Prompt de Comando como Administrador e executar o comando para remover a chave criad
 
 a:
 `reg.exe delete "HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}" /f`
 Em seguida, reinicie o Explorador de Arquivos pelo Gerenciador de Tarefas.
 
 ### 3. Essa modificação afeta a estabilidade do sistema ou causa telas azuis (BSOD)?
-De forma algum
-
-a. Trata-se apenas de uma alteração inofensiva no Registro do Windows que diz ao Explorador de Arquivos qual interface gráfica de menu desenhar na tel
-
-a. Nenhum driver de kernel ou hardware é tocado no processo.
+De forma alguma. Trata-se apenas de uma alteração inofensiva no Registro do Windows que diz ao Explorador de Arquivos qual interface gráfica de menu desenhar na tela. Nenhum driver de kernel ou hardware é tocado no processo.

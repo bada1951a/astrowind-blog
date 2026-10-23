@@ -23,9 +23,7 @@ a. O projeto estava na reta final e o computador recusava-se a manter o sistema 
 
 a: Por que o 0x0000000a acontece?
 
-Antes de sair reinstalando o sistema operacional — o que seria um tiro no escuro e desperdício de tempo precioso —, precisamos mapear a raiz do problem
-
-a. Na nossa arquitetura de testes em São Paulo, isolamos três causas principais para esse comportamento:
+Antes de sair reinstalando o sistema operacional — o que seria um tiro no escuro e desperdício de tempo precioso —, precisamos mapear a raiz do problema. Na nossa arquitetura de testes em São Paulo, isolamos três causas principais para esse comportamento:
 
 1. Incompatibilidade de Drivers Pós-Update: Um driver de rede, controladora SATA ou GPU recém-atualizado que tenta se comunicar com endereços de memória inválidos.
 

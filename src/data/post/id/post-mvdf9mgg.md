@@ -9,13 +9,9 @@ theme: "Rosewood Hardware Guide"
 ---
 
 
-Suasana di kantor *startup* teknologi kami di kawasan Jakarta Selatan mendadak tegang ketika laptop *deployment* utama untuk tim *internal server* mendadak macet total. Layar menampilkan progress pembaruan Windows 11 yang sudah menyentuh angka 100 persen, namun tidak ada pergerakan sama sekali selama lebih dari tiga jam. Padahal, kami harus segera merilis *patch* keamanan mendesak sore itu jug
+Suasana di kantor *startup* teknologi kami di kawasan Jakarta Selatan mendadak tegang ketika laptop *deployment* utama untuk tim *internal server* mendadak macet total. Layar menampilkan progress pembaruan Windows 11 yang sudah menyentuh angka 100 persen, namun tidak ada pergerakan sama sekali selama lebih dari tiga jam. Padahal, kami harus segera merilis *patch* keamanan mendesak sore itu juga. Mematikan paksa laptop tersebut berisiko merusak sistem operasi dan membuat *boot loop*, tapi membiarkannya berarti mengorbankan tenggat waktu proyek yang ketat.
 
-a. Mematikan paksa laptop tersebut berisiko merusak sistem operasi dan membuat *boot loop*, tapi membiarkannya berarti mengorbankan tenggat waktu proyek yang ketat.
-
-Setelah mencoba berbagai cara standar seperti *restart* tombol daya dan menunggu dalam keresahan—yang tentu saja berujung nihil—saya mulai menganalisis akar masalahny
-
-a. Ternyata, kendala ini klasik: prosesor dan layanan sistem terjebak dalam *infinite loop* karena berkas instalasi pembaruan di dalam direktori *cache* mengalami korupsi data (*data corruption*) atau terkunci oleh proses latar belakang yang tidak mau berhenti.
+Setelah mencoba berbagai cara standar seperti *restart* tombol daya dan menunggu dalam keresahan—yang tentu saja berujung nihil—saya mulai menganalisis akar masalahnya. Ternyata, kendala ini klasik: prosesor dan layanan sistem terjebak dalam *infinite loop* karena berkas instalasi pembaruan di dalam direktori *cache* mengalami korupsi data (*data corruption*) atau terkunci oleh proses latar belakang yang tidak mau berhenti.
 
 ![Tech & IT Solution Guide](https://picsum.photos/seed/computer944/1000/550)
 
@@ -79,9 +75,7 @@ net start msiserver
 ```
 
 #### Langkah 5: Restart Perangkat
-Setelah semua perintah selesai dieksekusi dengan sukses, tutup jendela Terminal dan lakukan *restart* pada komputer atau laptop And
-
-a. Windows akan mendeteksi *folder* *cache* yang bersih dan melanjutkan proses *booting* dengan normal.
+Setelah semua perintah selesai dieksekusi dengan sukses, tutup jendela Terminal dan lakukan *restart* pada komputer atau laptop Anda. Windows akan mendeteksi *folder* *cache* yang bersih dan melanjutkan proses *booting* dengan normal.
 
 ---
 
@@ -95,8 +89,6 @@ a.
 Anda bisa menggunakan alat bawaan Windows bernama *System File Checker*. Buka Command Prompt Administrator lalu ketik `sfc /scannow` untuk memperbaiki file sistem yang rusak secara menyeluruh.
 
 3. Bisakah saya menghapus folder cadangan (.old) setelah pembaruan berhasil?  
-Bis
-
-a. Setelah Windows 11 berhasil melakukan *update* dan berjalan stabil selama beberapa hari, Anda dapat menghapus folder `SoftwareDistribution.old` untuk menghemat ruang penyimpanan SSD And
+Bisa. Setelah Windows 11 berhasil melakukan *update* dan berjalan stabil selama beberapa hari, Anda dapat menghapus folder `SoftwareDistribution.old` untuk menghemat ruang penyimpanan SSD And
 
 a.

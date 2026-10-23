@@ -15,9 +15,7 @@ Nei primi minuti di panico totale ho fatto l'errore classico: ho iniziato a clic
 
 ![Tech Troubleshooting Guide](/images/tech-photo/tech-photos%20(20).jpg)
 
-Il problema non era solo estetico, ma bloccava letteralmente l'interazione con le applicazioni desktop a schermo intero. Dopo aver tamponato la situazione spostando temporaneamente il file su un vecchio portatile di backup per l'invio in extremis, ho analizzato la situazione a mente fredd
-
-a. Perché quella filigrana crea conflitti visivi bloccanti? 
+Il problema non era solo estetico, ma bloccava letteralmente l'interazione con le applicazioni desktop a schermo intero. Dopo aver tamponato la situazione spostando temporaneamente il file su un vecchio portatile di backup per l'invio in extremis, ho analizzato la situazione a mente fredda. Perché quella filigrana crea conflitti visivi bloccanti? 
 
 Ecco i 3 motivi tecnici principali per cui questo fastidio visivo si trasforma in un blocco operativo:
 1. Conflitto di rendering Direct3D: Nelle versioni non attivate, Windows gestisce i livelli grafici della filigrana in sovrimpressione, mandando in tilt l'accelerazione hardware di alcune applicazioni gestionali legacy.
@@ -58,11 +56,7 @@ a:
    ```cmd
    slmgr /rearm
    ```
-   Premi Invio, chiudi il prompt e riavvia immediatamente il computer dal menu Start > Spegni o disconnetti > Riavvi
-
-a.
-
-Al riavvio, la filigrana sparirà dallo schermo, liberando l'area di lavoro e permettendoti di completare l'invio dei report senza interruzioni visive o conflitti con i software gestionali.
+   Premi Invio, chiudi il prompt e riavvia immediatamente il computer dal menu Start > Spegni o disconnetti > Riavvia. Al riavvio, la filigrana sparirà dallo schermo, liberando l'area di lavoro e permettendoti di completare l'invio dei report senza interruzioni visive o conflitti con i software gestionali.
 
 ### Consigli del Sistemista & Avvertenze di Sicurezza
 

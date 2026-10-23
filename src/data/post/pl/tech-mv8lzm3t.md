@@ -9,11 +9,7 @@ theme: "Crimson Emergency Field"
 ---
 
 
-Godzina 8:52 rano. Za acht minut mam mieć gotowy raport dla zarządu i rzuconego na głęboką wodę klienta z Frankfurtu. Otwieram mojego ThinkPada, a on... wita mnie czarnym ekranem i kręcącym się kółkiem ładowani
-
-a. Dysk NVMe mieli w kółko, procesor jedzie na 100% swoich możliwości, a wentylatory wyją jak odkurzacz w małym pokoju. W tle ładuje się Teams, Discord, Spotify, autoupdater do jakiejś głupiej gierki i pięć różnych programów do "optymalizacji", które jakiś geniusz z działu marketingu zainstalował bez pytani
-
-a. Krew mnie zalała, pot oblał czoło – klasyczny piątkowy orkan w korpo, gdzie sprzęt decyduje się umrzeć w najmniej odpowiednim momencie.
+Godzina 8:52 rano. Za acht minut mam mieć gotowy raport dla zarządu i rzuconego na głęboką wodę klienta z Frankfurtu. Otwieram mojego ThinkPada, a on... wita mnie czarnym ekranem i kręcącym się kółkiem ładowania. Dysk NVMe mieli w kółko, procesor jedzie na 100% swoich możliwości, a wentylatory wyją jak odkurzacz w małym pokoju. W tle ładuje się Teams, Discord, Spotify, autoupdater do jakiejś głupiej gierki i pięć różnych programów do "optymalizacji", które jakiś geniusz z działu marketingu zainstalował bez pytania. Krew mnie zalała, pot oblał czoło – klasyczny piątkowy orkan w korpo, gdzie sprzęt decyduje się umrzeć w najmniej odpowiednim momencie.
 
 <div style="border-left: 4px solid #ef4444; padding: 12px 16px; margin: 20px 0; background-color: rgba(239, 68, 68, 0.05); border-radius: 4px;">
 <strong>STATUS AWARYJNY: KRYTYCZNY SPADEK WYDAJNOŚCI</strong><br>
@@ -24,19 +20,13 @@ a.
 
 ![Hardware Diagnostic & Troubleshooting](https://picsum.photos/seed/hardware-907/1000/550)
 
-Przez pierwsze dziesięć minut borykałem się z tym badziewiem jak jakiś amator. Próbowałem odpalać *Zarządzanie dyskami*, sprawdzałem *Menedżer urządzeń*, czy mi karta sieciowa nie zwariowała, klikałem losowe ikonki w zasobniku systemowym (tray), tracąc bezcenny czas. Szybki rzut okiem na procesy w tle i wyszło szydło z worka – system walczył o życie z 47 aplikacjami rezydentnymi, które uznały, że są pępkiem wszechświat
-
-a.
-
-W tym poradniku wylejemy kubeł zimnej wody na te cyfrowe pijawki. Pokażę Ci, jak bezlitośnie przeorać autostart, żeby Twój blaszak lub laptop znowu dostawał kopa w plecy zaraz po wciśnięciu power.
+Przez pierwsze dziesięć minut borykałem się z tym badziewiem jak jakiś amator. Próbowałem odpalać *Zarządzanie dyskami*, sprawdzałem *Menedżer urządzeń*, czy mi karta sieciowa nie zwariowała, klikałem losowe ikonki w zasobniku systemowym (tray), tracąc bezcenny czas. Szybki rzut okiem na procesy w tle i wyszło szydło z worka – system walczył o życie z 47 aplikacjami rezydentnymi, które uznały, że są pępkiem wszechświata. W tym poradniku wylejemy kubeł zimnej wody na te cyfrowe pijawki. Pokażę Ci, jak bezlitośnie przeorać autostart, żeby Twój blaszak lub laptop znowu dostawał kopa w plecy zaraz po wciśnięciu power.
 
 ---
 
 ## 3 Główne Źródła Korporacyjnego (i Domowego) Koszmaru Rozruchowego
 
-Zanim przejdziemy do chirurgicznego usuwania problemów, ustalmy, dlaczego Twój system zamienił się w żółwi
-
-a. Oto trzy najczęstsze grzechy użytkowników i samych aplikacji:
+Zanim przejdziemy do chirurgicznego usuwania problemów, ustalmy, dlaczego Twój system zamienił się w żółwia. Oto trzy najczęstsze grzechy użytkowników i samych aplikacji:
 
 1. Syndrom "Każda apka musi być ważna": Instalatorzy softu (od pakietów Adobe po darmowe narzędzia PDF) domyślnie zaznaczają opcję *"Uruchom wraz z systemem Windows"*. Aplikacje te bezczelnie wrzucają swoje demony i usługi do autostartu, chociaż uruchamiasz je raz na kwartał.
 
@@ -136,9 +126,7 @@ A: Niektóre aplikacje mają własne ustawienia wewnętrzne, które przy każdym
 
 Q2: Czy czyszczenie autostartu jest bezpieczne dla moich danych?
 
-A:W 100% bezpieczne. Wyłączenie aplikacji w autostarcienie oznacza jej odinstalowani
-
-a. Programy te nadal będą działać idealnie, gdy klikniesz ich ikonkę ręcznie. Po prostu przestaną marnować zasoby komputera w momencie, gdy Ty próbujesz spokojnie zacząć pracę.
+A:W 100% bezpieczne. Wyłączenie aplikacji w autostarcienie oznacza jej odinstalowania. Programy te nadal będą działać idealnie, gdy klikniesz ich ikonkę ręcznie. Po prostu przestaną marnować zasoby komputera w momencie, gdy Ty próbujesz spokojnie zacząć pracę.
 
 ###
 

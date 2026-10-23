@@ -21,9 +21,7 @@ En medio del pánico inicial, mi primer instinto fue empezar a vaciar la papeler
 a:</strong> Cuando Windows se queda sin espacio libre en la partición principal de forma repentina, el culpable rara vez son tus archivos personales. El verdadero villano son gigabytes y gigabytes de datos invisibles acumulados en segundo plano.
 </div>
 
-Por suerte, mi compañero de sistemas se acercó con calma, abrió el menú oculto de almacenamiento y aplicó el procedimiento exacto que salvó nuestra entreg
-
-a. Aquí te comparto el diagnóstico y el paso a paso definitivo para limpiar tu unidad C: de una vez por todas.
+Por suerte, mi compañero de sistemas se acercó con calma, abrió el menú oculto de almacenamiento y aplicó el procedimiento exacto que salvó nuestra entrega. Aquí te comparto el diagnóstico y el paso a paso definitivo para limpiar tu unidad C: de una vez por todas.
 
 ---
 
@@ -44,9 +42,7 @@ Antes de lanzarnos a borrar cosas a lo loco, entendamos cuáles son las tres cau
 Para solucionar esto de manera segura y profesional, vamos a utilizar las herramientas nativas de Windows sin arriesgarnos a romper el sistema operativo.
 
 #### Paso 1: Usar el Sensor de almacenamiento de Windows
-Olvídate de buscar carpeta por carpet
-
-a. Windows incluye una utilidad fantástica para esto:
+Olvídate de buscar carpeta por carpeta. Windows incluye una utilidad fantástica para esto:
 1. Haz clic en el botón de Inicio y entra en la Configuración (el icono de la rueda dentada).
 
 2. Ve a Sistemay luego haz clic enAlmacenamiento.
@@ -63,9 +59,7 @@ Si necesitas una limpieza más a fondo a nivel de administrador:
 
 2. Selecciona tu unidad `C:` y haz clic en Aceptar.
 
-3. En la ventana que aparece, haz clic en el botón inferior que dice Limpiar archivos del sistem
-
-a. Vuelve a seleccionar la unidad C:.
+3. En la ventana que aparece, haz clic en el botón inferior que dice Limpiar archivos del sistema. Vuelve a seleccionar la unidad C:.
 
 4. Esta vez, la lista incluirá opciones avanzadas. Marca "Limpieza de actualizaciones de Windows" y "Archivos de instalación temporales de Windows". Haz clic en Aceptar para proceder con la limpieza profund
 

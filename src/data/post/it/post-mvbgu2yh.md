@@ -9,20 +9,12 @@ theme: "Sunset Horizon Coral"
 ---
 
 
-Erano le 16:30 di un martedì pomeriggio frenetico nella nostra azienda IT a Milano, eravamo in pieno fermento per l'ottimizzazione delle prestazioni dell'infrastruttura di un cliente chiave, quando all'improvviso il mio monitor principale si è trasformato in un incubo: la barra delle applicazioni di Windows 11 si è completamente congelat
-
-a. Cliccavo sul menu Start, cercavo di aprire le impostazioni rapide, premevo sulle icone delle app aperte, ma null
-
-a. Zero rispost
-
-a. Con tre call urgenti aperte su Teams e una scadenza imminente per il deploy dei nuovi server, non potevo certo permettermi di riavviare il PC perdendo venti minuti di sessioni di lavoro. 
+Erano le 16:30 di un martedì pomeriggio frenetico nella nostra azienda IT a Milano, eravamo in pieno fermento per l'ottimizzazione delle prestazioni dell'infrastruttura di un cliente chiave, quando all'improvviso il mio monitor principale si è trasformato in un incubo: la barra delle applicazioni di Windows 11 si è completamente congelata. Cliccavo sul menu Start, cercavo di aprire le impostazioni rapide, premevo sulle icone delle app aperte, ma nulla. Zero risposta. Con tre call urgenti aperte su Teams e una scadenza imminente per il deploy dei nuovi server, non potevo certo permettermi di riavviare il PC perdendo venti minuti di sessioni di lavoro. 
 
 <div style="border-left: 4px solid #f97316; padding: 12px 16px; margin: 20px 0; background-color: rgba(249,115,22,0.05); border-radius: 4px; color: #111827;">
 <strong>Situazione di emergenz
 
-a:</strong> Quando la taskbar di Windows 11 smette di rispondere, il panico è comprensibile, ma nella maggior parte dei casi non serve riavviare la macchin
-
-a. Il colpevole è quasi sempre il gestore dell'interfaccia grafic
+a:</strong> Quando la taskbar di Windows 11 smette di rispondere, il panico è comprensibile, ma nella maggior parte dei casi non serve riavviare la macchina. Il colpevole è quasi sempre il gestore dell'interfaccia grafic
 
 a.
 </div>

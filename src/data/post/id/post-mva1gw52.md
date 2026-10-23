@@ -32,9 +32,7 @@ Sebelum Anda gegabah menghapus file sembarangan yang justru bisa merusak sistem 
    Setiap kali Windows 11 mendownload *major update* atau patch keamanan bulanan, OS ini menyimpan salinan file lama (Windows.old atau paket instalasi) sebagai cadangan jika proses *rollback* diperlukan. File-file ini bisa memakan ruang hingga puluhan gigabyte.
 
 3. Cache Hibernasi dan Virtual Memory (Pagefile.sys & Hiberfil.sys)
-   Jika fitur *Hibernation* aktif, Windows mencadangkan seluruh isi RAM ke dalam file sistem sebesar kapasitas RAM fisik And
-
-a. Ditambah file *pagefile* untuk manajemen memori virtual, kedua file sistem ini otomatis mengunci ruang penyimpanan dalam jumlah masif.
+   Jika fitur *Hibernation* aktif, Windows mencadangkan seluruh isi RAM ke dalam file sistem sebesar kapasitas RAM fisik Anda. Ditambah file *pagefile* untuk manajemen memori virtual, kedua file sistem ini otomatis mengunci ruang penyimpanan dalam jumlah masif.
 
 ---
 
@@ -59,9 +57,7 @@ Terkadang Storage Sense melewatkan beberapa direktori tersembunyi. Kita bisa mas
 
 * Tekan `Windows + R`, ketik `%temp%` lalu tekan Enter. Ini akan membuka direktori `AppData\Local\Temp`.
 * Tekan `Ctrl + A` untuk memilih seluruh file di dalamnya, lalu tekan `Shift + Delete` untuk menghapusnya secara permanen (tanpa masuk Recycle Bin).
-* *Catatan Penting:* Jika ada file yang gagal dihapus dengan keterangan "File is in use", biarkan saj
-
-a. Itu artinya file sedang digunakan oleh aplikasi yang sedang aktif berjalan.
+* *Catatan Penting:* Jika ada file yang gagal dihapus dengan keterangan "File is in use", biarkan saja. Itu artinya file sedang digunakan oleh aplikasi yang sedang aktif berjalan.
 * Ulangi proses yang sama dengan menekan `Windows + R`, kali ini ketik `temp` (tanpa tanda persen) dan bersihkan isinya dengan hak akses administrator.
 
 ### Langkah 3: Eksekusi Disk Cleanup Tingkat Lanjut (System Files)
@@ -83,9 +79,7 @@ a.
 ## Catatan Penting & Rekomendasi Keamanan
 
 <div style="border-left: 4px solid #475569; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
-<strong>Peringatan Preventif:</strong> Jangan pernah secara sembarangan menghapus folder <code>Windows.old</code> melalui tombol Delete biasa jika Anda baru saja melakukan *major upgrade* Windows 11 dalam 10 hari terakhir dan masih ingin opsi kembali ke versi sebelumny
-
-a. Gunakan selalu fitur Disk Cleanup agar sistem menghapusnya secara aman dari tingkat kernel.
+<strong>Peringatan Preventif:</strong> Jangan pernah secara sembarangan menghapus folder <code>Windows.old</code> melalui tombol Delete biasa jika Anda baru saja melakukan *major upgrade* Windows 11 dalam 10 hari terakhir dan masih ingin opsi kembali ke versi sebelumnya. Gunakan selalu fitur Disk Cleanup agar sistem menghapusnya secara aman dari tingkat kernel.
 </div>
 
 Sebagai tindakan pencegahan jangka panjang, biasakan untuk memindahkan lokasi penyimpanan *default* untuk dokumen,unduhan (*Downloads*), dan media besar ke Drive D atau penyimpanan eksternal. Anda bisa mengaturnya melalui Settings > System > Storage > Where new content is saved.

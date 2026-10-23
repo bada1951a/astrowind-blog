@@ -53,9 +53,7 @@ a.
 ### 1.
 
 2. Deformación mecánica y pérdida de histéresis elástica
-La lámina flexible interna depende de una constante elástica calculada al milímetro para proporcionar el retorno mecánico y la histéresis requerid
-
-a. Si el usuario somete ciertas teclas de alta frecuencia operativa (como `W`, `A`, `S`, `D`, `Espacio` o `Enter`) a impactos sistemáticos o fatiga prolongada, la lámina pierde tensión. Al juntarse con la lámina estática, no impacta con una fuerza de retención neta constante, sino que vibra físicamente contra el terminal fijo, superando el tiempo de tolerancia de amortiguación.
+La lámina flexible interna depende de una constante elástica calculada al milímetro para proporcionar el retorno mecánico y la histéresis requerida. Si el usuario somete ciertas teclas de alta frecuencia operativa (como `W`, `A`, `S`, `D`, `Espacio` o `Enter`) a impactos sistemáticos o fatiga prolongada, la lámina pierde tensión. Al juntarse con la lámina estática, no impacta con una fuerza de retención neta constante, sino que vibra físicamente contra el terminal fijo, superando el tiempo de tolerancia de amortiguación.
 
 ### 1.
 
@@ -167,9 +165,7 @@ a.
 El alcohol isopropílico (IPA) de alta pureza es seguro químicamente para la mayoría de plásticos, pero su aplicación mediante gotero carece de la fuerza cinética que aporta el propelente presurizado del spray. La presión del aerosol es fundamental para desincrustar mecánicamente las partículas microscópicas aprisionadas entre las dos caras de la lámina de contacto. Además, el isopropanol puede tardar más en evaporarse dentro de la cámara sellada del conmutador si no existe flujo de aire forzado.
 
 ### Tras aplicar el limpiador, la tecla no responde en absoluto. ¿Qué ha ocurrido?
-El propelente de los sprays de contacto se expande a temperaturas bajo cero, provocando con frecuencia condensación de humedad ambiental inmediata sobre los contactos fríos, lo cual bloquea temporalmente la continuidad eléctric
-
-a. Asimismo, si no se respetó el tiempo de secado, el líquido remanente puede alterar las propiedades capacitivas del circuito. Espere 30 minutos adicionales, aplique aire comprimido seco para acelerar la evaporación y vuelva a conectar el teclado al puerto USB.
+El propelente de los sprays de contacto se expande a temperaturas bajo cero, provocando con frecuencia condensación de humedad ambiental inmediata sobre los contactos fríos, lo cual bloquea temporalmente la continuidad eléctrica. Asimismo, si no se respetó el tiempo de secado, el líquido remanente puede alterar las propiedades capacitivas del circuito. Espere 30 minutos adicionales, aplique aire comprimido seco para acelerar la evaporación y vuelva a conectar el teclado al puerto USB.
 
 ### ¿Afecta esta intervención a los teclados mecánicos de tipo óptico o inductivo (efecto Hall)?
 No debe aplicar este procedimiento a conmutadores ópticos (como los switches Razer Optical o Gateron Optical) ni a teclados analógicos de efecto Hall (como Wooting). Estos conmutadores no disponen de láminas de contacto metálicas; su accionamiento depende de la interrupción de un haz de luz infrarroja o de la variación de un campo magnético medido por un sensor en el PCB. En estos dispositivos, el chattering suele deberse a suciedad física en la lente del sensor o a fallos en la calibración del firmware analógico, situaciones que el limpiador de contactos no corregirá e incluso podría agravar manchando los prismas ópticos.

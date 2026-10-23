@@ -26,15 +26,9 @@ Get-WmiObject Win32_Keyboard | Format-Table Name, Description, DeviceID
 
 ## 1. Experiência de Campo: O Pânico do Duplo Clique no Terminal de Produção
 
-Em um ambiente corporativo crítico ou em uma estação de trabalho de infraestrutura, um periférico de entrada não é apenas um acessório: é a interface primária entre o engenheiro e o núcleo do sistema operacional. Já passei pela situação frustrante de ter um teclado mecânico de ponta falhando durante uma janela de manutenção de emergência às 02h00 da madrugad
+Em um ambiente corporativo crítico ou em uma estação de trabalho de infraestrutura, um periférico de entrada não é apenas um acessório: é a interface primária entre o engenheiro e o núcleo do sistema operacional. Já passei pela situação frustrante de ter um teclado mecânico de ponta falhando durante uma janela de manutenção de emergência às 02h00 da madrugada. Eu precisava executar comandos encadeados e, de repente, a tecla `Enter` ou a barra de espaço registrava dois ou três toques involuntários para cada pulso físico. Pior aind
 
-a. Eu precisava executar comandos encadeados e, de repente, a tecla `Enter` ou a barra de espaço registrava dois ou três toques involuntários para cada pulso físico. Pior aind
-
-a: em comandos de deleção ou migração de containers, a perda de precisão pode ser catastrófic
-
-a.
-
-Esse comportamento errático — conhecido no meio técnico como key chattering(repique ou duplicação de toques) ekey skipping (falha intermitente de acionamento) — é comum em teclados com switches mecânicos tradicionais baseados em lâminas de contato metálicas (folhas de cobre/ouro). O usuário leigo costuma presumir que a controladora queimou ou que o switch morreu definitivamente. Na maioria esmagadora das vezes em que atendi chamados de bancada, tratava-se de oxidação superficial microscópica, poeira dielétrica ou degradação na leitura do algoritmo de debounce. 
+a: em comandos de deleção ou migração de containers, a perda de precisão pode ser catastrófica. Esse comportamento errático — conhecido no meio técnico como key chattering(repique ou duplicação de toques) ekey skipping (falha intermitente de acionamento) — é comum em teclados com switches mecânicos tradicionais baseados em lâminas de contato metálicas (folhas de cobre/ouro). O usuário leigo costuma presumir que a controladora queimou ou que o switch morreu definitivamente. Na maioria esmagadora das vezes em que atendi chamados de bancada, tratava-se de oxidação superficial microscópica, poeira dielétrica ou degradação na leitura do algoritmo de debounce. 
 
 Neste guia prático de laboratório, mostro o protocolo exato que utilizo para diagnosticar, isolar e reparar esses switches em nível cirúrgico, fazendo uso correto de produtos químicos de grau eletrônico sem destruir as propriedades dos plásticos internos.
 
@@ -45,9 +39,7 @@ Neste guia prático de laboratório, mostro o protocolo exato que utilizo para d
 
 a: As 3 Causas Raiz do Chattering
 
-Para intervir com eficácia, é indispensável entender o que acontece dentro do invólucro do switch quando a chave é pressionad
-
-a. Abaixo estão as três causas fundamentais identificadas em diagnósticos de hardware.
+Para intervir com eficácia, é indispensável entender o que acontece dentro do invólucro do switch quando a chave é pressionada. Abaixo estão as três causas fundamentais identificadas em diagnósticos de hardware.
 
 ```
 +-----------------------------------------------------------------------+
@@ -99,9 +91,7 @@ Antes de desmontar qualquer peça, certifique-se de que a falha não é decorren
 
 5. Desconecte o cabo USB do teclado, aguarde 10 segundos e reconecte em uma porta USB traseira direta da placa-mãe (evite hubs ou extensores). O Windows reinstalará os drivers padrão limpos.
 
-6. Abra um software de teste de latência e repique (como *Keyboard Chattering Fix Tool* ou *Switch Hitter*). Pressione a tecla defeituosa 100 vezes seguidas em cadência moderad
-
-a. Se o log acusar repiques com intervalos inferiores a 30 milissegundos, o problema é comprovadamente físico.
+6. Abra um software de teste de latência e repique (como *Keyboard Chattering Fix Tool* ou *Switch Hitter*). Pressione a tecla defeituosa 100 vezes seguidas em cadência moderada. Se o log acusar repiques com intervalos inferiores a 30 milissegundos, o problema é comprovadamente físico.
 
 ### Etapa 2: Preparação de Bancada e Desenergização Completa
 A regra de ouro de hardware: nunca aplique substâncias químicas condutoras ou solventes com o dispositivo energizado.
@@ -150,12 +140,8 @@ a.
 ### Etapa 4: Troca do Switch em Teclados Hot-Swap ou Re-solda
 Se o método do limpa-contato não resolver (indicando desgaste físico irreversível ou quebra da lâmina):
 
-* Teclados Hot-Swap: Utilize um extrator de switches (*switch puller*). Pressione as travas superior e inferior do switch e puxe-o verticalmente para cim
-
-a. Insira um novo switch alinhando rigorosamente os dois pinos metálicos com os soquetes Kailh/Gateron do PCB para não dobrar os terminais.
-* Teclados Soldados: Utilize ferro de solda ajustado a 350°C, sugador de solda com bico de silicone e fluxo de sold
-
-a. Remova a solda antiga dos dois terminais, extraia o switch danificado, posicione a nova peça e solde novamente utilizando solda 63/37 de boa qualidade.
+* Teclados Hot-Swap: Utilize um extrator de switches (*switch puller*). Pressione as travas superior e inferior do switch e puxe-o verticalmente para cima. Insira um novo switch alinhando rigorosamente os dois pinos metálicos com os soquetes Kailh/Gateron do PCB para não dobrar os terminais.
+* Teclados Soldados: Utilize ferro de solda ajustado a 350°C, sugador de solda com bico de silicone e fluxo de solda. Remova a solda antiga dos dois terminais, extraia o switch danificado, posicione a nova peça e solde novamente utilizando solda 63/37 de boa qualidade.
 
 ---
 
@@ -167,11 +153,7 @@ PERIGO: Nunca utilize WD-40 Multiuso tradicional, óleos lubrificantes, desengri
 </div>
 
 * WD-40 Tradicional (Lata Azul):Este produto contém destilados de petróleo e óleos minerais projetados para soltar parafusos e proteger metais pesados. Ele deixa uma camada viscosa persistente no interior do switch. Em poucas semanas, essa camada atrai poeira em suspensão, transformando o interior do componente em uma pasta abrasiva condutora que inutilizará o switch e destruirá a sensação tátil. Use exclusivamente sprays rotulados explicitamente como "Limpa-Contato Eletrônico Não Oleoso / Secagem Rápida".
-* Álcool 70% Hidratado:O álcool 70% vendido em farmácias contém 30% de água destilad
-
-a. A água evapora lentamente, acumula-se sob o PCB e oxida os contatos metálicos finos, além de provocar curto-circuito imediato se a placa for ligada úmid
-
-a. Se for usar álcool, recorra unicamente aoÁlcool Isopropílico 99,8% (isopropanol absoluto).
+* Álcool 70% Hidratado:O álcool 70% vendido em farmácias contém 30% de água destilada. A água evapora lentamente, acumula-se sob o PCB e oxida os contatos metálicos finos, além de provocar curto-circuito imediato se a placa for ligada úmida. Se for usar álcool, recorra unicamente aoÁlcool Isopropílico 99,8% (isopropanol absoluto).
 * Sobrecarga de Pressão: Não utilize sopradores térmicos nem secadores de cabelo com ar quente na tentativa de secar o solvente mais rápido. As carcaças dos switches e as keycaps (especialmente as fabricadas em plástico ABS) empenam em temperaturas a partir de 60°C a 70°C, inutilizando o alinhamento da haste.
 
 ---
@@ -186,9 +168,7 @@ a: Sim. O solvente dielétrico do spray limpa-contato dissolve óleos e graxas i
 ### P2: Aumentar o "debounce time" no firmware do teclado resolve a falha em definitivo?
 Respost
 
-a: Não, apenas mascara o problema temporariamente. Alguns teclados de marcas premium (como Corsair, Wooting ou modelos compatíveis com QMK/VIA) permitem elevar o tempo de debounce de 5 ms para 15 ms ou 20 ms nas configurações de firmware. Isso faz o microcontrolador esperar mais tempo antes de aceitar um novo comando da mesma tecla, ignorando os repiques da lâmina danificad
-
-a. Contudo, a oxidação ou fadiga metálica continuará progredindo. Conforme a folha de contato se deteriora, o tempo de vibração ultrapassará até mesmo o novo limite, resultando finalmente na parada total do switch. Trate o ajuste de debounce apenas como medida paliativa de contingênci
+a: Não, apenas mascara o problema temporariamente. Alguns teclados de marcas premium (como Corsair, Wooting ou modelos compatíveis com QMK/VIA) permitem elevar o tempo de debounce de 5 ms para 15 ms ou 20 ms nas configurações de firmware. Isso faz o microcontrolador esperar mais tempo antes de aceitar um novo comando da mesma tecla, ignorando os repiques da lâmina danificada. Contudo, a oxidação ou fadiga metálica continuará progredindo. Conforme a folha de contato se deteriora, o tempo de vibração ultrapassará até mesmo o novo limite, resultando finalmente na parada total do switch. Trate o ajuste de debounce apenas como medida paliativa de contingênci
 
 a.
 

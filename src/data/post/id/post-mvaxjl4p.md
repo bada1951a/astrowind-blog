@@ -9,11 +9,7 @@ theme: "Sunset Horizon Coral"
 ---
 
 
-Jam menunjukkan pukul 08.55 WIB. Lima menit lagi *daily standup meeting* via Zoom akan dimulai di ruang *huddle* kantor startup kami di kawasan SCBD, Jakart
-
-a. Sialnya, laptop Windows 10 operasional saya baru saja dinyalakan karena habis melakukan *update* sistem semalam. Layar *desktop* sudah muncul, tapi kursor mutar-mutar terus, kipas bergemuruh kencang, dan aplikasi Slack serta Chrome sama sekali tidak mau dibuk
-
-a. Keringat dingin mulai bercucuran karena saya harus segera membagikan laporan server internal yang down semalam. Masalah klasik: laptop kehabisan napas karena puluhan aplikasi langsung *nyala* bersamaan saat *booting*.
+Jam menunjukkan pukul 08.55 WIB. Lima menit lagi *daily standup meeting* via Zoom akan dimulai di ruang *huddle* kantor startup kami di kawasan SCBD, Jakarta. Sialnya, laptop Windows 10 operasional saya baru saja dinyalakan karena habis melakukan *update* sistem semalam. Layar *desktop* sudah muncul, tapi kursor mutar-mutar terus, kipas bergemuruh kencang, dan aplikasi Slack serta Chrome sama sekali tidak mau dibuka. Keringat dingin mulai bercucuran karena saya harus segera membagikan laporan server internal yang down semalam. Masalah klasik: laptop kehabisan napas karena puluhan aplikasi langsung *nyala* bersamaan saat *booting*.
 
 Situasi seperti ini pasti sering bikin darah tinggi, kan? Kalau Anda bekerja di lingkungan cepat seperti *startup* Jakarta, menunggu laptop *loading* selama 5 sampai 10 menit adalah kemewahan yang tidak kita miliki. 
 
@@ -50,9 +46,7 @@ a.
 Tidak perlu instal software tambahan atau masuk ke pengaturan BIOS yang ribet. Cukup gunakan fitur bawaan Windows 10 dengan langkah-langkah kilat berikut:
 
 #### Langkah 1: Buka Task Manager
-Tekan kombinasi tombol Ctrl + Shift + Esc secara bersamaan di keyboard And
-
-a. Cara ini adalah jalan pintas paling cepat untuk memanggil Task Manager tanpa harus klik kanan *taskbar*.
+Tekan kombinasi tombol Ctrl + Shift + Esc secara bersamaan di keyboard Anda. Cara ini adalah jalan pintas paling cepat untuk memanggil Task Manager tanpa harus klik kanan *taskbar*.
 
 #### Langkah 2: Masuk ke Tab "Startup"
 Pada jendela Task Manager yang muncul, klik tab Startup(biasanya berada di bagian atas, berikon speedometer atau meteran). Jika Anda tidak melihat tab tersebut, klikMore details di bagian bawah jendela terlebih dahulu.

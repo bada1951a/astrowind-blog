@@ -21,9 +21,7 @@ Se você já passou pela humilhação de ver o computador demorar dez minutos pa
 
 ## Por que o seu Windows 10 demora tanto para ligar?
 
-Antes de aplicar a faca cirúrgica no sistema, vale a pena entender a raiz do problem
-
-a. A lentidão na inicialização geralmente é causada por três fatores principais:
+Antes de aplicar a faca cirúrgica no sistema, vale a pena entender a raiz do problema. A lentidão na inicialização geralmente é causada por três fatores principais:
 
 1. Efeito "Cachorro de Guarda": Aplicativos como antivírus secundários, Discord, Steam e utilitários de impressora configuram-se automaticamente para iniciar junto com o sistema operacional, disputando I/O do disco rígido ou SSD logo nos primeiros segundos.
 
@@ -52,9 +50,7 @@ Clique com o botão direito em cima do aplicativo que você nãoprecisa que rode
 <div style="border-left: 4px solid #e11d48; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Dica de Ouro de Engenhari
 
-a:</strong> Não saia desativando tudo de forma ceg
-
-a. Mantenha ativos apenas o seu antivírus principal e drivers essenciais (como painéis de controle de placa de vídeo ou touchpad). Se tiver dúvida sobre um processo com nome estranho, clique com o botão direito nele e selecione "Pesquisar online" para verificar se é seguro desativá-lo.
+a:</strong> Não saia desativando tudo de forma cega. Mantenha ativos apenas o seu antivírus principal e drivers essenciais (como painéis de controle de placa de vídeo ou touchpad). Se tiver dúvida sobre um processo com nome estranho, clique com o botão direito nele e selecione "Pesquisar online" para verificar se é seguro desativá-lo.
 </div>
 
 ---
@@ -72,9 +68,7 @@ a.
 
 ## Perguntas Frequentes (FAQ)
 
-1. Desativar programas na inicialização pode danificar o Windows? De forma algum
-
-a. A aba "Inicializar" do Gerenciador de Tarefas lida apenas com aplicativos de usuário e utilitários opcionais. O Windows protege seus arquivos e serviços essenciais de sistema, impedindo que você desative algo crítico por engano nessa tel
+1. Desativar programas na inicialização pode danificar o Windows? De forma alguma. A aba "Inicializar" do Gerenciador de Tarefas lida apenas com aplicativos de usuário e utilitários opcionais. O Windows protege seus arquivos e serviços essenciais de sistema, impedindo que você desative algo crítico por engano nessa tel
 
 a.
 

@@ -59,9 +59,7 @@ Spesso il driver sta bene, ma il "cervello" audio di Windows si è addormentato.
 - Premi la combinazione `Ctrl + Shift + Esc` per aprire [Gestione attività].
 - Vai sulla scheda Servizi (l'icona con gli ingranaggi a sinistra).
 - Cerca il servizio denominato `Audiosrv` (Servizio Windows Audio).
-- Cliccaci sopra con il tasto destro del mouse e seleziona Riavvi
-
-a. Vedrai che nel giro di due secondi l'audio tornerà a funzionare magicamente.
+- Cliccaci sopra con il tasto destro del mouse e seleziona Riavvia. Vedrai che nel giro di due secondi l'audio tornerà a funzionare magicamente.
 
 <div style="border-left: 4px solid #78350f; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Consiglio Pro:</strong> Se usi cuffie Bluetooth con microfono integrato, ricorda che Windows 11 tende a passare dalla modalità stereo di alta qualità alla modalità vivavoce a bassa fedeltà se un'app (come Teams o Zoom) richiede l'uso del microfono. Controlla sempre le impostazioni audio dell'app specifica che stai usando.
@@ -79,8 +77,6 @@ D: Dopo ogni aggiornamento di Windows 11 perdo l'audio delle casse integrate. Co
 
 R: Gli aggiornamenti cumulativi di Windows spesso sovrascrivono i driver Realtek con versioni generiche Microsoft che funzionano male. La soluzione definitiva è scaricare il pacchetto driver proprietario direttamente dal sito del produttore del tuo PC (Dell, Lenovo, HP, ecc.) e disabilitare temporaneamente l'installazione automatica dei driver tramite Windows Update.
 
-D: Le cuffie funzionano su YouTube ma muoiono appena apro il software gestionale dell'aziend
-
-a. Perché?
+D: Le cuffie funzionano su YouTube ma muoiono appena apro il software gestionale dell'azienda. Perché?
 
 R: Significa che il software gestionale o la piattaforma di Unified Communication sta monopolizzando l'uso esclusivo della scheda audio. Vai nelle impostazioni avanzate dell'app che causa il blocco e disabilita l'opzione "Consenti alle applicazioni di assumere il controllo esclusivo del dispositivo" nel pannello classico dei suoni (`mmsys.cpl`, tab Proprietà del dispositivo -> Avanzate).

@@ -9,9 +9,7 @@ theme: "Forest Emerald Bio"
 ---
 
 
-Była dokładnie 21:40, gdy w naszym biurze we wrocławskim parku technologicznym panowała niemal grobowa cisz
-
-a. Zostały zaledwie dwa dni do kluczowego audytu stabilności infrastruktury przed wejściem zewnętrznego klienta, a mój główny stacja robocza testowa ugrzęzła na ekranie blokady z denerwującym komunikatem: *„Trwa przygotowywanie aktualizacji. Nie wyłączaj komputer
+Była dokładnie 21:40, gdy w naszym biurze we wrocławskim parku technologicznym panowała niemal grobowa cisza. Zostały zaledwie dwa dni do kluczowego audytu stabilności infrastruktury przed wejściem zewnętrznego klienta, a mój główny stacja robocza testowa ugrzęzła na ekranie blokady z denerwującym komunikatem: *„Trwa przygotowywanie aktualizacji. Nie wyłączaj komputer
 
 a. 100% ukończono”*. Komputer stał tak bezczynnie od ponad dwóch godzin. Dysk pracował na minimalnych obrotach, procesor spał, a ja czułem, jak pot spływa mi po plecach, bo na tym hoście miałem postawione ostatnie środowiska testowe pod bazy danych. Restart na twardo? Ryzyko uszkodzenia partycji rozruchowej i korupcji rejestru było zbyt wielkie.
 

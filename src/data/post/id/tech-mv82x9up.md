@@ -67,9 +67,7 @@ Karena kita lagi ngejar deadline mepet, nggak usah pusing buka-buka command prom
 
 #### 3. Cek dan Pindah Slot RAM (Slot Migration)
 * Kalau RAM-nya ada dua keping, coba pasang satu keping dulu di slot pertama (biasanya slot A2 atau DIMM_1 yang paling dekat dengan kipas CPU).
-* Kalau tetap nggak mau nyala, pindahkan kepingan tadi ke slot sebelahny
-
-a. Kadang ada jalur pin di *motherboard* yang kotor atau retak rambut akibat panas berlebih.
+* Kalau tetap nggak mau nyala, pindahkan kepingan tadi ke slot sebelahnya. Kadang ada jalur pin di *motherboard* yang kotor atau retak rambut akibat panas berlebih.
 
 #### 4. Clear CMOS (Opsional tapi Ampuh)
 * Kalau langkah di atas belum ngefek, cari baterai koin di *motherboard* (CR2032). Lepas baterai tersebut selama 3 menit, atau jumper pin `CLR_CMOS` pakai obeng minus selama 5 detik buat mereset BIOS balik ke pengaturan pabrik.

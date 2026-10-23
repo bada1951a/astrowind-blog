@@ -9,9 +9,7 @@ theme: "Warm Coffee Latte"
 ---
 
 
-Jantung saya rasanya mau copot. Waktu menunjukkan pukul 09.55 pagi di apartemen saya kawasan Sudirman, Jakart
-
-a. Lima menit lagi, meeting koordinasi kuartal via Microsoft Teams dengan para petinggi kantor di SCBD harus dimulai. Sialnya, malam tadi saya ketiduran saat merangkap tugas WFH, dan pagi ini saya langsung menyalakan laptop kantor, menyambungkan VPN perusahaan agar akses server internal aman, lalu membuka aplikasi meeting. Tiba-tiba, sunyi senyap. Ketika saya coba memutar video di YouTube untuk mengetes suara, sama sekali tidak ada output audio yang keluar dari speaker laptop. Ikon speaker di taskbar kanan bawah berikon silang merah dengan keterangan [No Audio Output Device is Installed]. Bayangkan rasany
+Jantung saya rasanya mau copot. Waktu menunjukkan pukul 09.55 pagi di apartemen saya kawasan Sudirman, Jakarta. Lima menit lagi, meeting koordinasi kuartal via Microsoft Teams dengan para petinggi kantor di SCBD harus dimulai. Sialnya, malam tadi saya ketiduran saat merangkap tugas WFH, dan pagi ini saya langsung menyalakan laptop kantor, menyambungkan VPN perusahaan agar akses server internal aman, lalu membuka aplikasi meeting. Tiba-tiba, sunyi senyap. Ketika saya coba memutar video di YouTube untuk mengetes suara, sama sekali tidak ada output audio yang keluar dari speaker laptop. Ikon speaker di taskbar kanan bawah berikon silang merah dengan keterangan [No Audio Output Device is Installed]. Bayangkan rasany
 
 a: bos besar sudah standby di layar, VPN aktif, tapi laptop malah siuman bisu. 
 
@@ -70,9 +68,7 @@ Jika langkah di atas belum mempan, masalahnya ada di driver hardware yang korup.
 - Anda akan melihat driver audio utama Anda, misalnya Realtek(R) AudioatauIntel Audio.
 - Klik kanan pada driver tersebut, lalu pilih Perbarui driver (Update driver) -> *Cari driver secara otomatis*.
 - Jika Windows bilang driver sudah yang paling baru tapi suara tetap tidak keluar, pilih Copot pemasangan perangkat (Uninstall device). Centang kotak *Attempt to remove the driver for this device*, lalu klik Uninstall. 
-- Setelah itu, cukup *Restart* laptop And
-
-a. Windows 11 secara otomatis akan menginstal ulang driver bawaan yang bersih begitu komputer menyala kembali.
+- Setelah itu, cukup *Restart* laptop Anda. Windows 11 secara otomatis akan menginstal ulang driver bawaan yang bersih begitu komputer menyala kembali.
 
 ---
 

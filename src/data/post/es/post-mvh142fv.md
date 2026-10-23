@@ -9,9 +9,7 @@ theme: "Graphite Technical Paper"
 ---
 
 
-Eran las 18:45 en nuestra oficina corporativa en Madrid. A solo quince minutos de enviar el paquete definitivo de un proyecto clave para un cliente multinacional, la pantalla de la workstation principal se quedo totalmente congelad
-
-a. El cursor no respondia, el teclado estaba muerto y el ventilador seguia zumbando con una calma insultante. Un reinicio por botonazo nos costo diez minutos vitales y, por supuesto, la entrega se retraso, generando un ambiente de tension maxima en el departamento de sistemas. Lo peor no fue el bloqueo en si, sino que era la tercera vez en la semana que ocurria sin dejar rastro aparente.
+Eran las 18:45 en nuestra oficina corporativa en Madrid. A solo quince minutos de enviar el paquete definitivo de un proyecto clave para un cliente multinacional, la pantalla de la workstation principal se quedo totalmente congelada. El cursor no respondia, el teclado estaba muerto y el ventilador seguia zumbando con una calma insultante. Un reinicio por botonazo nos costo diez minutos vitales y, por supuesto, la entrega se retraso, generando un ambiente de tension maxima en el departamento de sistemas. Lo peor no fue el bloqueo en si, sino que era la tercera vez en la semana que ocurria sin dejar rastro aparente.
 
 <div style="border-left: 4px solid #475569; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Nota del especialist
@@ -47,9 +45,7 @@ Antes de hacer clic en cualquier sitio, debemos entender que buscan nuestros ojo
 Vamos a aplicar el procedimiento tecnico estandar para extraer la verdad de los registros de Windows sin rodeos academicos.
 
 #### Paso 1: Abrir el Visor de Eventos de Windows
-Usa la combinacion de teclas `Windows + X` en tu teclado y selecciona Visor de eventos en el menu rapido que aparece abajo a la izquierd
-
-a. Tambien puedes buscarlo directamente escribiendo "Visor de eventos" en la barra de tareas de Windows 11.
+Usa la combinacion de teclas `Windows + X` en tu teclado y selecciona Visor de eventos en el menu rapido que aparece abajo a la izquierda. Tambien puedes buscarlo directamente escribiendo "Visor de eventos" en la barra de tareas de Windows 11.
 
 #### Paso 2: Filtrar los registros criticos del sistema
 1. En la columna de la izquierda, haz clic en Registros de Windowsy luego seleccionaSistem
@@ -58,9 +54,7 @@ a.
 
 2. En la columna de la derecha, haz clic en la opcion Filtrar registro actual....
 
-3. En la ventana que se abre, busca la casilla de Nivel de eventoy marca unicamente las opciones:Critico,ErroryAdvertenci
-
-a. Haz clic en Aceptar.
+3. En la ventana que se abre, busca la casilla de Nivel de eventoy marca unicamente las opciones:Critico,ErroryAdvertencia. Haz clic en Aceptar.
 
 #### Paso 3: Buscar las marcas de tiempo del congelamiento
 Anota mentalmente la hora exacta en la que tu PC se congelo hoy. Ahora, busca en la lista central los eventos registrados exactamente en esa franja horaria o 1-2 minutos antes. 
@@ -80,9 +74,7 @@ a.
 
 - Atencion con la energi
 
-a: Si el Visor de eventos te muestra constantemente el error Kernel-Power ID 41 sin un codigo de error bugcheck previo, es casi seguro un problema fisico de la fuente de alimentacion o una regleta defectuosa en la oficin
-
-a. No descartes cambiar la fuente antes de seguir testeando software.
+a: Si el Visor de eventos te muestra constantemente el error Kernel-Power ID 41 sin un codigo de error bugcheck previo, es casi seguro un problema fisico de la fuente de alimentacion o una regleta defectuosa en la oficina. No descartes cambiar la fuente antes de seguir testeando software.
 - Temperaturas bajo control: Utiliza herramientas de monitorizacion para asegurarte de que los sensores no superan los 85°C en picos de trabajo. Un procesador haciendo thermal throttling severo puede colgar por completo el bus PCIe de la placa base.
 - Copia de seguridad preventiv
 

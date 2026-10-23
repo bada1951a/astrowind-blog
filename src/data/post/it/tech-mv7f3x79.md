@@ -15,9 +15,7 @@ theme: "Nordic Clean Ice"
 
 Durante l’ultimo roll-out di postazioni docking per il reparto ingegneria della nostra sede di Milano, mi sono trovato di fronte a un classico incubo sistemistico: laptop aziendali di fascia alta (ThinkPad e Dell XPS) che, collegati via Thunderbolt o HDMI a monitor 4K secondari, manifestavano micro-disconnessioni casuali, sfarfallio ritmico della retroilluminazione e il famigerato messaggio *"Nessun segnale rilevato"*. 
 
-L'istinto iniziale dell'utente medio porta a muovere il cavo o a riavviare alla cieca la macchin
-
-a. Tuttavia, sul campo, la colpa è raramente del cavo in sé: nella quasi totalità dei casi ci troviamo di fronte a un fallimento del sottosistema video di Windows, corruzioni nella negoziazione EDID o conflitti latenti tra le pipeline della GPU integrata e di quella discret
+L'istinto iniziale dell'utente medio porta a muovere il cavo o a riavviare alla cieca la macchina. Tuttavia, sul campo, la colpa è raramente del cavo in sé: nella quasi totalità dei casi ci troviamo di fronte a un fallimento del sottosistema video di Windows, corruzioni nella negoziazione EDID o conflitti latenti tra le pipeline della GPU integrata e di quella discret
 
 a.
 
@@ -157,15 +155,11 @@ Nei contesti di produzione ad alta intensità raccomando di prestare attenzione 
 Questo comportamento conferma un problema a livello di composizione grafica gestita dal Desktop Window Manager (DWM). Quando un'applicazione richiede il rendering Direct3D, il sistema delega il calcolo alla GPU. Se vi è un'incoerenza nella commutazione degli stati energetici (stati P-State) della GPU o se l'opzione "Pianificazione GPU con accelerazione hardware" in Windows è attiva su driver non allineati, il clock video subisce micro-cali di tensione, causando il flicker.
 
 #### 2. Il monitor continua a dire "Nessun segnale", ma Windows vede lo schermo in Impostazioni. Come procedo?
-In questo scenario il bus logico comunica, ma la pipeline video ad alta velocità è bloccat
-
-a. Apri Prompt dei comandi come amministratore e resetta il sottosistema di erogazione DisplayPort con il comando:
+In questo scenario il bus logico comunica, ma la pipeline video ad alta velocità è bloccata. Apri Prompt dei comandi come amministratore e resetta il sottosistema di erogazione DisplayPort con il comando:
 ```cmd
 dism /online /cleanup-image /restorehealth
 ```
-Subito dopo, vai in Impostazioni schermo, seleziona il monitor cieco, cambia temporaneamente la risoluzione su `1280x720` a `60Hz`. Questo forza la scheda grafica a richiedere una larghezza di banda minim
-
-a. Se a questa risoluzione compare il segnale, il problema risiede nella larghezza di banda del cavo o nei timing video avanzati non supportati dalla dock.
+Subito dopo, vai in Impostazioni schermo, seleziona il monitor cieco, cambia temporaneamente la risoluzione su `1280x720` a `60Hz`. Questo forza la scheda grafica a richiedere una larghezza di banda minima. Se a questa risoluzione compare il segnale, il problema risiede nella larghezza di banda del cavo o nei timing video avanzati non supportati dalla dock.
 
 #### 3. È sicuro disattivare completamente la GPU integrata da Gestione dispositivi per usare solo quella dedicata?
 No, è caldamente sconsigliato. Sulla maggior parte dei moderni laptop con architettura mobile, il display integrato e talvolta persino le porte USB-C/DisplayPort sono collegate fisicamente ai pin di output della iGPU. Disattivando l'adattatore grafico integrato in *Gestione dispositivi*, Windows passerà forzatamente al *Microsoft Basic Display Adapter*, perdendo l'accelerazione hardware di sistema, il supporto a risoluzioni superiori a 1080p e l'output multimonitor.
