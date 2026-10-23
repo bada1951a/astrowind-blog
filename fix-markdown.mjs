@@ -8,25 +8,27 @@ if (!fs.existsSync(POSTS_BASE_DIR)) {
   process.exit(1);
 }
 
-// =========================================================================
-// 모든 예외 케이스 완벽 대응 + 단어 쪼개짐(Ja., mengatasinya.) 완전 차단
-// =========================================================================
 function sanitizeMarkdownFormatting(content) {
   let cleaned = content;
 
-  // 1. 마크다운 볼드(**) 기호 일괄 제거
+  // 1. 마크다운 볼드(**) 기호 제거
   cleaned = cleaned.replace(/\*\*/g, '');
 
-  // 2. 물음표(?) 뒤에 공백 없이 바로 일반 글자가 오면 강제 띄어쓰기 (?단어 -> ? 단어)
+  // 2. [복원] 앞선 스크립트로 인해 잘못 쪼개진 단어 끝 '\n\na.' 원상태로 복원
+  // 예: "koelpast\n\na. Zodra" -> "koelpasta. Zodra"
+  // 예: "mengatasiny\n\na. Cukup" -> "mengatasinya. Cukup"
+  cleaned = cleaned.replace(/([a-zA-Z\u00C0-\u024F\u1EA0-\u1EF9]+)\s*\n+\s*a\.\s+([A-Z\u00C0-\u024F\u1EA0-\u1EF9])/g, '$1a. $2');
+
+  // 3. 물음표(?) 뒤에 공백 없이 바로 일반 글자가 오면 띄어쓰기 (?단어 -> ? 단어)
   cleaned = cleaned.replace(/\?([A-Za-z\u00C0-\u024F\u1EA0-\u1EF9가-힣])/g, '? $1');
 
-  // 3. 물음표(?) 바로 뒤에 대문자 Q/A(A:, A1:, Q:, Q1: 등)가 붙어 있으면 강제 두 줄 개행 (소문자 a 제외)
+  // 4. 물음표(?) 뒤에 대문자 Q/A(A:, A1:, Q:, Q1: 등)가 붙은 경우만 두 줄 개행
   cleaned = cleaned.replace(/\?\s*([QA][0-9]*\s*[:.])/g, '?\n\n$1');
 
-  // 4. 문장 부호(.!) 뒤에 대문자 Q/A 또는 번호 목록(1., 2.)이 붙어 있으면 강제 두 줄 개행
+  // 5. 문장 부호(.!) 뒤에 대문자 Q/A 또는 번호 목록(1., 2.)이 붙은 경우 두 줄 개행
   cleaned = cleaned.replace(/([.!])\s*([QA][0-9]*\s*[:.]|[0-9]+\.\s+)/g, '$1\n\n$2');
 
-  // 5. 소문자 단어 쪼개짐 방지: 반드시 공백 뒤에 오는 대문자 Q/A 머리말만 줄바꿈 처리
+  // 6. 독립된 대문자 Q/A 머리말(앞에 공백이 있는 경우만) 앞 줄바꿈 확보
   cleaned = cleaned.replace(/([^\n])\s+([QA][0-9]*\s*[:.])/g, '$1\n\n$2');
   cleaned = cleaned.replace(/([.!])\s*(D:|R:|Risposta|Domande)/gi, '$1\n\n$2');
 
@@ -49,7 +51,7 @@ function getAllMdFiles(dir, fileList = []) {
 
 async function runFix() {
   console.log("==================================================");
-  console.log("🛠️ 모든 언어/패턴 마크다운 완전 정제 시작");
+  console.log("🛠️ 마크다운 서식 정제 및 쪼개진 단어 자동 복원 시작");
   console.log("==================================================");
 
   const files = getAllMdFiles(POSTS_BASE_DIR);
@@ -76,7 +78,7 @@ async function runFix() {
       fs.writeFileSync(filePath, newContent, 'utf-8');
       modifiedCount++;
       const relativePath = path.relative(process.cwd(), filePath);
-      console.log(`✅ [수정 완료] ${relativePath}`);
+      console.log(`✅ [복원/수정 완료] ${relativePath}`);
     }
   }
 
