@@ -33,7 +33,7 @@ PC를 켤 때마다 화면은 켜지는데 마우스 커서가 버벅이고 브�
 
 
 
-![Tech Hardware Guide](https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1200&h=675&q=85)
+![Tech Hardware Guide](https://images.unsplash.com/photo-1519389950473-47ba0277781c? auto=format&fit=crop&w=1200&h=675&q=85)
 
 ## 2. 1분 만에 끝내는 시작 프로그램 비활성화 스텝별 가이드
 

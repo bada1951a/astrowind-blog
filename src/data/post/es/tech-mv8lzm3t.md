@@ -23,7 +23,9 @@ Eran las 8:55 AM, a solo cinco minutos de que el *Director General* entrara a la
 
 En el mundo real de la oficina, los cuellos de botella del arranque se deben casi siempre a tres villanos habituales:
 1. La plaga de daemons residentes: Cada aplicación que instalas (Teams, Slack, Adobe Updater, OneDrive, el maldito gestor de la impresora HP) cree que es el centro del universo y se auto-añade al registro de Windows para ejecutarse en segundo plano antes de que el usuario siquiera toque el teclado.
+
 2. Servicios huérfanos y parches de firmware obsoletos: Placas base con UEFI/BIOS desactualizadas que gestionan mal los estados de energía C-State y la inicialización de dispositivos NVMe.
+
 3. El desgaste lógico del almacenamiento: Un SSD sin espacio para *over-provisioning* o con sectores lógicos pidiendo auxilio debido a fragmentaciones crónicas en particiones mal dimensionadas.
 
 ---
@@ -36,7 +38,9 @@ Para evitar que esto vuelva a ocurrir en el parque informático de la empresa, d
 No uses CCleaner ni herramientas milagrosas de dudosa procedencia. Vamos directo al núcleo del sistema operativo.
 
 1. Presiona `Ctrl + Shift + Esc` para abrir el Administrador de tareas.
+
 2. Dirígete a la pestaña Aplicaciones de inicio (Startup).
+
 3. Evalúa el *Impacto de inicio* (Startup impact). Deshabilita sin miedo todo lo que no sea el controlador gráfico o el antivirus corporativo.
 
 Si quieres ir un nivel más allá (estilo sysadmin pro), clona o descarga el script de automatización desde repositorios confiables de GitHub orientados a la optimización de entornos Windows, o utiliza la suite oficial Sysinternals (Autoruns) para cazar daemons ocultos en el registro:
@@ -50,7 +54,9 @@ chkdsk C: /f /r
 Un arranque lento a veces oculta un problema de particionado o falta de alineación en discos de estado sólido (SSD).
 
 1. Haz clic derecho en el botón de Inicio y abre Administración de discos (*Disk Management*).
+
 2. Verifica que la partición del sistema operativo tenga al menos un 15% o 20% de espacio libre real. Los SSD sufren caídas drásticas de velocidad de lectura/escritura aleatoria (IOPS) cuando rozan el límite de su capacidad.
+
 3. Si detectas particiones de recuperación obsoletas de equipos antiguos, límpialas usando la utilidad CLI nativa:
 
 ```powershell
@@ -62,7 +68,9 @@ Get-Volume | Select-Object DriveLetter, FileSystemLabel, FileSystem, HealthStatu
 Muchos servicios de Windows vienen activados por defecto ("Automático") sin que ninguna estación de trabajo los necesite realmente.
 
 1. Presiona `Win + R`, escribe `services.msc` y pulsa Enter.
+
 2. Busca servicios como *SysMain* (antes Superfetch) si el equipo usa un SSD rápido (a veces genera picos de I/O innecesarios), o servicios de telemetría agresiva que consumen ciclos de CPU al arrancar.
+
 3. Cámbiales el tipo de inicio a ManualoDeshabilitado según las políticas de seguridad de tu organización.
 
 <div style="border-left: 4px solid #84cc16; padding: 12px 16px; margin: 20px 0; background-color: rgba(132, 204, 22, 0.05); border-radius: 4px;">

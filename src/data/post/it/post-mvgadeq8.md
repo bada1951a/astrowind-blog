@@ -19,7 +19,9 @@ Il problema non era solo estetico, ma bloccava letteralmente l'interazione con l
 
 Ecco i 3 motivi tecnici principali per cui questo fastidio visivo si trasforma in un blocco operativo:
 1. Conflitto di rendering Direct3D: Nelle versioni non attivate, Windows gestisce i livelli grafici della filigrana in sovrimpressione, mandando in tilt l'accelerazione hardware di alcune applicazioni gestionali legacy.
+
 2. Coda di stampa e spooler sovraccarichi: Spesso la notifica persistente occupa la memoria video dedicata (VRAM) causando stuttering nei software di produttività pesante.
+
 3. Criteri di Group Policy bloccati: Se il PC fa parte di un dominio aziendale disallineato, il sistema tenta continuamente di aggiornare lo stato di attivazione, congelando temporaneamente i thread dell'interfaccia utente.
 
 Per evitare di perdere ore dietro a script scaricati da forum sconosciuti che rischiano solo di infettare la macchina con malware, la via più pulita, rapida e sicura passa attraverso il Prompt dei comandi (`cmd`) nativo di Windows, sfruttando una procedura di gestione della licenza pulita o arrestando temporaneamente il processo di notifica senza toccare i file di sistema critici.
@@ -33,12 +35,14 @@ Ecco la procedura passo-passo che ho testato sul campo per risolvere definitivam
 ### Procedura passo-passo tramite CMD
 
 1. Apri il Prompt dei comandi come Amministratore:Premi il tasto Windows sulla tastiera, digita `cmd`, fai clic con il tasto destro suPrompt dei comandinei risultati della ricerca e selezionaEsegui come amministratore.
+
 2. Verifica lo stato della licenza:
    Nella finestra nera del terminale, digita il comando di controllo della licenza per identificare il canale di attivazione:
    ```cmd
    slmgr /xpr
    ```
    Premi Invio e attendi la finestra di dialogo che conferma lo stato attuale del sistema operativo.
+
 3. Arresta temporaneamente il servizio di notifica:
    Per impedire al sistema di ridisegnare la filigrana sopra le tue finestre di lavoro, puoi reimpostare il periodo di prova o fermare il gestore delle notifiche tramite il comando di gestione script:
    ```cmd

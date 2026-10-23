@@ -52,7 +52,7 @@ Setiap monitor mengirimkan data EDID yang berisi resolusi native, profil warna, 
 
 
 
-![Hardware Diagnostic & Troubleshooting](https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1000&h=550&q=80)
+![Hardware Diagnostic & Troubleshooting](https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe? auto=format&fit=crop&w=1000&h=550&q=80)
 
 ### 2. Tabrakan Driver Hybrid Graphics (iGPU vs dGPU)
 Mayoritas laptop bisnis mengandalkan kombinasi Intel Iris Xe / AMD Radeon Graphics untuk efisiensi daya dan NVIDIA GeForce / RTX untuk komputasi berat. Output fisik HDMI atau DisplayPort lewat USB-C sering kali dialihkan melalui jalur perangkat keras yang diatur oleh iGPU terlebih dahulu. Jika Windows Update mengganti driver display OEM dengan driver generik tanpa memperbarui subsistem dGPU, sinkronisasi *frame buffer* gagal, menghasilkan fenomena *blackout* 1–2 detik secara berkala.
@@ -70,9 +70,11 @@ Ikuti urutan langkah di bawah ini secara runut, mulai dari perbaikan non-invasif
 Sebelum membongkar konfigurasi sistem, picu restart pada *Desktop Window Manager* dan driver display tanpa me-reboot komputer.
 
 1. Pastikan monitor eksternal dalam posisi terhubung dan menyala.
+
 2. Tekan kombinasi tombol pintas secara bersamaan:  
    `Win` + `Ctrl` + `Shift` + `B`
 3. Layar laptop dan monitor eksternal akan berkedip hitam selama satu detik disertai bunyi *beep* pendek dari sistem.
+
 4. Perintah ini memaksa kernel Windows menginisialisasi ulang tumpukan driver WDDM (*Windows Display Driver Model*) dan membangun kembali *surface buffer*.
 
 <div style="border-left: 4px solid #2563eb; padding: 14px 18px; margin: 24px 0; background-color: rgba(37, 99, 235, 0.05); border-radius: 4px;">
@@ -83,6 +85,7 @@ Sebelum membongkar konfigurasi sistem, picu restart pada *Desktop Window Manager
 Jika cache konfigurasi tampilan telah korup, sistem akan terus memuat konfigurasi yang keliru meskipun kabel dicabut-pasang. Kita perlu menghapus cache ini melalui Registry Editor.
 
 1. Buka kotak dialog Run dengan menekan `Win` + `R`, ketik `regedit`, lalu tekan Enter.
+
 2. Masuk ke direktori berikut:
    ```text
    HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\GraphicsDrivers
@@ -92,7 +95,9 @@ Jika cache konfigurasi tampilan telah korup, sistem akan terus memuat konfiguras
    * `Connectivity`
    * `ScaleFactors`
 4. Klik kanan pada folder `Configuration`, lalu pilih Delete. Lakukan hal yang sama untuk folder `Connectivity` dan `ScaleFactors`.
+
 5. Jangan khawatir, folder-folder ini aman dihapus karena Windows akan otomatis membuatnya kembali dalam kondisi default (*fresh*) begitu sistem mendeteksi layar aktif.
+
 6. Lakukan *restart* laptop Anda.
 
 ```
@@ -107,12 +112,18 @@ Jika cache konfigurasi tampilan telah korup, sistem akan terus memuat konfiguras
 Jika sinyal masih terputus, langkah berikutnya adalah mereset adaptor display dan driver Generic PnP Monitor langsung dari konsol manajemen perangkat.
 
 1. Klik kanan pada tombol Start Windows, pilih Device Manager.
+
 2. Buka kategori Display adapters.
+
 3. Klik kanan pada kartu grafis Anda (misalnya: *Intel(R) Iris(R) Xe Graphics* atau *AMD Radeon Graphics*), pilih Properties.
+
 4. Masuk ke tab Driver, lalu klik opsiRoll Back Driver jika opsi tersebut aktif (ini berguna jika masalah muncul tepat setelah pembaruan otomatis).
+
 5. Jika opsi rollback tidak aktif, kembali ke jendela utama Device Manager, klik kanan pada kartu grafis, dan pilih Uninstall device. 
    * *Perhatian:* Jangan centang opsi *"Attempt to remove the driver for this device"* pada tahap ini.
+
 6. Perluas juga kategori Monitors, klik kanan pada semua entri bertuliskanGeneric PnP Monitor, dan pilihUninstall device.
+
 7. Pada menu bar bagian atas Device Manager, klik ikon Scan for hardware changes (ikon komputer dengan kaca pembesar). Layar akan mendeteksi ulang adaptor dan monitor secara otomatis.
 
 ```
@@ -129,15 +140,20 @@ Device Manager
 Flickering parah sering kali bersumber dari ketidakcocokan frekuensi transmisi sinyal (*refresh rate*) atau fitur Variable Refresh Rate (G-Sync/FreeSync) yang mencoba berjalan pada monitor kerja biasa.
 
 1. Buka SettingsWindows (`Win` + `I`) >System>Display.
+
 2. Klik monitor eksternal Anda (biasanya monitor nomor 2), lalu gulir ke bawah dan pilih Advanced display settings (Pengaturan Tampilan Lanjutan).
+
 3. Periksa nilai pada Choose a refresh rate. Jika terpilih nilai non-standar (seperti 59.94Hz atau 74.97Hz), ubah secara manual ke nilai bilangan bulat stabil:60.00 Hz.
+
 4. Jika monitor mendukung refresh rate tinggi (144Hz ke atas) tetapi terhubung melalui adaptor biasa, turunkan refresh rate ke 60Hz atau 100Hz untuk mengurangi beban bandwidth transmisi.
+
 5. Kembali ke menu Display utama, pilih opsi Graphics, klikChange default graphics settings, lalu nonaktifkan tombolVariable refresh ratedanHardware-accelerated GPU scheduling (HAGS) untuk pengujian stabilitas.
 
 ### Langkah 5: Verifikasi Integritas File Driver via Command Prompt
 Jika driver display korup akibat kegagalan penulisan sektor SSD, perbaiki dependensi kernel Windows menggunakan utilitas bawaan:
 
 1. Buka Windows Search, ketik `cmd`, klik kanan pada Command Prompt, lalu pilihRun as administrator.
+
 2. Jalankan perintah perbaikan citra sistem berikut:
    ```cmd
    DISM.exe /Online /Cleanup-image /Restorehealth

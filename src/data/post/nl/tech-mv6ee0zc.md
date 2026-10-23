@@ -54,7 +54,7 @@ Bij moderne toetsenborden met Kailh- of Gateron hot-swap sockets zitten de schak
 Elke mechanische schakelaar stuitert van nature fysiek na (ongeveer 2 tot 5 milliseconden). De microcontroller van het toetsenbord filtert dit weg via een zogeheten *debounce-algoritme* (zoals Eager PR of Symmetric Defer). Wanneer de fysieke slijtage van het koperen bladveertje ervoor zorgt dat de stuitertijd langer duurt dan de softwarematige filterdrempel (vaak ingesteld op 5ms), wordt de stuitering geregistreerd als een volwaardige tweede toetsaanslag.
 
 ---
-![Tech Diagnostics](https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?auto=format&fit=crop&w=1000&h=550&q=80)
+![Tech Diagnostics](https://images.unsplash.com/photo-1527443224154-c4a3942d3acf? auto=format&fit=crop&w=1000&h=550&q=80)
 
 ## Stapsgewijze probleemoplossing en herstelprocedure
 
@@ -64,8 +64,11 @@ Volg onderstaande stappen systematisch. We beginnen met niet-invasieve softwaret
 Voordat we de fysieke hardware demonteren, controleren we of er geen driverconflicten of USB-stroombeheerproblemen zijn binnen Windows.
 
 1. Koppel het toetsenbord los en open Apparaatbeheer via `devmgmt.msc` in het venster Uitvoeren (`Win + R`).
+
 2. Vouw de categorie Toetsenbordenuit. Klik met de rechtermuisknop op het problematische apparaat en kiesApparaat verwijderen.
+
 3. Vouw onderaan de categorie Universal Serial Bus-controllers uit. Controleer de eigenschappen van de USB-hoofdhubs: schakel op het tabblad *Energiebeheer* de optie *"De computer mag dit apparaat uitschakelen om energie te besparen"* uit.
+
 4. Koppel het toetsenbord weer aan via een directe USB-poort op het moederbord (geen ongevoede USB-hub) zodat Windows het stuurprogramma opnieuw initialiseert.
 
 <div style="border-left: 4px solid #7c3aed; background-color: #f5f3ff; padding: 14px 18px; margin: 20px 0; border-radius: 4px;">
@@ -86,13 +89,21 @@ Om de switch te herstellen zonder de printplaat te beschadigen, heb je specifiek
 Dit is de meest effectieve methode om haperende switches en chattering op te lossen zonder te hoeven solderen:
 
 1. Ontkoppel het toetsenbord volledig van de computer. Laat er onder geen enkel beding stroom op staan tijdens deze procedure.
+
 2. Verwijder de keycap van de defecte switch met de puller.
+
 3. Blaas met perslucht al het oppervlakkige stof en haren rondom de switchbehuizing grondig weg.
+
 4. Het cruciale moment: Druk het kruisvormige asje (*stem*) van de switch helemaal naar beneden met een pincet of een stomp voorwerp, zodat de interne contactholte zich opent.
+
 5. Plaats het fijne spuitrietje van de contactspray direct in de opening langs de stam, gericht op de hoek waar het koperen bladveertje zich bevindt (meestal de zijde met het logo op de switchbehuizing).
+
 6. Geef één zeer korte, gecontroleerde puls (minder dan een halve seconde). De vloeistof moet naar binnen vloeien, maar de switch mag niet verzuipen.
+
 7. Druk direct daarna de switch 60 tot 80 keer snel en ritmisch handmatig in. Hiermee wrijft de chemische reiniger over het koperen bladveertje, waardoor de oxidatielaag microscopisch wordt weggeschuurd.
+
 8. Draai het toetsenbord om op een microvezeldoek en laat overtollig oplosmiddel weglopen.
+
 9. Wachttijd: Laat het toetsenbord minimaal 20 tot 30 minuten rusten op kamertemperatuur tot het drijfgas en de dragende alcohol volledig zijn verdampt.
 
 ```
@@ -109,8 +120,11 @@ Dit is de meest effectieve methode om haperende switches en chattering op te los
 Heeft het flashen met contactspray geen effect? Dan ligt de fout dieper in het mechanische contact:
 
 1. Trek bij een hot-swap toetsenbord de switch recht omhoog met een switch puller. Verbuig de koperen pootjes niet.
+
 2. Inspecteer de twee koperen pinnetjes aan de onderzijde van de switch. Zijn ze verbogen of zwart uitgeslagen? Maak ze schoon met een wattenstaafje en 99,9% IPA, of buig ze voorzichtig recht met een precisiepincet.
+
 3. Kijk in de opening van de PCB. De twee metalen klemmetjes in de hot-swap socket moeten strak tegen elkaar aan liggen. Gebruik een dunne naald om de klemmetjes vanuit de binnenkant heel voorzichtig iets naar elkaar toe te duwen, zodat ze weer stevig om de pootjes van de switch klemmen.
+
 4. Plaats de switch terug of wissel hem om met een switch van een toets die je zelden gebruikt (zoals `Scroll Lock`). Verhuist het probleem mee? Dan is de switch intern kapot en moet deze vervangen worden. Blijft het probleem op dezelfde fysieke toetslocatie? Dan is de soldeerverbinding van de socket op de PCB gescheurd.
 
 ---

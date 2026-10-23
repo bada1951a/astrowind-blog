@@ -20,7 +20,9 @@ Ore 09:15 in punto, lunedì mattina. Ricevo una chiamata urgente da una collega 
 Prima di agire a tentoni cancellando cartelle a caso, capiamo cosa sta effettivamente soffocando il sistema operativo:
 
 1. Accumulo smodato di File Temporanei (Temp): Windows 11, le app installate e i browser creano continuamente file di cache che spesso non vengono eliminati alla chiusura. In pochi mesi possono occupare decine di gigabyte.
+
 2. File di Aggiornamento Residui e Windows.old: Dopo un grande aggiornamento di sistema (o una patch cumulativa corposa), Windows conserva le vecchie versioni per permettere il rollback. Spesso pesano tra i 15 e i 30 GB.
+
 3. Punti di Ripristino e Shadow Copies: Il sistema di protezione di Windows crea copie di sicurezza dei file di sistema. Se non impostate con un limite di spazio, divorano letteralmente l'SSD.
 
 ---

@@ -60,25 +60,35 @@ Follow these exact steps using official Windows 11 administrative utilities to s
 Skip third-party applications. Windows 11 has a robust built-in tool designed specifically for this.
 
 1. Press `Windows Key + I` to open Settings.
+
 2. Navigate to System>Storage.
+
 3. Toggle Storage SensetoOn, then click directly on theStorage Sense text menu to configure it.
-4. Click Temporary Files and let the system scan your drive. 
-5. Check the boxes next to Windows Update Cleanup,Previous Windows installations, andTemporary files. 
+
+4. Click Temporary Files and let the system scan your drive.
+
+5. Check the boxes next to Windows Update Cleanup,Previous Windows installations, andTemporary files.
+
 6. Click Remove files.
 
 ### Step 2: Manually Purge User and System Temp Directories
 Sometimes apps leave behind locked or stubborn temp files that standard settings miss. Let us clean them out safely via the Run dialog.
 
 1. Press `Windows Key + R` to open the Run command box.
+
 2. Type `%temp%` and press Enter. This opens `C:\Users\[Username]\AppData\Local\Temp`.
-3. Press `Ctrl + A` to select all files, then press `Shift + Delete`. 
+
+3. Press `Ctrl + A` to select all files, then press `Shift + Delete`.
+
 4. *Pro Tip:* If a prompt appears saying a file is currently in use by another program, simply click Skip. That means an active app or background service is using it right now.
+
 5. Next, open the Run dialog again (`Windows Key + R`), type `temp` (without percentage signs), and hit Enter. Clear out everything in that directory as well.
 
 ### Step 3: Clean Up Component Store (WinSxS) via Terminal
 If you are a developer or power user, your Windows Component Store accumulates years of obsolete system packages. We can safely prune them using an elevated Command Prompt.
 
 1. Right-click the Start menu and select Terminal (Admin)orCommand Prompt (Admin).
+
 2. Type the following command and press Enter:
    `DISM.exe /Online /Cleanup-Image /StartComponentCleanup`
 3. Wait for the process to hit 100 percent. This safely strips away outdated system binaries without affecting your current OS stability.

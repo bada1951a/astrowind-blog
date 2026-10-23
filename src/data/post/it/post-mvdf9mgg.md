@@ -26,7 +26,9 @@ Se anche tu ti sei trovato davanti a questa schermata immobile, sai benissimo qu
 Prima di sporcarci le mani con i comandi, capiamo cosa sta succedendo sotto il cofano. Nella maggior parte dei casi, il blocco non è un vero e proprio crash del sistema, ma un ingorgo logico. Ecco le tre cause principali:
 
 1. Cache degli aggiornamenti corrotta: I file scaricati nella cartella di sistema (`SoftwareDistribution`) presentano conflitti o bit corrotti durante la fase di decompressione.
+
 2. Servizi di Windows in stallo: Il servizio Windows Update (`wuauserv`) o il servizio di crittografia tentano di scrivere su file temporanei bloccati da altri processi fantasma.
+
 3. Driver di terze parti obsoleti: Durante la fase finale del 100%, il sistema tenta di configurare driver hardware che vanno in conflitto con l'architettura della macchina.
 
 ---
@@ -93,5 +95,5 @@ A questo punto, chiudi il terminale, riavvia normalmente il computer tramite il 
 
 ### Domande Frequenti (FAQ)
 
-Posso perdere i miei file personali cancellando la cartella SoftwareDistribution?Assolutamente no. La cartella `SoftwareDistribution` contiene unicamente i file temporanei necessari per scaricare e installare gli aggiornamenti di Windows. I tuoi documenti, le foto e le applicazioni installate non verranno toccati in alcun modo.Cosa devo fare se il comando `ren` restituisce un errore di file in uso?Significa che uno dei servizi di Windows Update non si è chiuso correttamente. Riavvia il computer inModalità Provvisoria(Modalità sicura) e ripeti la procedura da lì; in questo modo nessun processo di background potrà bloccare i file.Quanto tempo devo aspettare prima di considerare l'aggiornamento bloccato?
+Posso perdere i miei file personali cancellando la cartella SoftwareDistribution? Assolutamente no. La cartella `SoftwareDistribution` contiene unicamente i file temporanei necessari per scaricare e installare gli aggiornamenti di Windows. I tuoi documenti, le foto e le applicazioni installate non verranno toccati in alcun modo.Cosa devo fare se il comando `ren` restituisce un errore di file in uso? Significa che uno dei servizi di Windows Update non si è chiuso correttamente. Riavvia il computer inModalità Provvisoria(Modalità sicura) e ripeti la procedura da lì; in questo modo nessun processo di background potrà bloccare i file.Quanto tempo devo aspettare prima di considerare l'aggiornamento bloccato?
 In genere, un aggiornamento cumulativo standard non dovrebbe impiegare più di 30-45 minuti per completarsi. Se la percentuale rimane fissa al 100% per oltre un'ora e mezza e l'indicatore di attività del disco è completamente spento, puoi procedere tranquillamente con questa guida.

@@ -33,7 +33,7 @@ Esse comportamento errático — conhecido no meio técnico como key chattering(
 Neste guia prático de laboratório, mostro o protocolo exato que utilizo para diagnosticar, isolar e reparar esses switches em nível cirúrgico, fazendo uso correto de produtos químicos de grau eletrônico sem destruir as propriedades dos plásticos internos.
 
 ---
-![Tech Diagnostics](https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1000&h=550&q=80)
+![Tech Diagnostics](https://images.unsplash.com/photo-1581091226825-a6a2a5aee158? auto=format&fit=crop&w=1000&h=550&q=80)
 
 ## 2. Anatomia da Falha: As 3 Causas Raiz do Chattering
 
@@ -76,13 +76,17 @@ FASE 1: Isolamento de Software &gt;&gt; FASE 2: Desenergização &gt;&gt; FASE 3
 Antes de desmontar qualquer peça, certifique-se de que a falha não é decorrente de drivers corrompidos ou interferência de utilitários de terceiros.
 
 1. Abra o Prompt de Comando ou o PowerShell como Administrador.
+
 2. Invoque o utilitário nativo de configuração de periféricos:
    ```cmd
    devmgmt.msc
    ```
 3. No Gerenciador de Dispositivos, expanda a categoriaTeclados.
+
 4. Localize todas as instâncias de "Teclado Padrão PS/2" ou "Dispositivo de Teclado HID", clique com o botão direito e selecione Desinstalar dispositivo.
+
 5. Desconecte o cabo USB do teclado, aguarde 10 segundos e reconecte em uma porta USB traseira direta da placa-mãe (evite hubs ou extensores). O Windows reinstalará os drivers padrão limpos.
+
 6. Abra um software de teste de latência e repique (como *Keyboard Chattering Fix Tool* ou *Switch Hitter*). Pressione a tecla defeituosa 100 vezes seguidas em cadência moderada. Se o log acusar repiques com intervalos inferiores a 30 milissegundos, o problema é comprovadamente físico.
 
 ### Etapa 2: Preparação de Bancada e Desenergização Completa
@@ -110,11 +114,17 @@ Aqui está o ponto central do procedimento. Você precisa de um spray Limpa-Cont
 ```
 
 1. Localize a haste central (*stem*) do switch mecânico. Pressione-a completamente para baixo com a ponta de uma pinça ou ferramenta de ponta cega.
+
 2. Com a haste rebaixada, uma pequena abertura fica visível entre a haste móvel e a carcaça plástica superior (*top housing*), permitindo acesso direto à câmara interna onde repousam as lâminas de contato.
+
 3. Encaixe a cânula extensora do spray limpa-contato nessa fresta.
+
 4. Aplique apenas uma borrifada curta e precisa (uma fração de segundo). Evite inundar a placa inteira.
+
 5. Imediatamente após a borrifada, pressione a tecla repetidamente e com firmeza de 60 a 80 vezes seguidas. Esse movimento mecânico faz as lâminas rasparem uma contra a outra enquanto o solvente está úmido, desalojando o óxido e os resíduos microscópicos.
+
 6. Coloque o teclado virado de cabeça para baixo sobre um pano de microfibra limpo ou papel absorvente industrial para permitir que o excesso do fluido escorra trazendo as impurezas.
+
 7. Aguarde a evaporação completa por no mínimo 15 a 20 minutos.
 
 ### Etapa 4: Troca do Switch em Teclados Hot-Swap ou Re-solda

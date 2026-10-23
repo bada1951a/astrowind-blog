@@ -39,7 +39,7 @@ Setiap mikrokontroler keyboard memiliki algoritma bawaan bernama *debounce delay
 Jika Anda menggunakan keyboard custom yang dilumasi secara manual (*factory lubed* atau *hand lubed*), penggunaan gemuk (*grease*) sintetis seperti Krytox yang berlebihan sering kali merembes ke titik temu bilah kontak tembaga. Karakter pelumas yang bersifat isolator listrik ini memutus aliran sinyal. Selain itu, pada keyboard yang sering dipukul keras atau jatuh, titik solderan kaki switch ke PCB dapat mengalami keretakan mikro (*hairline crack*), menyebabkan input terputus-putus tergantung sudut tekanan jari Anda.
 
 ---
-![Tech Diagnostics](https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1000&h=550&q=80)
+![Tech Diagnostics](https://images.unsplash.com/photo-1516321318423-f06f85e504b3? auto=format&fit=crop&w=1000&h=550&q=80)
 
 ## 2. Prosedur Diagnostik Sistem Sebelum Tindakan Fisik
 
@@ -57,10 +57,12 @@ Sebelum melangkah ke perbaikan kimiawi, pastikan masalah tersebut bukan disebabk
 ```
 
 1. Uji Kecepatan Input pada Switch Tester: Buka aplikasi uji input seperti *Keyboard Key Info* atau situs *keyboard-tester.com*. Periksa tombol yang bermasalah. Amati apakah nilai latensi menunjukkan angka di bawah 10 ms secara stabil atau terjadi *burst* input ganda dalam selang 1-2 ms.
+
 2. Periksa Integrasi di Device Manager:
    - Tekan kombinasi tombol `Windows + X`, lalu pilih Device Manager.
    - Perluas menu Keyboards. Klik kanan pada perangkat Anda (sering kali terdaftar sebagai *HID Keyboard Device*), lalu pilih Properties.
    - Periksa status perangkat pada tab *General*. Jika muncul kode galat (*Error Code 10/43*), lakukan klik kanan lalu pilih Uninstall device, lalu cabut dan tancapkan kembali kabel USB keyboard agar Windows memuat ulang driver standar.
+
 3. Pindahkan Jalur Port USB: Hubungkan keyboard langsung ke port USB belakang motherboard (bukan melalui USB Hub monitor atau casing depan) untuk menyingkirkan kemungkinan kekurangan daya (*undervoltage*).
 
 ---
@@ -82,24 +84,34 @@ Jangan sembarangan menggunakan kaleng semprotan. Anda memerlukan Electronic Cont
 
 ### Tahap 2: Pembongkaran Ringan (Area Tombol Bermasalah)
 1. Putuskan Aliran Listrik: Cabut kabel keyboard dari PC. Jika menggunakan keyboard nirkabel (Wireless/Bluetooth), matikan sakelar baterai utama di bagian bawah.
+
 2. Lepaskan Keycap: Gunakan wire keycap puller. Tarik lurus ke atas agar stem switch tidak patah.
+
 3. Bersihkan Area Sekitar: Gunakan kuas anti-statis atau *canned air* untuk meniup kotoran, rambut, dan remah-remah di sekeliling housing switch agar tidak ikut terseret masuk saat cairan disemprotkan.
 
 ### Tahap 3: Metode Penetrasi Tanpa Solder (Metode Batang Stem)
 Jika keyboard Anda menggunakan switch tersolder (*soldered board*) dan Anda tidak ingin membongkar sasis total, gunakan metode suntik celah ini:
 
 1. Ambil kaleng contact cleaner dan pasang sedotan pipa aplikator merah/bawaan kaleng ke mulut nosel.
+
 2. Tekan stem switch ke bawah hingga posisi terdalam menggunakan pinset atau ujung jari.
+
 3. Arahkan ujung sedotan ke celah sempit di antara stem dan housing switch bagian dalam—fokuskan ke sisi tempat bilah tembaga berada (biasanya di sisi atas yang sejajar dengan jalur LED).
+
 4. Berikan semprotan kejut pendek (kurang dari 0,5 detik). Jangan membanjiri sasis keyboard.
+
 5. Segera tekan dan lepas stem tombol tersebut secara berulang-ulang dengan cepat (sebanyak 40–60 kali). Tindakan mekanis ini memungkinkan cairan meluruhkan oksidasi pada pelat tembaga yang saling bergesekan.
+
 6. Miringkan keyboard ke arah bawah di atas kain microfiber atau tisu tebal agar sisa pelarut mengalir keluar bersama kotoran terlarut.
 
 ### Tahap 4: Alternatif untuk Keyboard Hot-Swap
 Jika keyboard Anda bertipe Hot-Swap (switch bisa dicabut):
 1. Cabut switch menggunakan switch puller dengan menjepit kedua klip pengunci vertikal.
+
 2. Semprotkan contact cleaner langsung ke celah pin bawah atau buka *casing switch* menggunakan switch opener.
+
 3. Usap pelat tembaga (*contact leaf*) menggunakan cotton bud yang telah dibasahi contact cleaner secara lembut.
+
 4. Pasang kembali switch setelah kering total.
 
 ### Tahap 5: Fase Penguapan dan Kalibrasi Ulang
@@ -145,4 +157,5 @@ Ya, tentu saja. Contact cleaner diformulasikan secara kimiawi untuk melarutkan o
 Q3. Mengapa tombol tetap mengetik ganda (chattering) meskipun switch baru sudah dipasang pada board hot-swap?
 Jika switch baru sudah dipasang namun chattering tetap terjadi pada titik tombol yang sama, masalahnya berada di tingkat sirkuit PCB. Penyebab paling umum adalah:
 1. Retakan solder pada kaki soket hotswap di sisi bawah PCB, membuat arus mikro melompat-lompat akibat getaran ketikan.
+
 2. Dioda SMD pelindung anti-ghosting (*diode matrix*) yang rusak atau bocor pada koordinat matriks tombol tersebut. Solusinya adalah melakukan pembongkaran casing dan menyolder ulang kaki soket (*reflow solder*) dengan timah timbal 60/40 baru.

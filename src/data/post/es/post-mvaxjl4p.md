@@ -22,7 +22,9 @@ Eran las 8:50 de la mañana en nuestra oficina del distrito 22@ en Barcelona. A 
 Antes de lanzarnos a limpiar, entendamos por qué tu ordenador portátil o de sobremesa pasa de tardar 10 segundos a necesitar un café entero para arrancar:
 
 1. Efecto polizón de los instaladores: Cada vez que instalas Discord, Spotify, Steam, Teams o una utilidad de impresora, configuran su propio servicio residente para ejecutarse en segundo plano desde el primer segundo que enciendes el PC.
+
 2. Impacto acumulativo en el búfer de inicio: Windows 10 intenta cargar simultáneamente procesos de red, sincronización de la nube y agentes de actualización antes de dejarte ver el escritorio, saturando el disco (especialmente si aún usas un HDD mecánico o un SSD saturado).
+
 3. Falta de mantenimiento preventivo: Rara vez revisamos qué procesos se autoinician tras una gran actualización del sistema operativo, permitiendo que aplicaciones obsoletas sigan devorando memoria RAM desde el arranque.
 
 ## Guía paso a paso: Cómo desactivar los programas de inicio

@@ -48,7 +48,7 @@ Khi cắm thêm màn hình thứ hai, hệ điều hành phải phân luồng t�
 
 
 
-![Hardware Diagnostic & Troubleshooting](https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=1000&h=550&q=80)
+![Hardware Diagnostic & Troubleshooting](https://images.unsplash.com/photo-1550745165-9bc0b252726f? auto=format&fit=crop&w=1000&h=550&q=80)
 
 ### 2. Thất Bại Trong Quy Trình Bắt Tay Băng Thông (Link Training Failure) & Suy Hao Tín Hiệu
 Giao thức DisplayPort và HDMI tốc độ cao (FRL/TMDS) đòi hỏi quá trình "Link Training" giữa laptop và màn hình ngoài phải diễn ra trong vài mili-giây để xác định số lượng làn dữ liệu (Lanes) và điện áp truyền tải. 
@@ -88,13 +88,21 @@ Việc gỡ driver qua giao diện thông thường của Windows luôn để l�
 </div>
 
 1. Tải bản DDU mới nhất từ trang chính thức và giải nén ra thư mục cố định.
+
 2. Nhấn tổ hợp phím `Windows + R`, gõ `msconfig` và nhấn Enter.
+
 3. Tại cửa sổ System Configuration, chuyển sang thẻBoot, tích chọn ôSafe boot(chọn chế độ con làMinimal), sau đó bấmOKvà chọnRestart.
+
 4. Khi máy tính đã vào chế độ Safe Mode, mở công cụDisplay Driver Uninstaller.exe.
+
 5. Trong mục Select device type, chọnGPU.
+
 6. Trong mục Select device, chọn hãng sản xuất card màn hình tích hợp trước (Intel hoặc AMD).
+
 7. Nhấp vào nút Clean and do NOT restart.
+
 8. Tiếp tục chọn lại mục Select devicesang card rời (NVIDIA/AMD) và bấmClean and restart.
+
 9. Sau khi hệ thống khởi động lại, truy cập trang hỗ trợ chính thức của hãng laptop (Dell Service Tag, Lenovo Support, HP Support) để cài đặt đúng gói driver đồ họa đã được OEM chứng thực tính tương thích, tuyệt đối không dùng các công cụ tự động tìm driver bên thứ ba.
 
 ```
@@ -114,8 +122,11 @@ Giao diện quản lý: Device Manager
 ```
 
 1. Nhấp chuột phải vào nút Start, chọnDevice Manager.
+
 2. Tìm đến mục Universal Serial Bus controllers, mở rộng danh sách.
+
 3. Nhấp đúp vào từng mục USB Root Hub (USB 3.0)hoặcGeneric SuperSpeed USB Hub.
+
 4. Chuyển sang thẻ Power Management, bỏ dấu tích ở dòng:
    `Allow the computer to turn off this device to save power`
 5. Chuyển xuống mục MonitorstrongDevice Manager, nhấp chuột phải vào các mục hiển thị tên màn hình phụ (hoặcGeneric PnP Monitor), chọnUpdate driver->Search automatically for drivers. Nếu thiết bị hiển thị dấu chấm than màu vàng, chọnUninstall device, sau đó nhấp vào menuActiontrên thanh công cụ và chọnScan for hardware changes.
@@ -125,6 +136,7 @@ Giao diện quản lý: Device Manager
 Giải pháp triệt tiêu hiện tượng màn hình phụ nhấp nháy khi lướt web, mở video hoặc làm việc đa tác vụ là can thiệp trực tiếp vào Registry của Desktop Window Manager (DWM).
 
 1. Nhấn phím `Windows`, gõ `cmd`, nhấp chuột phải vào Command Promptvà chọnRun as administrator.
+
 2. Dán đoạn lệnh sau vào cửa sổ dòng lệnh để tạo khóa ghi đè cấu hình MPO:
 
 ```cmd
@@ -139,6 +151,7 @@ reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v OverlayTestMode /t REG_DWORD /d
 Nếu laptop của bạn từng cắm vào nhiều màn hình khác nhau (màn hình ở nhà, máy chiếu phòng họp, màn hình công ty), Windows sẽ lưu lại hàng loạt profile cấu hình bị chồng chéo trong Registry. Việc xóa sạch cache này sẽ ép Windows phải đọc lại thông số EDID mới nhất từ màn hình hiện tại.
 
 1. Nhấn `Windows + R`, gõ `regedit` và nhấn Enterđể mởRegistry Editor.
+
 2. Điều hướng chính xác theo đường dẫn sau:
    `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\GraphicsDrivers`
 3. Tại nhánh này, bạn sẽ thấy ba thư mục con quan trọng:
@@ -146,6 +159,7 @@ Nếu laptop của bạn từng cắm vào nhiều màn hình khác nhau (màn h
    - `Connectivity`
    - `ScaleFactors`
 4. Nhấp chuột phải vào lần lượt từng thư mục trên và chọn Delete. Đừng lo lắng, đây chỉ là các bộ nhớ đệm tạm thời. Hệ điều hành sẽ tự động tạo lại các khóa này với giá trị chuẩn xác ngay khi bạn cắm lại cáp màn hình.
+
 5. Khởi động lại laptop.
 
 ```
@@ -161,8 +175,11 @@ Nếu laptop của bạn từng cắm vào nhiều màn hình khác nhau (màn h
 Sau khi tín hiệu đã lên, bạn cần loại bỏ tính năng tần số quét biến thiên (Dynamic Refresh Rate) vì đây là tác nhân gây nhấp nháy trên các màn hình văn phòng tiêu chuẩn:
 
 1. Nhấp chuột phải lên màn hình Desktop, chọn Display settings.
+
 2. Cuộn xuống và chọn Advanced display.
+
 3. Trong mục Select a display to view or change its settings, chọn màn hình phụ bị lỗi.
+
 4. Tại dòng Choose a refresh rate, chuyển từ các giá trị động hoặc tần số cao lẻ (ví dụ: `59.94Hz` hoặc `Dynamic`) về mức cố định tiêu chuẩn là`60.00 Hz` (hoặc thông số gốc của màn hình như `120.00 Hz` / `144.00 Hz`).
 
 ---

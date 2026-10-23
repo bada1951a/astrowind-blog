@@ -24,10 +24,12 @@ No era la tarjeta gráfica, ni el cable HDMI. El verdadero culpable estaba escon
 
 ### Root Cause Breakdown: ¿Por qué demonios pasa esto?
 
-Antes de volverte loco cambiando piezas, hay que entender qué está pasando en la placa base cuando el PC enciende pero el monitor se queda en negro. 
+Antes de volverte loco cambiando piezas, hay que entender qué está pasando en la placa base cuando el PC enciende pero el monitor se queda en negro.
 
 1. Oxidación y suciedad en los contactos (Fretting corrosion): Con las vibraciones de la oficina, los cambios térmicos (cuando el PC se calienta por la tarde y se enfría por la noche) y la humedad ambiental, se crea una microcapa de óxido o suciedad en los pines dorados de la RAM. El bus de datos pierde continuidad y la placa se niega a hacer el *Power-On Self-Test (POST)*.
+
 2. Microfisuras o desplazamiento por golpes/vibraciones: ¿Alguien le dio una patada sin querer a la torre debajo del escritorio? Un milímetro de desplazamiento basta para que los canales de memoria dejen de hacer contacto perfecto con los pines del zócalo.
+
 3. Fallo en la línea de alimentación del slot (DIMM slot failure): A veces el problema no es el módulo de memoria en sí, sino que la ranura principal de la placa base ha acumulado estática o se ha tostado por un pico de tensión, bloqueando la inicialización del hardware.
 
 ---

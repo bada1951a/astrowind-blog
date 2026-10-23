@@ -30,7 +30,9 @@ Bevor wir blind anfangen, Teile auszutauschen oder das Betriebssystem komplett n
 In meiner jahrelangen Praxis als Hardware-Diagnostiker haben sich drei übliche Verdächtige herauskristallisiert, wenn Windows 11 ohne erkennbaren Grund einfriert:
 
 1. Grafikkartentreiber-Timeout (TDR): Der Grafiktreiber hängt sich kurz auf, Windows versucht ihn neu zu starten, scheitert aber im schlimmsten Fall und zieht das ganze System in den Stillstand.
+
 2. Stromspar- und C-State-Probleme: Moderne CPUs (besonders Intel Core der 12. bis 14. Generation oder aktuelle AMD Ryzen) wechseln im Leerlauf extrem schnell die Energiesparstufen. Wenn das Mainboard-BIOS hier veraltet ist, führt das zu unvorhersehbaren Freezes.
+
 3. Instabiler Arbeitsspeicher (RAM / XPO / EXPO): Ein leicht zu aggressiv eingestelltes XMP-Profil im BIOS verursacht nach 20 Minuten unauffälligem Betrieb plötzlich einen Speicherfehler, der den Kernel sofort einfriert.
 
 ---
@@ -74,14 +76,18 @@ Suchen Sie im System-Log exakt nach dem Eintrag Event-ID 41(Das war Ihr erzwunge
 Haben Sie den Verdächtigen identifiziert, greifen folgende Sofortmaßnahmen:
 
 1. Treiber-Clean-Install: Wenn die Ereignisanzeige Treiberkonflikte meldet, nutzen Sie DDU (Display Driver Uninstaller) im abgesicherten Modus für die Grafikkarte und installieren Sie den allerneuesten Hersteller-Treiber frisch.
+
 2. BIOS-Update einspielen: Viele zufällige Freezes bei Windows 11 auf modernen Mainboards werden schlichtweg durch veraltetes UEFI/BIOS verursacht, das die neuen Energiesparmodi der CPU nicht korrekt unterstützt.
+
 3. XMP/EXPO-Profil im BIOS deaktivieren: Testweise den Arbeitsspeicher mit dem Standardtakt (z.B. 4800 MHz statt 6000 MHz) betreiben. Läuft der Rechner stabil, war das RAM-Profil zu scharf eingestellt.
 
 ---
 
 ### Häufig gestellte Fragen (FAQ)
 
-1. Warum taucht in der Ereignisanzeige direkt vor dem Freeze überhaupt kein Fehler auf?Wenn ein PC komplett einfriert (Hard Freeze), hat das Betriebssystem oft keine Millisekunde mehr Zeit, den Fehler auf die Festplatte zu schreiben. Der letzte Log-Eintrag liegt dann oft Minuten zurück. In diesem Fall liegt zu 90% ein handfestes Hardware-Problem vor (RAM, Netzteil, CPU-Spannung oder überhitzte Chipsätze).2. Was bedeutet der berüchtigte WHEA-Logger Fehler in den Protokollen?
+1. Warum taucht in der Ereignisanzeige direkt vor dem Freeze überhaupt kein Fehler auf? Wenn ein PC komplett einfriert (Hard Freeze), hat das Betriebssystem oft keine Millisekunde mehr Zeit, den Fehler auf die Festplatte zu schreiben. Der letzte Log-Eintrag liegt dann oft Minuten zurück. In diesem Fall liegt zu 90% ein handfestes Hardware-Problem vor (RAM, Netzteil, CPU-Spannung oder überhitzte Chipsätze).
+
+2. Was bedeutet der berüchtigte WHEA-Logger Fehler in den Protokollen?
 WHEA steht für *Windows Hardware Error Architecture*. Wenn Sie hier Einträge finden, meldet die CPU oder das PCIe-Subsystem einen Hardware-internen Paritäts- oder Bus-Fehler. Das ist ein ernstes Indiz für instabile Spannungen, defekten RAM oder beschädigte CPU-Kerne.
 
 3. Soll ich Windows 11 einfach komplett neu installieren?

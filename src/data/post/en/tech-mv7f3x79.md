@@ -47,7 +47,7 @@ When Windows Update pushes a generic WHQL DCH graphics driver in the background,
 
 #
 
-![Hardware Diagnostic & Troubleshooting](https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=1000&h=550&q=80)
+![Hardware Diagnostic & Troubleshooting](https://images.unsplash.com/photo-1581092918056-0c4c3acd3789? auto=format&fit=crop&w=1000&h=550&q=80)
 
 ### 2. DisplayPort Link Training Failures & DSC Bandwidth Starvation
 When you plug in dual monitors, the graphics transmitter initiates Link Training with the monitor's receiver (scaler). They negotiate clock speeds, lane counts, and Display Stream Compression (DSC). 
@@ -83,12 +83,15 @@ Follow these steps in exact sequence. Do not skip the offline isolation phase; o
 Before touching the drivers, purge the accumulated multi-monitor topology configurations.
 
 1. Unplug both external monitors and disconnect your Thunderbolt/USB-C dock.
+
 2. Press `Win + R`, type `cmd`, and press `Ctrl + Shift + Enter` to launch Command Prompt as Administrator.
+
 3. Stop the display pipeline service temporarily:
    ```cmd
    net stop "DisplayEnhancementService"
    ```
 4. Press `Win + R`, type `regedit`, and hit Enter.
+
 5. Navigate to:
    `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\GraphicsDrivers`
 6. Back up your registry first (`File` > `Export`). Then right-click and delete these three subkeys entirely:
@@ -106,9 +109,13 @@ Before touching the drivers, purge the accumulated multi-monitor topology config
 To prevent driver conflicts, execute an isolated cleanup in Windows Safe Mode.
 
 1. Disconnect your machine from the internet (unplug Ethernet and toggle Wi-Fi OFF). This is non-negotiable.
+
 2. Hold down the `Shift` key while clicking `Start` > `Power` > `Restart`.
+
 3. Navigate to: `Troubleshoot` > `Advanced options` > `Startup Settings` > click `Restart`.
+
 4. Upon reboot, hit `4` or `F4` to enter Safe Mode.
+
 5. Launch Display Driver Uninstaller (DDU):
    * Set Select device type to `GPU`.
    * Under Select device, select your discrete card first (e.g., `NVIDIA`).
@@ -129,9 +136,13 @@ To prevent driver conflicts, execute an isolated cleanup in Windows Safe Mode.
 Now boot back into standard Windows while keeping your internet connection disabled.
 
 1. Run the offline installer for your Integrated GPU (iGPU) first. The iGPU physically controls your laptop's display PHYs; it must establish the root driver framework before the discrete GPU can negotiate display pipelines.
+
 2. Reboot your laptop.
+
 3. Run the offline installer for your Discrete GPU (dGPU). Choose *Custom Installation* and check Perform a clean installation.
+
 4. Reboot your laptop once more.
+
 5. Reconnect your network adapters now that the core drivers are locked in place.
 
 #### Phase 4: Clean Cable Sequence and Link Clock Synchronization
@@ -139,10 +150,15 @@ Now boot back into standard Windows while keeping your internet connection disab
 Now we rebuild the physical display link without triggering an MST sync error.
 
 1. Connect your dock or primary USB-C cable to the laptop with no monitors plugged into the dock.
+
 2. Connect Monitor 1 using your certified cable. Wait five seconds for the Windows plug-and-play chime to sound.
+
 3. Open Device Manager(`Win + X` > `Device Manager`). ExpandMonitors and confirm your panel shows its actual model name rather than "Generic PnP Monitor". If it displays Generic PnP, right-click and hit *Update driver* > *Search automatically*.
+
 4. Connect Monitor 2.
+
 5. Press `Win + I` to open Settings, go to `System` > `Display` > `Advanced display`.
+
 6. Select each monitor individually from the top drop-down menu and lock down their refresh rates:
    * Disable any Dynamic (Variable) refresh rate settings.
    * Explicitly choose a fixed refresh rate (e.g., straight `60.00 Hz` or `120.00 Hz`). Avoid fractionals like `59.94 Hz` on secondary screens if the primary is running a locked integer clock.
@@ -160,17 +176,23 @@ Now we rebuild the physical display link without triggering an MST sync error.
 
 ### Frequently Asked Questions
 
-#### Q1: Why does hot-unplugging the cable fix the flicker for 15 minutes before the screen drops out again?
+####
+
+Q1: Why does hot-unplugging the cable fix the flicker for 15 minutes before the screen drops out again?
 Hot-unplugging forces the graphics adapter to reset the DisplayPort auxiliary (AUX) channel and re-run link training from scratch. At connection time, the link operates cleanly. 
 
 However, as thermal loads rise or minor line noise builds up on poor-quality cables, uncorrected link errors quickly exceed the transceiver's error budget. Once the bit error rate threshold is crossed, the driver drops the display link to protect against memory corruption, producing the exact flicker loop you started with.
 
-#### Q2: Should I update my discrete GPU (NVIDIA) driver or integrated GPU (Intel/AMD) driver first?
+####
+
+Q2: Should I update my discrete GPU (NVIDIA) driver or integrated GPU (Intel/AMD) driver first?
 Always update the Integrated GPU driver first. On modern dual-GPU laptops, the integrated GPU directly controls the internal display engine and manages the physical video routing lines (DisplayPort Alternate Mode) exiting the motherboard. 
 
 The discrete GPU functions primarily as a compute accelerator, rendering frames off-screen and copying them to the iGPU's framebuffer. If the integrated platform driver is outdated or broken, updating the discrete GPU won't solve external monitor signal drops.
 
-#### Q3: Can a damaged or cheap cable actually simulate a display driver crash?
+####
+
+Q3: Can a damaged or cheap cable actually simulate a display driver crash?
 Yes. Modern high-resolution displays push massive amounts of data. Dual 4K at 60Hz requires significant bandwidth, demanding strict physical link integrity. Cheap or worn cables suffer from signal attenuation, impedance mismatches, and electromagnetic interference. 
 
 When signal packets drop, the GPU interprets the communication silence as a disconnected or unresponsive device. Windows responds by firing a display engine reset (TDR—Timeout Detection and Recovery), causing your entire desktop to freeze and flash black while it tries to restart the driver stack. Ensure all cables are certified for DisplayPort 1.4 or HDMI 2.1 specs.

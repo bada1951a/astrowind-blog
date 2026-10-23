@@ -35,8 +35,10 @@ Genoeg gepraat over hypotheses, we gaan nu gericht sporen zoeken. Volg deze nauw
 Klik op de Start-knop onderaan je scherm en typ direct het woord Logboeken in de zoekbalk. Klik op de applicatie die verschijnt (Event Viewer in de Engelse versie). Dit is het centrale archief waar Windows alles opslaat wat er onder de motorkap gebeurt.
 
 ### Stap 2: Navigeer naar de Kritieke Systeemgebeurtenissen
-In het linkerdeelvenster zie je een boomstructuur. 
+In het linkerdeelvenster zie je een boomstructuur.
+
 1. Klik op het pijltje voor Logboeken van Windows.
+
 2. Klik vervolgens op Systeem. Dit kan even duren omdat Windows hier alle hardware- en drivermeldingen laadt.
 
 ### Stap 3: Filter op de exacte crash-tijd

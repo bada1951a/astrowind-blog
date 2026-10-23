@@ -22,7 +22,9 @@ Jam menunjukkan pukul 09:15 pagi di kantor *startup* teknologi kami di kawasan S
 Sebelum langsung melompat ke solusi, ada baiknya kita memahami tiga akar permasalahan utama yang sering memicu kendala ini di lingkungan kerja harian:
 
 1. Eksplorasi Proses `explorer.exe` yang Mengalami *Crash*: Proses Windows Explorer tidak hanya mengatur tampilan folder, tetapi juga memegang kendali penuh atas antarmuka *taskbar* dan menu Start. Ketika proses ini macet, otomatis *taskbar* ikut lumpuh.
+
 2. Konflik Layanan Latar Belakang (Background Services): Aplikasi pihak ketiga atau pembaruan latar belakang yang berjalan bersamaan sering kali memicu bentrok pada memori penampil sistem.
+
 3. Data *Cache* Start Menu yang Rusak: Terkadang, berkas penumpukan data sementara dari menu Start yang sering diakses mengalami korupsi data ringan.
 
 ---
@@ -35,17 +37,24 @@ Jangan terburu-buru melakukan *restart* paksa atau instal ulang sistem. Mari kit
 Ini adalah jurus pamungkas tercepat yang biasa digunakan oleh *admin system* untuk memulihkan *taskbar* dalam hitungan detik.
 
 1. Tekan kombinasi tombol Ctrl + Shift + Escsecara bersamaan untuk membukaTask Manager.
+
 2. Jika Task Manager terbuka dalam tampilan sederhana, klik More details di bagian bawah untuk melihat daftar lengkap proses.
+
 3. Gulir ke bawah pada tab Processeshingga Anda menemukan proses bernamaWindows Explorer (atau *explorer.exe*).
+
 4. Klik kanan pada proses tersebut, lalu pilih tombol Restart di pojok kanan bawah.
+
 5. Layar Anda akan berkedip hitam sejenak—ini normal karena sistem sedang memuat ulang antarmuka grafis dan *taskbar* Anda akan kembali normal serta bisa diklik kembali.
 
 ### Langkah 2: Menggunakan Terminal untuk Pendaftaran Ulang Paket Sistem
 Jika langkah pertama belum membuahkan hasil, kita perlu mendaftarkan ulang komponen *shell* sistem menggunakan Terminal.
 
 1. Tekan kombinasi tombol Ctrl + Shift + Esc lagi untuk membuka Task Manager (jika *taskbar* masih bermasalah).
+
 2. Klik menu Run new task di bagian atas jendela Task Manager.
+
 3. Ketik `cmd` pada kolom yang tersedia, centang kotak Create this task with administrative privileges, lalu tekanEnter.
+
 4. Salin dan tempel perintah pemulihan berikut ke dalam jendela Command Prompt, lalu tekan Enter:
    `Get-AppXPackage -AllUsers | Foreach {Add-AppxPackage -DisableDevelopmentMode -Register "(_.InstallLocation)\AppXManifest.xml"}`
 5. Biarkan proses berjalan hingga selesai, lalu *restart* perangkat komputer Anda.
@@ -54,8 +63,11 @@ Jika langkah pertama belum membuahkan hasil, kita perlu mendaftarkan ulang kompo
 Terkadang, ketidakcocokan antara *driver* grafis bawaan dengan pembaruan kumulatif Windows memicu *freeze* pada bilah tugas.
 
 1. Buka menu Pengaturan (Settings)dengan menekan tombolWindows + I.
+
 2. Pilih menu Windows Update di panel sebelah kiri.
+
 3. Klik Check for updates dan pastikan tidak ada pembaruan tertunda yang gagal terpasang.
+
 4. Periksa juga pembaruan *driver* melalui Alat Administratif (Device Manager) untuk memastikan kartu grafis Anda berjalan pada versi yang stabil.
 
 ---

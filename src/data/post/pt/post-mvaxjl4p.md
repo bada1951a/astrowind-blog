@@ -24,7 +24,9 @@ Se você já passou pela humilhação de ver o computador demorar dez minutos pa
 Antes de aplicar a faca cirúrgica no sistema, vale a pena entender a raiz do problema. A lentidão na inicialização geralmente é causada por três fatores principais:
 
 1. Efeito "Cachorro de Guarda": Aplicativos como antivírus secundários, Discord, Steam e utilitários de impressora configuram-se automaticamente para iniciar junto com o sistema operacional, disputando I/O do disco rígido ou SSD logo nos primeiros segundos.
+
 2. Serviços Residuais de Instalações Passadas: Cada software que você instala adiciona um pequeno "daemon" ou ajudante que fica monitorando atualizações em segundo plano, consumindo memória sem necessidade.
+
 3. Gargalo de Hardware (Mesmo em SSDs): Mesmo que você utilize um SSD moderno, a sobrecarga de chamadas de API feitas por dezenas de apps no momento do boot cria um congestionamento lógico na inicialização.
 
 ---
@@ -62,5 +64,9 @@ Limpar a inicialização vai devolver agilidade ao seu fluxo de trabalho, mas va
 
 ## Perguntas Frequentes (FAQ)
 
-1. Desativar programas na inicialização pode danificar o Windows?De forma alguma. A aba "Inicializar" do Gerenciador de Tarefas lida apenas com aplicativos de usuário e utilitários opcionais. O Windows protege seus arquivos e serviços essenciais de sistema, impedindo que você desative algo crítico por engano nessa tela.2. O que acontece se eu desativar um programa por engano?Nada grave. Se você notar que algum aplicativo que você usa com frequência deixou de abrir sozinho, basta voltar ao Gerenciador de Tarefas (Ctrl + Shift + Esc), ir na aba "Inicializar", clicar com o botão direito nele e selecionar "Habilitar".3. Preciso reiniciar o computador imediatamente após fazer isso?
+1. Desativar programas na inicialização pode danificar o Windows? De forma alguma. A aba "Inicializar" do Gerenciador de Tarefas lida apenas com aplicativos de usuário e utilitários opcionais. O Windows protege seus arquivos e serviços essenciais de sistema, impedindo que você desative algo crítico por engano nessa tela.
+
+2. O que acontece se eu desativar um programa por engano? Nada grave. Se você notar que algum aplicativo que você usa com frequência deixou de abrir sozinho, basta voltar ao Gerenciador de Tarefas (Ctrl + Shift + Esc), ir na aba "Inicializar", clicar com o botão direito nele e selecionar "Habilitar".
+
+3. Preciso reiniciar o computador imediatamente após fazer isso?
 Não é obrigatório para que a alteração seja salva, mas é altamente recomendável reiniciar a máquina logo em seguida para testar o novo tempo de boot e sentir a diferença na prática.

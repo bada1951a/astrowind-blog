@@ -13,7 +13,7 @@ theme: "Pastel Lavender Tech"
 
 原因は、裏で勝手に動き回っていた無数のバックグラウンドアプリと、Windows 11の無駄にリッチなアニメーション（視覚効果）がメモリとCPUのパワーを完全に食い潰していたことでした。
 
-![Hardware Diagnostic & Troubleshooting](https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?w=1000&auto=format&fit=crop&q=80)
+![Hardware Diagnostic & Troubleshooting](https://images.unsplash.com/photo-1588872657578-7efd1f1555ed? w=1000&auto=format&fit=crop&q=80)
 
 <div style="border-left: 4px solid #7c3aed; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>【よくある質問 5選サクッとまとめ】</strong><br>

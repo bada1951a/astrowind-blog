@@ -28,7 +28,9 @@ Prima di mettermi a smontare banchi di RAM o a ordinare un nuovo alimentatore su
 Prima di aprire gli strumenti di diagnostica, facciamo chiarezza su cosa scatena solitamente questi fastidiosi freeze totali nei computer moderni:
 
 1. Gestione energetica aggressiva (C-states): I processori moderni cambiano stato di frequenza e voltaggio in millisecondi. A volte, i profili di risparmio energetico di Windows 11 spingono la CPU a un livello di idle troppo basso da cui il processore non riesce a risvegliarsi, causando il blocco totale.
+
 2. Driver grafici o conflitti PCIe: Una cattiva comunicazione tra il kernel di Windows 11 e i driver della scheda video (NVIDIA, AMD o Intel integrata) porta spesso a un congelamento del gestore delle finestre (Desktop Window Manager).
+
 3. Instabilità della memoria RAM (XPO o profili di overclock): Anche se il test di memoria iniziale va a buon fine, lievi variazioni di tensione sui banchi RAM possono corrompere i dati nella cache di sistema, facendo piantare l'intero sistema operativo.
 
 ---

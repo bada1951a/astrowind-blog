@@ -22,10 +22,12 @@ Vendredi, 17h45. Le commit final de la semaine est prêt à être poussé, la ma
 
 ## Anatomie d'un plantage à la con : Pourquoi ce putain d'écran reste noir ?
 
-On a tous tendance à paniquer en pensant que la carte mère a grillé ou que le GPU a rendu l'âme. Sauf que dans 80% des cas sur une machine de bureau, le coupable est bien plus vicieux et terre-à-terre. 
+On a tous tendance à paniquer en pensant que la carte mère a grillé ou que le GPU a rendu l'âme. Sauf que dans 80% des cas sur une machine de bureau, le coupable est bien plus vicieux et terre-à-terre.
 
 1. L'oxydation invisible des contacts dorés : Avec l'humidité ambiante des bureaux et les variations thermiques (le chauffage qui s'allume et s'éteint), une fine pellicule d'oxydation se forme sur les pistes de la barrette de RAM. Résultat : le bus de données ne communique plus avec le CPU.
+
 2. La micro-dilatation thermique : À force de cycles de charge intense (compilation, VMs qui tourne, Docker en PLS), le PCB de la carte mère travaille. La barrette de RAM se décale imperceptiblement de son slot DIMM, provoquant une rupture de contact sur certaines lignes d'adressage.
+
 3. L'accumulation de poussière conductive : Les ventilateurs aspirent toutes les cochonneries de l'open space. Un mouton de poussière s'est glissé dans le slot, agissant comme un isolant ou pire, créant une micro-interférence.
 
 ## Fiche de diagnostic et procédure d'urgence (Pas à pas)
@@ -61,11 +63,17 @@ Pour éviter de vous retrouver à poil un vendredi soir :
 
 ## FAQ Technique
 
-### Q1 : Mon PC émet des bips bizarres (Beep codes) au démarrage, ça un rapport avec la RAM ?
+###
+
+Q1 : Mon PC émet des bips bizarres (Beep codes) au démarrage, ça un rapport avec la RAM ?
 R : Oh que oui. C'est le BIOS qui communique avec vous. Une séquence spécifique de bips courts (souvent 3 bips continus ou un bip long suivi de deux courts selon les constructeurs de cartes mères comme AMI ou Award) signifie clairement : *"Je ne trouve pas de mémoire valide, je suis aveugle"*. C'est le moment de sortir la gomme.
 
-### Q2 : Est-ce que je peux mélanger des barrettes de RAM de fréquences différentes si l'une est morte ?
+###
+
+Q2 : Est-ce que je peux mélanger des barrettes de RAM de fréquences différentes si l'une est morte ?
 R : Techniquement oui, le contrôleur mémoire va s'aligner sur la fréquence et les timings de la barrette la plus lente pour éviter le crash. Mais en environnement professionnel ou de dev, c'est la pire idée du monde : vous allez vous taper des kernel panics aléatoires ou des Blue Screens of Death (BSOD) en plein milieu de compilations lourdes.
 
-### Q3 : Comment savoir si le slot DIMM de la carte mère est physiquement mort ?
+###
+
+Q3 : Comment savoir si le slot DIMM de la carte mère est physiquement mort ?
 R : Testez la même barrette de RAM dans chaque slot un par un. Si la machine boote avec la barrette sur le slot 2 et le slot 4, mais refuse catégoriquement de s'allumer (toujours le même écran noir) quand elle est insérée seule sur le slot 1 ou 3, c'est que les pistes du circuit imprimé de la carte mère sont endommagées ou qu'une pin du socket du processeur fait des siennes. Condoléances, il faudra envisager un remplacement de mobo.

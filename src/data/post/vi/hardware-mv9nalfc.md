@@ -20,7 +20,9 @@ Chỉ còn đúng 15 phút nữa là đến cuộc họp tổng kết dự án q
 Dựa trên hàng trăm ca cứu hộ máy tính văn phòng tại các tòa nhà cao ốc ở TP.HCM, tôi đúc kết ra ba thủ phạm chính gây ra cơn ác mộng này:
 
 1. Bộ nhớ đệm tạm thời (Temp Files) phình to quá mức: Sau nhiều tháng cập nhật Windows Update, duyệt web Chrome và chạy các file Excel nặng, thư mục Temp sinh ra hàng triệu file rác chiếm trọn dung lượng ổ C.
+
 2. Xung đột nguồn điện cổng USB (USB Root Hub Power Saving): Khi ổ C đầy, tính năng tiết kiệm năng lượng của Windows tự động ngắt nguồn điện cấp cho các cổng USB phía trước thùng máy (case) hoặc cổng thiếu ổn định, khiến ổ cứng ngoài không đủ điện để khởi động motor quay.
+
 3. Lỗi phân vùng hoặc mất ký tự ổ đĩa (Drive Letter Conflict): Ổ cứng ngoài vẫn kết nối nhưng do xung đột phân vùng ngầm, hệ điều hành không gán được tên ổ (như ổ D, ổ E), dẫn đến việc Explorer không hiển thị.
 
 ---

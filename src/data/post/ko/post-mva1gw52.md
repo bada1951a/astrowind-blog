@@ -13,7 +13,7 @@ theme: "Crimson Emergency Field"
 
 도커(Docker) 컨테이너는 비정상적으로 종료되고, 비주얼 스튜디오(Visual Studio)는 저장 공간 부족으로 크래시를 일으키는 절체절명의 순간이었습니다. 중요한 시스템 검증을 코앞에 두고 발을 동동 구르던 그때, 수년간의 인프라 및 OS 최적화 경험을 바탕으로 10분 만에 C드라이브 용량을 40GB 이상 확보해 낸 실무 노하우를 지금부터 가감 없이 풀어드립니다. 섣불리 폴더를 지웠다가 시스템이 먹통이 되기 전에, 이 글을 따라 안전하고 확실하게 용량을 확보해 보세요.
 
-![Tech Hardware Guide](https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=1200&h=675&q=85)
+![Tech Hardware Guide](https://images.unsplash.com/photo-1542751371-adc38448a05e? auto=format&fit=crop&w=1200&h=675&q=85)
 
 <div style="border-left: 4px solid #ef4444; padding: 12px 16px; margin: 20px 0; background-color: rgba(239, 68, 68, 0.05); border-radius: 4px; color: #111827;">
 <strong>긴급 경고:</strong> C드라이브가 완전히 꽉 찬 상태에서는 윈도우가 가상 메모리(페이지 파일)를 정상적으로 쓰지 못해 강제 종료나 블루스크린이 발생할 수 있습니다. 무작정 대용량 폴더를 삭제하기 전, 아래의 안전한 절차를 반드시 준수하세요!
@@ -27,8 +27,10 @@ theme: "Crimson Emergency Field"
 
 1. 방치된 윈도우 업데이트 및 시스템 임시 파일 (`Temp`, `SoftwareDistribution`)
    대규모 보안 패치나 기능 업데이트가 진행될 때마다 기존 OS 파일의 백업본과 다운로드 캐시가 고스란히 쌓입니다. 시간이 지나면 수십 기가바이트에 달하는 정크 데이터로 변합니다.
+
 2. 개발 툴 및 브라우저 캐시의 폭발적인 증가
    크롬, 엣지 등의 웹 브라우저 캐시뿐만 아니라, 윈도우 스토어 앱 데이터, 그리고 개발자들의 경우 노드 모듈(`node_modules`), 도커 이미지 레이어, 윈도우 하위 시스템(WSL2) 가상 disk 파일이 C드라이브의 숨통을 조입니다.
+
 3. 최대 절전 모드 파일(`hiberfil.sys`)과 가상 메모리(`pagefile.sys`)
    이 파일들은 사용자의 물리 램(RAM) 용량과 맞물려 자동으로 생성되는데, 32GB 램을 사용하는 머신의 경우 최대 절전 모드 파일만으로도 C드라이브 용량을 20GB 이상 고정적으로 차지하게 됩니다.
 

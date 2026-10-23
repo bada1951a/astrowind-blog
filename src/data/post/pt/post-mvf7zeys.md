@@ -24,7 +24,9 @@ Neste artigo, vou te mostrar o passo a passo exato, direto da bancada de suporte
 Antes de correr para formatar a máquina (o que seria um tiro no escuro), vamos entender o que realmente causa essa pane no ecossistema do Windows. Na maioria das vezes, o processo *System* engole o processador por três motivos principais:
 
 1. Loop de atualização do Windows (Windows Update): O assistente tenta baixar um pacote, corrompe o cache e fica em um ciclo infinito tentando aplicar a correção, consumindo ciclos de clock absurdos.
+
 2. Conflito de Driver no Gerenciador de Dispositivos: Um driver de controladora SATA, rede ou vídeo corrompido gera falsas interrupções de hardware (*Interrupt Storm*), sobrecarregando o núcleo do sistema operacional.
+
 3. Indexação de arquivos corrompida (Windows Search): O serviço de busca do Windows tenta indexar um arquivo corrompido ou um PST gigante de Outlook que entrou em loop de leitura e escrita no SSD/HDD.
 
 ---
@@ -45,22 +47,33 @@ Pressione `Ctrl + Shift + Esc` para abrir o Gerenciador de Tarefas.
 
 #### Passo 2: Parando o Windows Update e o Windows Search (Os maiores vilões)
 Muitas vezes, interromper os serviços que gerenciam atualizações e buscas resolve o travamento instantaneamente.
+
 1. Pressione as teclas `Windows + R`, digite `services.msc` e dê Enter.
+
 2. Na lista de serviços, procure por Windows Update.
+
 3. Clique com o botão direito nele, selecione Parar.
+
 4. Faça o mesmo para o serviço Windows Search (pesquisa do Windows).
+
 5. Volte ao Gerenciador de Tarefas e verifique se a CPU despencou para taxas normais (abaixo de 10%).
 
 #### Passo 3: Limpando o Cache de Atualizações corrompidas
 Se o passo anterior aliviou o problema, precisamos limpar a pasta onde o Windows guarda os arquivos temporários de update corrompidos.
+
 1. Abra o Explorador de Arquivos e vá até `C:\Windows\SoftwareDistribution`.
+
 2. Apague todo o conteúdo de dentro das pastas DownloadeDataStore. (Se o sistema disser que algum arquivo está em uso, pare o serviço do Windows Update novamente pelo `services.msc` e tente de novo).
+
 3. Reinicie a máquina normalmente.
 
 #### Passo 4: Verificando drivers no Gerenciador de Dispositivos
 Se o processo *Interrupções de Sistema* continua sugando o processador, o problema é hardware ou driver.
+
 1. Clique com o botão direito no menu Iniciar e selecione Gerenciador de Dispositivos.
+
 2. Expanda itens como Controladoras IDE ATA/ATAPIouAdaptadores de Rede.
+
 3. Se houver algum dispositivo com um ponto de exclamação amarelo, clique com o botão direito, selecione Atualizar driver ou desinstale o dispositivo e reinicie para que o Windows reinstale o driver padrão limpo.
 
 ---
@@ -75,4 +88,8 @@ Se o processo *Interrupções de Sistema* continua sugando o processador, o prob
 
 ### Perguntas Frequentes (FAQ)
 
-1. Posso simplesmente desativar o Windows Update para o problema nunca mais voltar?Não é recomendado. Embora desativar impeça novos loops de atualização temporariamente, você deixará a máquina vulnerável a falhas de segurança críticas. O ideal é limpar o cache corrompido conforme ensinado no Passo 3 e deixar o sistema atualizar de forma limpa fora do expediente.2. O uso de 100% de CPU pode queimar o processador do computador?Processadores modernos possuem mecanismos de proteção térmica (Thermal Throttling) que reduzem a velocidade de clock ou desligam a máquina automaticamente antes que ocorra dano físico permanente. No entanto, deixar a CPU em estresse máximo constante reduz a vida útil da pasta térmica e força os componentes da placa-mãe desnecessariamente.3. O que fazer se nenhuma dessas dicas baixar o uso da CPU?Se após parar os serviços e limpar os caches o problema persistir, abra asConfigurações(`Windows + I`), vá emAtualização e Segurança > Recuperação e utilize a ferramenta para redefinir o PC mantendo os arquivos pessoais, ou execute o comando `sfc /scannow` no Prompt de Comando (como Administrador) para reparar arquivos corrompidos do núcleo do Windows.
+1. Posso simplesmente desativar o Windows Update para o problema nunca mais voltar? Não é recomendado. Embora desativar impeça novos loops de atualização temporariamente, você deixará a máquina vulnerável a falhas de segurança críticas. O ideal é limpar o cache corrompido conforme ensinado no Passo 3 e deixar o sistema atualizar de forma limpa fora do expediente.
+
+2. O uso de 100% de CPU pode queimar o processador do computador? Processadores modernos possuem mecanismos de proteção térmica (Thermal Throttling) que reduzem a velocidade de clock ou desligam a máquina automaticamente antes que ocorra dano físico permanente. No entanto, deixar a CPU em estresse máximo constante reduz a vida útil da pasta térmica e força os componentes da placa-mãe desnecessariamente.
+
+3. O que fazer se nenhuma dessas dicas baixar o uso da CPU? Se após parar os serviços e limpar os caches o problema persistir, abra asConfigurações(`Windows + I`), vá emAtualização e Segurança > Recuperação e utilize a ferramenta para redefinir o PC mantendo os arquivos pessoais, ou execute o comando `sfc /scannow` no Prompt de Comando (como Administrador) para reparar arquivos corrompidos do núcleo do Windows.

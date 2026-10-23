@@ -30,7 +30,7 @@ Het grootste pijnpunt in moderne Windows-omgevingen is de automatische vervangin
 
 #
 
-![Hardware Diagnostic & Troubleshooting](https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=1000&h=550&q=80)
+![Hardware Diagnostic & Troubleshooting](https://images.unsplash.com/photo-1542751371-adc38448a05e? auto=format&fit=crop&w=1000&h=550&q=80)
 
 ### 2. Corruptie van de EDID-handshake en HDCP-onderhandeling
 Extended Display Identification Data (EDID) is de metadata die de monitor naar de videokaart stuurt met informatie over resoluties, vernieuwingsfrequenties en kleurprofielen. Als de laptop vanuit de slaapstand ontwaakt terwijl het dockingstation al stroom levert, kan deze handshake halverwege vastlopen. De High-bandwidth Digital Content Protection (HDCP) ziet dit als een potentiële beveiligingsinbreuk en sluit de videotransmissie abrupt af. Dit veroorzaakt de beruchte "knipperlus": de GPU probeert te verbinden, faalt de HDCP-controle, verbreekt de verbinding en start opnieuw op.
@@ -63,14 +63,18 @@ Signaalverlies/Knipperen gedetecteerd
 Voordat we diep in het register duiken, dwingen we het Desktop Window Manager (DWM) subsysteem om de beeldschermadapter opnieuw te initialiseren.
 
 1. Gebruik de sneltoets: Windows-toets + Ctrl + Shift + B.
+
 2. Het scherm knippert eenmaal kort en je hoort een akoestische pieptoon van het besturingssysteem. Dit herstart de grafische pipeline en wist de actieve framebuffer zonder dat actieve applicaties worden afgesloten.
+
 3. Helpt dit niet? Koppel de USB-C/HDMI-kabel los, wacht 10 seconden en sluit deze weer aan.
 
 #### Stap 2: Diagnostiek en Driververwijdering via Apparaatbeheer
 Als de snelle reset het probleem niet verhelpt, is het stuurprogramma in een ongeldige toestand beland. We gaan de drivers isoleren.
 
 1. Klik met de rechtermuisknop op het Startmenu en selecteer Apparaatbeheer (Device Manager).
+
 2. Klap de sectie Beeldschermadapters (Display adapters) uit. Hier zie je doorgaans twee apparaten: de geïntegreerde GPU (bijv. *Intel Iris Xe Graphics*) en de discrete GPU (bijv. *NVIDIA GeForce RTX 4060 Laptop GPU*).
+
 3. Controleer of er een geel uitroepteken staat bij een van de adapters (foutcode 43 of code 31).
 
 <div style="border-left: 4px solid #1d4ed8; padding: 14px 18px; margin: 20px 0; background-color: rgba(29, 78, 216, 0.05); border-radius: 4px;">
@@ -78,18 +82,26 @@ Als de snelle reset het probleem niet verhelpt, is het stuurprogramma in een ong
 </div>
 
 4. Klap tevens de categorie Beeldschermen(Monitors) uit in Apparaatbeheer. Klik in de menubalk opBeeld->Verborgen apparaten weergeven.
+
 5. Verwijder alle grijs weergegeven schermen (dit zijn zogeheten "ghost monitors" met verouderde EDID-caches) door met de rechtermuisknop te klikken en te kiezen voor Apparaat verwijderen.
+
 6. Klik met de rechtermuisknop op je primaire geïntegreerde beeldschermadapter en kies Stuurprogramma bijwerken->Op mijn computer naar stuurprogramma's zoeken->Ik wil kiezen uit een lijst met stuurprogramma's op mijn computer. Selecteer de vorige stabiele driverversie indien beschikbaar en voltooi de wizard.
 
 #### Stap 3: Uitvoeren van een Schone Driverinstallatie (DDU Methode)
 Wanneer Windows Update de stuurprogrammacache heeft beschadigd, biedt alleen een rigoureuze schoonmaak uitkomst.
 
 1. Download de nieuwste OEM-driver via de ondersteuningspagina van je laptopfabrikant (installeer bij voorkeur géén generieke driver via Intel Driver Support Assistant als je een enterprise-dock gebruikt).
+
 2. Start Windows op in Veilige Modus (Houd Shift ingedrukt terwijl je klikt op Start -> Opnieuw opstarten -> Problemen oplossen -> Geavanceerde opties -> Opstartinstellingen -> Opnieuw opstarten -> Druk op F4).
+
 3. Start Display Driver Uninstaller (DDU) met beheerdersrechten.
+
 4. Selecteer het apparaattype "GPU", kies de fabrikant van je geïntegreerde GPU en klik op Opschonen en NIET opnieuw opstarten.
+
 5. Herhaal deze actie direct voor de discrete GPU (indien aanwezig).
+
 6. Sluit DDU af en herstart de laptop normaal.
+
 7. Installeer het vooraf gedownloade OEM-stuurprogrammabestand. Sluit de externe schermen pas weer aan nadat de installatie 100% is voltooid en de machine eenmaal opnieuw is opgestart.
 
 #### Stap 4: Reset van de Windows Display Cache via het Register
@@ -109,9 +121,13 @@ Herstart de laptop direct na het uitvoeren van deze opdrachten. Windows zal de d
 Knipperende schermen ontstaan vaak doordat Windows probeert een paneel aan te sturen op 59.94 Hz terwijl de interne scaler van de monitor rekent op exact 60.00 Hz, of wanneer variabele vernieuwingsfrequentie (VRR/G-Sync) actief is op een dock dat dit niet ondersteunt.
 
 1. Open Instellingen(Windows-toets + I) ->Systeem->Beeldscherm.
+
 2. Scroll naar beneden en klik op Geavanceerde beeldscherminstellingen.
+
 3. Selecteer het problematische externe scherm in het dropdown-menu.
+
 4. Kijk naar de Vernieuwingsfrequentie kiezen (Refresh rate).
+
 5. Schakel een eventuele variabele vernieuwingsfrequentie direct uit. Zet de waarde vast op 60 Hzof50 Hz (of verlaag deze tijdelijk naar 30 Hz als diagnostische test). Als het knipperen bij 30 Hz stopt, is er definitief sprake van een kabel- of poortbandbreedtetekort.
 
 ---
@@ -127,8 +143,10 @@ Om te voorkomen dat ditzelfde probleem zich bij de volgende Windows Update-cyclu
 1. Groepsbeleid tegen driver-overschrijvingen:
    Open de Lokale groepsbeleidbewerker (`gpedit.msc`) en navigeer naar:  
    `Computerconfiguratie` -> `Beheersjablonen` -> `Windows-onderdelen` -> `Windows Update` -> `Geen stuurprogramma's opnemen in Windows-updates`. Zet deze beleidsregel op Ingeschakeld. Hiermee voorkom je dat Microsoft WHQL-drivers je stabiele OEM-videodrivers overschrijven.
+
 2. Kabelkwaliteit en Passieve Adapters:
    Gooi goedkope, passieve HDMI-naar-DisplayPort adapters resoluut de prullenbak in. Zodra je een dual-monitoropstelling draait via USB-C, vereist de signaalintegriteit gecertificeerde VESA DisplayPort 1.4 of HDMI 2.1 kabels met actieve signaalomvormers indien er sprake is van protocolconversie.
+
 3. Power Delivery Marges:
    Zorg dat het dockingstation voldoende vermogen levert. Als een dock slechts 65W levert aan een laptop die onder piekbelasting 90W trekt, schaalt het moederbord automatisch de stroomtoevoer naar de USB-C multiplexers terug. Dit resulteert in het wegvallen van het videosignaal zodra de processor zwaar wordt belast.
 

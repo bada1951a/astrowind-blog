@@ -32,17 +32,23 @@ Không cần cài đặt những phần mềm cứu hộ phức tạp, chúng ta
 ### Bước 1: Kiểm tra và vô hiệu hóa nhanh Interrupts trong Task Manager
 Tiến trình System Process thường gánh luôn cả các ngắt phần cứng (Hardware Interrupts). Để xác định chính xác:
 1. Nhấn tổ hợp phím `Ctrl + Shift + Esc` để mở Task Manager.
+
 2. Chuyển sang tab Processes, cuộn xuống tìm tiến trình có tên làSystemhoặcSystem and compressed memory.
+
 3. Nếu thấy mức sử dụng CPU vượt quá 50 phần trăm một cách phi lý, hãy click chuột phải vào nó và chọn Go to details để xem mã PID chi tiết.
+
 4. Tạm thời vô hiệu hóa các thiết bị ngoại vi không cần thiết đang cắm qua cổng USB như chuột rời phụ, bàn phím cơ Led rực rỡ, hoặc Hub chuyển đổi để loại trừ xung đột phần cứng ngoại vi.
 
 ### Bước 2: Chạy lệnh quét và phục hồi tệp hệ thống bằng SFC và DISM
 Đây là cứu cánh nhanh nhất khi file hệ thống bị lỗi ngầm do xung đột phần mềm:
 1. Nhấn phím `Windows`, gõ từ khóa `cmd` vào thanh tìm kiếm.
+
 2. Click chuột phải vào Command Promptvà chọnRun as administrator (Chạy với quyền quản trị viên).
+
 3. Trong cửa sổ đen hiện ra, gõ chính xác dòng lệnh sau rồi nhấn Enter:
    `sfc /scannow`
 4. Ngồi chờ khoảng 5 đến 10 phút để Windows tự động tìm kiếm và vá lại các tệp hệ thống bị hỏng.
+
 5. Sau khi quét xong, tiếp tục gõ lệnh sau để làm sạch bộ nhớ đệm hệ thống:
    `DISM /Online /Cleanup-Image /RestoreHealth`
 6. Khởi động lại máy tính (`Restart`) ngay sau khi hoàn tất.
@@ -50,8 +56,11 @@ Tiến trình System Process thường gánh luôn cả các ngắt phần cứn
 ### Bước 3: Tinh chỉnh lại dịch vụ Windows Update và SysMain
 Nhiều trường hợp tiến trình System cố gắng tải xuống hoặc cài đặt bản cập nhật lỗi ngầm:
 1. Nhấn tổ hợp phím `Windows + R`, gõ `services.msc` rồi nhấn Enter để mở bảng Cài đặt Dịch vụ.
+
 2. Cuộn tìm đến dịch vụ có tên Windows Update, click đúp vào đó.
+
 3. Tại ô *Startup type*, chọn Disabled, sau đó bấm nútStop để dừng hẳn tiến trình đang kẹt.
+
 4. Tìm tiếp dịch vụ SysMain(trước đây là Superfetch), làm tương tự: chọnDisabledvà bấmStop để giảm tải tối đa cho ổ cứng và CPU.
 
 <div style="border-left: 4px solid #3b82f6; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">

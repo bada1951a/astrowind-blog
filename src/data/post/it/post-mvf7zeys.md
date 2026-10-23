@@ -26,7 +26,9 @@ Ecco esattamente come ho risolto il problema sul campo, passo dopo passo, senza 
 Il processo *System* di Windows racchiude i thread del kernel del sistema operativo. Quando schizza al massimo e ci rimane, non è quasi mai un virus o un'applicazione standard che sta girando in background, ma piuttosto un conflitto a livello di basso livello hardware o software. Nella mia esperienza sul campo, le cause principali si riducono a tre colpevoli ricorrenti:
 
 1. Driver di periferica obsoleti o corrotti: Spesso driver di rete (soprattutto Realtek o schede Wi-Fi) o driver di archiviazione entrano in un loop infinito di interrupt hardware (IRQL), facendo impazzire il kernel.
+
 2. File di paging (Pagefile) frammentato o corrotto: Se la RAM fisica è sotto stress e Windows tenta di scrivere continuamente sulla memoria virtuale di massa con un disco parzialmente danneggiato, il kernel si siede in attesa (I/O wait).
+
 3. Servizi di indicizzazione o Windows Update bloccati: Coda di stampa o aggiornamenti falliti che continuano a tentare di scrivere registri di sistema all'infinito.
 
 <div style="border-left: 4px solid #334155; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">

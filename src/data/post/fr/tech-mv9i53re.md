@@ -28,7 +28,9 @@ Ce genre de panne n'attend jamais le bon moment. Si vous aussi, votre bécane a 
 Pourquoi un ordinateur moderne, censé être une bête de course, finit-il par ramer comme un PC d'il y a dix ans ? En creusant sous le capot, trois coupables principaux reviennent constamment sur le terrain.
 
 1. L'armée des ombres (Applications en arrière-plan) : Des dizaines d'applications que vous n'avez jamais ouvertes de votre plein gré (météo, actualités, outils Xbox, synchronisations cloud en triple) tournent en continu, bouffant de la mémoire vive et du processeur pour rien.
+
 2. Le festival des feux d'artifice (Effets visuels et animations) : Windows 11 adore les transparence de style acrylique, les fenêtres qui s'ouvrent en fondu enchaîné et les animations fluides. Sur le papier, c'est joli. En pratique, cela sollicite inutilement la carte graphique et le processeur, surtout quand la batterie commence à faiblir.
+
 3. Le piège de la mise à jour et de la télémétrie : Le système envoie constamment des données et cherche des mises à jour en plein milieu de vos tâches critiques, créant des micro-coupures de performance insupportables.
 
 ---
@@ -74,5 +76,9 @@ Pour ne plus jamais vous retrouver bloqué la sueur au front avant une réunion 
 
 ### Foire Aux Questions (FAQ)
 
-Q1 : Est-ce que désactiver les effets visuels va rendre mon écran moche ?R : Ça enlève les effets de transparence "verre dépoli" et les animations de glissement lorsque vous fermez ou ouvrez une fenêtre. Le rendu devient un peu plus brut, semblable à Windows 10, mais le gain de réactivité sur un PC de bureau ou un portable professionnel est immédiat et flagrant.Q2 : Si je bloque les applications en arrière-plan, est-ce que je risque de rater des notifications importantes ?R : Uniquement pour les applications secondaires que vous aurez ciblées (comme l'application Météo ou des jeux). Vos logiciels de messagerie principaux (comme Outlook ou Teams si configurés correctement) resteront actifs lorsqu'ils sont ouverts au premier plan.Q3 : Pourquoi mon PC redevient-il lent après quelques mois malgré cette optimisation ?
+Q1 : Est-ce que désactiver les effets visuels va rendre mon écran moche ? R : Ça enlève les effets de transparence "verre dépoli" et les animations de glissement lorsque vous fermez ou ouvrez une fenêtre. Le rendu devient un peu plus brut, semblable à Windows 10, mais le gain de réactivité sur un PC de bureau ou un portable professionnel est immédiat et flagrant.
+
+Q2 : Si je bloque les applications en arrière-plan, est-ce que je risque de rater des notifications importantes ? R : Uniquement pour les applications secondaires que vous aurez ciblées (comme l'application Météo ou des jeux). Vos logiciels de messagerie principaux (comme Outlook ou Teams si configurés correctement) resteront actifs lorsqu'ils sont ouverts au premier plan.
+
+Q3 : Pourquoi mon PC redevient-il lent après quelques mois malgré cette optimisation ?
 R : Windows réinstalle parfois des applications par défaut lors des grosses mises à jour semestrielles, et le cache accumulé par votre navigateur web finit par peser lourd. Un petit nettoyage trimestriel des applications installées s'impose pour garder une machine saine.

@@ -22,7 +22,9 @@ Erano le 17:45 in un frenetico ufficio al Centro direzionale di Milano, con la d
 Prima di mettere le mani nel sistema, capiamo cosa succede "sotto il cofano". Le ragioni principali di questo cambiamento e del disagio associato sono tre:
 
 1. Sandboxing e isolamento delle app: Microsoft ha progettato il nuovo menu per impedire che le vecchie applicazioni di terze parti facciano crashare Esplora risorse (explorer.exe), isolando le estensioni in modo più sicuro.
+
 2. Design Minimalista (e forzato): L'obiettivo era ripulire il desktop e le cartelle da decenni di voci accumulate da software installati nel corso degli anni, offrendo un look pulito ma sacrificando l'efficienza degli utenti professionali.
+
 3. Mancanza di compatibilità nativa immediata: Molti software aziendali e utility avanzate non si sono ancora integrati perfettamente nelle nuove API di Windows 11, costringendo l'utente a passare per il sottomenu legacy.
 
 ## La Soluzione Definitiva: Procedura Passo-Passo
@@ -36,8 +38,11 @@ Fortunatamente, non dobbiamo convivere per forza con questa limitazione. Esiston
 ### Metodo Rapido via Riga di Comando (Consigliato)
 
 1. Cliccate sul pulsante Start o premete i tasti della tastiera corrispondenti.
+
 2. Digitate Gestione attività(utile se dovete riavviare explorer.exe) oppure cercate direttamenteTerminale.
+
 3. Aprite il Terminale(o il Prompt dei comandi) facendo clic con il tasto destro e selezionandoEsegui come amministratore.
+
 4. Copiate e incololate questa stringa esatta all'interno della finestra nera del terminale e premete Invio:
 
 ```cmd
@@ -45,8 +50,11 @@ reg.exe add "HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\
 ```
 
 5. Vedrete la scritta "Operazione completata con successo".
+
 6. Ora, per rendere effettiva la modifica senza riavviare l'intero PC, aprite Gestione attività (potete usare la scorciatoia da tastiera `Ctrl + Maiusc + Esc`).
+
 7. Nella scheda *Processi*, scorrete l'elenco fino a trovare Esplora risorse (explorer.exe).
+
 8. Cliccateci sopra con il tasto destro e selezionate Riavvia.
 
 In meno di dieci secondi, la barra delle applicazioni e il desktop lampeggeranno brevemente: da questo momento in poi, cliccando con il tasto destro su un file o una cartella, apparirà direttamente il buon vecchio menu classico di Windows 10, con tutte le opzioni subito visibili.

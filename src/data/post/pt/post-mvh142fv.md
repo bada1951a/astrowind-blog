@@ -20,7 +20,9 @@ Eram exatamente 14h45 em um escritório na Avenida Paulista, em São Paulo. Falt
 Antes de abrir qualquer ferramenta, precisamos entender o que costuma derrubar o sistema operacional de forma repentina. Na minha rotina de bancada, divido esses travamentos misteriosos em três grandes vilões:
 
 1. Instabilidade de Driver de Vídeo: Atualizações automáticas do Windows Update muitas vezes sobrescrevem drivers essenciais da placa gráfica (NVIDIA, AMD ou Intel), gerando conflitos que congelam a interface gráfica inteira.
+
 2. Micro-falhas de Energia ou Tensão na Placa-Mãe: Variações na linha de 12V da fonte ou perfis de memória RAM (XMP/EXPO) ligeiramente instáveis fazem o processador travar instantaneamente para evitar danos maiores.
+
 3. Erros de Leitura em SSDs NVMe: Falhas intermitentes no controlador do armazenamento principal travam o kernel do Windows ao tentar ler o arquivo de paginação.
 
 ---

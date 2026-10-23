@@ -20,7 +20,9 @@ Eram exatamente 16h45 em um hub de tecnologia na região da Avenida Paulista, em
 Antes de sair deletando arquivos aleatoriamente e correr o risco de quebrar o sistema operacional, precisamos entender onde o espaço realmente está indo. O comportamento padrão do Windows 11 acumulates resíduos invisíveis que drenam gigabytes preciosos silenciosamente.
 
 1. Acúmulo de Arquivos Temporários (Temp e Prefetch): Aplicativos em execução, navegadores e o próprio sistema criam logs e caches que raramente são apagados automaticamente após o fechamento.
+
 2. Histórico de Atualizações Anteriores (Windows.old): Após grandes updates do sistema, o Windows guarda uma cópia completa da versão anterior para fins de recuperação, ocupando facilmente entre 15 GB e 30 GB.
+
 3. Caches Ocultos de Navegadores e Ferramentas de Desenvolvimento: Se você usa Docker, Node.js, IDEs como VS Code ou navegadores com dezenas de abas, as pastas de cache locais explodem de tamanho sem aviso prévio.
 
 ---

@@ -22,7 +22,9 @@ Afgelopen dinsdagmiddag, midden in de hectiek op kantoor op de Zuidas in Amsterd
 In de uren na die bijna-ramp ben ik diep in het systeem gedoken om te achterhalen waar die gigabytes aan data in vredesnaambleven. Als je merkt dat je SSD of HDD ineens dichtslibt, komt dat bijna altijd door een van deze drie boosdoeners:
 
 1. Tijdelijke bestanden (Temp files): Windows en actieve applicaties zoals browsers creëren continu tijdelijke bestanden om taken te versnellen. Heel handig op dat moment, maar ze vergeten bijna altijd om deze rotzooi naderhand weer op te ruimen. Na maanden hopen megabytes zich op tot gigabytes.
+
 2. Systeemherstel en Windows Update-restanten: Na een grote update bewaart Windows voor de zekerheid oudere bestanden (zoals de map *Windows.old*) en herstelpunten. Dit is handig als een update mislukt, maar het vreet onnodig gigabytes aan kostbare opslagruimte op je SSD.
+
 3. Browsercache en downloadhistorie: Of je nu Chrome, Edge of Firefox gebruikt; je browser slaat gigantische hoeveelheden webpagina-onderdelen, afbeeldingen en installatiebestanden op in de achtergrond.
 
 ### Stap-voor-stap naar een lege C-schijf
@@ -69,5 +71,9 @@ Om je een idee te geven van het verschil dat dit oplevert op een gemiddelde kant
 
 ### Veelgestelde Vragen (FAQ)
 
-1. Kan ik zomaar alle bestanden in de map %temp% verwijderen zonder dat mijn pc stukgaat?Ja, absoluut. Deze map is uitsluitend bedoeld voor tijdelijke rommel die apps tijdelijk parkeren. Bestanden die op dat moment door actieve programma's worden gebruikt, worden automatisch overgeslagen door Windows. Je systeem kan hierdoor dus nooit beschadigen.2. Wat moet ik doen als mijn schijf na deze stappen binnen de kortste keren weer volloopt?Als je schijf snel volloopt ondanks deze opschoning, is de kans groot dat je te maken hebt met een groeiende map van een cloudservice (zoals OneDrive of Dropbox die onbeperkt lokaal synchroniseren) of dat je downloadmap uitpuilt met zware installatiebestanden. Verplaats grote persoonlijke media naar een externe schijf of de cloud.3. Is het verstandig om gratis opschoonsoftware van derden te downloaden?
+1. Kan ik zomaar alle bestanden in de map %temp% verwijderen zonder dat mijn pc stukgaat? Ja, absoluut. Deze map is uitsluitend bedoeld voor tijdelijke rommel die apps tijdelijk parkeren. Bestanden die op dat moment door actieve programma's worden gebruikt, worden automatisch overgeslagen door Windows. Je systeem kan hierdoor dus nooit beschadigen.
+
+2. Wat moet ik doen als mijn schijf na deze stappen binnen de kortste keren weer volloopt? Als je schijf snel volloopt ondanks deze opschoning, is de kans groot dat je te maken hebt met een groeiende map van een cloudservice (zoals OneDrive of Dropbox die onbeperkt lokaal synchroniseren) of dat je downloadmap uitpuilt met zware installatiebestanden. Verplaats grote persoonlijke media naar een externe schijf of de cloud.
+
+3. Is het verstandig om gratis opschoonsoftware van derden te downloaden?
 Over het algemeen raden we dit af voor de doorsnee gebruiker. Veel van dit soort programma's zitten vol met agressieve reclame, bundleware of onnodige achtergrondprocessen die je systeem juist vertragen. De ingebouwde Windows-tools zoals *Opslag* en *Schijfopruiming* zijn meer dan voldoende en volledig veilig.

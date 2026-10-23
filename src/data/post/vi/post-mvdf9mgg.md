@@ -20,7 +20,9 @@ Sáng nay vừa bước chân vào văn phòng ở khu công nghệ phần mềm
 Sau nhiều năm bám trụ với nghề tối ưu hệ thống, tôi nhận ra thủ phạm đứng sau tình trạng này hiếm khi nằm ở phần cứng, mà thường xuất phát từ ba nguyên nhân chính sau:
 
 1. Xung đột gói tin trong thư mục SoftwareDistribution: Đây là nơi Windows lưu trữ tạm thời các file cài đặt tải về. Khi một file nào đó bị lỗi checksum hoặc bị treo quyền đọc/ghi, tiến trình giải nén sẽ đứng hình vĩnh viễn ở mốc cuối cùng.
+
 2. Tiến trình ngầm Windows Update (wuauserv) bị kẹt: Dịch vụ quản lý cập nhật bị treo trạng thái "Stopping" hoặc "Starting", làm tắc nghẽn toàn bộ luồng xử lý của hệ thống.
+
 3. Lỗi phân quyền file hệ thống (ACLs): Một số bản vá yêu cầu quyền truy cập đặc biệt nhưng các bản cập nhật cũ để lại phân quyền cũ kỹ, khiến bộ cài không thể ghi đè file cốt lõi.
 
 ## Giải pháp thực chiến: Dọn dẹp và Reset thư mục Cache Update

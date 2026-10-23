@@ -28,7 +28,9 @@ Sebagai teknisi infrastruktur IT yang sudah kenyang asam garam menghadapi drama 
 Sebelum masuk ke langkah teknis, mari kita bedah tiga penyebab utama kenapa Windows 11 sering mendadak tidak merespons di lingkungan kantoran:
 
 1. Driver Grafis (GPU) Crash & Recover Gagal: Windows 11 sangat bergantung pada akselerasi hardware. Jika driver grafis mengalami konflik sesaat dan gagal bangkit, sistem akan langsung freeze.
+
 2. I/O Bottleneck pada Storage (SSD/HDD): Sektor pada SSD yang mulai *bad sector* atau antrean tulis (Write Queue) yang penuh membuat sistem menunggu respons storage tanpa batas waktu (hang).
+
 3. Ketidakstabilan Power Management (C-States / Thermal): Fitur penghemat daya agresif di BIOS atau lonjakan suhu sesaat pada VRM motherboard sering membuat sistem menghentikan proses secara mendadak untuk melindungi komponen.
 
 ---
@@ -39,12 +41,16 @@ Mari kita bedah kejadian di Sudirman tadi menggunakan langkah-langkah sistematis
 
 #### Langkah 1: Membuka Event Viewer
 1. Klik tombol Startdi Windows 11, ketikEvent Viewer, lalu tekan Enter.
+
 2. Pada panel sebelah kiri, klik dua kali pada Windows Logs, lalu pilihSystem. Di sinilah semua catatan aktivitas hardware dan driver sistem disimpan.
 
 #### Langkah 2: Menyaring Kejadian Kritis (Critical & Error)
 Karena log sistem sangat banyak, kita tidak perlu membaca semuanya satu per satu. Kita cari waktu persis di mana PC Anda tadi freeze.
+
 1. Di panel sebelah kanan, klik Filter Current Log...
+
 2. Pada bagian *Logged*, pilih rentang waktu kejadian (misalnya: *Last 1 hour* atau *Last 24 hours*).
+
 3. Pada kotak centang *Event Level*, centang CriticaldanError, lalu klikOK.
 
 #### Langkah 3: Berburu Kode Error (The Smoking Gun)
@@ -77,14 +83,16 @@ Berikut adalah tabel panduan cepat bagi Anda untuk mencocokkan gejala fisik PC d
 Setelah Anda menemukan biang keroknya melalui Event Viewer, lakukan langkah pengamanan berikut agar insiden di Sudirman tidak terulang:
 
 1. Jangan Abaikan Suhu: Gunakan aplikasi pemantau hardware gratis untuk memastikan suhu CPU tidak melewati batas aman (di bawah 80°C saat bekerja normal). Debu menumpuk di heatsink adalah pembunuh senyap nomor satu.
+
 2. Rutin Cek Kesehatan Storage: Seringkali *random freezing* di Windows 11 disebabkan oleh SSD yang mulai kehabisan *spare area*. Pastikan selalu menyisakan minimal 10-15% kapasitas kosong pada drive sistem (C:).
+
 3. Update BIOS Secara Berkala: Beberapa motherboard memiliki bug pada manajemen daya C-States yang memicu freeze acak di Windows 11. Pembaruan BIOS sering kali menjadi solusi pamungkas.
 
 ---
 
 ### FAQ (Pertanyaan yang Sering Diajukan)
 
-Q: Apakah Event Viewer bisa memperbaiki komputer secara otomatis?A: Tidak. Event Viewer berfungsi sebagai "rekaman CCTV" atau diagnostik untuk mendeteksi letak kerusakan secara presisi, sehingga Anda tidak salah dalam mengambil tindakan perbaikan (tidak salah beli komponen atau salah instal software).Q: Kenapa banyak sekali tulisan Error di Event Viewer padahal PC saya terasa normal?  
+Q: Apakah Event Viewer bisa memperbaiki komputer secara otomatis? A: Tidak. Event Viewer berfungsi sebagai "rekaman CCTV" atau diagnostik untuk mendeteksi letak kerusakan secara presisi, sehingga Anda tidak salah dalam mengambil tindakan perbaikan (tidak salah beli komponen atau salah instal software).Q: Kenapa banyak sekali tulisan Error di Event Viewer padahal PC saya terasa normal?  
 A: Jangan panik. Tidak semua *Error* berakibat fatal. Windows sering kali mencatat error latar belakang (background service) yang gagal start lalu mencoba ulang secara otomatis tanpa mengganggu pengguna. Fokuskan pencarian pada jam-jam spesifik di mana PC Anda benar-benar mengalami freeze atau crash.
 
 Q: Apa yang harus saya lakukan jika Event Viewer hanya menunjukkan Kernel-Power (ID 41) tanpa ada petunjuk error lain sebelumnya?  

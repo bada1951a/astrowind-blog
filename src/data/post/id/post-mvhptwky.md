@@ -26,7 +26,9 @@ Sebagai seorang teknisi infrastruktur IT, saya tidak boleh tinggal diam. Setelah
 Sebelum masuk ke eksekusi perbaikan, mari kita pahami akar masalah dari perubahan antarmuka ini. Ada tiga alasan utama mengapa Microsoft mengubah struktur menu klik kanan pada Windows 11:
 
 1. Pembersihan Bloatware Kontekstual: Di versi Windows sebelumnya, banyak aplikasi pihak ketiga (seperti WinRAR, WinZip, aplikasi edit foto, hingga driver GPU) secara otomatis menyusup ke menu klik kanan utama, membuat tampilannya sangat panjang dan berantakan.
+
 2. Penerapan Desain Modern (Fluent Design): Microsoft ingin menyeragamkan estetika visual dengan sudut membulat dan ikon minimalis yang terpusat pada produktivitas dasar, meski hal ini sering kali mengorbankan kecepatan kerja para power user.
+
 3. Pemisahan Proses Aplikasi (App Containerization): Menu baru dirancang untuk memisahkan proses aplikasi desktop warisan (legacy apps) agar tidak membuat Explorer.exe rentan mengalami crash atau not responding saat diklik.
 
 ---
@@ -38,7 +40,9 @@ Kita tidak memerlukan software pihak ketiga yang mencurigakan. Cukup gunakan fit
 ### Cara Cepat via Command Prompt (Rekomendasi Utama)
 
 1. Tekan tombol kombinasi pada keyboard: Windows + S, lalu ketikcmd.
+
 2. Pada hasil pencarian, klik kanan pada Command Promptdan pilihRun as administrator (atau Jalankan sebagai administrator).
+
 3. Salin dan tempel (paste) kode perintah di bawah ini ke dalam jendela Command Prompt, lalu tekan Enter:
 
 ```cmd
@@ -46,6 +50,7 @@ reg.exe add "HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\
 ```
 
 4. Jika proses berhasil, Anda akan melihat pesan: `The operation completed successfully`.
+
 5. Langkah terakhir untuk menyegarkan sistem: ketik `taskkill /f /im explorer.exe` lalu tekan Enter, dilanjutkan dengan mengetik `start explorer.exe` dan tekan Enter.
 
 Selesai! Sekarang coba klik kanan pada sembarang folder atau file di desktop Anda. Menu klasik legendaris langsung muncul tanpa perlu lagi mengklik "Show more options".
@@ -64,7 +69,11 @@ Sebagai teknisi senior, saya menyarankan agar perubahan ini dicatat dalam dokume
 
 ## Pertanyaan yang Sempurna (FAQ)
 
-1. Apakah trik ini aman untuk kestabilan sistem Windows 11 jangka panjang?Sangat aman. Metode ini memanfaatkan fungsi GUID (Globally Unique Identifier) bawaan Windows yang memang disiapkan oleh pengembang untuk menguji atau mengembalikan kompatibilitas antarmuka lama tanpa merusak file sistem inti.2. Apakah cara ini akan hilang otomatis jika komputer melakukan update Windows?Sebagian besar pembaruan kumulatif (cumulative update) bulanan tidak akan menghapus tweak registry ini. Namun, pada pembaruan fitur besar tahunan (major OS upgrade), ada kemungkinan pengaturan ini mereset ke default dan Anda perlu menjalankan ulang perintah Command Prompt di atas.3. Bagaimana cara mengembalikan ke menu bawaan Windows 11 jika saya berubah pikiran?
+1. Apakah trik ini aman untuk kestabilan sistem Windows 11 jangka panjang? Sangat aman. Metode ini memanfaatkan fungsi GUID (Globally Unique Identifier) bawaan Windows yang memang disiapkan oleh pengembang untuk menguji atau mengembalikan kompatibilitas antarmuka lama tanpa merusak file sistem inti.
+
+2. Apakah cara ini akan hilang otomatis jika komputer melakukan update Windows? Sebagian besar pembaruan kumulatif (cumulative update) bulanan tidak akan menghapus tweak registry ini. Namun, pada pembaruan fitur besar tahunan (major OS upgrade), ada kemungkinan pengaturan ini mereset ke default dan Anda perlu menjalankan ulang perintah Command Prompt di atas.
+
+3. Bagaimana cara mengembalikan ke menu bawaan Windows 11 jika saya berubah pikiran?
 Sangat mudah. Buka kembali Command Prompt sebagai Administrator, lalu ketik perintah berikut untuk menghapus kuncinya:
 `reg.exe delete "HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}" /f`
 Setelah itu, restart Windows Explorer Anda.

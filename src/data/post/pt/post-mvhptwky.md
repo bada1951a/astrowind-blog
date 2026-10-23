@@ -20,7 +20,9 @@ Eram exatamente 13h45 em um escritório na Avenida Paulista, e a tensão na sala
 Antes de aplicar a solução definitiva que salvou nossa reunião, vale a pena entender a raiz técnica desse comportamento no sistema operacional:
 
 1. Isolamento de Processos (AppX Packages): A Microsoft migrou o menu clássico para uma arquitetura moderna baseada em UWP/WinRT, o que impede que programas legados (como WinRAR, 7-Zip e clientes FTP antigos) se injetem diretamente na raiz do menu sem uma adaptação profunda por parte dos desenvolvedores.
+
 2. Falta de Compatibilidade Nativa Imediata: Milhares de softwares corporativos essenciais ainda usam as chaves antigas de registro do shell do Windows. Sem o ajuste correto, eles ficam ocultos no submenu secundário.
+
 3. Ergonomia e Memória Muscular: Anos de uso do Windows 10 criaram uma memória muscular nos dedos. Parar o fluxo de trabalho para dar um clique duplo ou usar atalhos extras causa fadiga cognitiva desnecessária na equipe.
 
 ## O Diagnóstico e a Tentativa Frustrada Inicial
@@ -37,7 +39,9 @@ Como sou adepto de soluções limpas e que não exigem softwares de terceiros pe
 
 ### Passo 1: Acessando o Terminal com Poderes de Administrador
 1. Vá até a barra de tarefas e clique no menu Iniciar.
+
 2. Digite TerminalouPrompt de Comando.
+
 3. Clique com o botão direito sobre o aplicativo e selecione Executar como Administrador. (Se o Controle de Conta de Usuário perguntar se permite alterações, clique em Sim).
 
 ### Passo 2: Injetando a Chave de Correção do Registro
@@ -54,7 +58,9 @@ reg.exe add "HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\
 ### Passo 3: Reiniciando o Explorador de Arquivos
 Para que a alteração tenha efeito imediato sem precisar reiniciar a máquina inteira (o que nos faria perder a reunião), finalize o processo do shell gráfico:
 1. Pressione Ctrl + Shift + Escpara abrir oGerenciador de Tarefas.
+
 2. Na aba Processos, role a lista até encontrar oExplorador de Windows (ou *explorer.exe*).
+
 3. Clique com o botão direito nele e selecione Reiniciar.
 
 Pronto! A barra de tarefas vai sumir e piscar por um segundo, e ao clicar com o botão direito em qualquer arquivo ou na Área de Trabalho, o menu clássico completo estará lá, tal como nos bons tempos.

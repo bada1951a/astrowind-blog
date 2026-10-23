@@ -24,7 +24,9 @@ After getting past the panic and successfully unfreezing the system, I dug into 
 Here are the three most common culprits behind this frustrating bottleneck:
 
 1. Corrupted SoftwareDistribution Cache: The temporary holding directory where Windows downloads and stages update files gets corrupted, creating a permanent loop where the installer tries to parse damaged payload data indefinitely.
+
 2. Hung Background Services: Core system services like the Windows Update service (`wuauserv`) or Cryptographic Services (`CryptSvc`) hang up while trying to register updated DLLs in the registry.
+
 3. Pending Component Store Locks: The Component Based Servicing (CBS) manifest holds onto file locks because another background task or security scanner is inspecting the newly unpacked binaries simultaneously.
 
 ## Step-by-Step Resolution: Clearing the Update Cache
@@ -46,7 +48,9 @@ net stop msiserver
 Once the services are stopped, navigate to the system directories where Windows stores temporary update data. You can do this quickly by opening the Run dialog (`Win + R`) or straight from your terminal.
 
 1. Open File Explorer and head to `C:\Windows\SoftwareDistribution`.
+
 2. Select everything inside this folder (`Ctrl + A`) and delete it. (Don't worry if a couple of active files say they are in use—just skip those and proceed).
+
 3. Next, head over to `C:\Windows\System32\catroot2` and clear out its contents as well. This folder holds the cryptographic signatures for the update packages.
 
 <div style="border-left: 4px solid #06b6d4; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">

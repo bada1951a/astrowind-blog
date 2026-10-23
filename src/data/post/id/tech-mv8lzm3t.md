@@ -32,7 +32,9 @@ Begitu gue pegang itu laptop dan buka Task Manager, *jebret!* Keliatan banget pe
 Berdasarkan pengalaman gue ngadepin ratusan user di kantor, ada tiga tersangka utama kenapa PC atau laptop jadi "santai" banget pas dinyalain:
 
 1. Efek "Install Next Next Finish": Kebanyakan user kalau install aplikasi (khususnya app chat, editor video, atau game launcher) lupa centang/uncheck opsi *"Launch at startup"*. Akibatnya, aplikasi ikutan nimbrung nyala tiap Windows *load*.
+
 2. Background Services yang Haus Resources: Software kayak Adobe Creative Cloud, OneDrive, atau updater-updater nggak penting kerjanya diem-diem di background, makan RAM dan bikin disk usage langsung nyentuh 100%.
+
 3. Registry Bloat & Fragmentasi File: Sisa-sisa uninstall-an aplikasi yang nggak bersih bikin sistem manggil file registry yang udah nggak ada alamatnya (*orphan registry*).
 
 ---
@@ -96,5 +98,7 @@ Kadang masalah booting lemot bukan cuma dari software startup, tapi fisik HDD/SS
 1. Apakah mendisable aplikasi di Startup bakal bikin aplikasinya ke-hapus?
 Nggak sama sekali. *Disable* cuma berarti aplikasi tersebut nggak bakal otomatis jalan di latar belakang pas laptop dinyalain. Lu tetep bisa buka aplikasinya secara manual lewat shortcut desktop atau menu Start kapan pun lu butuh.
 
-2. Kenapa laptop gue masih lemot padahal startup udah bersih semua?Kalau startup udah bersih tapi booting tetap memakan waktu lebih dari 2-3 menit, besar kemungkinan media penyimpanan lu masih menggunakan Hard Disk Drive (HDD) jadul, atau kesehatan (Health) SSD lu udah drop di bawah 50%. Solusi permanennya adalah migrasi sistem operasi ke SSD NVMe/SATA.3. Amankah mematikan semua service non-Microsoft di msconfig?
+2. Kenapa laptop gue masih lemot padahal startup udah bersih semua? Kalau startup udah bersih tapi booting tetap memakan waktu lebih dari 2-3 menit, besar kemungkinan media penyimpanan lu masih menggunakan Hard Disk Drive (HDD) jadul, atau kesehatan (Health) SSD lu udah drop di bawah 50%. Solusi permanennya adalah migrasi sistem operasi ke SSD NVMe/SATA.
+
+3. Amankah mematikan semua service non-Microsoft di msconfig?
 Aman, asalkan aplikasi tersebut adalah aplikasi tambahan pihak ketiga (seperti updater game atau utility printer tambahan). Tapi kalau ragu dengan nama servicenya, biarkan default atau cari tahu dulu fungsi service tersebut di internet sebelum di-disable.

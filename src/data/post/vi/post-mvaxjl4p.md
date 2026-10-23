@@ -20,7 +20,9 @@ Sáng thứ Hai đầu tuần tại văn phòng ở Duy Tân (Cầu Giấy, Hà 
 Sau nhiều năm hỗ trợ kỹ thuật cho các hệ thống từ văn phòng nhỏ đến doanh nghiệp lớn, tôi đúc rút ra 3 nguyên nhân chính khiến máy tính của bạn biến thành "rùa bò" mỗi khi khởi động:
 
 1. Hiệu ứng "Domino" của ứng dụng bên thứ ba: Mỗi khi bạn cài đặt Zalo, Skype, Discord, Spotify hoặc các trình duyệt, chúng thường lén lút tích chọn mục "Run when computer starts" mà không hỏi ý kiến người dùng.
+
 2. Quá tải I/O ổ cứng (Đặc biệt với HDD cũ): Khi bật máy, hàng chục tiến trình cùng lúc lao vào đọc/ghi ổ cứng. Nếu bạn dùng HDD truyền thống, hiện tượng nghẽn cổ chai (bottleneck) là điều hiển nhiên.
+
 3. Tiến trình ngầm chiếm dụng RAM: RAM bị ngốn ngay từ giây đầu tiên, khiến Windows không đủ tài nguyên để load các dịch vụ cốt lõi (System Services).
 
 ---

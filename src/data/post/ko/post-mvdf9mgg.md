@@ -15,7 +15,7 @@ theme: "Forest Emerald Bio"
 <strong>실무 전문가의 긴급 진단:</strong> 윈도우 11 업데이트가 100%에서 멈추는 현상은 대부분 다운로드된 패키지를 설치하는 과정에서 시스템 캐시 파일이 꼬였거나, 이전 설치 잔여물과의 충돌로 인해 백그라운드 프로세스가 데드락(Deadlock) 상태에 빠졌기 때문입니다.
 </div>
 
-![Tech Hardware Guide](https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?auto=format&fit=crop&w=1200&h=675&q=85)
+![Tech Hardware Guide](https://images.unsplash.com/photo-1607604276583-eef5d076aa5f? auto=format&fit=crop&w=1200&h=675&q=85)
 
 ---
 
@@ -25,8 +25,10 @@ theme: "Forest Emerald Bio"
 
 1. 다운로드 및 설치 캐시 폴더의 손상 (SoftwareDistribution 부패)
    윈도우는 업데이트 파일을 `SoftwareDistribution`이라는 시스템 폴더에 임시로 다운로드하고 압축을 해제합니다. 이 과정에서 네트워크 끊김이나 강제 종료 등이 발생하면 파일이 손상되어 무한 루프에 빠집니다.
+
 2. 백그라운드 업데이트 관련 서비스의 응답 없음
    `Windows Update (wuauserv)` 서비스나 암호화 관련된 서비스가 꼬여서 설치 작업을 완료했다고 운영체제에 보고하지 못하는 현상입니다.
+
 3. 저장 장치(SSD/HDD)의 일시적인 I/O 병목
    대용량 누적 업데이트 파일이 쓰여지는 동안 시스템 리소스가 부족하거나 백그라운드 디스크 작업과 충돌이 일어날 때 발생합니다.
 

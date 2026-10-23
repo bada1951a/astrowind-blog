@@ -24,7 +24,9 @@ Sebelum panik berlanjut dan berujung bongkar hardware atau install ulang yang ba
 Sebelum kita eksekusi kodenya, mari kita pahami dulu tiga akar penyebab utama kenapa masalah ini sering muncul mendadak di lingkungan korporat:
 
 1. Sinkronisasi KMS Server Kantor Terputus: PC Anda biasanya terhubung ke server aktivasi internal kantor. Kalau VPN terputus atau jaringan lokal office <i>drop</i> sesaat, Windows gagal memvalidasi token dan langsung memunculkan watermark peringatan.
+
 2. Update Windows Otomatis Mereset Status Lisensi: Seringkali patch keamanan terbaru dari Microsoft mereset *cache* status aktivasi, terutama jika lisensi sebelumnya menggunakan jalur aktivasi OEM yang mulai 'lelah'.
+
 3. Perubahan Hardware Signifikan: Pergantian komponen mendadak (misalnya SSD NVMe baru atau penggantian motherboard oleh tim IT sebelumnya) membuat algoritma keamanan Windows mengira ini adalah unit PC yang berbeda.
 
 ---

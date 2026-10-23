@@ -44,7 +44,7 @@ Zjawisko *key chatteringu* (odbijania styków) oraz gubienia wciśnięć (*key s
    Przy bardzo intensywnej eksploatacji (np. klawisze `WASD` czy spacja) sprężynująca blaszka traci swoją pierwotną geometrię. Jeśli klawiatura posiada gniazda wymienne (*hot-swap Kailh/Gateron*), powodem problemów może być również rozszerzenie metalowych widełek gniazda na spodzie PCB. Wtedy nóżka przełącznika nie ma stabilnego kontaktu z samą płytą główną.
 
 ---
-![Tech Diagnostics](https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=1000&h=550&q=80)
+![Tech Diagnostics](https://images.unsplash.com/photo-1515378791036-0648a3ef77b2? auto=format&fit=crop&w=1000&h=550&q=80)
 
 ## Procedura krok po kroku: Diagnostyka i chemiczna regeneracja styków
 
@@ -53,8 +53,11 @@ Zjawisko *key chatteringu* (odbijania styków) oraz gubienia wciśnięć (*key s
 Zanim rozbierzesz klawiaturę, musimy wykluczyć usterki po stronie warstwy systemowej i sterowników HID.
 
 1. Otwórz Menedżer urządzeń(skrót `Win + X` → wybierzMenedżer urządzeń).
+
 2. Rozwiń sekcję Klawiatury.
+
 3. Odszukaj wpisy o nazwie *Klawiatura zgodna z HID* lub dedykowane urządzenie producenta. Kliknij prawym przyciskiem myszy i wybierz Odinstaluj urządzenie.
+
 4. W menu górnym kliknij Akcja→Skanuj w poszukiwaniu zmian sprzętu, aby system Windows ponownie zainicjalizował sterownik magistrali USB.
 
 Następnie uruchom przeglądarkowy tester klawiatury (np. *Keyboard Event Viewer* lub *Keyboard Chatter Strip*) albo otwórz Wiersz polecenia (`cmd.exe`) i wykonaj serię 50 szybkich, powtarzalnych uderzeń w felerny klawisz. Zwróć uwagę na czas powrotu (*bounce time*). Czas rejestracji poniżej 15–20 ms z wielokrotnym wpisem jednoznacznie wskazuje na usterkę sprzętową switcha.
@@ -66,7 +69,9 @@ Następnie uruchom przeglądarkowy tester klawiatury (np. *Keyboard Event Viewer
 ### Krok 2: Przygotowanie przełącznika (Hot-swap vs. Switch lutowany)
 
 1. Za pomocą drucianego pullera zdejmij nakładkę (*keycap*) z uszkodzonego klawisza oraz klawiszy sąsiadujących, aby uzyskać wygodne pole manewru.
+
 2. Klawiatury Hot-Swap: Wsuń switch puller w zaczepy na górnej i dolnej ściance przełącznika, ściśnij blokady i pionowym, pewnym ruchem wyciągnij switch z płyty montażowej. Wyjęcie przełącznika pozwala na precyzyjniejszą pracę i chroni płytkę PCB przed zalaniem.
+
 3. Klawiatury z przełącznikami lutowanymi: Jeśli nie planujesz wylutowywania całego komponentu stacją lutowniczą, zabieg można wykonać metodą inwazyjną bez demontażu, wstrzykując preparat przez wciśnięty trzpień.
 
 ### Krok 3: Prawidłowa aplikacja preparatu do styków (Technika ciśnieniowa)
@@ -74,9 +79,13 @@ Następnie uruchom przeglądarkowy tester klawiatury (np. *Keyboard Event Viewer
 Do tego celu najlepiej sprawdza się schemat dwuetapowy: preparat rozpuszczający tlenki (*np. Kontakt 60*) oraz preparat myjący/wypłukujący (*Kontakt U* lub *czysty alkohol izopropylowy 99,9%*).
 
 1. Wciśnięcie trzpienia: Wciśnij plastikowy trzonek (*stem*) do oporu w dół za pomocą małego wkrętaka lub pęsety, odsłaniając szczelinę prowadnicy, pod którą ukryte są miedziane blaszki.
+
 2. Precyzyjny wtrysk: Załóż cienką rurkę na zawór puszki preparatu do czyszczenia styków. Przystaw końcówkę do krawędzi wciśniętego trzpienia po stronie, gdzie znajdują się blaszki (zazwyczaj strona z logo producenta switcha).
+
 3. Mikrodawka:Zaaplikuj dosłownieułamek sekundy aerozolu – wystarczy jedna mikrokropla. Zbyt duża ilość chemii wypłucze fabryczny smar prowadnic i zaleje wnętrze obudowy.
+
 4. Aktywacja mechaniczna: Natychmiast po wstrzyknięciu środka zacznij energicznie i rytmicznie wciskać trzonek klawisza (około 60–80 razy w ciągu 30 sekund). Ruch ten powoduje mechaniczne przetarcie blaszek w obecności rozpuszczalnika, zrywając patynę i emulgując brud.
+
 5. Wypłukanie (opcjonalnie, ale zalecane): Po 5 minutach odparowania powtórz procedurę z użyciem *Kontaktu U* lub czystego alkoholu izopropylowego w celu usunięcia chemicznie agresywnych resztek rozpuszczalnika siarczków.
 
 ```

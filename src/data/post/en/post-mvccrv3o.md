@@ -39,11 +39,14 @@ To conquer this crash without losing your afternoon, follow this battle-tested t
 
 ### Step 1: Isolate Hardware Faults with Windows Memory Diagnostics
 
-When the kernel trips over memory addresses, hardware integrity is suspect number one. 
+When the kernel trips over memory addresses, hardware integrity is suspect number one.
 
 1. Press `Win + R`, type `mdsched.exe`, and hit Enter.
+
 2. Select "Restart now and check for problems (recommended)".
-3. Your system will reboot into a dedicated blue diagnostic screen. Let it run through the standard test pass. 
+
+3. Your system will reboot into a dedicated blue diagnostic screen. Let it run through the standard test pass.
+
 4. If it flags hardware errors, reseat your RAM sticks or test them one by one. If it passes cleanly, your hardware is fine, and we move straight to software drivers.
 
 ### Step 2: Boot into Safe Mode and Inspect Recent Changes
@@ -51,8 +54,11 @@ When the kernel trips over memory addresses, hardware integrity is suspect numbe
 If the memory test comes back clean, a rogue driver is almost certainly the culprit—often installed during a background Windows Update earlier that morning.
 
 1. Force restart your PC twice during the boot logo to trigger the Automatic Repair environment.
+
 2. Navigate to Troubleshoot > Advanced options > Startup Settings, and clickRestart.
+
 3. Upon reboot, press `4` or `F4` to enable Safe Mode.
+
 4. Once you are on the desktop, open the TerminalorCommand Prompt as an Administrator and run a quick system file check to repair any collateral damage:
    ```cmd
    sfc /scannow
@@ -63,9 +69,13 @@ If the memory test comes back clean, a rogue driver is almost certainly the culp
 Now it is time to reverse the bad update that ruined your afternoon sprint.
 
 1. Right-click the Start button and open Device Manager.
+
 2. Expand categories—pay special attention to Network Adapters, Display Adapters, and Universal Serial Bus controllers.
+
 3. Right-click your primary device (e.g., your Wi-Fi or GPU driver) and select Properties.
-4. Switch to the Drivertab and clickRoll Back Driver if the button is active. 
+
+4. Switch to the Drivertab and clickRoll Back Driver if the button is active.
+
 5. If it is grayed out, click Uninstall Device, check the box to attempt removal of the driver for this device, and reboot your system to let Windows install a stable fallback driver.
 
 <div style="border-left: 4px solid #7c3aed; padding: 12px 16px; margin: 20px 0; background-color: rgba(124,58,237,0.06); border-radius: 4px; color: #111827;">
@@ -84,5 +94,9 @@ BSODs like `0x0000000a` are annoying, but they serve as a valuable canary in the
 
 ### Frequently Asked Questions (FAQ)
 
-1. Can an overheating CPU cause stop code 0x0000000a?Indirectly, yes. Extreme thermal throttling or unstable voltage delivery can cause memory controller glitches on the CPU die, leading to memory access violations. Ensure your cooling fans and heatsinks are clear of dust.2. How do I analyze the minidump file to find the exact driver name?You can download and install WinDbg from the Microsoft Store, open the crash dump located in `C:\Windows\Minidump`, and run the analysis command `!analyze -v`. Look for the `MODULE_NAME` or `IMAGE_NAME` to identify the exact file name causing the fault.3. Is it safe to use third-party driver updater tools?
+1. Can an overheating CPU cause stop code 0x0000000a? Indirectly, yes. Extreme thermal throttling or unstable voltage delivery can cause memory controller glitches on the CPU die, leading to memory access violations. Ensure your cooling fans and heatsinks are clear of dust.
+
+2. How do I analyze the minidump file to find the exact driver name? You can download and install WinDbg from the Microsoft Store, open the crash dump located in `C:\Windows\Minidump`, and run the analysis command `!analyze -v`. Look for the `MODULE_NAME` or `IMAGE_NAME` to identify the exact file name causing the fault.
+
+3. Is it safe to use third-party driver updater tools?
 As a rule of thumb in enterprise IT, we strongly advise against them. They frequently pull generic, WHQL-unverified drivers that break hardware integration and cause these exact kernel stop codes. Stick to OEM support pages or Windows Update.

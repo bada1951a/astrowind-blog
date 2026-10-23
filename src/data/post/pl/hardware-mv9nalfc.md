@@ -24,7 +24,9 @@ Przełom nastąpił, gdy w desperacji porzuciłem klikanie w myszkę, odpaliłem
 Zanim przejdziemy do czyszczenia, warto zrozumieć, dlaczego dysk C puchnie bez wyraźnego powodu. Oto trzy najczęstsze grzechy systemu Windows:
 
 1. Ukryte pliki pamięci podręcznej (Temp): Aplikacje biurkowe, przeglądarki oraz sam instalator Windows generują tysiące małych plików, które po zamknięciu programów rzadko są automatycznie usuwane.
+
 2. Kopia zapasowa aktualizacji (WinSxS oraz SoftwareDistribution): Po każdej większej aktualizacji Windows zachowuje pliki instalacyjne "na wszelki wypadek", potrafiąc zająć w ten sposób kilkanaście gigabajtów.
+
 3. Hibernacja i plik stronicowania (pagefile.sys / hiberfil.sys): Jeśli Twój laptop ma 16 GB RAM-u, plik hibernacji może bezczelnie zabrać kolejne kilkanaście gigabajtów na dysku systemowym, nawet jeśli funkcji tej nigdy nie używasz.
 
 ---
@@ -42,10 +44,15 @@ Zanim skasujesz cokolwiek, upewnij się, że żadna zawieszona aplikacja nie zap
 ### Krok 2: Użycie zaawansowanego oczyszczania dysku
 Zapomnij o prostym usuwaniu folderu pobranych plików. Zróbmy to porządnie:
 1. Wpisz w menu Start frazę Wiersz polecenia, kliknij na niego prawym przyciskiem myszy i wybierz *Uruchom jako administrator*.
+
 2. Wpisz polecenie `cleanmgr` i zatwierdź klawiszem Enter.
+
 3. Wybierz dysk `C:` i kliknij OK.
+
 4. Gdy okno się załaduje, kliknij przycisk Oczyść pliki systemowe (znajdziesz go na dole).
+
 5. Zaznacz ptaszkami wszystkie najcięższe pozycje: *Poprzednie instalacje systemu Windows*, *Tymczasowe pliki instalacyjne systemu*, *Pliki dziennika aktualizacji Windows* oraz *Kosz*.
+
 6. Kliknij OK i pozwól systemowi usunąć ten balast.
 
 ### Krok 3: Ręczne czyszczenie folderów Temp przez konsolę

@@ -22,7 +22,9 @@ W takich momentach serce na chwilę zastyga, zwłaszcza gdy na szybkiej diagnozi
 Zanim klikniemy cokolwiek na ślepo, warto zrozumieć, z czym właściwie walczymy. W środowiskach biurowych i podczas pracy mobilnej problemy z dźwiękiem wynikają zazwyczaj z trzech powtarzających się scenariuszy:
 
 1. Automatyczna zmiana domyślnego urządzenia wyjściowego: Po wpięciu kabla HDMI lub DisplayPort Windows 11 często próbuje przekierować strumień audio do wbudowanych głośników monitora lub projektora, które nierzadko są wyciszone lub w ogóle nie posiadają fizycznych przetworników dźwięku.
+
 2. Konflikt lub zawieszenie sterowników audio: Usługi odpowiedzialne za dźwięk (np. *Windows Audio*) potrafią się zawiesić podczas szybkiego przełączania między kartą dźwiękową Realtek a wyjściem cyfrowym karty graficznej NVIDIA/AMD.
+
 3. Uśpienie lub dezaktywacja urządzenia w menedżerze: Czasami po aktualizacjach systemowych konkretny kodek audio zostaje wyłączony lub oznaczony jako "odłączony", przez co system całkowicie go ignoruje.
 
 ---
@@ -68,7 +70,9 @@ Jeśli ikonka głośnika reaguje komunikatem o błędzie, winne mogą być usłu
 
 ### Często zadawane pytania (FAQ)
 
-1. Co zrobić, gdy po aktualizacji systemu Windows 11 dźwięk całkowicie zniknął i żaden suwak nie pomaga?Najskuteczniejszą metodą w takim przypadku jest cofnięcie problematycznego sterownika. Wejdź w [Menedżer urządzeń], kliknij dwukrotnie na swoją kartę dźwiękową, przejdź do zakładki *Sterownik* i kliknij przycisk Przywróć sterownik(jeśli jest podświetlony). Często nowa łatka Microsoftu gryzie się ze starszym kodekiem producenta sprzętu.2. Podłączyłem słuchawki na jacka 3.5 mm, ale laptop nadal odtwarza dźwięk z wbudowanych głośników.
+1. Co zrobić, gdy po aktualizacji systemu Windows 11 dźwięk całkowicie zniknął i żaden suwak nie pomaga? Najskuteczniejszą metodą w takim przypadku jest cofnięcie problematycznego sterownika. Wejdź w [Menedżer urządzeń], kliknij dwukrotnie na swoją kartę dźwiękową, przejdź do zakładki *Sterownik* i kliknij przycisk Przywróć sterownik(jeśli jest podświetlony). Często nowa łatka Microsoftu gryzie się ze starszym kodekiem producenta sprzętu.
+
+2. Podłączyłem słuchawki na jacka 3.5 mm, ale laptop nadal odtwarza dźwięk z wbudowanych głośników.
 To klasyczny problem z wykryczeniem fizycznego wpięcia wtyku przez oprogramowanie zarządzające (np. *Realtek Audio Console*). Upewnij się, że w tle działa aplikacja fabryczna Realteka i że w jej ustawieniach włączono wyskakujące okienka powiadamiające o podłączeniu nowego urządzenia audio jako zestawu słuchawkowego.
 
-3. Czy narzędzie do rozwiązywania problemów z systemem Windows faktycznie pomaga?W Windows 11 narzędzie diagnostyczne zostało nieco usprawnione. Warto wpisać w menu Start [Ustawienia] -> *System* -> *Dźwięk* -> *Rozwiązywanie typowych problemów z dźwiękiem*. Choć nie naprawi każdej usterki sprzętowej, potrafi automatycznie zresetować zablokowane usługi audio i poprawnie przekierować domyślny strumień w kilkadziesiąt sekund.
+3. Czy narzędzie do rozwiązywania problemów z systemem Windows faktycznie pomaga? W Windows 11 narzędzie diagnostyczne zostało nieco usprawnione. Warto wpisać w menu Start [Ustawienia] -> *System* -> *Dźwięk* -> *Rozwiązywanie typowych problemów z dźwiękiem*. Choć nie naprawi każdej usterki sprzętowej, potrafi automatycznie zresetować zablokowane usługi audio i poprawnie przekierować domyślny strumień w kilkadziesiąt sekund.

@@ -36,7 +36,7 @@ Bài viết này là quy trình chuẩn hóa thực chiến rút ra từ hàng t
         |
         +---> 3. Rạn chân hàn PCB / Lỏng ngàm lá đồng Hot-swap socket
 ```
-![Tech Diagnostics](https://images.unsplash.com/photo-1555680202-c86f0e12f086?auto=format&fit=crop&w=1000&h=550&q=80)
+![Tech Diagnostics](https://images.unsplash.com/photo-1555680202-c86f0e12f086? auto=format&fit=crop&w=1000&h=550&q=80)
 
 ### 1. Nhiễm Bụi Vi Mô Và Oxy Hóa Bề Mặt Lá Đồng (Oxidation & Contamination)
 Khi bạn nhấn phím, stem trượt xuống tách hoặc đẩy hai lá đồng chạm vào nhau để khép kín mạch điện. Điểm tiếp xúc này thường được mạ vàng hoặc hợp kim chống rỉ mỏng. Sau 1-2 năm sử dụng trong môi trường văn phòng nóng ẩm tại Việt Nam:
@@ -75,9 +75,13 @@ Quy trình chuẩn hóa dưới đây được áp dụng trực tiếp tại b�
 Trước khi can thiệp phần cứng, loại trừ toàn bộ nguyên nhân do driver hoặc hệ điều hành.
 
 1. Nhấn tổ hợp phím `Windows + X`, chọn Device Manager.
+
 2. Mở rộng mục Keyboards, nhấp chuột phải vào bàn phím đang sử dụng, chọnUninstall device.
+
 3. Rút cáp USB ra khỏi máy tính, cắm sang một cổng USB khác (ưu tiên cắm trực tiếp vào cổng I/O sau case máy, bỏ qua các Hub USB chia cổng). Khởi động lại hệ điều hành để Windows tự nạp driver chuẩn.
+
 4. Truy cập các công cụ kiểm tra switch trực tuyến hoặc tải phần mềm `Keyboard Chattering Fix` / `Switch Hitter`.
+
 5. Thiết lập ngưỡng phát hiện debounce trên phần mềm xuống mức 20ms. Gõ liên tục phím lỗi khoảng 100 lần với lực gõ khác nhau. Nếu phần mềm đánh dấu đỏ kèm khoảng cách mili-giây cực ngắn giữa hai lần ấn, bạn đã xác định chính xác switch đó bị lỗi tiếp điểm cơ khí.
 
 ---
@@ -93,13 +97,17 @@ Trước khi can thiệp phần cứng, loại trừ toàn bộ nguyên nhân do
 </div>
 
 Các bước thao tác chuẩn:1.Ngắt toàn bộ nguồn điện: Rút cáp kết nối hoặc gạt công tắc tắt nguồn pin (nếu dùng phím Bluetooth/Wireless). Tháo pin rời nếu có.
+
 2. Tháo Keycap: Dùng dụng cụ rút phím (Keycap puller) rút phím bị lỗi theo phương thẳng đứng 90 độ, tránh bẻ nghiêng gây gãy chân stem.
+
 3. Nhỏ/Xịt dung dịch vào buồng tiếp điểm:
    * Lắp vòi xịt mảnh đi kèm bình BW-100 / DeoxIT.
    * Dùng ngón tay nhấn giữ stem của switch xuống mức kịch kim (đáy hành trình). Lúc này bạn sẽ thấy khe hở nhỏ dẫn thẳng xuống buồng chứa lá đồng.
    * Đặt vòi xịt nghiêng góc 45 độ hướng về phía có lá đồng tiếp điểm (thường là phía có in logo thương hiệu của switch như Cherry, Gateron).
    * Xịt một nhịp thật dứt khoát trong vòng 0.5 giây. Không xịt ngập ngụa bừa bãi.
+
 4. Kích hoạt cơ học:Ngay sau khi xịt, dùng ngón tay nhấp nhả stem thật nhanh liên tục từ50 đến 70 lần. Động tác này ép hai lá đồng cọ xát vào nhau, mượn áp lực cơ học cùng hoạt chất tẩy rửa đánh bật hoàn toàn lớp muội than oxy hóa và cuốn bụi mịn trôi ra ngoài.
+
 5. Chờ khô tự nhiên: Do dung dịch điện tử chuyên dụng bay hơi cực nhanh, hãy để yên bàn phím trong khoảng 10-15 phút ở nơi khô ráo để dung dịch phân tán và khô hoàn toàn.
 
 ---
@@ -110,14 +118,19 @@ Nếu sau khi xử lý dung dịch mà phím vẫn còn hiện tượng nuốt n
 
 * Đối với bàn phím Hot-swap:
   1. Dùng Switch Puller kẹp vào hai ngàm nhựa trên và dưới của switch, kéo thẳng đứng ra khỏi mạch.
-  2. Lật mặt dưới của switch, kiểm tra xem hai chân đồng dẫn điện có bị cong gập lại ép sát vào đáy nhựa không. Nếu có, dùng nhíp kỹ thuật nắn thẳng góc 90 độ.
-  3. Nhìn xuống lỗ socket trên mạch PCB: Dùng đầu kim khâu hoặc nhíp nhọn khều nhẹ hai lá kim loại bên trong lỗ socket ép sát vào nhau một chút để khi cắm switch vào, ngàm kẹp chặt chân kim loại hơn.
-  4. Cắm switch lại thẳng góc, nhấn dứt khoát nghe tiếng "tách".
+
+2. Lật mặt dưới của switch, kiểm tra xem hai chân đồng dẫn điện có bị cong gập lại ép sát vào đáy nhựa không. Nếu có, dùng nhíp kỹ thuật nắn thẳng góc 90 độ.
+
+3. Nhìn xuống lỗ socket trên mạch PCB: Dùng đầu kim khâu hoặc nhíp nhọn khều nhẹ hai lá kim loại bên trong lỗ socket ép sát vào nhau một chút để khi cắm switch vào, ngàm kẹp chặt chân kim loại hơn.
+
+4. Cắm switch lại thẳng góc, nhấn dứt khoát nghe tiếng "tách".
 
 * Đối với bàn phím Mạch hàn (Solder):
   1. Mở vỏ bàn phím, lật mặt sau PCB.
-  2. Bật mỏ hàn ở nhiệt độ 320°C - 350°C. 
-  3. Chấm một lượng nhỏ thiếc hàn mới có chứa lõi trợ hàn (flux) vào hai mối hàn của switch lỗi để làm mới mối nối (solder reflow), loại bỏ triệt để hiện tượng nứt chân hàn li ti do mỏi nhiệt.
+
+2. Bật mỏ hàn ở nhiệt độ 320°C - 350°C.
+
+3. Chấm một lượng nhỏ thiếc hàn mới có chứa lõi trợ hàn (flux) vào hai mối hàn của switch lỗi để làm mới mối nối (solder reflow), loại bỏ triệt để hiện tượng nứt chân hàn li ti do mỏi nhiệt.
 
 ---
 

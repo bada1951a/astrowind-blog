@@ -13,7 +13,7 @@ theme: "Sandstone Desert Minimal"
 
 급한 마음에 백업용 외장 SSD를 연결해 데이터를 옮기려 했으나, C드라이브의 가상메모리(페이지파일) 공간조차 부족해져 외장 SSD 인식조차 제대로 안 되는 최악의 상황이 벌어졌습니다. 보고서는 날아가기 직전이고, 바탕화면의 아이콘들은 빨간색 용량 경고등을 깜빡이며 시스템을 압박했습니다.
 
-![Tech Hardware Guide](https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?auto=format&fit=crop&w=1200&h=675&q=85)
+![Tech Hardware Guide](https://images.unsplash.com/photo-1607604276583-eef5d076aa5f? auto=format&fit=crop&w=1200&h=675&q=85)
 
 <div style="border-left: 4px solid #a16207; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>실무 핵심 팁:</strong> C드라이브 용량이 5% 미만으로 떨어지면 윈도우는 임시 파일조차 생성하지 못해 블루스크린, 프로그램 강제 종료, 외장 장치 인식 오류 등 연쇄적인 시스템 장애를 일으킵니다. 평소에 15% 이상의 여유 공간을 확보하는 것이 철칙입니다.
@@ -27,8 +27,10 @@ theme: "Sandstone Desert Minimal"
 
 1. 윈도우 업데이트 및 구버전 백업 파일 (Windows.old)
    대규모 윈도우 업데이트가 진행될 때마다 기존 시스템 파일이 고스란히 백업됩니다. 이 폴더 하나만 수십 기가바이트를 잡아먹는 경우가 부지기수입니다.
+
 2. 누적된 브라우저 캐시 및 앱 임시 파일 (Temp)
    크롬, 엣지 등 웹브라우저와 각종 메신저, 협업 툴(슬랙, 팀즈 등)이 캐시 데이터를 C드라이브 내 사용자 폴더에 무분별하게 쌓아둡니다. 몇 년간 청소하지 않았다면 수십 GB는 우습게 넘어갑니다.
+
 3. 최대 절전 모드 파일 (hiberfil.sys) 및 가상 메모리 (pagefile.sys)
    사용자의 RAM 용량과 맞물려 동작하는 시스템 필수 파일로, 물리 메모리 크기만큼 C드라이브 공간을 고정적으로 점유합니다. 노트북이나 절전 모드를 자주 쓰는 PC에서 주범이 됩니다.
 
@@ -53,9 +55,11 @@ theme: "Sandstone Desert Minimal"
 설정 메뉴에서 잡히지 않는 미세한 찌꺼기들은 직접 폴더로 들어가 청소해야 확실합니다.
 
 1. 키보드의 `Windows 키 + R`을 눌러 실행 창을 엽니다.
+
 2. `%temp%`를 입력하고 엔터를 칩니다. 열린 폴더 안의 모든 파일(`Ctrl + A`)을 선택하고 과감히 삭제(`Shift + Delete`)합니다.
    * *현재 사용 중인 파일이라며 삭제되지 않는 항목은 "건너뛰기"를 누르면 됩니다.*
 3. 다시 `Windows 키 + R`을 누르고 이번에는 `temp`를 입력한 뒤 동일하게 내부 파일을 정리합니다.
+
 4. 마지막으로 휴지통을 비워 완전히 용량을 확보합니다.
 
 #### Step 3: 고급 사용자용 디스크 정리 (시스템 파일 정리)

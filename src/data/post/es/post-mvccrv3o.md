@@ -22,7 +22,9 @@ Eran las 18:30 en nuestra oficina del 22@ en Barcelona. Estábamos a menos de cu
 Para solucionar este fallo de inmediato sin perder tiempo probando soluciones aleatorias, debemos entender qué lo desencadenó:
 
 1. Controladores obsoletos o mal firmados: Una actualización reciente de Windows Update o la instalación manual de un driver de red o de vídeo no certificado suele corromper las tablas de interrupciones del kernel.
+
 2. Inestabilidad en los módulos de memoria RAM (XMP/EXPO): Perfiles de velocidad excesivos en la BIOS o microfisuras en los DIMMs que provocan fallos de lectura silenciosos que el kernel detecta de forma fatal.
+
 3. Servicios de terceros en conflicto: Antivirus corporativos o herramientas de virtualización de bajo nivel que intentan engancharse a zonas de memoria protegidas durante procesos de alta carga de E/S.
 
 ---
@@ -40,8 +42,11 @@ Una vez dentro, necesitamos analizar el archivo de volcado (`C:\Windows\Minidump
 
 ### Paso 2: Ejecutar el Diagnóstico de Memoria de Windows
 Descartemos primero el hardware. No puedes solucionar un problema de drivers si la memoria física está devolviendo datos corruptos.
+
 1. Abre el menú de inicio, escribe Diagnóstico de memoria de Windows y ejecútalo como administrador.
+
 2. Selecciona la opción Reiniciar ahora y comprobar si existen problemas (recomendado).
+
 3. Deja que el sistema realice las pruebas estándar (o cambia a la opción *Ampliada* si sospechas de los módulos físicos). Al reiniciar, revisa el visor de eventos (Visor de eventos > Registros de Windows > Sistema) filtrando por el origen MemoryDiagnostics-Results.
 
 <div style="border-left: 4px solid #a855f7; padding: 12px 16px; margin: 20px 0; background-color: #f3e8ff; border-radius: 4px; color: #111827;">
@@ -51,8 +56,11 @@ Descartemos primero el hardware. No puedes solucionar un problema de drivers si 
 ### Paso 3: Reversión de Drivers (Driver Rollback) o Desinstalación limpia
 Si la memoria está perfecta, el problema es indudablemente software. Para revertir el driver conflictivo que se instaló antes del fallo:
 1. Haz clic derecho en el menú de inicio y abre Administrador de dispositivos.
+
 2. Despliega la categoría sospechosa (habitualmente Adaptadores de red, Controladoras de sonido o Tarjetas gráficas).
+
 3. Haz doble clic sobre el dispositivo problemático, ve a la pestaña Controladory haz clic enRevertir al controlador anterior (si el botón está habilitado).
+
 4. Si el botón está desactivado, selecciona Desinstalar el dispositivo, marca la casilla *Intentar quitar el controlador de este equipo* y reinicia inmediatamente para que Windows cargue un driver genérico estable.
 
 ---

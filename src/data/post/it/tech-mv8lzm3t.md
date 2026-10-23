@@ -11,7 +11,9 @@ theme: "Cyberpunk Terminal"
 
 <div style="border-left: 4px solid #00ffcc; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,255,204,0.05); border-radius: 4px; font-family: monospace;">
 [SYS_ALERT] root@hardware-lab:~# tail -f /var/log/boot_sequence.log<br>
-CRITICAL: I/O bottleneck detected. Disk queue length > 5.0. System unresponsive.
+CRITICAL: I/O bottleneck detected. Disk queue length > 5.
+
+0. System unresponsive.
 </div>
 
 Erano le 8:45 di un venerdì mattina qualunque, e il mio capo era già dietro la mia scrivania con la tazza di caffè in mano, pronto a guardarmi lo schermo per l'ennesima demo urgente con un cliente chiave. Io premo il pulsante di accensione del mio workstation di test e... il nulla cosmico. Anzi, peggio: la rotellina di caricamento di Windows che gira imperterrita per sei interminabili minuti, mentre la spia del disco fisso (un vecchio SSD ormai alla frutta) lampeggia fissa come un semaforo impazzito. Il mio collega mi guarda e fa: *"Ti conviene reinstallare tutto da capo"*. Ma figurati se un sistemista si arrende a una formattazione prima di aver fatto sanguinare la tastiera.
@@ -20,7 +22,9 @@ Il problema non era l'hardware in sé, ma il caos assoluto che si era accumulato
 
 Analizziamo i tre veri colpevoli di questo scempio prestazionale:
 1. I demoni residenti (Daemon invisibili): Applicazioni come Discord, Steam, Spotify e vari updater di Adobe che non servono a nulla finché non decidi esplicitamente di aprirli, ma che pretendono di restare in memoria RAM dal millisecondo zero.
+
 2. Servizi di telemetria e sincronizzazione cloud: OneDrive, Google Drive e Dropbox che partono tutti insieme in contemporanea, saturando la banda di I/O del disco e la connessione di rete locale per fare il check dei file.
+
 3. Bloatware OEM preinstallati: Utilità inutili dei produttori di motherboard (ASUS, MSI, Dell) che occupano cicli di clock preziosi eseguendo diagnostiche ridondanti all'avvio.
 
 BК bando alle ciance, apriamo il terminale e riprendiamoci il controllo della macchina. Ecco la procedura chirurgica da eseguire.

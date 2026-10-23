@@ -24,7 +24,9 @@ Zamiast panikować, sięgnąłem po sprawdzoną procedurę awaryjną, którą st
 Zanim przejdziemy do naprawy, warto zrozumieć root cause tego fenomenu. Dlaczego pasek dochodzi do końca i staje? Oto trzy najczęstsze powody:
 
 1. Konflikt zablokowanych plików (File Locks): Usługa Windows Update (`wuauserv`) próbuje podmienić pliki systemowe, które w tym samym momencie są aktywowane przez inne procesy w tle lub filtry antywirusowe.
+
 2. Korupcja bazy danych katalogu aktualizacji: Plik `catroot2` lub baza `DataStore` w folderze `SoftwareDistribution` uległy uszkodzeniu podczas pobierania pakietu zbiorczego (Cumulative Update), przez co system zapętlił się w fazie weryfikacji sum kontrolnych.
+
 3. Przerwane połączenie lub timeout dysku: Chwilowy spadek wydajności macierzy lub dysku NVMe w momencie zapisu kluczowych kluczy rejestru sprawił, że instalator stracił synchronizację z sekwencją bootowania.
 
 ## Krok po kroku: Jak zresetować pamięć podręczną aktualizacji
@@ -72,5 +74,9 @@ Na koniec zrestartuj komputer tradycyjną komendą `shutdown /r /t 0`. Po ponown
 
 ## Często Zadawane Pytania (FAQ)
 
-1. Czy utracę moje osobiste pliki lub aplikacje po zmianie nazwy folderu SoftwareDistribution?Absolutnie nie. Folder `SoftwareDistribution` przechowuje wyłącznie tymczasowe pliki instalacyjne pobrane z serwerów Microsoftu oraz logi. Twoje dokumenty, aplikacje i konfiguracje pozostaną całkowicie nienaruszone.2. Co zrobić, jeśli polecenie `net stop wuauserv` zwraca błąd o odmowie dostępu?Upewnij się, że uruchomiłeś Wiersz polecenia lub Terminal, klikając na ikonę prawym przyciskiem myszy i wybierając opcję „Uruchom jako administrator”. Zwykłe konto użytkownika nie posiada uprawnień do zarządzania kluczowymi usługami systemowymi.3. Czy po wykonaniu tego zabiegu system będzie pobierał aktualizacje od nowa?  
+1. Czy utracę moje osobiste pliki lub aplikacje po zmianie nazwy folderu SoftwareDistribution? Absolutnie nie. Folder `SoftwareDistribution` przechowuje wyłącznie tymczasowe pliki instalacyjne pobrane z serwerów Microsoftu oraz logi. Twoje dokumenty, aplikacje i konfiguracje pozostaną całkowicie nienaruszone.
+
+2. Co zrobić, jeśli polecenie `net stop wuauserv` zwraca błąd o odmowie dostępu? Upewnij się, że uruchomiłeś Wiersz polecenia lub Terminal, klikając na ikonę prawym przyciskiem myszy i wybierając opcję „Uruchom jako administrator”. Zwykłe konto użytkownika nie posiada uprawnień do zarządzania kluczowymi usługami systemowymi.
+
+3. Czy po wykonaniu tego zabiegu system będzie pobierał aktualizacje od nowa?  
 Tak. Ponieważ stary, uszkodzony bufor został zarchiwizowany w folderze `.bak`, Windows 11 pobierze pakiety aktualizacyjne całkowicie na świeżo z serwerów Microsoft Update. Zalecamy wykonanie tej operacji przy stabilnym i szybkim połączeniu internetowym.

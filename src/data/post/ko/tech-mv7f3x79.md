@@ -39,7 +39,7 @@ theme: "Midnight Navy Royal"
 
 
 
-![Tech Hardware Guide](https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?auto=format&fit=crop&w=1200&h=675&q=85)
+![Tech Hardware Guide](https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2? auto=format&fit=crop&w=1200&h=675&q=85)
 
 ## 2. 장애 극복 단계별 해결 절차 (Step-by-Step Resolution)
 
@@ -52,7 +52,9 @@ theme: "Midnight Navy Royal"
 외장 모니터가 연결된 상태에서 가장 먼저 운영체제 디스플레이 서브시스템을 강제 리로드합니다.
 
 1. 키보드에서 `Windows 로고 키 + Ctrl + Shift + B` 단축키를 동시에 누릅니다.
+
 2. 시스템 비프음(‘삑’ 소리)과 함께 노트북 화면이 약 1초간 깜빡이며 그래픽 드라이버와 DWM 프로세스가 재기동됩니다.
+
 3. 이 단계에서 화면이 돌아오면 단순 드라이버 버퍼 오버플로우 문제이며, 여전히 신호가 잡히지 않는다면 물리적/소프트웨어적 레지스트리 꼬임 상태이므로 STEP 2로 진입합니다.
 
 <div style="border-left: 4px solid #1d4ed8; padding: 14px 18px; margin: 20px 0; background-color: rgba(29, 78, 216, 0.04); border-radius: 4px; color: #111827;">
@@ -62,8 +64,11 @@ theme: "Midnight Navy Royal"
 기존에 연결되었던 모니터 정보와 잘못 잡힌 어댑터 프로파일이 충돌을 유발하므로 이를 강제 적출해야 합니다.
 
 1. `Windows 키 + X`를 누른 후 장치 관리자를 실행합니다.
+
 2. 상단 메뉴에서 보기(V) -> 숨겨진 장치 표시(W)를 반드시 체크합니다.
+
 3. 모니터카테고리를 확장합니다. 반투명하게 비활성화되어 있는 '일반 PnP 모니터' 항목들을 마우스 우클릭하여 모두디바이스 제거합니다.
+
 4. 디스플레이 어댑터 카테고리를 확장하여 내장/외장 그래픽 카드의 현재 상태를 확인합니다(느낌표나 코드 43 등의 오류가 떠 있는지 체크).
 
 ```cmd
@@ -81,13 +86,16 @@ pnputil /enum-devices /class Display
 
 1. 사전 준비:- 노트북 제조사 공식 홈페이지 또는 칩셋 제조사(Intel/AMD/NVIDIA)에서 노트북 모델에 정확히 일치하는최신 WHQL 그래픽 드라이버 설치 파일(내장, 외장 둘 다)을 미리 다운로드해 둡니다.
    - Wagnardsoft의 DDU(Display Driver Uninstaller) 최신 포터블 버전을 다운로드합니다.
+
 2. 네트워크 완전 차단:
    - Wi-Fi를 끄거나 유선 LAN 선을 분리합니다. (드라이버 삭제 후 윈도우가 임의로 구버전 드라이버를 자동 설치하는 것을 방지하기 위함)
 3. 안전 모드 부팅:- `Windows 키 + R` -> `msconfig` 입력 ->부팅탭에서안전 부팅(최소 설치) 체크 후 재부팅합니다.
+
 4. DDU 드라이버 밀어내기:
    - 안전 모드로 진입한 후 DDU를 관리자 권한으로 실행합니다.
    - 우측 드롭다운에서 GPU -> NVIDIA(또는 AMD)를 선택하고‘지우고, 다시 시작하지 않음(Clean and do NOT restart)’을 클릭합니다.
    - 외장 그래픽 제거가 끝나면, 다시 장치 유형을 선택해 Intel(또는 AMD 내장)을 선택하고‘지우고, 다시 시작(Clean and restart)’을 클릭합니다.
+
 5. 순차 재설치 (가장 중요):- 윈도우 정상 부팅 후,반드시 내장 그래픽(iGPU) 드라이버를 1순위로 설치하고 재부팅합니다.
    - 그 다음 외장 그래픽(dGPU) 드라이버를 2순위로 설치합니다. 이 순서가 바뀌면 디스플레이 스위칭 레지스트리가 꼬여 외장 출력 포트가 영구 먹통이 될 수 있습니다.
 
@@ -98,8 +106,11 @@ pnputil /enum-devices /class Display
 드라이버 재설치가 완료되고 화면이 들어왔더라도, 특정 주사율에서 깜빡임이 재발할 수 있습니다.
 
 1. 바탕화면 우클릭 -> 디스플레이 설정->고급 디스플레이로 이동합니다.
+
 2. 외장 모니터를 선택한 후, 새로 고침 빈도(주사율) 항목을 확인합니다.
+
 3. 144Hz나 165Hz 등 가변 주사율(VRR/G-Sync 호환)로 잡혀 있다면, 이를 60Hz 또는 120Hz 고정 정수 단위로 한 단계 낮춥니다.
+
 4. 케이블 대역폭 한계로 DSC(Display Stream Compression) 압축 복원 과정에서 깜빡임이 생기는 현상을 즉각 억제할 수 있습니다.
 
 ---

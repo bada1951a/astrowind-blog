@@ -26,7 +26,9 @@ Si te ha pasado lo mismo justo cuando más prisa tienes, sabes la frustración q
 Antes de aplicar la solución, es útil entender qué está pasando bajo el capó para evitar que vuelva a suceder:
 
 1. El Explorador de archivos colapsa: En Windows 11, la barra de tareas y el menú de inicio están estrechamente integrados con el proceso `explorer.exe`. Si este proceso se bloquea debido a una app de terceros o a un pico de memoria, arrastra consigo toda la interfaz inferior.
+
 2. Problemas con el paquete XamlShell: La interfaz moderna de Windows 11 depende de componentes XAML que a veces sufren pérdidas de memoria o bloqueos temporales al actualizar en segundo plano.
+
 3. Actualizaciones acumulativas recientes: Ciertas actualizaciones de seguridad de Windows han demostrado generar conflictos intermitentes con los complementos visuales del explorador.
 
 ---
@@ -39,8 +41,11 @@ Sigue esta secuencia ordenada para recuperar el control de tu equipo en menos de
 Dado que no puedes acceder al Administrador de tareas de la forma habitual haciendo clic derecho en la barra, utilizaremos un atajo de teclado universal.
 
 1. Pulsa las teclas `Ctrl` + `Shift` + `Esc` simultáneamente para abrir el Administrador de tareas.
+
 2. Si se abre en vista compacta, haz clic en Más detalles en la esquina inferior.
+
 3. Desplázate por la pestaña Procesoshasta encontrarExplorador de Windows (o busca `explorer.exe`).
+
 4. Haz clic derecho sobre él y selecciona Reiniciar. 
 
 *Verás que la pantalla parpadea durante un segundo y la barra de tareas vuelve a la vida.*
@@ -49,8 +54,11 @@ Dado que no puedes acceder al Administrador de tareas de la forma habitual hacie
 A veces el bloqueo es tan profundo que ni siquiera el Administrador de tareas responde al atajo clásico. Aquí es donde entra en juego la Terminal de comandos de emergencia.
 
 1. Pulsa `Ctrl` + `Alt` + `Supr` y selecciona Administrador de tareas desde esa pantalla de seguridad.
+
 2. Si logras entrar, ve arriba a la izquierda, haz clic en Ejecutar nueva tarea.
+
 3. Escribe `cmd` (marca la casilla para crearlo con privilegios administrativos si lo consideras necesario) y pulsa `Enter`.
+
 4. En la ventana negra que se abre, escribe el siguiente comando para matar el proceso a la fuerza y reiniciarlo:
    `taskkill /f /im explorer.exe && start explorer.exe`
 5. Pulsa `Enter`. La barra debería reactivarse de inmediato.
@@ -59,7 +67,9 @@ A veces el bloqueo es tan profundo que ni siquiera el Administrador de tareas re
 Si el fallo persiste cada vez que reinicias el ordenador, el problema está en los archivos de registro del sistema operativo. Vamos a forzar a Windows a reconstruir la interfaz de usuario.
 
 1. Abre el menú Ejecutar pulsando la combinación `Windows` + `R`.
+
 2. Escribe `powershell` y pulsa `Ctrl` + `Shift` + `Enter` para abrirlo como Administrador.
+
 3. Copia y pega el siguiente comando de recuperación profunda:
    `Get-AppXPackage -AllUsers | Foreach {Add-AppxPackage -DisableDevelopmentMode -Register "(_.InstallLocation)\AppXManifest.xml"}`
 4. Ignora cualquier aviso en rojo que pueda aparecer (son aplicaciones del sistema que ya están en uso) y espera a que termine el proceso. Reinicia tu equipo normalmente.
@@ -75,5 +85,9 @@ Si el fallo persiste cada vez que reinicias el ordenador, el problema está en l
 
 ### Preguntas Frecuentes (FAQ)
 
-1. ¿Perderé mis archivos abiertos si reinicio el Explorador de Windows?No. Reiniciar `explorer.exe` solo afecta a la interfaz gráfica (barra de tareas, iconos del escritorio y carpetas abiertas). Los documentos de Word, Excel o las pestañas del navegador que tengas en uso no se cerrarán ni perderán su progreso.2. ¿Qué hago si el comando de PowerShell da errores en rojo?Es totalmente normal. PowerShell intentará re registrar todos los paquetes nativos de Windows; aquellos que estén abiertos o bloqueados en ese momento mostrarán un aviso en rojo que puedes ignorar por completo. Lo importante es que el script complete el ciclo.3. ¿Es recomendable usar puntos de restauración del sistema para esto?
+1. ¿Perderé mis archivos abiertos si reinicio el Explorador de Windows? No. Reiniciar `explorer.exe` solo afecta a la interfaz gráfica (barra de tareas, iconos del escritorio y carpetas abiertas). Los documentos de Word, Excel o las pestañas del navegador que tengas en uso no se cerrarán ni perderán su progreso.
+
+2. ¿Qué hago si el comando de PowerShell da errores en rojo? Es totalmente normal. PowerShell intentará re registrar todos los paquetes nativos de Windows; aquellos que estén abiertos o bloqueados en ese momento mostrarán un aviso en rojo que puedes ignorar por completo. Lo importante es que el script complete el ciclo.
+
+3. ¿Es recomendable usar puntos de restauración del sistema para esto?
 Solo como última alternativa si los comandos anteriores fallan. Por lo general, un fallo en la barra de tareas es un problema de servicios locales que se resuelve limpiando la caché o reiniciando el proceso del explorador, sin necesidad de retroceder el estado del sistema.

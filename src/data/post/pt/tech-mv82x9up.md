@@ -36,7 +36,9 @@ Desligue o cabo de força da tomada. Abra o gabinete e pressione o botão Power 
 
 ### Passo 2: Remoção e Limpeza Cirúrgica da RAM
 1. Puxe as travas laterais do slot e retire o(s) pente(s) de memória com cuidado.
+
 2. Inspecione os contatos dourados. Se notar manchas escuras ou opacas, pegue uma borracha branca escolar (limpa e macia) e passe delicadamente no sentido dos pinos (nunca de um lado para o outro para não levantar as bordas do circuito).
+
 3. Remova todos os resíduos de borracha com um pincel antiestático ou jatos de ar seco. Nunca use álcool comum, se precisar limpar resíduos de gordura dos dedos, use Álcool Isopropílico 99%.
 
 ### Passo 3: Teste de Isolamento de Slots (A Regra do "Um por Um")

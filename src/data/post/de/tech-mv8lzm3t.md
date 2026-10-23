@@ -15,14 +15,16 @@ Freitag, 16:50 Uhr. Zehn Minuten vor dem verdienten Feierabend brennt mal wieder
 <strong>Admin-Notiz:</strong> Ein lahmer Bootvorgang ist kein Schicksal und auch kein sofortiges Signal für eine Neuanschaffung. In 90 % der Fälle ist es einfach zugemüllter Autostart-Speicher und ein Haufen Software, die meint, sie sei der Nabel der Welt.
 </div>
 
-![Tech Hardware Guide](https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1200&h=675&q=85)
+![Tech Hardware Guide](https://images.unsplash.com/photo-1581092160607-ee22621dd758? auto=format&fit=crop&w=1200&h=675&q=85)
 
 ### Warum der Rechner zur Krücke wird: Die 3 Hauptverdächtigen
 
 Bevor wir die Werkzeuge auspacken, müssen wir verstehen, wer hier eigentlich bremst. Nach Jahren im Support sehe ich immer wieder dieselben Übeltäter:
 
 1. Der "Ich will wichtig sein"-Effekt von Software: Gefühlt jede App (von Spotify über Discord bis zum Drucker-Treiber) installiert sich heimlich im Autostart. Sie wollen sofort da sein, wenn du den PC einschaltest – selbst wenn du sie monatelang nicht anfasst.
+
 2. Hintergrund-Dienste und geplante Tasks: Windows hat seine eigenen Mechanismen, aber Drittanbieter-Tools blähen den Task-Planer (*Aufgabenplanung*) mit unnötigem Ballast auf.
+
 3. Zerspannte System-Ressourcen: Wenn die Boot-Platte (besonders, wenn noch eine alte HDD verbaut ist, aber selbst bei SSDs) voll ist und das System beim Start permanent virtuelle Speicherseiten jonglieren muss, geht gar nichts mehr vorwärts.
 
 ### Der Befreiungsschlag: Schritt-für-Schritt-Anleitung
@@ -62,5 +64,5 @@ Finger weg von dubiosen "One-Click-Turbo-Boost"-Programmen aus dem Internet! Die
 
 ### Häufig gestellte Fragen (FAQ)
 
-F: Soll ich den Windows-Virenscanner (Defender) im Autostart deaktivieren, um Zeit zu sparen?A: Um Himmels willen:Nein!Der Echtzeitschutz muss beim Booten sofort greifen. Wer hier spart, öffnet Ransomware Tür und Tor.F: Nach dem Aufräumen startet der PC immer noch langsam. Was nun?A: Wenn du noch eine mechanische Festplatte (HDD) als Systemlaufwerk nutzt, ist der Zeitpunkt für ein Upgrade gekommen. Investiere in eine günstige NVMe- oder SATA-SSD. Das ist der absolute Gamechanger und lässt selbst fünf Jahre alte Hardware wieder fliegen.F: Windows schaltet bestimmte Apps von selbst wieder in den Autostart ein. Warum?
+F: Soll ich den Windows-Virenscanner (Defender) im Autostart deaktivieren, um Zeit zu sparen? A: Um Himmels willen:Nein!Der Echtzeitschutz muss beim Booten sofort greifen. Wer hier spart, öffnet Ransomware Tür und Tor.F: Nach dem Aufräumen startet der PC immer noch langsam. Was nun? A: Wenn du noch eine mechanische Festplatte (HDD) als Systemlaufwerk nutzt, ist der Zeitpunkt für ein Upgrade gekommen. Investiere in eine günstige NVMe- oder SATA-SSD. Das ist der absolute Gamechanger und lässt selbst fünf Jahre alte Hardware wieder fliegen.F: Windows schaltet bestimmte Apps von selbst wieder in den Autostart ein. Warum?
 A: Viele moderne Apps (vor allem Electron-basierte wie Browser oder Messenger) ignorieren beim Update die lokalen Einstellungen und schreiben sich klammheimlich wieder in den Autostart. Du musst diesen Apps in ihren eigenen Einstellungen die Option "Beim Systemstart ausführen" explizit verbieten.

@@ -36,7 +36,7 @@ Jeder Tastenanschlag biegt die innenliegende Blattfeder. Nach mehreren Millionen
 Jeder mechanische Schalter prellt von Natur aus einige Millisekunden beim Schließen der Kontakte. Tastatur-Controller fangen dies über einen Entprell-Algorithmus (*Debounce Time*) ab. Wenn Schalter altern, verlängert sich diese Prellphase typischerweise von beispielsweise 5 ms auf 15 bis 20 ms. Steht die Firmware der Tastatur auf einer aggressiven, zu niedrigen Entprellzeit (etwa im "Gamer-Modus" mit 1 bis 2 ms), wird eine ganz normale Schalteralterung sofort als doppelter Tastendruck interpretiert.
 
 ---
-![Tech Hardware Guide](https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?auto=format&fit=crop&w=1200&h=675&q=85)
+![Tech Hardware Guide](https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2? auto=format&fit=crop&w=1200&h=675&q=85)
 
 ## 2. Schritt-für-Schritt-Entstörung (Diagnose & Instandsetzung)
 
@@ -56,8 +56,11 @@ Bevor wir zur Flasche mit dem Kontaktreiniger greifen, stellen wir sicher, dass 
    dism /online /cleanup-image /restorehealth
    ```
 2. Rufen Sie den Geräte-Manager über `devmgmt.msc` auf.
-3. Klappen Sie den Bereich Tastaturen aus. Klicken Sie mit der rechten Maustaste auf das gelistete *HID-Tastatur*-Gerät und wählen Sie Gerät deinstallieren. 
+
+3. Klappen Sie den Bereich Tastaturen aus. Klicken Sie mit der rechten Maustaste auf das gelistete *HID-Tastatur*-Gerät und wählen Sie Gerät deinstallieren.
+
 4. Ziehen Sie das USB-Kabel ab, starten Sie das System bei Bedarf neu und schließen Sie die Tastatur wieder an. Das Betriebssystem initialisiert den Standard-Treiberstack neu.
+
 5. Nutzen Sie ein Diagnose-Tool (wie *Keyboard Chattering Fixer* oder webbasierte Switch-Tester), um die exakte Prellzeit in Millisekunden sichtbar zu machen. Registriert das Tool Doppelklicks unterhalb von 30 ms Abstand, ist der Schalter definitiv physikalisch defekt oder verschmutzt.
 
 ---
@@ -72,11 +75,17 @@ Bevor wir zur Flasche mit dem Kontaktreiniger greifen, stellen wir sicher, dass 
 #### Die "Straw-and-Stem"-Methode (Ohne Gehäuseöffnung)
 
 1. Stromlos schalten: Ziehen Sie das USB-Kabel zwingend ab. Das Board muss vollständig stromlos sein.
+
 2. Keycap entfernen: Ziehen Sie die Tastenkappe der betroffenen Taste mit einem Draht-Keycap-Puller senkrecht nach oben ab. Verwenden Sie keinen Schraubendreher, um die Haltenasen des Stempels nicht zu beschädigen.
+
 3. Stempel herabdrücken: Drücken Sie den Schalterstempel mit einer Pinzette oder einem Zahnstocher vollständig nach unten, sodass die Öffnung zum Schalterinneren freigelegt wird.
+
 4. Dosierung: Setzen Sie das feine Sprühröhrchen des Kontaktreinigers schräg an den Rand des Stempels an – genau dort, wo die interne Blattfeder sitzt.
+
 5. Applikation:Geben Sieeinen einzigen, ultrakurzen Sprühstoß (weniger als eine halbe Sekunde) in den Schalter. Der Schalter soll nicht "ertrinken".
+
 6. Einarbeiten: Betätigen Sie den Switch sofort danach 50 bis 80 Mal schnell hintereinander mit dem Finger. Dadurch reibt sich der Schmutz von den Kontaktzungen ab, und das Lösungsmittel verteilt sich über die gesamte Oberfläche.
+
 7. Verdunstungszeit einhalten: Warten Sie mindestens 20 bis 30 Minuten, bis das Lösungsmittel restlos verflüchtigt ist. Nutzen Sie ggf. Druckluftspray aus der Dose, um Reste herauszublasen.
 
 ```
@@ -123,7 +132,9 @@ Im RZ-Betrieb gelten strenge Richtlinien für Flüssigkeiten und Gase. Bei Heim-
 Im industriellen IT-Betrieb endet kein Incident ohne Vorbeugemaßnahmen. Um erneute Ausfälle zu verhindern:
 
 1. Staubschutzabdeckung etablieren: Bei längerer Nichtbenutzung der Workstation eine Acryl-Abdeckung über die Tastatur legen. Das verhindert 90 % aller Partikeleinträge.
+
 2. QMK/VIA Debounce-Konfiguration anpassen:Wenn Ihre Tastatur Open-Source-Firmware (QMK/ZMK) unterstützt, flashen Sie ein Profil mit angepasstem Entprell-Algorithmus. Wechseln Sie vom aggressiven `sym_defer_g` auf `asym_eager_defer_pk` mit einer Zeitspanne von8 bis 10 ms. Dies maskiert Alterungserscheinungen der Feder komplett, ohne dass eine spürbare Latenz entsteht.
+
 3. Firmware-Updates einspielen: Hersteller wie Ducky, Corsair oder Razer veröffentlichen regelmäßig Firmware-Patches, die gezielt die Debounce-Filterung für prellende Schalterserien optimieren.
 
 ---

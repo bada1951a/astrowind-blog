@@ -24,7 +24,9 @@ Mari kita bedah apa yang sebenarnya terjadi di balik layar sistem operasi Anda.
 Sebelum kita masuk ke tombol eksekusi, kenali dulu tiga musuh utama penyebab audio laptop mendadak hilang:
 
 1. Layanan Audio Windows (Windows Audio Service) Berhenti Mendadak: Seringkali karena konflik memori atau proses latar belakang yang terganggu saat VPN aktif, layanan utama penggerak suara *crash* atau *stop* sendiri.
+
 2. Driver Audio Rusak atau 'Rollback': Windows Update yang berjalan di latar belakang malam hari kerap mengganti driver Realtek atau Intel Smart Sound Technology dengan driver generik yang tidak kompatibel.
+
 3. Salah Pilih Perangkat Output (Default Playback Device): Saat VPN atau headset bluetooth terhubung, Windows sering kebingungan dan mengalihkan jalur suara ke perangkat virtual atau *dummy output* yang tidak aktif.
 
 <div style="border-left: 4px solid #78350f; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
@@ -74,7 +76,7 @@ Agar kejadian memalukan seperti ini tidak terulang saat Anda sedang presentasi p
 
 ### Pertanyaan yang Sering Diajukan (FAQ)
 
-Q: Apakah aman melakukan Uninstall Device pada driver audio di Device Manager?A: Sangat aman. Ini adalah teknik standar teknisi IT. Ketika Anda me-restart laptop setelah uninstall, Windows 11 secara otomatis akan mendeteksi ulang komponen audio fisik Anda dan memasang driver dasarnya dari sistem.Q: Mengapa suara saya hilang persis setelah menyalakan VPN kantor?
+Q: Apakah aman melakukan Uninstall Device pada driver audio di Device Manager? A: Sangat aman. Ini adalah teknik standar teknisi IT. Ketika Anda me-restart laptop setelah uninstall, Windows 11 secara otomatis akan mendeteksi ulang komponen audio fisik Anda dan memasang driver dasarnya dari sistem.Q: Mengapa suara saya hilang persis setelah menyalakan VPN kantor?
 A: Beberapa aplikasi VPN korporat memiliki fitur keamanan ketat yang memblokir perangkat periferal eksternal atau mengalihkan *audio gateway*. Cek pengaturan *split tunneling* atau matikan sementara VPN jika sedang tidak mengakses data internal.
 
 Q: Ikon speaker di laptop saya ada tanda silang merah dan pesan "No Audio Output Device is Installed", apakah soundcard saya rusak secara fisik?

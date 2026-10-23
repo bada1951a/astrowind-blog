@@ -28,7 +28,7 @@ W architekturze hybrydowej wyjścia wideo USB-C/DisplayPort fizycznie przechodz�
 
 #
 
-![Hardware Diagnostic & Troubleshooting](https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1000&h=550&q=80)
+![Hardware Diagnostic & Troubleshooting](https://images.unsplash.com/photo-1504384308090-c894fdcc538d? auto=format&fit=crop&w=1000&h=550&q=80)
 
 ### 2. Timeout mechanizmu TDR w jądrze `dxgkrnl.sys`
 Podsystem graficzny DirectX monitoruje czas odpowiedzi karty. Jeśli kontroler DisplayPort Alternate Mode lub transceiver stacji dokującej opóźni handshake EDID o więcej niż 2 sekundy podczas negocjacji szyfrowania HDCP, jądro systemu uznaje sterownik za zawieszony. Uruchamiana jest procedura TDR: jądro resetuje akcelerator graficzny, co objawia się natychmiastowym zgaśnięciem wszystkich paneli i przejściem drugiego monitora w tryb uśpienia.
@@ -43,8 +43,11 @@ System Windows agresywnie cachuje informacje o każdym podłączonym kiedykolwie
 Zanim przejdziemy do modyfikacji plików binarnych, musimy precyzyjnie ustalić, który kontroler odpowiada za błądzący port wideo.
 
 1. Uruchom narzędzie Menedżer urządzeń(kombinacja `Win + X` -> wybierzMenedżer urządzeń).
+
 2. Rozwiń sekcję Karty graficzne.
+
 3. Kliknij prawym przyciskiem myszy na zintegrowaną kartę (np. *Intel Iris Xe Graphics*) i wybierz Właściwości.
+
 4. W zakładce Szczegółyrozwiń listęWłaściwośći wybierzIdentyfikatory sprzętu.
 
 <div style="border-left: 4px solid #4338ca; padding: 12px 16px; margin: 20px 0; background-color: rgba(67, 56, 202, 0.04); border-radius: 4px;">
@@ -77,6 +80,7 @@ Gdzie <code>VEN_8086</code> oznacza dostawcę (Intel), a <code>DEV_9A49</code> t
 Operacja ta zmusza podsystem graficzny Windows do ponownego odpytania wszystkich podłączonych ekranów o ich natywne tablice EDID i wyczyszczenia błędnych profili multi-monitor.
 
 1. Wciśnij `Win + R`, wpisz `regedit` i zatwierdź z uprawnieniami administratora.
+
 2. Przejdź do następującego klucza:
    `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\GraphicsDrivers`
 3. Odszukaj trzy podkatalogi:
@@ -94,9 +98,11 @@ reg export "HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers\Configuration"
 Zwykłe odinstalowanie sterownika z poziomu Menedżera urządzeń pozostawia pliki INF w magazynie `DriverStore`. Wykorzystamy dedykowane narzędzie do całkowitej sanacji.
 
 1. Pobierz narzędzie Display Driver Uninstaller (DDU).
+
 2. Uruchom system w trybie awaryjnym:
    * Przytrzymaj klawisz `Shift` i kliknij Uruchom ponownie w menu Start.
    * Przejdź do: Rozwiąż problemy->Opcje zaawansowane->Ustawienia uruchamiania-> wciśnij klawisz `4` (Włącz tryb awaryjny).
+
 3. Uruchom DDU z uprawnieniami administratora:
    * Jako typ urządzenia wybierz Karta graficzna.
    * Wybierz producenta dedykowanego układu (np. NVIDIA) i kliknij Wyczyść i NIE restartuj.
@@ -110,8 +116,11 @@ Zwykłe odinstalowanie sterownika z poziomu Menedżera urządzeń pozostawia pli
 Zainstalowanie oprogramowania w złej kolejności to najczęstszy błąd administratorów. W architekturze zintegrowanej obowiązuje rygorystyczna hierarchia:
 
 1. Magistrala i Thunderbolt: Zainstaluj najnowszy pakiet *Intel Serial IO Driver* oraz *Thunderbolt Controller Driver* (jeśli laptop korzysta z procesora Intel Core).
+
 2. Karta zintegrowana (iGPU): Zainstaluj sterownik pobrany bezpośrednio ze strony Intel lub AMD, weryfikując zgodność z wcześniej zapisanym `DEV_ID`.
+
 3. Karta dedykowana (dGPU): Na samym końcu zainstaluj sterownik NVIDIA/AMD, wybierając opcję „Czysta instalacja”.
+
 4. Dopiero po zainstalowaniu kompletu podłącz monitory do stacji lub portów USB-C.
 
 #### Krok 4: Modyfikacja tolerancji TDR w Wierszu polecenia
@@ -133,7 +142,9 @@ Wartość domyślna wynosi 2 sekundy. Zwiększenie jej do 8 sekund eliminuje fa�
 Praca na niskopoziomowych komponentach wideo niesie za sobą ryzyko utraty obrazu na wszystkich podłączonych ekranach:
 
 * Zasilanie stacji dokującej (Power Delivery): Zawsze upewnij się, że stacja USB-C/Thunderbolt ma podłączony dedykowany zasilacz o mocy minimum 100W–130W. Niedobory zasilania na magistrali powodują chwilowe spadki napięcia na liniach sygnałowych High-Speed DisplayPort, co jest mylone przez system z awarią sterownika.
-* Agresywne kable pasywne: W konfiguracjach dwumonitorowych powyżej rozdzielczości 1440p (QHD) przy 60 Hz nie należy stosować tanich kabli pasywnych USB-C do HDMI. Zawsze wybieraj przewody z aktywnym konwerterem poziomu sygnału i certyfikacją DisplayPort 1.4 lub HDMI 2.1.
+* Agresywne kable pasywne: W konfiguracjach dwumonitorowych powyżej rozdzielczości 1440p (QHD) przy 60 Hz nie należy stosować tanich kabli pasywnych USB-C do HDMI. Zawsze wybieraj przewody z aktywnym konwerterem poziomu sygnału i certyfikacją DisplayPort 1.4 lub HDMI 2.
+
+1.
 * Blokada nadpisywania przez Windows Update: Skonfiguruj zasady grupy (`gpedit.msc`), przechodząc do: *Konfiguracja komputera* -> *Szablony administracyjne* -> *System* -> *Instalacja urządzeń* -> *Ograniczenia dotyczące instalacji urządzeń*, aby uniemożliwić systemowi automatyczną wymianę zainstalowanego ręcznie, stabilnego sterownika na wersję z repozytorium Microsoftu.
 
 ---
@@ -143,5 +154,7 @@ Praca na niskopoziomowych komponentach wideo niesie za sobą ryzyko utraty obraz
 1. Czy uszkodzony lub zbyt długi kabel może wywoływać błędy systemowe TDR w dzienniku zdarzeń?  
 Tak. Jeżeli kabel ma długość przekraczającą 2 metry bez aktywnego wzmacniacza sygnału lub nie posiada odpowiedniego ekranowania, na liniach transmisyjnych pojawia się zjawisko *DisplayPort link training error*. Karta graficzna próbuje obniżyć taktowanie lub renegocjować pasmo, co zamraża potok renderowania i zmusza sterownik `dxgkrnl.sys` do zainicjowania procedury naprawczej TDR.
 
-2. Dlaczego pojedynczy monitor działa perfekcyjnie, a problem pojawia się dopiero po wpięciu drugiego ekranu?Obsługa dwóch monitorów wymaga podwojenia przepustowości na współdzielonym łączu PCIe oraz aktywacji technologii MST (Multi-Stream Transport). Wielu tańszych producentów stacji dokujących implementuje huby MST, które wchodzą w konflikt z mechanizmem zarządzania energią ASPM (Active State Power Management) w laptopie. W efekcie kontroler odcina zasilanie drugiego strumienia wideo przy braku gwałtownych zmian obrazu.3. Czy wyłączenie zintegrowanej karty graficznej (iGPU) w Menedżerze urządzeń rozwiąże konflikt?  
+2. Dlaczego pojedynczy monitor działa perfekcyjnie, a problem pojawia się dopiero po wpięciu drugiego ekranu? Obsługa dwóch monitorów wymaga podwojenia przepustowości na współdzielonym łączu PCIe oraz aktywacji technologii MST (Multi-Stream Transport). Wielu tańszych producentów stacji dokujących implementuje huby MST, które wchodzą w konflikt z mechanizmem zarządzania energią ASPM (Active State Power Management) w laptopie. W efekcie kontroler odcina zasilanie drugiego strumienia wideo przy braku gwałtownych zmian obrazu.
+
+3. Czy wyłączenie zintegrowanej karty graficznej (iGPU) w Menedżerze urządzeń rozwiąże konflikt?  
 W żadnym wypadku nie wolno tego robić w laptopach bez sprzętowego przełącznika MUX switch. W większości konstrukcji matryca laptopa oraz porty wyjściowe są fizycznie podpięte pod piny wyjściowe iGPU. Wyłączenie zintegrowanego układu w Menedżerze urządzeń spowoduje całkowite wyłączenie akceleracji sprzętowej, spadek rozdzielczości do trybu podstawowego Microsoft Basic Display Driver i brak możliwości wyprowadzenia sygnału na jakiekolwiek ekrany zewnętrzne.

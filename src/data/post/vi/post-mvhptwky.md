@@ -22,7 +22,9 @@ Chuyện quái quỷ gì đang diễn ra với cái giao diện Windows 11 này 
 Trước khi tìm cách bẻ khóa, chúng ta cần hiểu tại sao Microsoft lại ép người dùng phải dùng cái menu "cụt lủn" đó. Dưới đây là 3 nguyên nhân chính:
 
 1. Thay đổi kiến trúc lập trình: Microsoft muốn tách biệt các ứng dụng hiện đại (UWP) khỏi các phần mềm truyền thống (Win32) để tăng độ bảo mật và giảm tình trạng treo máy do các phím tắt của bên thứ ba chèn vào menu chuột phải.
+
 2. Ưu tiên thiết bị di động và cảm ứng: Giao diện mới có khoảng cách giữa các dòng rộng hơn, các icon được gom gọn để người dùng bấm bằng ngón tay dễ dàng hơn trên các dòng máy tính bảng lai (Surface).
+
 3. Thiếu tính linh hoạt ban đầu: Ở các phiên bản Windows 11 đầu tiên, Microsoft không cung cấp sẵn nút chuyển đổi trực quan trong Cài đặt (Settings), buộc người dùng phải can thiệp sâu vào hệ thống.
 
 Sau sự cố suýt trễ deadline chiều hôm đó, tôi đã ngồi lại nghiên cứu và tìm ra cách xử lý triệt để vấn đề này. Dưới đây là giải pháp nhanh gọn nhất dành cho anh em làm văn phòng.
@@ -49,7 +51,9 @@ Ngay sau khi thông báo `The operation completed successfully` hiện lên, l�
 ### Bước 3: Khởi động lại tiến trình Explorer (File Explorer)
 Để hệ thống cập nhật giao diện mới mà không cần khởi động lại toàn bộ máy tính (tránh làm mất các file đang soạn thảo), bạn làm như sau:
 1. Nhấn tổ hợp phím Ctrl + Shift + Escđể mởTask Manager.
+
 2. Tại thẻ Processes(Tiến trình), tìm đến mụcWindows Explorer (có biểu tượng thư mục màu vàng).
+
 3. Nhấp chuột phải vào Windows Explorervà chọnRestart (Khởi động lại).
 
 Màn hình và thanh Taskbar sẽ chớp nhẹ một cái trong vòng 1-2 giây. Bây giờ, hãy thử nhấp chuột phải bất kỳ vào một file hay màn hình nền xem kết quả. Menu cổ điển toàn diện với đầy đủ các dòng lệnh quen thuộc đã trở lại!

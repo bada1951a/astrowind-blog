@@ -34,7 +34,7 @@ USB Type-CやThunderboltドックを介したマルチモニター環境が標�
 
 
 
-![Hardware Diagnostic & Troubleshooting](https://images.unsplash.com/photo-1587202372775-e229f172b9d7?auto=format&fit=crop&w=1000&h=550&q=80)
+![Hardware Diagnostic & Troubleshooting](https://images.unsplash.com/photo-1587202372775-e229f172b9d7? auto=format&fit=crop&w=1000&h=550&q=80)
 
 ### 2. DisplayPort Alt ModeおよびHDCPのハンドシェイクタイムアウト
 USB Type-C経由でのDisplayPort信号伝送（DP Alt Mode）時、グラフィックスエンジンとモニター間では常時HDCP（著作権保護）認証と通信レーンのネゴシエーションが行われています。省電力状態からの復帰（モダンスタンバイ復帰時など）でGPUの応答が数ミリ秒遅れると、OS側が「モニター切断」と誤認し、画面の点滅ループ（切断・再接続の繰り返し）へ陥ります。

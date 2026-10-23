@@ -22,7 +22,9 @@ Mới sáng thứ Hai đầu tuần, sếp tổng gọi gấp vào phòng họp 
 Trước khi vung dao mổ xẻ, phải bắt đúng bệnh thì mới trị dứt điểm được. Dưới đây là 3 thủ phạm chính:
 
 1. Rác Startup quá tải (Startup Bloatware): Mỗi lần anh em cài app mới (như Zalo, Steam, Adobe, v.v.), bọn chúng mặc định tích vào ô *"Run when Windows starts"*. Cứ thế, 30-40 tiến trình chạy ngầm ngốn hết RAM và ổ cứng ngay từ giây đầu tiên bấm nút nguồn.
+
 2. Ổ cứng HDD lão hóa hoặc SSD hết dung lượng trống: Máy ai còn dùng HDD cơ quay tít thò lò thì xác định khởi động mất 5 phút là bình thường. Còn dùng SSD mà để đầy dung lượng (dưới 10% trống), tốc độ đọc ghi (Read/Write) sẽ rớt thảm hại do không còn không gian cho bộ nhớ ảo (Pagefile).
+
 3. Driver phần cứng hoặc BIOS lỗi thời: Xung đột driver card màn hình hoặc chipset khiến tiến trình khởi động của hệ điều hành bị nghẽn (boot bottleneck).
 
 ---
@@ -76,5 +78,9 @@ Tính năng này giúp Windows lưu trạng thái kernel vào một file hiberna
 
 ### Câu hỏi thường gặp (FAQ)
 
-1. Tôi đã tắt hết Startup mà máy vẫn khởi động lâu, phải làm sao nữa?> Khả năng cao máy bạn vẫn đang dùng ổ cứng cơ HDD truyền thống. Giải pháp duy nhất và đáng tiền nhất lúc này là nâng cấp lên ổ cứng SSD NVMe. Tốc độ sẽ cải thiện từ 5 đến 10 lần, bấm nút lên nguồn là vào Win trong vòng 10 giây.2. Tính năng Fast Startup có gây hại gì cho máy không?> Fast Startup hoàn toàn an toàn, tuy nhiên đôi khi nó gây lỗi hiển thị hoặc xung đột driver phần cứng đời cũ (đặc biệt là card màn hình Nvidia). Nếu máy bạn thỉnh thoảng bị treo logo khi bật lên, hãy thử tắt Fast Startup đi để kiểm tra.3. Có nên dùng các phần mềm bên thứ ba như CCleaner để tối ưu khởi động không?
+1. Tôi đã tắt hết Startup mà máy vẫn khởi động lâu, phải làm sao nữa?> Khả năng cao máy bạn vẫn đang dùng ổ cứng cơ HDD truyền thống. Giải pháp duy nhất và đáng tiền nhất lúc này là nâng cấp lên ổ cứng SSD NVMe. Tốc độ sẽ cải thiện từ 5 đến 10 lần, bấm nút lên nguồn là vào Win trong vòng 10 giây.
+
+2. Tính năng Fast Startup có gây hại gì cho máy không?> Fast Startup hoàn toàn an toàn, tuy nhiên đôi khi nó gây lỗi hiển thị hoặc xung đột driver phần cứng đời cũ (đặc biệt là card màn hình Nvidia). Nếu máy bạn thỉnh thoảng bị treo logo khi bật lên, hãy thử tắt Fast Startup đi để kiểm tra.
+
+3. Có nên dùng các phần mềm bên thứ ba như CCleaner để tối ưu khởi động không?
 > Tuyệt đối hạn chế. Các phần mềm tối ưu bên thứ ba thường quét sâu vào Registry, đôi khi xóa nhầm các khóa quan trọng khiến hệ điều hành lỗi nặng. Hãy tận dụng các công cụ native sẵn có của Windows như Task Manager và Command Prompt là quá đủ dùng cho một kỹ sư chuyên nghiệp.

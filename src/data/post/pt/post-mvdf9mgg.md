@@ -22,7 +22,9 @@ Essa cena é o pesadelo de qualquer profissional de TI ou usuário que depende d
 Para entender o problema e nunca mais passar raiva, precisamos olhar debaixo do capô. Os três gargalos mais comuns que causam esse travamento irritante são:
 
 1. Cache do Windows Update Corrompido: Os arquivos baixados para a pasta `SoftwareDistribution` vieram corrompidos por instabilidade na rede ou falha de leitura no SSD durante o download.
+
 2. Serviços em Loop Infinito: O serviço responsável por gerenciar as instalações (`wuauserv`) tenta aplicar um pacote corrompido, falha silenciosamente, reinicia o processo e fica preso em um ciclo infinito.
+
 3. Conflito de Drivers de Terceiros: Softwares de segurança agressivos ou drivers de hardware desatualizados bloqueiam a finalização da escrita de arquivos críticos no registro do sistema (`System32`).
 
 ---

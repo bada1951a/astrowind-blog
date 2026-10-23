@@ -87,5 +87,9 @@ Il ne vous reste plus qu'à redémarrer votre machine, puis à vous rendre dans 
 
 ## Foire aux Questions (FAQ)
 
-1. Est-ce que renommer le dossier SoftwareDistribution efface mes fichiers personnels ?Absolument pas. Ce dossier contient uniquement les fichiers temporaires téléchargés pour les mises à jour Windows. Vos documents, applications et paramètres personnels ne sont en aucun cas touchés.2. Que faire si la commande `net stop wuauserv` reste bloquée sur "Arrêt en cours" ?C'est un classique lorsque le service est totalement gelé. Ouvrez le Gestionnaire tâches (Ctrl + Maj + Échap), allez dans l'ongletServices, cherchez `wuauserv`, faites un clic droit dessus et choisissezArrêter. Si cela ne suffit pas, un redémarrage de la machine s'impose.3. Pourquoi Windows 11 bloque-t-il si souvent à 100 pourcent lors des mises à jour ?
+1. Est-ce que renommer le dossier SoftwareDistribution efface mes fichiers personnels ? Absolument pas. Ce dossier contient uniquement les fichiers temporaires téléchargés pour les mises à jour Windows. Vos documents, applications et paramètres personnels ne sont en aucun cas touchés.
+
+2. Que faire si la commande `net stop wuauserv` reste bloquée sur "Arrêt en cours" ? C'est un classique lorsque le service est totalement gelé. Ouvrez le Gestionnaire tâches (Ctrl + Maj + Échap), allez dans l'ongletServices, cherchez `wuauserv`, faites un clic droit dessus et choisissezArrêter. Si cela ne suffit pas, un redémarrage de la machine s'impose.
+
+3. Pourquoi Windows 11 bloque-t-il si souvent à 100 pourcent lors des mises à jour ?
 Le blocage à 100% correspond généralement à la phase finale d'écriture dans le registre et de nettoyage des composants. Si un pilote tiers, un antivirus un peu trop zélé ou un secteur disque défectueux interrompt cette séquence, le processus s'arrête indéfiniment en attendant une réponse qui ne viendra jamais.

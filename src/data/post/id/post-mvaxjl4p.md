@@ -28,7 +28,9 @@ Mari kita bedah kenapa hal ini bisa terjadi dan bagaimana cara membereskannya ku
 Sebelum masuk ke eksekusi, kita harus paham dulu apa yang sebenarnya terjadi di balik layar laptop Anda:
 
 1. Aplikasi "Numpang Nyala" Otomatis: Banyak aplikasi seperti Steam, Spotify, Discord, hingga aplikasi kantor seperti Teams dan OneDrive yang secara *default* mencentang opsi "Run at startup" saat instalasi.
+
 2. Kapasitas Penyimpanan Terbebani: Jika laptop Anda masih menggunakan Hard Disk lama (HDD) alih-alih SSD, antrean baca tulis saat *booting* akan membuat sistem *not responding* dalam waktu lama.
+
 3. Pemeriksaan Keamanan Berlebihan: Antivirus pihak ketiga yang langsung melakukan pemindaian menyeluruh (*full system scan*) setiap kali komputer baru menyala.
 
 ---

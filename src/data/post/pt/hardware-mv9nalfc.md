@@ -24,7 +24,9 @@ A virada de chave aconteceu quando decidi parar de enxugar gelo e aplicar um pro
 Antes de sair deletando tudo pela frente, vale a pena entender o que realmente lotou o seu SSD principal:
 
 1. Acúmulo de arquivos temporários do sistema (Temp e Prefetch): O Windows guarda logs de instalação, atualizações passadas (Windows.old) e dados de aplicativos que já foram desinstalados.
+
 2. Hipersaturação do cache de hibernação e paginação: Arquivos como *hiberfil.sys* e *pagefile.sys* reservam gigabytes preciosos do seu SSD para simular memória RAM.
+
 3. Conflito de leitura em dispositivos externos (NVMe): Quando o C: está completamente cheio, o sistema falha ao tentar indexar ou ler dados de um SSD NVMe externo, gerando falsos erros de hardware.
 
 ## Passo a Passo para a Limpeza Completa e Correção
@@ -55,5 +57,9 @@ Com o espaço liberado no drive C: (recomendo manter pelo menos 15% a 20% livres
 
 ## Perguntas Frequentes (FAQ)
 
-1. Posso apagar todos os arquivos da pasta Temp sem medo?Sim. A pasta Temp armazena apenas arquivos de uso temporário por aplicativos e pelo próprio sistema. O que estiver em uso ativo no momento não poderá ser apagado pelo Windows, garantindo que nenhum dado essencial seja perdido.2. O que fazer se o meu SSD NVMe externo continuar dando erro de leitura mesmo após limpar o C:?Se o erro persistir, o problema pode estar na porta USB utilizada (recomendo conectar diretamente nas portas traseiras da placa-mãe, que possuem melhor alimentação de energia) ou na formatação do arquivo system. Use oGerenciamento de Discopara verificar se a partição está íntegra.3. Com que frequência devo realizar essa limpeza de arquivos temporários?
+1. Posso apagar todos os arquivos da pasta Temp sem medo? Sim. A pasta Temp armazena apenas arquivos de uso temporário por aplicativos e pelo próprio sistema. O que estiver em uso ativo no momento não poderá ser apagado pelo Windows, garantindo que nenhum dado essencial seja perdido.
+
+2. O que fazer se o meu SSD NVMe externo continuar dando erro de leitura mesmo após limpar o C:? Se o erro persistir, o problema pode estar na porta USB utilizada (recomendo conectar diretamente nas portas traseiras da placa-mãe, que possuem melhor alimentação de energia) ou na formatação do arquivo system. Use oGerenciamento de Discopara verificar se a partição está íntegra.
+
+3. Com que frequência devo realizar essa limpeza de arquivos temporários?
 Para uso corporativo intenso, o ideal é rodar essa limpeza pelo menos uma vez por mês. Isso evita surpresas desagradáveis com travamentos repentinos em prazos de entrega importantes.

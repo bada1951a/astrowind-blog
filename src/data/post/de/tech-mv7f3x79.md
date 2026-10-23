@@ -31,7 +31,7 @@ Beim Anschließen eines externen Monitors handeln Grafikkarte und Display via I2
 
 
 
-![Tech Hardware Guide](https://images.unsplash.com/photo-1531297484001-80022131f5a1?auto=format&fit=crop&w=1200&h=675&q=85)
+![Tech Hardware Guide](https://images.unsplash.com/photo-1531297484001-80022131f5a1? auto=format&fit=crop&w=1200&h=675&q=85)
 
 ### 2. Treiber-Fragmentierung durch Windows Update (DCH-Konflikte)
 Windows Update neigt dazu, funktionierende WHQL-Treiber der Chiphersteller (Intel, AMD, NVIDIA) im Hintergrund durch generische, abgespeckte OEM-Pakete zu überschreiben. 
@@ -62,8 +62,11 @@ Drücken Sie folgende Tastenkombination simultan:
 </div>
 
 1. Der Bildschirm wird für den Bruchteil einer Sekunde dunkel.
+
 2. Ein kurzer System-Piepton ertönt.
+
 3. Windows verwirft den aktuellen Framebuffer, startet den Desktop Window Manager (`dwm.exe`) neu und initialisiert die Treiberkommunikation von Grund auf.
+
 4. *Effekt:* Häufig beendet dieser Shortcut temporäre Handshake-Blockaden sofort.
 
 ---
@@ -73,7 +76,9 @@ Reicht der Hotkey nicht aus, prüfen wir den physikalischen und logischen Status
 
 ```markdown
 1. Drücken Sie [Win] + [X] und wählen Sie "Geräte-Manager".
+
 2. Navigieren Sie zu "Grafikkarten".
+
 3. Klappen Sie den Zweig auf und prüfen Sie beide Adapter (iGPU und dGPU).
 ```
 
@@ -93,11 +98,13 @@ Wenn Treiberfragmente tiefer im System korrupt sind, reicht das normale Windows-
 
 1. Öffnen Sie die Eingabeaufforderung als Administrator:
    Drücken Sie <kbd style="background: #44475a; color: #bd93f9; border: 1px solid #6272a4; border-radius: 3px; padding: 1px 5px; font-family: monospace;">Win</kbd> + <kbd style="background: #44475a; color: #bd93f9; border: 1px solid #6272a4; border-radius: 3px; padding: 1px 5px; font-family: monospace;">R</kbd>, tippen Sie `cmd` ein und bestätigen Sie mit <kbd style="background: #44475a; color: #bd93f9; border: 1px solid #6272a4; border-radius: 3px; padding: 1px 5px; font-family: monospace;">Strg</kbd> + <kbd style="background: #44475a; color: #bd93f9; border: 1px solid #6272a4; border-radius: 3px; padding: 1px 5px; font-family: monospace;">Umschalt</kbd> + <kbd style="background: #44475a; color: #bd93f9; border: 1px solid #6272a4; border-radius: 3px; padding: 1px 5px; font-family: monospace;">Enter</kbd>.
+
 2. Erzwingen Sie den Start in den abgesicherten Modus mit folgendem Befehl:
    ```cmd
    shutdown /r /o /f /t 00
    ```
 3. Navigieren Sie über das blaue Bootmenü: Problembehandlung&rarr;Erweiterte Optionen&rarr;Starteinstellungen&rarr;Neu starten&rarr; Taste4 (Abgesicherter Modus aktivieren).
+
 4. Starten Sie DDU:
    * Wählen Sie rechts den Gerätetyp: Grafikkarte.
    * Wählen Sie den Hersteller (zuerst Intel/AMD, danach ggf. NVIDIA).
@@ -109,9 +116,12 @@ Wenn Treiberfragmente tiefer im System korrupt sind, reicht das normale Windows-
 Nach dem Neustart befindet sich Ihr System auf dem Basis-Grafiktreiber von Microsoft.
 
 1. Installieren Sie zuerst den Treiber für die integrierte Prozessorgrafik (Intel Graphics oder AMD Adrenalin). Dies ist essenziell, da die Display-Pipelines fast immer physisch an der CPU hängen.
+
 2. Führen Sie einen Reboot durch.
+
 3. Installieren Sie nun den Treiber der dedizierten Grafikkarte (z. B. NVIDIA Studio- oder Game-Ready-Treiber). Wählen Sie im Installationsassistenten:
    * Benutzerdefiniert (Erweitert)&rarr; Haken setzen beiNeuinstallation vornehmen.
+
 4. Schließen Sie das Typ-C-Kabel oder den HDMI-Stecker erst an, nachdem die Installation komplett abgeschlossen und das System neu gebootet ist.
 
 ---
@@ -121,8 +131,11 @@ Manchmal flackert das Bild, weil Windows eine Bildwiederholrate erzwingt, die da
 
 ```markdown
 1. Öffnen Sie die Windows-Einstellungen ([Win] + [I]) -> "System" -> "Bildschirm".
+
 2. Scrollen Sie nach unten zu "Erweiterte Anzeige".
+
 3. Wählen Sie den betroffenen Zweitmonitor im Dropdown-Menü aus.
+
 4. Prüfen Sie die "Aktualisierungsrate".
 ```
 

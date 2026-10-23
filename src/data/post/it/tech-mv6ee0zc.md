@@ -41,7 +41,7 @@ Tutti gli interruttori fisici soffrono fisiologicamente di rimbalzo (*contact bo
 Nelle tastiere moderne dotate di socket a innesto rapido (Kailh o Gateron hot-swap), i terminali a pinzetta saldati sul retro del circuito stampato (PCB) subiscono sollecitazioni torsionali continue. Con il tempo, le alette del socket perdono forza di serraggio oppure si sviluppano micro-crepe da fatica nella lega di stagno (*cold solder joints*). Il contatto diventa quindi intermittente in base alla pressione e all'angolo con cui il tasto viene colpito.
 
 ---
-![Tech Diagnostics](https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?auto=format&fit=crop&w=1000&h=550&q=80)
+![Tech Diagnostics](https://images.unsplash.com/photo-1517430816045-df4b7de11d1d? auto=format&fit=crop&w=1000&h=550&q=80)
 
 ## 2. Protocollo Operativo di Ripristino Passo-Passo
 
@@ -64,9 +64,13 @@ Prima di procedere con solventi chimici o saldatori, è obbligatorio isolare il 
 Prima di intervenire fisicamente, verifichiamo che il sottosistema USB di Windows non sia compromesso da conflitti di polling rate o risparmio energetico:
 
 1. Premi `Tasto Windows + X` e seleziona Gestione dispositivi.
+
 2. Espandi il nodo Tastieree poiController USB (Universal Serial Bus).
+
 3. Fai clic destro sul dispositivo relativo alla tastiera (spesso elencato come *Dispositivo tastiera HID*) e seleziona Proprietà.
+
 4. Nella scheda Risparmio energia (se presente), deseleziona l'opzione: *Consenti al computer di spegnere il dispositivo per risparmiare energia*.
+
 5. Apri il Prompt dei comandi con privilegi elevati (Esegui come amministratore) per verificare che l'input non sia alterato da ritardi di buffer di sistema:
 ```cmd
 reg query "HKCU\Control Panel\Keyboard" /v KeyboardSpeed
@@ -80,7 +84,9 @@ reg query "HKCU\Control Panel\Keyboard" /v KeyboardDelay
 
 ### Passo 2: Isolamento Fisico del Tasto Compromesso
 1. Scollega fisicamente il cavo USB dalla macchina. Lavorare sotto tensione su un circuito a 5V con liquidi volatili può causare cortocircuiti sul controller logico.
+
 2. Utilizzando un estrattore per copritasti ad anello (*wire keycap puller*), estrai il tasto interessato tirando perpendicolarmente verso l'alto per non rompere la crociera dello stelo.
+
 3. Rimuovi la polvere perimetrale con un soffiatore manuale o una bomboletta di aria compressa, tenendo l'ugello ad almeno 10 cm di distanza per evitare condensa criogenica.
 
 ---
@@ -93,10 +99,15 @@ Il prodotto da utilizzare deve essere rigorosamente un disossidante per contatti
 </div>
 
 1. Inserisci la cannuccia di precisione sull'erogatore dello spray.
+
 2. Premi a fondo lo stelo centrale dello switch (usando la cannuccia stessa o un piccolo cacciavite spudger in plastica) per esporre la fessura interna tra lo stelo e la parete del corpo switch.
+
 3. Eroga un impulso brevissimo (frazione di secondo, uno "sbuffo"). Il liquido entrerà per capillarità nell'alloggiamento della lamella.
+
 4. Ciclo di azionamento meccanico immediato: Premi e rilascia rapidamente lo stelo per almeno 40-50 volte consecutive. Questa azione meccanica favorisce l'azione solvente, permettendo alla lamella di sfregare contro la piazzola e rimuovere le tracce di ossido o sporco.
+
 5. Capovolgi la tastiera su un panno assorbente per favorire il deflusso di solvente in eccesso.
+
 6. Fase di asciugatura passiva: Attendi non meno di 15-20 minuti prima di alimentare nuovamente la periferica. Il solvente deve evaporare completamente.
 
 ```
@@ -117,8 +128,11 @@ Il prodotto da utilizzare deve essere rigorosamente un disossidante per contatti
 Se il disossidante non risolve l'anomalia, il problema risiede nell'accoppiamento elettrico a valle:
 
 1. Se la tastiera supporta l'hot-swap, utilizza l'estrattore per switch (*switch puller*). Aggancia le due clip di rilascio a nord e sud dello switch ed estrailo verticalmente.
+
 2. Ispeziona i piedini metallici in rame dello switch: se risultano piegati o schiacciati, raddrizzali con una pinzetta da orologiaio prima di reinserirli.
+
 3. Ispeziona i fori del PCB. Se il contatto interno è allargato, comprimi leggermente le lamine del socket da dietro il PCB con un ago da sutura o una sonda metallica sottile.
+
 4. Se la tastiera è saldata e lo switch continua a generare chattering persistente, procedi alla dissaldatura:
    - Riscalda la piazzola a 330°C con stazione saldante.
    - Aspira lo stagno vecchio con pompetta a vuoto o treccia dissaldante.

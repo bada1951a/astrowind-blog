@@ -26,7 +26,9 @@ Heureusement, il existe une méthode propre, rapide et sécurisée via l'invite 
 Avant de manipuler le système, comprenons l'origine technique de ce blocage pour éviter les fausses manœuvres :
 
 1. Perte temporaire de synchronisation KMS / Active Directory : Le serveur d'authentification de l'entreprise est injoignable sur le réseau local ou VPN, ce qui fait basculer Windows en mode de notification de licence.
+
 2. Mise à jour cumulative bloquée : Une mise à jour récente (notamment via Windows Update) a réinitialisé les caches graphiques du bureau et l'état des services de vérification visuelle.
+
 3. Corruption du cache de l'Explorateur (explorer.exe) : Le processus gérant l'interface graphique panique et affiche les couches de texte d'état d'activation par défaut en surimpression prioritaire.
 
 ## Guide étape par étape : Nettoyer l'affichage via CMD
@@ -66,5 +68,9 @@ Le bureau réapparaît instantanément, et le filigrane a disparu, vous laissant
 
 ## Foire Aux Questions (FAQ)
 
-1. Est-ce que cette manipulation présente un risque pour mes fichiers Excel ou mes documents en cours ?Non, absolument aucun. La commande `taskkill` stoppe uniquement l'interface visuelle (les dossiers ouverts, la barre des tâches). Vos fichiers ouverts dans les logiciels restent en mémoire vive (RAM) et réapparaîtront exactement là où vous les aviez laissés dès le redémarrage de `explorer.exe`.2. Le filigrane revient systématiquement au bout de quelques heures, que faire ?C'est le signe que votre PC n'arrive plus à joindre le serveur d'activation de l'entreprise. Si vous êtes en télétravail, connectez-vous au VPN d'entreprise, puis retournez dans lesParamètres > Système > Activationpour relancer une liaison directe avec le domaine.3. Puis-je utiliser cette astuce sur toutes les versions de Windows ?
+1. Est-ce que cette manipulation présente un risque pour mes fichiers Excel ou mes documents en cours ? Non, absolument aucun. La commande `taskkill` stoppe uniquement l'interface visuelle (les dossiers ouverts, la barre des tâches). Vos fichiers ouverts dans les logiciels restent en mémoire vive (RAM) et réapparaîtront exactement là où vous les aviez laissés dès le redémarrage de `explorer.exe`.
+
+2. Le filigrane revient systématiquement au bout de quelques heures, que faire ? C'est le signe que votre PC n'arrive plus à joindre le serveur d'activation de l'entreprise. Si vous êtes en télétravail, connectez-vous au VPN d'entreprise, puis retournez dans lesParamètres > Système > Activationpour relancer une liaison directe avec le domaine.
+
+3. Puis-je utiliser cette astuce sur toutes les versions de Windows ?
 Oui, cette méthode fonctionne parfaitement sur Windows 10 et Windows 11, que ce soit en édition Professionnelle ou Entreprise, à condition de disposer des privilèges administrateur sur la machine.

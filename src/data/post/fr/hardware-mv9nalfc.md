@@ -23,10 +23,12 @@ Heureusement, après des années à dépanner les postes de l'équipe, j'ai une 
 
 ## Pourquoi votre disque C se remplit tout seul ?
 
-Avant de passer à l'action, il est bon de comprendre ce qui s'est passé dans les coulisses de votre machine. 
+Avant de passer à l'action, il est bon de comprendre ce qui s'est passé dans les coulisses de votre machine.
 
 1. Le cache des applications et navigateurs : Google Chrome, Microsoft Edge, Slack ou Teams adorent stocker des gigaoctets de données temporaires pour charger les pages plus vite. Sauf qu'ils oublient souvent de faire le ménage derrière eux.
+
 2. Les restes de Windows Update : Chaque mise à jour majeure du système conserve une copie de secours (le dossier `Windows.old` ou les packages dans `WinSxS`) au cas où il faudrait rétrograder. C'est souvent là que se cachent 20 à 40 Go de données fantômes.
+
 3. Les fichiers de mise en veille prolongée et mémoire virtuelle : Les fichiers `hiberfil.sys` et `pagefile.sys` taillent directement dans votre SSD en réservant l'équivalent de votre mémoire vive, parfois bien plus que nécessaire.
 
 ## Guide étape par étape : Nettoyage complet du disque C
@@ -76,7 +78,9 @@ Voici concrètement ce que vous pouvez espérer récupérer sur un PC de bureau 
 
 ## Questions Fréquemment Posées (FAQ)
 
-Q1 : Est-ce que vider le dossier `%temp%` risque de supprimer mes documents de travail ?R : Absolument pas. Le dossier `Temp` porte bien son nom : il ne contient que des données éphémères générées par les logiciels pour fonctionner. Vos documents personnels (Word, Excel, PDF, photos) stockés dans Documents ou Bureau ne sont jamais touchés.Q2 : Que faire si mon disque C se remplit à nouveau tout seul en quelques jours ?
+Q1 : Est-ce que vider le dossier `%temp%` risque de supprimer mes documents de travail ? R : Absolument pas. Le dossier `Temp` porte bien son nom : il ne contient que des données éphémères générées par les logiciels pour fonctionner. Vos documents personnels (Word, Excel, PDF, photos) stockés dans Documents ou Bureau ne sont jamais touchés.
+
+Q2 : Que faire si mon disque C se remplit à nouveau tout seul en quelques jours ?
 R : C'est souvent le signe d'un cache applicatif qui s'emballe (souvent un logiciel de visioconférence, un client de téléchargement de jeux ou un outil de synchronisation cloud mal configuré). Utilisez un outil gratuit comme *WizTree* ou *WinDirStat* pour identifier visuellement quel dossier pèse le plus lourd sur votre SSD.
 
 Q3 : Pourquoi mon SSD externe n'était-il pas détecté au début de ma panne ?

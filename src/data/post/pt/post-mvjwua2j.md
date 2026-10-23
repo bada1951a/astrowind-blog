@@ -22,7 +22,9 @@ Trabalhando no suporte de TI, sei que esse tipo de falha paralisa qualquer profi
 Antes de sair clicando em tudo, vale entender o que costuma causar essa dor de cabeça nos computadores corporativos de São Paulo:
 
 1. Conflito ou corrupção de driver: Atualizações automáticas do Windows Update muitas vezes sobrescrevem o driver de áudio (Realtek, Intel Smart Sound, etc.) por uma versão genérica que simplesmente não conversa direito com o seu hardware.
+
 2. Dispositivo padrão incorreto: Com múltiplos monitores HDMI, fones Bluetooth e docks USB conectados, o Windows 11 frequentemente se perde e tenta enviar o som para uma saída que está desligada ou desconectada.
+
 3. Serviços de áudio travados: O serviço central de gerenciamento de áudio do sistema operacional pode ter sofrido um crash silencioso em segundo plano devido ao alto uso de memória na multitarefa.
 
 ---
@@ -36,8 +38,11 @@ Siga esta sequência lógica de procedimentos para restabelecer o funcionamento 
 Muitas vezes o problema é apenas a rota do som configurada errada.
 
 1. Pressione [Windows + I] para abrir asConfigurações.
+
 2. Vá em Sistemae depois clique emSom.
+
 3. Na seção Saída, verifique qual dispositivo está selecionado. Clique na seta ao lado para expandir e certifique-se de que o seu fone ou alto-falante principal está escolhido.
+
 4. Role até o final da página, clique em Mais configurações de sompara abrir a janela clássica doPainel de Controle. Na abaReprodução, clique com o botão direito no seu dispositivo principal e selecioneDefinir como Dispositivo Padrão.
 
 ### Passo 2: Atualização ou Reinstalação pelo Gerenciador de Dispositivos
@@ -45,9 +50,13 @@ Muitas vezes o problema é apenas a rota do som configurada errada.
 Se o driver corrompeu durante o pico de uso do computador, precisamos forçar o Windows a recarregá-lo.
 
 1. Clique com o botão direito no botão Iniciar e selecione Gerenciador de Dispositivos.
+
 2. Procure pela categoria Entradas e saídas de áudioe tambémControladores de som, vídeo e jogos.
-3. Clique com o botão direito no seu driver de áudio principal (geralmente *Realtek(R) Audio* ou *Intel Display Audio*) e selecione Desinstalar o dispositivo. 
+
+3. Clique com o botão direito no seu driver de áudio principal (geralmente *Realtek(R) Audio* ou *Intel Display Audio*) e selecione Desinstalar o dispositivo.
+
 4. Atenção:Não se preocupe, você não vai perder o componente físico. Apenas clique emDesinstalar.
+
 5. No menu superior do Gerenciador de Dispositivos, clique emAçãoe depois emVerificar se há alterações de hardware. O Windows vai reinstalar o driver limpo automaticamente na hora.
 
 ### Passo 3: Reiniciando os Serviços de Áudio do Windows
@@ -55,9 +64,13 @@ Se o driver corrompeu durante o pico de uso do computador, precisamos forçar o 
 Quando o sistema operacional trava o subsistema de som, reiniciar o serviço resolve o congelamento instantaneamente.
 
 1. Pressione [Windows + R] para abrir a caixa Executar.
+
 2. Digite `services.msc` e aperte Enter.
+
 3. Na lista de serviços, role para baixo até encontrar Áudio do Windows (*Windows Audio*).
+
 4. Clique com o botão direito nele e selecione Reiniciar. Se ele estiver parado, clique emIniciar.
+
 5. Faça o mesmo com o serviço Construtor de Pontos de Extremidade de Áudio do Windows.
 
 ---

@@ -29,7 +29,9 @@ Before we click anything, we need to understand what we are fighting. In Windows
 
 Here are the three most common culprits behind this bottleneck:
 1. Faulty Hardware Drivers: Corrupted storage controller or network adapter drivers flooding the kernel with interrupts (DPC latency).
+
 2. Windows Update Stalls: Background servicing stacks stuck trying to parse a corrupted patch cache.
+
 3. Corrupted Pagefile / Memory Management: Hardware memory mapping errors forcing the kernel into aggressive paging loops.
 
 ---
@@ -42,21 +44,27 @@ Let's walk through the exact steps to diagnose and neutralize the bottleneck wit
 Standard Task Manager gives you a high-level view, but we need granular data to see *which* thread or driver within the System process is misbehaving.
 
 1. Press `Ctrl + Shift + Esc` to open Task Manager.
+
 2. Click on the Performancetab at the top, then clickOpen Resource Monitor at the very bottom.
+
 3. In the Resource Monitor window, go to the CPU tab.
+
 4. Expand the Associated Handlesor look closely at theServicesandCPU Activity sections. Sort by CPU usage to see if a specific driver (like `ntoskrnl.exe`) or hardware interrupt is dominating the cycles.
 
 #### Step 2: Restart the Windows Audio and Search Services
 Surprisingly, core services tied into the System process frequently glitch out, causing runaway CPU loops. Let's restart them cleanly via Settings and Control Panel interfaces.
 
 1. Press `Windows Key + R`, type `services.msc`, and hit Enter.
+
 2. Scroll down to find Windows AudioandWindows Search.
+
 3. Right-click each service and select Restart. If a service is hung up, this action forces the kernel to release its grip on the CPU threads.
 
 #### Step 3: Run DISM and SFC via Command Prompt
 If corrupted system files are forcing the kernel into a loop, we need to repair the OS image immediately.
 
 1. Click the Start Menu, type `cmd`, right-click Command Prompt, and selectRun as administrator.
+
 2. Type the following command to check the component store integrity: 
    `DISM.exe /Online /Cleanup-image /Restorehealth`
 3. Once that completes, run the system file checker to replace damaged kernel binaries:
@@ -87,5 +95,5 @@ Avoid blindly disabling critical startup drivers in Device Manager unless you ha
 
 ### Frequently Asked Questions (FAQ)
 
-Q: Can I just force-shutdown my PC by holding the power button when this happens?A: Yes, if the system is completely frozen and unresponsive to mouse inputs, holding the power button for 5 to 10 seconds is your last resort. While it carries a slight risk of file corruption, modern NTFS journaling handles hard resets much better than older file systems. Use it only when all input methods fail.Q: Why does the System process spike right after I log in?A: This is usually caused by startup tasks, background Windows Updates initializing, or third-party antivirus software indexing your local drives simultaneously. Give the machine 3 to 5 minutes upon boot to settle before launching heavy apps.Q: Does disabling SysMain (Superfetch) still help fix 100% CPU usage?
+Q: Can I just force-shutdown my PC by holding the power button when this happens? A: Yes, if the system is completely frozen and unresponsive to mouse inputs, holding the power button for 5 to 10 seconds is your last resort. While it carries a slight risk of file corruption, modern NTFS journaling handles hard resets much better than older file systems. Use it only when all input methods fail.Q: Why does the System process spike right after I log in? A: This is usually caused by startup tasks, background Windows Updates initializing, or third-party antivirus software indexing your local drives simultaneously. Give the machine 3 to 5 minutes upon boot to settle before launching heavy apps.Q: Does disabling SysMain (Superfetch) still help fix 100% CPU usage?
 A: On modern NVMe SSDs, the SysMain service is rarely the culprit anymore, and disabling it can sometimes hinder memory preloading efficiency. It's usually better to check for corrupted storage drivers or pending Windows updates first before tinkering with memory caching services.

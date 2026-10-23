@@ -36,23 +36,31 @@ Pas question de formater la machine. Voici la méthodologie exacte que j'ai appl
 Avant de chercher du côté des pilotes, il faut écarter tout problème physique sur la RAM.
 
 1. Redémarrez votre PC en mode récupération (ou tapez "Diagnostic de mémoire Windows" dans la barre de recherche si le PC tient quelques minutes allumé).
+
 2. Choisissez l'option Redémarrer maintenant et rechercher les problèmes éventuels.
+
 3. Laissez tourner l'outil au démarrage (le mode *Standard* suffit). Si une erreur est détectée, une barrette de RAM est physiquement endommagée ou mal insérée dans son slot. Heureusement, dans mon cas, le rapport est revenu vierge, pointant directement vers une défaillance logicielle.
 
 ### Étape 2 : Identifier le coupable dans les fichiers Minidump
 Pour savoir quel pilote a provoqué le plantage, j'ai utilisé un utilitaire portable indispensable.
 
 1. Téléchargez et lancez BlueScreenViewouWhoCrashed depuis une clé USB ou le mode sans échec avec prise en charge réseau.
+
 2. Ouvrez le dernier fichier `.dmp` généré dans le dossier système.
+
 3. Regardez la ligne Caused by driver. Chez moi, il s'agissait d'un pilote de contrôleur réseau (`exfirewall.sys` ou un vieux pilote VPN tiers mis à jour la veille).
 
 ### Étape 3 : Effectuer un retour arrière (Driver Rollback) ou désinstallation propre
 Une fois le pilote fautif identifié, il faut reprendre le contrôle depuis le Gestionnaire de périphériques.
 
 1. Faites un clic droit sur le bouton Démarrer et ouvrez le Gestionnaire de périphériques.
+
 2. Retrouvez le matériel associé au pilote incriminé (par exemple dans *Cartes réseau* ou *Contrôleurs de bus USB*).
+
 3. Faites un clic droit dessus, sélectionnez Propriétés, puis allez sur l'ongletPilote.
+
 4. Cliquez sur le bouton Pilote de S1(ouRestaurer le pilote en français) pour revenir à la version stable précédente.
+
 5. Si l'option est grisée, désinstallez complètement le périphérique en cochant *Supprimer le pilote pour ce périphérique*, puis redémarrez immédiatement.
 
 ---
@@ -76,5 +84,7 @@ Pour garantir la stabilité de vos postes de travail en période de forte charge
 1. Mon PC redémarre en boucle et je n'ai pas accès au bureau pour lancer le retour arrière, que faire ?
 Forcez l'arrêt du PC trois fois de suite en maintenant le bouton d'alimentation enfoncé lors du logo Windows. Au quatrième démarrage, le système affichera automatiquement l'environnement de récupération (WinRE). Allez dans *Dépannage > Options avancées > Paramètres de démarrage*, puis redémarrez en *Mode sans échec*.
 
-2. Le diagnostic mémoire Windows indique une erreur, est-ce réparable ?Non, une erreur physique signalée par l'outil de diagnostic signifie généralement qu'une barrette de RAM est défectueuse. Il faut l'extraire physiquement de la carte mère, nettoyer les contacts, ou la remplacer purement et simplement.3. Le retour arrière du pilote est grisé dans le Gestionnaire de périphériques, quelle est l'alternative ?
+2. Le diagnostic mémoire Windows indique une erreur, est-ce réparable ? Non, une erreur physique signalée par l'outil de diagnostic signifie généralement qu'une barrette de RAM est défectueuse. Il faut l'extraire physiquement de la carte mère, nettoyer les contacts, ou la remplacer purement et simplement.
+
+3. Le retour arrière du pilote est grisé dans le Gestionnaire de périphériques, quelle est l'alternative ?
 Cela signifie qu'aucune version précédente n'est stockée en cache local. Dans ce cas, téléchargez la version stable précédente directement sur le site du fabricant depuis un autre ordinateur, mettez-la sur une clé USB, puis procédez à une installation manuelle via l'option *Parcourir mon poste de ordinateur pour rechercher des pilotes*.

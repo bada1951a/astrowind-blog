@@ -79,7 +79,7 @@ Before picking up any chemical solvents or tools, systematically isolate the ope
 1. Check HID Drivers in Device Manager:
    Press `Windows Key + X` and select Device Manager. ExpandHuman Interface DevicesandKeyboards. 
    Look for duplicate driver entries, yellow warning glyphs, or selective suspend power-saving states. Right-click your active keyboard device, choose Properties, navigate toPower Management, and uncheck *Allow the computer to turn off this device to save power*.
-   
+
 2. Execute a Clean State Test:
    Launch an administrative shell and run the system file verification tool to ensure driver subsystem integrity:
    ```cmd
@@ -90,7 +90,7 @@ Before picking up any chemical solvents or tools, systematically isolate the ope
    * Skipping (Dead switch): Inputs fail entirely under standard actuation pressure.
 
 ---
-![Tech Diagnostics](https://images.unsplash.com/photo-1555680202-c86f0e12f086?auto=format&fit=crop&w=1000&h=550&q=80)
+![Tech Diagnostics](https://images.unsplash.com/photo-1555680202-c86f0e12f086? auto=format&fit=crop&w=1000&h=550&q=80)
 
 ### Phase 2: Chemical Decontamination (Electronic Contact Cleaner)
 
@@ -108,8 +108,11 @@ Using a wire keycap puller, gently pull the affected keycap straight up to preve
 
 #### Step 3: Solvent Delivery via Capillary Flush
 1. Attach the micro-bore straw nozzle to the contact cleaner can.
+
 2. Use your finger or a plastic spudger to depress the switch stem completely into the housing. This creates a tiny gap between the stem slider and the internal contact leaf.
+
 3. Position the straw directly into the exposed opening beside the stem where the internal metal leaves sit.
+
 4. Deliver one ultra-short burst (roughly 0.2 to 0.5 seconds). Do not soak the entire switch. The solvent needs to reach the contact points, dissolve surface oxidation, flush away debris, and quickly evaporate.
 
 ```
@@ -135,8 +138,11 @@ If chemical cleaning fails to resolve the issue, the switch has either suffered 
 If your keyboard uses Kailh-style hot-swap sockets, the underlying metal leaf springs on the *PCB's backside* may have widened over time:
 
 1. Unplug the keyboard, remove the keycap, and use a switch puller to gently remove the switch from the hot-swap plate.
+
 2. Inspect the two small receiver leaves inside the PCB socket holes.
+
 3. If the contact gap appears too wide to grip the switch pins, use a needle or ultra-fine tweezers to gently push the two internal spring leaves closer together from the front or bottom.
+
 4. Reinstall the switch, taking extra care that the pins slide directly into the socket without bending against the PCB surface.
 
 #### 2. Physical Leaf Straightening or Replacement

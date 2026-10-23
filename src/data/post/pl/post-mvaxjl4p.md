@@ -22,7 +22,9 @@ Wczoraj rano, tuż przed kluczowym audytem stabilności infrastruktury dla nasze
 Zanim przejdziemy do klikania, spójrzmy prawdzie w oczy – skąd ten narastający problem?
 
 1. Efekt "pijawki" instalacyjnej: Większość programów (od Spotify, przez Discord, po Adobe czy Epic Games) podczas instalacji ukradkiem zaznacza opcję "Uruchom razem z systemem". Po roku użytkowania masz w autostarcie armię aplikacji, o których istnieniu dawno zapomniałeś.
+
 2. Kolejkowanie I/O dysku: Nawet szybkie dyski NVMe potrafią złapać zadyszkę, gdy w tej samej milisekundzie po starcie systemu każdy program próbuje sprawdzać aktualizacje, pobierać metadane i meldować się na serwerach producenta.
+
 3. Zasoby w tle (RAM i CPU): Aplikacje rezydujące w zasobniku systemowym (tray) bez przerwy konsumują pamięć operacyjną, co drastycznie wydłuża czas potrzebny na osiągnięcie pełnej gotowości roboczej komputera.
 
 ---
@@ -57,5 +59,9 @@ Podczas audytów w firmach często widzę przestrzelone optymalizacje, gdzie uż
 
 ### Często Zadawane Pytania (FAQ)
 
-1. Czy wyłączenie programu w autostarcie odinstalowuje go z komputera?Absolutnie nie. Wyłączenie w Menedżerze zadań sprawia jedynie, że aplikacja nie uruchomi się automatycznie w tle po włączeniu systemu. Będziesz mógł ją normalnie włączyć w dowolnym momencie, klikając jej skrót na pulpicie.2. Co zrobić, jeśli jakiejś aplikacji nie ma w zakładce "Uruchamianie"?Niektóre starsze programy potrafią ukryć swój autostart głębiej. Wpisz w menu Start frazę `Harmonogram zadań` (Task Scheduler) lub zajrzyj do folderu autostartu, naciskając `Win + R` i wpisując polecenie `shell:startup`.3. Czy muszę restartować komputer od razu po zmianach?
+1. Czy wyłączenie programu w autostarcie odinstalowuje go z komputera? Absolutnie nie. Wyłączenie w Menedżerze zadań sprawia jedynie, że aplikacja nie uruchomi się automatycznie w tle po włączeniu systemu. Będziesz mógł ją normalnie włączyć w dowolnym momencie, klikając jej skrót na pulpicie.
+
+2. Co zrobić, jeśli jakiejś aplikacji nie ma w zakładce "Uruchamianie"? Niektóre starsze programy potrafią ukryć swój autostart głębiej. Wpisz w menu Start frazę `Harmonogram zadań` (Task Scheduler) lub zajrzyj do folderu autostartu, naciskając `Win + R` i wpisując polecenie `shell:startup`.
+
+3. Czy muszę restartować komputer od razu po zmianach?
 Nie jest to wymagane natychmiast, ale zalecane, aby przetestować faktyczny czas rozruchu i upewnić się, że system wstaje znacznie szybciej i stabilniej.

@@ -22,7 +22,9 @@ Zamiast panikować i stawiać system od nowa, podwinąłem rękawy, odłączyłe
 Zanim przejdziesz do bezmyślnego formatowania dysku, warto zrozumieć, co dokładnie wywołało ten stan w systemie Windows:
 
 1. Niestabilne sterowniki urządzeń niskiego poziomu: Świeżo zainstalowany sterownik karty sieciowej, kontrolera NVMe lub oprogramowania VPN próbuje odwołać się do wirtualnego adresu w pamięci RAM, który został zwolniony lub nie należy do niego.
+
 2. Problemy z taktowaniem lub degradacją pamięci RAM: Zbyt agresywny profil XMP/DOCP w BIOS-ie, mikroskopijne błędy w komórkach pamięci pod obciążeniem albo poluzowana kość w slocie DIMM.
+
 3. Konflikt usług systemowych po aktualizacji: Uszkodzone pliki kernela (`ntoskrnl.exe`) lub nakładające się na siebie filtry systemowe (np. oprogramowanie antywirusowe starej generacji).
 
 ---
@@ -30,26 +32,34 @@ Zanim przejdziesz do bezmyślnego formatowania dysku, warto zrozumieć, co dokł
 ## Krok po kroku: Jak uratować system przed audytem
 
 ### Krok 1: Diagnostyka pamięci RAM (Weryfikacja sprzętowa)
-Zanim zaczniemy szukać winnych w oprogramowaniu, wykluczmy kwestie fizyczne. 
+Zanim zaczniemy szukać winnych w oprogramowaniu, wykluczmy kwestie fizyczne.
 
 1. Wciśnij kombinację klawiszy `Windows + R`, wpisz `mdsched.exe` i zatwierdź Enterem.
+
 2. Wybierz opcję "Uruchom ponownie teraz i sprawdź występowanie problemów (zalecane)".
+
 3. Komputer uruchomi się ponownie w trybie diagnostycznym Windows Memory Diagnostic. Jeśli standardowy test wykryje błędy, wejdź do BIOS-u, wyłącz profil XMP/DOCP i przetestuj komputer ponownie na domyślnych taktowaniach płyty głównej.
 
 ### Krok 2: Identyfikacja winowajcy w zrzutach pamięci (Minidump)
 Potrzebujemy dowodów. System zapisuje pliki zrzutów za każdym razem, gdy występuje BSoD.
 
 1. Przejdź do folderu `C:\Windows\Minidump`.
+
 2. Skopiuj najnowszy plik `.dmp` na pulpit (żeby ominąć uprawnienia administratora przy odczycie).
+
 3. Pobierz lekki, darmowy program BlueScreenViewlub użyj narzędziaWinDbg z pakietu Windows SDK.
+
 4. Otwórz plik zrzutu i spójrz na linię Caused By Driver. Jeśli widnieje tam nazwa sterownika trzeciego (np. `nvlddmkm.sys`, `extend_net.sys`), masz bezpośredniego sprawcę.
 
 ### Krok 3: Cofnięcie feralnego sterownika (Driver Rollback)
 Jeśli system pozwala na uruchomienie w trybie awaryjnym (Safe Mode), czas na cofnięcie zmiany, która zepsuła stabilność.
 
 1. Kliknij prawym przyciskiem myszy na Start i wybierz Menedżer urządzeń (Device Manager).
+
 2. Rozwiń gałąź urządzenia, które niedawno aktualizowano (najczęściej karty sieciowe, kontrolery IDE ATA/ATAPI lub karty graficzne).
+
 3. Kliknij urządzenie prawym przyciskiem myszy, wybierz Właściwości, a następnie przejdź do zakładkiSterownik.
+
 4. Kliknij przycisk Przywróć sterownik (Roll Back Driver), jeśli jest podświetlony. System natychmiast podmieni wadliwą binarkę na poprzednią, stabilną wersję.
 
 <div style="border-left: 4px solid #4338ca; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">

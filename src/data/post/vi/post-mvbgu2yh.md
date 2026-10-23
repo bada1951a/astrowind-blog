@@ -22,7 +22,9 @@ Nếu bạn cũng đang phát bực với lỗi kinh điển này của Windows 
 Trước khi mổ xẻ các bước fix lỗi, hãy điểm qua lý do tại sao giao diện hiện đại của Windows 11 lại hay "bóp dấm" người dùng vào những thời điểm oái oăm nhất:
 
 1. Tiến trình Explorer.exe bị treo: Đây là "trái tim" quản lý giao diện desktop, Start Menu và Taskbar. Khi tiến trình này gặp xung đột RAM hoặc deadlock, thanh Taskbar sẽ đóng băng ngay lập tức.
+
 2. Lỗi XamlShell / Start Menu Experience Host: Thành phần chịu trách nhiệm render giao diện Start Menu và Taskbar đôi khi bị kẹt sau các bản cập nhật ngầm (Windows Update).
+
 3. Xung đột ứng dụng bên thứ ba hoặc cache hệ thống: Các phần mềm can thiệp sâu vào giao diện (như tool đổi giao diện, phần mềm tối ưu RAM rác) thường là thủ phạm âm thầm phá hoại Taskbar.
 
 ---
@@ -59,8 +61,11 @@ Get-AppxPackage -AllUsers | Foreach {Add-AppxPackage -DisableDevelopmentMode -Re
 Nhiều anh em kỹ thuật tại văn phòng sau khi dính update KB mới nhất của Microsoft đã than trời vì Taskbar lăn ra chết. Nếu lỗi xuất hiện ngay sau khi máy tự động cập nhật, bạn cần gỡ nó ra:
 
 1. Mở Cài đặt bằng phím tắt Windows + I.
+
 2. Chọn Windows Update ở cột bên trái.
+
 3. Chọn tiếp Update history-> Cuộn xuống dưới chọnUninstall updates.
+
 4. Tìm bản cập nhật gần nhất được cài vào ngày máy bắt đầu lỗi và bấm Uninstall.
 
 ---

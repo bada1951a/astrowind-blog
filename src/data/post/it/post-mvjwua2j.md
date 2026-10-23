@@ -22,7 +22,9 @@ Erano le undici e mezza del mattino qui al Centro Direzionale di Milano, uno di 
 Prima di metterci a smanettare a casaccio perdendo ore preziose, capiamo cosa è successo sotto il cofano del sistema operativo. Quando si aprono troppi applicativi pesanti, Windows 11 va in affanno nella gestione delle risorse multimediali. Ecco i colpevoli più frequenti:
 
 1. Conflitto di driver audio (Realtek o Intel Smart Sound): I servizi audio in background si bloccano o vanno in crash per esaurimento temporaneo della memoria di paging.
+
 2. Periferica di output predefinita modificata: Windows ha scambiato le cuffie USB o il monitor HDMI con gli altoparlanti integrati del notebook, o viceversa, a causa di una disconnessione millisecondale della porta USB dovuta al sovraccarico energetico.
+
 3. Servizi Windows Audio disattivati: Il motore principale che gestisce i flussi sonori si è piantato e necessita di un riavvio forzato.
 
 ---

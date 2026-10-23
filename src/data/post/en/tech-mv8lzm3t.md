@@ -29,7 +29,9 @@ Here is the exact battle-tested playbook I used to slash my boot times from a ag
 Before we touch any configuration files, we need to understand what's actually murdering your system resources the second the kernel initializes.
 
 1. The Electron Memory-Leak Cult: Half the apps running in your system tray—Discord, Slack, Teams, Spotify, and that obscure internal tool written by the intern—are bloated Electron wrappers. They all register themselves as auto-start daemons, consuming gigabytes of RAM before you've even opened a browser.
+
 2. Aggressive Telemetry and Updater Daemons: Corporate endpoint management tools, Adobe background synchronizers, and various OEM updater suites love to hog I/O queues during the critical boot window, creating a massive disk bottleneck.
+
 3. Ghost Services & Orphaned Registry Hooks: Uninstalling software via standard GUI uninstaller wizards often leaves behind orphaned run-keys in the Windows Registry (`HKCU\Software\Microsoft\Windows\CurrentVersion\Run`), forcing the session manager to timeout while trying to launch non-existent binaries.
 
 ---
@@ -47,8 +49,11 @@ systeminfo | findstr /C:"Boot Device" /C:"System Boot Time"
 Forget third-party registry cleaners that promise miracles and deliver malware. Let's use the native orchestration tool.
 
 1. Hit `Ctrl + Shift + Esc` to launch the Task Manager directly.
+
 2. Navigate to the Startup apps tab (the gauge icon on Windows 11).
+
 3. Sort by Startup impact. Look for anything marked "High".
+
 4. Right-click and Disable every single non-essential utility (OneDrive, Cortana, third-party updaters, chat clients). Leave only your core hardware drivers and Windows Security.
 
 #### Step 2: Deep System Diagnostics via Command Prompt & Device Manager
@@ -61,13 +66,16 @@ sfc /scannow
 </div>
 
 1. Open Command Prompt as Administrator.
+
 2. Run the deployment image servicing and system file checker commands shown above to repair corrupted DLLs that slow down service initialization.
+
 3. Open Device Manager (`devmgmt.msc`), expand *Disk drives*, and check your primary NVMe/SSD health. If SMART data reports high reallocation sectors, your drive controller is choking your boot reads.
 
 #### Step 3: Prune Registry Run Keys (Advanced)
 For persistent bloatware that refuses to disappear from your startup list:
 
 1. Press `Win + R`, type `regedit`, and hit Enter.
+
 2. Navigate to:
    `HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run`
    and
@@ -88,7 +96,7 @@ When cleaning up startup items, resist the urge to nuke everything blindly. Disa
 
 ### Frequently Asked Questions (FAQ)
 
-Q: Will disabling startup apps delete my files or uninstall my programs?A: Absolutely not. Disabling an app from startup simply prevents it from launching automatically in the background when your operating system boots up. You can still launch any application manually via the Start Menu whenever you actually need it.Q: How can I check my exact boot duration down to the millisecond?  
+Q: Will disabling startup apps delete my files or uninstall my programs? A: Absolutely not. Disabling an app from startup simply prevents it from launching automatically in the background when your operating system boots up. You can still launch any application manually via the Start Menu whenever you actually need it.Q: How can I check my exact boot duration down to the millisecond?  
 A: Open PowerShell as an administrator and run:  
 `Get-WinEvent -ProviderName Microsoft-Windows-Diagnostics-Performance -MaxEvents 20 | Where-Object { $_.Id -eq 100 }`  
 This query pulls the exact Event Viewer telemetry log detailing how many milliseconds your system took to complete the last boot sequence.

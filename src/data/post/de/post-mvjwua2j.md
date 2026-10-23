@@ -24,7 +24,9 @@ Solche unerklärlichen Audio-Aussetzer kosten im hektischen Arbeitsalltag wertvo
 Nach jahrelanger Erfahrung im Support auf verschiedenen Technologie-Campi und in Banken sehe ich meistens drei Hauptursachen für dieses Phänomen:
 
 1. Treiberkonflikte durch automatische Updates oder Datenimport: Manchmal triggert das Entpacken großer, unbekannter Datenmengen im Hintergrund Windows-Dienste, die Audio-Endpunkte neu enumerieren und dabei den aktuellen Realtek- oder Intel-Treiber korrumpieren.
+
 2. Hängender Windows-Audiodienst: Der eigentliche Windows-Audio-Dienst (`Audiosrv`) oder der Endpunkt-Generator hängen in einer Warteschleife fest und reagieren nicht mehr auf Hardware-Interrupts.
+
 3. Deaktivierte oder falsch zugewiesene Standardgeräte: Nach dem Anschließen von USB-Headsets oder Dockingstationen verliert Windows schlicht den Überblick, welches physische Ausgabegerät priorisiert werden soll.
 
 ---
@@ -34,29 +36,40 @@ Nach jahrelanger Erfahrung im Support auf verschiedenen Technologie-Campi und in
 Gehen wir die Sache systematisch an. Wir nutzen dabei die klassischen Windows-Bordmittel, die jeder Administrator im Schlaf beherrscht.
 
 ### Schritt 1: Den Windows-Audiodienst neu starten
-Manchmal muss man dem Unterbau einfach nur einen Schubs geben. 
+Manchmal muss man dem Unterbau einfach nur einen Schubs geben.
 
 1. Drücken Sie die Tastenkombination `Windows + R`, tippen Sie `services.msc` ein und bestätigen Sie mit Enter.
+
 2. Scrollen Sie in der Liste nach unten zum Eintrag Windows-Audio.
-3. Machen Sie einen Rechtsklick darauf und wählen Sie Neu starten. 
+
+3. Machen Sie einen Rechtsklick darauf und wählen Sie Neu starten.
+
 4. Wiederholen Sie diesen Vorgang direkt auch für den Dienst Windows-Audio-Endpunkt-Generator.
 
 ### Schritt 2: Den Geräte-Manager bereinigen und Treiber aktualisieren
 Wenn der Dienst allein nicht hilft, werfen wir einen Blick auf die Hardware-Ebene.
 
 1. Öffnen Sie den Geräte-Manager (Rechtsklick auf das Startmenü oder `devmgmt.msc`).
+
 2. Klappen Sie den Bereich Audio-, Video- und Gamecontroller auf.
+
 3. Suchen Sie Ihren primären Audiotreiber (meist *Realtek(R) Audio* oder *Intel Smart Sound Technology*).
+
 4. Machen Sie einen Rechtsklick und wählen Sie Gerät deinstallieren. Keine Sorge, Windows zieht sich beim nächsten Neustart die Basis-Treiber wieder.
+
 5. Klicken Sie im Menü oben auf Aktionund wählen SieNach geänderter Hardware suchen.
+
 6. Sollte das Problem bestehen bleiben, wählen Sie Treiber aktualisieren>Auf meinem Computer nach Treibern suchen und wählen Sie einen bereits installierten kompatiblen Treiber aus.
 
 ### Schritt 3: Die Systemsteuerung für tiefere Klangeinstellungen nutzen
 Das moderne Windows 11 Einstellungsmenü ist schick, aber für Audio-Fehler greifen wir Profis oft lieber auf die bewährte Systemsteuerung zurück.
 
 1. Öffnen Sie die Systemsteuerung (einfach in die Taskleiste eintippen).
+
 2. Gehen Sie auf Hardware und Soundund dann aufAudio(oder direktSound).
+
 3. Überprüfen Sie im Reiter *Wiedergabe*, ob Ihr gewünschter Lautsprecher oder Kopfhörer als Als Standardgerät festlegen markiert ist. Ein grünes Häkchen muss zu sehen sein.
+
 4. Machen Sie einen Rechtsklick auf das Gerät, wählen Sie Eigenschaften, gehen Sie zum Reiter *Erweitert* und testen Sie verschiedene Audioformate oder deaktivieren Sie temporär alle *Erweiterungen*.
 
 ```cmd
