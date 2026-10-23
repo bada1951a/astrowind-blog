@@ -9,7 +9,7 @@ if (!fs.existsSync(POSTS_BASE_DIR)) {
 }
 
 // =========================================================================
-// 모든 예외 케이스(숫자 유무, 마침표, 콜론, 다국어 헤더 전체) 종결 처리 함수
+// 모든 예외 케이스 완벽 대응 + 단어 쪼개짐(Ja., mengatasinya.) 완전 차단
 // =========================================================================
 function sanitizeMarkdownFormatting(content) {
   let cleaned = content;
@@ -20,14 +20,14 @@ function sanitizeMarkdownFormatting(content) {
   // 2. 물음표(?) 뒤에 공백 없이 바로 일반 글자가 오면 강제 띄어쓰기 (?단어 -> ? 단어)
   cleaned = cleaned.replace(/\?([A-Za-z\u00C0-\u024F\u1EA0-\u1EF9가-힣])/g, '? $1');
 
-  // 3. 물음표(?) 바로 뒤에 질문/답변(A:, A1:, A., Q:, Q1: 등)이 붙어 있으면 강제 두 줄 개행
-  cleaned = cleaned.replace(/\?\s*([QA][0-9]*\s*[:.])/gi, '?\n\n$1');
+  // 3. 물음표(?) 바로 뒤에 대문자 Q/A(A:, A1:, Q:, Q1: 등)가 붙어 있으면 강제 두 줄 개행 (소문자 a 제외)
+  cleaned = cleaned.replace(/\?\s*([QA][0-9]*\s*[:.])/g, '?\n\n$1');
 
-  // 4. 마침표(.)나 느낌표(!) 뒤에 질문/답변(Q:, A:, Q1:, A1: 등) 또는 번호 목록(1., 2.)이 붙어 있으면 강제 두 줄 개행
-  cleaned = cleaned.replace(/([.!])\s*([QA][0-9]*\s*[:.]|[0-9]+\.\s+)/gi, '$1\n\n$2');
+  // 4. 문장 부호(.!) 뒤에 대문자 Q/A 또는 번호 목록(1., 2.)이 붙어 있으면 강제 두 줄 개행
+  cleaned = cleaned.replace(/([.!])\s*([QA][0-9]*\s*[:.]|[0-9]+\.\s+)/g, '$1\n\n$2');
 
-  // 5. 문장 중간에 줄바꿈 없이 섞여 들어간 모든 형태의 Q/A 및 다국어 머리말 강제 분리
-  cleaned = cleaned.replace(/([^\n])\s*([QA][0-9]*\s*[:.])/gi, '$1\n\n$2');
+  // 5. 소문자 단어 쪼개짐 방지: 반드시 공백 뒤에 오는 대문자 Q/A 머리말만 줄바꿈 처리
+  cleaned = cleaned.replace(/([^\n])\s+([QA][0-9]*\s*[:.])/g, '$1\n\n$2');
   cleaned = cleaned.replace(/([.!])\s*(D:|R:|Risposta|Domande)/gi, '$1\n\n$2');
 
   return cleaned;
