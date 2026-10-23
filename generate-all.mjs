@@ -61,7 +61,7 @@ function getKstPublishDateIso(index) {
 }
 
 // =========================================================================
-// [최종 안정형 마크다운 정제 함수] 단어 쪼개짐 방지 + Q&A 개행 완전 보장
+// [최종 안정형 마크다운 정제 함수] 단어 쪼개짐 방지 + 스페인어 번호 개행 방어
 // =========================================================================
 function sanitizeMarkdownFormatting(content) {
   let cleaned = content;
@@ -69,13 +69,13 @@ function sanitizeMarkdownFormatting(content) {
   // 1) 마크다운 볼드(**) 기호 일괄 제거
   cleaned = cleaned.replace(/\*\*/g, '');
 
-  // 2) 스페인어 특수 부호(¿, ¡) 앞 문장 끝 부호 뭉침 방지 (예: intactos.¿Qué -> intactos.\n\n¿Qué)
-  cleaned = cleaned.replace(/([.?!])\s*([¿¡])/g, '$1\n\n$2');
+  // 2) 숫자 뒤 마침표(1. 2.)는 보존하고, 일반 문장 끝 부호 뒤의 ¿ 만 분리
+  cleaned = cleaned.replace(/([^0-9][.?!])\s*([¿¡])/g, '$1\n\n$2');
 
   // 3) 물음표 뒤 띄어쓰기 누락 보정 (?단어 -> ? 단어)
   cleaned = cleaned.replace(/\?([A-Za-z\u00C0-\u024F\u1EA0-\u1EF9가-힣])/g, '? $1');
 
-  // 4) 물음표 뒤에 대문자 Q/A(Q:, A:, Q1:, A1: 등)가 올 때 강제 2줄 개행 (소문자 a.는 건드리지 않음)
+  // 4) 물음표 뒤에 대문자 Q/A(Q:, A:, Q1:, A1: 등)가 올 때 강제 2줄 개행
   cleaned = cleaned.replace(/\?\s*([QA][0-9]*\s*[:.])/g, '?\n\n$1');
 
   // 5) 문장 끝 부호(.!) 뒤에 대문자 Q/A 또는 번호 목록(1., 2.)이 올 때 강제 2줄 개행
