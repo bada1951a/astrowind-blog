@@ -27,9 +27,7 @@ a: Perché Windows 10 rallenta all'avvio?
 
 Prima di mettere mano al sistema, capiamo cosa sta succedendo sotto il cofano. Nella mia esperienza quotidiana di ottimizzazione delle prestazioni, ho notato che i rallentamenti in fase di boot sono quasi sempre causati da tre fattori precisi:
 
-1. Effetto "Coda Indiana" dei software superflui: Ogni volta che installi un programma (Spotify, Adobe Acrobat, OneDrive, Steam), questo imposta automaticamente un gancio nel sistema di avvio. Moltiplica per venti applicazioni e avrai il disco fisso saturo di richieste I/O nei primi secondi di vita del sistem
-
-a.
+1. Effetto "Coda Indiana" dei software superflui: Ogni volta che installi un programma (Spotify, Adobe Acrobat, OneDrive, Steam), questo imposta automaticamente un gancio nel sistema di avvio. Moltiplica per venti applicazioni e avrai il disco fisso saturo di richieste I/O nei primi secondi di vita del sistema.
 
 2. Servizi di aggiornamento in background: Molti programmi caricano i propri demoni di controllo aggiornamenti prima ancora che l'utente abbia visualizzato il desktop, consumando preziosa RAM.
 
@@ -37,11 +35,7 @@ a.
 
 ## Come risolvere in 1 Minuto: La Procedura Passo-Passo
 
-Non serve installare software terzi o utility di terze parti miracolose che spesso fanno più male che bene. Windows 10 ha già tutto quello che ci serve integrato nativamente. Apriamo il cofano e ripuliamo la sequenza di boot usando gli strumenti di sistem
-
-a.
-
-### Metodo Rapido (Task Manager)
+Non serve installare software terzi o utility di terze parti miracolose che spesso fanno più male che bene. Windows 10 ha già tutto quello che ci serve integrato nativamente. Apriamo il cofano e ripuliamo la sequenza di boot usando gli strumenti di sistema. ### Metodo Rapido (Task Manager)
 
 Ecco la sequenza esatta da seguire per ripulire l'avvio in meno di sessanta secondi:
 
@@ -49,19 +43,13 @@ Ecco la sequenza esatta da seguire per ripulire l'avvio in meno di sessanta seco
 
 2. Espandi la finestr
 
-a: Se vedi una visualizzazione ridotta, clicca su "Più dettagli" in basso a sinistra per accedere alla vista avanzat
-
-a.
+a: Se vedi una visualizzazione ridotta, clicca su "Più dettagli" in basso a sinistra per accedere alla vista avanzata.
 
 3. Vai alla scheda Avvio:Clicca sulla schedaAvvio nella barra superiore. Qui vedrai la lista completa dei programmi configurati per avviarsi insieme a Windows 10.
 
 4. Analizza l'Impatto di avvio: Guarda la colonna "Impatto di avvio". I programmi etichettati come *Alto* o *Medio* sono i principali indiziati del tuo rallentamento.
 
-5. Disattiva il superfluo:Clicca con il tasto destro sul programma che non ti serve immediatamente all'avvio (ad esempio Cortana, Steam, updater vari) e selezionaDisattiv
-
-a.
-
-<div style="border-left: 4px solid #4338ca; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
+5. Disattiva il superfluo:Clicca con il tasto destro sul programma che non ti serve immediatamente all'avvio (ad esempio Cortana, Steam, updater vari) e selezionaDisattiva. <div style="border-left: 4px solid #4338ca; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Consiglio Pro dall'Infrastruttur
 
 a:</strong> Non toccare mai i driver hardware essenziali o i software di sicurezza come il tuo antivirus (Windows Defender o soluzioni aziendali). Concentrati solo sulle applicazioni di consumo e sui tool di terze parti.

@@ -93,11 +93,7 @@ reg query "HKCU\Control Panel\Keyboard" /v KeyboardDelay
 
 2. Utilizzando un estrattore per copritasti ad anello (*wire keycap puller*), estrai il tasto interessato tirando perpendicolarmente verso l'alto per non rompere la crociera dello stelo.
 
-3. Rimuovi la polvere perimetrale con un soffiatore manuale o una bomboletta di aria compressa, tenendo l'ugello ad almeno 10 cm di distanza per evitare condensa criogenic
-
-a.
-
----
+3. Rimuovi la polvere perimetrale con un soffiatore manuale o una bomboletta di aria compressa, tenendo l'ugello ad almeno 10 cm di distanza per evitare condensa criogenica. ---
 
 ### Passo 3: Trattamento Mirato con Disossidante per Contatti Elettrici
 Il prodotto da utilizzare deve essere rigorosamente un disossidante per contatti elettronici a secco, a rapida evaporazione e a residuo zero (es. *WD-40 Specialist Detergente Contatti*, *Kontakt Chemie 60/61*, o *CRC QD Electronic Cleaner*).
@@ -112,9 +108,7 @@ A:</strong> Non usare MAI il classico WD-40 multifunzione o spray sbloccanti ole
 
 2. Premi a fondo lo stelo centrale dello switch (usando la cannuccia stessa o un piccolo cacciavite spudger in plastica) per esporre la fessura interna tra lo stelo e la parete del corpo switch.
 
-3. Eroga un impulso brevissimo (frazione di secondo, uno "sbuffo"). Il liquido entrerà per capillarità nell'alloggiamento della lamell
-
-a.
+3. Eroga un impulso brevissimo (frazione di secondo, uno "sbuffo"). Il liquido entrerà per capillarità nell'alloggiamento della lamella.
 
 4. Ciclo di azionamento meccanico immediato: Premi e rilascia rapidamente lo stelo per almeno 40-50 volte consecutive. Questa azione meccanica favorisce l'azione solvente, permettendo alla lamella di sfregare contro la piazzola e rimuovere le tracce di ossido o sporco.
 
@@ -152,11 +146,7 @@ Se il disossidante non risolve l'anomalia, il problema risiede nell'accoppiament
 a:
    - Riscalda la piazzola a 330°C con stazione saldante.
    - Aspira lo stagno vecchio con pompetta a vuoto o treccia dissaldante.
-   - Sostituisci l'interruttore con uno nuovo dello stesso tipo (es. Gateron/Cherry MX) e risalda con lega Sn99.3Cu0.7 e flussante a base di colofoni
-
-a.
-
----
+   - Sostituisci l'interruttore con uno nuovo dello stesso tipo (es. Gateron/Cherry MX) e risalda con lega Sn99.3Cu0.7 e flussante a base di colofonia. ---
 
 ## 3. Avvertenze Tecniche e Prevenzione Guasti
 

@@ -15,11 +15,7 @@ Znam ten ból na pamięć. Nowy interfejs w Windows 11 miał być "czysty" i "pr
 
 ![Tech Troubleshooting Guide](/images/tech-photo/tech-photos%20(43).jpg)
 
-W tym artykule pokażę Ci sprawdzoną metodę inżynierską, jak raz na zawsze przywrócić stare, dobre klasyczne menu kontekstowe w Windows 11 za pomocą jednego polecenia w Edytorze Rejestru. Zero zbędnego oprogramowania, czysta inżynieria systemow
-
-a.
-
-<div style="border-left: 4px solid #f59e0b; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
+W tym artykule pokażę Ci sprawdzoną metodę inżynierską, jak raz na zawsze przywrócić stare, dobre klasyczne menu kontekstowe w Windows 11 za pomocą jednego polecenia w Edytorze Rejestru. Zero zbędnego oprogramowania, czysta inżynieria systemowa. <div style="border-left: 4px solid #f59e0b; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Notatka serwisow
 
 a:</strong> Poniższa procedura modyfikacji rejestru została przetestowana na setkach stacji roboczych z systemem Windows 11 (od wersji 21H2 do najnowszych wydań 24H2). Jest w 100% bezpieczna, pod warunkiem trzymania się instrukcji krok po kroku.

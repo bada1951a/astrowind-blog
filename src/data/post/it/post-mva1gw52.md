@@ -36,13 +36,7 @@ Il metodo più rapido e sicuro integrato in Windows 11.
 - Clicca su Starte apri leImpostazioni (icona a forma di ingranaggio).
 - Vai su Sistemae poi selezionaArchiviazione.
 - Attiva l'interruttore di Sensore memoria e clicca sulla riga stessa per configurarlo.
-- Clicca sul pulsante Elimina file temporanei ora per avviare una scansione approfondit
-
-a.
-
-
-
-![Tech & IT Solution Guide](https://picsum.photos/seed/computer625/1000/550)
+- Clicca sul pulsante Elimina file temporanei ora per avviare una scansione approfondita. ![Tech & IT Solution Guide](https://picsum.photos/seed/computer625/1000/550)
 
 ### 2. Pulizia Disco Avanzata (Pulizia file di sistema)
 Per eliminare residui che il Sensore Memoria potrebbe ignorare, usiamo lo storico ma potentissimo strumento di amministrazione.
@@ -73,11 +67,7 @@ a:
 - *Not
 
 a:* Alcuni file potrebbero essere in uso da applicazioni aperte. Clicca su "Ignora" o "Salta" per quelli che non si possono cancellare.
-- Ripeti l'operazione premendo nuovamente `Windows + R`, digitando `temp` (senza percentuali) e pulendo anche quella cartella di sistem
-
-a.
-
----
+- Ripeti l'operazione premendo nuovamente `Windows + R`, digitando `temp` (senza percentuali) e pulendo anche quella cartella di sistema. ---
 
 ## Best Practice e Consigli dell'Esperto per Evitare il Ripetersi del Problema
 
@@ -92,11 +82,7 @@ Gestire lo spazio su disco non deve diventare un impegno settimanale. Ecco alcun
 ## Domande Frequenti (FAQ)
 
 ### Posso cancellare tutti i file nella cartella Temp senza rischiare di bloccare Windows?
-Sì, assolutamente. La cartella Temp contiene esclusivamente file temporanei creati da programmi e installer durante il loro funzionamento. Se un file è attualmente in uso da un'app aperta, Windows impedirà semplicemente la sua cancellazione, proteggendo la stabilità del sistem
-
-a.
-
-### Come faccio a capire quale applicazione occupa più spazio su Windows 11?
+Sì, assolutamente. La cartella Temp contiene esclusivamente file temporanei creati da programmi e installer durante il loro funzionamento. Se un file è attualmente in uso da un'app aperta, Windows impedirà semplicemente la sua cancellazione, proteggendo la stabilità del sistema. ### Come faccio a capire quale applicazione occupa più spazio su Windows 11?
 Vai in Impostazioni > Sistema > Archiviazione. Clicca sulla voceApp e funzionalità (o "Installate"). Da qui puoi ordinare l'elenco dei software installati in base alle dimensioni, individuando subito i programmi più pesanti che non usi più e che puoi disinstallare.
 
 ### Cosa succede se elimino i file della cartella Windows.old?

@@ -33,11 +33,7 @@ a: Milhares de softwares corporativos essenciais ainda usam as chaves antigas de
 
 Assim que cheguei à mesa do diretor, a primeira reação instintiva de qualquer usuário comum foi tentar clicar em "Mostrar mais opções" ou buscar nas Configurações visuais do Windows 11 alguma chave mágica de reversão. Infelizmente, a Microsoft não colocou um botão simples de "Ligar/Desligar" o menu clássico no aplicativo de Configurações. 
 
-Perdemos quase 3 minutos preciosos tentando tutoriais antigos da internet que recomendavam apagar chaves complexas no Editor do Registro (Regedit) manualmente, o que em máquinas com políticas de segurança de domínio ativas (Group Policy) causava erros de permissão e negação de acesso. Precisávamos de algo rápido, cirúrgico e que funcionasse via linha de comando ou chave diret
-
-a.
-
----
+Perdemos quase 3 minutos preciosos tentando tutoriais antigos da internet que recomendavam apagar chaves complexas no Editor do Registro (Regedit) manualmente, o que em máquinas com políticas de segurança de domínio ativas (Group Policy) causava erros de permissão e negação de acesso. Precisávamos de algo rápido, cirúrgico e que funcionasse via linha de comando ou chave direta. ---
 
 ## Passo a Passo Definitivo: Restaurando o Menu Clássico
 

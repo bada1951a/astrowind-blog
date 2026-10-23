@@ -32,11 +32,7 @@ Antes de lanzarnos a limpiar, entendamos por qué tu ordenador portátil o de so
 Vamos a solucionar este problema de raíz utilizando las herramientas nativas de Windows 10. No necesitas instalar programas de terceros sospechosos ni herramientas de optimización milagrosas que solo llenan tu equipo de publicidad.
 
 ### Paso 1: Abre el Administrador de tareas avanzado
-No busques comandos complejos en la Terminal. Simplemente utiliza el acceso directo universal del teclado presionando las teclas Ctrl + Shift + Esc. Si se abre la ventana compacta, haz clic en la esquina inferior que dice "Más detalles" para ver la vista complet
-
-a.
-
-### Paso 2: Navega a la pestaña "Inicio"
+No busques comandos complejos en la Terminal. Simplemente utiliza el acceso directo universal del teclado presionando las teclas Ctrl + Shift + Esc. Si se abre la ventana compacta, haz clic en la esquina inferior que dice "Más detalles" para ver la vista completa. ### Paso 2: Navega a la pestaña "Inicio"
 En el menú superior de pestañas (Procesos, Rendimiento, Historial de aplicaciones...), haz clic en la pestaña "Inicio". Verás una lista completa de todas las aplicaciones configuradas para ejecutarse automáticamente cuando inicias sesión en Windows.
 
 ### Paso 3: Identifica los procesos vampiro y deshabilítalos

@@ -14,10 +14,7 @@ Eran las 18:30 en nuestra oficina del 22@ en Barcelona. Estábamos a menos de cu
 a. Justo en medio de una compilación pesada y con el cliente respirándonos en la nuca a través de Slack, el equipo se quedó en silencio. No podíamos permitirnos formatear ni perder los entornos de contenedores configurados para la demo del día siguiente.
 
 <div style="border-left: 4px solid #a855f7; padding: 12px 16px; margin: 20px 0; background-color: #f3e8ff; border-radius: 4px; color: #111827;">
-<strong>Atención SysAdmins:</strong> El error 0x0000000a indica que un proceso en modo kernel o un controlador (driver) intentó acceder a una dirección de memoria sin la autorización o el nivel de IRQL adecuado. Casi siempre apunta a una incompatibilidad de controladores tras una actualización o a una celda de memoria RAM degradad
-
-a.
-</div>
+<strong>Atención SysAdmins:</strong> El error 0x0000000a indica que un proceso en modo kernel o un controlador (driver) intentó acceder a una dirección de memoria sin la autorización o el nivel de IRQL adecuado. Casi siempre apunta a una incompatibilidad de controladores tras una actualización o a una celda de memoria RAM degradada. </div>
 
 ![Tech & IT Solution Guide](https://picsum.photos/seed/computer272/1000/550)
 
@@ -82,9 +79,5 @@ Si la memoria está perfecta, el problema es indudablemente software. Para rever
 No. El Diagnóstico de Memoria de Windows es una utilidad de lectura y verificación física. No modifica ni borra ningún archivo de usuario, documentos ni configuraciones del sistema operativo.
 
 ### ¿Qué hago si el botón de "Reversión de controlador" aparece en gris?
-Significa que Windows no ha conservado una copia del paquete anterior en la caché local. En este caso, debes descargar manualmente la versión anterior estable desde la web oficial del fabricante del componente, desinstalar el driver actual por completo y aplicar una instalación limpi
-
-a.
-
-### ¿Este error 0x0000000a puede ser causado por un fallo en el disco SSD?
+Significa que Windows no ha conservado una copia del paquete anterior en la caché local. En este caso, debes descargar manualmente la versión anterior estable desde la web oficial del fabricante del componente, desinstalar el driver actual por completo y aplicar una instalación limpia. ### ¿Este error 0x0000000a puede ser causado por un fallo en el disco SSD?
 Es menos común, ya que los fallos de almacenamiento suelen generar códigos como `CRITICAL_PROCESS_DIED` o `UNMOUNTABLE_BOOT_VOLUME`. Sin embargo, si la tabla de paginación (pagefile.sys) se ubica en un sector defectuoso del SSD, indirectamente puede provocar un fallo de acceso al kernel que derive en este pantallazo azul.

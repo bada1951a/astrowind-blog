@@ -44,11 +44,7 @@ To najbardziej niezawodny pierwszy krok ratunkowy.
 
 4. Kliknij na niego prawym przyciskiem myszy i wybierz Uruchom ponownie (lub zaznacz go i kliknij przycisk restartu w prawym górnym rogu okna).
 
-5. Ekran na ułamek sekundy zgaśnie, znikną ikony i pasek zadań – to całkowicie normalne. Po chwili proces wstał na nowo, a pasek zadań powinien znowu reagować na kliknięci
-
-a.
-
-#### Krok 2: Użycie Terminala lub PowerShell do twardego restartu powłoki
+5. Ekran na ułamek sekundy zgaśnie, znikną ikony i pasek zadań – to całkowicie normalne. Po chwili proces wstał na nowo, a pasek zadań powinien znowu reagować na kliknięcia. #### Krok 2: Użycie Terminala lub PowerShell do twardego restartu powłoki
 Jeśli Menedżer zadań zawodzi lub potrzebujesz podejścia bardziej zautomatyzowanego, użyj wiersza poleceń.
 
 1. Wciśnij kombinację `Win + X` (powinna zadziałać nawet przy zablokowanym pasku) i wybierz TerminallubWindows PowerShell.

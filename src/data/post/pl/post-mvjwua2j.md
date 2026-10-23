@@ -49,11 +49,7 @@ Gdy proste przełączenie nie pomaga, sterownik audio prawdopodobnie złapał "z
 - Kliknij prawym przyciskiem myszy na menu Start i wybierz [Menedżer urządzeń].
 - Rozwiń gałąź Kontrolery dźwięku, wideo i gieroraz sekcjęWejścia i wyjścia audio.
 - Znajdź swoje urządzenie (np. *Realtek Audio* lub *Intel Display Audio*). Jeśli widzisz przy nim żółty trójkąt z wykrzyknikiem, kliknij je prawym przyciskiem myszy i wybierz Odinstaluj urządzenie.
-- Po odinstalowaniu kliknij na górnym pasku ikonę skanowania w poszukiwaniu zmian sprzętu (lub po prostu uruchom ponownie komputer). Windows 11 samoczynnie wykryje brakujący element i wgra czystą instancję sterownik
-
-a.
-
-#### Krok 3: Diagnoza usług systemowych w tle
+- Po odinstalowaniu kliknij na górnym pasku ikonę skanowania w poszukiwaniu zmian sprzętu (lub po prostu uruchom ponownie komputer). Windows 11 samoczynnie wykryje brakujący element i wgra czystą instancję sterownika. #### Krok 3: Diagnoza usług systemowych w tle
 Jeśli ikonka głośnika reaguje komunikatem o błędzie, winne mogą być usługi systemowe:
 - Wpisz w menu Start frazę [Usługi] i otwórz aplikację.
 - Znajdź pozycję o nazwie Windows Audio.

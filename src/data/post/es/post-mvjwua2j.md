@@ -27,9 +27,7 @@ Antes de lanzarnos a tocar botones, es fundamental entender qué falló bajo el 
 
 a:
 
-1. Conflicto de actualizaciones acumulativas: Una actualización reciente de Windows Update suele sobrescribir o desconfigurar la ruta de los controladores de audio genéricos (Realtek o Intel Smart Sound), dejando al sistema sin la asignación correcta del dispositivo de salid
-
-a.
+1. Conflicto de actualizaciones acumulativas: Una actualización reciente de Windows Update suele sobrescribir o desconfigurar la ruta de los controladores de audio genéricos (Realtek o Intel Smart Sound), dejando al sistema sin la asignación correcta del dispositivo de salida.
 
 2. Silenciamiento automático por periféricos Bluetooth: Si el usuario conectó unos auriculares inalámbricos por la mañana y los apagó mal, Windows 11 se queda "pensando" que el audio sigue saliendo por un canal Bluetooth inexistente.
 
@@ -39,11 +37,7 @@ a.
 
 ### Guía paso a paso para recuperar el audio de inmediato
 
-Vamos a solucionar el problema usando las herramientas nativas de Windows 11: [Configuración], [Administrador de dispositivos] y los servicios del sistema. No necesitas descargar software extraño de dudosa procedenci
-
-a.
-
-#### Paso 1: Verificar el dispositivo de salida correcto y el mezclador de volumen
+Vamos a solucionar el problema usando las herramientas nativas de Windows 11: [Configuración], [Administrador de dispositivos] y los servicios del sistema. No necesitas descargar software extraño de dudosa procedencia. #### Paso 1: Verificar el dispositivo de salida correcto y el mezclador de volumen
 Muchas veces el controlador está perfecto, pero Windows ha cambiado la ruta de audio por defecto.
 
 1. Haz clic en el icono de volumen situado en la esquina inferior derecha de la barra de tareas (cerca del reloj).
@@ -80,11 +74,7 @@ Si los servicios están activos pero seguimos mudos, el problema recae directame
 
 4. Si la actualización no surte efecto, haz clic derecho otra vez, selecciona Desinstalar el dispositivo, marca la casilla que dice "Intentar quitar el controlador de este dispositivo" y haz clic enDesinstalar.
 
-5. Finalmente, reinicia tu ordenador. Windows 11 detectará el hardware faltante al arrancar y reinstalará un controlador limpio y funcional de manera automátic
-
-a.
-
----
+5. Finalmente, reinicia tu ordenador. Windows 11 detectará el hardware faltante al arrancar y reinstalará un controlador limpio y funcional de manera automática. ---
 
 ### Advertencia del especialista en hardware
 
@@ -94,11 +84,15 @@ Cuando trabajes bajo presión de cierre contable o financiero, evita a toda cost
 
 ### Preguntas frecuentes (FAQ)
 
-1. ¿Qué hago si después de desinstalar el controlador en el Administrador de dispositivos sigo sin sonido tras reiniciar? Si Windows no logra reinstalar el driver genérico por sí mismo, accede a la página web oficial de soporte del fabricante de tu equipo (Dell, HP, Lenovo, etc.), introduce el número de serie exacto de tu estación de trabajo, descarga el paquete de controladores de audio (`Audio Driver`) oficial para Windows 11 e instálalo manualmente.
+1.
 
-2. ¿Por qué el icono de volumen aparece con una pequeña cruz roja en Windows 11? Ese símbolo de advertencia indica que el servicio principal de audio está deshabilitado o que el controlador del dispositivo de hardware ha sufrido un fallo crítico. Ve al [Administrador de dispositivos], busca si hay algún elemento con un triángulo amarillo y aplica el proceso de reinicio de servicios que explicamos en el Paso 2.
+¿Qué hago si después de desinstalar el controlador en el Administrador de dispositivos sigo sin sonido tras reiniciar? Si Windows no logra reinstalar el driver genérico por sí mismo, accede a la página web oficial de soporte del fabricante de tu equipo (Dell, HP, Lenovo, etc.), introduce el número de serie exacto de tu estación de trabajo, descarga el paquete de controladores de audio (`Audio Driver`) oficial para Windows 11 e instálalo manualmente.
 
-3. ¿Pueden las conexiones físicas causar este fallo repentino en la oficina?
-Sí, aunque parezca software, la acumulación de polvo en el puerto Jack frontal de la torre o un falso contacto en el conector USB de unos cascos modernos puede hacer que Windows desactive el canal de audio por motivos de protección eléctrica. Prueba siempre a conectar el dispositivo en un puerto diferente antes de modificar la configuración del sistem
+2.
 
-a.
+¿Por qué el icono de volumen aparece con una pequeña cruz roja en Windows 11? Ese símbolo de advertencia indica que el servicio principal de audio está deshabilitado o que el controlador del dispositivo de hardware ha sufrido un fallo crítico. Ve al [Administrador de dispositivos], busca si hay algún elemento con un triángulo amarillo y aplica el proceso de reinicio de servicios que explicamos en el Paso 2.
+
+3.
+
+¿Pueden las conexiones físicas causar este fallo repentino en la oficina?
+Sí, aunque parezca software, la acumulación de polvo en el puerto Jack frontal de la torre o un falso contacto en el conector USB de unos cascos modernos puede hacer que Windows desactive el canal de audio por motivos de protección eléctrica. Prueba siempre a conectar el dispositivo en un puerto diferente antes de modificar la configuración del sistema. 

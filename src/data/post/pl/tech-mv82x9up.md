@@ -11,11 +11,7 @@ theme: "Warm Coffee Latte"
 
 Godzina 14:50 w piątek. Za dziesięć minut miałem kończyć kwartalny raport z wdrażania nowego korporacyjnego środowiska, a w tle już chłodził się browar w lodówce. Nagle z biurka mojego key account managera dobiega cichy, złowrogi jęk wiatraków, po którym następuje przerażająca cisza. Ekran – czarny jak sumienie praktykanta po skasowaniu bazy produkcyjnej. Wiatraki kręcą się na najwyższych obrotach, klawiatura ani mrugnie, a na monitorze dumnie wisi komunikat *„Brak sygnału”*. Krawaciarz patrzy na mnie szklistym wzrokiem, a ja czuję, jak po plecach spływa mi strużka lodowatego potu. 
 
-Znamy to wszyscy, prawda? Komputer ożywa, diody świecą, dyski szumią, ale ekran uparcie pozostaje martwy. Pierwsza myśl? Padła karta graficzna. Druga? Płyta główna poszła z dymem. Ale spokojnie, odłóżcie młotki i wyciągnijcie ten kubek z letnią kawą latte – zapraszam na krótką, inżynieryjną opowieść z okopów warszawskiego supportu, jak bez wydawania ani grosza postawić taki grat na nogi za pomocą zwykłej gumki do ścierani
-
-a.
-
-![Hardware Diagnostic & Troubleshooting](https://picsum.photos/seed/hardware-22/1000/550)
+Znamy to wszyscy, prawda? Komputer ożywa, diody świecą, dyski szumią, ale ekran uparcie pozostaje martwy. Pierwsza myśl? Padła karta graficzna. Druga? Płyta główna poszła z dymem. Ale spokojnie, odłóżcie młotki i wyciągnijcie ten kubek z letnią kawą latte – zapraszam na krótką, inżynieryjną opowieść z okopów warszawskiego supportu, jak bez wydawania ani grosza postawić taki grat na nogi za pomocą zwykłej gumki do ścierania. ![Hardware Diagnostic & Troubleshooting](https://picsum.photos/seed/hardware-22/1000/550)
 
 ## Korzeniowy dramat: Dlaczego sprzęt udaje trupa?
 
@@ -24,10 +20,7 @@ Zanim wpadniemy w panikę i zaczniemy zamawiać nowe podzespoły za tysiące zł
 <div style="border-left: 4px solid #78350f; padding: 12px 16px; margin: 20px 0; background-color: rgba(120, 53, 15, 0.05); border-radius: 4px;">
 <strong>Uwaga Inżynier
 
-a:</strong> W ponad 70% przypadków "czarnego ekranu przy działających wiatrakach" winny jest nie tyle sam brak kontaktu, ile mikroskopijna warstwa utlenionej miedzi na stykach pamięci RAM lub spuchnięty BIOS po skoku napięci
-
-a.
-</div>
+a:</strong> W ponad 70% przypadków "czarnego ekranu przy działających wiatrakach" winny jest nie tyle sam brak kontaktu, ile mikroskopijna warstwa utlenionej miedzi na stykach pamięci RAM lub spuchnięty BIOS po skoku napięcia. </div>
 
 1. Zasniedziałe styki RAM (tzw. "zaśniedziały kontakt"): Wilgoć z klimatyzacji, kurz z biura i lata pracy sprawiają, że złote blaszki na kościach RAM tracą przewodność. Płyta główna próbuje zainicjalizować pamięć podczas procedury POST (Power-On Self-Test), natrafia na ścianę i zatrzymuje proces *zanim* zdąży przekazać sygnał do karty graficznej.
 
@@ -42,15 +35,8 @@ a.
 Oto procedura operacyjna, którą stosuję w biurze, gdy dyrektor finansowy stoi nade mną z zegarkiem w ręku. Bez owijania w bawełnę – robimy to chirurgicznie.
 
 ### Krok 1: Bezpieczne odcięcie zasilania i uziemienie
-Wyłącz komputer trzymający przycisk zasilania przez 5 sekund, a następnie koniecznie wyciągnij wtyczkę z gniazdka ściennego. Dotknij metalowego elementu obudowy, aby odprowadzić ładunki elektrostatyczne (ESD) ze swojego ciała – chyba że chcesz uwalić płytę główną za pomocą własnego swetr
-
-a.
-
-### Krok 2: Demontaż kości RAM (Procedura czyszczenia)
-Otwórz bok obudowy. Znajdź moduły pamięci RAM. Odchyl plastikowe zatrzaski na obu końcach slotu, a kość wyskoczy sam
-
-a. 
-* Weź zwykłą, szkolną białą gumkę do ścierania (taką do ołówka, żadnych kolorowych z brokatem!).
+Wyłącz komputer trzymający przycisk zasilania przez 5 sekund, a następnie koniecznie wyciągnij wtyczkę z gniazdka ściennego. Dotknij metalowego elementu obudowy, aby odprowadzić ładunki elektrostatyczne (ESD) ze swojego ciała – chyba że chcesz uwalić płytę główną za pomocą własnego swetra. ### Krok 2: Demontaż kości RAM (Procedura czyszczenia)
+Otwórz bok obudowy. Znajdź moduły pamięci RAM. Odchyl plastikowe zatrzaski na obu końcach slotu, a kość wyskoczy sama. * Weź zwykłą, szkolną białą gumkę do ścierania (taką do ołówka, żadnych kolorowych z brokatem!).
 * Delikatnie przetrzyj złote styki (finger prints) na kości RAM, usuwając szarawy nalot.
 * Oczyść sloty pędzelkiem z miękkiego włosia lub po prostu mocno dmuchnij, by pozbyć się kurzu (uwaga na ślinę!).
 

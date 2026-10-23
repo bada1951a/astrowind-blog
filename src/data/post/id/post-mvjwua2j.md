@@ -17,11 +17,7 @@ Sebagai teknisi infrastruktur IT yang biasa merawat ratusan unit PC kantor, saya
 
 ![Tech Troubleshooting Guide](/images/tech-photo/storage%20(9).png)
 
-Mari kita bedah apa yang sebenarnya terjadi di balik layar sistem operasi And
-
-a.
-
----
+Mari kita bedah apa yang sebenarnya terjadi di balik layar sistem operasi Anda. ---
 
 ### Akar Masalah: Kenapa Windows 11 Tiba-Tiba Bisu?
 
@@ -44,10 +40,7 @@ Sebelum kita masuk ke tombol eksekusi, kenali dulu tiga musuh utama penyebab aud
 Karena waktu Anda tinggal beberapa menit sebelum meeting dimulai, mari kita lakukan eksekusi bertahap yang paling mujarab untuk Windows 11.
 
 #### Langkah 1: Restart Layanan Audio Utama (Task Manager / Services)
-Cara paling cepat memancing driver agar sadar tanpa restart komputer adalah dengan me-refresh layanan sistemny
-
-a.
-- Tekan kombinasi tombol Ctrl + Shift + Escuntuk membukaTask Manager.
+Cara paling cepat memancing driver agar sadar tanpa restart komputer adalah dengan me-refresh layanan sistemnya. - Tekan kombinasi tombol Ctrl + Shift + Escuntuk membukaTask Manager.
 - Klik tab Services (ikon roda gigi di sisi kiri).
 - Cari layanan bernama Audiosrv (Windows Audio).
 - Klik kanan pada Audiosrv, lalu pilihRestart. 

@@ -46,11 +46,7 @@ El fallo de pulsación (*missed stroke*) y la duplicación involuntaria (*key ch
 ### 1.
 
 1. Micro-oxidación y contaminación de las láminas de contacto
-En los conmutadores de estilo tradicional (Cherry MX y sus derivados directos), dos láminas de aleación de cobre y berilio o bronce fosforoso con chapado de oro/plata hacen contacto físico al descender el vástago. Aunque las corrientes involucradas son mínimas (del orden de 5V y microamperios dentro del bus USB HID), la exposición al aire ambiental degrada las capas superficiales. La acumulación de polvo microscópico, restos de lubricante degradado o sales transportadas por la humedad ambiental crean una resistencia transitoria de contacto que el microcontrolador lee como interrupciones oscilantes de alta frecuenci
-
-a.
-
-### 1.
+En los conmutadores de estilo tradicional (Cherry MX y sus derivados directos), dos láminas de aleación de cobre y berilio o bronce fosforoso con chapado de oro/plata hacen contacto físico al descender el vástago. Aunque las corrientes involucradas son mínimas (del orden de 5V y microamperios dentro del bus USB HID), la exposición al aire ambiental degrada las capas superficiales. La acumulación de polvo microscópico, restos de lubricante degradado o sales transportadas por la humedad ambiental crean una resistencia transitoria de contacto que el microcontrolador lee como interrupciones oscilantes de alta frecuencia. ### 1.
 
 2. Deformación mecánica y pérdida de histéresis elástica
 La lámina flexible interna depende de una constante elástica calculada al milímetro para proporcionar el retorno mecánico y la histéresis requerida. Si el usuario somete ciertas teclas de alta frecuencia operativa (como `W`, `A`, `S`, `D`, `Espacio` o `Enter`) a impactos sistemáticos o fatiga prolongada, la lámina pierde tensión. Al juntarse con la lámina estática, no impacta con una fuerza de retención neta constante, sino que vibra físicamente contra el terminal fijo, superando el tiempo de tolerancia de amortiguación.
@@ -139,9 +135,7 @@ a:Administre una ráfaga extremadamente corta, de no más demedio segundo. La pr
 
 4. Ciclo de purga mecánic
 
-a:De inmediato, libere el aerosol y comience a pulsar repetidamente y a fondo el vástago del conmutador entre60 y 80 veces consecutivas. Esta acción de fricción dinámica fuerza a las láminas de contacto a frotarse entre sí, permitiendo que el solvente en evaporación arrastre mecánicamente las partículas hacia el fondo inerte o las disuelva por fricción galvánic
-
-a.
+a:De inmediato, libere el aerosol y comience a pulsar repetidamente y a fondo el vástago del conmutador entre60 y 80 veces consecutivas. Esta acción de fricción dinámica fuerza a las láminas de contacto a frotarse entre sí, permitiendo que el solvente en evaporación arrastre mecánicamente las partículas hacia el fondo inerte o las disuelva por fricción galvánica.
 
 5. Tiempo de evaporación y desgasificación:Deje reposar la unidad durante un mínimo de15 a 20 minutos. El vehículo solvente debe evaporarse por completo para garantizar una constante dieléctrica idónea y eliminar cualquier condensación térmica inducida por el gas propelente.
 
@@ -152,10 +146,7 @@ a.
 Como política técnica corporativa para estaciones de trabajo de alto rendimiento, deben adoptarse las siguientes directrices preventivas:
 
 * Incompatibilidad de lubricantes convencionales: Si el switch es de tipo lineal o táctil lubricado artesanalmente por el usuario (*lube* tipo Krytox GPL 205g0), el limpiador de contactos disolverá y lavará dicho lubricante. Si la tecla tratada queda con un sonido "rasposo", será necesario aplicar una microgota de lubricante dieléctrico fluorado específico mediante pincel del calibre 00.
-* Límite de intervenciones: Si un switch requiere más de dos tratamientos con limpiador de contactos en un lapso de tres meses, la lámina ha perdido sus propiedades metalúrgicas de tensión (fatiga de material). En teclados con placa base *Hot-Swap* (con zócalos Kailh o Gateron), la política estándar debe ser la sustitución física del conmutador por una unidad nuev
-
-a.
-* Riesgo en conmutadores soldados: En teclados donde los conmutadores están soldados directamente al circuito impreso (PCB), la inundación excesiva de disolvente puede degradar la máscara de soldadura o arrastrar flux residual hacia los pines del diodo SMD de la matriz. Aplique siempre cantidades mínimas.
+* Límite de intervenciones: Si un switch requiere más de dos tratamientos con limpiador de contactos en un lapso de tres meses, la lámina ha perdido sus propiedades metalúrgicas de tensión (fatiga de material). En teclados con placa base *Hot-Swap* (con zócalos Kailh o Gateron), la política estándar debe ser la sustitución física del conmutador por una unidad nueva. * Riesgo en conmutadores soldados: En teclados donde los conmutadores están soldados directamente al circuito impreso (PCB), la inundación excesiva de disolvente puede degradar la máscara de soldadura o arrastrar flux residual hacia los pines del diodo SMD de la matriz. Aplique siempre cantidades mínimas.
 
 ---
 
@@ -164,7 +155,9 @@ a.
 ### ¿Puedo utilizar alcohol isopropílico al 99% directamente en lugar de un spray limpiador de contactos?
 El alcohol isopropílico (IPA) de alta pureza es seguro químicamente para la mayoría de plásticos, pero su aplicación mediante gotero carece de la fuerza cinética que aporta el propelente presurizado del spray. La presión del aerosol es fundamental para desincrustar mecánicamente las partículas microscópicas aprisionadas entre las dos caras de la lámina de contacto. Además, el isopropanol puede tardar más en evaporarse dentro de la cámara sellada del conmutador si no existe flujo de aire forzado.
 
-### Tras aplicar el limpiador, la tecla no responde en absoluto. ¿Qué ha ocurrido?
+### Tras aplicar el limpiador, la tecla no responde en absoluto.
+
+¿Qué ha ocurrido?
 El propelente de los sprays de contacto se expande a temperaturas bajo cero, provocando con frecuencia condensación de humedad ambiental inmediata sobre los contactos fríos, lo cual bloquea temporalmente la continuidad eléctrica. Asimismo, si no se respetó el tiempo de secado, el líquido remanente puede alterar las propiedades capacitivas del circuito. Espere 30 minutos adicionales, aplique aire comprimido seco para acelerar la evaporación y vuelva a conectar el teclado al puerto USB.
 
 ### ¿Afecta esta intervención a los teclados mecánicos de tipo óptico o inductivo (efecto Hall)?

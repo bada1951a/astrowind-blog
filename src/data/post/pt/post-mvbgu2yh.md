@@ -27,9 +27,7 @@ Antes de aplicar os comandos, vale entender o que acontece por trás dos panos. 
 
 1. Bug no Explorador de Arquivos (explorer.exe): No Windows 11, a barra de tarefas está profundamente integrada ao processo do Explorer. Se o Explorer engasga ao carregar miniaturas ou notificações, a barra congela junto.
 
-2. Conflito no Pacote de Experiência (Windows Feature Experience Pack): Atualizações em segundo plano que mexem com o menu Iniciar e widgets costumam corromper temporariamente a interface gráfic
-
-a.
+2. Conflito no Pacote de Experiência (Windows Feature Experience Pack): Atualizações em segundo plano que mexem com o menu Iniciar e widgets costumam corromper temporariamente a interface gráfica.
 
 3. Loop de Memória em Processos de Terceiros: Softwares de customização visual ou antivírus muito agressivos podem bloquear ganchos (hooks) essenciais da API da barra de tarefas.
 
@@ -57,11 +55,7 @@ Este é o método mais rápido e eficiente para recuperar a barra de tarefas sem
 
 5. *O que acontece agor
 
-a:* A barra de tarefas sumirá por um segundo junto com a área de trabalho e voltará a funcionar normalmente, já limpa e reestabilizad
-
-a.
-
----
+a:* A barra de tarefas sumirá por um segundo junto com a área de trabalho e voltará a funcionar normalmente, já limpa e reestabilizada. ---
 
 ### Método 2: Registrar novamente a Barra de Tarefas via PowerShell
 
@@ -69,9 +63,7 @@ Se o Método 1 não resolveu e o congelamento persiste, o problema pode estar no
 
 1. Pressione as teclas `Ctrl + Shift + Esc` para abrir o Gerenciador de Tarefas.
 
-2. No menu superior, clique em Executar nova taref
-
-a.
+2. No menu superior, clique em Executar nova tarefa.
 
 3. Na caixa de texto que abrir, digite `powershell` (marque a caixa "Criar esta tarefa com privilégios administrativos").
 
@@ -95,9 +87,7 @@ Se o travamento for recorrente ao longo dos dias, arquivos do sistema podem esta
    ```cmd
    sfc /scannow
    ```
-3. Aguarde a verificação chegar a 100%. Caso encontre arquivos corrompidos, o próprio utilitário do Windows fará a substituição automátic
-
-a.
+3. Aguarde a verificação chegar a 100%. Caso encontre arquivos corrompidos, o próprio utilitário do Windows fará a substituição automática.
 
 4. Reinicie o computador assim que o processo for concluído para garantir a estabilidade.
 

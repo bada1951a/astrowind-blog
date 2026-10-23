@@ -27,11 +27,7 @@ a:
 
 2. Problemi di integrità della RAM (Banchi difettosi o overclock aggressivo): Se la memoria fisica presenta errori di lettura/scrittura o profili XMP/DOCP troppo spinti, il sistema operativo riceve dati corrotti a livello di interrupt request level (IRQL).
 
-3. Servizi di terze parti o antivirus invasivi: Software di sicurezza o utility di sistema non aggiornate che si agganciano profondamente al kernel possono causare violazioni di accesso alla memori
-
-a.
-
----
+3. Servizi di terze parti o antivirus invasivi: Software di sicurezza o utility di sistema non aggiornate che si agganciano profondamente al kernel possono causare violazioni di accesso alla memoria. ---
 
 ## Procedura Passo-Passo per la Risoluzione
 

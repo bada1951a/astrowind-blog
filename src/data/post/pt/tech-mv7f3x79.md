@@ -53,11 +53,7 @@ Ao conectar o cabo HDMI ou DisplayPort (via USB-C Alt Mode), a GPU e o monitor t
 O Windows Update tem o péssimo hábito de sobrescrever silenciosamente drivers homologados (seja da NVIDIA, AMD ou Intel) por versões genéricas da biblioteca WHQL. Isso quebra a integração do subsistema *Multi-Plane Overlay* (MPO). Quando o MPO é acionado para renderizar janelas transparentes, aceleração por hardware em navegadores ou jogos em modo janela sem bordas, a interface gráfica perde o quadro e o sinal cai momentaneamente.
 
 ### 3. Saturação da Largura de Banda de Transmissão (Bandwidth Starvation)
-Muitos usuários conectam monitores Quad HD (1440p) ou 4K com taxas de atualização elevadas (144Hz, 165Hz ou 240Hz) usando cabos genéricos ou adaptadores USB-C/HDMI 1.4 legados. Se o sinal ultrapassar o teto térmico e elétrico do conversor ou a capacidade de compressão de fluxo (*Display Stream Compression* - DSC), os pacotes de dados sofrem descarte (*packet drop*). O resultado imediato é tela preta intermitente, atraso no mouse e ruído digital na tel
-
-a.
-
----
+Muitos usuários conectam monitores Quad HD (1440p) ou 4K com taxas de atualização elevadas (144Hz, 165Hz ou 240Hz) usando cabos genéricos ou adaptadores USB-C/HDMI 1.4 legados. Se o sinal ultrapassar o teto térmico e elétrico do conversor ou a capacidade de compressão de fluxo (*Display Stream Compression* - DSC), os pacotes de dados sofrem descarte (*packet drop*). O resultado imediato é tela preta intermitente, atraso no mouse e ruído digital na tela. ---
 
 ## Benchmark de Conexão: Taxa de Atualização, Latência e Estabilidade
 
@@ -81,11 +77,7 @@ a:
 
 ## Procedimento Passo a Passo de Resolução
 
-Siga estritamente a ordem descrita abaixo para isolar o problema e resetar o pipeline de vídeo com precisão técnic
-
-a.
-
-### Etapa 1: Reset a Frio do Pipeline Gráfico
+Siga estritamente a ordem descrita abaixo para isolar o problema e resetar o pipeline de vídeo com precisão técnica. ### Etapa 1: Reset a Frio do Pipeline Gráfico
 Antes de intervir no software, force o Windows a reiniciar os buffers de renderização e descarregar o driver ativo sem desligar a máquin
 
 a:
@@ -148,9 +140,7 @@ Após a instalação limpa, alinhe as frequências de operação para evitar des
 
 1. Pressione `Win + I` para abrir as Configurações.
 
-2. Vá em Sistema>Tela>Configurações avançadas de tel
-
-a.
+2. Vá em Sistema>Tela>Configurações avançadas de tela.
 
 3. No menu suspenso, selecione o Monitor 2 (o monitor externo com problema).
 

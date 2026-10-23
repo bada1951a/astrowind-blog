@@ -24,10 +24,7 @@ Begitu gue pegang itu laptop dan buka Task Manager, *jebret!* Keliatan banget pe
 a: ada 45 aplikasi, dari mulai Steam, Epic Games, Spotify, Discord, sampe bloatware bawaan vendor laptop, jalan serentak begitu tombol power ditekan. Ini bukan lagi *booting*, tapi ritual pemanggilan arwah!
 
 <div style="border: 1px dashed #a6e22e; padding: 15px; margin: 20px 0; background-color: #1e1e1e; color: #a6e22e; border-radius: 4px;">
-<strong>DEBUGGING_NOTE:</strong> Jangan langsung vonis hardware rusak atau SSD minta ganti baru. Seringkali masalah utamanya ada di barisan "antrian siluman" yang numpuk pas sistem operasi nyal
-
-a.
-</div>
+<strong>DEBUGGING_NOTE:</strong> Jangan langsung vonis hardware rusak atau SSD minta ganti baru. Seringkali masalah utamanya ada di barisan "antrian siluman" yang numpuk pas sistem operasi nyala. </div>
 
 ---
 
@@ -73,11 +70,7 @@ Buat mastiin nggak ada service siluman yang lolos dari pengamatan Task Manager, 
 *   Masuk ke tab Services.
 *   PENTING:Centang dulu kotak "Hide all Microsoft services" di bagian bawah (biar lu nggak nggak sengaja mematikan sistem inti Windows).
 *   Lihat daftar service yang tersisa. Hilangkan centang pada service aplikasi yang nggak butuh jalan otomatis (contoh: *Adobe Acrobat Update Service*, *Google Update Service*, dll).
-*   Klik ApplylaluOK. Restart laptop lu dan rasakan bedany
-
-a.
-
----
+*   Klik ApplylaluOK. Restart laptop lu dan rasakan bedanya. ---
 
 ### Langkah 3: Cek Kesehatan Disk via Command Prompt (Bonus Diagnostik)
 

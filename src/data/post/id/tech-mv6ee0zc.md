@@ -42,11 +42,7 @@ a:
 Setiap mikrokontroler keyboard memiliki algoritma bawaan bernama *debounce delay*—rentang waktu toleransi (biasanya 5–15 ms) untuk menyaring getaran fisik logam saat bertumbukan agar tidak terbaca sebagai dua ketukan terpisah. Ketika pelat kontak kotor atau kehilangan elastisitasnya, getaran mekanis (*metal bouncing*) berlangsung lebih lama dari batas ambang debounce di firmware. Akibatnya, ketukan tunggal terbaca sebagai input ganda atau tripel.
 
 ### C. Retak Dingin Solderan (Cold Solder Joint) atau Pelumas Berlebih (Over-lubing)
-Jika Anda menggunakan keyboard custom yang dilumasi secara manual (*factory lubed* atau *hand lubed*), penggunaan gemuk (*grease*) sintetis seperti Krytox yang berlebihan sering kali merembes ke titik temu bilah kontak tembaga. Karakter pelumas yang bersifat isolator listrik ini memutus aliran sinyal. Selain itu, pada keyboard yang sering dipukul keras atau jatuh, titik solderan kaki switch ke PCB dapat mengalami keretakan mikro (*hairline crack*), menyebabkan input terputus-putus tergantung sudut tekanan jari And
-
-a.
-
----
+Jika Anda menggunakan keyboard custom yang dilumasi secara manual (*factory lubed* atau *hand lubed*), penggunaan gemuk (*grease*) sintetis seperti Krytox yang berlebihan sering kali merembes ke titik temu bilah kontak tembaga. Karakter pelumas yang bersifat isolator listrik ini memutus aliran sinyal. Selain itu, pada keyboard yang sering dipukul keras atau jatuh, titik solderan kaki switch ke PCB dapat mengalami keretakan mikro (*hairline crack*), menyebabkan input terputus-putus tergantung sudut tekanan jari Anda. ---
 ![Tech Diagnostics](https://images.unsplash.com/photo-1516321318423-f06f85e504b3? auto=format&fit=crop&w=1000&h=550&q=80)
 
 ## 2. Prosedur Diagnostik Sistem Sebelum Tindakan Fisik
@@ -126,11 +122,7 @@ Jika keyboard Anda bertipe Hot-Swap (switch bisa dicabut):
 Meskipun contact cleaner berlabel cepat kering (*fast drying*), cairan yang terperangkap di ruang sempit housing switch membutuhkan waktu untuk menguap secara tuntas:
 - Biarkan keyboard terbuka di ruangan berventilasi baik selama minimal 15 hingga 20 menit.
 - Jangan mengeringkannya menggunakan pengering rambut (*hair dryer*) bersuhu panas tinggi karena dapat memuai dan merusak toleransi plastik stem.
-- Hubungkan kembali ke komputer dan buka aplikasi pengujian keyboard. Lakukan pengetikan cepat untuk memastikan gejala chattering telah hilang sepenuhny
-
-a.
-
----
+- Hubungkan kembali ke komputer dan buka aplikasi pengujian keyboard. Lakukan pengetikan cepat untuk memastikan gejala chattering telah hilang sepenuhnya. ---
 
 ## 4. Peringatan Teknisi: Batasan Tindakan dan Pencegahan Bahaya
 
@@ -159,11 +151,7 @@ Q:</b> Rangkuman atas pertanyaan yang paling sering diajukan saat perbaikan mand
 ###
 
 Q1. Bisakah saya menggunakan Isopropyl Alcohol (IPA) 99% sebagai pengganti contact cleaner kaleng?
-Bisa, tetapi dengan catatan teknis. Isopropil alkohol dengan kemurnian 99% murni aman untuk elektronik dan tidak meninggalkan residu air. Namun, IPA tidak memiliki tekanan gas semprot (*pressurized jet*) seperti kaleng aerosol contact cleaner. Anda harus meneteskannya secara hati-hati menggunakan pipet mikro ke celah stem, lalu menekan tombol berulang kali. Hindari IPA dengan kadar di bawah 90% karena kandungan airnya dapat mengendap di dasar housing switch dan memicu karat pada spring/per baj
-
-a.
-
-###
+Bisa, tetapi dengan catatan teknis. Isopropil alkohol dengan kemurnian 99% murni aman untuk elektronik dan tidak meninggalkan residu air. Namun, IPA tidak memiliki tekanan gas semprot (*pressurized jet*) seperti kaleng aerosol contact cleaner. Anda harus meneteskannya secara hati-hati menggunakan pipet mikro ke celah stem, lalu menekan tombol berulang kali. Hindari IPA dengan kadar di bawah 90% karena kandungan airnya dapat mengendap di dasar housing switch dan memicu karat pada spring/per baja. ###
 
 Q2. Apakah penyemprotan contact cleaner akan melunturkan pelumas bawaan (lube) pada switch?
 Ya, tentu saja. Contact cleaner diformulasikan secara kimiawi untuk melarutkan oli, gemuk (*grease*), dan minyak. Jika keyboard Anda sebelumnya telah di-*lube* menggunakan cairan seperti Krytox 205g0, semprotan ini akan melunturkan lapisan pelumas di area stem dan rail. Switch Anda mungkin akan terasa sedikit lebih berpasir (*scratchy*) setelah kering. Untuk mengatasinya, Anda disarankan melumasi ulang switch menggunakan pelumas switch khusus secara presisi setelah proses perbaikan selesai.

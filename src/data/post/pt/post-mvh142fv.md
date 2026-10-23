@@ -21,9 +21,7 @@ a:</strong> O Windows 11 guarda um diário secreto de tudo o que acontece em seu
 
 Antes de abrir qualquer ferramenta, precisamos entender o que costuma derrubar o sistema operacional de forma repentina. Na minha rotina de bancada, divido esses travamentos misteriosos em três grandes vilões:
 
-1. Instabilidade de Driver de Vídeo: Atualizações automáticas do Windows Update muitas vezes sobrescrevem drivers essenciais da placa gráfica (NVIDIA, AMD ou Intel), gerando conflitos que congelam a interface gráfica inteir
-
-a.
+1. Instabilidade de Driver de Vídeo: Atualizações automáticas do Windows Update muitas vezes sobrescrevem drivers essenciais da placa gráfica (NVIDIA, AMD ou Intel), gerando conflitos que congelam a interface gráfica inteira.
 
 2. Micro-falhas de Energia ou Tensão na Placa-Mãe: Variações na linha de 12V da fonte ou perfis de memória RAM (XMP/EXPO) ligeiramente instáveis fazem o processador travar instantaneamente para evitar danos maiores.
 
@@ -39,11 +37,7 @@ Esqueça achismos. Vamos abrir a ferramenta nativa do Windows para encontrar o c
 Pressione as teclas `Windows + X` no seu teclado e selecione Visualizador de Eventos (ou digite "Visualizador de Eventos" na barra de pesquisa do menu Iniciar e abra o aplicativo).
 
 ### Passo 2: Navegando até os Logs do Windows
-Na coluna à esquerda, clique na seta ao lado de Logs do Windowse selecioneSistem
-
-a. 
-
-<div style="border-left: 4px solid #0284c7; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
+Na coluna à esquerda, clique na seta ao lado de Logs do Windowse selecioneSistema. <div style="border-left: 4px solid #0284c7; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Dica de Ouro:</strong> Como a lista de eventos é gigantesca, clique em <strong>Filtrar Log Atual...</strong> no painel à direita para refinar a busca e economizar tempo precioso.
 </div>
 
@@ -83,13 +77,7 @@ Travamentos constantes onde o usuário é obrigado a desligar o PC no botão de 
 ## Perguntas Frequentes (FAQ)
 
 ### 1. O que significa o Event ID 41 no Visualizador de Eventos?
-O Event ID 41 (Kernel-Power) indica apenas que o computador foi desligado ou reiniciado sem um desligamento limpo. Ele não aponta a causa raiz sozinho, mas confirma que houve uma queda abrupta de energia ou travamento total do sistem
-
-a.
-
-
-
-![Tech Troubleshooting Guide](/images/tech-photo/tech-photos%20(33).jpg)
+O Event ID 41 (Kernel-Power) indica apenas que o computador foi desligado ou reiniciado sem um desligamento limpo. Ele não aponta a causa raiz sozinho, mas confirma que houve uma queda abrupta de energia ou travamento total do sistema. ![Tech Troubleshooting Guide](/images/tech-photo/tech-photos%20(33).jpg)
 
 ### 2. Todo travamento gera um log de erro no Visualizador de Eventos?
 Não necessariamente. Quando o congelamento é total e afeta o barramento do processador ou o controlador de vídeo em nível de hardware puro, o sistema trava antes de conseguir gravar qualquer informação no disco rígido. Nestes casos, o log mostrará apenas o reinício forçado posterior.

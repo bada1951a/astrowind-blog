@@ -49,11 +49,7 @@ Về mặt vật lý học, không có hai miếng kim loại nào chạm vào n
 Nếu switch bị lão hóa, độ đàn hồi của lá đồng suy giảm, thời gian rung vật lý vượt quá ngưỡng Debounce Time của firmware, hiện tượng gõ một ra hai (chattering) sẽ xuất hiện ngay lập tức trên hệ điều hành.
 
 ### 3. Hỏng Hóc Mối Hàn Hoặc Giãn Chân Socket Hot-swap
-Đối với bàn phím mạch hàn (solder), các mối thiếc dưới đáy PCB sau thời gian chịu lực gõ mạnh có thể bị nứt chân chim (cold solder joint). Đối với bàn phím hỗ trợ thay switch nhanh (Hot-swap), hai ngàm kẹp bằng đồng của socket Kailh hoặc Gateron dưới bo mạch có thể bị toét rộng ra do rút cắm switch sai góc, dẫn đến tình trạng mất tiếp xúc chập chờn – lúc bấm ăn, lúc bấm trơ r
-
-a.
-
----
+Đối với bàn phím mạch hàn (solder), các mối thiếc dưới đáy PCB sau thời gian chịu lực gõ mạnh có thể bị nứt chân chim (cold solder joint). Đối với bàn phím hỗ trợ thay switch nhanh (Hot-swap), hai ngàm kẹp bằng đồng của socket Kailh hoặc Gateron dưới bo mạch có thể bị toét rộng ra do rút cắm switch sai góc, dẫn đến tình trạng mất tiếp xúc chập chờn – lúc bấm ăn, lúc bấm trơ ra. ---
 
 ## Quy Trình Xử Lý Thực Chiến (Runbook Step-by-Step)
 

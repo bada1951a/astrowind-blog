@@ -34,11 +34,7 @@ a: Mỗi khi bạn cài đặt Zalo, Skype, Discord, Spotify hoặc các trình 
 Không cần dùng phần mềm bên thứ ba rườm rà hay chỉnh sửa Registry mạo hiểm. Windows 10 đã tích hợp sẵn công cụ quản lý cực kỳ trực quan ngay trong Task Manager. Hãy làm theo thao tác chuẩn xác dưới đây:
 
 ### Bước 1: Mở Task Manager bằng phím tắt huyền thoại
-Bấm tổ hợp phím Ctrl + Shift + Esc trên bàn phím. Đây là cách nhanh nhất để mở thẳng trình quản lý tác vụ mà không cần thông qua màn hình khó
-
-a.
-
-### Bước 2: Truy cập tab Startup
+Bấm tổ hợp phím Ctrl + Shift + Esc trên bàn phím. Đây là cách nhanh nhất để mở thẳng trình quản lý tác vụ mà không cần thông qua màn hình khóa. ### Bước 2: Truy cập tab Startup
 Trong giao diện Task Manager, nếu bạn chỉ thấy một bảng nhỏ gọn, hãy bấm vào dòng chữ More detailsở góc dưới bên trái. Sau đó, tìm và bấm chọn tabStartup (có biểu tượng hình đồng hồ đo tốc độ).
 
 ### Bước 3: Vô hiệu hóa ứng dụng không cần thiết

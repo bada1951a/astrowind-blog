@@ -18,10 +18,7 @@ Panik? Pastinya. Rekan kerja di sebelah mulai keringat dingin karena dokumen Exc
 Sebagai seorang teknisi infrastruktur IT yang sudah kenyang asam garam menghadapi drama kantor seperti ini, saya langsung bergerak cepat. Masalah CPU 100 persen akibat *System process* ini bukan hal mistis. Ini murni masalah sinkronisasi *driver*, *interrupt request* (IRQ) yang bentrok, atau layanan latar belakang Windows yang mengalami *infinite loop*. Mari kita bedah tuntas akar masalahnya dan selesaikan dengan protokol penanganan yang benar.
 
 <div style="border-left: 4px solid #4338ca; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
-<strong>Catatan Teknisi:</strong> Jangan pernah langsung mematikan PC secara paksa saat CPU 100 persen jika masih memungkinkan untuk membuka Task Manager. Tindakan ini bisa memicu <em>bad sector</em> pada penyimpanan mekanis (HDD) And
-
-a.
-</div>
+<strong>Catatan Teknisi:</strong> Jangan pernah langsung mematikan PC secara paksa saat CPU 100 persen jika masih memungkinkan untuk membuka Task Manager. Tindakan ini bisa memicu <em>bad sector</em> pada penyimpanan mekanis (HDD) Anda. </div>
 
 ---
 

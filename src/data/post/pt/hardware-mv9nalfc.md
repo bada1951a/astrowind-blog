@@ -63,9 +63,7 @@ Com o espaço liberado no drive C: (recomendo manter pelo menos 15% a 20% livres
 
 1. Posso apagar todos os arquivos da pasta Temp sem medo? Sim. A pasta Temp armazena apenas arquivos de uso temporário por aplicativos e pelo próprio sistema. O que estiver em uso ativo no momento não poderá ser apagado pelo Windows, garantindo que nenhum dado essencial seja perdido.
 
-2. O que fazer se o meu SSD NVMe externo continuar dando erro de leitura mesmo após limpar o C:? Se o erro persistir, o problema pode estar na porta USB utilizada (recomendo conectar diretamente nas portas traseiras da placa-mãe, que possuem melhor alimentação de energia) ou na formatação do arquivo system. Use oGerenciamento de Discopara verificar se a partição está íntegr
-
-a.
+2. O que fazer se o meu SSD NVMe externo continuar dando erro de leitura mesmo após limpar o C:? Se o erro persistir, o problema pode estar na porta USB utilizada (recomendo conectar diretamente nas portas traseiras da placa-mãe, que possuem melhor alimentação de energia) ou na formatação do arquivo system. Use oGerenciamento de Discopara verificar se a partição está íntegra.
 
 3. Com que frequência devo realizar essa limpeza de arquivos temporários?
 Para uso corporativo intenso, o ideal é rodar essa limpeza pelo menos uma vez por mês. Isso evita surpresas desagradáveis com travamentos repentinos em prazos de entrega importantes.

@@ -58,33 +58,21 @@ Zapomnij o prostym usuwaniu folderu pobranych plików. Zróbmy to porządnie:
 ### Krok 3: Ręczne czyszczenie folderów Temp przez konsolę
 Jeżeli potrzebujesz natychmiastowego efektu, oto najszybsza metoda na usunięcie bieżących śmieci:
 * Otwórz ponownie Wiersz polecenia jako administrator.
-* Wpisz polecenie `start %temp%` i naciśnij Enter. Otworzy się folder tymczasowy użytkownik
-
-a.
-* Zaznacz wszystko (`Ctrl + A`) i usuń (`Shift + Delete`). 
+* Wpisz polecenie `start %temp%` i naciśnij Enter. Otworzy się folder tymczasowy użytkownika. * Zaznacz wszystko (`Ctrl + A`) i usuń (`Shift + Delete`). 
 * *Wskazówka ekspert
 
 a:* Pliki, których system obecnie używa i nie pozwala skasować, po prostu zignoruj (kliknij "Pomiń").
 * Następnie w Wierszu poleceń wpisz `temp` i powtórz operację dla głównego folderu systemowego.
 
 <div style="border-left: 4px solid #00ffcc; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
-<strong>OSTRZEŻENIE TECHNICZNE:</strong> Nigdy nie pobieraj losowych programów z internetu obiecujących "magiczne oczyszczanie jednym kliknięciem". W 90% przypadków to adware lub bloatware, które dodatkowo obciążają system i zapychają rejestr. Zaufaj wbudowanym mechanizmom Windows
-
-a.
-</div>
+<strong>OSTRZEŻENIE TECHNICZNE:</strong> Nigdy nie pobieraj losowych programów z internetu obiecujących "magiczne oczyszczanie jednym kliknięciem". W 90% przypadków to adware lub bloatware, które dodatkowo obciążają system i zapychają rejestr. Zaufaj wbudowanym mechanizmom Windowsa. </div>
 
 ---
 
 ## Często Zadawane Pytania (FAQ)
 
 ### 1. Czy bezpiecznie jest usuwać zawartość folderu SoftwareDistribution?
-Tak, ale najlepiej robić to po zatrzymaniu usługi Windows Update. Folder ten zawiera pobrane pakiety instalacyjne aktualizacji. Jeśli jakaś aktualizacja utknęła w martwym punkcie i zapycha dysk, wyczyszczenie tego katalogu (znajdującego się w `C:\Windows`) jest w pełni bezpieczne i często naprawia błędy pobierani
-
-a.
-
-
-
-![Hardware Diagnostic & Troubleshooting](https://picsum.photos/seed/computer64/1000/550)
+Tak, ale najlepiej robić to po zatrzymaniu usługi Windows Update. Folder ten zawiera pobrane pakiety instalacyjne aktualizacji. Jeśli jakaś aktualizacja utknęła w martwym punkcie i zapycha dysk, wyczyszczenie tego katalogu (znajdującego się w `C:\Windows`) jest w pełni bezpieczne i często naprawia błędy pobierania. ![Hardware Diagnostic & Troubleshooting](https://picsum.photos/seed/computer64/1000/550)
 
 ### 2. Co zrobić, gdy zwolniłem miejsce, ale dysk znów zapełnia się samoczynnie?
 To znak, że w tle działa usługa, która generuje ogromne pliki dziennika (często błędy sterowników kart graficznych lub zapętlone próby pobrania uszkodzonej aktualizacji). Otwórz Menedżer urządzeń, sprawdź, czy któreś urządzenie nie zgłasza żółtego wykrzyknika, oraz przejrzyj harmonogram zadań.

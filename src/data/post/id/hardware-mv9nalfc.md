@@ -42,11 +42,7 @@ Mari kita selesaikan masalah ini dengan cepat menggunakan fitur bawaan Windows t
 
 3. Tekan Ctrl + Auntuk memilih semua file di dalam folder tersebut, lalu tekanShift + Delete (hapus permanen agar tidak masuk Recycle Bin). 
 *Catatan: Jika ada file yang gagal dihapus karena sedang digunakan sistem, klik "Skip".*
-4. Ulangi proses Windows + R, ketik `temp` (tanpa tanda persen), lalu hapus semua isiny
-
-a.
-
-#### Langkah 2: Jalankan Disk Cleanup Bawaan Windows
+4. Ulangi proses Windows + R, ketik `temp` (tanpa tanda persen), lalu hapus semua isinya. #### Langkah 2: Jalankan Disk Cleanup Bawaan Windows
 1. Buka File Explorer, klik kanan padaLocal Disk (C:), lalu pilihProperties.
 
 2. Pada tab *General*, klik tombol Disk Cleanup.
@@ -58,9 +54,7 @@ a.
 5. Klik OK dan biarkan sistem membersihkan file-file berat tersebut.
 
 #### Langkah 3: Matikan Fitur Hibernasi (Opsional tapi Efektif)
-Jika Anda tidak pernah menggunakan mode *Hibernate* pada laptop atau PC kerja Anda, fitur ini memakan ruang C drive yang setara dengan kapasitas RAM And
-
-a.
+Jika Anda tidak pernah menggunakan mode *Hibernate* pada laptop atau PC kerja Anda, fitur ini memakan ruang C drive yang setara dengan kapasitas RAM Anda.
 
 1. Klik tombol *Start*, ketik Command Prompt, lalu klik kanan dan pilihRun as administrator.
 

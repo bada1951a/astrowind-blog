@@ -62,11 +62,7 @@ Zanim rozbierzesz klawiaturę, musimy wykluczyć usterki po stronie warstwy syst
 
 4. W menu górnym kliknij Akcja→Skanuj w poszukiwaniu zmian sprzętu, aby system Windows ponownie zainicjalizował sterownik magistrali USB.
 
-Następnie uruchom przeglądarkowy tester klawiatury (np. *Keyboard Event Viewer* lub *Keyboard Chatter Strip*) albo otwórz Wiersz polecenia (`cmd.exe`) i wykonaj serię 50 szybkich, powtarzalnych uderzeń w felerny klawisz. Zwróć uwagę na czas powrotu (*bounce time*). Czas rejestracji poniżej 15–20 ms z wielokrotnym wpisem jednoznacznie wskazuje na usterkę sprzętową switch
-
-a.
-
-<div style="border-left: 4px solid #f97316; padding: 14px 18px; margin: 20px 0; background-color: rgba(249, 115, 22, 0.05); border-radius: 4px;">
+Następnie uruchom przeglądarkowy tester klawiatury (np. *Keyboard Event Viewer* lub *Keyboard Chatter Strip*) albo otwórz Wiersz polecenia (`cmd.exe`) i wykonaj serię 50 szybkich, powtarzalnych uderzeń w felerny klawisz. Zwróć uwagę na czas powrotu (*bounce time*). Czas rejestracji poniżej 15–20 ms z wielokrotnym wpisem jednoznacznie wskazuje na usterkę sprzętową switcha. <div style="border-left: 4px solid #f97316; padding: 14px 18px; margin: 20px 0; background-color: rgba(249, 115, 22, 0.05); border-radius: 4px;">
   <strong style="color: #f97316;">Wskazówka serwisow
 
 a:</strong> Przed rozpoczęciem jakichkolwiek prac fizycznych bezwzględnie <strong>odłącz przewód USB</strong> klawiatury od komputera, a w modelach bezprzewodowych wyłącz przełącznik zasilania bateryjnego na spodzie obudowy. Płytka drukowana nie może znajdować się pod napięciem podczas aplikacji chemii.
@@ -166,9 +162,5 @@ Pamiętaj również o wyładowaniach elektrostatycznych (ESD). Pracując przy ot
 Oznacza to, że sprężynująca blaszka stykowa uległa trwałemu odkształceniu zmęczeniowemu (*metal fatigue*) i nie powraca do punktu spoczynkowego z odpowiednią siłą docisku. W takim wypadku jedynym trwałym rozwiązaniem jest wymiana przełącznika na nowy. W klawiaturach typu hot-swap zajmuje to 30 sekund. W modelach lutowanych należy rozgrzać luty odsysaczem cyny na spodzie PCB, wyjąć uszkodzony przełącznik i wlutować nowy element za pomocą spoiwa ołowiowego (lub bezołowiowego z topnikiem).
 
 ### 2. Czy mogę programowo zamaskować chattering bez rozbierania klawiatury?
-Tak, jest to doraźne rozwiązanie kompensacyjne. Jeśli Twoja klawiatura wspiera oprogramowanie open-source QMK lub VIA, możesz zwiększyć programowy filtr przeciwdrganiowy (`debounce latency`) w konfiguracji z domyślnych 5 ms do np. 10–15 ms. W systemie Windows możesz również skorzystać z darmowych narzędzi zewnętrznych, takich jak *Keyboard Chattering Fix*, które blokują programowo powtórne naciśnięcia tego samego klawisza występujące w odstępie krótszym niż ustalony próg milisekund. Nie rozwiązuje to jednak degradacji fizycznej switch
-
-a.
-
-### 3. Czy do czyszczenia mogę użyć czystego spirytusu salicylowego z apteki?
+Tak, jest to doraźne rozwiązanie kompensacyjne. Jeśli Twoja klawiatura wspiera oprogramowanie open-source QMK lub VIA, możesz zwiększyć programowy filtr przeciwdrganiowy (`debounce latency`) w konfiguracji z domyślnych 5 ms do np. 10–15 ms. W systemie Windows możesz również skorzystać z darmowych narzędzi zewnętrznych, takich jak *Keyboard Chattering Fix*, które blokują programowo powtórne naciśnięcia tego samego klawisza występujące w odstępie krótszym niż ustalony próg milisekund. Nie rozwiązuje to jednak degradacji fizycznej switcha. ### 3. Czy do czyszczenia mogę użyć czystego spirytusu salicylowego z apteki?
 Absolutnie nie. Spirytus salicylowy zawiera wodę oraz kwas salicylowy. Woda wywoła natychmiastową korozję stalowej sprężyny powrotnej oraz miedzianych styków, a kwas pozostawi krystaliczny nalot uniemożliwiający prawidłowy kontakt elektryczny. Jedynym dopuszczalnym alkoholem w serwisie elektroniki jest alkohol izopropylowy (IPA) o czystości minimum 99% lub dedykowane aerozole kontaktowe z atestem dla podzespołów telekomunikacyjnych.

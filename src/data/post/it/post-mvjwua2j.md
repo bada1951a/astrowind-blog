@@ -38,20 +38,14 @@ a: Windows ha scambiato le cuffie USB o il monitor HDMI con gli altoparlanti int
 Mettiamo da parte il caffè freddo e seguiamo questa procedura collaudata sul campo per ripristinare l'audio senza riavviare il PC (cosa che farebbe perdere altri dieci minuti preziosi con le sessioni aperte).
 
 ### Passo 1: Verifica rapida da [Impostazioni] e [Pannello di controllo]
-La prima cosa da fare è controllare che Windows non stia mandando il flusso audio su una periferica spenta o scollegat
-
-a.
-- Clicca sull'icona della rete/audio vicino all'orologio in basso a destra, poi premi sulla freccetta accanto alla barra del volume per aprire l'elenco dei dispositivi di riproduzione disponibili.
+La prima cosa da fare è controllare che Windows non stia mandando il flusso audio su una periferica spenta o scollegata. - Clicca sull'icona della rete/audio vicino all'orologio in basso a destra, poi premi sulla freccetta accanto alla barra del volume per aprire l'elenco dei dispositivi di riproduzione disponibili.
 - Seleziona manualmente le tue cuffie o gli altoparlanti corretti.
 - Se non vedi il dispositivo giusto, premi la combinazione di tasti `Windows + R`, digita `mmsys.cpl` e premi Invio. Si aprirà il vecchio e fedele [Pannello di controllo] classico dei suoni: assicurati che il tuo dispositivo primario abbia la spunta verde come "Dispositivo predefinito".
 
 ### Passo 2: Controllo avanzato da [Gestione dispositivi]
 Se il dispositivo risulta assente o ha un punto esclamativo giallo, il problema è il driver.
 - Clicca con il tasto destro sul pulsante Start e seleziona [Gestione dispositivi].
-- Cerca la voce Controller audio, video e giochi ed espandil
-
-a.
-- Trova il tuo driver audio principale (di solito *Realtek Audio* o *Intel High Definition Audio*). Cliccaci sopra con il tasto destro e scegli Aggiorna driver, oppureDisinstalla dispositivo (non preoccuparti, Windows lo rinnoverà a breve).
+- Cerca la voce Controller audio, video e giochi ed espandila. - Trova il tuo driver audio principale (di solito *Realtek Audio* o *Intel High Definition Audio*). Cliccaci sopra con il tasto destro e scegli Aggiorna driver, oppureDisinstalla dispositivo (non preoccuparti, Windows lo rinnoverà a breve).
 - Subito dopo, vai nel menu in alto, clicca su Azionie selezionaRileva modifiche hardware. Il sistema ricaricherà il driver pulito.
 
 ### Passo 3: Riavvio forzato dei servizi di sistema

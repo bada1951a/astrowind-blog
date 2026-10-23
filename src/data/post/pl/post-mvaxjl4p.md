@@ -25,15 +25,9 @@ Zanim przejdziemy do klikania, spójrzmy prawdzie w oczy – skąd ten narastaj�
 
 1. Efekt "pijawki" instalacyjnej: Większość programów (od Spotify, przez Discord, po Adobe czy Epic Games) podczas instalacji ukradkiem zaznacza opcję "Uruchom razem z systemem". Po roku użytkowania masz w autostarcie armię aplikacji, o których istnieniu dawno zapomniałeś.
 
-2. Kolejkowanie I/O dysku: Nawet szybkie dyski NVMe potrafią złapać zadyszkę, gdy w tej samej milisekundzie po starcie systemu każdy program próbuje sprawdzać aktualizacje, pobierać metadane i meldować się na serwerach producent
+2. Kolejkowanie I/O dysku: Nawet szybkie dyski NVMe potrafią złapać zadyszkę, gdy w tej samej milisekundzie po starcie systemu każdy program próbuje sprawdzać aktualizacje, pobierać metadane i meldować się na serwerach producenta.
 
-a.
-
-3. Zasoby w tle (RAM i CPU): Aplikacje rezydujące w zasobniku systemowym (tray) bez przerwy konsumują pamięć operacyjną, co drastycznie wydłuża czas potrzebny na osiągnięcie pełnej gotowości roboczej komputer
-
-a.
-
----
+3. Zasoby w tle (RAM i CPU): Aplikacje rezydujące w zasobniku systemowym (tray) bez przerwy konsumują pamięć operacyjną, co drastycznie wydłuża czas potrzebny na osiągnięcie pełnej gotowości roboczej komputera. ---
 
 ### Krok po kroku: Jak wyczyścić autostart w 1 minutę
 
@@ -51,10 +45,7 @@ Zwróć uwagę na kolumnę Wpływ na uruchamianie (Startup impact). Szukaj pozyc
 <div style="border-left: 4px solid #14b8a6; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Wskazówka praktyczn
 
-a:</strong> Kliknij prawym przyciskiem myszy na wybraną aplikację (np. uciążliwy komunikator lub launcher) i wybierz <strong>Wyłącz</strong> (Disable). Nic nie tracisz – program nadal będzie działał normalnie, gdy włączysz go ręcznie, ale przestanie marnować zasoby podczas rozruchu komputer
-
-a.
-</div>
+a:</strong> Kliknij prawym przyciskiem myszy na wybraną aplikację (np. uciążliwy komunikator lub launcher) i wybierz <strong>Wyłącz</strong> (Disable). Nic nie tracisz – program nadal będzie działał normalnie, gdy włączysz go ręcznie, ale przestanie marnować zasoby podczas rozruchu komputera. </div>
 
 ---
 

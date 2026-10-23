@@ -17,9 +17,7 @@ Kwadrans przed kluczową prezentacją dla zarządu w warszawskim centrum bizneso
 
 Zanim sięgnąłem po konsolę, muszę wyjaśnić, skąd bierze się ten problem na stanowiskach roboczych w biurze. Oto trzy najczęstsze przyczyny, z którymi mierzę się jako serwisant:
 
-1. Utrata połączenia z serwerem KMS w domenie: Komputery w firmach często aktywują się cyklicznie przez wewnętrzny serwer KMS. Jeśli stacja robocza była odłączona od sieci VPN lub firmowego LAN-u przez dłuższy czas, token wygas
-
-a.
+1. Utrata połączenia z serwerem KMS w domenie: Komputery w firmach często aktywują się cyklicznie przez wewnętrzny serwer KMS. Jeśli stacja robocza była odłączona od sieci VPN lub firmowego LAN-u przez dłuższy czas, token wygasa.
 
 2. Nieudana aktualizacja po wymianie sprzętu: Wymiana płyty głównej lub karty sieciowej w serwisie może unieważnić cyfrową licencję przypniętą do unikalnego identyfikatora sprzętowego (HWID).
 
@@ -54,11 +52,7 @@ Teraz wykonamy właściwą operację dezaktywacji denerwującego powiadomienia o
 ```text
 slmgr /rearm
 ```
-Po chwili na ekranie pojawi się małe okienko dialogowe z informacją, że polecenie wykonało się pomyślnie. Oznacza to, że system da nam spokój na kolejne 30 dni, a znak wodny zniknie po ponownym uruchomieniu komputer
-
-a.
-
-#### Krok 4: Ponowne uruchomienie stacji roboczej
+Po chwili na ekranie pojawi się małe okienko dialogowe z informacją, że polecenie wykonało się pomyślnie. Oznacza to, że system da nam spokój na kolejne 30 dni, a znak wodny zniknie po ponownym uruchomieniu komputera. #### Krok 4: Ponowne uruchomienie stacji roboczej
 Aby zmiany weszły w życie, nie musisz szukać zaawansowanych opcji w Panelu sterowaniaczyMenedżerze urządzeń. Po prostu zresetuj komputer w klasyczny sposób przez Menu Start lub wpisz w konsoli:
 ```text
 shutdown /r /t 0

@@ -37,11 +37,7 @@ a: Molti software aziendali e utility avanzate non si sono ancora integrati perf
 
 a: Procedura Passo-Passo
 
-Fortunatamente, non dobbiamo convivere per forza con questa limitazione. Esistono metodi rapidi per ripristinare il comportamento classico o per aggirarlo definitivamente. Vediamo la procedura tramite il Prompt dei comandi (o il Terminale), che è la via più pulita e duratur
-
-a.
-
-<div style="border-left: 4px solid #3b82f6; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
+Fortunatamente, non dobbiamo convivere per forza con questa limitazione. Esistono metodi rapidi per ripristinare il comportamento classico o per aggirarlo definitivamente. Vediamo la procedura tramite il Prompt dei comandi (o il Terminale), che è la via più pulita e duratura. <div style="border-left: 4px solid #3b82f6; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Attenzione:</strong> Questa modifica interviene sul Registro di sistema di Windows. Seguite i passaggi con attenzione senza modificare chiavi non pertinenti.
 </div>
 
@@ -82,11 +78,7 @@ Quando si mettono le mani sul registro di sistema o sulle impostazioni avanzate 
 ## Domande Frequenti (FAQ)
 
 ### Questa modifica è irreversibile o pericolosa per il PC?
-Assolutamente no. Si tratta di una modifica sicura che sfrutta una chiave di registro nativa lasciata aperta da Microsoft proprio per retrocompatibilità. Potete tornare al menu predefinito di Windows 11 in qualsiasi momento cancellando la chiave aggiunt
-
-a.
-
-### Funziona su tutte le versioni di Windows 11?
+Assolutamente no. Si tratta di una modifica sicura che sfrutta una chiave di registro nativa lasciata aperta da Microsoft proprio per retrocompatibilità. Potete tornare al menu predefinito di Windows 11 in qualsiasi momento cancellando la chiave aggiunta. ### Funziona su tutte le versioni di Windows 11?
 Sì, la procedura è testata e funzionante sia su Windows 11 Home che sulle edizioni Pro ed Enterprise, comprese le ultime build aggiornate, sia su architetture basate su processori Intel che AMD.
 
 ### Perdo i miei file o le mie impostazioni personali applicando questo fix?

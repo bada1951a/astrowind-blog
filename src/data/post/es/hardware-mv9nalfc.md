@@ -61,15 +61,9 @@ Si necesitas una limpieza más a fondo a nivel de administrador:
 
 3. En la ventana que aparece, haz clic en el botón inferior que dice Limpiar archivos del sistema. Vuelve a seleccionar la unidad C:.
 
-4. Esta vez, la lista incluirá opciones avanzadas. Marca "Limpieza de actualizaciones de Windows" y "Archivos de instalación temporales de Windows". Haz clic en Aceptar para proceder con la limpieza profund
-
-a.
-
-#### Paso 3: Borrado manual de carpetas temporales ocultas
+4. Esta vez, la lista incluirá opciones avanzadas. Marca "Limpieza de actualizaciones de Windows" y "Archivos de instalación temporales de Windows". Haz clic en Aceptar para proceder con la limpieza profunda. #### Paso 3: Borrado manual de carpetas temporales ocultas
 Si aún necesitas raspar más gigabytes, vamos a limpiar los directorios de usuario manualmente:
-1. Presiona `Windows + R`, escribe `%temp%` y presiona Enter. Se abrirá el Explorador de archivos con una carpeta llena de archivos basur
-
-a.
+1. Presiona `Windows + R`, escribe `%temp%` y presiona Enter. Se abrirá el Explorador de archivos con una carpeta llena de archivos basura.
 
 2. Selecciona todo presionando `Ctrl + A` y elimínalo pulsando `Shift + Supr` (para borrarlo permanentemente sin pasar por la papelera).
 
@@ -84,14 +78,15 @@ a:* Si Windows te avisa que algún archivo está abierto o en uso por un program
 ### Advertencias del experto técnico
 
 <div style="border-left: 4px solid #4338ca; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
-<strong>Precaución vital:</strong> Nunca descargues programas milagrosos de internet que prometen "limpiar el registro con un clic". Muchos de estos programas son adware o pueden corromper rutas críticas del sistema operativo. Utiliza siempre las herramientas nativas de Windows descritas en esta guí
-
-a.
-</div>
+<strong>Precaución vital:</strong> Nunca descargues programas milagrosos de internet que prometen "limpiar el registro con un clic". Muchos de estos programas son adware o pueden corromper rutas críticas del sistema operativo. Utiliza siempre las herramientas nativas de Windows descritas en esta guía. </div>
 
 ---
 
 ### Preguntas frecuentes (FAQ)
 
-¿Es seguro borrar todo lo que aparece en la carpeta Temp? Sí, al 100%. Los archivos dentro de las carpetas Temp son únicamente residuos temporales que los programas ya terminaron de utilizar. Si un archivo está siendo usado activamente por una aplicación abierta, Windows simplemente te impedirá borrarlo, por lo que no hay riesgo de dañar el sistema operativo.¿Por qué mi disco C: se vuelve a llenar solo a los pocos días? Esto suele deberse a descargas pesadas automáticas de actualizaciones de Windows Update o a la caché acumulada de aplicaciones de streaming y navegadores. Te recomiendo revisar periódicamente el Sensor de almacenamiento y configurar tu navegador para que borre los datos de navegación al cerrar.¿Qué hago si después de limpiar sigo sin espacio en el disco C?
+¿Es seguro borrar todo lo que aparece en la carpeta Temp? Sí, al 100%. Los archivos dentro de las carpetas Temp son únicamente residuos temporales que los programas ya terminaron de utilizar. Si un archivo está siendo usado activamente por una aplicación abierta, Windows simplemente te impedirá borrarlo, por lo que no hay riesgo de dañar el sistema operativo.
+
+¿Por qué mi disco C: se vuelve a llenar solo a los pocos días? Esto suele deberse a descargas pesadas automáticas de actualizaciones de Windows Update o a la caché acumulada de aplicaciones de streaming y navegadores. Te recomiendo revisar periódicamente el Sensor de almacenamiento y configurar tu navegador para que borre los datos de navegación al cerrar.
+
+¿Qué hago si después de limpiar sigo sin espacio en el disco C?
 Si ya borraste los temporales y sigues al límite, el siguiente paso lógico es usar una herramienta gratuita y confiable como *WizTree* o *WinDirStat* para visualizar gráficamente qué carpetas o archivos exactos son los que están devorando el almacenamiento de tu equipo, permitiéndote mover archivos personales pesados (como vídeos o fotos) a un disco duro externo o secundario.

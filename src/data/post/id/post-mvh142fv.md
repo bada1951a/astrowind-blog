@@ -35,11 +35,7 @@ Sebelum masuk ke langkah teknis, mari kita bedah tiga penyebab utama kenapa Wind
 
 ### Langkah-Langkah Melacak Penyebab Freeze Lewat Event Viewer
 
-Mari kita bedah kejadian di Sudirman tadi menggunakan langkah-langkah sistematis yang bisa Anda ikuti langsung di meja kerja And
-
-a.
-
-#### Langkah 1: Membuka Event Viewer
+Mari kita bedah kejadian di Sudirman tadi menggunakan langkah-langkah sistematis yang bisa Anda ikuti langsung di meja kerja Anda. #### Langkah 1: Membuka Event Viewer
 1. Klik tombol Startdi Windows 11, ketikEvent Viewer, lalu tekan Enter.
 
 2. Pada panel sebelah kiri, klik dua kali pada Windows Logs, lalu pilihSystem. Di sinilah semua catatan aktivitas hardware dan driver sistem disimpan.
@@ -65,10 +61,7 @@ a:
 * Event ID 4101 (Display): Menandakan driver Display (NVIDIA/AMD/Intel) sempat berhenti merespons dan berhasil dipulihkan (atau gagal total berujung freeze).
 
 <div style="border-left: 4px solid #f59e0b; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
-<strong>Tips Lapangan:</strong> Jika Anda melihat Event ID 4101 secara berulang, segera buka <strong>Device Manager</strong>, lakukan *Clean Install* driver grafis menggunakan DDU (Display Driver Uninstaller). Seringkali masalah selesai seketik
-
-a.
-</div>
+<strong>Tips Lapangan:</strong> Jika Anda melihat Event ID 4101 secara berulang, segera buka <strong>Device Manager</strong>, lakukan *Clean Install* driver grafis menggunakan DDU (Display Driver Uninstaller). Seringkali masalah selesai seketika. </div>
 
 ---
 
@@ -110,6 +103,4 @@ A: Jangan panik. Tidak semua *Error* berakibat fatal. Windows sering kali mencat
 
 Q: Apa yang harus saya lakukan jika Event Viewer hanya menunjukkan Kernel-Power (ID 41) tanpa ada petunjuk error lain sebelumnya?
 
-A: Jika sebelum Event ID 41 sama sekali tidak ada catatan error, besar kemungkinan masalahnya murni bersumber dari suplai daya hardware (Power Supply unit yang mulai melemah, kabel power kendor, atau korsleting listrik eksternal). Cek kestabilan listrik dan kondisi fisik PSU And
-
-a.
+A: Jika sebelum Event ID 41 sama sekali tidak ada catatan error, besar kemungkinan masalahnya murni bersumber dari suplai daya hardware (Power Supply unit yang mulai melemah, kabel power kendor, atau korsleting listrik eksternal). Cek kestabilan listrik dan kondisi fisik PSU Anda. 

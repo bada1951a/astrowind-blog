@@ -13,11 +13,7 @@ Jam sudah menunjukkan pukul 16:50 WIB. Hari Jumat sore, minggu penutupan laporan
 
 Mau teriak tapi malu sama anak-anak *dev* sebelah. Mau reboot paksa sampai lima kali hasilnya tetap sam
 
-a: mesin hidup, angin AC CPU muter kenceng, tapi display nihil. Buat ukuran anak IT lapangan, pemandangan kayak gini tuh udah biasa bikin asam lambung naik seketik
-
-a.
-
-<div style="border-left: 4px solid #84cc16; padding: 12px 16px; margin: 20px 0; background-color: rgba(132, 204, 22, 0.05); border-radius: 4px;">
+a: mesin hidup, angin AC CPU muter kenceng, tapi display nihil. Buat ukuran anak IT lapangan, pemandangan kayak gini tuh udah biasa bikin asam lambung naik seketika. <div style="border-left: 4px solid #84cc16; padding: 12px 16px; margin: 20px 0; background-color: rgba(132, 204, 22, 0.05); border-radius: 4px;">
 <strong>Catatan Firmware & Open Source Hardware:</strong> Panduan ini disusun ala patch firmware darurat. Kita bakal pakai metode diagnostik level rendah, mirip waktu nge-flash ulang BIOS atau nge-check log kernel lewat serial interface. Jangan panik, hardware lama pun kalau "masuk angin" cuma butuh sentuhan mekanis yang pas.
 </div>
 
@@ -29,9 +25,7 @@ Sebelum main bongkar, kita bedah dulu kenapa hardware ini suka bikin darah tingg
 
 1. Oksidasi & Debu Mikro di Kuningan RAM: Udara ruangan kantor yang ber-AC kadang bikin kelembapan terjebak di dalam *casing*. Hasilnya? Lapisan tipis kayak karat putih alias oksidasi nutupin jalur data emas di kepingan RAM (*Golden Finger*). BIOS gagal baca modul memori, alhasil POST (*Power-On Self-Test*) nyangkut di tengah jalan.
 
-2. Slot RAM "Masuk Angin" atau Longgar: Getaran halus dari meja kerja atau kipas *heatsink* yang terlalu berat sering bikin slot DIMM di *motherboard* sedikit melar atau kotor di bagian pin dalamny
-
-a.
+2. Slot RAM "Masuk Angin" atau Longgar: Getaran halus dari meja kerja atau kipas *heatsink* yang terlalu berat sering bikin slot DIMM di *motherboard* sedikit melar atau kotor di bagian pin dalamnya.
 
 3. Static Electricity (Listrik Statis): Sisa-sisa arus listrik yang nongkrong di kapasitor *motherboard* bikin sistem proteksi *power supply* atau chipset nge-lock sinyal display demi keamanan komponen.
 
@@ -78,10 +72,7 @@ Karena kita lagi ngejar deadline mepet, nggak usah pusing buka-buka command prom
 
 <div style="border-left: 4px solid #84cc16; padding: 12px 16px; margin: 20px 0; background-color: rgba(132, 204, 22, 0.05); border-radius: 4px;">
 <strong>Peringatan Keras dari Teknisi:</strong> 
-<br>1. <strong>Wajib Grounding:</strong> Sebelum pegang komponen daleman PC, pegang dulu bagian casing besi yang tidak dicat buat buang listrik statis dari tubuh lo. Kalau tangan lo nyetrum statis ke chip RAM, tamat sudah riwayatny
-
-a.
-<br>2. <strong>Jangan Pakai Cairan Sembarangan:</strong> Buat bersihin kuningan RAM, cukup pakai penghapus karet atau kapas kering beralkohol 90% (isopropil). Jangan pernah pakai air atau minyak kayu putih!
+<br>1. <strong>Wajib Grounding:</strong> Sebelum pegang komponen daleman PC, pegang dulu bagian casing besi yang tidak dicat buat buang listrik statis dari tubuh lo. Kalau tangan lo nyetrum statis ke chip RAM, tamat sudah riwayatnya. <br>2. <strong>Jangan Pakai Cairan Sembarangan:</strong> Buat bersihin kuningan RAM, cukup pakai penghapus karet atau kapas kering beralkohol 90% (isopropil). Jangan pernah pakai air atau minyak kayu putih!
 </div>
 
 ---

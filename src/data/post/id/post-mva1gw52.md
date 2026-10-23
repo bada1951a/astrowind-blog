@@ -9,14 +9,8 @@ theme: "Graphite Technical Paper"
 ---
 
 
-Layar monitor di ruang server kantor kami di kawasan SCBD mendadak menyala merah dengan notifikasi *Low Disk Space* tepat satu jam sebelum *sync-up* mingguan dengan tim manajemen. Laptop operasional salah satu analis data kami ngadat total; sistem Windows 11 menolak membuka aplikasi Excel karena kapasitas Drive C, yang berukuran 512GB NVMe, menyisakan ruang kosong persis 0 bytes. Tidak ada ruang *swap memory*, tidak bisa *save file*, bahkan proses *update* sistem tertahan di tengah jalan. Panik? Sedikit. Tapi sebagai anak IT yang sudah kenyang asam garam menangani kendala server dan sistem internal, saya tahu persis di mana Windows menyembunyikan "sampah" digitalny
-
-a.
-
-<div style="border-left: 4px solid #475569; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
-<strong>Catatan Lapangan IT:</strong> Masalah Drive C penuh di Windows 11 jarang sekali disebabkan oleh dokumen pekerjaan bias
-
-a. 90 persen kasus di lingkungan kantor kami berakar dari tumpukan *cache* aplikasi modern, *installer* sisa pembaruan sistem, dan file sementara (*temp files*) yang dibiarkan menumpuk selama berbulan-bulan.
+Layar monitor di ruang server kantor kami di kawasan SCBD mendadak menyala merah dengan notifikasi *Low Disk Space* tepat satu jam sebelum *sync-up* mingguan dengan tim manajemen. Laptop operasional salah satu analis data kami ngadat total; sistem Windows 11 menolak membuka aplikasi Excel karena kapasitas Drive C, yang berukuran 512GB NVMe, menyisakan ruang kosong persis 0 bytes. Tidak ada ruang *swap memory*, tidak bisa *save file*, bahkan proses *update* sistem tertahan di tengah jalan. Panik? Sedikit. Tapi sebagai anak IT yang sudah kenyang asam garam menangani kendala server dan sistem internal, saya tahu persis di mana Windows menyembunyikan "sampah" digitalnya. <div style="border-left: 4px solid #475569; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
+<strong>Catatan Lapangan IT:</strong> Masalah Drive C penuh di Windows 11 jarang sekali disebabkan oleh dokumen pekerjaan biasa. 90 persen kasus di lingkungan kantor kami berakar dari tumpukan *cache* aplikasi modern, *installer* sisa pembaruan sistem, dan file sementara (*temp files*) yang dibiarkan menumpuk selama berbulan-bulan.
 </div>
 
 ![Tech & IT Solution Guide](https://picsum.photos/seed/computer917/1000/550)
@@ -45,14 +39,7 @@ Daripada mengunduh aplikasi pembersih pihak ketiga yang kadang membawa *bloatwar
 
 * Buka Pengaturan (Settings) dengan menekan kombinasi tombol `Windows + I`.
 * Navigasi ke menu Sistem (System)lalu pilihPenyimpanan (Storage).
-* Nyalakan toggle Storage Sense ke posisi *On*. Fitur ini akan otomatis membersihkan file sementara secara berkal
-
-a.
-* Klik pada opsi Temporary files. Tunggu beberapa saat hingga sistem selesai memindai rincian dat
-
-a.
-
-### Langkah 2: Pembersihan Manual File Temporary yang Bandel
+* Nyalakan toggle Storage Sense ke posisi *On*. Fitur ini akan otomatis membersihkan file sementara secara berkala. * Klik pada opsi Temporary files. Tunggu beberapa saat hingga sistem selesai memindai rincian data. ### Langkah 2: Pembersihan Manual File Temporary yang Bandel
 Terkadang Storage Sense melewatkan beberapa direktori tersembunyi. Kita bisa masuk langsung menggunakan utilitas Run.
 
 * Tekan `Windows + R`, ketik `%temp%` lalu tekan Enter. Ini akan membuka direktori `AppData\Local\Temp`.
@@ -70,11 +57,7 @@ Untuk membersihkan file sisa pembaruan Windows yang tersembunyi, kita butuh hak 
   * *Windows Update Cleanup*
   * *Previous Windows installation(s)*
   * *Temporary files*
-* Klik OK dan biarkan sistem memangkas beban file sampah tersebut. Proses ini bisa memakan waktu 5 hingga 15 menit tergantung kecepatan SSD And
-
-a.
-
----
+* Klik OK dan biarkan sistem memangkas beban file sampah tersebut. Proses ini bisa memakan waktu 5 hingga 15 menit tergantung kecepatan SSD Anda. ---
 
 ## Catatan Penting & Rekomendasi Keamanan
 

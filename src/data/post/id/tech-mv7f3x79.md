@@ -55,11 +55,7 @@ Setiap monitor mengirimkan data EDID yang berisi resolusi native, profil warna, 
 ![Hardware Diagnostic & Troubleshooting](https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe? auto=format&fit=crop&w=1000&h=550&q=80)
 
 ### 2. Tabrakan Driver Hybrid Graphics (iGPU vs dGPU)
-Mayoritas laptop bisnis mengandalkan kombinasi Intel Iris Xe / AMD Radeon Graphics untuk efisiensi daya dan NVIDIA GeForce / RTX untuk komputasi berat. Output fisik HDMI atau DisplayPort lewat USB-C sering kali dialihkan melalui jalur perangkat keras yang diatur oleh iGPU terlebih dahulu. Jika Windows Update mengganti driver display OEM dengan driver generik tanpa memperbarui subsistem dGPU, sinkronisasi *frame buffer* gagal, menghasilkan fenomena *blackout* 1–2 detik secara berkal
-
-a.
-
-### 3. Degradasi Bandwidth Jalur Transmisi dan Handshake HDCP
+Mayoritas laptop bisnis mengandalkan kombinasi Intel Iris Xe / AMD Radeon Graphics untuk efisiensi daya dan NVIDIA GeForce / RTX untuk komputasi berat. Output fisik HDMI atau DisplayPort lewat USB-C sering kali dialihkan melalui jalur perangkat keras yang diatur oleh iGPU terlebih dahulu. Jika Windows Update mengganti driver display OEM dengan driver generik tanpa memperbarui subsistem dGPU, sinkronisasi *frame buffer* gagal, menghasilkan fenomena *blackout* 1–2 detik secara berkala. ### 3. Degradasi Bandwidth Jalur Transmisi dan Handshake HDCP
 Penggunaan monitor dengan resolusi tinggi (1440p atau 4K) membutuhkan stabilitas sinyal tanpa celah. Kabel HDMI/DP yang tidak memenuhi rating bandwidth (misalnya kabel HDMI High Speed standar digunakan untuk refresh rate 144Hz atau protokol HDR) akan mengalami *packet drop*. Ketika paket autentikasi HDCP (*High-bandwidth Digital Content Protection*) gagal diverifikasi dalam interval waktu tertentu, monitor akan memutus sinyal demi proteksi konten.
 
 ---
@@ -71,9 +67,7 @@ Ikuti urutan langkah di bawah ini secara runut, mulai dari perbaikan non-invasif
 ### Langkah 1: Eksekusi Reset Subsistem Grafis Instan
 Sebelum membongkar konfigurasi sistem, picu restart pada *Desktop Window Manager* dan driver display tanpa me-reboot komputer.
 
-1. Pastikan monitor eksternal dalam posisi terhubung dan menyal
-
-a.
+1. Pastikan monitor eksternal dalam posisi terhubung dan menyala.
 
 2. Tekan kombinasi tombol pintas secara bersamaan:  
    `Win` + `Ctrl` + `Shift` + `B`
@@ -104,11 +98,7 @@ a:
 
 5. Jangan khawatir, folder-folder ini aman dihapus karena Windows akan otomatis membuatnya kembali dalam kondisi default (*fresh*) begitu sistem mendeteksi layar aktif.
 
-6. Lakukan *restart* laptop And
-
-a.
-
-```
+6. Lakukan *restart* laptop Anda. ```
 [GraphicsDrivers Registry Hierarchy]
 └── GraphicsDrivers
     ├── Configuration  ───> [HAPUS UNTUK RESET PROFIL DISPLAY]
@@ -147,9 +137,7 @@ Device Manager
 ```
 
 ### Langkah 4: Sinkronisasi Refresh Rate dan Matikan Variable Refresh Rate (VRR)
-Flickering parah sering kali bersumber dari ketidakcocokan frekuensi transmisi sinyal (*refresh rate*) atau fitur Variable Refresh Rate (G-Sync/FreeSync) yang mencoba berjalan pada monitor kerja bias
-
-a.
+Flickering parah sering kali bersumber dari ketidakcocokan frekuensi transmisi sinyal (*refresh rate*) atau fitur Variable Refresh Rate (G-Sync/FreeSync) yang mencoba berjalan pada monitor kerja biasa.
 
 1. Buka SettingsWindows (`Win` + `I`) >System>Display.
 

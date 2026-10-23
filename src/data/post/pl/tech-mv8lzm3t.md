@@ -13,10 +13,7 @@ Godzina 8:52 rano. Za acht minut mam mieć gotowy raport dla zarządu i rzuconeg
 
 <div style="border-left: 4px solid #ef4444; padding: 12px 16px; margin: 20px 0; background-color: rgba(239, 68, 68, 0.05); border-radius: 4px;">
 <strong>STATUS AWARYJNY: KRYTYCZNY SPADEK WYDAJNOŚCI</strong><br>
-Jeśli Twój system startuje dłużej niż parzenie porannej kawy, oznacza to, że Twoja pamięć operacyjna i podsystem dyskowy są dosłownie dławione przez zombie-procesy działające w tle od samego momentu włączenia komputer
-
-a.
-</div>
+Jeśli Twój system startuje dłużej niż parzenie porannej kawy, oznacza to, że Twoja pamięć operacyjna i podsystem dyskowy są dosłownie dławione przez zombie-procesy działające w tle od samego momentu włączenia komputera. </div>
 
 ![Hardware Diagnostic & Troubleshooting](https://picsum.photos/seed/hardware-907/1000/550)
 
@@ -40,20 +37,12 @@ Zanim przejdziemy do chirurgicznego usuwania problemów, ustalmy, dlaczego Twój
 
 a: Krok po Kroku do Wolności
 
-Odrzucamy wszelkie szemrane programy "szuwarek-optimizer" z internetu. Zrobimy to jak profesjonalni inżynierowie wsparcia – szybko, czysto i za pomocą wbudowanych narzędzi Windows
-
-a.
-
-### Krok 1: Oczyszczanie Menedżera Zadania (Task Manager)
-Zapomnij o starym `msconfig`. Od czasów Windows 10 i 11 mamy do dyspozycji dedykowaną zakładkę w Menedżerze Zadań, która bezlitośnie obnaża zasobożerność starter
-
-a.
+Odrzucamy wszelkie szemrane programy "szuwarek-optimizer" z internetu. Zrobimy to jak profesjonalni inżynierowie wsparcia – szybko, czysto i za pomocą wbudowanych narzędzi Windowsa. ### Krok 1: Oczyszczanie Menedżera Zadania (Task Manager)
+Zapomnij o starym `msconfig`. Od czasów Windows 10 i 11 mamy do dyspozycji dedykowaną zakładkę w Menedżerze Zadań, która bezlitośnie obnaża zasobożerność startera.
 
 1. Wciśnij skrót klawiszowy Ctrl + Shift + Esc, aby natychmiast uruchomićMenedżer zadań.
 
-2. Jeśli widzisz uproszczony widok, kliknij Więcej szczegółów na dole okn
-
-a.
+2. Jeśli widzisz uproszczony widok, kliknij Więcej szczegółów na dole okna.
 
 3. Przejdź do zakładki z ikoną licznika/miernika – Aplikacje startowe (lub *Autostart* w starszych wersjach).
 
@@ -87,9 +76,7 @@ Jeśli standardowy interfejs zawodzi albo podejrzewasz, że w systemie siedzi uk
    ```
 
 ### Krok 3: Harmonogram Zadań (Task Scheduler) – Ukryte Zło
-Wielu cwaniaków w branży oprogramowania omija autostart rejestru i wrzuca swoje procesy bezpośrednio do Harmonogramu Zadań, żeby uruchamiały się po zalogowaniu użytkownik
-
-a.
+Wielu cwaniaków w branży oprogramowania omija autostart rejestru i wrzuca swoje procesy bezpośrednio do Harmonogramu Zadań, żeby uruchamiały się po zalogowaniu użytkownika.
 
 1. Wciśnij Win + R, wpisz `taskschd.msc` i zatwierdź Enterem.
 

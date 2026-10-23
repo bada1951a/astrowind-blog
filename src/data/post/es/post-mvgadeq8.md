@@ -33,9 +33,7 @@ Antes de aplicar la solución, es bueno entender qué provocó el fallo en nuest
 
 1. Pérdida temporal de conexión con el servidor KMS: En entornos corporativos, las licencias por volumen se validan periódicamente contra un servidor interno. Si el equipo pierde contacto por VPN o red local, salta la alerta visual.
 
-2. Actualización acumulativa reciente: Ciertos paquetes de actualización de Windows Update (como los parches de seguridad mensuales) reinician los servicios de licencias y fuerzan la revalidación del estado del sistem
-
-a.
+2. Actualización acumulativa reciente: Ciertos paquetes de actualización de Windows Update (como los parches de seguridad mensuales) reinician los servicios de licencias y fuerzan la revalidación del estado del sistema.
 
 3. Cambios en componentes de hardware:Una sustitución reciente de placa base o tarjeta de red en elAdministrador de dispositivos puede invalidar el token de activación digital guardado en el equipo.
 
@@ -48,9 +46,7 @@ Para solucionar este inconveniente sin instalar herramientas peligrosas, vamos a
 #### Paso 1: Abrir la consola con privilegios de administrador
 1. Dirígete al menú de inicio de Windows.
 
-2. Escribe `cmd` en la barra de búsqued
-
-a.
+2. Escribe `cmd` en la barra de búsqueda.
 
 3. Haz clic derecho sobre Símbolo del sistemay selecciona "Ejecutar como administrador" (es vital tener permisos elevados para modificar los servicios del sistema).
 
@@ -75,11 +71,7 @@ slmgr -rearm
 a: Si te sale un mensaje indicando que el comando se ejecutó con éxito, aparecerá una ventana emergente indicando que debes reiniciar el equipo.*
 
 #### Paso 4: Reiniciar el equipo de forma limpia
-No cierres el día operativo sin hacer un reinicio completo. Ve a Configuración > Inicio/Apagado > Reiniciar. Al volver a encender la máquina, el servicio se reiniciará de forma limpia y la molesta marca de agua habrá desaparecido, permitiéndote trabajar con la pantalla despejad
-
-a.
-
----
+No cierres el día operativo sin hacer un reinicio completo. Ve a Configuración > Inicio/Apagado > Reiniciar. Al volver a encender la máquina, el servicio se reiniciará de forma limpia y la molesta marca de agua habrá desaparecido, permitiéndote trabajar con la pantalla despejada. ---
 
 ### Consejos del técnico de soporte
 
@@ -91,5 +83,9 @@ a.
 
 ### Preguntas Frecuentes (FAQ)
 
-¿Este método borra o desactiva permanentemente mi licencia oficial? No. Este procedimiento únicamente reinicia el servicio de evaluación visual y el contador de licencias del sistema operativo. Si tu equipo cuenta con una licencia legítima vinculada a la BIOS o a tu cuenta corporativa, Windows volverá a validarse correctamente en cuanto recupere la conexión con el servidor de licencias.¿Qué pasa si al ejecutar el comando `slmgr -rearm` me da un error de acceso denegado? Significa que no abriste la consola como administrador. Vuelve al menú de inicio, busca el Símbolo del sistema y asegúrate de hacer clic derecho y elegir "Ejecutar como administrador" antes de volver a escribir las líneas de comando.¿Puedo usar este truco en Windows 10 y Windows 11 indistintamente?
+¿Este método borra o desactiva permanentemente mi licencia oficial? No. Este procedimiento únicamente reinicia el servicio de evaluación visual y el contador de licencias del sistema operativo. Si tu equipo cuenta con una licencia legítima vinculada a la BIOS o a tu cuenta corporativa, Windows volverá a validarse correctamente en cuanto recupere la conexión con el servidor de licencias.
+
+¿Qué pasa si al ejecutar el comando `slmgr -rearm` me da un error de acceso denegado? Significa que no abriste la consola como administrador. Vuelve al menú de inicio, busca el Símbolo del sistema y asegúrate de hacer clic derecho y elegir "Ejecutar como administrador" antes de volver a escribir las líneas de comando.
+
+¿Puedo usar este truco en Windows 10 y Windows 11 indistintamente?
 Sí, el administrador de licencias (`slmgr`) y la gestión de servicios mediante comandos CMD funcionan exactamente igual tanto en entornos de Windows 10 como en las versiones más recientes de Windows 11 utilizadas en oficinas y estaciones de trabajo profesionales.

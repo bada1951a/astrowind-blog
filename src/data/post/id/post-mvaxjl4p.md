@@ -31,15 +31,9 @@ a:
 
 1. Aplikasi "Numpang Nyala" Otomatis: Banyak aplikasi seperti Steam, Spotify, Discord, hingga aplikasi kantor seperti Teams dan OneDrive yang secara *default* mencentang opsi "Run at startup" saat instalasi.
 
-2. Kapasitas Penyimpanan Terbebani: Jika laptop Anda masih menggunakan Hard Disk lama (HDD) alih-alih SSD, antrean baca tulis saat *booting* akan membuat sistem *not responding* dalam waktu lam
+2. Kapasitas Penyimpanan Terbebani: Jika laptop Anda masih menggunakan Hard Disk lama (HDD) alih-alih SSD, antrean baca tulis saat *booting* akan membuat sistem *not responding* dalam waktu lama.
 
-a.
-
-3. Pemeriksaan Keamanan Berlebihan: Antivirus pihak ketiga yang langsung melakukan pemindaian menyeluruh (*full system scan*) setiap kali komputer baru menyal
-
-a.
-
----
+3. Pemeriksaan Keamanan Berlebihan: Antivirus pihak ketiga yang langsung melakukan pemindaian menyeluruh (*full system scan*) setiap kali komputer baru menyala. ---
 
 ### Panduan Praktis: Matikan Aplikasi Startup dalam 1 Menit
 
@@ -57,10 +51,7 @@ Anda akan melihat daftar panjang aplikasi yang berjalan otomatis. Cari aplikasi 
 * Pilih Disable.
 
 <div style="border-left: 4px solid #f97316; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
-<strong>Tips Pro:</strong> Perhatikan kolom <strong>Startup impact</strong>. Prioritaskan untuk mematikan aplikasi yang memiliki dampak <em>High</em> (Tinggi) agar performa <em>booting</em> langsung terasa peningkatanny
-
-a.
-</div>
+<strong>Tips Pro:</strong> Perhatikan kolom <strong>Startup impact</strong>. Prioritaskan untuk mematikan aplikasi yang memiliki dampak <em>High</em> (Tinggi) agar performa <em>booting</em> langsung terasa peningkatannya. </div>
 
 ---
 

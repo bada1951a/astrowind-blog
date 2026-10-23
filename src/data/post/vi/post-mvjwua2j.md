@@ -88,9 +88,7 @@ a: Tránh tải các phần mềm "Driver Updater" trôi nổi trên mạng vì 
 
 1. Tôi đã thử mọi cách trên Device Manager nhưng vẫn không thấy hiển thị thiết bị âm thanh nào ngoài dấu chéo đỏ, phải làm sao? Hiện tượng này thường do chip âm thanh trên bo mạch chủ (Mainboard) bị treo phần cứng hoặc BIOS vô tình tắt tính năng Audio. Hãy thử tắt hẳn máy (Shutdown hoàn toàn, giữ phím Shift khi bấm Shutdown), đợi 10 giây rồi bật lại. Nếu vẫn không được, bạn cần kỹ thuật viên kiểm tra lại BIOS hoặc phần cứng.
 
-2. Tại sao tai nghe Bluetooth của tôi vẫn kết nối nhưng không nghe được âm thanh trên Windows 11? Lỗi này thường do Windows tách biệt âm thanh cuộc gọi (Calls) và âm thanh giải trí (Music). Hãy vàoCài đặt(Settings) ->Bluetooth & thiết bị(Bluetooth & devices), ngắt kết nối (Disconnect) và kết nối lại tai nghe. Đồng thời kiểm tra trong mục Sound Output xem đã chọn đúng profile âm thanh của tai nghe chư
-
-a.
+2. Tại sao tai nghe Bluetooth của tôi vẫn kết nối nhưng không nghe được âm thanh trên Windows 11? Lỗi này thường do Windows tách biệt âm thanh cuộc gọi (Calls) và âm thanh giải trí (Music). Hãy vàoCài đặt(Settings) ->Bluetooth & thiết bị(Bluetooth & devices), ngắt kết nối (Disconnect) và kết nối lại tai nghe. Đồng thời kiểm tra trong mục Sound Output xem đã chọn đúng profile âm thanh của tai nghe chưa.
 
 3. Sau mỗi lần cập nhật Windows là máy tôi lại mất âm thanh, có cách nào ngăn chặn triệt để không?
 Bạn có thể tạm dừng cập nhật Windows trong một khoảng thời gian nhất định hoặc sử dụng công cụ ẩn bản cập nhật driver cụ thể của Microsoft để tránh việc hệ thống tự động đè driver âm thanh cũ vốn đang hoạt động ổn định.

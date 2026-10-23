@@ -34,11 +34,7 @@ Prima di mettere mano al sistema, capiamo cosa sta intasando la nostra unità pr
 
 3. Cartella Download dimenticat
 
-a: Può sembrare banale, ma centinaia di utenti accumulano file ISO, archivi ZIP enormi e installativi nella cartella Download senza mai svuotarl
-
-a.
-
----
+a: Può sembrare banale, ma centinaia di utenti accumulano file ISO, archivi ZIP enormi e installativi nella cartella Download senza mai svuotarla. ---
 
 ### Procedura passo-passo per la pulizia profonda
 

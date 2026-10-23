@@ -48,9 +48,7 @@ net stop cryptSvc
 net stop bits
 net stop msiserver
 ```
-*Isso garante que nenhum arquivo do sistema esteja em uso enquanto limpamos a bagunç
-
-a.*
+*Isso garante que nenhum arquivo do sistema esteja em uso enquanto limpamos a bagunça. *
 
 ### Passo 2: Renomear a pasta de cache (SoftwareDistribution)
 Ainda no Prompt de Comando, vamos renomear a pasta onde ficam os arquivos corrompidos para forçar o Windows a criar uma nova do zero limpinh
@@ -72,11 +70,7 @@ net start bits
 net start msiserver
 ```
 
-Feche a janela do terminal, reinicie o computador normalmente através das Configurações>Energia>Reiniciar, e verifique se o Windows 11 conclui a aplicação dos pacotes pendentes de forma limp
-
-a.
-
----
+Feche a janela do terminal, reinicie o computador normalmente através das Configurações>Energia>Reiniciar, e verifique se o Windows 11 conclui a aplicação dos pacotes pendentes de forma limpa. ---
 
 ## Recomendações de Segurança e Boas Práticas
 
@@ -92,18 +86,10 @@ a.
 ## Perguntas Frequentes (FAQ)
 
 ### 1. Se eu desligar o computador no botão físico enquanto está em 100%, vou perder meus arquivos?
-Na maioria das vezes, seus arquivos pessoais (documentos, fotos) ficam seguros nas pastas de usuário. No entanto, o sistema operacional pode corromper arquivos de registro, exigindo reparo de inicialização ou o procedimento de limpeza de cache que mostramos neste gui
-
-a.
-
-
-
-![Tech & IT Solution Guide](https://picsum.photos/seed/computer725/1000/550)
+Na maioria das vezes, seus arquivos pessoais (documentos, fotos) ficam seguros nas pastas de usuário. No entanto, o sistema operacional pode corromper arquivos de registro, exigindo reparo de inicialização ou o procedimento de limpeza de cache que mostramos neste guia. ![Tech & IT Solution Guide](https://picsum.photos/seed/computer725/1000/550)
 
 ### 2. Posso apagar totalmente a pasta SoftwareDistribution.old depois que o PC ligar?
 Sim. Depois que o Windows iniciar normalmente e você verificar que tudo está funcionando e atualizado, você pode deletar a pasta `SoftwareDistribution.old` para liberar espaço em disco (pode ser necessário usar a limpeza de disco do sistema para permissões).
 
 ### 3. Por que isso acontece com tanta frequência no Windows 11?
-O Windows 11 gerencia pacotes cumulativos grandes e complexos. Quedas mínimas de conexão durante o download em segundo plano ou oscilações de energia no SSD durante a gravação final geram bits corrompidos que confundem o assistente de instalação. Manter o SSD saudável e usar uma conexão de internet estável minimiza drasticamente o problem
-
-a.
+O Windows 11 gerencia pacotes cumulativos grandes e complexos. Quedas mínimas de conexão durante o download em segundo plano ou oscilações de energia no SSD durante a gravação final geram bits corrompidos que confundem o assistente de instalação. Manter o SSD saudável e usar uma conexão de internet estável minimiza drasticamente o problema. 

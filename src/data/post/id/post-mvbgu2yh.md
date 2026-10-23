@@ -12,10 +12,7 @@ theme: "Nordic Clean Ice"
 Jam menunjukkan pukul 09:15 pagi di kantor *startup* teknologi kami di kawasan SCBD, Jakarta. Grup Slack internal mendadak ramai oleh laporan tim operasional yang panik karena *taskbar* Windows 11 di laptop mereka mendadak membeku (*freeze*). Tombol Start tidak merespons, ikon aplikasi di bilah bawah tidak bisa diklik, dan mengeklik *system tray* sama sekali tidak membawa hasil. Padahal, rapat sinkronisasi server dan *deployment* sistem internal klien harus segera berjalan dalam waktu kurang dari setengah jam. Panik sempat melanda sejenak sebelum akhirnya kami mengeksekusi langkah-langkah pemulihan standar operasional IT yang cepat dan efektif.
 
 <div style="border-left: 4px solid #0284c7; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
-<strong>Catatan Lapangan IT:</strong> Masalah taskbar Windows 11 yang tidak merespons jarang sekali disebabkan oleh kerusakan permanen pada sistem operasi. Seringkali, masalah ini berakar dari proses antarmuka grafis yang mengalami *hang* atau konflik *cache* sementar
-
-a.
-</div>
+<strong>Catatan Lapangan IT:</strong> Masalah taskbar Windows 11 yang tidak merespons jarang sekali disebabkan oleh kerusakan permanen pada sistem operasi. Seringkali, masalah ini berakar dari proses antarmuka grafis yang mengalami *hang* atau konflik *cache* sementara. </div>
 
 ![Tech & IT Solution Guide](https://picsum.photos/seed/computer612/1000/550)
 
@@ -59,11 +56,7 @@ Jika langkah pertama belum membuahkan hasil, kita perlu mendaftarkan ulang kompo
 
 4. Salin dan tempel perintah pemulihan berikut ke dalam jendela Command Prompt, lalu tekan Enter:
    `Get-AppXPackage -AllUsers | Foreach {Add-AppxPackage -DisableDevelopmentMode -Register "(_.InstallLocation)\AppXManifest.xml"}`
-5. Biarkan proses berjalan hingga selesai, lalu *restart* perangkat komputer And
-
-a.
-
-### Langkah 3: Memeriksa Pembaruan Sistem dan Driver Grafis
+5. Biarkan proses berjalan hingga selesai, lalu *restart* perangkat komputer Anda. ### Langkah 3: Memeriksa Pembaruan Sistem dan Driver Grafis
 Terkadang, ketidakcocokan antara *driver* grafis bawaan dengan pembaruan kumulatif Windows memicu *freeze* pada bilah tugas.
 
 1. Buka menu Pengaturan (Settings)dengan menekan tombolWindows + I.

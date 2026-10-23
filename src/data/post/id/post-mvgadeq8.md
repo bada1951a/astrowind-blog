@@ -27,21 +27,14 @@ Sebelum kita eksekusi kodenya, mari kita pahami dulu tiga akar penyebab utama ke
 
 2. Update Windows Otomatis Mereset Status Lisensi: Seringkali patch keamanan terbaru dari Microsoft mereset *cache* status aktivasi, terutama jika lisensi sebelumnya menggunakan jalur aktivasi OEM yang mulai 'lelah'.
 
-3. Perubahan Hardware Signifikan: Pergantian komponen mendadak (misalnya SSD NVMe baru atau penggantian motherboard oleh tim IT sebelumnya) membuat algoritma keamanan Windows mengira ini adalah unit PC yang berbed
-
-a.
-
----
+3. Perubahan Hardware Signifikan: Pergantian komponen mendadak (misalnya SSD NVMe baru atau penggantian motherboard oleh tim IT sebelumnya) membuat algoritma keamanan Windows mengira ini adalah unit PC yang berbeda. ---
 
 ## Langkah-Langkah Eksekusi: Menghilangkan Watermark via CMD
 
 Mari kita selesaikan masalah ini langsung dari balik layar sistem operasi menggunakan hak akses tertinggi. Ikuti langkah-langkah di bawah ini secara teliti:
 
 ### Langkah 1: Buka Command Promptsebagai Administrator
-* Klik tombol Start di pojok kiri bawah atau tekan tombol Windows di keyboard And
-
-a.
-* Ketik `cmd` di kolom pencarian.
+* Klik tombol Start di pojok kiri bawah atau tekan tombol Windows di keyboard Anda. * Ketik `cmd` di kolom pencarian.
 * Jangan langsung di-klik biasa. Klik kanan pada aplikasi Command Prompt, lalu pilihRun as administrator. 
 * Jika muncul jendela konfirmasi User Account Control (UAC), klik Yes.
 
@@ -74,10 +67,7 @@ PC Anda akan melakukan *reboot* secara otomatis dalam hitungan detik. Nyala kemb
 ## Tips Keamanan & Saran Pakar Infrastruktur IT
 
 <div style="border-left: 4px solid #3b82f6; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
-<strong>Peringatan Penting:</strong> Perintah <code>slmgr -rearm</code> adalah fitur resmi dari Microsoft untuk memperpanjang masa evaluasi sistem. Namun, trik ini memiliki batas penggunaan (umumnya hingga 3-4 kali). Ini adalah solusi darurat kantor, bukan solusi permanen selamany
-
-a.
-</div>
+<strong>Peringatan Penting:</strong> Perintah <code>slmgr -rearm</code> adalah fitur resmi dari Microsoft untuk memperpanjang masa evaluasi sistem. Namun, trik ini memiliki batas penggunaan (umumnya hingga 3-4 kali). Ini adalah solusi darurat kantor, bukan solusi permanen selamanya. </div>
 
 * Amankan Data Dahulu: Jangan pernah menggunakan software aktivator pihak ketiga sembarangan yang beredar di internet saat jam genting. Risiko infeksi *ransomware* atau *malware* pencuri data jauh lebih berbahaya daripada sekadar ada tulisan transparan di layar.
 * Lapor ke Tim Helpdesk Internal: Setelah tenggat waktu laporan Anda selesai dan situasi sudah aman, segera laporkan nomor inventaris PC Anda ke departemen IT internal agar lisensi digital korporat bisa diinjeksikan secara permanen melalui KMS server resmi perusahaan.

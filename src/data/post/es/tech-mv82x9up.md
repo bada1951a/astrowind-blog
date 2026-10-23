@@ -51,11 +51,7 @@ a:<br>
 #### Paso 1: Extracción y limpieza quirúrgica de los módulos
 Abre el chasis. Presiona las pestañas de seguridad de los extremos de la ranura RAM y saca los módulos con cuidado. 
 * Pásale una goma de borrar blanca suavemente por los contactos dorados (pines) de la RAM para quitar la capa de grasa y óxido. 
-* Elimina los residuos de goma con un pincel antiestático o aire comprimido. Nunca toques los circuitos integrados (chips negros) con los dedos descalzos si hay riesgo estátic
-
-a.
-
-#### Paso 2: Limpieza de slots (Zócalos DIMM)
+* Elimina los residuos de goma con un pincel antiestático o aire comprimido. Nunca toques los circuitos integrados (chips negros) con los dedos descalzos si hay riesgo estática. #### Paso 2: Limpieza de slots (Zócalos DIMM)
 Usa aire comprimido en spray para soplar dentro de las ranuras de la placa base. A veces hay acumulaciones de pelusa que impiden que el módulo entre hasta el fondo.
 
 #### Paso 3: Prueba de aislamiento y reubicación
@@ -94,7 +90,7 @@ Q1: ¿Por qué el PC enciende (giran los ventiladores y encienden luces) pero la
 Q2: ¿Puedo mezclar memorias RAM de diferentes marcas o frecuencias si una falló?  
 *R:* Para probar y salir del paso en una emergencia, sí, el sistema suele arrancar ajustándose a la frecuencia y latencias del módulo más lento. Sin embargo, para entornos de producción estables, es altamente recomendable usar módulos idénticos (mismo kit, frecuencia y latencia) para evitar pantallas azules (*BSOD*) por desincronización del controlador de memoria.
 
-Q3: Limpié los contactos, cambié de slot y sigue sin dar vídeo. ¿Qué sigue?  
-*R:* Si ya descartaste la RAM, el siguiente sospechoso en la línea de fuego es la fuente de alimentación (que no entrega suficiente voltaje en el riel de 12V para la gráfica o el procesador) o un problema de cortocircuito en los Standoffs (separadores) de la placa base con el chasis. Desconecta todo lo secundario y prueba hacer un *Clear CMOS* para resetear la BIOS a fábric
+Q3: Limpié los contactos, cambié de slot y sigue sin dar vídeo.
 
-a.
+¿Qué sigue?  
+*R:* Si ya descartaste la RAM, el siguiente sospechoso en la línea de fuego es la fuente de alimentación (que no entrega suficiente voltaje en el riel de 12V para la gráfica o el procesador) o un problema de cortocircuito en los Standoffs (separadores) de la placa base con el chasis. Desconecta todo lo secundario y prueba hacer un *Clear CMOS* para resetear la BIOS a fábrica. 

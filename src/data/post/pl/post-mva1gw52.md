@@ -25,17 +25,9 @@ Zanim przejdziemy do klikania, warto zrozumieć, dlaczego Windows 11 tak szybko 
 
 *   Pozostałości po aktualizacjach i folder Windows.old: System trzyma kopie zapasowe poprzedniej wersji przez 10 dni na wypadek awarii, co potrafi zająć od 15 do nawet 30 GB.
 *   Ukryte pliki Temp i pamięć podręczna aplikacji: Programy takie jak Teams, Slack czy przeglądarki zostawiają gigabajty danych w folderach `AppData`, do których rzadko zaglądamy.
-*   Punkty przywracania systemu (System Restore): Automatyczne snapshotsy potrafią w tle pożreć przydzieloną pulę gigabajtów bez wiedzy użytkownik
+*   Punkty przywracania systemu (System Restore): Automatyczne snapshotsy potrafią w tle pożreć przydzieloną pulę gigabajtów bez wiedzy użytkownika. ## Krok po kroku: Jak bezpiecznie odzyskać przestrzeń
 
-a.
-
-## Krok po kroku: Jak bezpiecznie odzyskać przestrzeń
-
-Nie musisz instalować żadnych podejrzanych programów "optymalizujących", które często przynoszą więcej szkody niż pożytku. Windows 11 ma do tego świetne, wbudowane narzędzi
-
-a.
-
-### 1. Użycie funkcji "Czyszczenie pamięci" (Storage Sense)
+Nie musisz instalować żadnych podejrzanych programów "optymalizujących", które często przynoszą więcej szkody niż pożytku. Windows 11 ma do tego świetne, wbudowane narzędzia. ### 1. Użycie funkcji "Czyszczenie pamięci" (Storage Sense)
 Wejdź w menu Ustawienia(skrót Windows + I), przejdź do zakładkiSystem, a następniePamięć. 
 - Kliknij na Pliki tymczasowe.
 - System chwilę skanuje dysk w poszukiwaniu zbędnych danych.
@@ -47,10 +39,7 @@ Wejdź w menu Ustawienia(skrót Windows + I), przejdź do zakładkiSystem, a nas
 ![Tech & IT Solution Guide](https://picsum.photos/seed/computer844/1000/550)
 
 ### 2. Ręczne czyszczenie folderu Temp przez okno Uruchom
-Często instalatory programów zostawiają śmieci w folderach użytkownik
-
-a.
-- Wciśnij kombinację klawiszy Windows + R, wpisz `%temp%` i wciśnij Enter.
+Często instalatory programów zostawiają śmieci w folderach użytkownika. - Wciśnij kombinację klawiszy Windows + R, wpisz `%temp%` i wciśnij Enter.
 - Zaznacz wszystko (Ctrl + A) i wciśnijShift + Delete (by ominąć Kosz).
 - *Uwag
 

@@ -22,10 +22,7 @@ In dit incidentenlogboek neem ik je mee langs de exacte diagnostische stappen en
 Wanneer een laptop via USB-C, HDMI of DisplayPort een extern scherm aanstuurt, is er sprake van een constante, bi-directionele communicatiestroom tussen de embedded controller (EC), de geïntegreerde GPU (zoals Intel Iris Xe of AMD Radeon Graphics), de discrete GPU (NVIDIA RTX / AMD Radeon Pro) en de beeldschermscaler. 
 
 <div style="border-left: 4px solid #1d4ed8; padding: 14px 18px; margin: 20px 0; background-color: rgba(29, 78, 216, 0.05); border-radius: 4px;">
-  <strong>Systeembeheerdersnotitie:</strong> Een extern beeldscherm dat periodiek op zwart springt (elke 3 tot 10 seconden), duidt in de regel op een time-out in de HDCP-authenticatie of een signaalstroom die de bandbreedtecapaciteit overschrijdt. Een monitor die direct overgaat in stand-by met de melding "Geen signaal" kampt vrijwel altijd met een mislukte EDID-uitlezing door een geblokkeerd stuurprogramm
-
-a.
-</div>
+  <strong>Systeembeheerdersnotitie:</strong> Een extern beeldscherm dat periodiek op zwart springt (elke 3 tot 10 seconden), duidt in de regel op een time-out in de HDCP-authenticatie of een signaalstroom die de bandbreedtecapaciteit overschrijdt. Een monitor die direct overgaat in stand-by met de melding "Geen signaal" kampt vrijwel altijd met een mislukte EDID-uitlezing door een geblokkeerd stuurprogramma. </div>
 
 #### 1. DCH-Driverconflicten door Geforceerde Windows Update-overschrijvingen
 Het grootste pijnpunt in moderne Windows-omgevingen is de automatische vervanging van specifieke OEM-videodrivers door generieke stuurprogramma's via Windows Update. Als Windows een generieke Intel- of AMD-driver over een door de fabrikant (Lenovo, Dell, HP) geoptimaliseerde driver heen installeert, ontstaat er een incompatibiliteit tussen de stroombeheerfuncties van het moederbord en de DisplayPort Alternate Mode (DP Alt Mode) van de USB-C-controller. Het resultaat is dat de GPU de aangesloten monitor niet langer herkent zodra de PCIe-link naar een lagere energiebeheermodus (C-state) schakelt.

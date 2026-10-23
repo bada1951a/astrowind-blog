@@ -73,5 +73,9 @@ Para evitar que este susto se repita en mitad de un despliegue importante, te su
 
 ## Preguntas Frecuentes (FAQ)
 
-¿Pierdo datos personales o aplicaciones instaladas al renombrar SoftwareDistribution? No. Esta carpeta almacena únicamente los paquetes temporales de instalación descargados desde los servidores de Microsoft. Tus documentos, programas y configuraciones de usuario permanecen completamente intactos.¿Qué hago si el comando `net stop wuauserv` se queda en "El servicio se está deteniendo..." indefinidamente? Es un síntoma clásico de que un subproceso se ha quedado colgado en el Kernel. La solución más rápida es abrir el Administrador de tareas (Ctrl + Shift + Esc), buscar el proceso de Windows Update en la pestaña Detalles, hacer clic derecho y seleccionarFinalizar árbol de procesos.¿Es seguro eliminar las carpetas `.bak` que hemos creado?
+¿Pierdo datos personales o aplicaciones instaladas al renombrar SoftwareDistribution? No. Esta carpeta almacena únicamente los paquetes temporales de instalación descargados desde los servidores de Microsoft. Tus documentos, programas y configuraciones de usuario permanecen completamente intactos.
+
+¿Qué hago si el comando `net stop wuauserv` se queda en "El servicio se está deteniendo..." indefinidamente? Es un síntoma clásico de que un subproceso se ha quedado colgado en el Kernel. La solución más rápida es abrir el Administrador de tareas (Ctrl + Shift + Esc), buscar el proceso de Windows Update en la pestaña Detalles, hacer clic derecho y seleccionarFinalizar árbol de procesos.
+
+¿Es seguro eliminar las carpetas `.bak` que hemos creado?
 Sí, pero te recomiendo esperar un par de días y comprobar que tu sistema arranca, apaga y actualiza sin problemas antes de borrarlas definitivamente para liberar espacio en el disco C.

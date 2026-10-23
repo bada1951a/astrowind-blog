@@ -33,11 +33,7 @@ W architekturze hybrydowej wyjścia wideo USB-C/DisplayPort fizycznie przechodz�
 ![Hardware Diagnostic & Troubleshooting](https://images.unsplash.com/photo-1504384308090-c894fdcc538d? auto=format&fit=crop&w=1000&h=550&q=80)
 
 ### 2. Timeout mechanizmu TDR w jądrze `dxgkrnl.sys`
-Podsystem graficzny DirectX monitoruje czas odpowiedzi karty. Jeśli kontroler DisplayPort Alternate Mode lub transceiver stacji dokującej opóźni handshake EDID o więcej niż 2 sekundy podczas negocjacji szyfrowania HDCP, jądro systemu uznaje sterownik za zawieszony. Uruchamiana jest procedura TDR: jądro resetuje akcelerator graficzny, co objawia się natychmiastowym zgaśnięciem wszystkich paneli i przejściem drugiego monitora w tryb uśpieni
-
-a.
-
-#### 3. Zaśmiecona pamięć podręczna EDID w gałęzi `GraphicsDrivers`
+Podsystem graficzny DirectX monitoruje czas odpowiedzi karty. Jeśli kontroler DisplayPort Alternate Mode lub transceiver stacji dokującej opóźni handshake EDID o więcej niż 2 sekundy podczas negocjacji szyfrowania HDCP, jądro systemu uznaje sterownik za zawieszony. Uruchamiana jest procedura TDR: jądro resetuje akcelerator graficzny, co objawia się natychmiastowym zgaśnięciem wszystkich paneli i przejściem drugiego monitora w tryb uśpienia. #### 3. Zaśmiecona pamięć podręczna EDID w gałęzi `GraphicsDrivers`
 System Windows agresywnie cachuje informacje o każdym podłączonym kiedykolwiek wyświetlaczu. Gdy laptop jest regularnie przepinany między różnymi salami konferencyjnymi a domowym biurkiem, wpisy w rejestrze dotyczące konfiguracji, pozycji i profilu timingów ulegają fragmentacji i korupcji. System próbuje wymusić nieobsługiwane taktowanie pikseli (pixel clock) lub pasmo Display Stream Compression (DSC), co skutkuje całkowitym brakiem sygnału.
 
 ---
@@ -85,9 +81,7 @@ Gdzie <code>VEN_8086</code> oznacza dostawcę (Intel), a <code>DEV_9A49</code> t
 #### Krok 1: Reset bufora konfiguracji monitorów w Edytorze rejestru
 Operacja ta zmusza podsystem graficzny Windows do ponownego odpytania wszystkich podłączonych ekranów o ich natywne tablice EDID i wyczyszczenia błędnych profili multi-monitor.
 
-1. Wciśnij `Win + R`, wpisz `regedit` i zatwierdź z uprawnieniami administrator
-
-a.
+1. Wciśnij `Win + R`, wpisz `regedit` i zatwierdź z uprawnieniami administratora.
 
 2. Przejdź do następującego klucz
 
@@ -116,10 +110,7 @@ Zwykłe odinstalowanie sterownika z poziomu Menedżera urządzeń pozostawia pli
 3. Uruchom DDU z uprawnieniami administrator
 
 a:
-   * Jako typ urządzenia wybierz Karta graficzn
-
-a.
-   * Wybierz producenta dedykowanego układu (np. NVIDIA) i kliknij Wyczyść i NIE restartuj.
+   * Jako typ urządzenia wybierz Karta graficzna. * Wybierz producenta dedykowanego układu (np. NVIDIA) i kliknij Wyczyść i NIE restartuj.
    * Następnie wybierz producenta zintegrowanego układu (Intel/AMD) i wybierz Wyczyść i uruchom ponownie.
 
 <div style="border-left: 4px solid #4338ca; padding: 12px 16px; margin: 20px 0; background-color: rgba(67, 56, 202, 0.04); border-radius: 4px;">
@@ -159,10 +150,7 @@ Wartość domyślna wynosi 2 sekundy. Zwiększenie jej do 8 sekund eliminuje fa�
 
 Praca na niskopoziomowych komponentach wideo niesie za sobą ryzyko utraty obrazu na wszystkich podłączonych ekranach:
 
-* Zasilanie stacji dokującej (Power Delivery): Zawsze upewnij się, że stacja USB-C/Thunderbolt ma podłączony dedykowany zasilacz o mocy minimum 100W–130W. Niedobory zasilania na magistrali powodują chwilowe spadki napięcia na liniach sygnałowych High-Speed DisplayPort, co jest mylone przez system z awarią sterownik
-
-a.
-* Agresywne kable pasywne: W konfiguracjach dwumonitorowych powyżej rozdzielczości 1440p (QHD) przy 60 Hz nie należy stosować tanich kabli pasywnych USB-C do HDMI. Zawsze wybieraj przewody z aktywnym konwerterem poziomu sygnału i certyfikacją DisplayPort 1.4 lub HDMI 2.
+* Zasilanie stacji dokującej (Power Delivery): Zawsze upewnij się, że stacja USB-C/Thunderbolt ma podłączony dedykowany zasilacz o mocy minimum 100W–130W. Niedobory zasilania na magistrali powodują chwilowe spadki napięcia na liniach sygnałowych High-Speed DisplayPort, co jest mylone przez system z awarią sterownika. * Agresywne kable pasywne: W konfiguracjach dwumonitorowych powyżej rozdzielczości 1440p (QHD) przy 60 Hz nie należy stosować tanich kabli pasywnych USB-C do HDMI. Zawsze wybieraj przewody z aktywnym konwerterem poziomu sygnału i certyfikacją DisplayPort 1.4 lub HDMI 2.
 
 1.
 * Blokada nadpisywania przez Windows Update: Skonfiguruj zasady grupy (`gpedit.msc`), przechodząc do: *Konfiguracja komputera* -> *Szablony administracyjne* -> *System* -> *Instalacja urządzeń* -> *Ograniczenia dotyczące instalacji urządzeń*, aby uniemożliwić systemowi automatyczną wymianę zainstalowanego ręcznie, stabilnego sterownika na wersję z repozytorium Microsoftu.

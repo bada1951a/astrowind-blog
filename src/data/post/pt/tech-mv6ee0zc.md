@@ -63,11 +63,7 @@ Os switches mecânicos convencionais (como Cherry MX, Gateron, Outemu e Kailh) u
 Nenhum contato mecânico físico encosta no outro perfeitamente sem vibrar. Durante alguns microssegundos, as lâminas metálicas "quicam" microscopicamente antes de fechar contato firme. O microcontrolador do teclado utiliza um algoritmo de debounce filtering (tipicamente entre 5 ms e 20 ms) para ignorar esses repiques. Se a lâmina sofrer leve fadiga plástica ou se a oxidação prolongar o tempo de vibração além da janela configurada pelo firmware, a controladora registrará cada micro-ressalto como um novo clique distinto.
 
 ### Causa 3: Microfraturas na Solda ou Trilha Rompida no PCB
-Em teclados sem suporte a *hot-swap* (soldados diretamente na placa de circuito impresso), a força repetitiva exercida pelo usuário pode gerar trincas invisíveis a olho nu na solda de estanho/chumbo nos pinos do switch. Essas trincas (conhecidas como solda fria ou estresse mecânico de junta) criam contato intermitente: uma leve torção no chassi do teclado faz o circuito abrir e fechar descontroladamente, simulando um chattering agressivo ou falha total de resposta da tecl
-
-a.
-
----
+Em teclados sem suporte a *hot-swap* (soldados diretamente na placa de circuito impresso), a força repetitiva exercida pelo usuário pode gerar trincas invisíveis a olho nu na solda de estanho/chumbo nos pinos do switch. Essas trincas (conhecidas como solda fria ou estresse mecânico de junta) criam contato intermitente: uma leve torção no chassi do teclado faz o circuito abrir e fechar descontroladamente, simulando um chattering agressivo ou falha total de resposta da tecla. ---
 
 ## 3. Resolução Passo a Passo: Protocolo Cirúrgico de Reparo
 
@@ -117,19 +113,13 @@ Aqui está o ponto central do procedimento. Você precisa de um spray Limpa-Cont
         Switch PCB
 ```
 
-1. Localize a haste central (*stem*) do switch mecânico. Pressione-a completamente para baixo com a ponta de uma pinça ou ferramenta de ponta ceg
-
-a.
+1. Localize a haste central (*stem*) do switch mecânico. Pressione-a completamente para baixo com a ponta de uma pinça ou ferramenta de ponta cega.
 
 2. Com a haste rebaixada, uma pequena abertura fica visível entre a haste móvel e a carcaça plástica superior (*top housing*), permitindo acesso direto à câmara interna onde repousam as lâminas de contato.
 
-3. Encaixe a cânula extensora do spray limpa-contato nessa frest
+3. Encaixe a cânula extensora do spray limpa-contato nessa fresta.
 
-a.
-
-4. Aplique apenas uma borrifada curta e precisa (uma fração de segundo). Evite inundar a placa inteir
-
-a.
+4. Aplique apenas uma borrifada curta e precisa (uma fração de segundo). Evite inundar a placa inteira.
 
 5. Imediatamente após a borrifada, pressione a tecla repetidamente e com firmeza de 60 a 80 vezes seguidas. Esse movimento mecânico faz as lâminas rasparem uma contra a outra enquanto o solvente está úmido, desalojando o óxido e os resíduos microscópicos.
 
@@ -168,11 +158,7 @@ a: Sim. O solvente dielétrico do spray limpa-contato dissolve óleos e graxas i
 ### P2: Aumentar o "debounce time" no firmware do teclado resolve a falha em definitivo?
 Respost
 
-a: Não, apenas mascara o problema temporariamente. Alguns teclados de marcas premium (como Corsair, Wooting ou modelos compatíveis com QMK/VIA) permitem elevar o tempo de debounce de 5 ms para 15 ms ou 20 ms nas configurações de firmware. Isso faz o microcontrolador esperar mais tempo antes de aceitar um novo comando da mesma tecla, ignorando os repiques da lâmina danificada. Contudo, a oxidação ou fadiga metálica continuará progredindo. Conforme a folha de contato se deteriora, o tempo de vibração ultrapassará até mesmo o novo limite, resultando finalmente na parada total do switch. Trate o ajuste de debounce apenas como medida paliativa de contingênci
-
-a.
-
-### P3: Como diferenciar se a falha é do switch mecânico ou do soquete Hot-Swap frouxo?
+a: Não, apenas mascara o problema temporariamente. Alguns teclados de marcas premium (como Corsair, Wooting ou modelos compatíveis com QMK/VIA) permitem elevar o tempo de debounce de 5 ms para 15 ms ou 20 ms nas configurações de firmware. Isso faz o microcontrolador esperar mais tempo antes de aceitar um novo comando da mesma tecla, ignorando os repiques da lâmina danificada. Contudo, a oxidação ou fadiga metálica continuará progredindo. Conforme a folha de contato se deteriora, o tempo de vibração ultrapassará até mesmo o novo limite, resultando finalmente na parada total do switch. Trate o ajuste de debounce apenas como medida paliativa de contingência. ### P3: Como diferenciar se a falha é do switch mecânico ou do soquete Hot-Swap frouxo?
 Respost
 
 a: Se ao pressionar a tecla em um ângulo específico ela registrar repiques, mas em pressão vertical reta funcionar perfeitamente, remova o switch e examine os contatos metálicos da parte de trás do PCB (os clipes de encaixe do soquete Hot-Swap). Com o tempo, trocas repetitivas de switches podem afrouxar os contatos de cobre do soquete, fazendo com que os pinos metálicos fiquem folgados. A solução técnica consiste em usar uma pinça de ponta fina para fechar suavemente as abas do soquete por trás do circuito ou refazer os pontos de solda do conector na placa de circuito impresso.

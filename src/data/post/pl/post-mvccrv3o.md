@@ -85,13 +85,7 @@ a. Instalują one ogólne paczki zamiast dedykowanych sterowników od producenta
 ## Często zadawane pytania (FAQ)
 
 ### 1. Co zrobić, jeśli komputer restartuje się tak szybko, że nie zdążam odczytać kodu błędu?
-Kliknij Start, wpisz `Zaawansowane ustawienia systemu` (Advanced system settings), w zakładce *Zaawansowane* znajdź sekcję *Uruchamianie i odzyskiwanie* i kliknij *Ustawienia*. W sekcji *Awaria systemu* odznacz opcję "Automatycznie uruchom ponownie". Dzięki temu system zatrzyma się na niebieskim ekranie, dając Ci czas na sfotografowanie kodu i nazwy pliku sterownik
-
-a.
-
-
-
-![Tech & IT Solution Guide](https://picsum.photos/seed/computer564/1000/550)
+Kliknij Start, wpisz `Zaawansowane ustawienia systemu` (Advanced system settings), w zakładce *Zaawansowane* znajdź sekcję *Uruchamianie i odzyskiwanie* i kliknij *Ustawienia*. W sekcji *Awaria systemu* odznacz opcję "Automatycznie uruchom ponownie". Dzięki temu system zatrzyma się na niebieskim ekranie, dając Ci czas na sfotografowanie kodu i nazwy pliku sterownika. ![Tech & IT Solution Guide](https://picsum.photos/seed/computer564/1000/550)
 
 ### 2. Czy błąd 0x0000000a może być spowodowany przez uszkodzony dysk SSD?
 Tak. Jeśli kontroler dysku NVMe gubi spójność danych w pamięci podręcznej, jądro systemu traci dostęp do sektorów wymiany, co kończy się identycznym błędem IRQL. Warto sprawdzić stan dysku za pomocą aplikacji diagnostycznej producenta (np. Samsung Magician, CrystalDiskInfo).

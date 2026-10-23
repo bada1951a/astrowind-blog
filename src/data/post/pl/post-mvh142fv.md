@@ -56,10 +56,7 @@ Podgląd Zdarzeń -> Dzienniki systemu Windows -> System -> Filtruj (Krytyczne +
 
 Gdy wiesz już z Podglądu Zdarzeń, co powoduje ból głowy, czas na konkretne działania w systemie i ustawieniach:
 
-* Menedżer urządzeń: Jeśli w dziennikach widzisz błędy kontrolera grafiki lub sieci, wejdź w *Menedżer urządzeń*, znajdź problematyczny komponent, kliknij prawym przyciskiem myszy i wybierz *Wycofaj sterownik* (Roll Back Driver), jeśli aktualizacja była niedawno przeprowadzan
-
-a.
-* Ustawienia zasilani
+* Menedżer urządzeń: Jeśli w dziennikach widzisz błędy kontrolera grafiki lub sieci, wejdź w *Menedżer urządzeń*, znajdź problematyczny komponent, kliknij prawym przyciskiem myszy i wybierz *Wycofaj sterownik* (Roll Back Driver), jeśli aktualizacja była niedawno przeprowadzana. * Ustawienia zasilani
 
 a: Otwórz *Ustawienia* -> *Zasilanie i bateria*, a następnie zmień plan zasilania na "Wysoka wydajność", aby wyeliminować agresywne oszczędzanie energii przez procesor.
 * Menedżer zadań: Sprawdź zakładkę *Aplikacje startowe* i wyłącz wszystko, co nie jest absolutnie konieczne do pracy biurowej. Często nakładki producentów płyt głównych (jak Armoury Crate czy Dragon Center) powodują wycieki pamięci i zwiechy.

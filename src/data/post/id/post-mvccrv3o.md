@@ -42,15 +42,9 @@ a: Aplikasi utilitas atau antivirus lawas yang menancapkan modul *driver*-nya la
 Karena PC workstation tadi tidak bisa masuk ke mode normal, langkah pertama yang wajib kita lakukan adalah masuk ke Safe Mode. Nyalakan komputer, lalu paksa matikan sebanyak tiga kali saat logo Windows muncul untuk memicu *Automatic Repair*, lalu pilih *Advanced Startup* > *Startup Settings* > pilih opsi 4 atau F4 untuk *Enable Safe Mode*.
 
 ### Langkah 1: Jalankan Diagnostik Memori Bawaan Windows
-Seringkali masalah bersumber dari perangkat keras RAM. Mari kita uji kesehatannya tanpa perlu software pihak ketig
-
-a.
-* Buka menu Pengaturan, ketikWindows Memory Diagnostic di kolom pencarian.
+Seringkali masalah bersumber dari perangkat keras RAM. Mari kita uji kesehatannya tanpa perlu software pihak ketiga. * Buka menu Pengaturan, ketikWindows Memory Diagnostic di kolom pencarian.
 * Pilih opsi Restart now and check for problems (recommended).
-* Biarkan komputer melakukan *reboot* dan menjalankan pemindaian memori. Proses ini memakan waktu sekitar 15 hingga 30 menit tergantung kapasitas RAM And
-
-a.
-* Jika ditemukan error pada laporan setelah masuk sistem, pastikan Anda membersihkan slot RAM atau mengganti kepingan yang rusak.
+* Biarkan komputer melakukan *reboot* dan menjalankan pemindaian memori. Proses ini memakan waktu sekitar 15 hingga 30 menit tergantung kapasitas RAM Anda. * Jika ditemukan error pada laporan setelah masuk sistem, pastikan Anda membersihkan slot RAM atau mengganti kepingan yang rusak.
 
 ### Langkah 2: Lakukan Driver Rollback pada Perangkat Terbaru
 Jika memori dalam kondisi prima, besar kemungkinan pelakunya adalah *driver* yang baru saja diperbarui sebelum error terjadi.
@@ -68,11 +62,7 @@ Langkah pamungkas untuk memastikan tidak ada file sistem inti yang rusak akibat 
 * Buka TerminalatauCommand Prompt dengan hak akses Administrator (Run as Administrator).
 * Ketik perintah `DISM.exe /Online /Cleanup-image /Restorehealth` lalu tekan Enter. Tunggu hingga proses selesai 100%.
 * Setelah itu, ketik perintah `sfc /scannow` dan tekan Enter. Perintah ini akan memindai dan memperbaiki file sistem yang rusak secara otomatis.
-* Lakukan *restart* normal pada komputer And
-
-a.
-
----
+* Lakukan *restart* normal pada komputer Anda. ---
 
 ## Catatan Penting untuk Mencegah Kejadian Berulang
 

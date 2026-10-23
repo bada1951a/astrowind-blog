@@ -31,10 +31,7 @@ Ecco la procedura passo-passo che ho testato sul campo per risolvere definitivam
 a:
 
 <div style="border-left: 4px solid #a6e22e; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
-<strong>Nota Bene:</strong> Esegui sempre queste operazioni con i privilegi amministrativi per evitare errori di accesso negato durante la scrittura nel registro di sistem
-
-a.
-</div>
+<strong>Nota Bene:</strong> Esegui sempre queste operazioni con i privilegi amministrativi per evitare errori di accesso negato durante la scrittura nel registro di sistema. </div>
 
 ### Procedura passo-passo tramite CMD
 
@@ -80,6 +77,4 @@ R: Sì, il comando `slmgr` è nativo in tutte le edizioni Pro, Enterprise ed Hom
 
 D: Cosa devo fare se il comando mi restituisce un errore di accesso negato?
 
-R: Significa che non hai aperto il Prompt dei comandi con i privilegi elevati. Assicurati di fare clic destro su `cmd` e selezionare esplicitamente "Esegui come amministratore" prima di digitare qualsiasi string
-
-a.
+R: Significa che non hai aperto il Prompt dei comandi con i privilegi elevati. Assicurati di fare clic destro su `cmd` e selezionare esplicitamente "Esegui come amministratore" prima di digitare qualsiasi stringa. 

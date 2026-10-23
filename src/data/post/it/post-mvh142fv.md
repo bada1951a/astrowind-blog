@@ -58,10 +58,7 @@ Ma l'ID 41 è solo la conseguenza, non la causa! Per trovare il colpevole reale,
 
 Cerca eventi con origini sospette come:
 - WHEA-Logger (ID 18 o 47): Indica un errore hardware interno (spesso legato alla CPU o alla cache).
-- DistributedCOM (ID 10016): Spesso trascurabile, ma a volte legato a timeout di servizi di sistem
-
-a.
-- Service Control Manager: Indica un driver o un servizio che non ha risposto alla richiesta di chiusura di Windows.
+- DistributedCOM (ID 10016): Spesso trascurabile, ma a volte legato a timeout di servizi di sistema. - Service Control Manager: Indica un driver o un servizio che non ha risposto alla richiesta di chiusura di Windows.
 
 ---
 

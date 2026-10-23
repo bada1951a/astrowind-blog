@@ -60,21 +60,13 @@ a:</strong> Não saia desativando tudo de forma cega. Mantenha ativos apenas o s
 Limpar a inicialização vai devolver agilidade ao seu fluxo de trabalho, mas vale a pena manter alguns cuidados para evitar dores de cabeça futuras:
 
 * Revise periodicamente: Sempre que você instalar novos softwares pesados (como suítes de edição ou ferramentas de comunicação corporativa), eles costumam marcar a caixinha "Iniciar com o Windows" por padrão. Crie o hábito de checar o Gerenciador de Tarefas mensalmente.
-* Cuidado com atualizadores: Desativar atualizadores automáticos de programas secundários não impede que eles funcionem; apenas significa que eles vão checar por updates quando você realmente abrir o programa, o que é muito mais saudável para o desempenho da máquin
-
-a.
-
----
+* Cuidado com atualizadores: Desativar atualizadores automáticos de programas secundários não impede que eles funcionem; apenas significa que eles vão checar por updates quando você realmente abrir o programa, o que é muito mais saudável para o desempenho da máquina. ---
 
 ## Perguntas Frequentes (FAQ)
 
-1. Desativar programas na inicialização pode danificar o Windows? De forma alguma. A aba "Inicializar" do Gerenciador de Tarefas lida apenas com aplicativos de usuário e utilitários opcionais. O Windows protege seus arquivos e serviços essenciais de sistema, impedindo que você desative algo crítico por engano nessa tel
-
-a.
+1. Desativar programas na inicialização pode danificar o Windows? De forma alguma. A aba "Inicializar" do Gerenciador de Tarefas lida apenas com aplicativos de usuário e utilitários opcionais. O Windows protege seus arquivos e serviços essenciais de sistema, impedindo que você desative algo crítico por engano nessa tela.
 
 2. O que acontece se eu desativar um programa por engano? Nada grave. Se você notar que algum aplicativo que você usa com frequência deixou de abrir sozinho, basta voltar ao Gerenciador de Tarefas (Ctrl + Shift + Esc), ir na aba "Inicializar", clicar com o botão direito nele e selecionar "Habilitar".
 
 3. Preciso reiniciar o computador imediatamente após fazer isso?
-Não é obrigatório para que a alteração seja salva, mas é altamente recomendável reiniciar a máquina logo em seguida para testar o novo tempo de boot e sentir a diferença na prátic
-
-a.
+Não é obrigatório para que a alteração seja salva, mas é altamente recomendável reiniciar a máquina logo em seguida para testar o novo tempo de boot e sentir a diferença na prática. 

@@ -39,22 +39,14 @@ O Windows 11 possui uma ferramenta nativa excelente para gerenciar lixo digital 
 * Pressione as teclas `Windows + I` para abrir as Configurações.
 * Vá em Sistemae clique emArmazenamento.
 * Ative o Sensor de Armazenamento (Storage Sense) caso esteja desligado.
-* Clique em Arquivos Temporários. O sistema fará uma varredura profund
-
-a.
-
-<div style="border-left: 4px solid #14b8a6; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
+* Clique em Arquivos Temporários. O sistema fará uma varredura profunda. <div style="border-left: 4px solid #14b8a6; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Atenção na Seleção:</strong> Marque caixas como "Arquivos de Instalação Anterior do Windows", "Logs de Atualização do Windows" e "Cache de Sombreador DirectX". Tenha cautela apenas com a opção "Downloads", pois ela apaga arquivos que vocêかもしれません ter guardado intencionalmente na pasta de Downloads.
 </div>
 
 * Clique no botão Remover Arquivos.
 
 ### Passo 2: Limpeza Avançada de Disco (Disk Cleanup)
-Para garantir que resíduos profundos do sistema sejam eliminados, recorremos à ferramenta clássica otimizad
-
-a.
-
-* Pressione `Windows + R`, digite `cleanmgr` e aperte `Enter`.
+Para garantir que resíduos profundos do sistema sejam eliminados, recorremos à ferramenta clássica otimizada. * Pressione `Windows + R`, digite `cleanmgr` e aperte `Enter`.
 * Selecione o drive `C:` e clique em OK.
 * Clique no botão Limpar arquivos do sistema (isso é crucial para liberar espaço de atualizações antigas).
 * Selecione novamente o drive `C:`.
@@ -68,11 +60,7 @@ Se você ainda precisa de mais alguns gigabytes urgentes, podemos acessar as pas
 * *Not
 
 a:* Alguns arquivos estarão em uso por aplicativos abertos. O Windows avisará sobre eles; basta clicar em "Ignorar" ou "Fazer isso para todos os itens atuais" e prosseguir.
-* Repita o processo pressionando `Windows + R`, digitando `temp` (sem porcentagem) e limpando o conteúdo da pasta do sistem
-
-a.
-
----
+* Repita o processo pressionando `Windows + R`, digitando `temp` (sem porcentagem) e limpando o conteúdo da pasta do sistema. ---
 
 ## Alerta do Especialist
 
@@ -81,10 +69,7 @@ a: O que Nunca Fazer
 Trabalhando no suporte a infraestrutura corporativa, já vi muita gente perder dados importantes por falta de cuidado básico. Siga estas diretrizes para manter seu sistema estável:
 
 * Nunca delete a pasta `System32` ou arquivos da raiz do C: Parece óbvio, mas pastas do sistema nunca devem ser modificadas manualmente.
-* Cuidado com limpadores milagrosos da web: Evite baixar softwares desconhecidos que prometem "acelerar o PC em 500%". Eles costumam vir acompanhados de adware e telemetria indesejad
-
-a.
-* Faça backups periódicos: Antes de rodar comandos avançados no Prompt de Comando (como compactação do sistema via CompactOS), certifique-se de que seus arquivos críticos estão salvos na nuvem ou em um HD externo.
+* Cuidado com limpadores milagrosos da web: Evite baixar softwares desconhecidos que prometem "acelerar o PC em 500%". Eles costumam vir acompanhados de adware e telemetria indesejada. * Faça backups periódicos: Antes de rodar comandos avançados no Prompt de Comando (como compactação do sistema via CompactOS), certifique-se de que seus arquivos críticos estão salvos na nuvem ou em um HD externo.
 
 ---
 

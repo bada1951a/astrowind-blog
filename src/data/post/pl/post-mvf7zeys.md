@@ -48,11 +48,7 @@ Do działania potrzebujemy pełnych uprawnień administratora. Otwórzmy Menedż
 
 3. Jeśli widzisz, że proces o nazwie „System”lub„System i przerwania”(System and compressed memory) pożera 80-100% CPU, kliknij na niego prawym przyciskiem myszy i wybierzPrzejdź do szczegółów.
 
-4. Zobaczysz proces ntoskrnl.exe. To potwierdzenie, że problem leży w jądrze systemu lub sterownikach urządzeń, a nie w zwykłej aplikacji użytkownik
-
-a.
-
-#### Krok 2: Czyszczenie kolejki Windows Update (Częsty punkt zapalny)
+4. Zobaczysz proces ntoskrnl.exe. To potwierdzenie, że problem leży w jądrze systemu lub sterownikach urządzeń, a nie w zwykłej aplikacji użytkownika. #### Krok 2: Czyszczenie kolejki Windows Update (Częsty punkt zapalny)
 Jeśli proces systemowy obciąża procesor z powodu zaciętych aktualizacji, musimy zresetować komponenty usługi Update:
 1. Kliknij Start, wpisz `cmd`, kliknij prawym przyciskiem myszy na Wiersz poleceniai wybierzUruchom jako administrator.
 
