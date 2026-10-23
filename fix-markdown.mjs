@@ -14,23 +14,28 @@ function sanitizeMarkdownFormatting(content) {
   // 1. 마크다운 볼드(**) 기호 제거
   cleaned = cleaned.replace(/\*\*/g, '');
 
-  // 2. [가장 중요] 앞서 잘못 쪼개져 저장된 모든 단어 끝 '\n\na.' 강제 원상복구
-  //    (sistem \n\n a. -> sistema. / limpi \n\n a. -> limpia. / koelpast \n\n a. -> koelpasta.)
+  // 2. [핵심 복원 1] 앞서 잘못 잘린 단어 끝 '\n\na.' 원상태로 복원
+  // 예: "sistem \n\n a." -> "sistema.", "koelpast \n\n a." -> "koelpasta."
   cleaned = cleaned.replace(/([a-zA-Z\u00C0-\u024F\u1EA0-\u1EF9]+)\s*\n+\s*a\.\s*/g, '$1a. ');
 
-  // 3. 스페인어 특수 물음표(¿) 및 느낌표(¡) 앞 뭉침 분리 (예: intactos.¿Qué -> intactos.\n\n¿Qué)
-  cleaned = cleaned.replace(/([.?!])\s*([¿¡])/g, '$1\n\n$2');
+  // 3. [핵심 복원 2] 번호(1., 2.) 바로 밑으로 떨어져 버린 스페인어 질문(¿...)을 번호 옆으로 한 줄 복구
+  // 예: "1.\n\n¿Qué" -> "1. ¿Qué"
+  cleaned = cleaned.replace(/([0-9]+\.)\s*\n+\s*([¿¡])/g, '$1 $2');
 
-  // 4. 일반 물음표(?) 뒤에 공백 없이 글자가 붙은 경우 띄어쓰기 (?단어 -> ? 단어)
+  // 4. 문장 끝 부호 뒤에 붙어버린 스페인어 부호(¿, ¡) 분리 (단, 숫자 뒤 마침표 제외)
+  cleaned = cleaned.replace(/([^0-9][.?!])\s*([¿¡])/g, '$1\n\n$2');
+
+  // 5. 물음표 뒤 띄어쓰기 누락 보정 (?단어 -> ? 단어)
   cleaned = cleaned.replace(/\?([A-Za-z\u00C0-\u024F\u1EA0-\u1EF9가-힣])/g, '? $1');
 
-  // 5. 물음표(?) 뒤에 오직 '대문자' Q/A가 오는 경우만 두 줄 개행 (소문자 절대 건드리지 않음)
+  // 6. 물음표(?) 뒤 대문자 Q/A(Q:, A:, Q1: 등) 강제 2줄 개행
   cleaned = cleaned.replace(/\?\s*([QA][0-9]*\s*[:.])/g, '?\n\n$1');
 
-  // 6. 마침표(.)나 느낌표(!) 뒤에 '대문자' Q/A 또는 번호 목록(1., 2.)이 올 때 두 줄 개행
+  // 7. 문장 부호(.!) 뒤 대문자 Q/A 또는 번호 목록(1., 2.) 강제 2줄 개행
   cleaned = cleaned.replace(/([.!])\s*([QA][0-9]*\s*[:.]|[0-9]+\.\s+)/g, '$1\n\n$2');
 
-  // 7. 다국어 헤더 줄바꿈
+  // 8. 독립된 대문자 Q/A 및 다국어 머리말 개행 확보
+  cleaned = cleaned.replace(/([^\n])\s+([QA][0-9]*\s*[:.])/g, '$1\n\n$2');
   cleaned = cleaned.replace(/([.!])\s*(D:|R:|Risposta|Domande)/gi, '$1\n\n$2');
 
   return cleaned;
@@ -52,7 +57,7 @@ function getAllMdFiles(dir, fileList = []) {
 
 async function runFix() {
   console.log("==================================================");
-  console.log("🛠️ 단어 쪼개짐 복원 및 마크다운 최종 종결 정제 시작");
+  console.log("🛠️ 기존 포스트 마크다운/스페인어 개행 일괄 복구 시작");
   console.log("==================================================");
 
   const files = getAllMdFiles(POSTS_BASE_DIR);
@@ -79,12 +84,12 @@ async function runFix() {
       fs.writeFileSync(filePath, newContent, 'utf-8');
       modifiedCount++;
       const relativePath = path.relative(process.cwd(), filePath);
-      console.log(`✅ [복원/교정 완료] ${relativePath}`);
+      console.log(`✅ [복구 완료] ${relativePath}`);
     }
   }
 
   console.log("\n==================================================");
-  console.log(`🎉 총 ${files.length}개 중 ${modifiedCount}개 파일 복원 및 수정 완료`);
+  console.log(`🎉 총 ${files.length}개 중 ${modifiedCount}개 파일 완벽 수정 완료`);
   console.log("==================================================");
 }
 
