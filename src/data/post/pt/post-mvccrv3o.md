@@ -9,7 +9,9 @@ theme: "Industrial Blueprint"
 ---
 
 
-Eram 19h45 em um hub de tecnologia na Avenida Paulista, em São Paulo. O clima estava tenso na sala de reuniões: faltavam exatos 45 minutos para o alinhamento técnico urgente antes da entrega da sprint para o cliente corporativo, e a minha estação principal simplesmente travou com aquela clássica e temida Tela Azul da Morte (BSOD). O código impresso na tela escura era impiedoso: `IRQL_NOT_LESS_OR_EQUAL` ou, no bom e velho formato hexadecimal, 0x0000000a. O projeto estava na reta final e o computador recusava-se a manter o sistema estável por mais de cinco minutos.
+Eram 19h45 em um hub de tecnologia na Avenida Paulista, em São Paulo. O clima estava tenso na sala de reuniões: faltavam exatos 45 minutos para o alinhamento técnico urgente antes da entrega da sprint para o cliente corporativo, e a minha estação principal simplesmente travou com aquela clássica e temida Tela Azul da Morte (BSOD). O código impresso na tela escura era impiedoso: `IRQL_NOT_LESS_OR_EQUAL` ou, no bom e velho formato hexadecimal, 0x0000000
+
+a. O projeto estava na reta final e o computador recusava-se a manter o sistema estável por mais de cinco minutos.
 
 <div style="border-left: 4px solid #f59e0b; padding: 12px 16px; margin: 20px 0; background-color: rgba(245, 158, 11, 0.08); border-radius: 4px; color: #111827;">
 <strong>Alerta de Diagnóstico Rápido:</strong> O erro 0x0000000a indica que um processo em modo kernel ou um driver tentou acessar um endereço de memória ao qual não tinha permissão. Em 90% dos casos sob pressão de entrega, o problema é um driver corrompido na última atualização ou instabilidade física nos módulos de RAM.
@@ -17,9 +19,13 @@ Eram 19h45 em um hub de tecnologia na Avenida Paulista, em São Paulo. O clima e
 
 ![Tech & IT Solution Guide](https://picsum.photos/seed/computer418/1000/550)
 
-## Anatomia da Falha: Por que o 0x0000000a acontece?
+## Anatomia da Falh
 
-Antes de sair reinstalando o sistema operacional — o que seria um tiro no escuro e desperdício de tempo precioso —, precisamos mapear a raiz do problema. Na nossa arquitetura de testes em São Paulo, isolamos três causas principais para esse comportamento:
+a: Por que o 0x0000000a acontece?
+
+Antes de sair reinstalando o sistema operacional — o que seria um tiro no escuro e desperdício de tempo precioso —, precisamos mapear a raiz do problem
+
+a. Na nossa arquitetura de testes em São Paulo, isolamos três causas principais para esse comportamento:
 
 1. Incompatibilidade de Drivers Pós-Update: Um driver de rede, controladora SATA ou GPU recém-atualizado que tenta se comunicar com endereços de memória inválidos.
 
@@ -34,7 +40,9 @@ Para contornar o problema sem perder dados e garantir que a entrega aconteça no
 ### Passo 1: Inicialização em Modo de Segurança (Safe Mode)
 Se o Windows sequer estabiliza na Área de Trabalho, force o desligamento físico duas vezes seguidas segurando o botão Power. Na terceira vez, o sistema abrirá o Ambiente de Recuperação do Windows (WinRE).
 * Vá em Solucionar problemas>Opções avançadas>Configurações de Inicialização>Reiniciar.
-* Pressione a tecla 4 ou F4 para habilitar o Modo de Segurança.
+* Pressione a tecla 4 ou F4 para habilitar o Modo de Seguranç
+
+a.
 
 ### Passo 2: Reversão do Driver Problemático (Driver Rollback)
 No meu caso na Paulista, o culpado foi o driver da placa de rede Wi-Fi atualizado automaticamente horas antes.
@@ -61,7 +69,9 @@ Se a reversão de drivers não estabilizar o sistema, o problema pode ser físic
 
 ---
 
-## Dicas do Especialista: Prevenção e Boas Práticas
+## Dicas do Especialist
+
+a: Prevenção e Boas Práticas
 
 <div style="border-left: 4px solid #f59e0b; padding: 12px 16px; margin: 20px 0; background-color: rgba(245, 158, 11, 0.08); border-radius: 4px; color: #111827;">
 <strong>Recomendação de Ouro:</strong> Nunca aplique atualizações grandes de drivers em máquinas de produção na véspera de entregas críticas. Utilize pontos de restauração do sistema (`Rstrui.exe`) sempre que testar novos hardwares ou pacotes de drivers corporativos.
@@ -71,7 +81,9 @@ Se a reversão de drivers não estabilizar o sistema, o problema pode ser físic
 
 1. O erro 0x0000000a pode queimar permanentemente o meu processador ou memória? Não. Trata-se de uma exceção de software em nível de kernel (Interruption Request Level). O Windows gera a Tela Azul justamente para proteger o hardware e evitar a corrupção permanente de dados em disco.
 
-2. Posso usar ferramentas de terceiros para testar a memória RAM? Sim. Embora o Diagnóstico de Memória nativo do Windows seja excelente para checagem rápida, em cenários avançados recomendamos criar um pendrive bootável com o softwareMemTest86para uma análise minuciosa de cada célula de memória.
+2. Posso usar ferramentas de terceiros para testar a memória RAM? Sim. Embora o Diagnóstico de Memória nativo do Windows seja excelente para checagem rápida, em cenários avançados recomendamos criar um pendrive bootável com o softwareMemTest86para uma análise minuciosa de cada célula de memóri
+
+a.
 
 3. O que devo fazer se o Windows entrar em loop infinito de Tela Azul?
 Se nem o Modo de Segurança puder ser acessado, utilize uma mídia de instalação do Windows via pendrive, acesse o Prompt de Comando no WinRE e execute o comando `sfc /scannow` combinado com `DISM /Online /Cleanup-Image /RestoreHealth` para reparar arquivos corrompidos do sistema operacional.

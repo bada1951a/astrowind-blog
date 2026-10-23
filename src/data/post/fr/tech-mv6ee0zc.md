@@ -29,7 +29,9 @@ Pour intervenir efficacement, il faut comprendre ce qui se passe sous le capucho
 [ Fermeture du circuit électrique ]
 ```
 
-### A. L'oxydation microscopique des points de contact
+###
+
+A. L'oxydation microscopique des points de contact
 Bien que les pastilles de contact soient généralement plaquées d'une fine couche d'or ou d'argent, l'humidité ambiante, les micro-arcs électriques générés par les cycles d'ouverture/fermeture et l'usure de friction finissent par exposer le métal sous-jacent. Une couche microscopique d'oxyde non conducteur se forme, créant une résistance de contact instable. Le microcontrôleur du clavier interprète ces fluctuations comme une succession rapide d'appuis et de relâchements.
 
 ### B. L'intrusion de micro-débris et la pollution particulaire

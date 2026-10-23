@@ -57,7 +57,9 @@ Soms blijft er in de diepe krochten van Windows wat achter in de tijdelijke mapp
 
 ---
 
-### Voor en na: Wat levert het op?
+### Voor en n
+
+a: Wat levert het op?
 
 Om je een idee te geven van het verschil dat dit oplevert op een gemiddelde kantoorlaptop, zie je hieronder de typische status voor en na onze grondige schoonmaakbeurt:
 

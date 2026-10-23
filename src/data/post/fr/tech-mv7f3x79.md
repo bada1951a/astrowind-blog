@@ -23,7 +23,9 @@ Pour intervenir efficacement sans procéder à des réinstallations système sup
   <strong>Postulat d'ingénierie :</strong> Un écran qui scintille de manière cyclique indique presque toujours une perte temporaire de liaison (<em>Link Training Loss</em>) ou une tentative infructueuse de renégociation HDCP/EDID, tandis qu'une absence totale de signal pointe vers une allocation de bande passante défaillante ou un pilote WDDM en état d'erreur silencieuse (Code 43 latent).
 </div>
 
-### Hypothèse A : Désynchronisation de la pile WDDM et conflit de négociation EDID/HDCP
+### Hypothèse
+
+A : Désynchronisation de la pile WDDM et conflit de négociation EDID/HDCP
 Lorsqu'un moniteur externe est branché, Windows interroge les données EDID (*Extended Display Identification Data*) via le bus DDC/I2C afin d'identifier les résolutions et fréquences natives. Si le pilote graphique (Intel Graphics, AMD Radeon Software ou NVIDIA Display Driver) subit un timeout de réponse ou applique un profil colorimétrique incompatible (par exemple, forçage du format RGB 10-bit sur une liaison DisplayPort limitée à 8-bit), le gestionnaire de fenêtrage du bureau (*Desktop Window Manager - DWM.exe*) réinitialise la liaison vidéo en boucle, générant ces micro-coupures caractéristiques.
 
 ### Hypothèse B : Saturation de la bande passante et instabilité MST (Multi-Stream Transport)

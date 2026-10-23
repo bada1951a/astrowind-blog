@@ -9,13 +9,17 @@ theme: "Pure Titanium Clean"
 ---
 
 
-Erano le 17:50 di un martedì infernale nel nostro ufficio al Centro direzionale di Milano. Mancavano dieci minuti alla deadline tassativa per l'invio del report trimestrale al board europeo, e la postazione principale del controllo di gestione si è letteralmente congelata. La ventola del PC sembrava stesse per decollare verso Linate, lo schermo rispondeva ai click con minuti di ritardo e il cursore si muoveva a scatti. Ho aperto di scatto *Gestione attività* usando la combinazione rapida Ctrl+Maiusc+Esc, e lo spettacolo era impietoso: l'utilizzo della CPU inchiodato al 100%, con il famigerato processo di sistema "System" (e il relativo modulo `ntoskrnl.exe`) che divorava ogni singolo ciclo di clock disponibile. 
+Erano le 17:50 di un martedì infernale nel nostro ufficio al Centro direzionale di Milano. Mancavano dieci minuti alla deadline tassativa per l'invio del report trimestrale al board europeo, e la postazione principale del controllo di gestione si è letteralmente congelat
+
+a. La ventola del PC sembrava stesse per decollare verso Linate, lo schermo rispondeva ai click con minuti di ritardo e il cursore si muoveva a scatti. Ho aperto di scatto *Gestione attività* usando la combinazione rapida Ctrl+Maiusc+Esc, e lo spettacolo era impietoso: l'utilizzo della CPU inchiodato al 100%, con il famigerato processo di sistema "System" (e il relativo modulo `ntoskrnl.exe`) che divorava ogni singolo ciclo di clock disponibile. 
 
 All'inizio il panico ha quasi preso il sopravvento. La prima reazione istintiva di chiunque sarebbe stata quella di tenere premuto il tasto di accensione per un hard reset brutale. Ma spegnere la macchina in quel momento esatto significava perdere gli ultimi dati non salvati del foglio di calcolo, corrompere il file di database locale e mancare la consegna al board. 
 
 ![How to Fix 100 Percent CPU Usage Caused by System Process Tech Guide](/images/tech-photo/system (2).png)
 
-Dopo tentativi inutili di chiudere i processi secondari e un paio di riavvii forzati che non facevano altro che ripresentare lo stesso identico collo di bottiglia dieci minuti dopo l'accesso, ho dovuto applicare il metodo sistemistico puro: isolare la causa radice, disabilitare i driver o i servizi in conflitto e riprendere il controllo della macchina in meno di un quarto d'ora. 
+Dopo tentativi inutili di chiudere i processi secondari e un paio di riavvii forzati che non facevano altro che ripresentare lo stesso identico collo di bottiglia dieci minuti dopo l'accesso, ho dovuto applicare il metodo sistemistico puro: isolare la causa radice, disabilitare i driver o i servizi in conflitto e riprendere il controllo della macchina in meno di un quarto d'or
+
+a. 
 
 Ecco esattamente come ho risolto il problema sul campo, passo dopo passo, senza perdermi in teorie accademiche inutili.
 
@@ -32,7 +36,9 @@ Il processo *System* di Windows racchiude i thread del kernel del sistema operat
 3. Servizi di indicizzazione o Windows Update bloccati: Coda di stampa o aggiornamenti falliti che continuano a tentare di scrivere registri di sistema all'infinito.
 
 <div style="border-left: 4px solid #334155; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
-<strong>Nota del Sistemista:</strong> Non fermarti mai a terminare il processo "System" da Gestione attività, perché Windows ti impedirà giustamente di farlo trattandosi di un processo critico di kernel. Dobbiamo aggirare il problema agendo sulle periferiche e sui servizi che lo richiamano.
+<strong>Nota del Sistemist
+
+a:</strong> Non fermarti mai a terminare il processo "System" da Gestione attività, perché Windows ti impedirà giustamente di farlo trattandosi di un processo critico di kernel. Dobbiamo aggirare il problema agendo sulle periferiche e sui servizi che lo richiamano.
 </div>
 
 ---

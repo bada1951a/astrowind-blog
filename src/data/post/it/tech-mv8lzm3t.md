@@ -16,7 +16,11 @@ CRITICAL: I/O bottleneck detected. Disk queue length > 5.
 0. System unresponsive.
 </div>
 
-Erano le 8:45 di un venerdì mattina qualunque, e il mio capo era già dietro la mia scrivania con la tazza di caffè in mano, pronto a guardarmi lo schermo per l'ennesima demo urgente con un cliente chiave. Io premo il pulsante di accensione del mio workstation di test e... il nulla cosmico. Anzi, peggio: la rotellina di caricamento di Windows che gira imperterrita per sei interminabili minuti, mentre la spia del disco fisso (un vecchio SSD ormai alla frutta) lampeggia fissa come un semaforo impazzito. Il mio collega mi guarda e fa: *"Ti conviene reinstallare tutto da capo"*. Ma figurati se un sistemista si arrende a una formattazione prima di aver fatto sanguinare la tastiera.
+Erano le 8:45 di un venerdì mattina qualunque, e il mio capo era già dietro la mia scrivania con la tazza di caffè in mano, pronto a guardarmi lo schermo per l'ennesima demo urgente con un cliente chiave. Io premo il pulsante di accensione del mio workstation di test e... il nulla cosmico. Anzi, peggio: la rotellina di caricamento di Windows che gira imperterrita per sei interminabili minuti, mentre la spia del disco fisso (un vecchio SSD ormai alla frutta) lampeggia fissa come un semaforo impazzito. Il mio collega mi guarda e f
+
+a: *"Ti conviene reinstallare tutto da capo"*. Ma figurati se un sistemista si arrende a una formattazione prima di aver fatto sanguinare la tastier
+
+a.
 
 Il problema non era l'hardware in sé, ma il caos assoluto che si era accumulato nel registro di sistema e nella sequenza di boot. Ogni volta che installi una suite di office automation, un tool di messaggistica o un driver di periferica, questi software si infilano subdoli nella coda d'avvio. Risultato? All'accensione, la CPU e il controller SATA/NVMe vengono subissati da decine di daemon e updater inutili che strangolano il sistema prima ancora che tu possa aprire il Task Manager.
 
@@ -27,7 +31,9 @@ Analizziamo i tre veri colpevoli di questo scempio prestazionale:
 
 3. Bloatware OEM preinstallati: Utilità inutili dei produttori di motherboard (ASUS, MSI, Dell) che occupano cicli di clock preziosi eseguendo diagnostiche ridondanti all'avvio.
 
-BК bando alle ciance, apriamo il terminale e riprendiamoci il controllo della macchina. Ecco la procedura chirurgica da eseguire.
+BК bando alle ciance, apriamo il terminale e riprendiamoci il controllo della macchin
+
+a. Ecco la procedura chirurgica da eseguire.
 
 <div style="border-left: 4px solid #00ffcc; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,255,204,0.05); border-radius: 4px; font-family: monospace;">
 C:\Users\Admin> taskkill /f /im bloatware_updater.exe<br>
@@ -36,7 +42,9 @@ SUCCESS: The process "bloatware_updater.exe" has been terminated.
 
 ### Procedura passo-passo per la bonifica del sistema
 
-Prima di mettere le mani nel registro, usiamo gli strumenti nativi di Windows per sezionare il problema. Niente software di terze parti pieni di adware; usiamo solo strumenti di sistema puri.
+Prima di mettere le mani nel registro, usiamo gli strumenti nativi di Windows per sezionare il problem
+
+a. Niente software di terze parti pieni di adware; usiamo solo strumenti di sistema puri.
 
 #### 1. Analisi tramite Gestione Attività (Task Manager)
 Premi la combinazione di tasti `Ctrl + Shift + Esc` per aprire la *Gestione attività*. Spostati sulla scheda Applicazioni in avvio (l'icona del tachimetro). Qui vedrai l'elenco completo di tutto ciò che si avvia con il sistema operativo, accompagnato dall'impatto stimato sull'avvio (*Basso*, *Medio*, *Alto*).
@@ -85,4 +93,6 @@ R: Niente panico. Premi `Win + R`, digita `msconfig`, vai alla scheda *Servizi*,
 
 D: Conviene usare software di ottimizzazione "one-click" scaricati dal web?
 
-R: Da sistemista ti dico: evitali come la peste. La maggior parte di quei tool inserisce ulteriori pubblicità o modifiche invasive al registro che peggiorano la stabilità del sistema. Fai tutto manualmente tramite gli strumenti nativi di Windows.
+R: Da sistemista ti dico: evitali come la peste. La maggior parte di quei tool inserisce ulteriori pubblicità o modifiche invasive al registro che peggiorano la stabilità del sistem
+
+a. Fai tutto manualmente tramite gli strumenti nativi di Windows.

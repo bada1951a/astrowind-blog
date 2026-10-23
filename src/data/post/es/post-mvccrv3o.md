@@ -9,10 +9,18 @@ theme: "Dark Velvet Obsidian"
 ---
 
 
-Eran las 18:30 en nuestra oficina del 22@ en Barcelona. Estábamos a menos de cuarenta y ocho horas del despliegue final de nuestra plataforma SaaS principal antes del lanzamiento oficial, cuando la estación de trabajo principal del equipo de arquitectura se quedó completamente congelada. De repente, el monitor principal se volvió de un azul intenso y apareció el temido código de error: IRQL_NOT_LESS_OR_EQUALcon el identificador0x0000000a. Justo en medio de una compilación pesada y con el cliente respirándonos en la nuca a través de Slack, el equipo se quedó en silencio. No podíamos permitirnos formatear ni perder los entornos de contenedores configurados para la demo del día siguiente.
+Eran las 18:30 en nuestra oficina del 22@ en Barcelon
+
+a. Estábamos a menos de cuarenta y ocho horas del despliegue final de nuestra plataforma SaaS principal antes del lanzamiento oficial, cuando la estación de trabajo principal del equipo de arquitectura se quedó completamente congelad
+
+a. De repente, el monitor principal se volvió de un azul intenso y apareció el temido código de error: IRQL_NOT_LESS_OR_EQUALcon el identificador0x0000000
+
+a. Justo en medio de una compilación pesada y con el cliente respirándonos en la nuca a través de Slack, el equipo se quedó en silencio. No podíamos permitirnos formatear ni perder los entornos de contenedores configurados para la demo del día siguiente.
 
 <div style="border-left: 4px solid #a855f7; padding: 12px 16px; margin: 20px 0; background-color: #f3e8ff; border-radius: 4px; color: #111827;">
-<strong>Atención SysAdmins:</strong> El error 0x0000000a indica que un proceso en modo kernel o un controlador (driver) intentó acceder a una dirección de memoria sin la autorización o el nivel de IRQL adecuado. Casi siempre apunta a una incompatibilidad de controladores tras una actualización o a una celda de memoria RAM degradada.
+<strong>Atención SysAdmins:</strong> El error 0x0000000a indica que un proceso en modo kernel o un controlador (driver) intentó acceder a una dirección de memoria sin la autorización o el nivel de IRQL adecuado. Casi siempre apunta a una incompatibilidad de controladores tras una actualización o a una celda de memoria RAM degradad
+
+a.
 </div>
 
 ![Tech & IT Solution Guide](https://picsum.photos/seed/computer272/1000/550)
@@ -36,7 +44,9 @@ Dado que el sistema entraba en bucle al arrancar de forma normal, tuvimos que ac
 ### Paso 1: Entrar en Modo Seguro y aislar el volcado de memoria (Dump)
 Si el equipo te permite llegar al escritorio unos segundos antes de colapsar, o si puedes entrar mediante el menú de recuperación avanzada (Reiniciar manteniendo presionada la tecla Shift):
 - Navega a Configuración > Actualización y seguridad > Recuperación > Inicio avanzado.
-- Selecciona Solucionar problemas > Opciones avanzadas > Configuración de inicioy reinicia. Pulsa la tecla `4` o `F4` para habilitar elModo seguro.
+- Selecciona Solucionar problemas > Opciones avanzadas > Configuración de inicioy reinici
+
+a. Pulsa la tecla `4` o `F4` para habilitar elModo seguro.
 
 Una vez dentro, necesitamos analizar el archivo de volcado (`C:\Windows\Minidump\*.dmp`) con herramientas como *BlueScreenView* o WinDbg para ver exactamente qué archivo DLL o SYS provocó el fallo (habitualmente asociado a `ntoskrnl.exe` o drivers gráficos).
 
@@ -75,10 +85,14 @@ Si la memoria está perfecta, el problema es indudablemente software. Para rever
 ## Preguntas Frecuentes (FAQ)
 
 ### ¿Perderé mis archivos si ejecuto la herramienta de diagnóstico de memoria?
-No. El Diagnóstico de Memoria de Windows es una utilidad de lectura y verificación física. No modifica ni borra ningún archivo de usuario, documentos ni configuraciones del sistema operativo.
+No. El Diagnóstico de Memoria de Windows es una utilidad de lectura y verificación físic
+
+a. No modifica ni borra ningún archivo de usuario, documentos ni configuraciones del sistema operativo.
 
 ### ¿Qué hago si el botón de "Reversión de controlador" aparece en gris?
-Significa que Windows no ha conservado una copia del paquete anterior en la caché local. En este caso, debes descargar manualmente la versión anterior estable desde la web oficial del fabricante del componente, desinstalar el driver actual por completo y aplicar una instalación limpia.
+Significa que Windows no ha conservado una copia del paquete anterior en la caché local. En este caso, debes descargar manualmente la versión anterior estable desde la web oficial del fabricante del componente, desinstalar el driver actual por completo y aplicar una instalación limpi
+
+a.
 
 ### ¿Este error 0x0000000a puede ser causado por un fallo en el disco SSD?
 Es menos común, ya que los fallos de almacenamiento suelen generar códigos como `CRITICAL_PROCESS_DIED` o `UNMOUNTABLE_BOOT_VOLUME`. Sin embargo, si la tabla de paginación (pagefile.sys) se ubica en un sector defectuoso del SSD, indirectamente puede provocar un fallo de acceso al kernel que derive en este pantallazo azul.

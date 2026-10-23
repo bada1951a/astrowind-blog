@@ -45,7 +45,9 @@ net stop msiserver
 ```
 
 ### Step 2: Clear the SoftwareDistribution and Catroot2 Folders
-Once the services are stopped, navigate to the system directories where Windows stores temporary update data. You can do this quickly by opening the Run dialog (`Win + R`) or straight from your terminal.
+Once the services are stopped, navigate to the system directories where Windows stores temporary update dat
+
+a. You can do this quickly by opening the Run dialog (`Win + R`) or straight from your terminal.
 
 1. Open File Explorer and head to `C:\Windows\SoftwareDistribution`.
 

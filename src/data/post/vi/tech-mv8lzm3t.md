@@ -80,7 +80,9 @@ Tính năng này giúp Windows lưu trạng thái kernel vào một file hiberna
 
 1. Tôi đã tắt hết Startup mà máy vẫn khởi động lâu, phải làm sao nữa?> Khả năng cao máy bạn vẫn đang dùng ổ cứng cơ HDD truyền thống. Giải pháp duy nhất và đáng tiền nhất lúc này là nâng cấp lên ổ cứng SSD NVMe. Tốc độ sẽ cải thiện từ 5 đến 10 lần, bấm nút lên nguồn là vào Win trong vòng 10 giây.
 
-2. Tính năng Fast Startup có gây hại gì cho máy không?> Fast Startup hoàn toàn an toàn, tuy nhiên đôi khi nó gây lỗi hiển thị hoặc xung đột driver phần cứng đời cũ (đặc biệt là card màn hình Nvidia). Nếu máy bạn thỉnh thoảng bị treo logo khi bật lên, hãy thử tắt Fast Startup đi để kiểm tra.
+2. Tính năng Fast Startup có gây hại gì cho máy không?> Fast Startup hoàn toàn an toàn, tuy nhiên đôi khi nó gây lỗi hiển thị hoặc xung đột driver phần cứng đời cũ (đặc biệt là card màn hình Nvidia). Nếu máy bạn thỉnh thoảng bị treo logo khi bật lên, hãy thử tắt Fast Startup đi để kiểm tr
+
+a.
 
 3. Có nên dùng các phần mềm bên thứ ba như CCleaner để tối ưu khởi động không?
 > Tuyệt đối hạn chế. Các phần mềm tối ưu bên thứ ba thường quét sâu vào Registry, đôi khi xóa nhầm các khóa quan trọng khiến hệ điều hành lỗi nặng. Hãy tận dụng các công cụ native sẵn có của Windows như Task Manager và Command Prompt là quá đủ dùng cho một kỹ sư chuyên nghiệp.

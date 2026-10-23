@@ -64,5 +64,10 @@ Schließen Sie alle Fenster und starten Sie das System über das Startmenü neu.
 
 ### Häufig gestellte Fragen (FAQ)
 
-F: Verliere ich durch diesen CMD-Befehl meine gespeicherten Daten oder Einstellungen? A: Nein, absolut nicht. Der Befehl greift ausschließlich in den Software Licensing Service (`sppsvc`) ein. Ihre Dokumente, installierten Programme und persönlichen Einstellungen im Benutzerprofil bleiben zu 100% unberührt.F: Was tun, wenn die Fehlermeldung "Der Befehl ist ungültig" in der CMD erscheint? A: Überprüfen Sie, ob Sie die Eingabeaufforderung tatsächlichals Administratorgeöffnet haben. Ohne administrative Rechte verweigert Windows jeglichen Zugriff auf die Lizenzierungsskripte. Achten Sie zudem auf die exakte Schreibweise inklusive der Dateiendung `.vbs`.F: Funktioniert dieser Trick auch bei Windows 11 Pro und Enterprise?
+F: Verliere ich durch diesen CMD-Befehl meine gespeicherten Daten oder Einstellungen?
+
+A: Nein, absolut nicht. Der Befehl greift ausschließlich in den Software Licensing Service (`sppsvc`) ein. Ihre Dokumente, installierten Programme und persönlichen Einstellungen im Benutzerprofil bleiben zu 100% unberührt.F: Was tun, wenn die Fehlermeldung "Der Befehl ist ungültig" in der CMD erscheint?
+
+A: Überprüfen Sie, ob Sie die Eingabeaufforderung tatsächlichals Administratorgeöffnet haben. Ohne administrative Rechte verweigert Windows jeglichen Zugriff auf die Lizenzierungsskripte. Achten Sie zudem auf die exakte Schreibweise inklusive der Dateiendung `.vbs`.F: Funktioniert dieser Trick auch bei Windows 11 Pro und Enterprise?
+
 A: Ja, der zugrundeliegende Windows-Lizenzierungsmanager verhält sich bei Windows 10 und Windows 11 identisch. Auch hier gilt jedoch: Es handelt sich um eine administrative Überbrückung, keine dauerhafte Freischaltung ohne gültigen Key.

@@ -9,16 +9,22 @@ theme: "Deep Indigo System"
 ---
 
 
-Jam 4 sore di sebuah gedung perkantoran kawasan Sudirman Jakarta, suasana mendadak tegang luar biasa. Batas waktu pengiriman laporan keuangan tinggal satu jam lagi, tapi layar monitor tiba-tiba membeku (*freezing*). Kipas PC berputar kencang menderu bagaikan mesin jet yang mau lepas landas, sementara kursor tetikus bergerak sangat lambat seperti terjebak di dalam lumpur. Saat tombol kombinasi keramat ditekan untuk membuka Task Manager, pemandangannya bikin jantungan: penggunaan CPU mentok di angka 100 persen penuh, dan pelakunya bukanlah aplikasi berat seperti game atau software rendering, melainkan proses bawaan Windows bernama "System" atau "System and Compressed Memory". 
+Jam 4 sore di sebuah gedung perkantoran kawasan Sudirman Jakarta, suasana mendadak tegang luar bias
 
-Panik? Pastinya. Rekan kerja di sebelah mulai keringat dingin karena dokumen Excel penting belum sempat tersimpan. Berbagai cara amatiran langsung dicoba, mulai dari menekan tombol restart paksa di CPU berulang kali, mencabut kabel power, hingga memukul-mukul meja karena kesal. Padahal, tindakan asal-asalan seperti itu justru berisiko merusak sektor *hard drive* atau membuat file laporan korup total. 
+a. Batas waktu pengiriman laporan keuangan tinggal satu jam lagi, tapi layar monitor tiba-tiba membeku (*freezing*). Kipas PC berputar kencang menderu bagaikan mesin jet yang mau lepas landas, sementara kursor tetikus bergerak sangat lambat seperti terjebak di dalam lumpur. Saat tombol kombinasi keramat ditekan untuk membuka Task Manager, pemandangannya bikin jantungan: penggunaan CPU mentok di angka 100 persen penuh, dan pelakunya bukanlah aplikasi berat seperti game atau software rendering, melainkan proses bawaan Windows bernama "System" atau "System and Compressed Memory". 
+
+Panik? Pastiny
+
+a. Rekan kerja di sebelah mulai keringat dingin karena dokumen Excel penting belum sempat tersimpan. Berbagai cara amatiran langsung dicoba, mulai dari menekan tombol restart paksa di CPU berulang kali, mencabut kabel power, hingga memukul-mukul meja karena kesal. Padahal, tindakan asal-asalan seperti itu justru berisiko merusak sektor *hard drive* atau membuat file laporan korup total. 
 
 ![How to Fix 100 Percent CPU Usage Caused by System Process Tech Guide](/images/tech-photo/ram (13).png)
 
 Sebagai seorang teknisi infrastruktur IT yang sudah kenyang asam garam menghadapi drama kantor seperti ini, saya langsung bergerak cepat. Masalah CPU 100 persen akibat *System process* ini bukan hal mistis. Ini murni masalah sinkronisasi *driver*, *interrupt request* (IRQ) yang bentrok, atau layanan latar belakang Windows yang mengalami *infinite loop*. Mari kita bedah tuntas akar masalahnya dan selesaikan dengan protokol penanganan yang benar.
 
 <div style="border-left: 4px solid #4338ca; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
-<strong>Catatan Teknisi:</strong> Jangan pernah langsung mematikan PC secara paksa saat CPU 100 persen jika masih memungkinkan untuk membuka Task Manager. Tindakan ini bisa memicu <em>bad sector</em> pada penyimpanan mekanis (HDD) Anda.
+<strong>Catatan Teknisi:</strong> Jangan pernah langsung mematikan PC secara paksa saat CPU 100 persen jika masih memungkinkan untuk membuka Task Manager. Tindakan ini bisa memicu <em>bad sector</em> pada penyimpanan mekanis (HDD) And
+
+a.
 </div>
 
 ---
@@ -40,7 +46,9 @@ Sebelum masuk ke tombol-tombol pengaturan, kita harus paham dulu kenapa proses i
 
 ### Langkah Eksekusi Cepat: Menjinakkan CPU 100 Persen
 
-Buka kembali Task Manager Anda menggunakan tombol pintas `Ctrl + Shift + Esc`. Jika gerakan mouse masih memungkinkan, ikuti langkah-langkah terstruktur berikut untuk memulihkan performa PC kantor Anda:
+Buka kembali Task Manager Anda menggunakan tombol pintas `Ctrl + Shift + Esc`. Jika gerakan mouse masih memungkinkan, ikuti langkah-langkah terstruktur berikut untuk memulihkan performa PC kantor And
+
+a:
 
 #### Langkah 1: Identifikasi dan Hentikan Layanan yang Bentrok
 1. Di dalam jendela Task Manager, arahkan pandangan ke tabProcesses.
@@ -63,7 +71,9 @@ Buka kembali Task Manager Anda menggunakan tombol pintas `Ctrl + Shift + Esc`. J
 4. Jika tidak, pilih Update Driver dan arahkan pencarian secara otomatis secara daring.
 
 #### Langkah 3: Jalankan Pemindaian Integritas Sistem (SFC & DISM)
-Jika langkah manual di atas belum sepenuhnya meredakan beban CPU, mari kita perbaiki file sistem yang mungkin rusak dari akarnya:
+Jika langkah manual di atas belum sepenuhnya meredakan beban CPU, mari kita perbaiki file sistem yang mungkin rusak dari akarny
+
+a:
 1. Klik tombol Start, ketik `cmd`, lalu klik kanan padaCommand Promptdan pilihRun as administrator.
 
 2. Ketik perintah berikut tanpa tanda kutip untuk memeriksa file sistem: `sfc /scannow`
@@ -86,5 +96,14 @@ Selalu pastikan sirkulasi udara pada casing PC atau laptop Anda tidak terhalang 
 
 ### Tanya Jawab Populer (FAQ)
 
-Q: Apakah aman mematikan layanan SysMain (Superfetch) secara permanen? A: Sangat aman. Bagi komputer kantor yang menggunakan SSD sebagai penyimpanan utamanya, layanan SysMain justru sering kali tidak diperlukan dan malah membebani kinerja baca-tulis serta proses latar belakang CPU.Q: Kenapa kipas laptop saya tetap berbunyi kencang meskipun Task Manager sudah menunjukkan penggunaan CPU di bawah 10 persen? A: Sensor suhu pada prosesor membutuhkan waktu beberapa menit untuk mendinginkan diri setelah bekerja keras di angka 100 persen. Selama suhu fisik chip belum turun ke ambang normal (di bawah 50 derajat Celsius), putaran kipas akan dipertahankan pada kecepatan tinggi.Q: Apakah reinstall Windows adalah satu-satunya jalan jika cara di atas gagal?
+Q: Apakah aman mematikan layanan SysMain (Superfetch) secara permanen?
+
+A: Sangat aman. Bagi komputer kantor yang menggunakan SSD sebagai penyimpanan utamanya, layanan SysMain justru sering kali tidak diperlukan dan malah membebani kinerja baca-tulis serta proses latar belakang CPU.
+
+Q: Kenapa kipas laptop saya tetap berbunyi kencang meskipun Task Manager sudah menunjukkan penggunaan CPU di bawah 10 persen?
+
+A: Sensor suhu pada prosesor membutuhkan waktu beberapa menit untuk mendinginkan diri setelah bekerja keras di angka 100 persen. Selama suhu fisik chip belum turun ke ambang normal (di bawah 50 derajat Celsius), putaran kipas akan dipertahankan pada kecepatan tinggi.
+
+Q: Apakah reinstall Windows adalah satu-satunya jalan jika cara di atas gagal?
+
 A: Tidak selalu. Biasanya masalah *System process* yang membandel dapat diselesaikan dengan melakukan *In-Place Upgrade* menggunakan file ISO Windows tanpa harus menghapus data dokumen kerja Anda yang tersimpan di drive C.

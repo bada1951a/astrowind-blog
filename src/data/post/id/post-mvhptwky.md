@@ -9,7 +9,9 @@ theme: "Retro Monokai"
 ---
 
 
-Jam menunjukkan pukul 16.45 WIB di salah satu gedung perkantoran kawasan Sudirman, Jakarta. Tenggat waktu (deadline) laporan keuangan tahunan tinggal 15 menit lagi, dan suasana di kubikal saya mendadak mencekam. PC salah satu manajer keuangan mengalami crash mendadak akibat pembaruan sistem yang gagal. Setelah melakukan force restart dan sistem berhasil menyala kembali, sang manajer panik bukan kepalang karena kebiasaan kerjanya terganggu. Menu klik kanan (right-click context menu) di Windows 11 berubah total menjadi tampilan modern minimalis yang menyembunyikan opsi "Show more options" atau tombol pintas lama seperti WinRAR, 7-Zip, dan pengaturan driver penting.
+Jam menunjukkan pukul 16.45 WIB di salah satu gedung perkantoran kawasan Sudirman, Jakart
+
+a. Tenggat waktu (deadline) laporan keuangan tahunan tinggal 15 menit lagi, dan suasana di kubikal saya mendadak mencekam. PC salah satu manajer keuangan mengalami crash mendadak akibat pembaruan sistem yang gagal. Setelah melakukan force restart dan sistem berhasil menyala kembali, sang manajer panik bukan kepalang karena kebiasaan kerjanya terganggu. Menu klik kanan (right-click context menu) di Windows 11 berubah total menjadi tampilan modern minimalis yang menyembunyikan opsi "Show more options" atau tombol pintas lama seperti WinRAR, 7-Zip, dan pengaturan driver penting.
 
 Bayangkan betapa frustrasinya harus mengklik dua kali hanya untuk melakukan ekstrak file atau scan antivirus di detik-detik krusial menjelang pengumpulan laporan. Waktu terbuang percuma untuk melakukan trial-and-error mengklik menu tersembunyi yang tidak responsif di bawah tekanan tenggat waktu yang begitu ketat.
 
@@ -53,7 +55,9 @@ reg.exe add "HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\
 
 5. Langkah terakhir untuk menyegarkan sistem: ketik `taskkill /f /im explorer.exe` lalu tekan Enter, dilanjutkan dengan mengetik `start explorer.exe` dan tekan Enter.
 
-Selesai! Sekarang coba klik kanan pada sembarang folder atau file di desktop Anda. Menu klasik legendaris langsung muncul tanpa perlu lagi mengklik "Show more options".
+Selesai! Sekarang coba klik kanan pada sembarang folder atau file di desktop And
+
+a. Menu klasik legendaris langsung muncul tanpa perlu lagi mengklik "Show more options".
 
 ---
 
@@ -74,6 +78,10 @@ Sebagai teknisi senior, saya menyarankan agar perubahan ini dicatat dalam dokume
 2. Apakah cara ini akan hilang otomatis jika komputer melakukan update Windows? Sebagian besar pembaruan kumulatif (cumulative update) bulanan tidak akan menghapus tweak registry ini. Namun, pada pembaruan fitur besar tahunan (major OS upgrade), ada kemungkinan pengaturan ini mereset ke default dan Anda perlu menjalankan ulang perintah Command Prompt di atas.
 
 3. Bagaimana cara mengembalikan ke menu bawaan Windows 11 jika saya berubah pikiran?
-Sangat mudah. Buka kembali Command Prompt sebagai Administrator, lalu ketik perintah berikut untuk menghapus kuncinya:
+Sangat mudah. Buka kembali Command Prompt sebagai Administrator, lalu ketik perintah berikut untuk menghapus kunciny
+
+a:
 `reg.exe delete "HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}" /f`
-Setelah itu, restart Windows Explorer Anda.
+Setelah itu, restart Windows Explorer And
+
+a.

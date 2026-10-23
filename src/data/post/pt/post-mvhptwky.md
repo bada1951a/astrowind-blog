@@ -12,7 +12,9 @@ theme: "Rosewood Hardware Guide"
 Eram exatamente 13h45 em um escritório na Avenida Paulista, e a tensão na sala de reuniões era palpable. Faltavam quinze minutos para a apresentação trimestral da diretoria quando o nosso gerente de operações chamou no rádio: o notebook corporativo recém-atualizado para o Windows 11 simplesmente travou na hora de anexar os arquivos finais compactados. O motivo? Aquela maldita interface simplificada do botão direito que esconde as opções essenciais de compactação e ferramentas de terceiros atrás de um clique extra em "Mostrar mais opções". Para quem precisa de agilidade e executa dezenas de tarefas por minuto, perder preciosos segundos caçando menus ocultos sob pressão é o cenário perfeito para um desastre corporativo.
 
 <div style="border-left: 4px solid #be123c; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
-<strong>Alerta de Bancada:</strong> O novo menu de contexto do Windows 11 foi desenhado pensando em telas sensíveis ao toque e usuários casuais, mas para ambientes corporativos e analistas de TI, ele representa uma perda drástica de eficiência operacional.
+<strong>Alerta de Bancad
+
+a:</strong> O novo menu de contexto do Windows 11 foi desenhado pensando em telas sensíveis ao toque e usuários casuais, mas para ambientes corporativos e analistas de TI, ele representa uma perda drástica de eficiência operacional.
 </div>
 
 ## Por Que Essa Mudança Incomoda Tanto os Profissionais?
@@ -21,7 +23,9 @@ Antes de aplicar a solução definitiva que salvou nossa reunião, vale a pena e
 
 1. Isolamento de Processos (AppX Packages): A Microsoft migrou o menu clássico para uma arquitetura moderna baseada em UWP/WinRT, o que impede que programas legados (como WinRAR, 7-Zip e clientes FTP antigos) se injetem diretamente na raiz do menu sem uma adaptação profunda por parte dos desenvolvedores.
 
-2. Falta de Compatibilidade Nativa Imediata: Milhares de softwares corporativos essenciais ainda usam as chaves antigas de registro do shell do Windows. Sem o ajuste correto, eles ficam ocultos no submenu secundário.
+2. Falta de Compatibilidade Nativa Imediat
+
+a: Milhares de softwares corporativos essenciais ainda usam as chaves antigas de registro do shell do Windows. Sem o ajuste correto, eles ficam ocultos no submenu secundário.
 
 3. Ergonomia e Memória Muscular: Anos de uso do Windows 10 criaram uma memória muscular nos dedos. Parar o fluxo de trabalho para dar um clique duplo ou usar atalhos extras causa fadiga cognitiva desnecessária na equipe.
 
@@ -29,7 +33,9 @@ Antes de aplicar a solução definitiva que salvou nossa reunião, vale a pena e
 
 Assim que cheguei à mesa do diretor, a primeira reação instintiva de qualquer usuário comum foi tentar clicar em "Mostrar mais opções" ou buscar nas Configurações visuais do Windows 11 alguma chave mágica de reversão. Infelizmente, a Microsoft não colocou um botão simples de "Ligar/Desligar" o menu clássico no aplicativo de Configurações. 
 
-Perdemos quase 3 minutos preciosos tentando tutoriais antigos da internet que recomendavam apagar chaves complexas no Editor do Registro (Regedit) manualmente, o que em máquinas com políticas de segurança de domínio ativas (Group Policy) causava erros de permissão e negação de acesso. Precisávamos de algo rápido, cirúrgico e que funcionasse via linha de comando ou chave direta.
+Perdemos quase 3 minutos preciosos tentando tutoriais antigos da internet que recomendavam apagar chaves complexas no Editor do Registro (Regedit) manualmente, o que em máquinas com políticas de segurança de domínio ativas (Group Policy) causava erros de permissão e negação de acesso. Precisávamos de algo rápido, cirúrgico e que funcionasse via linha de comando ou chave diret
+
+a.
 
 ---
 
@@ -84,9 +90,17 @@ Sim. O comando afeta diretamente a estrutura de classes do shell do Windows e co
 ![Tech Troubleshooting Guide](/images/tech-photo/storage%20(15).png)
 
 ### 2. Posso reverter a alteração caso eu me arrependa?
-Com certeza. Se quiser voltar ao menu padrão do Windows 11, basta abrir o Prompt de Comando como Administrador e executar o comando para remover a chave criada:
+Com certez
+
+a. Se quiser voltar ao menu padrão do Windows 11, basta abrir o Prompt de Comando como Administrador e executar o comando para remover a chave criad
+
+a:
 `reg.exe delete "HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}" /f`
 Em seguida, reinicie o Explorador de Arquivos pelo Gerenciador de Tarefas.
 
 ### 3. Essa modificação afeta a estabilidade do sistema ou causa telas azuis (BSOD)?
-De forma alguma. Trata-se apenas de uma alteração inofensiva no Registro do Windows que diz ao Explorador de Arquivos qual interface gráfica de menu desenhar na tela. Nenhum driver de kernel ou hardware é tocado no processo.
+De forma algum
+
+a. Trata-se apenas de uma alteração inofensiva no Registro do Windows que diz ao Explorador de Arquivos qual interface gráfica de menu desenhar na tel
+
+a. Nenhum driver de kernel ou hardware é tocado no processo.

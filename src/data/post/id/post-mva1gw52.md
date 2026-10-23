@@ -9,10 +9,14 @@ theme: "Graphite Technical Paper"
 ---
 
 
-Layar monitor di ruang server kantor kami di kawasan SCBD mendadak menyala merah dengan notifikasi *Low Disk Space* tepat satu jam sebelum *sync-up* mingguan dengan tim manajemen. Laptop operasional salah satu analis data kami ngadat total; sistem Windows 11 menolak membuka aplikasi Excel karena kapasitas Drive C, yang berukuran 512GB NVMe, menyisakan ruang kosong persis 0 bytes. Tidak ada ruang *swap memory*, tidak bisa *save file*, bahkan proses *update* sistem tertahan di tengah jalan. Panik? Sedikit. Tapi sebagai anak IT yang sudah kenyang asam garam menangani kendala server dan sistem internal, saya tahu persis di mana Windows menyembunyikan "sampah" digitalnya.
+Layar monitor di ruang server kantor kami di kawasan SCBD mendadak menyala merah dengan notifikasi *Low Disk Space* tepat satu jam sebelum *sync-up* mingguan dengan tim manajemen. Laptop operasional salah satu analis data kami ngadat total; sistem Windows 11 menolak membuka aplikasi Excel karena kapasitas Drive C, yang berukuran 512GB NVMe, menyisakan ruang kosong persis 0 bytes. Tidak ada ruang *swap memory*, tidak bisa *save file*, bahkan proses *update* sistem tertahan di tengah jalan. Panik? Sedikit. Tapi sebagai anak IT yang sudah kenyang asam garam menangani kendala server dan sistem internal, saya tahu persis di mana Windows menyembunyikan "sampah" digitalny
+
+a.
 
 <div style="border-left: 4px solid #475569; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
-<strong>Catatan Lapangan IT:</strong> Masalah Drive C penuh di Windows 11 jarang sekali disebabkan oleh dokumen pekerjaan biasa. 90 persen kasus di lingkungan kantor kami berakar dari tumpukan *cache* aplikasi modern, *installer* sisa pembaruan sistem, dan file sementara (*temp files*) yang dibiarkan menumpuk selama berbulan-bulan.
+<strong>Catatan Lapangan IT:</strong> Masalah Drive C penuh di Windows 11 jarang sekali disebabkan oleh dokumen pekerjaan bias
+
+a. 90 persen kasus di lingkungan kantor kami berakar dari tumpukan *cache* aplikasi modern, *installer* sisa pembaruan sistem, dan file sementara (*temp files*) yang dibiarkan menumpuk selama berbulan-bulan.
 </div>
 
 ![Tech & IT Solution Guide](https://picsum.photos/seed/computer917/1000/550)
@@ -28,7 +32,9 @@ Sebelum Anda gegabah menghapus file sembarangan yang justru bisa merusak sistem 
    Setiap kali Windows 11 mendownload *major update* atau patch keamanan bulanan, OS ini menyimpan salinan file lama (Windows.old atau paket instalasi) sebagai cadangan jika proses *rollback* diperlukan. File-file ini bisa memakan ruang hingga puluhan gigabyte.
 
 3. Cache Hibernasi dan Virtual Memory (Pagefile.sys & Hiberfil.sys)
-   Jika fitur *Hibernation* aktif, Windows mencadangkan seluruh isi RAM ke dalam file sistem sebesar kapasitas RAM fisik Anda. Ditambah file *pagefile* untuk manajemen memori virtual, kedua file sistem ini otomatis mengunci ruang penyimpanan dalam jumlah masif.
+   Jika fitur *Hibernation* aktif, Windows mencadangkan seluruh isi RAM ke dalam file sistem sebesar kapasitas RAM fisik And
+
+a. Ditambah file *pagefile* untuk manajemen memori virtual, kedua file sistem ini otomatis mengunci ruang penyimpanan dalam jumlah masif.
 
 ---
 
@@ -41,15 +47,21 @@ Daripada mengunduh aplikasi pembersih pihak ketiga yang kadang membawa *bloatwar
 
 * Buka Pengaturan (Settings) dengan menekan kombinasi tombol `Windows + I`.
 * Navigasi ke menu Sistem (System)lalu pilihPenyimpanan (Storage).
-* Nyalakan toggle Storage Sense ke posisi *On*. Fitur ini akan otomatis membersihkan file sementara secara berkala.
-* Klik pada opsi Temporary files. Tunggu beberapa saat hingga sistem selesai memindai rincian data.
+* Nyalakan toggle Storage Sense ke posisi *On*. Fitur ini akan otomatis membersihkan file sementara secara berkal
+
+a.
+* Klik pada opsi Temporary files. Tunggu beberapa saat hingga sistem selesai memindai rincian dat
+
+a.
 
 ### Langkah 2: Pembersihan Manual File Temporary yang Bandel
 Terkadang Storage Sense melewatkan beberapa direktori tersembunyi. Kita bisa masuk langsung menggunakan utilitas Run.
 
 * Tekan `Windows + R`, ketik `%temp%` lalu tekan Enter. Ini akan membuka direktori `AppData\Local\Temp`.
 * Tekan `Ctrl + A` untuk memilih seluruh file di dalamnya, lalu tekan `Shift + Delete` untuk menghapusnya secara permanen (tanpa masuk Recycle Bin).
-* *Catatan Penting:* Jika ada file yang gagal dihapus dengan keterangan "File is in use", biarkan saja. Itu artinya file sedang digunakan oleh aplikasi yang sedang aktif berjalan.
+* *Catatan Penting:* Jika ada file yang gagal dihapus dengan keterangan "File is in use", biarkan saj
+
+a. Itu artinya file sedang digunakan oleh aplikasi yang sedang aktif berjalan.
 * Ulangi proses yang sama dengan menekan `Windows + R`, kali ini ketik `temp` (tanpa tanda persen) dan bersihkan isinya dengan hak akses administrator.
 
 ### Langkah 3: Eksekusi Disk Cleanup Tingkat Lanjut (System Files)
@@ -62,14 +74,18 @@ Untuk membersihkan file sisa pembaruan Windows yang tersembunyi, kita butuh hak 
   * *Windows Update Cleanup*
   * *Previous Windows installation(s)*
   * *Temporary files*
-* Klik OK dan biarkan sistem memangkas beban file sampah tersebut. Proses ini bisa memakan waktu 5 hingga 15 menit tergantung kecepatan SSD Anda.
+* Klik OK dan biarkan sistem memangkas beban file sampah tersebut. Proses ini bisa memakan waktu 5 hingga 15 menit tergantung kecepatan SSD And
+
+a.
 
 ---
 
 ## Catatan Penting & Rekomendasi Keamanan
 
 <div style="border-left: 4px solid #475569; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
-<strong>Peringatan Preventif:</strong> Jangan pernah secara sembarangan menghapus folder <code>Windows.old</code> melalui tombol Delete biasa jika Anda baru saja melakukan *major upgrade* Windows 11 dalam 10 hari terakhir dan masih ingin opsi kembali ke versi sebelumnya. Gunakan selalu fitur Disk Cleanup agar sistem menghapusnya secara aman dari tingkat kernel.
+<strong>Peringatan Preventif:</strong> Jangan pernah secara sembarangan menghapus folder <code>Windows.old</code> melalui tombol Delete biasa jika Anda baru saja melakukan *major upgrade* Windows 11 dalam 10 hari terakhir dan masih ingin opsi kembali ke versi sebelumny
+
+a. Gunakan selalu fitur Disk Cleanup agar sistem menghapusnya secara aman dari tingkat kernel.
 </div>
 
 Sebagai tindakan pencegahan jangka panjang, biasakan untuk memindahkan lokasi penyimpanan *default* untuk dokumen,unduhan (*Downloads*), dan media besar ke Drive D atau penyimpanan eksternal. Anda bisa mengaturnya melalui Settings > System > Storage > Where new content is saved.

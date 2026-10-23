@@ -18,7 +18,9 @@ theme: "Rosewood Hardware Guide"
 </div>
 
 Trong môi trường văn phòng doanh nghiệp, có 3 thủ phạm chính gây ra vụ án này:
-1. Oxi hóa chân tiếp điểm vàng (Golden Fingers): Độ ẩm không khí kết hợp với bụi mịn lọt qua khe case lâu ngày tạo thành một lớp màng cách điện mỏng như tờ giấy lụa.
+1. Oxi hóa chân tiếp điểm vàng (Golden Fingers): Độ ẩm không khí kết hợp với bụi mịn lọt qua khe case lâu ngày tạo thành một lớp màng cách điện mỏng như tờ giấy lụ
+
+a.
 
 2. Lỏng khe cắm do sốc nhiệt hoặc rung lắc: Máy dùng lâu năm, quá trình co giãn vì nhiệt làm chân socket RAM bị hở nhẹ chân tín hiệu (Pins).
 

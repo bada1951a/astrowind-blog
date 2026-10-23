@@ -9,7 +9,9 @@ theme: "Electric Cyan Speed"
 ---
 
 
-Eran las 18:30 en nuestras oficinas del 22@ en Barcelona. Estábamos a menos de dos horas de realizar el despliegue crítico de una nueva versión de nuestro software y, de repente, la pantalla de mi estación de trabajo principal se iluminó con esa maldita notificación en rojo: "Espacio en disco insuficiente en la unidad C:". El rendimiento cayó en picado justo cuando necesitaba compilar los últimos paquetes y empaquetar los artefactos. El disco de 500 GB estaba al límite absoluto, con apenas 400 MB libres, y el sistema operativo amenazaba con congelarse por completo en pleno proceso de release.
+Eran las 18:30 en nuestras oficinas del 22@ en Barcelon
+
+a. Estábamos a menos de dos horas de realizar el despliegue crítico de una nueva versión de nuestro software y, de repente, la pantalla de mi estación de trabajo principal se iluminó con esa maldita notificación en rojo: "Espacio en disco insuficiente en la unidad C:". El rendimiento cayó en picado justo cuando necesitaba compilar los últimos paquetes y empaquetar los artefactos. El disco de 500 GB estaba al límite absoluto, con apenas 400 MB libres, y el sistema operativo amenazaba con congelarse por completo en pleno proceso de release.
 
 <div style="border-left: 4px solid #06b6d4; padding: 12px 16px; margin: 20px 0; background-color: rgba(6,182,212,0.05); border-radius: 4px; color: #111827;">
 <strong>Emergencia en el entorno de desarrollo:</strong> Cuando el disco C se llena por completo, Windows 11 no solo deja de recibir actualizaciones, sino que pierde la capacidad de gestionar la memoria virtual (archivo de paginación), provocando cierres inesperados de aplicaciones críticas.
@@ -21,7 +23,9 @@ Eran las 18:30 en nuestras oficinas del 22@ en Barcelona. Estábamos a menos de 
 
 Antes de empezar a borrar a lo loco y romper algo importante, hay que entender dónde se esconde realmente la basura digital en este sistema operativo. Tras investigar el origen del colapso en mi equipo, identifiqué tres culpables principales:
 
-1. Archivos temporales acumulados y caché del sistema: Las actualizaciones de Windows Update anteriores, los instaladores de parches y la caché de aplicaciones de la Tienda de Windows dejan gigabytes de archivos huérfanos en directorios ocultos.
+1. Archivos temporales acumulados y caché del sistem
+
+a: Las actualizaciones de Windows Update anteriores, los instaladores de parches y la caché de aplicaciones de la Tienda de Windows dejan gigabytes de archivos huérfanos en directorios ocultos.
 
 2. Puntos de restauración y copias de seguridad de Shadow Copy: Windows crea copias de seguridad automáticas del sistema cada vez que instalas un controlador o un programa pesado, devorando espacio sin avisar.
 
@@ -45,17 +49,23 @@ Esta es la ruta más segura para recuperar espacio al instante sin tocar archivo
 * Haz clic en el botón superior Quitar archivos.
 
 <div style="border-left: 4px solid #06b6d4; padding: 12px 16px; margin: 20px 0; background-color: rgba(6,182,212,0.05); border-radius: 4px; color: #111827;">
-<strong>Consejo Pro:</strong> Evita marcar la casilla de "Descargas" a menos que estés 100 por ciento seguro de que no necesitas nada de lo que hay en esa carpeta.
+<strong>Consejo Pro:</strong> Evita marcar la casilla de "Descargas" a menos que estés 100 por ciento seguro de que no necesitas nada de lo que hay en esa carpet
+
+a.
 </div>
 
 #### Fase 2: Purga profunda de carpetas Temp ocultas
 
-Si la fase anterior no ha liberado suficiente espacio, necesitamos acceder manualmente a los directorios donde las aplicaciones de terceros acumulan basura.
+Si la fase anterior no ha liberado suficiente espacio, necesitamos acceder manualmente a los directorios donde las aplicaciones de terceros acumulan basur
+
+a.
 
 1. Presiona `Windows + R`, escribe `%temp%` y pulsa Intro. Se abrirá la carpeta de temporales del usuario actual.
 
 2. Selecciona todo con `Ctrl + E` y bórralo con `Shift + Supr` (para eliminarlo permanentemente sin pasar por la papelera). 
-   * *Nota:* Si Windows te avisa de que un archivo está abierto en otra aplicación, simplemente haz clic en "Omitir".
+   * *Not
+
+a:* Si Windows te avisa de que un archivo está abierto en otra aplicación, simplemente haz clic en "Omitir".
 
 3. Vuelve a presionar `Windows + R`, escribe esta vez `temp` (sin porcentajes) y pulsa Intro. Repite el proceso de selección y borrado para los temporales del sistema (te pedirá permisos de Administrador).
 
@@ -74,5 +84,7 @@ Si la fase anterior no ha liberado suficiente espacio, necesitamos acceder manua
 
 ### Preguntas frecuentes (FAQ)
 
-¿Es seguro borrar todo el contenido de la carpeta Temp (%temp%)? Sí, es completamente seguro. Los archivos que están en uso activo por el sistema o aplicaciones abiertas no se dejarán borrar y recibirás un aviso, por lo que no hay riesgo de corromper el sistema operativo.¿Qué hago si mi disco C se vuelve a llenar inmediatamente después de limpiarlo? Lo más probable es que tengas una aplicación configurada para descargar archivos pesados en el disco principal (como herramientas de edición de vídeo o clientes de torrents), o que la caché de actualizaciones de Windows esté corrupta. Revisa el uso de almacenamiento por aplicación en la configuración para identificar al responsable.¿Puedo mover la carpeta de Usuarios o Archivos de Programa al disco D para liberar el C?
+¿Es seguro borrar todo el contenido de la carpeta Temp (%temp%)? Sí, es completamente seguro. Los archivos que están en uso activo por el sistema o aplicaciones abiertas no se dejarán borrar y recibirás un aviso, por lo que no hay riesgo de corromper el sistema operativo.¿Qué hago si mi disco C se vuelve a llenar inmediatamente después de limpiarlo? Lo más probable es que tengas una aplicación configurada para descargar archivos pesados en el disco principal (como herramientas de edición de vídeo o clientes de torrents), o que la caché de actualizaciones de Windows esté corrupt
+
+a. Revisa el uso de almacenamiento por aplicación en la configuración para identificar al responsable.¿Puedo mover la carpeta de Usuarios o Archivos de Programa al disco D para liberar el C?
 Aunque técnicamente es posible mediante enlaces simbólicos o modificaciones avanzadas del registro, no se recomienda para la carpeta de Archivos de Programa, ya que puede romper futuras actualizaciones de software. Es mucho más seguro mover las carpetas personales (Documentos, Descargas, Imágenes) haciendo clic derecho en ellas, seleccionando *Propiedades*, y luego en la pestaña *Ubicación*.

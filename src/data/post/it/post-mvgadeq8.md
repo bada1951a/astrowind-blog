@@ -15,7 +15,9 @@ Nei primi minuti di panico totale ho fatto l'errore classico: ho iniziato a clic
 
 ![Tech Troubleshooting Guide](/images/tech-photo/tech-photos%20(20).jpg)
 
-Il problema non era solo estetico, ma bloccava letteralmente l'interazione con le applicazioni desktop a schermo intero. Dopo aver tamponato la situazione spostando temporaneamente il file su un vecchio portatile di backup per l'invio in extremis, ho analizzato la situazione a mente fredda. Perché quella filigrana crea conflitti visivi bloccanti? 
+Il problema non era solo estetico, ma bloccava letteralmente l'interazione con le applicazioni desktop a schermo intero. Dopo aver tamponato la situazione spostando temporaneamente il file su un vecchio portatile di backup per l'invio in extremis, ho analizzato la situazione a mente fredd
+
+a. Perché quella filigrana crea conflitti visivi bloccanti? 
 
 Ecco i 3 motivi tecnici principali per cui questo fastidio visivo si trasforma in un blocco operativo:
 1. Conflitto di rendering Direct3D: Nelle versioni non attivate, Windows gestisce i livelli grafici della filigrana in sovrimpressione, mandando in tilt l'accelerazione hardware di alcune applicazioni gestionali legacy.
@@ -26,29 +28,39 @@ Ecco i 3 motivi tecnici principali per cui questo fastidio visivo si trasforma i
 
 Per evitare di perdere ore dietro a script scaricati da forum sconosciuti che rischiano solo di infettare la macchina con malware, la via più pulita, rapida e sicura passa attraverso il Prompt dei comandi (`cmd`) nativo di Windows, sfruttando una procedura di gestione della licenza pulita o arrestando temporaneamente il processo di notifica senza toccare i file di sistema critici.
 
-Ecco la procedura passo-passo che ho testato sul campo per risolvere definitivamente il problema:
+Ecco la procedura passo-passo che ho testato sul campo per risolvere definitivamente il problem
+
+a:
 
 <div style="border-left: 4px solid #a6e22e; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
-<strong>Nota Bene:</strong> Esegui sempre queste operazioni con i privilegi amministrativi per evitare errori di accesso negato durante la scrittura nel registro di sistema.
+<strong>Nota Bene:</strong> Esegui sempre queste operazioni con i privilegi amministrativi per evitare errori di accesso negato durante la scrittura nel registro di sistem
+
+a.
 </div>
 
 ### Procedura passo-passo tramite CMD
 
 1. Apri il Prompt dei comandi come Amministratore:Premi il tasto Windows sulla tastiera, digita `cmd`, fai clic con il tasto destro suPrompt dei comandinei risultati della ricerca e selezionaEsegui come amministratore.
 
-2. Verifica lo stato della licenza:
+2. Verifica lo stato della licenz
+
+a:
    Nella finestra nera del terminale, digita il comando di controllo della licenza per identificare il canale di attivazione:
    ```cmd
    slmgr /xpr
    ```
    Premi Invio e attendi la finestra di dialogo che conferma lo stato attuale del sistema operativo.
 
-3. Arresta temporaneamente il servizio di notifica:
+3. Arresta temporaneamente il servizio di notific
+
+a:
    Per impedire al sistema di ridisegnare la filigrana sopra le tue finestre di lavoro, puoi reimpostare il periodo di prova o fermare il gestore delle notifiche tramite il comando di gestione script:
    ```cmd
    slmgr /rearm
    ```
-   Premi Invio, chiudi il prompt e riavvia immediatamente il computer dal menu Start > Spegni o disconnetti > Riavvia.
+   Premi Invio, chiudi il prompt e riavvia immediatamente il computer dal menu Start > Spegni o disconnetti > Riavvi
+
+a.
 
 Al riavvio, la filigrana sparirà dallo schermo, liberando l'area di lavoro e permettendoti di completare l'invio dei report senza interruzioni visive o conflitti con i software gestionali.
 
@@ -74,4 +86,6 @@ R: Sì, il comando `slmgr` è nativo in tutte le edizioni Pro, Enterprise ed Hom
 
 D: Cosa devo fare se il comando mi restituisce un errore di accesso negato?
 
-R: Significa che non hai aperto il Prompt dei comandi con i privilegi elevati. Assicurati di fare clic destro su `cmd` e selezionare esplicitamente "Esegui come amministratore" prima di digitare qualsiasi stringa.
+R: Significa che non hai aperto il Prompt dei comandi con i privilegi elevati. Assicurati di fare clic destro su `cmd` e selezionare esplicitamente "Esegui come amministratore" prima di digitare qualsiasi string
+
+a.

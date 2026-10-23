@@ -21,7 +21,9 @@ Se você já passou pela humilhação de ver o computador demorar dez minutos pa
 
 ## Por que o seu Windows 10 demora tanto para ligar?
 
-Antes de aplicar a faca cirúrgica no sistema, vale a pena entender a raiz do problema. A lentidão na inicialização geralmente é causada por três fatores principais:
+Antes de aplicar a faca cirúrgica no sistema, vale a pena entender a raiz do problem
+
+a. A lentidão na inicialização geralmente é causada por três fatores principais:
 
 1. Efeito "Cachorro de Guarda": Aplicativos como antivírus secundários, Discord, Steam e utilitários de impressora configuram-se automaticamente para iniciar junto com o sistema operacional, disputando I/O do disco rígido ou SSD logo nos primeiros segundos.
 
@@ -48,7 +50,11 @@ Você verá uma lista completa de todos os softwares configurados para abrir aut
 Clique com o botão direito em cima do aplicativo que você nãoprecisa que rode em segundo plano logo na inicialização (por exemplo: utilitários de fabricantes que você nunca usa, players de música, launchers de jogos) e selecione "Desativar".
 
 <div style="border-left: 4px solid #e11d48; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
-<strong>Dica de Ouro de Engenharia:</strong> Não saia desativando tudo de forma cega. Mantenha ativos apenas o seu antivírus principal e drivers essenciais (como painéis de controle de placa de vídeo ou touchpad). Se tiver dúvida sobre um processo com nome estranho, clique com o botão direito nele e selecione "Pesquisar online" para verificar se é seguro desativá-lo.
+<strong>Dica de Ouro de Engenhari
+
+a:</strong> Não saia desativando tudo de forma ceg
+
+a. Mantenha ativos apenas o seu antivírus principal e drivers essenciais (como painéis de controle de placa de vídeo ou touchpad). Se tiver dúvida sobre um processo com nome estranho, clique com o botão direito nele e selecione "Pesquisar online" para verificar se é seguro desativá-lo.
 </div>
 
 ---
@@ -58,15 +64,23 @@ Clique com o botão direito em cima do aplicativo que você nãoprecisa que rode
 Limpar a inicialização vai devolver agilidade ao seu fluxo de trabalho, mas vale a pena manter alguns cuidados para evitar dores de cabeça futuras:
 
 * Revise periodicamente: Sempre que você instalar novos softwares pesados (como suítes de edição ou ferramentas de comunicação corporativa), eles costumam marcar a caixinha "Iniciar com o Windows" por padrão. Crie o hábito de checar o Gerenciador de Tarefas mensalmente.
-* Cuidado com atualizadores: Desativar atualizadores automáticos de programas secundários não impede que eles funcionem; apenas significa que eles vão checar por updates quando você realmente abrir o programa, o que é muito mais saudável para o desempenho da máquina.
+* Cuidado com atualizadores: Desativar atualizadores automáticos de programas secundários não impede que eles funcionem; apenas significa que eles vão checar por updates quando você realmente abrir o programa, o que é muito mais saudável para o desempenho da máquin
+
+a.
 
 ---
 
 ## Perguntas Frequentes (FAQ)
 
-1. Desativar programas na inicialização pode danificar o Windows? De forma alguma. A aba "Inicializar" do Gerenciador de Tarefas lida apenas com aplicativos de usuário e utilitários opcionais. O Windows protege seus arquivos e serviços essenciais de sistema, impedindo que você desative algo crítico por engano nessa tela.
+1. Desativar programas na inicialização pode danificar o Windows? De forma algum
+
+a. A aba "Inicializar" do Gerenciador de Tarefas lida apenas com aplicativos de usuário e utilitários opcionais. O Windows protege seus arquivos e serviços essenciais de sistema, impedindo que você desative algo crítico por engano nessa tel
+
+a.
 
 2. O que acontece se eu desativar um programa por engano? Nada grave. Se você notar que algum aplicativo que você usa com frequência deixou de abrir sozinho, basta voltar ao Gerenciador de Tarefas (Ctrl + Shift + Esc), ir na aba "Inicializar", clicar com o botão direito nele e selecionar "Habilitar".
 
 3. Preciso reiniciar o computador imediatamente após fazer isso?
-Não é obrigatório para que a alteração seja salva, mas é altamente recomendável reiniciar a máquina logo em seguida para testar o novo tempo de boot e sentir a diferença na prática.
+Não é obrigatório para que a alteração seja salva, mas é altamente recomendável reiniciar a máquina logo em seguida para testar o novo tempo de boot e sentir a diferença na prátic
+
+a.

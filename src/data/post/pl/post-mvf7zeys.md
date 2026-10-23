@@ -9,7 +9,11 @@ theme: "Pure Titanium Clean"
 ---
 
 
-Godzina 8:45 rano, warszawskie centrum biznesowe na Mokotowie. Za piętnaście minut kluczowa telekonferencja zarządu z inwestorami, a stacja robocza dyrektora finansowego wydaje z siebie dźwięk startującego odrzutowca. Wentylatory wyją na maksymalnych obrotach, kursor myszy skacze po ekranie jak szalony, a w Menedżerze zadań proces „System”lub„System i przerwania”dumnie wyświetla równe100% użycia procesora. Ekran zamarza przy próbie otwarcia prezentacji PowerPoint. Panika w oczach użytkownika sięga zenitu, a ja wkraczam do akcji z walizką serwisową.
+Godzina 8:45 rano, warszawskie centrum biznesowe na Mokotowie. Za piętnaście minut kluczowa telekonferencja zarządu z inwestorami, a stacja robocza dyrektora finansowego wydaje z siebie dźwięk startującego odrzutowc
+
+a. Wentylatory wyją na maksymalnych obrotach, kursor myszy skacze po ekranie jak szalony, a w Menedżerze zadań proces „System”lub„System i przerwania”dumnie wyświetla równe100% użycia procesor
+
+a. Ekran zamarza przy próbie otwarcia prezentacji PowerPoint. Panika w oczach użytkownika sięga zenitu, a ja wkraczam do akcji z walizką serwisową.
 
 Znam ten ból na pamięć. Zanim wpadłem na właściwy trop, straciłem mnóstwo czasu na bezmyślne restarty komputera, odinstalowywanie pakietu Office czy skanowanie antywirusem, które w tym konkretnym scenariuszu nie dawały absolutnie nic. Problem leżał głębiej – w sterownikach, uszkodzonej usłudze Windows Update lub konflikcie podzespołów. 
 
@@ -31,9 +35,13 @@ Zanim klikniemy cokolwiek w systemie, warto zrozumieć, z czym walczymy. Proces 
 
 ---
 
-### Procedura naprawcza: Krok po kroku do stabilnego systemu
+### Procedura naprawcz
 
-Do działania potrzebujemy pełnych uprawnień administratora. Otwórzmy Menedżer zadań, przejdźmy do Panelu sterowania i Menedżera urządzeń. Oto co robimy po kolei.
+a: Krok po kroku do stabilnego systemu
+
+Do działania potrzebujemy pełnych uprawnień administrator
+
+a. Otwórzmy Menedżer zadań, przejdźmy do Panelu sterowania i Menedżera urządzeń. Oto co robimy po kolei.
 
 <div style="border-left: 4px solid #334155; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Złota zasada serwisu:</strong> Zanim zaczniesz grzebać w sterownikach, odłącz wszystkie niepotrzebne urządzenia zewnętrzne (stacje dokujące USB-C, pendrive'y, drukarki sieciowe). Często to wadliwy hub USB powoduje 100% obciążenia procesora przez przerwania systemowe!
@@ -46,7 +54,9 @@ Do działania potrzebujemy pełnych uprawnień administratora. Otwórzmy Menedż
 
 3. Jeśli widzisz, że proces o nazwie „System”lub„System i przerwania”(System and compressed memory) pożera 80-100% CPU, kliknij na niego prawym przyciskiem myszy i wybierzPrzejdź do szczegółów.
 
-4. Zobaczysz proces ntoskrnl.exe. To potwierdzenie, że problem leży w jądrze systemu lub sterownikach urządzeń, a nie w zwykłej aplikacji użytkownika.
+4. Zobaczysz proces ntoskrnl.exe. To potwierdzenie, że problem leży w jądrze systemu lub sterownikach urządzeń, a nie w zwykłej aplikacji użytkownik
+
+a.
 
 #### Krok 2: Czyszczenie kolejki Windows Update (Częsty punkt zapalny)
 Jeśli proces systemowy obciąża procesor z powodu zaciętych aktualizacji, musimy zresetować komponenty usługi Update:
@@ -85,7 +95,9 @@ Jeżeli reset Windows Update nie pomógł, winny jest najpewniej sterownik sprz�
 ### Ważne ostrzeżenie serwisowe i dobre praktyki
 
 <div style="border-left: 4px solid #334155; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
-<strong>Uwaga dotyczące zasilania i temperatur:</strong> Długotrwałe utrzymywanie się 100% obciążenia procesora drastycznie podnosi temperaturę układu (często powyżej 85-90°C w laptopach). Upewnij się, że otwory wentylacyjne nie są zablokowane, a pasta termoprzewodząca nie wyschła. Przegrzewający się procesor włączy tzw. thermal throttling, drastycznie obniżając taktowanie i uniemożliwiając normalną pracę.
+<strong>Uwaga dotyczące zasilania i temperatur:</strong> Długotrwałe utrzymywanie się 100% obciążenia procesora drastycznie podnosi temperaturę układu (często powyżej 85-90°C w laptopach). Upewnij się, że otwory wentylacyjne nie są zablokowane, a pasta termoprzewodząca nie wyschł
+
+a. Przegrzewający się procesor włączy tzw. thermal throttling, drastycznie obniżając taktowanie i uniemożliwiając normalną pracę.
 </div>
 
 ---
@@ -97,4 +109,6 @@ Jeżeli reset Windows Update nie pomógł, winny jest najpewniej sterownik sprz�
 2. Co zrobić, jeśli po restrykcyjnym skanowaniu antywirusem problem nadal występuje? Jeśli program antywirusowy nie wykrył zagrożeń, a proces systemowy nadal dusi procesor, problem na 99% nie wynika z infekcji złośliwym oprogramowaniem. Skup się na aktualizacji BIOS-u płyty głównej oraz sterowników chipsetu (szczególnie sterowników Intel Management Engine lub AMD Chipset Drivers).
 
 3. Czy wyłączenie szybkiego uruchamiania (Fast Startup) w Panelu sterowania może pomóc?
-Tak! Funkcja szybkiego uruchamiania w Windows często zapisuje uszkodzony stan jądra systemowego do pliku hibernacji podczas zamykania komputera. Aby to wyłączyć, wejdź w *Panel sterowania -> Opcje zasilania -> Wybierz działanie przycisków zasilania*, odznacz *Włącz szybkie uruchamianie* i zrestartuj komputer. To rozwiązuje problem w co trzecim przypadków biurowych stacji roboczych.
+Tak! Funkcja szybkiego uruchamiania w Windows często zapisuje uszkodzony stan jądra systemowego do pliku hibernacji podczas zamykania komputer
+
+a. Aby to wyłączyć, wejdź w *Panel sterowania -> Opcje zasilania -> Wybierz działanie przycisków zasilania*, odznacz *Włącz szybkie uruchamianie* i zrestartuj komputer. To rozwiązuje problem w co trzecim przypadków biurowych stacji roboczych.

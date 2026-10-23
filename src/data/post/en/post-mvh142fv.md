@@ -35,7 +35,9 @@ When a system locks up completely without a Blue Screen of Death (BSOD), it usua
 
 ### Step-by-Step Resolution: Hunting the Ghost in Event Viewer
 
-Let's dive into the operating system and pull the forensic data. You do not need third-party diagnostic bloatware for this; Windows 11 has everything built right in.
+Let's dive into the operating system and pull the forensic dat
+
+a. You do not need third-party diagnostic bloatware for this; Windows 11 has everything built right in.
 
 #### Step 1: Open Event Viewer and Target System Logs
 Click on the Start menu, type Event Viewer, and hit Enter.
@@ -83,10 +85,13 @@ Once you identify potential corrupted system files or driver clashes in the logs
 ### Frequently Asked Questions (FAQ)
 
 Q1: What does Event ID 41 mean, and does it mean my power supply is broken?
+
 A:Event ID 41 simply means "The system has rebooted without cleanly shutting down first." While it can indicate a dying power supply, 80% of the time it is triggered by a sudden software lockup, unstable RAM overclock, or a crashed display driver that forced you to hold the physical power button.
 
 Q2: I see hundreds of errors in Event Viewer. Are they all causing my PC to freeze?
+
 A: No. Windows logs background service timeouts and minor app glitches constantly during normal operation. Ignore older errors and focus strictly on the cluster of critical errors that occurred 1 to 5 minutes *before* your manual reboot timestamp.
 
 Q3: Can a failing SSD cause random total system freezes in Windows 11?
+
 A: Absolutely. If your system drive drops connection for even a split second, Windows cannot page memory to disk, resulting in an immediate, total system lockup. Check Event Viewer for disk-related warnings mentioning `storahci`, `disk`, or `Ntfs` (Event ID 55 or 129).

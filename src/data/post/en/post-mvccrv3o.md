@@ -27,7 +27,9 @@ It was 4:50 PM on a Thursday at our Palo Alto office. We were twenty minutes awa
 Before tearing apart hardware or wiping a drive, let's look at what this specific stop code actually means under the hood. The `0x0000000a` error code indicates that a kernel-mode process or driver attempted to access a memory address it had no business touching while at a process Internal Request Level (IRQL) that was too high. 
 
 <div style="border-left: 4px solid #7c3aed; padding: 12px 16px; margin: 20px 0; background-color: rgba(124,58,237,0.06); border-radius: 4px; color: #111827;">
-<strong>Core Culprits behind 0x0000000a:</strong><br>
+<strong>Core Culprits behind 0x0000000
+
+a:</strong><br>
 - <strong>Faulty or Unstable Device Drivers:</strong> Usually a newly updated network, storage, or graphics driver interacting poorly with the kernel.<br>
 - <strong>Physical Memory (RAM) Degradation:</strong> A failing memory stick or unstable XMP/DOCP overclock profile.<br>
 - <strong>Corrupted System Files:</strong> Interrupted Windows updates leaving behind misaligned system binaries.

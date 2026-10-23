@@ -26,7 +26,9 @@ Im Sysadmin-Alltag ist so etwas kein bloßes Ärgernis, sondern ein echtes Betri
 
 Mechanische Tastaturschalter arbeiten fast ausnahmslos mit galvanischen Schaltkontakten: Zwei feine Metallplättchen (meist aus einer Kupferlegierung mit Goldbeschichtung) werden durch den mechanischen Stempel (*Stem*) getrennt oder zusammengeführt. Funktioniert dieses Prinzip nicht mehr zuverlässig, liegt die Ursache in der Regel in einem der folgenden drei Szenarien:
 
-### Ursache A: Mikroskopische Oxidation und Fremdkörperpartikel
+### Ursache
+
+A: Mikroskopische Oxidation und Fremdkörperpartikel
 Mechanische Schalter sind selten hermetisch versiegelt. Im Laufe von Monaten dringen feiner Staub, Aerosole und mikroskopischer Abrieb in das Gehäuse ein. Setzen sich diese Partikel genau zwischen die Gold-Crosspoint-Kontakte, wird der Stromkreis beim Niederdrücken nicht stabil geschlossen. Das Resultat: Die Firmware registriert ein extremes Flattern des Pegels. Statt eines sauberen High-/Low-Signals interpretiert der Controller die Spannungsschwankungen als mehrfaches Drücken der Taste binnen weniger Millisekunden (Chattering) oder der Kontakt kommt schlicht gar nicht zustande.
 
 ### Ursache B: Materialermüdung und Dejustierung der Blattfeder

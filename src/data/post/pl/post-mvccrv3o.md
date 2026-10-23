@@ -9,7 +9,11 @@ theme: "Deep Indigo System"
 ---
 
 
-Godzina 18:40, a we wrocławskim parku technologicznym atmosfera robi się gęsta. Jutro rano mamy kluczowy audyt stabilności infrastruktury przed wejściem zewnętrznego klienta, a stacja robocza lead architekta nagle sypie się do niebieskiego ekranu. Na monitorze dumnie widnieje kod błędu: `IRQL_NOT_LESS_OR_EQUAL` czyli klasyczny 0x0000000a. Serce na chwilę zamiera, bo reset komputera pomagał tylko na dokładnie pięć minut pracy pod obciążeniem. 
+Godzina 18:40, a we wrocławskim parku technologicznym atmosfera robi się gęst
+
+a. Jutro rano mamy kluczowy audyt stabilności infrastruktury przed wejściem zewnętrznego klienta, a stacja robocza lead architekta nagle sypie się do niebieskiego ekranu. Na monitorze dumnie widnieje kod błędu: `IRQL_NOT_LESS_OR_EQUAL` czyli klasyczny 0x0000000
+
+a. Serce na chwilę zamiera, bo reset komputera pomagał tylko na dokładnie pięć minut pracy pod obciążeniem. 
 
 Zamiast panikować i stawiać system od nowa, podwinąłem rękawy, odłączyłem zbędne peryferia i odpaliłem procedurę ratunkową. Poniżej opisuję krok po kroku, jak szybko zidentyfikować, czy winny jest niestabilny profil XMP na kościach RAM, czy może świeża aktualizacja sterownika kontrolera dysków.
 
@@ -63,14 +67,18 @@ Jeśli system pozwala na uruchomienie w trybie awaryjnym (Safe Mode), czas na co
 4. Kliknij przycisk Przywróć sterownik (Roll Back Driver), jeśli jest podświetlony. System natychmiast podmieni wadliwą binarkę na poprzednią, stabilną wersję.
 
 <div style="border-left: 4px solid #4338ca; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
-<strong>Wskazówka architekta:</strong> Jeśli przycisk cofania jest nieaktywny, przejdź do wiersza poleceń uruchomionego jako Administrator (Terminal) i wpisz komendę: <code>sfc /scannow</code>, a zaraz potem <code>DISM /Online /Cleanup-Image /RestoreHealth</code>. Pomoże to naprawić ewentualne uszkodzenia plikowe w warstwie WinSxS.
+<strong>Wskazówka architekt
+
+a:</strong> Jeśli przycisk cofania jest nieaktywny, przejdź do wiersza poleceń uruchomionego jako Administrator (Terminal) i wpisz komendę: <code>sfc /scannow</code>, a zaraz potem <code>DISM /Online /Cleanup-Image /RestoreHealth</code>. Pomoże to naprawić ewentualne uszkodzenia plikowe w warstwie WinSxS.
 </div>
 
 ---
 
 ## Ważne ostrzeżenia i dobre praktyki
 
-* Unikaj "magicznych" programów do aktualizacji sterowników: Narzędzia typu Driver Booster to najczęstsza przyczyna błędów 0x0000000a. Instalują one ogólne paczki zamiast dedykowanych sterowników od producenta płyty głównej.
+* Unikaj "magicznych" programów do aktualizacji sterowników: Narzędzia typu Driver Booster to najczęstsza przyczyna błędów 0x0000000
+
+a. Instalują one ogólne paczki zamiast dedykowanych sterowników od producenta płyty głównej.
 * Kontroluj wersje BIOS-u: Czasami najnowsza aktualizacja UEFI wprowadza poprawki mikrokodu CPU, które rozwiązują problemy z adresowaniem pamięci wywołujące ten konkretny BSoD.
 * Kopia zapasowa rejestru: Przed każdą większą zmianą w sterownikach kluczowych komponentów wykonaj punkt przywracania systemu (`sysdm.cpl` -> Ochrona systemu).
 
@@ -79,7 +87,9 @@ Jeśli system pozwala na uruchomienie w trybie awaryjnym (Safe Mode), czas na co
 ## Często zadawane pytania (FAQ)
 
 ### 1. Co zrobić, jeśli komputer restartuje się tak szybko, że nie zdążam odczytać kodu błędu?
-Kliknij Start, wpisz `Zaawansowane ustawienia systemu` (Advanced system settings), w zakładce *Zaawansowane* znajdź sekcję *Uruchamianie i odzyskiwanie* i kliknij *Ustawienia*. W sekcji *Awaria systemu* odznacz opcję "Automatycznie uruchom ponownie". Dzięki temu system zatrzyma się na niebieskim ekranie, dając Ci czas na sfotografowanie kodu i nazwy pliku sterownika.
+Kliknij Start, wpisz `Zaawansowane ustawienia systemu` (Advanced system settings), w zakładce *Zaawansowane* znajdź sekcję *Uruchamianie i odzyskiwanie* i kliknij *Ustawienia*. W sekcji *Awaria systemu* odznacz opcję "Automatycznie uruchom ponownie". Dzięki temu system zatrzyma się na niebieskim ekranie, dając Ci czas na sfotografowanie kodu i nazwy pliku sterownik
+
+a.
 
 
 

@@ -88,8 +88,12 @@ theme: "Industrial Blueprint"
 ```
 [ 채터링 진단 로그 예시 ]
 [KEY DOWN] 'D' (VK_0x44) -> Time: 10:24:01.120
-[KEY UP  ] 'D' (VK_0x44) -> Time: 10:24:01.185 (Delta: 65ms)
-[KEY DOWN] 'D' (VK_0x44) -> Time: 10:24:01.189 (Delta: 4ms)  <-- BOUNCING ERROR DETECTED!
+[KEY UP  ] 'D' (VK_0x44) -> Time: 10:24:01.185 (Delt
+
+a: 65ms)
+[KEY DOWN] 'D' (VK_0x44) -> Time: 10:24:01.189 (Delt
+
+a: 4ms)  <-- BOUNCING ERROR DETECTED!
 ```
 *연속된 Key Down 이벤트 간격이 10ms 미만인 경우 물리적 스위치 접점 채터링으로 확정합니다.*
 

@@ -18,7 +18,9 @@ Eran las 18:50 en nuestra oficina corporativa en Madrid. Quedaban apenas diez mi
 Durante los primeros minutos de panico, intente adaptarme a la nueva interfaz minimalista que Microsoft introdujo por defecto. Malgaste valiosos minutos buscando opciones avanzadas de compresion y herramientas de desarrollo que habian quedado sepultadas bajo el boton secundario o convertidas en iconos planos sin texto. En un entorno de oficina donde la velocidad de respuesta define la eficiencia del soporte tecnico, perder el acceso directo a las aplicaciones de terceros desde el menu contextual es un freno de mano inaceptable.
 
 <div style="border-left: 4px solid #f97316; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
-<strong>Nota del especialista:</strong> El nuevo menu contextual de Windows 11 prioriza la limpieza visual, pero sacrifica la productividad directa de los usuarios avanzados y profesionales de sistemas que dependen de accesos rapidos de terceros.
+<strong>Nota del especialist
+
+a:</strong> El nuevo menu contextual de Windows 11 prioriza la limpieza visual, pero sacrifica la productividad directa de los usuarios avanzados y profesionales de sistemas que dependen de accesos rapidos de terceros.
 </div>
 
 ### Causas raices de este quebradero de cabeza
@@ -27,7 +29,11 @@ Para entender por que ocurre esto y como solucionarlo de raiz sin alterar la est
 
 1. Diseño UWP Moderno: Microsoft diseño el nuevo menu basado en aplicaciones universales, aislando las extensiones clasicas de Win32 para evitar cuelgues del Explorador de archivos.
 
-2. Falta de opciones nativas en la Interfaz grafica: El menu de Configuracion general de Windows 11 no incluye un interruptor simple para desactivar este comportamiento, obligando a modificar registros o comandos del sistema.
+2. Falta de opciones nativas en la Interfaz grafic
+
+a: El menu de Configuracion general de Windows 11 no incluye un interruptor simple para desactivar este comportamiento, obligando a modificar registros o comandos del sistem
+
+a.
 
 3. Incompatibilidad de software heredado: Programas esenciales de oficina (como clientes FTP, compresores o herramientas de seguridad) necesitan engancharse al arbol de comandos antiguo para funcionar con agilidad.
 
@@ -35,7 +41,9 @@ Para entender por que ocurre esto y como solucionarlo de raiz sin alterar la est
 
 ### Guia paso a paso: Recupera el menu clasico al instante
 
-Como tecnico de sistemas, detesto las soluciones complejas que requieren instalar software de terceros dudoso. Vamos a solucionarlo mediante un comando limpio directamente en la consola del sistema.
+Como tecnico de sistemas, detesto las soluciones complejas que requieren instalar software de terceros dudoso. Vamos a solucionarlo mediante un comando limpio directamente en la consola del sistem
+
+a.
 
 #### Paso 1: Abrir la Terminal o Símbolo del sistema con privilegios
 Haz clic en el boton de Inicio, escribe `Terminal` o `cmd`, haz clic derecho sobre la aplicacion y selecciona "Ejecutar como administrador".
@@ -56,7 +64,9 @@ Para que los cambios surtan efecto de inmediato sin necesidad de reiniciar todo 
 
 ---
 
-### Tabla comparativa: Antes vs. Despues de aplicar el ajuste
+### Tabla comparativ
+
+a: Antes vs. Despues de aplicar el ajuste
 
 | Caracteristica | Menu Moderno por Defecto | Menu Clasico Restaurado |
 | :--- | :--- | :--- |

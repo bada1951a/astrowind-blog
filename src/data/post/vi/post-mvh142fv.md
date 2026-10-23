@@ -18,7 +18,9 @@ Trước đây, khi gặp tình trạng này, phản xạ đầu tiên của dâ
 Thực tế, Windows 11 lưu giữ toàn bộ "lý lịch tử vong" của hệ thống mỗi khi bị đơ cứng. Bí quyết nằm ở công cụ tích hợp sẵn mang tên Event Viewer (Trình xem sự kiện). Hãy cùng tôi bóc trần nguyên nhân và xử lý dứt điểm tình trạng này theo chuẩn kỹ thuật viên chuyên nghiệp.
 
 <div style="border-left: 4px solid #475569; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
-<strong>Lưu ý từ chuyên gia:</strong> Lỗi đơ cứng ngẫu nhiên (random freezing) trên Windows 11 thường do xung đột driver phần cứng, ổ cứng SSD sắp hỏng hoặc thiết lập nguồn điện (Power Plan) không tương thích. Đừng vội mang máy đi sửa phần cứng khi chưa kiểm tra nhật ký hệ thống.
+<strong>Lưu ý từ chuyên gi
+
+a:</strong> Lỗi đơ cứng ngẫu nhiên (random freezing) trên Windows 11 thường do xung đột driver phần cứng, ổ cứng SSD sắp hỏng hoặc thiết lập nguồn điện (Power Plan) không tương thích. Đừng vội mang máy đi sửa phần cứng khi chưa kiểm tra nhật ký hệ thống.
 </div>
 
 ---

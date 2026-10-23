@@ -9,14 +9,20 @@ theme: "Solarized Amber Warm"
 ---
 
 
-Jam 8 malam di kantor startup kawasan SCBD Jakarta. Tim *engineering* sedang bersiap merilis pembaruan besar sistem internal, tiba-tiba salah satu PC workstation utama yang menangani *deployment pipeline* mendadak mati total dan menampilkan layar biru pekat dengan kode *stop error* yang bikin jantungan: IRQL_NOT_LESS_OR_EQUALatau kode heksadesimal0x0000000a. Panik? Jelas. Pengerjaan sistem internal langsung tersendat karena mesin tersebut tidak mau masuk ke sistem operasi dan terus-menerus mengalami *reboot loop*.
+Jam 8 malam di kantor startup kawasan SCBD Jakart
+
+a. Tim *engineering* sedang bersiap merilis pembaruan besar sistem internal, tiba-tiba salah satu PC workstation utama yang menangani *deployment pipeline* mendadak mati total dan menampilkan layar biru pekat dengan kode *stop error* yang bikin jantungan: IRQL_NOT_LESS_OR_EQUALatau kode heksadesimal0x0000000
+
+a. Panik? Jelas. Pengerjaan sistem internal langsung tersendat karena mesin tersebut tidak mau masuk ke sistem operasi dan terus-menerus mengalami *reboot loop*.
 
 Setelah berjibaku selama dua jam mencoba berbagai cara instan seperti mematikan paksa dan mencabut kabel daya yang ternyata tidak membuahkan hasil, saya mulai melakukan penelusuran sistematis. Kode error 0x0000000a ini sebenarnya memberikan petunjuk yang sangat spesifik: ada proses di level *kernel* atau *driver* yang mencoba mengakses alamat memori yang tidak diizinkan. 
 
 ![Tech & IT Solution Guide](https://picsum.photos/seed/computer637/1000/550)
 
 <div style="border-left: 4px solid #d97706; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
-<strong>Catatan Lapangan IT:</strong> Jangan buru-buru melakukan instal ulang Windows saat menghadapi error 0x0000000a. Sembilan puluh persen kasus ini bisa diselesaikan lewat investigasi RAM fisik atau pembaruan/penurunan versi driver yang bermasalah.
+<strong>Catatan Lapangan IT:</strong> Jangan buru-buru melakukan instal ulang Windows saat menghadapi error 0x0000000
+
+a. Sembilan puluh persen kasus ini bisa diselesaikan lewat investigasi RAM fisik atau pembaruan/penurunan versi driver yang bermasalah.
 </div>
 
 ## Akar Masalah: Kenapa Error 0x0000000a Bisa Muncul?
@@ -27,7 +33,9 @@ Sebelum masuk ke langkah perbaikan, mari kita bedah tiga penyebab utama yang ser
 
 2. Inkonsistensi atau Kerusakan Modul RAM: Ada sektor pada kepingan RAM yang mengalami *bad sector* atau pemasangan pin yang kurang klop setelah terkena getaran atau perubahan suhu ruangan server.
 
-3. Layanan Latar Belakang Pihak Ketiga: Aplikasi utilitas atau antivirus lawas yang menancapkan modul *driver*-nya langsung ke kernel sistem operasi sehingga memicu pelanggaran akses memori.
+3. Layanan Latar Belakang Pihak Ketig
+
+a: Aplikasi utilitas atau antivirus lawas yang menancapkan modul *driver*-nya langsung ke kernel sistem operasi sehingga memicu pelanggaran akses memori.
 
 ---
 
@@ -36,10 +44,14 @@ Sebelum masuk ke langkah perbaikan, mari kita bedah tiga penyebab utama yang ser
 Karena PC workstation tadi tidak bisa masuk ke mode normal, langkah pertama yang wajib kita lakukan adalah masuk ke Safe Mode. Nyalakan komputer, lalu paksa matikan sebanyak tiga kali saat logo Windows muncul untuk memicu *Automatic Repair*, lalu pilih *Advanced Startup* > *Startup Settings* > pilih opsi 4 atau F4 untuk *Enable Safe Mode*.
 
 ### Langkah 1: Jalankan Diagnostik Memori Bawaan Windows
-Seringkali masalah bersumber dari perangkat keras RAM. Mari kita uji kesehatannya tanpa perlu software pihak ketiga.
+Seringkali masalah bersumber dari perangkat keras RAM. Mari kita uji kesehatannya tanpa perlu software pihak ketig
+
+a.
 * Buka menu Pengaturan, ketikWindows Memory Diagnostic di kolom pencarian.
 * Pilih opsi Restart now and check for problems (recommended).
-* Biarkan komputer melakukan *reboot* dan menjalankan pemindaian memori. Proses ini memakan waktu sekitar 15 hingga 30 menit tergantung kapasitas RAM Anda.
+* Biarkan komputer melakukan *reboot* dan menjalankan pemindaian memori. Proses ini memakan waktu sekitar 15 hingga 30 menit tergantung kapasitas RAM And
+
+a.
 * Jika ditemukan error pada laporan setelah masuk sistem, pastikan Anda membersihkan slot RAM atau mengganti kepingan yang rusak.
 
 ### Langkah 2: Lakukan Driver Rollback pada Perangkat Terbaru
@@ -58,7 +70,9 @@ Langkah pamungkas untuk memastikan tidak ada file sistem inti yang rusak akibat 
 * Buka TerminalatauCommand Prompt dengan hak akses Administrator (Run as Administrator).
 * Ketik perintah `DISM.exe /Online /Cleanup-image /Restorehealth` lalu tekan Enter. Tunggu hingga proses selesai 100%.
 * Setelah itu, ketik perintah `sfc /scannow` dan tekan Enter. Perintah ini akan memindai dan memperbaiki file sistem yang rusak secara otomatis.
-* Lakukan *restart* normal pada komputer Anda.
+* Lakukan *restart* normal pada komputer And
+
+a.
 
 ---
 

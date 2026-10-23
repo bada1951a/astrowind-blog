@@ -14,7 +14,9 @@ Wczoraj rano, tuż przed kluczowym audytem stabilności infrastruktury dla nasze
 Okazało się, że Windows 11 po ostatniej dużej aktualizacji i intensywnych testach środowiskowych zostawił po sobie gigantyczny śmietnik w ukrytych folderach tymczasowych. Jeśli u Ciebie też dysk C pęka w szwach, a nie masz pojęcia, co bezpiecznie skasować, oto prosty, sprawdzony plan ratunkowy.
 
 <div style="border-left: 4px solid #8b5cf6; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
-<strong>Wskazówka eksperta:</strong> Zanim cokolwiek skasujesz ręcznie z katalogów systemowych, upewnij się, że masz wyłączoną hibernację, jeśli z niej nie korzystasz – komenda <code>powercfg /hibernate off</code> potrafi od ręki uwolnić tyle gigabajtów, ile wynosi Twoja pamięć RAM.
+<strong>Wskazówka ekspert
+
+a:</strong> Zanim cokolwiek skasujesz ręcznie z katalogów systemowych, upewnij się, że masz wyłączoną hibernację, jeśli z niej nie korzystasz – komenda <code>powercfg /hibernate off</code> potrafi od ręki uwolnić tyle gigabajtów, ile wynosi Twoja pamięć RAM.
 </div>
 
 ## Gdzie ucieka miejsce? Główne źródła problemu na dysku C
@@ -23,11 +25,15 @@ Zanim przejdziemy do klikania, warto zrozumieć, dlaczego Windows 11 tak szybko 
 
 *   Pozostałości po aktualizacjach i folder Windows.old: System trzyma kopie zapasowe poprzedniej wersji przez 10 dni na wypadek awarii, co potrafi zająć od 15 do nawet 30 GB.
 *   Ukryte pliki Temp i pamięć podręczna aplikacji: Programy takie jak Teams, Slack czy przeglądarki zostawiają gigabajty danych w folderach `AppData`, do których rzadko zaglądamy.
-*   Punkty przywracania systemu (System Restore): Automatyczne snapshotsy potrafią w tle pożreć przydzieloną pulę gigabajtów bez wiedzy użytkownika.
+*   Punkty przywracania systemu (System Restore): Automatyczne snapshotsy potrafią w tle pożreć przydzieloną pulę gigabajtów bez wiedzy użytkownik
+
+a.
 
 ## Krok po kroku: Jak bezpiecznie odzyskać przestrzeń
 
-Nie musisz instalować żadnych podejrzanych programów "optymalizujących", które często przynoszą więcej szkody niż pożytku. Windows 11 ma do tego świetne, wbudowane narzędzia.
+Nie musisz instalować żadnych podejrzanych programów "optymalizujących", które często przynoszą więcej szkody niż pożytku. Windows 11 ma do tego świetne, wbudowane narzędzi
+
+a.
 
 ### 1. Użycie funkcji "Czyszczenie pamięci" (Storage Sense)
 Wejdź w menu Ustawienia(skrót Windows + I), przejdź do zakładkiSystem, a następniePamięć. 
@@ -41,10 +47,14 @@ Wejdź w menu Ustawienia(skrót Windows + I), przejdź do zakładkiSystem, a nas
 ![Tech & IT Solution Guide](https://picsum.photos/seed/computer844/1000/550)
 
 ### 2. Ręczne czyszczenie folderu Temp przez okno Uruchom
-Często instalatory programów zostawiają śmieci w folderach użytkownika.
+Często instalatory programów zostawiają śmieci w folderach użytkownik
+
+a.
 - Wciśnij kombinację klawiszy Windows + R, wpisz `%temp%` i wciśnij Enter.
 - Zaznacz wszystko (Ctrl + A) i wciśnijShift + Delete (by ominąć Kosz).
-- *Uwaga:* Jeśli wyskoczy komunikat, że plik jest aktualnie używany przez inny program, po prostu kliknij "Pomiń" dla tych konkretnych plików.
+- *Uwag
+
+a:* Jeśli wyskoczy komunikat, że plik jest aktualnie używany przez inny program, po prostu kliknij "Pomiń" dla tych konkretnych plików.
 - Następnie powtórz operację, wpisując w oknie Uruchom zwykłe `temp` (bez procentów) i wyczyść ten folder jako administrator.
 
 ### 3. Oczyszczanie dysku z uprawnieniami administratora
@@ -59,7 +69,9 @@ Dla głębszego czyszczenia użyjmy klasycznego, niezawodnego narzędzia systemo
 ## Często zadawane pytania (FAQ)
 
 ### Czy bezpiecznie jest usuwać zawartość folderu `%temp%`?
-Tak, w 100%. Folder ten służy aplikacjom wyłącznie do przechowywania plików roboczych i tymczasowych podczas ich działania. Jeśli program jest zamknięty, te pliki nie są do niczego potrzebne.
+Tak, w 100%. Folder ten służy aplikacjom wyłącznie do przechowywania plików roboczych i tymczasowych podczas ich działani
+
+a. Jeśli program jest zamknięty, te pliki nie są do niczego potrzebne.
 
 ### Co zrobić, jeśli dysk C znowu zapełni się za kilka dni?
 Najczęstszą przyczynami są rosnąca pamięć podręczna przeglądarki lub pliki pobierane bezpośrednio na pulpit. Warto zmienić domyślną lokalizację folderu Pobrane (Downloads) na dysk D lub E, jeśli taki posiadasz.

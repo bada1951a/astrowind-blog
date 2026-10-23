@@ -10,7 +10,9 @@ theme: "Cyberpunk Terminal"
 
 
 <div style="border-left: 4px solid #00ffcc; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,255,204,0.05); border-radius: 4px; font-family: monospace;">
-root@silicon-valley-hq:~# ./diagnose_boot_lag.sh --status=critical
+root@silicon-valley-h
+
+q:~# ./diagnose_boot_lag.sh --status=critical
 [!] ALERT: T-minus 4 minutes to the QBR slide-deck drop. Machine is hung at the Windows logo. Coffee is cold. Panic level: MAX.
 </div>
 
@@ -96,10 +98,16 @@ When cleaning up startup items, resist the urge to nuke everything blindly. Disa
 
 ### Frequently Asked Questions (FAQ)
 
-Q: Will disabling startup apps delete my files or uninstall my programs? A: Absolutely not. Disabling an app from startup simply prevents it from launching automatically in the background when your operating system boots up. You can still launch any application manually via the Start Menu whenever you actually need it.Q: How can I check my exact boot duration down to the millisecond?  
+Q: Will disabling startup apps delete my files or uninstall my programs?
+
+A: Absolutely not. Disabling an app from startup simply prevents it from launching automatically in the background when your operating system boots up. You can still launch any application manually via the Start Menu whenever you actually need it.
+
+Q: How can I check my exact boot duration down to the millisecond?
+
 A: Open PowerShell as an administrator and run:  
 `Get-WinEvent -ProviderName Microsoft-Windows-Diagnostics-Performance -MaxEvents 20 | Where-Object { $_.Id -eq 100 }`  
 This query pulls the exact Event Viewer telemetry log detailing how many milliseconds your system took to complete the last boot sequence.
 
-Q: Is it safe to disable Windows Defender or OneDrive at startup?  
+Q: Is it safe to disable Windows Defender or OneDrive at startup?
+
 A: Never disable Windows Security/Defender startup components unless you are running a certified third-party enterprise EDR solution. OneDrive can be safely disabled if you prefer to sync files on-demand rather than choking your network adapter and disk I/O right at login.
