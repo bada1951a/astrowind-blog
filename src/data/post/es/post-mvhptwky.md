@@ -82,15 +82,9 @@ Modificar el Registro de Windows es un procedimiento seguro si se siguen los pas
 
 ### Preguntas Frecuentes (FAQ)
 
-1.
+1. ¿Este cambio afecta a la estabilidad general de Windows 11? Absolutamente no. Este comando simplemente habilita una clave de CLSID nativa que Microsoft mantuvo en el codigo del sistema operativo para facilitar la transicion, por lo que no genera errores ni pantallazos azules.
 
-¿Este cambio afecta a la estabilidad general de Windows 11? Absolutamente no. Este comando simplemente habilita una clave de CLSID nativa que Microsoft mantuvo en el codigo del sistema operativo para facilitar la transicion, por lo que no genera errores ni pantallazos azules.
+2. ¿ tendre que repetir este proceso despues de cada actualizacion grande de Windows? En la gran mayoria de las actualizaciones acumulativas mensuales el ajuste se mantiene intacto. Sin embargo, en actualizaciones mayores de caracteristicas anuales, existe una pequeña posibilidad de que Microsoft restablezca el valor por defecto y debas volver a ejecutar el comando.
 
-2.
-
-¿ tendre que repetir este proceso despues de cada actualizacion grande de Windows? En la gran mayoria de las actualizaciones acumulativas mensuales el ajuste se mantiene intacto. Sin embargo, en actualizaciones mayores de caracteristicas anuales, existe una pequeña posibilidad de que Microsoft restablezca el valor por defecto y debas volver a ejecutar el comando.
-
-3.
-
-¿Puedo aplicar este truco en equipos portatiles y de sobremesa por igual?
+3. ¿Puedo aplicar este truco en equipos portatiles y de sobremesa por igual?
 Si, funciona de manera identica en cualquier ediciones de Windows 11 (Home, Pro o Enterprise), ya que el funcionamiento interno del Explorador de archivos es exactamente el mismo en todas las arquitecturas compatibles.

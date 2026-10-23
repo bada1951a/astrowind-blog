@@ -84,15 +84,9 @@ Cuando trabajes bajo presión de cierre contable o financiero, evita a toda cost
 
 ### Preguntas frecuentes (FAQ)
 
-1.
+1. ¿Qué hago si después de desinstalar el controlador en el Administrador de dispositivos sigo sin sonido tras reiniciar? Si Windows no logra reinstalar el driver genérico por sí mismo, accede a la página web oficial de soporte del fabricante de tu equipo (Dell, HP, Lenovo, etc.), introduce el número de serie exacto de tu estación de trabajo, descarga el paquete de controladores de audio (`Audio Driver`) oficial para Windows 11 e instálalo manualmente.
 
-¿Qué hago si después de desinstalar el controlador en el Administrador de dispositivos sigo sin sonido tras reiniciar? Si Windows no logra reinstalar el driver genérico por sí mismo, accede a la página web oficial de soporte del fabricante de tu equipo (Dell, HP, Lenovo, etc.), introduce el número de serie exacto de tu estación de trabajo, descarga el paquete de controladores de audio (`Audio Driver`) oficial para Windows 11 e instálalo manualmente.
+2. ¿Por qué el icono de volumen aparece con una pequeña cruz roja en Windows 11? Ese símbolo de advertencia indica que el servicio principal de audio está deshabilitado o que el controlador del dispositivo de hardware ha sufrido un fallo crítico. Ve al [Administrador de dispositivos], busca si hay algún elemento con un triángulo amarillo y aplica el proceso de reinicio de servicios que explicamos en el Paso 2.
 
-2.
-
-¿Por qué el icono de volumen aparece con una pequeña cruz roja en Windows 11? Ese símbolo de advertencia indica que el servicio principal de audio está deshabilitado o que el controlador del dispositivo de hardware ha sufrido un fallo crítico. Ve al [Administrador de dispositivos], busca si hay algún elemento con un triángulo amarillo y aplica el proceso de reinicio de servicios que explicamos en el Paso 2.
-
-3.
-
-¿Pueden las conexiones físicas causar este fallo repentino en la oficina?
+3. ¿Pueden las conexiones físicas causar este fallo repentino en la oficina?
 Sí, aunque parezca software, la acumulación de polvo en el puerto Jack frontal de la torre o un falso contacto en el conector USB de unos cascos modernos puede hacer que Windows desactive el canal de audio por motivos de protección eléctrica. Prueba siempre a conectar el dispositivo en un puerto diferente antes de modificar la configuración del sistema. 

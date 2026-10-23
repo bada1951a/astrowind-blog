@@ -89,15 +89,9 @@ a: Una GPU con drivers desactualizados puede corromper el renderizado de la inte
 
 ### Preguntas Frecuentes (FAQ)
 
-1.
+1. ¿Perderé mis archivos abiertos si reinicio el Explorador de Windows? No. Reiniciar `explorer.exe` solo afecta a la interfaz gráfica (barra de tareas, iconos del escritorio y carpetas abiertas). Los documentos de Word, Excel o las pestañas del navegador que tengas en uso no se cerrarán ni perderán su progreso.
 
-¿Perderé mis archivos abiertos si reinicio el Explorador de Windows? No. Reiniciar `explorer.exe` solo afecta a la interfaz gráfica (barra de tareas, iconos del escritorio y carpetas abiertas). Los documentos de Word, Excel o las pestañas del navegador que tengas en uso no se cerrarán ni perderán su progreso.
+2. ¿Qué hago si el comando de PowerShell da errores en rojo? Es totalmente normal. PowerShell intentará re registrar todos los paquetes nativos de Windows; aquellos que estén abiertos o bloqueados en ese momento mostrarán un aviso en rojo que puedes ignorar por completo. Lo importante es que el script complete el ciclo.
 
-2.
-
-¿Qué hago si el comando de PowerShell da errores en rojo? Es totalmente normal. PowerShell intentará re registrar todos los paquetes nativos de Windows; aquellos que estén abiertos o bloqueados en ese momento mostrarán un aviso en rojo que puedes ignorar por completo. Lo importante es que el script complete el ciclo.
-
-3.
-
-¿Es recomendable usar puntos de restauración del sistema para esto?
+3. ¿Es recomendable usar puntos de restauración del sistema para esto?
 Solo como última alternativa si los comandos anteriores fallan. Por lo general, un fallo en la barra de tareas es un problema de servicios locales que se resuelve limpiando la caché o reiniciando el proceso del explorador, sin necesidad de retroceder el estado del sistema. 

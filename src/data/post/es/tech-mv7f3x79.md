@@ -144,9 +144,7 @@ a: La combinación de adaptadores (por ejemplo, Tipo C a DisplayPort, y de ahí 
 
 ## Preguntas Frecuentes (FAQ)
 
-### 1.
-
-¿Por qué el monitor parpadea únicamente al abrir ciertas aplicaciones como Netflix o reproductores multimedia?
+### 1. ¿Por qué el monitor parpadea únicamente al abrir ciertas aplicaciones como Netflix o reproductores multimedia?
 Esto se debe a un fallo en la negociación del protocolo anticopia HDCP (High-bandwidth Digital Content Protection). Cuando reproduces contenido protegido, la GPU exige un nivel de cifrado de hardware que viaja a través del cable. Si el cable tiene pines dañados o el driver tiene un fallo de sincronización en sus módulos criptográficos, la pantalla se desconecta por seguridad durante medio segundo de forma cíclica. La solución pasa por actualizar el firmware del monitor o sustituir el cable por uno con certificación HDCP 2.2 o superior.
 
 ### 2. He reinstalado los drivers con DDU pero el monitor sigue sin dar señal.
@@ -154,7 +152,5 @@ Esto se debe a un fallo en la negociación del protocolo anticopia HDCP (High-ba
 ¿Cómo sé si el puerto del portátil está dañado?
 Abre el Símbolo del sistema con privilegios elevados o PowerShell y revisa los eventos del sistema. Desconecta y conecta el cable; si en el Administrador de dispositivos no se actualiza la lista automáticamente (el árbol de dispositivos no parpadea buscando cambios de hardware), el fallo está en el conector físico o en el fusible térmico del puerto USB-C/HDMI de la placa. Adicionalmente, prueba arrancando una distribución de Ubuntu en modo Live USB: si allí tampoco hay señal externa, el fallo es estrictamente de hardware (puerto, cable o scaler del monitor) y no de Windows.
 
-### 3.
-
-¿Es mejor conectar la segunda pantalla por HDMI directo o mediante el puerto USB-C con soporte DisplayPort?
+### 3. ¿Es mejor conectar la segunda pantalla por HDMI directo o mediante el puerto USB-C con soporte DisplayPort?
 Técnicamente, USB-C con soporte nativo DisplayPort (DP Alt Mode) ofrece una arquitectura de transmisión más moderna y flexible, con mayor ancho de banda nativo por carril (lane) y mejor soporte para tasas de refresco adaptativas que los puertos HDMI 1.4/2.0 habituales en portátiles. No obstante, el puerto HDMI suele ser más robusto a nivel mecánico y no depende de la negociación de perfiles energéticos que a veces saturan el controlador de bus Type-C. Si buscas fiabilidad absoluta en oficina para 1080p o 1440p a 60 Hz, un HDMI nativo suele dar menos incidencias en jornadas prolongadas.
