@@ -1,34 +1,75 @@
-name: Fix All Markdown Posts
+import fs from 'fs';
+import path from 'path';
 
-on:
-  workflow_dispatch: # Actions 탭에서 "Run workflow" 버튼으로 수동 실행
+const POSTS_BASE_DIR = path.resolve('src/data/post');
 
-jobs:
-  fix-posts:
-    runs-on: ubuntu-latest
-    permissions:
-      contents: write
+if (!fs.existsSync(POSTS_BASE_DIR)) {
+  console.error(`❌ 포스트 디렉터리를 찾을 수 없습니다: ${POSTS_BASE_DIR}`);
+  process.exit(1);
+}
 
-    steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v4
+function sanitizeMarkdownFormatting(content) {
+  let cleaned = content.replace(/\*\*/g, '');
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
+  cleaned = cleaned.replace(/([.?!])\s*([0-9]+\.\s+|[QA][1-9]\s*[:.])/gi, '$1\n\n$2');
+  cleaned = cleaned.replace(/([?])\s*([QA][1-9]\s*[:.])/gi, '$1\n\n$2');
+  cleaned = cleaned.replace(/\?([A-Za-z\u00C0-\u024F\u1EA0-\u1EF9])/g, '? $1');
+  cleaned = cleaned.replace(/([^\n])\s*([QA][1-9]\s*[:.])/gi, '$1\n\n$2');
+  cleaned = cleaned.replace(/([.?!])\s*(D:|R:|Risposta|Domande)/gi, '$1\n\n$2');
 
-      - name: Run Markdown Fixer
-        run: node fix-markdown.mjs
+  return cleaned;
+}
 
-      - name: Commit and Push Fixed Posts
-        run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add src/data/post
-          if git diff --staged --quiet; then
-            echo "수정할 파일이 없습니다."
-          else
-            git commit -m "Fix: Batch fix all markdown formatting glitch"
-            git push
-          fi
+function getAllMdFiles(dir, fileList = []) {
+  const items = fs.readdirSync(dir);
+  for (const item of items) {
+    const fullPath = path.join(dir, item);
+    const stat = fs.statSync(fullPath);
+    if (stat.isDirectory()) {
+      getAllMdFiles(fullPath, fileList);
+    } else if (stat.isFile() && item.endsWith('.md')) {
+      fileList.push(fullPath);
+    }
+  }
+  return fileList;
+}
+
+async function runFix() {
+  console.log("==================================================");
+  console.log("🛠️ 기존 포스트 전체 일괄 서식 정제 작업 시작");
+  console.log("==================================================");
+
+  const files = getAllMdFiles(POSTS_BASE_DIR);
+  console.log(`📁 검사 대상 파일: 총 ${files.length}개\n`);
+
+  let modifiedCount = 0;
+
+  for (const filePath of files) {
+    const originalContent = fs.readFileSync(filePath, 'utf-8');
+
+    const fmMatch = originalContent.match(/^---[\s\S]*?---\n*/);
+    let frontmatter = '';
+    let body = originalContent;
+
+    if (fmMatch) {
+      frontmatter = fmMatch[0];
+      body = originalContent.slice(frontmatter.length);
+    }
+
+    const fixedBody = sanitizeMarkdownFormatting(body);
+    const newContent = `${frontmatter}${fixedBody}`;
+
+    if (newContent !== originalContent) {
+      fs.writeFileSync(filePath, newContent, 'utf-8');
+      modifiedCount++;
+      const relativePath = path.relative(process.cwd(), filePath);
+      console.log(`✅ [수정 완료] ${relativePath}`);
+    }
+  }
+
+  console.log("\n==================================================");
+  console.log(`🎉 작업 완료: 총 ${files.length}개 파일 중 ${modifiedCount}개 파일 수정됨`);
+  console.log("==================================================");
+}
+
+runFix();
