@@ -96,6 +96,4 @@ A: Beberapa aplikasi VPN korporat memiliki fitur keamanan ketat yang memblokir p
 
 Q: Ikon speaker di laptop saya ada tanda silang merah dan pesan "No Audio Output Device is Installed", apakah soundcard saya rusak secara fisik?
 
-A: 95% kasus dengan pesan ini bukanlah kerusakan hardware fisik (bukan karena soundcard terbakar), melainkan kegagalan sistem Windows membaca driver akibat *registry* yang korup atau layanan *Audiosrv* yang berhenti. Cukup ikuti Langkah 3 di atas untuk mengatasiny
-
-a.
+A: 95% kasus dengan pesan ini bukanlah kerusakan hardware fisik (bukan karena soundcard terbakar), melainkan kegagalan sistem Windows membaca driver akibat *registry* yang korup atau layanan *Audiosrv* yang berhenti. Cukup ikuti Langkah 3 di atas untuk mengatasinya.
