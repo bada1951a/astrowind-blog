@@ -10,7 +10,7 @@ function cleanMarkdown(content) {
   const frontmatter = fmMatch[0];
   let body = content.slice(frontmatter.length);
 
-  // 1. [인코딩 복원] 깨진 전구 이모지 복원
+  // 1. [인코딩 및 깨진 문자 복원]
   body = body.replace(/ðŸ’¡/g, '💡');
 
   // 2. [단어 잘림 및 띄어쓰기 복원]
@@ -19,29 +19,22 @@ function cleanMarkdown(content) {
   body = body.replace(/clickRestart/g, 'click Restart');
   body = body.replace(/turn\s*onStorage/gi, 'turn on Storage');
 
-  // 3. [대주제(H2) 표준화] 명확한 섹션 번호 대제목만 H2로 지정
-  body = body.replace(/^([0-9]+\.\s+[^\n]{4,45})$/gm, '## $1');
+  // 3. [대주제(H2) 깔끔한 표준화] 숫자. 형태로 시작하는 메인 섹션만 확실하게 H2 지정
+  body = body.replace(/^([0-9]+\.\s+[^\n]{4,50})$/gm, '## $1');
 
-  // 주요 언어별 대주제 키워드 H2 승격
-  body = body.replace(/^#{3}\s*(Root Cause|Step-by-Step Resolution|Warum läuft|Langkah-Langkah|Akar Masalah|Causes racines|Häufig gestellte|자주 묻는 질문|FAQ|Preguntas frecuentes|Chronologie|Guida pratica)/gim, '## $1');
-  body = body.replace(/^(자주 묻는 질문\s*\(?FAQ\)?|FAQ|Frequently Asked Questions|Chronologie de l'intervention|Guide de survie|Guida pratica: come rimuovere)/gim, '## $1');
-
-  // 4. [단계별 소제목(H3) 표준화] '1단계', 'Step 1', 'Paso 1' 등의 단계 타이틀만 H3로 지정 (본문 리스트 번호는 절대 건드리지 않음)
+  // 4. [단계별 소제목(H3) 표준화] '1단계', 'Step 1' 등 명확한 단계 타이틀만 H3 지정 (본문 리스트는 절대 건드리지 않음)
   const stepRegex = /^(?:#{1,4}\s*)?(\*{0,2}(?:Step|Paso|Schritt|Etape|Étape|Passo|Krok|Stap|Langkah|Bước|[0-9]+단계)\s*[0-9]+(?:\s*[:\.]|\s*[-–])\s*[^\n]+?\*{0,2})$/gim;
   body = body.replace(stepRegex, (match, p1) => {
     const cleanTitle = p1.replace(/\*\*/g, '').replace(/^#+\s*/, '').trim();
     return `### ${cleanTitle}`;
   });
 
-  // 5. [오류 방어] 본문 안의 실행 순서 리스트(1. 윈도우..., 3. 좌측...)가 헤딩으로 오인되어 커진 경우 일반 본문 리스트로 강제 환원
-  body = body.replace(/^#{1,4}\s+([0-9]+\.\s+[가-힣A-Za-zÀ-ÖØ-ßa-zà-öø-ÿ].*?)$/gm, '$1');
-
-  // 6. [유령 헤딩 및 잔여 기호 소거]
+  // 5. [유령 헤딩 및 잔여 기호 소거]
   body = body.replace(/^\s*\*\*\s*$/gm, '');
   body = body.replace(/^\s*#{1,4}\s*$/gm, '');
   body = body.replace(/\*{3,}/g, '**');
 
-  // 7. [동일 헤딩 중복 방지 및 빈 줄 정돈]
+  // 6. [동일 헤딩 중복 방지 및 빈 줄 정돈]
   body = body.replace(/^(#{1,3}\s+[^\n]+)\n+(?:\1\n+)+/gm, '$1\n\n');
   body = body.replace(/\n{3,}/g, '\n\n').trim();
 
