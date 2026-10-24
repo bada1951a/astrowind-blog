@@ -17,6 +17,7 @@ theme: "Dracula Purple Dev"
 
 
 
+
 Montagmorgen, 08:15 Uhr im Großraumbüro. Ein Kollege schließt sein ThinkPad an die Thunderbolt-Dockingstation an. Auf dem internen Display läuft alles geschmeidig, doch die beiden externen 4K-Bildschirme verhalten sich katastrophal: Monitor 1 meldet stoisch *„Kein Signal – Eingang wird gesucht“*, während Monitor 2 im Dreisekundentakt zwischen tiefem Schwarz und zuckendem Desktop hin- und herflackert. Das Phänomen begegnet mir in meiner täglichen Praxis als Systemadministrator dutzende Male im Monat – insbesondere nach kumulativen Windows-Updates oder Firmware-Pushes. 
 
 Die Ursache liegt selten an defekten Panels, sondern fast ausnahmslos in korrupten Treiberzuständen, asynchronen Handshakes im Display-Subsystem oder fehlerhaft interpretierten EDID-Tabellen. Wenn einfaches Aus- und Einstecken keine Besserung bringt, müssen Sie tiefer in den Windows-Grafikstack eingreifen. In diesem Leitfaden zeige ich Ihnen exakt die Methodik, mit der wir solche Störungen im Enterprise-Support reproduzierbar lösen.
@@ -69,7 +70,7 @@ Drücken Sie folgende Tastenkombination simultan:
 
 1. Der Bildschirm wird für den Bruchteil einer Sekunde dunkel.
 
-2. Ein kurzer System-Piepton ertönt.
+## 2. Ein kurzer System-Piepton ertönt.
 
 3. Windows verwirft den aktuellen Framebuffer, startet den Desktop Window Manager (`dwm.exe`) neu und initialisiert die Treiberkommunikation von Grund auf.
 
@@ -84,7 +85,7 @@ Reicht der Hotkey nicht aus, prüfen wir den physikalischen und logischen Status
 
 1. Drücken Sie [Win] + [X] und wählen Sie "Geräte-Manager".
 
-2. Navigieren Sie zu "Grafikkarten".
+## 2. Navigieren Sie zu "Grafikkarten".
 
 3. Klappen Sie den Zweig auf und prüfen Sie beide Adapter (iGPU und dGPU).
 
@@ -116,7 +117,7 @@ Wenn Treiberfragmente tiefer im System korrupt sind, reicht das normale Windows-
 
 3. Navigieren Sie über das blaue Bootmenü: Problembehandlung&rarr;Erweiterte Optionen&rarr;Starteinstellungen&rarr;Neu starten&rarr; Taste4 (Abgesicherter Modus aktivieren).
 
-4. Starten Sie DDU:
+## 4. Starten Sie DDU:
 
    * Wählen Sie rechts den Gerätetyp: Grafikkarte.
    * Wählen Sie den Hersteller (zuerst Intel/AMD, danach ggf. NVIDIA).
@@ -129,7 +130,7 @@ Nach dem Neustart befindet sich Ihr System auf dem Basis-Grafiktreiber von Micro
 
 1. Installieren Sie zuerst den Treiber für die integrierte Prozessorgrafik (Intel Graphics oder AMD Adrenalin). Dies ist essenziell, da die Display-Pipelines fast immer physisch an der CPU hängen.
 
-2. Führen Sie einen Reboot durch.
+## 2. Führen Sie einen Reboot durch.
 
 3. Installieren Sie nun den Treiber der dedizierten Grafikkarte (z. B. NVIDIA Studio- oder Game-Ready-Treiber). Wählen Sie im Installationsassistenten:
 
@@ -150,7 +151,7 @@ Manchmal flackert das Bild, weil Windows eine Bildwiederholrate erzwingt, die da
 
 3. Wählen Sie den betroffenen Zweitmonitor im Dropdown-Menü aus.
 
-4. Prüfen Sie die "Aktualisierungsrate".
+## 4. Prüfen Sie die "Aktualisierungsrate".
 
 ```
 

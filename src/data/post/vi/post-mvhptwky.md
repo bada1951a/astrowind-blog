@@ -17,6 +17,7 @@ theme: "Mint Fresh Engineering"
 
 
 
+
 Đồng hồ góc màn hình nhảy đúng 15:45, chỉ còn 15 phút nữa là đến hạn chót nộp bản báo cáo tài chính tháng cho sếp tổng tại văn phòng trung tâm TP.HCM. Tay trái tôi bấm cuống cuồng, tay phải nhấp chuột phải vào tệp Excel chính để đổi tên và nén file gửi đi. Thế nhưng, đập vào mắt tôi lại là cái giao diện menu chuột phải tối giản mới tinh của Windows 11. Muốn nén file, tôi lại phải bấm thêm một nhịp "Show more options" (Hiển thị thêm tùy chọn) vô duyên vô phạt. Trong lúc hoảng loạn, cái click chuột chậm chạp ấy làm tôi trễ mất 3 giây, tim đập chân lạnh vì sợ treo cả hệ thống.
 
 Chuyện quái quỷ gì đang diễn ra với cái giao diện Windows 11 này vậy? Tại sao một thao tác vốn quen thuộc từ thời Windows 7, Windows 10 bỗng dưng bị "cách tân" thành một thảm họa thao tác cho dân văn phòng?

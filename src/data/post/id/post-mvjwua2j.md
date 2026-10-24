@@ -17,6 +17,7 @@ theme: "Warm Coffee Latte"
 
 
 
+
 Jantung saya rasanya mau copot. Waktu menunjukkan pukul 09.55 pagi di apartemen saya kawasan Sudirman, Jakarta. Lima menit lagi, meeting koordinasi kuartal via Microsoft Teams dengan para petinggi kantor di SCBD harus dimulai. Sialnya, malam tadi saya ketiduran saat merangkap tugas WFH, dan pagi ini saya langsung menyalakan laptop kantor, menyambungkan VPN perusahaan agar akses server internal aman, lalu membuka aplikasi meeting. Tiba-tiba, sunyi senyap. Ketika saya coba memutar video di YouTube untuk mengetes suara, sama sekali tidak ada output audio yang keluar dari speaker laptop. Ikon speaker di taskbar kanan bawah berikon silang merah dengan keterangan [No Audio Output Device is Installed]. Bayangkan rasany
 
 a: bos besar sudah standby di layar, VPN aktif, tapi laptop malah siuman bisu. 
@@ -27,7 +28,7 @@ Sebagai teknisi infrastruktur IT yang biasa merawat ratusan unit PC kantor, saya
 
 Mari kita bedah apa yang sebenarnya terjadi di balik layar sistem operasi Anda. ---
 
-### Akar Masalah: Kenapa Windows 11 Tiba-Tiba Bisu?
+## Akar Masalah: Kenapa Windows 11 Tiba-Tiba Bisu?
 
 Sebelum kita masuk ke tombol eksekusi, kenali dulu tiga musuh utama penyebab audio laptop mendadak hilang:
 

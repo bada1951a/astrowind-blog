@@ -17,6 +17,7 @@ theme: "Mint Fresh Engineering"
 
 
 
+
 금요일 오후 4시 55분, 다음 주 월요일에 전사 발표할 대규모 쿠버네티스 클러스터 마이그레이션 최종 빌드 검증을 돌려놓고 커피를 마시러 다녀왔는데, 데스크톱 팬은 터빈 돌아가는 소리처럼 굉음을 내며 돌고 있는데 모니터 화면은 완벽한 '무(無)'인 채로 나를 반기더라. 슬랙(Slack)에서는 VP가 "Build ready?"를 치고 있고, 내 메인 rig는 화면 출력도 안 되는 상황. 심장이 방구석 밖으로 튀어나오는 줄 알았다.
 
 <div style="border-left: 4px solid #059669; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px;">

@@ -17,6 +17,7 @@ theme: "Cobalt Enterprise Lab"
 
 
 
+
 Eram exatos 08h45 de uma segunda-feira chuvosa quando o diretor comercial brotou atrás da minha cadeira com aquela clássica frase que tira dez anos de vida de qualquer analista de suporte: *"Meu notebook tá demorando dez minutos pra abrir o Excel, a reunião com o cliente é às 9h, resolve aí rapidão"*. O bicho tava tão lento que o logo do Windows 10 parecia uma tela de loading de jogo de disquete. A ventoinha do i7 gritando, o disco em 100% de uso no Gerenciador de Tarefas, e eu suando frio olhando pro relógio. 
 
 A gente sabe como é: o usuário instala aplicativo de chat da empresa, utilitário de impressora que roda desde o século passado, antivírus corporativo pesadíssimo e atualizações acumuladas. Tudo isso decide carregar no *startup* ao mesmo tempo. O resultado? Um gargalo miserável que transforma uma máquina com SSD NVMe numa carroça de tração animal. 
@@ -58,7 +59,7 @@ Esqueça programas de terceiros duvidosos como *CCleaner*. O próprio Windows j�
 
 3. Vá direto para a aba Inicializar (ou o ícone de medidor de velocidade nas versões mais recentes do Windows 11).
 
-4. Ordene os itens por Impacto na inicialização.
+4.  Ordene os itens por Impacto na inicialização.
 
 5. Clique com o botão direito nos aplicativos desnecessários (tipo Steam, Epic Games, Cortana, utilitários de celular) e selecione Desabilitar. Deixe ativo apenas o antivírus e o driver de vídeo.
 
@@ -100,7 +101,7 @@ Nunca desative drivers essenciais de chipset, controladoras de armazenamento (co
 
 ---
 
-### FAQ Técnico: Dúvidas Comuns da Bancada
+## FAQ Técnico: Dúvidas Comuns da Bancada
 
 1. Trocar o HD mecânico por um SSD resolve o problema de boot de vez? Com toda certeza. Enquanto um HD tradicional (7200 RPM) pena para entregar 100 MB/s de leitura sequencial com alto tempo de busca, um SSD SATA básico entrega cerca de 550 MB/s, e um NVMe moderno ultrapassa facilmente os 3500 MB/s. É a mudança com melhor custo-benefício que existe na computação moderna.
 

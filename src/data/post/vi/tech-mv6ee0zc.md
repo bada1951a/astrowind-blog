@@ -17,6 +17,7 @@ theme: "Midnight Navy Royal"
 
 
 
+
 ## [INCIDENT LOG 01:15 AM] Bối Cảnh Sự Cố Tại Bàn Trực Vận Hành
 
 Đồng hồ hệ thống điểm 01:15 sáng. Trong phòng máy chủ yên tĩnh chỉ có tiếng quạt tản nhiệt server rít đều đặn, đồng chí kỹ sư trực ca bên cạnh bắt đầu đập bàn phím liên hồi kèm theo tiếng thở dài. Anh ta đang cấu hình dở cụm Kubernetes qua terminal thì phím `e` liên tục bị "chattering" (gõ một lần nhưng máy nhận thành `ee` hoặc `eee`), trong khi phím `Enter` thì nhấn 3 lần mới ăn được 1 lần. 
@@ -106,7 +107,7 @@ Các bước thao tác chuẩn:1.Ngắt toàn bộ nguồn điện: Rút cáp k�
 
 2. Tháo Keycap: Dùng dụng cụ rút phím (Keycap puller) rút phím bị lỗi theo phương thẳng đứng 90 độ, tránh bẻ nghiêng gây gãy chân stem.
 
-3. Nhỏ/Xịt dung dịch vào buồng tiếp điểm:
+## 3. Nhỏ/Xịt dung dịch vào buồng tiếp điểm:
 
    * Lắp vòi xịt mảnh đi kèm bình BW-100 / DeoxIT.
    * Dùng ngón tay nhấn giữ stem của switch xuống mức kịch kim (đáy hành trình). Lúc này bạn sẽ thấy khe hở nhỏ dẫn thẳng xuống buồng chứa lá đồng.
@@ -135,9 +136,9 @@ Nếu sau khi xử lý dung dịch mà phím vẫn còn hiện tượng nuốt n
 
 * Đối với bàn phím Mạch hàn (Solder):
 
-1. Mở vỏ bàn phím, lật mặt sau PCB.
+## 1. Mở vỏ bàn phím, lật mặt sau PCB.
 
-2. Bật mỏ hàn ở nhiệt độ 320°C - 350°C.
+## 2. Bật mỏ hàn ở nhiệt độ 320°C - 350°C.
 
 3. Chấm một lượng nhỏ thiếc hàn mới có chứa lõi trợ hàn (flux) vào hai mối hàn của switch lỗi để làm mới mối nối (solder reflow), loại bỏ triệt để hiện tượng nứt chân hàn li ti do mỏi nhiệt.
 

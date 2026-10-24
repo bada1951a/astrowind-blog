@@ -17,6 +17,7 @@ theme: "Electric Cyan Speed"
 
 
 
+
 Eran las 18:30 en nuestras oficinas del 22@ en Barcelona. Estábamos a menos de dos horas de realizar el despliegue crítico de una nueva versión de nuestro software y, de repente, la pantalla de mi estación de trabajo principal se iluminó con esa maldita notificación en rojo: "Espacio en disco insuficiente en la unidad C:". El rendimiento cayó en picado justo cuando necesitaba compilar los últimos paquetes y empaquetar los artefactos. El disco de 500 GB estaba al límite absoluto, con apenas 400 MB libres, y el sistema operativo amenazaba con congelarse por completo en pleno proceso de release.
 
 <div style="border-left: 4px solid #06b6d4; padding: 12px 16px; margin: 20px 0; background-color: rgba(6,182,212,0.05); border-radius: 4px; color: #111827;">
@@ -83,7 +84,7 @@ a:* Si Windows te avisa de que un archivo está abierto en otra aplicación, sim
 
 ---
 
-### Preguntas frecuentes (FAQ)
+## Preguntas frecuentes (FAQ)
 
 ¿Es seguro borrar todo el contenido de la carpeta Temp (%temp%)? Sí, es completamente seguro. Los archivos que están en uso activo por el sistema o aplicaciones abiertas no se dejarán borrar y recibirás un aviso, por lo que no hay riesgo de corromper el sistema operativo.
 

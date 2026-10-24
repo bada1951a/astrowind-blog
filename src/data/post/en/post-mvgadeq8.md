@@ -17,6 +17,7 @@ theme: "Steel Silver Metallic"
 
 
 
+
 The clock on the wall of our NYC office read 9:40 AM. Exactly twenty minutes from now, our CEO was scheduled to hook up his laptop for the quarterly board meeting, projecting his screen onto a massive 4-meter display at the front of the room. He called me over to his desk, sweating through his suit jacket, pointing frantically at the bottom right corner of his monitor. There it was: that obnoxious, glowing translucent text staring right back at us—"Activate Windows. Go to Settings to activate Windows." 
 
 In front of a room full of venture capitalists and board members, projecting a machine with an unactivated OS watermark looks messy and unprofessional. He looked at me, dead serious, and whispered, "Fix it. Now."

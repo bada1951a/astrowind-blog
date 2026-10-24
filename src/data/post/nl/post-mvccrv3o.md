@@ -17,6 +17,7 @@ theme: "Cobalt Enterprise Lab"
 
 
 
+
 Het was dinsdagochtend om 09:15 uur op onze tech-incubator nabij de Amsterdamse Zuidas. Terwijl we de laatste hand legden aan een cruciale demo voor een fintech-partner, sloeg het lot toe: een angstaanjagend blauw scherm, de beruchte STOP: 0x0000000a (IRQL_NOT_LESS_OR_EQUAL). Geen tijd voor paniek, want de directeur stond binnen een uur op de stoep voor een live evaluatie van onze systemen. Dit soort acute prestatieproblemen vragen om een directe, no-nonsense aanpak.
 
 In deze gids duiken we diep in de werkelijke oorzaken van deze specifieke stop-code en lopen we door een beproefd stappenplan om je werkstation of server direct weer stabiel te krijgen.
@@ -99,6 +100,6 @@ Voorkomen is beter dan genezen, zeker als je midden in een project zit.
 
 Hiervoor kun je het gratis programma *BlueScreenView* gebruiken, of de geheugendump (memory dump) analyseren via *WinDbg* (Windows Debugger). Zoek naar het bestand dat vermeld staat bij de foutmelding (bijv. `ntoskrnl.exe` of een specifieke `.sys` file).
 
-3. Helpt een schone Windows-installatie altijd?
+3.  Helpt een schone Windows-installatie altijd?
 
 Ja, als het een hardnekkig software- of driverconflict betreft dat niet te traceren is, lost een schone installatie het in 99% van de gevallen op. Blijft het probleem daarna aanhouden? Dan is je RAM-latje of moederbord fysiek defect.

@@ -17,6 +17,7 @@ theme: "Bronze Artisan Workshop"
 
 
 
+
 Es ist 14:45 Uhr im Frankfurter Bankenviertel. Um 15:30 Uhr soll die wichtigste Pitch-Präsentation des Quartals für einen neuen Großkunden starten. Der Konferenzraum ist voll, die Kollegen warten gespannt, und ich stehe schwitzend vor dem Chef-Laptop. Plötzlich: Totale Stille im System. Keine Mausbewegung, kein blauer Bildschirm, einfach ein eingefrorenes Windows 11. Kein Tastendruck reagiert, der Task-Manager lässt sich nicht aufrufen. Nach drei gefühlten Ewigkeit hilft nur noch der harte Reset über den Power-Knopf. Zehn Minuten später dasselbe Spiel. Ein klassischer, zufälliger Freeze (Random Freezing), der jeden Sysadmin an den Rand des Wahnsinns treibt.
 
 ### Die Werkzeugkiste: Was wir für die Diagnose brauchen
@@ -91,7 +92,7 @@ Haben Sie den Verdächtigen identifiziert, greifen folgende Sofortmaßnahmen:
 
 ---
 
-### Häufig gestellte Fragen (FAQ)
+## Häufig gestellte Fragen (FAQ)
 
 1. Warum taucht in der Ereignisanzeige direkt vor dem Freeze überhaupt kein Fehler auf? Wenn ein PC komplett einfriert (Hard Freeze), hat das Betriebssystem oft keine Millisekunde mehr Zeit, den Fehler auf die Festplatte zu schreiben. Der letzte Log-Eintrag liegt dann oft Minuten zurück. In diesem Fall liegt zu 90% ein handfestes Hardware-Problem vor (RAM, Netzteil, CPU-Spannung oder überhitzte Chipsätze).
 

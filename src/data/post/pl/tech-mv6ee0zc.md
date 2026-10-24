@@ -17,6 +17,7 @@ theme: "Sunset Horizon Coral"
 
 
 
+
 Jako inżynier wsparcia IT w środowisku korporacyjnym widziałem już setki peryferiów skazanych na przedwczesną utylizację. W zeszły piątek na mój stół warsztatowy trafiła klawiatura jednego z naszych senior developerów – customowy mechanik na przełącznikach Gateron Yellow, w którym klawisze `W` oraz `E` naprzemiennie gubiły wciśnięcia albo generowały irytujący podwójny klik (*chattering*). Zamiast wpisać prostą komendę w terminalu, system rejestrował `wwweee`. Użytkownik był przekonany, że kontroler na płytce PCB uległ uszkodzeniu, a sprzęt nadaje się wyłącznie do kosza. Rzeczywistość w 90% takich przypadków jest znacznie bardziej prozaiczn
 
 a: zanieczyszczenia mikroskopowe, utlenienie styków lub chwilowa utrata elastyczności blaszki kontaktowej wewnątrz samego switcha. Zanim wydasz kilkaset złotych na nowy zestaw przełączników lub nową klawiaturę, możesz przeprowadzić skuteczną regenerację w ramach weekendowego serwisu DIY. Poniżej przedstawiam sprawdzoną w bojach procedurę czyszczenia i chemicznej rewitalizacji przełączników mechanicznych.
@@ -67,7 +68,7 @@ Zanim rozbierzesz klawiaturę, musimy wykluczyć usterki po stronie warstwy syst
 
 1. Otwórz Menedżer urządzeń(skrót `Win + X` → wybierzMenedżer urządzeń).
 
-2. Rozwiń sekcję Klawiatury.
+## 2. Rozwiń sekcję Klawiatury.
 
 3. Odszukaj wpisy o nazwie *Klawiatura zgodna z HID* lub dedykowane urządzenie producenta. Kliknij prawym przyciskiem myszy i wybierz Odinstaluj urządzenie.
 
@@ -91,7 +92,7 @@ a:</strong> Przed rozpoczęciem jakichkolwiek prac fizycznych bezwzględnie <str
 
 Do tego celu najlepiej sprawdza się schemat dwuetapowy: preparat rozpuszczający tlenki (*np. Kontakt 60*) oraz preparat myjący/wypłukujący (*Kontakt U* lub *czysty alkohol izopropylowy 99,9%*).
 
-1. Wciśnięcie trzpieni
+## 1. Wciśnięcie trzpieni
 
 a: Wciśnij plastikowy trzonek (*stem*) do oporu w dół za pomocą małego wkrętaka lub pęsety, odsłaniając szczelinę prowadnicy, pod którą ukryte są miedziane blaszki.
 
@@ -101,7 +102,7 @@ a: Wciśnij plastikowy trzonek (*stem*) do oporu w dół za pomocą małego wkr�
 
 a:Zaaplikuj dosłownieułamek sekundy aerozolu – wystarczy jedna mikrokropla. Zbyt duża ilość chemii wypłucze fabryczny smar prowadnic i zaleje wnętrze obudowy.
 
-4. Aktywacja mechaniczn
+## 4. Aktywacja mechaniczn
 
 a: Natychmiast po wstrzyknięciu środka zacznij energicznie i rytmicznie wciskać trzonek klawisza (około 60–80 razy w ciągu 30 sekund). Ruch ten powoduje mechaniczne przetarcie blaszek w obecności rozpuszczalnika, zrywając patynę i emulgując brud.
 

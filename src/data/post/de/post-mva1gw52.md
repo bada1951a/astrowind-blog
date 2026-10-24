@@ -17,6 +17,7 @@ theme: "Matte Black stealth"
 
 
 
+
 Es war kurz vor 17 Uhr in unserem Büro in Berlin-Mitte. Mitten in der finalen Vorbereitung für den Rollout unserer neuen Microservices-Architektur ploppte auf meinem Hauptrechner die gefürchtete rote Warnmeldung auf: "Speicherplatz auf C: wird knapp. Nur noch 1,2 GB verfügbar." Der Build-Prozess in Docker brach ab, Visual Studio Code fror ein und die Lüfter drehten am Limit. Keine Zeit für langes Rätselraten – das System musste sofort bereinigt werden, ohne dass wichtige Konfigurationen oder Logs für den Release verloren gingen.
 
 Wer in einer schnelllebigen IT-Umgebung arbeitet, kennt das Problem. Windows 11 neigt dazu, sich im Laufe der Zeit unbemerkt mit Gigabytes an temporärem Datenmüll vollzusaugen. Hier ist mein praxiserprobter Leitfaden, wie du deine C-Platte in wenigen Minuten wieder freiräumst, ohne dein System zu gefährden.
@@ -55,7 +56,7 @@ Gehen wir die Sache systematisch an. Wir nutzen ausschließlich die offiziellen 
    - *Temporäre Dateien*
    - *Thumbnails (Miniaturansichten)*
 
-5. Klicke auf Dateien entfernen.
+## 5. Klicke auf Dateien entfernen.
 
 ### Schritt 2: Manuelles Leeren der Benutzer-Caches via Ausführen-Dialog
 
@@ -93,7 +94,7 @@ Damit das Problem vor dem nächsten Release nicht wieder auftritt, automatisiere
 ### Kann ich den Ordner `C:\Windows.old` einfach löschen?
 Ja, wenn dein Windows 11 stabil läuft und du kein Downgrade auf eine vorherige Version machen möchtest. Am sichersten löschst du ihn über die *Datenträgerbereinigung* (suche im Startmenü danach), indem du dort das Häkchen bei "Vorherige Windows-Installation(en)" setzt.
 
-### Warum läuft C: nach dem Löschen sofort wieder voll?
+## Warum läuft C: nach dem Löschen sofort wieder voll?
 Das liegt meist an virtuellen Maschinen (Hyper-V, WSL2), Docker-Images oder großen Browser-Caches. Prüfe mit einem Tool wie *TreeSize Free*, welche Ordner auf C: den tatsächlichen Speicherplatz belegen.
 
 ### Ist es sicher, den Inhalt von `%temp%` komplett zu löschen?

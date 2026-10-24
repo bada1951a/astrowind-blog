@@ -17,6 +17,7 @@ theme: "Tokyo Neon Violet"
 
 
 
+
 Durante anos gerenciando bancadas de suporte e estações de alta performance para desenvolvedores e jogadores competitivos, perdi a conta de quantas vezes me deparei com o mesmo chamado: *"Conectei meu monitor externo no notebook gamer/corporativo e a tela simplesmente não dá sinal, ou pior, fica piscando a cada 20 segundos"*. Esse comportamento instável — o infame *flickering* ou a perda total de sincronia com a clássica mensagem de "Sem Sinal" (*No Signal*) — raramente é um defeito físico no painel do monitor. 
 
 Na esmagadora maioria dos casos práticos que analisei em laboratório, o vilão é uma colisão na pilha de drivers gráficos híbridos (a dança sensível entre a iGPU do processador e a dGPU dedicada), corrupção de tabelas EDID ou uma tentativa do Windows de forçar uma taxa de quadros e largura de banda que o barramento físico atual não consegue sustentar. 
@@ -128,7 +129,7 @@ a:
 
 3. Pressione `Win + R`, digite `msconfig` e pressione Enter. Na abaInicialização do Sistema, marque a caixaInicialização segura (Modo Mínimo) e reinicie o notebook.
 
-4. No Modo de Segurança, abra o DDU:
+## 4. No Modo de Segurança, abra o DDU:
 
    - Selecione o tipo de dispositivo: GPU.
    - Selecione a fabricante: Intel / AMD (GPU integrada primeiro).
@@ -169,7 +170,7 @@ a:</strong> Se você joga com taxa de atualização alta e quer latência mínim
 
 Se o seu monitor continua apresentando micro-piscadas pretas esporádicas ao alternar janelas ou ver vídeos no YouTube em segundo plano enquanto trabalha, desative a chave MPO do Windows:
 
-1. Abra o Prompt de Comando como Administrador.
+1.  Abra o Prompt de Comando como Administrador.
 
 2. Copie e cole o comando abaixo, pressionando Enter:
 

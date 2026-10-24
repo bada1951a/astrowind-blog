@@ -17,6 +17,7 @@ theme: "Deep Ocean Cobalt"
 
 
 
+
 Eram exatamente 14h50 de uma terça-feira movimentada no nosso hub de tecnologia na Zona Sul de São Paulo. A entrega do projeto para o cliente final estava marcada para as 15h30, e o time inteiro revisava os últimos pulls no GitHub. De repente, fui chamado às pressas na mesa do nosso desenvolvedor sênior: a barra de tarefas do Windows 11 simplesmente congelou. O menu Iniciar não abria, os ícones fixados ignoravam qualquer clique e o relógio parecia estático no tempo. Com o cliente no chat cobrando a build final, reiniciar a máquina do zero levaria preciosos minutos preciosos que não tínhamos. Precisávamos de uma solução cirúrgica e imediata, sem perder o fluxo de trabalho.
 
 Se você já passou por isso, sabe o nível de frustração. O Windows 11 é excelente em design, mas o Explorador de Arquivos e a camada gráfica da barra de tarefas (que agora dependem fortemente de pacotes modernos do sistema) ainda sofrem com engasgos intermitentes. 
@@ -61,7 +62,7 @@ Este é o método mais rápido e eficiente para recuperar a barra de tarefas sem
 
 4. Clique com o botão direito em cima dele e selecione Reiniciar.
 
-5. *O que acontece agor
+## 5. *O que acontece agor
 
 a:* A barra de tarefas sumirá por um segundo junto com a área de trabalho e voltará a funcionar normalmente, já limpa e reestabilizada. ---
 
@@ -91,7 +92,7 @@ Se o travamento for recorrente ao longo dos dias, arquivos do sistema podem esta
 
 1. Clique com o botão direito no menu Iniciar (ou use o atalho `Win + X`) e selecione Terminal (Administrador)ouPrompt de Comando (Administrador).
 
-2. Digite o seguinte comando e aperte Enter:
+## 2. Digite o seguinte comando e aperte Enter:
 
    ```cmd
    sfc /scannow

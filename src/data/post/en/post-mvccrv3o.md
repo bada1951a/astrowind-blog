@@ -17,6 +17,7 @@ theme: "Pastel Lavender Tech"
 
 
 
+
 <div style="border-left: 4px solid #7c3aed; padding: 12px 16px; margin: 20px 0; background-color: rgba(124,58,237,0.06); border-radius: 4px; color: #111827;">
 <strong>Quick Summary FAQ (Top 5 User Questions):</strong><br>
 
@@ -71,11 +72,11 @@ If the memory test comes back clean, a rogue driver is almost certainly the culp
 
 1. Force restart your PC twice during the boot logo to trigger the Automatic Repair environment.
 
-2. Navigate to Troubleshoot > Advanced options > Startup Settings, and clickRestart.
+2. Navigate to Troubleshoot > Advanced options > Startup Settings, and click Restart.
 
 3. Upon reboot, press `4` or `F4` to enable Safe Mode.
 
-4. Once you are on the desktop, open the TerminalorCommand Prompt as an Administrator and run a quick system file check to repair any collateral damage:
+4. Once you are on the desktop, open the Terminal or Command Prompt as an Administrator and run a quick system file check to repair any collateral damage:
 
    ```cmd
    sfc /scannow

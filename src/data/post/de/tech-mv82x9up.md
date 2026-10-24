@@ -17,6 +17,7 @@ theme: "Retro Monokai"
 
 
 
+
 Freitagnachmittag, 16:45 Uhr. Der letzte Deployment-Lauf für das Release am Montag läuft durch, der Kaffee ist kalt, und ich will eigentlich nur noch den Rechner zuklappen und ins Wochenende starten. Plötzlich fängt die Kiste neben mir an zu röhren wie ein startender A380 – die Gehäuselüfter drehen auf 100%, die RGB-Beleuchtung glimmt in traurigem Monokai-Grün, aber der Dell-Monitor bleibt eisern im Standby. Kein POST-Screen, kein BIOS-Logo, absolut tote Hose. Und natürlich wartet der Abteilungsleiter im Teams auf den finalen Build. Herzlichen Glückwunsch, der klassische Hardware-Gau.
 
 <div style="border-left: 4px solid #a6e22e; padding: 12px 16px; margin: 20px 0; background-color: rgba(166,226,46,0.05); border-radius: 4px; color: #111827; font-family: monospace;">

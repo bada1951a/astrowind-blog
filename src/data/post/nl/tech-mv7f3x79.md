@@ -17,6 +17,7 @@ theme: "Midnight Navy Royal"
 
 
 
+
 Tijdens een nachtdienst op de IT-infrastructuurdesk van een corporate kantoor in Amsterdam zag ik de tickets plotseling binnenstromen: direct na de uitrol van een cumulatieve Windows 11-update via ons WSUS-platform meldden tientallen gebruikers die 's ochtends vroeg inlogden identieke symptomen. Laptops aangesloten op Thunderbolt 4-dockingstations gaven massaal de melding "Geen signaal" op het primaire externe beeldscherm, terwijl het secundaire scherm om de vier seconden zwart knipperde. 
 
 Wanneer een gebruiker geconfronteerd wordt met een knipperend beeldscherm of een volslagen gebrek aan videosignaal op een tweede of derde monitor, grijpt men vrijwel altijd direct naar de fysieke bekabeling. In meer dan 85% van de zakelijke incidenten die ik behandel, is de hardware echter kerngezond. Het probleem ligt dieper: een vastgelopen DisplayPort-handshake, corrupte DCH-stuurprogrammabestanden of een bandbreedteconflict in het subsysteem van de grafische processor (GPU). 
@@ -145,16 +146,16 @@ Knipperende schermen ontstaan vaak doordat Windows probeert een paneel aan te st
 
 Om te voorkomen dat ditzelfde probleem zich bij de volgende Windows Update-cyclus herhaalt, implementeren wij standaard de volgende preventieve maatregelen:
 
-1. Groepsbeleid tegen driver-overschrijvingen:
+## 1. Groepsbeleid tegen driver-overschrijvingen:
 
    Open de Lokale groepsbeleidbewerker (`gpedit.msc`) en navigeer naar:  
    `Computerconfiguratie` -> `Beheersjablonen` -> `Windows-onderdelen` -> `Windows Update` -> `Geen stuurprogramma's opnemen in Windows-updates`. Zet deze beleidsregel op Ingeschakeld. Hiermee voorkom je dat Microsoft WHQL-drivers je stabiele OEM-videodrivers overschrijven.
 
-2. Kabelkwaliteit en Passieve Adapters:
+## 2. Kabelkwaliteit en Passieve Adapters:
 
    Gooi goedkope, passieve HDMI-naar-DisplayPort adapters resoluut de prullenbak in. Zodra je een dual-monitoropstelling draait via USB-C, vereist de signaalintegriteit gecertificeerde VESA DisplayPort 1.4 of HDMI 2.1 kabels met actieve signaalomvormers indien er sprake is van protocolconversie.
 
-3. Power Delivery Marges:
+## 3. Power Delivery Marges:
 
    Zorg dat het dockingstation voldoende vermogen levert. Als een dock slechts 65W levert aan een laptop die onder piekbelasting 90W trekt, schaalt het moederbord automatisch de stroomtoevoer naar de USB-C multiplexers terug. Dit resulteert in het wegvallen van het videosignaal zodra de processor zwaar wordt belast.
 

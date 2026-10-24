@@ -17,6 +17,7 @@ theme: "Sunset Horizon Coral"
 
 
 
+
 Eran las 18:50 en nuestra oficina corporativa en Madrid. Quedaban apenas diez minutos para enviar el paquete definitivo del proyecto trimestral a la direccion y mi equipo principal empezo a fallar de la peor manera posible. Necesitaba comprimir carpetas urgentemente, renombrar lotes masivos de archivos PDF y aplicar scripts de automatizacion desde el explorador, pero cada vez que hacia clic derecho con el raton, Windows 11 me obligaba a dar un rodeo absurdo haciendo clic en "Mostrar mas opciones". Ese pequeño retraso de dos segundos por cada operacion se acumulaba, generando una frustracion monumental en medio del caos del cierre de proyecto.
 
 ### El problema diario: El infierno del nuevo diseño de Windows 11
@@ -88,7 +89,7 @@ Modificar el Registro de Windows es un procedimiento seguro si se siguen los pas
 
 ---
 
-### Preguntas Frecuentes (FAQ)
+## Preguntas Frecuentes (FAQ)
 
 1. ¿Este cambio afecta a la estabilidad general de Windows 11? Absolutamente no. Este comando simplemente habilita una clave de CLSID nativa que Microsoft mantuvo en el codigo del sistema operativo para facilitar la transicion, por lo que no genera errores ni pantallazos azules.
 

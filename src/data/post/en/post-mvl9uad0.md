@@ -17,6 +17,7 @@ theme: "Modern Minimalist Slate"
 
 
 
+
 Picture this: It is late evening, and I am sitting in a busy Silicon Valley hotel lobby during a business trip. My laptop battery is sitting precariously at 18 percent. I desperately need to review a critical corporate financial document stored on our secure shared drive before tomorrow morning's stakeholder alignment call. I finish reviewing the files, save my local notes, and click the Windows Start menu to shut down the machine so I can conserve every last drop of battery life for the flight tomorrow. I close the lid, pack up my gear, and head back to my room. 
 
 Ten minutes later, as I unpack my backpack on the desk, I notice the laptop chassis feels unusually warm. The tiny side power LED is still glowing softly. I open the lid, and the screen instantly lights back up to the lock screen, and my battery is now drained down to a critical 4 percent. The machine simply refused to turn off. Instead of shutting down, it hung in a bizarre limbo state where the operating system pretended to close while the hardware refused to power down the motherboard and power rails. This is a classic enterprise headache that wastes battery, overheats systems in transport, and ruins morning workflows.
@@ -39,7 +40,7 @@ Second is faulty or outdated Intel Management Engine Interface or chipset driver
 
 Third is USB peripheral interference or Wake-on-LAN settings. Sometimes external docking stations, wireless mouse dongles, or network packets trick the motherboard into waking up the exact millisecond the power supply tries to cut the current.
 
-### Step-by-Step Resolution: Disabling Fast Startup
+## Step-by-Step Resolution: Disabling Fast Startup
 
 The most reliable, battle-tested fix for this shutdown glitch is turning off Fast Startup through the Control Panel. Here is how to do it step-by-step like a senior system administrator.
 

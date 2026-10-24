@@ -17,6 +17,7 @@ theme: "Retro Monokai"
 
 
 
+
 Erano le 17:45 in un frenetico lunedì pomeriggio in un ufficio del Centro direzionale di Milano. Mancavano quindici minuti alla scadenza tassativa per l'invio del report trimestrale alla direzione centrale, e la mia postazione principale aveva deciso di fare le bizze. Sull'angolo in basso a destra dello schermo, campeggiava fissa l'odiata scritta "Attiva Windows". Fin qui niente di tragico, se non fosse che il software aziendale per la compilazione dei PDF aveva deciso di andare in conflitto con quell'overlay grafico, bloccando l'esportazione del file e coprendo parte dei pulsanti di invio. Il panico totale: il cliente che chiama per sollecitare, il capo che passa dietro la scrivania e il sistema piantato. 
 
 Nei primi minuti di panico totale ho fatto l'errore classico: ho iniziato a cliccare a caso nelle Impostazionidi Windows cercando una scorciatoia rapida, riavviando il servizio di Esplora risorse daGestione attivitàe persino smanettando nelPannello di controllo. Risultato? Dieci minuti buttati nel wc, il report ancora bloccato e quella filigrana trasparente ma fastidiosa sempre lì, pronta a coprire i dati critici della tabella finanziaria che stavo per inviare. 
@@ -46,7 +47,7 @@ a:
 
 1. Apri il Prompt dei comandi come Amministratore:Premi il tasto Windows sulla tastiera, digita `cmd`, fai clic con il tasto destro suPrompt dei comandinei risultati della ricerca e selezionaEsegui come amministratore.
 
-2. Verifica lo stato della licenz
+## 2. Verifica lo stato della licenz
 
 a:
    Nella finestra nera del terminale, digita il comando di controllo della licenza per identificare il canale di attivazione:
