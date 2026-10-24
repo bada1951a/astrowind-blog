@@ -150,3 +150,38 @@
   color: var(--shiki-dark) !important;
   background-color: var(--shiki-dark-bg) !important;
 }
+
+/* ============================================================
+   [최종 종결] 본문 내 비정상 거대 폰트 및 리스트 강제 표준화
+   ============================================================ */
+
+/* 1. 본문 소제목(h2, h3, h4)이 본문 리스트를 집어삼키지 않도록 크기 상한선 고정 */
+.prose h2 {
+  font-size: 1.35rem !important;
+  line-height: 1.5 !important;
+  font-weight: 700 !important;
+  margin-top: 2rem !important;
+  margin-bottom: 0.75rem !important;
+}
+
+.prose h3,
+.prose h4 {
+  font-size: 1.15rem !important;
+  line-height: 1.5 !important;
+  font-weight: 700 !important;
+  margin-top: 1.5rem !important;
+  margin-bottom: 0.5rem !important;
+}
+
+/* 2. 번호 목록이나 긴 문장이 제목 태그로 들어간 경우 일반 본문 크기(16px)로 진압 */
+.prose h2:has(+ p),
+.prose h3:has(+ p) {
+  font-size: 1.1rem !important;
+}
+
+/* 3. 본문 텍스트 표준 가독성 확보 */
+.prose p {
+  font-size: 1rem !important;
+  line-height: 1.75 !important;
+  word-break: keep-all !important;
+}
