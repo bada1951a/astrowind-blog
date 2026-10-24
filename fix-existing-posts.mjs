@@ -3,7 +3,7 @@ import path from 'path';
 
 const POSTS_BASE_DIR = path.resolve('src/data/post');
 
-function cleanMarkdown(content) {
+function cleanAndRestructureMarkdown(content) {
   const fmMatch = content.match(/^---[\s\S]*?---\n*/);
   if (!fmMatch) return content;
 
@@ -13,31 +13,34 @@ function cleanMarkdown(content) {
   // 1. 인코딩 및 깨진 문자 복원
   body = body.replace(/ðŸ’¡/g, '💡');
 
-  // 2. [핵심 방어] 본문 안의 실행 순서 번호(1. 윈도우..., 3. 좌측... 등)가 헤딩으로 오인된 것들을 전부 일반 본문으로 강제 환원
-  body = body.replace(/^#{1,4}\s+([0-9]+\.\s+[가-힣A-Za-zÀ-ÖØ-ßa-zà-öø-ÿ].*)$/gm, '$1');
+  // 2. [핵심] 기존에 본문 안에서 헤딩으로 오인되어 붙은 모든 불필요한 '#' 기호들을 제거하여 순수 텍스트로 환원
+  body = body.replace(/^#{1,6}\s+/gm, '');
 
-  // 3. [메인 대제목(H2) 정밀 지정] 오직 1~4번 메인 섹션 타이틀만 정확히 H2로 지정 (본문 세부 번호는 절대 H2로 만들지 않음)
-  body = body.replace(/^([1-4]\.\s+[^\n]{4,50})$/gm, (match, p1) => {
-    // 세부 실행 단계 안의 번호 문장들은 절대 대제목으로 승격시키지 않음
-    if (p1.startsWith('1. 윈도우') || p1.startsWith('3. 좌측') || p1.startsWith('1. 키보드') || p1.startsWith('2. 제어판')) {
-      return p1;
+  // 3. 줄 단위로 나누어 위계 재부팅
+  const lines = body.split('\n');
+  const processedLines = lines.map(line => {
+    const trimmed = line.trim();
+
+    // A. 메인 대제목(H2) 지정: 숫자로 시작하는 주요 섹션 타이틀 (예: "1. 시스템 종료...", "2. 빠른 시작...", "4. 자주 묻는 질문 (FAQ)")
+    if (/^[1-4]\.\s+[가-힣A-Za-z\s\(\)]+$/.test(trimmed) && trimmed.length < 60) {
+      return `## ${trimmed}`;
     }
-    return `## ${p1}`;
+
+    // B. 단계별 소제목(H3) 지정: '1단계', '2단계', '방법 1', '방법 2' 등
+    if (/^(?:Step|Paso|Schritt|Etape|Étape|Passo|Krok|Stap|Langkah|Bước|[0-9]+단계|방법\s*[0-9]+)/i.test(trimmed)) {
+      const cleanTitle = trimmed.replace(/\*\*/g, '').replace(/^#+\s*/, '').trim();
+      return `### ${cleanTitle}`;
+    }
+
+    // C. 나머지는 절대 헤딩이 되지 않는 일반 본문 텍스트 유지
+    return line;
   });
 
-  // 4. [단계별 소제목(H3) 표준화] '1단계', 'Step 1' 등 명확한 단계 타이틀만 H3 지정
-  const stepRegex = /^(?:#{1,4}\s*)?(\*{0,2}(?:Step|Paso|Schritt|Etape|Étape|Passo|Krok|Stap|Langkah|Bước|[0-9]+단계)\s*[0-9]+(?:\s*[:\.]|\s*[-–])\s*[^\n]+?\*{0,2})$/gim;
-  body = body.replace(stepRegex, (match, p1) => {
-    const cleanTitle = p1.replace(/\*\*/g, '').replace(/^#+\s*/, '').trim();
-    return `### ${cleanTitle}`;
-  });
+  body = processedLines.join('\n');
 
-  // 5. 유령 헤딩 및 잔여 기호 소거
+  // 4. 잔여 기호 및 과도한 공백 정돈
   body = body.replace(/^\s*\*\*\s*$/gm, '');
-  body = body.replace(/^\s*#{1,4}\s*$/gm, '');
   body = body.replace(/\*{3,}/g, '**');
-
-  // 6. 빈 줄 정돈
   body = body.replace(/\n{3,}/g, '\n\n').trim();
 
   return `${frontmatter}\n${body}\n`;
@@ -66,7 +69,7 @@ function run() {
       totalScanned++;
       const filePath = path.join(targetDir, file);
       const original = fs.readFileSync(filePath, 'utf-8');
-      const cleaned = cleanMarkdown(original);
+      const cleaned = cleanAndRestructureMarkdown(original);
 
       if (original !== cleaned) {
         fs.writeFileSync(filePath, cleaned, 'utf-8');
@@ -75,7 +78,7 @@ function run() {
     }
   }
 
-  console.log(`\n🎉 100개 이상 전체 포스트 위계 완벽 정화 완료!`);
+  console.log(`\n🎉 100개 이상 전체 포스트 완전 리셋 및 재정렬 완료!`);
   console.log(`- 총 스캔된 파일: ${totalScanned}개`);
   console.log(`- 서식이 교정된 파일: ${totalUpdated}개`);
 }
