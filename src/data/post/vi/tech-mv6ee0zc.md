@@ -20,6 +20,7 @@ theme: "Midnight Navy Royal"
 
 
 
+
 ## [INCIDENT LOG 01:15 AM] Bối Cảnh Sự Cố Tại Bàn Trực Vận Hành
 
 Đồng hồ hệ thống điểm 01:15 sáng. Trong phòng máy chủ yên tĩnh chỉ có tiếng quạt tản nhiệt server rít đều đặn, đồng chí kỹ sư trực ca bên cạnh bắt đầu đập bàn phím liên hồi kèm theo tiếng thở dài. Anh ta đang cấu hình dở cụm Kubernetes qua terminal thì phím `e` liên tục bị "chattering" (gõ một lần nhưng máy nhận thành `ee` hoặc `eee`), trong khi phím `Enter` thì nhấn 3 lần mới ăn được 1 lần. 
@@ -59,7 +60,7 @@ Khi bạn nhấn phím, stem trượt xuống tách hoặc đẩy hai lá đồn
 Về mặt vật lý học, không có hai miếng kim loại nào chạm vào nhau mà dừng lại ngay lập tức; chúng luôn rung nhẹ (bounce) trước khi tiếp xúc tĩnh hoàn toàn. Firmware của bàn phím cơ luôn cài đặt một thuật toán gọi là Debounce Time (thời gian trễ khử rung, thường từ 5ms đến 15ms) để bỏ qua các tín hiệu dao động này. 
 Nếu switch bị lão hóa, độ đàn hồi của lá đồng suy giảm, thời gian rung vật lý vượt quá ngưỡng Debounce Time của firmware, hiện tượng gõ một ra hai (chattering) sẽ xuất hiện ngay lập tức trên hệ điều hành.
 
-3. Hỏng Hóc Mối Hàn Hoặc Giãn Chân Socket Hot-swap
+## 3. Hỏng Hóc Mối Hàn Hoặc Giãn Chân Socket Hot-swap
 Đối với bàn phím mạch hàn (solder), các mối thiếc dưới đáy PCB sau thời gian chịu lực gõ mạnh có thể bị nứt chân chim (cold solder joint). Đối với bàn phím hỗ trợ thay switch nhanh (Hot-swap), hai ngàm kẹp bằng đồng của socket Kailh hoặc Gateron dưới bo mạch có thể bị toét rộng ra do rút cắm switch sai góc, dẫn đến tình trạng mất tiếp xúc chập chờn – lúc bấm ăn, lúc bấm trơ ra. ---
 
 ## Quy Trình Xử Lý Thực Chiến (Runbook Step-by-Step)
@@ -109,7 +110,7 @@ Các bước thao tác chuẩn:1.Ngắt toàn bộ nguồn điện: Rút cáp k�
 
 2. Tháo Keycap: Dùng dụng cụ rút phím (Keycap puller) rút phím bị lỗi theo phương thẳng đứng 90 độ, tránh bẻ nghiêng gây gãy chân stem.
 
-3. Nhỏ/Xịt dung dịch vào buồng tiếp điểm:
+## 3. Nhỏ/Xịt dung dịch vào buồng tiếp điểm:
 
    * Lắp vòi xịt mảnh đi kèm bình BW-100 / DeoxIT.
    * Dùng ngón tay nhấn giữ stem của switch xuống mức kịch kim (đáy hành trình). Lúc này bạn sẽ thấy khe hở nhỏ dẫn thẳng xuống buồng chứa lá đồng.
@@ -138,9 +139,9 @@ Nếu sau khi xử lý dung dịch mà phím vẫn còn hiện tượng nuốt n
 
 * Đối với bàn phím Mạch hàn (Solder):
 
-1. Mở vỏ bàn phím, lật mặt sau PCB.
+## 1. Mở vỏ bàn phím, lật mặt sau PCB.
 
-2. Bật mỏ hàn ở nhiệt độ 320°C - 350°C.
+## 2. Bật mỏ hàn ở nhiệt độ 320°C - 350°C.
 
 3. Chấm một lượng nhỏ thiếc hàn mới có chứa lõi trợ hàn (flux) vào hai mối hàn của switch lỗi để làm mới mối nối (solder reflow), loại bỏ triệt để hiện tượng nứt chân hàn li ti do mỏi nhiệt.
 

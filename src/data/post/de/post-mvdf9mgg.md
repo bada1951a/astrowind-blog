@@ -20,6 +20,7 @@ theme: "Matte Black stealth"
 
 
 
+
 Es ist mal wieder Freitag, kurz vor 17:00 Uhr in unserem Berliner Tech-Hub, und der dringend anstehende Rollout unserer neuen Entwicklungsumgebung droht komplett ins Wasser zu fallen. Auf dem Test-Laptop eines Kollegen lief das neueste Windows 11 Funktionsupdate – und hielt seit sage und schreibe zwei Stunden starr bei exakt 100 Prozent an. Kein Fortschritt, kein Bluescreen, nur der nervige kreisende Punkt und die subtile Panik im Team, dass wir das Gerät plattmachen und bei Null anfangen müssen. Ein erzwungener Neustart endete natürlich in einer automatischen Reparalschleife. Klassiker.
 
 <div style="border-left: 4px solid #ffffff; padding: 12px 16px; margin: 20px 0; background-color: rgba(255,255,255,0.05); border-radius: 4px; color: #111827;">

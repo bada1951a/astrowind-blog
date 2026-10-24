@@ -20,13 +20,14 @@ theme: "Graphite Technical Paper"
 
 
 
+
 Dans le cadre du déploiement et de la maintenance de parcs informatiques en entreprise, la gestion de l'affichage multi-écrans sur stations mobiles (ultrabooks et stations de travail portables) représente l'un des postes de sollicitation les plus fréquents auprès des équipes d'infrastructure. Qu’il s’agisse d’une liaison directe via HDMI/DisplayPort ou d'un transit par station d’accueil Thunderbolt/USB-C, les symptômes d'« absence de signal » (*No Signal*) et de scintillement intermittent (*black screens* aléatoires d'une ou deux secondes) ne relèvent que rarement d'une panne matérielle franche de la dalle. 
 
 Dans plus de 85 % des cas observés sur le terrain, ces anomalies résultent d'une désynchronisation critique de la pile logicielle vidéo, d'une altération du cache topologique du système d'exploitation ou d'un échec de négociation protocolaire au niveau de la couche matérielle de transmission. Ce document formalise une approche méthodique de diagnostic et de remédiation par réinitialisation en profondeur des sous-systèmes graphiques sous Windows.
 
 ---
 
-1. Hypothèses et analyse des causes racines
+## 1. Hypothèses et analyse des causes racines
 
 Pour intervenir efficacement sans procéder à des réinstallations système superflues, il convient d'isoler la source de l'instabilité selon trois vecteurs techniques distincts.
 
@@ -63,13 +64,13 @@ Avant toute manipulation de pilotes, il est impératif d'assainir la mémoire de
 
 2. Ouvrez l'outil d'exécution avec le raccourci clavier `Windows + R`, saisissez `regedit` et validez pour ouvrir l'Éditeur du Registre.
 
-3. Naviguez jusqu'à l'arborescence suivante :
+## 3. Naviguez jusqu'à l'arborescence suivante :
 
    ```text
    HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\GraphicsDrivers
    ```
 
-4. Repérez les trois sous-clés suivantes :
+## 4. Repérez les trois sous-clés suivantes :
 
    * `Configuration`
    * `Connectivity`
@@ -100,16 +101,16 @@ Si le scintillement persiste, une corruption profonde de la bibliothèque de lie
 
 1. Téléchargez la dernière version stable de DDU ainsi que le package complet du pilote graphique constructeur (privilégiez le pilote OEM validé par le fabricant de votre PC portable : Lenovo, Dell, HP, etc., ou le dernier package WHQL d'Intel/NVIDIA).
 
-2. Lancez Windows en Mode sans échec :
+## 2. Lancez Windows en Mode sans échec :
 
    * Maintenez la touche `Shift` enfoncée tout en cliquant sur Redémarrer dans le menu Démarrer.
    * Accédez à Dépannage>Options avancées>Paramètres>Redémarrer, puis choisissez l'option `4` ou `F4` (Activer le mode sans échec).
 
-3. Exécutez DDU avec les privilèges administrateur.
+## 3. Exécutez DDU avec les privilèges administrateur.
 
 4. Sélectionnez le type de périphérique (GPU), puis choisissez la marque de votre carte (Intel, AMD ou NVIDIA).
 
-5. Cliquez sur Nettoyer et redémarrer.
+## 5. Cliquez sur Nettoyer et redémarrer.
 
 <div style="border-left: 4px solid #475569; padding: 12px 16px; margin: 20px 0; background-color: rgba(71, 85, 105, 0.05); border-radius: 4px;">
   <strong>Remarque sur les systèmes hybrides :</strong> Sur les ordinateurs portables équipés d'un processeur avec contrôleur intégré (iGPU Intel/AMD) et d'un GPU dédié (dGPU NVIDIA), effectuez systématiquement le nettoyage de l'iGPU en premier, car c'est lui qui gère la table de routage physique des sorties vidéo sur la majorité des architectures non équipées d'un commutateur MUX matériel.
@@ -145,7 +146,7 @@ Pour pérenniser la liaison vidéo et prévenir la dégradation progressive des 
 
 ---
 
-4. Questions fréquemment posées (FAQ)
+## 4. Questions fréquemment posées (FAQ)
 
 ### Pourquoi mon écran externe fonctionne-t-il correctement en 30 Hz mais perd-il le signal dès que je le configure en 60 Hz ?
 Ce comportement est le symptôme typique d'une bande passante physique insuffisante au niveau de la chaîne de transmission. En passant de 30 Hz à 60 Hz, le débit de données requis double instantanément. Si votre câble n'est pas certifié (ex. un câble HDMI 1.4 utilisé pour transporter un flux 4K), ou si votre hub USB-C ne prend en charge que le DP Alt Mode sur 2 lignes (*2-lane*) sans compression DSC en présence de périphériques USB 3.0 actifs, la carte graphique coupe le flux pour éviter la corruption des trames.

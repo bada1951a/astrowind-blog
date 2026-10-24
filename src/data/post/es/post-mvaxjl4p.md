@@ -20,6 +20,7 @@ theme: "Pastel Lavender Tech"
 
 
 
+
 Eran las 8:50 de la mañana en nuestra oficina del distrito 22@ en Barcelona. A solo diez minutos de una reunión clave con el equipo de producto para revisar el despliegue de la nueva versión de nuestra plataforma, mi ordenador principal decidió hacer una actualización fantasma y quedarse congelado en la pantalla de bienvenida. El ventilador rugía como un motor de avión y el cursor apenas se arrastraba por el escritorio. Los Slack de mis compañeros parpadeaban con avisos de urgencia y yo sudando frío mirando cómo pasaban los segundos. El cuello de botella no era falta de hardware; era que el sistema operativo intentaba cargar al mismo tiempo dieciocho aplicaciones que ni siquiera recordaba haber instalado. 
 
 <div style="border-left: 4px solid #7c3aed; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">

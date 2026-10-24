@@ -20,6 +20,7 @@ theme: "Graphite Technical Paper"
 
 
 
+
 Eran las 18:45 en nuestra oficina corporativa en Madrid. A solo quince minutos de enviar el paquete definitivo de un proyecto clave para un cliente multinacional, la pantalla de la workstation principal se quedo totalmente congelada. El cursor no respondia, el teclado estaba muerto y el ventilador seguia zumbando con una calma insultante. Un reinicio por botonazo nos costo diez minutos vitales y, por supuesto, la entrega se retraso, generando un ambiente de tension maxima en el departamento de sistemas. Lo peor no fue el bloqueo en si, sino que era la tercera vez en la semana que ocurria sin dejar rastro aparente.
 
 <div style="border-left: 4px solid #475569; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">

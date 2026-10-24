@@ -20,6 +20,7 @@ theme: "Modern Minimalist Slate"
 
 
 
+
 Het was vrijdagochtend, kwart voor negen. Om negen uur stond de weekly stand-up gepland met de hele directie en ik moest de Q3-infrastructuurdemo geven. Mijn laptop, een beest van een apparaat dat normaal gesproken binnen vijf seconden klaar voor actie was, besloot om een update te forceren. Zwarte scherm, draaiende bolletjes, en de minuten tikten weg. Terwijl mijn ademhaling versnelde en het zweet op mijn rug stond, keek ik naar de klok: 08:55. Mijn manager stond al achter me met een kop koffie in zijn hand en vroeg: "Is de presentatie er bijna klaar voor, of moeten we via papier praten?" 
 
 Dat moment van pure paniek kent iedereen in de IT wel. Je zit vast achter een scherm dat weigert door te starten, terwijl de stress door je aderen giert. Na die bijna-ramp heb ik de boel eens flink onder de loep genomen. Geen vage fabels over "register opschonen" met duistere freeware, maar gewoon een no-nonsense aanpak zoals we die op de supportafdeling gewend zijn.
@@ -34,7 +35,7 @@ Dat moment van pure paniek kent iedereen in de IT wel. Je zit vast achter een sc
 
 Voordat we gaan slopen, moeten we weten waarom je systeem zo tergend traag opstart. Na jaren van troubleshooting zie ik meestal drie boosdoeners terugkomen:
 
-1. De "Ik wil op de achtergrond draaien"-maffi
+## 1. De "Ik wil op de achtergrond draaien"-maffi
 
 a: Apps zoals Spotify, Discord, OneDrive en diverse printertools vinden het nodig om direct bij het opstarten al actief te zijn. Ze claimen RAM en CPU-cycli voordat je überhaupt je wachtwoord hebt ingetypt.
 
@@ -56,7 +57,7 @@ Vergeet de oude `msconfig`-trucs; sinds Windows 10 en 11 regelen we dit direct v
 
 2. Klik aan de linkerkant op het icoon met de meters (Opstart-apps / Startup apps).
 
-3. Sorteer op Opstartimpact (Startup impact).
+## 3. Sorteer op Opstartimpact (Startup impact).
 
 4. Ga rigoureus door de lijst. Staan er apps tussen die je zelden gebruikt, zoals Steam, Epic Games, of die vage update-helper van Adobe?
 
@@ -79,7 +80,7 @@ Soms zit het dieper en is de opstartsector of de harde schijf zelf vervuild. Lat
    ```
    Wacht tot dit klaar is (dit kan even duren).
 
-3. Voer daarna de klassieke schijfcheck uit:
+## 3. Voer daarna de klassieke schijfcheck uit:
 
    ```cmd
    sfc /scannow

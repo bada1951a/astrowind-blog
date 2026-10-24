@@ -20,6 +20,7 @@ theme: "Deep Indigo System"
 
 
 
+
 W pracy inżyniera wsparcia IT niewiele jest scenariuszy równie powtarzalnych i frustrujących dla użytkownika, jak nagła utrata stabilności wielomonitorowej stacji roboczej. Scenariusz z reguły wygląda identycznie: pracownik podłącza nowoczesnego ultrabooka do stacji dokującej Thunderbolt lub replikatora portów USB-C z dwoma monitorami roboczymi. Zamiast płynnego rozszerzenia pulpitu, jeden z ekranów cyklicznie gaśnie co kilkanaście sekund, a drugi wita komunikatem „Brak sygnału” (No Signal). W dziennikach systemowych pojawia się lawina ostrzeżeń o resecie sterownika ekranu, a użytkownik traci możliwość pracy.
 
 <div style="border-left: 4px solid #4338ca; padding: 12px 16px; margin: 20px 0; background-color: rgba(67, 56, 202, 0.04); border-radius: 4px;">
@@ -41,7 +42,7 @@ W architekturze hybrydowej wyjścia wideo USB-C/DisplayPort fizycznie przechodz�
 
 ![Hardware Diagnostic & Troubleshooting](https://images.unsplash.com/photo-1504384308090-c894fdcc538d? auto=format&fit=crop&w=1000&h=550&q=80)
 
-2.  Timeout mechanizmu TDR w jądrze `dxgkrnl.sys`
+## 2.  Timeout mechanizmu TDR w jądrze `dxgkrnl.sys`
 Podsystem graficzny DirectX monitoruje czas odpowiedzi karty. Jeśli kontroler DisplayPort Alternate Mode lub transceiver stacji dokującej opóźni handshake EDID o więcej niż 2 sekundy podczas negocjacji szyfrowania HDCP, jądro systemu uznaje sterownik za zawieszony. Uruchamiana jest procedura TDR: jądro resetuje akcelerator graficzny, co objawia się natychmiastowym zgaśnięciem wszystkich paneli i przejściem drugiego monitora w tryb uśpienia. ## 3. Zaśmiecona pamięć podręczna EDID w gałęzi `GraphicsDrivers`
 System Windows agresywnie cachuje informacje o każdym podłączonym kiedykolwiek wyświetlaczu. Gdy laptop jest regularnie przepinany między różnymi salami konferencyjnymi a domowym biurkiem, wpisy w rejestrze dotyczące konfiguracji, pozycji i profilu timingów ulegają fragmentacji i korupcji. System próbuje wymusić nieobsługiwane taktowanie pikseli (pixel clock) lub pasmo Display Stream Compression (DSC), co skutkuje całkowitym brakiem sygnału.
 
@@ -55,7 +56,7 @@ Zanim przejdziemy do modyfikacji plików binarnych, musimy precyzyjnie ustalić,
 
 1. Uruchom narzędzie Menedżer urządzeń(kombinacja `Win + X` -> wybierzMenedżer urządzeń).
 
-2. Rozwiń sekcję Karty graficzne.
+## 2. Rozwiń sekcję Karty graficzne.
 
 3. Kliknij prawym przyciskiem myszy na zintegrowaną kartę (np. *Intel Iris Xe Graphics*) i wybierz Właściwości.
 
@@ -92,12 +93,12 @@ Operacja ta zmusza podsystem graficzny Windows do ponownego odpytania wszystkich
 
 1. Wciśnij `Win + R`, wpisz `regedit` i zatwierdź z uprawnieniami administratora.
 
-2. Przejdź do następującego klucz
+## 2. Przejdź do następującego klucz
 
 a:
    `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\GraphicsDrivers`
 
-3. Odszukaj trzy podkatalogi:
+## 3. Odszukaj trzy podkatalogi:
 
    * `Configuration`
    * `Connectivity`
@@ -115,12 +116,12 @@ Zwykłe odinstalowanie sterownika z poziomu Menedżera urządzeń pozostawia pli
 
 1. Pobierz narzędzie Display Driver Uninstaller (DDU).
 
-2. Uruchom system w trybie awaryjnym:
+## 2. Uruchom system w trybie awaryjnym:
 
    * Przytrzymaj klawisz `Shift` i kliknij Uruchom ponownie w menu Start.
    * Przejdź do: Rozwiąż problemy->Opcje zaawansowane->Ustawienia uruchamiania-> wciśnij klawisz `4` (Włącz tryb awaryjny).
 
-3. Uruchom DDU z uprawnieniami administrator
+## 3. Uruchom DDU z uprawnieniami administrator
 
 a:
    * Jako typ urządzenia wybierz Karta graficzna. * Wybierz producenta dedykowanego układu (np. NVIDIA) i kliknij Wyczyść i NIE restartuj.

@@ -11,6 +11,7 @@ theme: "Matte Black stealth"
 
 
 
+
 ## 1. [Opening Story/Problem]
 
 L'altra settimana ero in trasferta presso la nostra filiale produttiva fuori Milano, chiamato a supportare una riunione tecnica urgente nella sala conferenze principale. Mentre cercavo di collegare il mio portatile aziendale ai monitor esterni e al proiettore della sala, avevo disperatamente bisogno di catturare rapidamente una schermata delle impostazioni di rete e dei log di proiezione per condividerli in tempo reale con il team di sviluppo. Ho premuto la combinazione di tasti a cui sono abituato da anni: **Win + Shift + S**. 
@@ -19,7 +20,7 @@ Il vuoto assoluto. Nessun oscuramento dello schermo, nessuna notifica in basso a
 
 ![Tech Troubleshooting Guide](/images/tech-photo/ram%20(1).png)
 
-2. Root Cause Breakdown
+## 2. Root Cause Breakdown
 
 Perché la combinazione **Win + Shift + S** smette improvvisamente di funzionare su Windows 11? Nel corso dei miei interventi sul campo, ho identificato tre cause principali che scatenano questo fastidioso blocco:
 
@@ -33,7 +34,7 @@ Perché la combinazione **Win + Shift + S** smette improvvisamente di funzionare
 
 3. **Corruzione dei file di configurazione dell'app:** Gli aggiornamenti cumulativi di Windows 11 a volte corrompono la cache dell'applicazione UWP (Universal Windows Platform) dello Strumento di cattura, rendendo necessario un reset forzato tramite le **Impostazioni**.
 
-3. Step-by-Step Resolution
+## 3. Step-by-Step Resolution
 
 Ecco la procedura esatta, testata sul campo, per ripristinare il corretto funzionamento della scorciatoia in pochi passaggi mirati.
 
@@ -57,7 +58,7 @@ Molti utenti non sanno che se le notifiche sono bloccate, lo strumento sembra no
 - Assicurati che le notifiche siano attive e controlla che l'applicazione **Strumento di cattura** sia autorizzata a inviare notifiche (banner e suoni).
 - Verifica inoltre nel **Pannello di controllo** o in **Gestione dispositivi** che la tastiera funzioni correttamente e che non ci siano conflitti di driver con tasti funzione o software di terze parti per macro (come i software di gestione tastiere gaming).
 
-4. Expert Advice
+## 4. Expert Advice
 
 <div style="border-left: 4px solid #ffffff; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Consiglio Pro:</strong> Se lavori spesso in mobilità collegando docking station universali o monitor esterni di marche diverse, tieni sempre a portata di mano un comando di riserva tramite PowerShell o crea un collegamento rapido alternativo sul desktop.
@@ -65,7 +66,7 @@ Molti utenti non sanno che se le notifiche sono bloccate, lo strumento sembra no
 
 Se riscontri spesso questo problema dopo aver collegato monitor esterni o proiettori (un problema classico legato alla gestione dei profili di visualizzazione multipla in Windows 11), ti consiglio di riavviare rapidamente il **Esplora risorse** (Explorer.exe) da **Gestione attività**. Questo semplice gesto rigenera la barra delle applicazioni e spesso sblocca istantaneamente le combinazioni di tasti globali senza dover riavviare l'intero computer durante una riunione importante.
 
-5. Frequently Asked Questions
+## 5. Frequently Asked Questions
 
 Q: Posso usare un comando rapido da terminale per riavviare lo Strumento di cattura se i menu grafici non rispondono?
 

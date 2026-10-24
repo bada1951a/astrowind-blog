@@ -20,6 +20,7 @@ theme: "Bronze Artisan Workshop"
 
 
 
+
 어제 판교의 한 IT 기업 회의실, 중요한 라이브 데모를 불과 10분 앞둔 긴박한 상황이었습니다. 사내 핵심 시스템 점검을 위해 여러 창을 동시에 띄워두고 급하게 슬랙(Slack) 메시지를 확인하려는데, 하필이면 Windows 11 작업표시줄이 완전히 얼어붙어 아무리 마우스로 클릭해도 반응하지 않는 사태가 발생했습니다. 시작 버튼도 안 눌리고, 실행 중인 앱 아이콘을 눌러도 창이 전환되지 않으니 급한 마음에 컴퓨터를 강제 재부팅하려다 중요한 작업 내용까지 날릴 뻔했죠. 매일 쓰는 운영체제인데 갑자기 이런 일이 생기면 정말 식은땀이 납니다. 저와 비슷한 경험으로 골머리를 앓고 계신 분들을 위해, 실무 현장에서 가장 빠르고 확실하게 먹통인 작업표시줄을 살려내는 특급 솔루션을 정리해 드립니다.
 
 <div style="border-left: 4px solid #b45309; padding: 12px 16px; margin: 20px 0; background-color: rgba(180, 83, 9, 0.05); border-radius: 4px; color: #111827;">
@@ -64,13 +65,13 @@ theme: "Bronze Artisan Workshop"
 ## 2단계: 터미널(PowerShell)을 통한 시스템 패키지 강제 재등록
 탐색기를 재시작해도 잠시 후 다시 먹통이 된다면, 윈도우 11의 Xaml UI 패키지 자체에 손상이 갔을 가능성이 높습니다. 관리자 권한으로 시스템을 재설정해 줍니다.
 
-1. 키보드의 Ctrl + Shift + Esc로 작업 관리자를 엽니다.
+## 1. 키보드의 Ctrl + Shift + Esc로 작업 관리자를 엽니다.
 
-2. 상단 메뉴의 '파일' > '새 작업 실행'을 클릭합니다.
+## 2. 상단 메뉴의 '파일' > '새 작업 실행'을 클릭합니다.
 
 3. 실행창에 `powershell`을 입력하고, '관리자 권한으로 이 작업 생성' 체크박스를 반드시 체크한 뒤 엔터를 칩니다.
 
-4. 관리자 PowerShell 창이 뜨면 아래 명령어를 복사해서 붙여넣고 엔터를 칩니다.
+## 4. 관리자 PowerShell 창이 뜨면 아래 명령어를 복사해서 붙여넣고 엔터를 칩니다.
 
 ```powershell
 Get-AppxPackage -AllUsers | Foreach {Add-AppxPackage -DisableDevelopmentMode -Register "(_.InstallLocation)\AppXManifest.xml"}
@@ -81,9 +82,9 @@ Get-AppxPackage -AllUsers | Foreach {Add-AppxPackage -DisableDevelopmentMode -Re
 ## 3단계: 시스템 파일 검사 및 무결성 복구 (DISM 및 SFC)
 근본적으로 운영체제 파일이 깨져서 발생하는 문제라면 DISM 명령어와 SFC 명령어를 통해 복구해야 합니다.
 
-1.  위 2단계와 동일한 방법으로 관리자 권한의 터미널(또는 명령 프롬프트)을 엽니다.
+## 1.  위 2단계와 동일한 방법으로 관리자 권한의 터미널(또는 명령 프롬프트)을 엽니다.
 
-2. 아래 명령어를 순서대로 입력하여 시스템 이미지를 검사하고 복구합니다.
+## 2. 아래 명령어를 순서대로 입력하여 시스템 이미지를 검사하고 복구합니다.
 
 ```cmd
 DISM.exe /Online /Cleanup-image /Restorehealth

@@ -20,6 +20,7 @@ theme: "Modern Minimalist Slate"
 
 
 
+
 Eran las 18:45 en nuestra oficina tecnológica en el distrito 22@ de Barcelona. Faltaban apenas quince horas para el lanzamiento crítico de un software en el que habíamos estado trabajando durante meses con el equipo de Madrid. El estrés en el canal de Slack era palpable y las notificaciones no paraban de llover. De repente, fui a hacer clic en el menú de Inicio de Windows 11 para abrir la consola de comandos y... nada. La barra de tareas entera se había quedado completamente congelada. El cursor se movía por el escritorio, pero ni el icono de Windows, ni los accesos directos, ni el reloj respondían a los clics. Reiniciar de la manera tradicional era imposible porque el menú estaba bloqueado, y un reinicio forzoso con el botón físico corría el riesgo de corromper un despliegue local crítico. Tenía que solucionarlo en cuestión de minutos.
 
 Si te ha pasado lo mismo justo cuando más prisa tienes, sabes la frustración que genera. Vamos a ir directos al grano con los métodos reales que utilizamos los ingenieros de soporte para solucionar este fallo clásico de Windows 11 sin perder la paciencia ni los datos.
@@ -36,7 +37,7 @@ Si te ha pasado lo mismo justo cuando más prisa tienes, sabes la frustración q
 
 Antes de aplicar la solución, es útil entender qué está pasando bajo el capó para evitar que vuelva a suceder:
 
-1. El Explorador de archivos colaps
+## 1. El Explorador de archivos colaps
 
 a: En Windows 11, la barra de tareas y el menú de inicio están estrechamente integrados con el proceso `explorer.exe`. Si este proceso se bloquea debido a una app de terceros o a un pico de memoria, arrastra consigo toda la interfaz inferior.
 
@@ -59,7 +60,7 @@ Dado que no puedes acceder al Administrador de tareas de la forma habitual hacie
 
 3. Desplázate por la pestaña Procesoshasta encontrarExplorador de Windows (o busca `explorer.exe`).
 
-4. Haz clic derecho sobre él y selecciona Reiniciar. 
+## 4. Haz clic derecho sobre él y selecciona Reiniciar. 
 
 *Verás que la pantalla parpadea durante un segundo y la barra de tareas vuelve a la vida. *
 

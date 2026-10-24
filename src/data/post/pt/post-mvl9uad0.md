@@ -20,6 +20,7 @@ theme: "Crimson Emergency Field"
 
 
 
+
 Eram exatamente 17h30 em um escritório na Avenida Paulista. O prazo da auditoria de segurança interna da nossa empresa vencia em trinta minutos, e eu precisava gerar e enviar o relatório de autodiagnóstico do meu departamento urgentemente. Cliquei em "Desligar" no menu Iniciar para reiniciar a máquina com um perfil limpo e garantir que o script de auditoria rodasse sem interferências, mas o monitor apagou e os coolers continuaram girando a toda velocidade. O LED do gabinete permaneceu aceso ininterruptamente. Tentei segurar o botão físico de energia por cinco segundos para forçar o desligamento, mas ao religar, o Windows retomou exatamente a mesma sessão travada, ignorando o comando anterior. O tempo estava correndo contra mim, o relatório não podia ser gerado com o sistema operacional preso nesse limbo de energia e a equipe de compliance estava monitorando o envio segundo a segundo.
 
 <div style="border-left: 4px solid #ef4444; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">

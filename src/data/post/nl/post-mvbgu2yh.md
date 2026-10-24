@@ -20,6 +20,7 @@ theme: "Graphite Technical Paper"
 
 
 
+
 Het was gisterochtend rond negen uur op onze tech-campus aan de Amsterdamse Zuidas. De sprintplanning stond op het punt te beginnen, mijn Slack ontplofte met meldingen van developers, en uitgerekend op dat moment besloot Windows 11 om volledig dwars te liggen. Ik klikte op het Start-menu: nul reactie. Ik probeerde met de rechtermuisknop op de taakbalk te klikken om Taakbeheer te openen: ook totaal geen beweging. Je cursor verandert in een ronddraaiend cirkeltje of reageert gewoon helemaal nergens meer op, terwijl je actieve vensters zoals je browser of IDE wel gewoon blijven draaien. Een klassiek geval van een bevroren Windows 11 Shell, en als je midden in een acute prestatieprobleem-oplossing zit, kun je dit echt niet gebruiken.
 
 <div style="border-left: 4px solid #475569; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
@@ -62,7 +63,7 @@ Als je geen taakbalk hebt om Taakbeheer te openen, gebruiken we de ultieme snelt
 ### Stap 2: Het Windows Systeemherstel via Terminal (Als Stap 1 niet helpt)
 Blijft de taakbalk hardnekkig weigeren of crasht hij direct opnieuw? Dan moeten we mogelijke corrupte systeembestanden aanpakken.
 
-1. Open Taakbeheer opnieuw via `Ctrl + Shift + Esc`.
+## 1. Open Taakbeheer opnieuw via `Ctrl + Shift + Esc`.
 
 2. Klik op Bestand>Nieuwe taak uitvoeren, typ `wt` of `cmd`, vink het hokje aan voor "Deze taak uitvoeren met beheerdersrechten" en druk op Enter.
 
@@ -74,7 +75,7 @@ Blijft de taakbalk hardnekkig weigeren of crasht hij direct opnieuw? Dan moeten 
 
    `sfc /scannow`
 
-5. Start na afloop je pc volledig opnieuw op.
+## 5. Start na afloop je pc volledig opnieuw op.
 
 ### Stap 3: De XAML-cache en Start-menu Resetten
 Lost dit het nog steeds niet op? Dan gaan we de gebruikersinterface-cache geforceerd legen via PowerShell.

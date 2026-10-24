@@ -11,7 +11,8 @@ theme: "Deep Indigo System"
 
 
 
-1. O Desespero do Momento e a Falha na Tela
+
+## 1. O Desespero do Momento e a Falha na Tela
 
 Era uma tarde típica de alta demanda aqui na Avenida Paulista, com o movimento intenso de escritórios corporativos ao redor. Eu estava executando uma query massiva no banco de dados de clientes na estação de trabalho principal, monitorando as tabelas e os logs de execução em tempo real para evitar qualquer gargalo de performance no cluster. De repente, notei um comportamento anômalo em um dos blocos de dados. Precisei registrar imediatamente a evidência visual daquele pico de uso para o relatório de auditoria e... apertei **Win + Shift + S**. 
 
@@ -25,7 +26,7 @@ O relógio correndo, a query rodando e o desespero batendo por não conseguir ti
 
 ![Tech Troubleshooting Guide](/images/tech-photo/keyboard%20(12).png)
 
-2. Root Cause Breakdown
+## 2. Root Cause Breakdown
 
 Para resolver esse problema de vez, precisamos entender por que o atalho da Ferramenta de Captura (Snipping Tool) simplesmente morre no Windows 11. Na minha rotina de suporte técnico, identifico três causas principais para essa falha:
 
@@ -33,7 +34,7 @@ Para resolver esse problema de vez, precisamos entender por que o atalho da Ferr
 * **Notificações e Permissões em Segundo Plano:** Se o sistema estiver configurado para bloquear notificações ou se o aplicativo não tiver permissão para rodar em segundo plano, a interface visual da ferramenta falha ao ser chamada.
 * **Corrupção no Pacote UWP (Appx):** Atualizações cumulativas do Windows 11 frequentemente corrompem o registro dos aplicativos nativos da Microsoft Store, exigindo um reparo ou reistalação limpa via PowerShell.
 
-3. Step-by-Step Resolution
+## 3. Step-by-Step Resolution
 
 Vamos ao que interessa. Vou te mostrar o passo a passo exato para destravar o seu sistema agora mesmo, utilizando as ferramentas nativas do Windows 11.
 
@@ -53,7 +54,7 @@ Muitas vezes, o atalho funciona, mas a notificação visual está desativada, da
 
 1. Abra as **Configurações** do Windows (atalho **Win + I**).
 
-2. Vá em **Sistema** e depois em **Notificações**.
+## 2. Vá em **Sistema** e depois em **Notificações**.
 
 3. Certifique-se de que as notificações estão ativadas e procure na lista a **Ferramenta de Captura** para garantir que ela tem permissão para exibir avisos.
 
@@ -62,7 +63,7 @@ Muitas vezes, o atalho funciona, mas a notificação visual está desativada, da
 ### Passo 3: Reparar e Redefinir o Aplicativo nas Configurações
 Se o processo estiver corrompido, podemos forçar o Windows a reparar os arquivos do aplicativo sem perder dados.
 
-1. Abra as **Configurações** (**Win + I**).
+## 1. Abra as **Configurações** (**Win + I**).
 
 2. Navegue até **Aplicativos** > **Aplicativos instalados**.
 
@@ -77,7 +78,7 @@ Se nada disso funcionou, vamos reinstalar o pacote do aplicativo usando um coman
 
 1. Clique no menu Iniciar, digite **PowerShell**, clique com o botão direito em cima dele e escolha **Executar como Administrador**.
 
-2. Cole o seguinte comando na janela e aperte Enter:
+## 2. Cole o seguinte comando na janela e aperte Enter:
 
 ```powershell
 Get-AppxPackage *ScreenSketch* -AllUsers | Foreach {Add-AppxPackage -DisableDevelopmentMode -Register "(_.InstallLocation)\AppXManifest.xml"}
@@ -85,13 +86,13 @@ Get-AppxPackage *ScreenSketch* -AllUsers | Foreach {Add-AppxPackage -DisableDeve
 
 3. Aguarde o término do processo, feche o terminal e teste o atalho **Win + Shift + S**.
 
-4. Expert Advice
+## 4. Expert Advice
 
 Como profissional de infraestrutura, recomendo fortemente que você evite usar softwares de terceiros desconhecidos para capturar tela apenas porque o atalho nativo falhou uma vez. Muitas dessas ferramentas gratuitas da internet capturam dados sensíveis da sua área de transferência ou sobrecarregam a inicialização do sistema operacional. 
 
 Além disso, mantenha sempre os drivers do seu teclado atualizados através do **Gerenciador de Dispositivos**, especialmente se você utiliza teclados mecânicos gamers que possuem softwares proprietários de macro. Às vezes, o software do teclado bloqueia combinações específicas de teclas como o **Win + Shift + S** achando que se trata de um comando de macro personalizado.
 
-5. Frequently Asked Questions
+## 5. Frequently Asked Questions
 
 Q: O atalho ainda não funciona mesmo após seguir todos os passos. O que pode ser?
 

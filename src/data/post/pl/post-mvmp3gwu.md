@@ -11,6 +11,7 @@ theme: "Pastel Lavender Tech"
 
 
 
+
 1. Ostatnia deska ratunku w środku korporacyjnego chaosu
 
 Siedzę przy biurku w naszym warszawskim biurowcu, a na wewnętrznym komunikatorze pali się czerwona lampka za czerwoną. Trwa gorący okres raportowania, a ja mam na ekranie otwartych dokładnie pięć różnych systemów ERP, arkusze kalkulacyjne, panel administracyjny i okno czatu z zirytowanym menedżerem projektu. W tym momencie potrzebuję na szybko zrobić zrzut ekranu fragmentu kodu i błędu, żeby wysłać go do zespołu wsparcia. Wciskam **Win + Shift + S**, odruchowo czekając na zaciemnienie ekranu i paletę wycinania. I... absolutnie nic. Ekran ani drgnie, żadna ikonka się nie pojawia, a ja zostaję z palcem na klawiaturze i rosnącą frustracją.
@@ -23,7 +24,7 @@ Zamiast spokojnie pracować, tracę cenne minuty na bezradne wciskanie kombinacj
 
 ![Tech Troubleshooting Guide](/images/tech-photo/tech-photos%20(13).jpg)
 
-2. Dlaczego skrót nagle przestaje działać?
+## 2. Dlaczego skrót nagle przestaje działać?
 
 Jako serwisant sprzętu i wsparcia IT spotykam się z tym zgłoszeniem przynajmniej kilka razy w tygodniu. Za ten konkretny problem odpowiada najczęściej kilka powtarzalnych czynników systemowych:
 
@@ -31,7 +32,7 @@ Jako serwisant sprzętu i wsparcia IT spotykam się z tym zgłoszeniem przynajmn
 * **Wyłączone powiadomienia systemowe:** Windows 11 blokuje wyskakujące okienka wycinania, jeśli włączony jest tryb Skupienia (Focus) lub wyłączono powiadomienia dla aplikacji.
 * **Uszkodzony pakiet aplikacji systemowych:** Składnik **Screen Sketch** (Narzędzie wycinanie) uległ korupcji w pamięci podręcznej i wymaga szybkiego zresetowania przez **Ustawienia**.
 
-3. Krok po kroku do pełnej sprawności systemu
+## 3. Krok po kroku do pełnej sprawności systemu
 
 Nie musimy od razu grzebać w rejestrze ani przeinstalowywać systemu. Przejdźmy przez sprawdzone procedury naprawcze, które stosuję na co dzień w biurze.
 
@@ -51,7 +52,7 @@ Jeśli zamknięcie procesu nie pomogło, musimy zresetować ustawienia samej apl
 
 2. Wybierz zakładkę **Aplikacje**, a następnie **Zainstalowane aplikacje**.
 
-3. Wpisz w wyszukiwarkę "Narzędzie wycinanie".
+## 3. Wpisz w wyszukiwarkę "Narzędzie wycinanie".
 
 4. Kliknij na trzy kropki obok nazwy aplikacji i wybierz **Opcje zaawansowane**.
 
@@ -66,7 +67,7 @@ Często problem wynika z niepoprawnie skonfigurowanych skrótów klawiszowych w 
 
 3. Sprawdź w sekcji **System -> Powiadomienia**, czy aplikacja Narzędzie wycinanie ma prawo wysyłać powiadomienia banerowe. Bez nich wycinek może być robiony, ale system nie pokazuje go na ekranie.
 
-4. Porada eksperta i środki ostrożności
+## 4. Porada eksperta i środki ostrożności
 
 Podczas intensywnej pracy wielozadaniowej łatwo nieświadomie wcisnąć kombinację klawiszy blokującą skróty, taką jak przełączenie układu klawiatury. Jeśli po wykonaniu powyższych kroków skrót nadal nie działa, sprawdź w **Menedżerze urządzeń**, czy Twoja klawiatura nie ma problemów ze sterownikami HID. 
 
@@ -74,7 +75,7 @@ Podczas intensywnej pracy wielozadaniowej łatwo nieświadomie wcisnąć kombina
 <strong>Ważna uwaga:</strong> Unikaj instalowania podejrzanych programów innych firm obiecujących "przyspieszenie wycinania". Oryginalne Narzędzie wycinanie w Windows 11 jest w pełni zintegrowane z systemem i wszelkie zewnętrze nakładki często powodują konflikty z bibliotekami DirectX oraz pamięcią podręczną schowka.
 </div>
 
-5. Często zadawane pytania (FAQ)
+## 5. Często zadawane pytania (FAQ)
 
 Q: Co zrobić, jeśli skrót Win+Shift+S nadal nie działa po zresetowaniu aplikacji w Ustawieniach?
 

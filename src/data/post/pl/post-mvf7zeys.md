@@ -20,6 +20,7 @@ theme: "Pure Titanium Clean"
 
 
 
+
 Godzina 8:45 rano, warszawskie centrum biznesowe na Mokotowie. Za piętnaście minut kluczowa telekonferencja zarządu z inwestorami, a stacja robocza dyrektora finansowego wydaje z siebie dźwięk startującego odrzutowca. Wentylatory wyją na maksymalnych obrotach, kursor myszy skacze po ekranie jak szalony, a w Menedżerze zadań proces „System”lub„System i przerwania”dumnie wyświetla równe100% użycia procesora. Ekran zamarza przy próbie otwarcia prezentacji PowerPoint. Panika w oczach użytkownika sięga zenitu, a ja wkraczam do akcji z walizką serwisową.
 
 Znam ten ból na pamięć. Zanim wpadłem na właściwy trop, straciłem mnóstwo czasu na bezmyślne restarty komputera, odinstalowywanie pakietu Office czy skanowanie antywirusem, które w tym konkretnym scenariuszu nie dawały absolutnie nic. Problem leżał głębiej – w sterownikach, uszkodzonej usłudze Windows Update lub konflikcie podzespołów. 
@@ -78,14 +79,14 @@ Jeśli proces systemowy obciąża procesor z powodu zaciętych aktualizacji, mus
    * `ren C:\Windows\SoftwareDistribution SoftwareDistribution.old`
    * `ren C:\Windows\System32\catroot2 Catroot2.old`
 
-4. Uruchom usługi ponownie:
+## 4. Uruchom usługi ponownie:
 
    * `net start wuauserv`
    * `net start cryptSvc`
    * `net start bits`
    * `net start msiserver`
 
-5. Zrestartuj komputer.
+## 5. Zrestartuj komputer.
 
 ### Krok 3: Aktualizacja lub wycofanie sterowników w Menedżerze Urządzeń
 Jeżeli reset Windows Update nie pomógł, winny jest najpewniej sterownik sprzętowy.

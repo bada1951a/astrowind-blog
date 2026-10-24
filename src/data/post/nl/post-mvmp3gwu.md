@@ -11,7 +11,8 @@ theme: "Deep Ocean Cobalt"
 
 
 
-1. De Paniek in de Vergaderruimte
+
+## 1. De Paniek in de Vergaderruimte
 
 Laatst stond ik voor een flinke uitdaging. Ik was af gereisd naar een regionaal kantoor ergens in het land voor een belangrijke strategische sessie. Net toen ik ter plekke in de vergaderruimte mijn laptop aansloot op een ietwat verouderde externe monitor en een overijverige projector, liep ik tegen een typische frustratie aan. Ik wilde snel een belangrijk configuratieschema vastleggen van het scherm met de bekende sneltoets **Win + Shift + S**, maar er gebeurde helemaal niets. Geen schermverduistering, geen melding in het actiecentrum, en het Knipprogramma (Snipping Tool) leek volledig te slapen. 
 
@@ -23,7 +24,7 @@ In zo'n hectische situatie, met een groep collega's die direct resultaat verwach
 
 ![Tech Troubleshooting Guide](/images/tech-photo/bsod%20(10).png)
 
-2. Waarom de Sneltoets Weigert
+## 2. Waarom de Sneltoets Weigert
 
 Voordat we direct ingrijpen met technische handelingen, is het handig om te begrijpen waarom de sneltoets **Win + Shift + S** opeens kan uitvallen, zeker wanneer je wisselt van hardware zoals docking stations of externe schermen. Er zijn drie hoofdoorzaken:
 
@@ -31,7 +32,7 @@ Voordat we direct ingrijpen met technische handelingen, is het handig om te begr
 * **Uitschakeling in de Instellingen:** Meldingen of achtergrondmachtigingen voor de app zijn onbedoeld uitgeschakeld, vaak door energiebesparende profielen of groepsbeleid.
 * **Corrupte App-installatie of Cache:** De Windows-app voor het Knipprogramma is beschadigd geraakt, wat vaak gebeurt bij onvolledige Windows-updates of na een abrupte hardwarewissel met een projector.
 
-3. Stapsgewijze Oplossing
+## 3. Stapsgewijze Oplossing
 
 Als systeembeheerder hou ik van een gestructureerde aanpak. Volg deze stappen in **Instellingen**, **Taakbeheer** of **Configuratiescherm** om de sneltoets direct weer tot leven te wekken.
 
@@ -62,7 +63,7 @@ Het kan zijn dat de app geen toestemming heeft om op de achtergrond te draaien o
 ### Stap 3: Sneltoets koppelen aan de Print Screen-toets als alternatief
 Als de toetscombinatie hardnekkig weigert op een specifieke laptop, kun je de functionaliteit direct toewijzen aan een fysieke knop.
 
-1. Open **Instellingen** (**Win + I**).
+## 1. Open **Instellingen** (**Win + I**).
 
 2. Navigeer naar **Toegankelijkheid** en klik op **Toetsenbord**.
 
@@ -73,7 +74,7 @@ REM Handmatige controle via PowerShell als de app volledig corrupt is
 Get-AppxPackage *ScreenSketch* | Reset-AppxPackage
 ```
 
-4. Expert Advies & Preventie
+## 4. Expert Advies & Preventie
 
 In een professionele kantooromgeving of tijdens klantbezoeken wil je niet voor verrassingen komen te staan. Zorg er altijd voor dat je Windows 11-omgeving up-to-date blijft via **Windows Update**. Veel problemen met het Knipprogramma zijn opgelost in recente cumulatieve updates. Let bovendien op met agressieve optimalisatiesoftware of 'crapware' die achtergrondprocessen geforceerd afsluit; deze raken vaak de systeemeigen sneltoetsen van Windows kwijt.
 
@@ -81,7 +82,7 @@ In een professionele kantooromgeving of tijdens klantbezoeken wil je niet voor v
 <strong>Belangrijke waarschuwing:</strong> Ga niet zomaar rigoureus sleutelen aan het Windows Register (regedit) tenzij het absoluut noodzakelijk is. Het resetten of opnieuw registreren van de UWP-app via PowerShell (zoals hierboven getoond) is een stuk veiliger voor je bedrijfsdata en gebruikersprofiel.
 </div>
 
-5. Veelgestelde Vragen
+## 5. Veelgestelde Vragen
 
 Q: Wat moet ik doen als **Win + Shift + S** na al deze stappen nog steeds niet werkt?
 

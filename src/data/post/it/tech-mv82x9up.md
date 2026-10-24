@@ -20,6 +20,7 @@ theme: "Sandstone Desert Minimal"
 
 
 
+
 Venerdì pomeriggio, ore 17:45. Mancano esattamente quindici minuti alla chiusura del bilancio mensile e il server di backup locale decide di fare le bizze. Premo il pulsante di accensione: le ventole partono a tutto gas, i LED RGB si illuminano con quel blu accecante, ma il monitor rimane ostinatamente nero. Nessun segnale video, nemmeno il BIOS. Il capo che mi alita sul collo, la scadenza imminente e il sudore freddo che inizia a scendere lungo la schiena. Panico totale in ufficio.
 
 <div style="border-left: 4px solid #a16207; padding: 12px 16px; margin: 20px 0; background-color: rgba(161,98,7,0.05); border-radius: 4px;">
@@ -34,7 +35,7 @@ Nei miei anni passati a smanettare tra rack e banchi da laboratorio, ho visto di
 
 1. Ossidazione dei contatti (il peggior nemico): L'umidità dell'ufficio e gli sbalzi termici creano una patina sottilissima sui pin dorati delle RAM. Basta un micron di ossido per interrompere il bus dati.
 
-2. Micro-vibrazioni ed espansione termic
+## 2. Micro-vibrazioni ed espansione termic
 
 a: Tra ventole che girano a 3000 RPM e cicli continui di caldo/freddo, i banchi di RAM tendono a "muoversi" millimetricamente nei loro slot, perdendo il contatto perfetto.
 

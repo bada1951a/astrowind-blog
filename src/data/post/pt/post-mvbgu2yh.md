@@ -20,6 +20,7 @@ theme: "Deep Ocean Cobalt"
 
 
 
+
 Eram exatamente 14h50 de uma terça-feira movimentada no nosso hub de tecnologia na Zona Sul de São Paulo. A entrega do projeto para o cliente final estava marcada para as 15h30, e o time inteiro revisava os últimos pulls no GitHub. De repente, fui chamado às pressas na mesa do nosso desenvolvedor sênior: a barra de tarefas do Windows 11 simplesmente congelou. O menu Iniciar não abria, os ícones fixados ignoravam qualquer clique e o relógio parecia estático no tempo. Com o cliente no chat cobrando a build final, reiniciar a máquina do zero levaria preciosos minutos preciosos que não tínhamos. Precisávamos de uma solução cirúrgica e imediata, sem perder o fluxo de trabalho.
 
 Se você já passou por isso, sabe o nível de frustração. O Windows 11 é excelente em design, mas o Explorador de Arquivos e a camada gráfica da barra de tarefas (que agora dependem fortemente de pacotes modernos do sistema) ainda sofrem com engasgos intermitentes. 
@@ -74,7 +75,7 @@ Se o Método 1 não resolveu e o congelamento persiste, o problema pode estar no
 
 1. Pressione as teclas `Ctrl + Shift + Esc` para abrir o Gerenciador de Tarefas.
 
-2. No menu superior, clique em Executar nova tarefa.
+## 2. No menu superior, clique em Executar nova tarefa.
 
 3. Na caixa de texto que abrir, digite `powershell` (marque a caixa "Criar esta tarefa com privilégios administrativos").
 
@@ -94,7 +95,7 @@ Se o travamento for recorrente ao longo dos dias, arquivos do sistema podem esta
 
 1. Clique com o botão direito no menu Iniciar (ou use o atalho `Win + X`) e selecione Terminal (Administrador)ouPrompt de Comando (Administrador).
 
-2. Digite o seguinte comando e aperte Enter:
+## 2. Digite o seguinte comando e aperte Enter:
 
    ```cmd
    sfc /scannow

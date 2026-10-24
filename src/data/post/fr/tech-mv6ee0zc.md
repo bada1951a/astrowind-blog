@@ -20,6 +20,7 @@ theme: "Pure Titanium Clean"
 
 
 
+
 En tant qu'ingénieur système, mon clavier n'est pas un simple périphérique de saisie : c'est l'interface directe avec les consoles de production, les hyperviseurs et les terminaux d'infrastructure. Rien n'est plus critique – et exaspérant – qu'un interrupteur mécanique qui commence à "bégaier" lors de la saisie d'une commande sensible sous SSH. Une touche `a` ou `Enter` qui enregistre deux frappes au lieu d'une, ou qui ignore purement et simplement la pression, peut transformer une commande d'administration anodine en incident d'exploitation.
 
 Ce dysfonctionnement, couramment appelé chattering (ou rebond de contact anormal), n'impose pas nécessairement le remplacement immédiat du matériel ou le recours au fer à souder. Dans plus de 80 % des cas rencontrés en environnement professionnel, une intervention ciblée à l'aide d'un nettoyant pour contacts électroniques permet de restaurer l'intégrité du signal. Voici notre procédure standard d'atelier pour diagnostiquer, décontaminer et pérenniser vos commutateurs mécaniques.
@@ -52,7 +53,7 @@ Chaque microcontrôleur de clavier intègre un algorithme d'anti-rebond (*deboun
 ---
 ![Tech Diagnostics](https://images.unsplash.com/photo-1588508065123-287b28e013da? auto=format&fit=crop&w=1000&h=550&q=80)
 
-2. Procédure de résolution pas-à-pas
+## 2. Procédure de résolution pas-à-pas
 
 <div style="border-left: 4px solid #334155; padding: 12px 16px; margin: 20px 0; background-color: rgba(51, 65, 85, 0.05); border-radius: 4px;">
 <strong>PRÉREQUIS MATÉRIEL :</strong>
@@ -116,7 +117,7 @@ C'est ici que réside le cœur de l'intervention. Le nettoyant contact possède 
                  └───────────────────────┘
 ```
 
-1. Munissez le spray de son tube prolongateur fin.
+## 1. Munissez le spray de son tube prolongateur fin.
 
 2. Enfoncez manuellement le plongeur de l'interrupteur à fond avec le doigt ou une spatule fine non métallique pour ouvrir au maximum l'espace interne.
 
@@ -142,7 +143,7 @@ Le nettoyant contact spécialisé est diélectrique (il ne conduit pas l'électr
 
 ---
 
-3. Mises en garde et règles de l'art
+## 3. Mises en garde et règles de l'art
 
 <div style="border-left: 4px solid #334155; padding: 12px 16px; margin: 20px 0; background-color: rgba(51, 65, 85, 0.05); border-radius: 4px;">
 <strong>ATTENTION : PROSCRIVEZ LES PRODUITS INADAPTÉS</strong>
@@ -156,7 +157,7 @@ L'application de dégrippant universel standard (WD-40 classique), d'huile de si
 
 ---
 
-4. Foire aux questions (FAQ)
+## 4. Foire aux questions (FAQ)
 
 **Q1.** L'alcool isopropylique (IPA à 99,9 %) peut-il remplacer le nettoyant pour contacts ?
 L'alcool isopropylique est un excellent dégraissant, mais il n'intègre pas d'agents désoxydants actifs conçus pour casser la passivation superficielle des métaux non ferreux. L'IPA diluera la crasse, mais ne traitera pas l'oxydation microscopique des lamelles. De plus, son temps d'évaporation au sein d'une chambre close non ventilée peut être plus long, augmentant le risque de piéger l'humidité atmosphérique lors du séchage. Le nettoyant contact diélectrique reste la solution technique supérieure.

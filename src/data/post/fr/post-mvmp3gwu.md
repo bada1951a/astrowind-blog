@@ -11,6 +11,7 @@ theme: "Warm Coffee Latte"
 
 
 
+
 ## 1. [Opening Story/Problem]
 
 C'était un mardi matin bien chargé dans notre tour à La Défense. Avec le système de smart office et les bureaux en libre-service, je venais de m'installer à un nouvel emplacement pour la journée. J'avais soigneusement branché mon nouveau dock USB-C, relié mes deux écrans externes, et j'étais prêt à attaquer mes revues de code et mes rapports graphiques. 
@@ -44,7 +45,7 @@ Si l'application est simplement gelée en arrière-plan, il faut nettoyer la tab
 
 3. Faites un clic droit dessus et sélectionnez **Fin de tâche**.
 
-4. Testez à nouveau le raccourci **Win + Shift + S**.
+## 4. Testez à nouveau le raccourci **Win + Shift + S**.
 
 ### Étape 2 : Réinitialiser et réparer l'application dans les Paramètres
 Si le processus n'était pas en cause, l'application a besoin d'un petit rafraîchissement logiciel.
@@ -79,7 +80,7 @@ Si rien n'y fait, nous allons réinstaller proprement le package système.
 Get-AppxPackage *ScreenSketch* -AllUsers | Foreach {Add-AppxPackage -DisableDevelopmentMode -Register "(_.InstallLocation)\AppXManifest.xml"}
 ```
 
-3. Redémarrez votre PC pour valider les changements.
+## 3. Redémarrez votre PC pour valider les changements.
 
 ## 4. [Expert Advice]
 
@@ -87,7 +88,7 @@ En environnement de bureau partagé ou en télétravail, les stations d'accueil 
 
 De plus, méfiez-vous des logiciels tiers de capture d'écran (comme Greenshot, Snagit ou ShareX) que vous auriez pu installer : ils monopolisent parfois les mêmes touches de raccourci, créant un conflit direct avec l'outil natif de Windows 11.
 
-5. Frequently Asked Questions
+## 5. Frequently Asked Questions
 
 Q: Le raccourci fonctionne mais l'écran ne s'assombrit pas, que faire ?
 

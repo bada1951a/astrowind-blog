@@ -20,6 +20,7 @@ theme: "Tokyo Neon Violet"
 
 
 
+
 Wczoraj rano, tuż przed kluczowym audytem stabilności infrastruktury dla naszego zagranicznego klienta we wrocławskim parku technologicznym, mój główny terminal roboczy zaczął wyrzucać krytyczne błędy braku pamięci wirtualnej. Pasek dysku C zaświecił się na złowrogi, krwisty czerwony kolor – zostało równe 420 megabajtów wolnej przestrzeni. Zamiast analizować logi, musiałem w kilka minut opanować kryzys, zanim system zszedłby na kolana w trakcie prezentacji przed zarządem.
 
 Okazało się, że Windows 11 po ostatniej dużej aktualizacji i intensywnych testach środowiskowych zostawił po sobie gigantyczny śmietnik w ukrytych folderach tymczasowych. Jeśli u Ciebie też dysk C pęka w szwach, a nie masz pojęcia, co bezpiecznie skasować, oto prosty, sprawdzony plan ratunkowy.
@@ -47,7 +48,7 @@ Wejdź w menu Ustawienia(skrót Windows + I), przejdź do zakładkiSystem, a nas
 
 ![Tech & IT Solution Guide](https://picsum.photos/seed/computer844/1000/550)
 
-2. Ręczne czyszczenie folderu Temp przez okno Uruchom
+## 2. Ręczne czyszczenie folderu Temp przez okno Uruchom
 Często instalatory programów zostawiają śmieci w folderach użytkownika. - Wciśnij kombinację klawiszy Windows + R, wpisz `%temp%` i wciśnij Enter.
 - Zaznacz wszystko (Ctrl + A) i wciśnijShift + Delete (by ominąć Kosz).
 - *Uwag
@@ -55,7 +56,7 @@ Często instalatory programów zostawiają śmieci w folderach użytkownika. - W
 a:* Jeśli wyskoczy komunikat, że plik jest aktualnie używany przez inny program, po prostu kliknij "Pomiń" dla tych konkretnych plików.
 - Następnie powtórz operację, wpisując w oknie Uruchom zwykłe `temp` (bez procentów) i wyczyść ten folder jako administrator.
 
-3. Oczyszczanie dysku z uprawnieniami administratora
+## 3. Oczyszczanie dysku z uprawnieniami administratora
 Dla głębszego czyszczenia użyjmy klasycznego, niezawodnego narzędzia systemowego:
 - Wpisz w menu Start Oczyszczanie dysku (Disk Cleanup).
 - Uruchom je jako administrator.

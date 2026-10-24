@@ -20,6 +20,7 @@ theme: "High-Contrast Charcoal"
 
 
 
+
 Es war kurz vor 16:00 Uhr an einem hektischen Dienstag im Frankfurter Büroalltag, als der Ernstfall eintrat: Mitten während der kritischen Datenübertragung wichtiger Quartalsberichte poppte plötzlich eine knallrote Windows-Warnung auf. „Speicherplatz auf C: fast voll.“ Wenige Sekunden später fror das System ein. Keine Rückmeldung mehr im Outlook, der Explorer streikte, und die Panik stieg, weil die finalen Projektdateien noch im temporären Cache hingen und ein abrupter Neustart den totalen Datenverlust hätte bedeuten können. Der berüchtigte rote Balken im Arbeitsplatz stand auf 0 Byte.
 
 Zuerst verfiel ich in blinden Aktionismus. Ich löschte ein paar größere PDF-Dateien und den Ordner „Downloads“, aber das brachte gerade einmal magere 500 Megabyte. Windows meldete sofort wieder volle Hütte. Der Übeltäter war nicht meine Musiksammlung oder meine Apps, sondern Gigabytes an unsichtbarem Datenmüll, den das Betriebssystem und diverse Anwendungen über Monate im Hintergrund angesammelt hatten. Erst der Griff zu den richtigen Systemwerkzeugen und das gezielte Bereinigen der versteckten Temp-Verzeichnisse brachte die ersehnte Rettung und gab über 40 Gigabyte frei.
@@ -66,7 +67,7 @@ Für alte Systemdateien brauchen wir tiefere Admin-Rechte:
 
 1. Öffne das Startmenü, tippe Datenträgerverwaltungoder besser nochDatenträgerbereinigung ein und starte sie. (Noch besser: Rechtsklick auf die App und als Administrator ausführen).
 
-2. Wähle das Laufwerk `C:` aus.
+## 2. Wähle das Laufwerk `C:` aus.
 
 3. Klicke im neuen Fenster unten links auf Systemdateien bereinigen.
 

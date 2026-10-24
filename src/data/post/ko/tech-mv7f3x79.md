@@ -20,6 +20,7 @@ theme: "Midnight Navy Royal"
 
 
 
+
 <div style="border-left: 4px solid #1d4ed8; padding: 14px 18px; margin: 20px 0; background-color: rgba(29, 78, 216, 0.04); border-radius: 4px; color: #111827;">
   <strong style="color: #1d4ed8; font-size: 0.95rem; text-transform: uppercase; letter-spacing: 0.5px;">[INCIDENT LOG #20261014-SYS] 판교 데이터센터 파견 인프라 당직 로그</strong><br>
   <span style="font-size: 0.9rem; color: #334155;">새벽 02시 40분, 관제 모니터링 콘솔용 랩톱 3대에서 동시다발적으로 외장 디스플레이 신호 단절 및 3~5초 간격의 간헐적 블랙아웃(암전) 현상 발생. 단순 케이블 재연결로 복구되지 않는 디스플레이 파이프라인 교착 상태 확인 후 드라이버 서브시스템 재구축 및 핸드셰이크 초기화 절차 수행.</span>
@@ -33,7 +34,7 @@ theme: "Midnight Navy Royal"
 
 ---
 
-1. 근본 원인 분석 (Root Cause Breakdown)
+## 1. 근본 원인 분석 (Root Cause Breakdown)
 
 단순히 "드라이버를 지웠다 깔아보라"는 식의 접근은 근본적인 해결책이 되지 못합니다. 왜 노트북 환경에서 외장 모니터 신호 단절이 유독 자주 일어나는지 3가지 기술적 메커니즘을 이해해야 합니다.
 
@@ -50,7 +51,7 @@ theme: "Midnight Navy Royal"
 
 ![Tech Hardware Guide](https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2? auto=format&fit=crop&w=1200&h=675&q=85)
 
-2. 장애 극복 단계별 해결 절차 (Step-by-Step Resolution)
+## 2. 장애 극복 단계별 해결 절차 (Step-by-Step Resolution)
 
 다음 절차는 Windows 11 및 Windows 10 환경에서 그래픽 드라이버 스택을 백지 상태로 초기화하고 신호 라인을 재구축하는 엔지니어 표준 프로토콜입니다.
 
@@ -74,7 +75,7 @@ theme: "Midnight Navy Royal"
 
 ## 1. `Windows 키 + X`를 누른 후 장치 관리자를 실행합니다.
 
-2. 상단 메뉴에서 보기(V) -> 숨겨진 장치 표시(W)를 반드시 체크합니다.
+## 2. 상단 메뉴에서 보기(V) -> 숨겨진 장치 표시(W)를 반드시 체크합니다.
 
 3. 모니터카테고리를 확장합니다. 반투명하게 비활성화되어 있는 '일반 PnP 모니터' 항목들을 마우스 우클릭하여 모두디바이스 제거합니다.
 
@@ -97,13 +98,13 @@ pnputil /enum-devices /class Display
 
    - Wagnardsoft의 DDU(Display Driver Uninstaller) 최신 포터블 버전을 다운로드합니다.
 
-2. 네트워크 완전 차단:
+## 2. 네트워크 완전 차단:
 
    - Wi-Fi를 끄거나 유선 LAN 선을 분리합니다. (드라이버 삭제 후 윈도우가 임의로 구버전 드라이버를 자동 설치하는 것을 방지하기 위함)
 
 3. 안전 모드 부팅:- `Windows 키 + R` -> `msconfig` 입력 ->부팅탭에서안전 부팅(최소 설치) 체크 후 재부팅합니다.
 
-4.  DDU 드라이버 밀어내기:
+## 4.  DDU 드라이버 밀어내기:
 
    - 안전 모드로 진입한 후 DDU를 관리자 권한으로 실행합니다.
    - 우측 드롭다운에서 GPU -> NVIDIA(또는 AMD)를 선택하고‘지우고, 다시 시작하지 않음(Clean and do NOT restart)’을 클릭합니다.
@@ -119,9 +120,9 @@ pnputil /enum-devices /class Display
 
 드라이버 재설치가 완료되고 화면이 들어왔더라도, 특정 주사율에서 깜빡임이 재발할 수 있습니다.
 
-1. 바탕화면 우클릭 -> 디스플레이 설정->고급 디스플레이로 이동합니다.
+## 1. 바탕화면 우클릭 -> 디스플레이 설정->고급 디스플레이로 이동합니다.
 
-2. 외장 모니터를 선택한 후, 새로 고침 빈도(주사율) 항목을 확인합니다.
+## 2. 외장 모니터를 선택한 후, 새로 고침 빈도(주사율) 항목을 확인합니다.
 
 3. 144Hz나 165Hz 등 가변 주사율(VRR/G-Sync 호환)로 잡혀 있다면, 이를 60Hz 또는 120Hz 고정 정수 단위로 한 단계 낮춥니다.
 
@@ -129,7 +130,7 @@ pnputil /enum-devices /class Display
 
 ---
 
-3. 엔지니어 주의사항 및 재발 방지 대책 (Post-Mortem Advice)
+## 3. 엔지니어 주의사항 및 재발 방지 대책 (Post-Mortem Advice)
 
 현장에서 문제를 해결한 뒤 재발을 방지하기 위해 다음 3가지 사항을 시스템에 즉각 반영해야 합니다.
 
@@ -147,7 +148,7 @@ pnputil /enum-devices /class Display
 
 ---
 
-4.  자주 묻는 질문 (FAQ)
+## 4.  자주 묻는 질문 (FAQ)
 
 **Q1.** 케이블을 새로 교체했는데도 4K 해상도에서 화면이 5초 간격으로 꺼졌다 켜집니다.
 케이블 규격 미달(대역폭 병목)일 확률이 매우 높습니다. 4K 60Hz HDR 이상 환경은 최소 18Gbps(HDMI 2.0)에서 48Gbps(HDMI 2.1) 및 DP 1.4(32.4Gbps) 수준의 순수 대역폭을 요구합니다. 시중의 저가형 '4K 지원' 케이블 중 상당수가 실측 대역폭 미달로 신호 감쇄(Attenuation)를 일으켜 화면이 깜빡입니다. 반드시 공인 인증된 Ultra High Speed HDMI(HDMI 2.1)또는VESA 인증 DP 1.4/DP 2.1 케이블을 선택하십시오.

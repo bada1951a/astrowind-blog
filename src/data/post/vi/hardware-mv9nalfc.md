@@ -20,6 +20,7 @@ theme: "Midnight Navy Royal"
 
 
 
+
 Chỉ còn đúng 15 phút nữa là đến cuộc họp tổng kết dự án quý tại văn phòng ở quận 1, TP.HCM. Sếp đã ngồi sẵn trong phòng họp, máy chiếu đang chờ, và tất cả tài liệu slide thuyết trình quan trọng đều nằm trong chiếc ổ cứng di động. Tôi cắm ổ cứng vào cổng USB của máy tính, nhưng màn hình hoàn toàn im lìm. Không có tiếng *ting-tong* quen thuộc, đèn LED trên ổ cứng nhấp nháy yếu ớt rồi tắt ngấm. Ngay lúc đó, một thông báo đỏ lòm hiện lên góc màn hình: "Low Disk Space - C Drive is almost full". Ổ C đỏ rực, dung lượng trống về mức 0 byte, khiến máy tính vừa chậm như rùa vừa không thể nhận diện thêm thiết bị ngoại vi do thiếu bộ nhớ ảo và cache hệ thống. Hít một hơi thật sâu, tôi bắt đầu cuộc chiến sửa lỗi "chữa cháy" ngay trên bàn làm việc giữa cái nóng oi ả của Sài Gòn.
 
 <div style="border-left: 4px solid #1d4ed8; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">

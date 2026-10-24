@@ -20,6 +20,7 @@ theme: "Deep Ocean Cobalt"
 
 
 
+
 Sebagai staf infrastruktur IT yang mengelola ratusan workstation di gedung perkantoran multi-tenant, kasus monitor eksternal mendadak menampilkan pesan *"No Signal"* atau berkedip hitam (*flickering*) setiap beberapa detik adalah makanan sehari-hari. Masalah ini kerap memuncak pada Senin pagi, terutama setelah sistem operasi mengunduh pembaruan rutin akhir pekan atau ketika laptop baru saja dilepas-pasang dari docking station Type-C/Thunderbolt. 
 
 Ketika pengguna mendapati layar kedua mereka mati, reaksi pertama biasanya menyalahkan kabel HDMI yang longgar atau menganggap monitor rusak total. Namun, dalam lebih dari 80% kasus yang saya tangani di lapangan, sumber masalah utamanya berakar pada kegagalan komunikasi lapisan perangkat lunak grafis: tumpukan driver (*driver stack*) yang korup, kegagalan negosiasi EDID (*Extended Display Identification Data*), serta konflik manajemen daya antara chip grafis terintegrasi (iGPU) dan grafis diskrit (dGPU).
@@ -63,7 +64,7 @@ Setiap monitor mengirimkan data EDID yang berisi resolusi native, profil warna, 
 
 ![Hardware Diagnostic & Troubleshooting](https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe? auto=format&fit=crop&w=1000&h=550&q=80)
 
-2. Tabrakan Driver Hybrid Graphics (iGPU vs dGPU)
+## 2. Tabrakan Driver Hybrid Graphics (iGPU vs dGPU)
 Mayoritas laptop bisnis mengandalkan kombinasi Intel Iris Xe / AMD Radeon Graphics untuk efisiensi daya dan NVIDIA GeForce / RTX untuk komputasi berat. Output fisik HDMI atau DisplayPort lewat USB-C sering kali dialihkan melalui jalur perangkat keras yang diatur oleh iGPU terlebih dahulu. Jika Windows Update mengganti driver display OEM dengan driver generik tanpa memperbarui subsistem dGPU, sinkronisasi *frame buffer* gagal, menghasilkan fenomena *blackout* 1–2 detik secara berkala. ### 3. Degradasi Bandwidth Jalur Transmisi dan Handshake HDCP
 Penggunaan monitor dengan resolusi tinggi (1440p atau 4K) membutuhkan stabilitas sinyal tanpa celah. Kabel HDMI/DP yang tidak memenuhi rating bandwidth (misalnya kabel HDMI High Speed standar digunakan untuk refresh rate 144Hz atau protokol HDR) akan mengalami *packet drop*. Ketika paket autentikasi HDCP (*High-bandwidth Digital Content Protection*) gagal diverifikasi dalam interval waktu tertentu, monitor akan memutus sinyal demi proteksi konten.
 
@@ -78,7 +79,7 @@ Sebelum membongkar konfigurasi sistem, picu restart pada *Desktop Window Manager
 
 1. Pastikan monitor eksternal dalam posisi terhubung dan menyala.
 
-2. Tekan kombinasi tombol pintas secara bersamaan:  
+## 2. Tekan kombinasi tombol pintas secara bersamaan:  
 
    `Win` + `Ctrl` + `Shift` + `B`
 
@@ -95,7 +96,7 @@ Jika cache konfigurasi tampilan telah korup, sistem akan terus memuat konfiguras
 
 1. Buka kotak dialog Run dengan menekan `Win` + `R`, ketik `regedit`, lalu tekan Enter.
 
-2. Masuk ke direktori berikut:
+## 2. Masuk ke direktori berikut:
 
    ```text
    HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\GraphicsDrivers
@@ -125,9 +126,9 @@ Jika sinyal masih terputus, langkah berikutnya adalah mereset adaptor display da
 
 1. Klik kanan pada tombol Start Windows, pilih Device Manager.
 
-2. Buka kategori Display adapters.
+## 2. Buka kategori Display adapters.
 
-3. Klik kanan pada kartu grafis Anda (misalny
+## 3. Klik kanan pada kartu grafis Anda (misalny
 
 a: *Intel(R) Iris(R) Xe Graphics* atau *AMD Radeon Graphics*), pilih Properties.
 
@@ -169,7 +170,7 @@ Jika driver display korup akibat kegagalan penulisan sektor SSD, perbaiki depend
 
 1. Buka Windows Search, ketik `cmd`, klik kanan pada Command Prompt, lalu pilihRun as administrator.
 
-2. Jalankan perintah perbaikan citra sistem berikut:
+## 2. Jalankan perintah perbaikan citra sistem berikut:
 
    ```cmd
    DISM.exe /Online /Cleanup-image /Restorehealth
@@ -200,7 +201,7 @@ Berdasarkan tinjauan teknis di lingkungan produksi enterprise, pemulihan jangka 
    *"Do not include drivers with Windows Updates"*.  
    Selalu unduh driver grafis langsung dari portal resmi vendor OEM (Lenovo Commercial Vantage, Dell Command Update, HP Image Assistant) atau portal manufaktur silikon (Intel/NVIDIA/AMD) yang telah tervalidasi stabil (*WHQL Certified*).
 
-2. Perhatikan Siklus Daya Docking Station:
+## 2. Perhatikan Siklus Daya Docking Station:
 
    Docking station berbasis Thunderbolt atau USB-C DisplayLink memiliki kontroler mikro internal yang menyimpan muatan statis. Selalu lakukan siklus daya penuh (*flea power drain*) setidaknya sebulan sekali: cabut kabel daya dok, lepaskan koneksi ke laptop, tekan dan tahan tombol daya dok selama 15 detik untuk membuang kapasitansi sisa, lalu hubungkan kembali.
 

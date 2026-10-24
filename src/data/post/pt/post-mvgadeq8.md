@@ -20,6 +20,7 @@ theme: "Deep Ocean Cobalt"
 
 
 
+
 Eram exatamente 14h42 em um escritório na Avenida Paulista, em São Paulo. Faltavam dezoito minutos para a reunião mais crítica do semestre com a diretoria internacional. O notebook principal do gerente de operações estava projetado no telão da sala de reuniões e, bem no canto inferior direito da tela, brilhava aquela frase irritante: "Ativar o Windows - Vá para Configurações para ativar o Windows". O diretor executivo, conhecido por ser extremamente atento a detalhes visuais, olhou fixamente para a projeção e arqueou a sobrancelha. O clima na sala congelou. A licença corporativa estava em processo de renovação no setor de compras, mas o servidor KMS da matriz havia caído cinco minutos antes. Eu precisava sumir com aquela marca d'água imediatamente, sem reiniciar a máquina, sem instalar softwares suspeitos e sem correr o risco de corromper o registro do sistema na frente de todo mundo.
 
 Nessas horas, o desespero faz o técnico tentar de tudo: baixar ativadores milagrosos da internet que só trazem vírus, reiniciar o processo do Explorador de Arquivos de forma desesperada ou fuçar em menus profundos das Configurações que não mudam nada. ![Tech Troubleshooting Guide](/images/tech-photo/ram%20(6).png)

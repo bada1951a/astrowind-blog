@@ -20,6 +20,7 @@ theme: "Mint Fresh Engineering"
 
 
 
+
 Nel mio lavoro quotidiano sui terminali di gestione e nei laboratori di collaudo hardware, uno strumento di input inaffidabile rappresenta un collo di bottiglia critico. Qualche mese fa, durante la configurazione in loco di un cluster di virtualizzazione, la tastiera meccanica della mia workstation da campo ha iniziato a mostrare sintomi subdoli: digitando credenziali complesse su terminale SSH, alcune lettere venivano registrate due volte (*key chattering* o rimbalzo), mentre la barra spaziatrice e il tasto `Tab` perdevano colpi in modo casuale (*key skipping*). 
 
 In un ambiente di produzione, dover cancellare backspace a raffica o fallire l'autenticazione per via di un doppio carattere non è solo frustrante: rischia di bloccare account di dominio o generare errori di sintassi distruttivi nei file di configurazione.
@@ -30,7 +31,7 @@ In un ambiente di produzione, dover cancellare backspace a raffica o fallire l'a
 
 ---
 
-1. Analisi delle Cause Radice (Root Cause Breakdown)
+## 1. Analisi delle Cause Radice (Root Cause Breakdown)
 
 Un interruttore meccanico (switch) basa il proprio funzionamento sulla chiusura fisica di un circuito tramite una coppia di lamine metalliche flessibili (generalmente in lega di rame-berillio o bronzo fosforoso). Il degrado di questo sistema elettromeccanico origina da tre vettori principali:
 
@@ -54,7 +55,7 @@ Nelle tastiere moderne dotate di socket a innesto rapido (Kailh o Gateron hot-sw
 ---
 ![Tech Diagnostics](https://images.unsplash.com/photo-1517430816045-df4b7de11d1d? auto=format&fit=crop&w=1000&h=550&q=80)
 
-2. Protocollo Operativo di Ripristino Passo-Passo
+## 2. Protocollo Operativo di Ripristino Passo-Passo
 
 Prima di procedere con solventi chimici o saldatori, è obbligatorio isolare il problema a livello software ed escludere interferenze da parte del sistema operativo o di driver periferica corrotti.
 
@@ -158,7 +159,7 @@ a:
    - Aspira lo stagno vecchio con pompetta a vuoto o treccia dissaldante.
    - Sostituisci l'interruttore con uno nuovo dello stesso tipo (es. Gateron/Cherry MX) e risalda con lega Sn99.3Cu0.7 e flussante a base di colofonia. ---
 
-3. Avvertenze Tecniche e Prevenzione Guasti
+## 3. Avvertenze Tecniche e Prevenzione Guasti
 
 Operare sulla componentistica di input richiede cautela per non convertire un semplice falso contatto in un guasto permanente della scheda madre:
 
@@ -167,7 +168,7 @@ Operare sulla componentistica di input richiede cautela per non convertire un se
 
 ---
 
-4. Domande Frequenti (FAQ)
+## 4. Domande Frequenti (FAQ)
 
 ### Posso usare l'alcol isopropilico (IPA) al 99.9% al posto dello spray per contatti dedicato?
 Sì, ma solo con somministrazione manuale controllata tramite pipetta o siringa (non più di una o due gocce). L'isopropanolo è un ottimo sgrassante e non lascia residui, tuttavia non contiene gli additivi tensioattivi dei disossidanti specifici per contatti elettrici che disgregano l'ossido metallico per via chimica. Inoltre, un bagno d'alcol eccessivo può opacizzare irreversibilmente le plastiche in policarbonato trasparente (*housing RGB*) di alcuni switch moderni.

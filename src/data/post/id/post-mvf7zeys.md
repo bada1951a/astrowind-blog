@@ -20,6 +20,7 @@ theme: "Deep Indigo System"
 
 
 
+
 Jam 4 sore di sebuah gedung perkantoran kawasan Sudirman Jakarta, suasana mendadak tegang luar biasa. Batas waktu pengiriman laporan keuangan tinggal satu jam lagi, tapi layar monitor tiba-tiba membeku (*freezing*). Kipas PC berputar kencang menderu bagaikan mesin jet yang mau lepas landas, sementara kursor tetikus bergerak sangat lambat seperti terjebak di dalam lumpur. Saat tombol kombinasi keramat ditekan untuk membuka Task Manager, pemandangannya bikin jantungan: penggunaan CPU mentok di angka 100 persen penuh, dan pelakunya bukanlah aplikasi berat seperti game atau software rendering, melainkan proses bawaan Windows bernama "System" atau "System and Compressed Memory". 
 
 Panik? Pastinya. Rekan kerja di sebelah mulai keringat dingin karena dokumen Excel penting belum sempat tersimpan. Berbagai cara amatiran langsung dicoba, mulai dari menekan tombol restart paksa di CPU berulang kali, mencabut kabel power, hingga memukul-mukul meja karena kesal. Padahal, tindakan asal-asalan seperti itu justru berisiko merusak sektor *hard drive* atau membuat file laporan korup total. 
@@ -45,7 +46,7 @@ Sebelum masuk ke tombol-tombol pengaturan, kita harus paham dulu kenapa proses i
 
    Pembaruan sistem yang gagal terunduh atau macet di tengah jalan kerap memaksa proses latar belakang bekerja secara repetitif tanpa hasil, memakan kapasitas inti CPU hingga maksimal.
 
-3. Kerusakan File Sistem (Corrupted System Files)
+## 3. Kerusakan File Sistem (Corrupted System Files)
 
    Sektor file sistem utama Windows yang rusak akibat mati lampu mendadak atau infeksi malware ringan membuat proses inti gagal membaca instruksi normal, berujung pada lonjakan penggunaan sumber daya hardware.
 

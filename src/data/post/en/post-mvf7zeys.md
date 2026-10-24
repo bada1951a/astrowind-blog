@@ -20,6 +20,7 @@ theme: "Industrial Blueprint"
 
 
 
+
 The clock on the wall in our Manhattan office read 9:40 AM. Exactly twenty minutes from now, our CEO was scheduled to stream a major quarterly update to the entire enterprise, and my primary presentation machine—a top-spec workstation—decided to throw a tantrum. The cooling fans were screaming like a jet engine preparing for takeoff, the mouse cursor was moving in sluggish, frame-dropping jerks, and Task Manager revealed a terrifying reality: the generic "System" process was locking the CPU flat at 100 percent usage. Powerpoint wouldn't open, Teams was frozen, and the entire system was effectively paralyzed. 
 
 Panic instantly set in. For the past ten minutes, I had been blindly stumbling through typical quick fixes—frantically smashing keyboard shortcuts, force-closing random background apps, and rebooting the machine twice, only to watch the CPU peg back at maximum capacity the moment the Windows login screen loaded. Restarting was getting us nowhere, and the clock was ticking down fast.
@@ -55,11 +56,11 @@ Let's walk through the exact steps to diagnose and neutralize the bottleneck wit
 ### Step 1: Isolate the Culprit Using Resource Monitor
 Standard Task Manager gives you a high-level view, but we need granular data to see *which* thread or driver within the System process is misbehaving.
 
-1. Press `Ctrl + Shift + Esc` to open Task Manager.
+## 1. Press `Ctrl + Shift + Esc` to open Task Manager.
 
 2. Click on the Performancetab at the top, then clickOpen Resource Monitor at the very bottom.
 
-3. In the Resource Monitor window, go to the CPU tab.
+## 3. In the Resource Monitor window, go to the CPU tab.
 
 4. Expand the Associated Handlesor look closely at theServicesandCPU Activity sections. Sort by CPU usage to see if a specific driver (like `ntoskrnl.exe`) or hardware interrupt is dominating the cycles.
 

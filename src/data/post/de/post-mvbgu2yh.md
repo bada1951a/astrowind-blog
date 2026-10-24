@@ -20,6 +20,7 @@ theme: "Industrial Blueprint"
 
 
 
+
 Es ist exakt 14:45 Uhr an einem Dienstag in unserem Berliner Büro am Hackeschen Markt. In einer Viertelstunde startet der finale System-Rollout für unsere neue Microservice-Architektur, und mein primärer Arbeitsrechner beschließt kollektiv den Dienst: Die Windows 11 Taskleiste ist komplett eingefroren. Ein Klick auf das Startmenü? Keine Reaktion. Die Pinnwand-Symbole? Tot. Weder der Explorer-Neustart über den gewohnten Affengriff noch frustriertes Hämmern auf die Windows-Taste bringen auch nur ein Pixel in Bewegung. Mitten in der Hochphase der Vorbereitung bricht Panik aus, denn ohne funktionierende Taskleiste und Schnellstart-Verknüpfungen läuft hier gar nichts mehr.
 
 <div style="border-left: 4px solid #f59e0b; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
@@ -84,5 +85,5 @@ Wenn Tastenkombinationen komplett blockiert sind, hilft meist nur ein erzwungene
 2. Warum passiert das ausgerechnet nach Windows-Updates?
 Windows-Updates aktualisieren im Hintergrund Systemkomponenten und DLLs der Benutzeroberfläche. Wenn dabei ein Prozess im Cache hängen bleibt oder ein Hintergrunddienst blockiert wird, friert die Taskleiste ein. Ein Neustart des Explorers behebt dies in 90 Prozent der Fälle.
 
-3.  Hilft es, ein neues Benutzerkonto anzulegen?
+## 3.  Hilft es, ein neues Benutzerkonto anzulegen?
 Wenn das Problem dauerhaft und nach jedem Neustart wieder auftritt, ist Ihr aktuelles Benutzerprofil wahrscheinlich beschädigt. Das Erstellen eines neuen lokalen Administrator-Kontos in den Windows-Einstellungen ist in diesem Fall die sauberste und nachhaltigste Lösung.

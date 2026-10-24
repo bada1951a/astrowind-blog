@@ -20,6 +20,7 @@ theme: "Nordic Clean Ice"
 
 
 
+
 <blockquote style="border-left: 3px solid #0284c7; margin: 24px 0; padding: 12px 20px; font-style: italic; color: #334155; background: #f8fafc; border-radius: 0 8px 8px 0;">
 "In una postazione di lavoro moderna, la stabilità visiva non è un lusso: un solo secondo di schermo nero durante una sessione di debug o una presentazione aziendale interrompe il flusso cognitivo e rivela un’instabilità architetturale che va risolta alla radice."
 </blockquote>
@@ -86,7 +87,7 @@ Se i file del driver contengono riferimenti incoerenti nel registro di sistema (
 
 2. Scarica il tool *Display Driver Uninstaller (DDU)* ed estrailo in una cartella locale.
 
-3. Riavvia Windows in Modalità provvisori
+## 3. Riavvia Windows in Modalità provvisori
 
 a:
    - Apri Prompt dei comandi come amministratore.
@@ -96,7 +97,7 @@ a:
      ```
    - Nella schermata blu di ripristino, naviga in: *Risoluzione dei problemi* -> *Opzioni avanzate* -> *Impostazioni di avvio* -> *Riavvia*, quindi premi `4` per avviare in Modalità Provvisoria.
 
-4. Esegui DDU. Imposta il tipo di dispositivo su GPU.
+## 4. Esegui DDU. Imposta il tipo di dispositivo su GPU.
 
 5. Seleziona il produttore della scheda (es. Intel, AMD o NVIDIA) e clicca su Pulisci e NON riavviare.
 
@@ -113,7 +114,7 @@ pnputil /enum-drivers | findstr /I "video display graphic"
 
 1. Installa per primo il driver della GPU Integrata (gestisce l'output primario della maggior parte dei bridge interni).
 
-2. Riavvia la macchina.
+## 2. Riavvia la macchina.
 
 3. Installa il driver della GPU Dedicata selezionando l'opzione *Installazione personalizzata* -> *Esegui un'installazione pulita*.
 

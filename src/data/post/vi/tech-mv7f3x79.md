@@ -20,6 +20,7 @@ theme: "Cobalt Enterprise Lab"
 
 
 
+
 <div style="border-left: 4px solid #1e40af; padding: 14px 18px; margin: 20px 0; background-color: rgba(30, 64, 175, 0.04); border-radius: 4px;">
   <strong style="color: #1e40af; font-size: 1.05rem;">BÁO CÁO KỸ THUẬT PHÒNG THỬ NGHIỆM QA (ENTERPRISE LAB REPORT)</strong><br>
   <span style="font-size: 0.92rem; color: #334155;">Mã hồ sơ: <code>LAB-DISP-2026-V4</code> | Phân loại: Video Signal Integrity & Driver Stack Failure | Tỉ lệ lỗi ghi nhận trên 450 máy trạm doanh nghiệp: <strong>14.2%</strong> (Dell Latitude 5000/7000 Series, ThinkPad T/P Series, HP EliteBook).</span>
@@ -104,7 +105,7 @@ Việc gỡ driver qua giao diện thông thường của Windows luôn để l�
 
 4. Khi máy tính đã vào chế độ Safe Mode, mở công cụDisplay Driver Uninstaller.exe.
 
-5. Trong mục Select device type, chọnGPU.
+## 5. Trong mục Select device type, chọnGPU.
 
 **Q6.** Trong mục Select device, chọn hãng sản xuất card màn hình tích hợp trước (Intel hoặc AMD).
 
@@ -128,7 +129,7 @@ Giao diện quản lý: Device Manager
        └─ Generic SuperSpeed USB Hub -> Properties -> Power Management
 ```
 
-1. Nhấp chuột phải vào nút Start, chọnDevice Manager.
+## 1. Nhấp chuột phải vào nút Start, chọnDevice Manager.
 
 2. Tìm đến mục Universal Serial Bus controllers, mở rộng danh sách.
 
@@ -174,7 +175,7 @@ Nếu laptop của bạn từng cắm vào nhiều màn hình khác nhau (màn h
 
 4. Nhấp chuột phải vào lần lượt từng thư mục trên và chọn Delete. Đừng lo lắng, đây chỉ là các bộ nhớ đệm tạm thời. Hệ điều hành sẽ tự động tạo lại các khóa này với giá trị chuẩn xác ngay khi bạn cắm lại cáp màn hình.
 
-5. Khởi động lại laptop.
+## 5. Khởi động lại laptop.
 
 ```
 [Registry GraphicsDrivers Reset]
@@ -190,7 +191,7 @@ Sau khi tín hiệu đã lên, bạn cần loại bỏ tính năng tần số qu
 
 1. Nhấp chuột phải lên màn hình Desktop, chọn Display settings.
 
-2. Cuộn xuống và chọn Advanced display.
+## 2. Cuộn xuống và chọn Advanced display.
 
 3. Trong mục Select a display to view or change its settings, chọn màn hình phụ bị lỗi.
 

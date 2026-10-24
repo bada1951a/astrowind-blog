@@ -20,6 +20,7 @@ theme: "Industrial Blueprint"
 
 
 
+
 Eram 19h45 em um hub de tecnologia na Avenida Paulista, em São Paulo. O clima estava tenso na sala de reuniões: faltavam exatos 45 minutos para o alinhamento técnico urgente antes da entrega da sprint para o cliente corporativo, e a minha estação principal simplesmente travou com aquela clássica e temida Tela Azul da Morte (BSOD). O código impresso na tela escura era impiedoso: `IRQL_NOT_LESS_OR_EQUAL` ou, no bom e velho formato hexadecimal, 0x0000000
 
 a. O projeto estava na reta final e o computador recusava-se a manter o sistema estável por mais de cinco minutos.

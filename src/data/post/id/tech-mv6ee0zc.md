@@ -20,6 +20,7 @@ theme: "Sandstone Desert Minimal"
 
 
 
+
 Sebagai seorang teknisi IT yang sering menangani inventaris periferal di lingkungan kantor dan lab komputasi, pemandangan keyboard mekanikal yang "dibuang" ke gudang karena tombolnya mengetik ganda (*chattering*) atau macet (*miss-click*) adalah hal yang lumrah. Keluhan yang masuk ke meja kerja saya biasanya seragam: tombol spasi tiba-tiba melompat dua kali, atau huruf "W" dan "A" mendadak tidak merespons saat dipakai kerja maupun bermain game. 
 
 Banyak pengguna beranggapan bahwa ketika switch mekanikal mulai bertingkah, solusinya hanyalah membeli keyboard baru atau melakukan desoldering total yang merepotkan. Faktanya, sekitar 85% kasus kerusakan tombol keyboard mekanikal yang saya tangani di lapangan murni disebabkan oleh degradasi titik kontak tembaga akibat oksidasi mikro dan debu, bukan karena kerusakan mekanis permanen. 
@@ -28,7 +29,7 @@ Panduan ini saya susun berdasarkan protokol pemeliharaan perangkat keras mandiri
 
 ---
 
-1. Analisis Akar Masalah: Mengapa Switch Bertingkah?
+## 1. Analisis Akar Masalah: Mengapa Switch Bertingkah?
 
 <div style="background-color: #fdfcfb; border-left: 4px solid #a16207; padding: 8px 16px; margin: 10px 0 20px 0; font-size: 0.92rem; color: #78350f; font-weight: 500;">
 💡 <b>Inti Masalah:</b> Kerusakan switch mekanikal non-fisik hampir selalu berakar pada kotoran mikroskopis di pelat kontak atau degradasi sinyal elektrik.
@@ -54,7 +55,7 @@ Setiap mikrokontroler keyboard memiliki algoritma bawaan bernama *debounce delay
 Jika Anda menggunakan keyboard custom yang dilumasi secara manual (*factory lubed* atau *hand lubed*), penggunaan gemuk (*grease*) sintetis seperti Krytox yang berlebihan sering kali merembes ke titik temu bilah kontak tembaga. Karakter pelumas yang bersifat isolator listrik ini memutus aliran sinyal. Selain itu, pada keyboard yang sering dipukul keras atau jatuh, titik solderan kaki switch ke PCB dapat mengalami keretakan mikro (*hairline crack*), menyebabkan input terputus-putus tergantung sudut tekanan jari Anda. ---
 ![Tech Diagnostics](https://images.unsplash.com/photo-1516321318423-f06f85e504b3? auto=format&fit=crop&w=1000&h=550&q=80)
 
-2. Prosedur Diagnostik Sistem Sebelum Tindakan Fisik
+## 2. Prosedur Diagnostik Sistem Sebelum Tindakan Fisik
 
 <div style="background-color: #fdfcfb; border-left: 4px solid #a16207; padding: 8px 16px; margin: 10px 0 20px 0; font-size: 0.92rem; color: #78350f; font-weight: 500;">
 💡 <b>Langkah Wajib:</b> Pastikan kegagalan bukan berasal dari konflik driver sistem operasi atau bus USB sebelum menyentuh komponen fisik.
@@ -65,17 +66,17 @@ Sebelum melangkah ke perbaikan kimiawi, pastikan masalah tersebut bukan disebabk
 ```
 [Isolasi Kerusakan: Alur Diagnostik Cepat]
 
-1. Uji Hardware pada Switch Test Tool
+## 1. Uji Hardware pada Switch Test Tool
 
-2. Inspeksi Host Controller di Device Manager
+## 2. Inspeksi Host Controller di Device Manager
 
-3. Evaluasi Jalur USB / Polling Rate Port
+## 3. Evaluasi Jalur USB / Polling Rate Port
 
 ```
 
 1. Uji Kecepatan Input pada Switch Tester: Buka aplikasi uji input seperti *Keyboard Key Info* atau situs *keyboard-tester.com*. Periksa tombol yang bermasalah. Amati apakah nilai latensi menunjukkan angka di bawah 10 ms secara stabil atau terjadi *burst* input ganda dalam selang 1-2 ms.
 
-2. Periksa Integrasi di Device Manager:
+## 2. Periksa Integrasi di Device Manager:
 
    - Tekan kombinasi tombol `Windows + X`, lalu pilih Device Manager.
    - Perluas menu Keyboards. Klik kanan pada perangkat Anda (sering kali terdaftar sebagai *HID Keyboard Device*), lalu pilih Properties.
@@ -132,7 +133,7 @@ Jika keyboard Anda bertipe Hot-Swap (switch bisa dicabut):
 
 3. Usap pelat tembaga (*contact leaf*) menggunakan cotton bud yang telah dibasahi contact cleaner secara lembut.
 
-4. Pasang kembali switch setelah kering total.
+## 4. Pasang kembali switch setelah kering total.
 
 ### Tahap 5: Fase Penguapan dan Kalibrasi Ulang
 Meskipun contact cleaner berlabel cepat kering (*fast drying*), cairan yang terperangkap di ruang sempit housing switch membutuhkan waktu untuk menguap secara tuntas:
@@ -156,7 +157,7 @@ a:
 
 ---
 
-5. Tanya Jawab Solutif (FAQ)
+## 5. Tanya Jawab Solutif (FAQ)
 
 <div style="background-color: #fdfcfb; border-left: 4px solid #a16207; padding: 8px 16px; margin: 10px 0 20px 0; font-size: 0.92rem; color: #78350f; font-weight: 500;">
 💡 <b>FA
