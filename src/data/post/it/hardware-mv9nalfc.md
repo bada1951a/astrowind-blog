@@ -18,6 +18,7 @@ theme: "Midnight Navy Royal"
 
 
 
+
 <div style="border-left: 4px solid #1d4ed8; padding: 12px 16px; margin: 20px 0; background-color: rgba(29, 78, 216, 0.05); border-radius: 4px; color: #111827;">
 <strong>Registro Notturno - Laboratorio Hardware Milano</strong><br>
 Timestamp: 02:42 AM. Chiamata urgente da uno studio di design in zona Porta Nuov
@@ -37,9 +38,9 @@ In questo articolo ti porto direttamente dietro il mio banco di lavoro per mostr
 
 Prima di mettere mano al sistema, capiamo cosa sta intasando la nostra unità principale. Nella mia esperienza quotidiana con i computer dei clienti, i colpevoli sono quasi sempre tre:
 
-1. Accumulo selvaggio di file temporanei e cache: Ogni volta che navighi sul web, installi aggiornamenti di Windows Update o usi programmi pesanti (come la suite Adobe), il sistema crea file di cache che spesso si dimentica di eliminare. Con il tempo, arrivano a pesare decine di gigabyte.
+### 1. Accumulo selvaggio di file temporanei e cache: Ogni volta che navighi sul web, installi aggiornamenti di Windows Update o usi programmi pesanti (come la suite Adobe), il sistema crea file di cache che spesso si dimentica di eliminare. Con il tempo, arrivano a pesare decine di gigabyte.
 
-2. Punti di ripristino e copie Shadow (VSS): Windows crea autonomamente backup di sicurezza del sistema. Se non vengono regolati, occupano una fetta enorme del disco C, strozzando letteralmente l'archiviazione disponibile.
+### 2. Punti di ripristino e copie Shadow (VSS): Windows crea autonomamente backup di sicurezza del sistema. Se non vengono regolati, occupano una fetta enorme del disco C, strozzando letteralmente l'archiviazione disponibile.
 
 ## 3. Cartella Download dimenticat
 

@@ -18,6 +18,7 @@ theme: "Warm Coffee Latte"
 
 
 
+
 Het was half drie op een drukke dinsdagmiddag op onze tech-campus in Eindhoven. Terwijl ik midden in een complexe troubleshoot-sessie zat voor een lokale partner, plofte er een paniekerig Slack-bericht binnen: een van onze developers kon geen code meer pushen omdat haar Windows 11 C-schijfklokje op rood stond—0 bytes vrije ruimte over. Het systeem liep vast, projectbestanden wilden niet opslaan en de ventilatoren loeiden als een opstijgende KLM-Boeing. Een acute performance-crisis die we direct moesten oplossen zonder belangrijke data te verliezen.
 
 <div style="border-left: 4px solid #78350f; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
@@ -30,11 +31,11 @@ Het was half drie op een drukke dinsdagmiddag op onze tech-campus in Eindhoven. 
 
 In de praktijk zie ik bij Nederlandse werkplekken en thuis-setups meestal dezelfde drie boosdoeners die de C-schijf binnen de kortste keren verstoppen:
 
-1. Tijdelijke Bestanden (Temp & Cache): Windows, webbrowsers en zware tools zoals Docker of Visual Studio dumpen continu gigabytes aan tijdelijke logbestanden en cachegegevens in verborgen mappen.
+### 1. Tijdelijke Bestanden (Temp & Cache): Windows, webbrowsers en zware tools zoals Docker of Visual Studio dumpen continu gigabytes aan tijdelijke logbestanden en cachegegevens in verborgen mappen.
 
-2. Windows Update Restanten: Na een grote OS-upgrade laat Microsoft vaak oude systeembestanden achter (zoals de `Windows.old`-map) voor het geval je wilt downgraden, goed voor zo'n 15 tot 30 GB aan verspilde ruimte.
+### 2. Windows Update Restanten: Na een grote OS-upgrade laat Microsoft vaak oude systeembestanden achter (zoals de `Windows.old`-map) voor het geval je wilt downgraden, goed voor zo'n 15 tot 30 GB aan verspilde ruimte.
 
-3. Slaapstand (Hibernation) en Wisselbestand: De `hiberfil.sys` en `pagefile.sys` reserveren automatisch gigabytes op basis van je fysieke werkgeheugen, vaak onnodig groot als je een snelle SSD hebt.
+### 3. Slaapstand (Hibernation) en Wisselbestand: De `hiberfil.sys` en `pagefile.sys` reserveren automatisch gigabytes op basis van je fysieke werkgeheugen, vaak onnodig groot als je een snelle SSD hebt.
 
 ---
 
@@ -47,7 +48,7 @@ We beginnen met de modernste en veiligste methode in Windows 11.
 
 1. Klik op Starten openInstellingen (het tandwielicoon).
 
-2.  Ga naar Systeemen kies vervolgens voorOpslag.
+## 2.  Ga naar Systeemen kies vervolgens voorOpslag.
 
 3. Klik bovenaan op Tijdelijke bestanden. Windows scant nu je hele systeem op overbodige data zoals Windows Update-opschoning, logboeken van fouten en eerdere installaties.
 

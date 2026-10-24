@@ -18,6 +18,7 @@ theme: "Acid Lime Hacker Space"
 
 
 
+
 Wtorek, kwadrans przed kluczową wideokonferencją z zarządem w nowo otwartej filii na Śląsku. Szybko wyciągam służbowego laptopa z torby i podpinam go pod stacjonarny monitor w sali konferencyjnej za pomocą kabla HDMI, żeby rzucić prezentację na wielki ekran. Prezentacja rusza bez zająknienia, slajdy wyglądają świetnie, ale gdy włączam materiał wideo z podkładem muzycznym… z głośników w sali dobiega całkowita cisza. Wszyscy patrzą na mnie, a systemowa ikonka głośnika w prawym dolnym rogu ekranu dumnie wyświetla mały, szary krzyżyk. Znam ten ból aż nazbyt dobrze.
 
 W takich momentach serce na chwilę zastyga, zwłaszcza gdy na szybkiej diagnozie zależy całemu zespołu. Jako inżynier wsparcia IT i serwisant sprzętu komputerowego przetestowałem już chyba każdy możliwy scenariusz awarii audio w systemie Windows 11. Zamiast panikować i tracić cenne minuty na przeinstalowywanie całego systemu, weźmy głęboki oddech i przejdźmy do konkretów. Oto sprawdzona procedura ratunkowa, którą wdrożysz w niespełna trzy minuty.
@@ -30,11 +31,11 @@ W takich momentach serce na chwilę zastyga, zwłaszcza gdy na szybkiej diagnozi
 
 Zanim klikniemy cokolwiek na ślepo, warto zrozumieć, z czym właściwie walczymy. W środowiskach biurowych i podczas pracy mobilnej problemy z dźwiękiem wynikają zazwyczaj z trzech powtarzających się scenariuszy:
 
-1. Automatyczna zmiana domyślnego urządzenia wyjściowego: Po wpięciu kabla HDMI lub DisplayPort Windows 11 często próbuje przekierować strumień audio do wbudowanych głośników monitora lub projektora, które nierzadko są wyciszone lub w ogóle nie posiadają fizycznych przetworników dźwięku.
+### 1. Automatyczna zmiana domyślnego urządzenia wyjściowego: Po wpięciu kabla HDMI lub DisplayPort Windows 11 często próbuje przekierować strumień audio do wbudowanych głośników monitora lub projektora, które nierzadko są wyciszone lub w ogóle nie posiadają fizycznych przetworników dźwięku.
 
-2. Konflikt lub zawieszenie sterowników audio: Usługi odpowiedzialne za dźwięk (np. *Windows Audio*) potrafią się zawiesić podczas szybkiego przełączania między kartą dźwiękową Realtek a wyjściem cyfrowym karty graficznej NVIDIA/AMD.
+### 2. Konflikt lub zawieszenie sterowników audio: Usługi odpowiedzialne za dźwięk (np. *Windows Audio*) potrafią się zawiesić podczas szybkiego przełączania między kartą dźwiękową Realtek a wyjściem cyfrowym karty graficznej NVIDIA/AMD.
 
-3. Uśpienie lub dezaktywacja urządzenia w menedżerze: Czasami po aktualizacjach systemowych konkretny kodek audio zostaje wyłączony lub oznaczony jako "odłączony", przez co system całkowicie go ignoruje.
+### 3. Uśpienie lub dezaktywacja urządzenia w menedżerze: Czasami po aktualizacjach systemowych konkretny kodek audio zostaje wyłączony lub oznaczony jako "odłączony", przez co system całkowicie go ignoruje.
 
 ---
 

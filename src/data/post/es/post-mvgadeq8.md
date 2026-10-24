@@ -18,6 +18,7 @@ theme: "Crimson Emergency Field"
 
 
 
+
 Eran las 4:50 de la tarde en nuestra oficina corporativa en Madrid. A solo diez minutos de enviar el paquete final del proyecto trimestral a la directiva, la pantalla del equipo principal de diseño comenzó a parpadear y, de la nada, apareció esa maldita marca transparente en la esquina inferior derech
 
 a: "Activa Windows: ve a Configuración para activar Windows". Para colmo, cubría justo los botones de exportación del software gráfico. El pánico se apoderó delux del estudio; el cliente estaba esperando los archivos y la interfaz parecía boicotearnos el trabajo.
@@ -40,11 +41,11 @@ Por suerte, como técnico especialista, recordé un procedimiento rápido, limpi
 
 Antes de aplicar la solución, es bueno entender qué provocó el fallo en nuestro entorno de trabajo:
 
-1. Pérdida temporal de conexión con el servidor KMS: En entornos corporativos, las licencias por volumen se validan periódicamente contra un servidor interno. Si el equipo pierde contacto por VPN o red local, salta la alerta visual.
+### 1. Pérdida temporal de conexión con el servidor KMS: En entornos corporativos, las licencias por volumen se validan periódicamente contra un servidor interno. Si el equipo pierde contacto por VPN o red local, salta la alerta visual.
 
-2. Actualización acumulativa reciente: Ciertos paquetes de actualización de Windows Update (como los parches de seguridad mensuales) reinician los servicios de licencias y fuerzan la revalidación del estado del sistema.
+### 2. Actualización acumulativa reciente: Ciertos paquetes de actualización de Windows Update (como los parches de seguridad mensuales) reinician los servicios de licencias y fuerzan la revalidación del estado del sistema.
 
-3. Cambios en componentes de hardware:Una sustitución reciente de placa base o tarjeta de red en elAdministrador de dispositivos puede invalidar el token de activación digital guardado en el equipo.
+### 3. Cambios en componentes de hardware:Una sustitución reciente de placa base o tarjeta de red en elAdministrador de dispositivos puede invalidar el token de activación digital guardado en el equipo.
 
 ---
 

@@ -18,6 +18,7 @@ theme: "Dracula Purple Dev"
 
 
 
+
 Montagmorgen, 08:15 Uhr im Großraumbüro. Ein Kollege schließt sein ThinkPad an die Thunderbolt-Dockingstation an. Auf dem internen Display läuft alles geschmeidig, doch die beiden externen 4K-Bildschirme verhalten sich katastrophal: Monitor 1 meldet stoisch *„Kein Signal – Eingang wird gesucht“*, während Monitor 2 im Dreisekundentakt zwischen tiefem Schwarz und zuckendem Desktop hin- und herflackert. Das Phänomen begegnet mir in meiner täglichen Praxis als Systemadministrator dutzende Male im Monat – insbesondere nach kumulativen Windows-Updates oder Firmware-Pushes. 
 
 Die Ursache liegt selten an defekten Panels, sondern fast ausnahmslos in korrupten Treiberzuständen, asynchronen Handshakes im Display-Subsystem oder fehlerhaft interpretierten EDID-Tabellen. Wenn einfaches Aus- und Einstecken keine Besserung bringt, müssen Sie tiefer in den Windows-Grafikstack eingreifen. In diesem Leitfaden zeige ich Ihnen exakt die Methodik, mit der wir solche Störungen im Enterprise-Support reproduzierbar lösen.
@@ -105,17 +106,17 @@ Wenn Treiberfragmente tiefer im System korrupt sind, reicht das normale Windows-
   <strong style="color: #ff79c6;">Vorbereitung:</strong> Laden Sie die aktuellen Treiber direkt von Intel/AMD und NVIDIA vorab herunter. Trennen Sie danach die Internetverbindung (WLAN aus, LAN-Kabel abziehen), damit Windows Update während der Bereinigung keine Treiber eigenmächtig nachlädt!
 </div>
 
-1. Öffnen Sie die Eingabeaufforderung als Administrator:
+### 1. Öffnen Sie die Eingabeaufforderung als Administrator:
 
    Drücken Sie <kbd style="background: #44475a; color: #bd93f9; border: 1px solid #6272a4; border-radius: 3px; padding: 1px 5px; font-family: monospace;">Win</kbd> + <kbd style="background: #44475a; color: #bd93f9; border: 1px solid #6272a4; border-radius: 3px; padding: 1px 5px; font-family: monospace;">R</kbd>, tippen Sie `cmd` ein und bestätigen Sie mit <kbd style="background: #44475a; color: #bd93f9; border: 1px solid #6272a4; border-radius: 3px; padding: 1px 5px; font-family: monospace;">Strg</kbd> + <kbd style="background: #44475a; color: #bd93f9; border: 1px solid #6272a4; border-radius: 3px; padding: 1px 5px; font-family: monospace;">Umschalt</kbd> + <kbd style="background: #44475a; color: #bd93f9; border: 1px solid #6272a4; border-radius: 3px; padding: 1px 5px; font-family: monospace;">Enter</kbd>.
 
-2. Erzwingen Sie den Start in den abgesicherten Modus mit folgendem Befehl:
+### 2. Erzwingen Sie den Start in den abgesicherten Modus mit folgendem Befehl:
 
    ```cmd
    shutdown /r /o /f /t 00
    ```
 
-3. Navigieren Sie über das blaue Bootmenü: Problembehandlung&rarr;Erweiterte Optionen&rarr;Starteinstellungen&rarr;Neu starten&rarr; Taste4 (Abgesicherter Modus aktivieren).
+### 3. Navigieren Sie über das blaue Bootmenü: Problembehandlung&rarr;Erweiterte Optionen&rarr;Starteinstellungen&rarr;Neu starten&rarr; Taste4 (Abgesicherter Modus aktivieren).
 
 ## 4. Starten Sie DDU:
 

@@ -18,6 +18,7 @@ theme: "High-Contrast Charcoal"
 
 
 
+
 Eram exatamente 8h45 da manhã em um hub de tecnologia na Zona Sul de São Paulo. A reunião de alinhamento técnico urgente antes da entrega do sprint com a diretoria estava prestes a começar, e meu cliente de videochamada travou. O motivo? Meu notebook decidiu fazer uma varredura completa e atualizar tudo no exato segundo em que cliquei para abrir o projeto. A barra de tarefas congelada, o cooler gritando como uma turbina de avião e o relógio correndo. Foi o empurrão que eu precisava para resolver de vez o calcanhar de Aquiles do Windows 10: a inicialização lenta entupida de aplicativos desnecessários.
 
 Se você já passou pela humilhação de ver o computador demorar dez minutos para abrir uma simples planilha enquanto o Teams tenta conectar dez vezes, você sabe exatamente do que estou falando. 
@@ -32,11 +33,11 @@ Se você já passou pela humilhação de ver o computador demorar dez minutos pa
 
 Antes de aplicar a faca cirúrgica no sistema, vale a pena entender a raiz do problema. A lentidão na inicialização geralmente é causada por três fatores principais:
 
-1. Efeito "Cachorro de Guarda": Aplicativos como antivírus secundários, Discord, Steam e utilitários de impressora configuram-se automaticamente para iniciar junto com o sistema operacional, disputando I/O do disco rígido ou SSD logo nos primeiros segundos.
+### 1. Efeito "Cachorro de Guarda": Aplicativos como antivírus secundários, Discord, Steam e utilitários de impressora configuram-se automaticamente para iniciar junto com o sistema operacional, disputando I/O do disco rígido ou SSD logo nos primeiros segundos.
 
-2. Serviços Residuais de Instalações Passadas: Cada software que você instala adiciona um pequeno "daemon" ou ajudante que fica monitorando atualizações em segundo plano, consumindo memória sem necessidade.
+### 2. Serviços Residuais de Instalações Passadas: Cada software que você instala adiciona um pequeno "daemon" ou ajudante que fica monitorando atualizações em segundo plano, consumindo memória sem necessidade.
 
-3. Gargalo de Hardware (Mesmo em SSDs): Mesmo que você utilize um SSD moderno, a sobrecarga de chamadas de API feitas por dezenas de apps no momento do boot cria um congestionamento lógico na inicialização.
+### 3. Gargalo de Hardware (Mesmo em SSDs): Mesmo que você utilize um SSD moderno, a sobrecarga de chamadas de API feitas por dezenas de apps no momento do boot cria um congestionamento lógico na inicialização.
 
 ---
 

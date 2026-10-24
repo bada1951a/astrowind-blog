@@ -18,6 +18,7 @@ theme: "Retro Monokai"
 
 
 
+
 Jam menunjukkan pukul 16.45 WIB di salah satu gedung perkantoran kawasan Sudirman, Jakarta. Tenggat waktu (deadline) laporan keuangan tahunan tinggal 15 menit lagi, dan suasana di kubikal saya mendadak mencekam. PC salah satu manajer keuangan mengalami crash mendadak akibat pembaruan sistem yang gagal. Setelah melakukan force restart dan sistem berhasil menyala kembali, sang manajer panik bukan kepalang karena kebiasaan kerjanya terganggu. Menu klik kanan (right-click context menu) di Windows 11 berubah total menjadi tampilan modern minimalis yang menyembunyikan opsi "Show more options" atau tombol pintas lama seperti WinRAR, 7-Zip, dan pengaturan driver penting.
 
 Bayangkan betapa frustrasinya harus mengklik dua kali hanya untuk melakukan ekstrak file atau scan antivirus di detik-detik krusial menjelang pengumpulan laporan. Waktu terbuang percuma untuk melakukan trial-and-error mengklik menu tersembunyi yang tidak responsif di bawah tekanan tenggat waktu yang begitu ketat.
@@ -34,11 +35,11 @@ Sebagai seorang teknisi infrastruktur IT, saya tidak boleh tinggal diam. Setelah
 
 Sebelum masuk ke eksekusi perbaikan, mari kita pahami akar masalah dari perubahan antarmuka ini. Ada tiga alasan utama mengapa Microsoft mengubah struktur menu klik kanan pada Windows 11:
 
-1. Pembersihan Bloatware Kontekstual: Di versi Windows sebelumnya, banyak aplikasi pihak ketiga (seperti WinRAR, WinZip, aplikasi edit foto, hingga driver GPU) secara otomatis menyusup ke menu klik kanan utama, membuat tampilannya sangat panjang dan berantakan.
+### 1. Pembersihan Bloatware Kontekstual: Di versi Windows sebelumnya, banyak aplikasi pihak ketiga (seperti WinRAR, WinZip, aplikasi edit foto, hingga driver GPU) secara otomatis menyusup ke menu klik kanan utama, membuat tampilannya sangat panjang dan berantakan.
 
-2. Penerapan Desain Modern (Fluent Design): Microsoft ingin menyeragamkan estetika visual dengan sudut membulat dan ikon minimalis yang terpusat pada produktivitas dasar, meski hal ini sering kali mengorbankan kecepatan kerja para power user.
+### 2. Penerapan Desain Modern (Fluent Design): Microsoft ingin menyeragamkan estetika visual dengan sudut membulat dan ikon minimalis yang terpusat pada produktivitas dasar, meski hal ini sering kali mengorbankan kecepatan kerja para power user.
 
-3. Pemisahan Proses Aplikasi (App Containerization): Menu baru dirancang untuk memisahkan proses aplikasi desktop warisan (legacy apps) agar tidak membuat Explorer.exe rentan mengalami crash atau not responding saat diklik.
+### 3. Pemisahan Proses Aplikasi (App Containerization): Menu baru dirancang untuk memisahkan proses aplikasi desktop warisan (legacy apps) agar tidak membuat Explorer.exe rentan mengalami crash atau not responding saat diklik.
 
 ---
 
@@ -48,7 +49,7 @@ Kita tidak memerlukan software pihak ketiga yang mencurigakan. Cukup gunakan fit
 
 ### Cara Cepat via Command Prompt (Rekomendasi Utama)
 
-1. Tekan tombol kombinasi pada keyboard: Windows + S, lalu ketikcmd.
+### 1. Tekan tombol kombinasi pada keyboard: Windows + S, lalu ketikcmd.
 
 2. Pada hasil pencarian, klik kanan pada Command Promptdan pilihRun as administrator (atau Jalankan sebagai administrator).
 

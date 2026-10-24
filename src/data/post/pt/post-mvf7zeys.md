@@ -18,6 +18,7 @@ theme: "Retro Monokai"
 
 
 
+
 Eram exatamente 13:45 em um escritório na Avenida Paulista, São Paulo. A reunião de diretoria começaria às 14:00 em ponto, e a apresentação principal estava salva na máquina do nosso diretor financeiro. O problema? O notebook dele simplesmente congelou. As ventoinhas pareciam uma turbina de boeing tentando decolar, o cursor do mouse arrastava na tela como se estivesse na lama e, ao abrir o Gerenciador de Tarefas, lá estava a sentença de morte: o uso da CPU cravado em 100%, dominado por um misterioso processo do sistema (*System* ou *Interrupções de Sistema*). 
 
 Se você já passou por isso, sabe que o desespero bate na hora. Reiniciar a máquina não adiantava, pois o Windows travava na tela de carregamento ou voltava com o mesmo gargalo infernal devido a indexações corrompidas, serviços de atualização travados ou conflitos de driver de hardware. 
@@ -32,11 +33,11 @@ Neste artigo, vou te mostrar o passo a passo exato, direto da bancada de suporte
 
 Antes de correr para formatar a máquina (o que seria um tiro no escuro), vamos entender o que realmente causa essa pane no ecossistema do Windows. Na maioria das vezes, o processo *System* engole o processador por três motivos principais:
 
-1. Loop de atualização do Windows (Windows Update): O assistente tenta baixar um pacote, corrompe o cache e fica em um ciclo infinito tentando aplicar a correção, consumindo ciclos de clock absurdos.
+### 1. Loop de atualização do Windows (Windows Update): O assistente tenta baixar um pacote, corrompe o cache e fica em um ciclo infinito tentando aplicar a correção, consumindo ciclos de clock absurdos.
 
-2. Conflito de Driver no Gerenciador de Dispositivos: Um driver de controladora SATA, rede ou vídeo corrompido gera falsas interrupções de hardware (*Interrupt Storm*), sobrecarregando o núcleo do sistema operacional.
+### 2. Conflito de Driver no Gerenciador de Dispositivos: Um driver de controladora SATA, rede ou vídeo corrompido gera falsas interrupções de hardware (*Interrupt Storm*), sobrecarregando o núcleo do sistema operacional.
 
-3. Indexação de arquivos corrompida (Windows Search): O serviço de busca do Windows tenta indexar um arquivo corrompido ou um PST gigante de Outlook que entrou em loop de leitura e escrita no SSD/HDD.
+### 3. Indexação de arquivos corrompida (Windows Search): O serviço de busca do Windows tenta indexar um arquivo corrompido ou um PST gigante de Outlook que entrou em loop de leitura e escrita no SSD/HDD.
 
 ---
 
@@ -72,7 +73,7 @@ Muitas vezes, interromper os serviços que gerenciam atualizações e buscas res
 ### Passo 3: Limpando o Cache de Atualizações corrompidas
 Se o passo anterior aliviou o problema, precisamos limpar a pasta onde o Windows guarda os arquivos temporários de update corrompidos.
 
-1. Abra o Explorador de Arquivos e vá até `C:\Windows\SoftwareDistribution`.
+### 1. Abra o Explorador de Arquivos e vá até `C:\Windows\SoftwareDistribution`.
 
 2. Apague todo o conteúdo de dentro das pastas DownloadeDataStore. (Se o sistema disser que algum arquivo está em uso, pare o serviço do Windows Update novamente pelo `services.msc` e tente de novo).
 

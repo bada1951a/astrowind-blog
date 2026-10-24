@@ -18,6 +18,7 @@ theme: "Industrial Blueprint"
 
 
 
+
 Pinging Slack channels were blowing up with urgent bug reports from our engineering leads in San Francisco, while my New York finance stakeholders were frantically asking for updated Q3 model projections on Zoom. To handle the chaos, I had five different heavy work tools open simultaneously: Bloomberg Terminal, a local Docker environment, three sprawling Excel workbooks, Jira boards, and a live client presentation deck. Suddenly, my headset went completely dead right as an incoming escalation call hit. No notification chimes, no system sounds, and zero audio output. 
 
 Panicking, I frantically clicked the speaker icon on the Windows 11 taskbar, only to see the dreaded red X over the volume control. The system output device had completely vanished into thin air right in the middle of a high-pressure workday.
@@ -30,11 +31,11 @@ Panicking, I frantically clicked the speaker icon on the Windows 11 taskbar, onl
 
 Before rushing to download random driver packages, we need to understand why high-performance enterprise rigs suddenly drop their sound devices. Here are the three most common culprits:
 
-1. Windows Audio Service Hang: When CPU usage spikes across multiple heavy apps, the core Windows Audio or Windows Audio Endpoint Builder services can freeze or crash entirely.
+### 1. Windows Audio Service Hang: When CPU usage spikes across multiple heavy apps, the core Windows Audio or Windows Audio Endpoint Builder services can freeze or crash entirely.
 
-2. Driver Conflict & Resource Contention: Background virtualization, active Bluetooth peripherals, and USB audio interfaces fighting for bandwidth can cause Realtek or Intel audio drivers to throw a fault.
+### 2. Driver Conflict & Resource Contention: Background virtualization, active Bluetooth peripherals, and USB audio interfaces fighting for bandwidth can cause Realtek or Intel audio drivers to throw a fault.
 
-3. Default Output Disconnection: Windows 11 automatically switches audio endpoints when connecting monitors, docking stations, or Bluetooth headsets, occasionally losing the designated playback device state.
+### 3. Default Output Disconnection: Windows 11 automatically switches audio endpoints when connecting monitors, docking stations, or Bluetooth headsets, occasionally losing the designated playback device state.
 
 ---
 
@@ -75,7 +76,7 @@ Let Windows 11 check endpoint routing and registry keys automatically.
 
 2. Navigate to System->Troubleshoot->Other troubleshooters.
 
-3.  Locate Playing Audioand click theRun button.
+## 3.  Locate Playing Audioand click theRun button.
 
 4. Follow the on-screen prompts to let the troubleshooter automatically restart audio services and correct default device configurations.
 

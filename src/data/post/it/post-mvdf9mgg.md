@@ -18,6 +18,7 @@ theme: "Sunset Horizon Coral"
 
 
 
+
 Erano le 18:30 di un martedì piovoso in ufficio a Milano, nel bel mezzo di un progetto di ottimizzazione dell'infrastruttura per un cliente importante, quando la mia postazione di test principale ha deciso di piantarsi stoicamente al famigerato 100% durante un aggiornamento cumulativo di Windows 11. Schermo acceso, ventole al minimo, nessun errore a schermo, ma immobile da oltre due ore. Riavviare brutalmente dal pulsante di accensione significava rischiare una corruzione del sistema operativo e dover reinstallare tutto da capo, mandando all'aria la deadline del giorno dopo.
 
 Se anche tu ti sei trovato davanti a questa schermata immobile, sai benissimo quale senso di frustrazione si provi. Fortunatamente, dopo anni passati a gestire infrastrutture IT e postazioni aziendali, conosco una scorciatoia pulita e sicura per risolvere il problema senza perdere i dati.
@@ -38,9 +39,9 @@ Prima di sporcarci le mani con i comandi, capiamo cosa sta succedendo sotto il c
 
 a: I file scaricati nella cartella di sistema (`SoftwareDistribution`) presentano conflitti o bit corrotti durante la fase di decompressione.
 
-2. Servizi di Windows in stallo: Il servizio Windows Update (`wuauserv`) o il servizio di crittografia tentano di scrivere su file temporanei bloccati da altri processi fantasma.
+### 2. Servizi di Windows in stallo: Il servizio Windows Update (`wuauserv`) o il servizio di crittografia tentano di scrivere su file temporanei bloccati da altri processi fantasma.
 
-3. Driver di terze parti obsoleti: Durante la fase finale del 100%, il sistema tenta di configurare driver hardware che vanno in conflitto con l'architettura della macchina. ---
+### 3. Driver di terze parti obsoleti: Durante la fase finale del 100%, il sistema tenta di configurare driver hardware che vanno in conflitto con l'architettura della macchina. ---
 
 ### La Soluzione Passo-Passo: Svuotare la Cache di Windows Update
 

@@ -18,6 +18,7 @@ theme: "Cyberpunk Terminal"
 
 
 
+
 <div style="border-left: 4px solid #00ffcc; padding: 12px 16px; margin: 20px 0; background-color: rgba(0, 255, 204, 0.05); font-family: monospace; border-radius: 4px;">
 <strong>[TERMINAL_INIT: SUBSYSTEM_INPUT_DIAGNOSTICS]</strong><br/>
 STATUS: DETECTED_KEY_CHATTERING_ANOMALY<br/>
@@ -33,7 +34,7 @@ Get-WmiObject Win32_Keyboard | Format-Table Name, Description, DeviceID
 
 ---
 
-1. Experiência de Campo: O Pânico do Duplo Clique no Terminal de Produção
+### 1. Experiência de Campo: O Pânico do Duplo Clique no Terminal de Produção
 
 Em um ambiente corporativo crítico ou em uma estação de trabalho de infraestrutura, um periférico de entrada não é apenas um acessório: é a interface primária entre o engenheiro e o núcleo do sistema operacional. Já passei pela situação frustrante de ter um teclado mecânico de ponta falhando durante uma janela de manutenção de emergência às 02h00 da madrugada. Eu precisava executar comandos encadeados e, de repente, a tecla `Enter` ou a barra de espaço registrava dois ou três toques involuntários para cada pulso físico. Pior aind
 
@@ -74,7 +75,7 @@ Nenhum contato mecânico físico encosta no outro perfeitamente sem vibrar. Dura
 ### Causa 3: Microfraturas na Solda ou Trilha Rompida no PCB
 Em teclados sem suporte a *hot-swap* (soldados diretamente na placa de circuito impresso), a força repetitiva exercida pelo usuário pode gerar trincas invisíveis a olho nu na solda de estanho/chumbo nos pinos do switch. Essas trincas (conhecidas como solda fria ou estresse mecânico de junta) criam contato intermitente: uma leve torção no chassi do teclado faz o circuito abrir e fechar descontroladamente, simulando um chattering agressivo ou falha total de resposta da tecla. ---
 
-3. Resolução Passo a Passo: Protocolo Cirúrgico de Reparo
+### 3. Resolução Passo a Passo: Protocolo Cirúrgico de Reparo
 
 <div style="border-left: 4px solid #00ffcc; padding: 12px 16px; margin: 20px 0; background-color: rgba(0, 255, 204, 0.05); font-family: monospace; border-radius: 4px;">
 <strong>[EXECUTION_FLOW]</strong><br/>
@@ -86,7 +87,7 @@ Antes de desmontar qualquer peça, certifique-se de que a falha não é decorren
 
 1. Abra o Prompt de Comando ou o PowerShell como Administrador.
 
-2. Invoque o utilitário nativo de configuração de periféricos:
+### 2. Invoque o utilitário nativo de configuração de periféricos:
 
    ```cmd
    devmgmt.msc

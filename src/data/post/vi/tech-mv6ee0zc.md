@@ -18,6 +18,7 @@ theme: "Midnight Navy Royal"
 
 
 
+
 ## [INCIDENT LOG 01:15 AM] Bối Cảnh Sự Cố Tại Bàn Trực Vận Hành
 
 Đồng hồ hệ thống điểm 01:15 sáng. Trong phòng máy chủ yên tĩnh chỉ có tiếng quạt tản nhiệt server rít đều đặn, đồng chí kỹ sư trực ca bên cạnh bắt đầu đập bàn phím liên hồi kèm theo tiếng thở dài. Anh ta đang cấu hình dở cụm Kubernetes qua terminal thì phím `e` liên tục bị "chattering" (gõ một lần nhưng máy nhận thành `ee` hoặc `eee`), trong khi phím `Enter` thì nhấn 3 lần mới ăn được 1 lần. 
@@ -105,7 +106,7 @@ Trước khi can thiệp phần cứng, loại trừ toàn bộ nguyên nhân do
 
 Các bước thao tác chuẩn:1.Ngắt toàn bộ nguồn điện: Rút cáp kết nối hoặc gạt công tắc tắt nguồn pin (nếu dùng phím Bluetooth/Wireless). Tháo pin rời nếu có.
 
-2. Tháo Keycap: Dùng dụng cụ rút phím (Keycap puller) rút phím bị lỗi theo phương thẳng đứng 90 độ, tránh bẻ nghiêng gây gãy chân stem.
+### 2. Tháo Keycap: Dùng dụng cụ rút phím (Keycap puller) rút phím bị lỗi theo phương thẳng đứng 90 độ, tránh bẻ nghiêng gây gãy chân stem.
 
 ## 3. Nhỏ/Xịt dung dịch vào buồng tiếp điểm:
 
@@ -130,7 +131,7 @@ Nếu sau khi xử lý dung dịch mà phím vẫn còn hiện tượng nuốt n
 
 2. Lật mặt dưới của switch, kiểm tra xem hai chân đồng dẫn điện có bị cong gập lại ép sát vào đáy nhựa không. Nếu có, dùng nhíp kỹ thuật nắn thẳng góc 90 độ.
 
-3. Nhìn xuống lỗ socket trên mạch PCB: Dùng đầu kim khâu hoặc nhíp nhọn khều nhẹ hai lá kim loại bên trong lỗ socket ép sát vào nhau một chút để khi cắm switch vào, ngàm kẹp chặt chân kim loại hơn.
+### 3. Nhìn xuống lỗ socket trên mạch PCB: Dùng đầu kim khâu hoặc nhíp nhọn khều nhẹ hai lá kim loại bên trong lỗ socket ép sát vào nhau một chút để khi cắm switch vào, ngàm kẹp chặt chân kim loại hơn.
 
 4. Cắm switch lại thẳng góc, nhấn dứt khoát nghe tiếng "tách".
 

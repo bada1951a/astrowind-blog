@@ -18,6 +18,7 @@ theme: "Industrial Blueprint"
 
 
 
+
 Eram 19h45 em um hub de tecnologia na Avenida Paulista, em São Paulo. O clima estava tenso na sala de reuniões: faltavam exatos 45 minutos para o alinhamento técnico urgente antes da entrega da sprint para o cliente corporativo, e a minha estação principal simplesmente travou com aquela clássica e temida Tela Azul da Morte (BSOD). O código impresso na tela escura era impiedoso: `IRQL_NOT_LESS_OR_EQUAL` ou, no bom e velho formato hexadecimal, 0x0000000
 
 a. O projeto estava na reta final e o computador recusava-se a manter o sistema estável por mais de cinco minutos.
@@ -34,11 +35,11 @@ a: Por que o 0x0000000a acontece?
 
 Antes de sair reinstalando o sistema operacional — o que seria um tiro no escuro e desperdício de tempo precioso —, precisamos mapear a raiz do problema. Na nossa arquitetura de testes em São Paulo, isolamos três causas principais para esse comportamento:
 
-1. Incompatibilidade de Drivers Pós-Update: Um driver de rede, controladora SATA ou GPU recém-atualizado que tenta se comunicar com endereços de memória inválidos.
+### 1. Incompatibilidade de Drivers Pós-Update: Um driver de rede, controladora SATA ou GPU recém-atualizado que tenta se comunicar com endereços de memória inválidos.
 
-2. Corrupção ou Instabilidade na Memória RAM: Pulos de tensão na placa-mãe ou pentes de memória com setores defeituosos que corrompem o ponteiro IRQL.
+### 2. Corrupção ou Instabilidade na Memória RAM: Pulos de tensão na placa-mãe ou pentes de memória com setores defeituosos que corrompem o ponteiro IRQL.
 
-3. Serviços de Terceiros em Conflito: Softwares de antivírus legados ou ferramentas de monitoramento de hardware rodando em nível de kernel (Ring 0) que entram em colisão com o Windows.
+### 3. Serviços de Terceiros em Conflito: Softwares de antivírus legados ou ferramentas de monitoramento de hardware rodando em nível de kernel (Ring 0) que entram em colisão com o Windows.
 
 ## Plano de Ação: Passo a Passo para Recuperação
 

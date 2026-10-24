@@ -18,6 +18,7 @@ theme: "Electric Cyan Speed"
 
 
 
+
 Es ist kurz vor 10:00 Uhr morgens im Frankfurter Bankenviertel. In einer halben Stunde startet die wichtige Kundenpräsentation für ein neues Finanz-Dashboard, und mein Kollege aus der Abteilung Corporate Finance sitzt schwitzend vor seinem frisch auf Windows 11 aktualisierten ThinkPad. Er will nur schnell ein ZIP-Archiv entpacken und die Logdateien kopieren – doch jedes Mal scheitert er an diesem neuen, abgespeckten Windows 11 Rechtsklick-Menü. Statt der gewohnten Tools von 7-Zip oder Notepad++ sieht er nur ein minimalistisches Pop-up und muss jedes Mal umständlich auf "Weitere Optionen anzeigen" klicken. Mitten im Live-Stress bricht bei ihm fast Panik aus. Wer professionell unter Zeitdruck arbeitet, hat keine Sekunde für solche unnötigen Klick-Umwege.
 
 <div style="border-left: 4px solid #06b6d4; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
@@ -30,11 +31,11 @@ Es ist kurz vor 10:00 Uhr morgens im Frankfurter Bankenviertel. In einer halben 
 
 Bevor wir den Schraubenzieher digital ansetzen, müssen wir verstehen, warum Microsoft diesen Schritt gegangen ist:
 
-1. Clean-Design-Philosophie: Microsoft wollte das Kontextmenü von Altlasten befreien, die über Jahrzehnte von Drittanbietern hineingeschrieben wurden.
+### 1. Clean-Design-Philosophie: Microsoft wollte das Kontextmenü von Altlasten befreien, die über Jahrzehnte von Drittanbietern hineingeschrieben wurden.
 
-2. Performance-Mythen: Ältere Shell-Erweiterungen sollten standardmäßig ausgeblendet werden, um angebliche Explorer-Abstürze zu minimieren.
+### 2. Performance-Mythen: Ältere Shell-Erweiterungen sollten standardmäßig ausgeblendet werden, um angebliche Explorer-Abstürze zu minimieren.
 
-3. Mangelnde Usability für Profis: Was für den normalen Nutzer aufgeräumt wirkt, ist für IT-Profis, die stündlich mit WinRAR, Git, Notepad++ und FTP-Clients arbeiten, ein echter Produktivitätskiller.
+### 3. Mangelnde Usability für Profis: Was für den normalen Nutzer aufgeräumt wirkt, ist für IT-Profis, die stündlich mit WinRAR, Git, Notepad++ und FTP-Clients arbeiten, ein echter Produktivitätskiller.
 
 Im ersten Moment versuchten wir es natürlich klassisch: Über die *Einstellungen* und den *Task-Manager* den Windows-Explorer neu starten – völlig sinnlos, da das Menü hardcodiert im Betriebssystem verankert ist. Auch ein Blick in die *Systemsteuerung* brachte keine Abhilfe. Der Frust wuchs, während die Uhr tickte. 
 
@@ -46,7 +47,7 @@ Zum Glück lässt sich das Verhalten mit einem einfachen Registry-Eintrag oder e
 
 1. Drücken Sie die Tastenkombination Windows + Xund öffnen Sie dasTerminal (oder die *Eingabeaufforderung* als Administrator).
 
-2. Kopieren Sie den folgenden Befehl und fügen Sie ihn ein:
+### 2. Kopieren Sie den folgenden Befehl und fügen Sie ihn ein:
 
    ```cmd
    reg add "HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\InprocServer32" /f /ve
@@ -64,7 +65,7 @@ Wer es lieber visuell mag, macht das Ganze über den Editor:
 
 1. Drücken Sie Windows + R, tippen Sie `regedit` ein und bestätigen Sie mit Enter.
 
-2. Navigieren Sie zum Pfad: `HKEY_CURRENT_USER\Software\Classes\CLSID`
+### 2. Navigieren Sie zum Pfad: `HKEY_CURRENT_USER\Software\Classes\CLSID`
 
 3. Erstellen Sie einen neuen Schlüssel (Ordner) mit dem Namen `{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}`.
 

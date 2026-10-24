@@ -18,6 +18,7 @@ theme: "Matte Black stealth"
 
 
 
+
 Es war kurz vor 17 Uhr in unserem Büro in Berlin-Mitte. Mitten in der finalen Vorbereitung für den Rollout unserer neuen Microservices-Architektur ploppte auf meinem Hauptrechner die gefürchtete rote Warnmeldung auf: "Speicherplatz auf C: wird knapp. Nur noch 1,2 GB verfügbar." Der Build-Prozess in Docker brach ab, Visual Studio Code fror ein und die Lüfter drehten am Limit. Keine Zeit für langes Rätselraten – das System musste sofort bereinigt werden, ohne dass wichtige Konfigurationen oder Logs für den Release verloren gingen.
 
 Wer in einer schnelllebigen IT-Umgebung arbeitet, kennt das Problem. Windows 11 neigt dazu, sich im Laufe der Zeit unbemerkt mit Gigabytes an temporärem Datenmüll vollzusaugen. Hier ist mein praxiserprobter Leitfaden, wie du deine C-Platte in wenigen Minuten wieder freiräumst, ohne dein System zu gefährden.
@@ -28,11 +29,11 @@ Wer in einer schnelllebigen IT-Umgebung arbeitet, kennt das Problem. Windows 11 
 
 Bevor wir blind Dateien löschen, müssen wir verstehen, woher der Ballast kommt. Das Hauptproblem liegt meistens in drei Bereichen:
 
-1. Versteckte temporäre System- und Update-Dateien: Windows speichert Installationsreste von großen Updates (Windows.old) und temporäre Installer im Hintergrund ab, die nach Abschluss oft vergessen werden.
+### 1. Versteckte temporäre System- und Update-Dateien: Windows speichert Installationsreste von großen Updates (Windows.old) und temporäre Installer im Hintergrund ab, die nach Abschluss oft vergessen werden.
 
-2. User-Temp-Verzeichnisse und App-Caches: Moderne Electron-Apps (wie Slack, Teams oder Discord) und Browser müllen das Verzeichnis `AppData\Local\Temp` mit gigantischen Cache-Dateien zu.
+### 2. User-Temp-Verzeichnisse und App-Caches: Moderne Electron-Apps (wie Slack, Teams oder Discord) und Browser müllen das Verzeichnis `AppData\Local\Temp` mit gigantischen Cache-Dateien zu.
 
-3. Ausgabedateien von Entwicklungstools: Docker-Container-Layer, Gradle-Caches oder Node_modules, die tief im Benutzerverzeichnis liegen, fressen unbemerkt den restlichen Platz.
+### 3. Ausgabedateien von Entwicklungstools: Docker-Container-Layer, Gradle-Caches oder Node_modules, die tief im Benutzerverzeichnis liegen, fressen unbemerkt den restlichen Platz.
 
 <div style="border-left: 4px solid #ffffff; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Pro-Tipp aus der Praxis:</strong> Nutze niemals einfach Tools von Drittanbietern, die dir dubiose "Turbo-Cleanings" versprechen. Die integrierten Windows-Bordmittel arbeiten am zuverlässigsten und zerstören keine Systemverknüpfungen.
@@ -64,7 +65,7 @@ Manchmal bleibt in den AppData-Ordnern hartnäckiger Müll zurück. Den räumen 
 
 1. Drücke Windows + R, tippe `%temp%` ein und drücke Enter.
 
-2. Der Datei-Explorer öffnet den Ordner `C:\Users\[DeinBenutzername]\AppData\Local\Temp`.
+### 2. Der Datei-Explorer öffnet den Ordner `C:\Users\[DeinBenutzername]\AppData\Local\Temp`.
 
 3. Drücke Strg + A, um alle Dateien zu markieren, und lösche sie mitEntf.
 

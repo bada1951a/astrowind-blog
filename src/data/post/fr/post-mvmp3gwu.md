@@ -9,6 +9,7 @@ theme: "Warm Coffee Latte"
 ---
 
 
+
 ## 1. [Opening Story/Problem]
 
 C'était un mardi matin bien chargé dans notre tour à La Défense. Avec le système de smart office et les bureaux en libre-service, je venais de m'installer à un nouvel emplacement pour la journée. J'avais soigneusement branché mon nouveau dock USB-C, relié mes deux écrans externes, et j'étais prêt à attaquer mes revues de code et mes rapports graphiques. 
@@ -18,8 +19,6 @@ Puis, le drame : un collègue m'envoie un message urgent sur Teams me demandant 
 <div style="border-left: 4px solid #78350f; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Note du technicien :</strong> Ne paniquez jamais face à un raccourci récalcitrant après un changement de matériel. Souvent, il s'agit simplement d'un processus en arrière-plan bloqué ou d'un conflit de mise à l'échelle d'affichage lié aux nouveaux moniteurs connectés au dock.
 </div>
-
-
 
 ![Tech Troubleshooting Guide](/images/tech-photo/tech-photos%20(30).jpg)
 

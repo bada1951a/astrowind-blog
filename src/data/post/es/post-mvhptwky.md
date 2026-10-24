@@ -18,6 +18,7 @@ theme: "Sunset Horizon Coral"
 
 
 
+
 Eran las 18:50 en nuestra oficina corporativa en Madrid. Quedaban apenas diez minutos para enviar el paquete definitivo del proyecto trimestral a la direccion y mi equipo principal empezo a fallar de la peor manera posible. Necesitaba comprimir carpetas urgentemente, renombrar lotes masivos de archivos PDF y aplicar scripts de automatizacion desde el explorador, pero cada vez que hacia clic derecho con el raton, Windows 11 me obligaba a dar un rodeo absurdo haciendo clic en "Mostrar mas opciones". Ese pequeño retraso de dos segundos por cada operacion se acumulaba, generando una frustracion monumental en medio del caos del cierre de proyecto.
 
 ### El problema diario: El infierno del nuevo diseño de Windows 11
@@ -36,13 +37,13 @@ a:</strong> El nuevo menu contextual de Windows 11 prioriza la limpieza visual, 
 
 Para entender por que ocurre esto y como solucionarlo de raiz sin alterar la estabilidad del sistema, debemos analizar el origen del comportamiento:
 
-1. Diseño UWP Moderno: Microsoft diseño el nuevo menu basado en aplicaciones universales, aislando las extensiones clasicas de Win32 para evitar cuelgues del Explorador de archivos.
+### 1. Diseño UWP Moderno: Microsoft diseño el nuevo menu basado en aplicaciones universales, aislando las extensiones clasicas de Win32 para evitar cuelgues del Explorador de archivos.
 
 2. Falta de opciones nativas en la Interfaz grafic
 
 a: El menu de Configuracion general de Windows 11 no incluye un interruptor simple para desactivar este comportamiento, obligando a modificar registros o comandos del sistema.
 
-3. Incompatibilidad de software heredado: Programas esenciales de oficina (como clientes FTP, compresores o herramientas de seguridad) necesitan engancharse al arbol de comandos antiguo para funcionar con agilidad.
+### 3. Incompatibilidad de software heredado: Programas esenciales de oficina (como clientes FTP, compresores o herramientas de seguridad) necesitan engancharse al arbol de comandos antiguo para funcionar con agilidad.
 
 ---
 

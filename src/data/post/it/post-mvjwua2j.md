@@ -18,6 +18,7 @@ theme: "Warm Coffee Latte"
 
 
 
+
 Erano le undici e mezza del mattino qui al Centro Direzionale di Milano, uno di quei giorni in cui l'aria profuma di caffè macchiato bevuto di fretta e le scadenze sembrano rincorrersi. Sulla mia scrivania, tra fogli di calcolo e monitor secondari, la situazione era incandescente: saette di richieste di supporto si rovesciavano sulla chat aziendale e, per sbrigarmi, avevo appena aperto contemporaneamente cinque diverse applicazioni gestionali, il client di posta, la VPN e una chiamata di riunione urgente. Clicca di qui, trascina di là, ed ecco che il disastro si compie: improvvisamente, il silenzio più assoluto. Dalle cuffie non esce un singolo suono, proprio mentre il capo reparto cerca di connettersi per un riscontro in tempo reale. Il panico sale, la riunione è già avviata e l'icona dell'altoparlante in basso a destra mostra quella maledetta crocetta rossa o, peggio, sembra tutto attivo ma l'audio non si decide a uscire.
 
 <div style="border-left: 4px solid #78350f; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
@@ -32,13 +33,13 @@ a:</strong> Non perdere la testa se Windows decide di ammutolirsi proprio durant
 
 Prima di metterci a smanettare a casaccio perdendo ore preziose, capiamo cosa è successo sotto il cofano del sistema operativo. Quando si aprono troppi applicativi pesanti, Windows 11 va in affanno nella gestione delle risorse multimediali. Ecco i colpevoli più frequenti:
 
-1. Conflitto di driver audio (Realtek o Intel Smart Sound): I servizi audio in background si bloccano o vanno in crash per esaurimento temporaneo della memoria di paging.
+### 1. Conflitto di driver audio (Realtek o Intel Smart Sound): I servizi audio in background si bloccano o vanno in crash per esaurimento temporaneo della memoria di paging.
 
 ## 2. Periferica di output predefinita modificat
 
 a: Windows ha scambiato le cuffie USB o il monitor HDMI con gli altoparlanti integrati del notebook, o viceversa, a causa di una disconnessione millisecondale della porta USB dovuta al sovraccarico energetico.
 
-3. Servizi Windows Audio disattivati: Il motore principale che gestisce i flussi sonori si è piantato e necessita di un riavvio forzato.
+### 3. Servizi Windows Audio disattivati: Il motore principale che gestisce i flussi sonori si è piantato e necessita di un riavvio forzato.
 
 ---
 

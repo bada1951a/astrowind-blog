@@ -18,6 +18,7 @@ theme: "Sunset Horizon Coral"
 
 
 
+
 Jako inżynier wsparcia IT w środowisku korporacyjnym widziałem już setki peryferiów skazanych na przedwczesną utylizację. W zeszły piątek na mój stół warsztatowy trafiła klawiatura jednego z naszych senior developerów – customowy mechanik na przełącznikach Gateron Yellow, w którym klawisze `W` oraz `E` naprzemiennie gubiły wciśnięcia albo generowały irytujący podwójny klik (*chattering*). Zamiast wpisać prostą komendę w terminalu, system rejestrował `wwweee`. Użytkownik był przekonany, że kontroler na płytce PCB uległ uszkodzeniu, a sprzęt nadaje się wyłącznie do kosza. Rzeczywistość w 90% takich przypadków jest znacznie bardziej prozaiczn
 
 a: zanieczyszczenia mikroskopowe, utlenienie styków lub chwilowa utrata elastyczności blaszki kontaktowej wewnątrz samego switcha. Zanim wydasz kilkaset złotych na nowy zestaw przełączników lub nową klawiaturę, możesz przeprowadzić skuteczną regenerację w ramach weekendowego serwisu DIY. Poniżej przedstawiam sprawdzoną w bojach procedurę czyszczenia i chemicznej rewitalizacji przełączników mechanicznych.
@@ -84,9 +85,9 @@ a:</strong> Przed rozpoczęciem jakichkolwiek prac fizycznych bezwzględnie <str
 
 1. Za pomocą drucianego pullera zdejmij nakładkę (*keycap*) z uszkodzonego klawisza oraz klawiszy sąsiadujących, aby uzyskać wygodne pole manewru.
 
-2. Klawiatury Hot-Swap: Wsuń switch puller w zaczepy na górnej i dolnej ściance przełącznika, ściśnij blokady i pionowym, pewnym ruchem wyciągnij switch z płyty montażowej. Wyjęcie przełącznika pozwala na precyzyjniejszą pracę i chroni płytkę PCB przed zalaniem.
+### 2. Klawiatury Hot-Swap: Wsuń switch puller w zaczepy na górnej i dolnej ściance przełącznika, ściśnij blokady i pionowym, pewnym ruchem wyciągnij switch z płyty montażowej. Wyjęcie przełącznika pozwala na precyzyjniejszą pracę i chroni płytkę PCB przed zalaniem.
 
-3. Klawiatury z przełącznikami lutowanymi: Jeśli nie planujesz wylutowywania całego komponentu stacją lutowniczą, zabieg można wykonać metodą inwazyjną bez demontażu, wstrzykując preparat przez wciśnięty trzpień.
+### 3. Klawiatury z przełącznikami lutowanymi: Jeśli nie planujesz wylutowywania całego komponentu stacją lutowniczą, zabieg można wykonać metodą inwazyjną bez demontażu, wstrzykując preparat przez wciśnięty trzpień.
 
 ### Krok 3: Prawidłowa aplikacja preparatu do styków (Technika ciśnieniowa)
 
@@ -96,7 +97,7 @@ Do tego celu najlepiej sprawdza się schemat dwuetapowy: preparat rozpuszczając
 
 a: Wciśnij plastikowy trzonek (*stem*) do oporu w dół za pomocą małego wkrętaka lub pęsety, odsłaniając szczelinę prowadnicy, pod którą ukryte są miedziane blaszki.
 
-2. Precyzyjny wtrysk: Załóż cienką rurkę na zawór puszki preparatu do czyszczenia styków. Przystaw końcówkę do krawędzi wciśniętego trzpienia po stronie, gdzie znajdują się blaszki (zazwyczaj strona z logo producenta switcha).
+### 2. Precyzyjny wtrysk: Załóż cienką rurkę na zawór puszki preparatu do czyszczenia styków. Przystaw końcówkę do krawędzi wciśniętego trzpienia po stronie, gdzie znajdują się blaszki (zazwyczaj strona z logo producenta switcha).
 
 ## 3. Mikrodawk
 

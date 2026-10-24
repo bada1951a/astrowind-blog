@@ -18,6 +18,7 @@ theme: "Mint Fresh Engineering"
 
 
 
+
 Nel mio lavoro quotidiano sui terminali di gestione e nei laboratori di collaudo hardware, uno strumento di input inaffidabile rappresenta un collo di bottiglia critico. Qualche mese fa, durante la configurazione in loco di un cluster di virtualizzazione, la tastiera meccanica della mia workstation da campo ha iniziato a mostrare sintomi subdoli: digitando credenziali complesse su terminale SSH, alcune lettere venivano registrate due volte (*key chattering* o rimbalzo), mentre la barra spaziatrice e il tasto `Tab` perdevano colpi in modo casuale (*key skipping*). 
 
 In un ambiente di produzione, dover cancellare backspace a raffica o fallire l'autenticazione per via di un doppio carattere non è solo frustrante: rischia di bloccare account di dominio o generare errori di sintassi distruttivi nei file di configurazione.
@@ -145,7 +146,7 @@ Se il disossidante non risolve l'anomalia, il problema risiede nell'accoppiament
 
 1. Se la tastiera supporta l'hot-swap, utilizza l'estrattore per switch (*switch puller*). Aggancia le due clip di rilascio a nord e sud dello switch ed estrailo verticalmente.
 
-2. Ispeziona i piedini metallici in rame dello switch: se risultano piegati o schiacciati, raddrizzali con una pinzetta da orologiaio prima di reinserirli.
+### 2. Ispeziona i piedini metallici in rame dello switch: se risultano piegati o schiacciati, raddrizzali con una pinzetta da orologiaio prima di reinserirli.
 
 3. Ispeziona i fori del PCB. Se il contatto interno è allargato, comprimi leggermente le lamine del socket da dietro il PCB con un ago da sutura o una sonda metallica sottile.
 

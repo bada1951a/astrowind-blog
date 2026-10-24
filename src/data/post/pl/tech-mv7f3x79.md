@@ -18,6 +18,7 @@ theme: "Deep Indigo System"
 
 
 
+
 W pracy inżyniera wsparcia IT niewiele jest scenariuszy równie powtarzalnych i frustrujących dla użytkownika, jak nagła utrata stabilności wielomonitorowej stacji roboczej. Scenariusz z reguły wygląda identycznie: pracownik podłącza nowoczesnego ultrabooka do stacji dokującej Thunderbolt lub replikatora portów USB-C z dwoma monitorami roboczymi. Zamiast płynnego rozszerzenia pulpitu, jeden z ekranów cyklicznie gaśnie co kilkanaście sekund, a drugi wita komunikatem „Brak sygnału” (No Signal). W dziennikach systemowych pojawia się lawina ostrzeżeń o resecie sterownika ekranu, a użytkownik traci możliwość pracy.
 
 <div style="border-left: 4px solid #4338ca; padding: 12px 16px; margin: 20px 0; background-color: rgba(67, 56, 202, 0.04); border-radius: 4px;">
@@ -39,7 +40,7 @@ W architekturze hybrydowej wyjścia wideo USB-C/DisplayPort fizycznie przechodz�
 
 ![Hardware Diagnostic & Troubleshooting](https://images.unsplash.com/photo-1504384308090-c894fdcc538d? auto=format&fit=crop&w=1000&h=550&q=80)
 
-2.  Timeout mechanizmu TDR w jądrze `dxgkrnl.sys`
+## 2.  Timeout mechanizmu TDR w jądrze `dxgkrnl.sys`
 Podsystem graficzny DirectX monitoruje czas odpowiedzi karty. Jeśli kontroler DisplayPort Alternate Mode lub transceiver stacji dokującej opóźni handshake EDID o więcej niż 2 sekundy podczas negocjacji szyfrowania HDCP, jądro systemu uznaje sterownik za zawieszony. Uruchamiana jest procedura TDR: jądro resetuje akcelerator graficzny, co objawia się natychmiastowym zgaśnięciem wszystkich paneli i przejściem drugiego monitora w tryb uśpienia. ## 3. Zaśmiecona pamięć podręczna EDID w gałęzi `GraphicsDrivers`
 System Windows agresywnie cachuje informacje o każdym podłączonym kiedykolwiek wyświetlaczu. Gdy laptop jest regularnie przepinany między różnymi salami konferencyjnymi a domowym biurkiem, wpisy w rejestrze dotyczące konfiguracji, pozycji i profilu timingów ulegają fragmentacji i korupcji. System próbuje wymusić nieobsługiwane taktowanie pikseli (pixel clock) lub pasmo Display Stream Compression (DSC), co skutkuje całkowitym brakiem sygnału.
 
@@ -133,11 +134,11 @@ Zainstalowanie oprogramowania w złej kolejności to najczęstszy błąd adminis
 
 a:
 
-1. Magistrala i Thunderbolt: Zainstaluj najnowszy pakiet *Intel Serial IO Driver* oraz *Thunderbolt Controller Driver* (jeśli laptop korzysta z procesora Intel Core).
+### 1. Magistrala i Thunderbolt: Zainstaluj najnowszy pakiet *Intel Serial IO Driver* oraz *Thunderbolt Controller Driver* (jeśli laptop korzysta z procesora Intel Core).
 
-2. Karta zintegrowana (iGPU): Zainstaluj sterownik pobrany bezpośrednio ze strony Intel lub AMD, weryfikując zgodność z wcześniej zapisanym `DEV_ID`.
+### 2. Karta zintegrowana (iGPU): Zainstaluj sterownik pobrany bezpośrednio ze strony Intel lub AMD, weryfikując zgodność z wcześniej zapisanym `DEV_ID`.
 
-3. Karta dedykowana (dGPU): Na samym końcu zainstaluj sterownik NVIDIA/AMD, wybierając opcję „Czysta instalacja”.
+### 3. Karta dedykowana (dGPU): Na samym końcu zainstaluj sterownik NVIDIA/AMD, wybierając opcję „Czysta instalacja”.
 
 4. Dopiero po zainstalowaniu kompletu podłącz monitory do stacji lub portów USB-C.
 

@@ -9,13 +9,12 @@ theme: "Matte Black stealth"
 ---
 
 
+
 ## 1. [Opening Story/Problem]
 
 L'altra settimana ero in trasferta presso la nostra filiale produttiva fuori Milano, chiamato a supportare una riunione tecnica urgente nella sala conferenze principale. Mentre cercavo di collegare il mio portatile aziendale ai monitor esterni e al proiettore della sala, avevo disperatamente bisogno di catturare rapidamente una schermata delle impostazioni di rete e dei log di proiezione per condividerli in tempo reale con il team di sviluppo. Ho premuto la combinazione di tasti a cui sono abituato da anni: **Win + Shift + S**. 
 
 Il vuoto assoluto. Nessun oscuramento dello schermo, nessuna notifica in basso a destra, nessuna traccia dello **Strumento di cattura**. Con la sala riunioni che mi guardava in attesa e la tensione alle stelle, ho dovuto perdere preziosi minuti ad aprire manualmente il menu Start, cercare l'app di cattura e trascinare goffamente le finestre. Una situazione frustrante per qualsiasi professionista IT che odia perdere tempo con i piccoli bug di Windows 11 proprio quando serve massima efficienza.
-
-
 
 ![Tech Troubleshooting Guide](/images/tech-photo/ram%20(1).png)
 

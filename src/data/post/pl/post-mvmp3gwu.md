@@ -9,6 +9,7 @@ theme: "Pastel Lavender Tech"
 ---
 
 
+
 ## 1. Ostatnia deska ratunku w środku korporacyjnego chaosu
 
 Siedzę przy biurku w naszym warszawskim biurowcu, a na wewnętrznym komunikatorze pali się czerwona lampka za czerwoną. Trwa gorący okres raportowania, a ja mam na ekranie otwartych dokładnie pięć różnych systemów ERP, arkusze kalkulacyjne, panel administracyjny i okno czatu z zirytowanym menedżerem projektu. W tym momencie potrzebuję na szybko zrobić zrzut ekranu fragmentu kodu i błędu, żeby wysłać go do zespołu wsparcia. Wciskam **Win + Shift + S**, odruchowo czekając na zaciemnienie ekranu i paletę wycinania. I... absolutnie nic. Ekran ani drgnie, żadna ikonka się nie pojawia, a ja zostaję z palcem na klawiaturze i rosnącą frustracją.
@@ -18,8 +19,6 @@ Zamiast spokojnie pracować, tracę cenne minuty na bezradne wciskanie kombinacj
 <div style="border-left: 4px solid #7c3aed; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Wskazówka serwisowa:</strong> Nie trać czasu na ponowne uruchamianie całego komputera za każdym razem, gdy znany skrót przestaje reagować. Problem zazwyczaj tkwi w zawieszonym procesie powiadomień lub wyłączonych uprawnieniach aplikacji w tle.
 </div>
-
-
 
 ![Tech Troubleshooting Guide](/images/tech-photo/tech-photos%20(13).jpg)
 
@@ -51,7 +50,7 @@ Jeśli zamknięcie procesu nie pomogło, musimy zresetować ustawienia samej apl
 
 2. Wybierz zakładkę **Aplikacje**, a następnie **Zainstalowane aplikacje**.
 
-3. Wpisz w wyszukiwarkę "Narzędzie wycinanie".
+## 3. Wpisz w wyszukiwarkę "Narzędzie wycinanie".
 
 4. Kliknij na trzy kropki obok nazwy aplikacji i wybierz **Opcje zaawansowane**.
 

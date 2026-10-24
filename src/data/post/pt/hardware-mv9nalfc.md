@@ -18,6 +18,7 @@ theme: "Sandstone Desert Minimal"
 
 
 
+
 Eram por volta das 16h em plena sexta-feira agitada em nosso escritório corporativo em São Paulo. O clima estava tenso porque precisávamos fechar o relatório trimestral e entregar os arquivos consolidados para a diretoria. De repente, a máquina de um dos analistas travou feio. Na tela, um pop-up vermelho irritante avisav
 
 a: "Espaço Insuficiente no Disco Local (C:)". Para piorar a situação, ao tentar fazer o backup de segurança dos dados, o sistema começou a apresentar um erro de leitura persistente no SSD NVMe externo conectado via USB-C. O desespero foi geral na sala. No começo, tentamos o caminho mais óbvio e ineficiente: apagar algumas pastas de fotos e documentos pessoais da área de trabalho, esvaziar a lixeira e reiniciar a máquina rezando para o Windows milagrosamente recuperar espaço. Perdemos preciosos 30 minutos nisso, e o indicador do drive C continuava em vermelho vivo, mostrando apenas alguns megabytes livres. O verdadeiro problema não eram os arquivos visíveis do usuário, mas sim o lixo invisível que o sistema operacional acumula nos bastidores.
@@ -34,11 +35,11 @@ a: gigabytes de arquivos temporários de atualizações antigas do Windows, cach
 
 Antes de sair deletando tudo pela frente, vale a pena entender o que realmente lotou o seu SSD principal:
 
-1. Acúmulo de arquivos temporários do sistema (Temp e Prefetch): O Windows guarda logs de instalação, atualizações passadas (Windows.old) e dados de aplicativos que já foram desinstalados.
+### 1. Acúmulo de arquivos temporários do sistema (Temp e Prefetch): O Windows guarda logs de instalação, atualizações passadas (Windows.old) e dados de aplicativos que já foram desinstalados.
 
-2. Hipersaturação do cache de hibernação e paginação: Arquivos como *hiberfil.sys* e *pagefile.sys* reservam gigabytes preciosos do seu SSD para simular memória RAM.
+### 2. Hipersaturação do cache de hibernação e paginação: Arquivos como *hiberfil.sys* e *pagefile.sys* reservam gigabytes preciosos do seu SSD para simular memória RAM.
 
-3. Conflito de leitura em dispositivos externos (NVMe): Quando o C: está completamente cheio, o sistema falha ao tentar indexar ou ler dados de um SSD NVMe externo, gerando falsos erros de hardware.
+### 3. Conflito de leitura em dispositivos externos (NVMe): Quando o C: está completamente cheio, o sistema falha ao tentar indexar ou ler dados de um SSD NVMe externo, gerando falsos erros de hardware.
 
 ## Passo a Passo para a Limpeza Completa e Correção
 

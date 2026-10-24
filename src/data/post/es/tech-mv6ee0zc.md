@@ -18,6 +18,7 @@ theme: "Deep Ocean Cobalt"
 
 
 
+
 Como responsable del puesto de trabajo e infraestructura técnica en entornos de desarrollo y centros de operaciones de red (NOC), me encuentro con frecuencia con incidencias de teclado que desconciertan a los usuarios: caracteres duplicados de forma aleatoria (el temido *chattering* o rebote de conmutador) o combinaciones de teclas que se niegan a registrarse en momentos críticos, como la introducción de contraseñas de privilegios o comandos de consola en producción. 
 
 En un parque de cientos de estaciones equipadas con periféricos de perfil mecánico orientados a programadores, desechar inmediatamente un equipo de 150 euros por un conmutador defectuoso no solo es ineficiente desde el punto de vista presupuestario, sino que incumple las normativas de sostenibilidad del departamento de TI. A continuación, detallo el protocolo técnico para diagnosticar y recuperar estos conmutadores mediante el uso estandarizado de agentes de limpieza dieléctricos de residuo cero.
@@ -78,7 +79,7 @@ A:</strong> Antes de proceder con cualquier manipulación química sobre el hard
 ### Fase 1: Diagnóstico lógico en el sistema operativo
 Antes de desmontar elementos, debemos aislar el problema respecto al subsistema de software de Windows.
 
-1. Inspección en el Administrador de dispositivos:- Presione `Windows + R`, escriba `devmgmt.msc` y pulse Intro para abrir elAdministrador de dispositivos.
+### 1. Inspección en el Administrador de dispositivos:- Presione `Windows + R`, escriba `devmgmt.msc` y pulse Intro para abrir elAdministrador de dispositivos.
 
    - Despliegue el nodo Dispositivos de interfaz de usuario (HID)yTeclados.
    - Verifique que ningún controlador presente advertencias triangulares amarillas. Si existen duplicados huérfanos provocados por hubs USB, haga clic derecho sobre el dispositivo y seleccione Desinstalar el dispositivo.
@@ -103,7 +104,7 @@ a:
 
 a: Extraiga el conector USB-C/USB-A del concentrador o torre.
 
-2. Extracción del capuchón (*Keycap*): Utilice un extractor de teclas de alambre (*wire keycap puller*). Evite las pinzas de plástico rígido, ya que rayan los laterales de teclas de policarbonato o PBT. Tire verticalmente hacia arriba a 90 grados exactos para no doblar el vástago cruzado del conmutador.
+### 2. Extracción del capuchón (*Keycap*): Utilice un extractor de teclas de alambre (*wire keycap puller*). Evite las pinzas de plástico rígido, ya que rayan los laterales de teclas de policarbonato o PBT. Tire verticalmente hacia arriba a 90 grados exactos para no doblar el vástago cruzado del conmutador.
 
 ```
        [ Extractor de Alambre ]
@@ -134,7 +135,7 @@ Para esta intervención se requiere exclusivamente un limpiador de contactos de 
          +---------------+     y la carcasa superior
 ```
 
-1. Hundimiento mecánico del vástago: Con una herramienta no metálica o su propio dedo, presione el vástago del conmutador hasta el tope de su recorrido (aproximadamente 4 mm).
+### 1. Hundimiento mecánico del vástago: Con una herramienta no metálica o su propio dedo, presione el vástago del conmutador hasta el tope de su recorrido (aproximadamente 4 mm).
 
 ## 2. Aplicación controlad
 

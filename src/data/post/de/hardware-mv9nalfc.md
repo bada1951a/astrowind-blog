@@ -18,6 +18,7 @@ theme: "High-Contrast Charcoal"
 
 
 
+
 Es war kurz vor 16:00 Uhr an einem hektischen Dienstag im Frankfurter Büroalltag, als der Ernstfall eintrat: Mitten während der kritischen Datenübertragung wichtiger Quartalsberichte poppte plötzlich eine knallrote Windows-Warnung auf. „Speicherplatz auf C: fast voll.“ Wenige Sekunden später fror das System ein. Keine Rückmeldung mehr im Outlook, der Explorer streikte, und die Panik stieg, weil die finalen Projektdateien noch im temporären Cache hingen und ein abrupter Neustart den totalen Datenverlust hätte bedeuten können. Der berüchtigte rote Balken im Arbeitsplatz stand auf 0 Byte.
 
 Zuerst verfiel ich in blinden Aktionismus. Ich löschte ein paar größere PDF-Dateien und den Ordner „Downloads“, aber das brachte gerade einmal magere 500 Megabyte. Windows meldete sofort wieder volle Hütte. Der Übeltäter war nicht meine Musiksammlung oder meine Apps, sondern Gigabytes an unsichtbarem Datenmüll, den das Betriebssystem und diverse Anwendungen über Monate im Hintergrund angesammelt hatten. Erst der Griff zu den richtigen Systemwerkzeugen und das gezielte Bereinigen der versteckten Temp-Verzeichnisse brachte die ersehnte Rettung und gab über 40 Gigabyte frei.
@@ -30,11 +31,11 @@ Zuerst verfiel ich in blinden Aktionismus. Ich löschte ein paar größere PDF-D
 
 Bevor wir zur Tat schreiten, müssen wir verstehen, woher dieser Datenmüll eigentlich kommt. Windows und moderne Anwendungen sind wahre Meister im Verstecken von temporären Daten.
 
-1. Versteckte AppData- und Temp-Ordner: Jedes Mal, wenn du ein Programm installierst, im Browser surfst oder Office-Dokumente bearbeitest, legt Windows temporäre Kopien an. Viele davon werden nach dem Schließen der App nie wieder gelöscht und müllen den Ordner `C:\Users\[Benutzername]\AppData\Local\Temp` zu.
+### 1. Versteckte AppData- und Temp-Ordner: Jedes Mal, wenn du ein Programm installierst, im Browser surfst oder Office-Dokumente bearbeitest, legt Windows temporäre Kopien an. Viele davon werden nach dem Schließen der App nie wieder gelöscht und müllen den Ordner `C:\Users\[Benutzername]\AppData\Local\Temp` zu.
 
-2. Windows Update-Reste und alte Systemdateien: Nach größeren Funktionsupdates speichert Windows das vorherige Betriebssystem im Hintergrund ab (`Windows.old`), falls du ein Rollback machen möchtest. Auch veraltete Installationspakete und Fehlerprotokolle fressen heimlich Dutzende Gigabyte.
+### 2. Windows Update-Reste und alte Systemdateien: Nach größeren Funktionsupdates speichert Windows das vorherige Betriebssystem im Hintergrund ab (`Windows.old`), falls du ein Rollback machen möchtest. Auch veraltete Installationspakete und Fehlerprotokolle fressen heimlich Dutzende Gigabyte.
 
-3. Der unbarmherzige Ruhezustand und die Auslagerungsdatei: Die Dateien `hiberfil.sys` (für den Schnellstart/Ruhezustand) und `pagefile.sys` (virtueller Arbeitsspeicher) skalieren direkt mit der Größe deines RAMs und belegen oft fix 16 bis 32 Gigabyte auf der Systempartition.
+### 3. Der unbarmherzige Ruhezustand und die Auslagerungsdatei: Die Dateien `hiberfil.sys` (für den Schnellstart/Ruhezustand) und `pagefile.sys` (virtueller Arbeitsspeicher) skalieren direkt mit der Größe deines RAMs und belegen oft fix 16 bis 32 Gigabyte auf der Systempartition.
 
 ---
 

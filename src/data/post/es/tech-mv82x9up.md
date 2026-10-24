@@ -18,6 +18,7 @@ theme: "Cyberpunk Terminal"
 
 
 
+
 Eran las 4:55 PM de un viernes. El *jefe de proyectos* tenía que presentar los números del Q3 en diez minutos a la dirección general, y su estación de trabajo decidió hacer un cosplay perfecto de un pisapapeles caro: los ventiladores rugían a tope, las luces RGB parpadeaban con alegría, pero el monitor seguía completamente negro, soltando el maldito aviso de *Sin señal*. El tipo estaba a un segundo de estampar el teclado contra el monitor. Sudor frío, la sala de juntas esperándoles, y yo con cara de payaso intentando averiguar por qué la BIOS ni siquiera hacía el clásico *beep* de arranque.
 
 <div style="border-left: 4px solid #00ffcc; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,255,204,0.05); border-radius: 4px; font-family: monospace;">
@@ -35,11 +36,11 @@ No era la tarjeta gráfica, ni el cable HDMI. El verdadero culpable estaba escon
 
 Antes de volverte loco cambiando piezas, hay que entender qué está pasando en la placa base cuando el PC enciende pero el monitor se queda en negro.
 
-1. Oxidación y suciedad en los contactos (Fretting corrosion): Con las vibraciones de la oficina, los cambios térmicos (cuando el PC se calienta por la tarde y se enfría por la noche) y la humedad ambiental, se crea una microcapa de óxido o suciedad en los pines dorados de la RAM. El bus de datos pierde continuidad y la placa se niega a hacer el *Power-On Self-Test (POST)*.
+### 1. Oxidación y suciedad en los contactos (Fretting corrosion): Con las vibraciones de la oficina, los cambios térmicos (cuando el PC se calienta por la tarde y se enfría por la noche) y la humedad ambiental, se crea una microcapa de óxido o suciedad en los pines dorados de la RAM. El bus de datos pierde continuidad y la placa se niega a hacer el *Power-On Self-Test (POST)*.
 
-2. Microfisuras o desplazamiento por golpes/vibraciones: ¿Alguien le dio una patada sin querer a la torre debajo del escritorio? Un milímetro de desplazamiento basta para que los canales de memoria dejen de hacer contacto perfecto con los pines del zócalo.
+### 2. Microfisuras o desplazamiento por golpes/vibraciones: ¿Alguien le dio una patada sin querer a la torre debajo del escritorio? Un milímetro de desplazamiento basta para que los canales de memoria dejen de hacer contacto perfecto con los pines del zócalo.
 
-3. Fallo en la línea de alimentación del slot (DIMM slot failure): A veces el problema no es el módulo de memoria en sí, sino que la ranura principal de la placa base ha acumulado estática o se ha tostado por un pico de tensión, bloqueando la inicialización del hardware.
+### 3. Fallo en la línea de alimentación del slot (DIMM slot failure): A veces el problema no es el módulo de memoria en sí, sino que la ranura principal de la placa base ha acumulado estática o se ha tostado por un pico de tensión, bloqueando la inicialización del hardware.
 
 ---
 
@@ -52,7 +53,7 @@ Vamos a dejar los blablablás y a ensuciarnos las manos. Apaga el equipo, descon
 
 a:<br>
 
-1.  shutdown -s -t 0 (Corte total de energía)<br>
+## 1.  shutdown -s -t 0 (Corte total de energía)<br>
 
 ## 2. unmount_chassis_side_panel()<br>
 

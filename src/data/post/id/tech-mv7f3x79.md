@@ -18,6 +18,7 @@ theme: "Deep Ocean Cobalt"
 
 
 
+
 Sebagai staf infrastruktur IT yang mengelola ratusan workstation di gedung perkantoran multi-tenant, kasus monitor eksternal mendadak menampilkan pesan *"No Signal"* atau berkedip hitam (*flickering*) setiap beberapa detik adalah makanan sehari-hari. Masalah ini kerap memuncak pada Senin pagi, terutama setelah sistem operasi mengunduh pembaruan rutin akhir pekan atau ketika laptop baru saja dilepas-pasang dari docking station Type-C/Thunderbolt. 
 
 Ketika pengguna mendapati layar kedua mereka mati, reaksi pertama biasanya menyalahkan kabel HDMI yang longgar atau menganggap monitor rusak total. Namun, dalam lebih dari 80% kasus yang saya tangani di lapangan, sumber masalah utamanya berakar pada kegagalan komunikasi lapisan perangkat lunak grafis: tumpukan driver (*driver stack*) yang korup, kegagalan negosiasi EDID (*Extended Display Identification Data*), serta konflik manajemen daya antara chip grafis terintegrasi (iGPU) dan grafis diskrit (dGPU).
@@ -76,7 +77,7 @@ Sebelum membongkar konfigurasi sistem, picu restart pada *Desktop Window Manager
 
 1. Pastikan monitor eksternal dalam posisi terhubung dan menyala.
 
-2. Tekan kombinasi tombol pintas secara bersamaan:  
+### 2. Tekan kombinasi tombol pintas secara bersamaan:  
 
    `Win` + `Ctrl` + `Shift` + `B`
 
@@ -167,7 +168,7 @@ Jika driver display korup akibat kegagalan penulisan sektor SSD, perbaiki depend
 
 1. Buka Windows Search, ketik `cmd`, klik kanan pada Command Prompt, lalu pilihRun as administrator.
 
-2. Jalankan perintah perbaikan citra sistem berikut:
+### 2. Jalankan perintah perbaikan citra sistem berikut:
 
    ```cmd
    DISM.exe /Online /Cleanup-image /Restorehealth
@@ -192,7 +193,7 @@ Berdasarkan tinjauan teknis di lingkungan produksi enterprise, pemulihan jangka 
   Hindari penggunaan konverter pasif multi-sambungan (seperti: Type-C ke HDMI, lalu disambung lagi HDMI ke VGA). Setiap titik terminasi pasif menyumbang degradasi sinyal sebesar 2–3 dB, yang memicu hilangnya sinkronisasi horizontal (*H-Sync collapse*). Wajibkan penggunaan kabel konverter aktif (*active adapter*) yang dilengkapi chip bridge mandiri.
 </div>
 
-1. Batasi Driver Update dari Windows Update Otomatis:  
+### 1. Batasi Driver Update dari Windows Update Otomatis:  
 
    Bagi workstation penting, nonaktifkan opsi pembaruan driver pihak ketiga melalui Local Group Policy Editor (`gpedit.msc`). Masuk ke `Computer Configuration > Administrative Templates > Windows Components > Windows Update > Manage updates offered from Windows Update`, lalu aktifkan kebijakan:  
    *"Do not include drivers with Windows Updates"*.  

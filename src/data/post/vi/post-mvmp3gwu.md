@@ -9,6 +9,7 @@ theme: "Sandstone Desert Minimal"
 ---
 
 
+
 ## 1. Tình huống khẩn cấp tại văn phòng
 
 Hôm nay là một ngày bận rộn tại văn phòng nằm ngay trung tâm Quận 1, TP. Hồ Chí Minh. Tôi vừa nhấp ngụm cà phê sáng thì đồng nghiệp ngồi bàn bên hoảng hốt gọi tôi đến hỗ trợ chiếc máy tính xách tay của anh ấy. Số là bên ngoài hợp tác xã và đối tác vừa gửi qua một tệp nén (ZIP) chứa các bản vẽ kỹ thuật và dữ liệu quan trọng. Anh ấy đang định dùng tổ hợp phím **Win + Shift + S** quen thuộc để cắt vài tấm hình chi tiết gửi ngay cho cấp trên kiểm tra tiến độ, nhưng bấm hoài mà màn hình cứ trơ ra, không có một chút phản hồi nào. Cửa sổ chụp ảnh màn hình của Snipping Tool hoàn toàn biến mất, khiến tiến độ công việc bị chững lại ngay lập tức.
@@ -16,8 +17,6 @@ Hôm nay là một ngày bận rộn tại văn phòng nằm ngay trung tâm Qu�
 <div style="border-left: 4px solid #a16207; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Mẹo nhanh từ kỹ thuật viên:</strong> Đừng vội khởi động lại máy khi gặp lỗi này. Trong 90% trường hợp, ứng dụng ngầm bị xung đột hoặc tính năng thông báo bị tắt chính là thủ phạm.
 </div>
-
-
 
 ![Tech Troubleshooting Guide](/images/tech-photo/tech-photo%20(37).jpg)
 

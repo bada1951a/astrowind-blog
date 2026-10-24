@@ -18,13 +18,14 @@ theme: "Pure Titanium Clean"
 
 
 
+
 En tant qu'ingénieur système, mon clavier n'est pas un simple périphérique de saisie : c'est l'interface directe avec les consoles de production, les hyperviseurs et les terminaux d'infrastructure. Rien n'est plus critique – et exaspérant – qu'un interrupteur mécanique qui commence à "bégaier" lors de la saisie d'une commande sensible sous SSH. Une touche `a` ou `Enter` qui enregistre deux frappes au lieu d'une, ou qui ignore purement et simplement la pression, peut transformer une commande d'administration anodine en incident d'exploitation.
 
 Ce dysfonctionnement, couramment appelé chattering (ou rebond de contact anormal), n'impose pas nécessairement le remplacement immédiat du matériel ou le recours au fer à souder. Dans plus de 80 % des cas rencontrés en environnement professionnel, une intervention ciblée à l'aide d'un nettoyant pour contacts électroniques permet de restaurer l'intégrité du signal. Voici notre procédure standard d'atelier pour diagnostiquer, décontaminer et pérenniser vos commutateurs mécaniques.
 
 ---
 
-1. Diagnostic électromécanique : Les trois causes racines
+### 1. Diagnostic électromécanique : Les trois causes racines
 
 Pour intervenir efficacement, il faut comprendre ce qui se passe sous le capuchon de la touche (*keycap*). Un commutateur mécanique traditionnel (type Cherry MX, Gateron ou Kailh) repose sur la mise en contact physique de deux lamelles en alliage métallique (souvent du bronze phosphoreux plaqué or). Trois facteurs principaux viennent dégrader ce mécanisme :
 
@@ -93,7 +94,7 @@ Déconnectez impérativement le clavier de toute source d'alimentation (câble U
 
 2. Dégagez la zone périphérique immédiate à l'air sec pour éviter que des particules externes ne tombent dans la chambre lors de l'ouverture.
 
-3. Cas A (Clavier Hot-Swap) : Utilisez votre extracteur de switch pour pincer les ergots de retenue situés en haut et en bas du commutateur, puis extrayez-le doucement du circuit imprimé (PCB). Vous pourrez ainsi travailler hors châssis.
+### 3. Cas A (Clavier Hot-Swap) : Utilisez votre extracteur de switch pour pincer les ergots de retenue situés en haut et en bas du commutateur, puis extrayez-le doucement du circuit imprimé (PCB). Vous pourrez ainsi travailler hors châssis.
 
 4. Cas B (Interrupteurs soudés) : L'opération se fait directement sur le clavier, maintenu à plat.
 

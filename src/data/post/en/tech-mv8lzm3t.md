@@ -18,6 +18,7 @@ theme: "Cyberpunk Terminal"
 
 
 
+
 <div style="border-left: 4px solid #00ffcc; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,255,204,0.05); border-radius: 4px; font-family: monospace;">
 root@silicon-valley-h
 
@@ -39,11 +40,11 @@ Here is the exact battle-tested playbook I used to slash my boot times from a ag
 
 Before we touch any configuration files, we need to understand what's actually murdering your system resources the second the kernel initializes.
 
-1. The Electron Memory-Leak Cult: Half the apps running in your system tray—Discord, Slack, Teams, Spotify, and that obscure internal tool written by the intern—are bloated Electron wrappers. They all register themselves as auto-start daemons, consuming gigabytes of RAM before you've even opened a browser.
+### 1. The Electron Memory-Leak Cult: Half the apps running in your system tray—Discord, Slack, Teams, Spotify, and that obscure internal tool written by the intern—are bloated Electron wrappers. They all register themselves as auto-start daemons, consuming gigabytes of RAM before you've even opened a browser.
 
-2. Aggressive Telemetry and Updater Daemons: Corporate endpoint management tools, Adobe background synchronizers, and various OEM updater suites love to hog I/O queues during the critical boot window, creating a massive disk bottleneck.
+### 2. Aggressive Telemetry and Updater Daemons: Corporate endpoint management tools, Adobe background synchronizers, and various OEM updater suites love to hog I/O queues during the critical boot window, creating a massive disk bottleneck.
 
-3. Ghost Services & Orphaned Registry Hooks: Uninstalling software via standard GUI uninstaller wizards often leaves behind orphaned run-keys in the Windows Registry (`HKCU\Software\Microsoft\Windows\CurrentVersion\Run`), forcing the session manager to timeout while trying to launch non-existent binaries.
+### 3. Ghost Services & Orphaned Registry Hooks: Uninstalling software via standard GUI uninstaller wizards often leaves behind orphaned run-keys in the Windows Registry (`HKCU\Software\Microsoft\Windows\CurrentVersion\Run`), forcing the session manager to timeout while trying to launch non-existent binaries.
 
 ---
 

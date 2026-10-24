@@ -18,6 +18,7 @@ theme: "Steel Silver Metallic"
 
 
 
+
 The clock on the wall of our NYC office read 9:40 AM. Exactly twenty minutes from now, our CEO was scheduled to hook up his laptop for the quarterly board meeting, projecting his screen onto a massive 4-meter display at the front of the room. He called me over to his desk, sweating through his suit jacket, pointing frantically at the bottom right corner of his monitor. There it was: that obnoxious, glowing translucent text staring right back at us—"Activate Windows. Go to Settings to activate Windows." 
 
 In front of a room full of venture capitalists and board members, projecting a machine with an unactivated OS watermark looks messy and unprofessional. He looked at me, dead serious, and whispered, "Fix it. Now."
@@ -32,11 +33,11 @@ In front of a room full of venture capitalists and board members, projecting a m
 
 When faced with this annoying overlay, most panicked sysadmins or office workers make classic mistakes that waste precious minutes:
 
-1. Wasting Time in Settings:Clicking frantically throughSettings > Update & Security > Activation only to find a generic error code because the corporate VPN hasn't synced with the KMS host yet.
+### 1. Wasting Time in Settings:Clicking frantically throughSettings > Update & Security > Activation only to find a generic error code because the corporate VPN hasn't synced with the KMS host yet.
 
-2. Downloading Shady Third-Party Tools: Grabbing sketchy "watermark remover" executables from random internet forums, which immediately trigger Windows Defender or, worse, inject unwanted adware right before a high-stakes meeting.
+### 2. Downloading Shady Third-Party Tools: Grabbing sketchy "watermark remover" executables from random internet forums, which immediately trigger Windows Defender or, worse, inject unwanted adware right before a high-stakes meeting.
 
-3. Endless Reboots: Restarting the Explorer process or rebooting the machine repeatedly, hoping the desktop rendering engine will magically drop the overlay layer. 
+### 3. Endless Reboots: Restarting the Explorer process or rebooting the machine repeatedly, hoping the desktop rendering engine will magically drop the overlay layer. 
 
 None of these work under tight pressure. What we actually needed was a direct, built-in system command to stop the desktop notification service from rendering the watermark text overlay, keeping the machine stable for the presentation.
 

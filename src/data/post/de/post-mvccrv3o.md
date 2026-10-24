@@ -18,6 +18,7 @@ theme: "Nordic Clean Ice"
 
 
 
+
 Es war exakt 21:45 Uhr an einem Donnerstagabend in unserem Berliner Tech-Hub im Prenzlauer Berg. Wir standen kurz vor dem finalen Rollout unserer neuen Microservices-Infrastruktur, als auf dem Haupt-Build-Server plötzlich der berüchtigte blaue Bildschirm flackerte: STOP 0x0000000
 
 a: IRQL_NOT_LESS_OR_EQUAL. 
@@ -34,11 +35,11 @@ Keine Vorwarnung, kein sanftes Herunterfahren, einfach harter Kernel-Absturz. De
 
 Bevor wir blind anfangen, Schraubenzieher zu schwingen oder das System neu aufzusetzen, müssen wir die echten Flaschenhälse identifizieren:
 
-1. Inkompatible oder beschädigte Treiber: Häufig nach einem automatischen Windows-Update eingespielt, bei dem Netzwerkkarten- oder Chipsatztreiber quergeschossen haben.
+### 1. Inkompatible oder beschädigte Treiber: Häufig nach einem automatischen Windows-Update eingespielt, bei dem Netzwerkkarten- oder Chipsatztreiber quergeschossen haben.
 
-2. Defekter oder instabiler Arbeitsspeicher (RAM): Ein physikalischer Defekt der Speicherriegel oder falsche XMP/EXPO-Profil-Timings im UEFI.
+### 2. Defekter oder instabiler Arbeitsspeicher (RAM): Ein physikalischer Defekt der Speicherriegel oder falsche XMP/EXPO-Profil-Timings im UEFI.
 
-3. Konflikte mit Hintergrunddiensten: Antiviren-Software oder Low-Level-Systemtools, die sich tief in den Windows-Kernel eingraben.
+### 3. Konflikte mit Hintergrunddiensten: Antiviren-Software oder Low-Level-Systemtools, die sich tief in den Windows-Kernel eingraben.
 
 ---
 
@@ -77,7 +78,7 @@ Manchmal hinterlässt der Absturz beschädigte Systemdateien. Das lässt sich sc
 
 2. Tippen Sie den Befehl `DISM.exe /Online /Cleanup-image /Restorehealth` ein und drücken Sie Enter.
 
-3. Geben Sie im Anschluss den Klassiker ein: `sfc /scannow`.
+### 3. Geben Sie im Anschluss den Klassiker ein: `sfc /scannow`.
 
 4. Warten Sie, bis der Scan abgeschlossen ist, und starten Sie das System neu.
 

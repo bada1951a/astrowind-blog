@@ -18,6 +18,7 @@ theme: "Nordic Clean Ice"
 
 
 
+
 Eran las siete de la tarde en las Torres Kio, en pleno distrito financiero de Madrid. Estábamos a pocas horas de cerrar el ejercicio fiscal, con la tensión cortándose en el ambiente, cuando mi equipo de contabilidad empezó a emitir alertas de voz automatizadas y pitidos de validación que de repente... enmudecieron por completo. Justo en el momento más crítico, cuando necesitábamos cruzar los datos de un año entero de hojas de cálculo de Excel con el sistema central del ERP corporativo, el ordenador principal se quedó totalmente mudo. No podíamos escuchar las alertas de discrepancias ni las llamadas de confirmación del departamento financiero.
 
 El pánico se apoderó de la oficina. En medio del estrés por cumplir con los plazos de la auditoría, los compañeros empezaron a desconectar los auriculares, a reiniciar el PC a lo loco y a golpear ligeramente el puerto Jack de 3.5mm pensando que era un fallo físico de los cascos. Por supuesto, eso solo empeoró las cosas y nos hizo perder valiosos minutos valiosos. Como técnico de sistemas de la casa, me tocó intervenir de inmediato para aplicar una solución rápida, limpia y definitiva en Windows 11 sin perder ni un solo dato del cierre contable.
@@ -36,11 +37,11 @@ Antes de lanzarnos a tocar botones, es fundamental entender qué falló bajo el 
 
 a:
 
-1. Conflicto de actualizaciones acumulativas: Una actualización reciente de Windows Update suele sobrescribir o desconfigurar la ruta de los controladores de audio genéricos (Realtek o Intel Smart Sound), dejando al sistema sin la asignación correcta del dispositivo de salida.
+### 1. Conflicto de actualizaciones acumulativas: Una actualización reciente de Windows Update suele sobrescribir o desconfigurar la ruta de los controladores de audio genéricos (Realtek o Intel Smart Sound), dejando al sistema sin la asignación correcta del dispositivo de salida.
 
-2. Silenciamiento automático por periféricos Bluetooth: Si el usuario conectó unos auriculares inalámbricos por la mañana y los apagó mal, Windows 11 se queda "pensando" que el audio sigue saliendo por un canal Bluetooth inexistente.
+### 2. Silenciamiento automático por periféricos Bluetooth: Si el usuario conectó unos auriculares inalámbricos por la mañana y los apagó mal, Windows 11 se queda "pensando" que el audio sigue saliendo por un canal Bluetooth inexistente.
 
-3. Servicios de audio detenidos: El motor de audio central de Windows (Windows Audio y Windows Audio Endpoint Builder) se queda colgado debido a un pico de memoria RAM en aplicaciones pesadas como Excel o software ERP.
+### 3. Servicios de audio detenidos: El motor de audio central de Windows (Windows Audio y Windows Audio Endpoint Builder) se queda colgado debido a un pico de memoria RAM en aplicaciones pesadas como Excel o software ERP.
 
 ---
 

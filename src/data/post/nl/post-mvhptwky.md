@@ -18,6 +18,7 @@ theme: "Forest Emerald Bio"
 
 
 
+
 Het is kwart voor negen 's ochtends in een glazen kantoorpand midden op de Zuidas in Amsterdam. Over vijftien minuten start de cruciale kwartaalpresentatie voor een grote klant, en mijn collega Jeroen staat lijkbleek achter zijn laptop. Hij probeert snel een zwaar logbestand te comprimeren en naar de map van de directeur te slepen, maar hij loopt vast. Door de nieuwe interface van Windows 11 moet hij telkens op "Meer opties weergeven" klikken om bij zijn vertrouwde WinRAR-menu te komen. Bij elke klik verspeelt hij kostbare seconden, de spanning stijgt en de frustratie spat ervan af. Een acute computerstoring tijdens de piekuren, precies wat je als IT-systeembeheerder niet kunt gebruiken.
 
 Dit scenario is herkenbaar voor menig kantoormedewerker sinds de introductie van Windows 11. Microsoft vond het nodig om het rechtermuisknop contextmenu te moderniseren en te verbergen achter een extra klik. Hartstikke mooi voor de minimalistische thuisgebruiker, maar rampzalig voor professionals die blind willen vertrouwen op hun vertrouwde tools zoals 7-Zip, Notepad++ of specifieke ERP-snelkoppelingen.
@@ -32,11 +33,11 @@ Dit scenario is herkenbaar voor menig kantoormedewerker sinds de introductie van
 
 Als hardware- en systeembeheerder zie ik dit soort veranderingen vaak met gemengde gevoelens aan. De root cause achter dit gedoe laat zich opsplitsen in drie technische factoren:
 
-1. Geheugen- en Resourcebeheer: In oudere Windows-versies laadde het contextmenu alle shell-extensies van derden (zoals Dropbox, WinRAR en virusscanners) direct in het geheugen zodra je rechtsklikte. Dat zorgde soms voor trage reacties of vastlopers van de Windows Verkenner (explorer.exe).
+### 1. Geheugen- en Resourcebeheer: In oudere Windows-versies laadde het contextmenu alle shell-extensies van derden (zoals Dropbox, WinRAR en virusscanners) direct in het geheugen zodra je rechtsklikte. Dat zorgde soms voor trage reacties of vastlopers van de Windows Verkenner (explorer.exe).
 
-2. Modernisering van de User Experience (UX): Microsoft wil af van de rommelige menus waarin decennia aan oude software zich heeft genesteld. Het nieuwe menu toont alleen de meest gebruikte acties zoals Kopiëren, Plakken, Hernoemen en Verwijderen.
+### 2. Modernisering van de User Experience (UX): Microsoft wil af van de rommelige menus waarin decennia aan oude software zich heeft genesteld. Het nieuwe menu toont alleen de meest gebruikte acties zoals Kopiëren, Plakken, Hernoemen en Verwijderen.
 
-3. Beveiliging en Isolatie: Door extensies te weren uit het hoofdmenu en ze te verbergen achter de "Meer opties weergeven"-laag, probeert Microsoft het systeem stabieler te houden tegen slecht geschreven software van externe leveranciers.
+### 3. Beveiliging en Isolatie: Door extensies te weren uit het hoofdmenu en ze te verbergen achter de "Meer opties weergeven"-laag, probeert Microsoft het systeem stabieler te houden tegen slecht geschreven software van externe leveranciers.
 
 ## Zo Haal Je Het Klassieke Menu Direct Terug (Stappenplan)
 
@@ -57,7 +58,7 @@ In het Register-venster zie je links een boomstructuur. Klik jezelf door naar de
 
 1. Klik met de rechtermuisknop op de map CLSID, kiesNieuwen daarnaSleutel.
 
-2. Geef deze nieuwe sleutel exact de volgende naam (inclusiefaccolades):
+### 2. Geef deze nieuwe sleutel exact de volgende naam (inclusiefaccolades):
 
    `{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}`
 

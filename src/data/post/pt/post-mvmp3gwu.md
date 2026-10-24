@@ -9,6 +9,7 @@ theme: "Deep Indigo System"
 ---
 
 
+
 ## 1. O Desespero do Momento e a Falha na Tela
 
 Era uma tarde típica de alta demanda aqui na Avenida Paulista, com o movimento intenso de escritórios corporativos ao redor. Eu estava executando uma query massiva no banco de dados de clientes na estação de trabalho principal, monitorando as tabelas e os logs de execução em tempo real para evitar qualquer gargalo de performance no cluster. De repente, notei um comportamento anômalo em um dos blocos de dados. Precisei registrar imediatamente a evidência visual daquele pico de uso para o relatório de auditoria e... apertei **Win + Shift + S**. 
@@ -20,8 +21,6 @@ O relógio correndo, a query rodando e o desespero batendo por não conseguir ti
 <div style="border-left: 4px solid #4338ca; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Dica do Especialista:</strong> Nunca subestime um atalho que parou de funcionar de repente. Geralmente, o problema não é o seu teclado físico, mas sim um processo travado em segundo plano ou uma atualização recente que corrompeu o registro do aplicativo de captura nativo do Windows 11.
 </div>
-
-
 
 ![Tech Troubleshooting Guide](/images/tech-photo/keyboard%20(12).png)
 
@@ -62,7 +61,7 @@ Muitas vezes, o atalho funciona, mas a notificação visual está desativada, da
 ### Passo 3: Reparar e Redefinir o Aplicativo nas Configurações
 Se o processo estiver corrompido, podemos forçar o Windows a reparar os arquivos do aplicativo sem perder dados.
 
-1. Abra as **Configurações** (**Win + I**).
+## 1. Abra as **Configurações** (**Win + I**).
 
 2. Navegue até **Aplicativos** > **Aplicativos instalados**.
 
@@ -77,7 +76,7 @@ Se nada disso funcionou, vamos reinstalar o pacote do aplicativo usando um coman
 
 1. Clique no menu Iniciar, digite **PowerShell**, clique com o botão direito em cima dele e escolha **Executar como Administrador**.
 
-2. Cole o seguinte comando na janela e aperte Enter:
+### 2. Cole o seguinte comando na janela e aperte Enter:
 
 ```powershell
 Get-AppxPackage *ScreenSketch* -AllUsers | Foreach {Add-AppxPackage -DisableDevelopmentMode -Register "(_.InstallLocation)\AppXManifest.xml"}

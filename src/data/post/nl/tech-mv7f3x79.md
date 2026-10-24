@@ -18,6 +18,7 @@ theme: "Midnight Navy Royal"
 
 
 
+
 Tijdens een nachtdienst op de IT-infrastructuurdesk van een corporate kantoor in Amsterdam zag ik de tickets plotseling binnenstromen: direct na de uitrol van een cumulatieve Windows 11-update via ons WSUS-platform meldden tientallen gebruikers die 's ochtends vroeg inlogden identieke symptomen. Laptops aangesloten op Thunderbolt 4-dockingstations gaven massaal de melding "Geen signaal" op het primaire externe beeldscherm, terwijl het secundaire scherm om de vier seconden zwart knipperde. 
 
 Wanneer een gebruiker geconfronteerd wordt met een knipperend beeldscherm of een volslagen gebrek aan videosignaal op een tweede of derde monitor, grijpt men vrijwel altijd direct naar de fysieke bekabeling. In meer dan 85% van de zakelijke incidenten die ik behandel, is de hardware echter kerngezond. Het probleem ligt dieper: een vastgelopen DisplayPort-handshake, corrupte DCH-stuurprogrammabestanden of een bandbreedteconflict in het subsysteem van de grafische processor (GPU). 
@@ -68,7 +69,7 @@ Signaalverlies/Knipperen gedetecteerd
 ### Stap 1: De Snelle Herstart van de Graphics Pipeline
 Voordat we diep in het register duiken, dwingen we het Desktop Window Manager (DWM) subsysteem om de beeldschermadapter opnieuw te initialiseren.
 
-1. Gebruik de sneltoets: Windows-toets + Ctrl + Shift + B.
+### 1. Gebruik de sneltoets: Windows-toets + Ctrl + Shift + B.
 
 2. Het scherm knippert eenmaal kort en je hoort een akoestische pieptoon van het besturingssysteem. Dit herstart de grafische pipeline en wist de actieve framebuffer zonder dat actieve applicaties worden afgesloten.
 

@@ -18,6 +18,7 @@ theme: "Sandstone Desert Minimal"
 
 
 
+
 Sebagai seorang teknisi IT yang sering menangani inventaris periferal di lingkungan kantor dan lab komputasi, pemandangan keyboard mekanikal yang "dibuang" ke gudang karena tombolnya mengetik ganda (*chattering*) atau macet (*miss-click*) adalah hal yang lumrah. Keluhan yang masuk ke meja kerja saya biasanya seragam: tombol spasi tiba-tiba melompat dua kali, atau huruf "W" dan "A" mendadak tidak merespons saat dipakai kerja maupun bermain game. 
 
 Banyak pengguna beranggapan bahwa ketika switch mekanikal mulai bertingkah, solusinya hanyalah membeli keyboard baru atau melakukan desoldering total yang merepotkan. Faktanya, sekitar 85% kasus kerusakan tombol keyboard mekanikal yang saya tangani di lapangan murni disebabkan oleh degradasi titik kontak tembaga akibat oksidasi mikro dan debu, bukan karena kerusakan mekanis permanen. 
@@ -26,7 +27,7 @@ Panduan ini saya susun berdasarkan protokol pemeliharaan perangkat keras mandiri
 
 ---
 
-1. Analisis Akar Masalah: Mengapa Switch Bertingkah?
+### 1. Analisis Akar Masalah: Mengapa Switch Bertingkah?
 
 <div style="background-color: #fdfcfb; border-left: 4px solid #a16207; padding: 8px 16px; margin: 10px 0 20px 0; font-size: 0.92rem; color: #78350f; font-weight: 500;">
 💡 <b>Inti Masalah:</b> Kerusakan switch mekanikal non-fisik hampir selalu berakar pada kotoran mikroskopis di pelat kontak atau degradasi sinyal elektrik.
@@ -71,7 +72,7 @@ Sebelum melangkah ke perbaikan kimiawi, pastikan masalah tersebut bukan disebabk
 
 ```
 
-1. Uji Kecepatan Input pada Switch Tester: Buka aplikasi uji input seperti *Keyboard Key Info* atau situs *keyboard-tester.com*. Periksa tombol yang bermasalah. Amati apakah nilai latensi menunjukkan angka di bawah 10 ms secara stabil atau terjadi *burst* input ganda dalam selang 1-2 ms.
+### 1. Uji Kecepatan Input pada Switch Tester: Buka aplikasi uji input seperti *Keyboard Key Info* atau situs *keyboard-tester.com*. Periksa tombol yang bermasalah. Amati apakah nilai latensi menunjukkan angka di bawah 10 ms secara stabil atau terjadi *burst* input ganda dalam selang 1-2 ms.
 
 ## 2. Periksa Integrasi di Device Manager:
 
@@ -79,7 +80,7 @@ Sebelum melangkah ke perbaikan kimiawi, pastikan masalah tersebut bukan disebabk
    - Perluas menu Keyboards. Klik kanan pada perangkat Anda (sering kali terdaftar sebagai *HID Keyboard Device*), lalu pilih Properties.
    - Periksa status perangkat pada tab *General*. Jika muncul kode galat (*Error Code 10/43*), lakukan klik kanan lalu pilih Uninstall device, lalu cabut dan tancapkan kembali kabel USB keyboard agar Windows memuat ulang driver standar.
 
-3. Pindahkan Jalur Port USB: Hubungkan keyboard langsung ke port USB belakang motherboard (bukan melalui USB Hub monitor atau casing depan) untuk menyingkirkan kemungkinan kekurangan daya (*undervoltage*).
+### 3. Pindahkan Jalur Port USB: Hubungkan keyboard langsung ke port USB belakang motherboard (bukan melalui USB Hub monitor atau casing depan) untuk menyingkirkan kemungkinan kekurangan daya (*undervoltage*).
 
 ---
 
@@ -100,11 +101,11 @@ Jangan sembarangan menggunakan kaleng semprotan. Anda memerlukan Electronic Cont
 
 ### Tahap 2: Pembongkaran Ringan (Area Tombol Bermasalah)
 
-1. Putuskan Aliran Listrik: Cabut kabel keyboard dari PC. Jika menggunakan keyboard nirkabel (Wireless/Bluetooth), matikan sakelar baterai utama di bagian bawah.
+### 1. Putuskan Aliran Listrik: Cabut kabel keyboard dari PC. Jika menggunakan keyboard nirkabel (Wireless/Bluetooth), matikan sakelar baterai utama di bagian bawah.
 
-2. Lepaskan Keycap: Gunakan wire keycap puller. Tarik lurus ke atas agar stem switch tidak patah.
+### 2. Lepaskan Keycap: Gunakan wire keycap puller. Tarik lurus ke atas agar stem switch tidak patah.
 
-3. Bersihkan Area Sekitar: Gunakan kuas anti-statis atau *canned air* untuk meniup kotoran, rambut, dan remah-remah di sekeliling housing switch agar tidak ikut terseret masuk saat cairan disemprotkan.
+### 3. Bersihkan Area Sekitar: Gunakan kuas anti-statis atau *canned air* untuk meniup kotoran, rambut, dan remah-remah di sekeliling housing switch agar tidak ikut terseret masuk saat cairan disemprotkan.
 
 ### Tahap 3: Metode Penetrasi Tanpa Solder (Metode Batang Stem)
 Jika keyboard Anda menggunakan switch tersolder (*soldered board*) dan Anda tidak ingin membongkar sasis total, gunakan metode suntik celah ini:

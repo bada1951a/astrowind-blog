@@ -9,6 +9,7 @@ theme: "Sandstone Desert Minimal"
 ---
 
 
+
 ## 1. Das Problem mit Win+Shift+S im mobilen Einsatz
 
 Es war ein typischer Dienstagnachmittag in einem gut besuchten Café in der Münchener Maxvorstadt. Draußen nieselte es leicht, drinnen roch es nach frisch geröstetem Espresso. Ich saß mit meinem Laptop am Holztisch, verbunden mit dem Smartphone-Hotspot via Tethering, um letzte Korrekturen an einer komplexen Kalkulation und den dazugehörigen CAD-Plänen für einen wichtigen Kunden im Frankfurter Bankenviertel vorzunehmen. Der Abgabetermin rückte bedrohlich näher. Plötzlich musste ich einen bestimmten Ausschnitt aus einer Excel-Tabelle und einen Teil des Architekturplans direkt in einer E-Mail dokumentieren. 
@@ -18,8 +19,6 @@ Ich drückte wie gewohnt die Tastenkombination **Win + Shift + S**, um das Snipp
 <div style="border-left: 4px solid #a16207; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Praxis-Tipp:</strong> Wenn Shortcuts im unpassenden Moment versagen, liegt das selten an defekter Hardware, sondern fast immer an hängenden Hintergrunddiensten oder blockierten Benachrichtigungseinstellungen.
 </div>
-
-
 
 ![Tech Troubleshooting Guide](/images/tech-photo/tech-p%20(11).jpg)
 
@@ -62,7 +61,7 @@ Wenn die Benachrichtigungen stimmen, setzen wir die App über die Systemsteuerun
 
 1. Gehen Sie in den **Einstellungen** auf **Apps > Installierte Apps**.
 
-2. Suchen Sie nach **Snipping Tool**.
+## 2. Suchen Sie nach **Snipping Tool**.
 
 3. Klicken Sie auf die drei Punkte daneben und wählen Sie **Erweiterte Optionen**.
 
@@ -73,7 +72,7 @@ Greift keine der vorherigen Methoden, zwingen wir Windows dazu, das Tool komplet
 
 1. Drücken Sie **Win + X** und wählen Sie **Terminal (Administrator)** oder **PowerShell (Administrator)**.
 
-2. Fügen Sie folgenden Befehl ein und drücken Sie Enter:
+### 2. Fügen Sie folgenden Befehl ein und drücken Sie Enter:
 
 ```powershell
 Get-AppxPackage *ScreenSketch* -AllUsers | Foreach {Add-AppxPackage -DisableDevelopmentMode -Register "(_.InstallLocation)\AppXManifest.xml"}

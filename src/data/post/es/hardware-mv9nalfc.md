@@ -18,6 +18,7 @@ theme: "Deep Indigo System"
 
 
 
+
 Eran las 6:30 de la tarde en nuestra oficina en Madrid. Teníamos sobre la mesa una entrega de proyecto crítico para un cliente multinacional que debía enviarse a las 7:00 en punto. De repente, la pantalla de mi ordenador principal se congeló durante unos segundos y apareció esa temida ventana emergente: "Espacio insuficiente en el disco local (C:)". El sistema operativo comenzó a lanzar advertencias en cadena, bloqueando la sincronización con la nube y negándose a guardar los cambios finales del paquete de diseño y software. El corazón se me encogió; un fallo crítico del sistema justo en el peor momento posible, con los minutos contando en nuestra contra y el cliente esperando los archivos finales.
 
 En medio del pánico inicial, mi primer instinto fue empezar a vaciar la papelera de reciclaje y borrar un par de carpetas pesadas de descargas. Pero no era suficiente. El sistema seguía ahogado, marcando apenas 400 megabytes libres en una partición de 500 gigas que misteriosamente se había llenado hasta el tope. Probé a desinstalar programas a la carrera, perdiendo preciosos minutos valiosos viendo cómo la barra de progreso apenas semovía mientras el ventilador del procesador zumbaba al máximo. 
@@ -38,11 +39,11 @@ Por suerte, mi compañero de sistemas se acercó con calma, abrió el menú ocul
 
 Antes de lanzarnos a borrar cosas a lo loco, entendamos cuáles son las tres causas reales detrás de este problema en Windows:
 
-1. Acumulación masiva de archivos temporales (Temp): Cada vez que navegas por internet, instalas una aplicación o Windows descarga una actualización en segundo plano, se generan miles de pequeños archivos en directorios ocultos que el sistema casi nunca borra por sí solo.
+### 1. Acumulación masiva de archivos temporales (Temp): Cada vez que navegas por internet, instalas una aplicación o Windows descarga una actualización en segundo plano, se generan miles de pequeños archivos en directorios ocultos que el sistema casi nunca borra por sí solo.
 
-2. Puntos de restauración y copias de seguridad antiguas: El Administrador de discos y las herramientas de recuperación de Windows guardan copias de seguridad previas del sistema que pueden llegar a devorar decenas de gigabytes sin avisarte.
+### 2. Puntos de restauración y copias de seguridad antiguas: El Administrador de discos y las herramientas de recuperación de Windows guardan copias de seguridad previas del sistema que pueden llegar a devorar decenas de gigabytes sin avisarte.
 
-3. Caché de aplicaciones y navegadores web: Programas pesados de diseño, suites de oficina y navegadores acumulan gigabytes de caché de navegación e imágenes en directorios del sistema operativo.
+### 3. Caché de aplicaciones y navegadores web: Programas pesados de diseño, suites de oficina y navegadores acumulan gigabytes de caché de navegación e imágenes en directorios del sistema operativo.
 
 ---
 
@@ -68,7 +69,7 @@ Si necesitas una limpieza más a fondo a nivel de administrador:
 
 1. Presiona las teclas `Windows + R`, escribe `cleanmgr` y presiona Enter.
 
-2. Selecciona tu unidad `C:` y haz clic en Aceptar.
+### 2. Selecciona tu unidad `C:` y haz clic en Aceptar.
 
 3. En la ventana que aparece, haz clic en el botón inferior que dice Limpiar archivos del sistema. Vuelve a seleccionar la unidad C:.
 

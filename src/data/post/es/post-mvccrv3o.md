@@ -18,6 +18,7 @@ theme: "Dark Velvet Obsidian"
 
 
 
+
 Eran las 18:30 en nuestra oficina del 22@ en Barcelona. Estábamos a menos de cuarenta y ocho horas del despliegue final de nuestra plataforma SaaS principal antes del lanzamiento oficial, cuando la estación de trabajo principal del equipo de arquitectura se quedó completamente congelada. De repente, el monitor principal se volvió de un azul intenso y apareció el temido código de error: IRQL_NOT_LESS_OR_EQUALcon el identificador0x0000000
 
 a. Justo en medio de una compilación pesada y con el cliente respirándonos en la nuca a través de Slack, el equipo se quedó en silencio. No podíamos permitirnos formatear ni perder los entornos de contenedores configurados para la demo del día siguiente.
@@ -31,11 +32,11 @@ a. Justo en medio de una compilación pesada y con el cliente respirándonos en 
 
 Para solucionar este fallo de inmediato sin perder tiempo probando soluciones aleatorias, debemos entender qué lo desencadenó:
 
-1. Controladores obsoletos o mal firmados: Una actualización reciente de Windows Update o la instalación manual de un driver de red o de vídeo no certificado suele corromper las tablas de interrupciones del kernel.
+### 1. Controladores obsoletos o mal firmados: Una actualización reciente de Windows Update o la instalación manual de un driver de red o de vídeo no certificado suele corromper las tablas de interrupciones del kernel.
 
-2. Inestabilidad en los módulos de memoria RAM (XMP/EXPO): Perfiles de velocidad excesivos en la BIOS o microfisuras en los DIMMs que provocan fallos de lectura silenciosos que el kernel detecta de forma fatal.
+### 2. Inestabilidad en los módulos de memoria RAM (XMP/EXPO): Perfiles de velocidad excesivos en la BIOS o microfisuras en los DIMMs que provocan fallos de lectura silenciosos que el kernel detecta de forma fatal.
 
-3. Servicios de terceros en conflicto: Antivirus corporativos o herramientas de virtualización de bajo nivel que intentan engancharse a zonas de memoria protegidas durante procesos de alta carga de E/S.
+### 3. Servicios de terceros en conflicto: Antivirus corporativos o herramientas de virtualización de bajo nivel que intentan engancharse a zonas de memoria protegidas durante procesos de alta carga de E/S.
 
 ---
 

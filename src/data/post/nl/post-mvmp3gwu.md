@@ -9,6 +9,7 @@ theme: "Deep Ocean Cobalt"
 ---
 
 
+
 ## 1. De Paniek in de Vergaderruimte
 
 Laatst stond ik voor een flinke uitdaging. Ik was af gereisd naar een regionaal kantoor ergens in het land voor een belangrijke strategische sessie. Net toen ik ter plekke in de vergaderruimte mijn laptop aansloot op een ietwat verouderde externe monitor en een overijverige projector, liep ik tegen een typische frustratie aan. Ik wilde snel een belangrijk configuratieschema vastleggen van het scherm met de bekende sneltoets **Win + Shift + S**, maar er gebeurde helemaal niets. Geen schermverduistering, geen melding in het actiecentrum, en het Knipprogramma (Snipping Tool) leek volledig te slapen. 
@@ -18,8 +19,6 @@ In zo'n hectische situatie, met een groep collega's die direct resultaat verwach
 <div style="border-left: 4px solid #2563eb; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Pro-tip voor onderweg:</strong> Externe monitoren en projectors sturen soms onjuiste EDID-signalen door naar Windows, waardoor grafische overlay-functies zoals het Knipprogramma tijdelijk blokkeren. Een snelle herstart van het proces via Taakbeheer lost dit vaak direct op.
 </div>
-
-
 
 ![Tech Troubleshooting Guide](/images/tech-photo/bsod%20(10).png)
 
@@ -62,7 +61,7 @@ Het kan zijn dat de app geen toestemming heeft om op de achtergrond te draaien o
 ### Stap 3: Sneltoets koppelen aan de Print Screen-toets als alternatief
 Als de toetscombinatie hardnekkig weigert op een specifieke laptop, kun je de functionaliteit direct toewijzen aan een fysieke knop.
 
-1. Open **Instellingen** (**Win + I**).
+## 1. Open **Instellingen** (**Win + I**).
 
 2. Navigeer naar **Toegankelijkheid** en klik op **Toetsenbord**.
 

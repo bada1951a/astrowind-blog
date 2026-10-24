@@ -18,6 +18,7 @@ theme: "Acid Lime Hacker Space"
 
 
 
+
 Eran las 8:55 AM, a solo cinco minutos de que el *Director General* entrara a la sala de juntas para una presentación global con inversores. El pobre Carlos, de finanzas, me llama por Teams con la voz quebrad
 
 a: su ThinkPad se había quedado congelado en la pantalla de bienvenida con la rueda de carga dando vueltas eternas. El ventilador parecía un motor de Boeing 747 a punto de despegar, y el tipo sudaba frío mirando el reloj. Si esa máquina no arrancaba en tres minutos, la reunión se caía y mi cabeza rodaba por el pasillo.
@@ -34,11 +35,11 @@ a: su ThinkPad se había quedado congelado en la pantalla de bienvenida con la r
 
 En el mundo real de la oficina, los cuellos de botella del arranque se deben casi siempre a tres villanos habituales:
 
-1. La plaga de daemons residentes: Cada aplicación que instalas (Teams, Slack, Adobe Updater, OneDrive, el maldito gestor de la impresora HP) cree que es el centro del universo y se auto-añade al registro de Windows para ejecutarse en segundo plano antes de que el usuario siquiera toque el teclado.
+### 1. La plaga de daemons residentes: Cada aplicación que instalas (Teams, Slack, Adobe Updater, OneDrive, el maldito gestor de la impresora HP) cree que es el centro del universo y se auto-añade al registro de Windows para ejecutarse en segundo plano antes de que el usuario siquiera toque el teclado.
 
-2. Servicios huérfanos y parches de firmware obsoletos: Placas base con UEFI/BIOS desactualizadas que gestionan mal los estados de energía C-State y la inicialización de dispositivos NVMe.
+### 2. Servicios huérfanos y parches de firmware obsoletos: Placas base con UEFI/BIOS desactualizadas que gestionan mal los estados de energía C-State y la inicialización de dispositivos NVMe.
 
-3. El desgaste lógico del almacenamiento: Un SSD sin espacio para *over-provisioning* o con sectores lógicos pidiendo auxilio debido a fragmentaciones crónicas en particiones mal dimensionadas.
+### 3. El desgaste lógico del almacenamiento: Un SSD sin espacio para *over-provisioning* o con sectores lógicos pidiendo auxilio debido a fragmentaciones crónicas en particiones mal dimensionadas.
 
 ---
 

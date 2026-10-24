@@ -18,6 +18,7 @@ theme: "Cobalt Enterprise Lab"
 
 
 
+
 Il est 14h30 dans notre bureau tech à Paris, la tension est palpable. Nous sommes en plein sprint critique pour le déploiement de notre nouvelle application interne, et soudain, catastrophe : sur ma station de travail principale, impossible de cliquer sur quoi que ce soit dans la barre des tâches. Le menu Démarrer reste sourd à mes clics, l'icône de Slack clignote sans que je puisse basculer sur la conversation de l'équipe, et mes fenêtres ouvertes sont comme piégées. Pour un ingénieur en pleines livraisons de code, avoir une barre des tâches de Windows 11 totalement gelée, c'est l'équivalent numérique d'un arrêt cardiaque en plein marathon.
 
 <div style="border-left: 4px solid #1e40af; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
@@ -32,9 +33,9 @@ Après avoir analysé ce comportement à plusieurs reprises lors de nos sessions
 
 1. Le processus Explorateur Windows (Explorer.exe) en état de mort cérébrale : C'est le cœur de l'interface graphique de Windows. S'il plante ou entre en boucle de charges, la barre des tâches cesse de répondre instantanément.
 
-2. Le cache du menu Démarrer et des applications XAML corrompu : Windows 11 s'appuie fortement sur des composants d'interface modernes. Une mise à jour en arrière-plan ou un plantage de processus peut corrompre ces éléments visuels.
+### 2. Le cache du menu Démarrer et des applications XAML corrompu : Windows 11 s'appuie fortement sur des composants d'interface modernes. Une mise à jour en arrière-plan ou un plantage de processus peut corrompre ces éléments visuels.
 
-3. Conflits de services tiers ou pilotes graphiques : Une application résiduelle dans la zone de notification ou un pilote d'affichage instable peut bloquer le thread principal de la barre des tâches.
+### 3. Conflits de services tiers ou pilotes graphiques : Une application résiduelle dans la zone de notification ou un pilote d'affichage instable peut bloquer le thread principal de la barre des tâches.
 
 ---
 
@@ -64,7 +65,7 @@ Si le simple redémarrage de l'explorateur ne suffit pas, il faut réenregistrer
 
 2. Cliquez sur le menu Fexions en haut à droite (ou "Exécuter une nouvelle tâche").
 
-3.  Tapez `powershell` dans la boîte de dialogue.
+## 3.  Tapez `powershell` dans la boîte de dialogue.
 
 4. Important :Cochez la caseCréer cette tâche avec des privilèges d'administrateur, puis validez par Entrée.
 
@@ -82,7 +83,7 @@ Si le problème persiste, des fichiers système essentiels liés à l'interface 
 
 1. Ouvrez à nouveau le Gestionnaire des tâches, créez une nouvelle tâche en tant qu'administrateur, et tapez `cmd` (Invite de commandes).
 
-2. Tapez la commande de vérification système de base :
+### 2. Tapez la commande de vérification système de base :
 
    ```cmd
    sfc /scannow

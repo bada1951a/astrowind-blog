@@ -18,6 +18,7 @@ theme: "Acid Lime Hacker Space"
 
 
 
+
 Jam sudah menunjukkan pukul 16:50 WIB. Hari Jumat sore, minggu penutupan laporan bulanan, dan *big boss* baru saja kirim pesan singkat via WhatsApp: *"Meeting jam 5 sore ini kita pakai ruang utama ya, presentasi data lo udah siap kan?"* Jantung langsung copot. Pas saya buru-buru pencet tombol power PC meja kerja, kipas *case* nyala bergemuruh, lampu RGB *motherboard* kedap-kedip sok ganteng, tapi... layar monitor *dead silent*. Kosong melompong dengan tulisan ikonik: "No Signal". 
 
 Mau teriak tapi malu sama anak-anak *dev* sebelah. Mau reboot paksa sampai lima kali hasilnya tetap sam
@@ -32,11 +33,11 @@ a: mesin hidup, angin AC CPU muter kenceng, tapi display nihil. Buat ukuran anak
 
 Sebelum main bongkar, kita bedah dulu kenapa hardware ini suka bikin darah tinggi. Berdasarkan pengalaman ngeberesin ratusan unit PC kantor dan server, 90% kasus "kipas nyala tapi layar gelap" bukan karena VGA atau prosesor jebol, melainkan tiga tersangka utama ini:
 
-1. Oksidasi & Debu Mikro di Kuningan RAM: Udara ruangan kantor yang ber-AC kadang bikin kelembapan terjebak di dalam *casing*. Hasilnya? Lapisan tipis kayak karat putih alias oksidasi nutupin jalur data emas di kepingan RAM (*Golden Finger*). BIOS gagal baca modul memori, alhasil POST (*Power-On Self-Test*) nyangkut di tengah jalan.
+### 1. Oksidasi & Debu Mikro di Kuningan RAM: Udara ruangan kantor yang ber-AC kadang bikin kelembapan terjebak di dalam *casing*. Hasilnya? Lapisan tipis kayak karat putih alias oksidasi nutupin jalur data emas di kepingan RAM (*Golden Finger*). BIOS gagal baca modul memori, alhasil POST (*Power-On Self-Test*) nyangkut di tengah jalan.
 
-2. Slot RAM "Masuk Angin" atau Longgar: Getaran halus dari meja kerja atau kipas *heatsink* yang terlalu berat sering bikin slot DIMM di *motherboard* sedikit melar atau kotor di bagian pin dalamnya.
+### 2. Slot RAM "Masuk Angin" atau Longgar: Getaran halus dari meja kerja atau kipas *heatsink* yang terlalu berat sering bikin slot DIMM di *motherboard* sedikit melar atau kotor di bagian pin dalamnya.
 
-3. Static Electricity (Listrik Statis): Sisa-sisa arus listrik yang nongkrong di kapasitor *motherboard* bikin sistem proteksi *power supply* atau chipset nge-lock sinyal display demi keamanan komponen.
+### 3. Static Electricity (Listrik Statis): Sisa-sisa arus listrik yang nongkrong di kapasitor *motherboard* bikin sistem proteksi *power supply* atau chipset nge-lock sinyal display demi keamanan komponen.
 
 ---
 

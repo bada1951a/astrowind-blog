@@ -18,6 +18,7 @@ theme: "Deep Indigo System"
 
 
 
+
 Lunedì mattina, ore 8:55. Sono seduto alla mia scrivania nella nostra sede di Milano, con il caffè fumante ancora intatto, quando il responsabile commerciale mi si avvicina con la faccia di chi ha un'emergenz
 
 a: "Il portatile aziendale ci mette dieci minuti solo per accendersi, non riesco ad aprire neanche Teams per il meeting delle nove con i clienti!". Una scena che, se lavori nel settore IT o gestisci un'infrastruttura, ti farà sicuramente scattare un campanello d'allarme familiare. Il problema non è l'hardware obsoleto, ma la quantità industriale di applicazioni che si caricano silenziosamente in background nel momento esatto in cui premi il tasto di accensione.
@@ -36,11 +37,11 @@ a: Perché Windows 10 rallenta all'avvio?
 
 Prima di mettere mano al sistema, capiamo cosa sta succedendo sotto il cofano. Nella mia esperienza quotidiana di ottimizzazione delle prestazioni, ho notato che i rallentamenti in fase di boot sono quasi sempre causati da tre fattori precisi:
 
-1. Effetto "Coda Indiana" dei software superflui: Ogni volta che installi un programma (Spotify, Adobe Acrobat, OneDrive, Steam), questo imposta automaticamente un gancio nel sistema di avvio. Moltiplica per venti applicazioni e avrai il disco fisso saturo di richieste I/O nei primi secondi di vita del sistema.
+### 1. Effetto "Coda Indiana" dei software superflui: Ogni volta che installi un programma (Spotify, Adobe Acrobat, OneDrive, Steam), questo imposta automaticamente un gancio nel sistema di avvio. Moltiplica per venti applicazioni e avrai il disco fisso saturo di richieste I/O nei primi secondi di vita del sistema.
 
-2. Servizi di aggiornamento in background: Molti programmi caricano i propri demoni di controllo aggiornamenti prima ancora che l'utente abbia visualizzato il desktop, consumando preziosa RAM.
+### 2. Servizi di aggiornamento in background: Molti programmi caricano i propri demoni di controllo aggiornamenti prima ancora che l'utente abbia visualizzato il desktop, consumando preziosa RAM.
 
-3. Frammentazione delle risorse: Un avvio congestionato satura la coda del disco, facendo impennare l'uso della CPU al 100% e rendendo il PC inutilizzabile per i primi 5-10 minuti.
+### 3. Frammentazione delle risorse: Un avvio congestionato satura la coda del disco, facendo impennare l'uso della CPU al 100% e rendendo il PC inutilizzabile per i primi 5-10 minuti.
 
 ## Come risolvere in 1 Minuto: La Procedura Passo-Passo
 
@@ -48,13 +49,13 @@ Non serve installare software terzi o utility di terze parti miracolose che spes
 
 Ecco la sequenza esatta da seguire per ripulire l'avvio in meno di sessanta secondi:
 
-1. Apri il Task Manager: Premi la combinazione di tasti `Ctrl + Shift + Esc` (oppure clicca con il tasto destro sulla barra delle applicazioni e seleziona "Gestione attività").
+### 1. Apri il Task Manager: Premi la combinazione di tasti `Ctrl + Shift + Esc` (oppure clicca con il tasto destro sulla barra delle applicazioni e seleziona "Gestione attività").
 
 ## 2. Espandi la finestr
 
 a: Se vedi una visualizzazione ridotta, clicca su "Più dettagli" in basso a sinistra per accedere alla vista avanzata.
 
-3. Vai alla scheda Avvio:Clicca sulla schedaAvvio nella barra superiore. Qui vedrai la lista completa dei programmi configurati per avviarsi insieme a Windows 10.
+### 3. Vai alla scheda Avvio:Clicca sulla schedaAvvio nella barra superiore. Qui vedrai la lista completa dei programmi configurati per avviarsi insieme a Windows 10.
 
 4. Analizza l'Impatto di avvio: Guarda la colonna "Impatto di avvio". I programmi etichettati come *Alto* o *Medio* sono i principali indiziati del tuo rallentamento.
 

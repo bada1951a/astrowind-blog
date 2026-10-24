@@ -18,6 +18,7 @@ theme: "Solarized Amber Warm"
 
 
 
+
 Jam 8 malam di kantor startup kawasan SCBD Jakarta. Tim *engineering* sedang bersiap merilis pembaruan besar sistem internal, tiba-tiba salah satu PC workstation utama yang menangani *deployment pipeline* mendadak mati total dan menampilkan layar biru pekat dengan kode *stop error* yang bikin jantungan: IRQL_NOT_LESS_OR_EQUALatau kode heksadesimal0x0000000
 
 a. Panik? Jelas. Pengerjaan sistem internal langsung tersendat karena mesin tersebut tidak mau masuk ke sistem operasi dan terus-menerus mengalami *reboot loop*.
@@ -36,9 +37,9 @@ a. Sembilan puluh persen kasus ini bisa diselesaikan lewat investigasi RAM fisik
 
 Sebelum masuk ke langkah perbaikan, mari kita bedah tiga penyebab utama yang sering ditemukan pada kasus operasional sehari-hari:
 
-1. Konflik Driver Perangkat Baru: Baru saja memperbarui *driver* kartu grafis, LAN card, atau *chipset* motherboard, tetapi versi tersebut tidak stabil atau tidak kompatibel dengan versi kernel Windows saat ini.
+### 1. Konflik Driver Perangkat Baru: Baru saja memperbarui *driver* kartu grafis, LAN card, atau *chipset* motherboard, tetapi versi tersebut tidak stabil atau tidak kompatibel dengan versi kernel Windows saat ini.
 
-2. Inkonsistensi atau Kerusakan Modul RAM: Ada sektor pada kepingan RAM yang mengalami *bad sector* atau pemasangan pin yang kurang klop setelah terkena getaran atau perubahan suhu ruangan server.
+### 2. Inkonsistensi atau Kerusakan Modul RAM: Ada sektor pada kepingan RAM yang mengalami *bad sector* atau pemasangan pin yang kurang klop setelah terkena getaran atau perubahan suhu ruangan server.
 
 ## 3. Layanan Latar Belakang Pihak Ketig
 

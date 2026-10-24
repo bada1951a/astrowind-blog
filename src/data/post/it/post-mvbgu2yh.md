@@ -18,6 +18,7 @@ theme: "Sunset Horizon Coral"
 
 
 
+
 Erano le 16:30 di un martedì pomeriggio frenetico nella nostra azienda IT a Milano, eravamo in pieno fermento per l'ottimizzazione delle prestazioni dell'infrastruttura di un cliente chiave, quando all'improvviso il mio monitor principale si è trasformato in un incubo: la barra delle applicazioni di Windows 11 si è completamente congelata. Cliccavo sul menu Start, cercavo di aprire le impostazioni rapide, premevo sulle icone delle app aperte, ma nulla. Zero risposta. Con tre call urgenti aperte su Teams e una scadenza imminente per il deploy dei nuovi server, non potevo certo permettermi di riavviare il PC perdendo venti minuti di sessioni di lavoro. 
 
 <div style="border-left: 4px solid #f97316; padding: 12px 16px; margin: 20px 0; background-color: rgba(249,115,22,0.05); border-radius: 4px; color: #111827;">
@@ -33,11 +34,11 @@ Dopo una rapida analisi, ho capito che non si trattava di un problema hardware, 
 
 Prima di mettere le mani in pasta con i comandi, capiamo cosa scatena questo fastidioso comportamento. I motivi principali sono tre:
 
-1. Esplora risorse (explorer.exe) in blocco: È il processo responsabile del rendering del desktop, delle finestre e della barra delle applicazioni. Se si blocca, la taskbar muore istantaneamente.
+### 1. Esplora risorse (explorer.exe) in blocco: È il processo responsabile del rendering del desktop, delle finestre e della barra delle applicazioni. Se si blocca, la taskbar muore istantaneamente.
 
-2. Conflitti con i pacchetti Xaml: La barra delle applicazioni di Windows 11 fa largo uso di componenti Xaml e Start Menu moderni. A volte la cache grafica o i servizi di background vanno in loop.
+### 2. Conflitti con i pacchetti Xaml: La barra delle applicazioni di Windows 11 fa largo uso di componenti Xaml e Start Menu moderni. A volte la cache grafica o i servizi di background vanno in loop.
 
-3. Aggiornamenti di Windows o driver video instabili: Patch cumulative non digerite correttamente dal sistema possono corrompere temporaneamente i file di interfaccia. ---
+### 3. Aggiornamenti di Windows o driver video instabili: Patch cumulative non digerite correttamente dal sistema possono corrompere temporaneamente i file di interfaccia. ---
 
 ## Guida passo-passo per risolvere il blocco della Taskbar
 

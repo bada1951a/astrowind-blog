@@ -18,6 +18,7 @@ theme: "Midnight Navy Royal"
 
 
 
+
 Chỉ còn đúng 15 phút nữa là đến cuộc họp tổng kết dự án quý tại văn phòng ở quận 1, TP.HCM. Sếp đã ngồi sẵn trong phòng họp, máy chiếu đang chờ, và tất cả tài liệu slide thuyết trình quan trọng đều nằm trong chiếc ổ cứng di động. Tôi cắm ổ cứng vào cổng USB của máy tính, nhưng màn hình hoàn toàn im lìm. Không có tiếng *ting-tong* quen thuộc, đèn LED trên ổ cứng nhấp nháy yếu ớt rồi tắt ngấm. Ngay lúc đó, một thông báo đỏ lòm hiện lên góc màn hình: "Low Disk Space - C Drive is almost full". Ổ C đỏ rực, dung lượng trống về mức 0 byte, khiến máy tính vừa chậm như rùa vừa không thể nhận diện thêm thiết bị ngoại vi do thiếu bộ nhớ ảo và cache hệ thống. Hít một hơi thật sâu, tôi bắt đầu cuộc chiến sửa lỗi "chữa cháy" ngay trên bàn làm việc giữa cái nóng oi ả của Sài Gòn.
 
 <div style="border-left: 4px solid #1d4ed8; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
@@ -28,11 +29,11 @@ Chỉ còn đúng 15 phút nữa là đến cuộc họp tổng kết dự án q
 
 Dựa trên hàng trăm ca cứu hộ máy tính văn phòng tại các tòa nhà cao ốc ở TP.HCM, tôi đúc kết ra ba thủ phạm chính gây ra cơn ác mộng này:
 
-1. Bộ nhớ đệm tạm thời (Temp Files) phình to quá mức: Sau nhiều tháng cập nhật Windows Update, duyệt web Chrome và chạy các file Excel nặng, thư mục Temp sinh ra hàng triệu file rác chiếm trọn dung lượng ổ C.
+### 1. Bộ nhớ đệm tạm thời (Temp Files) phình to quá mức: Sau nhiều tháng cập nhật Windows Update, duyệt web Chrome và chạy các file Excel nặng, thư mục Temp sinh ra hàng triệu file rác chiếm trọn dung lượng ổ C.
 
-2. Xung đột nguồn điện cổng USB (USB Root Hub Power Saving): Khi ổ C đầy, tính năng tiết kiệm năng lượng của Windows tự động ngắt nguồn điện cấp cho các cổng USB phía trước thùng máy (case) hoặc cổng thiếu ổn định, khiến ổ cứng ngoài không đủ điện để khởi động motor quay.
+### 2. Xung đột nguồn điện cổng USB (USB Root Hub Power Saving): Khi ổ C đầy, tính năng tiết kiệm năng lượng của Windows tự động ngắt nguồn điện cấp cho các cổng USB phía trước thùng máy (case) hoặc cổng thiếu ổn định, khiến ổ cứng ngoài không đủ điện để khởi động motor quay.
 
-3. Lỗi phân vùng hoặc mất ký tự ổ đĩa (Drive Letter Conflict): Ổ cứng ngoài vẫn kết nối nhưng do xung đột phân vùng ngầm, hệ điều hành không gán được tên ổ (như ổ D, ổ E), dẫn đến việc Explorer không hiển thị.
+### 3. Lỗi phân vùng hoặc mất ký tự ổ đĩa (Drive Letter Conflict): Ổ cứng ngoài vẫn kết nối nhưng do xung đột phân vùng ngầm, hệ điều hành không gán được tên ổ (như ổ D, ổ E), dẫn đến việc Explorer không hiển thị.
 
 ---
 

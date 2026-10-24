@@ -18,6 +18,7 @@ theme: "Cobalt Enterprise Lab"
 
 
 
+
 <div style="border-left: 4px solid #1e40af; padding: 14px 18px; margin: 20px 0; background-color: rgba(30, 64, 175, 0.04); border-radius: 4px;">
   <strong style="color: #1e40af; font-size: 1.05rem;">BÁO CÁO KỸ THUẬT PHÒNG THỬ NGHIỆM QA (ENTERPRISE LAB REPORT)</strong><br>
   <span style="font-size: 0.92rem; color: #334155;">Mã hồ sơ: <code>LAB-DISP-2026-V4</code> | Phân loại: Video Signal Integrity & Driver Stack Failure | Tỉ lệ lỗi ghi nhận trên 450 máy trạm doanh nghiệp: <strong>14.2%</strong> (Dell Latitude 5000/7000 Series, ThinkPad T/P Series, HP EliteBook).</span>
@@ -144,7 +145,7 @@ Giải pháp triệt tiêu hiện tượng màn hình phụ nhấp nháy khi lư
 
 1. Nhấn phím `Windows`, gõ `cmd`, nhấp chuột phải vào Command Promptvà chọnRun as administrator.
 
-2. Dán đoạn lệnh sau vào cửa sổ dòng lệnh để tạo khóa ghi đè cấu hình MPO:
+### 2. Dán đoạn lệnh sau vào cửa sổ dòng lệnh để tạo khóa ghi đè cấu hình MPO:
 
 ```cmd
 reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v OverlayTestMode /t REG_DWORD /d 00000005 /f
@@ -164,7 +165,7 @@ Nếu laptop của bạn từng cắm vào nhiều màn hình khác nhau (màn h
 
    `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\GraphicsDrivers`
 
-3. Tại nhánh này, bạn sẽ thấy ba thư mục con quan trọng:
+### 3. Tại nhánh này, bạn sẽ thấy ba thư mục con quan trọng:
 
    - `Configuration`
    - `Connectivity`

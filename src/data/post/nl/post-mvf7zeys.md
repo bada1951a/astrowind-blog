@@ -18,6 +18,7 @@ theme: "Cobalt Enterprise Lab"
 
 
 
+
 Het was kwart voor twee op een gure dinsdagmiddag in het Zuidas zakendistrict in Amsterdam. Om twee uur zou een van onze senior consultants een beslissende pitch geven aan een grote internationale cliënt. Paniek brak los toen zijn high-end laptop plotseling veranderde in een straaljager: de ventilatoren loeiden op volle toeren, de cursor schokschoot over het scherm en PowerPoint weigerde nog te reageren. Ik snelde naar zijn flexplek toe, drukte op Ctrl+Shift+Esc en zag het onmiddellijk in Taakbeheer: het proces 'Systeem' (System) slurpte doodleuk 99 tot 100 procent van zijn dure processor op. De temperatuur van de CPU schoot door naar 92°C en de presentatie stond op knappen.
 
 <div style="border-left: 4px solid #1e40af; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
@@ -38,11 +39,11 @@ Het probleem zat hem niet in de hardware zelf, maar in een typische Windows-soft
 
 Voordat we gaan sleutelen, is het handig om te weten waarom dit gebeurt. Het Windows 'Systeem'-proces (kernel en kernservices) schiet niet zomaar naar 100%.
 
-1. Stuurprogramma-conflicten (Drivers): Een corrupte of verouderde driver (vaak van netwerkkaart, chipset of energiebeheer) blijft eindeloos interrupts (hardware-verzoeken) sturen naar de processor.
+### 1. Stuurprogramma-conflicten (Drivers): Een corrupte of verouderde driver (vaak van netwerkkaart, chipset of energiebeheer) blijft eindeloos interrupts (hardware-verzoeken) sturen naar de processor.
 
-2. Windows Update of Background Intelligent Transfer Service (BITS): Een update die half is binnengekomen en nu in een oneindige foutloop hangt in de achtergrond.
+### 2. Windows Update of Background Intelligent Transfer Service (BITS): Een update die half is binnengekomen en nu in een oneindige foutloop hangt in de achtergrond.
 
-3. Defecte of losse hardware-randapparatuur: Een falend docking station of een USB-apparaat dat continu verbinding maakt en verbreekt, triggert de kernel om constant te reageren.
+### 3. Defecte of losse hardware-randapparatuur: Een falend docking station of een USB-apparaat dat continu verbinding maakt en verbreekt, triggert de kernel om constant te reageren.
 
 ---
 
@@ -77,11 +78,11 @@ Soms is de kernel zelf beschadigd door een onvoltooide update. Dit herstellen we
 
 1. Klik op Start, typ `cmd`, klik met rechts op Opdrachtprompten kiesAls administrator uitvoeren.
 
-2. Typ het volgende commando in en druk op Enter:
+### 2. Typ het volgende commando in en druk op Enter:
 
    `DISM.exe /Online /Cleanup-image /Restorehealth`
 
-3. Wacht tot dit klaar is en typ dan het tweede reddingsmiddel in:
+### 3. Wacht tot dit klaar is en typ dan het tweede reddingsmiddel in:
 
    `sfc /scannow`
 

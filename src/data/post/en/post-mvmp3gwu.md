@@ -9,6 +9,7 @@ theme: "Cobalt Enterprise Lab"
 ---
 
 
+
 ## 1. [Opening Story/Problem]
 
 There I was, aboard the high-speed train cutting through the countryside, tethering my laptop to a notoriously choppy mobile hotspot. An urgent email from the New York finance executive just hit my inbox: the client's production deployment report contained a critical UI glitch, and they needed visual proof immediately. I instinctively pressed **Win + Shift + S** to capture the exact error window. 
@@ -22,8 +23,6 @@ If you are reading this because your **Win + Shift + S** shortcut suddenly stopp
 <div style="border-left: 4px solid #1e40af; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Enterprise Impact Note:</strong> Snipping Tool failures across corporate endpoints routinely cost teams hours of cumulative friction during incident response. Resolving this via native configurations saves valuable engineering time.
 </div>
-
-
 
 ![Tech Troubleshooting Guide](/images/tech-photo/keyboard%20(2).png)
 

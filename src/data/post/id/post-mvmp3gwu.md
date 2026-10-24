@@ -9,13 +9,12 @@ theme: "Teal Matrix Digital"
 ---
 
 
+
 ## 1. [Opening Story/Problem]
 
 Pagi yang cukup sibuk di kawasan SCBD Jakarta, tepatnya di salah satu lantai gedung perkantoran modern. Hari itu, saya baru saja merakit dan menyiapkan sebuah PC spesifikasi tinggi baru untuk keperluan *development* dan *graphic design* berat. Sebagai bagian dari standar operasional IT, saya harus segera memasang berbagai lisensi software perusahaan, mengambil tangkapan layar dokumentasi instalasi, dan mengirimkannya ke tim manajemen aset. 
 
 Di tengah proses setup yang serba cepat ini, tiba-tiba tombol kombinasi keramat **Win + Shift + S** mendadak ngadat. Setiap kali ditekan, tidak ada kedipan layar atau panel *Snipping Tool* yang muncul sama sekali. Padahal, aplikasi bawaan ini sangat krusial untuk mengambil cuplikan error log dan dokumentasi lisensi secara instan. Mengambil gambar pakai tombol **PrtScn** biasa tentu kurang efektif karena butuh proses *crop* manual yang membuang waktu berharga di tengah deadline setup perangkat yang padat.
-
-
 
 ![Tech Troubleshooting Guide](/images/tech-photo/system%20(5).png)
 
@@ -60,11 +59,11 @@ Terkadang, notifikasi *Snipping Tool* diblokir oleh sistem atau fitur *Clipboard
 ### Langkah 3: Perbaikan Melalui Menu Aplikasi Terinstal
 Jika kedua cara di atas belum membuahkan hasil, kita perlu melakukan *Reset* atau *Repair* melalui menu pengaturan sistem.
 
-1. Buka **Pengaturan (Settings)** (**Win + I**).
+## 1. Buka **Pengaturan (Settings)** (**Win + I**).
 
 2. Pilih menu **Apps**, lalu klik **Installed apps**.
 
-3. Ketik "Snipping Tool" pada kolom pencarian.
+## 3. Ketik "Snipping Tool" pada kolom pencarian.
 
 4. Klik ikon titik tiga di sebelah kanan nama aplikasi, lalu pilih **Advanced options**.
 

@@ -18,6 +18,7 @@ theme: "Nordic Clean Ice"
 
 
 
+
 Jam menunjukkan pukul 09:15 pagi di kantor *startup* teknologi kami di kawasan SCBD, Jakarta. Grup Slack internal mendadak ramai oleh laporan tim operasional yang panik karena *taskbar* Windows 11 di laptop mereka mendadak membeku (*freeze*). Tombol Start tidak merespons, ikon aplikasi di bilah bawah tidak bisa diklik, dan mengeklik *system tray* sama sekali tidak membawa hasil. Padahal, rapat sinkronisasi server dan *deployment* sistem internal klien harus segera berjalan dalam waktu kurang dari setengah jam. Panik sempat melanda sejenak sebelum akhirnya kami mengeksekusi langkah-langkah pemulihan standar operasional IT yang cepat dan efektif.
 
 <div style="border-left: 4px solid #0284c7; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
@@ -29,11 +30,11 @@ Jam menunjukkan pukul 09:15 pagi di kantor *startup* teknologi kami di kawasan S
 
 Sebelum langsung melompat ke solusi, ada baiknya kita memahami tiga akar permasalahan utama yang sering memicu kendala ini di lingkungan kerja harian:
 
-1. Eksplorasi Proses `explorer.exe` yang Mengalami *Crash*: Proses Windows Explorer tidak hanya mengatur tampilan folder, tetapi juga memegang kendali penuh atas antarmuka *taskbar* dan menu Start. Ketika proses ini macet, otomatis *taskbar* ikut lumpuh.
+### 1. Eksplorasi Proses `explorer.exe` yang Mengalami *Crash*: Proses Windows Explorer tidak hanya mengatur tampilan folder, tetapi juga memegang kendali penuh atas antarmuka *taskbar* dan menu Start. Ketika proses ini macet, otomatis *taskbar* ikut lumpuh.
 
-2. Konflik Layanan Latar Belakang (Background Services): Aplikasi pihak ketiga atau pembaruan latar belakang yang berjalan bersamaan sering kali memicu bentrok pada memori penampil sistem.
+### 2. Konflik Layanan Latar Belakang (Background Services): Aplikasi pihak ketiga atau pembaruan latar belakang yang berjalan bersamaan sering kali memicu bentrok pada memori penampil sistem.
 
-3. Data *Cache* Start Menu yang Rusak: Terkadang, berkas penumpukan data sementara dari menu Start yang sering diakses mengalami korupsi data ringan.
+### 3. Data *Cache* Start Menu yang Rusak: Terkadang, berkas penumpukan data sementara dari menu Start yang sering diakses mengalami korupsi data ringan.
 
 ---
 

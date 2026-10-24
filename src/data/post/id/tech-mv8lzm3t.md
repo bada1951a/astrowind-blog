@@ -18,6 +18,7 @@ theme: "Retro Monokai"
 
 
 
+
 <div style="border-left: 4px solid #a6e22e; padding: 12px 16px; margin: 20px 0; background-color: #272822; color: #f8f8f2; border-radius: 4px; font-family: 'Courier New', Courier, monospace;">
 [08:45:12] SYSTEM_ALERT: CPU Load 98% | RAM Usage 95% | User Panic Level: MAXIMUM<br>
 [08:45:18] LOG: "Mas, laptop gue stuck di logo Windows! Padahal 5 menit lagi mau meeting sama client VIP!"<br>
@@ -41,11 +42,11 @@ a: ada 45 aplikasi, dari mulai Steam, Epic Games, Spotify, Discord, sampe bloatw
 
 Berdasarkan pengalaman gue ngadepin ratusan user di kantor, ada tiga tersangka utama kenapa PC atau laptop jadi "santai" banget pas dinyalain:
 
-1. Efek "Install Next Next Finish": Kebanyakan user kalau install aplikasi (khususnya app chat, editor video, atau game launcher) lupa centang/uncheck opsi *"Launch at startup"*. Akibatnya, aplikasi ikutan nimbrung nyala tiap Windows *load*.
+### 1. Efek "Install Next Next Finish": Kebanyakan user kalau install aplikasi (khususnya app chat, editor video, atau game launcher) lupa centang/uncheck opsi *"Launch at startup"*. Akibatnya, aplikasi ikutan nimbrung nyala tiap Windows *load*.
 
-2. Background Services yang Haus Resources: Software kayak Adobe Creative Cloud, OneDrive, atau updater-updater nggak penting kerjanya diem-diem di background, makan RAM dan bikin disk usage langsung nyentuh 100%.
+### 2. Background Services yang Haus Resources: Software kayak Adobe Creative Cloud, OneDrive, atau updater-updater nggak penting kerjanya diem-diem di background, makan RAM dan bikin disk usage langsung nyentuh 100%.
 
-3. Registry Bloat & Fragmentasi File: Sisa-sisa uninstall-an aplikasi yang nggak bersih bikin sistem manggil file registry yang udah nggak ada alamatnya (*orphan registry*).
+### 3. Registry Bloat & Fragmentasi File: Sisa-sisa uninstall-an aplikasi yang nggak bersih bikin sistem manggil file registry yang udah nggak ada alamatnya (*orphan registry*).
 
 ---
 

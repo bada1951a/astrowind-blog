@@ -18,6 +18,7 @@ theme: "Graphite Technical Paper"
 
 
 
+
 Eram 19h45 em um hub de tecnologia na região da Avenida Paulista, em São Paulo, e o clima na sala de reuniões estava tenso. Precisávamos entregar um relatório de BI consolidado para a diretoria às 9h do dia seguinte, mas o notebook principal da equipe simplesmente decidiu travar na tela de reinicialização com o famigerado aviso de "Atualizando o Windows: 100% concluído. Não desligue o computador". Passaram-se trinta minutos, quarenta minutos, e a porcentagem não saía do lugar. O cooler do aparelho rodava no talo, o prazo apertava, e reiniciar no botão físico trazia o medo clássico de corromper o sistema de vez.
 
 Essa cena é o pesadelo de qualquer profissional de TI ou usuário que depende de estabilidade. Depois de perder valiosos minutos tentando alternativas ineficientes, o diagnóstico certeiro apontou para o que costuma falhar nesses momentos: arquivos corrompidos no cache do Windows Update, especificamente na pasta onde o sistema armazena os pacotes de instalação temporários.
@@ -32,11 +33,11 @@ a:</strong> Nunca force o desligamento repetidas vezes sem um plano B. Se o Wind
 
 Para entender o problema e nunca mais passar raiva, precisamos olhar debaixo do capô. Os três gargalos mais comuns que causam esse travamento irritante são:
 
-1. Cache do Windows Update Corrompido: Os arquivos baixados para a pasta `SoftwareDistribution` vieram corrompidos por instabilidade na rede ou falha de leitura no SSD durante o download.
+### 1. Cache do Windows Update Corrompido: Os arquivos baixados para a pasta `SoftwareDistribution` vieram corrompidos por instabilidade na rede ou falha de leitura no SSD durante o download.
 
-2. Serviços em Loop Infinito: O serviço responsável por gerenciar as instalações (`wuauserv`) tenta aplicar um pacote corrompido, falha silenciosamente, reinicia o processo e fica preso em um ciclo infinito.
+### 2. Serviços em Loop Infinito: O serviço responsável por gerenciar as instalações (`wuauserv`) tenta aplicar um pacote corrompido, falha silenciosamente, reinicia o processo e fica preso em um ciclo infinito.
 
-3. Conflito de Drivers de Terceiros: Softwares de segurança agressivos ou drivers de hardware desatualizados bloqueiam a finalização da escrita de arquivos críticos no registro do sistema (`System32`).
+### 3. Conflito de Drivers de Terceiros: Softwares de segurança agressivos ou drivers de hardware desatualizados bloqueiam a finalização da escrita de arquivos críticos no registro do sistema (`System32`).
 
 ---
 
