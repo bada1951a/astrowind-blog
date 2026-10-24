@@ -24,6 +24,7 @@ theme: "Sunset Horizon Coral"
 
 
 
+
 C'était un mardi matin agité dans notre open space de La Défense. Je m'apprêtais à boucler le rapport trimestriel pour un client important quand, soudain, la catastrophe : notification rouge vif dans la barre des tâches de Windows. Le disque C est saturé, plus un seul gigaoctet de libre, et pour couronner le tout, mon SSD externe de secours n'est même pas détecté par le système. Panique à bord, impossible d'enregistrer le moindre fichier Word, et le PC qui commence à ramer à mort au pire moment possible.
 
 Dans ce genre de situation critique, on a tous tendance à faire n'importe quoi : vider la Corbeille en espérant un miracle, supprimer à la hache des dossiers dont on ne connait pas l'utilité, ou redémarrer la machine en boucle en espérant que l'espace va magiquement réapparaître. Évidemment, ça ne sert à rien. Le vrai coupable invisible, c'est l'accumulation silencieuse de fichiers temporaires, de caches système et de résidus de mises à jour qui étouffent votre partition principale sans que vous ne remarquiez rien.

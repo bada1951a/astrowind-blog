@@ -15,7 +15,8 @@ theme: "Deep Indigo System"
 
 
 
-1. O Desespero do Momento e a Falha na Tela
+
+## 1. O Desespero do Momento e a Falha na Tela
 
 Era uma tarde típica de alta demanda aqui na Avenida Paulista, com o movimento intenso de escritórios corporativos ao redor. Eu estava executando uma query massiva no banco de dados de clientes na estação de trabalho principal, monitorando as tabelas e os logs de execução em tempo real para evitar qualquer gargalo de performance no cluster. De repente, notei um comportamento anômalo em um dos blocos de dados. Precisei registrar imediatamente a evidência visual daquele pico de uso para o relatório de auditoria e... apertei **Win + Shift + S**. 
 
@@ -95,7 +96,7 @@ Como profissional de infraestrutura, recomendo fortemente que você evite usar s
 
 Além disso, mantenha sempre os drivers do seu teclado atualizados através do **Gerenciador de Dispositivos**, especialmente se você utiliza teclados mecânicos gamers que possuem softwares proprietários de macro. Às vezes, o software do teclado bloqueia combinações específicas de teclas como o **Win + Shift + S** achando que se trata de um comando de macro personalizado.
 
-5. Frequently Asked Questions
+## 5. Frequently Asked Questions
 
 Q: O atalho ainda não funciona mesmo após seguir todos os passos. O que pode ser?
 

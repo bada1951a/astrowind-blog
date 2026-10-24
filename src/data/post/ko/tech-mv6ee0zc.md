@@ -24,6 +24,7 @@ theme: "Industrial Blueprint"
 
 
 
+
 현장 엔지니어로 인프라 관제 업무를 보던 중, 방화벽 CLI 콘솔에서 서브넷 마스크 `255.255.255.0`을 입력할 때 특정 옥텟이 `2555`로 중복 입력되거나 엔터 키 스트로크가 누락되는 치명적인 오동작을 겪었습니다. 체리 갈축 스위치가 탑재된 업무용 커스텀 키보드의 특정 스위치에서 바운싱(Bouncing) 에러, 즉 채터링(Chattering)이 발생한 것입니다. 
 
 운영체제 재부팅이나 포트 변경으로 해결되지 않는 이 문제는 전형적인 하드웨어 스위치 접점 불량입니다. 본 문서에서는 필드 엔지니어링 관점에서 기계식 스위치의 전기적 신호 흐름을 분해하고, 접점 부활제(Contact Cleaner)를 안전하게 적용하여 키보드를 원상 복구하는 테크니컬 리페어 프로토콜을 상세히 기술합니다.
@@ -71,7 +72,7 @@ theme: "Industrial Blueprint"
 ---
 ![Tech Hardware Guide](https://images.unsplash.com/photo-1531297484001-80022131f5a1? auto=format&fit=crop&w=1200&h=675&q=85)
 
-2. 세척 용제 및 정비 방식 기술 비교
+## 2. 세척 용제 및 정비 방식 기술 비교
 
 스위치 접점을 복구할 때 무분별한 화학 스프레이를 사용할 경우 하우징 플라스틱(POM, PC, Nylon) 파손이나 쇼트를 유발합니다. 반드시 물리화학적 특성을 파악하고 용제를 선택해야 합니다.
 
@@ -83,7 +84,7 @@ theme: "Industrial Blueprint"
 
 ---
 
-3. 단계별 자가 수리 및 정밀 세척 절차
+## 3. 단계별 자가 수리 및 정밀 세척 절차
 
 1단계: OS 레벨 및 드라이버 이상 유무 판별
 하드웨어 작업 전, 운영체제의 인터럽트 충돌이나 드라이버 문제를 격리합니다.
@@ -159,7 +160,7 @@ a: 4ms)  <-- BOUNCING ERROR DETECTED!
 
 ---
 
-4. 엔지니어 경고 및 유지보수 유의점
+## 4. 엔지니어 경고 및 유지보수 유의점
 
 <div style="border-left: 4px solid #f59e0b; padding: 12px 16px; margin: 20px 0; background-color: rgba(245, 158, 11, 0.05); border-radius: 4px; color: #111827;">
 <strong>주의 (Hardware Fault Prevention):</strong><br>

@@ -24,6 +24,7 @@ theme: "Cobalt Enterprise Lab"
 
 
 
+
 Het was dinsdagochtend om 09:15 uur op onze tech-incubator nabij de Amsterdamse Zuidas. Terwijl we de laatste hand legden aan een cruciale demo voor een fintech-partner, sloeg het lot toe: een angstaanjagend blauw scherm, de beruchte STOP: 0x0000000a (IRQL_NOT_LESS_OR_EQUAL). Geen tijd voor paniek, want de directeur stond binnen een uur op de stoep voor een live evaluatie van onze systemen. Dit soort acute prestatieproblemen vragen om een directe, no-nonsense aanpak.
 
 In deze gids duiken we diep in de werkelijke oorzaken van deze specifieke stop-code en lopen we door een beproefd stappenplan om je werkstation of server direct weer stabiel te krijgen.

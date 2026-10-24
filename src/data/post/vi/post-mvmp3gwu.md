@@ -15,6 +15,7 @@ theme: "Sandstone Desert Minimal"
 
 
 
+
 1. Tình huống khẩn cấp tại văn phòng
 
 Hôm nay là một ngày bận rộn tại văn phòng nằm ngay trung tâm Quận 1, TP. Hồ Chí Minh. Tôi vừa nhấp ngụm cà phê sáng thì đồng nghiệp ngồi bàn bên hoảng hốt gọi tôi đến hỗ trợ chiếc máy tính xách tay của anh ấy. Số là bên ngoài hợp tác xã và đối tác vừa gửi qua một tệp nén (ZIP) chứa các bản vẽ kỹ thuật và dữ liệu quan trọng. Anh ấy đang định dùng tổ hợp phím **Win + Shift + S** quen thuộc để cắt vài tấm hình chi tiết gửi ngay cho cấp trên kiểm tra tiến độ, nhưng bấm hoài mà màn hình cứ trơ ra, không có một chút phản hồi nào. Cửa sổ chụp ảnh màn hình của Snipping Tool hoàn toàn biến mất, khiến tiến độ công việc bị chững lại ngay lập tức.

@@ -24,6 +24,7 @@ theme: "Acid Lime Hacker Space"
 
 
 
+
 Het is kwart voor negen 's ochtends op onze hub aan de Amsterdamse Zuidas. Over precies een kwartier start de wekelijkse architectuursync met het core-team, en net vandaag besluit mijn primaire testlaptop om tijdens een cruciale Windows 11-update muurvast te roesten op exact 100 procent. Geen beweging in te krijgen. De ventilator loeit als een straaljager, het scherm blijft koppig hangen, en de deadline ademt in mijn nek. Een klassiek noodgeval waarbij paniek op de loer ligt, maar we moeten direct handelen om acute prestatieproblemen en data-corruptie te voorkomen.
 
 <div style="border-left: 4px solid #84cc16; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">

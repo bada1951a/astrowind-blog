@@ -15,6 +15,7 @@ theme: "Pastel Lavender Tech"
 
 
 
+
 1. Ostatnia deska ratunku w środku korporacyjnego chaosu
 
 Siedzę przy biurku w naszym warszawskim biurowcu, a na wewnętrznym komunikatorze pali się czerwona lampka za czerwoną. Trwa gorący okres raportowania, a ja mam na ekranie otwartych dokładnie pięć różnych systemów ERP, arkusze kalkulacyjne, panel administracyjny i okno czatu z zirytowanym menedżerem projektu. W tym momencie potrzebuję na szybko zrobić zrzut ekranu fragmentu kodu i błędu, żeby wysłać go do zespołu wsparcia. Wciskam **Win + Shift + S**, odruchowo czekając na zaciemnienie ekranu i paletę wycinania. I... absolutnie nic. Ekran ani drgnie, żadna ikonka się nie pojawia, a ja zostaję z palcem na klawiaturze i rosnącą frustracją.

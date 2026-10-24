@@ -24,6 +24,7 @@ theme: "Midnight Navy Royal"
 
 
 
+
 Tijdens een nachtdienst op de IT-infrastructuurdesk van een corporate kantoor in Amsterdam zag ik de tickets plotseling binnenstromen: direct na de uitrol van een cumulatieve Windows 11-update via ons WSUS-platform meldden tientallen gebruikers die 's ochtends vroeg inlogden identieke symptomen. Laptops aangesloten op Thunderbolt 4-dockingstations gaven massaal de melding "Geen signaal" op het primaire externe beeldscherm, terwijl het secundaire scherm om de vier seconden zwart knipperde. 
 
 Wanneer een gebruiker geconfronteerd wordt met een knipperend beeldscherm of een volslagen gebrek aan videosignaal op een tweede of derde monitor, grijpt men vrijwel altijd direct naar de fysieke bekabeling. In meer dan 85% van de zakelijke incidenten die ik behandel, is de hardware echter kerngezond. Het probleem ligt dieper: een vastgelopen DisplayPort-handshake, corrupte DCH-stuurprogrammabestanden of een bandbreedteconflict in het subsysteem van de grafische processor (GPU). 
@@ -44,10 +45,10 @@ Het grootste pijnpunt in moderne Windows-omgevingen is de automatische vervangin
 
 ![Hardware Diagnostic & Troubleshooting](https://images.unsplash.com/photo-1542751371-adc38448a05e? auto=format&fit=crop&w=1000&h=550&q=80)
 
-2. Corruptie van de EDID-handshake en HDCP-onderhandeling
+## 2. Corruptie van de EDID-handshake en HDCP-onderhandeling
 Extended Display Identification Data (EDID) is de metadata die de monitor naar de videokaart stuurt met informatie over resoluties, vernieuwingsfrequenties en kleurprofielen. Als de laptop vanuit de slaapstand ontwaakt terwijl het dockingstation al stroom levert, kan deze handshake halverwege vastlopen. De High-bandwidth Digital Content Protection (HDCP) ziet dit als een potentiële beveiligingsinbreuk en sluit de videotransmissie abrupt af. Dit veroorzaakt de beruchte "knipperlus": de GPU probeert te verbinden, faalt de HDCP-controle, verbreekt de verbinding en start opnieuw op.
 
-3. Bandbreedte- en DSC-verzadiging op de Type-C Controller
+## 3. Bandbreedte- en DSC-verzadiging op de Type-C Controller
 Moderne kantooropstellingen gebruiken vaak twee 1440p- of 4K-schermen aangesloten op een enkele USB-C-kabel. Om dit videosignaal samen met USB 3.2-data over dezelfde kabel te sturen, maakt Windows gebruik van Display Stream Compression (DSC). Wanneer een grafische driver crasht of een update ondergaat zonder schone herstart, verliest de driver zijn DSC-timingparameters. De video-uitvoer probeert ongecomprimeerd te verzenden, overschrijdt de maximale bandbreedte van 21.6 Gbps (DP 1.4 HBR3) of 40 Gbps (TB4), en het signaal valt met regelmatige intervallen weg.
 
 ---

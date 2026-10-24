@@ -24,6 +24,7 @@ theme: "Deep Indigo System"
 
 
 
+
 Lunedì mattina, ore 8:55. Sono seduto alla mia scrivania nella nostra sede di Milano, con il caffè fumante ancora intatto, quando il responsabile commerciale mi si avvicina con la faccia di chi ha un'emergenz
 
 a: "Il portatile aziendale ci mette dieci minuti solo per accendersi, non riesco ad aprire neanche Teams per il meeting delle nove con i clienti!". Una scena che, se lavori nel settore IT o gestisci un'infrastruttura, ti farà sicuramente scattare un campanello d'allarme familiare. Il problema non è l'hardware obsoleto, ma la quantità industriale di applicazioni che si caricano silenziosamente in background nel momento esatto in cui premi il tasto di accensione.
@@ -56,7 +57,7 @@ Ecco la sequenza esatta da seguire per ripulire l'avvio in meno di sessanta seco
 
 1. Apri il Task Manager: Premi la combinazione di tasti `Ctrl + Shift + Esc` (oppure clicca con il tasto destro sulla barra delle applicazioni e seleziona "Gestione attività").
 
-2. Espandi la finestr
+## 2. Espandi la finestr
 
 a: Se vedi una visualizzazione ridotta, clicca su "Più dettagli" in basso a sinistra per accedere alla vista avanzata.
 

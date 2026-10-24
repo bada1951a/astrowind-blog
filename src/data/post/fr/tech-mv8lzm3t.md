@@ -24,6 +24,7 @@ theme: "Matte Black stealth"
 
 
 
+
 Lundi matin, 8h52. La réunion stratégique avec le N+2 commence dans 8 minutes. Évidemment, ma machine décide de faire une mise à jour de ses grands morts et se fige sur l'écran de chargement. Le ventilo souffle comme un A380 au décollage, le curseur freeze, et je transite lentement vers l'angoisse pure en voyant la barre de progression bloquée à 98%. J'ai failli balancer mon ThinkPad par la fenêtre. 
 
 Ce genre de galère, en tant qu'ingénieur système, ça me met hors de moi. On a sous les doigts des bécanes sous i7 avec 32 Go de RAM, et pourtant, à cause d'une ribambelle de bloatwares et de services tiers qui s'invitent au boot, nos machines rament comme des Pentium 4 sous Windows 98. 

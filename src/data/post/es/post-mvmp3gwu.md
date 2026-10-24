@@ -15,6 +15,7 @@ theme: "Industrial Blueprint"
 
 
 
+
 1. El Momento de Pánico en la Sala de Reuniones
 
 Eran las 10:45 de la mañana en el flamante edificio corporativo situado en pleno Paseo de la Castellana en Madrid. Todo estaba listo para la gran demostración ante los directivos de nuestro principal cliente. Tenía mi portátil conectado al proyector de la sala principal y el proyector mostraba la pantalla de inicio perfectamente. En cuestión de minutos, los directivos entrarían para ver en vivo una nueva arquitectura de red y la interfaz de usuario optimizada que habíamos preparado durante semanas. 
@@ -35,11 +36,11 @@ Volví a pulsar el teclado con más fuerza, asegurándome de presionar bien cada
 
 ¿Por qué demonios deja de funcionar un atajo tan básico en Windows 11? Tras revisar cientos de equipos en entornos corporativos, el problema rara vez es un fallo físico del teclado. En el 99 por ciento de los casos, la raíz del problema se divide en tres culpables habituales dentro del ecosistema de software de Microsoft:
 
-1. **El proceso de la aplicación se ha quedado colgado en segundo plano:** La Herramienta Recortes (Snipping Tool) depende de un proceso llamado `ScreenClippingHost.exe` o de la propia aplicación de capturas moderna. Si este proceso se congela, el atajo deja de emitir la señal visual aunque el sistema reconozca las teclas.
+1. El proceso de la aplicación se ha quedado colgado en segundo plano: La Herramienta Recortes (Snipping Tool) depende de un proceso llamado `ScreenClippingHost.exe` o de la propia aplicación de capturas moderna. Si este proceso se congela, el atajo deja de emitir la señal visual aunque el sistema reconozca las teclas.
 
-2. **Notificaciones o Ayuda de enfoque bloqueadas:** Windows 11 maneja las capturas como notificaciones del sistema. Si tienes activado el modo "No molestar" de forma agresiva o si las notificaciones de la aplicación están deshabilitadas en la **Configuración**, el sistema bloquea la interfaz flotante del recorte.
+2. Notificaciones o Ayuda de enfoque bloqueadas: Windows 11 maneja las capturas como notificaciones del sistema. Si tienes activado el modo "No molestar" de forma agresiva o si las notificaciones de la aplicación están deshabilitadas en la Configuración, el sistema bloquea la interfaz flotante del recorte.
 
-3. **Corrupción en la caché de la aplicación o actualizaciones pendientes:** A veces, una actualización acumulativa de Windows corrompe el registro o la caché de la aplicación universal (UWP), impidiendo que el servicio responda a los ganchos de teclado (*keyboard hooks*).
+3. Corrupción en la caché de la aplicación o actualizaciones pendientes: A veces, una actualización acumulativa de Windows corrompe el registro o la caché de la aplicación universal (UWP), impidiendo que el servicio responda a los ganchos de teclado (*keyboard hooks*).
 
 ## 3. Step-by-Step Resolution
 
@@ -99,7 +100,7 @@ Si estás en medio de una crisis de tiempo y el atajo de Windows 11 sigue fallan
 * **La tecla Impr Pant (PrtScn):** Puedes configurar Windows en **Configuración > Accesibilidad > Teclado** para que la tecla de impresión de pantalla abra directamente la herramienta de recortes sin necesidad de pulsar tres teclas a la vez.
 * **Software alternativo portátil:** Lleva siempre en tu memoria USB corporativa herramientas ligeras y portátiles como *Greenshot* o *Lightshot*. No requieren instalación pesada, corren desde el explorador y salvan cualquier demostración en cuestión de segundos.
 
-5. Frequently Asked Questions
+## 5. Frequently Asked Questions
 
 Q: ¿Qué hago si mi teclado no tiene la tecla Windows o está dañada?
 

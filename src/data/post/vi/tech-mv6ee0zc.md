@@ -24,6 +24,7 @@ theme: "Midnight Navy Royal"
 
 
 
+
 [INCIDENT LOG 01:15 AM] Bối Cảnh Sự Cố Tại Bàn Trực Vận Hành
 
 Đồng hồ hệ thống điểm 01:15 sáng. Trong phòng máy chủ yên tĩnh chỉ có tiếng quạt tản nhiệt server rít đều đặn, đồng chí kỹ sư trực ca bên cạnh bắt đầu đập bàn phím liên hồi kèm theo tiếng thở dài. Anh ta đang cấu hình dở cụm Kubernetes qua terminal thì phím `e` liên tục bị "chattering" (gõ một lần nhưng máy nhận thành `ee` hoặc `eee`), trong khi phím `Enter` thì nhấn 3 lần mới ăn được 1 lần. 

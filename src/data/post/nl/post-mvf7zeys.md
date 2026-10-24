@@ -24,6 +24,7 @@ theme: "Cobalt Enterprise Lab"
 
 
 
+
 Het was kwart voor twee op een gure dinsdagmiddag in het Zuidas zakendistrict in Amsterdam. Om twee uur zou een van onze senior consultants een beslissende pitch geven aan een grote internationale cliënt. Paniek brak los toen zijn high-end laptop plotseling veranderde in een straaljager: de ventilatoren loeiden op volle toeren, de cursor schokschoot over het scherm en PowerPoint weigerde nog te reageren. Ik snelde naar zijn flexplek toe, drukte op Ctrl+Shift+Esc en zag het onmiddellijk in Taakbeheer: het proces 'Systeem' (System) slurpte doodleuk 99 tot 100 procent van zijn dure processor op. De temperatuur van de CPU schoot door naar 92°C en de presentatie stond op knappen.
 
 <div style="border-left: 4px solid #1e40af; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">

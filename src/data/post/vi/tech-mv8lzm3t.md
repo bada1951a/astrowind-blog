@@ -24,6 +24,7 @@ theme: "Pure Titanium Clean"
 
 
 
+
 Mới sáng thứ Hai đầu tuần, sếp tổng gọi gấp vào phòng họp để present cái báo cáo quý. Mồ hôi hột vã ra như tắm khi cái laptop chiến thần của mình bấm nút nguồn lên xong... đứng hình ở logo Windows đúng 10 phút tròn. Nhìn thanh Task Manager lúc mở được máy thì ôi thôi, Disk 100%, CPU quạt hú như phản lực cất cánh. Đám app "ăn hại" từ Zalo, KakaoTalk, OneDrive cho đến mấy cái phần mềm diệt virus rác tự động nhảy vào chạy ngầm (Startup) khiến cỗ máy i7 đời cũ nghẹt thở.
 
 Đó là lúc anh em kỹ sư IT như tụi mình phải bật chế độ "cấp cứu" ngay lập tức. Đừng vội mang ra tiệm tốn tiền hay cài lại Win mất thời gian, bài viết này tôi sẽ chỉ cho anh em cách "phẫu thuật" tận gốc bệnh khởi động chậm trễ này chỉ trong vòng một nốt nhạc.

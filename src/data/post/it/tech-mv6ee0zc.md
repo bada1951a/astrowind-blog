@@ -24,6 +24,7 @@ theme: "Mint Fresh Engineering"
 
 
 
+
 Nel mio lavoro quotidiano sui terminali di gestione e nei laboratori di collaudo hardware, uno strumento di input inaffidabile rappresenta un collo di bottiglia critico. Qualche mese fa, durante la configurazione in loco di un cluster di virtualizzazione, la tastiera meccanica della mia workstation da campo ha iniziato a mostrare sintomi subdoli: digitando credenziali complesse su terminale SSH, alcune lettere venivano registrate due volte (*key chattering* o rimbalzo), mentre la barra spaziatrice e il tasto `Tab` perdevano colpi in modo casuale (*key skipping*). 
 
 In un ambiente di produzione, dover cancellare backspace a raffica o fallire l'autenticazione per via di un doppio carattere non è solo frustrante: rischia di bloccare account di dominio o generare errori di sintassi distruttivi nei file di configurazione.
@@ -58,7 +59,7 @@ Nelle tastiere moderne dotate di socket a innesto rapido (Kailh o Gateron hot-sw
 ---
 ![Tech Diagnostics](https://images.unsplash.com/photo-1517430816045-df4b7de11d1d? auto=format&fit=crop&w=1000&h=550&q=80)
 
-2. Protocollo Operativo di Ripristino Passo-Passo
+## 2. Protocollo Operativo di Ripristino Passo-Passo
 
 Prima di procedere con solventi chimici o saldatori, è obbligatorio isolare il problema a livello software ed escludere interferenze da parte del sistema operativo o di driver periferica corrotti.
 
@@ -162,7 +163,7 @@ a:
    - Aspira lo stagno vecchio con pompetta a vuoto o treccia dissaldante.
    - Sostituisci l'interruttore con uno nuovo dello stesso tipo (es. Gateron/Cherry MX) e risalda con lega Sn99.3Cu0.7 e flussante a base di colofonia. ---
 
-3. Avvertenze Tecniche e Prevenzione Guasti
+## 3. Avvertenze Tecniche e Prevenzione Guasti
 
 Operare sulla componentistica di input richiede cautela per non convertire un semplice falso contatto in un guasto permanente della scheda madre:
 

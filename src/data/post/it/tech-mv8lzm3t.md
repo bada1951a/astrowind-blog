@@ -24,6 +24,7 @@ theme: "Cyberpunk Terminal"
 
 
 
+
 <div style="border-left: 4px solid #00ffcc; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,255,204,0.05); border-radius: 4px; font-family: monospace;">
 [SYS_ALERT] root@hardware-lab:~# tail -f /var/log/boot_sequence.log<br>
 CRITICAL: I/O bottleneck detected. Disk queue length > 5.

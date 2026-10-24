@@ -15,6 +15,7 @@ theme: "Matte Black stealth"
 
 
 
+
 1. [Opening Story/Problem]
 
 L'altra settimana ero in trasferta presso la nostra filiale produttiva fuori Milano, chiamato a supportare una riunione tecnica urgente nella sala conferenze principale. Mentre cercavo di collegare il mio portatile aziendale ai monitor esterni e al proiettore della sala, avevo disperatamente bisogno di catturare rapidamente una schermata delle impostazioni di rete e dei log di proiezione per condividerli in tempo reale con il team di sviluppo. Ho premuto la combinazione di tasti a cui sono abituato da anni: **Win + Shift + S**. 
@@ -31,11 +32,11 @@ Perché la combinazione **Win + Shift + S** smette improvvisamente di funzionare
 <strong>Nota del Sistemista:</strong> Spesso il problema non è un guasto hardware della tastiera, ma un conflitto software temporaneo o un'impostazione di sistema corrotta legata alle notifiche in background.
 </div>
 
-1. **Servizi in background bloccati:** Il processo principale dello Strumento di cattura (*Snipping Tool*) o il gestore delle notifiche di Windows si è bloccato o non risponde correttamente in memoria.
+1. Servizi in background bloccati: Il processo principale dello Strumento di cattura (*Snipping Tool*) o il gestore delle notifiche di Windows si è bloccato o non risponde correttamente in memoria.
 
-2. **Disattivazione accidentale delle notifiche:** Se le notifiche di sistema sono disattivate o è attivo l'Assistente फोकस (o Non disturbare), lo screenshot potrebbe essere catturato ma l'anteprima visiva viene soppressa, dando l'impressione che la scorciatoia non funzioni.
+2. Disattivazione accidentale delle notifiche: Se le notifiche di sistema sono disattivate o è attivo l'Assistente फोकस (o Non disturbare), lo screenshot potrebbe essere catturato ma l'anteprima visiva viene soppressa, dando l'impressione che la scorciatoia non funzioni.
 
-3. **Corruzione dei file di configurazione dell'app:** Gli aggiornamenti cumulativi di Windows 11 a volte corrompono la cache dell'applicazione UWP (Universal Windows Platform) dello Strumento di cattura, rendendo necessario un reset forzato tramite le **Impostazioni**.
+3. Corruzione dei file di configurazione dell'app: Gli aggiornamenti cumulativi di Windows 11 a volte corrompono la cache dell'applicazione UWP (Universal Windows Platform) dello Strumento di cattura, rendendo necessario un reset forzato tramite le Impostazioni.
 
 ## 3. Step-by-Step Resolution
 
@@ -69,7 +70,7 @@ Molti utenti non sanno che se le notifiche sono bloccate, lo strumento sembra no
 
 Se riscontri spesso questo problema dopo aver collegato monitor esterni o proiettori (un problema classico legato alla gestione dei profili di visualizzazione multipla in Windows 11), ti consiglio di riavviare rapidamente il **Esplora risorse** (Explorer.exe) da **Gestione attività**. Questo semplice gesto rigenera la barra delle applicazioni e spesso sblocca istantaneamente le combinazioni di tasti globali senza dover riavviare l'intero computer durante una riunione importante.
 
-5. Frequently Asked Questions
+## 5. Frequently Asked Questions
 
 Q: Posso usare un comando rapido da terminale per riavviare lo Strumento di cattura se i menu grafici non rispondono?
 

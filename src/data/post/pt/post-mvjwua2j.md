@@ -24,6 +24,7 @@ theme: "Bronze Artisan Workshop"
 
 
 
+
 Eram por volta das dez da manhã em um escritório comercial na agitada Avenida Paulista, em São Paulo. O ritmo estava frenético: com o chat corporativo apitando sem parar com pedidos urgentes de correção de erros e cinco ferramentas de trabalho abertas simultaneamente na minha tela, eu precisava entrar em uma reunião de emergência via Teams. Cliquei no link, mas o caos se instalou: silêncio absoluto. Nenhum som saía do meu headset ou das caixas de som, enquanto o ícone de volume na barra de tarefas exibia aquele maldito X vermelho. O desespero bateu, pois os chamados acumulavam e a reunião exigia minha participação imediata. Trabalhando no suporte de TI, sei que esse tipo de falha paralisa qualquer profissional. Depois de testar cabos e reiniciar o navegador às cegas sem sucesso, parei por um instante para aplicar o método correto de diagnóstico no Windows 11. Se você também passou por isso, respire fundo. Vamos resolver essa pane de áudio agora mesmo, direto ao ponto e sem enrolação teórica. <div style="border-left: 4px solid #b45309; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Ferramentas e Atalhos Essenciais:</strong> Tenha sempre à mão o <strong>Gerenciador de Dispositivos</strong>, as <strong>Configurações</strong> do Windows (atalho [Windows + I]) e o bom e velho <strong>Painel de Controle</strong> clássico.
 </div>

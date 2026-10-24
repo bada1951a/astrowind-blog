@@ -24,6 +24,7 @@ theme: "Acid Lime Hacker Space"
 
 
 
+
 Jam sudah menunjukkan pukul 16:50 WIB. Hari Jumat sore, minggu penutupan laporan bulanan, dan *big boss* baru saja kirim pesan singkat via WhatsApp: *"Meeting jam 5 sore ini kita pakai ruang utama ya, presentasi data lo udah siap kan?"* Jantung langsung copot. Pas saya buru-buru pencet tombol power PC meja kerja, kipas *case* nyala bergemuruh, lampu RGB *motherboard* kedap-kedip sok ganteng, tapi... layar monitor *dead silent*. Kosong melompong dengan tulisan ikonik: "No Signal". 
 
 Mau teriak tapi malu sama anak-anak *dev* sebelah. Mau reboot paksa sampai lima kali hasilnya tetap sam
@@ -56,7 +57,7 @@ Karena kita lagi ngejar deadline mepet, nggak usah pusing buka-buka command prom
 
 ![Hardware Diagnostic & Troubleshooting](https://picsum.photos/seed/hardware-95/1000/550)
 
-2. Operasi Pembersihan Kepingan RAM
+## 2. Operasi Pembersihan Kepingan RAM
 * Buka *casing* samping PC. Cari letak RAM (biasanya dekat kipas prosesor).
 * Tekan klip pengunci di kedua ujung slot RAM, lalu angkat modulnya pelan-pelan.
 * Trik Lapangan: Ambil penghapus pensil karet (yang warna putih bersih dan agak lunak). Gosok pelan-pelan bagian kuningan emas RAM (*gold fingers*) searah. Jangan bolak-balik terlalu kasar. Setelah itu, tiup sisa serpihan penghapus (jangan ditiup pakai ludah ya, bro!).

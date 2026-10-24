@@ -24,6 +24,7 @@ theme: "Solarized Amber Warm"
 
 
 
+
 Eran las 7:30 de la tarde en nuestra oficina tecnológica del distrito 22@ en Barcelona. Estábamos a menos de cuarenta y ocho horas de liberar una nueva versión crítica de nuestro software principal, y decidí reiniciar mi estación de trabajo tras aplicar el último parche acumulativo de Windows 11. Grave error. La pantalla se quedó congelada de forma impertinente en un fatídico "100% completado. No apague el equipo" durante más de una hora. El ventilador rugía como un reactor y el grupo de Slack echaba humo con compañeros preguntando por los binarios de la compilación previa al lanzamiento. Tenía la máquina principal totalmente secuestrada por el asistente de actualización.
 
 <div style="border-left: 4px solid #d97706; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
