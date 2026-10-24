@@ -9,6 +9,7 @@ theme: "Rosewood Hardware Guide"
 ---
 
 
+
 The clock on the wall of our NYC office was glaring at me: 2:40 PM. The company-wide board meeting starts at 3:00 PM, and I am the lead IT systems engineer responsible for projecting the Q3 financial models. Suddenly, right as I switch to the master slide deck, my top-tier workstation locks up completely. The mouse pointer is frozen in place, the audio is buzzing like a trapped hornet, and keyboard inputs do nothing. Panic sets in. I force a hard reboot by holding the power button, cross my fingers, and pray it boots up before the executive team walks through the doors. 
 
 If you work in IT or manage high-performance setups, you know this gut-wrenching feeling all too well. Windows 11 random freezing is arguably the most frustrating diagnostic nightmare because it leaves zero error messages on your screen when it happens. 
@@ -37,23 +38,23 @@ When a system locks up completely without a Blue Screen of Death (BSOD), it usua
 
 Let's dive into the operating system and pull the forensic data. You do not need third-party diagnostic bloatware for this; Windows 11 has everything built right in.
 
-#### Step 1: Open Event Viewer and Target System Logs
+## Step 1: Open Event Viewer and Target System Logs
 Click on the Start menu, type Event Viewer, and hit Enter.
 
-1. In the left-hand navigation pane, expand Windows Logs.
+## 1. In the left-hand navigation pane, expand Windows Logs.
 
-2. Click directly on System. This is where Windows logs all hardware, driver, and system-level service events.
+## 2. Click directly on System. This is where Windows logs all hardware, driver, and system-level service events.
 
-#### Step 2: Filter for Critical Failures Right Before the Crash
+## Step 2: Filter for Critical Failures Right Before the Crash
 Loading every single system event will overwhelm you. We need to isolate the exact timestamp of your freeze.
 
-1. On the right-hand Action pane, click Filter Current Log...
+## 1. On the right-hand Action pane, click Filter Current Log...
 
-2. Under theLogged drop-down, select a relevant timeframe (e.g., "Last 1 hour" if it just happened).
+## 2. Under theLogged drop-down, select a relevant timeframe (e.g., "Last 1 hour" if it just happened).
 
-3. Under Event Level, check the boxes forCriticalandError. Click OK.
+## 3. Under Event Level, check the boxes forCriticalandError. Click OK.
 
-#### Step 3: Hunt Down the Timestamp Markers
+## Step 3: Hunt Down the Timestamp Markers
 Scroll through the filtered list and look for events logged *literally one second before* your hard reboot. 
 * Look for Event ID 41 (Kernel-Power) under the Source column. This confirms the unexpected shutdown.
 * More importantly, look at the errors logged *immediately preceding* Event ID 41. Do you see Event ID 10010 (DistributedCOM)? Do you see disk timeout warnings fromstorahciordisk? Those are your breadcrumbs.
@@ -62,13 +63,14 @@ Scroll through the filtered list and look for events logged *literally one secon
 <strong>Pro Tip for Modern Hardware:</strong> If you spot <strong>WHEA-Logger (Event ID 18 or 19)</strong>, go straight into your BIOS/UEFI and disable any automatic CPU overclocking, XMP/EXPO memory profiles, or aggressive C-states. Unstable memory timings are the #1 cause of random Windows 11 freezes on custom or high-end enterprise rigs.
 </div>
 
-#### Step 4: Verify System Integrity via Command Prompt
+## Step 4: Verify System Integrity via Command Prompt
 Once you identify potential corrupted system files or driver clashes in the logs, run a quick system health check:
-1. Press `Windows Key + X` and select Terminal (Admin)orCommand Prompt (Admin).
 
-2. Type `DISM.exe /Online /Cleanup-image /Restorehealth` and hit Enter.
+## 1. Press `Windows Key + X` and select Terminal (Admin)orCommand Prompt (Admin).
 
-3. Once finished, type `sfc /scannow` and let Windows repair any foundational OS components.
+## 2. Type `DISM.exe /Online /Cleanup-image /Restorehealth` and hit Enter.
+
+## 3. Once finished, type `sfc /scannow` and let Windows repair any foundational OS components.
 
 ---
 

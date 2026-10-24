@@ -9,6 +9,7 @@ theme: "Industrial Blueprint"
 ---
 
 
+
 Siedzę w szklanej sali konferencyjnej w warszawskim centrum biznesowym przy Rondzie Daszyńskiego. Za dziesięć minut ma się zacząć kluczowe spotkanie zarządu z inwestorami, a dyrektor finansowy pan Marek blady jak ściana patrzy na swój nowy służbowy laptop z Windows 11 i cicho przeklina pod nosem. Próbował na szybko spakować cztery pliki Excela do archiwum ZIP, ale zamiast klasycznego menu pod prawym przyciskiem myszy wyskoczył mu ten nowoczesny, minimalistyczny potwór z ukrytą opcją "Pokaż więcej opcji". Trzy kliknięcia zamiast jednego, 7 sekund zwłoki przy każdym pliku, a zegar tyka nieubłaganie. Pan Marek patrzy na mnie błagalnym wzrokiem: "Panie inżynierze, zrób pan z tym coś, zaraz wchodzą Niemcy!".
 
 Znam ten ból na pamięć. Nowy interfejs w Windows 11 miał być "czysty" i "przyjazny", ale dla analityków, programistów i sysadminów, którzy codziennie operują dziesiątkami plików, skrótów i narzędzi deweloperskich, ukrywanie tradycyjnych opcji za dodatkowym kliknięciem to czysta patologia produktywności. Klienci korporacyjni dzwonią do mojego serwisu w tej sprawie przynajmniej kilka razy w tygodniu.
@@ -25,11 +26,11 @@ a:</strong> Poniższa procedura modyfikacji rejestru została przetestowana na s
 
 Zanim przejdziemy do naprawy, rzućmy okiem na to, z czym dokładnie walczymy. Dlaczego standardowe menu kontekstowe w Windows 11 tak bardzo irytuje profesjonalistów? Oto trzy główne przyczyny:
 
-1. Warstwa abstrakcji XAML: Nowe menu renderowane jest w nowym silniku wizualnym, który dba o estetykę, ale drastycznie obniża czas reakcji (tzw. input lag) przy szybkich operacjach na plikach.
+## 1. Warstwa abstrakcji XAML: Nowe menu renderowane jest w nowym silniku wizualnym, który dba o estetykę, ale drastycznie obniża czas reakcji (tzw. input lag) przy szybkich operacjach na plikach.
 
-2. Ukrywanie rozszerzeń powłoki (Shell Extensions): Programy takie jak 7-Zip, Notepad++, czy klient sieci VPN automatycznie rejestrują się w systemie. W Windows 11 ich wpisy trafiają do podmenu "Pokaż więcej opcji", zmuszając użytkownika do wykonywania zbędnych ruchów kursorem.
+## 2. Ukrywanie rozszerzeń powłoki (Shell Extensions): Programy takie jak 7-Zip, Notepad++, czy klient sieci VPN automatycznie rejestrują się w systemie. W Windows 11 ich wpisy trafiają do podmenu "Pokaż więcej opcji", zmuszając użytkownika do wykonywania zbędnych ruchów kursorem.
 
-3. Brak konfigurowalności:Microsoft domyślnie nie daje prostego przełącznika w klasycznej aplikacjiUstawienia, co zmusza nas do grzebania w rejestrze systemowym (`Regedit`).
+## 3. Brak konfigurowalności:Microsoft domyślnie nie daje prostego przełącznika w klasycznej aplikacjiUstawienia, co zmusza nas do grzebania w rejestrze systemowym (`Regedit`).
 
 ---
 
@@ -39,16 +40,22 @@ Nie potrzebujemy do tego żadnych zewnętrznych programów instalowanych z podej
 
 ### Krok po kroku do pełnej wydajności:
 
-1. Otwórz menu Start, wpisz Edytor rejestru (lub po prostu `regedit`) i naciśnij Enter. Jeśli system poprosi o uprawnienia administratora w wyskakującym okienku kontroli konta, kliknij "Tak".
+## 1. Otwórz menu Start, wpisz Edytor rejestru (lub po prostu `regedit`) i naciśnij Enter. Jeśli system poprosi o uprawnienia administratora w wyskakującym okienku kontroli konta, kliknij "Tak".
 
-2. W pasku adresowym na górze edytora wklej poniższą ścieżkę i zatwierdź Enterem:
+## 2. W pasku adresowym na górze edytora wklej poniższą ścieżkę i zatwierdź Enterem:
+
    `HKEY_CURRENT_USER\Software\Classes\CLSID`
    *(Alternatywnie możesz przeklikać się ręcznie przez gałęzie drzewa po lewej stronie).*
-3. Kliknij prawym przyciskiem myszy na klucz `CLSID`, wybierz Nowy->Klucz, a następnie nadaj nowemu folderowi dokładnie taką nazwę (najlepiej skopiuj ją stąd, aby uniknąć literówki):
+
+## 3. Kliknij prawym przyciskiem myszy na klucz `CLSID`, wybierz Nowy->Klucz, a następnie nadaj nowemu folderowi dokładnie taką nazwę (najlepiej skopiuj ją stąd, aby uniknąć literówki):
+
    `{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}`
-4. Teraz kliknij prawym przyciskiem myszy na nowo utworzony klucz `{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}`, wybierz Nowy->Klucz i nazwij go:
+
+## 4. Teraz kliknij prawym przyciskiem myszy na nowo utworzony klucz `{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}`, wybierz Nowy->Klucz i nazwij go:
+
    `InprocServer32`
-5. Wewnątrz klucza `InprocServer32` spójrz na prawą stronę ekranu. Kliknij dwukrotnie na domyślną wartość (Domyślna) (Default).
+
+## 5. Wewnątrz klucza `InprocServer32` spójrz na prawą stronę ekranu. Kliknij dwukrotnie na domyślną wartość (Domyślna) (Default).
 
 6. Upewnij się, że pole "Dane wartości" jest całkowicie puste, po czym kliknij OK. Wartość domyślna powinna przyjąć stan `(wartość nie ustawiona)`.
 
@@ -92,10 +99,12 @@ a: Modyfikację wykonuj na koncie z uprawnieniami administratora stacji roboczej
 
 ## Często Zadawane Pytania (FAQ)
 
-1. Czy ta metoda działa w najnowszej wersji Windows 11 (24H2)?
+## 1. Czy ta metoda działa w najnowszej wersji Windows 11 (24H2)?
+
 Tak. Klucz rejestru `86ca1aa0-34aa-4e8b-a509-50c905bae2a2` został zaprojektowany przez Microsoft jako ukryty przełącznik wsteczny (ang. *fallback*) i działa niezawodnie również w wydaniach 24H2.
 
-2. Co zrobić, jeśli chcę w przyszłości wrócić do domyślnego menu Windows 11? To bardzo proste. Wystarczy, że wejdziesz do Edytora rejestru pod klucz `HKEY_CURRENT_USER\Software\Classes\CLSID` i całkowicie usuniesz utworzony wcześniej folder `{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}` wraz z jego podkluczem `InprocServer32`. Po ponownym uruchomieniu Eksploratora Windows system wróci do ustawień fabrycznych.
+## 2. Co zrobić, jeśli chcę w przyszłości wrócić do domyślnego menu Windows 11? To bardzo proste. Wystarczy, że wejdziesz do Edytora rejestru pod klucz `HKEY_CURRENT_USER\Software\Classes\CLSID` i całkowicie usuniesz utworzony wcześniej folder `{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}` wraz z jego podkluczem `InprocServer32`. Po ponownym uruchomieniu Eksploratora Windows system wróci do ustawień fabrycznych.
 
-3. Czy ta modyfikacja wpłynie na stabilność stabilność komputera lub bezpieczeństwo danych?
+## 3. Czy ta modyfikacja wpłynie na stabilność stabilność komputera lub bezpieczeństwo danych?
+
 Absolutnie nie. Modyfikacja dotyczy wyłącznie sposobu renderowania interfejsu graficznego powłoki systemu (Shell). Nie ma żadnego wpływu na integralność plików systemowych, sterowniki sprzętowe ani bezpieczeństwo danych przechowywanych na dysku twardym.

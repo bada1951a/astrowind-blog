@@ -9,6 +9,7 @@ theme: "Mint Fresh Engineering"
 ---
 
 
+
 Il est 17h45 dans notre open space à Paris La Défense. La pression monte d'un cran : le rapport financier trimestriel doit être bouclé et envoyé au comité de direction avant 18h30. Soudain, c'est le drame. Mon écran se fige net. La souris ne répond plus, le curseur est immobile, et le clavier refuse d'afficher le moindre caractère. Pas de BSOD (écran bleu) classique, juste un gel total de Windows 11. Impossible de basculer sur une autre application ou de faire un simple Ctrl+Alt+Suppr. Le ventirad du processeur continue de tourner, mais la machine est complètement sourde. Dix minutes perdues à attendre, puis l'angoisse de devoir forcer le redémarrage via le bouton physique du boîtier en croisant les doigts pour que le document Excel n'ait pas été corrompu. 
 
 Face à ce genre de panne aléatoire, la pire erreur est de jouer aux devinettes en changeant des pièces au hasard. En tant qu'ingénieur support, j'ai vu trop de collègues formater des machines ou racheter des barrettes de RAM sans savoir ce qui se passait réellement sous le capot. 
@@ -35,8 +36,6 @@ Puisque le plantage vient de se produire, nous allons utiliser l'outil natif de 
 Cliquez sur le menu Démarrer, tapez Observateur d'événements (Event Viewer) et validez. 
 Dans la colonne de gauche, développez l'arborescence : Journaux Windows->Système.
 
-
-
 ![Tech Troubleshooting Guide](/images/tech-photo/display%20(14).png)
 
 ### 2. Filtrer les erreurs critiques (Kernel-Power)
@@ -60,11 +59,11 @@ Filtrez ou lisez les avertissements et erreurs juste avant le plantage. Voici ce
 
 Une fois la piste identifiée dans les journaux, passons à la résolution pratique via les outils de configuration de Windows 11 :
 
-1.  Mise à jour ou réinstallation propre du pilote graphique :Ouvrez leGestionnaire de périphériques, allez dans *Cartes graphique*, faites un clic droit sur votre GPU et choisissez *Désinstaller l'appareil*. Redémarrez et installez le dernier pilote stable téléchargé directement depuis le site du fabricant (Intel, AMD ou NVIDIA).
+## 1.  Mise à jour ou réinstallation propre du pilote graphique :Ouvrez leGestionnaire de périphériques, allez dans *Cartes graphique*, faites un clic droit sur votre GPU et choisissez *Désinstaller l'appareil*. Redémarrez et installez le dernier pilote stable téléchargé directement depuis le site du fabricant (Intel, AMD ou NVIDIA).
 
-2.  Vérification de l'intégrité du système : Ouvrez un terminal en mode administrateur (via le menu contextuel du bouton Démarrer) et lancez la commande `sfc /scannow`, suivie de `DISM /Online /Cleanup-Image /RestoreHealth`. Cela répare les fichiers système corrompus qui font planter le gestionnaire de fenêtres.
+## 2.  Vérification de l'intégrité du système : Ouvrez un terminal en mode administrateur (via le menu contextuel du bouton Démarrer) et lancez la commande `sfc /scannow`, suivie de `DISM /Online /Cleanup-Image /RestoreHealth`. Cela répare les fichiers système corrompus qui font planter le gestionnaire de fenêtres.
 
-3.  Ajustement du plan d'alimentation :Allez dans lePanneau de configuration, puis *Options d'alimentation*. Si vous utilisez un profil d'économie d'énergie agressive, passez sur le mode *Performances élevées* pour tester si les freezes persistent.
+## 3.  Ajustement du plan d'alimentation :Allez dans lePanneau de configuration, puis *Options d'alimentation*. Si vous utilisez un profil d'économie d'énergie agressive, passez sur le mode *Performances élevées* pour tester si les freezes persistent.
 
 ---
 

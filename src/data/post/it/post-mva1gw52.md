@@ -9,6 +9,7 @@ theme: "Cobalt Enterprise Lab"
 ---
 
 
+
 Ore 09:15 in punto, lunedì mattina. Ricevo una chiamata urgente da una collega del reparto grafico nella nostra sede qui a Milano: "Il PC si è bloccato, continua a comparire un avviso rosso che dice 'Spazio su disco insufficiente' e non riesco più a salvare i file del progetto". Vado subito alla sua postazione: apro Esplora File e vedo l'unità C: dipinta di un rosso allarmante, con soli 400 MB liberi su un SSD da 512 GB. Le applicazioni rallentano, gli aggiornamenti di Windows 11 sono bloccati in un loop di errore e la tensione sale. Situazioni come questa capitano spesso quando gestiamo postazioni di lavoro che macinano dati ogni giorno. Invece di andare nel panico o formattare tutto, vediamo come risolvere il problema in modo chirurgico, sicuro e definitivo.
 
 <div style="border-left: 4px solid #1e40af; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
@@ -19,11 +20,11 @@ Ore 09:15 in punto, lunedì mattina. Ricevo una chiamata urgente da una collega 
 
 Prima di agire a tentoni cancellando cartelle a caso, capiamo cosa sta effettivamente soffocando il sistema operativo:
 
-1. Accumulo smodato di File Temporanei (Temp): Windows 11, le app installate e i browser creano continuamente file di cache che spesso non vengono eliminati alla chiusura. In pochi mesi possono occupare decine di gigabyte.
+## 1. Accumulo smodato di File Temporanei (Temp): Windows 11, le app installate e i browser creano continuamente file di cache che spesso non vengono eliminati alla chiusura. In pochi mesi possono occupare decine di gigabyte.
 
-2. File di Aggiornamento Residui e Windows.old: Dopo un grande aggiornamento di sistema (o una patch cumulativa corposa), Windows conserva le vecchie versioni per permettere il rollback. Spesso pesano tra i 15 e i 30 GB.
+## 2. File di Aggiornamento Residui e Windows.old: Dopo un grande aggiornamento di sistema (o una patch cumulativa corposa), Windows conserva le vecchie versioni per permettere il rollback. Spesso pesano tra i 15 e i 30 GB.
 
-3. Punti di Ripristino e Shadow Copies: Il sistema di protezione di Windows crea copie di sicurezza dei file di sistema. Se non impostate con un limite di spazio, divorano letteralmente l'SSD.
+## 3. Punti di Ripristino e Shadow Copies: Il sistema di protezione di Windows crea copie di sicurezza dei file di sistema. Se non impostate con un limite di spazio, divorano letteralmente l'SSD.
 
 ---
 

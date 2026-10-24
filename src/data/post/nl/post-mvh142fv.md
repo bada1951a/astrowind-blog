@@ -9,6 +9,7 @@ theme: "Crimson Emergency Field"
 ---
 
 
+
 Het is kwart voor negen 's ochtends in een glazen kantoorpand op de Zuidas in Amsterdam. Over precies vijftien minuten begint een cruciale pitch voor een nieuwe internationale cliënt. Terwijl ik nog snel de laatste grafieken in de PowerPoint-presentatie wil zetten, slaat het scherm ineens dood. Geen blauw scherm van de dood, geen foutmelding, helemaal niks. De muisaanwijzer bevriest, de klok in de taakbalk blijft stilstaan op 08:42 uur, en zelfs de Caps Lock-toets reageert niet meer op het toetsenbord. Paniek. Een harde reset met de aan-uitknop is de enige optie, maar de spanning stijgt naar een kookpunt omdat de tijd wegtikt.
 
 Dit soort willekeurige vastlopers onder Windows 11 zijn de ultieme nachtmerrie van elke kantoormedewerker en systeembeheerder. Je eerste neiging is om maar wat te roepen: "Het zal wel aan de laatste Windows-update liggen!" of "Die SSD is vast kapot!". Vervolgens verspil je kostbare tijd met het willekeurig herinstalleren van stuurprogramma's, het loskoppelen van alle USB-apparaten en het draaien van eindeloze virusscans die niets opleveren. Maar als IT-specialist weet ik inmiddels beter: gissen is missen. We moeten de ingebouwde rechercheur van Windows inschakelen om de exacte dader te ontmaskeren.
@@ -37,9 +38,9 @@ Klik op de Start-knop onderaan je scherm en typ direct het woord Logboeken in de
 ### Stap 2: Navigeer naar de Kritieke Systeemgebeurtenissen
 In het linkerdeelvenster zie je een boomstructuur.
 
-1. Klik op het pijltje voor Logboeken van Windows.
+## 1. Klik op het pijltje voor Logboeken van Windows.
 
-2. Klik vervolgens op Systeem. Dit kan even duren omdat Windows hier alle hardware- en drivermeldingen laadt.
+## 2. Klik vervolgens op Systeem. Dit kan even duren omdat Windows hier alle hardware- en drivermeldingen laadt.
 
 ### Stap 3: Filter op de exacte crash-tijd
 Omdat je pc zojuist is vastgelopen en je hem met de knop hebt moeten herstarten, is er direct na het opnieuw opstarten een specifieke gebeurtenis weggeschreven.
@@ -68,8 +69,6 @@ Zorg er daarnaast voor dat je via Apparaatbeheer je netwerk- en videodrivers up-
 
 ### 1. Mijn Logboeken staat vol met duizenden gele waarschuwingen. Moet ik me daar zorgen over maken?
 Nee, absoluut niet. Windows genereert continu achtergrondwaarschuwingen en niet-kritieke fouten over randapparatuur of achtergrondservices die tijdelijk niet reageren. Focus je bij vastlopers uitsluitend op de rode categorieën KritiekenFout rond het exacte tijdstip van de crash.
-
-
 
 ![Tech Troubleshooting Guide](/images/tech-photo/storage%20(10).png)
 

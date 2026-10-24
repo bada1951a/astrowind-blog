@@ -9,6 +9,7 @@ theme: "Matte Black stealth"
 ---
 
 
+
 Sáng nay tại văn phòng công ty công nghệ ở quận Cầu Giấy, Hà Nội, cú đấm thép của deadline dự án vừa dội xuống thì chiếc laptop cá nhân của tôi dở chứng. Thanh Taskbar trên Windows 11 bỗng nhiên tê liệt hoàn toàn. Click vào nút Start không phản hồi, icon các ứng dụng ghim sẵn đứng im như tượng đá, thậm chí đồng hồ góc phải cũng chết cứng. Cả một hệ thống đang cần xử lý gấp các yêu cầu tối ưu hiệu năng mà ngay cả việc mở Task Manager bằng chuột phải cũng bất khả thi.
 
 Nếu bạn cũng đang phát bực với lỗi kinh điển này của Windows 11, đừng vội khởi động lại máy hay cài lại Win. Dưới đây là quy trình xử lý thực chiến từ góc nhìn của một kỹ sư hệ thống.
@@ -21,11 +22,11 @@ Nếu bạn cũng đang phát bực với lỗi kinh điển này của Windows 
 
 Trước khi mổ xẻ các bước fix lỗi, hãy điểm qua lý do tại sao giao diện hiện đại của Windows 11 lại hay "bóp dấm" người dùng vào những thời điểm oái oăm nhất:
 
-1. Tiến trình Explorer.exe bị treo: Đây là "trái tim" quản lý giao diện desktop, Start Menu và Taskbar. Khi tiến trình này gặp xung đột RAM hoặc deadlock, thanh Taskbar sẽ đóng băng ngay lập tức.
+## 1. Tiến trình Explorer.exe bị treo: Đây là "trái tim" quản lý giao diện desktop, Start Menu và Taskbar. Khi tiến trình này gặp xung đột RAM hoặc deadlock, thanh Taskbar sẽ đóng băng ngay lập tức.
 
-2. Lỗi XamlShell / Start Menu Experience Host: Thành phần chịu trách nhiệm render giao diện Start Menu và Taskbar đôi khi bị kẹt sau các bản cập nhật ngầm (Windows Update).
+## 2. Lỗi XamlShell / Start Menu Experience Host: Thành phần chịu trách nhiệm render giao diện Start Menu và Taskbar đôi khi bị kẹt sau các bản cập nhật ngầm (Windows Update).
 
-3. Xung đột ứng dụng bên thứ ba hoặc cache hệ thống: Các phần mềm can thiệp sâu vào giao diện (như tool đổi giao diện, phần mềm tối ưu RAM rác) thường là thủ phạm âm thầm phá hoại Taskbar.
+## 3. Xung đột ứng dụng bên thứ ba hoặc cache hệ thống: Các phần mềm can thiệp sâu vào giao diện (như tool đổi giao diện, phần mềm tối ưu RAM rác) thường là thủ phạm âm thầm phá hoại Taskbar.
 
 ---
 
@@ -62,13 +63,13 @@ Nhiều anh em kỹ thuật tại văn phòng sau khi dính update KB mới nh�
 
 a:
 
-1. Mở Cài đặt bằng phím tắt Windows + I.
+## 1. Mở Cài đặt bằng phím tắt Windows + I.
 
-2. Chọn Windows Update ở cột bên trái.
+## 2. Chọn Windows Update ở cột bên trái.
 
-3. Chọn tiếp Update history-> Cuộn xuống dưới chọnUninstall updates.
+## 3. Chọn tiếp Update history-> Cuộn xuống dưới chọnUninstall updates.
 
-4. Tìm bản cập nhật gần nhất được cài vào ngày máy bắt đầu lỗi và bấm Uninstall.
+## 4. Tìm bản cập nhật gần nhất được cài vào ngày máy bắt đầu lỗi và bấm Uninstall.
 
 ---
 
@@ -91,8 +92,6 @@ a: Nhiều người bất ngờ khi biết Driver GPU quá cũ cũng gây ra hi�
 
 ### 1. Nếu tôi không thể mở được Task Manager bằng phím tắt Ctrl + Shift + Esc thì phải làm sao?
 Trong trường hợp phím tắt bị khóa hoặc máy đơ toàn tập, hãy bấm Ctrl + Alt + Delete, sau đó chọnSign out (Đăng xuất) rồi đăng nhập lại, hoặc giữ nút nguồn cứng 5 giây để tắt hẳn máy và khởi động nguội (Cold Boot).
-
-
 
 ![Tech & IT Solution Guide](https://picsum.photos/seed/computer685/1000/550)
 

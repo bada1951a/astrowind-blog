@@ -9,6 +9,7 @@ theme: "Graphite Technical Paper"
 ---
 
 
+
 Dans le cadre du déploiement et de la maintenance de parcs informatiques en entreprise, la gestion de l'affichage multi-écrans sur stations mobiles (ultrabooks et stations de travail portables) représente l'un des postes de sollicitation les plus fréquents auprès des équipes d'infrastructure. Qu’il s’agisse d’une liaison directe via HDMI/DisplayPort ou d'un transit par station d’accueil Thunderbolt/USB-C, les symptômes d'« absence de signal » (*No Signal*) et de scintillement intermittent (*black screens* aléatoires d'une ou deux secondes) ne relèvent que rarement d'une panne matérielle franche de la dalle. 
 
 Dans plus de 85 % des cas observés sur le terrain, ces anomalies résultent d'une désynchronisation critique de la pile logicielle vidéo, d'une altération du cache topologique du système d'exploitation ou d'un échec de négociation protocolaire au niveau de la couche matérielle de transmission. Ce document formalise une approche méthodique de diagnostic et de remédiation par réinitialisation en profondeur des sous-systèmes graphiques sous Windows.
@@ -38,8 +39,6 @@ Le sous-système graphique de Windows conserve l'historique complet de chaque mo
 
 ---
 
-
-
 ![Hardware Diagnostic & Troubleshooting](https://images.unsplash.com/photo-1588508065123-287b28e013da? auto=format&fit=crop&w=1000&h=550&q=80)
 
 ## 2. Protocole de résolution et réinitialisation des pilotes
@@ -50,19 +49,23 @@ Pour rétablir l'intégrité du signal d'affichage, nous appliquons une procédu
 
 Avant toute manipulation de pilotes, il est impératif d'assainir la mémoire de configuration d'affichage de Windows pour forcer une ré-énumération matérielle propre.
 
-1. Déconnectez tous les moniteurs externes et stations d'accueil du PC portable.
+## 1. Déconnectez tous les moniteurs externes et stations d'accueil du PC portable.
 
-2. Ouvrez l'outil d'exécution avec le raccourci clavier `Windows + R`, saisissez `regedit` et validez pour ouvrir l'Éditeur du Registre.
+## 2. Ouvrez l'outil d'exécution avec le raccourci clavier `Windows + R`, saisissez `regedit` et validez pour ouvrir l'Éditeur du Registre.
 
-3. Naviguez jusqu'à l'arborescence suivante :
+## 3. Naviguez jusqu'à l'arborescence suivante :
+
    ```text
    HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\GraphicsDrivers
    ```
-4. Repérez les trois sous-clés suivantes :
+
+## 4. Repérez les trois sous-clés suivantes :
+
    * `Configuration`
    * `Connectivity`
    * `ScaleFactors`
-5. Cliquez avec le bouton droit sur chacune de ces trois clés et sélectionnez Supprimer (Windows les recréera automatiquement avec des valeurs saines lors du prochain démarrage).
+
+## 5. Cliquez avec le bouton droit sur chacune de ces trois clés et sélectionnez Supprimer (Windows les recréera automatiquement avec des valeurs saines lors du prochain démarrage).
 
 6. Redémarrez le système d'exploitation.
 
@@ -85,17 +88,18 @@ Cette commande force le sous-système Windows à purger la mémoire tampon d'aff
 
 Si le scintillement persiste, une corruption profonde de la bibliothèque de liens dynamiques (.dll) du pilote est avérée. L'outil natif de désinstallation de Windows conservant souvent des fichiers résiduels, nous utilisons l'utilitaire de référence de l'industrie : Display Driver Uninstaller (DDU).
 
-1. Téléchargez la dernière version stable de DDU ainsi que le package complet du pilote graphique constructeur (privilégiez le pilote OEM validé par le fabricant de votre PC portable : Lenovo, Dell, HP, etc., ou le dernier package WHQL d'Intel/NVIDIA).
+## 1. Téléchargez la dernière version stable de DDU ainsi que le package complet du pilote graphique constructeur (privilégiez le pilote OEM validé par le fabricant de votre PC portable : Lenovo, Dell, HP, etc., ou le dernier package WHQL d'Intel/NVIDIA).
 
-2. Lancez Windows en Mode sans échec :
+## 2. Lancez Windows en Mode sans échec :
+
    * Maintenez la touche `Shift` enfoncée tout en cliquant sur Redémarrer dans le menu Démarrer.
    * Accédez à Dépannage>Options avancées>Paramètres>Redémarrer, puis choisissez l'option `4` ou `F4` (Activer le mode sans échec).
 
-3. Exécutez DDU avec les privilèges administrateur.
+## 3. Exécutez DDU avec les privilèges administrateur.
 
-4. Sélectionnez le type de périphérique (GPU), puis choisissez la marque de votre carte (Intel, AMD ou NVIDIA).
+## 4. Sélectionnez le type de périphérique (GPU), puis choisissez la marque de votre carte (Intel, AMD ou NVIDIA).
 
-5. Cliquez sur Nettoyer et redémarrer.
+## 5. Cliquez sur Nettoyer et redémarrer.
 
 <div style="border-left: 4px solid #475569; padding: 12px 16px; margin: 20px 0; background-color: rgba(71, 85, 105, 0.05); border-radius: 4px;">
   <strong>Remarque sur les systèmes hybrides :</strong> Sur les ordinateurs portables équipés d'un processeur avec contrôleur intégré (iGPU Intel/AMD) et d'un GPU dédié (dGPU NVIDIA), effectuez systématiquement le nettoyage de l'iGPU en premier, car c'est lui qui gère la table de routage physique des sorties vidéo sur la majorité des architectures non équipées d'un commutateur MUX matériel.
@@ -109,15 +113,15 @@ Si le scintillement persiste, une corruption profonde de la bibliothèque de lie
 
 Une fois le pilote réinstallé, raccordez votre second moniteur et procédez aux ajustements de synchronisation temporelle :
 
-1. Ouvrez les ParamètresWindows (`Win + I`), puis naviguez versSystème>Écran>Paramètres d'affichage avancés.
+## 1. Ouvrez les ParamètresWindows (`Win + I`), puis naviguez versSystème>Écran>Paramètres d'affichage avancés.
 
-2. Sélectionnez votre moniteur externe dans la liste déroulante supérieure.
+## 2. Sélectionnez votre moniteur externe dans la liste déroulante supérieure.
 
-3. Vérifiez la valeur du champ Choisir une fréquence d'actualisation.
+## 3. Vérifiez la valeur du champ Choisir une fréquence d'actualisation.
 
-4. Si la dalle est configurée sur une valeur non standard (ex. : 59,94 Hz ou 75 Hz instable), basculez-la manuellement sur un palier standard strict : 60,00 Hz.
+## 4. Si la dalle est configurée sur une valeur non standard (ex. : 59,94 Hz ou 75 Hz instable), basculez-la manuellement sur un palier standard strict : 60,00 Hz.
 
-5. Ouvrez le Gestionnaire de périphériques, développez la sectionMoniteurs, effectuez un clic droit sur l'écran identifié comme *Moniteur Plug-and-Play générique*, puis sélectionnez Mettre à jour le pilote>Rechercher automatiquement les pilotes.
+## 5. Ouvrez le Gestionnaire de périphériques, développez la sectionMoniteurs, effectuez un clic droit sur l'écran identifié comme *Moniteur Plug-and-Play générique*, puis sélectionnez Mettre à jour le pilote>Rechercher automatiquement les pilotes.
 
 ---
 
@@ -139,7 +143,8 @@ Ce comportement est le symptôme typique d'une bande passante physique insuffisa
 ### Faut-il privilégier le pilote vidéo du fabricant de l'ordinateur portable (OEM) ou celui du fondeur (Intel/NVIDIA/AMD) ?
 En environnement d'entreprise, la règle d'ingénierie priorise le pilote OEM (validé par Dell, Lenovo, HP), car il intègre les profils de régulation thermique (*TGP/PL1/PL2*) et le routage des lignes PCIe spécifiques à la carte mère de l'appareil. Cependant, en cas de bogue d'affichage persistant sur des écrans récents, l'installation du pilote générique du fondeur (Intel Graphics Driver ou NVIDIA Studio/Game Ready) s'avère indispensable pour bénéficier des correctifs de conformité de la norme DisplayPort 2.1 / HDMI 2.
 
-1.
+## 1.
 
 ### Est-il possible qu'un câble vidéo provoque des micro-coupures sans être totalement hors service ?
+
 Absolument. Un câble présentant un blindage électromagnétique déficient ou une continuité marginale sur la broche HPD (*Hot Plug Detect*) peut transporter sans encombre les signaux basse résolution, mais générer des pertes de paquets massives lors de pics de charge vidéo ou lors du passage de signaux protégés HDCP. De simples interférences induites par le câble d'alimentation du moniteur longeant un câble vidéo bas de gamme suffisent à provoquer un écran noir intermittent d'une seconde.

@@ -9,6 +9,7 @@ theme: "Crimson Emergency Field"
 ---
 
 
+
 <div style="border-left: 4px solid #ef4444; padding: 12px 16px; margin: 20px 0; background-color: rgba(239, 68, 68, 0.08); border-radius: 4px; color: #111827;">
 <strong>Kritieke Systeemwaarschuwing:</strong> Sta je op het punt om een belangrijk videogesprek te starten op je kantoor aan de Zuidas, en hoor je opeens helemaal niets meer na een onverwachte BSOD? Geen paniek. Dit stappenplan brengt je geluid binnen enkele minuten terug.
 </div>
@@ -25,11 +26,11 @@ In de hectiek begin je dan al snel te stressen. Eerst klik je willekeurig op het
 
 Voordat we direct ingrijpen, is het handig om te begrijpen wat er onder de motorkap van Windows 11 gebeurt tijdens een harde systeemreboot:
 
-1. Vastgelopen Audio-services (Windows Audio & Endpoint Builder): Na een abrupte crash weigeren essentiële achtergrondservices soms automatisch opnieuw op te starten, waardoor Windows de communicatie met je geluidskaart verliest.
+## 1. Vastgelopen Audio-services (Windows Audio & Endpoint Builder): Na een abrupte crash weigeren essentiële achtergrondservices soms automatisch opnieuw op te starten, waardoor Windows de communicatie met je geluidskaart verliest.
 
-2. Corruptie van de Stuurprogrammacache (Driver Conflict): Een plotselinge stroomonderbreking of harde reset kan de actieve audio-driver (Realtek, Conexant, of USB-audio) in een status van datacorruptie achterlaten.
+## 2. Corruptie van de Stuurprogrammacache (Driver Conflict): Een plotselinge stroomonderbreking of harde reset kan de actieve audio-driver (Realtek, Conexant, of USB-audio) in een status van datacorruptie achterlaten.
 
-3. Standaard Apparaat Reset: Windows raakt in de war over welke fysieke uitgang prioriteit heeft, waardoor je hoofdtelefoon of ingebouwde speakers ineens op 'Uitgeschakeld' of 'Niet aangesloten' springen.
+## 3. Standaard Apparaat Reset: Windows raakt in de war over welke fysieke uitgang prioriteit heeft, waardoor je hoofdtelefoon of ingebouwde speakers ineens op 'Uitgeschakeld' of 'Niet aangesloten' springen.
 
 ---
 
@@ -37,7 +38,7 @@ Voordat we direct ingrijpen, is het handig om te begrijpen wat er onder de motor
 
 We gaan direct aan de slag met een praktische, logische volgorde. Geen theoretisch gezwets, maar acties via [Taakbeheer], [Configuratiescherm], [Apparaatbeheer] en [Instellingen].
 
-#### Stap 1: Controleer en herstart de Windows Audio-services via Taakbeheer
+## Stap 1: Controleer en herstart de Windows Audio-services via Taakbeheer
 Soms slaapt de achtergrondservice simpelweg na de crash. Laten we hem dwingen om opnieuw te starten.
 * Druk op `Ctrl + Shift + Esc` om [Taakbeheer] te openen.
 * Ga naar het tabblad [Services] (het tandwiel-icoon aan de linkerkant).
@@ -45,7 +46,7 @@ Soms slaapt de achtergrondservice simpelweg na de crash. Laten we hem dwingen om
 * Klik er met je rechtermuisknop op en kies [Opnieuw starten]. Als de optie grijs is, klik dan op [Starten].
 * Controleer direct of de service AudioEndpointBuilder ook actief is en herstart deze indien nodig op dezelfde manier.
 
-#### Stap 2: Duik in Apparaatbeheer om corrupte stuurprogramma's te verversen
+## Stap 2: Duik in Apparaatbeheer om corrupte stuurprogramma's te verversen
 Als de services draaien maar het apparaat nog steeds weigert, ligt het probleem bij de hardware-stuurprogramma's.
 * Klik met je rechtermuisknop op de Start-knop en selecteer [Apparaatbeheer].
 * Vouw de categorie [Besturing voor geluid, video en spelletjes] open.
@@ -53,7 +54,7 @@ Als de services draaien maar het apparaat nog steeds weigert, ligt het probleem 
 * Klik met rechts op het apparaat en kies [Apparaat verwijderen]. *(Geen zorgen, Windows verwijdert alleen de corrupte instantie).*
 * Klik bovenin de menubalk op [Actie] en kies [Zoeken naar gewijzigde apparaten]. Windows herkent je geluidskaart direct opnieuw en installeert de basisdriver vers.
 
-#### Stap 3: Handmatig het juiste afspeelapparaat selecteren in Instellingen
+## Stap 3: Handmatig het juiste afspeelapparaat selecteren in Instellingen
 Na een harde reset durft Windows nog wel eens de standaard audio-output te vergeten of op een virtuele HDMI-poort van je monitor te zetten.
 * Open [Instellingen] via de sneltoets `Windows + I`.
 * Ga naar [Systeem] en vervolgens naar [Geluid].

@@ -9,6 +9,7 @@ theme: "Acid Lime Hacker Space"
 ---
 
 
+
 Het is kwart voor negen 's ochtends op onze hub aan de Amsterdamse Zuidas. Over precies een kwartier start de wekelijkse architectuursync met het core-team, en net vandaag besluit mijn primaire testlaptop om tijdens een cruciale Windows 11-update muurvast te roesten op exact 100 procent. Geen beweging in te krijgen. De ventilator loeit als een straaljager, het scherm blijft koppig hangen, en de deadline ademt in mijn nek. Een klassiek noodgeval waarbij paniek op de loer ligt, maar we moeten direct handelen om acute prestatieproblemen en data-corruptie te voorkomen.
 
 <div style="border-left: 4px solid #84cc16; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
@@ -21,11 +22,11 @@ Na wat trial-and-error en het analyseren van de logs, werd de root bottleneck al
 
 ### De drie hoofdoorzaken van een vastgelopen update
 
-1. Corrupte downloadcache: Tijdelijke updatebestanden zijn beschadigd geraakt tijdens het binnenhalen via de Microsoft-servers.
+## 1. Corrupte downloadcache: Tijdelijke updatebestanden zijn beschadigd geraakt tijdens het binnenhalen via de Microsoft-servers.
 
-2. Conflicterende achtergrondservices: Diensten zoals Background Intelligent Transfer Service (BITS) blijven hangen in een hangende status.
+## 2. Conflicterende achtergrondservices: Diensten zoals Background Intelligent Transfer Service (BITS) blijven hangen in een hangende status.
 
-3. Rechtenproblemen of NTFS-lock: Windows weigert bestanden in de System32-omgeving te overschrijven omdat een actieve thread ze blijft vasthouden.
+## 3. Rechtenproblemen of NTFS-lock: Windows weigert bestanden in de System32-omgeving te overschrijven omdat een actieve thread ze blijft vasthouden.
 
 ---
 
@@ -33,10 +34,10 @@ Na wat trial-and-error en het analyseren van de logs, werd de root bottleneck al
 
 Geen paniek, we gaan dit direct oplossen via de command-line. Volg deze stappen nauwkeurig om de boel te bevrijden.
 
-#### Stap 1: Open de Terminal als Administrator
+## Stap 1: Open de Terminal als Administrator
 Ga naar je Windows-zoekbalk, typ `Terminal` of `cmd`, klik met je rechtermuisknop op het resultaat en kies Als administrator uitvoeren.
 
-#### Stap 2: Stop de update-gerelateerde services
+## Stap 2: Stop de update-gerelateerde services
 Voordat we de mappen kunnen legen, moeten we de actieve services die bestanden vergrendelen tijdelijk stoppen. Voer de volgende commando's één voor één uit:
 
 ```cmd
@@ -46,7 +47,7 @@ net stop appidsvc
 net stop cryptsvc
 ```
 
-#### Stap 3: Benoem de corrupte cache-mappen om
+## Stap 3: Benoem de corrupte cache-mappen om
 In plaats van direct alles te wissen, hernoemen we de mappen `SoftwareDistribution` en `Catroot2`. Hiermee dwing je Windows om direct een schone, nieuwe cache aan te maken.
 
 ```cmd
@@ -54,7 +55,7 @@ ren %systemroot%\SoftwareDistribution SoftwareDistribution.bak
 ren %systemroot%\System32\Catroot2 Catroot2.bak
 ```
 
-#### Stap 4: Start de services opnieuw op
+## Stap 4: Start de services opnieuw op
 Nu de schone lei klaarstaan, starten we de noodzakelijke Windows-diensten weer op:
 
 ```cmd

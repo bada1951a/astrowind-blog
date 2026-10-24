@@ -9,6 +9,7 @@ theme: "Pastel Lavender Tech"
 ---
 
 
+
 Il est 17h55 dans notre open space de La Défense. La clôture des dossiers trimestriels tombe à 18h00, mes écrans sont pleins à craquer de fichiers compressés et de PDF, et je dois renommer et envoyer d'urgence un package à la direction. Je fais un clic droit rapide pour archiver le tout avec 7-Zip, et là... c'est le drame. Ce nouveau menu contextuel épuré de Windows 11 s'affiche. L'option indispensable de mon logiciel de compression a disparu. Je suis obligé de cliquer sur "Afficher plus d'options" à chaque manipulation, perdant de précieuses secondes qui me font suer à grosses gouttes à l'approche de la deadline.
 
 Ce genre de micro-frustration ergonomique au bureau, multiplié par des centaines de clics par jour, finit par plomber totalement la productivité des équipes. En tant qu'ingénieur support, j'ai vu trop de collègues pester contre cette interface moderne mais peu pratique. Heureusement, il existe une solution radicale et propre pour retrouver le comportement classique de Windows 10 en quelques clics.
@@ -48,11 +49,11 @@ Cette commande crée la clé de registre spécifique que l'explorateur Windows s
 ### Étape 3 : Redémarrer l'Explorateur Windows
 Pour que la modification prenne effet immédiatement sans avoir à redémarrer tout le PC (ce qui vous ferait perdre vos fenêtres en cours), ouvrez le Gestionnaire des tâches (raccourci `Ctrl + Shift + Échap`).
 
-1. Dans l'onglet *Processus*, faites défiler vers le bas pour trouver Explorateur Windows (Windows Explorer).
+## 1. Dans l'onglet *Processus*, faites défiler vers le bas pour trouver Explorateur Windows (Windows Explorer).
 
-2. Faites un clic droit dessus.
+## 2. Faites un clic droit dessus.
 
-3. Cliquez sur Redémarrer.
+## 3. Cliquez sur Redémarrer.
 
 Votre barre des tâches va disparaître et réapparaître une fraction de seconde. C'est tout bon ! Faites un clic droit sur n'importe quel fichier : le menu classique de Windows 10 est de retour.
 
@@ -73,9 +74,10 @@ En tant que spécialiste de la maintenance, je vois souvent des scripts ou des l
 
 ## Foire Aux Questions (FAQ)
 
-1. Cette manipulation est-elle réversible si je souhaite revenir au menu par défaut de Windows 11 ? Absolument. Il suffit d'ouvrir à nouveau le Terminal en administrateur et de supprimer la clé avec la commande suivante : `reg.exe delete "HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}" /f`, puis de redémarrer l'Explorateur Windows via le Gestionnaire des tâches.
+## 1. Cette manipulation est-elle réversible si je souhaite revenir au menu par défaut de Windows 11 ? Absolument. Il suffit d'ouvrir à nouveau le Terminal en administrateur et de supprimer la clé avec la commande suivante : `reg.exe delete "HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}" /f`, puis de redémarrer l'Explorateur Windows via le Gestionnaire des tâches.
 
-2. Est-ce que cela fonctionne sur toutes les versions de Windows 11 ? Oui, cette astuce fonctionne sur les versions initiales ainsi que sur les mises à jour récentes (22H2, 23H2 et ultérieures). Microsoft n'a pas bloqué cette clé de contournement, car elle est tolérée pour des raisons de rétrocompatibilité.
+## 2. Est-ce que cela fonctionne sur toutes les versions de Windows 11 ? Oui, cette astuce fonctionne sur les versions initiales ainsi que sur les mises à jour récentes (22H2, 23H2 et ultérieures). Microsoft n'a pas bloqué cette clé de contournement, car elle est tolérée pour des raisons de rétrocompatibilité.
 
-3. Vais-je perdre mes applications récentes dans le menu ?
+## 3. Vais-je perdre mes applications récentes dans le menu ?
+
 Non. Vos logiciels habituels (comme 7-Zip, Notepad++, ou vos outils de gestion de documents) réapparaîtront directement au premier clic, sans que vous ayez besoin de chercher dans les sous-menus.

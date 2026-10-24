@@ -9,6 +9,7 @@ theme: "Industrial Blueprint"
 ---
 
 
+
 Suasana di salah satu gedung perkantoran kawasan Sudirman, Jakarta, mendadak mencekam. Jam menunjukkan pukul 16:45 WIB, tepat lima belas menit sebelum tenggat waktu pengiriman laporan keuangan kuartalan ke direksi. Tiba-tiba, layar monitor manajer operasional nge-freeze total. Mouse tidak bergerak, tombol Caps Lock ditekan tidak merespons, dan angka-angka laporan di Excel seolah mengejek dari balik layar yang membeku. Panik melanda karena belum sempat *save*. Dengan terpaksa, tombol *power* ditahan selama lima detik hingga PC mati paksa. Begitu PC dinyalakan ulang, dokumen yang dikerjakan hilang setengahnya, dan kepanikan berubah menjadi kejengkelan karena masalah *random freezing* seperti ini sudah terjadi tiga kali dalam seminggu terakhir.
 
 ![Tech Troubleshooting Guide](/images/tech-photo/tech-photos%20(42).jpg)
@@ -25,33 +26,34 @@ Sebagai teknisi infrastruktur IT yang sudah kenyang asam garam menghadapi drama 
 
 Sebelum masuk ke langkah teknis, mari kita bedah tiga penyebab utama kenapa Windows 11 sering mendadak tidak merespons di lingkungan kantoran:
 
-1. Driver Grafis (GPU) Crash & Recover Gagal: Windows 11 sangat bergantung pada akselerasi hardware. Jika driver grafis mengalami konflik sesaat dan gagal bangkit, sistem akan langsung freeze.
+## 1. Driver Grafis (GPU) Crash & Recover Gagal: Windows 11 sangat bergantung pada akselerasi hardware. Jika driver grafis mengalami konflik sesaat dan gagal bangkit, sistem akan langsung freeze.
 
-2. I/O Bottleneck pada Storage (SSD/HDD): Sektor pada SSD yang mulai *bad sector* atau antrean tulis (Write Queue) yang penuh membuat sistem menunggu respons storage tanpa batas waktu (hang).
+## 2. I/O Bottleneck pada Storage (SSD/HDD): Sektor pada SSD yang mulai *bad sector* atau antrean tulis (Write Queue) yang penuh membuat sistem menunggu respons storage tanpa batas waktu (hang).
 
-3. Ketidakstabilan Power Management (C-States / Thermal): Fitur penghemat daya agresif di BIOS atau lonjakan suhu sesaat pada VRM motherboard sering membuat sistem menghentikan proses secara mendadak untuk melindungi komponen.
+## 3. Ketidakstabilan Power Management (C-States / Thermal): Fitur penghemat daya agresif di BIOS atau lonjakan suhu sesaat pada VRM motherboard sering membuat sistem menghentikan proses secara mendadak untuk melindungi komponen.
 
 ---
 
 ### Langkah-Langkah Melacak Penyebab Freeze Lewat Event Viewer
 
-Mari kita bedah kejadian di Sudirman tadi menggunakan langkah-langkah sistematis yang bisa Anda ikuti langsung di meja kerja Anda. #### Langkah 1: Membuka Event Viewer
-1. Klik tombol Startdi Windows 11, ketikEvent Viewer, lalu tekan Enter.
+Mari kita bedah kejadian di Sudirman tadi menggunakan langkah-langkah sistematis yang bisa Anda ikuti langsung di meja kerja Anda. ## Langkah 1: Membuka Event Viewer
 
-2. Pada panel sebelah kiri, klik dua kali pada Windows Logs, lalu pilihSystem. Di sinilah semua catatan aktivitas hardware dan driver sistem disimpan.
+## 1. Klik tombol Startdi Windows 11, ketikEvent Viewer, lalu tekan Enter.
 
-#### Langkah 2: Menyaring Kejadian Kritis (Critical & Error)
+## 2. Pada panel sebelah kiri, klik dua kali pada Windows Logs, lalu pilihSystem. Di sinilah semua catatan aktivitas hardware dan driver sistem disimpan.
+
+## Langkah 2: Menyaring Kejadian Kritis (Critical & Error)
 Karena log sistem sangat banyak, kita tidak perlu membaca semuanya satu per satu. Kita cari waktu persis di mana PC Anda tadi freeze.
 
-1. Di panel sebelah kanan, klik Filter Current Log...
+## 1. Di panel sebelah kanan, klik Filter Current Log...
 
-2. Pada bagian *Logged*, pilih rentang waktu kejadian (misalny
+## 2. Pada bagian *Logged*, pilih rentang waktu kejadian (misalny
 
 a: *Last 1 hour* atau *Last 24 hours*).
 
-3. Pada kotak centang *Event Level*, centang CriticaldanError, lalu klikOK.
+## 3. Pada kotak centang *Event Level*, centang CriticaldanError, lalu klikOK.
 
-#### Langkah 3: Berburu Kode Error (The Smoking Gun)
+## Langkah 3: Berburu Kode Error (The Smoking Gun)
 Cari kejadian tepat pada menit-menit sebelum PC Anda dipaksa mati. Perhatikan beberapa Event ID yang sering menjadi tersangka utam
 
 a:
@@ -81,11 +83,11 @@ Berikut adalah tabel panduan cepat bagi Anda untuk mencocokkan gejala fisik PC d
 
 Setelah Anda menemukan biang keroknya melalui Event Viewer, lakukan langkah pengamanan berikut agar insiden di Sudirman tidak terulang:
 
-1. Jangan Abaikan Suhu: Gunakan aplikasi pemantau hardware gratis untuk memastikan suhu CPU tidak melewati batas aman (di bawah 80°C saat bekerja normal). Debu menumpuk di heatsink adalah pembunuh senyap nomor satu.
+## 1. Jangan Abaikan Suhu: Gunakan aplikasi pemantau hardware gratis untuk memastikan suhu CPU tidak melewati batas aman (di bawah 80°C saat bekerja normal). Debu menumpuk di heatsink adalah pembunuh senyap nomor satu.
 
-2. Rutin Cek Kesehatan Storage: Seringkali *random freezing* di Windows 11 disebabkan oleh SSD yang mulai kehabisan *spare area*. Pastikan selalu menyisakan minimal 10-15% kapasitas kosong pada drive sistem (C:).
+## 2. Rutin Cek Kesehatan Storage: Seringkali *random freezing* di Windows 11 disebabkan oleh SSD yang mulai kehabisan *spare area*. Pastikan selalu menyisakan minimal 10-15% kapasitas kosong pada drive sistem (C:).
 
-3. Update BIOS Secara Berkal
+## 3. Update BIOS Secara Berkal
 
 a: Beberapa motherboard memiliki bug pada manajemen daya C-States yang memicu freeze acak di Windows 11. Pembaruan BIOS sering kali menjadi solusi pamungkas.
 
@@ -103,4 +105,4 @@ A: Jangan panik. Tidak semua *Error* berakibat fatal. Windows sering kali mencat
 
 Q: Apa yang harus saya lakukan jika Event Viewer hanya menunjukkan Kernel-Power (ID 41) tanpa ada petunjuk error lain sebelumnya?
 
-A: Jika sebelum Event ID 41 sama sekali tidak ada catatan error, besar kemungkinan masalahnya murni bersumber dari suplai daya hardware (Power Supply unit yang mulai melemah, kabel power kendor, atau korsleting listrik eksternal). Cek kestabilan listrik dan kondisi fisik PSU Anda. 
+A: Jika sebelum Event ID 41 sama sekali tidak ada catatan error, besar kemungkinan masalahnya murni bersumber dari suplai daya hardware (Power Supply unit yang mulai melemah, kabel power kendor, atau korsleting listrik eksternal). Cek kestabilan listrik dan kondisi fisik PSU Anda.

@@ -9,6 +9,7 @@ theme: "Sunset Horizon Coral"
 ---
 
 
+
 Erano le 18:30 di un martedì piovoso in ufficio a Milano, nel bel mezzo di un progetto di ottimizzazione dell'infrastruttura per un cliente importante, quando la mia postazione di test principale ha deciso di piantarsi stoicamente al famigerato 100% durante un aggiornamento cumulativo di Windows 11. Schermo acceso, ventole al minimo, nessun errore a schermo, ma immobile da oltre due ore. Riavviare brutalmente dal pulsante di accensione significava rischiare una corruzione del sistema operativo e dover reinstallare tutto da capo, mandando all'aria la deadline del giorno dopo.
 
 Se anche tu ti sei trovato davanti a questa schermata immobile, sai benissimo quale senso di frustrazione si provi. Fortunatamente, dopo anni passati a gestire infrastrutture IT e postazioni aziendali, conosco una scorciatoia pulita e sicura per risolvere il problema senza perdere i dati.
@@ -25,19 +26,19 @@ Se anche tu ti sei trovato davanti a questa schermata immobile, sai benissimo qu
 
 Prima di sporcarci le mani con i comandi, capiamo cosa sta succedendo sotto il cofano. Nella maggior parte dei casi, il blocco non è un vero e proprio crash del sistema, ma un ingorgo logico. Ecco le tre cause principali:
 
-1. Cache degli aggiornamenti corrott
+## 1. Cache degli aggiornamenti corrott
 
 a: I file scaricati nella cartella di sistema (`SoftwareDistribution`) presentano conflitti o bit corrotti durante la fase di decompressione.
 
-2. Servizi di Windows in stallo: Il servizio Windows Update (`wuauserv`) o il servizio di crittografia tentano di scrivere su file temporanei bloccati da altri processi fantasma.
+## 2. Servizi di Windows in stallo: Il servizio Windows Update (`wuauserv`) o il servizio di crittografia tentano di scrivere su file temporanei bloccati da altri processi fantasma.
 
-3. Driver di terze parti obsoleti: Durante la fase finale del 100%, il sistema tenta di configurare driver hardware che vanno in conflitto con l'architettura della macchina. ---
+## 3. Driver di terze parti obsoleti: Durante la fase finale del 100%, il sistema tenta di configurare driver hardware che vanno in conflitto con l'architettura della macchina. ---
 
 ### La Soluzione Passo-Passo: Svuotare la Cache di Windows Update
 
 Per sbloccare la situazione senza fare danni, dobbiamo interrompere temporaneamente i servizi di aggiornamento, ripulire i file temporanei bloccati e riavviare il processo. Ecco come procedere in modo sicuro.
 
-#### 1. Aprire il Terminale con privilegi amministrativi
+## 1. Aprire il Terminale con privilegi amministrativi
 Clicca sul menu Start, digita `Terminale` (o `Prompt dei comandi`), fai clic destro sull'applicazione e selezionaEsegui come amministratore.
 
 #
@@ -54,7 +55,7 @@ net stop bits
 net stop msiserver
 ```
 
-#### 3. Rinominare o ripulire la cartella SoftwareDistribution
+## 3. Rinominare o ripulire la cartella SoftwareDistribution
 Questa è la vera chiave di volta. Invece di cancellare brutalmente i file, è più sicuro rinominare la cartella di cache in modo che Windows ne crei una nuova e pulita automaticamente. Esegui questi comandi nel terminale:
 
 ```text
@@ -62,7 +63,7 @@ ren C:\Windows\SoftwareDistribution SoftwareDistribution.old
 ren C:\Windows\System32\catroot2 Catroot2.old
 ```
 
-#### 4. Riavviare i servizi di sistema
+## 4. Riavviare i servizi di sistema
 Ora che la strada è pulita, riattiva i servizi di aggiornamento che avevamo fermato in precedenz
 
 a:
@@ -98,4 +99,4 @@ A questo punto, chiudi il terminale, riavvia normalmente il computer tramite il 
 ### Domande Frequenti (FAQ)
 
 Posso perdere i miei file personali cancellando la cartella SoftwareDistribution? Assolutamente no. La cartella `SoftwareDistribution` contiene unicamente i file temporanei necessari per scaricare e installare gli aggiornamenti di Windows. I tuoi documenti, le foto e le applicazioni installate non verranno toccati in alcun modo.Cosa devo fare se il comando `ren` restituisce un errore di file in uso? Significa che uno dei servizi di Windows Update non si è chiuso correttamente. Riavvia il computer inModalità Provvisoria(Modalità sicura) e ripeti la procedura da lì; in questo modo nessun processo di background potrà bloccare i file.Quanto tempo devo aspettare prima di considerare l'aggiornamento bloccato?
-In genere, un aggiornamento cumulativo standard non dovrebbe impiegare più di 30-45 minuti per completarsi. Se la percentuale rimane fissa al 100% per oltre un'ora e mezza e l'indicatore di attività del disco è completamente spento, puoi procedere tranquillamente con questa guida. 
+In genere, un aggiornamento cumulativo standard non dovrebbe impiegare più di 30-45 minuti per completarsi. Se la percentuale rimane fissa al 100% per oltre un'ora e mezza e l'indicatore di attività del disco è completamente spento, puoi procedere tranquillamente con questa guida.

@@ -9,6 +9,7 @@ theme: "Sunset Horizon Coral"
 ---
 
 
+
 Last Friday at 4:30 PM, right as our deployment sprint was winding down, an engineering lead brought her flagship Dell Precision workstation into my lab. She was running dual external 4K monitors through a Thunderbolt 4 dock. Every twenty seconds, panel two would drop to black, display the dreaded "No Signal" banner, wake up, and drag the primary panel into an agonizing three-second stutter loop. She had already swapped cables three times and rebooted twice.
 
 In production environments, this issue is rarely fried silicon. Nine times out of ten, dual-monitor signal dropouts on modern laptops boil down to a corrupted display pipeline state: botched DisplayPort link training, aggressive Windows Update driver clobbering, or an invalidated EDID cache in the registry. 
@@ -40,7 +41,7 @@ Laptops routing dual displays handle a surprisingly fragile chain of handshakes 
                                                                 (Flicker / Black Screen)
 ```
 
-#### 1. Windows Update Driver Clobbering & Hybrid Switching Desync
+## 1. Windows Update Driver Clobbering & Hybrid Switching Desync
 Modern laptops use hybrid graphics switching (NVIDIA Optimus or AMD SmartAccess). Even if a powerful RTX card powers your applications, your laptop's integrated Intel or AMD SoC physically drives the internal panel and the external display outputs via DisplayPort Alternate Mode. 
 
 When Windows Update pushes a generic WHQL DCH graphics driver in the background, it often overwrites custom OEM-tuned clock tables. This causes a desync between the iGPU frame presentation and the dGPU render queue, manifesting as intermittent black frames whenever dynamic refresh rates change or hardware acceleration initializes.
@@ -54,7 +55,7 @@ When you plug in dual monitors, the graphics transmitter initiates Link Training
 
 If a cable has marginal signal integrity or your dock's Multi-Stream Transport (MST) chip overheats, the receiver experiences excessive bit error rates. The graphics card drops the link, attempts a renegotiation, and causes the monitor to power-cycle its inputs. That continuous cycle is the flicker you see on your desk.
 
-#### 3. Stale Multi-Monitor Topology & Corrupted EDID Registry Cache
+## 3. Stale Multi-Monitor Topology & Corrupted EDID Registry Cache
 Every time you connect a monitor, Windows saves its Extended Display Identification Data (EDID), timings, and desktop coordinates under:
 `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\GraphicsDrivers\Configuration`
 
@@ -78,21 +79,24 @@ Over months of hot-plugging docks, hotel TVs, and conference room projectors, th
 
 Follow these steps in exact sequence. Do not skip the offline isolation phase; otherwise, Windows Update will silently inject a generic display driver mid-install and invalidate your progress.
 
-#### Phase 1: Clear the Stale Windows Monitor Registry Cache
+## Phase 1: Clear the Stale Windows Monitor Registry Cache
 
 Before touching the drivers, purge the accumulated multi-monitor topology configurations.
 
-1. Unplug both external monitors and disconnect your Thunderbolt/USB-C dock.
+## 1. Unplug both external monitors and disconnect your Thunderbolt/USB-C dock.
 
-2. Press `Win + R`, type `cmd`, and press `Ctrl + Shift + Enter` to launch Command Prompt as Administrator.
+## 2. Press `Win + R`, type `cmd`, and press `Ctrl + Shift + Enter` to launch Command Prompt as Administrator.
 
-3. Stop the display pipeline service temporarily:
+## 3. Stop the display pipeline service temporarily:
+
    ```cmd
    net stop "DisplayEnhancementService"
    ```
-4. Press `Win + R`, type `regedit`, and hit Enter.
 
-5. Navigate to:
+## 4. Press `Win + R`, type `regedit`, and hit Enter.
+
+## 5. Navigate to:
+
    `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\GraphicsDrivers`
 6. Back up your registry first (`File` > `Export`). Then right-click and delete these three subkeys entirely:
    * `Configuration`
@@ -104,19 +108,20 @@ Before touching the drivers, purge the accumulated multi-monitor topology config
   <strong>Field Tip:</strong> Never delete the parent <code>GraphicsDrivers</code> key itself—only delete the three nested subkeys named above. If Windows blocks deletion, right-click the key, select <strong>Permissions</strong>, and grant <em>Full Control</em> to your Administrator account.
 </div>
 
-#### Phase 2: Nuclear Clean via Display Driver Uninstaller (DDU)
+## Phase 2: Nuclear Clean via Display Driver Uninstaller (DDU)
 
 To prevent driver conflicts, execute an isolated cleanup in Windows Safe Mode.
 
-1. Disconnect your machine from the internet (unplug Ethernet and toggle Wi-Fi OFF). This is non-negotiable.
+## 1. Disconnect your machine from the internet (unplug Ethernet and toggle Wi-Fi OFF). This is non-negotiable.
 
-2. Hold down the `Shift` key while clicking `Start` > `Power` > `Restart`.
+## 2. Hold down the `Shift` key while clicking `Start` > `Power` > `Restart`.
 
-3. Navigate to: `Troubleshoot` > `Advanced options` > `Startup Settings` > click `Restart`.
+## 3. Navigate to: `Troubleshoot` > `Advanced options` > `Startup Settings` > click `Restart`.
 
-4. Upon reboot, hit `4` or `F4` to enter Safe Mode.
+## 4. Upon reboot, hit `4` or `F4` to enter Safe Mode.
 
-5. Launch Display Driver Uninstaller (DDU):
+## 5. Launch Display Driver Uninstaller (DDU):
+
    * Set Select device type to `GPU`.
    * Under Select device, select your discrete card first (e.g., `NVIDIA`).
    * Click Clean and do NOT restart.
@@ -131,33 +136,33 @@ To prevent driver conflicts, execute an isolated cleanup in Windows Safe Mode.
       └──> Run DDU: Select iGPU (Intel/AMD)  ──> Execute "Clean and restart"
 ```
 
-#### Phase 3: Sequential Clean Driver Reinstallation
+## Phase 3: Sequential Clean Driver Reinstallation
 
 Now boot back into standard Windows while keeping your internet connection disabled.
 
-1. Run the offline installer for your Integrated GPU (iGPU) first. The iGPU physically controls your laptop's display PHYs; it must establish the root driver framework before the discrete GPU can negotiate display pipelines.
+## 1. Run the offline installer for your Integrated GPU (iGPU) first. The iGPU physically controls your laptop's display PHYs; it must establish the root driver framework before the discrete GPU can negotiate display pipelines.
 
-2. Reboot your laptop.
+## 2. Reboot your laptop.
 
-3. Run the offline installer for your Discrete GPU (dGPU). Choose *Custom Installation* and check Perform a clean installation.
+## 3. Run the offline installer for your Discrete GPU (dGPU). Choose *Custom Installation* and check Perform a clean installation.
 
-4. Reboot your laptop once more.
+## 4. Reboot your laptop once more.
 
-5. Reconnect your network adapters now that the core drivers are locked in place.
+## 5. Reconnect your network adapters now that the core drivers are locked in place.
 
-#### Phase 4: Clean Cable Sequence and Link Clock Synchronization
+## Phase 4: Clean Cable Sequence and Link Clock Synchronization
 
 Now we rebuild the physical display link without triggering an MST sync error.
 
-1. Connect your dock or primary USB-C cable to the laptop with no monitors plugged into the dock.
+## 1. Connect your dock or primary USB-C cable to the laptop with no monitors plugged into the dock.
 
-2. Connect Monitor 1 using your certified cable. Wait five seconds for the Windows plug-and-play chime to sound.
+## 2. Connect Monitor 1 using your certified cable. Wait five seconds for the Windows plug-and-play chime to sound.
 
-3. Open Device Manager(`Win + X` > `Device Manager`). ExpandMonitors and confirm your panel shows its actual model name rather than "Generic PnP Monitor". If it displays Generic PnP, right-click and hit *Update driver* > *Search automatically*.
+## 3. Open Device Manager(`Win + X` > `Device Manager`). ExpandMonitors and confirm your panel shows its actual model name rather than "Generic PnP Monitor". If it displays Generic PnP, right-click and hit *Update driver* > *Search automatically*.
 
-4. Connect Monitor 2.
+## 4. Connect Monitor 2.
 
-5. Press `Win + I` to open Settings, go to `System` > `Display` > `Advanced display`.
+## 5. Press `Win + I` to open Settings, go to `System` > `Display` > `Advanced display`.
 
 6. Select each monitor individually from the top drop-down menu and lock down their refresh rates:
    * Disable any Dynamic (Variable) refresh rate settings.
@@ -176,21 +181,21 @@ Now we rebuild the physical display link without triggering an MST sync error.
 
 ### Frequently Asked Questions
 
-####
+##
 
 Q1: Why does hot-unplugging the cable fix the flicker for 15 minutes before the screen drops out again?
 Hot-unplugging forces the graphics adapter to reset the DisplayPort auxiliary (AUX) channel and re-run link training from scratch. At connection time, the link operates cleanly. 
 
 However, as thermal loads rise or minor line noise builds up on poor-quality cables, uncorrected link errors quickly exceed the transceiver's error budget. Once the bit error rate threshold is crossed, the driver drops the display link to protect against memory corruption, producing the exact flicker loop you started with.
 
-####
+##
 
 Q2: Should I update my discrete GPU (NVIDIA) driver or integrated GPU (Intel/AMD) driver first?
 Always update the Integrated GPU driver first. On modern dual-GPU laptops, the integrated GPU directly controls the internal display engine and manages the physical video routing lines (DisplayPort Alternate Mode) exiting the motherboard. 
 
 The discrete GPU functions primarily as a compute accelerator, rendering frames off-screen and copying them to the iGPU's framebuffer. If the integrated platform driver is outdated or broken, updating the discrete GPU won't solve external monitor signal drops.
 
-####
+##
 
 Q3: Can a damaged or cheap cable actually simulate a display driver crash?
 Yes. Modern high-resolution displays push massive amounts of data. Dual 4K at 60Hz requires significant bandwidth, demanding strict physical link integrity. Cheap or worn cables suffer from signal attenuation, impedance mismatches, and electromagnetic interference. 

@@ -9,6 +9,7 @@ theme: "Sunset Horizon Coral"
 ---
 
 
+
 Jam menunjukkan pukul 08.55 WIB. Lima menit lagi *daily standup meeting* via Zoom akan dimulai di ruang *huddle* kantor startup kami di kawasan SCBD, Jakarta. Sialnya, laptop Windows 10 operasional saya baru saja dinyalakan karena habis melakukan *update* sistem semalam. Layar *desktop* sudah muncul, tapi kursor mutar-mutar terus, kipas bergemuruh kencang, dan aplikasi Slack serta Chrome sama sekali tidak mau dibuka. Keringat dingin mulai bercucuran karena saya harus segera membagikan laporan server internal yang down semalam. Masalah klasik: laptop kehabisan napas karena puluhan aplikasi langsung *nyala* bersamaan saat *booting*.
 
 Situasi seperti ini pasti sering bikin darah tinggi, kan? Kalau Anda bekerja di lingkungan cepat seperti *startup* Jakarta, menunggu laptop *loading* selama 5 sampai 10 menit adalah kemewahan yang tidak kita miliki. 
@@ -29,23 +30,23 @@ Sebelum masuk ke eksekusi, kita harus paham dulu apa yang sebenarnya terjadi di 
 
 a:
 
-1. Aplikasi "Numpang Nyala" Otomatis: Banyak aplikasi seperti Steam, Spotify, Discord, hingga aplikasi kantor seperti Teams dan OneDrive yang secara *default* mencentang opsi "Run at startup" saat instalasi.
+## 1. Aplikasi "Numpang Nyala" Otomatis: Banyak aplikasi seperti Steam, Spotify, Discord, hingga aplikasi kantor seperti Teams dan OneDrive yang secara *default* mencentang opsi "Run at startup" saat instalasi.
 
-2. Kapasitas Penyimpanan Terbebani: Jika laptop Anda masih menggunakan Hard Disk lama (HDD) alih-alih SSD, antrean baca tulis saat *booting* akan membuat sistem *not responding* dalam waktu lama.
+## 2. Kapasitas Penyimpanan Terbebani: Jika laptop Anda masih menggunakan Hard Disk lama (HDD) alih-alih SSD, antrean baca tulis saat *booting* akan membuat sistem *not responding* dalam waktu lama.
 
-3. Pemeriksaan Keamanan Berlebihan: Antivirus pihak ketiga yang langsung melakukan pemindaian menyeluruh (*full system scan*) setiap kali komputer baru menyala. ---
+## 3. Pemeriksaan Keamanan Berlebihan: Antivirus pihak ketiga yang langsung melakukan pemindaian menyeluruh (*full system scan*) setiap kali komputer baru menyala. ---
 
 ### Panduan Praktis: Matikan Aplikasi Startup dalam 1 Menit
 
 Tidak perlu instal software tambahan atau masuk ke pengaturan BIOS yang ribet. Cukup gunakan fitur bawaan Windows 10 dengan langkah-langkah kilat berikut:
 
-#### Langkah 1: Buka Task Manager
+## Langkah 1: Buka Task Manager
 Tekan kombinasi tombol Ctrl + Shift + Esc secara bersamaan di keyboard Anda. Cara ini adalah jalan pintas paling cepat untuk memanggil Task Manager tanpa harus klik kanan *taskbar*.
 
-#### Langkah 2: Masuk ke Tab "Startup"
+## Langkah 2: Masuk ke Tab "Startup"
 Pada jendela Task Manager yang muncul, klik tab Startup(biasanya berada di bagian atas, berikon speedometer atau meteran). Jika Anda tidak melihat tab tersebut, klikMore details di bagian bawah jendela terlebih dahulu.
 
-#### Langkah 3: Nonaktifkan Aplikasi yang Tidak Perlu
+## Langkah 3: Nonaktifkan Aplikasi yang Tidak Perlu
 Anda akan melihat daftar panjang aplikasi yang berjalan otomatis. Cari aplikasi yang berstatus Enabled namun jarang Anda gunakan saat pertama kali menyalakan laptop. 
 * Klik kanan pada aplikasi tersebut (contoh: *Spotify Web Helper*, *Skype*, atau *Epic Games Launcher*).
 * Pilih Disable.
@@ -80,11 +81,14 @@ Jika Anda ragu dengan fungsi sebuah aplikasi, cukup lakukan pencarian singkat di
 
 ### Pertanyaan yang Sering Diajukan (FAQ)
 
-1. Apakah aplikasi yang di-disable akan terhapus dari laptop saya?
+## 1. Apakah aplikasi yang di-disable akan terhapus dari laptop saya?
+
 Tidak sama sekali. Proses *disable* hanya menghentikan aplikasi agar tidak berjalan otomatis saat Windows baru dinyalakan. Anda tetap bisa membuka aplikasi tersebut secara manual kapan pun Anda butuhkan lewat menu Start atau *desktop shortcut*.
 
-2. Kenapa beberapa aplikasi otomatis aktif kembali setelah di-update?
+## 2. Kenapa beberapa aplikasi otomatis aktif kembali setelah di-update?
+
 Beberapa software memiliki perilaku agresif di mana pengaturan *startup*-nya akan ter-reset menjadi aktif setiap kali aplikasi tersebut memperbarui versinya (*auto-update*). Anda hanya perlu mengulang langkah Task Manager di atas jika hal ini terjadi.
 
-3. Apakah cara ini aman untuk dilakukan pada laptop kantor yang dikelola tim IT?
+## 3. Apakah cara ini aman untuk dilakukan pada laptop kantor yang dikelola tim IT?
+
 Secara umum aman untuk aplikasi personal yang Anda instal sendiri. Namun, jika laptop Anda menggunakan kebijakan (*policy*) domain perusahaan yang dikunci oleh administrator IT, beberapa opsi mungkin tidak bisa diubah.

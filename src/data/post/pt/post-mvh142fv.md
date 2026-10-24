@@ -9,6 +9,7 @@ theme: "Nordic Clean Ice"
 ---
 
 
+
 Eram exatamente 14h45 em um escritório na Avenida Paulista, em São Paulo. Faltavam quinze minutos para a reunião mais importante do semestre com a diretoria, e a máquina principal do gerente de operações simplesmente congelou. Tela estática, mouse morto, o cooler rodando no talo e o pior: a apresentação de resultados aberta sem backup recente. No desespero, o botão físico de reset foi acionado. A máquina voltou, a reunião aconteceu no sufoco usando um notebook reserva, mas o problema voltou a se repetir duas vezes na mesma semana. Trocar peças às cegas estava fora de cogitação. Era hora de usar a ferramenta que todo bom profissional de suporte tem no arsenal: o Visualizador de Eventos do Windows.
 
 <div style="border-left: 4px solid #0284c7; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
@@ -21,11 +22,11 @@ a:</strong> O Windows 11 guarda um diário secreto de tudo o que acontece em seu
 
 Antes de abrir qualquer ferramenta, precisamos entender o que costuma derrubar o sistema operacional de forma repentina. Na minha rotina de bancada, divido esses travamentos misteriosos em três grandes vilões:
 
-1. Instabilidade de Driver de Vídeo: Atualizações automáticas do Windows Update muitas vezes sobrescrevem drivers essenciais da placa gráfica (NVIDIA, AMD ou Intel), gerando conflitos que congelam a interface gráfica inteira.
+## 1. Instabilidade de Driver de Vídeo: Atualizações automáticas do Windows Update muitas vezes sobrescrevem drivers essenciais da placa gráfica (NVIDIA, AMD ou Intel), gerando conflitos que congelam a interface gráfica inteira.
 
-2. Micro-falhas de Energia ou Tensão na Placa-Mãe: Variações na linha de 12V da fonte ou perfis de memória RAM (XMP/EXPO) ligeiramente instáveis fazem o processador travar instantaneamente para evitar danos maiores.
+## 2. Micro-falhas de Energia ou Tensão na Placa-Mãe: Variações na linha de 12V da fonte ou perfis de memória RAM (XMP/EXPO) ligeiramente instáveis fazem o processador travar instantaneamente para evitar danos maiores.
 
-3. Erros de Leitura em SSDs NVMe: Falhas intermitentes no controlador do armazenamento principal travam o kernel do Windows ao tentar ler o arquivo de paginação.
+## 3. Erros de Leitura em SSDs NVMe: Falhas intermitentes no controlador do armazenamento principal travam o kernel do Windows ao tentar ler o arquivo de paginação.
 
 ---
 

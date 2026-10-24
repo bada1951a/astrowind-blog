@@ -9,6 +9,7 @@ theme: "Modern Minimalist Slate"
 ---
 
 
+
 Es ist exakt 16:30 Uhr an einem Freitag im Frankfurter Bankenviertel. Genau in dreißig Minuten beginnt das lange Wochenende, und auf meinem Schreibtisch stapeln sich noch die letzten dringenden Freigabedokumente für das Q4-Budget. Ich will nur noch die letzten digitalen Signaturen setzen, die Dokumente abschicken und den Rechner in den Feierabend schicken. Ich klicke auf Herunterfahren. Der Bildschirm wird schwarz, die Lüfter heulen kurz auf – aber die Power-LED am Gehäuse leuchtet weiter. Auch nach fünf Minuten rührt sich nichts. Die Festplatten-LED ist tot, aber der Rechner zieht stur Strom. Wenn ich jetzt den Stecker ziehe oder den Power-Knopf lange gedrückt halte, riskiere ich Dateisystemfehler in den verschlüsselten Laufwerken. In Panik vor dem drohenden Datenverlust suche ich nach einer schnellen Lösung, um diesen störrischen Workstation-Kasten endlich auszubekommen.
 
 <div style="border-left: 4px solid #3b82f6; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">

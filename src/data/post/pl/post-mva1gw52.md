@@ -9,6 +9,7 @@ theme: "Tokyo Neon Violet"
 ---
 
 
+
 Wczoraj rano, tuż przed kluczowym audytem stabilności infrastruktury dla naszego zagranicznego klienta we wrocławskim parku technologicznym, mój główny terminal roboczy zaczął wyrzucać krytyczne błędy braku pamięci wirtualnej. Pasek dysku C zaświecił się na złowrogi, krwisty czerwony kolor – zostało równe 420 megabajtów wolnej przestrzeni. Zamiast analizować logi, musiałem w kilka minut opanować kryzys, zanim system zszedłby na kolana w trakcie prezentacji przed zarządem.
 
 Okazało się, że Windows 11 po ostatniej dużej aktualizacji i intensywnych testach środowiskowych zostawił po sobie gigantyczny śmietnik w ukrytych folderach tymczasowych. Jeśli u Ciebie też dysk C pęka w szwach, a nie masz pojęcia, co bezpiecznie skasować, oto prosty, sprawdzony plan ratunkowy.
@@ -33,8 +34,6 @@ Wejdź w menu Ustawienia(skrót Windows + I), przejdź do zakładkiSystem, a nas
 - System chwilę skanuje dysk w poszukiwaniu zbędnych danych.
 - Zaznacz pola takie jak: *Poprzednie instalacje systemu Windows*, *Pobierane pliki* (jeśli nie masz tam nic ważnego), *Tymczasowe pliki internetowe* oraz *Wyrzucone elementy z Kosza*.
 - Kliknij Usuń pliki. To w pełni bezpieczna procedura akceptowana przez Microsoft.
-
-
 
 ![Tech & IT Solution Guide](https://picsum.photos/seed/computer844/1000/550)
 

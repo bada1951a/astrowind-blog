@@ -9,6 +9,7 @@ theme: "Nordic Clean Ice"
 ---
 
 
+
 > *"A misplaced semicolon will break your build, but an intermittent switch leaf will break your sanity. In production environments, deterministic hardware input is not an amenity—it is an absolute operational baseline."*
 
 Late last winter, during an urgent infrastructure migration on an internal Kubernetes cluster, my terminal suddenly spat out syntax errors during a critical namespace eviction. My custom 75% hot-swap board—built with tuned linear switches—had begun randomly dropping strokes on the `T` key and double-registering the `E` key (`eerror: unexpeected token`). 
@@ -76,11 +77,13 @@ Before picking up any chemical solvents or tools, systematically isolate the ope
 
 ### Phase 1: Software and Interface Triage
 
-1. Check HID Drivers in Device Manager:
+## 1. Check HID Drivers in Device Manager:
+
    Press `Windows Key + X` and select Device Manager. ExpandHuman Interface DevicesandKeyboards. 
    Look for duplicate driver entries, yellow warning glyphs, or selective suspend power-saving states. Right-click your active keyboard device, choose Properties, navigate toPower Management, and uncheck *Allow the computer to turn off this device to save power*.
 
-2. Execute a Clean State Test:
+## 2. Execute a Clean State Test:
+
    Launch an administrative shell and run the system file verification tool to ensure driver subsystem integrity:
    ```cmd
    DISM /Online /Cleanup-Image /ScanHealth
@@ -100,20 +103,21 @@ If software triage confirms that an isolated switch is dropping or chattering, t
   <strong>CRITICAL CHEMICAL WARNING:</strong> Do NOT use standard WD-40 Multi-Use Product, mineral oils, isopropyl alcohol (IPA) baths, or industrial brake cleaners. Standard WD-40 leaves a non-conductive, oil-based film that collects dust and destroys keyboard plastics (like Polycarbonate and ABS). Only use zero-residue, fast-evaporating, plastic-safe electronic contact cleaners.
 </div>
 
-#### Step 1: Complete Power Isolation
+## Step 1: Complete Power Isolation
 Unplug the keyboard's USB cable directly from your PC. Never attempt chemical cleaning on an active electrical circuit. Even though electronic contact cleaners are non-conductive, the rapid drop in temperature during aerosol discharge can cause atmospheric condensation, which can short your PCB.
 
-#### Step 2: Keycap Removal and Housing Exposure
+## Step 2: Keycap Removal and Housing Exposure
 Using a wire keycap puller, gently pull the affected keycap straight up to prevent side-loading the switch stem. Clear any stray dust around the switch using a brush or compressed air.
 
-#### Step 3: Solvent Delivery via Capillary Flush
-1. Attach the micro-bore straw nozzle to the contact cleaner can.
+## Step 3: Solvent Delivery via Capillary Flush
 
-2. Use your finger or a plastic spudger to depress the switch stem completely into the housing. This creates a tiny gap between the stem slider and the internal contact leaf.
+## 1. Attach the micro-bore straw nozzle to the contact cleaner can.
 
-3. Position the straw directly into the exposed opening beside the stem where the internal metal leaves sit.
+## 2. Use your finger or a plastic spudger to depress the switch stem completely into the housing. This creates a tiny gap between the stem slider and the internal contact leaf.
 
-4. Deliver one ultra-short burst (roughly 0.2 to 0.5 seconds). Do not soak the entire switch. The solvent needs to reach the contact points, dissolve surface oxidation, flush away debris, and quickly evaporate.
+## 3. Position the straw directly into the exposed opening beside the stem where the internal metal leaves sit.
+
+## 4. Deliver one ultra-short burst (roughly 0.2 to 0.5 seconds). Do not soak the entire switch. The solvent needs to reach the contact points, dissolve surface oxidation, flush away debris, and quickly evaporate.
 
 ```
        [Aerosol Straw]
@@ -122,10 +126,10 @@ Using a wire keycap puller, gently pull the affected keycap straight up to preve
    [Depressed Stem] ──> [Gap] ──> [Internal Contact Leaves]
 ```
 
-#### Step 4: Rapid Manual Actuation
+## Step 4: Rapid Manual Actuation
 Immediately upon spraying—while the solvent is still wet inside the housing—press the switch stem vigorously 60 to 80 times over 15 seconds. This cycling causes the contacts to rub against each other, allowing the chemical solvent to scrub away loosened carbon buildup and flush micro-particulates out of the contact points.
 
-#### Step 5: Complete Outgassing and Evaporation
+## Step 5: Complete Outgassing and Evaporation
 Allow the board to sit unpowered for at least 15 to 20 minutes. Even fast-evaporating solvents like BW-100 need time to outgas if trapped inside a sealed switch enclosure.
 
 ---
@@ -134,18 +138,18 @@ Allow the board to sit unpowered for at least 15 to 20 minutes. Even fast-evapor
 
 If chemical cleaning fails to resolve the issue, the switch has either suffered irreversible leaf deformation or the hot-swap socket has loosened.
 
-#### 1. Retensioning Hot-Swap Sockets
+## 1. Retensioning Hot-Swap Sockets
 If your keyboard uses Kailh-style hot-swap sockets, the underlying metal leaf springs on the *PCB's backside* may have widened over time:
 
-1. Unplug the keyboard, remove the keycap, and use a switch puller to gently remove the switch from the hot-swap plate.
+## 1. Unplug the keyboard, remove the keycap, and use a switch puller to gently remove the switch from the hot-swap plate.
 
-2. Inspect the two small receiver leaves inside the PCB socket holes.
+## 2. Inspect the two small receiver leaves inside the PCB socket holes.
 
-3. If the contact gap appears too wide to grip the switch pins, use a needle or ultra-fine tweezers to gently push the two internal spring leaves closer together from the front or bottom.
+## 3. If the contact gap appears too wide to grip the switch pins, use a needle or ultra-fine tweezers to gently push the two internal spring leaves closer together from the front or bottom.
 
-4. Reinstall the switch, taking extra care that the pins slide directly into the socket without bending against the PCB surface.
+## 4. Reinstall the switch, taking extra care that the pins slide directly into the socket without bending against the PCB surface.
 
-#### 2. Physical Leaf Straightening or Replacement
+## 2. Physical Leaf Straightening or Replacement
 If the board is soldered, you can open the switch housing *in situ* using switch opening clips (for loose plates) to gently reshape the curved metal contact leaf. However, at that point, the spring metal has likely fatigued past its elastic limit. The most reliable fix is desoldering the degraded switch and replacing it with a fresh, factory-tested unit.
 
 ---

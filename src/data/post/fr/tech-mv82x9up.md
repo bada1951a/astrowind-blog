@@ -9,6 +9,7 @@ theme: "Steel Silver Metallic"
 ---
 
 
+
 Vendredi, 17h45. Le commit final de la semaine est prêt à être poussé, la machine à café est vide, et mon manager débarque derrière mon épaule pour me demander un export critique des logs serveurs de la semaine. Je tape sur la touche Power de ma station de travail principale pour la sortir de veille... Et là, c'est le drame. Le boîtier s'illumine, les ventilateurs hurlent comme des turbines d'A380 en phase de décollage, mais le moniteur reste noir de chez noir, sans même un signal DisplayPort. Pas de BIOS, pas de logo, le néant total. La sueur froide commence à perler sur la nuque.
 
 <div style="border-left: 4px solid #64748b; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; font-family: monospace;">
@@ -24,11 +25,11 @@ Vendredi, 17h45. Le commit final de la semaine est prêt à être poussé, la ma
 
 On a tous tendance à paniquer en pensant que la carte mère a grillé ou que le GPU a rendu l'âme. Sauf que dans 80% des cas sur une machine de bureau, le coupable est bien plus vicieux et terre-à-terre.
 
-1. L'oxydation invisible des contacts dorés : Avec l'humidité ambiante des bureaux et les variations thermiques (le chauffage qui s'allume et s'éteint), une fine pellicule d'oxydation se forme sur les pistes de la barrette de RAM. Résultat : le bus de données ne communique plus avec le CPU.
+## 1. L'oxydation invisible des contacts dorés : Avec l'humidité ambiante des bureaux et les variations thermiques (le chauffage qui s'allume et s'éteint), une fine pellicule d'oxydation se forme sur les pistes de la barrette de RAM. Résultat : le bus de données ne communique plus avec le CPU.
 
-2. La micro-dilatation thermique : À force de cycles de charge intense (compilation, VMs qui tourne, Docker en PLS), le PCB de la carte mère travaille. La barrette de RAM se décale imperceptiblement de son slot DIMM, provoquant une rupture de contact sur certaines lignes d'adressage.
+## 2. La micro-dilatation thermique : À force de cycles de charge intense (compilation, VMs qui tourne, Docker en PLS), le PCB de la carte mère travaille. La barrette de RAM se décale imperceptiblement de son slot DIMM, provoquant une rupture de contact sur certaines lignes d'adressage.
 
-3. L'accumulation de poussière conductive : Les ventilateurs aspirent toutes les cochonneries de l'open space. Un mouton de poussière s'est glissé dans le slot, agissant comme un isolant ou pire, créant une micro-interférence.
+## 3. L'accumulation de poussière conductive : Les ventilateurs aspirent toutes les cochonneries de l'open space. Un mouton de poussière s'est glissé dans le slot, agissant comme un isolant ou pire, créant une micro-interférence.
 
 ## Fiche de diagnostic et procédure d'urgence (Pas à pas)
 

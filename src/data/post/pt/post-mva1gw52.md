@@ -9,6 +9,7 @@ theme: "Teal Matrix Digital"
 ---
 
 
+
 Eram exatamente 16h45 em um hub de tecnologia na região da Avenida Paulista, em São Paulo. Nossa equipe estava a quinze minutos de uma reunião crítica de alinhamento técnico para a entrega de um grande projeto de arquitetura de dados com um cliente do setor financeiro. De repente, a tela do meu notebook principal pisca em vermelho: notificação crítica do Windows — "Espaço em disco insuficiente no Disco C:". O sistema travou bem na hora em que eu precisava compilar os logs finais e gerar o pacote de homologação. O coração acelera, o Slack da empresa começa a apitar com cobranças, e o Windows me avisa que restam apenas 800 MB livres em um SSD de 512 GB. Precisei agir rápido, sem perder dados e sem tempo para testar softwares milagrosos de internet.
 
 <div style="border-left: 4px solid #14b8a6; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
@@ -21,11 +22,11 @@ a:</strong> Quando o disco C: atinge o limite crítico de armazenamento, o Windo
 
 Antes de sair deletando arquivos aleatoriamente e correr o risco de quebrar o sistema operacional, precisamos entender onde o espaço realmente está indo. O comportamento padrão do Windows 11 acumulates resíduos invisíveis que drenam gigabytes preciosos silenciosamente.
 
-1. Acúmulo de Arquivos Temporários (Temp e Prefetch): Aplicativos em execução, navegadores e o próprio sistema criam logs e caches que raramente são apagados automaticamente após o fechamento.
+## 1. Acúmulo de Arquivos Temporários (Temp e Prefetch): Aplicativos em execução, navegadores e o próprio sistema criam logs e caches que raramente são apagados automaticamente após o fechamento.
 
-2. Histórico de Atualizações Anteriores (Windows.old): Após grandes updates do sistema, o Windows guarda uma cópia completa da versão anterior para fins de recuperação, ocupando facilmente entre 15 GB e 30 GB.
+## 2. Histórico de Atualizações Anteriores (Windows.old): Após grandes updates do sistema, o Windows guarda uma cópia completa da versão anterior para fins de recuperação, ocupando facilmente entre 15 GB e 30 GB.
 
-3. Caches Ocultos de Navegadores e Ferramentas de Desenvolvimento: Se você usa Docker, Node.js, IDEs como VS Code ou navegadores com dezenas de abas, as pastas de cache locais explodem de tamanho sem aviso prévio.
+## 3. Caches Ocultos de Navegadores e Ferramentas de Desenvolvimento: Se você usa Docker, Node.js, IDEs como VS Code ou navegadores com dezenas de abas, as pastas de cache locais explodem de tamanho sem aviso prévio.
 
 ---
 
@@ -77,8 +78,6 @@ Trabalhando no suporte a infraestrutura corporativa, já vi muita gente perder d
 
 ### 1. Posso apagar a pasta Windows.old sem medo?
 Sim, desde que seu computador esteja funcionando perfeitamente após a última atualização do Windows. A pasta `Windows.old` serve apenas para reverter o sistema para uma versão anterior. Se você não planeja fazer downgrade, pode apagá-la sem receio através da Limpeza de Disco para recuperar dezenas de gigabytes.
-
-
 
 ![Tech & IT Solution Guide](https://picsum.photos/seed/computer698/1000/550)
 

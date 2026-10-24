@@ -9,6 +9,7 @@ theme: "Graphite Technical Paper"
 ---
 
 
+
 Layar monitor di ruang server kantor kami di kawasan SCBD mendadak menyala merah dengan notifikasi *Low Disk Space* tepat satu jam sebelum *sync-up* mingguan dengan tim manajemen. Laptop operasional salah satu analis data kami ngadat total; sistem Windows 11 menolak membuka aplikasi Excel karena kapasitas Drive C, yang berukuran 512GB NVMe, menyisakan ruang kosong persis 0 bytes. Tidak ada ruang *swap memory*, tidak bisa *save file*, bahkan proses *update* sistem tertahan di tengah jalan. Panik? Sedikit. Tapi sebagai anak IT yang sudah kenyang asam garam menangani kendala server dan sistem internal, saya tahu persis di mana Windows menyembunyikan "sampah" digitalnya. <div style="border-left: 4px solid #475569; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Catatan Lapangan IT:</strong> Masalah Drive C penuh di Windows 11 jarang sekali disebabkan oleh dokumen pekerjaan biasa. 90 persen kasus di lingkungan kantor kami berakar dari tumpukan *cache* aplikasi modern, *installer* sisa pembaruan sistem, dan file sementara (*temp files*) yang dibiarkan menumpuk selama berbulan-bulan.
 </div>
@@ -19,13 +20,16 @@ Layar monitor di ruang server kantor kami di kawasan SCBD mendadak menyala merah
 
 Sebelum Anda gegabah menghapus file sembarangan yang justru bisa merusak sistem operasi, mari kita identifikasi tiga pelaku utama yang kerap membuat penyimpanan utama Windows 11 cepat ludes:
 
-1. Folder Temp Aplikasi dan Sistem yang Terlupakan
+## 1. Folder Temp Aplikasi dan Sistem yang Terlupakan
+
    Setiap kali aplikasi seperti browser, Discord, Slack, atau Microsoft Teams berjalan, mereka menulis data sementara ke folder `AppData\Local\Temp`. Masalahnya, banyak aplikasi pihak ketiga yang malas membersihkan sisa file mereka sendiri setelah proses ditutup.
 
-2. File Sisa Pembaruan Sistem (Windows Update Cleanup)
+## 2. File Sisa Pembaruan Sistem (Windows Update Cleanup)
+
    Setiap kali Windows 11 mendownload *major update* atau patch keamanan bulanan, OS ini menyimpan salinan file lama (Windows.old atau paket instalasi) sebagai cadangan jika proses *rollback* diperlukan. File-file ini bisa memakan ruang hingga puluhan gigabyte.
 
-3. Cache Hibernasi dan Virtual Memory (Pagefile.sys & Hiberfil.sys)
+## 3. Cache Hibernasi dan Virtual Memory (Pagefile.sys & Hiberfil.sys)
+
    Jika fitur *Hibernation* aktif, Windows mencadangkan seluruh isi RAM ke dalam file sistem sebesar kapasitas RAM fisik Anda. Ditambah file *pagefile* untuk manajemen memori virtual, kedua file sistem ini otomatis mengunci ruang penyimpanan dalam jumlah masif.
 
 ---
@@ -71,11 +75,14 @@ Sebagai tindakan pencegahan jangka panjang, biasakan untuk memindahkan lokasi pe
 
 ## Tanya Jawab Populer (FAQ)
 
-1. Apakah aman menghapus seluruh isi folder di dalam direktori `%temp%`?
+## 1. Apakah aman menghapus seluruh isi folder di dalam direktori `%temp%`?
+
 Ya, sangat aman. Folder *temp* (temporary) secara desain memang diperuntukkan bagi data buangan sementara aplikasi. File penting sistem Anda tidak akan pernah disimpan di dalam direktori ini.
 
-2. Mengapa setelah dihapus, kapasitas kosong Drive C tidak bertambah secara signifikan?
+## 2. Mengapa setelah dihapus, kapasitas kosong Drive C tidak bertambah secara signifikan?
+
 Kemungkinan besar ada file sistem yang terkunci atau fitur *System Protection* (Restore Point) mengalokasikan ruang yang cukup besar untuk cadangan pemulihan. Anda bisa memeriksa pengaturan *System Protection* melalui panel *Advanced system settings*.
 
-3. Bolehkah saya menggunakan software pembersih pihak ketiga seperti CCleaner di Windows 11?
+## 3. Bolehkah saya menggunakan software pembersih pihak ketiga seperti CCleaner di Windows 11?
+
 Untuk penggunaan profesional di lingkungan kantor, kami sangat menyarankan untuk menghindari aplikasi pembersih pihak ketiga yang agresif. Seringkali aplikasi tersebut menghapus *registry key* penting yang justru menyebabkan sistem Windows 11 menjadi tidak stabil atau *blue screen*. Gunakan utilitas bawaan OS yang jauh lebih aman.

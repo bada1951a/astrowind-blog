@@ -9,6 +9,7 @@ theme: "Cyberpunk Terminal"
 ---
 
 
+
 <div style="border-left: 4px solid #00ffcc; padding: 12px 16px; margin: 20px 0; background-color: rgba(0, 255, 204, 0.05); font-family: monospace; border-radius: 4px;">
 <strong>[TERMINAL_INIT: SUBSYSTEM_INPUT_DIAGNOSTICS]</strong><br/>
 STATUS: DETECTED_KEY_CHATTERING_ANOMALY<br/>
@@ -75,17 +76,19 @@ FASE 1: Isolamento de Software &gt;&gt; FASE 2: Desenergização &gt;&gt; FASE 3
 ### Etapa 1: Isolamento de Software no Sistema Operacional
 Antes de desmontar qualquer peça, certifique-se de que a falha não é decorrente de drivers corrompidos ou interferência de utilitários de terceiros.
 
-1. Abra o Prompt de Comando ou o PowerShell como Administrador.
+## 1. Abra o Prompt de Comando ou o PowerShell como Administrador.
 
-2. Invoque o utilitário nativo de configuração de periféricos:
+## 2. Invoque o utilitário nativo de configuração de periféricos:
+
    ```cmd
    devmgmt.msc
    ```
-3. No Gerenciador de Dispositivos, expanda a categoriaTeclados.
 
-4. Localize todas as instâncias de "Teclado Padrão PS/2" ou "Dispositivo de Teclado HID", clique com o botão direito e selecione Desinstalar dispositivo.
+## 3. No Gerenciador de Dispositivos, expanda a categoriaTeclados.
 
-5. Desconecte o cabo USB do teclado, aguarde 10 segundos e reconecte em uma porta USB traseira direta da placa-mãe (evite hubs ou extensores). O Windows reinstalará os drivers padrão limpos.
+## 4. Localize todas as instâncias de "Teclado Padrão PS/2" ou "Dispositivo de Teclado HID", clique com o botão direito e selecione Desinstalar dispositivo.
+
+## 5. Desconecte o cabo USB do teclado, aguarde 10 segundos e reconecte em uma porta USB traseira direta da placa-mãe (evite hubs ou extensores). O Windows reinstalará os drivers padrão limpos.
 
 6. Abra um software de teste de latência e repique (como *Keyboard Chattering Fix Tool* ou *Switch Hitter*). Pressione a tecla defeituosa 100 vezes seguidas em cadência moderada. Se o log acusar repiques com intervalos inferiores a 30 milissegundos, o problema é comprovadamente físico.
 
@@ -113,15 +116,15 @@ Aqui está o ponto central do procedimento. Você precisa de um spray Limpa-Cont
         Switch PCB
 ```
 
-1. Localize a haste central (*stem*) do switch mecânico. Pressione-a completamente para baixo com a ponta de uma pinça ou ferramenta de ponta cega.
+## 1. Localize a haste central (*stem*) do switch mecânico. Pressione-a completamente para baixo com a ponta de uma pinça ou ferramenta de ponta cega.
 
-2. Com a haste rebaixada, uma pequena abertura fica visível entre a haste móvel e a carcaça plástica superior (*top housing*), permitindo acesso direto à câmara interna onde repousam as lâminas de contato.
+## 2. Com a haste rebaixada, uma pequena abertura fica visível entre a haste móvel e a carcaça plástica superior (*top housing*), permitindo acesso direto à câmara interna onde repousam as lâminas de contato.
 
-3. Encaixe a cânula extensora do spray limpa-contato nessa fresta.
+## 3. Encaixe a cânula extensora do spray limpa-contato nessa fresta.
 
-4. Aplique apenas uma borrifada curta e precisa (uma fração de segundo). Evite inundar a placa inteira.
+## 4. Aplique apenas uma borrifada curta e precisa (uma fração de segundo). Evite inundar a placa inteira.
 
-5. Imediatamente após a borrifada, pressione a tecla repetidamente e com firmeza de 60 a 80 vezes seguidas. Esse movimento mecânico faz as lâminas rasparem uma contra a outra enquanto o solvente está úmido, desalojando o óxido e os resíduos microscópicos.
+## 5. Imediatamente após a borrifada, pressione a tecla repetidamente e com firmeza de 60 a 80 vezes seguidas. Esse movimento mecânico faz as lâminas rasparem uma contra a outra enquanto o solvente está úmido, desalojando o óxido e os resíduos microscópicos.
 
 6. Coloque o teclado virado de cabeça para baixo sobre um pano de microfibra limpo ou papel absorvente industrial para permitir que o excesso do fluido escorra trazendo as impurezas.
 

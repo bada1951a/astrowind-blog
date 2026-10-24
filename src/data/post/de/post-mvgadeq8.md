@@ -9,6 +9,7 @@ theme: "Rosewood Hardware Guide"
 ---
 
 
+
 Es ist 14:45 Uhr im Frankfurter Bankenviertel. Um 15:30 Uhr haben wir eine entscheidende Kundenpräsentation im Konferenzraum im 30. Stock, und der nagelneue Vorführ-Laptop zeigt unten rechts in der Ecke dieses nervige, grelle Wasserzeichen: "Windows aktivieren – Gehen Sie zu den Einstellungen, um Windows zu aktivieren." Der Vorstand sitzt gleich mit am Tisch, und so ein unfertig wirkendes System geht absolut gar nicht. Die Lizenzschlüssel hängen mal wieder im internen Aktivierungsserver-Queue fest, und für langwierige Telefonate mit dem Microsoft-Support haben wir jetzt definitiv keine Zeit. Das Ding muss jetzt weg, sauber und ohne das System zu zerschießen.
 
 ### Der Adrenalinstoss vor dem Meeting: Wenn die Optik über den Deal entscheidet
@@ -25,11 +26,11 @@ Zuerst verfällt man natürlich in blinden Aktionismus. Man klickt sich panisch 
 
 Bevor wir den Befehl absetzen, müssen wir verstehen, warum das System überhaupt meckert:
 
-1. Geraumer KMS-Grace-Period-Ablauf: Der Rechner war zu lange nicht im Firmen-VPN, um sich mit dem lokalen Key Management Service (KMS) abzugleichen.
+## 1. Geraumer KMS-Grace-Period-Ablauf: Der Rechner war zu lange nicht im Firmen-VPN, um sich mit dem lokalen Key Management Service (KMS) abzugleichen.
 
-2. Hardwaretausch: Gestern wurde im Rahmen der Vorbereitung eine defekte SSD getauscht, wodurch die digitale Lizenzüberprüfung ins Stolpern geraten ist.
+## 2. Hardwaretausch: Gestern wurde im Rahmen der Vorbereitung eine defekte SSD getauscht, wodurch die digitale Lizenzüberprüfung ins Stolpern geraten ist.
 
-3. Build-Testphase: Auf dem Vorführgerät läuft testweise eine Enterprise-Evaluation-Version, deren Evaluierungszeitraum kurz vor dem Ablauf steht.
+## 3. Build-Testphase: Auf dem Vorführgerät läuft testweise eine Enterprise-Evaluation-Version, deren Evaluierungszeitraum kurz vor dem Ablauf steht.
 
 ---
 
@@ -37,10 +38,10 @@ Bevor wir den Befehl absetzen, müssen wir verstehen, warum das System überhaup
 
 Da wir die offizielle Volumenlizenz für den Kunden natürlich besitzen, sie aber akut gerade nicht online verifizieren können, stoppen wir für die Präsentation den zuständigen Dienst beziehungsweise setzen den Benachrichtigungstimer zurück. 
 
-#### Schritt 1: Eingabeaufforderung als Administrator öffnen
+## Schritt 1: Eingabeaufforderung als Administrator öffnen
 Drücken Sie die Windows-Taste auf Ihrer Tastatur, tippen Sie `cmd` ein, machen Sie einen Rechtsklick auf die Eingabeaufforderungund wählen Sie im KontextmenüAls Administrator ausführen aus. Bestätigen Sie die Sicherheitsabfrage der Benutzerkontensteuerung.
 
-#### Schritt 2: Den Lizenzstatus-Befehl ausführen
+## Schritt 2: Den Lizenzstatus-Befehl ausführen
 Um den aktuellen Status zu prüfen und den Aussetzer zu kaschieren, nutzen wir das Windows-Skript für Software Licensing Management (`slmgr.vbs`). Tippen Sie folgenden Befehl ein und drücken Sie Enter:
 
 ```cmd
@@ -49,7 +50,7 @@ slmgr.vbs -rearm
 
 Dieser Befehl setzt den Lizenzierungs-Timer zurück und gibt Ihnen in der Regel 30 bis 90 Tage Grace Period (je nach Windows-Edition). Das System fordert Sie danach direkt auf, einen Neustart durchzuführen.
 
-#### Schritt 3: Neustart durchführen und prüfen
+## Schritt 3: Neustart durchführen und prüfen
 Schließen Sie alle Fenster und starten Sie das System über das Startmenü neu. Nach dem Hochfahren ist der Desktop wieder absolut sauber, das Overlay verschwunden und die Präsentation kann makellos starten.
 
 ---

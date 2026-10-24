@@ -9,6 +9,7 @@ theme: "Deep Indigo System"
 ---
 
 
+
 Jam 4 sore di sebuah gedung perkantoran kawasan Sudirman Jakarta, suasana mendadak tegang luar biasa. Batas waktu pengiriman laporan keuangan tinggal satu jam lagi, tapi layar monitor tiba-tiba membeku (*freezing*). Kipas PC berputar kencang menderu bagaikan mesin jet yang mau lepas landas, sementara kursor tetikus bergerak sangat lambat seperti terjebak di dalam lumpur. Saat tombol kombinasi keramat ditekan untuk membuka Task Manager, pemandangannya bikin jantungan: penggunaan CPU mentok di angka 100 persen penuh, dan pelakunya bukanlah aplikasi berat seperti game atau software rendering, melainkan proses bawaan Windows bernama "System" atau "System and Compressed Memory". 
 
 Panik? Pastinya. Rekan kerja di sebelah mulai keringat dingin karena dokumen Excel penting belum sempat tersimpan. Berbagai cara amatiran langsung dicoba, mulai dari menekan tombol restart paksa di CPU berulang kali, mencabut kabel power, hingga memukul-mukul meja karena kesal. Padahal, tindakan asal-asalan seperti itu justru berisiko merusak sektor *hard drive* atau membuat file laporan korup total. 
@@ -26,13 +27,16 @@ Sebagai seorang teknisi infrastruktur IT yang sudah kenyang asam garam menghadap
 
 Sebelum masuk ke tombol-tombol pengaturan, kita harus paham dulu kenapa proses inti Windows ini mendadak menjadi "vampir" yang menyedot daya komputasi secara brutal. Berdasarkan pengalaman di lapangan, ada 3 penyebab utama yang paling sering terjadi:
 
-1. Konflik Driver Perangkat Keras (Hardware Driver Conflict)
+## 1. Konflik Driver Perangkat Keras (Hardware Driver Conflict)
+
    Driver komponen seperti chipset motherboard, LAN card, atau driver grafis yang sudah kedaluwarsa atau korup sering kali memicu *interrupt storm*. Akibatnya, proses *System* di Windows terus-menerus memproses sinyal interupsi yang tak berkesudahan.
 
-2. Layanan Windows Update yang Nyangkut (Stuck Update)
+## 2. Layanan Windows Update yang Nyangkut (Stuck Update)
+
    Pembaruan sistem yang gagal terunduh atau macet di tengah jalan kerap memaksa proses latar belakang bekerja secara repetitif tanpa hasil, memakan kapasitas inti CPU hingga maksimal.
 
-3. Kerusakan File Sistem (Corrupted System Files)
+## 3. Kerusakan File Sistem (Corrupted System Files)
+
    Sektor file sistem utama Windows yang rusak akibat mati lampu mendadak atau infeksi malware ringan membuat proses inti gagal membaca instruksi normal, berujung pada lonjakan penggunaan sumber daya hardware.
 
 ---
@@ -43,37 +47,42 @@ Buka kembali Task Manager Anda menggunakan tombol pintas `Ctrl + Shift + Esc`. J
 
 a:
 
-#### Langkah 1: Identifikasi dan Hentikan Layanan yang Bentrok
-1. Di dalam jendela Task Manager, arahkan pandangan ke tabProcesses.
+## Langkah 1: Identifikasi dan Hentikan Layanan yang Bentrok
 
-2. Cari proses bernama SystematauSystem and Compressed Memory.
+## 1. Di dalam jendela Task Manager, arahkan pandangan ke tabProcesses.
 
-3. Klik kanan pada proses tersebut, lalu pilih Go to details untuk melihat proses *executable* utamanya (`ntoskrnl.exe`).
+## 2. Cari proses bernama SystematauSystem and Compressed Memory.
 
-4. Jika lonjakan ini dipicu oleh layanan tambahan yang terkait, Anda bisa membuka menu Services (ketik `services.png` di kolom pencarian Windows atau Start Menu).
+## 3. Klik kanan pada proses tersebut, lalu pilih Go to details untuk melihat proses *executable* utamanya (`ntoskrnl.exe`).
 
-5. Cari layanan seperti SysMain(sebelumnya dikenal sebagai Superfetch) atauWindows Update, klik kanan, lalu pilihStop. Layanan ini sering kali menjadi dalang utama pembengkakan memori dan CPU.
+## 4. Jika lonjakan ini dipicu oleh layanan tambahan yang terkait, Anda bisa membuka menu Services (ketik `services.png` di kolom pencarian Windows atau Start Menu).
 
-#### Langkah 2: Perbarui atau Rollback Driver yang Bermasalah
-1. Klik tombol Start, ketikDevice Manager, lalu tekan Enter.
+## 5. Cari layanan seperti SysMain(sebelumnya dikenal sebagai Superfetch) atauWindows Update, klik kanan, lalu pilihStop. Layanan ini sering kali menjadi dalang utama pembengkakan memori dan CPU.
 
-2. Perhatikan apakah ada ikon tanda seru berwarna kuning di daftar perangkat keras Anda, terutama pada bagian System DevicesatauNetwork Adapters.
+## Langkah 2: Perbarui atau Rollback Driver yang Bermasalah
 
-3. Jika Anda baru saja memperbarui driver tertentu sebelum masalah ini terjadi, klik kanan pada perangkat tersebut, pilih Properties, masuk ke tabDriver, lalu klikRoll Back Driver.
+## 1. Klik tombol Start, ketikDevice Manager, lalu tekan Enter.
 
-4. Jika tidak, pilih Update Driver dan arahkan pencarian secara otomatis secara daring.
+## 2. Perhatikan apakah ada ikon tanda seru berwarna kuning di daftar perangkat keras Anda, terutama pada bagian System DevicesatauNetwork Adapters.
 
-#### Langkah 3: Jalankan Pemindaian Integritas Sistem (SFC & DISM)
+## 3. Jika Anda baru saja memperbarui driver tertentu sebelum masalah ini terjadi, klik kanan pada perangkat tersebut, pilih Properties, masuk ke tabDriver, lalu klikRoll Back Driver.
+
+## 4. Jika tidak, pilih Update Driver dan arahkan pencarian secara otomatis secara daring.
+
+## Langkah 3: Jalankan Pemindaian Integritas Sistem (SFC & DISM)
 Jika langkah manual di atas belum sepenuhnya meredakan beban CPU, mari kita perbaiki file sistem yang mungkin rusak dari akarny
 
 a:
-1. Klik tombol Start, ketik `cmd`, lalu klik kanan padaCommand Promptdan pilihRun as administrator.
 
-2. Ketik perintah berikut tanpa tanda kutip untuk memeriksa file sistem: `sfc /scannow`
-3. Tekan Enter dan tunggu proses pemindaian selesai (biasanya memakan waktu 10 hingga 15 menit). Sistem akan otomatis memperbaiki file yang rusak.
+## 1. Klik tombol Start, ketik `cmd`, lalu klik kanan padaCommand Promptdan pilihRun as administrator.
 
-4. Setelah selesai, lanjutkan dengan mengetik perintah pemeliharaan citra sistem: `DISM /Online /Cleanup-Image /RestoreHealth`
-5. Nyalakan ulang (*Restart*) komputer Anda setelah kedua proses tersebut tuntas.
+## 2. Ketik perintah berikut tanpa tanda kutip untuk memeriksa file sistem: `sfc /scannow`
+
+## 3. Tekan Enter dan tunggu proses pemindaian selesai (biasanya memakan waktu 10 hingga 15 menit). Sistem akan otomatis memperbaiki file yang rusak.
+
+## 4. Setelah selesai, lanjutkan dengan mengetik perintah pemeliharaan citra sistem: `DISM /Online /Cleanup-Image /RestoreHealth`
+
+## 5. Nyalakan ulang (*Restart*) komputer Anda setelah kedua proses tersebut tuntas.
 
 ---
 

@@ -9,6 +9,7 @@ theme: "Midnight Navy Royal"
 ---
 
 
+
 Il est 7h45 ce mardi matin. Je suis assis à mon bureau dans une tour de verre à La Défense, le souffle court, les yeux rivés sur mon écran qui refuse obstanément d'ouvrir PowerPoint. À 9h, je dois monter dans leTGV en direction de Lyon pour une réunion matinale extrêmement tendue avec un client historique. Mon PC portable souffre d'une lenteur maladive : le ventilateur hurle à la mort, le curseur de la souris saccade, et chaque clic déclenche cette fichue roue de chargement bleue. Le coupable ? Windows 11 qui, dans sa grande générosité, décide de synchroniser le monde entier en tâche de fond pendant que j'essaie simplement de bosser.
 
 Ce genre de panne n'attend jamais le bon moment. Si vous aussi, votre bécane a l'air de traîner un boulet invisible alors que vous avez juste besoin d'efficacité immédiate, sortez votre carnet de notes. Voici le journal de bord de mon intervention d'urgence, heure par heure, pour redonner vie à un Windows 11 essoufflé.
@@ -27,11 +28,11 @@ Ce genre de panne n'attend jamais le bon moment. Si vous aussi, votre bécane a 
 
 Pourquoi un ordinateur moderne, censé être une bête de course, finit-il par ramer comme un PC d'il y a dix ans ? En creusant sous le capot, trois coupables principaux reviennent constamment sur le terrain.
 
-1. L'armée des ombres (Applications en arrière-plan) : Des dizaines d'applications que vous n'avez jamais ouvertes de votre plein gré (météo, actualités, outils Xbox, synchronisations cloud en triple) tournent en continu, bouffant de la mémoire vive et du processeur pour rien.
+## 1. L'armée des ombres (Applications en arrière-plan) : Des dizaines d'applications que vous n'avez jamais ouvertes de votre plein gré (météo, actualités, outils Xbox, synchronisations cloud en triple) tournent en continu, bouffant de la mémoire vive et du processeur pour rien.
 
-2. Le festival des feux d'artifice (Effets visuels et animations) : Windows 11 adore les transparence de style acrylique, les fenêtres qui s'ouvrent en fondu enchaîné et les animations fluides. Sur le papier, c'est joli. En pratique, cela sollicite inutilement la carte graphique et le processeur, surtout quand la batterie commence à faiblir.
+## 2. Le festival des feux d'artifice (Effets visuels et animations) : Windows 11 adore les transparence de style acrylique, les fenêtres qui s'ouvrent en fondu enchaîné et les animations fluides. Sur le papier, c'est joli. En pratique, cela sollicite inutilement la carte graphique et le processeur, surtout quand la batterie commence à faiblir.
 
-3. Le piège de la mise à jour et de la télémétrie : Le système envoie constamment des données et cherche des mises à jour en plein milieu de vos tâches critiques, créant des micro-coupures de performance insupportables.
+## 3. Le piège de la mise à jour et de la télémétrie : Le système envoie constamment des données et cherche des mises à jour en plein milieu de vos tâches critiques, créant des micro-coupures de performance insupportables.
 
 ---
 
@@ -39,7 +40,7 @@ Pourquoi un ordinateur moderne, censé être une bête de course, finit-il par r
 
 Pas besoin d'être ingénieur système pour régler ça. Voici la procédure exacte que j'ai appliquée à la va-vite entre deux gorgées de café serré pour sauver ma matinée.
 
-#### Étape 1 : Mettre au pas les applications en arrière-plan
+## Étape 1 : Mettre au pas les applications en arrière-plan
 Par défaut, Windows autorise presque tout le monde à s'activer en cachette. On va siffler la fin de la récréation.
 
 - Ouvrez les Paramètres de Windows (raccourci clavier : `Touche Windows + I`).
@@ -52,7 +53,7 @@ Par défaut, Windows autorise presque tout le monde à s'activer en cachette. On
 <strong>Astuce du technicien :</strong> Pour un nettoyage de printemps radical des applications qui se lancent au démarrage avec Windows, faites un <code>Ctrl + Maj + Échap</code> pour ouvrir le <strong>Gestionnaire des tâches</strong>, allez sur l'icône de jauge de vitesse (Applications de démarrage) et désactivez tout ce qui n'est pas vital (Spotify, Cortana, Steam, etc.).
 </div>
 
-#### Étape 2 : Couper les effets visuels superflus
+## Étape 2 : Couper les effets visuels superflus
 On retire le maquillage inutile pour privilégier la performance pure.
 
 - Ouvrez à nouveau les Paramètres (`Touche Windows + I`).

@@ -9,6 +9,7 @@ theme: "Steel Silver Metallic"
 ---
 
 
+
 Afgelopen dinsdagochtend om kwart voor negen op de High Tech Campus in Eindhoven: de koffieautomaat had net de brui eraan gegeven en ik stond met een spoedticket van een senior developer die zijn laptop opnieuw moest opstarten voor een cruciale client-demo. Het systeem deed er bijna vier minuten over om überhaupt door het vergrendelscherm heen te breken. Vier minuten in tech-tijd staat gelijk aan eeneeuw. Alle logfiles en Teams-meldingen stapelden zich op, en de frustratie was compleet. Dit soort acute prestatieproblemen vragen niet om een langdurige herinstallatie, maar om een directe, no-nonsense ingreep.
 
 <div style="border-left: 4px solid #64748b; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
@@ -21,11 +22,11 @@ Afgelopen dinsdagochtend om kwart voor negen op de High Tech Campus in Eindhoven
 
 Waarom kruipt je pc na een paar jaar gebruik ineens over de vloer bij het opstarten? De bottleneck zit bijna nooit in Windows zelf, maar in de softwarecultuur van vandaag:
 
-1. Stiekeme achtergrondinstallaties: Vrijwel elke applicatie (van Spotify en Discord tot cloud-synchronisatietools en printerdrivers) vinkt standaard de optie aan om mee te starten met Windows. Ze nestelen zich ongevraagd in het geheugen.
+## 1. Stiekeme achtergrondinstallaties: Vrijwel elke applicatie (van Spotify en Discord tot cloud-synchronisatietools en printerdrivers) vinkt standaard de optie aan om mee te starten met Windows. Ze nestelen zich ongevraagd in het geheugen.
 
-2. Resource-roofdieren (Impact: Hoog): Zodra je desktop laadt, proberen al deze programma's tegelijk te updaten en te verbinden met hun servers. Dit vreet direct al je RAM en CPU-capaciteit op.
+## 2. Resource-roofdieren (Impact: Hoog): Zodra je desktop laadt, proberen al deze programma's tegelijk te updaten en te verbinden met hun servers. Dit vreet direct al je RAM en CPU-capaciteit op.
 
-3. Verouderde servicemanagers: Veel gebruikers denken dat ze geavanceerde tools nodig hebben om dit op te lossen, terwijl Windows 10 al jaren een ingebouwde, razendsnelle manager heeft die direct inzicht geeft in de opstartimpact.
+## 3. Verouderde servicemanagers: Veel gebruikers denken dat ze geavanceerde tools nodig hebben om dit op te lossen, terwijl Windows 10 al jaren een ingebouwde, razendsnelle manager heeft die direct inzicht geeft in de opstartimpact.
 
 ### Stap-voor-stap oplossen: In 1 minuut naar een snelle pc
 
@@ -33,11 +34,17 @@ Laten we direct actie ondernemen. Geen ingewikkelde registersleutels of derde-pa
 
 <div style="border-left: 4px solid #64748b; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Stappenplan (Systeembeheer Stijl):</strong><br>
-1. Druk tegelijk op <strong>Ctrl + Shift + Esc</strong> om Taakbeheer (Task Manager) te openen.<br>
-2. Zie je alleen een minimalistisch scherm? Klik onderin op <strong>Meer details</strong>.<br>
-3. Klik op het tabblad <strong>Opstarten</strong> (het icoontje met de meter).<br>
-4. Sorteer op <strong>Opstartimpact</strong> door op de kolomkop te klikken.<br>
-5. Klik met je rechtermuisknop op programma's met een "Hoge impact" die je niet direct nodig hebt (zoals Skype, OneDrive of Steam) en kies <strong>Uitschakelen</strong>.
+
+## 1. Druk tegelijk op <strong>Ctrl + Shift + Esc</strong> om Taakbeheer (Task Manager) te openen.<br>
+
+## 2. Zie je alleen een minimalistisch scherm? Klik onderin op <strong>Meer details</strong>.<br>
+
+## 3. Klik op het tabblad <strong>Opstarten</strong> (het icoontje met de meter).<br>
+
+## 4. Sorteer op <strong>Opstartimpact</strong> door op de kolomkop te klikken.<br>
+
+## 5. Klik met je rechtermuisknop op programma's met een "Hoge impact" die je niet direct nodig hebt (zoals Skype, OneDrive of Steam) en kies <strong>Uitschakelen</strong>.
+
 </div>
 
 ### Expert Waarschuwing & Preventie

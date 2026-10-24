@@ -9,6 +9,7 @@ theme: "Mint Fresh Engineering"
 ---
 
 
+
 금요일 오후 4시 55분, 다음 주 월요일에 전사 발표할 대규모 쿠버네티스 클러스터 마이그레이션 최종 빌드 검증을 돌려놓고 커피를 마시러 다녀왔는데, 데스크톱 팬은 터빈 돌아가는 소리처럼 굉음을 내며 돌고 있는데 모니터 화면은 완벽한 '무(無)'인 채로 나를 반기더라. 슬랙(Slack)에서는 VP가 "Build ready?"를 치고 있고, 내 메인 rig는 화면 출력도 안 되는 상황. 심장이 방구석 밖으로 튀어나오는 줄 알았다.
 
 <div style="border-left: 4px solid #059669; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px;">
@@ -21,11 +22,11 @@ theme: "Mint Fresh Engineering"
 
 현장에서 십 수 년간 수백 대의 워크스테이션과 서버, 데스크톱을 까뒤집어 보며 느낀 거지만, 이런 증상의 90%는 물리적인 접촉 불량이다. 구체적인 원인은 이렇다.
 
-1. 미세한 열 팽창과 수축 (Thermal Cycling): 빌드가 풀로드로 돌아갈 때 메인보드 기판과 RAM의 골드핑거(Gold Finger) 금속 재질이 열을 받아 미세하게 팽창했다가, 사무실 에어컨 바람에 식으면서 수축한다. 이 과정에서 접점 압력이 미세하게 틀어져 데이터 라인이 노이즈를 타며 POST(Power-On Self-Test) 단계를 통과하지 못하는 것이다.
+## 1. 미세한 열 팽창과 수축 (Thermal Cycling): 빌드가 풀로드로 돌아갈 때 메인보드 기판과 RAM의 골드핑거(Gold Finger) 금속 재질이 열을 받아 미세하게 팽창했다가, 사무실 에어컨 바람에 식으면서 수축한다. 이 과정에서 접점 압력이 미세하게 틀어져 데이터 라인이 노이즈를 타며 POST(Power-On Self-Test) 단계를 통과하지 못하는 것이다.
 
-2. 미세 먼지와 산화 피막 (Oxidation): 실내 습도와 공기 중의 미세 먼지가 슬롯 내부로 유입되어 RAM 골드핑거 표면에 보이지 않는 산화막을 형성한다. 이게 전도율을 떨어뜨려 CPU 메모리 컨트롤러가 RAM을 인식하지 못하게 막는다.
+## 2. 미세 먼지와 산화 피막 (Oxidation): 실내 습도와 공기 중의 미세 먼지가 슬롯 내부로 유입되어 RAM 골드핑거 표면에 보이지 않는 산화막을 형성한다. 이게 전도율을 떨어뜨려 CPU 메모리 컨트롤러가 RAM을 인식하지 못하게 막는다.
 
-3. 메인보드 슬롯 래치(Latch) 유격: 케이스를 책상 밑에 두고 발로 툭툭 치거나 진동이 가해지면, 원클릭 래치 고정부가 미세하게 풀리면서 양쪽 핀 중 일부가 이탈한다.
+## 3. 메인보드 슬롯 래치(Latch) 유격: 케이스를 책상 밑에 두고 발로 툭툭 치거나 진동이 가해지면, 원클릭 래치 고정부가 미세하게 풀리면서 양쪽 핀 중 일부가 이탈한다.
 
 ---
 
@@ -56,9 +57,10 @@ theme: "Mint Fresh Engineering"
 <strong>🛠️ Quick Terminal & OS Tip (정상 부팅 후 확인):</strong> 
 윈도우로 진입했다면 반드시 하드웨어 안정성을 체크해야 한다.
 
-1. <kbd>Win</kbd> + <kbd>R</kbd>을 누르고 `mdsched.exe`를 실행해 'Windows 메모리 진단'을 돌려라.
+## 1. <kbd>Win</kbd> + <kbd>R</kbd>을 누르고 `mdsched.exe`를 실행해 'Windows 메모리 진단'을 돌려라.
 
-2. 명령 프롬프트(CMD)나 PowerShell을 관리자 권한으로 열고 시스템 파일 무결성을 점검하자.
+## 2. 명령 프롬프트(CMD)나 PowerShell을 관리자 권한으로 열고 시스템 파일 무결성을 점검하자.
+
 <pre style="background:#111; color:#059669; padding:10px; border-radius:4px; overflow-x:auto;"><code>DISM.exe /Online /Cleanup-image /Restorehealth
 sfc /scannow</code></pre>
 </div>

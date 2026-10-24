@@ -9,6 +9,7 @@ theme: "Warm Coffee Latte"
 ---
 
 
+
 Godzina 14:50 w piątek. Za dziesięć minut miałem kończyć kwartalny raport z wdrażania nowego korporacyjnego środowiska, a w tle już chłodził się browar w lodówce. Nagle z biurka mojego key account managera dobiega cichy, złowrogi jęk wiatraków, po którym następuje przerażająca cisza. Ekran – czarny jak sumienie praktykanta po skasowaniu bazy produkcyjnej. Wiatraki kręcą się na najwyższych obrotach, klawiatura ani mrugnie, a na monitorze dumnie wisi komunikat *„Brak sygnału”*. Krawaciarz patrzy na mnie szklistym wzrokiem, a ja czuję, jak po plecach spływa mi strużka lodowatego potu. 
 
 Znamy to wszyscy, prawda? Komputer ożywa, diody świecą, dyski szumią, ale ekran uparcie pozostaje martwy. Pierwsza myśl? Padła karta graficzna. Druga? Płyta główna poszła z dymem. Ale spokojnie, odłóżcie młotki i wyciągnijcie ten kubek z letnią kawą latte – zapraszam na krótką, inżynieryjną opowieść z okopów warszawskiego supportu, jak bez wydawania ani grosza postawić taki grat na nogi za pomocą zwykłej gumki do ścierania. ![Hardware Diagnostic & Troubleshooting](https://picsum.photos/seed/hardware-22/1000/550)
@@ -22,11 +23,11 @@ Zanim wpadniemy w panikę i zaczniemy zamawiać nowe podzespoły za tysiące zł
 
 a:</strong> W ponad 70% przypadków "czarnego ekranu przy działających wiatrakach" winny jest nie tyle sam brak kontaktu, ile mikroskopijna warstwa utlenionej miedzi na stykach pamięci RAM lub spuchnięty BIOS po skoku napięcia. </div>
 
-1. Zasniedziałe styki RAM (tzw. "zaśniedziały kontakt"): Wilgoć z klimatyzacji, kurz z biura i lata pracy sprawiają, że złote blaszki na kościach RAM tracą przewodność. Płyta główna próbuje zainicjalizować pamięć podczas procedury POST (Power-On Self-Test), natrafia na ścianę i zatrzymuje proces *zanim* zdąży przekazać sygnał do karty graficznej.
+## 1. Zasniedziałe styki RAM (tzw. "zaśniedziały kontakt"): Wilgoć z klimatyzacji, kurz z biura i lata pracy sprawiają, że złote blaszki na kościach RAM tracą przewodność. Płyta główna próbuje zainicjalizować pamięć podczas procedury POST (Power-On Self-Test), natrafia na ścianę i zatrzymuje proces *zanim* zdąży przekazać sygnał do karty graficznej.
 
-2. Luźny slot pamięci (Bank RAM): Zatrzaski na płycie głównej potrafią się wyrobić, zwłaszcza pod wpływem ciągłych drgań podłogi w open space. Kość wysuwa się o ułamek milimetra – wystarczająco, by stracić linię danych.
+## 2. Luźny slot pamięci (Bank RAM): Zatrzaski na płycie głównej potrafią się wyrobić, zwłaszcza pod wpływem ciągłych drgań podłogi w open space. Kość wysuwa się o ułamek milimetra – wystarczająco, by stracić linię danych.
 
-3. Problem z kompensacją napięcia CMOS: Czasami BIOS po prostu "głupieje" i trzyma w pamięci podręcznej błędne ustawienia timingów pamięci, uniemożliwiając stabilne uruchomienie kontrolera w procesorze.
+## 3. Problem z kompensacją napięcia CMOS: Czasami BIOS po prostu "głupieje" i trzyma w pamięci podręcznej błędne ustawienia timingów pamięci, uniemożliwiając stabilne uruchomienie kontrolera w procesorze.
 
 ---
 
@@ -66,9 +67,10 @@ Dodatkowo, jeśli komputer ma cztery sloty na RAM (np. 2 czarne, 2 szare), a Ty 
 
 ## Często Zadawane Pytania (FAQ)
 
-1. Czy mogę użyć alkoholu izopropylowego (IPA) zamiast gumki do ścierania? Jasne, IPA to inżynieryjny klasyk do czyszczenia elektroniki. Jeśli masz pod ręką wacik bezpyłowy i czysty alkohol izopropylowy (min. 99%), przetrzyj nim styki. Gumka do ścierania jest jednak świetnym, szybkim rozwiązaniem mechanicznym, gdy nie ma pod ręką chemii.
+## 1. Czy mogę użyć alkoholu izopropylowego (IPA) zamiast gumki do ścierania? Jasne, IPA to inżynieryjny klasyk do czyszczenia elektroniki. Jeśli masz pod ręką wacik bezpyłowy i czysty alkohol izopropylowy (min. 99%), przetrzyj nim styki. Gumka do ścierania jest jednak świetnym, szybkim rozwiązaniem mechanicznym, gdy nie ma pod ręką chemii.
 
-2. Komputer wstał, ale po ponownym uruchomieniu znowu jest czarny ekran. Co jest grane? To klasyczny objaw uszkodzonego zatrzasku w slocie RAM lub samej kości, która poluzowała się pod wpływem drgań wentylatora. Sprawdź, czy zatrzask "kliknął" podczas wpinania. Jeśli problem wraca, zamień kości miejscami lub przetestuj je pojedynczo w pierwszym slocie.
+## 2. Komputer wstał, ale po ponownym uruchomieniu znowu jest czarny ekran. Co jest grane? To klasyczny objaw uszkodzonego zatrzasku w slocie RAM lub samej kości, która poluzowała się pod wpływem drgań wentylatora. Sprawdź, czy zatrzask "kliknął" podczas wpinania. Jeśli problem wraca, zamień kości miejscami lub przetestuj je pojedynczo w pierwszym slocie.
 
-3. Czy zepsuty RAM może uszkodzić procesor lub płytę główną?
+## 3. Czy zepsuty RAM może uszkodzić procesor lub płytę główną?
+
 Bardzo rzadko. Najczęściej płyta główna po prostu zablokuje rozruch (włączając diodę DEBUG LED z napisem DRAM) lub wyda serię piknięć alarmowych z głośniczka systemowego (tzw. beepera), zanim dojdzie do jakichkolwiek uszkodzeń termicznych czy elektrycznych.

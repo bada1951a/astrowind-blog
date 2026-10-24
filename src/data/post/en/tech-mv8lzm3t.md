@@ -9,6 +9,7 @@ theme: "Cyberpunk Terminal"
 ---
 
 
+
 <div style="border-left: 4px solid #00ffcc; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,255,204,0.05); border-radius: 4px; font-family: monospace;">
 root@silicon-valley-h
 
@@ -30,11 +31,11 @@ Here is the exact battle-tested playbook I used to slash my boot times from a ag
 
 Before we touch any configuration files, we need to understand what's actually murdering your system resources the second the kernel initializes.
 
-1. The Electron Memory-Leak Cult: Half the apps running in your system tray—Discord, Slack, Teams, Spotify, and that obscure internal tool written by the intern—are bloated Electron wrappers. They all register themselves as auto-start daemons, consuming gigabytes of RAM before you've even opened a browser.
+## 1. The Electron Memory-Leak Cult: Half the apps running in your system tray—Discord, Slack, Teams, Spotify, and that obscure internal tool written by the intern—are bloated Electron wrappers. They all register themselves as auto-start daemons, consuming gigabytes of RAM before you've even opened a browser.
 
-2. Aggressive Telemetry and Updater Daemons: Corporate endpoint management tools, Adobe background synchronizers, and various OEM updater suites love to hog I/O queues during the critical boot window, creating a massive disk bottleneck.
+## 2. Aggressive Telemetry and Updater Daemons: Corporate endpoint management tools, Adobe background synchronizers, and various OEM updater suites love to hog I/O queues during the critical boot window, creating a massive disk bottleneck.
 
-3. Ghost Services & Orphaned Registry Hooks: Uninstalling software via standard GUI uninstaller wizards often leaves behind orphaned run-keys in the Windows Registry (`HKCU\Software\Microsoft\Windows\CurrentVersion\Run`), forcing the session manager to timeout while trying to launch non-existent binaries.
+## 3. Ghost Services & Orphaned Registry Hooks: Uninstalling software via standard GUI uninstaller wizards often leaves behind orphaned run-keys in the Windows Registry (`HKCU\Software\Microsoft\Windows\CurrentVersion\Run`), forcing the session manager to timeout while trying to launch non-existent binaries.
 
 ---
 
@@ -47,18 +48,18 @@ We aren't going to click around useless graphical menus. We are going straight t
 systeminfo | findstr /C:"Boot Device" /C:"System Boot Time"
 </div>
 
-#### Step 1: Purge the Startup Queue via Task Manager
+## Step 1: Purge the Startup Queue via Task Manager
 Forget third-party registry cleaners that promise miracles and deliver malware. Let's use the native orchestration tool.
 
-1. Hit `Ctrl + Shift + Esc` to launch the Task Manager directly.
+## 1. Hit `Ctrl + Shift + Esc` to launch the Task Manager directly.
 
-2. Navigate to the Startup apps tab (the gauge icon on Windows 11).
+## 2. Navigate to the Startup apps tab (the gauge icon on Windows 11).
 
-3. Sort by Startup impact. Look for anything marked "High".
+## 3. Sort by Startup impact. Look for anything marked "High".
 
-4. Right-click and Disable every single non-essential utility (OneDrive, Cortana, third-party updaters, chat clients). Leave only your core hardware drivers and Windows Security.
+## 4. Right-click and Disable every single non-essential utility (OneDrive, Cortana, third-party updaters, chat clients). Leave only your core hardware drivers and Windows Security.
 
-#### Step 2: Deep System Diagnostics via Command Prompt & Device Manager
+## Step 2: Deep System Diagnostics via Command Prompt & Device Manager
 If disabling startup apps doesn't yield an immediate I/O boost, you might have failing hardware or corrupted system files slowing down the kernel handshake.
 
 <div style="border-left: 4px solid #00ffcc; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,255,204,0.05); border-radius: 4px; font-family: monospace;">
@@ -67,22 +68,24 @@ DISM.exe /Online /Cleanup-image /Restorehealth
 sfc /scannow
 </div>
 
-1. Open Command Prompt as Administrator.
+## 1. Open Command Prompt as Administrator.
 
-2. Run the deployment image servicing and system file checker commands shown above to repair corrupted DLLs that slow down service initialization.
+## 2. Run the deployment image servicing and system file checker commands shown above to repair corrupted DLLs that slow down service initialization.
 
-3. Open Device Manager (`devmgmt.msc`), expand *Disk drives*, and check your primary NVMe/SSD health. If SMART data reports high reallocation sectors, your drive controller is choking your boot reads.
+## 3. Open Device Manager (`devmgmt.msc`), expand *Disk drives*, and check your primary NVMe/SSD health. If SMART data reports high reallocation sectors, your drive controller is choking your boot reads.
 
-#### Step 3: Prune Registry Run Keys (Advanced)
+## Step 3: Prune Registry Run Keys (Advanced)
 For persistent bloatware that refuses to disappear from your startup list:
 
-1. Press `Win + R`, type `regedit`, and hit Enter.
+## 1. Press `Win + R`, type `regedit`, and hit Enter.
 
-2. Navigate to:
+## 2. Navigate to:
+
    `HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run`
    and
    `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Run`
-3. Audit the string values. If you spot a dead executable path, delete the key entirely.
+
+## 3. Audit the string values. If you spot a dead executable path, delete the key entirely.
 
 ---
 

@@ -9,6 +9,7 @@ theme: "Industrial Blueprint"
 ---
 
 
+
 Llevo más de una década gestionando el parque microinformático de una multinacional con más de 800 puestos operativos, y si hay una incidencia que entra a diario en el sistema de tickets de soporte técnico con la etiqueta de "urgente", es el colapso del puesto de trabajo multimonitor. El escenario siempre es el mismo: el usuario llega por la mañana, conecta su portátil corporativo a la base de conexión (docking station) o directamente por HDMI/DisplayPort, y se encuentra con el temido mensaje de "Sin señal" (No Signal) o, peor aún, un parpadeo intermitente cada tres segundos que deja el equipo totalmente inútil para trabajar.
 
 Muchas veces se culpa a la pantalla o al cable de inmediato. Sin embargo, en el 90% de las intervenciones que realizo en planta, el fallo no reside en el panel físico, sino en una desincronización crítica en el handshake digital de la GPU, microcortes de tensión en el protocolo de enlace (DisplayPort Alternate Mode) o la corrupción de los controladores gráficos tras una actualización en segundo plano de Windows Update. En esta guía técnica voy a desglosar cómo aislar la avería a nivel de esquema funcional y resolverla de forma definitiva mediante software e instrumentación del sistema. <div style="border-left: 4px solid #f59e0b; padding: 14px 18px; margin: 24px 0; background-color: rgba(245, 158, 11, 0.05); border-radius: 4px; font-family: monospace; font-size: 0.95em;">
@@ -30,8 +31,6 @@ Para abordar este problema con mentalidad de ingeniería, debemos entender la ca
 
 ### 1. Colapso del enlace TMDS / DisplayPort Main Link y renegociación de EDID
 El monitor y la GPU se comunican mediante el canal DDC (Display Data Channel) para intercambiar los datos EDID (Extended Display Identification Data), que contienen las resoluciones, tasas de refresco y tiempos soportados. Cuando el controlador de vídeo almacena en caché un perfil corrupto o incompatible tras una hibernación del portátil, la GPU intenta forzar una velocidad de enlace (Link Rate) que la línea física no sostiene. Esto provoca una caída del búfer, la pantalla se apaga para renegociar el enlace (*Link Training*), recupera la señal temporalmente y vuelve a caer, generando el bucle infinito de parpadeo.
-
-
 
 ![Hardware Diagnostic & Troubleshooting](https://images.unsplash.com/photo-1555680202-c86f0e12f086? auto=format&fit=crop&w=1000&h=550&q=80)
 
@@ -72,15 +71,17 @@ Antes de desinstalar nada, prueba a forzar el reinicio en caliente del subsistem
 Escucharás un breve pitido del sistema y la pantalla parpadeará una vez. Si la señal vuelve de inmediato de forma estable, el problema residía en un bloqueo temporal de la cola de procesamiento del Administrador de ventanas de escritorio (dwm.exe).
 
 ### Paso 2: Análisis en el Administrador de dispositivos
-1. Haz clic derecho sobre el botón de Inicio de Windows y selecciona Administrador de dispositivos.
 
-2. Despliega la categoría Adaptadores de pantalla.
+## 1. Haz clic derecho sobre el botón de Inicio de Windows y selecciona Administrador de dispositivos.
 
-3. Si observas un triángulo amarillo de advertencia sobre la gráfica integrada o dedicada, haz doble clic sobre el dispositivo y revisa el código de estado:
+## 2. Despliega la categoría Adaptadores de pantalla.
+
+## 3. Si observas un triángulo amarillo de advertencia sobre la gráfica integrada o dedicada, haz doble clic sobre el dispositivo y revisa el código de estado:
+
    - Código 43: Error crítico de comunicación de hardware/firmware o controlador totalmente corrupto.
    - Código 31: Windows no pudo cargar los controladores requeridos para este dispositivo.
 
-4. Despliega la categoría Monitores. Si tu segunda pantalla aparece como *Monitor PnP genérico* en lugar de reflejar el modelo real del fabricante, Windows ha perdido la tabla EDID.
+## 4. Despliega la categoría Monitores. Si tu segunda pantalla aparece como *Monitor PnP genérico* en lugar de reflejar el modelo real del fabricante, Windows ha perdido la tabla EDID.
 
 <div style="border-left: 4px solid #f59e0b; padding: 14px 18px; margin: 24px 0; background-color: rgba(245, 158, 11, 0.05); border-radius: 4px;">
   <strong>NOTA DE CAMPO:</strong> No uses la opción "Actualizar controlador" dentro de Windows. El catálogo interno prioriza drivers genéricos orientados a la estabilidad básica de oficina, omitiendo extensiones críticas de control de reloj para monitores duales de alta frecuencia. </div>
@@ -88,15 +89,15 @@ Escucharás un breve pitido del sistema y la pantalla parpadeará una vez. Si la
 ### Paso 3: Purga absoluta de controladores en Modo Seguro mediante DDU
 Para garantizar que no queden residuos en las claves del registro, debemos recurrir a la herramienta estándar del sector: Display Driver Uninstaller (DDU).
 
-1. Descarga el paquete oficial más reciente del controlador desde la web de soporte del fabricante del portátil o del diseñador del silicio (Intel, AMD o NVIDIA).
+## 1. Descarga el paquete oficial más reciente del controlador desde la web de soporte del fabricante del portátil o del diseñador del silicio (Intel, AMD o NVIDIA).
 
-2. Descarga la versión portable de DDU.
+## 2. Descarga la versión portable de DDU.
 
-3. Desconecta el portátil de Internet (apaga el Wi-Fi y retira el cable Ethernet RJ-45) para evitar que Windows Update intente autodescargar un driver genérico en cuanto reiniciemos.
+## 3. Desconecta el portátil de Internet (apaga el Wi-Fi y retira el cable Ethernet RJ-45) para evitar que Windows Update intente autodescargar un driver genérico en cuanto reiniciemos.
 
-4. Pulsa `Win` + `R`, escribe `msconfig` y presiona Intro.
+## 4. Pulsa `Win` + `R`, escribe `msconfig` y presiona Intro.
 
-5. En la pestaña Arranque, marca la casillaArranque a prueba de errorescon la opciónMínimo. Aplica y reinicia el sistema.
+## 5. En la pestaña Arranque, marca la casillaArranque a prueba de errorescon la opciónMínimo. Aplica y reinicia el sistema.
 
 6. Una vez dentro del Modo Seguro:
    - Ejecuta DDU como Administrador.
@@ -107,15 +108,17 @@ Para garantizar que no queden residuos en las claves del registro, debemos recur
 7. Repite el proceso para ambos adaptadores si dispones de un sistema híbrido (primero la gráfica integrada y luego la dedicada).
 
 ### Paso 4: Reinstalación limpia y configuración de temporización
-1. Tras reiniciar en modo normal (recuerda desactivar el arranque a prueba de errores en `msconfig` si no se quitó automáticamente), instala primero el controlador de la gráfica integrada (iGPU) y reinicia.
 
-2. Instala a continuación el controlador de la gráfica dedicada (dGPU) y reinicia de nuevo.
+## 1. Tras reiniciar en modo normal (recuerda desactivar el arranque a prueba de errores en `msconfig` si no se quitó automáticamente), instala primero el controlador de la gráfica integrada (iGPU) y reinicia.
 
-3. Conecta el segundo monitor.
+## 2. Instala a continuación el controlador de la gráfica dedicada (dGPU) y reinicia de nuevo.
 
-4. Pulsa `Win` + `I` para abrir Configuración>Sistema>Pantalla.
+## 3. Conecta el segundo monitor.
 
-5. Selecciona el monitor problemático, baja hasta Pantalla avanzaday revisa el apartadoFrecuencia de actualización.
+## 4. Pulsa `Win` + `I` para abrir Configuración>Sistema>Pantalla.
+
+## 5. Selecciona el monitor problemático, baja hasta Pantalla avanzaday revisa el apartadoFrecuencia de actualización.
+
    - Si está configurado a una tasa de refresco ultraalta (por ejemplo, 144 Hz o 165 Hz) sobre una conexión HDMI 1.4 o USB-C básico, baja la frecuencia manualmente a 60 Hzo59.94 Hz.
    - Comprueba si el espacio de color está configurado en RGB 8-bit en lugar de YCbCr422/420. La reducción de la profundidad de color libera de inmediato ancho de banda en el bus de datos, eliminando el parpadeo en enlaces saturados.
 

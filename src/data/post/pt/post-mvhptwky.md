@@ -9,6 +9,7 @@ theme: "Rosewood Hardware Guide"
 ---
 
 
+
 Eram exatamente 13h45 em um escritório na Avenida Paulista, e a tensão na sala de reuniões era palpable. Faltavam quinze minutos para a apresentação trimestral da diretoria quando o nosso gerente de operações chamou no rádio: o notebook corporativo recém-atualizado para o Windows 11 simplesmente travou na hora de anexar os arquivos finais compactados. O motivo? Aquela maldita interface simplificada do botão direito que esconde as opções essenciais de compactação e ferramentas de terceiros atrás de um clique extra em "Mostrar mais opções". Para quem precisa de agilidade e executa dezenas de tarefas por minuto, perder preciosos segundos caçando menus ocultos sob pressão é o cenário perfeito para um desastre corporativo.
 
 <div style="border-left: 4px solid #be123c; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
@@ -21,13 +22,13 @@ a:</strong> O novo menu de contexto do Windows 11 foi desenhado pensando em tela
 
 Antes de aplicar a solução definitiva que salvou nossa reunião, vale a pena entender a raiz técnica desse comportamento no sistema operacional:
 
-1. Isolamento de Processos (AppX Packages): A Microsoft migrou o menu clássico para uma arquitetura moderna baseada em UWP/WinRT, o que impede que programas legados (como WinRAR, 7-Zip e clientes FTP antigos) se injetem diretamente na raiz do menu sem uma adaptação profunda por parte dos desenvolvedores.
+## 1. Isolamento de Processos (AppX Packages): A Microsoft migrou o menu clássico para uma arquitetura moderna baseada em UWP/WinRT, o que impede que programas legados (como WinRAR, 7-Zip e clientes FTP antigos) se injetem diretamente na raiz do menu sem uma adaptação profunda por parte dos desenvolvedores.
 
-2. Falta de Compatibilidade Nativa Imediat
+## 2. Falta de Compatibilidade Nativa Imediat
 
 a: Milhares de softwares corporativos essenciais ainda usam as chaves antigas de registro do shell do Windows. Sem o ajuste correto, eles ficam ocultos no submenu secundário.
 
-3. Ergonomia e Memória Muscular: Anos de uso do Windows 10 criaram uma memória muscular nos dedos. Parar o fluxo de trabalho para dar um clique duplo ou usar atalhos extras causa fadiga cognitiva desnecessária na equipe.
+## 3. Ergonomia e Memória Muscular: Anos de uso do Windows 10 criaram uma memória muscular nos dedos. Parar o fluxo de trabalho para dar um clique duplo ou usar atalhos extras causa fadiga cognitiva desnecessária na equipe.
 
 ## O Diagnóstico e a Tentativa Frustrada Inicial
 
@@ -40,11 +41,12 @@ Perdemos quase 3 minutos preciosos tentando tutoriais antigos da internet que re
 Como sou adepto de soluções limpas e que não exigem softwares de terceiros pesados rodando em segundo plano, utilizo o procedimento via Prompt de Comando com privilégios administrativos. É seguro, rápido e pode ser aplicado via script em massa na sua rede.
 
 ### Passo 1: Acessando o Terminal com Poderes de Administrador
-1. Vá até a barra de tarefas e clique no menu Iniciar.
 
-2. Digite TerminalouPrompt de Comando.
+## 1. Vá até a barra de tarefas e clique no menu Iniciar.
 
-3. Clique com o botão direito sobre o aplicativo e selecione Executar como Administrador. (Se o Controle de Conta de Usuário perguntar se permite alterações, clique em Sim).
+## 2. Digite TerminalouPrompt de Comando.
+
+## 3. Clique com o botão direito sobre o aplicativo e selecione Executar como Administrador. (Se o Controle de Conta de Usuário perguntar se permite alterações, clique em Sim).
 
 ### Passo 2: Injetando a Chave de Correção do Registro
 Copie e cole o comando exato abaixo na janela do terminal e aperte Enter:
@@ -59,11 +61,12 @@ reg.exe add "HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\
 
 ### Passo 3: Reiniciando o Explorador de Arquivos
 Para que a alteração tenha efeito imediato sem precisar reiniciar a máquina inteira (o que nos faria perder a reunião), finalize o processo do shell gráfico:
-1. Pressione Ctrl + Shift + Escpara abrir oGerenciador de Tarefas.
 
-2. Na aba Processos, role a lista até encontrar oExplorador de Windows (ou *explorer.exe*).
+## 1. Pressione Ctrl + Shift + Escpara abrir oGerenciador de Tarefas.
 
-3. Clique com o botão direito nele e selecione Reiniciar.
+## 2. Na aba Processos, role a lista até encontrar oExplorador de Windows (ou *explorer.exe*).
+
+## 3. Clique com o botão direito nele e selecione Reiniciar.
 
 Pronto! A barra de tarefas vai sumir e piscar por um segundo, e ao clicar com o botão direito em qualquer arquivo ou na Área de Trabalho, o menu clássico completo estará lá, tal como nos bons tempos.
 
@@ -80,8 +83,6 @@ Pronto! A barra de tarefas vai sumir e piscar por um segundo, e ao clicar com o 
 
 ### 1. Esse procedimento funciona nas versões mais recentes do Windows 11?
 Sim. O comando afeta diretamente a estrutura de classes do shell do Windows e continua operacional nas builds mais recentes, pois a Microsoft mantém essa compatibilidade legada por razões de estabilidade empresarial.
-
-
 
 ![Tech Troubleshooting Guide](/images/tech-photo/storage%20(15).png)
 

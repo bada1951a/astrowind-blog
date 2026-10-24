@@ -9,6 +9,7 @@ theme: "Electric Cyan Speed"
 ---
 
 
+
 Eran las 18:30 en nuestras oficinas del 22@ en Barcelona. Estábamos a menos de dos horas de realizar el despliegue crítico de una nueva versión de nuestro software y, de repente, la pantalla de mi estación de trabajo principal se iluminó con esa maldita notificación en rojo: "Espacio en disco insuficiente en la unidad C:". El rendimiento cayó en picado justo cuando necesitaba compilar los últimos paquetes y empaquetar los artefactos. El disco de 500 GB estaba al límite absoluto, con apenas 400 MB libres, y el sistema operativo amenazaba con congelarse por completo en pleno proceso de release.
 
 <div style="border-left: 4px solid #06b6d4; padding: 12px 16px; margin: 20px 0; background-color: rgba(6,182,212,0.05); border-radius: 4px; color: #111827;">
@@ -21,13 +22,13 @@ Eran las 18:30 en nuestras oficinas del 22@ en Barcelona. Estábamos a menos de 
 
 Antes de empezar a borrar a lo loco y romper algo importante, hay que entender dónde se esconde realmente la basura digital en este sistema operativo. Tras investigar el origen del colapso en mi equipo, identifiqué tres culpables principales:
 
-1. Archivos temporales acumulados y caché del sistem
+## 1. Archivos temporales acumulados y caché del sistem
 
 a: Las actualizaciones de Windows Update anteriores, los instaladores de parches y la caché de aplicaciones de la Tienda de Windows dejan gigabytes de archivos huérfanos en directorios ocultos.
 
-2. Puntos de restauración y copias de seguridad de Shadow Copy: Windows crea copias de seguridad automáticas del sistema cada vez que instalas un controlador o un programa pesado, devorando espacio sin avisar.
+## 2. Puntos de restauración y copias de seguridad de Shadow Copy: Windows crea copias de seguridad automáticas del sistema cada vez que instalas un controlador o un programa pesado, devorando espacio sin avisar.
 
-3. La carpeta de Descargas y la caché de navegadores: Archivos pesados que descargamos para pruebas rápidas y que se quedan acumulados en carpetas predeterminadas del perfil de usuario.
+## 3. La carpeta de Descargas y la caché de navegadores: Archivos pesados que descargamos para pruebas rápidas y que se quedan acumulados en carpetas predeterminadas del perfil de usuario.
 
 ---
 
@@ -35,7 +36,7 @@ a: Las actualizaciones de Windows Update anteriores, los instaladores de parches
 
 Para salir del apuro sin arriesgar la estabilidad del sistema, aplicaremos un método de dos fases: una limpieza rápida mediante la interfaz nativa y una purga avanzada de archivos temporales ocultos.
 
-#### Fase 1: Limpieza rápida desde la Configuración de Windows 11
+## Fase 1: Limpieza rápida desde la Configuración de Windows 11
 
 Esta es la ruta más segura para recuperar espacio al instante sin tocar archivos del sistema por error.
 
@@ -49,20 +50,22 @@ Esta es la ruta más segura para recuperar espacio al instante sin tocar archivo
 <div style="border-left: 4px solid #06b6d4; padding: 12px 16px; margin: 20px 0; background-color: rgba(6,182,212,0.05); border-radius: 4px; color: #111827;">
 <strong>Consejo Pro:</strong> Evita marcar la casilla de "Descargas" a menos que estés 100 por ciento seguro de que no necesitas nada de lo que hay en esa carpeta. </div>
 
-#### Fase 2: Purga profunda de carpetas Temp ocultas
+## Fase 2: Purga profunda de carpetas Temp ocultas
 
 Si la fase anterior no ha liberado suficiente espacio, necesitamos acceder manualmente a los directorios donde las aplicaciones de terceros acumulan basura.
 
-1. Presiona `Windows + R`, escribe `%temp%` y pulsa Intro. Se abrirá la carpeta de temporales del usuario actual.
+## 1. Presiona `Windows + R`, escribe `%temp%` y pulsa Intro. Se abrirá la carpeta de temporales del usuario actual.
 
-2. Selecciona todo con `Ctrl + E` y bórralo con `Shift + Supr` (para eliminarlo permanentemente sin pasar por la papelera). 
+## 2. Selecciona todo con `Ctrl + E` y bórralo con `Shift + Supr` (para eliminarlo permanentemente sin pasar por la papelera). 
+
    * *Not
 
 a:* Si Windows te avisa de que un archivo está abierto en otra aplicación, simplemente haz clic en "Omitir".
 
-3. Vuelve a presionar `Windows + R`, escribe esta vez `temp` (sin porcentajes) y pulsa Intro. Repite el proceso de selección y borrado para los temporales del sistema (te pedirá permisos de Administrador).
+## 3. Vuelve a presionar `Windows + R`, escribe esta vez `temp` (sin porcentajes) y pulsa Intro. Repite el proceso de selección y borrado para los temporales del sistema (te pedirá permisos de Administrador).
 
-4. Finalmente, abre el menú Inicio, escribe TerminaloSímbolo del sistema, haz clic derecho sobre él y seleccionaEjecutar como administrador. Ejecuta el siguiente comando para limpiar el almacenamiento reservado del sistema si es necesario:
+## 4. Finalmente, abre el menú Inicio, escribe TerminaloSímbolo del sistema, haz clic derecho sobre él y seleccionaEjecutar como administrador. Ejecuta el siguiente comando para limpiar el almacenamiento reservado del sistema si es necesario:
+
    `Dism.exe /Online /Cleanup-Image /StartComponentCleanup`
 
 ---

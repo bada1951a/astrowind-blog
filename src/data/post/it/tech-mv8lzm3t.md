@@ -9,6 +9,7 @@ theme: "Cyberpunk Terminal"
 ---
 
 
+
 <div style="border-left: 4px solid #00ffcc; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,255,204,0.05); border-radius: 4px; font-family: monospace;">
 [SYS_ALERT] root@hardware-lab:~# tail -f /var/log/boot_sequence.log<br>
 CRITICAL: I/O bottleneck detected. Disk queue length > 5.
@@ -21,11 +22,12 @@ Erano le 8:45 di un venerdì mattina qualunque, e il mio capo era già dietro la
 a: *"Ti conviene reinstallare tutto da capo"*. Ma figurati se un sistemista si arrende a una formattazione prima di aver fatto sanguinare la tastiera. Il problema non era l'hardware in sé, ma il caos assoluto che si era accumulato nel registro di sistema e nella sequenza di boot. Ogni volta che installi una suite di office automation, un tool di messaggistica o un driver di periferica, questi software si infilano subdoli nella coda d'avvio. Risultato? All'accensione, la CPU e il controller SATA/NVMe vengono subissati da decine di daemon e updater inutili che strangolano il sistema prima ancora che tu possa aprire il Task Manager.
 
 Analizziamo i tre veri colpevoli di questo scempio prestazionale:
-1. I demoni residenti (Daemon invisibili): Applicazioni come Discord, Steam, Spotify e vari updater di Adobe che non servono a nulla finché non decidi esplicitamente di aprirli, ma che pretendono di restare in memoria RAM dal millisecondo zero.
 
-2. Servizi di telemetria e sincronizzazione cloud: OneDrive, Google Drive e Dropbox che partono tutti insieme in contemporanea, saturando la banda di I/O del disco e la connessione di rete locale per fare il check dei file.
+## 1. I demoni residenti (Daemon invisibili): Applicazioni come Discord, Steam, Spotify e vari updater di Adobe che non servono a nulla finché non decidi esplicitamente di aprirli, ma che pretendono di restare in memoria RAM dal millisecondo zero.
 
-3. Bloatware OEM preinstallati: Utilità inutili dei produttori di motherboard (ASUS, MSI, Dell) che occupano cicli di clock preziosi eseguendo diagnostiche ridondanti all'avvio.
+## 2. Servizi di telemetria e sincronizzazione cloud: OneDrive, Google Drive e Dropbox che partono tutti insieme in contemporanea, saturando la banda di I/O del disco e la connessione di rete locale per fare il check dei file.
+
+## 3. Bloatware OEM preinstallati: Utilità inutili dei produttori di motherboard (ASUS, MSI, Dell) che occupano cicli di clock preziosi eseguendo diagnostiche ridondanti all'avvio.
 
 BК bando alle ciance, apriamo il terminale e riprendiamoci il controllo della macchina. Ecco la procedura chirurgica da eseguire.
 
@@ -38,7 +40,7 @@ SUCCESS: The process "bloatware_updater.exe" has been terminated.
 
 Prima di mettere le mani nel registro, usiamo gli strumenti nativi di Windows per sezionare il problema. Niente software di terze parti pieni di adware; usiamo solo strumenti di sistema puri.
 
-#### 1. Analisi tramite Gestione Attività (Task Manager)
+## 1. Analisi tramite Gestione Attività (Task Manager)
 Premi la combinazione di tasti `Ctrl + Shift + Esc` per aprire la *Gestione attività*. Spostati sulla scheda Applicazioni in avvio (l'icona del tachimetro). Qui vedrai l'elenco completo di tutto ciò che si avvia con il sistema operativo, accompagnato dall'impatto stimato sull'avvio (*Basso*, *Medio*, *Alto*).
 
 Ordina la lista per "Impatto sull'avvio" e disabilita senza pietà tutto ciò che non è un driver critico o un antivirus. 
@@ -56,7 +58,7 @@ wmic startup get Caption, Command
 
 Questo comando ti sputerà a video l'elenco esatto dei binari che si caricano all'avvio. Se noti percorsi strani in directory temporanee (`AppData\Local` o `Temp`), hai trovato il malware o il software spazzatura che rallenta il boot.
 
-#### 3. Controllo dello stato dei dischi e dell'integrità
+## 3. Controllo dello stato dei dischi e dell'integrità
 Spesso un avvio lento non è solo colpa dei programmi, ma di un supporto di memoria che sta cedendo. Apri Gestione disco (`diskmgmt.msc`) o verifica lo stato S.M.
 
 A.R.T. da terminale con:

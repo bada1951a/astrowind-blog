@@ -9,6 +9,7 @@ theme: "Pastel Lavender Tech"
 ---
 
 
+
 Eran las 8:50 de la mañana en nuestra oficina del distrito 22@ en Barcelona. A solo diez minutos de una reunión clave con el equipo de producto para revisar el despliegue de la nueva versión de nuestra plataforma, mi ordenador principal decidió hacer una actualización fantasma y quedarse congelado en la pantalla de bienvenida. El ventilador rugía como un motor de avión y el cursor apenas se arrastraba por el escritorio. Los Slack de mis compañeros parpadeaban con avisos de urgencia y yo sudando frío mirando cómo pasaban los segundos. El cuello de botella no era falta de hardware; era que el sistema operativo intentaba cargar al mismo tiempo dieciocho aplicaciones que ni siquiera recordaba haber instalado. 
 
 <div style="border-left: 4px solid #7c3aed; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
@@ -21,11 +22,11 @@ Eran las 8:50 de la mañana en nuestra oficina del distrito 22@ en Barcelona. A 
 
 Antes de lanzarnos a limpiar, entendamos por qué tu ordenador portátil o de sobremesa pasa de tardar 10 segundos a necesitar un café entero para arrancar:
 
-1. Efecto polizón de los instaladores: Cada vez que instalas Discord, Spotify, Steam, Teams o una utilidad de impresora, configuran su propio servicio residente para ejecutarse en segundo plano desde el primer segundo que enciendes el PC.
+## 1. Efecto polizón de los instaladores: Cada vez que instalas Discord, Spotify, Steam, Teams o una utilidad de impresora, configuran su propio servicio residente para ejecutarse en segundo plano desde el primer segundo que enciendes el PC.
 
-2. Impacto acumulativo en el búfer de inicio: Windows 10 intenta cargar simultáneamente procesos de red, sincronización de la nube y agentes de actualización antes de dejarte ver el escritorio, saturando el disco (especialmente si aún usas un HDD mecánico o un SSD saturado).
+## 2. Impacto acumulativo en el búfer de inicio: Windows 10 intenta cargar simultáneamente procesos de red, sincronización de la nube y agentes de actualización antes de dejarte ver el escritorio, saturando el disco (especialmente si aún usas un HDD mecánico o un SSD saturado).
 
-3. Falta de mantenimiento preventivo: Rara vez revisamos qué procesos se autoinician tras una gran actualización del sistema operativo, permitiendo que aplicaciones obsoletas sigan devorando memoria RAM desde el arranque.
+## 3. Falta de mantenimiento preventivo: Rara vez revisamos qué procesos se autoinician tras una gran actualización del sistema operativo, permitiendo que aplicaciones obsoletas sigan devorando memoria RAM desde el arranque.
 
 ## Guía paso a paso: Cómo desactivar los programas de inicio
 

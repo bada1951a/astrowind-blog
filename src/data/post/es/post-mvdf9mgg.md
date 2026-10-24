@@ -9,6 +9,7 @@ theme: "Solarized Amber Warm"
 ---
 
 
+
 Eran las 7:30 de la tarde en nuestra oficina tecnológica del distrito 22@ en Barcelona. Estábamos a menos de cuarenta y ocho horas de liberar una nueva versión crítica de nuestro software principal, y decidí reiniciar mi estación de trabajo tras aplicar el último parche acumulativo de Windows 11. Grave error. La pantalla se quedó congelada de forma impertinente en un fatídico "100% completado. No apague el equipo" durante más de una hora. El ventilador rugía como un reactor y el grupo de Slack echaba humo con compañeros preguntando por los binarios de la compilación previa al lanzamiento. Tenía la máquina principal totalmente secuestrada por el asistente de actualización.
 
 <div style="border-left: 4px solid #d97706; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
@@ -21,11 +22,11 @@ Eran las 7:30 de la tarde en nuestra oficina tecnológica del distrito 22@ en Ba
 
 Tras rescatar el equipo mediante un reinicio forzoso y revisar los registros del Visor de eventos, el cuello de botella quedó clarísimo. Estos son los tres culpables habituales en entornos de desarrollo y producción:
 
-1. Corrupción en la base de datos de actualización (Catroot2 y SoftwareDistribution): Archivos temporales de descarga que se han quedado a medias o con permisos bloqueados.
+## 1. Corrupción en la base de datos de actualización (Catroot2 y SoftwareDistribution): Archivos temporales de descarga que se han quedado a medias o con permisos bloqueados.
 
-2. Servicios del sistema zombie: Los hilos de `wuauserv` (Windows Update) o `cryptsvc` (Cryptographic Services) se quedan colgados en bucle infinito intentando verificar firmas digitales que ya han expirado o fallado.
+## 2. Servicios del sistema zombie: Los hilos de `wuauserv` (Windows Update) o `cryptsvc` (Cryptographic Services) se quedan colgados en bucle infinito intentando verificar firmas digitales que ya han expirado o fallado.
 
-3. Interferencias de software de seguridad o políticas de red corporativas: Un corte breve de la VPN de la oficina justo cuando descargaba el último manifiesto binario.
+## 3. Interferencias de software de seguridad o políticas de red corporativas: Un corte breve de la VPN de la oficina justo cuando descargaba el último manifiesto binario.
 
 ## Pasos para la solución: Vaciado de la caché y reseteo de servicios
 

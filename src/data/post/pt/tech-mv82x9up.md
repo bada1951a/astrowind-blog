@@ -9,6 +9,7 @@ theme: "Graphite Technical Paper"
 ---
 
 
+
 Eram exatamente 8h45 de uma segunda-feira caótica quando o chefe do comercial brotou na minha baia com aquela cara de quem engoliu um parafuso. O relatório de fechamento de trimestre, que precisava ser apresentado para a diretoria às 10h, estava trancado na máquina principal dele. O sintoma? O gabinete ligava, os coolers berravam, o LED azul acendia bonitinho, mas o monitor continuava com aquela maldita mensagem flutuante de "Sem Sinal". Nada de BIOS, nada de POST, tela preta absoluta. <div style="border-left: 4px solid #475569; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px;">
 <strong>Nota do Analista (Estilo Paper Técnico):</strong> O cenário de "cooler roda mas não dá vídeo" é o clássico indicativo de que o processador não conseguiu inicializar o firmware básico (UEFI/BIOS). Na maioria das vezes, o culpado não é a placa-mãe moribunda, mas sim um falso contato nos barramentos de memória. </div>
 
@@ -22,8 +23,6 @@ Antes de sair trocando peça ou chorando no cantinho da copa, precisamos isolar 
 
 a: O ciclo de liga/desliga expande e contrai a placa-mãe, fazendo o pente "andar" milímetros para fora do encaixe perfeito.
 
-
-
 ![Hardware Diagnostic & Troubleshooting](https://picsum.photos/seed/hardware-876/1000/550)
 
 ## 2. Metodologia de Resolução Passo a Passo (O Guia Definitivo)
@@ -32,11 +31,12 @@ Esquece tentativa e erro aleatória. Vamos tratar isso como um procedimento cir�
 Desligue o cabo de força da tomada. Abra o gabinete e pressione o botão Power por 10 segundos com o PC fora da tomada para descarregar os capacitores da placa-mãe. Se você pular isso, pode fechar curto nos trilhos de 3.3V/5V da RAM.
 
 ### Passo 2: Remoção e Limpeza Cirúrgica da RAM
-1. Puxe as travas laterais do slot e retire o(s) pente(s) de memória com cuidado.
 
-2. Inspecione os contatos dourados. Se notar manchas escuras ou opacas, pegue uma borracha branca escolar (limpa e macia) e passe delicadamente no sentido dos pinos (nunca de um lado para o outro para não levantar as bordas do circuito).
+## 1. Puxe as travas laterais do slot e retire o(s) pente(s) de memória com cuidado.
 
-3. Remova todos os resíduos de borracha com um pincel antiestático ou jatos de ar seco. Nunca use álcool comum, se precisar limpar resíduos de gordura dos dedos, use Álcool Isopropílico 99%.
+## 2. Inspecione os contatos dourados. Se notar manchas escuras ou opacas, pegue uma borracha branca escolar (limpa e macia) e passe delicadamente no sentido dos pinos (nunca de um lado para o outro para não levantar as bordas do circuito).
+
+## 3. Remova todos os resíduos de borracha com um pincel antiestático ou jatos de ar seco. Nunca use álcool comum, se precisar limpar resíduos de gordura dos dedos, use Álcool Isopropílico 99%.
 
 ### Passo 3: Teste de Isolamento de Slots (A Regra do "Um por Um")
 Se o seu PC tem dois ou quatro pentes, não coloque todos de volta de uma vez. 

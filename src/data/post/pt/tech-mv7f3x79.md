@@ -9,6 +9,7 @@ theme: "Tokyo Neon Violet"
 ---
 
 
+
 Durante anos gerenciando bancadas de suporte e estações de alta performance para desenvolvedores e jogadores competitivos, perdi a conta de quantas vezes me deparei com o mesmo chamado: *"Conectei meu monitor externo no notebook gamer/corporativo e a tela simplesmente não dá sinal, ou pior, fica piscando a cada 20 segundos"*. Esse comportamento instável — o infame *flickering* ou a perda total de sincronia com a clássica mensagem de "Sem Sinal" (*No Signal*) — raramente é um defeito físico no painel do monitor. 
 
 Na esmagadora maioria dos casos práticos que analisei em laboratório, o vilão é uma colisão na pilha de drivers gráficos híbridos (a dança sensível entre a iGPU do processador e a dGPU dedicada), corrupção de tabelas EDID ou uma tentativa do Windows de forçar uma taxa de quadros e largura de banda que o barramento físico atual não consegue sustentar. 
@@ -45,8 +46,6 @@ Para intervir com precisão cirúrgica sem perder tempo trocando peças à toa, 
 ### 1. Quebra de Handshake HDCP e Corrupção de Metadados EDID
 Ao conectar o cabo HDMI ou DisplayPort (via USB-C Alt Mode), a GPU e o monitor trocam pacotes de identificação (*Extended Display Identification Data* - EDID) e negociam chaves de proteção HDCP. Se o notebook estiver alternando estados de energia ou se a iGPU assumir a interface externa enquanto a dGPU tenta renderizar a cena, essa troca de chaves falha. O monitor perde a sincronia de clock pixel a pixel, desliga a luz de fundo por proteção e tenta reconectar segundos depois, gerando o efeito de tela piscando em loop.
 
-
-
 ![Hardware Diagnostic & Troubleshooting](https://images.unsplash.com/photo-1527443224154-c4a3942d3acf? auto=format&fit=crop&w=1000&h=550&q=80)
 
 ### 2. Conflito de Drivers e Descompasso do Windows Update
@@ -82,21 +81,23 @@ Antes de intervir no software, force o Windows a reiniciar os buffers de renderi
 
 a:
 
-1. Com o monitor externo conectado, pressione simultaneamente as teclas:  
-   `Win + Ctrl + Shift + B`
-2. A tela do notebook e o monitor piscarão por uma fração de segundo e você ouvirá um bipe curto emitido pelo sistema operacional.
+## 1. Com o monitor externo conectado, pressione simultaneamente as teclas:  
 
-3. Se o sinal de vídeo retornar de forma estável, o problema decorria de um travamento temporário no subsistema DWM (*Desktop Window Manager*). Caso continue instável, avance para a Etapa 2.
+   `Win + Ctrl + Shift + B`
+
+## 2. A tela do notebook e o monitor piscarão por uma fração de segundo e você ouvirá um bipe curto emitido pelo sistema operacional.
+
+## 3. Se o sinal de vídeo retornar de forma estável, o problema decorria de um travamento temporário no subsistema DWM (*Desktop Window Manager*). Caso continue instável, avance para a Etapa 2.
 
 ### Etapa 2: Análise e Limpeza no Gerenciador de Dispositivos
 
-1. Clique com o botão direito do mouse no menu Iniciar e selecione Gerenciador de Dispositivos.
+## 1. Clique com o botão direito do mouse no menu Iniciar e selecione Gerenciador de Dispositivos.
 
-2. Expanda a categoria Adaptadores de vídeo. Identifique a placa integrada (ex: *Intel Iris Xe* ou *AMD Radeon Graphics*) e a dedicada (ex: *NVIDIA GeForce RTX*).
+## 2. Expanda a categoria Adaptadores de vídeo. Identifique a placa integrada (ex: *Intel Iris Xe* ou *AMD Radeon Graphics*) e a dedicada (ex: *NVIDIA GeForce RTX*).
 
-3. Expanda também a seção Monitores. Se houver registros duplicados ou listados como "Monitor Genérico PnP" com sinal de exclamação amarelo, há conflito de perfil de cor ou EDID.
+## 3. Expanda também a seção Monitores. Se houver registros duplicados ou listados como "Monitor Genérico PnP" com sinal de exclamação amarelo, há conflito de perfil de cor ou EDID.
 
-4. Clique com o botão direito sobre os monitores genéricos com erro e selecione Desinstalar dispositivo.
+## 4. Clique com o botão direito sobre os monitores genéricos com erro e selecione Desinstalar dispositivo.
 
 ```
 [Gerenciador de Dispositivos]
@@ -114,13 +115,14 @@ A reinstalação convencional via instaladores executáveis costuma falhar porqu
 
 a:
 
-1. Baixe a versão mais recente do utilitário DDU (Display Driver Uninstaller) de um portal confiável.
+## 1. Baixe a versão mais recente do utilitário DDU (Display Driver Uninstaller) de um portal confiável.
 
-2. Baixe previamente os instaladores oficiais e mais recentes da sua GPU integrada e da sua GPU dedicada no site dos respectivos fabricantes.
+## 2. Baixe previamente os instaladores oficiais e mais recentes da sua GPU integrada e da sua GPU dedicada no site dos respectivos fabricantes.
 
-3. Pressione `Win + R`, digite `msconfig` e pressione Enter. Na abaInicialização do Sistema, marque a caixaInicialização segura (Modo Mínimo) e reinicie o notebook.
+## 3. Pressione `Win + R`, digite `msconfig` e pressione Enter. Na abaInicialização do Sistema, marque a caixaInicialização segura (Modo Mínimo) e reinicie o notebook.
 
-4. No Modo de Segurança, abra o DDU:
+## 4. No Modo de Segurança, abra o DDU:
+
    - Selecione o tipo de dispositivo: GPU.
    - Selecione a fabricante: Intel / AMD (GPU integrada primeiro).
    - Clique em Limpar e NÃO reiniciar.
@@ -132,21 +134,21 @@ a:
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate" /v "ExcludeWUDriversInQualityUpdate" /t REG_DWORD /d 1 /f
 ```
 
-5. O Windows reiniciará em resolução básica nativa. Instale primeiro o driver da placa integradae, em seguida, o driver daplaca dedicada. Reinicie o sistema mais uma vez.
+## 5. O Windows reiniciará em resolução básica nativa. Instale primeiro o driver da placa integradae, em seguida, o driver daplaca dedicada. Reinicie o sistema mais uma vez.
 
 ### Etapa 4: Alinhamento de Frequência e Profundidade de Bits
 
 Após a instalação limpa, alinhe as frequências de operação para evitar descarte de sinal:
 
-1. Pressione `Win + I` para abrir as Configurações.
+## 1. Pressione `Win + I` para abrir as Configurações.
 
-2. Vá em Sistema>Tela>Configurações avançadas de tela.
+## 2. Vá em Sistema>Tela>Configurações avançadas de tela.
 
-3. No menu suspenso, selecione o Monitor 2 (o monitor externo com problema).
+## 3. No menu suspenso, selecione o Monitor 2 (o monitor externo com problema).
 
-4. Em Escolher uma taxa de atualização, reduza temporariamente de valores extremos (ex: 165Hz) para o padrão de bancada mais seguro:60Hzou120Hz.
+## 4. Em Escolher uma taxa de atualização, reduza temporariamente de valores extremos (ex: 165Hz) para o padrão de bancada mais seguro:60Hzou120Hz.
 
-5. Verifique o campo Formato de cor: certifique-se de que está definido comoRGBe aProfundidade de bitsem8 bits (em vez de 10 bits HDR, que dobra a exigência de largura de banda do cabo).
+## 5. Verifique o campo Formato de cor: certifique-se de que está definido comoRGBe aProfundidade de bitsem8 bits (em vez de 10 bits HDR, que dobra a exigência de largura de banda do cabo).
 
 <div style="border-left: 4px solid #8b5cf6; padding: 14px 18px; margin: 24px 0; background-color: rgba(139, 92, 246, 0.05); border-radius: 6px;">
   <strong style="color: #8b5cf6; font-size: 1.05rem;">Dica de Otimização Competitiv
@@ -160,15 +162,15 @@ a:</strong> Se você joga com taxa de atualização alta e quer latência mínim
 
 Se o seu monitor continua apresentando micro-piscadas pretas esporádicas ao alternar janelas ou ver vídeos no YouTube em segundo plano enquanto trabalha, desative a chave MPO do Windows:
 
-1. Abra o Prompt de Comando como Administrador.
+## 1. Abra o Prompt de Comando como Administrador.
 
-2. Copie e cole o comando abaixo, pressionando Enter:
+## 2. Copie e cole o comando abaixo, pressionando Enter:
 
 ```cmd
 reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "OverlayTestMode" /t REG_DWORD /d 5 /f
 ```
 
-3. Reinicie o notebook. Essa modificação desabilita o plano de sobreposição dinâmica do Direct3D, eliminando de vez incompatibilidades crônicas entre o Windows 11 e placas modernas.
+## 3. Reinicie o notebook. Essa modificação desabilita o plano de sobreposição dinâmica do Direct3D, eliminando de vez incompatibilidades crônicas entre o Windows 11 e placas modernas.
 
 ---
 
