@@ -3,7 +3,7 @@ import path from 'path';
 
 const POSTS_BASE_DIR = path.resolve('src/data/post');
 
-function cleanMarkdownPerfect(content) {
+function cleanMarkdownVerified(content) {
   const fmMatch = content.match(/^---[\s\S]*?---\n*/);
   if (!fmMatch) return content;
 
@@ -13,30 +13,44 @@ function cleanMarkdownPerfect(content) {
   // 1. 인코딩 깨짐 복원
   body = body.replace(/ðŸ’¡/g, '💡');
 
-  // 2. 본문 중간에 잘못 들어간 불필요한 헤딩 기호 제거
+  // 2. 본문 중간에 잘못 들어간 불필요한 헤딩 기호 초기화
   body = body.replace(/^#{1,6}\s+/gm, '');
 
   const lines = body.split('\n');
   const processedLines = lines.map(line => {
     const trimmed = line.trim();
 
-    // A. 메인 대제목(H2) 지정: 숫자로 시작하는 메인 섹션들 (예: "1. [Opening Story...", "2. [Root Cause...")
-    if (/^[1-5]\.\s+\[/.test(trimmed)) {
-      return `## ${trimmed}`;
+    // 빈 줄은 그대로 유지
+    if (!trimmed) return line;
+
+    // A. 대제목(H2) 통합 패턴: 숫자형, 서술형, FAQ, 실무 노트 등을 완벽하게 동시 포착
+    const isH2 = 
+      /^[1-5]\.\s+/.test(trimmed) ||
+      /^자주\s*묻는\s*질문/i.test(trimmed) ||
+      /^Frequently\s+Asked\s+Questions/i.test(trimmed) ||
+      /실무\s*노트/i.test(trimmed) ||
+      /실무\s*예방\s*조언/i.test(trimmed) ||
+      /전문가가\s*전하는/i.test(trimmed) ||
+      /주요\s*원인/i.test(trimmed) ||
+      /해결\s*가이드/i.test(trimmed);
+
+    if (isH2) {
+      // 본문 안의 긴 서술형 설명문(마침표로 끝나거나 길이가 너무 긴 문장)은 대제목에서 철저히 제외
+      if (trimmed.endsWith('.') && trimmed.length > 50) {
+        return line;
+      }
+      const cleanTitle = trimmed.replace(/^#+\s*/, '').replace(/\*\*/g, '').trim();
+      return `## ${cleanTitle}`;
     }
 
-    // B. FAQ 섹션 타이틀을 완벽한 대제목(H2)으로 승격 (이 부분이 빠져서 일반 텍스트로 튀어나오던 문제를 근본적으로 해결)
-    if (/^자주\s*묻는\s*질문/i.test(trimmed) || /^Frequently\s+Asked\s+Questions/i.test(trimmed)) {
-      return `## ${trimmed}`;
-    }
-
-    // C. 단계별 소제목(H3) 지정: '[단계 1]', '방법 1', 'Step 1' 등
-    if (/^(\[[단계\s0-9]+\]|방법\s*[0-9]+|Step\s*[0-9]+)/i.test(trimmed)) {
-      const cleanTitle = trimmed.replace(/\*\*/g, '').trim();
+    // B. 소제목(H3) 판별 패턴: '[단계 1]', '방법 1', 'Step 1' 등
+    const isH3 = /^(\[[단계\s0-9]+\]|방법\s*[0-9]+|Step\s*[0-9]+)/i.test(trimmed);
+    if (isH3) {
+      const cleanTitle = trimmed.replace(/^#+\s*/, '').replace(/\*\*/g, '').trim();
       return `### ${cleanTitle}`;
     }
 
-    // D. 본문 내 과도한 볼드체(굵은 글씨) 제거 (가독성 및 애드센스 최적화)
+    // C. 본문 내 과도한 볼드체(굵은 글씨) 제거 (애드센스 최적화)
     if (/^[0-9]+\.\s+\*\*/.test(trimmed)) {
       return line.replace(/\*\*/g, '');
     }
@@ -46,7 +60,7 @@ function cleanMarkdownPerfect(content) {
 
   body = processedLines.join('\n');
 
-  // 3. 공백 및 잔여 기호 정리
+  // 3. 공백 및 잔여 기호 정돈
   body = body.replace(/^\s*\*\*\s*$/gm, '');
   body = body.replace(/\n{3,}/g, '\n\n').trim();
 
@@ -76,7 +90,7 @@ function run() {
       totalScanned++;
       const filePath = path.join(targetDir, file);
       const original = fs.readFileSync(filePath, 'utf-8');
-      const cleaned = cleanMarkdownPerfect(original);
+      const cleaned = cleanMarkdownVerified(original);
 
       if (original !== cleaned) {
         fs.writeFileSync(filePath, cleaned, 'utf-8');
@@ -85,7 +99,7 @@ function run() {
     }
   }
 
-  console.log(`\n🎉 마크다운 서식 최종 완벽 정돈 완료!`);
+  console.log(`\n🎉 모든 제목 위계 동시 정돈 완료!`);
   console.log(`- 총 스캔된 파일: ${totalScanned}개`);
   console.log(`- 교정된 파일: ${totalUpdated}개`);
 }
