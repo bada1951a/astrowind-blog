@@ -3,56 +3,51 @@ import path from 'path';
 
 const POSTS_BASE_DIR = path.resolve('src/data/post');
 
-function cleanMarkdownFinal(content) {
+function cleanMarkdownPerfect(content) {
   const fmMatch = content.match(/^---[\s\S]*?---\n*/);
   if (!fmMatch) return content;
 
   const frontmatter = fmMatch[0];
   let body = content.slice(frontmatter.length);
 
-  // 1. 인코딩 및 깨진 문자 복원
+  // 1. 인코딩 깨짐 복원
   body = body.replace(/ðŸ’¡/g, '💡');
 
-  // 2. [핵심] 기존에 본문 안에서 헤딩으로 오인되어 붙은 모든 '#' 기호를 제거하여 순수 텍스트로 환원
+  // 2. 본문 중간에 잘못 들어간 불필요한 헤딩 기호 제거
   body = body.replace(/^#{1,6}\s+/gm, '');
 
-  // 3. 줄 단위 분석 및 대제목/소제목만 엄격하게 재적용
   const lines = body.split('\n');
   const processedLines = lines.map(line => {
     const trimmed = line.trim();
 
-    // A. 진짜 대제목(H2) 지정: 숫자로 시작하며 메인 섹션 타이틀인 경우만 허용 (본문 내 실행 번호는 절대 제외)
-    // 예: "1. 시스템 종료...", "2. 빠른 시작...", "3. Step-by-Step...", "4. Frequently Asked Questions" 등
-    if (/^[1-5]\.\s+[A-Za-z가-힣\s\-]+$/.test(trimmed) && trimmed.length < 60) {
-      // 본문 안의 설명 문장(예: "1. 사내 IT 보안 감사팀의...")은 길이가 길거나 마침표/서술어로 끝나므로 대제목에서 철저히 제외
-      if (!trimmed.endsWith('.') && !trimmed.endsWith('상황') && !trimmed.includes('분기별')) {
-        return `## ${trimmed}`;
-      }
+    // A. 메인 대제목(H2) 지정: 숫자로 시작하는 메인 섹션들 (예: "1. [Opening Story...", "2. [Root Cause...")
+    if (/^[1-5]\.\s+\[/.test(trimmed)) {
+      return `## ${trimmed}`;
     }
 
-    // B. 소제목(H3) 지정: '[단계 1]', '방법 1', 'Step 1' 등 명시적인 단계/방법 키워드만 허용
+    // B. FAQ 섹션 타이틀을 완벽한 대제목(H2)으로 승격 (이 부분이 빠져서 일반 텍스트로 튀어나오던 문제를 근본적으로 해결)
+    if (/^자주\s*묻는\s*질문/i.test(trimmed) || /^Frequently\s+Asked\s+Questions/i.test(trimmed)) {
+      return `## ${trimmed}`;
+    }
+
+    // C. 단계별 소제목(H3) 지정: '[단계 1]', '방법 1', 'Step 1' 등
     if (/^(\[[단계\s0-9]+\]|방법\s*[0-9]+|Step\s*[0-9]+)/i.test(trimmed)) {
-      // 소제목 안의 과도한 볼드체 제거
-      const cleanTitle = trimmed.replace(/\*\*/g, '').replace(/^#+\s*/, '').trim();
+      const cleanTitle = trimmed.replace(/\*\*/g, '').trim();
       return `### ${cleanTitle}`;
     }
 
-    // C. 과도한 볼드체(굵은 글씨) 남발 완화: 본문 내 리스트 항목의 불필요한 볼드 처리 제거 (선택적용)
-    // 예: "1. **작업 관리자 호출:** ..." -> "1. 작업 관리자 호출: ..."
-    let cleanedLine = line;
+    // D. 본문 내 과도한 볼드체(굵은 글씨) 제거 (가독성 및 애드센스 최적화)
     if (/^[0-9]+\.\s+\*\*/.test(trimmed)) {
-      cleanedLine = line.replace(/\*\*/g, '');
+      return line.replace(/\*\*/g, '');
     }
 
-    // D. 그 외의 모든 문장은 일반 본문 유지
-    return cleanedLine;
+    return line;
   });
 
   body = processedLines.join('\n');
 
-  // 4. 잔여 기호 및 과도한 공백 정돈
+  // 3. 공백 및 잔여 기호 정리
   body = body.replace(/^\s*\*\*\s*$/gm, '');
-  body = body.replace(/\*{3,}/g, '**');
   body = body.replace(/\n{3,}/g, '\n\n').trim();
 
   return `${frontmatter}\n${body}\n`;
@@ -81,7 +76,7 @@ function run() {
       totalScanned++;
       const filePath = path.join(targetDir, file);
       const original = fs.readFileSync(filePath, 'utf-8');
-      const cleaned = cleanMarkdownFinal(original);
+      const cleaned = cleanMarkdownPerfect(original);
 
       if (original !== cleaned) {
         fs.writeFileSync(filePath, cleaned, 'utf-8');
@@ -90,9 +85,9 @@ function run() {
     }
   }
 
-  console.log(`\n🎉 전체 포스트 대소제목 및 볼드 정돈 완료!`);
+  console.log(`\n🎉 마크다운 서식 최종 완벽 정돈 완료!`);
   console.log(`- 총 스캔된 파일: ${totalScanned}개`);
-  console.log(`- 서식이 교정된 파일: ${totalUpdated}개`);
+  console.log(`- 교정된 파일: ${totalUpdated}개`);
 }
 
 run();
