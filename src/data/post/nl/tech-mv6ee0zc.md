@@ -22,6 +22,7 @@ theme: "Pastel Lavender Tech"
 
 
 
+
 Als werkplekbeheerder en IT-infrastructuurspecialist krijg ik regelmatig randapparatuur op mijn werkbank die door collega's al bijna is afgeschreven. Vorige week nog stond een senior software developer aan mijn bureau: zijn op maat gemaakte mechanische toetsenbord met Cherry MX Brown switches registreerde bij de 'E'-toets willekeurig dubbele aanslagen (`ee`) en liet de spatiebalk regelmatig steken. Voor een programmeur is dit funest; één onbedoelde dubbele letter breekt variabelen en veroorzaakt syntaxfouten. 
 
 In plaats van direct een nieuw toetsenbord van tweehonderd euro uit het IT-budget te trekken of direct de soldeerbout aan te slingeren, heb ik het probleem binnen twintig minuten permanent verholpen. In deze technische handleiding deel ik de exacte diagnose- en herstelprocedure voor chattering(toetsstuiting of dubbelslag) enmissende aanslagen, inclusief de veilige toepassing van elektronica-contactspray.
@@ -41,7 +42,7 @@ In plaats van direct een nieuw toetsenbord van tweehonderd euro uit het IT-budge
 
 ---
 
-## De anatomie van het probleem: Drie technische grondoorzaken
+De anatomie van het probleem: Drie technische grondoorzaken
 
 Voordat we naar de werkbank grijpen, moeten we begrijpen wat er fysiek gebeurt binnen een mechanische schakelaar. Een conventionele mechanische switch (zoals Cherry MX, Gateron of Kailh) werkt met een fysiek metalen bladveercontact (*leaf spring*).
 
@@ -69,7 +70,7 @@ Elke mechanische schakelaar stuitert van nature fysiek na (ongeveer 2 tot 5 mill
 ---
 ![Tech Diagnostics](https://images.unsplash.com/photo-1527443224154-c4a3942d3acf? auto=format&fit=crop&w=1000&h=550&q=80)
 
-## Stapsgewijze probleemoplossing en herstelprocedure
+### Stapsgewijze probleemoplossing en herstelprocedure
 
 Volg onderstaande stappen systematisch. We beginnen met niet-invasieve softwaretests en werken toe naar het gericht reinigen van het schakelmechanisme.
 
@@ -151,7 +152,7 @@ Heeft het flashen met contactspray geen effect? Dan ligt de fout dieper in het m
 
 ---
 
-## Geavanceerde workaround: Debounce via QMK / VIA aanpassen
+Geavanceerde workaround: Debounce via QMK / VIA aanpassen
 
 Als een switch af en toe nog licht stuitert en je geen reserveonderdelen bij de hand hebt, kun je het probleem softwarematig opvangen als jouw toetsenbord opensource firmware zoals QMKofVIA ondersteunt.
 
@@ -167,7 +168,7 @@ Door de debounce-tijd te verhogen van `5` naar `8` of `10` milliseconden geef je
 
 ---
 
-## Veelgestelde vragen (FAQ)
+Veelgestelde vragen (FAQ)
 
 1. Kan ik een switch smeren met Krytox 205g0 om chattering op te lossen?
 Nee, integendeel. Krytox 205g0 of TriboSys switchesmeermiddelen zijn diëlektrisch (niet-geleidend) en bedoeld om de wrijving tussen de plastic onderdelen (de stem en de behuizing) te verminderen. Als er smeermiddel op het metalen bladveertje of de contactpuntjes terechtkomt, vormt dit juist een isolerende barrière. Dit resulteert in haperende of compleet weigerende toetsen. Krijg je chattering na het handmatig smeren van je switches, dan moet je de contactpunten juist ontvetten met contactspray of pure isopropanol.

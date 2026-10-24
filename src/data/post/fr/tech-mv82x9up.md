@@ -22,6 +22,7 @@ theme: "Steel Silver Metallic"
 
 
 
+
 Vendredi, 17h45. Le commit final de la semaine est prêt à être poussé, la machine à café est vide, et mon manager débarque derrière mon épaule pour me demander un export critique des logs serveurs de la semaine. Je tape sur la touche Power de ma station de travail principale pour la sortir de veille... Et là, c'est le drame. Le boîtier s'illumine, les ventilateurs hurlent comme des turbines d'A380 en phase de décollage, mais le moniteur reste noir de chez noir, sans même un signal DisplayPort. Pas de BIOS, pas de logo, le néant total. La sueur froide commence à perler sur la nuque.
 
 <div style="border-left: 4px solid #64748b; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; font-family: monospace;">
@@ -33,7 +34,7 @@ Vendredi, 17h45. Le commit final de la semaine est prêt à être poussé, la ma
 
 ![Hardware Diagnostic & Troubleshooting](https://picsum.photos/seed/hardware-657/1000/550)
 
-## Anatomie d'un plantage à la con : Pourquoi ce putain d'écran reste noir ?
+Anatomie d'un plantage à la con : Pourquoi ce putain d'écran reste noir ?
 
 On a tous tendance à paniquer en pensant que la carte mère a grillé ou que le GPU a rendu l'âme. Sauf que dans 80% des cas sur une machine de bureau, le coupable est bien plus vicieux et terre-à-terre.
 
@@ -43,7 +44,7 @@ On a tous tendance à paniquer en pensant que la carte mère a grillé ou que le
 
 3. L'accumulation de poussière conductive : Les ventilateurs aspirent toutes les cochonneries de l'open space. Un mouton de poussière s'est glissé dans le slot, agissant comme un isolant ou pire, créant une micro-interférence.
 
-## Fiche de diagnostic et procédure d'urgence (Pas à pas)
+Fiche de diagnostic et procédure d'urgence (Pas à pas)
 
 Bon, inutile de lancer un `journalctl -xe` ou de trifouiller le `Gestionnaire de périphériques` sous Windows, la machine ne boote même pas l'OS. On sort les tournevis et le matériel de nettoyage.
 
@@ -66,7 +67,7 @@ Si vous avez 4 slots et 2 barrettes, ne les remettez pas au même endroit par fi
 <code>mdsched.exe</code> (Outil de diagnostic de la mémoire Windows)
 </div>
 
-## Prévention et bonnes pratiques en milieu pro
+Prévention et bonnes pratiques en milieu pro
 
 Pour éviter de vous retrouver à poil un vendredi soir :
 * Lors du dépoussiérage annuel de la bécane (qu'on fait tous les 6 mois, n'est-ce pas ?), profitez-en pour clipser/déclipser les barrettes de RAM afin de décaper les contacts mécaniquement.
@@ -74,7 +75,7 @@ Pour éviter de vous retrouver à poil un vendredi soir :
 
 ---
 
-## FAQ Technique
+FAQ Technique
 
 Q1 : Mon PC émet des bips bizarres (Beep codes) au démarrage, ça un rapport avec la RAM ?
 R : Oh que oui. C'est le BIOS qui communique avec vous. Une séquence spécifique de bips courts (souvent 3 bips continus ou un bip long suivi de deux courts selon les constructeurs de cartes mères comme AMI ou Award) signifie clairement : *"Je ne trouve pas de mémoire valide, je suis aveugle"*. C'est le moment de sortir la gomme.

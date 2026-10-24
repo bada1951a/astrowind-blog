@@ -22,6 +22,7 @@ theme: "Pastel Lavender Tech"
 
 
 
+
 <div style="border-left: 4px solid #7c3aed; padding: 12px 16px; margin: 20px 0; background-color: rgba(124,58,237,0.06); border-radius: 4px; color: #111827;">
 <strong>Quick Summary FAQ (Top 5 User Questions):</strong><br>
 
@@ -41,7 +42,7 @@ It was 4:50 PM on a Thursday at our Palo Alto office. We were twenty minutes awa
 
 ![Tech & IT Solution Guide](https://picsum.photos/seed/computer980/1000/550)
 
-## Root Cause Breakdown: Why 0x0000000a Happens
+Root Cause Breakdown: Why 0x0000000a Happens
 
 Before tearing apart hardware or wiping a drive, let's look at what this specific stop code actually means under the hood. The `0x0000000a` error code indicates that a kernel-mode process or driver attempted to access a memory address it had no business touching while at a process Internal Request Level (IRQL) that was too high. 
 
@@ -54,7 +55,7 @@ a:</strong><br>
 - <strong>Corrupted System Files:</strong> Interrupted Windows updates leaving behind misaligned system binaries.
 </div>
 
-## Step-by-Step Resolution Guide
+### Step-by-Step Resolution Guide
 
 To conquer this crash without losing your afternoon, follow this battle-tested triage workflow.
 
@@ -105,7 +106,7 @@ Now it is time to reverse the bad update that ruined your afternoon sprint.
 Always keep a stable, manufacturer-verified network driver installer saved in a local backup directory on your machine. If a botched update knocks out your internet connection during troubleshooting, you will thank yourself later.
 </div>
 
-## Expert Advice and Preventing Recurrence
+Expert Advice and Preventing Recurrence
 
 BSODs like `0x0000000a` are annoying, but they serve as a valuable canary in the coal mine. To keep your development workstation pristine:
 - Avoid bleeding-edge optional preview updates on mission-critical work machines.
@@ -114,7 +115,7 @@ BSODs like `0x0000000a` are annoying, but they serve as a valuable canary in the
 
 ---
 
-### Frequently Asked Questions (FAQ)
+Frequently Asked Questions (FAQ)
 
 1. Can an overheating CPU cause stop code 0x0000000a? Indirectly, yes. Extreme thermal throttling or unstable voltage delivery can cause memory controller glitches on the CPU die, leading to memory access violations. Ensure your cooling fans and heatsinks are clear of dust.
 

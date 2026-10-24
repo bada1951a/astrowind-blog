@@ -22,6 +22,7 @@ theme: "Deep Indigo System"
 
 
 
+
 Lunedì mattina, ore 8:55. Sono seduto alla mia scrivania nella nostra sede di Milano, con il caffè fumante ancora intatto, quando il responsabile commerciale mi si avvicina con la faccia di chi ha un'emergenz
 
 a: "Il portatile aziendale ci mette dieci minuti solo per accendersi, non riesco ad aprire neanche Teams per il meeting delle nove con i clienti!". Una scena che, se lavori nel settore IT o gestisci un'infrastruttura, ti farà sicuramente scattare un campanello d'allarme familiare. Il problema non è l'hardware obsoleto, ma la quantità industriale di applicazioni che si caricano silenziosamente in background nel momento esatto in cui premi il tasto di accensione.
@@ -34,7 +35,7 @@ a:</strong> Quando accendi Windows 10, decine di software non necessari (updater
 
 ![Tech & IT Solution Guide](https://picsum.photos/seed/computer924/1000/550)
 
-## Analisi del Problem
+Analisi del Problem
 
 a: Perché Windows 10 rallenta all'avvio?
 
@@ -46,7 +47,7 @@ Prima di mettere mano al sistema, capiamo cosa sta succedendo sotto il cofano. N
 
 3. Frammentazione delle risorse: Un avvio congestionato satura la coda del disco, facendo impennare l'uso della CPU al 100% e rendendo il PC inutilizzabile per i primi 5-10 minuti.
 
-## Come risolvere in 1 Minuto: La Procedura Passo-Passo
+Come risolvere in 1 Minuto: La Procedura Passo-Passo
 
 Non serve installare software terzi o utility di terze parti miracolose che spesso fanno più male che bene. Windows 10 ha già tutto quello che ci serve integrato nativamente. Apriamo il cofano e ripuliamo la sequenza di boot usando gli strumenti di sistema. ### Metodo Rapido (Task Manager)
 
@@ -69,7 +70,7 @@ a: Se vedi una visualizzazione ridotta, clicca su "Più dettagli" in basso a sin
 a:</strong> Non toccare mai i driver hardware essenziali o i software di sicurezza come il tuo antivirus (Windows Defender o soluzioni aziendali). Concentrati solo sulle applicazioni di consumo e sui tool di terze parti.
 </div>
 
-## Consigli dell'Esperto per la Stabilità del Sistema
+Consigli dell'Esperto per la Stabilità del Sistema
 
 Ottimizzare l'avvio non significa solo guadagnare secondi preziosi, ma preservare l'integrità dell'hardware aziendale. Un disco meno stressato nei primi minuti di attività dura più a lungo e garantisce una risposta immediata quando apri gli strumenti di lavoro principali come il terminale, la suite Office o i client VPN. 
 
@@ -77,7 +78,7 @@ Se dopo questa pulizia noti ancora lentezze anomale, ti consiglio di verificare 
 
 ---
 
-## Domande Frequenti (FAQ)
+Domande Frequenti (FAQ)
 
 1. Disattivando un programma dall'avvio, perderò i miei dati o smetterà di funzionare? Assolutamente no. Disattivare un programma nella scheda Avvio significa semplicemente impedirgli di aprirsi automaticamente in background quando accendi il PC. Potrai comunque avviarlo manualmente facendo clic sulla sua icona quando ti serve davvero.
 

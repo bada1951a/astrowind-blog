@@ -22,6 +22,7 @@ theme: "Bronze Artisan Workshop"
 
 
 
+
 Il est 19h45 dans notre bureau tech près de la place de la République à Paris, et la pression monte d'un cran. Nous sommes en plein sprint de livraison pour notre nouveau client, et mon poste de travail principal décide de s'bloquer net à 100% sur l'installation de la dernière mise à jour cumulative Windows 11. Le curseur ne bouge plus depuis quarante minutes, le disque SSD ronronne en continu, et redémarrer la machine de force risque de corrompre l'image système. Impossible de lancer nos scripts de test ou de compiler nos environnements Docker dans cet état.
 
 J'ai déjà vécu cette situation ubuesque des dizaines de fois en entreprise. Plutôt que de paniquer ou d'attendre un miracle qui ne viendra pas, il faut agir à la source. Le coupable idéal dans ce genre de scénario ? Un cache de mise à jour corrompu qui boucle sur lui-même en essayant d'appliquer des paquets figés.
@@ -30,7 +31,7 @@ J'ai déjà vécu cette situation ubuesque des dizaines de fois en entreprise. P
 
 Voici la méthode directe et sans fioritures pour purger ce cache et reprendre le contrôle de votre machine en moins de dix minutes.
 
-## Pourquoi votre mise à jour Windows 11 reste-t-elle bloquée à 100 pourcent ?
+Pourquoi votre mise à jour Windows 11 reste-t-elle bloquée à 100 pourcent ?
 
 Avant de manipuler les fichiers système, comprenons ce qui se passe sous le capot. Lorsque Windows télécharge une mise à jour, il stocke les fichiers d'installation temporaires dans un dossier spécifique. 
 
@@ -45,7 +46,7 @@ Avant de manipuler les fichiers système, comprenons ce qui se passe sous le cap
 
 ---
 
-## Guide étape par étape : Nettoyer le cache pour débloquer la situation
+Guide étape par étape : Nettoyer le cache pour débloquer la situation
 
 Pour résoudre ce problème, nous allons devoir arrêter temporairement les services de mise à jour, vider le dossier de cache corrompu, puis relancer les processus. 
 
@@ -90,7 +91,7 @@ Il ne vous reste plus qu'à redémarrer votre machine, puis à vous rendre dans 
 
 ---
 
-## Précautions de l'expert et bonnes pratiques
+Précautions de l'expert et bonnes pratiques
 
 - Sauvegardez vos travaux en cours : Avant de manipuler les services système ou de forcer un arrêt, assurez-vous que vos modifications de code ou vos documents ouverts sont bien enregistrés (idéalement commités sur votre dépôt distant).
 - Vérifiez l'espace disque : Assurez-vous d'avoir au moins 15 à 20 Go d'espace libre sur votre lecteur C: avant de lancer de grosses mises à jour cumulatives Windows 11.
@@ -98,7 +99,7 @@ Il ne vous reste plus qu'à redémarrer votre machine, puis à vous rendre dans 
 
 ---
 
-## Foire aux Questions (FAQ)
+Foire aux Questions (FAQ)
 
 1. Est-ce que renommer le dossier SoftwareDistribution efface mes fichiers personnels ? Absolument pas. Ce dossier contient uniquement les fichiers temporaires téléchargés pour les mises à jour Windows. Vos documents, applications et paramètres personnels ne sont en aucun cas touchés.
 

@@ -22,6 +22,7 @@ theme: "Electric Cyan Speed"
 
 
 
+
 The Slack workspace for our Mountain View office engineering team was blowing up right before our quarterly release sync. My machine decided it was the absolute best moment to install a cumulative Windows 11 update, and of course, it completely froze at 100 percent. The status bar had been mocking me for over 45 minutes, the fan was spinning at jet-engine speeds, and my presentation deck was trapped behind a non-responsive lock screen. Hard-rebooting during a finalizing state is a gamble nobody wants to take, but staring at an immobile progress ring while executives wait on a Google Meet call forces your hand. 
 
 <div style="border-left: 4px solid #06b6d4; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
@@ -30,7 +31,7 @@ The Slack workspace for our Mountain View office engineering team was blowing up
 
 ![Tech & IT Solution Guide](https://picsum.photos/seed/computer287/1000/550)
 
-## Why Your Windows 11 Update Gets Stuck at 100 Percent
+Why Your Windows 11 Update Gets Stuck at 100 Percent
 
 After getting past the panic and successfully unfreezing the system, I dug into the logs to understand what actually went wrong. When Windows 11 gets stuck right at the finish line, it is almost never because it is downloading files; it is trapped in the finalization and component store registration phase.
 
@@ -42,7 +43,7 @@ Here are the three most common culprits behind this frustrating bottleneck:
 
 3. Pending Component Store Locks: The Component Based Servicing (CBS) manifest holds onto file locks because another background task or security scanner is inspecting the newly unpacked binaries simultaneously.
 
-## Step-by-Step Resolution: Clearing the Update Cache
+### Step-by-Step Resolution: Clearing the Update Cache
 
 To break the deadlock safely, we need to manually stop the update services, clear out the corrupted staging files, and let Windows spin up a clean session. We will use the terminal with administrator privileges to bypass any GUI locks.
 
@@ -83,19 +84,19 @@ net start msiserver
 
 Reboot your machine normally, head back into Settings > Windows Update, and hitCheck for updates. Windows will re-verify the system state and breeze past that 100 percent mark in a fraction of the time.
 
-## Expert Warning & Best Practices
+Expert Warning & Best Practices
 
 When dealing with low-level OS components, a few precautions will save you from a full system re-image:
 - Avoid Third-Party "Registry Cleaners": They often strip critical permission ACLs from the `SoftwareDistribution` folder, making future updates impossible without a manual permissions reset.
 - Run DISM Before Re-trying: If a fresh cache download still hangs, run `DISM.exe /Online /Cleanup-image /Restorehealth` followed by `sfc /scannow` in your admin terminal to repair the underlying system image before attempting the update again.
 
-## Frequently Asked Questions
+Frequently Asked Questions
 
-### Is it safe to delete everything inside the SoftwareDistribution folder?
+Is it safe to delete everything inside the SoftwareDistribution folder?
 Yes, absolutely. This folder is purely a staging and cache directory for downloaded update files. Once you clear it, Windows will simply re-download any missing installation packages cleanly.
 
-### What if the services fail to stop when running the net stop command?
+What if the services fail to stop when running the net stop command?
 If a service hangs on "Stopping...", your best bet is to restart your computer into Safe Mode or use Task Manager to kill the specific Service Host process associated with `wuauserv`, then immediately run the deletion steps.
 
-### Why does this specific 100 percent freeze happen so often on Windows 11?
+Why does this specific 100 percent freeze happen so often on Windows 11?
 It usually happens when a cumulative update encounters an unexpected conflict with third-party endpoint security software or a locked registry key during the final registry hive merge. Clearing the cache forces Windows to generate a fresh deployment plan.

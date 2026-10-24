@@ -22,6 +22,7 @@ theme: "Midnight Navy Royal"
 
 
 
+
 Il est 7h45 ce mardi matin. Je suis assis à mon bureau dans une tour de verre à La Défense, le souffle court, les yeux rivés sur mon écran qui refuse obstanément d'ouvrir PowerPoint. À 9h, je dois monter dans leTGV en direction de Lyon pour une réunion matinale extrêmement tendue avec un client historique. Mon PC portable souffre d'une lenteur maladive : le ventilateur hurle à la mort, le curseur de la souris saccade, et chaque clic déclenche cette fichue roue de chargement bleue. Le coupable ? Windows 11 qui, dans sa grande générosité, décide de synchroniser le monde entier en tâche de fond pendant que j'essaie simplement de bosser.
 
 Ce genre de panne n'attend jamais le bon moment. Si vous aussi, votre bécane a l'air de traîner un boulet invisible alors que vous avez juste besoin d'efficacité immédiate, sortez votre carnet de notes. Voici le journal de bord de mon intervention d'urgence, heure par heure, pour redonner vie à un Windows 11 essoufflé.
@@ -36,7 +37,7 @@ Ce genre de panne n'attend jamais le bon moment. Si vous aussi, votre bécane a 
 
 ---
 
-## Chronologie de l'intervention : Diagnostiquer l'invisible
+Chronologie de l'intervention : Diagnostiquer l'invisible
 
 Pourquoi un ordinateur moderne, censé être une bête de course, finit-il par ramer comme un PC d'il y a dix ans ? En creusant sous le capot, trois coupables principaux reviennent constamment sur le terrain.
 
@@ -48,7 +49,7 @@ Pourquoi un ordinateur moderne, censé être une bête de course, finit-il par r
 
 ---
 
-### Guide de survie : Le plan d'action étape par étape
+Guide de survie : Le plan d'action étape par étape
 
 Pas besoin d'être ingénieur système pour régler ça. Voici la procédure exacte que j'ai appliquée à la va-vite entre deux gorgées de café serré pour sauver ma matinée.
 
@@ -77,7 +78,7 @@ On retire le maquillage inutile pour privilégier la performance pure.
 
 ---
 
-### Prévention et bonnes pratiques pour éviter la rechute
+Prévention et bonnes pratiques pour éviter la rechute
 
 Pour ne plus jamais vous retrouver bloqué la sueur au front avant une réunion importante ou un trajet en train :
 
@@ -87,7 +88,7 @@ Pour ne plus jamais vous retrouver bloqué la sueur au front avant une réunion 
 
 ---
 
-### Foire Aux Questions (FAQ)
+Foire Aux Questions (FAQ)
 
 Q1 : Est-ce que désactiver les effets visuels va rendre mon écran moche ? R : Ça enlève les effets de transparence "verre dépoli" et les animations de glissement lorsque vous fermez ou ouvrez une fenêtre. Le rendu devient un peu plus brut, semblable à Windows 10, mais le gain de réactivité sur un PC de bureau ou un portable professionnel est immédiat et flagrant.
 

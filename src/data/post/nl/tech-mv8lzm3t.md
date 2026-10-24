@@ -22,6 +22,7 @@ theme: "Modern Minimalist Slate"
 
 
 
+
 Het was vrijdagochtend, kwart voor negen. Om negen uur stond de weekly stand-up gepland met de hele directie en ik moest de Q3-infrastructuurdemo geven. Mijn laptop, een beest van een apparaat dat normaal gesproken binnen vijf seconden klaar voor actie was, besloot om een update te forceren. Zwarte scherm, draaiende bolletjes, en de minuten tikten weg. Terwijl mijn ademhaling versnelde en het zweet op mijn rug stond, keek ik naar de klok: 08:55. Mijn manager stond al achter me met een kop koffie in zijn hand en vroeg: "Is de presentatie er bijna klaar voor, of moeten we via papier praten?" 
 
 Dat moment van pure paniek kent iedereen in de IT wel. Je zit vast achter een scherm dat weigert door te starten, terwijl de stress door je aderen giert. Na die bijna-ramp heb ik de boel eens flink onder de loep genomen. Geen vage fabels over "register opschonen" met duistere freeware, maar gewoon een no-nonsense aanpak zoals we die op de supportafdeling gewend zijn.
@@ -32,11 +33,11 @@ Dat moment van pure paniek kent iedereen in de IT wel. Je zit vast achter een sc
 <strong>Essentieel Inzicht:</strong> Windows is standaard ingericht om vriendelijk te zijn voor softwareontwikkelaars, niet voor jou. Vrijwel elke applicatie die je installeert, nestelt zich stiekem in je opstartsequentie. Tijd om orde op zaken te stellen.
 </div>
 
-## De Daders: Waarom je PC verandert in een slak
+De Daders: Waarom je PC verandert in een slak
 
 Voordat we gaan slopen, moeten we weten waarom je systeem zo tergend traag opstart. Na jaren van troubleshooting zie ik meestal drie boosdoeners terugkomen:
 
-## 1. De "Ik wil op de achtergrond draaien"-maffi
+1. De "Ik wil op de achtergrond draaien"-maffi
 
 a: Apps zoals Spotify, Discord, OneDrive en diverse printertools vinden het nodig om direct bij het opstarten al actief te zijn. Ze claimen RAM en CPU-cycli voordat je überhaupt je wachtwoord hebt ingetypt.
 
@@ -46,7 +47,7 @@ a: Apps zoals Spotify, Discord, OneDrive en diverse printertools vinden het nodi
 
 ---
 
-## Stap voor Stap naar een Ultrasnelle Boot
+### Stap voor Stap naar een Ultrasnelle Boot
 
 Laten we de bezem er doorheen halen. Geen ingewikkelde tools, maar gewoon gebruik maken van wat Windows ons zelf biedt.
 
@@ -58,7 +59,7 @@ Vergeet de oude `msconfig`-trucs; sinds Windows 10 en 11 regelen we dit direct v
 
 2. Klik aan de linkerkant op het icoon met de meters (Opstart-apps / Startup apps).
 
-## 3. Sorteer op Opstartimpact (Startup impact).
+3. Sorteer op Opstartimpact (Startup impact).
 
 4. Ga rigoureus door de lijst. Staan er apps tussen die je zelden gebruikt, zoals Steam, Epic Games, of die vage update-helper van Adobe?
 
@@ -81,7 +82,7 @@ Soms zit het dieper en is de opstartsector of de harde schijf zelf vervuild. Lat
    ```
    Wacht tot dit klaar is (dit kan even duren).
 
-## 3. Voer daarna de klassieke schijfcheck uit:
+3. Voer daarna de klassieke schijfcheck uit:
 
    ```cmd
    sfc /scannow
@@ -102,7 +103,7 @@ Windows gebruikt een hybride slaapstand genaamd *Fast Startup*. Handig, tenzij h
 
 ---
 
-## Expert Waarschuwing: Wat je absoluut NIET moet doen
+Expert Waarschuwing: Wat je absoluut NIET moet doen
 
 Als IT'er zie ik regelmatig collega's of gebruikers hun systeem om zeep helpen met goedbedoelde "speed up your pc"-software van schimmige websites. 
 
@@ -111,7 +112,7 @@ Als IT'er zie ik regelmatig collega's of gebruikers hun systeem om zeep helpen m
 
 ---
 
-## Veelgestelde Vragen (FAQ)
+Veelgestelde Vragen (FAQ)
 
 1. Mijn pc start na het uitschakelen van apps nog steeds langzaam op. Wat nu? Grote kans dat je nog een oude HDD (harde schijf) gebruikt in plaats van een SSD. Een traditionele schijf trekt de trage opstarttijden van moderne besturingssystemen simpelweg niet meer. Overstap naar een SSD is in dit geval de enige echte remedie.
 

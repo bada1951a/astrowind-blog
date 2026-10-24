@@ -22,6 +22,7 @@ theme: "Industrial Blueprint"
 
 
 
+
 The clock on the wall in our Manhattan office read 9:40 AM. Exactly twenty minutes from now, our CEO was scheduled to stream a major quarterly update to the entire enterprise, and my primary presentation machine—a top-spec workstation—decided to throw a tantrum. The cooling fans were screaming like a jet engine preparing for takeoff, the mouse cursor was moving in sluggish, frame-dropping jerks, and Task Manager revealed a terrifying reality: the generic "System" process was locking the CPU flat at 100 percent usage. Powerpoint wouldn't open, Teams was frozen, and the entire system was effectively paralyzed. 
 
 Panic instantly set in. For the past ten minutes, I had been blindly stumbling through typical quick fixes—frantically smashing keyboard shortcuts, force-closing random background apps, and rebooting the machine twice, only to watch the CPU peg back at maximum capacity the moment the Windows login screen loaded. Restarting was getting us nowhere, and the clock was ticking down fast.
@@ -32,7 +33,7 @@ That's when I had to step back, put away the panic, and rely on systematic IT tr
 
 ---
 
-### Understanding the Blueprint: Why Is the "System" Process Eating Your CPU?
+Understanding the Blueprint: Why Is the "System" Process Eating Your CPU?
 
 Before we click anything, we need to understand what we are fighting. In Windows, the System process (process ID 4) isn't a single application; it's a wrapper for core operating system threads, hardware drivers, and kernel-level routines. When it spikes to 100%, it usually means something at the hardware or driver level is stuck in an endless interrupt loop. 
 
@@ -50,18 +51,18 @@ Here are the three most common culprits behind this bottleneck:
 
 ---
 
-## Step-by-Step Resolution Workflow
+### Step-by-Step Resolution Workflow
 
 Let's walk through the exact steps to diagnose and neutralize the bottleneck without losing your unsaved work.
 
 ### Step 1: Isolate the Culprit Using Resource Monitor
 Standard Task Manager gives you a high-level view, but we need granular data to see *which* thread or driver within the System process is misbehaving.
 
-## 1. Press `Ctrl + Shift + Esc` to open Task Manager.
+1. Press `Ctrl + Shift + Esc` to open Task Manager.
 
 2. Click on the Performancetab at the top, then clickOpen Resource Monitor at the very bottom.
 
-## 3. In the Resource Monitor window, go to the CPU tab.
+3. In the Resource Monitor window, go to the CPU tab.
 
 4. Expand the Associated Handlesor look closely at theServicesandCPU Activity sections. Sort by CPU usage to see if a specific driver (like `ntoskrnl.exe`) or hardware interrupt is dominating the cycles.
 
@@ -91,7 +92,7 @@ If corrupted system files are forcing the kernel into a loop, we need to repair 
 
 ---
 
-### Quick Comparison of Diagnostic Approaches
+Quick Comparison of Diagnostic Approaches
 
 | Method | Speed | Risk Level | Best Used For |
 | :--- | :--- | :--- | :--- |
@@ -101,7 +102,7 @@ If corrupted system files are forcing the kernel into a loop, we need to repair 
 
 ---
 
-### Expert Warning: Hardware and Data Safety
+Expert Warning: Hardware and Data Safety
 
 <div style="border-left: 4px solid #f59e0b; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Critical Precaution:</strong> When your CPU is running at 100 percent for extended periods, thermal throttling will kick in to prevent physical silicon damage. If your laptop or desktop fans sound like a turbine and the chassis is burning hot to the touch, do not force heavy benchmark tools. Let the machine idle for 5 minutes in a well-ventilated area before attempting intensive repairs.
@@ -111,7 +112,7 @@ Avoid blindly disabling critical startup drivers in Device Manager unless you ha
 
 ---
 
-### Frequently Asked Questions (FAQ)
+Frequently Asked Questions (FAQ)
 
 Q: Can I just force-shutdown my PC by holding the power button when this happens?
 

@@ -22,13 +22,14 @@ theme: "Matte Black stealth"
 
 
 
+
 Es war kurz vor 17 Uhr in unserem Büro in Berlin-Mitte. Mitten in der finalen Vorbereitung für den Rollout unserer neuen Microservices-Architektur ploppte auf meinem Hauptrechner die gefürchtete rote Warnmeldung auf: "Speicherplatz auf C: wird knapp. Nur noch 1,2 GB verfügbar." Der Build-Prozess in Docker brach ab, Visual Studio Code fror ein und die Lüfter drehten am Limit. Keine Zeit für langes Rätselraten – das System musste sofort bereinigt werden, ohne dass wichtige Konfigurationen oder Logs für den Release verloren gingen.
 
 Wer in einer schnelllebigen IT-Umgebung arbeitet, kennt das Problem. Windows 11 neigt dazu, sich im Laufe der Zeit unbemerkt mit Gigabytes an temporärem Datenmüll vollzusaugen. Hier ist mein praxiserprobter Leitfaden, wie du deine C-Platte in wenigen Minuten wieder freiräumst, ohne dein System zu gefährden.
 
 ![Tech Hardware Guide](https://images.unsplash.com/photo-1518770660439-4636190af475? auto=format&fit=crop&w=1200&h=675&q=85)
 
-## Warum läuft das Laufwerk C: eigentlich immer wieder voll?
+Warum läuft das Laufwerk C: eigentlich immer wieder voll?
 
 Bevor wir blind Dateien löschen, müssen wir verstehen, woher der Ballast kommt. Das Hauptproblem liegt meistens in drei Bereichen:
 
@@ -42,7 +43,7 @@ Bevor wir blind Dateien löschen, müssen wir verstehen, woher der Ballast kommt
 <strong>Pro-Tipp aus der Praxis:</strong> Nutze niemals einfach Tools von Drittanbietern, die dir dubiose "Turbo-Cleanings" versprechen. Die integrierten Windows-Bordmittel arbeiten am zuverlässigsten und zerstören keine Systemverknüpfungen.
 </div>
 
-## Schritt-für-Schritt-Anleitung: Sichere Bereinigung unter Windows 11
+### Schritt-für-Schritt-Anleitung: Sichere Bereinigung unter Windows 11
 
 Gehen wir die Sache systematisch an. Wir nutzen ausschließlich die offiziellen Windows-UI-Komponenten und das Terminal.
 
@@ -93,13 +94,13 @@ Damit das Problem vor dem nächsten Release nicht wieder auftritt, automatisiere
 <strong>Sicherheitshinweis:</strong> Lösche niemals den gesamten Ordner `C:\Windows\System32` oder ungesichert den Ordner `C:\Windows.old`, es sei denn, du bist absolut sicher, dass du kein Rollback auf eine vorherige Windows-Build mehr benötigst.
 </div>
 
-## Häufig gestellte Fragen (FAQ)
+Häufig gestellte Fragen (FAQ)
 
-### Kann ich den Ordner `C:\Windows.old` einfach löschen?
+Kann ich den Ordner `C:\Windows.old` einfach löschen?
 Ja, wenn dein Windows 11 stabil läuft und du kein Downgrade auf eine vorherige Version machen möchtest. Am sichersten löschst du ihn über die *Datenträgerbereinigung* (suche im Startmenü danach), indem du dort das Häkchen bei "Vorherige Windows-Installation(en)" setzt.
 
-## Warum läuft C: nach dem Löschen sofort wieder voll?
+Warum läuft C: nach dem Löschen sofort wieder voll?
 Das liegt meist an virtuellen Maschinen (Hyper-V, WSL2), Docker-Images oder großen Browser-Caches. Prüfe mit einem Tool wie *TreeSize Free*, welche Ordner auf C: den tatsächlichen Speicherplatz belegen.
 
-### Ist es sicher, den Inhalt von `%temp%` komplett zu löschen?
+Ist es sicher, den Inhalt von `%temp%` komplett zu löschen?
 Ja. Alle Dateien in diesem Ordner sind rein temporärer Natur. Programme, die aktuell laufen, sperren ihre eigenen Temp-Dateien, sodass Windows diese ohnehin schützt und das Löschen verweigert.

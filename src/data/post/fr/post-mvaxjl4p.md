@@ -22,6 +22,7 @@ theme: "Cyberpunk Terminal"
 
 
 
+
 <div style="border-left: 4px solid #00ffcc; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,255,204,0.08); border-radius: 4px; font-family: monospace; color: #111827;">
 [ACCÈS RAPIDE CLI / RACCOURCI] Ctrl + Shift + Échap -> Onglet "Démarrage" -> Désactiver l'inutile.
 </div>
@@ -32,7 +33,7 @@ Il est 8h55 dans notre bureau tech à Paris. Le sprint final pour la livraison d
 
 Ce genre de lenteur extrême au boot n'arrive jamais par hasard. Après avoir pesté contre le système, j'ai pris une minute pour analyser le problème à froid une fois la tempête passée.
 
-## Anatomie du goulot d'étranglement au démarrage
+Anatomie du goulot d'étranglement au démarrage
 
 Pourquoi Windows 10 finit-il par s'effondrer au boot après quelques mois d'utilisation intensive ? Trois coupables reviennent constamment dans nos environnements de travail :
 
@@ -46,7 +47,7 @@ Pourquoi Windows 10 finit-il par s'effondrer au boot après quelques mois d'util
 <strong>Diagnostic minute :</strong> Ne cherchez pas midi à quatorze heures. Dans 90% des cas sur Windows 10, le problème vient directement de la liste des applications lancées en arrière-plan au démarrage de la session.
 </div>
 
-## Résolution express : Nettoyer le démarrage en 60 secondes
+Résolution express : Nettoyer le démarrage en 60 secondes
 
 Pas besoin de scripts PowerShell complexes ou de réinstaller tout le système. Voici la méthode officielle et directe pour reprendre le contrôle de votre machine, validée par notre équipe support.
 
@@ -67,7 +68,7 @@ Faites un clic droit sur les applications superflues (par exemple : Cortana, app
 
 ---
 
-## Conseils d'expert pour maintenir un système sain
+Conseils d'expert pour maintenir un système sain
 
 Une fois le ménage fait, redémarrez votre PC pour mesurer le gain de temps. Sur une machine standard, vous devriez constater une réduction du temps de boot de 30 à 60 secondes. 
 
@@ -77,7 +78,7 @@ Pour éviter de retomber dans les mêmes travers lors des prochains sprints :
 
 ---
 
-## Foire Aux Questions (FAQ)
+Foire Aux Questions (FAQ)
 
 1. Est-ce dangereux de désactiver des éléments dans l'onglet Démarrage ? Non, absolument pas. Désactiver une application ici signifie simplement qu'elle ne se lancera plus toute seule en arrière-plan. Vous pourrez toujours l'ouvrir manuellement en double-cliquant sur son icône quand vous en aurez réellement besoin.
 

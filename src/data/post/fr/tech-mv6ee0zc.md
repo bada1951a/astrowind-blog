@@ -22,6 +22,7 @@ theme: "Pure Titanium Clean"
 
 
 
+
 En tant qu'ingénieur système, mon clavier n'est pas un simple périphérique de saisie : c'est l'interface directe avec les consoles de production, les hyperviseurs et les terminaux d'infrastructure. Rien n'est plus critique – et exaspérant – qu'un interrupteur mécanique qui commence à "bégaier" lors de la saisie d'une commande sensible sous SSH. Une touche `a` ou `Enter` qui enregistre deux frappes au lieu d'une, ou qui ignore purement et simplement la pression, peut transformer une commande d'administration anodine en incident d'exploitation.
 
 Ce dysfonctionnement, couramment appelé chattering (ou rebond de contact anormal), n'impose pas nécessairement le remplacement immédiat du matériel ou le recours au fer à souder. Dans plus de 80 % des cas rencontrés en environnement professionnel, une intervention ciblée à l'aide d'un nettoyant pour contacts électroniques permet de restaurer l'intégrité du signal. Voici notre procédure standard d'atelier pour diagnostiquer, décontaminer et pérenniser vos commutateurs mécaniques.
@@ -45,16 +46,16 @@ Pour intervenir efficacement, il faut comprendre ce qui se passe sous le capucho
 A. L'oxydation microscopique des points de contact
 Bien que les pastilles de contact soient généralement plaquées d'une fine couche d'or ou d'argent, l'humidité ambiante, les micro-arcs électriques générés par les cycles d'ouverture/fermeture et l'usure de friction finissent par exposer le métal sous-jacent. Une couche microscopique d'oxyde non conducteur se forme, créant une résistance de contact instable. Le microcontrôleur du clavier interprète ces fluctuations comme une succession rapide d'appuis et de relâchements.
 
-### B. L'intrusion de micro-débris et la pollution particulaire
+B. L'intrusion de micro-débris et la pollution particulaire
 Les environnements de travail ne sont pas des salles blanches. Les cellules mortes, les microfibres textiles et les poussières abrasives s'infiltrent le long du plongeur (*stem*). Lorsqu'une poussière vient se loger précisément entre les lamelles, elle empêche la fermeture franche du circuit : soit la touche ne répond plus (frappe ignorée), soit elle génère un contact intermittent lors des micro-mouvements du doigt.
 
-### C. La dérive mécanique de l'effet ressort et la rupture de l'hystérésis
+C. La dérive mécanique de l'effet ressort et la rupture de l'hystérésis
 Chaque microcontrôleur de clavier intègre un algorithme d'anti-rebond (*debounce filter*) programmé pour ignorer les rebonds physiques normaux intervenant en quelques millisecondes (généralement entre 5 et 15 ms). Si la lamelle métallique a perdu de son élasticité par fatigue mécanique, son temps de stabilisation dépasse la fenêtre tolérée par le microcode, induisant une double saisie logique pour une seule pression physique.
 
 ---
 ![Tech Diagnostics](https://images.unsplash.com/photo-1588508065123-287b28e013da? auto=format&fit=crop&w=1000&h=550&q=80)
 
-## 2. Procédure de résolution pas-à-pas
+2. Procédure de résolution pas-à-pas
 
 <div style="border-left: 4px solid #334155; padding: 12px 16px; margin: 20px 0; background-color: rgba(51, 65, 85, 0.05); border-radius: 4px;">
 <strong>PRÉREQUIS MATÉRIEL :</strong>
@@ -118,7 +119,7 @@ C'est ici que réside le cœur de l'intervention. Le nettoyant contact possède 
                  └───────────────────────┘
 ```
 
-## 1. Munissez le spray de son tube prolongateur fin.
+1. Munissez le spray de son tube prolongateur fin.
 
 2. Enfoncez manuellement le plongeur de l'interrupteur à fond avec le doigt ou une spatule fine non métallique pour ouvrir au maximum l'espace interne.
 
@@ -144,7 +145,7 @@ Le nettoyant contact spécialisé est diélectrique (il ne conduit pas l'électr
 
 ---
 
-## 3. Mises en garde et règles de l'art
+3. Mises en garde et règles de l'art
 
 <div style="border-left: 4px solid #334155; padding: 12px 16px; margin: 20px 0; background-color: rgba(51, 65, 85, 0.05); border-radius: 4px;">
 <strong>ATTENTION : PROSCRIVEZ LES PRODUITS INADAPTÉS</strong>

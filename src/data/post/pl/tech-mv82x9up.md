@@ -22,11 +22,12 @@ theme: "Warm Coffee Latte"
 
 
 
+
 Godzina 14:50 w piątek. Za dziesięć minut miałem kończyć kwartalny raport z wdrażania nowego korporacyjnego środowiska, a w tle już chłodził się browar w lodówce. Nagle z biurka mojego key account managera dobiega cichy, złowrogi jęk wiatraków, po którym następuje przerażająca cisza. Ekran – czarny jak sumienie praktykanta po skasowaniu bazy produkcyjnej. Wiatraki kręcą się na najwyższych obrotach, klawiatura ani mrugnie, a na monitorze dumnie wisi komunikat *„Brak sygnału”*. Krawaciarz patrzy na mnie szklistym wzrokiem, a ja czuję, jak po plecach spływa mi strużka lodowatego potu. 
 
 Znamy to wszyscy, prawda? Komputer ożywa, diody świecą, dyski szumią, ale ekran uparcie pozostaje martwy. Pierwsza myśl? Padła karta graficzna. Druga? Płyta główna poszła z dymem. Ale spokojnie, odłóżcie młotki i wyciągnijcie ten kubek z letnią kawą latte – zapraszam na krótką, inżynieryjną opowieść z okopów warszawskiego supportu, jak bez wydawania ani grosza postawić taki grat na nogi za pomocą zwykłej gumki do ścierania. ![Hardware Diagnostic & Troubleshooting](https://picsum.photos/seed/hardware-22/1000/550)
 
-## Korzeniowy dramat: Dlaczego sprzęt udaje trupa?
+Korzeniowy dramat: Dlaczego sprzęt udaje trupa?
 
 Zanim wpadniemy w panikę i zaczniemy zamawiać nowe podzespoły za tysiące złotych, rozłóżmy ten problem na czynniki pierwsze. Dlaczego maszyna wstaje, ale odmawia transmisji obrazu?
 
@@ -43,7 +44,7 @@ a:</strong> W ponad 70% przypadków "czarnego ekranu przy działających wiatrak
 
 ---
 
-## Krok po kroku: Jak przywrócić sygnał do życia (Inżynieryjny Proceder)
+### Krok po kroku: Jak przywrócić sygnał do życia (Inżynieryjny Proceder)
 
 Oto procedura operacyjna, którą stosuję w biurze, gdy dyrektor finansowy stoi nade mną z zegarkiem w ręku. Bez owijania w bawełnę – robimy to chirurgicznie.
 
@@ -58,16 +59,16 @@ Gdy już uda nam się uruchomić maszynę (a wierz mi, po oczyszczeniu RAM-u zaz
 
 Dla zaawansowanych – szybki test stabilności z poziomu wiersza poleceń (uruchom jako Administrator):
 ```cmd
-# Sprawdzenie integralności plików systemowych po twardym resecie
+Sprawdzenie integralności plików systemowych po twardym resecie
 sfc /scannow
 
-# Diagnostyka pamięci systemowej Windows (uruchomi ponowne uruchomienie)
+Diagnostyka pamięci systemowej Windows (uruchomi ponowne uruchomienie)
 mdsched.exe
 ```
 
 ---
 
-## Eksperckie ostrzeżenie: Czego NIE wolno robić pod żadnym pozorem!
+Eksperckie ostrzeżenie: Czego NIE wolno robić pod żadnym pozorem!
 
 <div style="border-left: 4px solid #78350f; padding: 12px 16px; margin: 20px 0; background-color: rgba(120, 53, 15, 0.05); border-radius: 4px;">
 <strong>Złota zasada serwisu:</strong> Nigdy nie używaj metalowych narzędzi (śrubokrętów, penset) do czyszczenia styków RAM ani nie dotykaj układów scalonych na kości gołymi palcami, jeśli nie masz maty antystatycznej. Jeden przeskok statyczny i pamięć nadaje się do utylizacji.
@@ -77,7 +78,7 @@ Dodatkowo, jeśli komputer ma cztery sloty na RAM (np. 2 czarne, 2 szare), a Ty 
 
 ---
 
-## Często Zadawane Pytania (FAQ)
+Często Zadawane Pytania (FAQ)
 
 1. Czy mogę użyć alkoholu izopropylowego (IPA) zamiast gumki do ścierania? Jasne, IPA to inżynieryjny klasyk do czyszczenia elektroniki. Jeśli masz pod ręką wacik bezpyłowy i czysty alkohol izopropylowy (min. 99%), przetrzyj nim styki. Gumka do ścierania jest jednak świetnym, szybkim rozwiązaniem mechanicznym, gdy nie ma pod ręką chemii.
 

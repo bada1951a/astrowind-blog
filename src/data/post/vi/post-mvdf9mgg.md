@@ -22,13 +22,14 @@ theme: "Mint Fresh Engineering"
 
 
 
+
 Sáng nay vừa bước chân vào văn phòng ở khu công nghệ phần mềm Đà Nẵng, đồng nghiệp bên bàn kế bên đã hớt hải chạy sang kêu cứu vì chiếc laptop làm việc chính cứ đơ cứng ở màn hình "Working on updates... 100%" suốt hơn hai tiếng đồng hồ. Sếp lớn thì đang chuẩn bị cuộc họp trực tuyến với đối tác, còn thanh niên này thì bất lực nhìn vòng tròn quay đều không lối thoát. Khởi động lại bằng nút nguồn cứng thì máy lại lăn ra lỗi vòng lặp boot, đúng là một cú sốc đầu ngày khiến bao kế hoạch đổ bể.
 
 <div style="border-left: 4px solid #059669; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Tình huống khẩn cấp:</strong> Màn hình cập nhật Windows 11 bị đóng băng ở mốc 100% không chỉ gây mất thời gian mà còn dễ dẫn đến hỏng phân vùng hệ thống nếu ép tắt máy sai cách. Đừng hoảng sợ, chúng ta hoàn toàn có thể can thiệp thủ công từ bên ngoài.
 </div>
 
-## Nguyên nhân cốt lõi khiến tiến trình Update kẹt cứng
+Nguyên nhân cốt lõi khiến tiến trình Update kẹt cứng
 
 Sau nhiều năm bám trụ với nghề tối ưu hệ thống, tôi nhận ra thủ phạm đứng sau tình trạng này hiếm khi nằm ở phần cứng, mà thường xuất phát từ ba nguyên nhân chính sau:
 
@@ -38,7 +39,7 @@ Sau nhiều năm bám trụ với nghề tối ưu hệ thống, tôi nhận ra 
 
 3. Lỗi phân quyền file hệ thống (ACLs): Một số bản vá yêu cầu quyền truy cập đặc biệt nhưng các bản cập nhật cũ để lại phân quyền cũ kỹ, khiến bộ cài không thể ghi đè file cốt lõi.
 
-## Giải pháp thực chiến: Dọn dẹp và Reset thư mục Cache Update
+Giải pháp thực chiến: Dọn dẹp và Reset thư mục Cache Update
 
 Thay vì ngồi chờ đợi trong vô vọng hoặc cài lại win mất cả buổi chiều, chúng ta sẽ tiến hành "phẫu thuật" trực tiếp vào thư mục chứa cache cập nhật ở chế độ an toàn hoặc thông qua môi trường cứu hộ.
 
@@ -82,13 +83,13 @@ net start msiserver
 
 Gõ lệnh `exit` để đóng cửa sổ dòng lệnh và khởi động lại máy tính bình thường. Lúc này, Windows 11 sẽ tiến hành tải lại các gói tin sạch và quá trình cài đặt sẽ chạy băng băng qua mốc 100%.
 
-## Lời khuyên từ chuyên gia hệ thống
+Lời khuyên từ chuyên gia hệ thống
 
 Đừng bao giờ nóng vội ngắt nguồn điện đột ngột ngay từ lần đầu tiên thấy máy treo ở 100%. Hãy kiên nhẫn đợi ít nhất 30 đến 45 phút vì đôi khi hệ thống đang cấu hình các tính năng bảo mật sâu bên trong Registry. Ngoài ra, trước khi thực hiện các bản update lớn, hãy luôn tạo một điểm khôi phục hệ thống (System Restore Point) để đề phòng tình huống xấu nhất xảy ra với môi trường làm việc của bạn.
 
 ---
 
-## Những câu hỏi thường gặp (FAQ)
+Những câu hỏi thường gặp (FAQ)
 
 1. Việc đổi tên thư mục SoftwareDistribution có làm mất dữ liệu cá nhân không?
 Tuyệt đối không. Thư mục này chỉ chứa các bản cập nhật tải tạm thời từ máy chủ Microsoft. Dữ liệu, ứng dụng và tài liệu cá nhân của bạn hoàn toàn được giữ nguyên vẹn.

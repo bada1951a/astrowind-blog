@@ -22,7 +22,8 @@ theme: "Midnight Navy Royal"
 
 
 
-## [INCIDENT LOG 01:15 AM] Bối Cảnh Sự Cố Tại Bàn Trực Vận Hành
+
+[INCIDENT LOG 01:15 AM] Bối Cảnh Sự Cố Tại Bàn Trực Vận Hành
 
 Đồng hồ hệ thống điểm 01:15 sáng. Trong phòng máy chủ yên tĩnh chỉ có tiếng quạt tản nhiệt server rít đều đặn, đồng chí kỹ sư trực ca bên cạnh bắt đầu đập bàn phím liên hồi kèm theo tiếng thở dài. Anh ta đang cấu hình dở cụm Kubernetes qua terminal thì phím `e` liên tục bị "chattering" (gõ một lần nhưng máy nhận thành `ee` hoặc `eee`), trong khi phím `Enter` thì nhấn 3 lần mới ăn được 1 lần. 
 
@@ -36,7 +37,7 @@ Bài viết này là quy trình chuẩn hóa thực chiến rút ra từ hàng t
 
 ---
 
-## Phân Tích Căn Nguyên Kỹ Thuật (Root Cause Analysis)
+Phân Tích Căn Nguyên Kỹ Thuật (Root Cause Analysis)
 
 Để sửa đúng, bạn cần hiểu bản chất cơ điện tử bên dưới từng nút bấm. Khác với phím cao su (membrane) hoạt động dựa trên việc ép hai màng mạch điện dẻo chạm vào nhau, phím cơ truyền thống (Cherry MX clone, Gateron, Kailh...) sử dụng hai lá đồng tiếp xúc cơ học (metal leaf). Có 3 nguyên nhân cốt lõi gây ra lỗi:
 
@@ -61,10 +62,10 @@ Khi bạn nhấn phím, stem trượt xuống tách hoặc đẩy hai lá đồn
 Về mặt vật lý học, không có hai miếng kim loại nào chạm vào nhau mà dừng lại ngay lập tức; chúng luôn rung nhẹ (bounce) trước khi tiếp xúc tĩnh hoàn toàn. Firmware của bàn phím cơ luôn cài đặt một thuật toán gọi là Debounce Time (thời gian trễ khử rung, thường từ 5ms đến 15ms) để bỏ qua các tín hiệu dao động này. 
 Nếu switch bị lão hóa, độ đàn hồi của lá đồng suy giảm, thời gian rung vật lý vượt quá ngưỡng Debounce Time của firmware, hiện tượng gõ một ra hai (chattering) sẽ xuất hiện ngay lập tức trên hệ điều hành.
 
-## 3. Hỏng Hóc Mối Hàn Hoặc Giãn Chân Socket Hot-swap
+3. Hỏng Hóc Mối Hàn Hoặc Giãn Chân Socket Hot-swap
 Đối với bàn phím mạch hàn (solder), các mối thiếc dưới đáy PCB sau thời gian chịu lực gõ mạnh có thể bị nứt chân chim (cold solder joint). Đối với bàn phím hỗ trợ thay switch nhanh (Hot-swap), hai ngàm kẹp bằng đồng của socket Kailh hoặc Gateron dưới bo mạch có thể bị toét rộng ra do rút cắm switch sai góc, dẫn đến tình trạng mất tiếp xúc chập chờn – lúc bấm ăn, lúc bấm trơ ra. ---
 
-## Quy Trình Xử Lý Thực Chiến (Runbook Step-by-Step)
+Quy Trình Xử Lý Thực Chiến (Runbook Step-by-Step)
 
 Quy trình chuẩn hóa dưới đây được áp dụng trực tiếp tại bàn làm việc mà không cần thiết bị phòng lab phức tạp.
 
@@ -111,7 +112,7 @@ Các bước thao tác chuẩn:1.Ngắt toàn bộ nguồn điện: Rút cáp k�
 
 2. Tháo Keycap: Dùng dụng cụ rút phím (Keycap puller) rút phím bị lỗi theo phương thẳng đứng 90 độ, tránh bẻ nghiêng gây gãy chân stem.
 
-## 3. Nhỏ/Xịt dung dịch vào buồng tiếp điểm:
+3. Nhỏ/Xịt dung dịch vào buồng tiếp điểm:
 
    * Lắp vòi xịt mảnh đi kèm bình BW-100 / DeoxIT.
    * Dùng ngón tay nhấn giữ stem của switch xuống mức kịch kim (đáy hành trình). Lúc này bạn sẽ thấy khe hở nhỏ dẫn thẳng xuống buồng chứa lá đồng.
@@ -140,15 +141,15 @@ Nếu sau khi xử lý dung dịch mà phím vẫn còn hiện tượng nuốt n
 
 * Đối với bàn phím Mạch hàn (Solder):
 
-## 1. Mở vỏ bàn phím, lật mặt sau PCB.
+1. Mở vỏ bàn phím, lật mặt sau PCB.
 
-## 2. Bật mỏ hàn ở nhiệt độ 320°C - 350°C.
+2. Bật mỏ hàn ở nhiệt độ 320°C - 350°C.
 
 3. Chấm một lượng nhỏ thiếc hàn mới có chứa lõi trợ hàn (flux) vào hai mối hàn của switch lỗi để làm mới mối nối (solder reflow), loại bỏ triệt để hiện tượng nứt chân hàn li ti do mỏi nhiệt.
 
 ---
 
-## Khuyến Cáo Phòng Ngừa & Bài Học Kỹ Thuật (Post-Mortem)
+Khuyến Cáo Phòng Ngừa & Bài Học Kỹ Thuật (Post-Mortem)
 
 Sau khi xử lý thành công cho kỹ sư trực ca, chúng tôi đưa chiếc bàn phím vào hoạt động bình thường lúc 02:30 AM. Để ngăn chặn hoàn toàn sự cố tái diễn trong tương lai, cần nắm vững các nguyên tắc sau:
 
@@ -163,7 +164,7 @@ Sau khi xử lý thành công cho kỹ sư trực ca, chúng tôi đưa chiếc 
 
 ---
 
-## Câu Hỏi Thường Gặp (FAQ)
+Câu Hỏi Thường Gặp (FAQ)
 
 1. Dùng cồn y tế 70 độ hoặc cồn đỏ để nhỏ vào switch phím cơ được không?
 Tuyệt đối không.Cồn y tế 70 độ chứa tới 30% là nước cất. Nước sẽ đọng lại rất lâu bên trong buồng switch kín, không thể bay hơi nhanh và sẽ thúc đẩy quá trình rỉ sét của lò xo thép cũng như lá đồng diễn ra nhanh hơn gấp nhiều lần. Nếu bất đắc dĩ không có chai xịt tiếp điểm, bạn chỉ được phép dùng cồn Isopropyl Alcohol (IPA) độ tinh khiết từ99% trở lên và phải để khô tối thiểu 1 tiếng trước khi cắm điện.

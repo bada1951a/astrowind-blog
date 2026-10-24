@@ -22,6 +22,7 @@ theme: "Cyberpunk Terminal"
 
 
 
+
 Siedzę w biurowcu w samym sercu Warszawy, za oknem szarość, a na moim monitorze miga przerażający komunikat: "Mało miejsca na dysku (C:)". Masakra. Za dokładnie dwie godziny mamy wysłać kluczowy pakiet danych do klienta, a mój dysk zewnętrzny właśnie postanowił wyzionąć ducha i odmawia współpracy. System niespodziewanie zablokował się przy próbie skopiowania gigantycznego projektu, bo na partycji systemowej zostało równe 420 megabajtów wolnej przestrzeni. W takich momentach człowiek czuje, jak pot spływa po plecach, a wszystkie nerwy z lat pracy z IT kumulują się w jednym punkcie.
 
 Próbowałem na szybko odinstalować kilka programów, ale deinstalatory domagają się wolnego miejsca do utworzenia własnych kopii zapasowych. Klasyczny bloker systemowy. Godzina ucieka, dysk zewnętrzny dalej leży martwy na biurku, a ja bezskutecznie szukam, gdzie system ukrył te wszystkie gigabajty śmieci. 
@@ -32,7 +33,7 @@ Przełom nastąpił, gdy w desperacji porzuciłem klikanie w myszkę, odpaliłem
 <strong>STATUS SYSTEMU:</strong> Krytyczny poziom zapełnienia dysku C. Poniższa procedura pozwala na natychmiastowe odzyskanie przestrzeni dyskowej bez użycia zewnętrznego oprogramowania szpiegowskiego czy wątpliwych optymalizatorów.
 </div>
 
-## Gdzie ucieka miejsce? Główne źródła problemu
+Gdzie ucieka miejsce? Główne źródła problemu
 
 Zanim przejdziemy do czyszczenia, warto zrozumieć, dlaczego dysk C puchnie bez wyraźnego powodu. Oto trzy najczęstsze grzechy systemu Windows:
 
@@ -44,7 +45,7 @@ Zanim przejdziemy do czyszczenia, warto zrozumieć, dlaczego dysk C puchnie bez 
 
 ---
 
-## Krok po kroku: Jak skutecznie oczyścić dysk C
+### Krok po kroku: Jak skutecznie oczyścić dysk C
 
 Do diagnostyki i szybkiego czyszczenia wykorzystamy wbudowane narzędzia systemowe, takie jak Menedżer zadań,Wiersz polecenia oraz klasyczne menu oczyszczania dysku.
 
@@ -61,7 +62,7 @@ Zapomnij o prostym usuwaniu folderu pobranych plików. Zróbmy to porządnie:
 
 2. Wpisz polecenie `cleanmgr` i zatwierdź klawiszem Enter.
 
-## 3. Wybierz dysk `C:` i kliknij OK.
+3. Wybierz dysk `C:` i kliknij OK.
 
 4. Gdy okno się załaduje, kliknij przycisk Oczyść pliki systemowe (znajdziesz go na dole).
 
@@ -83,7 +84,7 @@ a:* Pliki, których system obecnie używa i nie pozwala skasować, po prostu zig
 
 ---
 
-## Często Zadawane Pytania (FAQ)
+Często Zadawane Pytania (FAQ)
 
 1. Czy bezpiecznie jest usuwać zawartość folderu SoftwareDistribution?
 Tak, ale najlepiej robić to po zatrzymaniu usługi Windows Update. Folder ten zawiera pobrane pakiety instalacyjne aktualizacji. Jeśli jakaś aktualizacja utknęła w martwym punkcie i zapycha dysk, wyczyszczenie tego katalogu (znajdującego się w `C:\Windows`) jest w pełni bezpieczne i często naprawia błędy pobierania. ![Hardware Diagnostic & Troubleshooting](https://picsum.photos/seed/computer64/1000/550)

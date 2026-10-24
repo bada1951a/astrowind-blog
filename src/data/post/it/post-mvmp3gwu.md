@@ -13,7 +13,8 @@ theme: "Matte Black stealth"
 
 
 
-## 1. [Opening Story/Problem]
+
+1. [Opening Story/Problem]
 
 L'altra settimana ero in trasferta presso la nostra filiale produttiva fuori Milano, chiamato a supportare una riunione tecnica urgente nella sala conferenze principale. Mentre cercavo di collegare il mio portatile aziendale ai monitor esterni e al proiettore della sala, avevo disperatamente bisogno di catturare rapidamente una schermata delle impostazioni di rete e dei log di proiezione per condividerli in tempo reale con il team di sviluppo. Ho premuto la combinazione di tasti a cui sono abituato da anni: **Win + Shift + S**. 
 
@@ -35,7 +36,7 @@ Perché la combinazione **Win + Shift + S** smette improvvisamente di funzionare
 
 3. **Corruzione dei file di configurazione dell'app:** Gli aggiornamenti cumulativi di Windows 11 a volte corrompono la cache dell'applicazione UWP (Universal Windows Platform) dello Strumento di cattura, rendendo necessario un reset forzato tramite le **Impostazioni**.
 
-## 3. Step-by-Step Resolution
+3. Step-by-Step Resolution
 
 Ecco la procedura esatta, testata sul campo, per ripristinare il corretto funzionamento della scorciatoia in pochi passaggi mirati.
 

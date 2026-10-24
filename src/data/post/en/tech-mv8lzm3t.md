@@ -22,6 +22,7 @@ theme: "Cyberpunk Terminal"
 
 
 
+
 <div style="border-left: 4px solid #00ffcc; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,255,204,0.05); border-radius: 4px; font-family: monospace;">
 root@silicon-valley-h
 
@@ -39,7 +40,7 @@ Here is the exact battle-tested playbook I used to slash my boot times from a ag
 
 ---
 
-## Root Cause Breakdown: Why Your Workstation Crawls on Boot
+Root Cause Breakdown: Why Your Workstation Crawls on Boot
 
 Before we touch any configuration files, we need to understand what's actually murdering your system resources the second the kernel initializes.
 
@@ -51,12 +52,12 @@ Before we touch any configuration files, we need to understand what's actually m
 
 ---
 
-## Step-by-Step Resolution: The CLI & Native OS Diagnostic Drill
+### Step-by-Step Resolution: The CLI & Native OS Diagnostic Drill
 
 We aren't going to click around useless graphical menus. We are going straight to the metal using built-in Windows diagnostic tools and CLI commands.
 
 <div style="border-left: 4px solid #00ffcc; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,255,204,0.05); border-radius: 4px; font-family: monospace;">
-# Execute this in an elevated Command Prompt or PowerShell session to audit boot performance
+Execute this in an elevated Command Prompt or PowerShell session to audit boot performance
 systeminfo | findstr /C:"Boot Device" /C:"System Boot Time"
 </div>
 
@@ -75,12 +76,12 @@ Forget third-party registry cleaners that promise miracles and deliver malware. 
 If disabling startup apps doesn't yield an immediate I/O boost, you might have failing hardware or corrupted system files slowing down the kernel handshake.
 
 <div style="border-left: 4px solid #00ffcc; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,255,204,0.05); border-radius: 4px; font-family: monospace;">
-# Run an integrity check on system files holding up the boot sequence
+Run an integrity check on system files holding up the boot sequence
 DISM.exe /Online /Cleanup-image /Restorehealth
 sfc /scannow
 </div>
 
-## 1. Open Command Prompt as Administrator.
+1. Open Command Prompt as Administrator.
 
 2. Run the deployment image servicing and system file checker commands shown above to repair corrupted DLLs that slow down service initialization.
 
@@ -89,9 +90,9 @@ sfc /scannow
 ### Step 3: Prune Registry Run Keys (Advanced)
 For persistent bloatware that refuses to disappear from your startup list:
 
-## 1. Press `Win + R`, type `regedit`, and hit Enter.
+1. Press `Win + R`, type `regedit`, and hit Enter.
 
-## 2. Navigate to:
+2. Navigate to:
 
    `HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run`
    and
@@ -101,7 +102,7 @@ For persistent bloatware that refuses to disappear from your startup list:
 
 ---
 
-### Expert Warning / Advice
+Expert Warning / Advice
 
 <div style="border-left: 4px solid #ff0055; padding: 12px 16px; margin: 20px 0; background-color: rgba(255,0,85,0.05); border-radius: 4px; font-family: monospace;">
 [!] CRITICAL WARNING: Do not disable core system services or Intel/AMD chipset drivers in MSConfig or Task Manager unless you enjoy blue-screening your workstation. Always create a System Restore point before editing registry run keys.
@@ -111,7 +112,7 @@ When cleaning up startup items, resist the urge to nuke everything blindly. Disa
 
 ---
 
-### Frequently Asked Questions (FAQ)
+Frequently Asked Questions (FAQ)
 
 Q: Will disabling startup apps delete my files or uninstall my programs?
 

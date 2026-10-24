@@ -22,6 +22,7 @@ theme: "Graphite Technical Paper"
 
 
 
+
 Siedzę w naszym biurze we wrocławskim parku technologicznym, zegar wskazuje za pięć dwunasta, a za dokładnie trzydzieści minut zaczynamy kluczowy audyt stabilności infrastruktury przed wejściem zewnętrznego klienta. W tym momencie, jak na złość, główna stacja robocza odmawia posłuszeństwa – dolny pasek zadań w Windows 11 zamroził się na amen. Klikam w menu Start, próbuję przełączyć okna, macham kursorem nad ikoną Wi-Fi – zero reakcji. Ekran niby żyje, aplikacje w tle działają, ale sam pasek zadań wygląda, jakby zastygł w betonie. Resetowanie komputera w ciemno nie wchodzi w grę, bo w tle trwają niezapisane sesje diagnostyczne. Trzeba działać chirurgicznie.
 
 <div style="border-left: 4px solid #475569; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
@@ -30,7 +31,7 @@ Siedzę w naszym biurze we wrocławskim parku technologicznym, zegar wskazuje za
 
 ![Tech & IT Solution Guide](https://picsum.photos/seed/computer539/1000/550)
 
-### Dlaczego pasek zadań w Windows 11 tak często się zawiesza?
+Dlaczego pasek zadań w Windows 11 tak często się zawiesza?
 
 Zanim przejdziemy do konkretnych komend, warto zrozumieć, co właściwie poszło nie tak. Z perspektywy administracji systemami, problem ten rzadko wynika z uszkodzenia samego sprzętu. Najczęstsze przyczyny to:
 
@@ -70,7 +71,7 @@ Jeśli Menedżer zadań zawodzi lub potrzebujesz podejścia bardziej zautomatyzo
 a:
    `taskkill /f /im explorer.exe`
 
-## 4. Następnie uruchom go ponownie, wpisując:
+4. Następnie uruchom go ponownie, wpisując:
 
    `start explorer.exe`
 
@@ -79,7 +80,7 @@ a:
 ### Krok 3: Rejestracja powłoki systemowej przez PowerShell (Gdy nic innego nie pomaga)
 Jeśli problem powraca jak bumerang, konieczna może być ponowna rejestracja pakietów interfejsu użytkownika Windows 11.
 
-## 1. Otwórz TerminallubPowerShell jako Administrator.
+1. Otwórz TerminallubPowerShell jako Administrator.
 
 2. Wklej poniższe polecenie i zatwierdź je klawiszem Enter:
 
@@ -87,11 +88,11 @@ Jeśli problem powraca jak bumerang, konieczna może być ponowna rejestracja pa
 
 3. Zignoruj ewentualne komunikaty o błędach w kolorze czerwonym (dotyczą one aplikacji, które są aktualnie używane).
 
-## 4. Uruchom ponownie komputer po zakończeniu operacji.
+4. Uruchom ponownie komputer po zakończeniu operacji.
 
 ---
 
-### Inżynierskie środki ostrożności i zapobieganie awariom
+Inżynierskie środki ostrożności i zapobieganie awariom
 
 <div style="border-left: 4px solid #475569; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Wskazówka architektoniczn
@@ -104,7 +105,7 @@ a:</strong> Unikaj instalowania nielicencjonowanych narzędzi do personalizacji 
 
 ---
 
-### Często zadawane pytania (FAQ)
+Często zadawane pytania (FAQ)
 
 1. Co zrobić, jeśli skrót Ctrl + Shift + Esc również nie działa?
 

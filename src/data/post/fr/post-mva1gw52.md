@@ -22,6 +22,7 @@ theme: "Pastel Lavender Tech"
 
 
 
+
 Il est 16h45 dans notre bureau tech près de la place de la République à Paris. Le dernier sprint de la semaine bat son plein et nous devons absolument déployer une mise à jour critique de notre application interne avant le point de validation avec la direction. Subitement, l'écran de mon poste de travail s'illumine d'une alerte rouge vif : *Espace disque insuffisant sur le lecteur C:*. Le système refuse d'initialiser l'environnement de build, les logs bloquent, et la barre de progression reste figée à zéro. Impossible de compiler quoi que ce soit. Le disque principal de 512 Go est totalement saturé par des gigaoctets de fichiers invisibles, accumulés au fil des mois sans crier gare.
 
 Dans l'urgence, le premier réflexe est souvent de supprimer des dossiers au hasard ou de vider la corbeille en espérant un miracle. C'est exactement là que l'on commet l'irréparable en effaçant des caches de développement essentiels ou des points de restauration cruciaux. Après plusieurs minutes de tâtonnements et un diagnostic rapide des dossiers cachés, la cause de la panne est devenue évidente : l'accumulation massive de fichiers temporaires système, de résidus d'anciennes mises à jour Windows Update et de caches d'applications obsolètes. 
@@ -41,7 +42,7 @@ Voici la méthode éprouvée, rapide et 100% sécurisée pour reprendre le contr
 
 </div>
 
-## Pourquoi votre lecteur C se remplit-il tout seul ?
+Pourquoi votre lecteur C se remplit-il tout seul ?
 
 Avant de foncer tête baissée dans le nettoyage, comprenons pourquoi Windows 11 grignote autant d'espace. Trois coupables principaux reviennent constamment dans nos environnements de travail :
 
@@ -53,7 +54,7 @@ Avant de foncer tête baissée dans le nettoyage, comprenons pourquoi Windows 11
 
 ---
 
-## Guide étape par étape : Nettoyer proprement le lecteur C
+Guide étape par étape : Nettoyer proprement le lecteur C
 
 Voici la procédure exacte à suivre pour récupérer plusieurs dizaines gigaoctets en moins de dix minutes, sans perturber vos outils de développement ou vos logiciels métiers.
 
@@ -62,7 +63,7 @@ Plutôt que de chercher manuellement, confions le travail de chaufferie à l'out
 
 1. Ouvrez les Paramètres de Windows 11 (raccourci `Touche Windows + I`).
 
-## 2.  Allez dans Système, puis cliquez surStockage.
+2.  Allez dans Système, puis cliquez surStockage.
 
 3. Activez l'interrupteur du Senseur de stockage (Storage Sense).
 
@@ -73,7 +74,7 @@ L'outil classique de nettoyage libère une première couche, mais il faut aller 
 
 1. Appuyez sur la touche `Windows`, tapez Nettoyage de disque et lancez l'application.
 
-## 2. Sélectionnez votre lecteur `C:` et validez.
+2. Sélectionnez votre lecteur `C:` et validez.
 
 3. Cliquez sur le bouton Nettoyer les fichiers système (administrateur).
 
@@ -105,7 +106,7 @@ Pour les caches de développement ou les fichiers temporaires persistants que l'
 
 ---
 
-## Foire Aux Questions (FAQ)
+Foire Aux Questions (FAQ)
 
 1. Puis-je supprimer en toute sécurité le dossier Windows.old si mon PC fonctionne bien ? Oui, absolument. Si votre mise à jour vers Windows 11 est stable et que vous n'avez pas besoin de revenir à l'ancienne version, ce dossier pèse souvent entre 15 Go et 30 Go. Supprimez-le via l'outil "Nettoyage de disque -> Fichiers système" pour récupérer cet espace immédiatement.
 

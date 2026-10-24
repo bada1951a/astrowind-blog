@@ -22,6 +22,7 @@ theme: "High-Contrast Charcoal"
 
 
 
+
 Es war kurz vor 16:00 Uhr an einem hektischen Dienstag im Frankfurter Büroalltag, als der Ernstfall eintrat: Mitten während der kritischen Datenübertragung wichtiger Quartalsberichte poppte plötzlich eine knallrote Windows-Warnung auf. „Speicherplatz auf C: fast voll.“ Wenige Sekunden später fror das System ein. Keine Rückmeldung mehr im Outlook, der Explorer streikte, und die Panik stieg, weil die finalen Projektdateien noch im temporären Cache hingen und ein abrupter Neustart den totalen Datenverlust hätte bedeuten können. Der berüchtigte rote Balken im Arbeitsplatz stand auf 0 Byte.
 
 Zuerst verfiel ich in blinden Aktionismus. Ich löschte ein paar größere PDF-Dateien und den Ordner „Downloads“, aber das brachte gerade einmal magere 500 Megabyte. Windows meldete sofort wieder volle Hütte. Der Übeltäter war nicht meine Musiksammlung oder meine Apps, sondern Gigabytes an unsichtbarem Datenmüll, den das Betriebssystem und diverse Anwendungen über Monate im Hintergrund angesammelt hatten. Erst der Griff zu den richtigen Systemwerkzeugen und das gezielte Bereinigen der versteckten Temp-Verzeichnisse brachte die ersehnte Rettung und gab über 40 Gigabyte frei.
@@ -30,7 +31,7 @@ Zuerst verfiel ich in blinden Aktionismus. Ich löschte ein paar größere PDF-D
 <strong>Notfall-Tipp für das C-Laufwerk:</strong> Gerate nicht in Panik und erzwinge keinen harten Neustart per Power-Knopf, wenn das System während einer Übertragung hängt. Schließe stattdessen über den <strong>Task-Manager</strong> (Strg + Shift + Esc) hängende Programme einzeln und beende nicht benötigte Hintergrundprozesse, um etwas temporären Puffer zu gewinnen.
 </div>
 
-## Warum läuft das C-Laufwerk immer wieder voll? (Die 3 Hauptursachen)
+Warum läuft das C-Laufwerk immer wieder voll? (Die 3 Hauptursachen)
 
 Bevor wir zur Tat schreiten, müssen wir verstehen, woher dieser Datenmüll eigentlich kommt. Windows und moderne Anwendungen sind wahre Meister im Verstecken von temporären Daten.
 
@@ -42,7 +43,7 @@ Bevor wir zur Tat schreiten, müssen wir verstehen, woher dieser Datenmüll eige
 
 ---
 
-## Schritt-für-Schritt-Anleitung: Temporäre Dateien restlos löschen
+### Schritt-für-Schritt-Anleitung: Temporäre Dateien restlos löschen
 
 Gehen wir das Problem systematisch an. Wir nutzen dabei ausschließlich Windows-Bordmittel, die du aus dem Arbeitsalltag im Büro bestens kennst. Keine dubiosen Registry-Cleaner aus dem Internet, die am Ende mehr zerstören als helfen.
 
@@ -68,7 +69,7 @@ Für alte Systemdateien brauchen wir tiefere Admin-Rechte:
 
 1. Öffne das Startmenü, tippe Datenträgerverwaltungoder besser nochDatenträgerbereinigung ein und starte sie. (Noch besser: Rechtsklick auf die App und als Administrator ausführen).
 
-## 2. Wähle das Laufwerk `C:` aus.
+2. Wähle das Laufwerk `C:` aus.
 
 3. Klicke im neuen Fenster unten links auf Systemdateien bereinigen.
 
@@ -82,7 +83,7 @@ Für alte Systemdateien brauchen wir tiefere Admin-Rechte:
 
 ---
 
-## Häufig gestellte Fragen (FAQ)
+Häufig gestellte Fragen (FAQ)
 
 1. Kann ich den Ruhezustand (Hibernation) komplett deaktivieren, um Platz zu sparen?
 Ja, wenn du den Schnellstart oder den Ruhezustand nie nutzt. Öffne die Eingabeaufforderung als Administrator (Rechtsklick im Startmenü) und tippe den Befehl `powercfg /hibernate off` ein und drücke Enter. Damit verschwindet die tonnenschwere `hiberfil.sys` sofort von deinem C-Laufwerk und gibt den Speicherplatz frei.

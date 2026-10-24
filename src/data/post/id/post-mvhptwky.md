@@ -22,6 +22,7 @@ theme: "Retro Monokai"
 
 
 
+
 Jam menunjukkan pukul 16.45 WIB di salah satu gedung perkantoran kawasan Sudirman, Jakarta. Tenggat waktu (deadline) laporan keuangan tahunan tinggal 15 menit lagi, dan suasana di kubikal saya mendadak mencekam. PC salah satu manajer keuangan mengalami crash mendadak akibat pembaruan sistem yang gagal. Setelah melakukan force restart dan sistem berhasil menyala kembali, sang manajer panik bukan kepalang karena kebiasaan kerjanya terganggu. Menu klik kanan (right-click context menu) di Windows 11 berubah total menjadi tampilan modern minimalis yang menyembunyikan opsi "Show more options" atau tombol pintas lama seperti WinRAR, 7-Zip, dan pengaturan driver penting.
 
 Bayangkan betapa frustrasinya harus mengklik dua kali hanya untuk melakukan ekstrak file atau scan antivirus di detik-detik krusial menjelang pengumpulan laporan. Waktu terbuang percuma untuk melakukan trial-and-error mengklik menu tersembunyi yang tidak responsif di bawah tekanan tenggat waktu yang begitu ketat.
@@ -34,7 +35,7 @@ Sebagai seorang teknisi infrastruktur IT, saya tidak boleh tinggal diam. Setelah
 <strong>Catatan Teknisi:</strong> Sebelum mengubah konfigurasi sistem lewat Registry, pastikan Anda tidak sedang menjalankan proses instalasi aplikasi berat agar sistem tetap stabil.
 </div>
 
-## Mengapa Menu Klik Kanan Windows 11 Berubah?
+Mengapa Menu Klik Kanan Windows 11 Berubah?
 
 Sebelum masuk ke eksekusi perbaikan, mari kita pahami akar masalah dari perubahan antarmuka ini. Ada tiga alasan utama mengapa Microsoft mengubah struktur menu klik kanan pada Windows 11:
 
@@ -46,11 +47,11 @@ Sebelum masuk ke eksekusi perbaikan, mari kita pahami akar masalah dari perubaha
 
 ---
 
-## Langkah-Langkah Mengembalikan Klik Kanan Klasik
+### Langkah-Langkah Mengembalikan Klik Kanan Klasik
 
 Kita tidak memerlukan software pihak ketiga yang mencurigakan. Cukup gunakan fitur bawaan sistem melalui Command Prompt dengan hak akses administrator atau Registry Editor.
 
-### Cara Cepat via Command Prompt (Rekomendasi Utama)
+Cara Cepat via Command Prompt (Rekomendasi Utama)
 
 1. Tekan tombol kombinasi pada keyboard: Windows + S, lalu ketikcmd.
 
@@ -70,7 +71,7 @@ Selesai! Sekarang coba klik kanan pada sembarang folder atau file di desktop And
 
 ---
 
-## Tips Keamanan dan Perawatan Infrastruktur IT
+Tips Keamanan dan Perawatan Infrastruktur IT
 
 <div style="border-left: 4px solid #a6e22e; padding: 12px 16px; margin: 20px 0; background-color: rgba(166,226,46,0.1); border-radius: 4px; color: #111827;">
 <strong>Peringatan Penting:</strong> Modifikasi Registry Windows bersifat permanen pada akun pengguna yang aktif jika tidak dikembalikan secara manual. Selalu lakukan backup data penting sebelum melakukan tweak sistem operasi di lingkungan kantor.
@@ -80,7 +81,7 @@ Sebagai teknisi senior, saya menyarankan agar perubahan ini dicatat dalam dokume
 
 ---
 
-## Pertanyaan yang Sempurna (FAQ)
+Pertanyaan yang Sempurna (FAQ)
 
 1. Apakah trik ini aman untuk kestabilan sistem Windows 11 jangka panjang? Sangat aman. Metode ini memanfaatkan fungsi GUID (Globally Unique Identifier) bawaan Windows yang memang disiapkan oleh pengembang untuk menguji atau mengembalikan kompatibilitas antarmuka lama tanpa merusak file sistem inti.
 

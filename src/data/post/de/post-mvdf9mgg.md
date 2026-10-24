@@ -22,6 +22,7 @@ theme: "Matte Black stealth"
 
 
 
+
 Es ist mal wieder Freitag, kurz vor 17:00 Uhr in unserem Berliner Tech-Hub, und der dringend anstehende Rollout unserer neuen Entwicklungsumgebung droht komplett ins Wasser zu fallen. Auf dem Test-Laptop eines Kollegen lief das neueste Windows 11 Funktionsupdate – und hielt seit sage und schreibe zwei Stunden starr bei exakt 100 Prozent an. Kein Fortschritt, kein Bluescreen, nur der nervige kreisende Punkt und die subtile Panik im Team, dass wir das Gerät plattmachen und bei Null anfangen müssen. Ein erzwungener Neustart endete natürlich in einer automatischen Reparalschleife. Klassiker.
 
 <div style="border-left: 4px solid #ffffff; padding: 12px 16px; margin: 20px 0; background-color: rgba(255,255,255,0.05); border-radius: 4px; color: #111827;">
@@ -31,7 +32,7 @@ Es ist mal wieder Freitag, kurz vor 17:00 Uhr in unserem Berliner Tech-Hub, und 
 
 ![Tech Hardware Guide](https://images.unsplash.com/photo-1542751371-adc38448a05e? auto=format&fit=crop&w=1200&h=675&q=85)
 
-### Warum Windows 11 beim Update-Endspurt stecken bleibt
+Warum Windows 11 beim Update-Endspurt stecken bleibt
 
 Nachdem ich den Laptop im betroffenen Zustand per erzwungenem Aus-Schalter (Power-Button für 10 Sekunden gedrückt halten) in den sicheren Zustand gezwungen und die Update-Logs via Terminal (`C:\Windows\Logs\CBS\CBS.log`) analysiert hatte, kristallisierten sich drei typische Hauptursachen heraus:
 
@@ -81,7 +82,7 @@ net start msiserver
 <p style="margin: 4px 0 0 0; color: #111827;">Führe im Anschluss direkt in demselben Terminal den Befehl <code>DISM.exe /Online /Cleanup-image /Restorehealth</code> gefolgt von <code>sfc /scannow</code> aus. So stellst du sicher, dass keine beschädigten Systemdateien das frische Update blockieren.</p>
 </div>
 
-## Häufig gestellte Fragen (FAQ)
+Häufig gestellte Fragen (FAQ)
 
 1. Verliere ich meine persönlichen Dateien oder installierten Apps, wenn ich den SoftwareDistribution-Ordner lösche? Nein, überhaupt nicht. In diesem Ordner speichert Windows lediglich die temporären Installationsdateien heruntergeladener Updates. Deine persönlichen Dokumente, Einstellungen und Anwendungen bleiben vollkommen unberührt.
 

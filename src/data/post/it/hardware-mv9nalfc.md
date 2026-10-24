@@ -22,6 +22,7 @@ theme: "Midnight Navy Royal"
 
 
 
+
 <div style="border-left: 4px solid #1d4ed8; padding: 12px 16px; margin: 20px 0; background-color: rgba(29, 78, 216, 0.05); border-radius: 4px; color: #111827;">
 <strong>Registro Notturno - Laboratorio Hardware Milano</strong><br>
 Timestamp: 02:42 AM. Chiamata urgente da uno studio di design in zona Porta Nuov
@@ -37,7 +38,7 @@ In questo articolo ti porto direttamente dietro il mio banco di lavoro per mostr
 
 ---
 
-### Perchè il disco C si riempie all'improvviso? (Le 3 cause reali)
+Perchè il disco C si riempie all'improvviso? (Le 3 cause reali)
 
 Prima di mettere mano al sistema, capiamo cosa sta intasando la nostra unità principale. Nella mia esperienza quotidiana con i computer dei clienti, i colpevoli sono quasi sempre tre:
 
@@ -49,7 +50,7 @@ Prima di mettere mano al sistema, capiamo cosa sta intasando la nostra unità pr
 
 a: Può sembrare banale, ma centinaia di utenti accumulano file ISO, archivi ZIP enormi e installativi nella cartella Download senza mai svuotarla. ---
 
-### Procedura passo-passo per la pulizia profonda
+Procedura passo-passo per la pulizia profonda
 
 Mettiamoci all'opera. Segui questa sequenza esatta usando gli strumenti nativi di Windows. Niente software di terze parti sospetti o shareware che promettono miracoli e installano adware.
 
@@ -83,7 +84,7 @@ Evita assolutamente di scaricare programmi "Cleaner" gratuiti trovati online che
 
 ---
 
-### Domande Frequenti (FAQ)
+Domande Frequenti (FAQ)
 
 1. Posso svuotare la cartella Windows.old senza problemi?
 

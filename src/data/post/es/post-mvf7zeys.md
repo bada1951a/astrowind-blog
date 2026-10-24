@@ -22,6 +22,7 @@ theme: "Modern Minimalist Slate"
 
 
 
+
 Eran las 18:30 en nuestra oficina corporativa en Madrid. A solo media hora de enviar el paquete definitivo del proyecto trimestral a dirección, el ordenador principal de la estación de trabajo comenzó a emitir un zumbido ensordecedor en los ventiladores. La pantalla se congeló por completo. Al abrir a duras penas el Administrador de tareas, el diagnóstico era alarmante: la CPU estaba clavada en el 100 por ciento de uso, y el único responsable en la lista era un proceso aparentemente inofensivo llamado simplemente "System" (Sistema y memoria comprimida en algunas versiones). El cursor apenas se movía, el correo no respondía y la tensión en la sala cortaba el aire con cuchillo.
 
 Durante los primeros diez minutos, caí en el típico error de desesperación: reinicié el equipo tres veces seguidas a la fuerza manteniendo presionado el botón de encendido. Grave error. Lo único que conseguí fue corrupción temporal en la caché de Windows y perder valiosos minutos valiosos que debimos usar para estabilizar el sistema operativo.
@@ -32,7 +33,7 @@ Al ver que el reinicio en frío no servía de nada porque el problema volvía a 
 <strong>Consejo del Técnico:</strong> Cuando el proceso "System" consume toda la CPU, casi nunca se trata de un virus troyano común, sino de un conflicto a nivel de controladores de hardware, servicios de indexación desbocados o errores en la gestión de energía del núcleo de Windows.
 </div>
 
-## ¿Por qué el proceso "System" devora tu CPU?
+¿Por qué el proceso "System" devora tu CPU?
 
 Antes de pasar a los clics, entendamos brevemente qué está pasando bajo el capó. El proceso del sistema (`ntoskrnl.exe`) gestiona las tareas esenciales del núcleo de Windows, controladores y memoria física. Cuando se dispara al máximo, las causas más comunes son:
 
@@ -40,7 +41,7 @@ Antes de pasar a los clics, entendamos brevemente qué está pasando bajo el cap
 - Servicios de Windows en conflicto: El Administrador de impresión, Windows Update o el sistema de indexación de archivos (`Windows Search`) intentando reparar un índice dañado.
 - Periféricos USB defectuosos: Hubs o dispositivos externos que saturan las líneas de comunicación PCIe del bus del sistema. ---
 
-## Guía paso a paso para solucionar el bloqueo
+Guía paso a paso para solucionar el bloqueo
 
 Sigue estos pasos de forma ordenada. No saltes al paso final sin antes revisar el estado de tus controladores.
 
@@ -83,7 +84,7 @@ Si el hardware está bien, el problema suele ser la base de datos de archivos co
 
 ---
 
-## Preguntas Frecuentes (FAQ)
+Preguntas Frecuentes (FAQ)
 
 1. ¿Es seguro deshabilitar el servicio SysMain (Superfetch) en Windows 10 u 11? Sí, totalmente seguro. Superfetch fue diseñado para pre-cargar aplicaciones en la memoria RAM en equipos con discos mecánicos tradicionales (HDD). Si tu ordenador corporativo utiliza un disco de estado sólido (SSD moderno), este servicio es totalmente innecesario y muchas veces causa picos de uso del 100 por ciento en el proceso System.
 

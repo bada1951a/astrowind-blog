@@ -22,9 +22,10 @@ theme: "Bronze Artisan Workshop"
 
 
 
+
 Es ist 14:45 Uhr im Frankfurter Bankenviertel. Um 15:30 Uhr soll die wichtigste Pitch-Präsentation des Quartals für einen neuen Großkunden starten. Der Konferenzraum ist voll, die Kollegen warten gespannt, und ich stehe schwitzend vor dem Chef-Laptop. Plötzlich: Totale Stille im System. Keine Mausbewegung, kein blauer Bildschirm, einfach ein eingefrorenes Windows 11. Kein Tastendruck reagiert, der Task-Manager lässt sich nicht aufrufen. Nach drei gefühlten Ewigkeit hilft nur noch der harte Reset über den Power-Knopf. Zehn Minuten später dasselbe Spiel. Ein klassischer, zufälliger Freeze (Random Freezing), der jeden Sysadmin an den Rand des Wahnsinns treibt.
 
-### Die Werkzeugkiste: Was wir für die Diagnose brauchen
+Die Werkzeugkiste: Was wir für die Diagnose brauchen
 Bevor wir blind anfangen, Teile auszutauschen oder das Betriebssystem komplett neu zu installieren, schauen wir uns an, was Windows im Hintergrund protokolliert hat. Als Werkzeuge nutzen wir heute:
 - Ereignisanzeige (Event Viewer) für die Spurensuche
 - Zuverlässigkeitsüberwachung für eine grafische Zeitleiste
@@ -38,7 +39,7 @@ Bevor wir blind anfangen, Teile auszutauschen oder das Betriebssystem komplett n
 
 ---
 
-### Warum friert Windows 11 eigentlich ein? (Die 3 Hauptursachen)
+Warum friert Windows 11 eigentlich ein? (Die 3 Hauptursachen)
 
 In meiner jahrelangen Praxis als Hardware-Diagnostiker haben sich drei übliche Verdächtige herauskristallisiert, wenn Windows 11 ohne erkennbaren Grund einfriert:
 
@@ -84,7 +85,7 @@ Suchen Sie im System-Log exakt nach dem Eintrag Event-ID 41(Das war Ihr erzwunge
 
 ---
 
-### Maßnahmen zur Sofortbehebung nach der Diagnose
+Maßnahmen zur Sofortbehebung nach der Diagnose
 
 Haben Sie den Verdächtigen identifiziert, greifen folgende Sofortmaßnahmen:
 
@@ -96,7 +97,7 @@ Haben Sie den Verdächtigen identifiziert, greifen folgende Sofortmaßnahmen:
 
 ---
 
-## Häufig gestellte Fragen (FAQ)
+Häufig gestellte Fragen (FAQ)
 
 1. Warum taucht in der Ereignisanzeige direkt vor dem Freeze überhaupt kein Fehler auf? Wenn ein PC komplett einfriert (Hard Freeze), hat das Betriebssystem oft keine Millisekunde mehr Zeit, den Fehler auf die Festplatte zu schreiben. Der letzte Log-Eintrag liegt dann oft Minuten zurück. In diesem Fall liegt zu 90% ein handfestes Hardware-Problem vor (RAM, Netzteil, CPU-Spannung oder überhitzte Chipsätze).
 

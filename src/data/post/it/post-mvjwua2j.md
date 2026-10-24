@@ -22,6 +22,7 @@ theme: "Warm Coffee Latte"
 
 
 
+
 Erano le undici e mezza del mattino qui al Centro Direzionale di Milano, uno di quei giorni in cui l'aria profuma di caffè macchiato bevuto di fretta e le scadenze sembrano rincorrersi. Sulla mia scrivania, tra fogli di calcolo e monitor secondari, la situazione era incandescente: saette di richieste di supporto si rovesciavano sulla chat aziendale e, per sbrigarmi, avevo appena aperto contemporaneamente cinque diverse applicazioni gestionali, il client di posta, la VPN e una chiamata di riunione urgente. Clicca di qui, trascina di là, ed ecco che il disastro si compie: improvvisamente, il silenzio più assoluto. Dalle cuffie non esce un singolo suono, proprio mentre il capo reparto cerca di connettersi per un riscontro in tempo reale. Il panico sale, la riunione è già avviata e l'icona dell'altoparlante in basso a destra mostra quella maledetta crocetta rossa o, peggio, sembra tutto attivo ma l'audio non si decide a uscire.
 
 <div style="border-left: 4px solid #78350f; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
@@ -32,7 +33,7 @@ a:</strong> Non perdere la testa se Windows decide di ammutolirsi proprio durant
 
 ![Tech Troubleshooting Guide](/images/tech-photo/tech-p%20(21).jpg)
 
-## Perché sparisce l'audio su Windows 11? Le 3 cause principali
+Perché sparisce l'audio su Windows 11? Le 3 cause principali
 
 Prima di metterci a smanettare a casaccio perdendo ore preziose, capiamo cosa è successo sotto il cofano del sistema operativo. Quando si aprono troppi applicativi pesanti, Windows 11 va in affanno nella gestione delle risorse multimediali. Ecco i colpevoli più frequenti:
 
@@ -46,7 +47,7 @@ a: Windows ha scambiato le cuffie USB o il monitor HDMI con gli altoparlanti int
 
 ---
 
-## Risoluzione passo-passo: Torniamo a sentire in un attimo
+Risoluzione passo-passo: Torniamo a sentire in un attimo
 
 Mettiamo da parte il caffè freddo e seguiamo questa procedura collaudata sul campo per ripristinare l'audio senza riavviare il PC (cosa che farebbe perdere altri dieci minuti preziosi con le sessioni aperte).
 
@@ -74,7 +75,7 @@ Spesso il driver sta bene, ma il "cervello" audio di Windows si è addormentato.
 
 ---
 
-## Domande Frequenti (FAQ)
+Domande Frequenti (FAQ)
 
 D: Ho seguito tutti i passaggi ma l'icona dell'audio ha ancora una X rossa e dice "Nessun dispositivo audio installato". Che faccio?
 

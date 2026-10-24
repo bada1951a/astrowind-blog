@@ -22,6 +22,7 @@ theme: "Graphite Technical Paper"
 
 
 
+
 Đồng hồ góc phải màn hình nhảy đúng 15:45, chỉ còn 15 phút nữa là đến hạn chót nộp báo cáo doanh thu quý cho sếp tổng tại văn phòng trung tâm Quận 1, TP.HCM. Đột nhiên, chiếc máy tính Windows 11 đời mới của tôi khựng lại. Chuột cứng ngắc, bàn phím bấm không ăn, màn hình đứng hình ở một slide PowerPoint dang dở. Khởi động nóng bằng nút nguồn, vào lại chưa đầy 3 phút sau lại tiếp tục đóng băng hoàn toàn mà không kịp báo lỗi màn hình xanh (BSOD). Mồ hôi túa ra như tắm giữa phòng máy lạnh, khách hàng và cấp trên đang giục dồn dập qua tin nhắn.
 
 Trước đây, khi gặp tình trạng này, phản xạ đầu tiên của dân văn phòng lẫn nhiều anh em làm IT non tay là cài lại toàn bộ Windows, hoặc tháo tung thùng máy ra phủi bụi, cắm lại thanh RAM cho có lệ. Nhưng cách làm mò mẫm đó ngốn cả tiếng đồng hồ quý giá và thường chẳng giải quyết được tận gốc vấn đề, để rồi ngày mai lỗi cũ lại tái diễn.
@@ -38,7 +39,7 @@ a:</strong> Lỗi đơ cứng ngẫu nhiên (random freezing) trên Windows 11 t
 
 ---
 
-### Phân tích 3 thủ phạm chính gây đơ cứng trên Windows 11
+Phân tích 3 thủ phạm chính gây đơ cứng trên Windows 11
 
 Trước khi mở công cụ tra cứu, chúng ta cần hiểu rõ ba nguyên nhân phổ biến nhất khiến máy tính bỗng nhiên "đóng băng" tại chỗ:
 
@@ -50,7 +51,7 @@ Trước khi mở công cụ tra cứu, chúng ta cần hiểu rõ ba nguyên nh
 
 ---
 
-### Các bước tra cứu và xử lý qua Event Viewer
+Các bước tra cứu và xử lý qua Event Viewer
 
 Để tìm ra chính xác thủ phạm giấu mặt, hãy thực hiện tuần tự theo quy trình chuẩn sau đây ngay khi máy khởi động lại được:
 
@@ -75,7 +76,7 @@ Trước khi mở công cụ tra cứu, chúng ta cần hiểu rõ ba nguyên nh
 
 ---
 
-### Cảnh báo chuyên gia về an toàn dữ liệu và phần cứng
+Cảnh báo chuyên gia về an toàn dữ liệu và phần cứng
 
 <div style="border-left: 4px solid #475569; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Cảnh báo quan trọng:</strong> Việc liên tục ép tắt máy bằng nút nguồn khi bị đơ cứng có thể làm hỏng bảng phân vùng NTFS của ổ cứng SSD, dẫn đến lỗi màn hình xanh vòng lặp (Boot Loop). Nếu máy bị đơ quá 5 phút, hãy kiên nhẫn chờ thêm hoặc chỉ giữ nút nguồn tối đa 1 lần duy nhất, sau đó truy cập ngay Event Viewer để kiểm tra nguyên nhân thay vì lặp lại thao tác tắt mở liên tục.
@@ -83,7 +84,7 @@ Trước khi mở công cụ tra cứu, chúng ta cần hiểu rõ ba nguyên nh
 
 ---
 
-### Các câu hỏi thường gặp (FAQ)
+Các câu hỏi thường gặp (FAQ)
 
 1. Máy tính của tôi tự đơ cứng nhưng trong Event Viewer không ghi lại lỗi gì ngoài Kernel-Power (Event ID 41), tại sao vậy? Mã Event ID 41 thực chất chỉ ghi nhận việc "Hệ thống đã khởi động lại mà không tắt đúng cách trước đó". Điều này xảy ra vì khi máy bị đơ cứng hoàn toàn, CPU không còn khả năng ghi bất kỳ thông tin lỗi nào vào ổ cứng trước lúc bạn bấm nút nguồn. Để xử lý, hãy kiểm tra lại nhiệt độ CPU/GPU bằng phần mềm HWiNFO và kiểm tra xem nguồn điện có bị sụt áp hay không.
 

@@ -22,17 +22,18 @@ theme: "Dracula Purple Dev"
 
 
 
+
 Sáng thứ Hai đầu tuần tại văn phòng ở Duy Tân (Cầu Giấy, Hà Nội), sếp lớn gọi gấp vào phòng họp để chuẩn bị màn thuyết trình cho đối tác quan trọng. Tôi vừa mở chiếc laptop Windows 10 quen thuộc lên thì hỡi ôi, vòng tròn xoay quay vòng vòng, màn hình đứng im phăng phắc gần 5 phút đồng hồ. Cả phòng họp nín thở nhìn tôi trong khi thanh Taskbar mãi vẫn chưa load xong các icon ứng dụng. Đổ mồ hôi hột, tôi biết ngay thủ phạm là đám phần mềm "tự sướng" cứ tự động chui lên chiếm hết tài nguyên CPU và RAM ngay từ giây phút bấm nút nguồn.
 
 <div style="border-left: 4px solid #bd93f9; padding: 12px 16px; margin: 20px 0; background-color: rgba(189,147,249,0.1); border-radius: 4px; color: #111827;">
 <strong>Cảnh báo thực chiến:</strong> Đừng vội mang máy đi cài lại Windows hay thay ổ cứng SSD nếu bạn chưa dọn dẹp danh sách ứng dụng khởi động cùng hệ thống (Startup Apps). 90% trường hợp máy chậm lúc bật nguồn đến từ đây.
 </div>
 
-## Tại sao chiếc PC/Laptop Windows 10 của bạn lại ì ạch khi khởi động?
+Tại sao chiếc PC/Laptop Windows 10 của bạn lại ì ạch khi khởi động?
 
 Sau nhiều năm hỗ trợ kỹ thuật cho các hệ thống từ văn phòng nhỏ đến doanh nghiệp lớn, tôi đúc rút ra 3 nguyên nhân chính khiến máy tính của bạn biến thành "rùa bò" mỗi khi khởi động:
 
-## 1. Hiệu ứng "Domino" của ứng dụng bên thứ b
+1. Hiệu ứng "Domino" của ứng dụng bên thứ b
 
 a: Mỗi khi bạn cài đặt Zalo, Skype, Discord, Spotify hoặc các trình duyệt, chúng thường lén lút tích chọn mục "Run when computer starts" mà không hỏi ý kiến người dùng.
 
@@ -42,7 +43,7 @@ a: Mỗi khi bạn cài đặt Zalo, Skype, Discord, Spotify hoặc các trình 
 
 ---
 
-## 3 bước xử lý gọn ghẽ trong vòng 1 phút
+3 bước xử lý gọn ghẽ trong vòng 1 phút
 
 Không cần dùng phần mềm bên thứ ba rườm rà hay chỉnh sửa Registry mạo hiểm. Windows 10 đã tích hợp sẵn công cụ quản lý cực kỳ trực quan ngay trong Task Manager. Hãy làm theo thao tác chuẩn xác dưới đây:
 
@@ -63,7 +64,7 @@ Chỉ giữ lại các tiến trình cực kỳ quan trọng như Windows Securi
 
 ---
 
-## Lời khuyên từ chuyên gia hệ thống
+Lời khuyên từ chuyên gia hệ thống
 
 Việc tinh chỉnh Startup không làm ảnh hưởng đến dữ liệu hay tính toàn vẹn của hệ điều hành. Tuy nhiên, bạn cần lưu ý một số điểm sau để duy trì độ mượt mà lâu dài:
 
@@ -73,7 +74,7 @@ Việc tinh chỉnh Startup không làm ảnh hưởng đến dữ liệu hay t�
 
 ---
 
-## Câu hỏi thường gặp (FAQ)
+Câu hỏi thường gặp (FAQ)
 
 1. Nếu tôi vô tình Disable nhầm ứng dụng quan trọng thì có sao không?
 Hoàn toàn không có gì nguy hiểm. Hệ thống sẽ không bị hỏng. Bạn chỉ cần mở lại Task Manager theo đúng các bước trên, tìm đến ứng dụng đó, click chuột phải và chọn Enable là xong.

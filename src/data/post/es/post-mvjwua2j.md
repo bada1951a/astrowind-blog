@@ -22,6 +22,7 @@ theme: "Nordic Clean Ice"
 
 
 
+
 Eran las siete de la tarde en las Torres Kio, en pleno distrito financiero de Madrid. Estábamos a pocas horas de cerrar el ejercicio fiscal, con la tensión cortándose en el ambiente, cuando mi equipo de contabilidad empezó a emitir alertas de voz automatizadas y pitidos de validación que de repente... enmudecieron por completo. Justo en el momento más crítico, cuando necesitábamos cruzar los datos de un año entero de hojas de cálculo de Excel con el sistema central del ERP corporativo, el ordenador principal se quedó totalmente mudo. No podíamos escuchar las alertas de discrepancias ni las llamadas de confirmación del departamento financiero.
 
 El pánico se apoderó de la oficina. En medio del estrés por cumplir con los plazos de la auditoría, los compañeros empezaron a desconectar los auriculares, a reiniciar el PC a lo loco y a golpear ligeramente el puerto Jack de 3.5mm pensando que era un fallo físico de los cascos. Por supuesto, eso solo empeoró las cosas y nos hizo perder valiosos minutos valiosos. Como técnico de sistemas de la casa, me tocó intervenir de inmediato para aplicar una solución rápida, limpia y definitiva en Windows 11 sin perder ni un solo dato del cierre contable.
@@ -34,7 +35,7 @@ El pánico se apoderó de la oficina. En medio del estrés por cumplir con los p
 
 ---
 
-### Por qué se va el sonido en Windows 11: Causas raíz reales
+Por qué se va el sonido en Windows 11: Causas raíz reales
 
 Antes de lanzarnos a tocar botones, es fundamental entender qué falló bajo el capó del sistema operativo. Estos son los tres culpables habituales en entornos de oficin
 
@@ -48,7 +49,7 @@ a:
 
 ---
 
-### Guía paso a paso para recuperar el audio de inmediato
+Guía paso a paso para recuperar el audio de inmediato
 
 Vamos a solucionar el problema usando las herramientas nativas de Windows 11: [Configuración], [Administrador de dispositivos] y los servicios del sistema. No necesitas descargar software extraño de dudosa procedencia. ## Paso 1: Verificar el dispositivo de salida correcto y el mezclador de volumen
 Muchas veces el controlador está perfecto, pero Windows ha cambiado la ruta de audio por defecto.
@@ -89,13 +90,13 @@ Si los servicios están activos pero seguimos mudos, el problema recae directame
 
 5. Finalmente, reinicia tu ordenador. Windows 11 detectará el hardware faltante al arrancar y reinstalará un controlador limpio y funcional de manera automática. ---
 
-### Advertencia del especialista en hardware
+Advertencia del especialista en hardware
 
 Cuando trabajes bajo presión de cierre contable o financiero, evita a toda costa utilizar programas de terceros de "actualización automática de drivers" que circulan por internet. Muchos de estos instaladores descargan versiones genéricas incompatibles con los codecs de audio propietarios de placas base empresariales (como Dell, HP o Lenovo), lo que puede generar una pantalla azul de error (BSOD) y arruinar por completo tu jornada laboral. Quédate siempre con los canales oficiales de Windows Update o los paquetes de controladores específicos del fabricante de tu equipo.
 
 ---
 
-## Preguntas frecuentes (FAQ)
+Preguntas frecuentes (FAQ)
 
 1. ¿Qué hago si después de desinstalar el controlador en el Administrador de dispositivos sigo sin sonido tras reiniciar? Si Windows no logra reinstalar el driver genérico por sí mismo, accede a la página web oficial de soporte del fabricante de tu equipo (Dell, HP, Lenovo, etc.), introduce el número de serie exacto de tu estación de trabajo, descarga el paquete de controladores de audio (`Audio Driver`) oficial para Windows 11 e instálalo manualmente.
 

@@ -22,6 +22,7 @@ theme: "High-Contrast Charcoal"
 
 
 
+
 Eram exatamente 8h45 da manhã em um hub de tecnologia na Zona Sul de São Paulo. A reunião de alinhamento técnico urgente antes da entrega do sprint com a diretoria estava prestes a começar, e meu cliente de videochamada travou. O motivo? Meu notebook decidiu fazer uma varredura completa e atualizar tudo no exato segundo em que cliquei para abrir o projeto. A barra de tarefas congelada, o cooler gritando como uma turbina de avião e o relógio correndo. Foi o empurrão que eu precisava para resolver de vez o calcanhar de Aquiles do Windows 10: a inicialização lenta entupida de aplicativos desnecessários.
 
 Se você já passou pela humilhação de ver o computador demorar dez minutos para abrir uma simples planilha enquanto o Teams tenta conectar dez vezes, você sabe exatamente do que estou falando. 
@@ -32,7 +33,7 @@ Se você já passou pela humilhação de ver o computador demorar dez minutos pa
 <strong>Alerta de Produtividade:</strong> Manter aplicativos como launchers de jogos, atualizadores automáticos e utilitários esquecidos rodando em segundo plano logo no boot consome ciclos preciosos de CPU e memória RAM antes mesmo de você começar a trabalhar.
 </div>
 
-## Por que o seu Windows 10 demora tanto para ligar?
+Por que o seu Windows 10 demora tanto para ligar?
 
 Antes de aplicar a faca cirúrgica no sistema, vale a pena entender a raiz do problema. A lentidão na inicialização geralmente é causada por três fatores principais:
 
@@ -44,7 +45,7 @@ Antes de aplicar a faca cirúrgica no sistema, vale a pena entender a raiz do pr
 
 ---
 
-## O Passo a Passo Definitivo para Resolver em 1 Minuto
+O Passo a Passo Definitivo para Resolver em 1 Minuto
 
 Esqueça softwares de terceiros milagrosos que prometem otimizações mágicas. O próprio Windows 10 possui uma ferramenta nativa, rápida e extremamente eficiente para gerenciar isso. Vamos direto ao ponto:
 
@@ -68,14 +69,14 @@ a:</strong> Não saia desativando tudo de forma cega. Mantenha ativos apenas o s
 
 ---
 
-## Precauções e Boas Práticas para o Dia a Dia
+Precauções e Boas Práticas para o Dia a Dia
 
 Limpar a inicialização vai devolver agilidade ao seu fluxo de trabalho, mas vale a pena manter alguns cuidados para evitar dores de cabeça futuras:
 
 * Revise periodicamente: Sempre que você instalar novos softwares pesados (como suítes de edição ou ferramentas de comunicação corporativa), eles costumam marcar a caixinha "Iniciar com o Windows" por padrão. Crie o hábito de checar o Gerenciador de Tarefas mensalmente.
 * Cuidado com atualizadores: Desativar atualizadores automáticos de programas secundários não impede que eles funcionem; apenas significa que eles vão checar por updates quando você realmente abrir o programa, o que é muito mais saudável para o desempenho da máquina. ---
 
-## Perguntas Frequentes (FAQ)
+Perguntas Frequentes (FAQ)
 
 1. Desativar programas na inicialização pode danificar o Windows? De forma alguma. A aba "Inicializar" do Gerenciador de Tarefas lida apenas com aplicativos de usuário e utilitários opcionais. O Windows protege seus arquivos e serviços essenciais de sistema, impedindo que você desative algo crítico por engano nessa tela.
 

@@ -22,6 +22,7 @@ theme: "Matte Black stealth"
 
 
 
+
 Lundi matin, 8h52. La réunion stratégique avec le N+2 commence dans 8 minutes. Évidemment, ma machine décide de faire une mise à jour de ses grands morts et se fige sur l'écran de chargement. Le ventilo souffle comme un A380 au décollage, le curseur freeze, et je transite lentement vers l'angoisse pure en voyant la barre de progression bloquée à 98%. J'ai failli balancer mon ThinkPad par la fenêtre. 
 
 Ce genre de galère, en tant qu'ingénieur système, ça me met hors de moi. On a sous les doigts des bécanes sous i7 avec 32 Go de RAM, et pourtant, à cause d'une ribambelle de bloatwares et de services tiers qui s'invitent au boot, nos machines rament comme des Pentium 4 sous Windows 98. 
@@ -34,7 +35,7 @@ Ce genre de galère, en tant qu'ingénieur système, ça me met hors de moi. On 
 
 ---
 
-### Pourquoi votre machine met trois plombes à démarrer ?
+Pourquoi votre machine met trois plombes à démarrer ?
 
 Avant de tout casser, faisons un état des lieux de la cata. Si votre poste met un temps infini à afficher le bureau, c'est généralement l'accumulation de trois facteurs critiques :
 
@@ -46,7 +47,7 @@ Avant de tout casser, faisons un état des lieux de la cata. Si votre poste met 
 
 ---
 
-### Procédure d'intervention : Nettoyage chirurgical (Spécifications techniques)
+Procédure d'intervention : Nettoyage chirurgical (Spécifications techniques)
 
 On passe aux choses sérieuses. Pas de blabla, voici le protocole exact que j'applique sur les postes de mes collègues en détresse.
 
@@ -81,15 +82,15 @@ sc config "NomDuServiceFoireux" start= disabled
 ### Étape 3 : Vérification de la santé du stockage via la Gestion des disques et PowerShell
 Un boot lent peut aussi cacher un SSD en fin de vie ou un système de fichiers corrompu à force de crashs.
 
-## 1. Ouvrez un terminal PowerShell en admin.
+1. Ouvrez un terminal PowerShell en admin.
 
-## 2.  Lancez un diagnostic d'intégrité du système :
+2.  Lancez un diagnostic d'intégrité du système :
 
 ```powershell
 sfc /scannow
 ```
 
-## 3. Vérifiez l'état S.M.
+3. Vérifiez l'état S.M.
 
 A.R.T de votre SSD pour être sûr qu'il ne rende pas l'âme :
 ```powershell
@@ -100,13 +101,13 @@ Si le statut renvoie autre chose que *Healthy*, sauvez vos données immédiateme
 
 ---
 
-### Précautions d'expert (Avertissements)
+Précautions d'expert (Avertissements)
 
 Ne désactivez pas tout bêtement. Si vous désactivez les services liés au bus PCI Express, au chipset Intel/AMD ou à la sécurité Windows (Windows Defender Security Center / VBS), vous allez provoquer un bel écran bleu (BSOD) au prochain redémarrage. En cas de doute sur un nom de service abscons, faites une recherche rapide sur le web avant de couper le cordon.
 
 ---
 
-## FAQ Technique
+FAQ Technique
 
 Q : Est-ce que je risque de casser Windows si je désactive un mauvais programme au démarrage ? R : Non. Le Gestionnaire des tâches ne vous laisse pas désactiver les services critiques du noyau Windows. Au pire, une application ne se lancera pas toute seule et vous devrez l'ouvrir manuellement quand vous en aurez besoin.
 

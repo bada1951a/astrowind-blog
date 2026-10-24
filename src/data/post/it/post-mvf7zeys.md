@@ -22,6 +22,7 @@ theme: "Pure Titanium Clean"
 
 
 
+
 Erano le 17:50 di un martedì infernale nel nostro ufficio al Centro direzionale di Milano. Mancavano dieci minuti alla deadline tassativa per l'invio del report trimestrale al board europeo, e la postazione principale del controllo di gestione si è letteralmente congelata. La ventola del PC sembrava stesse per decollare verso Linate, lo schermo rispondeva ai click con minuti di ritardo e il cursore si muoveva a scatti. Ho aperto di scatto *Gestione attività* usando la combinazione rapida Ctrl+Maiusc+Esc, e lo spettacolo era impietoso: l'utilizzo della CPU inchiodato al 100%, con il famigerato processo di sistema "System" (e il relativo modulo `ntoskrnl.exe`) che divorava ogni singolo ciclo di clock disponibile. 
 
 All'inizio il panico ha quasi preso il sopravvento. La prima reazione istintiva di chiunque sarebbe stata quella di tenere premuto il tasto di accensione per un hard reset brutale. Ma spegnere la macchina in quel momento esatto significava perdere gli ultimi dati non salvati del foglio di calcolo, corrompere il file di database locale e mancare la consegna al board. 
@@ -32,7 +33,7 @@ Dopo tentativi inutili di chiudere i processi secondari e un paio di riavvii for
 
 ---
 
-### Perché il processo "System" manda la CPU al 100%?
+Perché il processo "System" manda la CPU al 100%?
 
 Il processo *System* di Windows racchiude i thread del kernel del sistema operativo. Quando schizza al massimo e ci rimane, non è quasi mai un virus o un'applicazione standard che sta girando in background, ma piuttosto un conflitto a livello di basso livello hardware o software. Nella mia esperienza sul campo, le cause principali si riducono a tre colpevoli ricorrenti:
 
@@ -50,7 +51,7 @@ a:</strong> Non fermarti mai a terminare il processo "System" da Gestione attivi
 
 ---
 
-### La Procedura di Risoluzione Passo dopo Passo
+La Procedura di Risoluzione Passo dopo Passo
 
 Per sbloccare la situazione rapidamente senza perdere i dati, segui questa sequenza testata sul campo.
 
@@ -83,7 +84,7 @@ Se il problema persiste dopo il riavvio, il file system o il registro del kernel
 
 ---
 
-### Avvertenze e Precauzioni per la Sicurezza dei Dati
+Avvertenze e Precauzioni per la Sicurezza dei Dati
 
 Prima di mettere mano a driver di basso livello o eseguire comandi di ripristino profondo sul sistema operativo, tieni a mente queste regole d'oro da professionista IT:
 
@@ -93,7 +94,7 @@ Prima di mettere mano a driver di basso livello o eseguire comandi di ripristino
 
 ---
 
-### Domande Frequenti (FAQ)
+Domande Frequenti (FAQ)
 
 D: Posso semplicemente terminare il processo System da Gestione attività per far respirare il PC?
 

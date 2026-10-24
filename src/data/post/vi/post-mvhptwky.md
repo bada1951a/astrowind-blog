@@ -22,6 +22,7 @@ theme: "Mint Fresh Engineering"
 
 
 
+
 Đồng hồ góc màn hình nhảy đúng 15:45, chỉ còn 15 phút nữa là đến hạn chót nộp bản báo cáo tài chính tháng cho sếp tổng tại văn phòng trung tâm TP.HCM. Tay trái tôi bấm cuống cuồng, tay phải nhấp chuột phải vào tệp Excel chính để đổi tên và nén file gửi đi. Thế nhưng, đập vào mắt tôi lại là cái giao diện menu chuột phải tối giản mới tinh của Windows 11. Muốn nén file, tôi lại phải bấm thêm một nhịp "Show more options" (Hiển thị thêm tùy chọn) vô duyên vô phạt. Trong lúc hoảng loạn, cái click chuột chậm chạp ấy làm tôi trễ mất 3 giây, tim đập chân lạnh vì sợ treo cả hệ thống.
 
 Chuyện quái quỷ gì đang diễn ra với cái giao diện Windows 11 này vậy? Tại sao một thao tác vốn quen thuộc từ thời Windows 7, Windows 10 bỗng dưng bị "cách tân" thành một thảm họa thao tác cho dân văn phòng?
@@ -30,7 +31,7 @@ Chuyện quái quỷ gì đang diễn ra với cái giao diện Windows 11 này 
 <strong>Góc nhìn kỹ thuật:</strong> Giao diện menu chuột phải (Context Menu) mới trên Windows 11 được thiết kế theo ngôn ngữ Fluent Design mới nhằm tối ưu hóa cho màn hình cảm ứng và các ứng dụng Universal Windows Platform (UWP). Tuy nhiên, nó lại làm gián đoạn nghiêm trọng thói quen làm việc của người dùng văn phòng chuyên nghiệp, những người cần tốc độ phản hồi nhanh qua các phần mềm Win32 truyền thống như WinRAR, Photoshop hay bộ Office.
 </div>
 
-## Nguyên nhân thực sự phía sau sự bất tiện này
+Nguyên nhân thực sự phía sau sự bất tiện này
 
 Trước khi tìm cách bẻ khóa, chúng ta cần hiểu tại sao Microsoft lại ép người dùng phải dùng cái menu "cụt lủn" đó. Dưới đây là 3 nguyên nhân chính:
 
@@ -44,7 +45,7 @@ Sau sự cố suýt trễ deadline chiều hôm đó, tôi đã ngồi lại ngh
 
 ---
 
-## Hướng dẫn từng bước khôi phục Menu chuột phải cổ điển
+Hướng dẫn từng bước khôi phục Menu chuột phải cổ điển
 
 Chúng ta sẽ sử dụng công cụ Windows Terminal hoặc Command Prompt để can thiệp vào kho lưu trữ hệ thống Registry Editor. Đừng lo lắng, thao tác rất an toàn nếu bạn làm đúng từng bước sau đây.
 
@@ -78,7 +79,7 @@ Màn hình và thanh Taskbar sẽ chớp nhẹ một cái trong vòng 1-2 giây.
 
 ---
 
-## Lời khuyên từ chuyên gia IT
+Lời khuyên từ chuyên gia IT
 
 Việc can thiệp vào Registry tuy nhỏ nhưng bạn cần lưu ý một số điểm sau để bảo vệ dữ liệu công ty:
 
@@ -87,7 +88,7 @@ Việc can thiệp vào Registry tuy nhỏ nhưng bạn cần lưu ý một số
 
 ---
 
-## Các câu hỏi thường gặp (FAQ)
+Các câu hỏi thường gặp (FAQ)
 
 1. Thủ thuật này có làm mất bảo hành hay gây lỗi hệ thống Windows 11 không?
 Hoàn toàn không. Đây chỉ là thao tác kích hoạt lại một lớp giao diện (GUID) cũ vẫn được Microsoft ngầm tích hợp sẵn bên trong nhân hệ thống Windows 11 để phục vụ các lập trình viên. Nó không làm tổn hại đến phần cứng hay gây mất dữ liệu của bạn.

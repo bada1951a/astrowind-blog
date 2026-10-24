@@ -22,6 +22,7 @@ theme: "Cyberpunk Terminal"
 
 
 
+
 Eran las 4:55 PM de un viernes. El *jefe de proyectos* tenía que presentar los números del Q3 en diez minutos a la dirección general, y su estación de trabajo decidió hacer un cosplay perfecto de un pisapapeles caro: los ventiladores rugían a tope, las luces RGB parpadeaban con alegría, pero el monitor seguía completamente negro, soltando el maldito aviso de *Sin señal*. El tipo estaba a un segundo de estampar el teclado contra el monitor. Sudor frío, la sala de juntas esperándoles, y yo con cara de payaso intentando averiguar por qué la BIOS ni siquiera hacía el clásico *beep* de arranque.
 
 <div style="border-left: 4px solid #00ffcc; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,255,204,0.05); border-radius: 4px; font-family: monospace;">
@@ -35,7 +36,7 @@ No era la tarjeta gráfica, ni el cable HDMI. El verdadero culpable estaba escon
 
 ---
 
-## Root Cause Breakdown: ¿Por qué demonios pasa esto?
+Root Cause Breakdown: ¿Por qué demonios pasa esto?
 
 Antes de volverte loco cambiando piezas, hay que entender qué está pasando en la placa base cuando el PC enciende pero el monitor se queda en negro.
 
@@ -47,22 +48,22 @@ Antes de volverte loco cambiando piezas, hay que entender qué está pasando en 
 
 ---
 
-## Step-by-Step Resolution: Protocolo de Resurrección de RAM
+### Step-by-Step Resolution: Protocolo de Resurrección de RAM
 
 Vamos a dejar los blablablás y a ensuciarnos las manos. Apaga el equipo, desconéctate de la corriente (¡saca el cable de la fuente, por favor, no queremos freír nada!) y ten a la mano una borra de nata (goma de borrar blanca de toda la vida) y aire comprimido.
 
 <div style="border-left: 4px solid #00ffcc; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,255,204,0.05); border-radius: 4px; font-family: monospace;">
-# Secuencia de comandos para diagnóstico físico en terminal human
+Secuencia de comandos para diagnóstico físico en terminal human
 
 a:<br>
 
-## 1.  shutdown -s -t 0 (Corte total de energía)<br>
+1.  shutdown -s -t 0 (Corte total de energía)<br>
 
-## 2. unmount_chassis_side_panel()<br>
+2. unmount_chassis_side_panel()<br>
 
-## 3. extract_dimm_modules()<br>
+3. extract_dimm_modules()<br>
 
-## 4. clean_contacts() -> verify_boot()
+4. clean_contacts() -> verify_boot()
 
 </div>
 
@@ -81,7 +82,7 @@ Si tienes varios módulos, no los metas todos de golpe.
 Conecta la corriente y enciende. Si da vídeo, entra a Windows y ejecuta el diagnóstico oficial para descartar errores lógicos o sectores dañados:
 
 ```cmd
-# Abre el Símbolo del sistema (CMD) como Administrador y ejecut
+Abre el Símbolo del sistema (CMD) como Administrador y ejecut
 
 a:
 mdsched.exe
@@ -90,7 +91,7 @@ mdsched.exe
 
 ---
 
-### Expert Warning / Advice: Lo que los tutoriales de YouTube no te dicen
+Expert Warning / Advice: Lo que los tutoriales de YouTube no te dicen
 
 <div style="border-left: 4px solid #ff0055; padding: 12px 16px; margin: 20px 0; background-color: rgba(255,0,85,0.05); border-radius: 4px; font-family: monospace;">
 [ADVERTENCIA_HARDWARE]: Nunca uses alcohol común de farmacia ni líquidos abrasivos para limpiar los pines de la RAM. El residuo químico degrada el oro de los contactos a mediano plazo. Si necesitas solvente, usa exclusivamente alcohol isopropílico al 99%.
@@ -100,7 +101,7 @@ Además, si al encender el equipo escuchas una sinfonía de pitidos continuos (b
 
 ---
 
-### Frequently Asked Questions (FAQ)
+Frequently Asked Questions (FAQ)
 
 Q1: ¿Por qué el PC enciende (giran los ventiladores y encienden luces) pero la pantalla sigue negra si el problema es la RAM?  
 *R:* Porque la placa base tiene energía para alimentar los periféricos básicos y ventiladores, pero el procesador no puede ejecutar el código de la BIOS (POST) sin la memoria RAM activa. Sin RAM, el sistema operativo ni siquiera empieza a cargar, por lo que la tarjeta gráfica no recibe la orden de enviar señal de vídeo al monitor.

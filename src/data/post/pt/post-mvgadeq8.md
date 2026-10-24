@@ -22,6 +22,7 @@ theme: "Deep Ocean Cobalt"
 
 
 
+
 Eram exatamente 14h42 em um escritório na Avenida Paulista, em São Paulo. Faltavam dezoito minutos para a reunião mais crítica do semestre com a diretoria internacional. O notebook principal do gerente de operações estava projetado no telão da sala de reuniões e, bem no canto inferior direito da tela, brilhava aquela frase irritante: "Ativar o Windows - Vá para Configurações para ativar o Windows". O diretor executivo, conhecido por ser extremamente atento a detalhes visuais, olhou fixamente para a projeção e arqueou a sobrancelha. O clima na sala congelou. A licença corporativa estava em processo de renovação no setor de compras, mas o servidor KMS da matriz havia caído cinco minutos antes. Eu precisava sumir com aquela marca d'água imediatamente, sem reiniciar a máquina, sem instalar softwares suspeitos e sem correr o risco de corromper o registro do sistema na frente de todo mundo.
 
 Nessas horas, o desespero faz o técnico tentar de tudo: baixar ativadores milagrosos da internet que só trazem vírus, reiniciar o processo do Explorador de Arquivos de forma desesperada ou fuçar em menus profundos das Configurações que não mudam nada. ![Tech Troubleshooting Guide](/images/tech-photo/ram%20(6).png)
@@ -34,7 +35,7 @@ a:</strong> Este procedimento é voltado para situações emergenciais em ambien
 
 ---
 
-### Por que essa marca d'água aparece de repente?
+Por que essa marca d'água aparece de repente?
 
 Antes de executar qualquer comando, vale entender o cenário técnico por trás do problema para não culpar o hardware ou achar que o SSD pifou:
 
@@ -84,7 +85,7 @@ Para fazer a marca d'água sumir instantaneamente da tela sem precisar reiniciar
 
 ---
 
-### Precauções de Segurança e Boas Práticas de TI
+Precauções de Segurança e Boas Práticas de TI
 
 <div style="border-left: 4px solid #2563eb; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Segurança em Primeiro Lugar:</strong> Nunca utilize ativadores piratas (como KMSAuto, scripts desconhecidos do GitHub ou arquivos executáveis `.exe`) em máquinas corporativas. Eles injetam payloads maliciosos, comprometem a integridade do Windows Defender e podem vazar credenciais da empresa para servidores externos.
@@ -94,7 +95,7 @@ Para fazer a marca d'água sumir instantaneamente da tela sem precisar reiniciar
 
 ---
 
-### Perguntas Frequentes (FAQ)
+Perguntas Frequentes (FAQ)
 
 1. Esse procedimento funciona no Windows 11 Pro e Home? Sim, os comandos baseados no `slmgr.vbs` e a manipulação do serviço `sppsvc` funcionam tanto no Windows 10 quanto no Windows 11. No entanto, edições Home possuem limitações quanto à conexão com servidores de volume KMS corporativo.
 

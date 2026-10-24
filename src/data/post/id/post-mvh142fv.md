@@ -22,6 +22,7 @@ theme: "Industrial Blueprint"
 
 
 
+
 Suasana di salah satu gedung perkantoran kawasan Sudirman, Jakarta, mendadak mencekam. Jam menunjukkan pukul 16:45 WIB, tepat lima belas menit sebelum tenggat waktu pengiriman laporan keuangan kuartalan ke direksi. Tiba-tiba, layar monitor manajer operasional nge-freeze total. Mouse tidak bergerak, tombol Caps Lock ditekan tidak merespons, dan angka-angka laporan di Excel seolah mengejek dari balik layar yang membeku. Panik melanda karena belum sempat *save*. Dengan terpaksa, tombol *power* ditahan selama lima detik hingga PC mati paksa. Begitu PC dinyalakan ulang, dokumen yang dikerjakan hilang setengahnya, dan kepanikan berubah menjadi kejengkelan karena masalah *random freezing* seperti ini sudah terjadi tiga kali dalam seminggu terakhir.
 
 ![Tech Troubleshooting Guide](/images/tech-photo/tech-photos%20(42).jpg)
@@ -34,7 +35,7 @@ Sebagai teknisi infrastruktur IT yang sudah kenyang asam garam menghadapi drama 
 
 ---
 
-### Kenapa Windows 11 Bisa Freeze Mendadak? (Analisis Akar Masalah)
+Kenapa Windows 11 Bisa Freeze Mendadak? (Analisis Akar Masalah)
 
 Sebelum masuk ke langkah teknis, mari kita bedah tiga penyebab utama kenapa Windows 11 sering mendadak tidak merespons di lingkungan kantoran:
 
@@ -46,7 +47,7 @@ Sebelum masuk ke langkah teknis, mari kita bedah tiga penyebab utama kenapa Wind
 
 ---
 
-## Langkah-Langkah Melacak Penyebab Freeze Lewat Event Viewer
+### Langkah-Langkah Melacak Penyebab Freeze Lewat Event Viewer
 
 Mari kita bedah kejadian di Sudirman tadi menggunakan langkah-langkah sistematis yang bisa Anda ikuti langsung di meja kerja Anda. ## Langkah 1: Membuka Event Viewer
 
@@ -57,7 +58,7 @@ Mari kita bedah kejadian di Sudirman tadi menggunakan langkah-langkah sistematis
 ### Langkah 2: Menyaring Kejadian Kritis (Critical & Error)
 Karena log sistem sangat banyak, kita tidak perlu membaca semuanya satu per satu. Kita cari waktu persis di mana PC Anda tadi freeze.
 
-## 1. Di panel sebelah kanan, klik Filter Current Log...
+1. Di panel sebelah kanan, klik Filter Current Log...
 
 2. Pada bagian *Logged*, pilih rentang waktu kejadian (misalny
 
@@ -79,7 +80,7 @@ a:
 
 ---
 
-### Perbandingan Cepat: Gejala dan Indikator Error di Event Viewer
+Perbandingan Cepat: Gejala dan Indikator Error di Event Viewer
 
 Berikut adalah tabel panduan cepat bagi Anda untuk mencocokkan gejala fisik PC dengan kode error di Event Viewer:
 
@@ -91,7 +92,7 @@ Berikut adalah tabel panduan cepat bagi Anda untuk mencocokkan gejala fisik PC d
 
 ---
 
-### Tindakan Pencegahan dan Saran Ahli (Expert Advice)
+Tindakan Pencegahan dan Saran Ahli (Expert Advice)
 
 Setelah Anda menemukan biang keroknya melalui Event Viewer, lakukan langkah pengamanan berikut agar insiden di Sudirman tidak terulang:
 
@@ -105,7 +106,7 @@ a: Beberapa motherboard memiliki bug pada manajemen daya C-States yang memicu fr
 
 ---
 
-## FAQ (Pertanyaan yang Sering Diajukan)
+FAQ (Pertanyaan yang Sering Diajukan)
 
 Q: Apakah Event Viewer bisa memperbaiki komputer secara otomatis?
 

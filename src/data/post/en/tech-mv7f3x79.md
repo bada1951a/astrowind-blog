@@ -22,6 +22,7 @@ theme: "Sunset Horizon Coral"
 
 
 
+
 Last Friday at 4:30 PM, right as our deployment sprint was winding down, an engineering lead brought her flagship Dell Precision workstation into my lab. She was running dual external 4K monitors through a Thunderbolt 4 dock. Every twenty seconds, panel two would drop to black, display the dreaded "No Signal" banner, wake up, and drag the primary panel into an agonizing three-second stutter loop. She had already swapped cables three times and rebooted twice.
 
 In production environments, this issue is rarely fried silicon. Nine times out of ten, dual-monitor signal dropouts on modern laptops boil down to a corrupted display pipeline state: botched DisplayPort link training, aggressive Windows Update driver clobbering, or an invalidated EDID cache in the registry. 
@@ -41,7 +42,7 @@ If your external screens are blacking out, cycling signal, or flashing whenever 
 
 ---
 
-## Root Cause Breakdown: Why Modern Dual-Display Links Fail
+Root Cause Breakdown: Why Modern Dual-Display Links Fail
 
 Laptops routing dual displays handle a surprisingly fragile chain of handshakes across multiplexers, integrated graphics (iGPU), discrete cards (dGPU), and dock controller hubs. When flickering strikes, it traces back to one of three failures:
 
@@ -73,7 +74,7 @@ Over months of hot-plugging docks, hotel TVs, and conference room projectors, th
 
 ---
 
-### Comparison: Default Windows Behavior vs. Tuned Hardware Pipeline
+Comparison: Default Windows Behavior vs. Tuned Hardware Pipeline
 
 | Metric / Behavior | Default / Degraded Configuration | Tuned Hardware Setup |
 | :--- | :--- | :--- |
@@ -85,11 +86,11 @@ Over months of hot-plugging docks, hotel TVs, and conference room projectors, th
 
 ---
 
-## Step-by-Step Resolution: The Clean-Slate Protocol
+### Step-by-Step Resolution: The Clean-Slate Protocol
 
 Follow these steps in exact sequence. Do not skip the offline isolation phase; otherwise, Windows Update will silently inject a generic display driver mid-install and invalidate your progress.
 
-## Phase 1: Clear the Stale Windows Monitor Registry Cache
+Phase 1: Clear the Stale Windows Monitor Registry Cache
 
 Before touching the drivers, purge the accumulated multi-monitor topology configurations.
 
@@ -97,13 +98,13 @@ Before touching the drivers, purge the accumulated multi-monitor topology config
 
 2. Press `Win + R`, type `cmd`, and press `Ctrl + Shift + Enter` to launch Command Prompt as Administrator.
 
-## 3. Stop the display pipeline service temporarily:
+3. Stop the display pipeline service temporarily:
 
    ```cmd
    net stop "DisplayEnhancementService"
    ```
 
-## 4. Press `Win + R`, type `regedit`, and hit Enter.
+4. Press `Win + R`, type `regedit`, and hit Enter.
 
 5. Navigate to:
 
@@ -119,7 +120,7 @@ Before touching the drivers, purge the accumulated multi-monitor topology config
   <strong>Field Tip:</strong> Never delete the parent <code>GraphicsDrivers</code> key itself—only delete the three nested subkeys named above. If Windows blocks deletion, right-click the key, select <strong>Permissions</strong>, and grant <em>Full Control</em> to your Administrator account.
 </div>
 
-## Phase 2: Nuclear Clean via Display Driver Uninstaller (DDU)
+Phase 2: Nuclear Clean via Display Driver Uninstaller (DDU)
 
 To prevent driver conflicts, execute an isolated cleanup in Windows Safe Mode.
 
@@ -129,7 +130,7 @@ To prevent driver conflicts, execute an isolated cleanup in Windows Safe Mode.
 
 3. Navigate to: `Troubleshoot` > `Advanced options` > `Startup Settings` > click `Restart`.
 
-## 4. Upon reboot, hit `4` or `F4` to enter Safe Mode.
+4. Upon reboot, hit `4` or `F4` to enter Safe Mode.
 
 5. Launch Display Driver Uninstaller (DDU):
 
@@ -147,21 +148,21 @@ To prevent driver conflicts, execute an isolated cleanup in Windows Safe Mode.
       └──> Run DDU: Select iGPU (Intel/AMD)  ──> Execute "Clean and restart"
 ```
 
-## Phase 3: Sequential Clean Driver Reinstallation
+Phase 3: Sequential Clean Driver Reinstallation
 
 Now boot back into standard Windows while keeping your internet connection disabled.
 
 1. Run the offline installer for your Integrated GPU (iGPU) first. The iGPU physically controls your laptop's display PHYs; it must establish the root driver framework before the discrete GPU can negotiate display pipelines.
 
-## 2. Reboot your laptop.
+2. Reboot your laptop.
 
 3. Run the offline installer for your Discrete GPU (dGPU). Choose *Custom Installation* and check Perform a clean installation.
 
-## 4. Reboot your laptop once more.
+4. Reboot your laptop once more.
 
 5. Reconnect your network adapters now that the core drivers are locked in place.
 
-## Phase 4: Clean Cable Sequence and Link Clock Synchronization
+Phase 4: Clean Cable Sequence and Link Clock Synchronization
 
 Now we rebuild the physical display link without triggering an MST sync error.
 
@@ -171,7 +172,7 @@ Now we rebuild the physical display link without triggering an MST sync error.
 
 3. Open Device Manager(`Win + X` > `Device Manager`). ExpandMonitors and confirm your panel shows its actual model name rather than "Generic PnP Monitor". If it displays Generic PnP, right-click and hit *Update driver* > *Search automatically*.
 
-## 4. Connect Monitor 2.
+4. Connect Monitor 2.
 
 5. Press `Win + I` to open Settings, go to `System` > `Display` > `Advanced display`.
 
@@ -181,7 +182,7 @@ Now we rebuild the physical display link without triggering an MST sync error.
 
 ---
 
-### Expert Warning: Prevent Hardware-Level Failures
+Expert Warning: Prevent Hardware-Level Failures
 
 <div style="border-left: 4px solid #ef4444; padding: 14px 18px; margin: 24px 0; background-color: rgba(239, 68, 68, 0.04); border-radius: 4px;">
   <strong style="color: #ef4444;">Caution: Thermal Throttling on MST Hubs & Ground Loops</strong><br />
@@ -190,7 +191,7 @@ Now we rebuild the physical display link without triggering an MST sync error.
 
 ---
 
-### Frequently Asked Questions
+Frequently Asked Questions
 
 Q1: Why does hot-unplugging the cable fix the flicker for 15 minutes before the screen drops out again?
 Hot-unplugging forces the graphics adapter to reset the DisplayPort auxiliary (AUX) channel and re-run link training from scratch. At connection time, the link operates cleanly. 

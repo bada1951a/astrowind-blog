@@ -22,6 +22,7 @@ theme: "Deep Indigo System"
 
 
 
+
 Jam 4 sore di sebuah gedung perkantoran kawasan Sudirman Jakarta, suasana mendadak tegang luar biasa. Batas waktu pengiriman laporan keuangan tinggal satu jam lagi, tapi layar monitor tiba-tiba membeku (*freezing*). Kipas PC berputar kencang menderu bagaikan mesin jet yang mau lepas landas, sementara kursor tetikus bergerak sangat lambat seperti terjebak di dalam lumpur. Saat tombol kombinasi keramat ditekan untuk membuka Task Manager, pemandangannya bikin jantungan: penggunaan CPU mentok di angka 100 persen penuh, dan pelakunya bukanlah aplikasi berat seperti game atau software rendering, melainkan proses bawaan Windows bernama "System" atau "System and Compressed Memory". 
 
 Panik? Pastinya. Rekan kerja di sebelah mulai keringat dingin karena dokumen Excel penting belum sempat tersimpan. Berbagai cara amatiran langsung dicoba, mulai dari menekan tombol restart paksa di CPU berulang kali, mencabut kabel power, hingga memukul-mukul meja karena kesal. Padahal, tindakan asal-asalan seperti itu justru berisiko merusak sektor *hard drive* atau membuat file laporan korup total. 
@@ -35,7 +36,7 @@ Sebagai seorang teknisi infrastruktur IT yang sudah kenyang asam garam menghadap
 
 ---
 
-### Kenapa Proses "System" Bisa Bikin CPU Kerja Kerja Kerja Terus?
+Kenapa Proses "System" Bisa Bikin CPU Kerja Kerja Kerja Terus?
 
 Sebelum masuk ke tombol-tombol pengaturan, kita harus paham dulu kenapa proses inti Windows ini mendadak menjadi "vampir" yang menyedot daya komputasi secara brutal. Berdasarkan pengalaman di lapangan, ada 3 penyebab utama yang paling sering terjadi:
 
@@ -43,7 +44,7 @@ Sebelum masuk ke tombol-tombol pengaturan, kita harus paham dulu kenapa proses i
 
    Driver komponen seperti chipset motherboard, LAN card, atau driver grafis yang sudah kedaluwarsa atau korup sering kali memicu *interrupt storm*. Akibatnya, proses *System* di Windows terus-menerus memproses sinyal interupsi yang tak berkesudahan.
 
-2. Layanan Windows Update yang Nyangkut (Stuck Update)
+## 2. Layanan Windows Update yang Nyangkut (Stuck Update)
 
    Pembaruan sistem yang gagal terunduh atau macet di tengah jalan kerap memaksa proses latar belakang bekerja secara repetitif tanpa hasil, memakan kapasitas inti CPU hingga maksimal.
 
@@ -98,7 +99,7 @@ a:
 
 ---
 
-### Peringatan Keras dari Teknisi (Best Practices)
+Peringatan Keras dari Teknisi (Best Practices)
 
 <div style="border-left: 4px solid #4338ca; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Perhatian Penting:</strong> Jangan sembarangan mendownload software pihak ketiga bertuliskan "PC Cleaner" atau "CPU Booster" gratisan dari internet. Banyak di antaranya justru berisi adware atau malware yang memperparah kondisi sistem Anda di saat genting.
@@ -108,7 +109,7 @@ Selalu pastikan sirkulasi udara pada casing PC atau laptop Anda tidak terhalang 
 
 ---
 
-### Tanya Jawab Populer (FAQ)
+Tanya Jawab Populer (FAQ)
 
 Q: Apakah aman mematikan layanan SysMain (Superfetch) secara permanen?
 

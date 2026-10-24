@@ -22,6 +22,7 @@ theme: "Graphite Technical Paper"
 
 
 
+
 Eran las 18:45 en nuestra oficina corporativa en Madrid. A solo quince minutos de enviar el paquete definitivo de un proyecto clave para un cliente multinacional, la pantalla de la workstation principal se quedo totalmente congelada. El cursor no respondia, el teclado estaba muerto y el ventilador seguia zumbando con una calma insultante. Un reinicio por botonazo nos costo diez minutos vitales y, por supuesto, la entrega se retraso, generando un ambiente de tension maxima en el departamento de sistemas. Lo peor no fue el bloqueo en si, sino que era la tercera vez en la semana que ocurria sin dejar rastro aparente.
 
 <div style="border-left: 4px solid #475569; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
@@ -37,7 +38,7 @@ Si te encuentras en una situation similar, aqui tienes el metodo directo para de
 
 ---
 
-### Diagnostico de Causas Raiz
+Diagnostico de Causas Raiz
 
 Antes de hacer clic en cualquier sitio, debemos entender que buscan nuestros ojos expertos en los registros:
 
@@ -75,7 +76,7 @@ Anota mentalmente la hora exacta en la que tu PC se congelo hoy. Ahora, busca en
 
 ---
 
-### Precauciones y Consejos de Hardware
+Precauciones y Consejos de Hardware
 
 - Atencion con la energi
 
@@ -85,7 +86,7 @@ a: Si el Visor de eventos te muestra constantemente el error Kernel-Power ID 41 
 
 a: Antes de modificar parametros de energia o voltajes de RAM en la BIOS tras un analisis de eventos, asegúrate de respaldar tus documentos criticos en la nube corporativa. ---
 
-## Preguntas Frecuentes (FAQ)
+Preguntas Frecuentes (FAQ)
 
 1. ¿Por que el Visor de eventos muestra tantos errores en rojo que parece que mi PC esta rota y sin embargo funciona bien? Es totalmente normal. Windows registra cientos de advertencias y errores menores en segundo plano (servicios que no arrancan a la primera, tiempos de espera agotados de aplicaciones secundarias). El secreto para un buen diagnostico tecnico es filtrar unicamente los errores que coinciden de forma milimetrica con la hora exacta en la que tu equipo sufrio el congelamiento real.
 

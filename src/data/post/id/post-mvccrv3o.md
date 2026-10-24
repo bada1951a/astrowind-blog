@@ -22,6 +22,7 @@ theme: "Solarized Amber Warm"
 
 
 
+
 Jam 8 malam di kantor startup kawasan SCBD Jakarta. Tim *engineering* sedang bersiap merilis pembaruan besar sistem internal, tiba-tiba salah satu PC workstation utama yang menangani *deployment pipeline* mendadak mati total dan menampilkan layar biru pekat dengan kode *stop error* yang bikin jantungan: IRQL_NOT_LESS_OR_EQUALatau kode heksadesimal0x0000000
 
 a. Panik? Jelas. Pengerjaan sistem internal langsung tersendat karena mesin tersebut tidak mau masuk ke sistem operasi dan terus-menerus mengalami *reboot loop*.
@@ -36,7 +37,7 @@ Setelah berjibaku selama dua jam mencoba berbagai cara instan seperti mematikan 
 a. Sembilan puluh persen kasus ini bisa diselesaikan lewat investigasi RAM fisik atau pembaruan/penurunan versi driver yang bermasalah.
 </div>
 
-## Akar Masalah: Kenapa Error 0x0000000a Bisa Muncul?
+Akar Masalah: Kenapa Error 0x0000000a Bisa Muncul?
 
 Sebelum masuk ke langkah perbaikan, mari kita bedah tiga penyebab utama yang sering ditemukan pada kasus operasional sehari-hari:
 
@@ -50,7 +51,7 @@ a: Aplikasi utilitas atau antivirus lawas yang menancapkan modul *driver*-nya la
 
 ---
 
-## Langkah Eksekusi: Panduan Pemulihan Step-by-Step
+### Langkah Eksekusi: Panduan Pemulihan Step-by-Step
 
 Karena PC workstation tadi tidak bisa masuk ke mode normal, langkah pertama yang wajib kita lakukan adalah masuk ke Safe Mode. Nyalakan komputer, lalu paksa matikan sebanyak tiga kali saat logo Windows muncul untuk memicu *Automatic Repair*, lalu pilih *Advanced Startup* > *Startup Settings* > pilih opsi 4 atau F4 untuk *Enable Safe Mode*.
 
@@ -71,19 +72,19 @@ Jika memori dalam kondisi prima, besar kemungkinan pelakunya adalah *driver* yan
 </div>
 
 ### Langkah 3: Verifikasi Integritas Berkas Sistem (SFC & DISM)
-Langkah pamungkas untuk memastikan tidak ada file sistem inti yang rusak akibat *crash* mendadak.
+### Langkah pamungkas untuk memastikan tidak ada file sistem inti yang rusak akibat *crash* mendadak.
 * Buka TerminalatauCommand Prompt dengan hak akses Administrator (Run as Administrator).
 * Ketik perintah `DISM.exe /Online /Cleanup-image /Restorehealth` lalu tekan Enter. Tunggu hingga proses selesai 100%.
 * Setelah itu, ketik perintah `sfc /scannow` dan tekan Enter. Perintah ini akan memindai dan memperbaiki file sistem yang rusak secara otomatis.
 * Lakukan *restart* normal pada komputer Anda. ---
 
-## Catatan Penting untuk Mencegah Kejadian Berulang
+Catatan Penting untuk Mencegah Kejadian Berulang
 
 Berdasarkan pengalaman menangani infrastruktur kantor, pencegahan selalu lebih murah daripada perbaikan darurat di malam hari. Selalu biasakan untuk membuat *System Restore Point* sebelum Anda melakukan pembaruan driver berskala besar. Selain itu, pastikan sirkulasi udara di ruang kerja atau server terjaga agar suhu komponen hardware tidak memicu kegagalan baca pada modul RAM.
 
 ---
 
-## Tanya Jawab Populer (FAQ)
+Tanya Jawab Populer (FAQ)
 
 1. Apakah error 0x0000000a pasti menandakan RAM saya rusak? Tidak selalu. Meskipun kode ini berkaitan dengan memori, 70% kasus justru disebabkan oleh driver software yang mencoba mengakses alamat memori secara ilegal, bukan kerusakan fisik RAM itu sendiri.
 

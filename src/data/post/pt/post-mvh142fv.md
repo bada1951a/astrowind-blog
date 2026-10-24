@@ -22,6 +22,7 @@ theme: "Nordic Clean Ice"
 
 
 
+
 Eram exatamente 14h45 em um escritório na Avenida Paulista, em São Paulo. Faltavam quinze minutos para a reunião mais importante do semestre com a diretoria, e a máquina principal do gerente de operações simplesmente congelou. Tela estática, mouse morto, o cooler rodando no talo e o pior: a apresentação de resultados aberta sem backup recente. No desespero, o botão físico de reset foi acionado. A máquina voltou, a reunião aconteceu no sufoco usando um notebook reserva, mas o problema voltou a se repetir duas vezes na mesma semana. Trocar peças às cegas estava fora de cogitação. Era hora de usar a ferramenta que todo bom profissional de suporte tem no arsenal: o Visualizador de Eventos do Windows.
 
 <div style="border-left: 4px solid #0284c7; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
@@ -30,7 +31,7 @@ Eram exatamente 14h45 em um escritório na Avenida Paulista, em São Paulo. Falt
 a:</strong> O Windows 11 guarda um diário secreto de tudo o que acontece em seus circuitos. Quando ocorre um travamento aleatório (freezing), o sistema costuma registrar a pista do crime milissegundos antes de travar ou logo após o reinício forçado.
 </div>
 
-## Por que o Windows 11 Trava do Nada?
+Por que o Windows 11 Trava do Nada?
 
 Antes de abrir qualquer ferramenta, precisamos entender o que costuma derrubar o sistema operacional de forma repentina. Na minha rotina de bancada, divido esses travamentos misteriosos em três grandes vilões:
 
@@ -42,7 +43,7 @@ Antes de abrir qualquer ferramenta, precisamos entender o que costuma derrubar o
 
 ---
 
-## Passo a Passo: Rastreando o Erro no Visualizador de Eventos
+### Passo a Passo: Rastreando o Erro no Visualizador de Eventos
 
 Esqueça achismos. Vamos abrir a ferramenta nativa do Windows para encontrar o código de erro exato (Event ID) que provocou o congelamento.
 
@@ -65,7 +66,7 @@ Procure pelo evento com o horário exato em que o computador travou. Na aba Gera
 
 ---
 
-## Verificações Complementares no Painel de Controle e Configurações
+Verificações Complementares no Painel de Controle e Configurações
 
 Depois de identificar o rastro no Visualizador de Eventos, vale a pena checar o estado geral do hardware através de caminhos rápidos do sistema:
 
@@ -77,7 +78,7 @@ a:AbraConfigurações>Sistema>Recuperação para testar se há falhas de hardwar
 
 ---
 
-## Alerta do Especialist
+Alerta do Especialist
 
 a: Cuidados com Hardware e Dados
 
@@ -85,7 +86,7 @@ Travamentos constantes onde o usuário é obrigado a desligar o PC no botão de 
 
 ---
 
-## Perguntas Frequentes (FAQ)
+Perguntas Frequentes (FAQ)
 
 1. O que significa o Event ID 41 no Visualizador de Eventos?
 O Event ID 41 (Kernel-Power) indica apenas que o computador foi desligado ou reiniciado sem um desligamento limpo. Ele não aponta a causa raiz sozinho, mas confirma que houve uma queda abrupta de energia ou travamento total do sistema. ![Tech Troubleshooting Guide](/images/tech-photo/tech-photos%20(33).jpg)

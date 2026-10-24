@@ -22,9 +22,10 @@ theme: "Sunset Horizon Coral"
 
 
 
+
 Eran las 18:50 en nuestra oficina corporativa en Madrid. Quedaban apenas diez minutos para enviar el paquete definitivo del proyecto trimestral a la direccion y mi equipo principal empezo a fallar de la peor manera posible. Necesitaba comprimir carpetas urgentemente, renombrar lotes masivos de archivos PDF y aplicar scripts de automatizacion desde el explorador, pero cada vez que hacia clic derecho con el raton, Windows 11 me obligaba a dar un rodeo absurdo haciendo clic en "Mostrar mas opciones". Ese pequeño retraso de dos segundos por cada operacion se acumulaba, generando una frustracion monumental en medio del caos del cierre de proyecto.
 
-### El problema diario: El infierno del nuevo diseño de Windows 11
+El problema diario: El infierno del nuevo diseño de Windows 11
 
 ![Tech Troubleshooting Guide](/images/tech-photo/tech-photos%20(35).jpg)
 
@@ -36,7 +37,7 @@ Durante los primeros minutos de panico, intente adaptarme a la nueva interfaz mi
 a:</strong> El nuevo menu contextual de Windows 11 prioriza la limpieza visual, pero sacrifica la productividad directa de los usuarios avanzados y profesionales de sistemas que dependen de accesos rapidos de terceros.
 </div>
 
-### Causas raices de este quebradero de cabeza
+Causas raices de este quebradero de cabeza
 
 Para entender por que ocurre esto y como solucionarlo de raiz sin alterar la estabilidad del sistema, debemos analizar el origen del comportamiento:
 
@@ -50,7 +51,7 @@ a: El menu de Configuracion general de Windows 11 no incluye un interruptor simp
 
 ---
 
-### Guia paso a paso: Recupera el menu clasico al instante
+Guia paso a paso: Recupera el menu clasico al instante
 
 Como tecnico de sistemas, detesto las soluciones complejas que requieren instalar software de terceros dudoso. Vamos a solucionarlo mediante un comando limpio directamente en la consola del sistema. ## Paso 1: Abrir la Terminal o Símbolo del sistema con privilegios
 Haz clic en el boton de Inicio, escribe `Terminal` o `cmd`, haz clic derecho sobre la aplicacion y selecciona "Ejecutar como administrador".
@@ -71,7 +72,7 @@ Para que los cambios surtan efecto de inmediato sin necesidad de reiniciar todo 
 
 ---
 
-### Tabla comparativ
+Tabla comparativ
 
 a: Antes vs. Despues de aplicar el ajuste
 
@@ -84,7 +85,7 @@ a: Antes vs. Despues de aplicar el ajuste
 
 ---
 
-### Advertencia de seguridad del experto en hardware
+Advertencia de seguridad del experto en hardware
 
 Modificar el Registro de Windows es un procedimiento seguro si se siguen los pasos al pie de la letra, pero ten en cuenta las siguientes precauciones en equipos corporativos:
 
@@ -93,7 +94,7 @@ Modificar el Registro de Windows es un procedimiento seguro si se siguen los pas
 
 ---
 
-## Preguntas Frecuentes (FAQ)
+Preguntas Frecuentes (FAQ)
 
 1. ¿Este cambio afecta a la estabilidad general de Windows 11? Absolutamente no. Este comando simplemente habilita una clave de CLSID nativa que Microsoft mantuvo en el codigo del sistema operativo para facilitar la transicion, por lo que no genera errores ni pantallazos azules.
 

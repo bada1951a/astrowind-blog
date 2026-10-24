@@ -22,6 +22,7 @@ theme: "Retro Monokai"
 
 
 
+
 Freitagnachmittag, 16:45 Uhr. Der letzte Deployment-Lauf für das Release am Montag läuft durch, der Kaffee ist kalt, und ich will eigentlich nur noch den Rechner zuklappen und ins Wochenende starten. Plötzlich fängt die Kiste neben mir an zu röhren wie ein startender A380 – die Gehäuselüfter drehen auf 100%, die RGB-Beleuchtung glimmt in traurigem Monokai-Grün, aber der Dell-Monitor bleibt eisern im Standby. Kein POST-Screen, kein BIOS-Logo, absolut tote Hose. Und natürlich wartet der Abteilungsleiter im Teams auf den finalen Build. Herzlichen Glückwunsch, der klassische Hardware-Gau.
 
 <div style="border-left: 4px solid #a6e22e; padding: 12px 16px; margin: 20px 0; background-color: rgba(166,226,46,0.05); border-radius: 4px; color: #111827; font-family: monospace;">
@@ -32,7 +33,7 @@ Freitagnachmittag, 16:45 Uhr. Der letzte Deployment-Lauf für das Release am Mon
 
 ![Tech Hardware Guide](https://images.unsplash.com/photo-1544197150-b99a580bb7a8? auto=format&fit=crop&w=1200&h=675&q=85)
 
-## Root Cause Analysis: Warum streikt die Kiste genau jetzt?
+Root Cause Analysis: Warum streikt die Kiste genau jetzt?
 
 Bevor man panikartig anfängt, neue Hardware zu bestellen, muss man verstehen, was unter der Haube schiefgelaufen ist. In 90% solcher Fälle bei Bestandsgeräten liegt es nicht an einem defekten Bauteil, sondern an schleichenden Umwelteinflüssen.
 
@@ -42,7 +43,7 @@ Bevor man panikartig anfängt, neue Hardware zu bestellen, muss man verstehen, w
 
 3. Statische Entladung / CMOS-Hänger: Das UEFI/BIOS hat sich verschluckt und versucht, die RAM-Timings mit Werten zu initialisieren, die der Speicher nach einem Kaltstart nicht mehr packt.
 
-## Step-by-Step Resolution: Debugging im Editor-Style
+### Step-by-Step Resolution: Debugging im Editor-Style
 
 Wir gehen das Problem jetzt systematisch an. Kein wildes Herumstecken, sondern strukturierte Fehlersuche.
 
@@ -59,18 +60,18 @@ Jetzt öffnen wir die Seitenwand. Wir berühren vorher kurz das unlackierte Netz
 ### Schritt 3: Slot-Isolationstest (Divide and Conquer)
 Wenn du zwei oder vier RAM-Riegel hast, stecke nur einen einzigen Riegel in den vom Handbuch empfohlenen Primärslot (meistens DIMM_A2, also der zweite von der CPU aus).
 
-## 1. Riegel einsetzen, bis die Clips hörbar einrasten.
+1. Riegel einsetzen, bis die Clips hörbar einrasten.
 
 2. Netzkabel wieder rein, Monitor anschließen (direkt ans Mainboard oder an die GPU, je nach Setup).
 
-## 3. Einschalten.
+3. Einschalten.
 
 Wenn der POST-Screen kommt: Glückwunsch, der Riegel lebt. Wenn nicht, nimm den nächsten Riegel und teste denselben Slot, um einen defekten Riegel auszuschließen.
 
 Nachdem das System wieder bootet, prüfen wir im OS kurz die Stabilität über die Eingabeaufforderung (`cmd` als Administrator):
 
 ```cmd
-# Windows-Speicherdiagnose triggern
+Windows-Speicherdiagnose triggern
 mdsched.exe
 ```
 (Wähle hier "Jetzt neu starten und nach Problemen suchen"). Wer es genauer wissen will, bootet später von einem USB-Stick mit *MemTest86*.
@@ -79,7 +80,7 @@ Falls Windows wider Erwarten hochfährt, werfen wir noch einen Blick in den Ger�
 
 ---
 
-## Expert Warning: Was du unbedingt vermeiden solltest
+Expert Warning: Was du unbedingt vermeiden solltest
 
 <div style="border-left: 4px solid #ff5555; padding: 12px 16px; margin: 20px 0; background-color: rgba(255,85,85,0.05); border-radius: 4px; color: #111827;">
 <strong>WARNUNG:</strong> Hände weg von Kontaktsprays oder Kontaktreinigern aus dem Baumarkt, es sei denn, sie sind explizit <em>rückstandsfrei</em> und für Elektronik zertifiziert (z.B. Tuner 600 oder Isopropanol > 99%). Ölbasierte Sprays ziehen den Staub erst recht an und grillen dir im schlimmsten Fall den RAM-Slot durch Kurzschluss.
@@ -87,7 +88,7 @@ Falls Windows wider Erwarten hochfährt, werfen wir noch einen Blick in den Ger�
 
 ---
 
-## Häufig gestellte Fragen (FAQ)
+Häufig gestellte Fragen (FAQ)
 
 1. Meine Mainboard-LED (EZ Debug LED) leuchtet permanent bei "CPU" oder "RAM", obwohl ich den RAM gereinigt habe. Was nun? Das kann an einem zu fest angezogenen CPU-Kühler liegen. Manchmal verzieht sich das PCB des Mainboards minimal, wodurch Pins im CPU-Sockel den Kontakt zu den PCIe- oder RAM-Lanzen verlieren. Löse die Schrauben des CPU-Kühlers um eine halbe Umdrehung.
 

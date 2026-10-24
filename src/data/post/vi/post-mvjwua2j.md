@@ -22,6 +22,7 @@ theme: "Nordic Clean Ice"
 
 
 
+
 <div style="border-left: 4px solid #0284c7; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 Đang là thời điểm nước rút chuẩn bị cho kỳ khóa sổ kế toán cuối năm. Ngồi cặm cụi đối chiếu từng trang bảng tính Excel khối lượng dữ liệu khổng lồ với hệ thống phần mềm ERP của công ty tại văn phòng ở một tòa nhà trung tâm Quận 1, TP. Hồ Chí Minh. Tôi chuẩn bị gọi cuộc họp trực tuyến khẩn cấp với các bộ phận để chốt số liệu thì hỡi ôi, biểu tượng loa góc phải màn hình xuất hiện dấu nhân đỏ chói lọi. Không một âm thanh phát ra, thông báo lỗi thiết bị đầu ra biến mất hoàn toàn ngay trước giờ G.
 </div>
@@ -30,7 +31,7 @@ Là một kỹ sư công nghệ thông tin phụ trách kỹ thuật tại chỗ
 
 ![Tech Troubleshooting Guide](/images/tech-photo/display%20(13).png)
 
-## Nguyên nhân gốc rễ gây mất âm thanh trên Windows 11
+Nguyên nhân gốc rễ gây mất âm thanh trên Windows 11
 
 Trước khi lao vào sửa lỗi, chúng ta cần hiểu tại sao chiếc máy tính bỗng nhiên câm lặng giữa lúc dầu sôi lửa bỏng:
 
@@ -44,7 +45,7 @@ a: Do vô tình bấm nhầm phím tắt hoặc một ứng dụng gọi thoại
 
 ---
 
-## Các bước xử lý thực chiến từng bước một
+Các bước xử lý thực chiến từng bước một
 
 Hãy hít một hơi thật sâu và làm theo đúng các bước sau đây trên Windows 11 của bạn.
 
@@ -87,7 +88,7 @@ Khi các tiến trình ngầm bị treo, việc khởi động lại dịch vụ
 
 ---
 
-## Lưu ý quan trọng từ chuyên gia
+Lưu ý quan trọng từ chuyên gia
 
 - Kiểm tra phần cứng vật lý: Đừng quên kiểm tra các nút bấm cứng mute/volume trên bàn phím laptop hoặc giắc cắm tai nghe 3.5mm xem có bị bám bụi hay cắm chưa chặt hay không.
 - Tránh dùng phần mềm bên thứ b
@@ -97,7 +98,7 @@ a: Tránh tải các phần mềm "Driver Updater" trôi nổi trên mạng vì 
 
 ---
 
-## Các câu hỏi thường gặp (FAQ)
+Các câu hỏi thường gặp (FAQ)
 
 1. Tôi đã thử mọi cách trên Device Manager nhưng vẫn không thấy hiển thị thiết bị âm thanh nào ngoài dấu chéo đỏ, phải làm sao? Hiện tượng này thường do chip âm thanh trên bo mạch chủ (Mainboard) bị treo phần cứng hoặc BIOS vô tình tắt tính năng Audio. Hãy thử tắt hẳn máy (Shutdown hoàn toàn, giữ phím Shift khi bấm Shutdown), đợi 10 giây rồi bật lại. Nếu vẫn không được, bạn cần kỹ thuật viên kiểm tra lại BIOS hoặc phần cứng.
 

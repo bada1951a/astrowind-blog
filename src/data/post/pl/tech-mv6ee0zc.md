@@ -22,6 +22,7 @@ theme: "Sunset Horizon Coral"
 
 
 
+
 Jako inżynier wsparcia IT w środowisku korporacyjnym widziałem już setki peryferiów skazanych na przedwczesną utylizację. W zeszły piątek na mój stół warsztatowy trafiła klawiatura jednego z naszych senior developerów – customowy mechanik na przełącznikach Gateron Yellow, w którym klawisze `W` oraz `E` naprzemiennie gubiły wciśnięcia albo generowały irytujący podwójny klik (*chattering*). Zamiast wpisać prostą komendę w terminalu, system rejestrował `wwweee`. Użytkownik był przekonany, że kontroler na płytce PCB uległ uszkodzeniu, a sprzęt nadaje się wyłącznie do kosza. Rzeczywistość w 90% takich przypadków jest znacznie bardziej prozaiczn
 
 a: zanieczyszczenia mikroskopowe, utlenienie styków lub chwilowa utrata elastyczności blaszki kontaktowej wewnątrz samego switcha. Zanim wydasz kilkaset złotych na nowy zestaw przełączników lub nową klawiaturę, możesz przeprowadzić skuteczną regenerację w ramach weekendowego serwisu DIY. Poniżej przedstawiam sprawdzoną w bojach procedurę czyszczenia i chemicznej rewitalizacji przełączników mechanicznych.
@@ -45,7 +46,7 @@ a:</strong> dedykowany preparat do regeneracji styków elektrycznych (np. <em>Ko
 
 ---
 
-## Źródła problemu: Dlaczego switch mechaniczny rejestruje błędy?
+Źródła problemu: Dlaczego switch mechaniczny rejestruje błędy?
 
 Zjawisko *key chatteringu* (odbijania styków) oraz gubienia wciśnięć (*key skipping*) wynika bezpośrednio z mechaniki działania tradycyjnego przełącznika stykowego (Cherry MX, Kailh, Gateron, Outemu). Każdy taki element opiera się na fizycznym zwarciu dwóch miniaturowych blaszek ze stopu miedzi.
 
@@ -64,7 +65,7 @@ Zjawisko *key chatteringu* (odbijania styków) oraz gubienia wciśnięć (*key s
 ---
 ![Tech Diagnostics](https://images.unsplash.com/photo-1515378791036-0648a3ef77b2? auto=format&fit=crop&w=1000&h=550&q=80)
 
-## Procedura krok po kroku: Diagnostyka i chemiczna regeneracja styków
+Procedura krok po kroku: Diagnostyka i chemiczna regeneracja styków
 
 ### Krok 1: Weryfikacja programowa w środowisku Windows
 
@@ -72,7 +73,7 @@ Zanim rozbierzesz klawiaturę, musimy wykluczyć usterki po stronie warstwy syst
 
 1. Otwórz Menedżer urządzeń(skrót `Win + X` → wybierzMenedżer urządzeń).
 
-## 2. Rozwiń sekcję Klawiatury.
+2. Rozwiń sekcję Klawiatury.
 
 3. Odszukaj wpisy o nazwie *Klawiatura zgodna z HID* lub dedykowane urządzenie producenta. Kliknij prawym przyciskiem myszy i wybierz Odinstaluj urządzenie.
 
@@ -96,7 +97,7 @@ a:</strong> Przed rozpoczęciem jakichkolwiek prac fizycznych bezwzględnie <str
 
 Do tego celu najlepiej sprawdza się schemat dwuetapowy: preparat rozpuszczający tlenki (*np. Kontakt 60*) oraz preparat myjący/wypłukujący (*Kontakt U* lub *czysty alkohol izopropylowy 99,9%*).
 
-## 1. Wciśnięcie trzpieni
+1. Wciśnięcie trzpieni
 
 a: Wciśnij plastikowy trzonek (*stem*) do oporu w dół za pomocą małego wkrętaka lub pęsety, odsłaniając szczelinę prowadnicy, pod którą ukryte są miedziane blaszki.
 
@@ -139,7 +140,7 @@ Pozostaw klawiaturę na co najmniej 30–45 minut w dobrze wentylowanym pomieszc
 
 ---
 
-## Porównanie: Stan przed i po regeneracji
+Porównanie: Stan przed i po regeneracji
 
 W poniższej tabeli zestawiłem parametry pracy klawiatury testowej przed wykonaniem procedury oraz po pełnym cyklu czyszczenia chemicznego.
 
@@ -152,7 +153,7 @@ W poniższej tabeli zestawiłem parametry pracy klawiatury testowej przed wykona
 
 ---
 
-## Ostrzeżenia ekspert
+Ostrzeżenia ekspert
 
 a: Czego pod żadnym pozorem nie wolno robić
 
@@ -172,7 +173,7 @@ Pamiętaj również o wyładowaniach elektrostatycznych (ESD). Pracując przy ot
 
 ---
 
-## Najczęściej zadawane pytania (FAQ)
+Najczęściej zadawane pytania (FAQ)
 
 1. Co zrobić, jeśli czyszczenie chemiczne pomogło tylko na dwa dni i problem wrócił?
 Oznacza to, że sprężynująca blaszka stykowa uległa trwałemu odkształceniu zmęczeniowemu (*metal fatigue*) i nie powraca do punktu spoczynkowego z odpowiednią siłą docisku. W takim wypadku jedynym trwałym rozwiązaniem jest wymiana przełącznika na nowy. W klawiaturach typu hot-swap zajmuje to 30 sekund. W modelach lutowanych należy rozgrzać luty odsysaczem cyny na spodzie PCB, wyjąć uszkodzony przełącznik i wlutować nowy element za pomocą spoiwa ołowiowego (lub bezołowiowego z topnikiem).

@@ -22,6 +22,7 @@ theme: "Rosewood Hardware Guide"
 
 
 
+
 Suasana di kantor *startup* teknologi kami di kawasan Jakarta Selatan mendadak tegang ketika laptop *deployment* utama untuk tim *internal server* mendadak macet total. Layar menampilkan progress pembaruan Windows 11 yang sudah menyentuh angka 100 persen, namun tidak ada pergerakan sama sekali selama lebih dari tiga jam. Padahal, kami harus segera merilis *patch* keamanan mendesak sore itu juga. Mematikan paksa laptop tersebut berisiko merusak sistem operasi dan membuat *boot loop*, tapi membiarkannya berarti mengorbankan tenggat waktu proyek yang ketat.
 
 Setelah mencoba berbagai cara standar seperti *restart* tombol daya dan menunggu dalam keresahan—yang tentu saja berujung nihil—saya mulai menganalisis akar masalahnya. Ternyata, kendala ini klasik: prosesor dan layanan sistem terjebak dalam *infinite loop* karena berkas instalasi pembaruan di dalam direktori *cache* mengalami korupsi data (*data corruption*) atau terkunci oleh proses latar belakang yang tidak mau berhenti.
@@ -34,7 +35,7 @@ Berikut adalah panduan langkah demi langkah berbasis pengalaman lapangan yang pa
 <strong>Catatan Penting:</strong> Jangan pernah mematikan PC secara paksa menggunakan tombol *power* sebelum Anda menghentikan layanan pembaruan sistem secara manual, karena hal ini dapat merusak partisi sistem Windows.
 </div>
 
-### 3 Akar Penyebab Utama Update Windows 11 Macet
+3 Akar Penyebab Utama Update Windows 11 Macet
 
 Sebelum masuk ke eksekusi pembersihan, penting untuk memahami kenapa masalah ini bisa terjadi di lingkungan kerja yang dinamis:
 
@@ -92,7 +93,7 @@ Setelah semua perintah selesai dieksekusi dengan sukses, tutup jendela Terminal 
 
 ---
 
-### Tanya Jawab Umum (FAQ)
+Tanya Jawab Umum (FAQ)
 
 1. Apakah menghapus folder SoftwareDistribution akan menghilangkan data pribadi saya? Tidak sama sekali. Folder ini murni berisi berkas unduhan pembaruan sistem operasi dan aplikasi bawaan. Dokumen, foto, dan aplikasi pihak ketiga Anda aman di tempatnya.
 

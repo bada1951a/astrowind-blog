@@ -22,6 +22,7 @@ theme: "Forest Emerald Bio"
 
 
 
+
 Była dokładnie 21:40, gdy w naszym biurze we wrocławskim parku technologicznym panowała niemal grobowa cisza. Zostały zaledwie dwa dni do kluczowego audytu stabilności infrastruktury przed wejściem zewnętrznego klienta, a mój główny stacja robocza testowa ugrzęzła na ekranie blokady z denerwującym komunikatem: *„Trwa przygotowywanie aktualizacji. Nie wyłączaj komputera. 100% ukończono”*. Komputer stał tak bezczynnie od ponad dwóch godzin. Dysk pracował na minimalnych obrotach, procesor spał, a ja czułem, jak pot spływa mi po plecach, bo na tym hoście miałem postawione ostatnie środowiska testowe pod bazy danych. Restart na twardo? Ryzyko uszkodzenia partycji rozruchowej i korupcji rejestru było zbyt wielkie.
 
 Zamiast panikować, sięgnąłem po sprawdzoną procedurę awaryjną, którą stosuję w takich sytuacjach od lat. Problem nie tkwił w samej procedurze instalacji poprawek, lecz w uszkodzonym buforze systemu Windows Update. Usługa pobierania utknęła w martwym punkcie, próbując zweryfikować zablokowane pliki tymczasowe.
@@ -32,7 +33,7 @@ Zamiast panikować, sięgnąłem po sprawdzoną procedurę awaryjną, którą st
 <strong>Wskaźnik Efektywności IT:</strong> Prawidłowy reset folderu pamięci podręcznej aktualizacji (SoftwareDistribution) skraca czas przestoju systemu z kilku godzin bezczynnego oczekiwania do zaledwie 5 minut sprawnej interwencji wiersza poleceń.
 </div>
 
-## Dlaczego Windows 11 zacina się na 100 procent?
+Dlaczego Windows 11 zacina się na 100 procent?
 
 Zanim przejdziemy do naprawy, warto zrozumieć root cause tego fenomenu. Dlaczego pasek dochodzi do końca i staje? Oto trzy najczęstsze powody:
 
@@ -84,7 +85,7 @@ Na koniec zrestartuj komputer tradycyjną komendą `shutdown /r /t 0`. Po ponown
 <div style="border-left: 4px solid #10b981; padding: 12px 16px; margin: 20px 0; background-color: rgba(16,185,129,0.05); border-radius: 4px; color: #111827;">
 <strong>Bezpieczeństwo i Dobre Praktyki:</strong> Nigdy nie kasuj zawartości folderów <code>SoftwareDistribution</code> bez uprzedniego zatrzymania usług systemowych. Może to doprowadzić do trwałego uszkodzenia metadanych systemu operacyjnego i wymusić reinstalację środowiska. </div>
 
-## Często Zadawane Pytania (FAQ)
+Często Zadawane Pytania (FAQ)
 
 1. Czy utracę moje osobiste pliki lub aplikacje po zmianie nazwy folderu SoftwareDistribution? Absolutnie nie. Folder `SoftwareDistribution` przechowuje wyłącznie tymczasowe pliki instalacyjne pobrane z serwerów Microsoftu oraz logi. Twoje dokumenty, aplikacje i konfiguracje pozostaną całkowicie nienaruszone.
 

@@ -22,6 +22,7 @@ theme: "Nordic Clean Ice"
 
 
 
+
 Es war exakt 21:45 Uhr an einem Donnerstagabend in unserem Berliner Tech-Hub im Prenzlauer Berg. Wir standen kurz vor dem finalen Rollout unserer neuen Microservices-Infrastruktur, als auf dem Haupt-Build-Server plötzlich der berüchtigte blaue Bildschirm flackerte: STOP 0x0000000
 
 a: IRQL_NOT_LESS_OR_EQUAL. 
@@ -34,7 +35,7 @@ Keine Vorwarnung, kein sanftes Herunterfahren, einfach harter Kernel-Absturz. De
 <strong>Einsatz-Tipp aus der Praxis:</strong> Panik ist jetzt der schlechteste Ratgeber. Der Fehler 0x0000000a signalisiert fast immer, dass ein Kernel-Mode-Prozess oder Treiber auf eine Speicheradresse zugreifen wollte, für die er keine Berechtigung hatte. Meistens liegt die Ursache an einem fehlerhaften RAM-Modul oder einem frisch aktualisierten Gerätetreiber.
 </div>
 
-## Die drei Hauptursachen für den Fehler 0x0000000a
+Die drei Hauptursachen für den Fehler 0x0000000a
 
 Bevor wir blind anfangen, Schraubenzieher zu schwingen oder das System neu aufzusetzen, müssen wir die echten Flaschenhälse identifizieren:
 
@@ -46,7 +47,7 @@ Bevor wir blind anfangen, Schraubenzieher zu schwingen oder das System neu aufzu
 
 ---
 
-## Schritt-für-Schritt-Anleitung zur Problemlösung
+### Schritt-für-Schritt-Anleitung zur Problemlösung
 
 ### Schritt 1: Speicherdiagnose (RAM prüfen)
 Da der Fehler oft durch Speicherzugriffsverletzungen ausgelöst wird, testen wir zuerst den Arbeitsspeicher direkt über die integrierten Windows-Bordmittel.
@@ -87,13 +88,13 @@ Manchmal hinterlässt der Absturz beschädigte Systemdateien. Das lässt sich sc
 
 ---
 
-## Experten-Warnung & Best Practices
+Experten-Warnung & Best Practices
 
 Vorsicht bei automatischen "Treiber-Update-Tools" aus dem Internet! Solche Software lädt oft generische Treiber herunter, die exakt diesen Bluescreen (0x0000000a) provozieren. Nutzen Sie für Mainboard-Treiber, Chipsatz und Netzwerk ausschließlich die offiziellen Treiber direkt vom Hersteller (Intel, AMD, ASUS, Lenovo etc.).
 
 ---
 
-## Häufig gestellte Fragen (FAQ)
+Häufig gestellte Fragen (FAQ)
 
 F: Kann ich den PC im abgesicherten Modus starten, wenn der Bluescreen sofort beim Hochfahren auftritt?
 

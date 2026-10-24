@@ -22,6 +22,7 @@ theme: "Cobalt Enterprise Lab"
 
 
 
+
 Il est 14h30 dans notre bureau tech à Paris, la tension est palpable. Nous sommes en plein sprint critique pour le déploiement de notre nouvelle application interne, et soudain, catastrophe : sur ma station de travail principale, impossible de cliquer sur quoi que ce soit dans la barre des tâches. Le menu Démarrer reste sourd à mes clics, l'icône de Slack clignote sans que je puisse basculer sur la conversation de l'équipe, et mes fenêtres ouvertes sont comme piégées. Pour un ingénieur en pleines livraisons de code, avoir une barre des tâches de Windows 11 totalement gelée, c'est l'équivalent numérique d'un arrêt cardiaque en plein marathon.
 
 <div style="border-left: 4px solid #1e40af; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
@@ -30,7 +31,7 @@ Il est 14h30 dans notre bureau tech à Paris, la tension est palpable. Nous somm
 
 ![Tech & IT Solution Guide](https://picsum.photos/seed/computer174/1000/550)
 
-## Pourquoi votre barre des tâches Windows 11 se fige-t-elle ?
+Pourquoi votre barre des tâches Windows 11 se fige-t-elle ?
 
 Après avoir analysé ce comportement à plusieurs reprises lors de nos sessions de support informatique, trois coupables principaux reviennent constamment :
 
@@ -42,7 +43,7 @@ Après avoir analysé ce comportement à plusieurs reprises lors de nos sessions
 
 ---
 
-## Guide de résolution étape par étape
+Guide de résolution étape par étape
 
 Voici la méthode rapide et efficace, testée et approuvée en environnement de production, pour reprendre le contrôle de votre poste.
 
@@ -68,7 +69,7 @@ Si le simple redémarrage de l'explorateur ne suffit pas, il faut réenregistrer
 
 2. Cliquez sur le menu Fexions en haut à droite (ou "Exécuter une nouvelle tâche").
 
-## 3.  Tapez `powershell` dans la boîte de dialogue.
+3.  Tapez `powershell` dans la boîte de dialogue.
 
 4. Important :Cochez la caseCréer cette tâche avec des privilèges d'administrateur, puis validez par Entrée.
 
@@ -106,7 +107,7 @@ Si le problème persiste, des fichiers système essentiels liés à l'interface 
 
 ---
 
-## Foire Aux Questions (FAQ)
+Foire Aux Questions (FAQ)
 
 1. Que faire si je ne peux même pas ouvrir le Gestionnaire des tâches avec les raccourcis clavier ? Si le système est totalement figé, effectuez un redémarrage forcé en maintenez le bouton d'alimentation de votre PC enfoncé pendant 10 secondes. Une fois redémarré, appliquez immédiatement l'Étape 3 pour vérifier l'intégrité de vos fichiers.
 
@@ -114,6 +115,6 @@ Si le problème persiste, des fichiers système essentiels liés à l'interface 
 
 Oui. Certaines mises à jour cumulatives optionnelles ou de sécurité de Windows 11 ont parfois introduit des régressions sur le composant `ShellExperienceHost`. Pensez à vérifier dans les *Paramètres > Windows Update* si une mise à jour corrective récente est disponible.
 
-## 3. Le mode sans échec résout-il le problème ?
+3. Le mode sans échec résout-il le problème ?
 
 Il permet de démarrer sans les applications tierces ni les pilotes superflus. Si la barre des tâches fonctionne en mode sans échec, cela confirme qu'un logiciel tiers installé récemment (antivirus, utilitaire graphique) entre en conflit avec l'explorateur Windows.

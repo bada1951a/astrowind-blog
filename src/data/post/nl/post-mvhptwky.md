@@ -22,6 +22,7 @@ theme: "Forest Emerald Bio"
 
 
 
+
 Het is kwart voor negen 's ochtends in een glazen kantoorpand midden op de Zuidas in Amsterdam. Over vijftien minuten start de cruciale kwartaalpresentatie voor een grote klant, en mijn collega Jeroen staat lijkbleek achter zijn laptop. Hij probeert snel een zwaar logbestand te comprimeren en naar de map van de directeur te slepen, maar hij loopt vast. Door de nieuwe interface van Windows 11 moet hij telkens op "Meer opties weergeven" klikken om bij zijn vertrouwde WinRAR-menu te komen. Bij elke klik verspeelt hij kostbare seconden, de spanning stijgt en de frustratie spat ervan af. Een acute computerstoring tijdens de piekuren, precies wat je als IT-systeembeheerder niet kunt gebruiken.
 
 Dit scenario is herkenbaar voor menig kantoormedewerker sinds de introductie van Windows 11. Microsoft vond het nodig om het rechtermuisknop contextmenu te moderniseren en te verbergen achter een extra klik. Hartstikke mooi voor de minimalistische thuisgebruiker, maar rampzalig voor professionals die blind willen vertrouwen op hun vertrouwde tools zoals 7-Zip, Notepad++ of specifieke ERP-snelkoppelingen.
@@ -32,7 +33,7 @@ Dit scenario is herkenbaar voor menig kantoormedewerker sinds de introductie van
 <strong>Tijdswinst Indicator:</strong> Het aanpassen van dit menu kost je nog geen 3 minuten, maar bespaart je dagelijks tientallen nodeloze extra muisklikken en een hoop ergernis.
 </div>
 
-## Waarom doet Windows dit eigenlijk? (De Technische Oorzaak)
+Waarom doet Windows dit eigenlijk? (De Technische Oorzaak)
 
 Als hardware- en systeembeheerder zie ik dit soort veranderingen vaak met gemengde gevoelens aan. De root cause achter dit gedoe laat zich opsplitsen in drie technische factoren:
 
@@ -42,7 +43,7 @@ Als hardware- en systeembeheerder zie ik dit soort veranderingen vaak met gemeng
 
 3. Beveiliging en Isolatie: Door extensies te weren uit het hoofdmenu en ze te verbergen achter de "Meer opties weergeven"-laag, probeert Microsoft het systeem stabieler te houden tegen slecht geschreven software van externe leveranciers.
 
-## Zo Haal Je Het Klassieke Menu Direct Terug (Stappenplan)
+Zo Haal Je Het Klassieke Menu Direct Terug (Stappenplan)
 
 Gelukkig hoeven we niet te leven met die vervelende extra klik. Als beheerder gebruik ik hiervoor een snelle en veilige aanpassing in het Windows Register (Registry). Volg deze stappen nauwkeurig om direct verlost te zijn van het probleem.
 
@@ -67,7 +68,7 @@ In het Register-venster zie je links een boomstructuur. Klik jezelf door naar de
 
 3. Klik met de rechtermuisknop op de zojuist aangemaakte sleutel (`{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}`), kies weer Nieuwen nuSleutel.
 
-## 4. Noem deze tweede sleutel:
+4. Noem deze tweede sleutel:
 
    `InprocServer32`
 
@@ -75,14 +76,14 @@ In het Register-venster zie je links een boomstructuur. Klik jezelf door naar de
 
 1. Klik op de map `InprocServer32` die je net hebt gemaakt.
 
-## 2. Dubbelklik rechts op de waarde (Standaard).
+2. Dubbelklik rechts op de waarde (Standaard).
 
 3. Laat het veld "Waardegegevens" helemaal leegen klik opOK. (De gegevens moeten op *(waarde is niet set)* komen te staan).
 
 ### Stap 5: Start de Windows Verkenner opnieuw
 Om de wijziging direct door te voeren zonder dat je je hele computer hoeft te herstarten, gebruiken we Taakbeheer:
 
-## 1. Druk op Ctrl + Shift + EscomTaakbeheer te openen.
+1. Druk op Ctrl + Shift + EscomTaakbeheer te openen.
 
 2. Zoek in de lijst met processen naar Windows Verkenner (of *explorer.exe*).
 
@@ -94,12 +95,12 @@ Je scherm flitst heel even weg en komt direct weer terug. Als het goed is, zie j
 <strong>Belangrijke Waarschuwing:</strong> Wees altijd voorzichtig met het Windows Register. Een typefout in een kritieke sleutel kan het systeem ontregelen. Volg bovenstaande stappen exact op en raak geen andere mappen aan. Maak bij twijfel vooraf een back-up van het register via Bestand > Exporteren.
 </div>
 
-## Veelgestelde Vragen (FAQ)
+Veelgestelde Vragen (FAQ)
 
 1. Verdwijnt deze instelling weer na een grote Windows 11 update? Soms wel. Microsoft brengt regelmatig cumulatieve updates uit (zoals de jaarlijkse feature updates) waarin standaardinstellingen soms worden gereset. Mocht het klassieke menu na een update ineens verdwenen zijn, dan herhaal je simpelweg de stappen uit dit artikel.
 
 2. Kan ik deze wijziging ook ongedaan maken als het toch niet bevalt? Jazeker. Je opent opnieuw de Register-editor via `regedit`, navigeert naar dezelfde sleutel (`HKEY_CURRENT_USER\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}`) en verwijdert de hele map `{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}`. Na een herstart van Taakbeheer staat alles weer netjes op de standaard Microsoft-instelling.
 
-## 3. Werkt deze methode ook op Windows 10?
+3. Werkt deze methode ook op Windows 10?
 
 Op Windows 10 hoef je dit niet te doen, omdat Windows 10 standaard al gebruikmaakt van het klassieke contextmenu. Deze tweak is exclusief ontworpen voor het oplossen van dit specifieke ergonomische obstakel in Windows 11.

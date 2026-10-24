@@ -22,6 +22,7 @@ theme: "Tokyo Neon Violet"
 
 
 
+
 Wczoraj rano, tuż przed kluczowym audytem stabilności infrastruktury dla naszego zagranicznego klienta we wrocławskim parku technologicznym, mój główny terminal roboczy zaczął wyrzucać krytyczne błędy braku pamięci wirtualnej. Pasek dysku C zaświecił się na złowrogi, krwisty czerwony kolor – zostało równe 420 megabajtów wolnej przestrzeni. Zamiast analizować logi, musiałem w kilka minut opanować kryzys, zanim system zszedłby na kolana w trakcie prezentacji przed zarządem.
 
 Okazało się, że Windows 11 po ostatniej dużej aktualizacji i intensywnych testach środowiskowych zostawił po sobie gigantyczny śmietnik w ukrytych folderach tymczasowych. Jeśli u Ciebie też dysk C pęka w szwach, a nie masz pojęcia, co bezpiecznie skasować, oto prosty, sprawdzony plan ratunkowy.
@@ -32,7 +33,7 @@ Okazało się, że Windows 11 po ostatniej dużej aktualizacji i intensywnych te
 a:</strong> Zanim cokolwiek skasujesz ręcznie z katalogów systemowych, upewnij się, że masz wyłączoną hibernację, jeśli z niej nie korzystasz – komenda <code>powercfg /hibernate off</code> potrafi od ręki uwolnić tyle gigabajtów, ile wynosi Twoja pamięć RAM.
 </div>
 
-## Gdzie ucieka miejsce? Główne źródła problemu na dysku C
+Gdzie ucieka miejsce? Główne źródła problemu na dysku C
 
 Zanim przejdziemy do klikania, warto zrozumieć, dlaczego Windows 11 tak szybko zjada gigabajty. Oto trzy najczęstsze "czarne dziury" pamięci masowej w środowisku biurowym i deweloperskim:
 
@@ -49,7 +50,7 @@ Wejdź w menu Ustawienia(skrót Windows + I), przejdź do zakładkiSystem, a nas
 
 ![Tech & IT Solution Guide](https://picsum.photos/seed/computer844/1000/550)
 
-## 2. Ręczne czyszczenie folderu Temp przez okno Uruchom
+2. Ręczne czyszczenie folderu Temp przez okno Uruchom
 Często instalatory programów zostawiają śmieci w folderach użytkownika. - Wciśnij kombinację klawiszy Windows + R, wpisz `%temp%` i wciśnij Enter.
 - Zaznacz wszystko (Ctrl + A) i wciśnijShift + Delete (by ominąć Kosz).
 - *Uwag
@@ -66,13 +67,13 @@ Dla głębszego czyszczenia użyjmy klasycznego, niezawodnego narzędzia systemo
 
 ---
 
-## Często zadawane pytania (FAQ)
+Często zadawane pytania (FAQ)
 
-### Czy bezpiecznie jest usuwać zawartość folderu `%temp%`?
+Czy bezpiecznie jest usuwać zawartość folderu `%temp%`?
 Tak, w 100%. Folder ten służy aplikacjom wyłącznie do przechowywania plików roboczych i tymczasowych podczas ich działania. Jeśli program jest zamknięty, te pliki nie są do niczego potrzebne.
 
-### Co zrobić, jeśli dysk C znowu zapełni się za kilka dni?
+Co zrobić, jeśli dysk C znowu zapełni się za kilka dni?
 Najczęstszą przyczynami są rosnąca pamięć podręczna przeglądarki lub pliki pobierane bezpośrednio na pulpit. Warto zmienić domyślną lokalizację folderu Pobrane (Downloads) na dysk D lub E, jeśli taki posiadasz.
 
-### Czy warto używać zewnętrznych programów typu CCleaner na Windows 11?
+Czy warto używać zewnętrznych programów typu CCleaner na Windows 11?
 Większość funkcji zewnętrznych programów czyszczących jest obecnie wbudowana bezpośrednio w Ustawienia Windows 11 (Storage Sense). Unikaj zewnętrznych narzędzi czyszczących rejestr, ponieważ w nowszych wersjach systemu mogą one przynieść więcej szkody niż pożytku.

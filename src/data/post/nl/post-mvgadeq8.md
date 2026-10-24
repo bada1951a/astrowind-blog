@@ -22,6 +22,7 @@ theme: "Forest Emerald Bio"
 
 
 
+
 Afgelopen dinsdagochtend, kwart voor negen, in een strak glazen kantoor op de Zuidas in Amsterdam. De spanning sneed door de kamer. Over precies vijftien minuten zou de raad van bestuur binnenstappen voor een cruciale kwartaalpresentatie. Mijn collega Mark sloot zijn laptop aan op de grote vergaderschermbeamer, en daar stond-ie dan, recht in het gezicht van iedereen: dat knalwitte, vervelende watermerk rechtsonder in de hoek: *"Windows activeren. Ga naar Instellingen om Windows te activeren."* Alsof dat nog niet genoeg afleidde, weigerde de achtergrond te wisselen en bleef het systeem zeuren over licentievernieuwingen, terwijl de geldige KMS-host op het bedrijfsnetwerk even buiten bereik lag door een tijdelijke VLAN-storing. Paniek natuurlijk. Een professionele corporate presentatie geven met een ongescripte evaluatiemelding op het scherm is het laatste wat je wilt.
 
 <div style="border-left: 4px solid #10b981; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
@@ -30,7 +31,7 @@ Afgelopen dinsdagochtend, kwart voor negen, in een strak glazen kantoor op de Zu
 
 ![Tech Troubleshooting Guide](/images/tech-photo/tech-photos%20(42).jpg)
 
-## Waaromduikt dat watermerk ineens op? Drie veelvoorkomende boosdoeners
+Waaromduikt dat watermerk ineens op? Drie veelvoorkomende boosdoeners
 
 Voordat we ingrijpen, is het handig om te begrijpen waarom Windows opeens begint te klagen. Als allround systeembeheerder kom ik dit in de praktijk meestal door drie oorzaken tegen:
 
@@ -40,7 +41,7 @@ Voordat we ingrijpen, is het handig om te begrijpen waarom Windows opeens begint
 
 3. Hardwarewissel of moederbord-reparatie: Als de TPM-chip of UEFI-instellingen na een BIOS-update versprongen zijn, herkent Windows de digitale licentie even niet meer direct.
 
-## Stap-voor-stap: Veilig het watermerk verbergen via de Opdrachtprompt
+### Stap-voor-stap: Veilig het watermerk verbergen via de Opdrachtprompt
 
 Geen ingewikkelde hacks of vage downloadprogramma's van het internet die je systeem alleen maar infecteren met malware. We gebruiken gewoon de ingebouwde beheertools van Windows zelf. Volg deze stappen exact op:
 
@@ -66,13 +67,13 @@ Druk op Enter. Er verschijnt een pop-upvenster waarin staat dat de opdracht succ
 <strong>Laatste stap:</strong> Sluit de Opdrachtprompt af en start je computer direct opnieuw op via <strong>Start > Aan/Uit > Opnieuw opstarten</strong>. Zodra je desktop weer laadt, is het watermerk verdwenen en kun je met een gerust hart je presentatie starten.
 </div>
 
-## Belangrijk advies van de specialist
+Belangrijk advies van de specialist
 
 Zie deze CMD-truc als een effectieve noodremedie (een pleister op de wond) voor acute situaties zoals een belangrijk klantgesprek of een live-uitzending. Het lost het onderliggende licentieprobleem met je bedrijfsdomein of KMS-server natuurlijk niet permanent op. Zodra de rust is teruggekeerd na je meeting, dien je via Instellingen > Systeem > Activering de officiële bedrijfslicentie of KMS-client key opnieuw in te voeren om het netwerkbeheer netjes te houden.
 
 ---
 
-## Veelgestelde vragen (FAQ)
+Veelgestelde vragen (FAQ)
 
 1. Is het gebruiken van `slmgr /rearm` illegaal of schadelijk voor mijn PC? Nee zeker niet. `slmgr` (Software License Management Tool) is een officieel, legitiem hulpprogramma van Microsoft zelf dat beheerders gebruiken om licenties te beheren en testperiodes te resetten binnen de toegestane limieten van het besturingssysteem.
 

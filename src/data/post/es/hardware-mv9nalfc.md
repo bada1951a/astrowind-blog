@@ -22,6 +22,7 @@ theme: "Deep Indigo System"
 
 
 
+
 Eran las 6:30 de la tarde en nuestra oficina en Madrid. Teníamos sobre la mesa una entrega de proyecto crítico para un cliente multinacional que debía enviarse a las 7:00 en punto. De repente, la pantalla de mi ordenador principal se congeló durante unos segundos y apareció esa temida ventana emergente: "Espacio insuficiente en el disco local (C:)". El sistema operativo comenzó a lanzar advertencias en cadena, bloqueando la sincronización con la nube y negándose a guardar los cambios finales del paquete de diseño y software. El corazón se me encogió; un fallo crítico del sistema justo en el peor momento posible, con los minutos contando en nuestra contra y el cliente esperando los archivos finales.
 
 En medio del pánico inicial, mi primer instinto fue empezar a vaciar la papelera de reciclaje y borrar un par de carpetas pesadas de descargas. Pero no era suficiente. El sistema seguía ahogado, marcando apenas 400 megabytes libres en una partición de 500 gigas que misteriosamente se había llenado hasta el tope. Probé a desinstalar programas a la carrera, perdiendo preciosos minutos valiosos viendo cómo la barra de progreso apenas semovía mientras el ventilador del procesador zumbaba al máximo. 
@@ -38,7 +39,7 @@ Por suerte, mi compañero de sistemas se acercó con calma, abrió el menú ocul
 
 ---
 
-### ¿Por qué se llena el disco C: sin que te des cuenta?
+¿Por qué se llena el disco C: sin que te des cuenta?
 
 Antes de lanzarnos a borrar cosas a lo loco, entendamos cuáles son las tres causas reales detrás de este problema en Windows:
 
@@ -50,7 +51,7 @@ Antes de lanzarnos a borrar cosas a lo loco, entendamos cuáles son las tres cau
 
 ---
 
-### Guía paso a paso: Cómo eliminar archivos temporales y recuperar tu disco C:
+Guía paso a paso: Cómo eliminar archivos temporales y recuperar tu disco C:
 
 Para solucionar esto de manera segura y profesional, vamos a utilizar las herramientas nativas de Windows sin arriesgarnos a romper el sistema operativo.
 
@@ -59,7 +60,7 @@ Olvídate de buscar carpeta por carpeta. Windows incluye una utilidad fantástic
 
 1. Haz clic en el botón de Inicio y entra en la Configuración (el icono de la rueda dentada).
 
-## 2. Ve a Sistemay luego haz clic enAlmacenamiento.
+2. Ve a Sistemay luego haz clic enAlmacenamiento.
 
 3. Verás una barra que desglosa qué está ocupando tu disco. Haz clic en Archivos temporales.
 
@@ -72,7 +73,7 @@ Si necesitas una limpieza más a fondo a nivel de administrador:
 
 1. Presiona las teclas `Windows + R`, escribe `cleanmgr` y presiona Enter.
 
-## 2. Selecciona tu unidad `C:` y haz clic en Aceptar.
+2. Selecciona tu unidad `C:` y haz clic en Aceptar.
 
 3. En la ventana que aparece, haz clic en el botón inferior que dice Limpiar archivos del sistema. Vuelve a seleccionar la unidad C:.
 
@@ -84,7 +85,7 @@ Si aún necesitas raspar más gigabytes, vamos a limpiar los directorios de usua
 
 2. Selecciona todo presionando `Ctrl + A` y elimínalo pulsando `Shift + Supr` (para borrarlo permanentemente sin pasar por la papelera).
 
-## 3. *Not
+3. *Not
 
 a:* Si Windows te avisa que algún archivo está abierto o en uso por un programa activo, simplemente haz clic en "Omitir".
 
@@ -92,14 +93,14 @@ a:* Si Windows te avisa que algún archivo está abierto o en uso por un program
 
 ---
 
-### Advertencias del experto técnico
+Advertencias del experto técnico
 
 <div style="border-left: 4px solid #4338ca; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Precaución vital:</strong> Nunca descargues programas milagrosos de internet que prometen "limpiar el registro con un clic". Muchos de estos programas son adware o pueden corromper rutas críticas del sistema operativo. Utiliza siempre las herramientas nativas de Windows descritas en esta guía. </div>
 
 ---
 
-## Preguntas frecuentes (FAQ)
+Preguntas frecuentes (FAQ)
 
 ¿Es seguro borrar todo lo que aparece en la carpeta Temp? Sí, al 100%. Los archivos dentro de las carpetas Temp son únicamente residuos temporales que los programas ya terminaron de utilizar. Si un archivo está siendo usado activamente por una aplicación abierta, Windows simplemente te impedirá borrarlo, por lo que no hay riesgo de dañar el sistema operativo.
 

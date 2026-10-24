@@ -22,9 +22,10 @@ theme: "Rosewood Hardware Guide"
 
 
 
+
 **Q1.** 0 phút nữa là đến giờ sếp tổng họp chiến lược quý để duyệt ngân sách IT, tự nhiên cái máy trạm của ông Kế toán trưởng lăn ra chứng "màn hình đen xì". Quạt tản nhiệt nước hú lên như máy bay phản lực cất cánh, đèn LED trên Mainboard sáng rực, bàn phím gõ NumLock không thèm nhấp nháy một cái. Nhìn mặt ổng lúc đó tái mét, mồ hôi hột tuôn rơi vì toàn bộ file báo cáo dòng tiền năm chưa kịp backup nằm trọn trong đó. Đứng sau lưng thở dốc, mẹ kiếp, cảm giác cái ghế IT của mình lúc đó nó lung lay dữ dội hơn bao giờ hết.
 
-## Góc nhìn chuyên sâu từ phần cứng: Triệu chứng "Hồn lìa khỏi xác"
+Góc nhìn chuyên sâu từ phần cứng: Triệu chứng "Hồn lìa khỏi xác"
 
 <div style="border-left: 4px solid #be123c; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px;">
 <strong>Phân tích từ Hardware Maniac:</strong> Hiện tượng bật nguồn quạt quay nhưng không lên hình (No Display) phần lớn xuất phát từ việc CPU không thể giao tiếp với bộ nhớ đệm thông qua thanh RAM. Khi tiếp điểm bị oxi hóa nhẹ do độ ẩm văn phòng điều hòa, hoặc bám bụi tĩnh điện, bo mạch chủ (Mainboard) sẽ kích hoạt chế độ bảo vệ, ngừng POST (Power-On Self-Test) và kẹt cứng ở bước khởi động RAM.
@@ -40,7 +41,7 @@ Trong môi trường văn phòng doanh nghiệp, có 3 thủ phạm chính gây 
 
 ---
 
-## Cẩm nang xử lý thực chiến: Từ hiện trường đến khi boot máy thành công
+Cẩm nang xử lý thực chiến: Từ hiện trường đến khi boot máy thành công
 
 Không dài dòng tháo tung máy, quy trình chuẩn của một IT sừng sỏ là phải "bắt mạch" chuẩn xác từng bước một.
 
@@ -57,7 +58,7 @@ Tắt nguồn hoàn toàn, rút dây nguồn PSU phía sau. Quan trọng nhất:
 
 ---
 
-## Kiểm tra hệ thống sau khi máy đã lên hình
+Kiểm tra hệ thống sau khi máy đã lên hình
 
 Ngay khi máy boot vào được Windows, đừng vội mừng mà tắt máy đi ngủ. Anh em cần chẩn đoán xem hệ thống có bị lỗi phần mềm đi kèm hay không bằng cách tận dụng các công cụ native của Windows:
 
@@ -71,7 +72,7 @@ Ngay khi máy boot vào được Windows, đừng vội mừng mà tắt máy đ
 
 ---
 
-## Cảnh báo từ chuyên gia IT: Sai lầm chết người cần tránh
+Cảnh báo từ chuyên gia IT: Sai lầm chết người cần tránh
 
 - Không bao giờ dùng tay trần chạm vào chân vàng của RAM: Dầu mỡ từ da tay để lại sẽ hút ẩm và gây ăn mòn điện hóa cực nhanh sau vài tháng.
 - Tránh thổi bụi bằng miệng: Hơi nước bọt chứa axit nhẹ sẽ bám trực tiếp lên khe cắm RAM hoặc chân CPU, tạo ổ rỉ sét xanh lè sau này. Hãy dùng máy thổi hoặc bình khí nén.
@@ -79,7 +80,7 @@ Ngay khi máy boot vào được Windows, đừng vội mừng mà tắt máy đ
 
 ---
 
-## Câu hỏi thường gặp (FAQ)
+Câu hỏi thường gặp (FAQ)
 
 1. Tại sao vệ sinh RAM sạch sẽ rồi mà cắm vào máy vẫn kêu tiếng bíp dài liên tục?
 Tiếng bíp dài liên tục (hoặc chu kỳ bíp lặp lại) thường báo hiệu Mainboard không nhận diện được RAM. Có hai nguyên nhân: một là thanh RAM chưa được ấn sập khớp hoàn toàn, hai là chân cắm trong khe RAM bị kẹt bụi. Hãy dùng cọ mềm quét sạch khe cắm hoặc thử đổi sang khe RAM khác.

@@ -22,6 +22,7 @@ theme: "Midnight Navy Royal"
 
 
 
+
 <div style="border-left: 4px solid #1d4ed8; padding: 14px 18px; margin: 20px 0; background-color: rgba(29, 78, 216, 0.04); border-radius: 4px; color: #111827;">
   <strong style="color: #1d4ed8; font-size: 0.95rem; text-transform: uppercase; letter-spacing: 0.5px;">[INCIDENT LOG #20261014-SYS] 판교 데이터센터 파견 인프라 당직 로그</strong><br>
   <span style="font-size: 0.9rem; color: #334155;">새벽 02시 40분, 관제 모니터링 콘솔용 랩톱 3대에서 동시다발적으로 외장 디스플레이 신호 단절 및 3~5초 간격의 간헐적 블랙아웃(암전) 현상 발생. 단순 케이블 재연결로 복구되지 않는 디스플레이 파이프라인 교착 상태 확인 후 드라이버 서브시스템 재구축 및 핸드셰이크 초기화 절차 수행.</span>
@@ -39,20 +40,20 @@ theme: "Midnight Navy Royal"
 
 단순히 "드라이버를 지웠다 깔아보라"는 식의 접근은 근본적인 해결책이 되지 못합니다. 왜 노트북 환경에서 외장 모니터 신호 단절이 유독 자주 일어나는지 3가지 기술적 메커니즘을 이해해야 합니다.
 
-### ① 듀얼 GPU(옵티머스/하이브리드 그래픽) 파이프라인 충돌
+① 듀얼 GPU(옵티머스/하이브리드 그래픽) 파이프라인 충돌
 최신 랩톱은 전력 효율을 위한 내장 그래픽(Intel Iris Xe / AMD Radeon Graphics)과 고성능 연산을 위한 외장 그래픽(NVIDIA GeForce / RTX Ada 등)이 공존합니다. 대다수 노트북의 Type-C(DP Alt Mode)나 HDMI 단자는 내장 그래픽을 거쳐 패스스루(Muxless)되거나, MUX 스위치를 통해 물리적으로 분기됩니다. Windows Update가 백그라운드에서 WHQL 기본 드라이버를 임베드할 때, 내장 그래픽과 외장 그래픽 드라이버의 통신 인터페이스 규격이 틀어지면 DWM(데스크톱 창 관리자)이 렌더링 프레임을 디스플레이 포트로 바이패스하지 못하고 드롭시킵니다.
 
-### ② EDID 핸드셰이크 유실 및 HDCP 인증 타임아웃
+② EDID 핸드셰이크 유실 및 HDCP 인증 타임아웃
 모니터는 PC에 연결되는 순간 "나는 어떤 해상도와 주사율을 지원하는가"를 담은 EDID 데이터 블록을 I2C DDC 채널을 통해 그래픽 카드로 전송합니다. 장치 드라이버가 꼬여 있거나 대역폭 마진이 극도로 좁아진 상태에서 고해상도(4K 이상) 혹은 고주사율(144Hz+) 신호가 인가되면, EDID 패킷 체크섬 오류가 발생하며 디스플레이 출력이 강제로 셧다운됩니다. 이후 윈도우가 신호를 재탐색하는 과정이 화면 깜빡임으로 발현됩니다.
 
-### ③ PCIe ASPM(Active State Power Management) 및 링크 트레이닝 실패
+③ PCIe ASPM(Active State Power Management) 및 링크 트레이닝 실패
 노트북의 전원 관리 프로파일이 배터리 절약 모드 또는 불완전한 균형 조정 모드로 설정되어 있을 때, PCIe 버스와 Type-C 컨트롤러가 저전력 상태(L1/L2 서브스테이트)로 진입합니다. 이때 외장 모니터가 요구하는 픽셀 클럭(Pixel Clock)을 드라이버가 제때 깨우지 못하면 링크 트레이닝(Link Training)에 실패하여 '신호 없음' 상태에 고착됩니다.
 
 ---
 
 ![Tech Hardware Guide](https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2? auto=format&fit=crop&w=1200&h=675&q=85)
 
-## 2. 장애 극복 단계별 해결 절차 (Step-by-Step Resolution)
+2. 장애 극복 단계별 해결 절차 (Step-by-Step Resolution)
 
 다음 절차는 Windows 11 및 Windows 10 환경에서 그래픽 드라이버 스택을 백지 상태로 초기화하고 신호 라인을 재구축하는 엔지니어 표준 프로토콜입니다.
 
@@ -74,9 +75,9 @@ theme: "Midnight Navy Royal"
 
 기존에 연결되었던 모니터 정보와 잘못 잡힌 어댑터 프로파일이 충돌을 유발하므로 이를 강제 적출해야 합니다.
 
-## 1. `Windows 키 + X`를 누른 후 장치 관리자를 실행합니다.
+1. `Windows 키 + X`를 누른 후 장치 관리자를 실행합니다.
 
-## 2. 상단 메뉴에서 보기(V) -> 숨겨진 장치 표시(W)를 반드시 체크합니다.
+2. 상단 메뉴에서 보기(V) -> 숨겨진 장치 표시(W)를 반드시 체크합니다.
 
 3. 모니터카테고리를 확장합니다. 반투명하게 비활성화되어 있는 '일반 PnP 모니터' 항목들을 마우스 우클릭하여 모두디바이스 제거합니다.
 
@@ -99,13 +100,13 @@ pnputil /enum-devices /class Display
 
    - Wagnardsoft의 DDU(Display Driver Uninstaller) 최신 포터블 버전을 다운로드합니다.
 
-## 2. 네트워크 완전 차단:
+2. 네트워크 완전 차단:
 
    - Wi-Fi를 끄거나 유선 LAN 선을 분리합니다. (드라이버 삭제 후 윈도우가 임의로 구버전 드라이버를 자동 설치하는 것을 방지하기 위함)
 
 3. 안전 모드 부팅:- `Windows 키 + R` -> `msconfig` 입력 ->부팅탭에서안전 부팅(최소 설치) 체크 후 재부팅합니다.
 
-## 4.  DDU 드라이버 밀어내기:
+4.  DDU 드라이버 밀어내기:
 
    - 안전 모드로 진입한 후 DDU를 관리자 권한으로 실행합니다.
    - 우측 드롭다운에서 GPU -> NVIDIA(또는 AMD)를 선택하고‘지우고, 다시 시작하지 않음(Clean and do NOT restart)’을 클릭합니다.
@@ -121,9 +122,9 @@ pnputil /enum-devices /class Display
 
 드라이버 재설치가 완료되고 화면이 들어왔더라도, 특정 주사율에서 깜빡임이 재발할 수 있습니다.
 
-## 1. 바탕화면 우클릭 -> 디스플레이 설정->고급 디스플레이로 이동합니다.
+1. 바탕화면 우클릭 -> 디스플레이 설정->고급 디스플레이로 이동합니다.
 
-## 2. 외장 모니터를 선택한 후, 새로 고침 빈도(주사율) 항목을 확인합니다.
+2. 외장 모니터를 선택한 후, 새로 고침 빈도(주사율) 항목을 확인합니다.
 
 3. 144Hz나 165Hz 등 가변 주사율(VRR/G-Sync 호환)로 잡혀 있다면, 이를 60Hz 또는 120Hz 고정 정수 단위로 한 단계 낮춥니다.
 
@@ -131,7 +132,7 @@ pnputil /enum-devices /class Display
 
 ---
 
-## 3. 엔지니어 주의사항 및 재발 방지 대책 (Post-Mortem Advice)
+3. 엔지니어 주의사항 및 재발 방지 대책 (Post-Mortem Advice)
 
 현장에서 문제를 해결한 뒤 재발을 방지하기 위해 다음 3가지 사항을 시스템에 즉각 반영해야 합니다.
 

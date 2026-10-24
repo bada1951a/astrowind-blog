@@ -22,6 +22,7 @@ theme: "Industrial Blueprint"
 
 
 
+
 <div style="border-left: 4px solid #f59e0b; padding: 12px 16px; margin: 20px 0; background-color: rgba(245,158,11,0.08); border-radius: 4px; color: #111827;">
 <strong>IT Emergency Context:</strong> It is 9:40 AM in our Manhattan office. A company-wide board meeting starts in exactly 20 minutes, and our VP of Operations is staring at her new Windows 11 laptop, visibly frustrated. She needs to rename a dozen critical PDF manifests quickly, but every time she right-clicks, she is greeted by the simplified Windows 11 context menu. The option she needs is buried behind a "Show more options" click. That extra click 50 times a day kills workflow rhythm. As the senior IT systems engineer, I need to fix this permanently right now.
 </div>
@@ -34,7 +35,7 @@ Let us look at why this happens and how you can restore the classic right-click 
 
 ---
 
-## Root Cause Breakdown: Why Windows 11 Hid Your Menu
+Root Cause Breakdown: Why Windows 11 Hid Your Menu
 
 Before jumping into the fix, let us understand what is happening under the hood of the Windows Shell.
 
@@ -46,11 +47,11 @@ Before jumping into the fix, let us understand what is happening under the hood 
 
 ---
 
-## Step-by-Step Resolution: Bringing Back the Classic Menu
+### Step-by-Step Resolution: Bringing Back the Classic Menu
 
 You do not need to install sketchy third-party software or pay for registry tweakers. You can achieve this using a simple command line or a quick registry adjustment. Here is how we fixed it for our VP in time for the board meeting.
 
-## Method 1: The Instant Command Line Script (Recommended for IT Admins)
+Method 1: The Instant Command Line Script (Recommended for IT Admins)
 You can apply this fix via PowerShell or Command Prompt. It creates the necessary registry hive override without requiring manual registry navigation.
 
 1. Click on your Start menu, type `cmd`, right-click on Command Prompt, and selectRun as administrator.
@@ -71,14 +72,14 @@ You can apply this fix via PowerShell or Command Prompt. It creates the necessar
 <code>reg delete "HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}" /f</code>
 </div>
 
-## Method 2: Manual Registry Editor Navigation
+Method 2: Manual Registry Editor Navigation
 If you prefer doing things manually or need to verify the registry key yourself, follow these clicks:
 
 1. Press `Windows Key + R` to open the Run dialog box.
 
 2. Type `regedit` and press Enter (approve any User Account Control prompts).
 
-## 3. Navigate through the left-hand tree structure to:
+3. Navigate through the left-hand tree structure to:
 
    `HKEY_CURRENT_USER \ Software \ Classes \ CLSID`
 
@@ -96,7 +97,7 @@ If you prefer doing things manually or need to verify the registry key yourself,
 
 ---
 
-### Expert Warning & Best Practices
+Expert Warning & Best Practices
 
 Before rolling this out across your entire enterprise domain via Group Policy or script deployment, keep these operational notes in mind:
 
@@ -106,7 +107,7 @@ Before rolling this out across your entire enterprise domain via Group Policy or
 
 ---
 
-### Frequently Asked Questions (FAQ)
+Frequently Asked Questions (FAQ)
 
 Q1: Does this tweak require a full system reboot?
 

@@ -22,6 +22,7 @@ theme: "Deep Ocean Cobalt"
 
 
 
+
 Afgelopen dinsdagmiddag, midden in het hectische Zuidas-zakendistrict in Amsterdam, liep de spanning hoog op. Ik zat achter mijn bureau te worstelen met een doodlopende zaak. Supeperbelangrijk moment: honderden medewerkers stonden te wachten op de toegang tot het interne intranet om de nieuwste en meest cruciale bedrijfsnotificaties en bijbehorende documenten te downloaden. Precies op dat moment besloot mijn werkstation te reageren op een herstartprikkel door finaal te weigeren. Het scherm werd zwart, maar de ventilatoren bleven loeien en de led-lampjes bleven vrolijk branden. Geen enkele toetscombinatie hielp, en een geforceerde harde reset met de aan-uitknop dreigde mijn actieve netwerksessies te corrumperen. Een regelrechte nachtmerrie voor een systeembeheerder.
 
 Dit fenomeen, waarbij een pc weigert om echt uit te schakelen en in een soort zombie-slaapmodus blijft hangen, komt verrassend vaak voor in kantooromgevingen. Als IT-hardware specialist krijg ik hier wekelijks vragen over. Het goede nieuws is dat je er geen ingewikkelde scripttalen of dure hardwarevervangingen voor nodig hebt. Laten we eens diep duiken in de echte technische oorzaken en direct aan de slag gaan met een definitieve oplossing.
@@ -48,7 +49,7 @@ De enige echte oplossing om dit probleem voor eens en voor altijd de wereld uit 
 
 2. Zorg rechtsboven bij 'Weergeven op' dat je kiest voor 'Grote pictogrammen' of 'Kleine pictogrammen' zodat alle opties zichtbaar worden.
 
-## 3. Klik op de optie Energiebeheer.
+3. Klik op de optie Energiebeheer.
 
 4. Kijk aan de linkerzijde van het venster en klik op de link met de tekst 'Het gedrag van de aan/uit-knoppen bepalen'.
 

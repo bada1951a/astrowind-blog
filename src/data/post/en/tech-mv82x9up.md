@@ -22,6 +22,7 @@ theme: "Mint Fresh Engineering"
 
 
 
+
 금요일 오후 4시 55분, 다음 주 월요일에 전사 발표할 대규모 쿠버네티스 클러스터 마이그레이션 최종 빌드 검증을 돌려놓고 커피를 마시러 다녀왔는데, 데스크톱 팬은 터빈 돌아가는 소리처럼 굉음을 내며 돌고 있는데 모니터 화면은 완벽한 '무(無)'인 채로 나를 반기더라. 슬랙(Slack)에서는 VP가 "Build ready?"를 치고 있고, 내 메인 rig는 화면 출력도 안 되는 상황. 심장이 방구석 밖으로 튀어나오는 줄 알았다.
 
 <div style="border-left: 4px solid #059669; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px;">
@@ -30,7 +31,7 @@ theme: "Mint Fresh Engineering"
 
 ![Hardware Diagnostic & Troubleshooting](https://picsum.photos/seed/hardware-438/1000/550)
 
-## 왜 갑자기 모니터가 안 들어올까? (Root Cause Breakdown)
+왜 갑자기 모니터가 안 들어올까? (Root Cause Breakdown)
 
 현장에서 십 수 년간 수백 대의 워크스테이션과 서버, 데스크톱을 까뒤집어 보며 느낀 거지만, 이런 증상의 90%는 물리적인 접촉 불량이다. 구체적인 원인은 이렇다.
 
@@ -42,7 +43,7 @@ theme: "Mint Fresh Engineering"
 
 ---
 
-## 실전 구원 투입: 3단계 하드웨어 리셋 및 슬롯 점검 매뉴얼
+실전 구원 투입: 3단계 하드웨어 리셋 및 슬롯 점검 매뉴얼
 
 자, 패닉은 그만두고 실리콘밸리 엔지니어들이 현장에서 쓰는 가장 빠르고 확실한 3단계 클렌징 및 진단 루틴을 타임라인대로 밟아보자. OS로 진입조차 못 하는 상황이니 소프트웨어 툴은 나중에 일이다.
 
@@ -79,7 +80,7 @@ sfc /scannow</code></pre>
 
 ---
 
-## 하드웨어 장해 예방을 위한 시니어 엔지니어의 조언
+하드웨어 장해 예방을 위한 시니어 엔지니어의 조언
 
 이런 고생을 두 번 다시 하고 싶지 않다면 다음 룰을 지켜라.
 * 주기적인 클리닝 사이클: 6개월에 한 번씩은 케이스를 열고 에어 더스터로 먼지를 날려주되, 콤프레샤 같은 고압 바람은 팬 베어링을 망가뜨리므로 절대 쓰지 마라.
@@ -87,7 +88,7 @@ sfc /scannow</code></pre>
 
 ---
 
-## Frequently Asked Questions (FAQ)
+Frequently Asked Questions (FAQ)
 
 **Q1.** 지우개가 없는데 안경닦이나 휴지로 닦아도 되나요?
 

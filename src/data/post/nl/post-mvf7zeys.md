@@ -22,6 +22,7 @@ theme: "Cobalt Enterprise Lab"
 
 
 
+
 Het was kwart voor twee op een gure dinsdagmiddag in het Zuidas zakendistrict in Amsterdam. Om twee uur zou een van onze senior consultants een beslissende pitch geven aan een grote internationale cliënt. Paniek brak los toen zijn high-end laptop plotseling veranderde in een straaljager: de ventilatoren loeiden op volle toeren, de cursor schokschoot over het scherm en PowerPoint weigerde nog te reageren. Ik snelde naar zijn flexplek toe, drukte op Ctrl+Shift+Esc en zag het onmiddellijk in Taakbeheer: het proces 'Systeem' (System) slurpte doodleuk 99 tot 100 procent van zijn dure processor op. De temperatuur van de CPU schoot door naar 92°C en de presentatie stond op knappen.
 
 <div style="border-left: 4px solid #1e40af; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
@@ -30,7 +31,7 @@ Het was kwart voor twee op een gure dinsdagmiddag in het Zuidas zakendistrict in
 
 ![How to Fix 100 Percent CPU Usage Caused by System Process Tech Guide](/images/tech-photo/bsod (8).png)
 
-### Wat we eerst *fout* deden (en jij dus niet moet doen)
+Wat we eerst *fout* deden (en jij dus niet moet doen)
 
 In de hectiek maakte mijn collega de klassieke fout: hij bleef maar op de aan/uit-knop drukken om een harde reset uit te voeren. Drie keer achter elkaar. Gevolg? Windows raakte nog verder in de war, de SSD sloeg op tilt vanwege onvoltooide schrijfbewerkingen, en PowerPoint herstelde de presentatie corrupt. Sterker nog, na elke reboot sprong het Systeem-proces binnen twee minuten weer vrolijk naar die tergende 100%. 
 
@@ -38,7 +39,7 @@ Het probleem zat hem niet in de hardware zelf, maar in een typische Windows-soft
 
 ---
 
-### De 3 belangrijkste boosdoeners van een maxed-out Systeem-proces
+De 3 belangrijkste boosdoeners van een maxed-out Systeem-proces
 
 Voordat we gaan sleutelen, is het handig om te weten waarom dit gebeurt. Het Windows 'Systeem'-proces (kernel en kernservices) schiet niet zomaar naar 100%.
 
@@ -81,7 +82,7 @@ Soms is de kernel zelf beschadigd door een onvoltooide update. Dit herstellen we
 
 1. Klik op Start, typ `cmd`, klik met rechts op Opdrachtprompten kiesAls administrator uitvoeren.
 
-## 2. Typ het volgende commando in en druk op Enter:
+2. Typ het volgende commando in en druk op Enter:
 
    `DISM.exe /Online /Cleanup-image /Restorehealth`
 
@@ -97,7 +98,7 @@ Soms is de kernel zelf beschadigd door een onvoltooide update. Dit herstellen we
 
 ---
 
-### Veelgestelde Vragen (FAQ)
+Veelgestelde Vragen (FAQ)
 
 1. Kan ik het 'Systeem'-proces zomaar beëindigen in Taakbeheer? Nee, absoluut niet. Als je probeert om het `System`-proces te beeindigen, dwing je een directe kernel-crash af. Je krijgt dan een blauw scherm (BSOD) en al je niet-opgeslagen werk ben je direct kwijt. Gebruik altijd de bovenstaande methoden via de opdrachtprompt of apparaatbeheer.
 

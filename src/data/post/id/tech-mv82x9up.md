@@ -22,6 +22,7 @@ theme: "Acid Lime Hacker Space"
 
 
 
+
 Jam sudah menunjukkan pukul 16:50 WIB. Hari Jumat sore, minggu penutupan laporan bulanan, dan *big boss* baru saja kirim pesan singkat via WhatsApp: *"Meeting jam 5 sore ini kita pakai ruang utama ya, presentasi data lo udah siap kan?"* Jantung langsung copot. Pas saya buru-buru pencet tombol power PC meja kerja, kipas *case* nyala bergemuruh, lampu RGB *motherboard* kedap-kedip sok ganteng, tapi... layar monitor *dead silent*. Kosong melompong dengan tulisan ikonik: "No Signal". 
 
 Mau teriak tapi malu sama anak-anak *dev* sebelah. Mau reboot paksa sampai lima kali hasilnya tetap sam
@@ -32,7 +33,7 @@ a: mesin hidup, angin AC CPU muter kenceng, tapi display nihil. Buat ukuran anak
 
 ---
 
-### Kenapa Sih PC Bisa Nyala Tapi Layar Kosong? (Root Cause Analysis)
+Kenapa Sih PC Bisa Nyala Tapi Layar Kosong? (Root Cause Analysis)
 
 Sebelum main bongkar, kita bedah dulu kenapa hardware ini suka bikin darah tinggi. Berdasarkan pengalaman ngeberesin ratusan unit PC kantor dan server, 90% kasus "kipas nyala tapi layar gelap" bukan karena VGA atau prosesor jebol, melainkan tiga tersangka utama ini:
 
@@ -60,7 +61,7 @@ Karena kita lagi ngejar deadline mepet, nggak usah pusing buka-buka command prom
 * Trik Lapangan: Ambil penghapus pensil karet (yang warna putih bersih dan agak lunak). Gosok pelan-pelan bagian kuningan emas RAM (*gold fingers*) searah. Jangan bolak-balik terlalu kasar. Setelah itu, tiup sisa serpihan penghapus (jangan ditiup pakai ludah ya, bro!).
 
 ```bash
-# Simulasi Logika POST BIOS saat RAM Normal vs Error
+Simulasi Logika POST BIOS saat RAM Normal vs Error
 [POST] Initializing CPU... OK
 [POST] Checking CMOS... OK
 [POST] Detecting RAM Modules... 
@@ -79,7 +80,7 @@ Karena kita lagi ngejar deadline mepet, nggak usah pusing buka-buka command prom
 
 ---
 
-### Expert Warning: Jangan Asal Main Colok!
+Expert Warning: Jangan Asal Main Colok!
 
 <div style="border-left: 4px solid #84cc16; padding: 12px 16px; margin: 20px 0; background-color: rgba(132, 204, 22, 0.05); border-radius: 4px;">
 <strong>Peringatan Keras dari Teknisi:</strong> 
@@ -88,7 +89,7 @@ Karena kita lagi ngejar deadline mepet, nggak usah pusing buka-buka command prom
 
 ---
 
-## FAQ (Pertanyaan Sering Muncul Seputar Masalah RAM & Layar Gelap)
+FAQ (Pertanyaan Sering Muncul Seputar Masalah RAM & Layar Gelap)
 
 Q: Kenapa PC nyala, kipas muter, tapi nggak ada suara *beep* sama sekali dari speaker internal?
 >

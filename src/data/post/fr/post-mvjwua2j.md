@@ -22,6 +22,7 @@ theme: "Sandstone Desert Minimal"
 
 
 
+
 Vendredi, 17h45. Le compte à rebours est lancé dans notre open space de La Défense, et l'ambiance est électrique. Dans 15 minutes, c'est le week-end, mais surtout, je dois absolument envoyer le rapport de clôture hebdomadaire final par e-mail à notre directeur et aux membres du comité de direction. Pour couronner le tout, une dernière vérification vidéo s'impose avec mon chef d'équipe sur un point crucial du dossier. Je clique sur la vidéo, et là... c'est le drame absolu. Un silence de mort. Pas un seul son ne sort de mes haut-parleurs, et mon casque sans fil refuse désespérément de diffuser la moindre note. La petite icône de haut-parleur dans la barre des tâches affiche une fichue croix rouge, et mes mains commencent à transpirer. Le stress monte en flèche.
 
 <div style="border-left: 4px solid #a16207; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
@@ -30,7 +31,7 @@ Vendredi, 17h45. Le compte à rebours est lancé dans notre open space de La Dé
 
 ![Tech Troubleshooting Guide](/images/tech-photo/tech-photos%20(26).jpg)
 
-## Pourquoi votre PC Windows 11 est-il soudainement muet ?
+Pourquoi votre PC Windows 11 est-il soudainement muet ?
 
 En tant qu'ingénieur support informatique, je vois ce genre de panne survenir au pire moment possible. Voici les trois coupables habituels derrière cette absence totale de son :
 
@@ -42,7 +43,7 @@ En tant qu'ingénieur support informatique, je vois ce genre de panne survenir a
 
 ---
 
-## Guide de résolution étape par étape
+Guide de résolution étape par étape
 
 Sortons de cette impasse immédiatement grâce à une méthode pragmatique et rapide, pensée pour les professionnels sous pression.
 
@@ -87,7 +88,7 @@ Si le matériel refuse obstinément de coopérer, le problème vient probablemen
 
 ---
 
-## Avertissement de l'expert en maintenance PC
+Avertissement de l'expert en maintenance PC
 
 Avant de tripatouiller vos composants ou de jeter votre casque par la fenêtre, gardez ces règles d'or en tête :
 
@@ -96,7 +97,7 @@ Avant de tripatouiller vos composants ou de jeter votre casque par la fenêtre, 
 
 ---
 
-## Foire Aux Questions (FAQ)
+Foire Aux Questions (FAQ)
 
 Q1 : L'icône de son a une croix rouge et affiche "Aucun périphérique de sortie audio n'est installé". Que faire ? C'est le signe classique d'un pilote manquant ou désactivé suite à une mise à jour. Rendez-vous immédiatement dans leGestionnaire de périphériques, faites un clic droit sur le nom de votre PC tout en haut de la liste, et cliquez surRechercher les modifications sur le matériel. Si cela ne suffit pas, téléchargez le pilote audio officiel depuis le site du fabricant de votre PC (Dell, HP, Lenovo).
 

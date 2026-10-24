@@ -22,6 +22,7 @@ theme: "Modern Minimalist Slate"
 
 
 
+
 Eran las 18:45 en nuestra oficina tecnológica en el distrito 22@ de Barcelona. Faltaban apenas quince horas para el lanzamiento crítico de un software en el que habíamos estado trabajando durante meses con el equipo de Madrid. El estrés en el canal de Slack era palpable y las notificaciones no paraban de llover. De repente, fui a hacer clic en el menú de Inicio de Windows 11 para abrir la consola de comandos y... nada. La barra de tareas entera se había quedado completamente congelada. El cursor se movía por el escritorio, pero ni el icono de Windows, ni los accesos directos, ni el reloj respondían a los clics. Reiniciar de la manera tradicional era imposible porque el menú estaba bloqueado, y un reinicio forzoso con el botón físico corría el riesgo de corromper un despliegue local crítico. Tenía que solucionarlo en cuestión de minutos.
 
 Si te ha pasado lo mismo justo cuando más prisa tienes, sabes la frustración que genera. Vamos a ir directos al grano con los métodos reales que utilizamos los ingenieros de soporte para solucionar este fallo clásico de Windows 11 sin perder la paciencia ni los datos.
@@ -34,7 +35,7 @@ Si te ha pasado lo mismo justo cuando más prisa tienes, sabes la frustración q
 
 ---
 
-### ¿Por qué se congela la barra de tareas en Windows 11?
+¿Por qué se congela la barra de tareas en Windows 11?
 
 Antes de aplicar la solución, es útil entender qué está pasando bajo el capó para evitar que vuelva a suceder:
 
@@ -48,7 +49,7 @@ a: En Windows 11, la barra de tareas y el menú de inicio están estrechamente i
 
 ---
 
-### Solución paso a paso: De lo más rápido a la artillería pesada
+Solución paso a paso: De lo más rápido a la artillería pesada
 
 Sigue esta secuencia ordenada para recuperar el control de tu equipo en menos de cinco minutos.
 
@@ -61,7 +62,7 @@ Dado que no puedes acceder al Administrador de tareas de la forma habitual hacie
 
 3. Desplázate por la pestaña Procesoshasta encontrarExplorador de Windows (o busca `explorer.exe`).
 
-## 4. Haz clic derecho sobre él y selecciona Reiniciar. 
+4. Haz clic derecho sobre él y selecciona Reiniciar. 
 
 *Verás que la pantalla parpadea durante un segundo y la barra de tareas vuelve a la vida. *
 
@@ -96,14 +97,14 @@ a:
 
 ---
 
-### Consejos de mantenimiento para evitar futuros bloqueos
+Consejos de mantenimiento para evitar futuros bloqueos
 
 * Cuidado con las herramientas de personalización visual: Aplicaciones de terceros que modifican el aspecto de la barra de tareas (como antiguos parches de diseño o modificadores de menú de inicio) suelen ser la causa principal de incompatibilidades con las actualizaciones mensuales de Windows 11.
 * Mantén los controladores gráficos al dí
 
 a: Una GPU con drivers desactualizados puede corromper el renderizado de la interfaz gráfica de Windows. Revisa periódicamente las actualizaciones desde la aplicación oficial de tu tarjeta gráfica. ---
 
-## Preguntas Frecuentes (FAQ)
+Preguntas Frecuentes (FAQ)
 
 1. ¿Perderé mis archivos abiertos si reinicio el Explorador de Windows? No. Reiniciar `explorer.exe` solo afecta a la interfaz gráfica (barra de tareas, iconos del escritorio y carpetas abiertas). Los documentos de Word, Excel o las pestañas del navegador que tengas en uso no se cerrarán ni perderán su progreso.
 

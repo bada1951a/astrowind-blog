@@ -22,6 +22,7 @@ theme: "Deep Ocean Cobalt"
 
 
 
+
 Eram exatamente 14h50 de uma terça-feira movimentada no nosso hub de tecnologia na Zona Sul de São Paulo. A entrega do projeto para o cliente final estava marcada para as 15h30, e o time inteiro revisava os últimos pulls no GitHub. De repente, fui chamado às pressas na mesa do nosso desenvolvedor sênior: a barra de tarefas do Windows 11 simplesmente congelou. O menu Iniciar não abria, os ícones fixados ignoravam qualquer clique e o relógio parecia estático no tempo. Com o cliente no chat cobrando a build final, reiniciar a máquina do zero levaria preciosos minutos preciosos que não tínhamos. Precisávamos de uma solução cirúrgica e imediata, sem perder o fluxo de trabalho.
 
 Se você já passou por isso, sabe o nível de frustração. O Windows 11 é excelente em design, mas o Explorador de Arquivos e a camada gráfica da barra de tarefas (que agora dependem fortemente de pacotes modernos do sistema) ainda sofrem com engasgos intermitentes. 
@@ -32,7 +33,7 @@ Abaixo, detalho o passo a passo exato que utilizei naquele momento de pressão p
 
 ---
 
-## 🔍 Raiz do Problem
+🔍 Raiz do Problem
 
 a: Por que a Barra de Tarefas trava no Windows 11?
 
@@ -46,7 +47,7 @@ Antes de aplicar os comandos, vale entender o que acontece por trás dos panos. 
 
 ---
 
-## 🛠️ Passo a Passo para a Resolução Rápida
+🛠️ Passo a Passo para a Resolução Rápida
 
 <div style="border-left: 4px solid #2563eb; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Atalho de Emergênci
@@ -54,7 +55,7 @@ Antes de aplicar os comandos, vale entender o que acontece por trás dos panos. 
 a:</strong> Se o mouse ainda funcionar minimamente, tente abrir o Gerenciador de Tarefas pressionando <strong>Ctrl + Shift + Esc</strong>. Se nem isso funcionar, use <strong>Ctrl + Alt + Del</strong> e selecione "Gerenciador de Tarefas".
 </div>
 
-### Método 1: Reiniciar o Explorador de Arquivos (A solução definitiva de 30 segundos)
+Método 1: Reiniciar o Explorador de Arquivos (A solução definitiva de 30 segundos)
 
 Este é o método mais rápido e eficiente para recuperar a barra de tarefas sem perder os aplicativos que já estão abertos.
 
@@ -66,17 +67,17 @@ Este é o método mais rápido e eficiente para recuperar a barra de tarefas sem
 
 4. Clique com o botão direito em cima dele e selecione Reiniciar.
 
-## 5. *O que acontece agor
+5. *O que acontece agor
 
 a:* A barra de tarefas sumirá por um segundo junto com a área de trabalho e voltará a funcionar normalmente, já limpa e reestabilizada. ---
 
-### Método 2: Registrar novamente a Barra de Tarefas via PowerShell
+Método 2: Registrar novamente a Barra de Tarefas via PowerShell
 
 Se o Método 1 não resolveu e o congelamento persiste, o problema pode estar nos registros internos da interface do usuário do Windows 11. Vamos forçar o sistema a reinstalar o pacote da barra de tarefas.
 
 1. Pressione as teclas `Ctrl + Shift + Esc` para abrir o Gerenciador de Tarefas.
 
-## 2. No menu superior, clique em Executar nova tarefa.
+2. No menu superior, clique em Executar nova tarefa.
 
 3. Na caixa de texto que abrir, digite `powershell` (marque a caixa "Criar esta tarefa com privilégios administrativos").
 
@@ -90,13 +91,13 @@ Get-AppXPackage -AllUsers -Name Microsoft.Windows.ShellExperienceHost | Foreach 
 
 ---
 
-### Método 3: Limpeza de Cache e Verificação de Integridade (SFC)
+Método 3: Limpeza de Cache e Verificação de Integridade (SFC)
 
 Se o travamento for recorrente ao longo dos dias, arquivos do sistema podem estar corrompidos. Vamos rodar uma varredura rápida pelo Terminal do Windows.
 
 1. Clique com o botão direito no menu Iniciar (ou use o atalho `Win + X`) e selecione Terminal (Administrador)ouPrompt de Comando (Administrador).
 
-## 2. Digite o seguinte comando e aperte Enter:
+2. Digite o seguinte comando e aperte Enter:
 
    ```cmd
    sfc /scannow
@@ -108,7 +109,7 @@ Se o travamento for recorrente ao longo dos dias, arquivos do sistema podem esta
 
 ---
 
-## ⚠️ Dica do Especialist
+⚠️ Dica do Especialist
 
 a: Prevenção e Boas Práticas
 
@@ -118,7 +119,7 @@ Evite também softwares de terceiros que prometem modificar profundamente o visu
 
 ---
 
-## ❓ Perguntas Frequentes (FAQ)
+❓ Perguntas Frequentes (FAQ)
 
 1. O que fazer se nem o Gerenciador de Tarefas abrir pelo atalho? Se o sistema estiver totalmente travado a ponto de ignorar `Ctrl + Shift + Esc`, pressione `Ctrl + Alt + Del`, clique emSairou use o botão físico de energia do gabinete/notebook para reiniciar a máquina de forma forçada. Em seguida, aplique o Método 3 para checar se houve corrupção de arquivos.
 

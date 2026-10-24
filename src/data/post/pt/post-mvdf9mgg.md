@@ -22,6 +22,7 @@ theme: "Graphite Technical Paper"
 
 
 
+
 Eram 19h45 em um hub de tecnologia na região da Avenida Paulista, em São Paulo, e o clima na sala de reuniões estava tenso. Precisávamos entregar um relatório de BI consolidado para a diretoria às 9h do dia seguinte, mas o notebook principal da equipe simplesmente decidiu travar na tela de reinicialização com o famigerado aviso de "Atualizando o Windows: 100% concluído. Não desligue o computador". Passaram-se trinta minutos, quarenta minutos, e a porcentagem não saía do lugar. O cooler do aparelho rodava no talo, o prazo apertava, e reiniciar no botão físico trazia o medo clássico de corromper o sistema de vez.
 
 Essa cena é o pesadelo de qualquer profissional de TI ou usuário que depende de estabilidade. Depois de perder valiosos minutos tentando alternativas ineficientes, o diagnóstico certeiro apontou para o que costuma falhar nesses momentos: arquivos corrompidos no cache do Windows Update, especificamente na pasta onde o sistema armazena os pacotes de instalação temporários.
@@ -32,7 +33,7 @@ Essa cena é o pesadelo de qualquer profissional de TI ou usuário que depende d
 a:</strong> Nunca force o desligamento repetidas vezes sem um plano B. Se o Windows trava em 100 porcento, geralmente ele está tentando reescrever uma chave de registro ou aplicar um componente que entrou em conflito com algum driver legado ou arquivo temporário corrompido.
 </div>
 
-## Por que o Windows 11 trava em 100 porcento na atualização?
+Por que o Windows 11 trava em 100 porcento na atualização?
 
 Para entender o problema e nunca mais passar raiva, precisamos olhar debaixo do capô. Os três gargalos mais comuns que causam esse travamento irritante são:
 
@@ -44,7 +45,7 @@ Para entender o problema e nunca mais passar raiva, precisamos olhar debaixo do 
 
 ---
 
-## Passo a Passo Prático: Limpando o Cache e Destravando o Sistema
+### Passo a Passo Prático: Limpando o Cache e Destravando o Sistema
 
 Se o seu sistema está inacessível pela interface gráfica normal, o caminho é iniciar em Modo de Segurança (Safe Mode) ou usar um ambiente de recuperação. Assumindo que você conseguiu acessar o Windows (mesmo que após um hard reset forçado) ou via Prompt de Comando na tela de Reparo Avançado, siga esta sequência exat
 
@@ -85,7 +86,7 @@ net start msiserver
 
 Feche a janela do terminal, reinicie o computador normalmente através das Configurações>Energia>Reiniciar, e verifique se o Windows 11 conclui a aplicação dos pacotes pendentes de forma limpa. ---
 
-## Recomendações de Segurança e Boas Práticas
+Recomendações de Segurança e Boas Práticas
 
 <div style="border-left: 4px solid #475569; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Alerta de Prevenção:</strong> Mantenha sempre um ponto de restauração ativo antes de aplicar grandes atualizações de recursos do Windows 11. Em ambientes corporativos, utilize ferramentas de gerenciamento de políticas para atrasar atualizações de grande porte até que elas estejam totalmente testadas e estáveis no mercado.
@@ -96,7 +97,7 @@ Feche a janela do terminal, reinicie o computador normalmente através das Confi
 
 ---
 
-## Perguntas Frequentes (FAQ)
+Perguntas Frequentes (FAQ)
 
 1. Se eu desligar o computador no botão físico enquanto está em 100%, vou perder meus arquivos?
 Na maioria das vezes, seus arquivos pessoais (documentos, fotos) ficam seguros nas pastas de usuário. No entanto, o sistema operacional pode corromper arquivos de registro, exigindo reparo de inicialização ou o procedimento de limpeza de cache que mostramos neste guia. ![Tech & IT Solution Guide](https://picsum.photos/seed/computer725/1000/550)

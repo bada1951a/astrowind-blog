@@ -22,13 +22,14 @@ theme: "Graphite Technical Paper"
 
 
 
+
 Layar monitor di ruang server kantor kami di kawasan SCBD mendadak menyala merah dengan notifikasi *Low Disk Space* tepat satu jam sebelum *sync-up* mingguan dengan tim manajemen. Laptop operasional salah satu analis data kami ngadat total; sistem Windows 11 menolak membuka aplikasi Excel karena kapasitas Drive C, yang berukuran 512GB NVMe, menyisakan ruang kosong persis 0 bytes. Tidak ada ruang *swap memory*, tidak bisa *save file*, bahkan proses *update* sistem tertahan di tengah jalan. Panik? Sedikit. Tapi sebagai anak IT yang sudah kenyang asam garam menangani kendala server dan sistem internal, saya tahu persis di mana Windows menyembunyikan "sampah" digitalnya. <div style="border-left: 4px solid #475569; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Catatan Lapangan IT:</strong> Masalah Drive C penuh di Windows 11 jarang sekali disebabkan oleh dokumen pekerjaan biasa. 90 persen kasus di lingkungan kantor kami berakar dari tumpukan *cache* aplikasi modern, *installer* sisa pembaruan sistem, dan file sementara (*temp files*) yang dibiarkan menumpuk selama berbulan-bulan.
 </div>
 
 ![Tech & IT Solution Guide](https://picsum.photos/seed/computer917/1000/550)
 
-## Bedah Masalah: 3 Akar Penyebab Utama Drive C Penuh
+Bedah Masalah: 3 Akar Penyebab Utama Drive C Penuh
 
 Sebelum Anda gegabah menghapus file sembarangan yang justru bisa merusak sistem operasi, mari kita identifikasi tiga pelaku utama yang kerap membuat penyimpanan utama Windows 11 cepat ludes:
 
@@ -36,7 +37,7 @@ Sebelum Anda gegabah menghapus file sembarangan yang justru bisa merusak sistem 
 
    Setiap kali aplikasi seperti browser, Discord, Slack, atau Microsoft Teams berjalan, mereka menulis data sementara ke folder `AppData\Local\Temp`. Masalahnya, banyak aplikasi pihak ketiga yang malas membersihkan sisa file mereka sendiri setelah proses ditutup.
 
-2. File Sisa Pembaruan Sistem (Windows Update Cleanup)
+## 2. File Sisa Pembaruan Sistem (Windows Update Cleanup)
 
    Setiap kali Windows 11 mendownload *major update* atau patch keamanan bulanan, OS ini menyimpan salinan file lama (Windows.old atau paket instalasi) sebagai cadangan jika proses *rollback* diperlukan. File-file ini bisa memakan ruang hingga puluhan gigabyte.
 
@@ -46,7 +47,7 @@ Sebelum Anda gegabah menghapus file sembarangan yang justru bisa merusak sistem 
 
 ---
 
-## Langkah-Langkah Eksekusi: Solusi Aman Tanpa Risiko
+### Langkah-Langkah Eksekusi: Solusi Aman Tanpa Risiko
 
 Berikut adalah prosedur standar operasional (SOP) yang biasa kami terapkan di kantor untuk merebut kembali ruang penyimpanan Drive C secara bersih dan aman.
 
@@ -75,7 +76,7 @@ Untuk membersihkan file sisa pembaruan Windows yang tersembunyi, kita butuh hak 
   * *Temporary files*
 * Klik OK dan biarkan sistem memangkas beban file sampah tersebut. Proses ini bisa memakan waktu 5 hingga 15 menit tergantung kecepatan SSD Anda. ---
 
-## Catatan Penting & Rekomendasi Keamanan
+Catatan Penting & Rekomendasi Keamanan
 
 <div style="border-left: 4px solid #475569; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Peringatan Preventif:</strong> Jangan pernah secara sembarangan menghapus folder <code>Windows.old</code> melalui tombol Delete biasa jika Anda baru saja melakukan *major upgrade* Windows 11 dalam 10 hari terakhir dan masih ingin opsi kembali ke versi sebelumnya. Gunakan selalu fitur Disk Cleanup agar sistem menghapusnya secara aman dari tingkat kernel.
@@ -85,7 +86,7 @@ Sebagai tindakan pencegahan jangka panjang, biasakan untuk memindahkan lokasi pe
 
 ---
 
-## Tanya Jawab Populer (FAQ)
+Tanya Jawab Populer (FAQ)
 
 1. Apakah aman menghapus seluruh isi folder di dalam direktori `%temp%`?
 

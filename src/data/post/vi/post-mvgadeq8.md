@@ -22,6 +22,7 @@ theme: "High-Contrast Charcoal"
 
 
 
+
 Mới 2 giờ chiều tại văn phòng giữa trung tâm Quận 1, TP.HCM, không khí đang cực kỳ căng thẳng vì chỉ còn đúng 30 phút nữa là đến hạn chót nộp bản báo cáo tài chính quý cho sếp tổng. Đúng lúc đó, màn hình chiếc máy tính chính của chị kế toán trưởng bỗng xuất hiện một dòng chữ mờ khó chịu ở góc dưới bên phải: "Activate Windows - Go to Settings to activate Windows". Đáng nói hơn, dòng chữ này cứ bám chặt lấy màn hình, che mất một phần số liệu quan trọng trong bảng Excel, thậm chí còn chặn luôn một số thao tác cá nhân hóa. Chị hoảng hốt gọi tôi qua xử lý gấp, miệng liên tục than thở vì sợ sếp thấy lại tưởng máy móc công ty có vấn đề bảo mật.
 
 <div style="border-left: 4px solid #e11d48; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
@@ -30,7 +31,7 @@ Mới 2 giờ chiều tại văn phòng giữa trung tâm Quận 1, TP.HCM, khô
 
 ![Tech Troubleshooting Guide](/images/tech-photo/display%20(4).png)
 
-### Nguyên nhân cốt lõi khiến dòng chữ "Activate Windows" xuất hiện đột ngột
+Nguyên nhân cốt lõi khiến dòng chữ "Activate Windows" xuất hiện đột ngột
 
 Dựa trên kinh nghiệm xử lý hàng trăm ca sự cố văn phòng, hiện tượng này thường xuất phát từ 3 nguyên nhân chính sau đây:
 
@@ -40,7 +41,7 @@ Dựa trên kinh nghiệm xử lý hàng trăm ca sự cố văn phòng, hiện 
 
 3. Lỗi file hệ thống hoặc Service bản quyền bị dừng đột ngột: Dịch vụ quản lý license (Software Protection Platform) bị vô hiệu hóa bởi phần mềm tối ưu hóa rác nào đó mà người dùng vô tình cài đặt.
 
-### Các bước xử lý nhanh bằng Command Prompt (CMD) chuẩn kỹ thuật
+Các bước xử lý nhanh bằng Command Prompt (CMD) chuẩn kỹ thuật
 
 Thay vì loay hoay vào mục *Cài đặt* (Settings) rồi *Update & Security* vốn đang bị khóa tính năng, chúng ta sẽ dùng ngay công cụ dòng lệnh quen thuộc để ép hệ thống làm mới trạng thái bản quyền một cách an toàn nhất.
 
@@ -66,7 +67,7 @@ Sau khi nhập lệnh này, hệ thống sẽ yêu cầu bạn khởi động l�
 <strong>Mẹo an toàn từ kỹ sư:</strong> Lệnh <code>slmgr /rearm</code> chỉ là giải pháp cứu nguy tạm thời (giúp kéo dài thời gian sử dụng thêm 30 ngày). Sau khi hoàn thành xong báo cáo cho sếp, bạn cần liên hệ ngay với bộ phận IT nội bộ của công ty để nhập lại Product Key chính hãng hoặc kết nối lại mạng VPN công ty để gia hạn vĩnh viễn.
 </div>
 
-### Những câu hỏi thường gặp (FAQ)
+Những câu hỏi thường gặp (FAQ)
 
 1. Dùng lệnh CMD này có làm mất dữ liệu trong file Excel hay Word đang mở không? Hoàn toàn không. Lệnh `slmgr` chỉ can thiệp vào phân vùng quản lý bản quyền hệ điều hành (System Registry và Licensing Service), không hề chạm vào các thư mục lưu trữ dữ liệu cá nhân hay file làm việc của bạn. Tuy nhiên, việc khởi động lại máy (Reboot) ở bước cuối có thể làm mất dữ liệu chưa lưu, nên hãy nhớ bấm Ctrl + S trước khi thực hiện.
 

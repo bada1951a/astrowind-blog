@@ -22,6 +22,7 @@ theme: "Industrial Blueprint"
 
 
 
+
 Llevo más de una década gestionando el parque microinformático de una multinacional con más de 800 puestos operativos, y si hay una incidencia que entra a diario en el sistema de tickets de soporte técnico con la etiqueta de "urgente", es el colapso del puesto de trabajo multimonitor. El escenario siempre es el mismo: el usuario llega por la mañana, conecta su portátil corporativo a la base de conexión (docking station) o directamente por HDMI/DisplayPort, y se encuentra con el temido mensaje de "Sin señal" (No Signal) o, peor aún, un parpadeo intermitente cada tres segundos que deja el equipo totalmente inútil para trabajar.
 
 Muchas veces se culpa a la pantalla o al cable de inmediato. Sin embargo, en el 90% de las intervenciones que realizo en planta, el fallo no reside en el panel físico, sino en una desincronización crítica en el handshake digital de la GPU, microcortes de tensión en el protocolo de enlace (DisplayPort Alternate Mode) o la corrupción de los controladores gráficos tras una actualización en segundo plano de Windows Update. En esta guía técnica voy a desglosar cómo aislar la avería a nivel de esquema funcional y resolverla de forma definitiva mediante software e instrumentación del sistema. <div style="border-left: 4px solid #f59e0b; padding: 14px 18px; margin: 24px 0; background-color: rgba(245, 158, 11, 0.05); border-radius: 4px; font-family: monospace; font-size: 0.95em;">
@@ -30,7 +31,7 @@ Muchas veces se culpa a la pantalla o al cable de inmediato. Sin embargo, en el 
 
 ---
 
-## Esquema funcional y desglose de causas raíz
+Esquema funcional y desglose de causas raíz
 
 Para abordar este problema con mentalidad de ingeniería, debemos entender la cadena de transmisión de señal de vídeo desde el silicio hasta la matriz de píxeles:
 
@@ -54,7 +55,7 @@ Windows Update suele superponer drivers genéricos WHQL sobre instalaciones pers
 
 ---
 
-## Análisis comparativo de topología de conexión
+Análisis comparativo de topología de conexión
 
 Antes de tocar el software, debemos contrastar la viabilidad física del despliegue. Esta tabla comparativa refleja los límites de ingeniería de cada interfaz en entornos corporativos:
 
@@ -66,7 +67,7 @@ Antes de tocar el software, debemos contrastar la viabilidad física del desplie
 
 ---
 
-## Procedimiento técnico de resolución paso a paso
+Procedimiento técnico de resolución paso a paso
 
 Para resolver la avería sin reinstalar el sistema operativo, aplicaremos un protocolo de purga profunda a nivel de hardware y software.
 
@@ -86,7 +87,7 @@ Escucharás un breve pitido del sistema y la pantalla parpadeará una vez. Si la
 
 1. Haz clic derecho sobre el botón de Inicio de Windows y selecciona Administrador de dispositivos.
 
-## 2. Despliega la categoría Adaptadores de pantalla.
+2. Despliega la categoría Adaptadores de pantalla.
 
 3. Si observas un triángulo amarillo de advertencia sobre la gráfica integrada o dedicada, haz doble clic sobre el dispositivo y revisa el código de estado:
 
@@ -103,7 +104,7 @@ Para garantizar que no queden residuos en las claves del registro, debemos recur
 
 1. Descarga el paquete oficial más reciente del controlador desde la web de soporte del fabricante del portátil o del diseñador del silicio (Intel, AMD o NVIDIA).
 
-## 2. Descarga la versión portable de DDU.
+2. Descarga la versión portable de DDU.
 
 3. Desconecta el portátil de Internet (apaga el Wi-Fi y retira el cable Ethernet RJ-45) para evitar que Windows Update intente autodescargar un driver genérico en cuanto reiniciemos.
 
@@ -125,7 +126,7 @@ Para garantizar que no queden residuos en las claves del registro, debemos recur
 
 2. Instala a continuación el controlador de la gráfica dedicada (dGPU) y reinicia de nuevo.
 
-## 3. Conecta el segundo monitor.
+3. Conecta el segundo monitor.
 
 4. Pulsa `Win` + `I` para abrir Configuración>Sistema>Pantalla.
 
@@ -143,7 +144,7 @@ DISM /Online /Cleanup-Image /RestoreHealth
 
 ---
 
-## Advertencias del especialista y prevención de fallos
+Advertencias del especialista y prevención de fallos
 
 <div style="border-left: 4px solid #f59e0b; padding: 14px 18px; margin: 24px 0; background-color: rgba(245, 158, 11, 0.05); border-radius: 4px;">
   <strong>ATENCIÓN: CUIDADO CON EL EXCESO DE VOLTAJE Y LA CARGA PD:</strong> Al utilizar adaptadores multipuerto USB-C sin alimentación propia (pasivos) que además alimentan el portátil mediante USB-PD (Power Delivery), un transformador de pared de mala calidad puede introducir rizado de corriente continua (ripple) en la línea de tierra. Este ruido eléctrico degrada el receptor DisplayPort del monitor y puede llegar a quemar el controlador de gestión de energía (PMIC) de la placa base del portátil. Utiliza siempre fuentes de alimentación certificadas por el OEM.
@@ -157,7 +158,7 @@ a: La combinación de adaptadores (por ejemplo, Tipo C a DisplayPort, y de ahí 
 
 ---
 
-## Preguntas Frecuentes (FAQ)
+Preguntas Frecuentes (FAQ)
 
 1. ¿Por qué el monitor parpadea únicamente al abrir ciertas aplicaciones como Netflix o reproductores multimedia?
 Esto se debe a un fallo en la negociación del protocolo anticopia HDCP (High-bandwidth Digital Content Protection). Cuando reproduces contenido protegido, la GPU exige un nivel de cifrado de hardware que viaja a través del cable. Si el cable tiene pines dañados o el driver tiene un fallo de sincronización en sus módulos criptográficos, la pantalla se desconecta por seguridad durante medio segundo de forma cíclica. La solución pasa por actualizar el firmware del monitor o sustituir el cable por uno con certificación HDCP 2.2 o superior.

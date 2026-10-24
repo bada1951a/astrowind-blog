@@ -22,6 +22,7 @@ theme: "Teal Matrix Digital"
 
 
 
+
 Mới sáng thứ Hai đầu tuần, chiếc máy trạm của một đồng nghiệp trong văn phòng công nghệ của tôi tại khu vực Cầu Giấy, Hà Nội bất ngờ lăn đùng ra sập nguồn với màn hình xanh chết chóc (BSOD) quen thuộc nhưng đầy ám ảnh: mã lỗi 0x0000000a (IRQL_NOT_LESS_OR_EQUAL). Đây là ác mộng của bất kỳ kỹ sư hay nhân viên văn phòng nào đang chạy đua với deadline dự án, bởi máy cứ lặp đi lặp lại vòng lặp khởi động rồi lại sập ngay khi vào đến màn hình desktop.
 
 Đừng hoảng loạn cài lại Windows vội. Hãy cùng tôi đi thẳng vào quy trình chẩn đoán và xử lý thực chiến đã được kiểm chứng qua hàng loạt hệ thống tại các văn phòng công nghệ Việt Nam.
@@ -36,7 +37,7 @@ a:</strong> Lỗi 0x0000000a xảy ra khi một tiến trình chế độ kernel
 
 ---
 
-### Phân tích nguyên nhân gốc rễ (Root Cause Breakdown)
+Phân tích nguyên nhân gốc rễ (Root Cause Breakdown)
 
 Trước khi chạm tay vào câu lệnh hay tháo ốc máy, chúng ta cần hiểu rõ tại sao hệ thống lại từ chối vận hành:
 
@@ -48,7 +49,7 @@ Trước khi chạm tay vào câu lệnh hay tháo ốc máy, chúng ta cần hi
 
 ---
 
-### Quy trình xử lý từng bước (Step-by-Step Resolution)
+Quy trình xử lý từng bước (Step-by-Step Resolution)
 
 Để tiết kiệm thời gian, chúng ta sẽ đi theo hai hướng xử lý song song: Kiểm tra phần cứng (RAM)vàXử lý phần mềm (Driver Rollback) thông qua chế độ Safe Mode.
 
@@ -81,14 +82,14 @@ a:
 
 ---
 
-### Lời khuyên từ chuyên gia (Expert Advice)
+Lời khuyên từ chuyên gia (Expert Advice)
 
 * Vệ sinh chân RAM định kỳ: Tại các văn phòng đô thị lớn, bụi bẩn và độ ẩm không khí có thể làm oxy hóa chân RAM. Hãy tháo hẳn thanh RAM ra, dùng tẩy sạch chà nhẹ phần chân đồng và dùng chổi quét bụi khe RAM trên bo mạch chủ.
 * Tắt tính năng Fast Startup:Tính năng này đôi khi lưu lại trạng thái kernel bị lỗi từ phiên trước. VàoControl Panel>Power Options>Choose what the power buttons do> Bỏ tích chọnTurn on fast startup.
 
 ---
 
-### Các câu hỏi thường gặp (FAQ)
+Các câu hỏi thường gặp (FAQ)
 
 Q1: Nếu công cụ chẩn đoán RAM của Windows báo lỗi nhưng tôi không có tiền thay RAM mới ngay thì phải làm sao?
 

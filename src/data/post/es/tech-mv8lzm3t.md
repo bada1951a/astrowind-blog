@@ -22,6 +22,7 @@ theme: "Acid Lime Hacker Space"
 
 
 
+
 Eran las 8:55 AM, a solo cinco minutos de que el *Director General* entrara a la sala de juntas para una presentación global con inversores. El pobre Carlos, de finanzas, me llama por Teams con la voz quebrad
 
 a: su ThinkPad se había quedado congelado en la pantalla de bienvenida con la rueda de carga dando vueltas eternas. El ventilador parecía un motor de Boeing 747 a punto de despegar, y el tipo sudaba frío mirando el reloj. Si esa máquina no arrancaba en tres minutos, la reunión se caía y mi cabeza rodaba por el pasillo.
@@ -32,7 +33,7 @@ a: su ThinkPad se había quedado congelado en la pantalla de bienvenida con la r
 
 ![Hardware Diagnostic & Troubleshooting](https://picsum.photos/seed/hardware-615/1000/550)
 
-## El Calvario del "Todo se Carga al Inicio"
+El Calvario del "Todo se Carga al Inicio"
 
 ¿Qué pasó realmente en ese ordenador? No fue un virus extraterrestre ni magia negra. Fue el clásico combo de desidia corporativa y software basura. Después de apagar el fuego con Carlos (sacando un pendrive de rescate y matando procesos a la fuerza), me puse a investigar la causa raíz en mi propio banco de pruebas. 
 
@@ -46,7 +47,7 @@ En el mundo real de la oficina, los cuellos de botella del arranque se deben cas
 
 ---
 
-## Protocolo de Intervención: Parcheo y Limpieza Extrema
+Protocolo de Intervención: Parcheo y Limpieza Extrema
 
 Para evitar que esto vuelva a ocurrir en el parque informático de la empresa, diseñé un procedimiento basado en utilidades de código abierto y herramientas oficiales de Windows, emulando un parche de firmware digno de un *hacker space*.
 
@@ -78,7 +79,7 @@ Un arranque lento a veces oculta un problema de particionado o falta de alineaci
 a:
 
 ```powershell
-# Abrir PowerShell como Administrador para listar volúmenes y comprobar estado de optimización
+Abrir PowerShell como Administrador para listar volúmenes y comprobar estado de optimización
 Get-Volume | Select-Object DriveLetter, FileSystemLabel, FileSystem, HealthStatus, SizeRemaining
 ```
 
@@ -97,7 +98,7 @@ Muchos servicios de Windows vienen activados por defecto ("Automático") sin que
 
 ---
 
-## FA
+FA
 
 Q: Dudas de trinchera sobre optimización de equipos
 

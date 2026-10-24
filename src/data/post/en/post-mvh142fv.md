@@ -22,6 +22,7 @@ theme: "Rosewood Hardware Guide"
 
 
 
+
 The clock on the wall of our NYC office was glaring at me: 2:40 PM. The company-wide board meeting starts at 3:00 PM, and I am the lead IT systems engineer responsible for projecting the Q3 financial models. Suddenly, right as I switch to the master slide deck, my top-tier workstation locks up completely. The mouse pointer is frozen in place, the audio is buzzing like a trapped hornet, and keyboard inputs do nothing. Panic sets in. I force a hard reboot by holding the power button, cross my fingers, and pray it boots up before the executive team walks through the doors. 
 
 If you work in IT or manage high-performance setups, you know this gut-wrenching feeling all too well. Windows 11 random freezing is arguably the most frustrating diagnostic nightmare because it leaves zero error messages on your screen when it happens. 
@@ -36,7 +37,7 @@ Before I figured out the systematic way to use Event Viewer, I spent countless h
 
 ---
 
-## Root Cause Breakdown: Why Windows 11 Randomly Freezes
+Root Cause Breakdown: Why Windows 11 Randomly Freezes
 
 When a system locks up completely without a Blue Screen of Death (BSOD), it usually points to one of three hardware-software communication breakdowns:
 
@@ -46,7 +47,7 @@ When a system locks up completely without a Blue Screen of Death (BSOD), it usua
 
 ---
 
-## Step-by-Step Resolution: Hunting the Ghost in Event Viewer
+### Step-by-Step Resolution: Hunting the Ghost in Event Viewer
 
 Let's dive into the operating system and pull the forensic data. You do not need third-party diagnostic bloatware for this; Windows 11 has everything built right in.
 
@@ -86,7 +87,7 @@ Once you identify potential corrupted system files or driver clashes in the logs
 
 ---
 
-### Expert Warning and Hardware Safeguards
+Expert Warning and Hardware Safeguards
 
 *   Never trust automatic driver updaters: Third-party driver tools often install generic chipset or GPU drivers that destabilize Windows 11 power management. Always pull drivers directly from your motherboard vendor or NVIDIA/AMD/Intel official portals.
 *   Thermal Throttling Checks: If Event Viewer shows no software errors but your fans roar right before a freeze, install HWMonitor or a reliable sensor utility. Check if your CPU package is spiking past 90-100°C under load.
@@ -94,7 +95,7 @@ Once you identify potential corrupted system files or driver clashes in the logs
 
 ---
 
-### Frequently Asked Questions (FAQ)
+Frequently Asked Questions (FAQ)
 
 Q1: What does Event ID 41 mean, and does it mean my power supply is broken?
 

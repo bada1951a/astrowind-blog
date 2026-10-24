@@ -22,6 +22,7 @@ theme: "Mint Fresh Engineering"
 
 
 
+
 Nel mio lavoro quotidiano sui terminali di gestione e nei laboratori di collaudo hardware, uno strumento di input inaffidabile rappresenta un collo di bottiglia critico. Qualche mese fa, durante la configurazione in loco di un cluster di virtualizzazione, la tastiera meccanica della mia workstation da campo ha iniziato a mostrare sintomi subdoli: digitando credenziali complesse su terminale SSH, alcune lettere venivano registrate due volte (*key chattering* o rimbalzo), mentre la barra spaziatrice e il tasto `Tab` perdevano colpi in modo casuale (*key skipping*). 
 
 In un ambiente di produzione, dover cancellare backspace a raffica o fallire l'autenticazione per via di un doppio carattere non è solo frustrante: rischia di bloccare account di dominio o generare errori di sintassi distruttivi nei file di configurazione.
@@ -56,7 +57,7 @@ Nelle tastiere moderne dotate di socket a innesto rapido (Kailh o Gateron hot-sw
 ---
 ![Tech Diagnostics](https://images.unsplash.com/photo-1517430816045-df4b7de11d1d? auto=format&fit=crop&w=1000&h=550&q=80)
 
-## 2. Protocollo Operativo di Ripristino Passo-Passo
+2. Protocollo Operativo di Ripristino Passo-Passo
 
 Prima di procedere con solventi chimici o saldatori, è obbligatorio isolare il problema a livello software ed escludere interferenze da parte del sistema operativo o di driver periferica corrotti.
 
@@ -171,11 +172,11 @@ Operare sulla componentistica di input richiede cautela per non convertire un se
 
 ## 4. Domande Frequenti (FAQ)
 
-### Posso usare l'alcol isopropilico (IPA) al 99.9% al posto dello spray per contatti dedicato?
+Posso usare l'alcol isopropilico (IPA) al 99.9% al posto dello spray per contatti dedicato?
 Sì, ma solo con somministrazione manuale controllata tramite pipetta o siringa (non più di una o due gocce). L'isopropanolo è un ottimo sgrassante e non lascia residui, tuttavia non contiene gli additivi tensioattivi dei disossidanti specifici per contatti elettrici che disgregano l'ossido metallico per via chimica. Inoltre, un bagno d'alcol eccessivo può opacizzare irreversibilmente le plastiche in policarbonato trasparente (*housing RGB*) di alcuni switch moderni.
 
-### Come faccio a capire se il chattering dipende dallo switch o da un problema della scheda madre/USB?
+Come faccio a capire se il chattering dipende dallo switch o da un problema della scheda madre/USB?
 Collega la tastiera a un secondo computer (preferibilmente con sistema operativo differente, ad esempio una live Linux o macOS). Se lo stesso identico tasto continua a raddoppiare gli input, il guasto risiede indiscutibilmente nella cinematica o nel circuito dello switch. Se invece il fenomeno scompare, il problema è a monte: conflitti di polling rate del controller USB, disturbi elettromagnetici causati da hub non alimentati o problemi del software di gestione periferiche proprietario (come Corsair iCUE o Razer Synapse).
 
-### Perché dopo aver applicato il disossidante il tasto funziona peggio di prima?
+Perché dopo aver applicato il disossidante il tasto funziona peggio di prima?
 Questo accade solitamente per due motivi: non hai atteso l'evaporazione completa del solvente (che abbassa temporaneamente l'isolamento elettrico tra i terminali) oppure hai mosso una quantità eccessiva di detriti e polvere accumulati sul fondo dello switch, facendoli depositare direttamente tra le due lamelle di contatto. In questo caso, occorre soffiare aria compressa a bassa pressione all'interno dell'interruttore premuto a fondo per espellere i residui disciolti, quindi ripetere un ciclo leggero di disossidante a secco.

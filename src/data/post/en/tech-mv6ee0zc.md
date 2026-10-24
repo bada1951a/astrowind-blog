@@ -22,6 +22,7 @@ theme: "Nordic Clean Ice"
 
 
 
+
 > *"A misplaced semicolon will break your build, but an intermittent switch leaf will break your sanity. In production environments, deterministic hardware input is not an amenity—it is an absolute operational baseline."*
 
 Late last winter, during an urgent infrastructure migration on an internal Kubernetes cluster, my terminal suddenly spat out syntax errors during a critical namespace eviction. My custom 75% hot-swap board—built with tuned linear switches—had begun randomly dropping strokes on the `T` key and double-registering the `E` key (`eerror: unexpeected token`). 
@@ -32,7 +33,7 @@ Here is how switch electrical contact mechanics work, why they fail, and how to 
 
 ---
 
-## Technical Root Cause Analysis
+Technical Root Cause Analysis
 
 Mechanical switches rely on physical galvanic contact between two tiny copper-alloy leaves. When you press the stem down, its slider moves away from (or presses into) a movable leaf, allowing it to strike a stationary contact point to close an electrical circuit. 
 
@@ -47,7 +48,7 @@ Mechanical switches rely on physical galvanic contact between two tiny copper-al
 
 When this sequence breaks down, the failure almost always traces back to three electrical and mechanical vectors:
 
-## 1. Contact Leaf Micro-Oxidation and Carbon Fouling
+1. Contact Leaf Micro-Oxidation and Carbon Fouling
 Every time a mechanical switch completes or breaks an electrical circuit, a microscopic electrical arc occurs across the gold-plated contact points. Over millions of cycles, or in humid environments, this galvanic activity—combined with atmospheric moisture—causes micro-oxidation. 
 
 Furthermore, environmental contaminants and airborne dust settle into the switch housing. When dust particles get trapped between the contacts, they burn during micro-arcing and create a non-conductive microscopic carbon scoria. This insulating layer increases contact resistance, causing dropped inputs or forcing you to mash the key harder to register a stroke.
@@ -71,11 +72,11 @@ If physical switch degradation, debris, or warping causes the bouncing phase to 
 
 ---
 
-## Diagnostic and Repair Protocol
+Diagnostic and Repair Protocol
 
 Before picking up any chemical solvents or tools, systematically isolate the operating system environment to verify that the issue is electromechanical rather than an OS-level driver conflict.
 
-### Pre-Flight Diagnostic Checklist
+Pre-Flight Diagnostic Checklist
 
 <div style="border-left: 4px solid #0284c7; padding: 14px 18px; margin: 20px 0; background-color: rgba(2, 132, 199, 0.04); border-radius: 4px;">
   <strong style="color: #0284c7; font-size: 1.05rem;">Diagnostic Inspection Routine</strong>
@@ -87,14 +88,14 @@ Before picking up any chemical solvents or tools, systematically isolate the ope
   </ul>
 </div>
 
-### Phase 1: Software and Interface Triage
+Phase 1: Software and Interface Triage
 
-## 1. Check HID Drivers in Device Manager:
+1. Check HID Drivers in Device Manager:
 
    Press `Windows Key + X` and select Device Manager. ExpandHuman Interface DevicesandKeyboards. 
    Look for duplicate driver entries, yellow warning glyphs, or selective suspend power-saving states. Right-click your active keyboard device, choose Properties, navigate toPower Management, and uncheck *Allow the computer to turn off this device to save power*.
 
-## 2. Execute a Clean State Test:
+2. Execute a Clean State Test:
 
    Launch an administrative shell and run the system file verification tool to ensure driver subsystem integrity:
    ```cmd
@@ -107,7 +108,7 @@ Before picking up any chemical solvents or tools, systematically isolate the ope
 ---
 ![Tech Diagnostics](https://images.unsplash.com/photo-1555680202-c86f0e12f086? auto=format&fit=crop&w=1000&h=550&q=80)
 
-### Phase 2: Chemical Decontamination (Electronic Contact Cleaner)
+Phase 2: Chemical Decontamination (Electronic Contact Cleaner)
 
 If software triage confirms that an isolated switch is dropping or chattering, the fastest and most effective fix is a non-conductive electronic contact cleaner (such as BW-100 or CRC QD Electronic Cleaner).
 
@@ -146,11 +147,11 @@ Allow the board to sit unpowered for at least 15 to 20 minutes. Even fast-evapor
 
 ---
 
-### Phase 3: Hardware Intervention (For Persistent Failures)
+Phase 3: Hardware Intervention (For Persistent Failures)
 
 If chemical cleaning fails to resolve the issue, the switch has either suffered irreversible leaf deformation or the hot-swap socket has loosened.
 
-## 1. Retensioning Hot-Swap Sockets
+1. Retensioning Hot-Swap Sockets
 If your keyboard uses Kailh-style hot-swap sockets, the underlying metal leaf springs on the *PCB's backside* may have widened over time:
 
 1. Unplug the keyboard, remove the keycap, and use a switch puller to gently remove the switch from the hot-swap plate.
@@ -166,7 +167,7 @@ If the board is soldered, you can open the switch housing *in situ* using switch
 
 ---
 
-## Expert Warning: Protecting Your Hardware
+Expert Warning: Protecting Your Hardware
 
 ```
    ┌────────────────────────────────────────────────────────┐
@@ -183,7 +184,7 @@ If the board is soldered, you can open the switch housing *in situ* using switch
 
 ---
 
-## Frequently Asked Questions
+Frequently Asked Questions
 
 1. Can I use 99% Isopropyl Alcohol (IPA) instead of aerosol contact cleaner?
 While 99% IPA is safe on most cured electronics, it is not ideal for switch cleaning. IPA takes significantly longer to evaporate inside an enclosed switch housing, and it lacks the propellant force needed to actively blast away microscopic debris from between the contact points. 

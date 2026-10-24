@@ -22,6 +22,7 @@ theme: "Crimson Emergency Field"
 
 
 
+
 Eran las 4:50 de la tarde en nuestra oficina corporativa en Madrid. A solo diez minutos de enviar el paquete final del proyecto trimestral a la directiva, la pantalla del equipo principal de diseño comenzó a parpadear y, de la nada, apareció esa maldita marca transparente en la esquina inferior derech
 
 a: "Activa Windows: ve a Configuración para activar Windows". Para colmo, cubría justo los botones de exportación del software gráfico. El pánico se apoderó delux del estudio; el cliente estaba esperando los archivos y la interfaz parecía boicotearnos el trabajo.
@@ -40,7 +41,7 @@ Por suerte, como técnico especialista, recordé un procedimiento rápido, limpi
 
 ---
 
-### Por qué aparece este molesto aviso de activación
+Por qué aparece este molesto aviso de activación
 
 Antes de aplicar la solución, es bueno entender qué provocó el fallo en nuestro entorno de trabajo:
 
@@ -58,9 +59,9 @@ Para solucionar este inconveniente sin instalar herramientas peligrosas, vamos a
 
 ### Paso 1: Abrir la consola con privilegios de administrador
 
-## 1. Dirígete al menú de inicio de Windows.
+1. Dirígete al menú de inicio de Windows.
 
-## 2. Escribe `cmd` en la barra de búsqueda.
+2. Escribe `cmd` en la barra de búsqueda.
 
 3. Haz clic derecho sobre Símbolo del sistemay selecciona "Ejecutar como administrador" (es vital tener permisos elevados para modificar los servicios del sistema).
 
@@ -87,7 +88,7 @@ a: Si te sale un mensaje indicando que el comando se ejecutó con éxito, aparec
 ### Paso 4: Reiniciar el equipo de forma limpia
 No cierres el día operativo sin hacer un reinicio completo. Ve a Configuración > Inicio/Apagado > Reiniciar. Al volver a encender la máquina, el servicio se reiniciará de forma limpia y la molesta marca de agua habrá desaparecido, permitiéndote trabajar con la pantalla despejada. ---
 
-### Consejos del técnico de soporte
+Consejos del técnico de soporte
 
 * Respaldo previo: Antes de ejecutar comandos avanzados de consola, asegúrate de tener respaldados tus archivos críticos en la nube corporativa o en un disco externo.
 * Revisión de red: Si trabajas en remoto, asegúrate de conectarte a la VPN de la empresa para que el script de validación periódica corrobore tu licencia corporativa legítima con el departamento de sistemas.
@@ -95,7 +96,7 @@ No cierres el día operativo sin hacer un reinicio completo. Ve a Configuración
 
 ---
 
-## Preguntas Frecuentes (FAQ)
+Preguntas Frecuentes (FAQ)
 
 ¿Este método borra o desactiva permanentemente mi licencia oficial? No. Este procedimiento únicamente reinicia el servicio de evaluación visual y el contador de licencias del sistema operativo. Si tu equipo cuenta con una licencia legítima vinculada a la BIOS o a tu cuenta corporativa, Windows volverá a validarse correctamente en cuanto recupere la conexión con el servidor de licencias.
 

@@ -22,6 +22,7 @@ theme: "Nordic Clean Ice"
 
 
 
+
 <blockquote style="border-left: 3px solid #0284c7; margin: 24px 0; padding: 12px 20px; font-style: italic; color: #334155; background: #f8fafc; border-radius: 0 8px 8px 0;">
 "In una postazione di lavoro moderna, la stabilità visiva non è un lusso: un solo secondo di schermo nero durante una sessione di debug o una presentazione aziendale interrompe il flusso cognitivo e rivela un’instabilità architetturale che va risolta alla radice."
 </blockquote>
@@ -40,7 +41,7 @@ L'istinto iniziale dell'utente medio porta a muovere il cavo o a riavviare alla 
 
 ---
 
-### Le Cause Principali dell'Instabilità Video Multischermo
+Le Cause Principali dell'Instabilità Video Multischermo
 
 Quando una docking station o un'uscita diretta USB-C/HDMI non aggancia stabilmente il segnale video, il sistema operativo sta affrontando uno dei seguenti tre colli di bottiglia logico-architetturali:
 
@@ -49,13 +50,13 @@ L'EDID (*Extended Display Identification Data*) è la struttura dati con cui il 
 
 ![Hardware Diagnostic & Troubleshooting](https://images.unsplash.com/photo-1517430816045-df4b7de11d1d? auto=format&fit=crop&w=1000&h=550&q=80)
 
-2. Timeout Detection and Recovery (TDR) ciclico del Driver
+## 2. Timeout Detection and Recovery (TDR) ciclico del Driver
 Sotto Windows, se la GPU non risponde entro due secondi a una richiesta di scheduling grafico, il sistema innesca una procedura TDR (`TdrDelay`). Questo riavvia il thread del driver video in background. All'utente il fenomeno appare esattamente come uno sfarfallio persistente o un black screen di 1-3 secondi accompagnato dal suono di periferica disconnessa. ## 3. Conflitto del Livello MUX e Assegnazione Risorse tra GPU Integrata e Dedicata
 Nei laptop dotati di architettura ibrida, le uscite video fisiche possono essere cablate direttamente alla GPU dedicata (dGPU) o instradate attraverso il frame buffer della GPU integrata (iGPU Intel Iris Xe o AMD Radeon 600M/700M). Se il driver della dGPU e quello della iGPU tentano di negoziare la pipeline di scaling in modo asincrono, si creano instabilità croniche sul clock del pixel.
 
 ---
 
-### Procedura di Ripristino e Azzeramento Driver Passo dopo Passo
+Procedura di Ripristino e Azzeramento Driver Passo dopo Passo
 
 Per ripristinare uno stack video corrotto non è sufficiente premere "Aggiorna driver" nelle impostazioni di sistema; serve una bonifica deterministica. <div style="border-left: 4px solid #0284c7; padding: 12px 16px; margin: 20px 0; background-color: rgba(2, 132, 199, 0.05); border-radius: 4px;">
 <strong>Scorciatoia di emergenz
@@ -63,7 +64,7 @@ Per ripristinare uno stack video corrotto non è sufficiente premere "Aggiorna d
 a:</strong> Se lo schermo esterno è completamente nero ma il portatile risponde, premi contemporaneamente <code>Tasto Windows + Ctrl + Shift + B</code>. Questa sequenza riavvia immediatamente il driver video e azzera il buffer del Desktop Window Manager senza chiudere le applicazioni in esecuzione.
 </div>
 
-## Fase 1: Isolamento e Rimozione Tramite Gestione Dispositivi
+Fase 1: Isolamento e Rimozione Tramite Gestione Dispositivi
 
 1. Premi la combinazione di tasti `Tasto Windows + X` e seleziona Gestione dispositivi.
 
@@ -75,12 +76,12 @@ a:</strong> Se lo schermo esterno è completamente nero ma il portatile risponde
 
 5. Se il problema si è presentato dopo un aggiornamento recente di Windows Update, fai clic su Ripristina driver. Se il pulsante è disabilitato, procedi con la disinstallazione avanzata. ```powershell
 
-# Esegui come Amministratore nel Prompt dei comandi o in PowerShell
-# Forza il rilevamento dell'hardware video senza riavvio forzato
+Esegui come Amministratore nel Prompt dei comandi o in PowerShell
+Forza il rilevamento dell'hardware video senza riavvio forzato
 pnputil /scan-devices
 ```
 
-## Fase 2: Bonifica con Display Driver Uninstaller (DDU) in Modalità Provvisoria
+Fase 2: Bonifica con Display Driver Uninstaller (DDU) in Modalità Provvisoria
 
 Se i file del driver contengono riferimenti incoerenti nel registro di sistema (`HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\{4d36e968-e325-11ce-bfc1-08002be10318}`), la semplice sovrascrittura non risolverà il problema.
 
@@ -88,7 +89,7 @@ Se i file del driver contengono riferimenti incoerenti nel registro di sistema (
 
 2. Scarica il tool *Display Driver Uninstaller (DDU)* ed estrailo in una cartella locale.
 
-## 3. Riavvia Windows in Modalità provvisori
+3. Riavvia Windows in Modalità provvisori
 
 a:
    - Apri Prompt dei comandi come amministratore.
@@ -98,7 +99,7 @@ a:
      ```
    - Nella schermata blu di ripristino, naviga in: *Risoluzione dei problemi* -> *Opzioni avanzate* -> *Impostazioni di avvio* -> *Riavvia*, quindi premi `4` per avviare in Modalità Provvisoria.
 
-## 4. Esegui DDU. Imposta il tipo di dispositivo su GPU.
+4. Esegui DDU. Imposta il tipo di dispositivo su GPU.
 
 5. Seleziona il produttore della scheda (es. Intel, AMD o NVIDIA) e clicca su Pulisci e NON riavviare.
 
@@ -107,15 +108,15 @@ a:
 **Q7.** Al termine delle pulizie, riavvia la macchina in modalità standard.
 
 ```cmd
-# Verifica dello stato dei pacchetti driver video residui nel Driver Store
+Verifica dello stato dei pacchetti driver video residui nel Driver Store
 pnputil /enum-drivers | findstr /I "video display graphic"
 ```
 
-## Fase 3: Reinstallazione Pulita e Configurazione di Handshake
+Fase 3: Reinstallazione Pulita e Configurazione di Handshake
 
 1. Installa per primo il driver della GPU Integrata (gestisce l'output primario della maggior parte dei bridge interni).
 
-## 2. Riavvia la macchina.
+2. Riavvia la macchina.
 
 3. Installa il driver della GPU Dedicata selezionando l'opzione *Installazione personalizzata* -> *Esegui un'installazione pulita*.
 
@@ -127,7 +128,7 @@ pnputil /enum-drivers | findstr /I "video display graphic"
 
 ---
 
-### Raccomandazioni dell'Ingegnere: Prevenzione Guasti e Usura Hardware
+Raccomandazioni dell'Ingegnere: Prevenzione Guasti e Usura Hardware
 
 <div style="border-left: 4px solid #e11d48; padding: 12px 16px; margin: 20px 0; background-color: rgba(225, 29, 72, 0.05); border-radius: 4px;">
 <strong>Avviso Critico:</strong> Non forzare mai risoluzioni personalizzate o overclocking del pixel clock tramite il pannello di controllo NVIDIA/AMD su monitor collegati a docking station USB-C alimentate. La saturazione termica del controller MST (Multi-Stream Transport) della dock può causare la corruzione permanente della EEPROM interna del controller video.
@@ -139,7 +140,7 @@ Nei contesti di produzione ad alta intensità raccomando di prestare attenzione 
 
 ---
 
-### Domande Frequenti (FAQ)
+Domande Frequenti (FAQ)
 
 1. Perché lo sfarfallio peggiora quando apro applicazioni con accelerazione hardware (come Chrome, Spotify o Teams)?
 Questo comportamento conferma un problema a livello di composizione grafica gestita dal Desktop Window Manager (DWM). Quando un'applicazione richiede il rendering Direct3D, il sistema delega il calcolo alla GPU. Se vi è un'incoerenza nella commutazione degli stati energetici (stati P-State) della GPU o se l'opzione "Pianificazione GPU con accelerazione hardware" in Windows è attiva su driver non allineati, il clock video subisce micro-cali di tensione, causando il flicker.

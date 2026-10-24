@@ -22,6 +22,7 @@ theme: "Pure Titanium Clean"
 
 
 
+
 Godzina 8:45 rano, warszawskie centrum biznesowe na Mokotowie. Za piętnaście minut kluczowa telekonferencja zarządu z inwestorami, a stacja robocza dyrektora finansowego wydaje z siebie dźwięk startującego odrzutowca. Wentylatory wyją na maksymalnych obrotach, kursor myszy skacze po ekranie jak szalony, a w Menedżerze zadań proces „System”lub„System i przerwania”dumnie wyświetla równe100% użycia procesora. Ekran zamarza przy próbie otwarcia prezentacji PowerPoint. Panika w oczach użytkownika sięga zenitu, a ja wkraczam do akcji z walizką serwisową.
 
 Znam ten ból na pamięć. Zanim wpadłem na właściwy trop, straciłem mnóstwo czasu na bezmyślne restarty komputera, odinstalowywanie pakietu Office czy skanowanie antywirusem, które w tym konkretnym scenariuszu nie dawały absolutnie nic. Problem leżał głębiej – w sterownikach, uszkodzonej usłudze Windows Update lub konflikcie podzespołów. 
@@ -32,7 +33,7 @@ Dziś pokażę Ci szybką, sprawdzoną metodę krok po kroku, jak opanować tę 
 
 ---
 
-### Dlaczego proces „System” obciąża procesor na 100%? (Główne przyczyny)
+Dlaczego proces „System” obciąża procesor na 100%? (Główne przyczyny)
 
 Zanim klikniemy cokolwiek w systemie, warto zrozumieć, z czym walczymy. Proces systemowy (System / ntoskrnl.exe) to jądro systemu Windows. Jeśli pożera całą moc obliczeniową procesora, oznacza to, że hardware lub sterownik nisko poziomowy utknął w pętli błędów. Oto 3 najczęstsze winowajcy:
 
@@ -44,7 +45,7 @@ Zanim klikniemy cokolwiek w systemie, warto zrozumieć, z czym walczymy. Proces 
 
 ---
 
-### Procedura naprawcz
+Procedura naprawcz
 
 a: Krok po kroku do stabilnego systemu
 
@@ -80,7 +81,7 @@ Jeśli proces systemowy obciąża procesor z powodu zaciętych aktualizacji, mus
    * `ren C:\Windows\SoftwareDistribution SoftwareDistribution.old`
    * `ren C:\Windows\System32\catroot2 Catroot2.old`
 
-## 4. Uruchom usługi ponownie:
+4. Uruchom usługi ponownie:
 
    * `net start wuauserv`
    * `net start cryptSvc`
@@ -104,7 +105,7 @@ Jeżeli reset Windows Update nie pomógł, winny jest najpewniej sterownik sprz�
 
 ---
 
-### Ważne ostrzeżenie serwisowe i dobre praktyki
+Ważne ostrzeżenie serwisowe i dobre praktyki
 
 <div style="border-left: 4px solid #334155; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Uwaga dotyczące zasilania i temperatur:</strong> Długotrwałe utrzymywanie się 100% obciążenia procesora drastycznie podnosi temperaturę układu (często powyżej 85-90°C w laptopach). Upewnij się, że otwory wentylacyjne nie są zablokowane, a pasta termoprzewodząca nie wyschła. Przegrzewający się procesor włączy tzw. thermal throttling, drastycznie obniżając taktowanie i uniemożliwiając normalną pracę.
@@ -112,7 +113,7 @@ Jeżeli reset Windows Update nie pomógł, winny jest najpewniej sterownik sprz�
 
 ---
 
-### Często zadawane pytania (FAQ)
+Często zadawane pytania (FAQ)
 
 1. Czy mogę po prostu zamknąć proces „System” w Menedżerze zadań? Nie. Proces „System” (`ntoskrnl.exe`) to fundament systemu operacyjnego Windows. Próba jego wymuszonego zamknięcia natychmiast spowoduje awarię systemu, tzw. "Blue Screen of Death" (BSOD) i utratę niezapisanych danych.
 

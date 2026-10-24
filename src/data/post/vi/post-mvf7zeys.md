@@ -22,6 +22,7 @@ theme: "Modern Minimalist Slate"
 
 
 
+
 Đồng hồ góc phải màn hình nhảy tưng tưng chỉ còn vỏn vẹn 15 phút nữa là đến hạn chót nộp báo cáo tài chính quý cho sếp tổng tại văn phòng trung tâm TP.HCM, thế nhưng chiếc máy tính để bàn bỗng dưng đơ cứng toàn tập. Chuột di chuyển giật cục từng nhịp, file Excel nặng hơn 20MB quay vòng tròn bất tận và tiếng quạt tản nhiệt hú lên như máy bay phản lực chuẩn bị cất cánh. Mở Task Manager lên xem, tôi chết lặng khi thấy cột CPU đứng im phăng phắc ở mức 100 phần trăm, mà kẻ "thủ ác" ngốn tài nguyên không ai khác chính là tiến trình System Process quen mặt.
 
 Trước đó, phản ứng bản năng của tôi là khởi động lại máy bằng nút nguồn cứng. Nhưng đời không như mơ, vừa bật lên vào lại Windows được đúng 2 phút, máy lại tiếp tục ì ạch, đơ quắc cần câu ngay khi mở trình duyệt Chrome. Thời gian trôi qua từng giây, mồ hôi hột túa ra vì sợ mất dữ liệu chưa kịp lưu. Loay hoay đủ kiểu từ quét virus bằng phần mềm bên thứ ba cho đến rút cả cáp mạng internet ra nhưng tình hình vẫn hoàn toàn vô vọng. 
@@ -30,7 +31,7 @@ Trước đó, phản ứng bản năng của tôi là khởi động lại máy
 <strong>Cảnh báo thực chiến:</strong> Khi CPU chạm đỉnh 100 phần trăm trong thời gian dài, nhiệt độ chip có thể vọt lên trên 85 độ C, gây ra hiện tượng tự ngắt nguồn đột ngột (thermal throttling) làm bay sạch dữ liệu chưa lưu. Hãy giữ bình tĩnh và xử lý theo các bước chuẩn kỹ thuật dưới đây.
 </div>
 
-## Giải mã nguyên nhân: Tại sao System Process lại "bóp" CPU đến chết?
+Giải mã nguyên nhân: Tại sao System Process lại "bóp" CPU đến chết?
 
 Nhiều người lầm tưởng tiến trình System (NT Kernel & System) là virus ăn hại, nhưng thực chất đây là linh hồn của hệ điều hành Windows, quản lý mọi luồng tác vụ phần cứng và driver cốt lõi. Khi nó ngốn sạch 100 phần trăm năng lực tính toán, nguyên nhân thường xuất phát từ ba thủ phạm chính sau:
 
@@ -38,7 +39,7 @@ Nhiều người lầm tưởng tiến trình System (NT Kernel & System) là vi
 - Lỗi tập tin hệ thống (System File Corruption): Ổ cứng HDD hoặc SSD bị lỗi sector khiến các lệnh đọc/ghi dữ liệu nền của hệ thống bị kẹt, ép CPU phải làm việc quá tải để xử lý ngắt (interrupt request).
 - Trình điều khiển quản lý năng lượng (ACPI): Cấu hình nguồn điện trong Control Panel chưa chuẩn khiến chip không thể hạ xung nhịp nghỉ ngơi, dẫn đến việc tiến trình hệ thống liên tục nhồi tải.
 
-## Các bước xử lý thực tế khẩn cấp ngay tại bàn làm việc
+Các bước xử lý thực tế khẩn cấp ngay tại bàn làm việc
 
 Không cần cài đặt những phần mềm cứu hộ phức tạp, chúng ta sẽ xử lý dứt điểm vấn đề này bằng chính các công cụ có sẵn bên trong Windows theo quy trình chuẩn xác từng cú click chuột.
 
@@ -87,7 +88,7 @@ Nhiều trường hợp tiến trình System cố gắng tải xuống hoặc c�
 <strong>Lời khuyên từ chuyên gia phần cứng:</strong> Nếu bạn đang dùng ổ cứng cơ HDD đời cũ cho máy văn phòng, việc nâng cấp lên ổ cứng thể rắn SSD chuẩn NVMe không chỉ giải quyết triệt để lỗi 100 phần trăm CPU do System Process mà còn tăng tốc độ khởi động máy lên gấp 10 lần.
 </div>
 
-## Những câu hỏi thường gặp (FAQ) khi xử lý lỗi CPU System Process
+Những câu hỏi thường gặp (FAQ) khi xử lý lỗi CPU System Process
 
 1. Tôi có nên bấm End Task trực tiếp vào tiến trình System trong Task Manager không?
 Tuyệt đối không. System là tiến trình gốc của nhân hệ điều hành Windows. Nếu bạn cố tình ép kết thúc (End Task), máy tính sẽ ngay lập tức xuất hiện màn hình xanh (BSOD) và khởi động lại, khiến toàn bộ dữ liệu chưa lưu trong Word hay Excel bốc hơi vĩnh viễn.

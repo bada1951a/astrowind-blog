@@ -13,7 +13,8 @@ theme: "Industrial Blueprint"
 
 
 
-## 1. El Momento de Pánico en la Sala de Reuniones
+
+1. El Momento de Pánico en la Sala de Reuniones
 
 Eran las 10:45 de la mañana en el flamante edificio corporativo situado en pleno Paseo de la Castellana en Madrid. Todo estaba listo para la gran demostración ante los directivos de nuestro principal cliente. Tenía mi portátil conectado al proyector de la sala principal y el proyector mostraba la pantalla de inicio perfectamente. En cuestión de minutos, los directivos entrarían para ver en vivo una nueva arquitectura de red y la interfaz de usuario optimizada que habíamos preparado durante semanas. 
 
@@ -39,11 +40,11 @@ Volví a pulsar el teclado con más fuerza, asegurándome de presionar bien cada
 
 3. **Corrupción en la caché de la aplicación o actualizaciones pendientes:** A veces, una actualización acumulativa de Windows corrompe el registro o la caché de la aplicación universal (UWP), impidiendo que el servicio responda a los ganchos de teclado (*keyboard hooks*).
 
-## 3. Step-by-Step Resolution
+3. Step-by-Step Resolution
 
 Para solucionar este inconveniente de forma quirúrgica y rápida, vamos a seguir tres métodos infalibles ordenados del más rápido al más avanzado. No necesitas reiniciar el equipo si sigues estos pasos al pie de la letra.
 
-### Método 1: Reiniciar el proceso mediante el Administrador de tareas
+Método 1: Reiniciar el proceso mediante el Administrador de tareas
 Si la herramienta se quedó "zombi" en segundo plano, matarla y dejar que Windows la reinicie solucionará el problema al instante.
 
 1. Haz clic derecho en la barra de tareas y abre el **Administrador de tareas** (o usa el atajo **Ctrl + Shift + Esc**).
@@ -56,7 +57,7 @@ Si la herramienta se quedó "zombi" en segundo plano, matarla y dejar que Window
 
 5. Prueba de nuevo el atajo **Win + Shift + S**.
 
-### Método 2: Comprobar la Configuración de Notificaciones y Aplicaciones
+Método 2: Comprobar la Configuración de Notificaciones y Aplicaciones
 A veces el problema es simplemente que Windows cree que no quieres ver notificaciones flotantes.
 
 1. Abre la aplicación de **Configuración** pulsando **Win + I**.
@@ -67,7 +68,7 @@ A veces el problema es simplemente que Windows cree que no quieres ver notificac
 
 4. Entra en sus propiedades y verifica que tenga permitido mostrar notificaciones y banners. Ya de paso, asegúrate de que el modo **No molestar** no esté bloqueando las alertas críticas.
 
-### Método 3: Restablecer y reparar la aplicación desde Configuración
+Método 3: Restablecer y reparar la aplicación desde Configuración
 Si los métodos anteriores fallan, vamos a limpiar los datos corruptos de la aplicación sin perder configuraciones importantes.
 
 1. Vuelve a entrar en **Configuración** (**Win + I**).

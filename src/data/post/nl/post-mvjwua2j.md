@@ -22,6 +22,7 @@ theme: "Crimson Emergency Field"
 
 
 
+
 <div style="border-left: 4px solid #ef4444; padding: 12px 16px; margin: 20px 0; background-color: rgba(239, 68, 68, 0.08); border-radius: 4px; color: #111827;">
 <strong>Kritieke Systeemwaarschuwing:</strong> Sta je op het punt om een belangrijk videogesprek te starten op je kantoor aan de Zuidas, en hoor je opeens helemaal niets meer na een onverwachte BSOD? Geen paniek. Dit stappenplan brengt je geluid binnen enkele minuten terug.
 </div>
@@ -34,7 +35,7 @@ In de hectiek begin je dan al snel te stressen. Eerst klik je willekeurig op het
 
 ---
 
-### Waaromvalt je geluid weg na een onverwachte crash?
+Waaromvalt je geluid weg na een onverwachte crash?
 
 Voordat we direct ingrijpen, is het handig om te begrijpen wat er onder de motorkap van Windows 11 gebeurt tijdens een harde systeemreboot:
 
@@ -46,7 +47,7 @@ Voordat we direct ingrijpen, is het handig om te begrijpen wat er onder de motor
 
 ---
 
-### Snelle Stappen: Zo krijg je je geluid direct terug
+Snelle Stappen: Zo krijg je je geluid direct terug
 
 We gaan direct aan de slag met een praktische, logische volgorde. Geen theoretisch gezwets, maar acties via [Taakbeheer], [Configuratiescherm], [Apparaatbeheer] en [Instellingen].
 
@@ -82,7 +83,7 @@ Na een harde reset durft Windows nog wel eens de standaard audio-output te verge
 
 ---
 
-### Veelgestelde Vragen (FAQ)
+Veelgestelde Vragen (FAQ)
 
 Q1: Mijn geluid werkt na deze stappen nog steeds niet en ik zie helemaal geen audioapparaten meer staan in Apparaatbeheer. Wat nu?
 *Dit wijst er vaak op dat de audiocontroller in het BIOS/UEFI is uitgeschakeld door de crash, of dat er sprake is van een hardnekkig hardwareconflict. Herstart je computer, druk herhaaldelijk op `F2` of `Del` om in het BIOS te komen, controleer of 'HD Audio Controller' op [Enabled] staat, en sla de instellingen op.*

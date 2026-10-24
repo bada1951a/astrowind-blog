@@ -22,6 +22,7 @@ theme: "Electric Cyan Speed"
 
 
 
+
 Eran las 18:30 en nuestras oficinas del 22@ en Barcelona. Estábamos a menos de dos horas de realizar el despliegue crítico de una nueva versión de nuestro software y, de repente, la pantalla de mi estación de trabajo principal se iluminó con esa maldita notificación en rojo: "Espacio en disco insuficiente en la unidad C:". El rendimiento cayó en picado justo cuando necesitaba compilar los últimos paquetes y empaquetar los artefactos. El disco de 500 GB estaba al límite absoluto, con apenas 400 MB libres, y el sistema operativo amenazaba con congelarse por completo en pleno proceso de release.
 
 <div style="border-left: 4px solid #06b6d4; padding: 12px 16px; margin: 20px 0; background-color: rgba(6,182,212,0.05); border-radius: 4px; color: #111827;">
@@ -30,7 +31,7 @@ Eran las 18:30 en nuestras oficinas del 22@ en Barcelona. Estábamos a menos de 
 
 ![Tech & IT Solution Guide](https://picsum.photos/seed/computer552/1000/550)
 
-### Por qué se llena tan rápido el disco C en Windows 11
+Por qué se llena tan rápido el disco C en Windows 11
 
 Antes de empezar a borrar a lo loco y romper algo importante, hay que entender dónde se esconde realmente la basura digital en este sistema operativo. Tras investigar el origen del colapso en mi equipo, identifiqué tres culpables principales:
 
@@ -42,11 +43,11 @@ Antes de empezar a borrar a lo loco y romper algo importante, hay que entender d
 
 ---
 
-### Guía paso a paso: Liberación rápida en 1 minutos y limpieza profunda
+Guía paso a paso: Liberación rápida en 1 minutos y limpieza profunda
 
 Para salir del apuro sin arriesgar la estabilidad del sistema, aplicaremos un método de dos fases: una limpieza rápida mediante la interfaz nativa y una purga avanzada de archivos temporales ocultos.
 
-## Fase 1: Limpieza rápida desde la Configuración de Windows 11
+Fase 1: Limpieza rápida desde la Configuración de Windows 11
 
 Esta es la ruta más segura para recuperar espacio al instante sin tocar archivos del sistema por error.
 
@@ -60,7 +61,7 @@ Esta es la ruta más segura para recuperar espacio al instante sin tocar archivo
 <div style="border-left: 4px solid #06b6d4; padding: 12px 16px; margin: 20px 0; background-color: rgba(6,182,212,0.05); border-radius: 4px; color: #111827;">
 <strong>Consejo Pro:</strong> Evita marcar la casilla de "Descargas" a menos que estés 100 por ciento seguro de que no necesitas nada de lo que hay en esa carpeta. </div>
 
-## Fase 2: Purga profunda de carpetas Temp ocultas
+Fase 2: Purga profunda de carpetas Temp ocultas
 
 Si la fase anterior no ha liberado suficiente espacio, necesitamos acceder manualmente a los directorios donde las aplicaciones de terceros acumulan basura.
 
@@ -80,7 +81,7 @@ a:* Si Windows te avisa de que un archivo está abierto en otra aplicación, sim
 
 ---
 
-### Advertencias del experto técnico
+Advertencias del experto técnico
 
 * Cuidado con los limpiadores de terceros: Evita usar programas milagrosos descargados de fuentes dudosas que prometen limpiar el registro con un clic. Muchas veces eliminan claves necesarias y rompen dependencias de software.
 * Puntos de restauración: Si necesitas liberar una cantidad masiva de espacio de golpe, puedes configurar la protección del sistema para reducir el porcentaje de disco asignado a las copias de seguridad, pero ten en cuenta que perderás puntos de restauración antiguos.
@@ -88,7 +89,7 @@ a:* Si Windows te avisa de que un archivo está abierto en otra aplicación, sim
 
 ---
 
-## Preguntas frecuentes (FAQ)
+Preguntas frecuentes (FAQ)
 
 ¿Es seguro borrar todo el contenido de la carpeta Temp (%temp%)? Sí, es completamente seguro. Los archivos que están en uso activo por el sistema o aplicaciones abiertas no se dejarán borrar y recibirás un aviso, por lo que no hay riesgo de corromper el sistema operativo.
 

@@ -22,6 +22,7 @@ theme: "Pure Titanium Clean"
 
 
 
+
 The Slack notifications were blowing up my second monitor, our product release sync was starting in exactly four minutes, and my mouse suddenly refused to register a single click on the Windows 11 taskbar. Clicking the Start menu did nothing, the system tray icons were completely unresponsive, and switching between my open IDE windows felt like trying to drive a car with square wheels. When you are sitting in a fast-paced Silicon Valley tech firm trying to push a pre-release build, a frozen taskbar isn't just an annoyance—it is an absolute workflow emergency. 
 
 We have all been there. You mash the Windows key, you frantically click around the clock and Wi-Fi icons, and nothing moves. Instead of panic-rebooting your entire machine and losing your open dev environments, let's walk through why this happens and how to fix it in under two minutes using native tools.
@@ -34,7 +35,7 @@ We have all been there. You mash the Windows key, you frantically click around t
 
 ---
 
-### Why Your Windows 11 Taskbar Freezes
+Why Your Windows 11 Taskbar Freezes
 
 To fix this issue permanently, it helps to understand what actually broke under the hood. In Windows 11, the taskbar is deeply intertwined with modern shell architecture, XAML islands, and background explorer processes. 
 
@@ -44,11 +45,11 @@ To fix this issue permanently, it helps to understand what actually broke under 
 
 ---
 
-## Step-by-Step Resolution
+### Step-by-Step Resolution
 
 Let's fix the problem using three battle-tested methods, ordered from the fastest workaround to deeper system repairs.
 
-## Method 1: Restart Windows Explorer via Task Manager (The 30-Second Fix)
+Method 1: Restart Windows Explorer via Task Manager (The 30-Second Fix)
 This is your go-to maneuver when minutes matter.
 
 1. Press `Ctrl + Shift + Esc` on your keyboard to launch Task Manager.
@@ -61,7 +62,7 @@ This is your go-to maneuver when minutes matter.
 
 5. Your screen will flicker for a second, the taskbar will disappear and reload, and your click responsiveness will instantly return.
 
-## Method 2: Terminate and Relaunch Shell Processes via Terminal
+Method 2: Terminate and Relaunch Shell Processes via Terminal
 If the explorer restart doesn't stick or Task Manager itself is acting sluggish, you can force-reset the shell components using a command line.
 
 1. Press `Ctrl + Shift + Esc` to open Task Manager again.
@@ -79,7 +80,7 @@ If the explorer restart doesn't stick or Task Manager itself is acting sluggish,
 
 5. This completely kills any hung instances of the desktop shell and spawns a clean fresh process.
 
-## Method 3: Re-register the Windows 11 Taskbar Package (Deep Repair)
+Method 3: Re-register the Windows 11 Taskbar Package (Deep Repair)
 If the taskbar freezes repeatedly after every reboot, the underlying modern app package for the shell needs a forced re-registration via PowerShell.
 
 1. Press `Ctrl + Shift + Esc` and open a new task as administrator, typing `powershell` instead of `cmd`.
@@ -98,7 +99,7 @@ If the taskbar freezes repeatedly after every reboot, the underlying modern app 
 
 ---
 
-### Frequently Asked Questions (FAQ)
+Frequently Asked Questions (FAQ)
 
 Q: Can I fix a frozen taskbar without using the keyboard or Task Manager?
 

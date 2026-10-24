@@ -22,6 +22,7 @@ theme: "Cobalt Enterprise Lab"
 
 
 
+
 <div style="border-left: 4px solid #1e40af; padding: 14px 18px; margin: 20px 0; background-color: rgba(30, 64, 175, 0.04); border-radius: 4px;">
   <strong style="color: #1e40af; font-size: 1.05rem;">BÁO CÁO KỸ THUẬT PHÒNG THỬ NGHIỆM QA (ENTERPRISE LAB REPORT)</strong><br>
   <span style="font-size: 0.92rem; color: #334155;">Mã hồ sơ: <code>LAB-DISP-2026-V4</code> | Phân loại: Video Signal Integrity & Driver Stack Failure | Tỉ lệ lỗi ghi nhận trên 450 máy trạm doanh nghiệp: <strong>14.2%</strong> (Dell Latitude 5000/7000 Series, ThinkPad T/P Series, HP EliteBook).</span>
@@ -35,7 +36,7 @@ Bài viết này chia sẻ quy trình chuẩn mà đội ngũ kỹ sư phần c�
 
 ---
 
-## Phân Tích Nguyên Nhân Kỹ Thuật (Root Cause Breakdown)
+Phân Tích Nguyên Nhân Kỹ Thuật (Root Cause Breakdown)
 
 Dưới góc độ phân tích tín hiệu phần cứng và kiến trúc driver WDDM (Windows Display Driver Model), hiện tượng mất hình hoặc chớp nháy xuất phát từ ba điểm nghẽn cốt lõi sau:
 
@@ -73,7 +74,7 @@ Tuy nhiên, phần cứng của nhiều dòng chip đồ họa tích hợp xử 
 
 ---
 
-## Bảng Dữ Liệu Kiểm Thử Tỷ Lệ Lỗi Theo Chuẩn Kết Nối
+Bảng Dữ Liệu Kiểm Thử Tỷ Lệ Lỗi Theo Chuẩn Kết Nối
 
 Dưới đây là thống kê thực tế từ 1.200 giờ đo kiểm tín hiệu liên tục (Stress-test 72 giờ không nghỉ) tại Lab trên các chuẩn giao tiếp xuất hình phổ biến:
 
@@ -86,7 +87,7 @@ Dưới đây là thống kê thực tế từ 1.200 giờ đo kiểm tín hiệ
 
 ---
 
-## Quy Trình Xử Lý Kỹ Thuật Từng Bước (Step-by-Step Resolution)
+Quy Trình Xử Lý Kỹ Thuật Từng Bước (Step-by-Step Resolution)
 
 Quy trình chuẩn hóa sau đây được thiết kế để loại bỏ triệt để lỗi logic về driver, cache tín hiệu và cấu hình hệ điều hành mà không làm mất mát dữ liệu của người dùng.
 
@@ -130,7 +131,7 @@ Giao diện quản lý: Device Manager
        └─ Generic SuperSpeed USB Hub -> Properties -> Power Management
 ```
 
-## 1. Nhấp chuột phải vào nút Start, chọnDevice Manager.
+1. Nhấp chuột phải vào nút Start, chọnDevice Manager.
 
 2. Tìm đến mục Universal Serial Bus controllers, mở rộng danh sách.
 
@@ -164,7 +165,7 @@ Nếu laptop của bạn từng cắm vào nhiều màn hình khác nhau (màn h
 
 1. Nhấn `Windows + R`, gõ `regedit` và nhấn Enterđể mởRegistry Editor.
 
-## 2. Điều hướng chính xác theo đường dẫn sau:
+2. Điều hướng chính xác theo đường dẫn sau:
 
    `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\GraphicsDrivers`
 
@@ -192,7 +193,7 @@ Sau khi tín hiệu đã lên, bạn cần loại bỏ tính năng tần số qu
 
 1. Nhấp chuột phải lên màn hình Desktop, chọn Display settings.
 
-## 2. Cuộn xuống và chọn Advanced display.
+2. Cuộn xuống và chọn Advanced display.
 
 3. Trong mục Select a display to view or change its settings, chọn màn hình phụ bị lỗi.
 
@@ -200,7 +201,7 @@ Sau khi tín hiệu đã lên, bạn cần loại bỏ tính năng tần số qu
 
 ---
 
-## Cảnh Báo Chuyên Gia & Khuyến Cáo Vận Hành Phần Cứng
+Cảnh Báo Chuyên Gia & Khuyến Cáo Vận Hành Phần Cứng
 
 <div style="border-left: 4px solid #1e40af; padding: 14px 18px; margin: 20px 0; background-color: rgba(30, 64, 175, 0.04); border-radius: 4px;">
   <strong style="color: #1e40af; font-size: 1rem;">NGUY CƠ CHÊNH LỆCH ĐIỆN THẾ TIẾP ĐỊA (GROUND LOOP POTENTIAL)</strong><br>
@@ -212,7 +213,7 @@ Sau khi tín hiệu đã lên, bạn cần loại bỏ tính năng tần số qu
 
 ---
 
-## Câu Hỏi Thường Gặp (FAQ)
+Câu Hỏi Thường Gặp (FAQ)
 
 1. Tại sao màn hình phụ chỉ bị chớp tắt khi tôi cắm sạc laptop, còn khi dùng pin thì xuất hình ổn định?
 Đây là dấu hiệu kinh điển của việc hệ thống điện bị nhiễu sóng hài hoặc củ sạc laptop bị rò điện (đặc biệt phổ biến với các củ sạc GaN bên thứ ba không có mạch lọc nhiễu EMI đạt chuẩn). Khi cắm sạc, xung điện cao tần từ bộ biến áp xung can thiệp trực tiếp vào đường truyền vi sai tốc độ cao (TMDS/DisplayPort differential pairs), làm suy giảm biên độ xung tín hiệu và gây rớt gói tin. Ngoài ra, việc cắm sạc sẽ chuyển cấu hình điện năng của Windows từ chế độ *Balanced* sang *High Performance*, kích hoạt card đồ họa rời nâng xung nhịp, dẫn đến xung đột tần số quét tức thời nếu profile driver chưa được hiệu chỉnh chuẩn xác theo Bước 3 và Bước 4 ở trên.

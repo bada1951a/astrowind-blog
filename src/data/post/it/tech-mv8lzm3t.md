@@ -22,6 +22,7 @@ theme: "Cyberpunk Terminal"
 
 
 
+
 <div style="border-left: 4px solid #00ffcc; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,255,204,0.05); border-radius: 4px; font-family: monospace;">
 [SYS_ALERT] root@hardware-lab:~# tail -f /var/log/boot_sequence.log<br>
 CRITICAL: I/O bottleneck detected. Disk queue length > 5.
@@ -48,11 +49,11 @@ C:\Users\Admin> taskkill /f /im bloatware_updater.exe<br>
 SUCCESS: The process "bloatware_updater.exe" has been terminated.
 </div>
 
-### Procedura passo-passo per la bonifica del sistema
+Procedura passo-passo per la bonifica del sistema
 
 Prima di mettere le mani nel registro, usiamo gli strumenti nativi di Windows per sezionare il problema. Niente software di terze parti pieni di adware; usiamo solo strumenti di sistema puri.
 
-## 1. Analisi tramite Gestione Attività (Task Manager)
+1. Analisi tramite Gestione Attività (Task Manager)
 Premi la combinazione di tasti `Ctrl + Shift + Esc` per aprire la *Gestione attività*. Spostati sulla scheda Applicazioni in avvio (l'icona del tachimetro). Qui vedrai l'elenco completo di tutto ciò che si avvia con il sistema operativo, accompagnato dall'impatto stimato sull'avvio (*Basso*, *Medio*, *Alto*).
 
 Ordina la lista per "Impatto sull'avvio" e disabilita senza pietà tutto ciò che non è un driver critico o un antivirus. 
@@ -68,7 +69,7 @@ wmic startup get Caption, Command
 
 Questo comando ti sputerà a video l'elenco esatto dei binari che si caricano all'avvio. Se noti percorsi strani in directory temporanee (`AppData\Local` o `Temp`), hai trovato il malware o il software spazzatura che rallenta il boot.
 
-## 3. Controllo dello stato dei dischi e dell'integrità
+3. Controllo dello stato dei dischi e dell'integrità
 Spesso un avvio lento non è solo colpa dei programmi, ma di un supporto di memoria che sta cedendo. Apri Gestione disco (`diskmgmt.msc`) o verifica lo stato S.M.
 
 A.R.T. da terminale con:
@@ -85,7 +86,7 @@ Se l'output restituisce qualcosa di diverso da `OK`, preparati a sostituire l'un
 
 ---
 
-### Domande Frequenti (FAQ)
+Domande Frequenti (FAQ)
 
 D: Disabilitare i programmi dall'avvio mi impedisce di usarli in seguito?
 

@@ -22,6 +22,7 @@ theme: "Warm Coffee Latte"
 
 
 
+
 Es war kurz vor 9 Uhr morgens in unserem Berliner Tech-Hub in Mitte. Der Espresso in meiner Lieblingstasse war noch heiß, und der große Sprint-Review für unseren anstehenden Software-Rollout stand unmittelbar bevor. Als ich mein ThinkPad aufklappte, um die letzten Systemdiagnosen zu checken, passierte es: Der Windows-Desktop hing im gefühlten ewigen Ladezustand fest. Minuten vergingen, während im Hintergrund munter Update-Agenten, Chat-Tools, Cloud-Synchronisierungen und Updater für Software starteten, die ich seit Monaten nicht mehr angefasst hatte. Die CPU-Auslastung schoss durch die Decke, die Lüfter jammerten, und mein Puls stieg mit. Mitten in der Hektik vor dem Meeting wurde mir klar: So kann das nicht weitergehen.
 
 <div style="border-left: 4px solid #78350f; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
@@ -30,7 +31,7 @@ Es war kurz vor 9 Uhr morgens in unserem Berliner Tech-Hub in Mitte. Der Espress
 
 ![Tech Hardware Guide](https://images.unsplash.com/photo-1607604276583-eef5d076aa5f? auto=format&fit=crop&w=1200&h=675&q=85)
 
-### Warum der Rechner plötzlich kriecht: Die 3 Hauptverdächtigen
+Warum der Rechner plötzlich kriecht: Die 3 Hauptverdächtigen
 
 Bevor wir zur Tat schreiten, werfen wir einen kurzen Blick unter die Motorhaube. Warum bricht ein eigentlich potenter Laptop beim Booten eigentlich so ein?
 
@@ -42,7 +43,7 @@ Bevor wir zur Tat schreiten, werfen wir einen kurzen Blick unter die Motorhaube.
 
 ---
 
-### In 60 Sekunden zum schnellen Start: Schritt-für-Schritt
+In 60 Sekunden zum schnellen Start: Schritt-für-Schritt
 
 Genug geredet, machen wir Nägel mit Köpfen. Wir lösen das Problem direkt über die integrierten Windows-Bordmittel, ohne extra Tool-Downloads.
 
@@ -57,7 +58,7 @@ Du siehst nun eine Liste aller Programme, die beim Start von Windows 10 automati
 
 1. Klicke mit der rechten Maustaste auf ein Programm, das du beim Systemstart nicht zwingend brauchst (zum Beispiel den Epic Games Launcher, Cortana, Spotify oder diverse Drucker-Helfer).
 
-## 2. Wähle im Kontextmenü "Deaktivieren".
+2. Wähle im Kontextmenü "Deaktivieren".
 
 3. Wiederhole das für alle nicht essenziellen Anwendungen.
 
@@ -67,7 +68,7 @@ Du siehst nun eine Liste aller Programme, die beim Start von Windows 10 automati
 
 ---
 
-## Häufig gestellte Fragen (FAQ)
+Häufig gestellte Fragen (FAQ)
 
 1. Was passiert, wenn ich ein wichtiges Programm im Autostart deaktiviere?
 

@@ -22,6 +22,7 @@ theme: "Steel Silver Metallic"
 
 
 
+
 Afgelopen dinsdagochtend om kwart voor negen op de High Tech Campus in Eindhoven: de koffieautomaat had net de brui eraan gegeven en ik stond met een spoedticket van een senior developer die zijn laptop opnieuw moest opstarten voor een cruciale client-demo. Het systeem deed er bijna vier minuten over om überhaupt door het vergrendelscherm heen te breken. Vier minuten in tech-tijd staat gelijk aan eeneeuw. Alle logfiles en Teams-meldingen stapelden zich op, en de frustratie was compleet. Dit soort acute prestatieproblemen vragen niet om een langdurige herinstallatie, maar om een directe, no-nonsense ingreep.
 
 <div style="border-left: 4px solid #64748b; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
@@ -30,7 +31,7 @@ Afgelopen dinsdagochtend om kwart voor negen op de High Tech Campus in Eindhoven
 
 ![Tech & IT Solution Guide](https://picsum.photos/seed/computer70/1000/550)
 
-### De echte boosdoeners achter een trage Windows 10 start
+De echte boosdoeners achter een trage Windows 10 start
 
 Waarom kruipt je pc na een paar jaar gebruik ineens over de vloer bij het opstarten? De bottleneck zit bijna nooit in Windows zelf, maar in de softwarecultuur van vandaag:
 
@@ -59,11 +60,11 @@ Laten we direct actie ondernemen. Geen ingewikkelde registersleutels of derde-pa
 
 </div>
 
-### Expert Waarschuwing & Preventie
+Expert Waarschuwing & Preventie
 
 Wees slim met wat je uitschakelt. Schakel geen essentiële drivers of beveiligingssoftware uit (zoals Windows Security / Defender). Het doel is niet om je pc te strippen van functionaliteit, maar om de digitale ballast te lozen die je workflow vertraagt. Herhaal deze check eens per half jaar; apps zijn hardnekkig in het zichzelf opnieuw aanmelden bij de opstartlijst na een grote update.
 
-### Veelgestelde Vragen (FAQ)
+Veelgestelde Vragen (FAQ)
 
 Verlies ik data of instellingen als ik een programma uitschakel bij het opstarten?
 Nee, absoluut niet. Je schakelt hiermee *alleen* uit dat het programma automatisch opstart op de achtergrond zodra je je pc aanzet. Je kunt de applicatie later gewoon handmatig openen via het Startmenu wanneer je hem daadwerkelijk nodig hebt.

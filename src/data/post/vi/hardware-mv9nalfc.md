@@ -22,13 +22,14 @@ theme: "Midnight Navy Royal"
 
 
 
+
 Chỉ còn đúng 15 phút nữa là đến cuộc họp tổng kết dự án quý tại văn phòng ở quận 1, TP.HCM. Sếp đã ngồi sẵn trong phòng họp, máy chiếu đang chờ, và tất cả tài liệu slide thuyết trình quan trọng đều nằm trong chiếc ổ cứng di động. Tôi cắm ổ cứng vào cổng USB của máy tính, nhưng màn hình hoàn toàn im lìm. Không có tiếng *ting-tong* quen thuộc, đèn LED trên ổ cứng nhấp nháy yếu ớt rồi tắt ngấm. Ngay lúc đó, một thông báo đỏ lòm hiện lên góc màn hình: "Low Disk Space - C Drive is almost full". Ổ C đỏ rực, dung lượng trống về mức 0 byte, khiến máy tính vừa chậm như rùa vừa không thể nhận diện thêm thiết bị ngoại vi do thiếu bộ nhớ ảo và cache hệ thống. Hít một hơi thật sâu, tôi bắt đầu cuộc chiến sửa lỗi "chữa cháy" ngay trên bàn làm việc giữa cái nóng oi ả của Sài Gòn.
 
 <div style="border-left: 4px solid #1d4ed8; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Nhật ký trực ca phần cứng:</strong> Khi ổ C đầy ứ hự (dưới 5% dung lượng trống), Windows không chỉ bị treo mà còn vô hiệu hóa các tiến trình Mount ổ đĩa ngoài do không tạo được file nhật ký tạm (temp logs). Việc đầu tiên cần làm là giải phóng ngay lập tức ít nhất 5GB đến 10GB dung lượng ảo trên ổ C trước khi nghĩ đến việc fix phần cứng.
 </div>
 
-## 3 nguyên nhân cốt lõi khiến ổ C đầy nghẹt và ổ cứng ngoài đột ngột "tàng hình"
+3 nguyên nhân cốt lõi khiến ổ C đầy nghẹt và ổ cứng ngoài đột ngột "tàng hình"
 
 Dựa trên hàng trăm ca cứu hộ máy tính văn phòng tại các tòa nhà cao ốc ở TP.HCM, tôi đúc kết ra ba thủ phạm chính gây ra cơn ác mộng này:
 
@@ -40,7 +41,7 @@ Dựa trên hàng trăm ca cứu hộ máy tính văn phòng tại các tòa nh�
 
 ---
 
-## 3 bước thực chiến cứu nguy và dọn sạch ổ C trong 5 phút
+3 bước thực chiến cứu nguy và dọn sạch ổ C trong 5 phút
 
 Không cần cài thêm phần mềm bên thứ ba rườm rà, chúng ta sẽ tận dụng ngay các công cụ có sẵn trong Windows để xử lý triệt để tình huống khẩn cấp này.
 
@@ -70,13 +71,13 @@ Ngay sau khi ổ C đã có không gian trống, việc kết nối ổ cứng n
 
 ---
 
-## Cảnh báo từ chuyên gia phần cứng
+Cảnh báo từ chuyên gia phần cứng
 
 > Lưu ý quan trọng:Không bao giờ dùng các phần mềm "dọn rác tự động" trôi nổi trên mạng tải về từ các link quảng cáo khi bạn đang gặp sự cố gấp. Chúng có thể cài thêm mã độc hoặc xóa nhầm file hệ thống (System32). Luôn ưu tiên dùng công cụ gốc của Windows (`Disk Cleanup`, `Storage Sense`, `chkdsk`). Ngoài ra, với ổ cứng di động, hãy luôn thao tác tính năngSafely Remove Hardware trước khi rút cáp để tránh làm hỏng mạch điều khiển bên trong.
 
 ---
 
-## Các câu hỏi thường gặp (FAQ)
+Các câu hỏi thường gặp (FAQ)
 
 1. Tại sao tôi đã xóa hết phim và nhạc ở ổ C nhưng dung lượng trống vẫn rất ít?
 Trả lời: Windows thường lưu trữ các bản vá lỗi cập nhật cũ, điểm khôi phục hệ thống (System Restore) và file ngủ đông (hiberfil.sys) ẩn sâu bên trong. Bạn cần dùng công cụ *Disk Cleanup* chọn mục *Clean up system files* để xóa sạch các bản backup Windows Update cũ, nơi thường ngốn từ 10GB đến 30GB dung lượng ổ C mà người dùng không hề hay biết.

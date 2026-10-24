@@ -22,13 +22,14 @@ theme: "Cobalt Enterprise Lab"
 
 
 
+
 Het was dinsdagochtend om 09:15 uur op onze tech-incubator nabij de Amsterdamse Zuidas. Terwijl we de laatste hand legden aan een cruciale demo voor een fintech-partner, sloeg het lot toe: een angstaanjagend blauw scherm, de beruchte STOP: 0x0000000a (IRQL_NOT_LESS_OR_EQUAL). Geen tijd voor paniek, want de directeur stond binnen een uur op de stoep voor een live evaluatie van onze systemen. Dit soort acute prestatieproblemen vragen om een directe, no-nonsense aanpak.
 
 In deze gids duiken we diep in de werkelijke oorzaken van deze specifieke stop-code en lopen we door een beproefd stappenplan om je werkstation of server direct weer stabiel te krijgen.
 
 ![Tech & IT Solution Guide](https://picsum.photos/seed/computer491/1000/550)
 
-## Waarom deze crash je workflow sloopt: De 3 hoofdoorzaken
+Waarom deze crash je workflow sloopt: De 3 hoofdoorzaken
 
 Voordat we willekeurig knoppen indrukken, moeten we begrijpen wat er onder de motorkap gebeurt bij foutcode 0x0000000
 
@@ -46,7 +47,7 @@ a. Dit duidt er bijna altijd op dat een kernel-modus proces of driver probeerde 
 
 ---
 
-## Stap-voor-stap naar een stabiel systeem
+### Stap-voor-stap naar een stabiel systeem
 
 Genoeg diagnose, tijd voor actie. Volg deze stappen om het probleem systematisch te isoleren en op te lossen.
 
@@ -87,7 +88,7 @@ Laat deze tools hun werk doen. Ze repareren corrupte systeemimagobestanden en co
 
 ---
 
-## Praktische preventietips voor de toekomst
+Praktische preventietips voor de toekomst
 
 Voorkomen is beter dan genezen, zeker als je midden in een project zit. 
 
@@ -96,7 +97,7 @@ Voorkomen is beter dan genezen, zeker als je midden in een project zit.
 
 ---
 
-## Veelgestelde Vragen (FAQ)
+Veelgestelde Vragen (FAQ)
 
 1. Kan ik mijn computer nog gebruiken als deze fout af en toe optreedt? Nee, negeer dit niet. Een 0x0000000a fout treedt op in de kernel-modus, wat betekent dat het hele besturingssysteem crasht om datacorruptie op de harde schijf te voorkomen. Als dit vaker gebeurt, loop je risico op permanent file-verlies.
 
@@ -104,6 +105,6 @@ Voorkomen is beter dan genezen, zeker als je midden in een project zit.
 
 Hiervoor kun je het gratis programma *BlueScreenView* gebruiken, of de geheugendump (memory dump) analyseren via *WinDbg* (Windows Debugger). Zoek naar het bestand dat vermeld staat bij de foutmelding (bijv. `ntoskrnl.exe` of een specifieke `.sys` file).
 
-## 3.  Helpt een schone Windows-installatie altijd?
+3.  Helpt een schone Windows-installatie altijd?
 
 Ja, als het een hardnekkig software- of driverconflict betreft dat niet te traceren is, lost een schone installatie het in 99% van de gevallen op. Blijft het probleem daarna aanhouden? Dan is je RAM-latje of moederbord fysiek defect.

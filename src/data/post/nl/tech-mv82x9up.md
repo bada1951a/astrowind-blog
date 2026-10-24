@@ -22,6 +22,7 @@ theme: "Dracula Purple Dev"
 
 
 
+
 Vrijdagmiddag, kwart over vier. Mijn grootste afnemer belde net dat de staging-omgeving eruit ligt voor de maandagse release, en op dat exact verkeerde moment besluit mijn workstation om zwart scherm te geven. De ventilatoren loeien alsof er een Boeing opstijgt, de RGB-verlichting knippert vrolijk in al zijn regenboogpracht, maar mijn monitor blijft koppig op *No Signal* staan. Mijn manager staat al achter me met een kop lauwe koffie en de klassieke vraag: *"Is het al opgelost?"* Je zweet breekt je uit, je drukt op goed geluk op Ctrl + Shift + Win + B om de grafische driver te resetten, maar er gebeurt werkelijk helemaal niets.
 
 Dit soort situaties kosten je levensjaren. Je vervloekt de hardware, denkt meteen dat je moederbord naar de haaien is, en ziet je weekend in duigen vallen. Maar na jaren meedraaien in de IT-infrastructuur weet ik inmiddels beter: in negen van de tien gevallen is het een banale contactfout. Tijd om die kast open te schroeven en handen uit de mouwen te steken.
@@ -36,7 +37,7 @@ Dit soort situaties kosten je levensjaren. Je vervloekt de hardware, denkt metee
 
 ---
 
-### Wat is hier in godsnaam aan de hand? (De echte oorzaken)
+Wat is hier in godsnaam aan de hand? (De echte oorzaken)
 
 Voordat je blind onderdelen gaat bestellen of de helpdesk van de facilitaire dienst belt met paniek in je stem, moeten we even nuchter naar de drie meest voorkomende boosdoeners kijken:
 
@@ -65,7 +66,7 @@ Als je vier sticks hebt, test ze dan niet allemaal tegelijk terug.
 
 2. Druk hem stevig aan tot je een duidelijke *klik* hoort van de sluiting.
 
-## 3. Zet de stroom erop en boot het systeem.
+3. Zet de stroom erop en boot het systeem.
 
 Als het scherm nu wel aanspringt, weet je dat ten minste één stick en dat specifieke slot functioneren. 
 
@@ -73,10 +74,10 @@ Als het scherm nu wel aanspringt, weet je dat ten minste één stick en dat spec
 Zodra je weer beeld hebt en door kunt booten naar Windows, wil je natuurlijk zeker weten dat je OS al het geheugen correct herkent en dat er geen corrupte sectoren zijn. Open je opdrachtprompt via Win + R, typ `cmd` en druk op `Ctrl + Shift + Enter` om het als Administrator uit te voeren:
 
 ```cmd
-# Controleer de fysieke geheugenstatus via WMI
+Controleer de fysieke geheugenstatus via WMI
 wmic memorychip get Capacity, Speed, DeviceLocator, PartNumber
 
-# Start de ingebouwde Windows Geheugen診断 (Memory Diagnostic) op
+Start de ingebouwde Windows Geheugen診断 (Memory Diagnostic) op
 mdsched.exe
 ```
 
@@ -84,7 +85,7 @@ Kies in het pop-upvenster voor *Nu opnieuw opstarten en naar problemen zoeken (a
 
 ---
 
-### Expert Waarschuwing: Voorkom brokken
+Expert Waarschuwing: Voorkom brokken
 
 <div style="border-left: 4px solid #ff5555; padding: 12px 16px; margin: 20px 0; background-color: rgba(255,85,85,0.05); border-radius: 4px;">
 <strong>Let op!</strong> Gebruik nooit vloeibare alcohol of agressieve schoonmaakmiddelen om de gouden pinnen van je RAM te reinigen. Dit tast de contactlaag onherroepelijk aan. Een simpele gum en droge perslucht zijn meer dan genoeg. Zorg er bovendien altijd voor dat de netspanning volledig ontkoppeld is (haal de stekker uit de voeding en zet de schakelaar op '0') voordat je ook maar iets op het moederbord aanraakt.
@@ -92,7 +93,7 @@ Kies in het pop-upvenster voor *Nu opnieuw opstarten en naar problemen zoeken (a
 
 ---
 
-### Veelgestelde Vragen (FAQ)
+Veelgestelde Vragen (FAQ)
 
 1. Mijn pc start nog steeds niet op na het schoonmaken en het herplaatsen van het RAM. Wat nu? Grote kans dat het niet aan het RAM ligt, maar aan de grafische kaart (GPU) of de CMOS-batterij. Probeer de CMOS te resetten door de knoopcelbatterij op het moederbord er voor 5 minuten uit te halen, of gebruik de `CLR_CMOS` jumper om het BIOS terug te zetten naar fabrieksinstellingen.
 

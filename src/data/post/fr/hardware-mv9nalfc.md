@@ -22,6 +22,7 @@ theme: "Sunset Horizon Coral"
 
 
 
+
 C'était un mardi matin agité dans notre open space de La Défense. Je m'apprêtais à boucler le rapport trimestriel pour un client important quand, soudain, la catastrophe : notification rouge vif dans la barre des tâches de Windows. Le disque C est saturé, plus un seul gigaoctet de libre, et pour couronner le tout, mon SSD externe de secours n'est même pas détecté par le système. Panique à bord, impossible d'enregistrer le moindre fichier Word, et le PC qui commence à ramer à mort au pire moment possible.
 
 Dans ce genre de situation critique, on a tous tendance à faire n'importe quoi : vider la Corbeille en espérant un miracle, supprimer à la hache des dossiers dont on ne connait pas l'utilité, ou redémarrer la machine en boucle en espérant que l'espace va magiquement réapparaître. Évidemment, ça ne sert à rien. Le vrai coupable invisible, c'est l'accumulation silencieuse de fichiers temporaires, de caches système et de résidus de mises à jour qui étouffent votre partition principale sans que vous ne remarquiez rien.
@@ -34,7 +35,7 @@ Heureusement, après des années à dépanner les postes de l'équipe, j'ai une 
 <strong>L'astuce du technicien :</strong> Ne cherchez pas à tout supprimer à la main dans l'explorateur de fichiers. Windows cache ses plus gros fichiers temporaires dans des dossiers protégés (`AppData`, `Temp`, `WinSxS`) qu'il faut nettoyer via les utilitaires dédiés pour éviter les plantages.
 </div>
 
-## Pourquoi votre disque C se remplit tout seul ?
+Pourquoi votre disque C se remplit tout seul ?
 
 Avant de passer à l'action, il est bon de comprendre ce qui s'est passé dans les coulisses de votre machine.
 
@@ -44,7 +45,7 @@ Avant de passer à l'action, il est bon de comprendre ce qui s'est passé dans l
 
 3. Les fichiers de mise en veille prolongée et mémoire virtuelle : Les fichiers `hiberfil.sys` et `pagefile.sys` taillent directement dans votre SSD en réservant l'équivalent de votre mémoire vive, parfois bien plus que nécessaire.
 
-## Guide étape par étape : Nettoyage complet du disque C
+Guide étape par étape : Nettoyage complet du disque C
 
 Voici la procédure exacte que j'applique sur les postes de bureau quand l'espace vital est menacé.
 
@@ -75,7 +76,7 @@ Pour les irréductibles qui veulent aller plus loin et gratter les derniers giga
 <strong>Attention aux données personnelles :</strong> Ne supprimez jamais de fichiers directement à la racine de `C:\` ou dans les dossiers `Windows` et `System32` si vous ne savez pas exactement ce qu'ils font. Vous risquez de corrompre le système d'exploitation.
 </div>
 
-## Comparatif : Avant / Après un nettoyage cibler du disque C
+Comparatif : Avant / Après un nettoyage cibler du disque C
 
 Voici concrètement ce que vous pouvez espérer récupérer sur un PC de bureau standard après avoir appliqué cette méthode :
 
@@ -89,7 +90,7 @@ Voici concrètement ce que vous pouvez espérer récupérer sur un PC de bureau 
 
 ---
 
-## Questions Fréquemment Posées (FAQ)
+Questions Fréquemment Posées (FAQ)
 
 Q1 : Est-ce que vider le dossier `%temp%` risque de supprimer mes documents de travail ? R : Absolument pas. Le dossier `Temp` porte bien son nom : il ne contient que des données éphémères générées par les logiciels pour fonctionner. Vos documents personnels (Word, Excel, PDF, photos) stockés dans Documents ou Bureau ne sont jamais touchés.
 

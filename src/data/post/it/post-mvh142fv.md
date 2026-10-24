@@ -22,6 +22,7 @@ theme: "Dracula Purple Dev"
 
 
 
+
 Erano le 17:45 in un frenetico lunedì pomeriggio nel nostro ufficio al centro direzionale di Milano. Mancavano esattamente quindici minuti alla scadenza per l'invio del report trimestrale di bilancio alla direzione generale, quando lo schermo del mio PC principale si è improvvisamente congelato. Nessun messaggio di errore, mouse immobile, tastiera completamente disattivata. La ventola della CPU ha continuato a girare a regime costante, come a prendersi gioco del mio panico crescente. Dopo tre minuti di attesa vana, ho dovuto procedere al famigerato reset hardware tenendo premuto il tasto di accensione. Risultato? Dieci pagine di analisi finanziaria non salvate e un cliente interno furioso.
 
 Nei giorni successivi, quel maledetto blocco casuale ha iniziato a ripresentarsi con una regolarità esasperante: a volte mentre aprivo Outlook, altre volte semplicemente mentre il PC era in idle. Le classiche soluzioni da bar dello sport digitale non servivano a null
@@ -40,7 +41,7 @@ a:</strong> Quando Windows si pianta improvvisamente senza una schermata blu (BS
 
 ---
 
-### Perché Windows 11 si blocca? I 3 colpevoli più comuni
+Perché Windows 11 si blocca? I 3 colpevoli più comuni
 
 Prima di aprire gli strumenti di diagnostica, facciamo chiarezza su cosa scatena solitamente questi fastidiosi freeze totali nei computer moderni:
 
@@ -52,7 +53,7 @@ Prima di aprire gli strumenti di diagnostica, facciamo chiarezza su cosa scatena
 
 ---
 
-### Guida passo-passo: tracciare la causa con il Visualizzatore Eventi
+Guida passo-passo: tracciare la causa con il Visualizzatore Eventi
 
 Mettiamoci all'opera. Non serve installare software di terze parti pesanti o rischiosi. Useremo gli strumenti integrati in Windows 11.
 
@@ -75,7 +76,7 @@ Cerca eventi con origini sospette come:
 
 ---
 
-### Gestione dispositivi e Impostazioni: correggere il tiro
+Gestione dispositivi e Impostazioni: correggere il tiro
 
 Una volta individuato il driver o il componente problematico grazie al registro, passiamo alle contromisure pratiche.
 
@@ -84,7 +85,7 @@ Una volta individuato il driver o il componente problematico grazie al registro,
    - Se il Visualizzatore Eventi ti ha segnalato un errore legato alla scheda di rete, al controller disco o alla GPU, espandi la categoria corrispondente.
    - Clicca col tasto destro sul dispositivo, seleziona Proprietà, vai sulla schedaDrivere verifica se il pulsanteRipristina driver è attivo. Se hai aggiornato di recente e sono iniziati i blocchi, usalo subito.
 
-## 2. Disattivare l'Avvio Rapido (Fast Startup):
+2. Disattivare l'Avvio Rapido (Fast Startup):
 
    Spesso l'Avvio Rapido di Windows 11 mantiene in memoria uno stato corrotto del kernel tra un riavvio e l'altro. 
    - Apri il Pannello di controllo (puoi cercarlo nella barra di ricerca).
@@ -94,7 +95,7 @@ Una volta individuato il driver o il componente problematico grazie al registro,
 
 ---
 
-### Domande Frequenti (FAQ)
+Domande Frequenti (FAQ)
 
 D: Il Visualizzatore Eventi mostra sempre la causa esatta del blocco?
 

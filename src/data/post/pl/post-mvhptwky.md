@@ -22,6 +22,7 @@ theme: "Industrial Blueprint"
 
 
 
+
 Siedzę w szklanej sali konferencyjnej w warszawskim centrum biznesowym przy Rondzie Daszyńskiego. Za dziesięć minut ma się zacząć kluczowe spotkanie zarządu z inwestorami, a dyrektor finansowy pan Marek blady jak ściana patrzy na swój nowy służbowy laptop z Windows 11 i cicho przeklina pod nosem. Próbował na szybko spakować cztery pliki Excela do archiwum ZIP, ale zamiast klasycznego menu pod prawym przyciskiem myszy wyskoczył mu ten nowoczesny, minimalistyczny potwór z ukrytą opcją "Pokaż więcej opcji". Trzy kliknięcia zamiast jednego, 7 sekund zwłoki przy każdym pliku, a zegar tyka nieubłaganie. Pan Marek patrzy na mnie błagalnym wzrokiem: "Panie inżynierze, zrób pan z tym coś, zaraz wchodzą Niemcy!".
 
 Znam ten ból na pamięć. Nowy interfejs w Windows 11 miał być "czysty" i "przyjazny", ale dla analityków, programistów i sysadminów, którzy codziennie operują dziesiątkami plików, skrótów i narzędzi deweloperskich, ukrywanie tradycyjnych opcji za dodatkowym kliknięciem to czysta patologia produktywności. Klienci korporacyjni dzwonią do mojego serwisu w tej sprawie przynajmniej kilka razy w tygodniu.
@@ -34,7 +35,7 @@ W tym artykule pokażę Ci sprawdzoną metodę inżynierską, jak raz na zawsze 
 a:</strong> Poniższa procedura modyfikacji rejestru została przetestowana na setkach stacji roboczych z systemem Windows 11 (od wersji 21H2 do najnowszych wydań 24H2). Jest w 100% bezpieczna, pod warunkiem trzymania się instrukcji krok po kroku.
 </div>
 
-## Dlaczego Microsoft utrudnił nam życie? (Analiza problemu)
+Dlaczego Microsoft utrudnił nam życie? (Analiza problemu)
 
 Zanim przejdziemy do naprawy, rzućmy okiem na to, z czym dokładnie walczymy. Dlaczego standardowe menu kontekstowe w Windows 11 tak bardzo irytuje profesjonalistów? Oto trzy główne przyczyny:
 
@@ -46,7 +47,7 @@ Zanim przejdziemy do naprawy, rzućmy okiem na to, z czym dokładnie walczymy. D
 
 ---
 
-## Jak przywrócić klasyczne menu: Instrukcja krok po kroku
+Jak przywrócić klasyczne menu: Instrukcja krok po kroku
 
 Nie potrzebujemy do tego żadnych zewnętrznych programów instalowanych z podejrzanych stron. Wykorzystamy natywne narzędzie systemowe. 
 
@@ -81,7 +82,7 @@ a:</strong> Po ponownym uruchomieniu Eksploratora pasek zadań na chwilę znikni
 
 ---
 
-## Porównanie: Nowe vs Klasyczne menu kontekstowe
+Porównanie: Nowe vs Klasyczne menu kontekstowe
 
 Aby uświadomić sobie skalę zmiany, spójrzmy na zestawienie obu rozwiązań z perspektywy codziennej pracy serwisowej:
 
@@ -94,7 +95,7 @@ Aby uświadomić sobie skalę zmiany, spójrzmy na zestawienie obu rozwiązań z
 
 ---
 
-## Profesjonalne ostrzeżenie i bezpieczeństwo danych
+Profesjonalne ostrzeżenie i bezpieczeństwo danych
 
 Podczas pracy z edycją rejestru systemowego łatwo o pomyłkę, która może skutkować niestabilnością systemu operacyjnego. Zawsze trzymaj się następujących zasad bezpieczeństw
 
@@ -109,7 +110,7 @@ a: Modyfikację wykonuj na koncie z uprawnieniami administratora stacji roboczej
 
 ---
 
-## Często Zadawane Pytania (FAQ)
+Często Zadawane Pytania (FAQ)
 
 1. Czy ta metoda działa w najnowszej wersji Windows 11 (24H2)?
 

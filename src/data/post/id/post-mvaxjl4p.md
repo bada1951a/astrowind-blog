@@ -22,6 +22,7 @@ theme: "Sunset Horizon Coral"
 
 
 
+
 Jam menunjukkan pukul 08.55 WIB. Lima menit lagi *daily standup meeting* via Zoom akan dimulai di ruang *huddle* kantor startup kami di kawasan SCBD, Jakarta. Sialnya, laptop Windows 10 operasional saya baru saja dinyalakan karena habis melakukan *update* sistem semalam. Layar *desktop* sudah muncul, tapi kursor mutar-mutar terus, kipas bergemuruh kencang, dan aplikasi Slack serta Chrome sama sekali tidak mau dibuka. Keringat dingin mulai bercucuran karena saya harus segera membagikan laporan server internal yang down semalam. Masalah klasik: laptop kehabisan napas karena puluhan aplikasi langsung *nyala* bersamaan saat *booting*.
 
 Situasi seperti ini pasti sering bikin darah tinggi, kan? Kalau Anda bekerja di lingkungan cepat seperti *startup* Jakarta, menunggu laptop *loading* selama 5 sampai 10 menit adalah kemewahan yang tidak kita miliki. 
@@ -36,7 +37,7 @@ Mari kita bedah kenapa hal ini bisa terjadi dan bagaimana cara membereskannya ku
 
 ---
 
-## Akar Masalah: Kenapa Windows 10 Bisa Mendadak Lemot Saat Dinyalakan?
+Akar Masalah: Kenapa Windows 10 Bisa Mendadak Lemot Saat Dinyalakan?
 
 Sebelum masuk ke eksekusi, kita harus paham dulu apa yang sebenarnya terjadi di balik layar laptop And
 
@@ -48,7 +49,7 @@ a:
 
 3. Pemeriksaan Keamanan Berlebihan: Antivirus pihak ketiga yang langsung melakukan pemindaian menyeluruh (*full system scan*) setiap kali komputer baru menyala. ---
 
-### Panduan Praktis: Matikan Aplikasi Startup dalam 1 Menit
+Panduan Praktis: Matikan Aplikasi Startup dalam 1 Menit
 
 Tidak perlu instal software tambahan atau masuk ke pengaturan BIOS yang ribet. Cukup gunakan fitur bawaan Windows 10 dengan langkah-langkah kilat berikut:
 
@@ -68,7 +69,7 @@ Anda akan melihat daftar panjang aplikasi yang berjalan otomatis. Cari aplikasi 
 
 ---
 
-### Perbandingan Performa Sebelum dan Sesudah Optimalisasi
+Perbandingan Performa Sebelum dan Sesudah Optimalisasi
 
 Berikut adalah gambaran nyata perbedaan kinerja laptop operasional tim kami setelah membersihkan daftar *startup*:
 
@@ -80,7 +81,7 @@ Berikut adalah gambaran nyata perbedaan kinerja laptop operasional tim kami sete
 
 ---
 
-### Peringatan Ahli: Apa yang *Jangan* Dimatikan?
+Peringatan Ahli: Apa yang *Jangan* Dimatikan?
 
 Meskipun Anda bebas mematikan aplikasi hiburan atau utilitas pihak ketiga, jangan pernah menonaktifkan komponen penting milik sistem operasi atau driver perangkat keras, antara lain:
 * Windows Security Notification Icon (Untuk memantau keamanan sistem).
@@ -91,7 +92,7 @@ Jika Anda ragu dengan fungsi sebuah aplikasi, cukup lakukan pencarian singkat di
 
 ---
 
-### Pertanyaan yang Sering Diajukan (FAQ)
+Pertanyaan yang Sering Diajukan (FAQ)
 
 1. Apakah aplikasi yang di-disable akan terhapus dari laptop saya?
 

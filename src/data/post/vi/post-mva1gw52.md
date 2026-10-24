@@ -22,6 +22,7 @@ theme: "High-Contrast Charcoal"
 
 
 
+
 Sáng nay vừa bước chân vào văn phòng công nghệ ở khu vực ven biển Đà Nẵng, mở laptop lên để chuẩn bị pull request bản update phần mềm cho khách hàng thì đập vào mắt tôi là dòng cảnh báo đỏ lòm: ổ C chỉ còn trống chưa đầy 500MB. Windows liên tục bắn thông báo "Low Disk Space", các ứng dụng nặng bắt đầu văng ra liên tục, máy giật đơ như đá tảng. Đồng nghiệp ngồi bên cạnh cứ bấm nút Restart liên tục với hy vọng máy sẽ tự khá hơn, nhưng tình hình chỉ càng tệ đi vì bộ nhớ ảo (pagefile) không còn chỗ để thở.
 
 <div style="border-left: 4px solid #e11d48; padding: 12px 16px; margin: 20px 0; background-color: rgba(225,29,72,0.05); border-radius: 4px; color: #111827;">
@@ -30,7 +31,7 @@ Sáng nay vừa bước chân vào văn phòng công nghệ ở khu vực ven bi
 
 ![Tech & IT Solution Guide](https://picsum.photos/seed/computer990/1000/550)
 
-## 3 nguyên nhân cốt lõi khiến ổ C Windows 11 nhanh chóng bị "bóp nghẹt"
+3 nguyên nhân cốt lõi khiến ổ C Windows 11 nhanh chóng bị "bóp nghẹt"
 
 Trước khi lao vào xóa bừa bãi các thư mục, chúng ta cần hiểu rõ tại sao ổ C lại biến thành một bãi rác khổng lồ chỉ sau vài tháng sử dụng:
 
@@ -42,7 +43,7 @@ Trước khi lao vào xóa bừa bãi các thư mục, chúng ta cần hiểu r�
 
 ---
 
-## Hướng dẫn từng bước giải cứu ổ C an toàn, không làm hỏng hệ thống
+Hướng dẫn từng bước giải cứu ổ C an toàn, không làm hỏng hệ thống
 
 Chúng ta sẽ không dùng mấy phần mềm dọn rác bên thứ ba trôi nổi trên mạng rất dễ dính mã độc hay quảng cáo phiền phức. Toàn bộ các bước dưới đây đều sử dụng công cụ tích hợp sẵn chính hãng Microsoft.
 
@@ -81,7 +82,7 @@ Công cụ kinh điển này đôi khi tìm thấy những thứ mà giao diện
 
 ---
 
-## Lời khuyên từ chuyên gia hệ thống để tránh tái diễn lỗi
+Lời khuyên từ chuyên gia hệ thống để tránh tái diễn lỗi
 
 Để máy tính luôn mượt mà và không bao giờ gặp lại cảnh ổ C đỏ rực giữa giờ làm việc căng thẳng, hãy ghi nhớ những nguyên tắc vàng sau:
 
@@ -91,13 +92,13 @@ Công cụ kinh điển này đôi khi tìm thấy những thứ mà giao diện
 
 ---
 
-## Các câu hỏi thường gặp (FAQ)
+Các câu hỏi thường gặp (FAQ)
 
-### Xóa thư mục Windows.old có làm mất dữ liệu cá nhân không?
+Xóa thư mục Windows.old có làm mất dữ liệu cá nhân không?
 Tuyệt đối không. Thư mục `Windows.old` chỉ chứa hệ điều hành cũ của lần cập nhật gần nhất nhằm cho phép bạn quay lùi phiên bản (Rollback) nếu bản mới bị lỗi. Sau khi hệ thống chạy ổn định tầm 10 ngày, bạn hoàn toàn có thể xóa sạch nó để tiết kiệm từ 15GB đến 30GB dung lượng ổ C.
 
-### Tại sao tôi đã xóa nhiều file nhưng dung lượng ổ C trống ra không đáng kể?
+Tại sao tôi đã xóa nhiều file nhưng dung lượng ổ C trống ra không đáng kể?
 Có thể các file bạn vừa xóa vẫn đang nằm ẩn trong Thùng rác (Recycle Bin)hoặc tính năngSystem Protection (Restore Points) đang ngốn dung lượng để lưu các bản sao lưu hệ thống cũ. Hãy vào System Properties -> System Protection để cấu hình lại dung lượng tối đa cho phép các điểm khôi phục này sử dụng.
 
-### Có nên dùng phần mềm bên thứ ba như CCleaner để dọn rác Windows 11 không?
+Có nên dùng phần mềm bên thứ ba như CCleaner để dọn rác Windows 11 không?
 Theo kinh nghiệm thực chiến của tôi, đối với Windows 11 hiện đại, các công cụ tích hợp sẵn như Storage Sense và Disk Cleanup đã làm quá tốt nhiệm vụ của mình. Việc dùng các phần mềm bên ngoài đôi khi can thiệp sâu vào Registry gây lỗi không đáng có hoặc cài chèn các tiến trình chạy ngầm làm giảm hiệu năng máy.

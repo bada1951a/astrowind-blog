@@ -22,6 +22,7 @@ theme: "Nordic Clean Ice"
 
 
 
+
 Jam menunjukkan pukul 09:15 pagi di kantor *startup* teknologi kami di kawasan SCBD, Jakarta. Grup Slack internal mendadak ramai oleh laporan tim operasional yang panik karena *taskbar* Windows 11 di laptop mereka mendadak membeku (*freeze*). Tombol Start tidak merespons, ikon aplikasi di bilah bawah tidak bisa diklik, dan mengeklik *system tray* sama sekali tidak membawa hasil. Padahal, rapat sinkronisasi server dan *deployment* sistem internal klien harus segera berjalan dalam waktu kurang dari setengah jam. Panik sempat melanda sejenak sebelum akhirnya kami mengeksekusi langkah-langkah pemulihan standar operasional IT yang cepat dan efektif.
 
 <div style="border-left: 4px solid #0284c7; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
@@ -29,7 +30,7 @@ Jam menunjukkan pukul 09:15 pagi di kantor *startup* teknologi kami di kawasan S
 
 ![Tech & IT Solution Guide](https://picsum.photos/seed/computer612/1000/550)
 
-## Mengapa Taskbar Windows 11 Bisa Macet?
+Mengapa Taskbar Windows 11 Bisa Macet?
 
 Sebelum langsung melompat ke solusi, ada baiknya kita memahami tiga akar permasalahan utama yang sering memicu kendala ini di lingkungan kerja harian:
 
@@ -41,7 +42,7 @@ Sebelum langsung melompat ke solusi, ada baiknya kita memahami tiga akar permasa
 
 ---
 
-## Langkah-Langkah Pemulihan Cepat (Step-by-Step Resolution)
+### Langkah-Langkah Pemulihan Cepat (Step-by-Step Resolution)
 
 Jangan terburu-buru melakukan *restart* paksa atau instal ulang sistem. Mari kita selesaikan masalah ini menggunakan alat administratif bawaan Windows 11.
 
@@ -77,7 +78,7 @@ Terkadang, ketidakcocokan antara *driver* grafis bawaan dengan pembaruan kumulat
 
 1. Buka menu Pengaturan (Settings)dengan menekan tombolWindows + I.
 
-## 2. Pilih menu Windows Update di panel sebelah kiri.
+2. Pilih menu Windows Update di panel sebelah kiri.
 
 3. Klik Check for updates dan pastikan tidak ada pembaruan tertunda yang gagal terpasang.
 
@@ -85,7 +86,7 @@ Terkadang, ketidakcocokan antara *driver* grafis bawaan dengan pembaruan kumulat
 
 ---
 
-## Saran dan Peringatan Ahli (Expert Warning)
+Saran dan Peringatan Ahli (Expert Warning)
 
 <div style="border-left: 4px solid #0284c7; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Perhatian Keamanan:</strong> Berhati-hatilah terhadap unduhan perangkat lunak pihak ketiga yang menjanjikan "perbaikan instan taskbar". Sebagian besar aplikasi tidak resmi tersebut justru menyusahkan sistem dengan *bloatware* atau potensi *malware*. Selalu utamakan utilitas bawaan resmi Windows seperti Task Manager dan PowerShell.
@@ -93,7 +94,7 @@ Terkadang, ketidakcocokan antara *driver* grafis bawaan dengan pembaruan kumulat
 
 ---
 
-## Pertanyaan yang Sering Diajukan (FAQ)
+Pertanyaan yang Sering Diajukan (FAQ)
 
 Q: Apakah data saya akan hilang jika saya me-*restart* Windows Explorer melalui Task Manager?
 

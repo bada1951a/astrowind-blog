@@ -22,6 +22,7 @@ theme: "Crimson Emergency Field"
 
 
 
+
 Het is kwart voor negen 's ochtends in een glazen kantoorpand op de Zuidas in Amsterdam. Over precies vijftien minuten begint een cruciale pitch voor een nieuwe internationale cliënt. Terwijl ik nog snel de laatste grafieken in de PowerPoint-presentatie wil zetten, slaat het scherm ineens dood. Geen blauw scherm van de dood, geen foutmelding, helemaal niks. De muisaanwijzer bevriest, de klok in de taakbalk blijft stilstaan op 08:42 uur, en zelfs de Caps Lock-toets reageert niet meer op het toetsenbord. Paniek. Een harde reset met de aan-uitknop is de enige optie, maar de spanning stijgt naar een kookpunt omdat de tijd wegtikt.
 
 Dit soort willekeurige vastlopers onder Windows 11 zijn de ultieme nachtmerrie van elke kantoormedewerker en systeembeheerder. Je eerste neiging is om maar wat te roepen: "Het zal wel aan de laatste Windows-update liggen!" of "Die SSD is vast kapot!". Vervolgens verspil je kostbare tijd met het willekeurig herinstalleren van stuurprogramma's, het loskoppelen van alle USB-apparaten en het draaien van eindeloze virusscans die niets opleveren. Maar als IT-specialist weet ik inmiddels beter: gissen is missen. We moeten de ingebouwde rechercheur van Windows inschakelen om de exacte dader te ontmaskeren.
@@ -30,7 +31,7 @@ Dit soort willekeurige vastlopers onder Windows 11 zijn de ultieme nachtmerrie v
 <strong>Korte noodkreet uit de praktijk:</strong> Ga niet meteen je hele systeem opnieuw installeren als Windows 11 willekeurig bevriest. In negentig procent van de gevallen laat de computer exact weten wat er misging vlak voor de crash, mits je weet waar je moet zoeken in het logboek.
 </div>
 
-## Waarom loopt Windows 11 zomaar vast? De 3 hoofdverdachten
+Waarom loopt Windows 11 zomaar vast? De 3 hoofdverdachten
 
 Voordat we diep in de logboeken duiken, is het handig om te begrijpen waar we naar op zoek zijn. Een willekeurige freeze zonder blauw scherm wordt vrijwel altijd veroorzaakt door een van de volgende drie hardware- of softwareproblemen:
 
@@ -40,7 +41,7 @@ Voordat we diep in de logboeken duiken, is het handig om te begrijpen waar we na
 
 ---
 
-## Stap voor stap de crash achterhalen via Logboeken (Event Viewer)
+### Stap voor stap de crash achterhalen via Logboeken (Event Viewer)
 
 Genoeg gepraat over hypotheses, we gaan nu gericht sporen zoeken. Volg deze nauwkeurige stappen om de precieze seconde van de crash te achterhalen en de schuldige aan te wijzen.
 
@@ -50,7 +51,7 @@ Klik op de Start-knop onderaan je scherm en typ direct het woord Logboeken in de
 ### Stap 2: Navigeer naar de Kritieke Systeemgebeurtenissen
 In het linkerdeelvenster zie je een boomstructuur.
 
-## 1. Klik op het pijltje voor Logboeken van Windows.
+1. Klik op het pijltje voor Logboeken van Windows.
 
 2. Klik vervolgens op Systeem. Dit kan even duren omdat Windows hier alle hardware- en drivermeldingen laadt.
 
@@ -69,7 +70,7 @@ Scroll door de gefilterde lijst naar het tijdstip waarop je computer net bevroor
 
 ---
 
-## Preventieve maatregelen en professioneel advies
+Preventieve maatregelen en professioneel advies
 
 Als je eenmaal via het logboek hebt ontdekt waar de schoen wringt, kun je actie ondernemen. Zie je veel geheugenwaarschuwingen? Duik dan de BIOS in en zet het overgeklokte XMP- of EXPO-geheugenprofiel eens tijdelijk uit op de standaardkloksnelheid. Krijg je constante Kernel-Power fouten? Open dan het Configuratiescherm, ga naarEnergiebeheer, kies voor 'De werking van de aan/uit-knoppen bepalen' envink "Snel opstarten inschakelen" uit. Deze beruchte Windows-functie veroorzaakt op moderne hardware vaak corrupte slaapstandbestanden die willekeurige freezes uitlokken.
 
@@ -77,7 +78,7 @@ Zorg er daarnaast voor dat je via Apparaatbeheer je netwerk- en videodrivers up-
 
 ---
 
-## Veelgestelde vragen (FAQ)
+Veelgestelde vragen (FAQ)
 
 1. Mijn Logboeken staat vol met duizenden gele waarschuwingen. Moet ik me daar zorgen over maken?
 Nee, absoluut niet. Windows genereert continu achtergrondwaarschuwingen en niet-kritieke fouten over randapparatuur of achtergrondservices die tijdelijk niet reageren. Focus je bij vastlopers uitsluitend op de rode categorieën KritiekenFout rond het exacte tijdstip van de crash.

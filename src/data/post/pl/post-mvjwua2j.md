@@ -22,6 +22,7 @@ theme: "Acid Lime Hacker Space"
 
 
 
+
 Wtorek, kwadrans przed kluczową wideokonferencją z zarządem w nowo otwartej filii na Śląsku. Szybko wyciągam służbowego laptopa z torby i podpinam go pod stacjonarny monitor w sali konferencyjnej za pomocą kabla HDMI, żeby rzucić prezentację na wielki ekran. Prezentacja rusza bez zająknienia, slajdy wyglądają świetnie, ale gdy włączam materiał wideo z podkładem muzycznym… z głośników w sali dobiega całkowita cisza. Wszyscy patrzą na mnie, a systemowa ikonka głośnika w prawym dolnym rogu ekranu dumnie wyświetla mały, szary krzyżyk. Znam ten ból aż nazbyt dobrze.
 
 W takich momentach serce na chwilę zastyga, zwłaszcza gdy na szybkiej diagnozie zależy całemu zespołu. Jako inżynier wsparcia IT i serwisant sprzętu komputerowego przetestowałem już chyba każdy możliwy scenariusz awarii audio w systemie Windows 11. Zamiast panikować i tracić cenne minuty na przeinstalowywanie całego systemu, weźmy głęboki oddech i przejdźmy do konkretów. Oto sprawdzona procedura ratunkowa, którą wdrożysz w niespełna trzy minuty.
@@ -30,7 +31,7 @@ W takich momentach serce na chwilę zastyga, zwłaszcza gdy na szybkiej diagnozi
 
 ---
 
-### Dlaczego Windows 11 traci dźwięk? (Główne przyczyny)
+Dlaczego Windows 11 traci dźwięk? (Główne przyczyny)
 
 Zanim klikniemy cokolwiek na ślepo, warto zrozumieć, z czym właściwie walczymy. W środowiskach biurowych i podczas pracy mobilnej problemy z dźwiękiem wynikają zazwyczaj z trzech powtarzających się scenariuszy:
 
@@ -42,7 +43,7 @@ Zanim klikniemy cokolwiek na ślepo, warto zrozumieć, z czym właściwie walczy
 
 ---
 
-### Szybka ścieżka naprawy: Krok po kroku
+Szybka ścieżka naprawy: Krok po kroku
 
 Jasne, moglibyśmy od razu grzebać w rejestrze, ale po co komplikować? Zacznijmy od najszybszych i najskuteczniejszych narzędzi diagnostycznych wbudowanych w Windows 11.
 
@@ -71,7 +72,7 @@ Jeśli ikonka głośnika reaguje komunikatem o błędzie, winne mogą być usłu
 
 ---
 
-### Profesjonalne ostrzeżenie serwisowe
+Profesjonalne ostrzeżenie serwisowe
 
 <div style="border-left: 4px solid #84cc16; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Ważne ostrzeżenie dotyczące sterowników:</strong> Unikaj pobierania uniwersalnych paczek sterowników audio z podejrzanych stron trzecich oferujących "magiczne aktualizacje jednym kliknięciem". Często instalują one adware lub niekompatybilne kodeki, które całkowicie psują stabilność systemu Windows 11. Zawsze korzystaj ze strony producenta swojego laptopa (Dell, Lenovo, HP, ASUS) lub oficjalnego katalogu Microsoft Update.
@@ -79,7 +80,7 @@ Jeśli ikonka głośnika reaguje komunikatem o błędzie, winne mogą być usłu
 
 ---
 
-### Często zadawane pytania (FAQ)
+Często zadawane pytania (FAQ)
 
 1. Co zrobić, gdy po aktualizacji systemu Windows 11 dźwięk całkowicie zniknął i żaden suwak nie pomaga? Najskuteczniejszą metodą w takim przypadku jest cofnięcie problematycznego sterownika. Wejdź w [Menedżer urządzeń], kliknij dwukrotnie na swoją kartę dźwiękową, przejdź do zakładki *Sterownik* i kliknij przycisk Przywróć sterownik(jeśli jest podświetlony). Często nowa łatka Microsoftu gryzie się ze starszym kodekiem producenta sprzętu.
 

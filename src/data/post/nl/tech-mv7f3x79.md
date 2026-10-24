@@ -22,6 +22,7 @@ theme: "Midnight Navy Royal"
 
 
 
+
 Tijdens een nachtdienst op de IT-infrastructuurdesk van een corporate kantoor in Amsterdam zag ik de tickets plotseling binnenstromen: direct na de uitrol van een cumulatieve Windows 11-update via ons WSUS-platform meldden tientallen gebruikers die 's ochtends vroeg inlogden identieke symptomen. Laptops aangesloten op Thunderbolt 4-dockingstations gaven massaal de melding "Geen signaal" op het primaire externe beeldscherm, terwijl het secundaire scherm om de vier seconden zwart knipperde. 
 
 Wanneer een gebruiker geconfronteerd wordt met een knipperend beeldscherm of een volslagen gebrek aan videosignaal op een tweede of derde monitor, grijpt men vrijwel altijd direct naar de fysieke bekabeling. In meer dan 85% van de zakelijke incidenten die ik behandel, is de hardware echter kerngezond. Het probleem ligt dieper: een vastgelopen DisplayPort-handshake, corrupte DCH-stuurprogrammabestanden of een bandbreedteconflict in het subsysteem van de grafische processor (GPU). 
@@ -30,7 +31,7 @@ In dit incidentenlogboek neem ik je mee langs de exacte diagnostische stappen en
 
 ---
 
-### [01:42 CET] – Oorzaakanalyse: Waarom verliest de display-pipeline zijn synchronisatie?
+[01:42 CET] – Oorzaakanalyse: Waarom verliest de display-pipeline zijn synchronisatie?
 
 Wanneer een laptop via USB-C, HDMI of DisplayPort een extern scherm aanstuurt, is er sprake van een constante, bi-directionele communicatiestroom tussen de embedded controller (EC), de geïntegreerde GPU (zoals Intel Iris Xe of AMD Radeon Graphics), de discrete GPU (NVIDIA RTX / AMD Radeon Pro) en de beeldschermscaler. 
 
@@ -50,7 +51,7 @@ Moderne kantooropstellingen gebruiken vaak twee 1440p- of 4K-schermen aangeslote
 
 ---
 
-### [02:15 CET] – Incident Respons: Stapsgewijs Herstelprotocol
+[02:15 CET] – Incident Respons: Stapsgewijs Herstelprotocol
 
 Om dit probleem softwarematig en structureel op te lossen, volgen we een gefaseerde aanpak. Voer deze stappen bij voorkeur uit met lokale beheerdersrechten.
 
@@ -142,7 +143,7 @@ Knipperende schermen ontstaan vaak doordat Windows probeert een paneel aan te st
 
 ---
 
-### [03:00 CET] – Expert Waarschuwing & Preventieve Maatregelen
+[03:00 CET] – Expert Waarschuwing & Preventieve Maatregelen
 
 <div style="border-left: 4px solid #1d4ed8; padding: 14px 18px; margin: 20px 0; background-color: rgba(29, 78, 216, 0.05); border-radius: 4px;">
   <strong>Kritieke Infrastructuurwaarschuwing:</strong> Forceer nooit firmware-updates van dockingstations terwijl er beeldschermen willekeurig in- en uitschakelen. Als de verbinding wegvalt tijdens het flashen van de DisplayPort-repeaterfirmware (VMM-chipset zoals Synaptics of Realtek), raakt de controller permanent gebricked. Koppel de schermen altijd fysiek los van het dock en voer dockfirmware-updates uitsluitend uit met enkel de laptop aangesloten op netstroom.
@@ -150,28 +151,28 @@ Knipperende schermen ontstaan vaak doordat Windows probeert een paneel aan te st
 
 Om te voorkomen dat ditzelfde probleem zich bij de volgende Windows Update-cyclus herhaalt, implementeren wij standaard de volgende preventieve maatregelen:
 
-## 1. Groepsbeleid tegen driver-overschrijvingen:
+1. Groepsbeleid tegen driver-overschrijvingen:
 
    Open de Lokale groepsbeleidbewerker (`gpedit.msc`) en navigeer naar:  
    `Computerconfiguratie` -> `Beheersjablonen` -> `Windows-onderdelen` -> `Windows Update` -> `Geen stuurprogramma's opnemen in Windows-updates`. Zet deze beleidsregel op Ingeschakeld. Hiermee voorkom je dat Microsoft WHQL-drivers je stabiele OEM-videodrivers overschrijven.
 
-## 2. Kabelkwaliteit en Passieve Adapters:
+2. Kabelkwaliteit en Passieve Adapters:
 
    Gooi goedkope, passieve HDMI-naar-DisplayPort adapters resoluut de prullenbak in. Zodra je een dual-monitoropstelling draait via USB-C, vereist de signaalintegriteit gecertificeerde VESA DisplayPort 1.4 of HDMI 2.1 kabels met actieve signaalomvormers indien er sprake is van protocolconversie.
 
-## 3. Power Delivery Marges:
+3. Power Delivery Marges:
 
    Zorg dat het dockingstation voldoende vermogen levert. Als een dock slechts 65W levert aan een laptop die onder piekbelasting 90W trekt, schaalt het moederbord automatisch de stroomtoevoer naar de USB-C multiplexers terug. Dit resulteert in het wegvallen van het videosignaal zodra de processor zwaar wordt belast.
 
 ---
 
-### [04:15 CET] – Post-Mortem: Veelgestelde Vragen (FAQ)
+[04:15 CET] – Post-Mortem: Veelgestelde Vragen (FAQ)
 
-## V1: Waarom treedt dit probleem vrijwel altijd op na het ontwaken uit de slaapstand (Modern Standby)?
+V1: Waarom treedt dit probleem vrijwel altijd op na het ontwaken uit de slaapstand (Modern Standby)?
 Antwoord: Moderne Windows-laptops maken gebruik van *Modern Standby (S0ix)* in plaats van de traditionele *S3 Slaapstand*. In deze toestand blijven de netwerkkaart en het geheugen deels actief, maar worden PCIe-interfaces en controllers met hoge energiebehoefte uitgeschakeld. Wanneer de machine ontwaakt, moeten de USB-C controllers binnen milliseconden communiceren met de monitor. Als de monitor te traag reageert vanuit zijn eigen diepe slaapstand, treedt er een time-out op in de Windows-kernel en markeert het besturingssysteem de poort als inactief. Schakel in het OSD-menu van je monitor "Auto Source Detection" en "Deep Sleep" uit om dit structureel te verhelpen.
 
-## V2: Mijn scherm geeft direct weer signaal als ik de resolutie verlaag van 4K naar 1080p. Is mijn GPU defect?
+V2: Mijn scherm geeft direct weer signaal als ik de resolutie verlaag van 4K naar 1080p. Is mijn GPU defect?
 Antwoord: Nee, je GPU is volkomen intact. Dit is een klassiek symptoom van bandbreedtecongestie of signaalverlies (packet loss) over de fysieke verbinding. Een 4K-signaal op 60 Hz met 8-bits kleurdiepte vereist circa 12.54 Gbps aan ongecomprimeerde datadoorvoer. Als je kabel net te lang is (langer dan 2 meter zonder actieve versterking) of er interferentie optreedt, kan de beeldschermadapter het hoge frequentiesignaal niet foutloos afleveren. Door terug te schakelen naar 1080p daalt de bandbreedtebehoefte naar ongeveer 3.2 Gbps, wat wel binnen de foutmarge van de verzwakte verbinding past. Vervang de kabel door een afgeschermde DisplayPort 1.4-kabel.
 
-## V3: Waarom kan ik in de beeldscherminstellingen de vernieuwingsfrequentie niet hoger instellen dan 30 Hz op mijn tweede scherm?
+V3: Waarom kan ik in de beeldscherminstellingen de vernieuwingsfrequentie niet hoger instellen dan 30 Hz op mijn tweede scherm?
 Antwoord: Dit gebeurt wanneer een USB-C hub of dock de beschikbare USB-C pinnen prioriteert voor USB 3.0-datasnelheden (5 Gbps) in plaats van videobandbreedte. Een USB-C kabel heeft vier high-speed datalijnen. Als er twee lijnen worden toegewezen aan USB 3.0 data, blijven er slechts twee lijnen over voor video (DisplayPort 2-lane mode). Zonder DSC ondersteuning kan een DP 1.2 interface over twee lijnen simpelweg niet meer dan 4K op 30 Hz leveren. De oplossing is om in het BIOS of in het configuratiescherm van het dock de prioriteit te verleggen van "High Data Speed" naar "High Resolution" (waardoor de USB-poorten op het dock terugschalen naar USB 2.0, maar alle vier de lijnen beschikbaar komen voor video).

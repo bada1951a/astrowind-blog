@@ -22,6 +22,7 @@ theme: "Cyberpunk Terminal"
 
 
 
+
 <div style="border-left: 4px solid #00ffcc; padding: 12px 16px; margin: 20px 0; background-color: rgba(0, 255, 204, 0.05); font-family: monospace; border-radius: 4px;">
 <strong>[TERMINAL_INIT: SUBSYSTEM_INPUT_DIAGNOSTICS]</strong><br/>
 STATUS: DETECTED_KEY_CHATTERING_ANOMALY<br/>
@@ -30,7 +31,7 @@ ACTION: EXECUTE_RECOVERY_PROTOCOL_V4
 </div>
 
 ```bash
-# Diagnóstico rápido de portas e periféricos HID via PowerShell (Console de TI)
+Diagnóstico rápido de portas e periféricos HID via PowerShell (Console de TI)
 Get-PnpDevice -Class 'Keyboard' | Select-Object Status, Class, FriendlyName, InstanceId
 Get-WmiObject Win32_Keyboard | Format-Table Name, Description, DeviceID
 ```
@@ -69,13 +70,13 @@ Para intervir com eficácia, é indispensável entender o que acontece dentro do
 +-----------------------------------------------------------------------+
 ```
 
-### Causa 1: Oxidação e Acúmulo de Resíduos nas Lâminas de Contato (Leaf Springs)
+Causa 1: Oxidação e Acúmulo de Resíduos nas Lâminas de Contato (Leaf Springs)
 Os switches mecânicos convencionais (como Cherry MX, Gateron, Outemu e Kailh) utilizam duas pequenas lâminas flexíveis de liga metálica que se tocam quando a haste desce. O fechamento do circuito envia um sinal elétrico de nível lógico baixo ou alto para o microcontrolador (MCU). Com o tempo, a umidade do ar, a oleosidade dos dedos que vaza pelos encaixes das keycaps e as partículas de fuligem criam uma película resistiva sobre os pontos de contato. Essa película gera flutuações na tensão do circuito, impedindo a continuidade estável e forçando a controladora a interpretar múltiplos pulsos rápidos.
 
-### Causa 2: Descompasso no Algoritmo de Debounce (Tempo de Acomodação)
+Causa 2: Descompasso no Algoritmo de Debounce (Tempo de Acomodação)
 Nenhum contato mecânico físico encosta no outro perfeitamente sem vibrar. Durante alguns microssegundos, as lâminas metálicas "quicam" microscopicamente antes de fechar contato firme. O microcontrolador do teclado utiliza um algoritmo de debounce filtering (tipicamente entre 5 ms e 20 ms) para ignorar esses repiques. Se a lâmina sofrer leve fadiga plástica ou se a oxidação prolongar o tempo de vibração além da janela configurada pelo firmware, a controladora registrará cada micro-ressalto como um novo clique distinto.
 
-### Causa 3: Microfraturas na Solda ou Trilha Rompida no PCB
+Causa 3: Microfraturas na Solda ou Trilha Rompida no PCB
 Em teclados sem suporte a *hot-swap* (soldados diretamente na placa de circuito impresso), a força repetitiva exercida pelo usuário pode gerar trincas invisíveis a olho nu na solda de estanho/chumbo nos pinos do switch. Essas trincas (conhecidas como solda fria ou estresse mecânico de junta) criam contato intermitente: uma leve torção no chassi do teclado faz o circuito abrir e fechar descontroladamente, simulando um chattering agressivo ou falha total de resposta da tecla. ---
 
 3. Resolução Passo a Passo: Protocolo Cirúrgico de Reparo
@@ -85,7 +86,7 @@ Em teclados sem suporte a *hot-swap* (soldados diretamente na placa de circuito 
 FASE 1: Isolamento de Software &gt;&gt; FASE 2: Desenergização &gt;&gt; FASE 3: Aplicação de Solvente &gt;&gt; FASE 4: Teste de Retorno
 </div>
 
-### Etapa 1: Isolamento de Software no Sistema Operacional
+Etapa 1: Isolamento de Software no Sistema Operacional
 Antes de desmontar qualquer peça, certifique-se de que a falha não é decorrente de drivers corrompidos ou interferência de utilitários de terceiros.
 
 1. Abra o Prompt de Comando ou o PowerShell como Administrador.
@@ -104,14 +105,14 @@ Antes de desmontar qualquer peça, certifique-se de que a falha não é decorren
 
 **Q6.** Abra um software de teste de latência e repique (como *Keyboard Chattering Fix Tool* ou *Switch Hitter*). Pressione a tecla defeituosa 100 vezes seguidas em cadência moderada. Se o log acusar repiques com intervalos inferiores a 30 milissegundos, o problema é comprovadamente físico.
 
-### Etapa 2: Preparação de Bancada e Desenergização Completa
+Etapa 2: Preparação de Bancada e Desenergização Completa
 A regra de ouro de hardware: nunca aplique substâncias químicas condutoras ou solventes com o dispositivo energizado.
 
 * Desconecte o cabo USB do computador. Se o teclado for sem fio (Bluetooth/2.4GHz), desligue a chave física na carcaça e desconecte a bateria interna se tiver acesso fácil.
 * Remova a keycap da tecla com problema utilizando um extrator apropriado (*keycap puller* de arame). Não use chaves de fenda para não danificar as paredes dos estabilizadores nem espanar a cruzeta da haste.
 * Aspire a área ao redor do switch com um pincel antiestático e ar comprimido seco para evitar que detritos entrem na carcaça durante o processo.
 
-### Etapa 3: Aplicação Cirúrgica de Limpa-Contato de Secagem Rápida
+Etapa 3: Aplicação Cirúrgica de Limpa-Contato de Secagem Rápida
 Aqui está o ponto central do procedimento. Você precisa de um spray Limpa-Contato de Alta Pureza (não utilize desengripantes oleosos).
 
 ```
@@ -142,7 +143,7 @@ Aqui está o ponto central do procedimento. Você precisa de um spray Limpa-Cont
 
 **Q7.** Aguarde a evaporação completa por no mínimo 15 a 20 minutos.
 
-### Etapa 4: Troca do Switch em Teclados Hot-Swap ou Re-solda
+Etapa 4: Troca do Switch em Teclados Hot-Swap ou Re-solda
 Se o método do limpa-contato não resolver (indicando desgaste físico irreversível ou quebra da lâmina):
 
 * Teclados Hot-Swap: Utilize um extrator de switches (*switch puller*). Pressione as travas superior e inferior do switch e puxe-o verticalmente para cima. Insira um novo switch alinhando rigorosamente os dois pinos metálicos com os soquetes Kailh/Gateron do PCB para não dobrar os terminais.
@@ -165,12 +166,12 @@ PERIGO: Nunca utilize WD-40 Multiuso tradicional, óleos lubrificantes, desengri
 
 5. Perguntas Frequentes (FAQ de Bancada)
 
-### P1: O uso frequente de limpa-contato remove a lubrificação original de fábrica do switch?
+P1: O uso frequente de limpa-contato remove a lubrificação original de fábrica do switch?
 Respost
 
 a: Sim. O solvente dielétrico do spray limpa-contato dissolve óleos e graxas industriais (como Krytox GPL 205g0 ou graxas sintéticas à base de PTFE). Se o seu teclado utilizava switches lineares suaves ou lubrificados manualmente para entusiastas, o solvente deixará o deslizamento da haste sensivelmente mais áspero e com ruído de atrito perceptível ("scratchy"). Nesses casos, o ideal para puristas é desmontar o switch (*switch opener*), limpar as peças individualmente, passar o limpa-contato apenas nas lâminas metálicas e relubrificar os trilhos plásticos antes de remontar.
 
-### P2: Aumentar o "debounce time" no firmware do teclado resolve a falha em definitivo?
+P2: Aumentar o "debounce time" no firmware do teclado resolve a falha em definitivo?
 Respost
 
 a: Não, apenas mascara o problema temporariamente. Alguns teclados de marcas premium (como Corsair, Wooting ou modelos compatíveis com QMK/VIA) permitem elevar o tempo de debounce de 5 ms para 15 ms ou 20 ms nas configurações de firmware. Isso faz o microcontrolador esperar mais tempo antes de aceitar um novo comando da mesma tecla, ignorando os repiques da lâmina danificada. Contudo, a oxidação ou fadiga metálica continuará progredindo. Conforme a folha de contato se deteriora, o tempo de vibração ultrapassará até mesmo o novo limite, resultando finalmente na parada total do switch. Trate o ajuste de debounce apenas como medida paliativa de contingência. ### P3: Como diferenciar se a falha é do switch mecânico ou do soquete Hot-Swap frouxo?

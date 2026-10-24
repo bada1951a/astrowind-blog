@@ -22,9 +22,10 @@ theme: "High-Contrast Charcoal"
 
 
 
+
 Była dokładnie 10:45 rano, a w warszawskim centrum biznesowym przy Rondzie Daszyńskiego panowała gęsta atmosfera. Za kwadrans miało ruszyć kluczowe spotkanie zarządu z inwestorami z Frankfurtu, a stacja robocizna naszego głównego analityka finansowego zamarzła na amen. Ekran zamroził się w bezruchu, kursor myszy nie reagował, a twardy reset przyciskiem na obudowie to była jedyna deska ratunku. Najgorsze było to, że to nie pierwszy taki zwis w tym tygodniu. Klient patrzył na mnie z paniką w oczach, pytając, czy jego modele finansowe przetrwały. Jako inżynier wsparcia IT wiedziałem, że bezmyślne przeinstalowywanie systemu nic tu nie da. Czas było wreszcie sprawdzić, co tak naprawdę boli ten komputer.
 
-### Trzy najczęstsze powody losowych zwiech w Windows 11
+Trzy najczęstsze powody losowych zwiech w Windows 11
 
 ![Tech Troubleshooting Guide](/images/tech-photo/tech-photo%20(39).jpg)
 
@@ -65,7 +66,7 @@ Jednak prawdziwego winowajcy szukaj tuż *przed* tym wpisem. Zwróć uwagę na b
 Podgląd Zdarzeń -> Dzienniki systemu Windows -> System -> Filtruj (Krytyczne + Błędy) -> Analiza ID 41 oraz WHEA-Logger ID 18.
 ```
 
-### Działanie naprawcze: Od diagnozy do stabilnego systemu
+Działanie naprawcze: Od diagnozy do stabilnego systemu
 
 Gdy wiesz już z Podglądu Zdarzeń, co powoduje ból głowy, czas na konkretne działania w systemie i ustawieniach:
 
@@ -78,7 +79,7 @@ a: Otwórz *Ustawienia* -> *Zasilanie i bateria*, a następnie zmień plan zasil
 <strong>Zasada bezpieczeństwa danych:</strong> Podczas diagnozowania losowych zwiech zawsze wykonaj kopię zapasową kluczowych plików na zewnętrzny nośnik lub chmurę firmową. Nagłe zaniki zasilania jądra systemu mogą w każdej chwili uszkodzić strukturę tabel partycji NTFS.
 </div>
 
-### Najczęściej zadawane pytania (FAQ)
+Najczęściej zadawane pytania (FAQ)
 
 1. W Podglądzie Zdarzeń widzę mnóstwo błędów "DistributedCOM" (ID 10016). Czy to przez to komputer mi się zawiesza? Nie. Błędy DistributedCOM to zmora niemal każdego czystego Windowsa 11. Dotyczą uprawnień dostępu DCOM dla aplikacji w tle i w 99% przypadków nie powodują zamrażania systemu. Możesz je spokojnie zignorować.
 

@@ -22,6 +22,7 @@ theme: "Deep Indigo System"
 
 
 
+
 Godzina 18:40, a we wrocławskim parku technologicznym atmosfera robi się gęsta. Jutro rano mamy kluczowy audyt stabilności infrastruktury przed wejściem zewnętrznego klienta, a stacja robocza lead architekta nagle sypie się do niebieskiego ekranu. Na monitorze dumnie widnieje kod błędu: `IRQL_NOT_LESS_OR_EQUAL` czyli klasyczny 0x0000000
 
 a. Serce na chwilę zamiera, bo reset komputera pomagał tylko na dokładnie pięć minut pracy pod obciążeniem. 
@@ -32,7 +33,7 @@ Zamiast panikować i stawiać system od nowa, podwinąłem rękawy, odłączyłe
 <strong>Kontekst operacyjny:</strong> Błąd 0x0000000a oznacza, że procesor lub program działający w trybie jądra (kernel-mode) próbował uzyskać dostęp do niedozwolonego adresu pamięci przy zbyt wysokim poziomie IRQL. W 90% przypadków winne są wadliwe sterowniki (często sieć lub chipset) albo fizyczna/ustawieniowa niestabilność pamięci RAM.
 </div>
 
-## Anatomia awarii: 3 główne przyczyny błędu 0x0000000a
+Anatomia awarii: 3 główne przyczyny błędu 0x0000000a
 
 Zanim przejdziesz do bezmyślnego formatowania dysku, warto zrozumieć, co dokładnie wywołało ten stan w systemie Windows:
 
@@ -44,7 +45,7 @@ Zanim przejdziesz do bezmyślnego formatowania dysku, warto zrozumieć, co dokł
 
 ---
 
-## Krok po kroku: Jak uratować system przed audytem
+### Krok po kroku: Jak uratować system przed audytem
 
 ### Krok 1: Diagnostyka pamięci RAM (Weryfikacja sprzętowa)
 Zanim zaczniemy szukać winnych w oprogramowaniu, wykluczmy kwestie fizyczne.
@@ -58,7 +59,7 @@ Zanim zaczniemy szukać winnych w oprogramowaniu, wykluczmy kwestie fizyczne.
 ### Krok 2: Identyfikacja winowajcy w zrzutach pamięci (Minidump)
 Potrzebujemy dowodów. System zapisuje pliki zrzutów za każdym razem, gdy występuje BSoD.
 
-## 1. Przejdź do folderu `C:\Windows\Minidump`.
+1. Przejdź do folderu `C:\Windows\Minidump`.
 
 2. Skopiuj najnowszy plik `.dmp` na pulpit (żeby ominąć uprawnienia administratora przy odczycie).
 
@@ -85,7 +86,7 @@ a:</strong> Jeśli przycisk cofania jest nieaktywny, przejdź do wiersza polece�
 
 ---
 
-## Ważne ostrzeżenia i dobre praktyki
+Ważne ostrzeżenia i dobre praktyki
 
 * Unikaj "magicznych" programów do aktualizacji sterowników: Narzędzia typu Driver Booster to najczęstsza przyczyna błędów 0x0000000
 
@@ -95,7 +96,7 @@ a. Instalują one ogólne paczki zamiast dedykowanych sterowników od producenta
 
 ---
 
-## Często zadawane pytania (FAQ)
+Często zadawane pytania (FAQ)
 
 1. Co zrobić, jeśli komputer restartuje się tak szybko, że nie zdążam odczytać kodu błędu?
 Kliknij Start, wpisz `Zaawansowane ustawienia systemu` (Advanced system settings), w zakładce *Zaawansowane* znajdź sekcję *Uruchamianie i odzyskiwanie* i kliknij *Ustawienia*. W sekcji *Awaria systemu* odznacz opcję "Automatycznie uruchom ponownie". Dzięki temu system zatrzyma się na niebieskim ekranie, dając Ci czas na sfotografowanie kodu i nazwy pliku sterownika. ![Tech & IT Solution Guide](https://picsum.photos/seed/computer564/1000/550)

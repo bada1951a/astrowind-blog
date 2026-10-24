@@ -22,6 +22,7 @@ theme: "Modern Minimalist Slate"
 
 
 
+
 Jam 4 sore di salah satu gedung perkantoran kawasan Sudirman Jakarta, suasana mendadak tegang luar biasa. Tenggat waktu laporan keuangan tahunan tinggal dua jam lagi, namun layar PC salah satu manajer tiba-tiba tertutup tulisan transparan mengganggu di pojok kanan bawah: *Activate Windows - Go to Settings to activate Windows*. Bukan cuma soal estetika presentasi yang mau dikirim ke direksi, watermark menyebalkan ini bikin beberapa aplikasi shortcut terkunci dan performa sistem terasa nge-lag gara-gara proses background Windows Script Host yang nyangkut. Panik? Pastinya. Apalagi tombol pengaturan lisensi di Control Panel malah mental *error code* gara-gara koneksi kantor yang dibatasi *firewall*.
 
 Sebelum panik berlanjut dan berujung bongkar hardware atau install ulang yang bakal makan waktu berjam-jam, sebagai teknisi infrastruktur IT, saya punya trik kilat yang aman, legal secara fungsional untuk *staging* darurat, dan pastinya bersih dari virus atau file *crack* abal-abal yang sering disebar situs download ilegal. Kita cukup pakai Command Prompt (CMD) bawaan sistem.
@@ -32,7 +33,7 @@ Sebelum panik berlanjut dan berujung bongkar hardware atau install ulang yang ba
 <strong>Catatan Teknisi:</strong> Cara ini adalah langkah mitigasi darurat untuk meredam gangguan visual dan menghentikan loop error notifikasi lisensi agar pekerjaan kantor Anda bisa segera terselesaikan tanpa gangguan.
 </div>
 
-## Kenapa Watermark Ini Tiba-Tiba Muncul di Jam Kritis?
+Kenapa Watermark Ini Tiba-Tiba Muncul di Jam Kritis?
 
 Sebelum kita eksekusi kodenya, mari kita pahami dulu tiga akar penyebab utama kenapa masalah ini sering muncul mendadak di lingkungan korporat:
 
@@ -42,7 +43,7 @@ Sebelum kita eksekusi kodenya, mari kita pahami dulu tiga akar penyebab utama ke
 
 3. Perubahan Hardware Signifikan: Pergantian komponen mendadak (misalnya SSD NVMe baru atau penggantian motherboard oleh tim IT sebelumnya) membuat algoritma keamanan Windows mengira ini adalah unit PC yang berbeda. ---
 
-## Langkah-Langkah Eksekusi: Menghilangkan Watermark via CMD
+### Langkah-Langkah Eksekusi: Menghilangkan Watermark via CMD
 
 Mari kita selesaikan masalah ini langsung dari balik layar sistem operasi menggunakan hak akses tertinggi. Ikuti langkah-langkah di bawah ini secara teliti:
 
@@ -77,7 +78,7 @@ PC Anda akan melakukan *reboot* secara otomatis dalam hitungan detik. Nyala kemb
 
 ---
 
-## Tips Keamanan & Saran Pakar Infrastruktur IT
+Tips Keamanan & Saran Pakar Infrastruktur IT
 
 <div style="border-left: 4px solid #3b82f6; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Peringatan Penting:</strong> Perintah <code>slmgr -rearm</code> adalah fitur resmi dari Microsoft untuk memperpanjang masa evaluasi sistem. Namun, trik ini memiliki batas penggunaan (umumnya hingga 3-4 kali). Ini adalah solusi darurat kantor, bukan solusi permanen selamanya. </div>
@@ -87,7 +88,7 @@ PC Anda akan melakukan *reboot* secara otomatis dalam hitungan detik. Nyala kemb
 
 ---
 
-## Pertanyaan yang Sering Diajukan (FAQ)
+Pertanyaan yang Sering Diajukan (FAQ)
 
 Q: Apakah cara ini akan menghapus data atau file laporan saya yang belum tersimpan?
 

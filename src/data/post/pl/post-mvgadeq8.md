@@ -22,9 +22,10 @@ theme: "High-Contrast Charcoal"
 
 
 
+
 Kwadrans przed kluczową prezentacją dla zarządu w warszawskim centrum biznesowym podchodzi do mnie blady jak ściana dyrektor handlowy. Na środku jego ekranu, dokładnie nad wykresami rocznej sprzedaży, dumnie widnieje irytujący, półprzezroczysty napis: „Aktywuj system Windows – przejdź do Ustawień, aby aktywować system”. Klienci mają wejść do sali za dokładnie dziesięć minut, rzutnik jest już rozstawiony, a ten nieszczęsny znak wodny zasłania kluczowe dane w Excelu. Każdy geek wie, że Windows po prostu przypomina o braku aktywacji, ale w warunkach korporacyjnych taki widok przed zarządem to wizerunkowa katastrofa. Szybki restart nie pomógł, a próby przeklinania pod nosem tylko podniosły ciśnienie. Zamiast panikować i szukać podejrzanych programów z internetu, które mogłyby zainfekować stację roboczą malwarem, musiałem działać szybko, legalnie (w ramach procedur testowych) i bezpośrednio z poziomu systemu.
 
-### Dlaczego ten cholerny napis w ogóle się pojawia?
+Dlaczego ten cholerny napis w ogóle się pojawia?
 
 ![Tech Troubleshooting Guide](/images/tech-photo/keyboard%20(20).png)
 
@@ -40,7 +41,7 @@ Zanim sięgnąłem po konsolę, muszę wyjaśnić, skąd bierze się ten problem
 <strong>Ostrzeżenie serwisowe:</strong> Pamiętaj, że ukrywanie znaku wodnego za pomocą modyfikacji plików systemowych (np. podmienianie plików w folderze System32) to droga przez mękę, która kończy się uszkodzeniem systemu (BSOD). Zawsze korzystaj z wbudowanych mechanizmów administracyjnych.
 </div>
 
-### Instrukcja krok po kroku: Czyszczenie pulpitu przez Wiersz polecenia
+Instrukcja krok po kroku: Czyszczenie pulpitu przez Wiersz polecenia
 
 Skoro zdiagnozowaliśmy problem, czas na szybkie działanie. Nie będziemy klikać dziesiątek okienek w Ustawieniach. Zastosujemy metodę czysto techniczną, która zresetuje stan powiadomień i wymusi odświeżenie licencji.
 
@@ -75,7 +76,7 @@ shutdown /r /t 0
 <strong>Ważna wskazówka dotycząca bezpieczeństwa danych:</strong> Polecenie <code>slmgr /rearm</code> resetuje okres próbny lub stan aktywacji KMS dozwolony przez producenta. Nie jest to uniwersalny "crack", lecz legalna komenda diagnostyczna wykorzystywana przez administratorów systemów do naprawy uszkodzonych stanów licencyjnych w środowiskach domenowych.
 </div>
 
-### Najczęściej zadawane pytania (FAQ)
+Najczęściej zadawane pytania (FAQ)
 
 1. Czy to polecenie usunie moją legalną licencję Windows na stałe? Absolutnie nie. Polecenie `slmgr /rearm` resetuje licznik stanu aktywacji. Jeśli komputer jest połączony z firmową siecią VPN i serwerem KMS lub posiada przypisaną licencję cyfrową MS Account, po ponownym połączeniu z siecią system automatycznie pobierze poprawny status aktywacji.
 

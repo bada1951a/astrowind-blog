@@ -22,6 +22,7 @@ theme: "Retro Monokai"
 
 
 
+
 Erano le 17:45 in un frenetico lunedì pomeriggio in un ufficio del Centro direzionale di Milano. Mancavano quindici minuti alla scadenza tassativa per l'invio del report trimestrale alla direzione centrale, e la mia postazione principale aveva deciso di fare le bizze. Sull'angolo in basso a destra dello schermo, campeggiava fissa l'odiata scritta "Attiva Windows". Fin qui niente di tragico, se non fosse che il software aziendale per la compilazione dei PDF aveva deciso di andare in conflitto con quell'overlay grafico, bloccando l'esportazione del file e coprendo parte dei pulsanti di invio. Il panico totale: il cliente che chiama per sollecitare, il capo che passa dietro la scrivania e il sistema piantato. 
 
 Nei primi minuti di panico totale ho fatto l'errore classico: ho iniziato a cliccare a caso nelle Impostazionidi Windows cercando una scorciatoia rapida, riavviando il servizio di Esplora risorse daGestione attivitàe persino smanettando nelPannello di controllo. Risultato? Dieci minuti buttati nel wc, il report ancora bloccato e quella filigrana trasparente ma fastidiosa sempre lì, pronta a coprire i dati critici della tabella finanziaria che stavo per inviare. 
@@ -47,7 +48,7 @@ a:
 <div style="border-left: 4px solid #a6e22e; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Nota Bene:</strong> Esegui sempre queste operazioni con i privilegi amministrativi per evitare errori di accesso negato durante la scrittura nel registro di sistema. </div>
 
-### Procedura passo-passo tramite CMD
+Procedura passo-passo tramite CMD
 
 1. Apri il Prompt dei comandi come Amministratore:Premi il tasto Windows sulla tastiera, digita `cmd`, fai clic con il tasto destro suPrompt dei comandinei risultati della ricerca e selezionaEsegui come amministratore.
 
@@ -69,7 +70,7 @@ a:
    ```
    Premi Invio, chiudi il prompt e riavvia immediatamente il computer dal menu Start > Spegni o disconnetti > Riavvia. Al riavvio, la filigrana sparirà dallo schermo, liberando l'area di lavoro e permettendoti di completare l'invio dei report senza interruzioni visive o conflitti con i software gestionali.
 
-### Consigli del Sistemista & Avvertenze di Sicurezza
+Consigli del Sistemista & Avvertenze di Sicurezza
 
 <div style="border-left: 4px solid #a6e22e; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Attenzione ai falsi miti sul web:</strong> Evita categoricamente l'uso di software "KMS activator" di terze parti trovati su siti torrent o forum anonimi. Non solo violano le policy di sicurezza aziendali (GDPR e conformità software), ma aprono backdoor permanenti nel firewall esponendo i dati sensibili dell'azienda a ransomware devastanti.
@@ -79,7 +80,7 @@ Prima di metter mano a qualsiasi modifica via riga di comando su PC aziendali, v
 
 ---
 
-### Domande Frequenti (FAQ)
+Domande Frequenti (FAQ)
 
 D: La rimozione della filigrana tramite CMD è permanente o devo ripeterla ogni volta che accendo il PC?
 

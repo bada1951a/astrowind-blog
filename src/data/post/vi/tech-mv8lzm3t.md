@@ -22,6 +22,7 @@ theme: "Pure Titanium Clean"
 
 
 
+
 Mới sáng thứ Hai đầu tuần, sếp tổng gọi gấp vào phòng họp để present cái báo cáo quý. Mồ hôi hột vã ra như tắm khi cái laptop chiến thần của mình bấm nút nguồn lên xong... đứng hình ở logo Windows đúng 10 phút tròn. Nhìn thanh Task Manager lúc mở được máy thì ôi thôi, Disk 100%, CPU quạt hú như phản lực cất cánh. Đám app "ăn hại" từ Zalo, KakaoTalk, OneDrive cho đến mấy cái phần mềm diệt virus rác tự động nhảy vào chạy ngầm (Startup) khiến cỗ máy i7 đời cũ nghẹt thở.
 
 Đó là lúc anh em kỹ sư IT như tụi mình phải bật chế độ "cấp cứu" ngay lập tức. Đừng vội mang ra tiệm tốn tiền hay cài lại Win mất thời gian, bài viết này tôi sẽ chỉ cho anh em cách "phẫu thuật" tận gốc bệnh khởi động chậm trễ này chỉ trong vòng một nốt nhạc.
@@ -30,7 +31,7 @@ Mới sáng thứ Hai đầu tuần, sếp tổng gọi gấp vào phòng họp 
 
 ---
 
-### 3 Nguyên nhân chính biến máy tính thành "rùa bò"
+3 Nguyên nhân chính biến máy tính thành "rùa bò"
 
 Trước khi vung dao mổ xẻ, phải bắt đúng bệnh thì mới trị dứt điểm được. Dưới đây là 3 thủ phạm chính:
 
@@ -42,7 +43,7 @@ Trước khi vung dao mổ xẻ, phải bắt đúng bệnh thì mới trị d�
 
 ---
 
-### Quy trình từng bước xử lý triệt để (Step-by-Step)
+Quy trình từng bước xử lý triệt để (Step-by-Step)
 
 <div style="border-left: 4px solid #334155; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px;">
 <strong>Lưu ý kỹ thuật:</strong> Các thao tác dưới đây áp dụng trực tiếp trên Windows 10 và Windows 11. Hãy chuẩn bị sẵn sàng bàn phím và làm theo từng lệnh chuẩn xác.
@@ -81,7 +82,7 @@ Tính năng này giúp Windows lưu trạng thái kernel vào một file hiberna
 
 ---
 
-### Cảnh báo chuyên gia từ IT thực chiến
+Cảnh báo chuyên gia từ IT thực chiến
 
 <div style="border-left: 4px solid #334155; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px;">
 <strong>Cẩn trọng dữ liệu:</strong> Không bao giờ tắt bừa các tiến trình hệ thống trong Task Manager nếu không biết nó là gì (ví dụ các tiến trình có tên svchost.exe hay csrss.exe). Việc tắt nhầm có thể gây màn hình xanh (BSOD) buộc phải force shutdown máy, dễ dẫn đến hỏng file hệ thống hoặc mất dữ liệu chưa lưu.
@@ -89,7 +90,7 @@ Tính năng này giúp Windows lưu trạng thái kernel vào một file hiberna
 
 ---
 
-### Câu hỏi thường gặp (FAQ)
+Câu hỏi thường gặp (FAQ)
 
 1. Tôi đã tắt hết Startup mà máy vẫn khởi động lâu, phải làm sao nữa?> Khả năng cao máy bạn vẫn đang dùng ổ cứng cơ HDD truyền thống. Giải pháp duy nhất và đáng tiền nhất lúc này là nâng cấp lên ổ cứng SSD NVMe. Tốc độ sẽ cải thiện từ 5 đến 10 lần, bấm nút lên nguồn là vào Win trong vòng 10 giây.
 

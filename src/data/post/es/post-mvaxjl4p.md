@@ -22,6 +22,7 @@ theme: "Pastel Lavender Tech"
 
 
 
+
 Eran las 8:50 de la mañana en nuestra oficina del distrito 22@ en Barcelona. A solo diez minutos de una reunión clave con el equipo de producto para revisar el despliegue de la nueva versión de nuestra plataforma, mi ordenador principal decidió hacer una actualización fantasma y quedarse congelado en la pantalla de bienvenida. El ventilador rugía como un motor de avión y el cursor apenas se arrastraba por el escritorio. Los Slack de mis compañeros parpadeaban con avisos de urgencia y yo sudando frío mirando cómo pasaban los segundos. El cuello de botella no era falta de hardware; era que el sistema operativo intentaba cargar al mismo tiempo dieciocho aplicaciones que ni siquiera recordaba haber instalado. 
 
 <div style="border-left: 4px solid #7c3aed; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
@@ -30,7 +31,7 @@ Eran las 8:50 de la mañana en nuestra oficina del distrito 22@ en Barcelona. A 
 
 ![Tech & IT Solution Guide](https://picsum.photos/seed/computer851/1000/550)
 
-## Por qué tu Windows 10 se arrastra al encender (Causas Raíz)
+Por qué tu Windows 10 se arrastra al encender (Causas Raíz)
 
 Antes de lanzarnos a limpiar, entendamos por qué tu ordenador portátil o de sobremesa pasa de tardar 10 segundos a necesitar un café entero para arrancar:
 
@@ -40,7 +41,7 @@ Antes de lanzarnos a limpiar, entendamos por qué tu ordenador portátil o de so
 
 3. Falta de mantenimiento preventivo: Rara vez revisamos qué procesos se autoinician tras una gran actualización del sistema operativo, permitiendo que aplicaciones obsoletas sigan devorando memoria RAM desde el arranque.
 
-## Guía paso a paso: Cómo desactivar los programas de inicio
+Guía paso a paso: Cómo desactivar los programas de inicio
 
 Vamos a solucionar este problema de raíz utilizando las herramientas nativas de Windows 10. No necesitas instalar programas de terceros sospechosos ni herramientas de optimización milagrosas que solo llenan tu equipo de publicidad.
 
@@ -59,13 +60,13 @@ Haz clic con el botón derecho sobre los programas que no necesites tener activo
 
 ---
 
-## Preguntas Frecuentes (FAQ)
+Preguntas Frecuentes (FAQ)
 
-### ¿Deshabilitar un programa en el inicio significa que ya no podré usarlo?
+¿Deshabilitar un programa en el inicio significa que ya no podré usarlo?
 Para nada. Deshabilitar una aplicación en el inicio solo evita que se ejecute automáticamente en segundo plano cada vez que enciendes el ordenador. Podrás seguir abriendo el programa haciendo doble clic en su icono o acceso directo cuando realmente lo necesites, y funcionará exactamente igual.
 
-### ¿Qué pasa si desactivo algo por error y el ordenador falla?
+¿Qué pasa si desactivo algo por error y el ordenador falla?
 No te preocupes, no vas a romper el sistema operativo. Si notas que alguna aplicación dejó de funcionar correctamente o necesitas que se ejecute al inicio, solo tienes que volver a abrir el Administrador de tareas, ir a la pestaña "Inicio", hacer clic derecho sobre la aplicación y seleccionar "Habilitar".
 
-### ¿Por qué mi ordenador sigue tardando en arrancar a pesar de haber limpiado el inicio?
+¿Por qué mi ordenador sigue tardando en arrancar a pesar de haber limpiado el inicio?
 Si ya desactivaste los programas innecesarios y el arranque sigue siendo desesperadamente lento, el cuello de disco ya no es de software, sino de hardware. Es muy probable que tu sistema operativo esté instalado en un disco duro tradicional (HDD) en lugar de una unidad de estado sólido (SSD). Migrar el sistema a un SSD moderno reducirá los tiempos de arranque de minutos a meros segundos.

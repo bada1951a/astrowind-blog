@@ -13,7 +13,8 @@ theme: "Sandstone Desert Minimal"
 
 
 
-## 1. Das Problem mit Win+Shift+S im mobilen Einsatz
+
+1. Das Problem mit Win+Shift+S im mobilen Einsatz
 
 Es war ein typischer Dienstagnachmittag in einem gut besuchten Café in der Münchener Maxvorstadt. Draußen nieselte es leicht, drinnen roch es nach frisch geröstetem Espresso. Ich saß mit meinem Laptop am Holztisch, verbunden mit dem Smartphone-Hotspot via Tethering, um letzte Korrekturen an einer komplexen Kalkulation und den dazugehörigen CAD-Plänen für einen wichtigen Kunden im Frankfurter Bankenviertel vorzunehmen. Der Abgabetermin rückte bedrohlich näher. Plötzlich musste ich einen bestimmten Ausschnitt aus einer Excel-Tabelle und einen Teil des Architekturplans direkt in einer E-Mail dokumentieren. 
 
@@ -33,7 +34,7 @@ Nachdem ich das Projekt erfolgreich übergeben hatte, widmete ich mich in Ruhe d
 - **Deaktivierte Benachrichtigungen:** Das Snipping Tool nutzt das Windows-Benachrichtigungscenter, um den Screenshot-Hinweis anzuzeigen. Ist der "Nicht stören"-Modus aktiv oder sind Benachrichtigungen blockiert, scheint es, als würde nichts passieren.
 - **Beschädigte App-Pakete:** Durch fehlerhafte Windows-Updates oder unerwartete Systemabbrüche (wie sie beim schnellen Wechsel zwischen WLAN und Hotspot vorkommen können) beschädigt Windows bisweilen die Registrierung der UWP-App.
 
-## 3. Step-by-Step Resolution
+3. Step-by-Step Resolution
 
 Gehen wir die Sache systematisch an. Wir nutzen dabei die gängigen Windows-Bordmittel wie **Task-Manager**, **Einstellungen** und die **PowerShell**, um das Problem schnell zu beheben.
 
@@ -64,7 +65,7 @@ Wenn die Benachrichtigungen stimmen, setzen wir die App über die Systemsteuerun
 
 1. Gehen Sie in den **Einstellungen** auf **Apps > Installierte Apps**.
 
-## 2. Suchen Sie nach **Snipping Tool**.
+2. Suchen Sie nach **Snipping Tool**.
 
 3. Klicken Sie auf die drei Punkte daneben und wählen Sie **Erweiterte Optionen**.
 

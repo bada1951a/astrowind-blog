@@ -22,6 +22,7 @@ theme: "Tokyo Neon Violet"
 
 
 
+
 Il est 17h55, la pression monte dans notre open space de La Défense. La clôture des dossiers trimestriels doit être envoyée à la direction générale à 18h30 pile, et c'est précisément le moment que choisit le poste de travail principal pour afficher ce fichu filigrane "Activer Windows - Accédez aux Paramètres pour activer Windows" en bas à droite de l'écran, par-dessus les tableaux croisés dynamiques essentiels. Impossible de faire une capture d'propre, et la directrice financière a horreur des artefacts visuels sur les livrables. Pas le temps de contacter le support central ou d'attendre une intervention réseau qui prendrait des heures : il faut nettoyer l'affichage immédiatement, sans crasher la machine ni corrompre les données en cours de saisie.
 
 En tant qu'ingénieur support et spécialiste de la maintenance PC, ce genre de panique de dernière minute, je connais par cœur. Pendant les premières minutes, j'ai bêtement cliqué partout dans les Paramètreset lePanneau de configuration, essayant de trouver un menu miracle pour masquer cette notification visuelle agaçante. J'ai même redémarré leGestionnaire des tâches en pensant à un simple bug d'affichage de l'explorateur Windows, pour finir par perdre cinq minutes précieuses alors que les rapports s'entassaient.
@@ -34,7 +35,7 @@ Heureusement, il existe une méthode propre, rapide et sécurisée via l'invite 
 <strong>Astuce Tokyo Neon Violet :</strong> Pour les power-users pressés, l'utilisation ciblée des scripts administratifs en arrière-plan permet de gagner un temps précieux lors des pannes de poste en milieu professionnel.
 </div>
 
-## Pourquoi ce filigrane apparaît-il soudainement en plein milieu de vos tâches ?
+Pourquoi ce filigrane apparaît-il soudainement en plein milieu de vos tâches ?
 
 Avant de manipuler le système, comprenons l'origine technique de ce blocage pour éviter les fausses manœuvres :
 
@@ -44,7 +45,7 @@ Avant de manipuler le système, comprenons l'origine technique de ce blocage pou
 
 3. Corruption du cache de l'Explorateur (explorer.exe) : Le processus gérant l'interface graphique panique et affiche les couches de texte d'état d'activation par défaut en surimpression prioritaire.
 
-## Guide étape par étape : Nettoyer l'affichage via CMD
+Guide étape par étape : Nettoyer l'affichage via CMD
 
 Voici la procédure exacte, testée et approuvée sur les parcs informatiques en entreprise, pour retrouver un bureau propre en moins de deux minutes.
 
@@ -79,7 +80,7 @@ Le bureau réapparaît instantanément, et le filigrane a disparu, vous laissant
 <strong>Attention Technique :</strong> La commande `slmgr -rearm` ne prolonge pas une licence illégale indéfiniment ; elle réinitialise simplement le délai de grâce légal de Windows fourni par Microsoft. En milieu professionnel, prévoyez une synchronisation avec votre administrateur réseau dès que possible.
 </div>
 
-## Foire Aux Questions (FAQ)
+Foire Aux Questions (FAQ)
 
 1. Est-ce que cette manipulation présente un risque pour mes fichiers Excel ou mes documents en cours ? Non, absolument aucun. La commande `taskkill` stoppe uniquement l'interface visuelle (les dossiers ouverts, la barre des tâches). Vos fichiers ouverts dans les logiciels restent en mémoire vive (RAM) et réapparaîtront exactement là où vous les aviez laissés dès le redémarrage de `explorer.exe`.
 

@@ -22,9 +22,10 @@ theme: "High-Contrast Charcoal"
 
 
 
+
 Il est 17h45 dans notre bureau tech du 11e arrondissement à Paris. Nous sommes à J-2 d'une livraison critique pour un client majeur, le canal Slack crépite d'urgences, et soudain, c'est le drame : mon poste de travail principal bascule net sur un magnifique écran bleu de la mort avec le code d'erreur `0x0000000a` (IRQL_NOT_LESS_OR_EQUAL). Impossible de redémarrer, le système replonge dans l'abysse à chaque tentative de chargement de session. Le stress monte d'un cran : perdre deux heures de configuration en plein sprint, c'est tout simplement inacceptable.
 
-## Pourquoi ce fichu écran bleu surgit-il sans prévenir ?
+Pourquoi ce fichu écran bleu surgit-il sans prévenir ?
 
 ![Tech & IT Solution Guide](https://picsum.photos/seed/computer199/1000/550)
 
@@ -41,7 +42,7 @@ Après un premier redémarrage forcé en mode sans échec, j'ai tout de suite an
 
 ---
 
-## Résolution pas à pas : Diagnostic mémoire et retour arrière
+Résolution pas à pas : Diagnostic mémoire et retour arrière
 
 Pas question de formater la machine. Voici la méthodologie exacte que j'ai appliquée pour rétablir la situation en moins de trente minutes.
 
@@ -78,7 +79,7 @@ Une fois le pilote fautif identifié, il faut reprendre le contrôle depuis le G
 
 ---
 
-## Conseils d'expert pour éviter la récidive
+Conseils d'expert pour éviter la récidive
 
 Pour garantir la stabilité de vos postes de travail en période de forte charge (comme un sprint de livraison) :
 
@@ -92,7 +93,7 @@ Pour garantir la stabilité de vos postes de travail en période de forte charge
 
 ---
 
-## Foire Aux Questions (FAQ)
+Foire Aux Questions (FAQ)
 
 1. Mon PC redémarre en boucle et je n'ai pas accès au bureau pour lancer le retour arrière, que faire ?
 

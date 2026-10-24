@@ -22,6 +22,7 @@ theme: "Industrial Blueprint"
 
 
 
+
 Eram 19h45 em um hub de tecnologia na Avenida Paulista, em São Paulo. O clima estava tenso na sala de reuniões: faltavam exatos 45 minutos para o alinhamento técnico urgente antes da entrega da sprint para o cliente corporativo, e a minha estação principal simplesmente travou com aquela clássica e temida Tela Azul da Morte (BSOD). O código impresso na tela escura era impiedoso: `IRQL_NOT_LESS_OR_EQUAL` ou, no bom e velho formato hexadecimal, 0x0000000
 
 a. O projeto estava na reta final e o computador recusava-se a manter o sistema estável por mais de cinco minutos.
@@ -32,7 +33,7 @@ a. O projeto estava na reta final e o computador recusava-se a manter o sistema 
 
 ![Tech & IT Solution Guide](https://picsum.photos/seed/computer418/1000/550)
 
-## Anatomia da Falh
+Anatomia da Falh
 
 a: Por que o 0x0000000a acontece?
 
@@ -44,7 +45,7 @@ Antes de sair reinstalando o sistema operacional — o que seria um tiro no escu
 
 3. Serviços de Terceiros em Conflito: Softwares de antivírus legados ou ferramentas de monitoramento de hardware rodando em nível de kernel (Ring 0) que entram em colisão com o Windows.
 
-## Plano de Ação: Passo a Passo para Recuperação
+Plano de Ação: Passo a Passo para Recuperação
 
 Para contornar o problema sem perder dados e garantir que a entrega aconteça no prazo, siga esta sequência validada em ambiente de produção:
 
@@ -66,7 +67,7 @@ Se a reversão de drivers não estabilizar o sistema, o problema pode ser físic
 
 ---
 
-## Comparativo Técnico: Abordagens de Resolução
+Comparativo Técnico: Abordagens de Resolução
 
 | Abordagem | Tempo Médio | Eficiência para 0x0000000a | Risco de Perda de Dados |
 | :--- | :--- | :--- | :--- |
@@ -76,7 +77,7 @@ Se a reversão de drivers não estabilizar o sistema, o problema pode ser físic
 
 ---
 
-## Dicas do Especialist
+Dicas do Especialist
 
 a: Prevenção e Boas Práticas
 
@@ -84,7 +85,7 @@ a: Prevenção e Boas Práticas
 <strong>Recomendação de Ouro:</strong> Nunca aplique atualizações grandes de drivers em máquinas de produção na véspera de entregas críticas. Utilize pontos de restauração do sistema (`Rstrui.exe`) sempre que testar novos hardwares ou pacotes de drivers corporativos.
 </div>
 
-## Perguntas Frequentes (FAQ)
+Perguntas Frequentes (FAQ)
 
 1. O erro 0x0000000a pode queimar permanentemente o meu processador ou memória? Não. Trata-se de uma exceção de software em nível de kernel (Interruption Request Level). O Windows gera a Tela Azul justamente para proteger o hardware e evitar a corrupção permanente de dados em disco.
 
