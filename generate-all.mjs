@@ -61,27 +61,33 @@ function getKstPublishDateIso(index) {
 }
 
 // =========================================================================
-// [최종 안정형 마크다운 정제 함수] 단어 쪼개짐 방지 + 스페인어 번호 개행 방어
+// [최종 안정형 마크다운 정제 함수] 소제목 보존 + 단어 쪼개짐 방지 + 개행 보정
 // =========================================================================
 function sanitizeMarkdownFormatting(content) {
   let cleaned = content;
 
-  // 1) 마크다운 볼드(**) 기호 일괄 제거
-  cleaned = cleaned.replace(/\*\*/g, '');
+  // 1) 소제목(##, ### 등)에 붙은 볼드 기호 정제 (### **제목** -> ### 제목)
+  cleaned = cleaned.replace(/^(#{1,6}\s*)\*\*(.*?)\*\*/gm, '$1$2');
 
-  // 2) 숫자 뒤 마침표(1. 2.)는 보존하고, 일반 문장 끝 부호 뒤의 ¿ 만 분리
+  // 2) 혹시 단독 줄로 생성된 볼드 소제목이 있으면 마크다운 헤딩으로 복원
+  cleaned = cleaned.replace(/^(\s*)\*\*([0-9A-Za-z가-힣].*?)\*\*(\s*)$/gm, '$1### $2$3');
+
+  // 3) 본문 속 남아있는 볼드(**) 기호만 깔끔히 제거 (문장 및 띄어쓰기 훼손 방지)
+  cleaned = cleaned.replace(/\*\*(.*?)\*\*/g, '$1');
+
+  // 4) 숫자 뒤 마침표(1. 2.)는 보존하고, 일반 문장 끝 부호 뒤의 ¿ 만 분리
   cleaned = cleaned.replace(/([^0-9][.?!])\s*([¿¡])/g, '$1\n\n$2');
 
-  // 3) 물음표 뒤 띄어쓰기 누락 보정 (?단어 -> ? 단어)
+  // 5) 물음표 뒤 띄어쓰기 누락 보정 (?단어 -> ? 단어)
   cleaned = cleaned.replace(/\?([A-Za-z\u00C0-\u024F\u1EA0-\u1EF9가-힣])/g, '? $1');
 
-  // 4) 물음표 뒤에 대문자 Q/A(Q:, A:, Q1:, A1: 등)가 올 때 강제 2줄 개행
+  // 6) 물음표 뒤에 대문자 Q/A(Q:, A:, Q1:, A1: 등)가 올 때 강제 2줄 개행
   cleaned = cleaned.replace(/\?\s*([QA][0-9]*\s*[:.])/g, '?\n\n$1');
 
-  // 5) 문장 끝 부호(.!) 뒤에 대문자 Q/A 또는 번호 목록(1., 2.)이 올 때 강제 2줄 개행
+  // 7) 문장 끝 부호(.!) 뒤에 대문자 Q/A 또는 번호 목록(1., 2.)이 올 때 강제 2줄 개행
   cleaned = cleaned.replace(/([.!])\s*([QA][0-9]*\s*[:.]|[0-9]+\.\s+)/g, '$1\n\n$2');
 
-  // 6) 줄바꿈 없이 본문 중에 들어간 대문자 Q/A 머리말 줄바꿈 확보
+  // 8) 줄바꿈 없이 본문 중에 들어간 대문자 Q/A 머리말 줄바꿈 확보
   cleaned = cleaned.replace(/([^\n])\s+([QA][0-9]*\s*[:.])/g, '$1\n\n$2');
   cleaned = cleaned.replace(/([.!])\s*(D:|R:|Risposta|Domande)/gi, '$1\n\n$2');
 
@@ -243,11 +249,19 @@ ${currentTopic}
 - ABSOLUTELY FORBIDDEN: Do NOT default to a generic "presentation in 30 minutes" or "board meeting" unless specifically assigned. Adapt naturally to the context.
 
 [STRICT MARKDOWN & FORMATTING RULES - NO RENDERING GLITCHES]
-1. BOLD FORMATTING RULE:
-    - Absolutely DO NOT use markdown bold asterisks anywhere in the body text or FAQ. Keep all text in plain standard format.
-2. COMMANDS & CODE BLOCKS:
+1. HEADINGS & STRUCTURE (MANDATORY):
+    - You MUST use clear markdown headings (## for major sections, ### for subsections) for every section:
+      * ## 1. [Opening Story/Problem]
+      * ## 2. [Root Cause Breakdown]
+      * ## 3. [Step-by-Step Resolution]
+      * ## 4. [Expert Advice]
+      * ## 5. Frequently Asked Questions
+    - NEVER put markdown asterisks inside headings. Write clean headings like "## 2. Root Cause Breakdown".
+2. BOLD FORMATTING RULE:
+    - Absolutely DO NOT use markdown bold asterisks (**) inside normal body sentences or FAQ. Keep body paragraphs in natural plain text.
+3. COMMANDS & CODE BLOCKS:
     - Always wrap long terminal/registry commands (like reg.exe add, slmgr, PowerShell scripts) in standard 3-backtick code blocks (\`\`\`cmd or \`\`\`bash).
-3. NO LATEX & NO TILDE:
+4. NO LATEX & NO TILDE:
     - ABSOLUTELY FORBIDDEN: NEVER use LaTeX math delimiters ($ or $$).
     - ABSOLUTELY FORBIDDEN: NEVER use tilde (~) for ranges. Always use a hyphen (e.g., "10-20%").
 
@@ -325,7 +339,7 @@ theme: "${selectedTheme.name}"
       frontmatter = frontmatter.replace(/publishDate:\s*[^\n\r]+/i, `publishDate: ${pubDateIso}`);
       frontmatter = frontmatter.replace(/image:\s*["'][^"']*["']/i, `image: '${coverUrl}'`);
 
-      // 안전 정제 함수 적용
+      // 안전 정제 함수 적용 (소제목 구조 보존)
       body = sanitizeMarkdownFormatting(body);
 
       const middleImageMarkdown = `\n\n![Tech Troubleshooting Guide](${bodyUrl})\n\n`;
