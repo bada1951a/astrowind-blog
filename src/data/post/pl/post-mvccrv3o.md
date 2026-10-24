@@ -21,6 +21,7 @@ theme: "Deep Indigo System"
 
 
 
+
 Godzina 18:40, a we wrocławskim parku technologicznym atmosfera robi się gęsta. Jutro rano mamy kluczowy audyt stabilności infrastruktury przed wejściem zewnętrznego klienta, a stacja robocza lead architekta nagle sypie się do niebieskiego ekranu. Na monitorze dumnie widnieje kod błędu: `IRQL_NOT_LESS_OR_EQUAL` czyli klasyczny 0x0000000
 
 a. Serce na chwilę zamiera, bo reset komputera pomagał tylko na dokładnie pięć minut pracy pod obciążeniem. 

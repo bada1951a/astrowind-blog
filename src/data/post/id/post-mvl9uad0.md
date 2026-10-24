@@ -21,6 +21,7 @@ theme: "Mint Fresh Engineering"
 
 
 
+
 Suasana di lantai 35 gedung perkantoran kawasan SCBD Jakarta sedang sangat tegang. Waktu sudah menunjukkan pukul 11 malam, dan batas waktu penyerahan laporan keuangan tinggal hitungan jam. Di tengah tekanan luar biasa menjelang tutup buku tahunan ini, saya sibuk melakukan pencocokan data krusial antara lembar kerja Excel 1 tahun penuh dengan sistem database pusat perusahaan. Kepala sudah pusing karena angka-angka yang harus direkonsiliasi sangat banyak, ditambah lagi komputer desktop di meja saya tiba-tiba bertingkah aneh. Ketika jam kerja usai dan saya mengklik tombol Shutdown, layar monitor memang mati, tetapi lampu indikator CPU, kipas pendingin, dan lampu pada port USB masih menyala terang benderang. 
 
 Awalnya saya mengira ini hanya gangguan kecil biasa. Saya coba tekan lama tombol power di casing komputer untuk mematikannya secara paksa, lalu menyalakannya kembali untuk melanjutkan pekerjaan rekonsiliasi. Namun, setiap kali selesai bekerja dan menekan Shutdown, masalah yang sama terus berulang. Komputer seolah-olah masuk ke mode tidur yang dalam, bukan benar-benar mati. Situasi ini membuat saya khawatir terjadi korupsi data pada file Excel laporan tahunan yang sedang saya verifikasi, mengingat proses tulis data ke SSD bisa terganggu jika PC tidak mati secara normal. 

@@ -21,6 +21,7 @@ theme: "Cyberpunk Terminal"
 
 
 
+
 <div style="border-left: 4px solid #00ffcc; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,255,204,0.08); border-radius: 4px; font-family: monospace; color: #111827;">
 [ACCÈS RAPIDE CLI / RACCOURCI] Ctrl + Shift + Échap -> Onglet "Démarrage" -> Désactiver l'inutile.
 </div>

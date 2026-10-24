@@ -21,6 +21,7 @@ theme: "Bronze Artisan Workshop"
 
 
 
+
 Il est 19h45 dans notre bureau tech près de la place de la République à Paris, et la pression monte d'un cran. Nous sommes en plein sprint de livraison pour notre nouveau client, et mon poste de travail principal décide de s'bloquer net à 100% sur l'installation de la dernière mise à jour cumulative Windows 11. Le curseur ne bouge plus depuis quarante minutes, le disque SSD ronronne en continu, et redémarrer la machine de force risque de corrompre l'image système. Impossible de lancer nos scripts de test ou de compiler nos environnements Docker dans cet état.
 
 J'ai déjà vécu cette situation ubuesque des dizaines de fois en entreprise. Plutôt que de paniquer ou d'attendre un miracle qui ne viendra pas, il faut agir à la source. Le coupable idéal dans ce genre de scénario ? Un cache de mise à jour corrompu qui boucle sur lui-même en essayant d'appliquer des paquets figés.

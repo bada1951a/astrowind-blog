@@ -12,6 +12,7 @@ theme: "Electric Cyan Speed"
 
 
 
+
 1. 사내 IT 보안 감사팀의 분기별 PC 점검 마감 30분 전, 자체 진단 리포트를 생성해 제출해야 하는 상황
 
 시계는 마감 시간을 향해 미쳐 돌아가고 있습니다. 사내 IT 보안 감사팀이 요구한 분기별 단말기 보안 점검 리포트를 작성해 메일로 발송하기까지 남은 시간은 단 30분. 현재 제 모니터 화면에는 윈도우 보안 상태와 백신 프로그램 로그가 빼곡하게 떠 있습니다. 이 화면을 빠짐없이 캡처해서 증빙 자료로 첨부해야만 하는 절체절명의 순간입니다. 
@@ -90,7 +91,7 @@ powershell -ExecutionPolicy Unrestricted -Command "Get-AppxPackage *Microsoft.Sc
 
 ---
 
-## 5. Frequently Asked Questions
+5. Frequently Asked Questions
 
 Q: 단축키(Win + Shift + S)를 눌러도 화면이 어두워지지 않고 아무 반응이 없습니다. 키보드 고장인가요?
 

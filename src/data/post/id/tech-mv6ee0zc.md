@@ -21,6 +21,7 @@ theme: "Sandstone Desert Minimal"
 
 
 
+
 Sebagai seorang teknisi IT yang sering menangani inventaris periferal di lingkungan kantor dan lab komputasi, pemandangan keyboard mekanikal yang "dibuang" ke gudang karena tombolnya mengetik ganda (*chattering*) atau macet (*miss-click*) adalah hal yang lumrah. Keluhan yang masuk ke meja kerja saya biasanya seragam: tombol spasi tiba-tiba melompat dua kali, atau huruf "W" dan "A" mendadak tidak merespons saat dipakai kerja maupun bermain game. 
 
 Banyak pengguna beranggapan bahwa ketika switch mekanikal mulai bertingkah, solusinya hanyalah membeli keyboard baru atau melakukan desoldering total yang merepotkan. Faktanya, sekitar 85% kasus kerusakan tombol keyboard mekanikal yang saya tangani di lapangan murni disebabkan oleh degradasi titik kontak tembaga akibat oksidasi mikro dan debu, bukan karena kerusakan mekanis permanen. 
@@ -157,7 +158,7 @@ a:
 
 ---
 
-## 5. Tanya Jawab Solutif (FAQ)
+5. Tanya Jawab Solutif (FAQ)
 
 <div style="background-color: #fdfcfb; border-left: 4px solid #a16207; padding: 8px 16px; margin: 10px 0 20px 0; font-size: 0.92rem; color: #78350f; font-weight: 500;">
 💡 <b>FA

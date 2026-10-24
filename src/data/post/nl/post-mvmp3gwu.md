@@ -12,6 +12,7 @@ theme: "Deep Ocean Cobalt"
 
 
 
+
 ## 1. De Paniek in de Vergaderruimte
 
 Laatst stond ik voor een flinke uitdaging. Ik was af gereisd naar een regionaal kantoor ergens in het land voor een belangrijke strategische sessie. Net toen ik ter plekke in de vergaderruimte mijn laptop aansloot op een ietwat verouderde externe monitor en een overijverige projector, liep ik tegen een typische frustratie aan. Ik wilde snel een belangrijk configuratieschema vastleggen van het scherm met de bekende sneltoets **Win + Shift + S**, maar er gebeurde helemaal niets. Geen schermverduistering, geen melding in het actiecentrum, en het Knipprogramma (Snipping Tool) leek volledig te slapen. 
@@ -82,7 +83,7 @@ In een professionele kantooromgeving of tijdens klantbezoeken wil je niet voor v
 <strong>Belangrijke waarschuwing:</strong> Ga niet zomaar rigoureus sleutelen aan het Windows Register (regedit) tenzij het absoluut noodzakelijk is. Het resetten of opnieuw registreren van de UWP-app via PowerShell (zoals hierboven getoond) is een stuk veiliger voor je bedrijfsdata en gebruikersprofiel.
 </div>
 
-## 5. Veelgestelde Vragen
+5. Veelgestelde Vragen
 
 Q: Wat moet ik doen als **Win + Shift + S** na al deze stappen nog steeds niet werkt?
 

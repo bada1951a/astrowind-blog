@@ -21,6 +21,7 @@ theme: "Graphite Technical Paper"
 
 
 
+
 Dans le cadre du déploiement et de la maintenance de parcs informatiques en entreprise, la gestion de l'affichage multi-écrans sur stations mobiles (ultrabooks et stations de travail portables) représente l'un des postes de sollicitation les plus fréquents auprès des équipes d'infrastructure. Qu’il s’agisse d’une liaison directe via HDMI/DisplayPort ou d'un transit par station d’accueil Thunderbolt/USB-C, les symptômes d'« absence de signal » (*No Signal*) et de scintillement intermittent (*black screens* aléatoires d'une ou deux secondes) ne relèvent que rarement d'une panne matérielle franche de la dalle. 
 
 Dans plus de 85 % des cas observés sur le terrain, ces anomalies résultent d'une désynchronisation critique de la pile logicielle vidéo, d'une altération du cache topologique du système d'exploitation ou d'un échec de négociation protocolaire au niveau de la couche matérielle de transmission. Ce document formalise une approche méthodique de diagnostic et de remédiation par réinitialisation en profondeur des sous-systèmes graphiques sous Windows.
@@ -110,7 +111,7 @@ Si le scintillement persiste, une corruption profonde de la bibliothèque de lie
 
 4. Sélectionnez le type de périphérique (GPU), puis choisissez la marque de votre carte (Intel, AMD ou NVIDIA).
 
-## 5. Cliquez sur Nettoyer et redémarrer.
+5. Cliquez sur Nettoyer et redémarrer.
 
 <div style="border-left: 4px solid #475569; padding: 12px 16px; margin: 20px 0; background-color: rgba(71, 85, 105, 0.05); border-radius: 4px;">
   <strong>Remarque sur les systèmes hybrides :</strong> Sur les ordinateurs portables équipés d'un processeur avec contrôleur intégré (iGPU Intel/AMD) et d'un GPU dédié (dGPU NVIDIA), effectuez systématiquement le nettoyage de l'iGPU en premier, car c'est lui qui gère la table de routage physique des sorties vidéo sur la majorité des architectures non équipées d'un commutateur MUX matériel.

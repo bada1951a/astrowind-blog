@@ -21,6 +21,7 @@ theme: "Modern Minimalist Slate"
 
 
 
+
 Erano le 17:45 in un frenetico ufficio al Centro direzionale di Milano, con la deadline per l'invio del report trimestrale fissata tassativamente per le 18:00. Stavo preparando gli ultimi allegati compressi in formato ZIP quando, per una questione di abitudine consolidata in anni di lavoro su Windows 10, ho cliccato con il tasto destro su una cartella per accedere subito a 7-Zip e rinominare il file al volo. Il risultato? Un menu contestuale ridotto all'osso, con le opzioni avanzate nascoste dietro un ulteriore e snervante clic sulla voce "Mostra altre opzioni". Nel panico del momento, con il capo che passava nel corridoio e il cliente che incalzava via email, quel singolo passaggio in più si è trasformato in un blocco operativo frustrante che mi ha fatto perdere preziosi minuti preziosi. Quante volte vi è capitato di imprecare contro questa interfaccia "moderna" ma poco pratica?
 
 <div style="border-left: 4px solid #3b82f6; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">

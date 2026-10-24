@@ -21,6 +21,7 @@ theme: "Warm Coffee Latte"
 
 
 
+
 Het was half drie op een drukke dinsdagmiddag op onze tech-campus in Eindhoven. Terwijl ik midden in een complexe troubleshoot-sessie zat voor een lokale partner, plofte er een paniekerig Slack-bericht binnen: een van onze developers kon geen code meer pushen omdat haar Windows 11 C-schijfklokje op rood stond—0 bytes vrije ruimte over. Het systeem liep vast, projectbestanden wilden niet opslaan en de ventilatoren loeiden als een opstijgende KLM-Boeing. Een acute performance-crisis die we direct moesten oplossen zonder belangrijke data te verliezen.
 
 <div style="border-left: 4px solid #78350f; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
@@ -56,7 +57,7 @@ We beginnen met de modernste en veiligste methode in Windows 11.
 
 4. Vink de items aan die je wilt verwijderen (laat persoonlijke downloads eventueel staan als je die nog wilt controleren).
 
-## 5. Klik op Bestanden verwijderen.
+5. Klik op Bestanden verwijderen.
 
 ### Stap 2: De diepe handmatige snoei via Schijfopruiming
 Voor het échte oude hang- en sluitwerk pakken we het klassieke hulpprogramma erbij.

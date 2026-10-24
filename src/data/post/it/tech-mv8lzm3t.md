@@ -21,11 +21,12 @@ theme: "Cyberpunk Terminal"
 
 
 
+
 <div style="border-left: 4px solid #00ffcc; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,255,204,0.05); border-radius: 4px; font-family: monospace;">
 [SYS_ALERT] root@hardware-lab:~# tail -f /var/log/boot_sequence.log<br>
 CRITICAL: I/O bottleneck detected. Disk queue length > 5.
 
-## 0. System unresponsive.
+0. System unresponsive.
 </div>
 
 Erano le 8:45 di un venerdì mattina qualunque, e il mio capo era già dietro la mia scrivania con la tazza di caffè in mano, pronto a guardarmi lo schermo per l'ennesima demo urgente con un cliente chiave. Io premo il pulsante di accensione del mio workstation di test e... il nulla cosmico. Anzi, peggio: la rotellina di caricamento di Windows che gira imperterrita per sei interminabili minuti, mentre la spia del disco fisso (un vecchio SSD ormai alla frutta) lampeggia fissa come un semaforo impazzito. Il mio collega mi guarda e f

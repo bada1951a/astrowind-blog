@@ -21,6 +21,7 @@ theme: "Cyberpunk Terminal"
 
 
 
+
 <div style="border-left: 4px solid #00ffcc; padding: 12px 16px; margin: 20px 0; background-color: rgba(0, 255, 204, 0.05); font-family: monospace; border-radius: 4px;">
 <strong>[TERMINAL_INIT: SUBSYSTEM_INPUT_DIAGNOSTICS]</strong><br/>
 STATUS: DETECTED_KEY_CHATTERING_ANOMALY<br/>
@@ -162,7 +163,7 @@ PERIGO: Nunca utilize WD-40 Multiuso tradicional, óleos lubrificantes, desengri
 
 ---
 
-## 5. Perguntas Frequentes (FAQ de Bancada)
+5. Perguntas Frequentes (FAQ de Bancada)
 
 ### P1: O uso frequente de limpa-contato remove a lubrificação original de fábrica do switch?
 Respost

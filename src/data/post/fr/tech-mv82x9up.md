@@ -21,6 +21,7 @@ theme: "Steel Silver Metallic"
 
 
 
+
 Vendredi, 17h45. Le commit final de la semaine est prêt à être poussé, la machine à café est vide, et mon manager débarque derrière mon épaule pour me demander un export critique des logs serveurs de la semaine. Je tape sur la touche Power de ma station de travail principale pour la sortir de veille... Et là, c'est le drame. Le boîtier s'illumine, les ventilateurs hurlent comme des turbines d'A380 en phase de décollage, mais le moniteur reste noir de chez noir, sans même un signal DisplayPort. Pas de BIOS, pas de logo, le néant total. La sueur froide commence à perler sur la nuque.
 
 <div style="border-left: 4px solid #64748b; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; font-family: monospace;">

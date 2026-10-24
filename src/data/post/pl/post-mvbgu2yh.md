@@ -21,6 +21,7 @@ theme: "Graphite Technical Paper"
 
 
 
+
 Siedzę w naszym biurze we wrocławskim parku technologicznym, zegar wskazuje za pięć dwunasta, a za dokładnie trzydzieści minut zaczynamy kluczowy audyt stabilności infrastruktury przed wejściem zewnętrznego klienta. W tym momencie, jak na złość, główna stacja robocza odmawia posłuszeństwa – dolny pasek zadań w Windows 11 zamroził się na amen. Klikam w menu Start, próbuję przełączyć okna, macham kursorem nad ikoną Wi-Fi – zero reakcji. Ekran niby żyje, aplikacje w tle działają, ale sam pasek zadań wygląda, jakby zastygł w betonie. Resetowanie komputera w ciemno nie wchodzi w grę, bo w tle trwają niezapisane sesje diagnostyczne. Trzeba działać chirurgicznie.
 
 <div style="border-left: 4px solid #475569; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">

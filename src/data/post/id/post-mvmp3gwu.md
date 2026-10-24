@@ -12,6 +12,7 @@ theme: "Teal Matrix Digital"
 
 
 
+
 ## 1. [Opening Story/Problem]
 
 Pagi yang cukup sibuk di kawasan SCBD Jakarta, tepatnya di salah satu lantai gedung perkantoran modern. Hari itu, saya baru saja merakit dan menyiapkan sebuah PC spesifikasi tinggi baru untuk keperluan *development* dan *graphic design* berat. Sebagai bagian dari standar operasional IT, saya harus segera memasang berbagai lisensi software perusahaan, mengambil tangkapan layar dokumentasi instalasi, dan mengirimkannya ke tim manajemen aset. 
@@ -75,7 +76,7 @@ Jika kedua cara di atas belum membuahkan hasil, kita perlu melakukan *Reset* ata
 
 Sebagai catatan tambahan dari pengalaman di lapangan, hindari menggunakan aplikasi pihak ketiga pembersih *registry* sembarangan yang sering mengklaim bisa "mengoptimalkan" Windows 11. Seringkali aplikasi pembersih tersebut justru menghapus *registry key* penting yang mengatur asosiasi shortcut global seperti **Win + Shift + S**. Selalu lakukan pembaruan sistem (*Windows Update*) secara berkala karena Microsoft sering merilis *patch* perbaikan khusus untuk bug UWP apps seperti ini.
 
-## 5. Frequently Asked Questions
+5. Frequently Asked Questions
 
 Q: Kenapa shortcut Win + Shift + S saya tiba-tiba berubah fungsi menjadi membuka aplikasi lain?
 

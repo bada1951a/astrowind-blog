@@ -21,6 +21,7 @@ theme: "Pure Titanium Clean"
 
 
 
+
 En tant qu'ingénieur système, mon clavier n'est pas un simple périphérique de saisie : c'est l'interface directe avec les consoles de production, les hyperviseurs et les terminaux d'infrastructure. Rien n'est plus critique – et exaspérant – qu'un interrupteur mécanique qui commence à "bégaier" lors de la saisie d'une commande sensible sous SSH. Une touche `a` ou `Enter` qui enregistre deux frappes au lieu d'une, ou qui ignore purement et simplement la pression, peut transformer une commande d'administration anodine en incident d'exploitation.
 
 Ce dysfonctionnement, couramment appelé chattering (ou rebond de contact anormal), n'impose pas nécessairement le remplacement immédiat du matériel ou le recours au fer à souder. Dans plus de 80 % des cas rencontrés en environnement professionnel, une intervention ciblée à l'aide d'un nettoyant pour contacts électroniques permet de restaurer l'intégrité du signal. Voici notre procédure standard d'atelier pour diagnostiquer, décontaminer et pérenniser vos commutateurs mécaniques.

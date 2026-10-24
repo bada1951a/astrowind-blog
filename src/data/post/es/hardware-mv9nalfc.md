@@ -21,6 +21,7 @@ theme: "Deep Indigo System"
 
 
 
+
 Eran las 6:30 de la tarde en nuestra oficina en Madrid. Teníamos sobre la mesa una entrega de proyecto crítico para un cliente multinacional que debía enviarse a las 7:00 en punto. De repente, la pantalla de mi ordenador principal se congeló durante unos segundos y apareció esa temida ventana emergente: "Espacio insuficiente en el disco local (C:)". El sistema operativo comenzó a lanzar advertencias en cadena, bloqueando la sincronización con la nube y negándose a guardar los cambios finales del paquete de diseño y software. El corazón se me encogió; un fallo crítico del sistema justo en el peor momento posible, con los minutos contando en nuestra contra y el cliente esperando los archivos finales.
 
 En medio del pánico inicial, mi primer instinto fue empezar a vaciar la papelera de reciclaje y borrar un par de carpetas pesadas de descargas. Pero no era suficiente. El sistema seguía ahogado, marcando apenas 400 megabytes libres en una partición de 500 gigas que misteriosamente se había llenado hasta el tope. Probé a desinstalar programas a la carrera, perdiendo preciosos minutos valiosos viendo cómo la barra de progreso apenas semovía mientras el ventilador del procesador zumbaba al máximo. 

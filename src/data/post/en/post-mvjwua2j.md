@@ -21,6 +21,7 @@ theme: "Industrial Blueprint"
 
 
 
+
 Pinging Slack channels were blowing up with urgent bug reports from our engineering leads in San Francisco, while my New York finance stakeholders were frantically asking for updated Q3 model projections on Zoom. To handle the chaos, I had five different heavy work tools open simultaneously: Bloomberg Terminal, a local Docker environment, three sprawling Excel workbooks, Jira boards, and a live client presentation deck. Suddenly, my headset went completely dead right as an incoming escalation call hit. No notification chimes, no system sounds, and zero audio output. 
 
 Panicking, I frantically clicked the speaker icon on the Windows 11 taskbar, only to see the dreaded red X over the volume control. The system output device had completely vanished into thin air right in the middle of a high-pressure workday.

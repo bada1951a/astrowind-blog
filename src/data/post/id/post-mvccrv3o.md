@@ -21,6 +21,7 @@ theme: "Solarized Amber Warm"
 
 
 
+
 Jam 8 malam di kantor startup kawasan SCBD Jakarta. Tim *engineering* sedang bersiap merilis pembaruan besar sistem internal, tiba-tiba salah satu PC workstation utama yang menangani *deployment pipeline* mendadak mati total dan menampilkan layar biru pekat dengan kode *stop error* yang bikin jantungan: IRQL_NOT_LESS_OR_EQUALatau kode heksadesimal0x0000000
 
 a. Panik? Jelas. Pengerjaan sistem internal langsung tersendat karena mesin tersebut tidak mau masuk ke sistem operasi dan terus-menerus mengalami *reboot loop*.

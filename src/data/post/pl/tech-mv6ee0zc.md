@@ -21,6 +21,7 @@ theme: "Sunset Horizon Coral"
 
 
 
+
 Jako inżynier wsparcia IT w środowisku korporacyjnym widziałem już setki peryferiów skazanych na przedwczesną utylizację. W zeszły piątek na mój stół warsztatowy trafiła klawiatura jednego z naszych senior developerów – customowy mechanik na przełącznikach Gateron Yellow, w którym klawisze `W` oraz `E` naprzemiennie gubiły wciśnięcia albo generowały irytujący podwójny klik (*chattering*). Zamiast wpisać prostą komendę w terminalu, system rejestrował `wwweee`. Użytkownik był przekonany, że kontroler na płytce PCB uległ uszkodzeniu, a sprzęt nadaje się wyłącznie do kosza. Rzeczywistość w 90% takich przypadków jest znacznie bardziej prozaiczn
 
 a: zanieczyszczenia mikroskopowe, utlenienie styków lub chwilowa utrata elastyczności blaszki kontaktowej wewnątrz samego switcha. Zanim wydasz kilkaset złotych na nowy zestaw przełączników lub nową klawiaturę, możesz przeprowadzić skuteczną regenerację w ramach weekendowego serwisu DIY. Poniżej przedstawiam sprawdzoną w bojach procedurę czyszczenia i chemicznej rewitalizacji przełączników mechanicznych.
