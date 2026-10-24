@@ -13,6 +13,7 @@ theme: "Cyberpunk Terminal"
 
 
 
+
 <div style="border-left: 4px solid #00ffcc; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,255,204,0.08); border-radius: 4px; font-family: monospace; color: #111827;">
 [ACCÈS RAPIDE CLI / RACCOURCI] Ctrl + Shift + Échap -> Onglet "Démarrage" -> Désactiver l'inutile.
 </div>
@@ -27,11 +28,11 @@ Ce genre de lenteur extrême au boot n'arrive jamais par hasard. Après avoir pe
 
 Pourquoi Windows 10 finit-il par s'effondrer au boot après quelques mois d'utilisation intensive ? Trois coupables reviennent constamment dans nos environnements de travail :
 
-## 1. L'effet "Parasite" des logiciels tiers : À chaque installation (Teams, Spotify, Discord, utilitaires divers), ces applications s'insèrent sournoisement dans le processus de démarrage automatique. Résultat : votre machine essaie de lancer 40 programmes en même temps que le noyau système.
+1. L'effet "Parasite" des logiciels tiers : À chaque installation (Teams, Spotify, Discord, utilitaires divers), ces applications s'insèrent sournoisement dans le processus de démarrage automatique. Résultat : votre machine essaie de lancer 40 programmes en même temps que le noyau système.
 
-## 2. La saturation des E/S du disque : Sur un disque dur classique (HDD) ou même sur un SSD un peu fatigué, faire concourir des dizaines de processus pour accéder au stockage sature instantanément la bande passante. Le processeur s'ennuie, mais le système d'exploitation attend que chaque service réponde.
+2. La saturation des E/S du disque : Sur un disque dur classique (HDD) ou même sur un SSD un peu fatigué, faire concourir des dizaines de processus pour accéder au stockage sature instantanément la bande passante. Le processeur s'ennuie, mais le système d'exploitation attend que chaque service réponde.
 
-## 3. Le service de préchargement inadapté : Des outils de mise à jour automatique en arrière-plan (Adobe, Java, navigateurs) décident de vérifier leurs versions avant même que vous n'ayez pu ouvrir un seul dossier.
+3. Le service de préchargement inadapté : Des outils de mise à jour automatique en arrière-plan (Adobe, Java, navigateurs) décident de vérifier leurs versions avant même que vous n'ayez pu ouvrir un seul dossier.
 
 <div style="border-left: 4px solid #00ffcc; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,255,204,0.08); border-radius: 4px; color: #111827;">
 <strong>Diagnostic minute :</strong> Ne cherchez pas midi à quatorze heures. Dans 90% des cas sur Windows 10, le problème vient directement de la liste des applications lancées en arrière-plan au démarrage de la session.
@@ -70,10 +71,10 @@ Pour éviter de retomber dans les mêmes travers lors des prochains sprints :
 
 ## Foire Aux Questions (FAQ)
 
-## 1. Est-ce dangereux de désactiver des éléments dans l'onglet Démarrage ? Non, absolument pas. Désactiver une application ici signifie simplement qu'elle ne se lancera plus toute seule en arrière-plan. Vous pourrez toujours l'ouvrir manuellement en double-cliquant sur son icône quand vous en aurez réellement besoin.
+1. Est-ce dangereux de désactiver des éléments dans l'onglet Démarrage ? Non, absolument pas. Désactiver une application ici signifie simplement qu'elle ne se lancera plus toute seule en arrière-plan. Vous pourrez toujours l'ouvrir manuellement en double-cliquant sur son icône quand vous en aurez réellement besoin.
 
-## 2. Que faire si certaines applications persistent à se lancer malgré la désactivation ? Certains logiciels récalcitrants possèdent leurs propres paramètres internes de lancement automatique. Ouvrez les préférences ou les paramètres de l'application concernée (comme Discord ou Steam) et décochez l'option "Lancer au démarrage de l'ordinateur" dans l'interface du logiciel lui-même.
+2. Que faire si certaines applications persistent à se lancer malgré la désactivation ? Certains logiciels récalcitrants possèdent leurs propres paramètres internes de lancement automatique. Ouvrez les préférences ou les paramètres de l'application concernée (comme Discord ou Steam) et décochez l'option "Lancer au démarrage de l'ordinateur" dans l'interface du logiciel lui-même.
 
-## 3. Pourquoi mon PC reste-t-il lent malgré le nettoyage du démarrage ?
+3. Pourquoi mon PC reste-t-il lent malgré le nettoyage du démarrage ?
 
 Si le temps de boot reste anormalement long après cette manipulation, le problème est probablement matériel. Un disque système (C:) saturé à plus de 90% ou un disque dur mécanique (HDD) en fin de vie provoquent ces symptômes. L'achat et l'installation d'un SSD NVMe résoudront définitivement le problème.

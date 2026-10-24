@@ -13,6 +13,7 @@ theme: "Sunset Horizon Coral"
 
 
 
+
 Erano le 18:30 di un martedì piovoso in ufficio a Milano, nel bel mezzo di un progetto di ottimizzazione dell'infrastruttura per un cliente importante, quando la mia postazione di test principale ha deciso di piantarsi stoicamente al famigerato 100% durante un aggiornamento cumulativo di Windows 11. Schermo acceso, ventole al minimo, nessun errore a schermo, ma immobile da oltre due ore. Riavviare brutalmente dal pulsante di accensione significava rischiare una corruzione del sistema operativo e dover reinstallare tutto da capo, mandando all'aria la deadline del giorno dopo.
 
 Se anche tu ti sei trovato davanti a questa schermata immobile, sai benissimo quale senso di frustrazione si provi. Fortunatamente, dopo anni passati a gestire infrastrutture IT e postazioni aziendali, conosco una scorciatoia pulita e sicura per risolvere il problema senza perdere i dati.
@@ -29,26 +30,26 @@ Se anche tu ti sei trovato davanti a questa schermata immobile, sai benissimo qu
 
 Prima di sporcarci le mani con i comandi, capiamo cosa sta succedendo sotto il cofano. Nella maggior parte dei casi, il blocco non è un vero e proprio crash del sistema, ma un ingorgo logico. Ecco le tre cause principali:
 
-## 1. Cache degli aggiornamenti corrott
+1. Cache degli aggiornamenti corrott
 
 a: I file scaricati nella cartella di sistema (`SoftwareDistribution`) presentano conflitti o bit corrotti durante la fase di decompressione.
 
-## 2. Servizi di Windows in stallo: Il servizio Windows Update (`wuauserv`) o il servizio di crittografia tentano di scrivere su file temporanei bloccati da altri processi fantasma.
+2. Servizi di Windows in stallo: Il servizio Windows Update (`wuauserv`) o il servizio di crittografia tentano di scrivere su file temporanei bloccati da altri processi fantasma.
 
-## 3. Driver di terze parti obsoleti: Durante la fase finale del 100%, il sistema tenta di configurare driver hardware che vanno in conflitto con l'architettura della macchina. ---
+3. Driver di terze parti obsoleti: Durante la fase finale del 100%, il sistema tenta di configurare driver hardware che vanno in conflitto con l'architettura della macchina. ---
 
 ### La Soluzione Passo-Passo: Svuotare la Cache di Windows Update
 
 Per sbloccare la situazione senza fare danni, dobbiamo interrompere temporaneamente i servizi di aggiornamento, ripulire i file temporanei bloccati e riavviare il processo. Ecco come procedere in modo sicuro.
 
-## 1. Aprire il Terminale con privilegi amministrativi
+1. Aprire il Terminale con privilegi amministrativi
 Clicca sul menu Start, digita `Terminale` (o `Prompt dei comandi`), fai clic destro sull'applicazione e selezionaEsegui come amministratore.
 
 #
 
 ![Tech & IT Solution Guide](https://picsum.photos/seed/computer652/1000/550)
 
-### 2. Fermare i servizi di Windows Update
+2. Fermare i servizi di Windows Update
 Prima di poter cancellare o modificare i file di cache, dobbiamo ordinare a Windows di rilasciare il controllo su di essi. Digita i seguenti comandi premendo Invio dopo ciascuno:
 
 ```text
@@ -58,7 +59,7 @@ net stop bits
 net stop msiserver
 ```
 
-## 3. Rinominare o ripulire la cartella SoftwareDistribution
+3. Rinominare o ripulire la cartella SoftwareDistribution
 Questa è la vera chiave di volta. Invece di cancellare brutalmente i file, è più sicuro rinominare la cartella di cache in modo che Windows ne crei una nuova e pulita automaticamente. Esegui questi comandi nel terminale:
 
 ```text
@@ -66,7 +67,7 @@ ren C:\Windows\SoftwareDistribution SoftwareDistribution.old
 ren C:\Windows\System32\catroot2 Catroot2.old
 ```
 
-## 4. Riavviare i servizi di sistema
+4. Riavviare i servizi di sistema
 Ora che la strada è pulita, riattiva i servizi di aggiornamento che avevamo fermato in precedenz
 
 a:

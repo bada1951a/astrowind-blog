@@ -13,6 +13,7 @@ theme: "High-Contrast Charcoal"
 
 
 
+
 Kwadrans przed kluczową prezentacją dla zarządu w warszawskim centrum biznesowym podchodzi do mnie blady jak ściana dyrektor handlowy. Na środku jego ekranu, dokładnie nad wykresami rocznej sprzedaży, dumnie widnieje irytujący, półprzezroczysty napis: „Aktywuj system Windows – przejdź do Ustawień, aby aktywować system”. Klienci mają wejść do sali za dokładnie dziesięć minut, rzutnik jest już rozstawiony, a ten nieszczęsny znak wodny zasłania kluczowe dane w Excelu. Każdy geek wie, że Windows po prostu przypomina o braku aktywacji, ale w warunkach korporacyjnych taki widok przed zarządem to wizerunkowa katastrofa. Szybki restart nie pomógł, a próby przeklinania pod nosem tylko podniosły ciśnienie. Zamiast panikować i szukać podejrzanych programów z internetu, które mogłyby zainfekować stację roboczą malwarem, musiałem działać szybko, legalnie (w ramach procedur testowych) i bezpośrednio z poziomu systemu.
 
 ### Dlaczego ten cholerny napis w ogóle się pojawia?
@@ -21,11 +22,11 @@ Kwadrans przed kluczową prezentacją dla zarządu w warszawskim centrum bizneso
 
 Zanim sięgnąłem po konsolę, muszę wyjaśnić, skąd bierze się ten problem na stanowiskach roboczych w biurze. Oto trzy najczęstsze przyczyny, z którymi mierzę się jako serwisant:
 
-## 1. Utrata połączenia z serwerem KMS w domenie: Komputery w firmach często aktywują się cyklicznie przez wewnętrzny serwer KMS. Jeśli stacja robocza była odłączona od sieci VPN lub firmowego LAN-u przez dłuższy czas, token wygasa.
+1. Utrata połączenia z serwerem KMS w domenie: Komputery w firmach często aktywują się cyklicznie przez wewnętrzny serwer KMS. Jeśli stacja robocza była odłączona od sieci VPN lub firmowego LAN-u przez dłuższy czas, token wygasa.
 
-## 2. Nieudana aktualizacja po wymianie sprzętu: Wymiana płyty głównej lub karty sieciowej w serwisie może unieważnić cyfrową licencję przypniętą do unikalnego identyfikatora sprzętowego (HWID).
+2. Nieudana aktualizacja po wymianie sprzętu: Wymiana płyty głównej lub karty sieciowej w serwisie może unieważnić cyfrową licencję przypniętą do unikalnego identyfikatora sprzętowego (HWID).
 
-## 3. Zawieszenie usługi licencjonowania (Software Protection Platform): Czasami usługa odpowiedzialna za weryfikację stanu licencji po prostu się sypie po nagłym zaniku zasilania lub błędnej aktualizacji systemowej.
+3. Zawieszenie usługi licencjonowania (Software Protection Platform): Czasami usługa odpowiedzialna za weryfikację stanu licencji po prostu się sypie po nagłym zaniku zasilania lub błędnej aktualizacji systemowej.
 
 <div style="border-left: 4px solid #e11d48; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Ostrzeżenie serwisowe:</strong> Pamiętaj, że ukrywanie znaku wodnego za pomocą modyfikacji plików systemowych (np. podmienianie plików w folderze System32) to droga przez mękę, która kończy się uszkodzeniem systemu (BSOD). Zawsze korzystaj z wbudowanych mechanizmów administracyjnych.
@@ -68,10 +69,10 @@ shutdown /r /t 0
 
 ### Najczęściej zadawane pytania (FAQ)
 
-## 1. Czy to polecenie usunie moją legalną licencję Windows na stałe? Absolutnie nie. Polecenie `slmgr /rearm` resetuje licznik stanu aktywacji. Jeśli komputer jest połączony z firmową siecią VPN i serwerem KMS lub posiada przypisaną licencję cyfrową MS Account, po ponownym połączeniu z siecią system automatycznie pobierze poprawny status aktywacji.
+1. Czy to polecenie usunie moją legalną licencję Windows na stałe? Absolutnie nie. Polecenie `slmgr /rearm` resetuje licznik stanu aktywacji. Jeśli komputer jest połączony z firmową siecią VPN i serwerem KMS lub posiada przypisaną licencję cyfrową MS Account, po ponownym połączeniu z siecią system automatycznie pobierze poprawny status aktywacji.
 
-## 2. Co zrobić, jeśli polecenie zwraca błąd o odmowie dostępu? Najczęstszą przyczyną jest uruchomienie Wiersza polecenia bez uprawnień administratora. Upewnij się, że nad ikoną konsoli widniał napis "Administrator", a w razie problemów sprawdź wMenedżerze zadań, czy nie działają w tle zablokowane procesy skryptowe, które blokują pliki systemowe.
+2. Co zrobić, jeśli polecenie zwraca błąd o odmowie dostępu? Najczęstszą przyczyną jest uruchomienie Wiersza polecenia bez uprawnień administratora. Upewnij się, że nad ikoną konsoli widniał napis "Administrator", a w razie problemów sprawdź wMenedżerze zadań, czy nie działają w tle zablokowane procesy skryptowe, które blokują pliki systemowe.
 
-## 3. Czy ten trik działa na każdej wersji systemu Windows 10 i 11?
+3. Czy ten trik działa na każdej wersji systemu Windows 10 i 11?
 
 Tak, komenda `slmgr` (Software Licensing Management Tool) jest standardowym narzędziem wbudowanym w jądro systemów Windows od czasów Visty, działającym bez zarzutu zarówno w edycjach Pro, jak i Enterprise.

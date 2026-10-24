@@ -13,6 +13,7 @@ theme: "Deep Ocean Cobalt"
 
 
 
+
 Afgelopen dinsdagmiddag, midden in het hectische Zuidas-zakendistrict in Amsterdam, liep de spanning hoog op. Ik zat achter mijn bureau te worstelen met een doodlopende zaak. Supeperbelangrijk moment: honderden medewerkers stonden te wachten op de toegang tot het interne intranet om de nieuwste en meest cruciale bedrijfsnotificaties en bijbehorende documenten te downloaden. Precies op dat moment besloot mijn werkstation te reageren op een herstartprikkel door finaal te weigeren. Het scherm werd zwart, maar de ventilatoren bleven loeien en de led-lampjes bleven vrolijk branden. Geen enkele toetscombinatie hielp, en een geforceerde harde reset met de aan-uitknop dreigde mijn actieve netwerksessies te corrumperen. Een regelrechte nachtmerrie voor een systeembeheerder.
 
 Dit fenomeen, waarbij een pc weigert om echt uit te schakelen en in een soort zombie-slaapmodus blijft hangen, komt verrassend vaak voor in kantooromgevingen. Als IT-hardware specialist krijg ik hier wekelijks vragen over. Het goede nieuws is dat je er geen ingewikkelde scripttalen of dure hardwarevervangingen voor nodig hebt. Laten we eens diep duiken in de echte technische oorzaken en direct aan de slag gaan met een definitieve oplossing.
@@ -35,15 +36,15 @@ Voordat we overgaan tot de definitieve handeling, heb ik zelf talloze keren uren
 
 De enige echte oplossing om dit probleem voor eens en voor altijd de wereld uit te helpen, is het uitschakelen van Snel opstarten in het Configuratiescherm. Volg deze exacte stappen op je Windows-werkstation:
 
-## 1. Open het startmenu en typ het woord Configuratiescherm in de zoekbalk. Klik op de applicatie om deze te openen.
+1. Open het startmenu en typ het woord Configuratiescherm in de zoekbalk. Klik op de applicatie om deze te openen.
 
-## 2. Zorg rechtsboven bij 'Weergeven op' dat je kiest voor 'Grote pictogrammen' of 'Kleine pictogrammen' zodat alle opties zichtbaar worden.
+2. Zorg rechtsboven bij 'Weergeven op' dat je kiest voor 'Grote pictogrammen' of 'Kleine pictogrammen' zodat alle opties zichtbaar worden.
 
-## 3. Klik op de optie Energiebeheer.
+3. Klik op de optie Energiebeheer.
 
-## 4. Kijk aan de linkerzijde van het venster en klik op de link met de tekst 'Het gedrag van de aan/uit-knoppen bepalen'.
+4. Kijk aan de linkerzijde van het venster en klik op de link met de tekst 'Het gedrag van de aan/uit-knoppen bepalen'.
 
-## 5. Je ziet nu een overzicht van de instellingen, maar de opties onderaan zijn waarschijnlijk grijs geklasseerd. Klik bovenaan op de tekst 'Instellingen wijzigen die momenteel niet beschikbaar zijn' (je hebt hier Administrator-rechten voor nodig).
+5. Je ziet nu een overzicht van de instellingen, maar de opties onderaan zijn waarschijnlijk grijs geklasseerd. Klik bovenaan op de tekst 'Instellingen wijzigen die momenteel niet beschikbaar zijn' (je hebt hier Administrator-rechten voor nodig).
 
 **Q6.** Vink onderaan bij de uitschakelinstellingen het hokje uit voor 'Snel opstarten inschakelen (aanbevolen)'.
 
@@ -57,19 +58,13 @@ Pro-tip van de expert: Start na het uitschakelen van Snel opstarten altijd een h
 
 Veelgestelde Vragen
 
-**
-
 **Q1.** Wordt mijn computer heel erg traag met opstarten als ik Snel opstarten uitschakel?
 
 A1. In de praktijk merk je hier op moderne SSD-systemen vrijwel niets van. Het verschil is hooguit een seconde of twee, terwijl je er een ijzersterke stabiliteit en een probleemloos afsluitende pc voor terugkrijgt.
 
-**
-
 **Q2.** Waarom staat de optie om Snel opstarten uit te schakelen bij mij niet in het Configuratiescherm?
 
 A2. Dit komt meestal doordat de Slaapstand (Hibernate) volledig is uitgeschakeld op je machine. Snel opstarten maakt namelijk gebruik van de slaapstand-functionaliteit. Je kunt dit herstellen door via een verhoogde opdrachtprompt de opdracht '**powercfg /hibernate on**' uit te voeren.
-
-**
 
 **Q3.** Wat moet ik doen als mijn computer na deze stappen alsnog weigert uit te schakelen?
 

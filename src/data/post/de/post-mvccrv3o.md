@@ -13,6 +13,7 @@ theme: "Nordic Clean Ice"
 
 
 
+
 Es war exakt 21:45 Uhr an einem Donnerstagabend in unserem Berliner Tech-Hub im Prenzlauer Berg. Wir standen kurz vor dem finalen Rollout unserer neuen Microservices-Infrastruktur, als auf dem Haupt-Build-Server plötzlich der berüchtigte blaue Bildschirm flackerte: STOP 0x0000000
 
 a: IRQL_NOT_LESS_OR_EQUAL. 
@@ -29,11 +30,11 @@ Keine Vorwarnung, kein sanftes Herunterfahren, einfach harter Kernel-Absturz. De
 
 Bevor wir blind anfangen, Schraubenzieher zu schwingen oder das System neu aufzusetzen, müssen wir die echten Flaschenhälse identifizieren:
 
-## 1. Inkompatible oder beschädigte Treiber: Häufig nach einem automatischen Windows-Update eingespielt, bei dem Netzwerkkarten- oder Chipsatztreiber quergeschossen haben.
+1. Inkompatible oder beschädigte Treiber: Häufig nach einem automatischen Windows-Update eingespielt, bei dem Netzwerkkarten- oder Chipsatztreiber quergeschossen haben.
 
-## 2. Defekter oder instabiler Arbeitsspeicher (RAM): Ein physikalischer Defekt der Speicherriegel oder falsche XMP/EXPO-Profil-Timings im UEFI.
+2. Defekter oder instabiler Arbeitsspeicher (RAM): Ein physikalischer Defekt der Speicherriegel oder falsche XMP/EXPO-Profil-Timings im UEFI.
 
-## 3. Konflikte mit Hintergrunddiensten: Antiviren-Software oder Low-Level-Systemtools, die sich tief in den Windows-Kernel eingraben.
+3. Konflikte mit Hintergrunddiensten: Antiviren-Software oder Low-Level-Systemtools, die sich tief in den Windows-Kernel eingraben.
 
 ---
 
@@ -42,24 +43,24 @@ Bevor wir blind anfangen, Schraubenzieher zu schwingen oder das System neu aufzu
 ### Schritt 1: Speicherdiagnose (RAM prüfen)
 Da der Fehler oft durch Speicherzugriffsverletzungen ausgelöst wird, testen wir zuerst den Arbeitsspeicher direkt über die integrierten Windows-Bordmittel.
 
-## 1. Drücken Sie die Tastenkombination `Windows + R`, tippen Sie `mdsched.exe` ein und bestätigen Sie mit Enter.
+1. Drücken Sie die Tastenkombination `Windows + R`, tippen Sie `mdsched.exe` ein und bestätigen Sie mit Enter.
 
-## 2. Wählen Sie die Option "Jetzt neu starten und nach Problemen suchen (empfohlen)".
+2. Wählen Sie die Option "Jetzt neu starten und nach Problemen suchen (empfohlen)".
 
-## 3. Der PC bootet neu und führt die Windows-Speicherdiagnose aus. Lassen Sie den Test im Standard-Modus durchlaufen. Sollten hier Fehler angezeigt werden, wissen Sie sofort, dass ein RAM-Riegel defekt ist oder nicht richtig im Slot sitzt.
+3. Der PC bootet neu und führt die Windows-Speicherdiagnose aus. Lassen Sie den Test im Standard-Modus durchlaufen. Sollten hier Fehler angezeigt werden, wissen Sie sofort, dass ein RAM-Riegel defekt ist oder nicht richtig im Slot sitzt.
 
 ### Schritt 2: Der rettende Treiber-Rollback im Gerätemanager
 Wenn der Speicher fehlerfrei ist, liegt es zu 90 Prozent an einem kürzlich installierten Treiber.
 
-## 1. Starten Sie Windows im Abgesicherten Modus(falls der normale Start fehlschlägt), oder öffnen Sie direkt dieVerwaltungstools über das Startmenü.
+1. Starten Sie Windows im Abgesicherten Modus(falls der normale Start fehlschlägt), oder öffnen Sie direkt dieVerwaltungstools über das Startmenü.
 
-## 2. Öffnen Sie den Gerätemanager (Rechtsklick auf das Startmenü -> Gerätemanager).
+2. Öffnen Sie den Gerätemanager (Rechtsklick auf das Startmenü -> Gerätemanager).
 
-## 3. Überprüfen Sie insbesondere neu installierte Komponenten (Netzwerkkarten, Grafiktreiber, Chipsatz).
+3. Überprüfen Sie insbesondere neu installierte Komponenten (Netzwerkkarten, Grafiktreiber, Chipsatz).
 
-## 4. Machen Sie einen Rechtsklick auf den verdächtigen Treiber, wählen Sie Eigenschaftenund wechseln Sie auf den ReiterTreiber.
+4. Machen Sie einen Rechtsklick auf den verdächtigen Treiber, wählen Sie Eigenschaftenund wechseln Sie auf den ReiterTreiber.
 
-## 5. Klicken Sie auf Vorheriger Treiber (Rollback), falls dieser Button aktiv ist. Das setzt die problematische Aktualisierung sofort zurück.
+5. Klicken Sie auf Vorheriger Treiber (Rollback), falls dieser Button aktiv ist. Das setzt die problematische Aktualisierung sofort zurück.
 
 <div style="border-left: 4px solid #0284c7; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Profi-Befehl für das Terminal:</strong> Wenn Sie den fehlerhaften Treiber eingrenzen müssen, öffnen Sie das Terminal als Administrator und nutzen Sie den Befehl <code>driverquery /v</code>, um eine detaillierte Liste aller geladenen Treiber inklusive Installationsdatum abzurufen.
@@ -68,13 +69,13 @@ Wenn der Speicher fehlerfrei ist, liegt es zu 90 Prozent an einem kürzlich inst
 ### Schritt 3: Systemdateien auf Integrität prüfen
 Manchmal hinterlässt der Absturz beschädigte Systemdateien. Das lässt sich schnell über die Eingabeaufforderung reparieren:
 
-## 1. Öffnen Sie das Terminaloder dieEingabeaufforderung als Administrator.
+1. Öffnen Sie das Terminaloder dieEingabeaufforderung als Administrator.
 
-## 2. Tippen Sie den Befehl `DISM.exe /Online /Cleanup-image /Restorehealth` ein und drücken Sie Enter.
+2. Tippen Sie den Befehl `DISM.exe /Online /Cleanup-image /Restorehealth` ein und drücken Sie Enter.
 
-## 3. Geben Sie im Anschluss den Klassiker ein: `sfc /scannow`.
+3. Geben Sie im Anschluss den Klassiker ein: `sfc /scannow`.
 
-## 4. Warten Sie, bis der Scan abgeschlossen ist, und starten Sie das System neu.
+4. Warten Sie, bis der Scan abgeschlossen ist, und starten Sie das System neu.
 
 ---
 

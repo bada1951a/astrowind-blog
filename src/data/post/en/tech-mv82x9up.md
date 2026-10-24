@@ -13,6 +13,7 @@ theme: "Mint Fresh Engineering"
 
 
 
+
 금요일 오후 4시 55분, 다음 주 월요일에 전사 발표할 대규모 쿠버네티스 클러스터 마이그레이션 최종 빌드 검증을 돌려놓고 커피를 마시러 다녀왔는데, 데스크톱 팬은 터빈 돌아가는 소리처럼 굉음을 내며 돌고 있는데 모니터 화면은 완벽한 '무(無)'인 채로 나를 반기더라. 슬랙(Slack)에서는 VP가 "Build ready?"를 치고 있고, 내 메인 rig는 화면 출력도 안 되는 상황. 심장이 방구석 밖으로 튀어나오는 줄 알았다.
 
 <div style="border-left: 4px solid #059669; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px;">
@@ -25,11 +26,11 @@ theme: "Mint Fresh Engineering"
 
 현장에서 십 수 년간 수백 대의 워크스테이션과 서버, 데스크톱을 까뒤집어 보며 느낀 거지만, 이런 증상의 90%는 물리적인 접촉 불량이다. 구체적인 원인은 이렇다.
 
-## 1. 미세한 열 팽창과 수축 (Thermal Cycling): 빌드가 풀로드로 돌아갈 때 메인보드 기판과 RAM의 골드핑거(Gold Finger) 금속 재질이 열을 받아 미세하게 팽창했다가, 사무실 에어컨 바람에 식으면서 수축한다. 이 과정에서 접점 압력이 미세하게 틀어져 데이터 라인이 노이즈를 타며 POST(Power-On Self-Test) 단계를 통과하지 못하는 것이다.
+1. 미세한 열 팽창과 수축 (Thermal Cycling): 빌드가 풀로드로 돌아갈 때 메인보드 기판과 RAM의 골드핑거(Gold Finger) 금속 재질이 열을 받아 미세하게 팽창했다가, 사무실 에어컨 바람에 식으면서 수축한다. 이 과정에서 접점 압력이 미세하게 틀어져 데이터 라인이 노이즈를 타며 POST(Power-On Self-Test) 단계를 통과하지 못하는 것이다.
 
-## 2. 미세 먼지와 산화 피막 (Oxidation): 실내 습도와 공기 중의 미세 먼지가 슬롯 내부로 유입되어 RAM 골드핑거 표면에 보이지 않는 산화막을 형성한다. 이게 전도율을 떨어뜨려 CPU 메모리 컨트롤러가 RAM을 인식하지 못하게 막는다.
+2. 미세 먼지와 산화 피막 (Oxidation): 실내 습도와 공기 중의 미세 먼지가 슬롯 내부로 유입되어 RAM 골드핑거 표면에 보이지 않는 산화막을 형성한다. 이게 전도율을 떨어뜨려 CPU 메모리 컨트롤러가 RAM을 인식하지 못하게 막는다.
 
-## 3. 메인보드 슬롯 래치(Latch) 유격: 케이스를 책상 밑에 두고 발로 툭툭 치거나 진동이 가해지면, 원클릭 래치 고정부가 미세하게 풀리면서 양쪽 핀 중 일부가 이탈한다.
+3. 메인보드 슬롯 래치(Latch) 유격: 케이스를 책상 밑에 두고 발로 툭툭 치거나 진동이 가해지면, 원클릭 래치 고정부가 미세하게 풀리면서 양쪽 핀 중 일부가 이탈한다.
 
 ---
 
@@ -60,9 +61,9 @@ theme: "Mint Fresh Engineering"
 <strong>🛠️ Quick Terminal & OS Tip (정상 부팅 후 확인):</strong> 
 윈도우로 진입했다면 반드시 하드웨어 안정성을 체크해야 한다.
 
-## 1. <kbd>Win</kbd> + <kbd>R</kbd>을 누르고 `mdsched.exe`를 실행해 'Windows 메모리 진단'을 돌려라.
+1. <kbd>Win</kbd> + <kbd>R</kbd>을 누르고 `mdsched.exe`를 실행해 'Windows 메모리 진단'을 돌려라.
 
-## 2. 명령 프롬프트(CMD)나 PowerShell을 관리자 권한으로 열고 시스템 파일 무결성을 점검하자.
+2. 명령 프롬프트(CMD)나 PowerShell을 관리자 권한으로 열고 시스템 파일 무결성을 점검하자.
 
 <pre style="background:#111; color:#059669; padding:10px; border-radius:4px; overflow-x:auto;"><code>DISM.exe /Online /Cleanup-image /Restorehealth
 sfc /scannow</code></pre>
@@ -80,19 +81,13 @@ sfc /scannow</code></pre>
 
 ## Frequently Asked Questions (FAQ)
 
-**
-
 **Q1.** 지우개가 없는데 안경닦이나 휴지로 닦아도 되나요?
 
 A. 휴지는 미세한 종이 가루와 정전기를 발생시키므로 절대 비추천한다. 지우개가 없다면 깨끗한 면 재질의 천이나 극세사 수건에 무수 알코올을 묻혀 닦거나, 아예 부드러운 브러시나 손가락 지문으로 살짝 닦아내고 결합하는 것이 낫다.
 
-**
-
 **Q2.** RAM을 여러 개 쓰는데 특정 슬롯에 꽂으면 아예 부팅이 안 되고 비프음(Beep Sound)이 울려요.
 
 A. 메인보드 슬롯 내부의 핀(Pin)이 휘었거나 파손되었을 확률이 높다. 랜턴과 돋보기로 CPU 소켓 주변 및 RAM 슬롯 안쪽을 비춰서 구부러진 핀이 있는지 확인해야 한다. 만약 핀 휨 현상이라면 자가 수리보다는 메인보드 교체나 서멀 컴파운드 재도포를 겸한 A/S 센터행이 답이다.
-
-**
 
 **Q3.** 청소를 다 하고 켰는데 이제는 모니터에 'No Signal' 대신 'Blue Screen(BSOD)'이 떠요.
 

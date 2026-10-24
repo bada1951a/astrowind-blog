@@ -13,6 +13,7 @@ theme: "Midnight Navy Royal"
 
 
 
+
 Tijdens een nachtdienst op de IT-infrastructuurdesk van een corporate kantoor in Amsterdam zag ik de tickets plotseling binnenstromen: direct na de uitrol van een cumulatieve Windows 11-update via ons WSUS-platform meldden tientallen gebruikers die 's ochtends vroeg inlogden identieke symptomen. Laptops aangesloten op Thunderbolt 4-dockingstations gaven massaal de melding "Geen signaal" op het primaire externe beeldscherm, terwijl het secundaire scherm om de vier seconden zwart knipperde. 
 
 Wanneer een gebruiker geconfronteerd wordt met een knipperend beeldscherm of een volslagen gebrek aan videosignaal op een tweede of derde monitor, grijpt men vrijwel altijd direct naar de fysieke bekabeling. In meer dan 85% van de zakelijke incidenten die ik behandel, is de hardware echter kerngezond. Het probleem ligt dieper: een vastgelopen DisplayPort-handshake, corrupte DCH-stuurprogrammabestanden of een bandbreedteconflict in het subsysteem van de grafische processor (GPU). 
@@ -28,17 +29,17 @@ Wanneer een laptop via USB-C, HDMI of DisplayPort een extern scherm aanstuurt, i
 <div style="border-left: 4px solid #1d4ed8; padding: 14px 18px; margin: 20px 0; background-color: rgba(29, 78, 216, 0.05); border-radius: 4px;">
   <strong>Systeembeheerdersnotitie:</strong> Een extern beeldscherm dat periodiek op zwart springt (elke 3 tot 10 seconden), duidt in de regel op een time-out in de HDCP-authenticatie of een signaalstroom die de bandbreedtecapaciteit overschrijdt. Een monitor die direct overgaat in stand-by met de melding "Geen signaal" kampt vrijwel altijd met een mislukte EDID-uitlezing door een geblokkeerd stuurprogramma. </div>
 
-## 1. DCH-Driverconflicten door Geforceerde Windows Update-overschrijvingen
+1. DCH-Driverconflicten door Geforceerde Windows Update-overschrijvingen
 Het grootste pijnpunt in moderne Windows-omgevingen is de automatische vervanging van specifieke OEM-videodrivers door generieke stuurprogramma's via Windows Update. Als Windows een generieke Intel- of AMD-driver over een door de fabrikant (Lenovo, Dell, HP) geoptimaliseerde driver heen installeert, ontstaat er een incompatibiliteit tussen de stroombeheerfuncties van het moederbord en de DisplayPort Alternate Mode (DP Alt Mode) van de USB-C-controller. Het resultaat is dat de GPU de aangesloten monitor niet langer herkent zodra de PCIe-link naar een lagere energiebeheermodus (C-state) schakelt.
 
 #
 
 ![Hardware Diagnostic & Troubleshooting](https://images.unsplash.com/photo-1542751371-adc38448a05e? auto=format&fit=crop&w=1000&h=550&q=80)
 
-### 2. Corruptie van de EDID-handshake en HDCP-onderhandeling
+2. Corruptie van de EDID-handshake en HDCP-onderhandeling
 Extended Display Identification Data (EDID) is de metadata die de monitor naar de videokaart stuurt met informatie over resoluties, vernieuwingsfrequenties en kleurprofielen. Als de laptop vanuit de slaapstand ontwaakt terwijl het dockingstation al stroom levert, kan deze handshake halverwege vastlopen. De High-bandwidth Digital Content Protection (HDCP) ziet dit als een potentiële beveiligingsinbreuk en sluit de videotransmissie abrupt af. Dit veroorzaakt de beruchte "knipperlus": de GPU probeert te verbinden, faalt de HDCP-controle, verbreekt de verbinding en start opnieuw op.
 
-## 3. Bandbreedte- en DSC-verzadiging op de Type-C Controller
+3. Bandbreedte- en DSC-verzadiging op de Type-C Controller
 Moderne kantooropstellingen gebruiken vaak twee 1440p- of 4K-schermen aangesloten op een enkele USB-C-kabel. Om dit videosignaal samen met USB 3.2-data over dezelfde kabel te sturen, maakt Windows gebruik van Display Stream Compression (DSC). Wanneer een grafische driver crasht of een update ondergaat zonder schone herstart, verliest de driver zijn DSC-timingparameters. De video-uitvoer probeert ongecomprimeerd te verzenden, overschrijdt de maximale bandbreedte van 21.6 Gbps (DP 1.4 HBR3) of 40 Gbps (TB4), en het signaal valt met regelmatige intervallen weg.
 
 ---
@@ -65,43 +66,43 @@ Signaalverlies/Knipperen gedetecteerd
 ## Stap 1: De Snelle Herstart van de Graphics Pipeline
 Voordat we diep in het register duiken, dwingen we het Desktop Window Manager (DWM) subsysteem om de beeldschermadapter opnieuw te initialiseren.
 
-## 1. Gebruik de sneltoets: Windows-toets + Ctrl + Shift + B.
+1. Gebruik de sneltoets: Windows-toets + Ctrl + Shift + B.
 
-## 2. Het scherm knippert eenmaal kort en je hoort een akoestische pieptoon van het besturingssysteem. Dit herstart de grafische pipeline en wist de actieve framebuffer zonder dat actieve applicaties worden afgesloten.
+2. Het scherm knippert eenmaal kort en je hoort een akoestische pieptoon van het besturingssysteem. Dit herstart de grafische pipeline en wist de actieve framebuffer zonder dat actieve applicaties worden afgesloten.
 
-## 3. Helpt dit niet? Koppel de USB-C/HDMI-kabel los, wacht 10 seconden en sluit deze weer aan.
+3. Helpt dit niet? Koppel de USB-C/HDMI-kabel los, wacht 10 seconden en sluit deze weer aan.
 
 ## Stap 2: Diagnostiek en Driververwijdering via Apparaatbeheer
 Als de snelle reset het probleem niet verhelpt, is het stuurprogramma in een ongeldige toestand beland. We gaan de drivers isoleren.
 
-## 1. Klik met de rechtermuisknop op het Startmenu en selecteer Apparaatbeheer (Device Manager).
+1. Klik met de rechtermuisknop op het Startmenu en selecteer Apparaatbeheer (Device Manager).
 
-## 2. Klap de sectie Beeldschermadapters (Display adapters) uit. Hier zie je doorgaans twee apparaten: de geïntegreerde GPU (bijv. *Intel Iris Xe Graphics*) en de discrete GPU (bijv. *NVIDIA GeForce RTX 4060 Laptop GPU*).
+2. Klap de sectie Beeldschermadapters (Display adapters) uit. Hier zie je doorgaans twee apparaten: de geïntegreerde GPU (bijv. *Intel Iris Xe Graphics*) en de discrete GPU (bijv. *NVIDIA GeForce RTX 4060 Laptop GPU*).
 
-## 3. Controleer of er een geel uitroepteken staat bij een van de adapters (foutcode 43 of code 31).
+3. Controleer of er een geel uitroepteken staat bij een van de adapters (foutcode 43 of code 31).
 
 <div style="border-left: 4px solid #1d4ed8; padding: 14px 18px; margin: 20px 0; background-color: rgba(29, 78, 216, 0.05); border-radius: 4px;">
   <strong>Let op bij laptops met hybride graphics (NVIDIA Optimus / AMD Switchable):</strong> De fysieke beeldschermpoorten en de USB-C DisplayPort-lijnen worden bij vrijwel alle laptops direct gerouteerd via de <em>geïntegreerde</em> processor (iGPU). Zelfs als je games of zware software draait op de discrete GPU, verzorgt de iGPU de beelduitvoer naar je dockingstation. Richt je pijlen bij signaalverlies daarom altijd eerst op de Intel- of AMD-driver!
 </div>
 
-## 4. Klap tevens de categorie Beeldschermen(Monitors) uit in Apparaatbeheer. Klik in de menubalk opBeeld->Verborgen apparaten weergeven.
+4. Klap tevens de categorie Beeldschermen(Monitors) uit in Apparaatbeheer. Klik in de menubalk opBeeld->Verborgen apparaten weergeven.
 
-## 5. Verwijder alle grijs weergegeven schermen (dit zijn zogeheten "ghost monitors" met verouderde EDID-caches) door met de rechtermuisknop te klikken en te kiezen voor Apparaat verwijderen.
+5. Verwijder alle grijs weergegeven schermen (dit zijn zogeheten "ghost monitors" met verouderde EDID-caches) door met de rechtermuisknop te klikken en te kiezen voor Apparaat verwijderen.
 
 **Q6.** Klik met de rechtermuisknop op je primaire geïntegreerde beeldschermadapter en kies Stuurprogramma bijwerken->Op mijn computer naar stuurprogramma's zoeken->Ik wil kiezen uit een lijst met stuurprogramma's op mijn computer. Selecteer de vorige stabiele driverversie indien beschikbaar en voltooi de wizard.
 
 ## Stap 3: Uitvoeren van een Schone Driverinstallatie (DDU Methode)
 Wanneer Windows Update de stuurprogrammacache heeft beschadigd, biedt alleen een rigoureuze schoonmaak uitkomst.
 
-## 1. Download de nieuwste OEM-driver via de ondersteuningspagina van je laptopfabrikant (installeer bij voorkeur géén generieke driver via Intel Driver Support Assistant als je een enterprise-dock gebruikt).
+1. Download de nieuwste OEM-driver via de ondersteuningspagina van je laptopfabrikant (installeer bij voorkeur géén generieke driver via Intel Driver Support Assistant als je een enterprise-dock gebruikt).
 
-## 2. Start Windows op in Veilige Modus (Houd Shift ingedrukt terwijl je klikt op Start -> Opnieuw opstarten -> Problemen oplossen -> Geavanceerde opties -> Opstartinstellingen -> Opnieuw opstarten -> Druk op F4).
+2. Start Windows op in Veilige Modus (Houd Shift ingedrukt terwijl je klikt op Start -> Opnieuw opstarten -> Problemen oplossen -> Geavanceerde opties -> Opstartinstellingen -> Opnieuw opstarten -> Druk op F4).
 
-## 3. Start Display Driver Uninstaller (DDU) met beheerdersrechten.
+3. Start Display Driver Uninstaller (DDU) met beheerdersrechten.
 
-## 4. Selecteer het apparaattype "GPU", kies de fabrikant van je geïntegreerde GPU en klik op Opschonen en NIET opnieuw opstarten.
+4. Selecteer het apparaattype "GPU", kies de fabrikant van je geïntegreerde GPU en klik op Opschonen en NIET opnieuw opstarten.
 
-## 5. Herhaal deze actie direct voor de discrete GPU (indien aanwezig).
+5. Herhaal deze actie direct voor de discrete GPU (indien aanwezig).
 
 **Q6.** Sluit DDU af en herstart de laptop normaal.
 
@@ -123,15 +124,15 @@ Herstart de laptop direct na het uitvoeren van deze opdrachten. Windows zal de d
 ## Stap 5: Handmatige Synchronisatie van de Vernieuwingsfrequentie (Hz)
 Knipperende schermen ontstaan vaak doordat Windows probeert een paneel aan te sturen op 59.94 Hz terwijl de interne scaler van de monitor rekent op exact 60.00 Hz, of wanneer variabele vernieuwingsfrequentie (VRR/G-Sync) actief is op een dock dat dit niet ondersteunt.
 
-## 1. Open Instellingen(Windows-toets + I) ->Systeem->Beeldscherm.
+1. Open Instellingen(Windows-toets + I) ->Systeem->Beeldscherm.
 
-## 2. Scroll naar beneden en klik op Geavanceerde beeldscherminstellingen.
+2. Scroll naar beneden en klik op Geavanceerde beeldscherminstellingen.
 
-## 3. Selecteer het problematische externe scherm in het dropdown-menu.
+3. Selecteer het problematische externe scherm in het dropdown-menu.
 
-## 4. Kijk naar de Vernieuwingsfrequentie kiezen (Refresh rate).
+4. Kijk naar de Vernieuwingsfrequentie kiezen (Refresh rate).
 
-## 5. Schakel een eventuele variabele vernieuwingsfrequentie direct uit. Zet de waarde vast op 60 Hzof50 Hz (of verlaag deze tijdelijk naar 30 Hz als diagnostische test). Als het knipperen bij 30 Hz stopt, is er definitief sprake van een kabel- of poortbandbreedtetekort.
+5. Schakel een eventuele variabele vernieuwingsfrequentie direct uit. Zet de waarde vast op 60 Hzof50 Hz (of verlaag deze tijdelijk naar 30 Hz als diagnostische test). Als het knipperen bij 30 Hz stopt, is er definitief sprake van een kabel- of poortbandbreedtetekort.
 
 ---
 
@@ -143,16 +144,16 @@ Knipperende schermen ontstaan vaak doordat Windows probeert een paneel aan te st
 
 Om te voorkomen dat ditzelfde probleem zich bij de volgende Windows Update-cyclus herhaalt, implementeren wij standaard de volgende preventieve maatregelen:
 
-## 1. Groepsbeleid tegen driver-overschrijvingen:
+1. Groepsbeleid tegen driver-overschrijvingen:
 
    Open de Lokale groepsbeleidbewerker (`gpedit.msc`) en navigeer naar:  
    `Computerconfiguratie` -> `Beheersjablonen` -> `Windows-onderdelen` -> `Windows Update` -> `Geen stuurprogramma's opnemen in Windows-updates`. Zet deze beleidsregel op Ingeschakeld. Hiermee voorkom je dat Microsoft WHQL-drivers je stabiele OEM-videodrivers overschrijven.
 
-## 2. Kabelkwaliteit en Passieve Adapters:
+2. Kabelkwaliteit en Passieve Adapters:
 
    Gooi goedkope, passieve HDMI-naar-DisplayPort adapters resoluut de prullenbak in. Zodra je een dual-monitoropstelling draait via USB-C, vereist de signaalintegriteit gecertificeerde VESA DisplayPort 1.4 of HDMI 2.1 kabels met actieve signaalomvormers indien er sprake is van protocolconversie.
 
-## 3. Power Delivery Marges:
+3. Power Delivery Marges:
 
    Zorg dat het dockingstation voldoende vermogen levert. Als een dock slechts 65W levert aan een laptop die onder piekbelasting 90W trekt, schaalt het moederbord automatisch de stroomtoevoer naar de USB-C multiplexers terug. Dit resulteert in het wegvallen van het videosignaal zodra de processor zwaar wordt belast.
 

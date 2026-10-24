@@ -13,6 +13,7 @@ theme: "Bronze Artisan Workshop"
 
 
 
+
 Erano le 17:30 di un giovedì caotico nel nostro ufficio di consulenza IT in zona Porta Nuova a Milano. Stavamo ultimando l'ottimizzazione delle prestazioni dell'infrastruttura per un cliente del settore finanziario quando, di colpo, la mia workstation principale si è spenta mostrando la famigerata schermata blu con il codice di errore `0x0000000a` (IRQL_NOT_LESS_OR_EQUAL). Il panico iniziale è durato pochi secondi: con una deadline imminente e i log di produzione da esportare, non potevo permettermi di perdere tempo in tentativi alla cieca. Sapevo benissimo che quel codice specifico puntava dritto a un conflitto di memoria o a un driver corrotto dopo l'ultimo aggiornamento di sistema. Dopo vent'anni passati a mettere le mani nei PC e nei server, ho imparato che le emergenze hardware e software non si affrontano con la disperazione, ma con un metodo chirurgico, degno di una bottega artigiana digitale. In questo articolo ti mostro esattamente come ho isolato il problema e come puoi risolverlo anche tu in pochi passaggi.
 
 ![Tech & IT Solution Guide](https://picsum.photos/seed/computer345/1000/550)
@@ -27,11 +28,11 @@ Prima di mettere mano a comandi e cacciaviti, capiamo cosa scatena esattamente q
 
 a:
 
-## 1. Driver di periferica instabili o corrotti: Spesso un aggiornamento automatico di Windows Update installa un driver di rete, audio o chipset non perfettamente stabile, che va in conflitto con il kernel di Windows.
+1. Driver di periferica instabili o corrotti: Spesso un aggiornamento automatico di Windows Update installa un driver di rete, audio o chipset non perfettamente stabile, che va in conflitto con il kernel di Windows.
 
-## 2. Problemi di integrità della RAM (Banchi difettosi o overclock aggressivo): Se la memoria fisica presenta errori di lettura/scrittura o profili XMP/DOCP troppo spinti, il sistema operativo riceve dati corrotti a livello di interrupt request level (IRQL).
+2. Problemi di integrità della RAM (Banchi difettosi o overclock aggressivo): Se la memoria fisica presenta errori di lettura/scrittura o profili XMP/DOCP troppo spinti, il sistema operativo riceve dati corrotti a livello di interrupt request level (IRQL).
 
-## 3. Servizi di terze parti o antivirus invasivi: Software di sicurezza o utility di sistema non aggiornate che si agganciano profondamente al kernel possono causare violazioni di accesso alla memoria. ---
+3. Servizi di terze parti o antivirus invasivi: Software di sicurezza o utility di sistema non aggiornate che si agganciano profondamente al kernel possono causare violazioni di accesso alla memoria. ---
 
 ## Procedura Passo-Passo per la Risoluzione
 
@@ -41,15 +42,15 @@ Per risolvere definitivamente il problema senza formattare, procediamo con un ap
 
 La prima cosa da fare è escludere un guasto fisico o un'instabilità dei moduli di memoria RAM.
 
-## 1. Premi la combinazione di tasti `Windows + R`, digita `mdsched.exe` e premi Invio.
+1. Premi la combinazione di tasti `Windows + R`, digita `mdsched.exe` e premi Invio.
 
-## 2. Seleziona l'opzione consigliat
+2. Seleziona l'opzione consigliat
 
 a: "Riavvia ora e individua eventuali problemi".
 
-## 3. Il PC si riavvierà in modalità di diagnostica UEFI/BIOS eseguendo il test standard.
+3. Il PC si riavvierà in modalità di diagnostica UEFI/BIOS eseguendo il test standard.
 
-## 4. Se riscontri errori al termine del test, significa che almeno un banco RAM è difettoso o va rimosso l'overclock dal BIOS.
+4. Se riscontri errori al termine del test, significa che almeno un banco RAM è difettoso o va rimosso l'overclock dal BIOS.
 
 <div style="border-left: 4px solid #b45309; padding: 12px 16px; margin: 20px 0; background-color: rgba(180, 83, 9, 0.05); border-radius: 4px; color: #111827;">
 <strong>Consiglio Hardware:</strong> Se usi banchi di RAM con profili XMP attivi nel BIOS, prova a disattivarli temporaneamente e imposta la frequenza nominale standard JEDEC per verificare se la schermata blu scompare.
@@ -59,15 +60,15 @@ a: "Riavvia ora e individua eventuali problemi".
 
 Se la RAM risulta integra al 100%, il colpevole è quasi certamente un driver corrotto installato di recente.
 
-## 1. Clicca sul pulsante Start, digita "Gestione dispositivi" e aprilo.
+1. Clicca sul pulsante Start, digita "Gestione dispositivi" e aprilo.
 
-## 2. Espandi le categorie principali (specialmente *Schede di rete*, *Controller audio, video e giochi* o *Schede video*).
+2. Espandi le categorie principali (specialmente *Schede di rete*, *Controller audio, video e giochi* o *Schede video*).
 
-## 3. Clicca con il tasto destro sul driver sospetto (magari quello aggiornato poche ore prima del crash) e seleziona "Proprietà".
+3. Clicca con il tasto destro sul driver sospetto (magari quello aggiornato poche ore prima del crash) e seleziona "Proprietà".
 
-## 4. Spostati sulla scheda "Driver" e clicca sul pulsante"Ripristina driver" (Roll Back Driver), se attivo.
+4. Spostati sulla scheda "Driver" e clicca sul pulsante"Ripristina driver" (Roll Back Driver), se attivo.
 
-## 5. Conferma l'operazione e riavvia il sistema. Se Windows non ti permette di fare il rollback perché il pulsante è disattivato, puoi procedere alla disinstallazione pulita del driver scaricando la versione precedente direttamente dal sito del produttore (es. NVIDIA, AMD, Realtek).
+5. Conferma l'operazione e riavvia il sistema. Se Windows non ti permette di fare il rollback perché il pulsante è disattivato, puoi procedere alla disinstallazione pulita del driver scaricando la versione precedente direttamente dal sito del produttore (es. NVIDIA, AMD, Realtek).
 
 ---
 

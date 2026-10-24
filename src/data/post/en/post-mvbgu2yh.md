@@ -13,6 +13,7 @@ theme: "Pure Titanium Clean"
 
 
 
+
 The Slack notifications were blowing up my second monitor, our product release sync was starting in exactly four minutes, and my mouse suddenly refused to register a single click on the Windows 11 taskbar. Clicking the Start menu did nothing, the system tray icons were completely unresponsive, and switching between my open IDE windows felt like trying to drive a car with square wheels. When you are sitting in a fast-paced Silicon Valley tech firm trying to push a pre-release build, a frozen taskbar isn't just an annoyance—it is an absolute workflow emergency. 
 
 We have all been there. You mash the Windows key, you frantically click around the clock and Wi-Fi icons, and nothing moves. Instead of panic-rebooting your entire machine and losing your open dev environments, let's walk through why this happens and how to fix it in under two minutes using native tools.
@@ -42,46 +43,46 @@ Let's fix the problem using three battle-tested methods, ordered from the fastes
 ## Method 1: Restart Windows Explorer via Task Manager (The 30-Second Fix)
 This is your go-to maneuver when minutes matter.
 
-## 1. Press `Ctrl + Shift + Esc` on your keyboard to launch Task Manager.
+1. Press `Ctrl + Shift + Esc` on your keyboard to launch Task Manager.
 
-## 2. If it opens in the compact view, click More details at the bottom to see the full list of processes.
+2. If it opens in the compact view, click More details at the bottom to see the full list of processes.
 
-## 3. Scroll down the Processestab until you findWindows Explorer (it has a yellow folder icon).
+3. Scroll down the Processestab until you findWindows Explorer (it has a yellow folder icon).
 
-## 4. Right-click on Windows Explorerand selectRestart (or click the restart button in the bottom-right corner).
+4. Right-click on Windows Explorerand selectRestart (or click the restart button in the bottom-right corner).
 
-## 5. Your screen will flicker for a second, the taskbar will disappear and reload, and your click responsiveness will instantly return.
+5. Your screen will flicker for a second, the taskbar will disappear and reload, and your click responsiveness will instantly return.
 
 ## Method 2: Terminate and Relaunch Shell Processes via Terminal
 If the explorer restart doesn't stick or Task Manager itself is acting sluggish, you can force-reset the shell components using a command line.
 
-## 1. Press `Ctrl + Shift + Esc` to open Task Manager again.
+1. Press `Ctrl + Shift + Esc` to open Task Manager again.
 
-## 2. Click on the Run new task button at the top of the window.
+2. Click on the Run new task button at the top of the window.
 
-## 3. Type `cmd` into the open field, check the box that says Create this task with administrative privileges, and hit Enter.
+3. Type `cmd` into the open field, check the box that says Create this task with administrative privileges, and hit Enter.
 
-## 4. In the Command Prompt window, type the following commands one by one and press Enter after each:
+4. In the Command Prompt window, type the following commands one by one and press Enter after each:
 
    ```cmd
    taskkill /f /im explorer.exe
    start explorer.exe
    ```
 
-## 5. This completely kills any hung instances of the desktop shell and spawns a clean fresh process.
+5. This completely kills any hung instances of the desktop shell and spawns a clean fresh process.
 
 ## Method 3: Re-register the Windows 11 Taskbar Package (Deep Repair)
 If the taskbar freezes repeatedly after every reboot, the underlying modern app package for the shell needs a forced re-registration via PowerShell.
 
-## 1. Press `Ctrl + Shift + Esc` and open a new task as administrator, typing `powershell` instead of `cmd`.
+1. Press `Ctrl + Shift + Esc` and open a new task as administrator, typing `powershell` instead of `cmd`.
 
-## 2. Copy and paste the following clean PowerShell command into the terminal and press Enter:
+2. Copy and paste the following clean PowerShell command into the terminal and press Enter:
 
    ```powershell
    Get-AppxPackage -AllUsers -Name Microsoft.Windows.ShellExperienceHost | Foreach {Add-AppxPackage -DisableDevelopmentMode -Register "(_.InstallLocation)\AppXManifest.xml"}
    ```
 
-## 3. Ignore any red warning text that might pop up, then restart your PC normally to let the package reload cleanly.
+3. Ignore any red warning text that might pop up, then restart your PC normally to let the package reload cleanly.
 
 <div style="border-left: 4px solid #334155; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Expert Warning:</strong> Avoid installing unverified third-party taskbar customizers or legacy start-menu modding tools on Windows 11 enterprise builds. They frequently cause version-mismatch crashes with routine Windows cumulative updates.

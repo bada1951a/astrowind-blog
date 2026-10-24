@@ -13,13 +13,14 @@ theme: "Pure Titanium Clean"
 
 
 
+
 En tant qu'ingénieur système, mon clavier n'est pas un simple périphérique de saisie : c'est l'interface directe avec les consoles de production, les hyperviseurs et les terminaux d'infrastructure. Rien n'est plus critique – et exaspérant – qu'un interrupteur mécanique qui commence à "bégaier" lors de la saisie d'une commande sensible sous SSH. Une touche `a` ou `Enter` qui enregistre deux frappes au lieu d'une, ou qui ignore purement et simplement la pression, peut transformer une commande d'administration anodine en incident d'exploitation.
 
 Ce dysfonctionnement, couramment appelé chattering (ou rebond de contact anormal), n'impose pas nécessairement le remplacement immédiat du matériel ou le recours au fer à souder. Dans plus de 80 % des cas rencontrés en environnement professionnel, une intervention ciblée à l'aide d'un nettoyant pour contacts électroniques permet de restaurer l'intégrité du signal. Voici notre procédure standard d'atelier pour diagnostiquer, décontaminer et pérenniser vos commutateurs mécaniques.
 
 ---
 
-## 1. Diagnostic électromécanique : Les trois causes racines
+1. Diagnostic électromécanique : Les trois causes racines
 
 Pour intervenir efficacement, il faut comprendre ce qui se passe sous le capuchon de la touche (*keycap*). Un commutateur mécanique traditionnel (type Cherry MX, Gateron ou Kailh) repose sur la mise en contact physique de deux lamelles en alliage métallique (souvent du bronze phosphoreux plaqué or). Trois facteurs principaux viennent dégrader ce mécanisme :
 
@@ -47,7 +48,7 @@ Chaque microcontrôleur de clavier intègre un algorithme d'anti-rebond (*deboun
 ---
 ![Tech Diagnostics](https://images.unsplash.com/photo-1588508065123-287b28e013da? auto=format&fit=crop&w=1000&h=550&q=80)
 
-## 2. Procédure de résolution pas-à-pas
+2. Procédure de résolution pas-à-pas
 
 <div style="border-left: 4px solid #334155; padding: 12px 16px; margin: 20px 0; background-color: rgba(51, 65, 85, 0.05); border-radius: 4px;">
 <strong>PRÉREQUIS MATÉRIEL :</strong>
@@ -63,15 +64,15 @@ Chaque microcontrôleur de clavier intègre un algorithme d'anti-rebond (*deboun
 
 Avant de toucher au matériel, il faut s'assurer qu'aucun conflit de pilote ou paramètre d'accessibilité Windows ne perturbe le signal de récurrence.
 
-## 1. Débranchez les autres périphériques d'entrée pour éviter les conflits d'interruptions.
+1. Débranchez les autres périphériques d'entrée pour éviter les conflits d'interruptions.
 
-## 2. Ouvrez le Gestionnaire de périphériques (raccourci `Win + X` puis sélectionnez l'entrée correspondante).
+2. Ouvrez le Gestionnaire de périphériques (raccourci `Win + X` puis sélectionnez l'entrée correspondante).
 
-## 3. Déroulez la section Périphériques d'interface utilisateur(HID) ainsi que la sectionClaviers.
+3. Déroulez la section Périphériques d'interface utilisateur(HID) ainsi que la sectionClaviers.
 
-## 4. Repérez votre équipement, faites un clic droit puis sélectionnez Désinstaller l'appareil. Redémarrez le poste pour forcer la réinitialisation de la pile de pilotes génériques Windows.
+4. Repérez votre équipement, faites un clic droit puis sélectionnez Désinstaller l'appareil. Redémarrez le poste pour forcer la réinitialisation de la pile de pilotes génériques Windows.
 
-## 5. Ouvrez une Invite de commandes en mode administrateur et vérifiez que les touches filtres ne sont pas compromises via le panneau d'accessibilité.
+5. Ouvrez une Invite de commandes en mode administrateur et vérifiez que les touches filtres ne sont pas compromises via le panneau d'accessibilité.
 
 ```cmd
 :: Commande de contrôle rapide des périphériques d'entrée connectés via PowerShell
@@ -86,13 +87,13 @@ Pour quantifier rigoureusement le taux de rebond, lancez un outil de diagnostic 
 
 Déconnectez impérativement le clavier de toute source d'alimentation (câble USB débranché ou interrupteur de batterie coupé pour les modèles sans fil).
 
-## 1. À l'aide de l'extracteur de touche, retirez délicatement le capuchon de la touche défaillante en tirant verticalement dans l'axe pour ne pas fausser le guide du plongeur.
+1. À l'aide de l'extracteur de touche, retirez délicatement le capuchon de la touche défaillante en tirant verticalement dans l'axe pour ne pas fausser le guide du plongeur.
 
-## 2. Dégagez la zone périphérique immédiate à l'air sec pour éviter que des particules externes ne tombent dans la chambre lors de l'ouverture.
+2. Dégagez la zone périphérique immédiate à l'air sec pour éviter que des particules externes ne tombent dans la chambre lors de l'ouverture.
 
-## 3. Cas A (Clavier Hot-Swap) : Utilisez votre extracteur de switch pour pincer les ergots de retenue situés en haut et en bas du commutateur, puis extrayez-le doucement du circuit imprimé (PCB). Vous pourrez ainsi travailler hors châssis.
+3. Cas A (Clavier Hot-Swap) : Utilisez votre extracteur de switch pour pincer les ergots de retenue situés en haut et en bas du commutateur, puis extrayez-le doucement du circuit imprimé (PCB). Vous pourrez ainsi travailler hors châssis.
 
-## 4. Cas B (Interrupteurs soudés) : L'opération se fait directement sur le clavier, maintenu à plat.
+4. Cas B (Interrupteurs soudés) : L'opération se fait directement sur le clavier, maintenu à plat.
 
 ---
 
@@ -111,15 +112,15 @@ C'est ici que réside le cœur de l'intervention. Le nettoyant contact possède 
                  └───────────────────────┘
 ```
 
-## 1. Munissez le spray de son tube prolongateur fin.
+1. Munissez le spray de son tube prolongateur fin.
 
-## 2. Enfoncez manuellement le plongeur de l'interrupteur à fond avec le doigt ou une spatule fine non métallique pour ouvrir au maximum l'espace interne.
+2. Enfoncez manuellement le plongeur de l'interrupteur à fond avec le doigt ou une spatule fine non métallique pour ouvrir au maximum l'espace interne.
 
-## 3. Positionnez le tube prolongateur directement contre l'interstice situé entre le plongeur mobile et le carter supérieur du commutateur (idéalement orienté vers le côté où se trouvent les lamelles de contact).
+3. Positionnez le tube prolongateur directement contre l'interstice situé entre le plongeur mobile et le carter supérieur du commutateur (idéalement orienté vers le côté où se trouvent les lamelles de contact).
 
-## 4. Appliquez une impulsion très brève (moins d'une demi-seconde). Une quantité minime suffit ; inonder le circuit imprimé est inutile et contre-productif.
+4. Appliquez une impulsion très brève (moins d'une demi-seconde). Une quantité minime suffit ; inonder le circuit imprimé est inutile et contre-productif.
 
-## 5. Immédiatement après l'injection, relâchez le plongeur et actionnez la touche de manière frénétique et répétée (40 à 60 pressions rapides successives). Ce mouvement mécanique frotte les lamelles l'une contre l'autre, permettant au solvant de décoller chimiquement et mécaniquement l'oxyde de surface.
+5. Immédiatement après l'injection, relâchez le plongeur et actionnez la touche de manière frénétique et répétée (40 à 60 pressions rapides successives). Ce mouvement mécanique frotte les lamelles l'une contre l'autre, permettant au solvant de décoller chimiquement et mécaniquement l'oxyde de surface.
 
 ---
 
@@ -127,17 +128,17 @@ C'est ici que réside le cœur de l'intervention. Le nettoyant contact possède 
 
 Le nettoyant contact spécialisé est diélectrique (il ne conduit pas l'électricité), mais il solubilise les graisses et les saletés qui, elles, peuvent créer des chemins de fuite temporaires.
 
-## 1. Retournez le clavier (ou le commutateur) face vers le bas au-dessus d'un chiffon microfibre non pelucheux pour laisser s'écouler l'éventuel excédent de produit chargé en impuretés.
+1. Retournez le clavier (ou le commutateur) face vers le bas au-dessus d'un chiffon microfibre non pelucheux pour laisser s'écouler l'éventuel excédent de produit chargé en impuretés.
 
-## 2. Utilisez une brève rafale d'air comprimé à basse pression pour chasser les solvants résiduels de la chambre interne.
+2. Utilisez une brève rafale d'air comprimé à basse pression pour chasser les solvants résiduels de la chambre interne.
 
-## 3. Respectez un temps de séchage strict de 15 à 30 minutes à l'air libre. Bien que le produit s'évapore rapidement en surface, l'espace confiné d'un commutateur retarde la dispersion des gaz propulseurs et des solvants légers.
+3. Respectez un temps de séchage strict de 15 à 30 minutes à l'air libre. Bien que le produit s'évapore rapidement en surface, l'espace confiné d'un commutateur retarde la dispersion des gaz propulseurs et des solvants légers.
 
-## 4. Replacez le commutateur sur le PCB (alignez scrupuleusement les broches métalliques pour éviter de les plier lors de l'insertion dans les connecteurs Kailh/Gateron) et remettez le capuchon.
+4. Replacez le commutateur sur le PCB (alignez scrupuleusement les broches métalliques pour éviter de les plier lors de l'insertion dans les connecteurs Kailh/Gateron) et remettez le capuchon.
 
 ---
 
-## 3. Mises en garde et règles de l'art
+3. Mises en garde et règles de l'art
 
 <div style="border-left: 4px solid #334155; padding: 12px 16px; margin: 20px 0; background-color: rgba(51, 65, 85, 0.05); border-radius: 4px;">
 <strong>ATTENTION : PROSCRIVEZ LES PRODUITS INADAPTÉS</strong>
@@ -151,25 +152,19 @@ L'application de dégrippant universel standard (WD-40 classique), d'huile de si
 
 ---
 
-## 4. Foire aux questions (FAQ)
+4. Foire aux questions (FAQ)
 
 ###
-
-**
 
 **Q1.** L'alcool isopropylique (IPA à 99,9 %) peut-il remplacer le nettoyant pour contacts ?
 L'alcool isopropylique est un excellent dégraissant, mais il n'intègre pas d'agents désoxydants actifs conçus pour casser la passivation superficielle des métaux non ferreux. L'IPA diluera la crasse, mais ne traitera pas l'oxydation microscopique des lamelles. De plus, son temps d'évaporation au sein d'une chambre close non ventilée peut être plus long, augmentant le risque de piéger l'humidité atmosphérique lors du séchage. Le nettoyant contact diélectrique reste la solution technique supérieure.
 
 ###
 
-**
-
 **Q2.** Peut-on compenser le chattering par voie logicielle plutôt que matérielle ?
 Il est techniquement possible d'augmenter le temps de debounce via des micrologiciels open source (comme QMK, VIA ou ZMK) ou via des utilitaires sous Windows (comme *Keyboard Chattering Fix*), en passant par exemple la valeur de rejet de 5 ms à 25 ms. Cependant, ce n'est qu'un pansement logiciel : cela masque la défaillance physique tout en augmentant la latence globale de saisie (*input lag*), ce qui est préjudiciable en jeu ou en saisie ultra-rapide. Il convient toujours de traiter la dégradation électromécanique à la racine.
 
 ###
-
-**
 
 **Q3.** Que faire si l'injection de produit ne résout rien sur un interrupteur soudé ?
 Si après deux applications et séchage complet le contact ne s'établit toujours pas ou continue de rebondir, la lamelle métallique souffre d'une déformation permanente ou d'une rupture de fatigue. Dans ce cas, l'unique issue sur un PCB non-hotswap consiste à démonter le châssis, chauffer les deux plots d'étain au fer à souder régulé (à 350 °C), aspirer la brasure à la pompe ou à la tresse de cuivre, et remplacer le composant par un commutateur neuf rigoureusement identique.

@@ -13,6 +13,7 @@ theme: "Mint Fresh Engineering"
 
 
 
+
 Suasana di lantai 35 gedung perkantoran kawasan SCBD Jakarta sedang sangat tegang. Waktu sudah menunjukkan pukul 11 malam, dan batas waktu penyerahan laporan keuangan tinggal hitungan jam. Di tengah tekanan luar biasa menjelang tutup buku tahunan ini, saya sibuk melakukan pencocokan data krusial antara lembar kerja Excel 1 tahun penuh dengan sistem database pusat perusahaan. Kepala sudah pusing karena angka-angka yang harus direkonsiliasi sangat banyak, ditambah lagi komputer desktop di meja saya tiba-tiba bertingkah aneh. Ketika jam kerja usai dan saya mengklik tombol Shutdown, layar monitor memang mati, tetapi lampu indikator CPU, kipas pendingin, dan lampu pada port USB masih menyala terang benderang. 
 
 Awalnya saya mengira ini hanya gangguan kecil biasa. Saya coba tekan lama tombol power di casing komputer untuk mematikannya secara paksa, lalu menyalakannya kembali untuk melanjutkan pekerjaan rekonsiliasi. Namun, setiap kali selesai bekerja dan menekan Shutdown, masalah yang sama terus berulang. Komputer seolah-olah masuk ke mode tidur yang dalam, bukan benar-benar mati. Situasi ini membuat saya khawatir terjadi korupsi data pada file Excel laporan tahunan yang sedang saya verifikasi, mengingat proses tulis data ke SSD bisa terganggu jika PC tidak mati secara normal. 
@@ -31,15 +32,15 @@ Sebagai seorang teknisi infrastruktur IT yang sudah belasan tahun mengurusi pera
 
 Sebelum kita masuk ke langkah perbaikan, ada baiknya kita pahami dulu tiga penyebab utama kenapa komputer Anda bandel tidak mau mati setelah diklik shutdown:
 
-## 1. Fitur Fast Startup yang Agresif
+1. Fitur Fast Startup yang Agresif
 
 Sejak era Windows 10 dan 11, Microsoft memperkenalkan fitur bernama Fast Startup. Fitur ini bekerja dengan cara menyimpan sesi kernel sistem operasi ke dalam file hibernasi saat Anda menekan Shutdown, sehingga saat komputer dinyalakan kembali, prosesnya terasa sangat instan. Sayangnya, pada beberapa kombinasi motherboard dan driver chipset, fitur ini justru membuat komputer gagal memutus aliran listrik ke komponen internal saat perintah shutdown diberikan.
 
-## 2. Masalah Kompatibilitas Driver Management Power (ACPI)
+2. Masalah Kompatibilitas Driver Management Power (ACPI)
 
 Driver pada komponen seperti kartu grafis, chipset motherboard, atau driver LAN card terkadang gagal merespons sinyal power state dari sistem operasi Windows. Akibatnya, hardware tetap meminta suplai daya meskipun sistem operasi sudah memerintahkan agar seluruh komponen dimatikan.
 
-## 3. Konfigurasi USB Power Delivery
+3. Konfigurasi USB Power Delivery
 
 Perangkat eksternal seperti mouse gaming, keyboard RGB, atau hard disk eksternal yang terus menancap terkadang mengirimkan sinyal arus balik ke port USB motherboard, membuat sistem mengira perangkat masih aktif dan menahan suplai daya utama dari Power Supply Unit (PSU).
 
@@ -70,19 +71,13 @@ Klik tombol "Save changes" di bagian bawah. Selesai! Sekarang coba lakukan pengu
 
 ### Pertanyaan yang Sering Diajukan (FAQ)
 
-**
-
 **Q1.** Apakah menonaktifkan Fast Startup akan membuat komputer saya menjadi sangat lambat saat dinyalakan keesokan harinya?
 
 A1. Secara teori waktu booting akan sedikit bertambah, namun jika PC Anda sudah menggunakan SSD modern, perbedaan waktunya hanya sekitar 2 sampai 5 detik saja dan jauh lebih stabil tanpa risiko error daya.
 
-**
-
 **Q2.** Kenapa opsi Fast Startup tidak muncul sama sekali di menu Power Options komputer saya?
 
 A2. Hal tersebut biasanya terjadi karena fitur Hibernate pada Windows dalam kondisi nonaktif. Anda bisa mengaktifkannya kembali dengan membuka Command Prompt sebagai administrator lalu mengetik perintah **powercfg /hibernate on**.
-
-**
 
 **Q3.** Apakah masalah ini bisa merusak komponen hardware jika dibiarkan terus-menerus?
 

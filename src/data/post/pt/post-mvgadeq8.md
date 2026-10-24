@@ -13,6 +13,7 @@ theme: "Deep Ocean Cobalt"
 
 
 
+
 Eram exatamente 14h42 em um escritório na Avenida Paulista, em São Paulo. Faltavam dezoito minutos para a reunião mais crítica do semestre com a diretoria internacional. O notebook principal do gerente de operações estava projetado no telão da sala de reuniões e, bem no canto inferior direito da tela, brilhava aquela frase irritante: "Ativar o Windows - Vá para Configurações para ativar o Windows". O diretor executivo, conhecido por ser extremamente atento a detalhes visuais, olhou fixamente para a projeção e arqueou a sobrancelha. O clima na sala congelou. A licença corporativa estava em processo de renovação no setor de compras, mas o servidor KMS da matriz havia caído cinco minutos antes. Eu precisava sumir com aquela marca d'água imediatamente, sem reiniciar a máquina, sem instalar softwares suspeitos e sem correr o risco de corromper o registro do sistema na frente de todo mundo.
 
 Nessas horas, o desespero faz o técnico tentar de tudo: baixar ativadores milagrosos da internet que só trazem vírus, reiniciar o processo do Explorador de Arquivos de forma desesperada ou fuçar em menus profundos das Configurações que não mudam nada. ![Tech Troubleshooting Guide](/images/tech-photo/ram%20(6).png)
@@ -29,11 +30,11 @@ a:</strong> Este procedimento é voltado para situações emergenciais em ambien
 
 Antes de executar qualquer comando, vale entender o cenário técnico por trás do problema para não culpar o hardware ou achar que o SSD pifou:
 
-## 1. Perda de Comunicação com o Servidor KMS: Em redes corporativas, os PCs validam a licença periodicamente com um servidor interno. Se a VPN cair ou houver instabilidade no switch principal, o Windows perde o "contato" e entra em estado de carência.
+1. Perda de Comunicação com o Servidor KMS: Em redes corporativas, os PCs validam a licença periodicamente com um servidor interno. Se a VPN cair ou houver instabilidade no switch principal, o Windows perde o "contato" e entra em estado de carência.
 
-## 2. Atualizações Cumulativas Recentes: O Windows Update frequentemente sobrescreve chaves de registro ou reinicia serviços de licenciamento (Software Protection Platform), fazendo com que a verificação de status reapareça na área de trabalho.
+2. Atualizações Cumulativas Recentes: O Windows Update frequentemente sobrescreve chaves de registro ou reinicia serviços de licenciamento (Software Protection Platform), fazendo com que a verificação de status reapareça na área de trabalho.
 
-## 3. Expiração do Período de Graça (Grace Period): Quando uma instalação nova é feita e o script de automação de deployment falha em injetar a chave MAK/KMS no primeiro boot, o relógio interno começa a contar as horas até exibir o aviso.
+3. Expiração do Período de Graça (Grace Period): Quando uma instalação nova é feita e o script de automação de deployment falha em injetar a chave MAK/KMS no primeiro boot, o relógio interno começa a contar as horas até exibir o aviso.
 
 ---
 
@@ -67,11 +68,11 @@ Uma janela de diálogo do Windows Script Host aparecerá na tela informando que 
 ## Passo 4: Reiniciar o Explorador de Arquivos (Explorer.exe)
 Para fazer a marca d'água sumir instantaneamente da tela sem precisar reiniciar o computador inteiro (o que salvaria seus minutos preciosos antes da reunião), abra o Gerenciador de Tarefas (pressione `Ctrl + Shift + Esc`).
 
-## 1. Na aba Processos, role a lista para baixo até encontrarExplorador de Windows (ou *Windows Explorer*).
+1. Na aba Processos, role a lista para baixo até encontrarExplorador de Windows (ou *Windows Explorer*).
 
-## 2. Clique com o botão direito nele e selecione Reiniciar.
+2. Clique com o botão direito nele e selecione Reiniciar.
 
-## 3. A barra de tarefas e a área de trabalho vão sumir por um segundo e retornar limpas. A marca d'água terá desaparecido.
+3. A barra de tarefas e a área de trabalho vão sumir por um segundo e retornar limpas. A marca d'água terá desaparecido.
 
 ---
 
@@ -87,10 +88,10 @@ Para fazer a marca d'água sumir instantaneamente da tela sem precisar reiniciar
 
 ### Perguntas Frequentes (FAQ)
 
-## 1. Esse procedimento funciona no Windows 11 Pro e Home? Sim, os comandos baseados no `slmgr.vbs` e a manipulação do serviço `sppsvc` funcionam tanto no Windows 10 quanto no Windows 11. No entanto, edições Home possuem limitações quanto à conexão com servidores de volume KMS corporativo.
+1. Esse procedimento funciona no Windows 11 Pro e Home? Sim, os comandos baseados no `slmgr.vbs` e a manipulação do serviço `sppsvc` funcionam tanto no Windows 10 quanto no Windows 11. No entanto, edições Home possuem limitações quanto à conexão com servidores de volume KMS corporativo.
 
-## 2. A marca d'água vai voltar depois que eu reiniciar o computador? Depende. Se o computador voltar a se comunicar com o servidor de licenças da empresa ou se a chave digital original for revalidada, ela continuará sumida. Caso contrário, após alguns dias ou após novas atualizações do sistema, o aviso poderá retornar, exigindo a inserção da chave definitiva de ativação nasConfigurações.
+2. A marca d'água vai voltar depois que eu reiniciar o computador? Depende. Se o computador voltar a se comunicar com o servidor de licenças da empresa ou se a chave digital original for revalidada, ela continuará sumida. Caso contrário, após alguns dias ou após novas atualizações do sistema, o aviso poderá retornar, exigindo a inserção da chave definitiva de ativação nasConfigurações.
 
-## 3. O comando `/rearm` afeta meus arquivos ou programas instalados?
+3. O comando `/rearm` afeta meus arquivos ou programas instalados?
 
 De forma alguma. O comando `slmgr.vbs /rearm` apenas redefine o estado de licenciamento do sistema operacional e limpa o cache de notificações visuais. Seus arquivos pessoais, planilhas, softwares instalados e configurações de usuário permanecem absolutamente intactos.

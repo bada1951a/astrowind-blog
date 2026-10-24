@@ -13,6 +13,7 @@ theme: "Graphite Technical Paper"
 
 
 
+
 Eran las 18:45 en nuestra oficina corporativa en Madrid. A solo quince minutos de enviar el paquete definitivo de un proyecto clave para un cliente multinacional, la pantalla de la workstation principal se quedo totalmente congelada. El cursor no respondia, el teclado estaba muerto y el ventilador seguia zumbando con una calma insultante. Un reinicio por botonazo nos costo diez minutos vitales y, por supuesto, la entrega se retraso, generando un ambiente de tension maxima en el departamento de sistemas. Lo peor no fue el bloqueo en si, sino que era la tercera vez en la semana que ocurria sin dejar rastro aparente.
 
 <div style="border-left: 4px solid #475569; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
@@ -32,13 +33,11 @@ Si te encuentras en una situation similar, aqui tienes el metodo directo para de
 
 Antes de hacer clic en cualquier sitio, debemos entender que buscan nuestros ojos expertos en los registros:
 
-## 1. Fallo de alimentacion o micro-cortes electricos (Kernel-Power ID 41): Indica que el sistema se apago o reinicio sin apagarse correctamente. Suele apuntar a la fuente de alimentacion (PSU) sufriendo caidas de rail o a problemas de temperatura critica en la placa base.
+1. Fallo de alimentacion o micro-cortes electricos (Kernel-Power ID 41): Indica que el sistema se apago o reinicio sin apagarse correctamente. Suele apuntar a la fuente de alimentacion (PSU) sufriendo caidas de rail o a problemas de temperatura critica en la placa base.
 
-## 2. Errores de controlador de almacenamiento (NVMe o SATA): Bloqueos repentinos donde el sistema operativo pierde la conexion con el disco principal. El disco se congela intentando leer un sector defectuoso o sufriendo un micro-corte de corriente en el puerto M.
+2. Errores de controlador de almacenamiento (NVMe o SATA): Bloqueos repentinos donde el sistema operativo pierde la conexion con el disco principal. El disco se congela intentando leer un sector defectuoso o sufriendo un micro-corte de corriente en el puerto M.
 
-## 2.
-
-## 3. Inestabilidad por perfiles de memoria agresivos (XMP/EXPO): Pequeñas desincronizaciones en los timings de la memoria RAM que provocan que Windows 11 colapse al gestionar paginacion pesada de memoria virtual.
+2. ## 3. Inestabilidad por perfiles de memoria agresivos (XMP/EXPO): Pequeñas desincronizaciones en los timings de la memoria RAM que provocan que Windows 11 colapse al gestionar paginacion pesada de memoria virtual.
 
 ---
 
@@ -51,11 +50,11 @@ Usa la combinacion de teclas `Windows + X` en tu teclado y selecciona Visor de e
 
 ## Paso 2: Filtrar los registros criticos del sistema
 
-## 1. En la columna de la izquierda, haz clic en Registros de Windowsy luego seleccionaSistema.
+1. En la columna de la izquierda, haz clic en Registros de Windowsy luego seleccionaSistema.
 
-## 2. En la columna de la derecha, haz clic en la opcion Filtrar registro actual....
+2. En la columna de la derecha, haz clic en la opcion Filtrar registro actual....
 
-## 3. En la ventana que se abre, busca la casilla de Nivel de eventoy marca unicamente las opciones:Critico,ErroryAdvertencia. Haz clic en Aceptar.
+3. En la ventana que se abre, busca la casilla de Nivel de eventoy marca unicamente las opciones:Critico,ErroryAdvertencia. Haz clic en Aceptar.
 
 ## Paso 3: Buscar las marcas de tiempo del congelamiento
 Anota mentalmente la hora exacta en la que tu PC se congelo hoy. Ahora, busca en la lista central los eventos registrados exactamente en esa franja horaria o 1-2 minutos antes. 
@@ -80,8 +79,8 @@ a: Antes de modificar parametros de energia o voltajes de RAM en la BIOS tras un
 
 ### Preguntas Frecuentes (FAQ)
 
-## 1. ¿Por que el Visor de eventos muestra tantos errores en rojo que parece que mi PC esta rota y sin embargo funciona bien? Es totalmente normal. Windows registra cientos de advertencias y errores menores en segundo plano (servicios que no arrancan a la primera, tiempos de espera agotados de aplicaciones secundarias). El secreto para un buen diagnostico tecnico es filtrar unicamente los errores que coinciden de forma milimetrica con la hora exacta en la que tu equipo sufrio el congelamiento real.
+1. ¿Por que el Visor de eventos muestra tantos errores en rojo que parece que mi PC esta rota y sin embargo funciona bien? Es totalmente normal. Windows registra cientos de advertencias y errores menores en segundo plano (servicios que no arrancan a la primera, tiempos de espera agotados de aplicaciones secundarias). El secreto para un buen diagnostico tecnico es filtrar unicamente los errores que coinciden de forma milimetrica con la hora exacta en la que tu equipo sufrio el congelamiento real.
 
-## 2. Si el Visor de eventos muestra "Kernel-Power ID 41", significa 100% que mi fuente de alimentacion esta rota? No necesariamente al cien por cien, pero es la causa principal en un 70% de los casos. El ID 41 simplemente significa que el equipo perdio la corriente de forma abrupta o se reinicio sin un apagado limpio. Tambien puede ser causado por un disyuntor en la placa base saltando por proteccion de voltaje, un enchufe flojo o una regleta de proteccion en mal estado.
+2. Si el Visor de eventos muestra "Kernel-Power ID 41", significa 100% que mi fuente de alimentacion esta rota? No necesariamente al cien por cien, pero es la causa principal en un 70% de los casos. El ID 41 simplemente significa que el equipo perdio la corriente de forma abrupta o se reinicio sin un apagado limpio. Tambien puede ser causado por un disyuntor en la placa base saltando por proteccion de voltaje, un enchufe flojo o una regleta de proteccion en mal estado.
 
-## 3. ¿Debo tocar la configuracion de energia en el Panel de control si sufro estos congelamientos? Si despues de revisar los logs sospechas de gestion energetica agresiva, entra en elPanel de control, buscaOpciones de energiay cambia temporalmente el plan predeterminado aAlto rendimiento. Esto evita que Windows apague los estados de energia de los puertos PCIe o del disco NVMe durante los momentos de inactividad o carga variable, lo cual suele solucionar muchos micro-congelamientos aleatorios en portatiles y equipos de oficina.
+3. ¿Debo tocar la configuracion de energia en el Panel de control si sufro estos congelamientos? Si despues de revisar los logs sospechas de gestion energetica agresiva, entra en elPanel de control, buscaOpciones de energiay cambia temporalmente el plan predeterminado aAlto rendimiento. Esto evita que Windows apague los estados de energia de los puertos PCIe o del disco NVMe durante los momentos de inactividad o carga variable, lo cual suele solucionar muchos micro-congelamientos aleatorios en portatiles y equipos de oficina.

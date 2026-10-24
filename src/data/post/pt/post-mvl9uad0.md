@@ -13,6 +13,7 @@ theme: "Crimson Emergency Field"
 
 
 
+
 Eram exatamente 17h30 em um escritório na Avenida Paulista. O prazo da auditoria de segurança interna da nossa empresa vencia em trinta minutos, e eu precisava gerar e enviar o relatório de autodiagnóstico do meu departamento urgentemente. Cliquei em "Desligar" no menu Iniciar para reiniciar a máquina com um perfil limpo e garantir que o script de auditoria rodasse sem interferências, mas o monitor apagou e os coolers continuaram girando a toda velocidade. O LED do gabinete permaneceu aceso ininterruptamente. Tentei segurar o botão físico de energia por cinco segundos para forçar o desligamento, mas ao religar, o Windows retomou exatamente a mesma sessão travada, ignorando o comando anterior. O tempo estava correndo contra mim, o relatório não podia ser gerado com o sistema operacional preso nesse limbo de energia e a equipe de compliance estava monitorando o envio segundo a segundo.
 
 <div style="border-left: 4px solid #ef4444; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
@@ -51,19 +52,13 @@ Como profissional de suporte técnico e infraestrutura, sempre recomendo manter 
 
 Perguntas Frequentes (FAQ)
 
-**
-
 **Q1.** Desativar a Inicialização Rápida vai deixar meu computador muito lento para ligar?
 
 A1. Em computadores modernos equipados com unidades SSD NVMe ou SATA, a diferença de tempo de boot com ou sem a Inicialização Rápida ativada é imperceptível, variando em apenas 2 a 5 segundos. O ganho em estabilidade e a prevenção de travamentos compensam amplamente essa mínima variação.
 
-**
-
 **Q2.** O problema persiste mesmo após desativar a Inicialização Rápida. O que devo verificar agora?
 
 A2. Quando o desligamento continua falhando, o próximo passo recomendado é abrir o Gerenciador de Dispositivos, expandir a categoria Controladores de Barramento Universal (USB) e adaptadores de rede, clicar com o botão direito em cada item principal, selecionar Propriedades, ir na aba Gerenciamento de Energia e desmarcar a opção "O computador pode desligar o dispositivo para economizar energia".
-
-**
 
 **Q3.** Essa falha de desligamento pode ser um defeito físico na fonte de alimentação ou na placa-mãe?
 

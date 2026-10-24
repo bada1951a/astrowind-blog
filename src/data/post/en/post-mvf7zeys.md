@@ -13,6 +13,7 @@ theme: "Industrial Blueprint"
 
 
 
+
 The clock on the wall in our Manhattan office read 9:40 AM. Exactly twenty minutes from now, our CEO was scheduled to stream a major quarterly update to the entire enterprise, and my primary presentation machine—a top-spec workstation—decided to throw a tantrum. The cooling fans were screaming like a jet engine preparing for takeoff, the mouse cursor was moving in sluggish, frame-dropping jerks, and Task Manager revealed a terrifying reality: the generic "System" process was locking the CPU flat at 100 percent usage. Powerpoint wouldn't open, Teams was frozen, and the entire system was effectively paralyzed. 
 
 Panic instantly set in. For the past ten minutes, I had been blindly stumbling through typical quick fixes—frantically smashing keyboard shortcuts, force-closing random background apps, and rebooting the machine twice, only to watch the CPU peg back at maximum capacity the moment the Windows login screen loaded. Restarting was getting us nowhere, and the clock was ticking down fast.
@@ -33,11 +34,11 @@ Before we click anything, we need to understand what we are fighting. In Windows
 
 Here are the three most common culprits behind this bottleneck:
 
-## 1. Faulty Hardware Drivers: Corrupted storage controller or network adapter drivers flooding the kernel with interrupts (DPC latency).
+1. Faulty Hardware Drivers: Corrupted storage controller or network adapter drivers flooding the kernel with interrupts (DPC latency).
 
-## 2. Windows Update Stalls: Background servicing stacks stuck trying to parse a corrupted patch cache.
+2. Windows Update Stalls: Background servicing stacks stuck trying to parse a corrupted patch cache.
 
-## 3. Corrupted Pagefile / Memory Management: Hardware memory mapping errors forcing the kernel into aggressive paging loops.
+3. Corrupted Pagefile / Memory Management: Hardware memory mapping errors forcing the kernel into aggressive paging loops.
 
 ---
 
@@ -48,37 +49,37 @@ Let's walk through the exact steps to diagnose and neutralize the bottleneck wit
 ## Step 1: Isolate the Culprit Using Resource Monitor
 Standard Task Manager gives you a high-level view, but we need granular data to see *which* thread or driver within the System process is misbehaving.
 
-## 1. Press `Ctrl + Shift + Esc` to open Task Manager.
+1. Press `Ctrl + Shift + Esc` to open Task Manager.
 
-## 2. Click on the Performancetab at the top, then clickOpen Resource Monitor at the very bottom.
+2. Click on the Performancetab at the top, then clickOpen Resource Monitor at the very bottom.
 
-## 3. In the Resource Monitor window, go to the CPU tab.
+3. In the Resource Monitor window, go to the CPU tab.
 
-## 4. Expand the Associated Handlesor look closely at theServicesandCPU Activity sections. Sort by CPU usage to see if a specific driver (like `ntoskrnl.exe`) or hardware interrupt is dominating the cycles.
+4. Expand the Associated Handlesor look closely at theServicesandCPU Activity sections. Sort by CPU usage to see if a specific driver (like `ntoskrnl.exe`) or hardware interrupt is dominating the cycles.
 
 ## Step 2: Restart the Windows Audio and Search Services
 Surprisingly, core services tied into the System process frequently glitch out, causing runaway CPU loops. Let's restart them cleanly via Settings and Control Panel interfaces.
 
-## 1. Press `Windows Key + R`, type `services.msc`, and hit Enter.
+1. Press `Windows Key + R`, type `services.msc`, and hit Enter.
 
-## 2. Scroll down to find Windows AudioandWindows Search.
+2. Scroll down to find Windows AudioandWindows Search.
 
-## 3. Right-click each service and select Restart. If a service is hung up, this action forces the kernel to release its grip on the CPU threads.
+3. Right-click each service and select Restart. If a service is hung up, this action forces the kernel to release its grip on the CPU threads.
 
 ## Step 3: Run DISM and SFC via Command Prompt
 If corrupted system files are forcing the kernel into a loop, we need to repair the OS image immediately.
 
-## 1. Click the Start Menu, type `cmd`, right-click Command Prompt, and selectRun as administrator.
+1. Click the Start Menu, type `cmd`, right-click Command Prompt, and selectRun as administrator.
 
-## 2. Type the following command to check the component store integrity: 
+2. Type the following command to check the component store integrity: 
 
    `DISM.exe /Online /Cleanup-image /Restorehealth`
 
-## 3. Once that completes, run the system file checker to replace damaged kernel binaries:
+3. Once that completes, run the system file checker to replace damaged kernel binaries:
 
    `sfc /scannow`
 
-## 4. Reboot your system normally once the scan finishes.
+4. Reboot your system normally once the scan finishes.
 
 ---
 

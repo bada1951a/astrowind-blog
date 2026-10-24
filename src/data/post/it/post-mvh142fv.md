@@ -13,6 +13,7 @@ theme: "Dracula Purple Dev"
 
 
 
+
 Erano le 17:45 in un frenetico lunedì pomeriggio nel nostro ufficio al centro direzionale di Milano. Mancavano esattamente quindici minuti alla scadenza per l'invio del report trimestrale di bilancio alla direzione generale, quando lo schermo del mio PC principale si è improvvisamente congelato. Nessun messaggio di errore, mouse immobile, tastiera completamente disattivata. La ventola della CPU ha continuato a girare a regime costante, come a prendersi gioco del mio panico crescente. Dopo tre minuti di attesa vana, ho dovuto procedere al famigerato reset hardware tenendo premuto il tasto di accensione. Risultato? Dieci pagine di analisi finanziaria non salvate e un cliente interno furioso.
 
 Nei giorni successivi, quel maledetto blocco casuale ha iniziato a ripresentarsi con una regolarità esasperante: a volte mentre aprivo Outlook, altre volte semplicemente mentre il PC era in idle. Le classiche soluzioni da bar dello sport digitale non servivano a null
@@ -35,11 +36,11 @@ a:</strong> Quando Windows si pianta improvvisamente senza una schermata blu (BS
 
 Prima di aprire gli strumenti di diagnostica, facciamo chiarezza su cosa scatena solitamente questi fastidiosi freeze totali nei computer moderni:
 
-## 1. Gestione energetica aggressiva (C-states): I processori moderni cambiano stato di frequenza e voltaggio in millisecondi. A volte, i profili di risparmio energetico di Windows 11 spingono la CPU a un livello di idle troppo basso da cui il processore non riesce a risvegliarsi, causando il blocco totale.
+1. Gestione energetica aggressiva (C-states): I processori moderni cambiano stato di frequenza e voltaggio in millisecondi. A volte, i profili di risparmio energetico di Windows 11 spingono la CPU a un livello di idle troppo basso da cui il processore non riesce a risvegliarsi, causando il blocco totale.
 
-## 2. Driver grafici o conflitti PCIe: Una cattiva comunicazione tra il kernel di Windows 11 e i driver della scheda video (NVIDIA, AMD o Intel integrata) porta spesso a un congelamento del gestore delle finestre (Desktop Window Manager).
+2. Driver grafici o conflitti PCIe: Una cattiva comunicazione tra il kernel di Windows 11 e i driver della scheda video (NVIDIA, AMD o Intel integrata) porta spesso a un congelamento del gestore delle finestre (Desktop Window Manager).
 
-## 3. Instabilità della memoria RAM (XPO o profili di overclock): Anche se il test di memoria iniziale va a buon fine, lievi variazioni di tensione sui banchi RAM possono corrompere i dati nella cache di sistema, facendo piantare l'intero sistema operativo.
+3. Instabilità della memoria RAM (XPO o profili di overclock): Anche se il test di memoria iniziale va a buon fine, lievi variazioni di tensione sui banchi RAM possono corrompere i dati nella cache di sistema, facendo piantare l'intero sistema operativo.
 
 ---
 
@@ -70,12 +71,12 @@ Cerca eventi con origini sospette come:
 
 Una volta individuato il driver o il componente problematico grazie al registro, passiamo alle contromisure pratiche.
 
-## 1. Aggiornamento o rollback dei driver:- Clicca col tasto destro sul pulsante Start e apriGestione dispositivi.
+1. Aggiornamento o rollback dei driver:- Clicca col tasto destro sul pulsante Start e apriGestione dispositivi.
 
    - Se il Visualizzatore Eventi ti ha segnalato un errore legato alla scheda di rete, al controller disco o alla GPU, espandi la categoria corrispondente.
    - Clicca col tasto destro sul dispositivo, seleziona Proprietà, vai sulla schedaDrivere verifica se il pulsanteRipristina driver è attivo. Se hai aggiornato di recente e sono iniziati i blocchi, usalo subito.
 
-## 2. Disattivare l'Avvio Rapido (Fast Startup):
+2. Disattivare l'Avvio Rapido (Fast Startup):
 
    Spesso l'Avvio Rapido di Windows 11 mantiene in memoria uno stato corrotto del kernel tra un riavvio e l'altro. 
    - Apri il Pannello di controllo (puoi cercarlo nella barra di ricerca).

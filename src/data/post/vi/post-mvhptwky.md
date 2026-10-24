@@ -13,6 +13,7 @@ theme: "Mint Fresh Engineering"
 
 
 
+
 Đồng hồ góc màn hình nhảy đúng 15:45, chỉ còn 15 phút nữa là đến hạn chót nộp bản báo cáo tài chính tháng cho sếp tổng tại văn phòng trung tâm TP.HCM. Tay trái tôi bấm cuống cuồng, tay phải nhấp chuột phải vào tệp Excel chính để đổi tên và nén file gửi đi. Thế nhưng, đập vào mắt tôi lại là cái giao diện menu chuột phải tối giản mới tinh của Windows 11. Muốn nén file, tôi lại phải bấm thêm một nhịp "Show more options" (Hiển thị thêm tùy chọn) vô duyên vô phạt. Trong lúc hoảng loạn, cái click chuột chậm chạp ấy làm tôi trễ mất 3 giây, tim đập chân lạnh vì sợ treo cả hệ thống.
 
 Chuyện quái quỷ gì đang diễn ra với cái giao diện Windows 11 này vậy? Tại sao một thao tác vốn quen thuộc từ thời Windows 7, Windows 10 bỗng dưng bị "cách tân" thành một thảm họa thao tác cho dân văn phòng?
@@ -25,11 +26,11 @@ Chuyện quái quỷ gì đang diễn ra với cái giao diện Windows 11 này 
 
 Trước khi tìm cách bẻ khóa, chúng ta cần hiểu tại sao Microsoft lại ép người dùng phải dùng cái menu "cụt lủn" đó. Dưới đây là 3 nguyên nhân chính:
 
-## 1. Thay đổi kiến trúc lập trình: Microsoft muốn tách biệt các ứng dụng hiện đại (UWP) khỏi các phần mềm truyền thống (Win32) để tăng độ bảo mật và giảm tình trạng treo máy do các phím tắt của bên thứ ba chèn vào menu chuột phải.
+1. Thay đổi kiến trúc lập trình: Microsoft muốn tách biệt các ứng dụng hiện đại (UWP) khỏi các phần mềm truyền thống (Win32) để tăng độ bảo mật và giảm tình trạng treo máy do các phím tắt của bên thứ ba chèn vào menu chuột phải.
 
-## 2. Ưu tiên thiết bị di động và cảm ứng: Giao diện mới có khoảng cách giữa các dòng rộng hơn, các icon được gom gọn để người dùng bấm bằng ngón tay dễ dàng hơn trên các dòng máy tính bảng lai (Surface).
+2. Ưu tiên thiết bị di động và cảm ứng: Giao diện mới có khoảng cách giữa các dòng rộng hơn, các icon được gom gọn để người dùng bấm bằng ngón tay dễ dàng hơn trên các dòng máy tính bảng lai (Surface).
 
-## 3. Thiếu tính linh hoạt ban đầu: Ở các phiên bản Windows 11 đầu tiên, Microsoft không cung cấp sẵn nút chuyển đổi trực quan trong Cài đặt (Settings), buộc người dùng phải can thiệp sâu vào hệ thống.
+3. Thiếu tính linh hoạt ban đầu: Ở các phiên bản Windows 11 đầu tiên, Microsoft không cung cấp sẵn nút chuyển đổi trực quan trong Cài đặt (Settings), buộc người dùng phải can thiệp sâu vào hệ thống.
 
 Sau sự cố suýt trễ deadline chiều hôm đó, tôi đã ngồi lại nghiên cứu và tìm ra cách xử lý triệt để vấn đề này. Dưới đây là giải pháp nhanh gọn nhất dành cho anh em làm văn phòng.
 
@@ -55,11 +56,11 @@ Ngay sau khi thông báo `The operation completed successfully` hiện lên, l�
 ### Bước 3: Khởi động lại tiến trình Explorer (File Explorer)
 Để hệ thống cập nhật giao diện mới mà không cần khởi động lại toàn bộ máy tính (tránh làm mất các file đang soạn thảo), bạn làm như sau:
 
-## 1. Nhấn tổ hợp phím Ctrl + Shift + Escđể mởTask Manager.
+1. Nhấn tổ hợp phím Ctrl + Shift + Escđể mởTask Manager.
 
-## 2. Tại thẻ Processes(Tiến trình), tìm đến mụcWindows Explorer (có biểu tượng thư mục màu vàng).
+2. Tại thẻ Processes(Tiến trình), tìm đến mụcWindows Explorer (có biểu tượng thư mục màu vàng).
 
-## 3. Nhấp chuột phải vào Windows Explorervà chọnRestart (Khởi động lại).
+3. Nhấp chuột phải vào Windows Explorervà chọnRestart (Khởi động lại).
 
 Màn hình và thanh Taskbar sẽ chớp nhẹ một cái trong vòng 1-2 giây. Bây giờ, hãy thử nhấp chuột phải bất kỳ vào một file hay màn hình nền xem kết quả. Menu cổ điển toàn diện với đầy đủ các dòng lệnh quen thuộc đã trở lại!
 
@@ -80,13 +81,13 @@ Việc can thiệp vào Registry tuy nhỏ nhưng bạn cần lưu ý một số
 
 ## Các câu hỏi thường gặp (FAQ)
 
-### 1. Thủ thuật này có làm mất bảo hành hay gây lỗi hệ thống Windows 11 không?
+1. Thủ thuật này có làm mất bảo hành hay gây lỗi hệ thống Windows 11 không?
 Hoàn toàn không. Đây chỉ là thao tác kích hoạt lại một lớp giao diện (GUID) cũ vẫn được Microsoft ngầm tích hợp sẵn bên trong nhân hệ thống Windows 11 để phục vụ các lập trình viên. Nó không làm tổn hại đến phần cứng hay gây mất dữ liệu của bạn.
 
 ![Tech Troubleshooting Guide](/images/tech-photo/system%20(7).png)
 
-### 2. Sau khi cập nhật (Update) lớn cho Windows 11, menu này có bị mất không?
+2. Sau khi cập nhật (Update) lớn cho Windows 11, menu này có bị mất không?
 Có khả năng. Đôi khi các bản cập nhật tính năng lớn (Major Updates) từ Microsoft sẽ khôi phục lại cài đặt gốc của hệ thống. Nếu thấy menu mới xuất hiện trở lại, bạn chỉ cần lặp lại đúng 3 bước chạy lệnh Terminal ở trên là xong.
 
-### 3. Tôi có cần quyền quản trị viên (Administrator) để thực hiện không?
+3. Tôi có cần quyền quản trị viên (Administrator) để thực hiện không?
 Không bắt buộc đối với phương án dùng lệnh `HKCU` (HKEY_CURRENT_USER) phía trên, vì nó chỉ tác động lên tài khoản cá nhân đang đăng nhập. Do đó, ngay cả khi bạn dùng máy tính công ty không có quyền Admin cấp cao, bạn vẫn có thể tự thực hiện được để tối ưu hóa công việc hàng ngày của mình.

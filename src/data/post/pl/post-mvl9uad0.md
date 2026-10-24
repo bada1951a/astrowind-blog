@@ -13,6 +13,7 @@ theme: "Bronze Artisan Workshop"
 
 
 
+
 Wchodzę do biura w nowoczesnym centrum biznesowym przy ulicy Domaniewskiej, trzymając w ręku gorącą kawę i szykując się na spokojny poranek. Dzisiejszy poranek powitał mnie jednak nietypowym incydentem: u jednego z kluczowych analityków finansowych komputer odmówił posłuszeństwa dokładnie po tym, jak zakończyła się instalacja ubiegłorocznej, dużej kumulatywnej aktualizacji bezpieczeństwa systemu Windows. Zrobił pierwszy rozruch po nocnym łataniu systemu, a kiedy pracownik próbował go normalnie wyłączyć, wentylator nadal szumiał, diody świeciły, a ekran gasł, lecz jednostka centralna twardo odmawiała całkowitego odcięcia zasilania. Trzeba było uciekać się do awaryjnego przytrzymywania przycisku power, co w świecie stabilnych stacji roboczych jest zawsze bolesnym kompromisem.
 
 Jako inżynier wsparcia IT od razu wiedziałem, z czym mamy do czynienia. Nowe aktualizacje systemowe potrafią mocno namieszać w domyślnych planach zasilania i sterownikach płyty głównej.

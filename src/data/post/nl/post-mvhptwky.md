@@ -13,6 +13,7 @@ theme: "Forest Emerald Bio"
 
 
 
+
 Het is kwart voor negen 's ochtends in een glazen kantoorpand midden op de Zuidas in Amsterdam. Over vijftien minuten start de cruciale kwartaalpresentatie voor een grote klant, en mijn collega Jeroen staat lijkbleek achter zijn laptop. Hij probeert snel een zwaar logbestand te comprimeren en naar de map van de directeur te slepen, maar hij loopt vast. Door de nieuwe interface van Windows 11 moet hij telkens op "Meer opties weergeven" klikken om bij zijn vertrouwde WinRAR-menu te komen. Bij elke klik verspeelt hij kostbare seconden, de spanning stijgt en de frustratie spat ervan af. Een acute computerstoring tijdens de piekuren, precies wat je als IT-systeembeheerder niet kunt gebruiken.
 
 Dit scenario is herkenbaar voor menig kantoormedewerker sinds de introductie van Windows 11. Microsoft vond het nodig om het rechtermuisknop contextmenu te moderniseren en te verbergen achter een extra klik. Hartstikke mooi voor de minimalistische thuisgebruiker, maar rampzalig voor professionals die blind willen vertrouwen op hun vertrouwde tools zoals 7-Zip, Notepad++ of specifieke ERP-snelkoppelingen.
@@ -27,11 +28,11 @@ Dit scenario is herkenbaar voor menig kantoormedewerker sinds de introductie van
 
 Als hardware- en systeembeheerder zie ik dit soort veranderingen vaak met gemengde gevoelens aan. De root cause achter dit gedoe laat zich opsplitsen in drie technische factoren:
 
-## 1. Geheugen- en Resourcebeheer: In oudere Windows-versies laadde het contextmenu alle shell-extensies van derden (zoals Dropbox, WinRAR en virusscanners) direct in het geheugen zodra je rechtsklikte. Dat zorgde soms voor trage reacties of vastlopers van de Windows Verkenner (explorer.exe).
+1. Geheugen- en Resourcebeheer: In oudere Windows-versies laadde het contextmenu alle shell-extensies van derden (zoals Dropbox, WinRAR en virusscanners) direct in het geheugen zodra je rechtsklikte. Dat zorgde soms voor trage reacties of vastlopers van de Windows Verkenner (explorer.exe).
 
-## 2. Modernisering van de User Experience (UX): Microsoft wil af van de rommelige menus waarin decennia aan oude software zich heeft genesteld. Het nieuwe menu toont alleen de meest gebruikte acties zoals Kopiëren, Plakken, Hernoemen en Verwijderen.
+2. Modernisering van de User Experience (UX): Microsoft wil af van de rommelige menus waarin decennia aan oude software zich heeft genesteld. Het nieuwe menu toont alleen de meest gebruikte acties zoals Kopiëren, Plakken, Hernoemen en Verwijderen.
 
-## 3. Beveiliging en Isolatie: Door extensies te weren uit het hoofdmenu en ze te verbergen achter de "Meer opties weergeven"-laag, probeert Microsoft het systeem stabieler te houden tegen slecht geschreven software van externe leveranciers.
+3. Beveiliging en Isolatie: Door extensies te weren uit het hoofdmenu en ze te verbergen achter de "Meer opties weergeven"-laag, probeert Microsoft het systeem stabieler te houden tegen slecht geschreven software van externe leveranciers.
 
 ## Zo Haal Je Het Klassieke Menu Direct Terug (Stappenplan)
 
@@ -50,34 +51,34 @@ In het Register-venster zie je links een boomstructuur. Klik jezelf door naar de
 
 ### Stap 3: Maak de benodigde sleutel aan
 
-## 1. Klik met de rechtermuisknop op de map CLSID, kiesNieuwen daarnaSleutel.
+1. Klik met de rechtermuisknop op de map CLSID, kiesNieuwen daarnaSleutel.
 
-## 2. Geef deze nieuwe sleutel exact de volgende naam (inclusiefaccolades):
+2. Geef deze nieuwe sleutel exact de volgende naam (inclusiefaccolades):
 
    `{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}`
 
-## 3. Klik met de rechtermuisknop op de zojuist aangemaakte sleutel (`{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}`), kies weer Nieuwen nuSleutel.
+3. Klik met de rechtermuisknop op de zojuist aangemaakte sleutel (`{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}`), kies weer Nieuwen nuSleutel.
 
-## 4. Noem deze tweede sleutel:
+4. Noem deze tweede sleutel:
 
    `InprocServer32`
 
 ### Stap 4: Maak de sleutel leeg en sla op
 
-## 1. Klik op de map `InprocServer32` die je net hebt gemaakt.
+1. Klik op de map `InprocServer32` die je net hebt gemaakt.
 
-## 2. Dubbelklik rechts op de waarde (Standaard).
+2. Dubbelklik rechts op de waarde (Standaard).
 
-## 3. Laat het veld "Waardegegevens" helemaal leegen klik opOK. (De gegevens moeten op *(waarde is niet set)* komen te staan).
+3. Laat het veld "Waardegegevens" helemaal leegen klik opOK. (De gegevens moeten op *(waarde is niet set)* komen te staan).
 
 ### Stap 5: Start de Windows Verkenner opnieuw
 Om de wijziging direct door te voeren zonder dat je je hele computer hoeft te herstarten, gebruiken we Taakbeheer:
 
-## 1. Druk op Ctrl + Shift + EscomTaakbeheer te openen.
+1. Druk op Ctrl + Shift + EscomTaakbeheer te openen.
 
-## 2. Zoek in de lijst met processen naar Windows Verkenner (of *explorer.exe*).
+2. Zoek in de lijst met processen naar Windows Verkenner (of *explorer.exe*).
 
-## 3. Klik erop met je rechtermuisknop en kies Taak opnieuw starten.
+3. Klik erop met je rechtermuisknop en kies Taak opnieuw starten.
 
 Je scherm flitst heel even weg en komt direct weer terug. Als het goed is, zie je nu meteen het vertrouwde klassieke rechtermuisknop menu zodra je ergens op je bureaublad of in een map klikt!
 
@@ -87,10 +88,10 @@ Je scherm flitst heel even weg en komt direct weer terug. Als het goed is, zie j
 
 ## Veelgestelde Vragen (FAQ)
 
-## 1. Verdwijnt deze instelling weer na een grote Windows 11 update? Soms wel. Microsoft brengt regelmatig cumulatieve updates uit (zoals de jaarlijkse feature updates) waarin standaardinstellingen soms worden gereset. Mocht het klassieke menu na een update ineens verdwenen zijn, dan herhaal je simpelweg de stappen uit dit artikel.
+1. Verdwijnt deze instelling weer na een grote Windows 11 update? Soms wel. Microsoft brengt regelmatig cumulatieve updates uit (zoals de jaarlijkse feature updates) waarin standaardinstellingen soms worden gereset. Mocht het klassieke menu na een update ineens verdwenen zijn, dan herhaal je simpelweg de stappen uit dit artikel.
 
-## 2. Kan ik deze wijziging ook ongedaan maken als het toch niet bevalt? Jazeker. Je opent opnieuw de Register-editor via `regedit`, navigeert naar dezelfde sleutel (`HKEY_CURRENT_USER\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}`) en verwijdert de hele map `{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}`. Na een herstart van Taakbeheer staat alles weer netjes op de standaard Microsoft-instelling.
+2. Kan ik deze wijziging ook ongedaan maken als het toch niet bevalt? Jazeker. Je opent opnieuw de Register-editor via `regedit`, navigeert naar dezelfde sleutel (`HKEY_CURRENT_USER\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}`) en verwijdert de hele map `{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}`. Na een herstart van Taakbeheer staat alles weer netjes op de standaard Microsoft-instelling.
 
-## 3. Werkt deze methode ook op Windows 10?
+3. Werkt deze methode ook op Windows 10?
 
 Op Windows 10 hoef je dit niet te doen, omdat Windows 10 standaard al gebruikmaakt van het klassieke contextmenu. Deze tweak is exclusief ontworpen voor het oplossen van dit specifieke ergonomische obstakel in Windows 11.

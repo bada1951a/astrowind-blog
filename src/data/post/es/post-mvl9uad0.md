@@ -13,6 +13,7 @@ theme: "Rosewood Hardware Guide"
 
 
 
+
 Eran justo las cuatro y media de la tarde en pleno distrito financiero de Madrid. Tenía la responsabilidad de subir de urgencia el paquete completo con los archivos de la nueva normativa y los anexos explicativos al tablón de la intranet corporativa, un portal por el que pasan a diario cientos de empleados de toda la compañía. Todo iba sobre ruedas hasta que, al intentar cerrar la jornada y reiniciar la torre principal del puesto de trabajo para aplicar los últimos parches de seguridad, el ordenador decidió entrar en una especie de limbo digital. Le di a apagar en el menú de Windows, la pantalla se quedó en negro y los ventiladores seguían zumbando a toda pastilla, con las luces de la placa base parpadeando obstinadamente. Pasaron diez, quince minutos y el equipo seguía sin apagarse del todo. Forzar el apagado manteniendo pulsado el botón físico de la torre a la brava no era una opción sensata con la subida de datos a medio sincronizar en la red interna. Sudor frío en la frente, el servidor web interno echando humo y yo atrapado porque el sistema operativo no terminaba de cerrar los procesos de kernel.
 
 Si te ha pasado esto alguna vez, sabrás perfectamente la frustración que se siente. No es una avería de hardware catastrófica ni se ha quemado la fuente de alimentación; el verdadero culpable detrás de este comportamiento tan errático suele ser una función nativa de Windows llamada Inicio Rápido o Fast Startup. Aunque suena genial sobre el papel para acelerar los tiempos de arranque, en la práctica se convierte en un dolor de cabeza monumental cuando se acumulan errores temporales en el archivo de hibernación o algún controlador de la placa base no interpreta bien la orden de apagado profundo.
@@ -58,19 +59,13 @@ Ahora busca la casilla situada en la sección de configuración de apagado que d
 
 Preguntas frecuentes sobre este problema de energía:
 
-**
-
 **Q1.** ¿Perderé velocidad al arrancar el ordenador si desactivo el Inicio Rápido?
 
 A1. En la gran mayoría de los equipos actuales que montan unidades de almacenamiento SSD de estado sólido, la diferencia de tiempo al encender es de apenas un par de segundos. El beneficio de ganar un apagado limpio y evitar bloqueos constantes compensa con creces esa mínima variación.
 
-**
-
 **Q2.** He desactivado el Inicio Rápido pero el ordenador sigue sin apagarse, ¿qué más puedo comprobar?
 
 A2. Si el problema persiste, el siguiente paso lógico es actualizar el BIOS o UEFI de tu placa base y revisar los controladores del chipset desde la página web oficial del fabricante (ASUS, MSI, Gigabyte, etc.). También puedes probar a desactivar temporalmente el "Inicio selectivo" en la herramienta msconfig para descartar conflictos con software de terceros en segundo plano.
-
-**
 
 **Q3.** ¿Esta solución sirve tanto para Windows 10 como para Windows 11?
 

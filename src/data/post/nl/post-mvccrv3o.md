@@ -13,6 +13,7 @@ theme: "Cobalt Enterprise Lab"
 
 
 
+
 Het was dinsdagochtend om 09:15 uur op onze tech-incubator nabij de Amsterdamse Zuidas. Terwijl we de laatste hand legden aan een cruciale demo voor een fintech-partner, sloeg het lot toe: een angstaanjagend blauw scherm, de beruchte STOP: 0x0000000a (IRQL_NOT_LESS_OR_EQUAL). Geen tijd voor paniek, want de directeur stond binnen een uur op de stoep voor een live evaluatie van onze systemen. Dit soort acute prestatieproblemen vragen om een directe, no-nonsense aanpak.
 
 In deze gids duiken we diep in de werkelijke oorzaken van deze specifieke stop-code en lopen we door een beproefd stappenplan om je werkstation of server direct weer stabiel te krijgen.
@@ -29,11 +30,11 @@ a. Dit duidt er bijna altijd op dat een kernel-modus proces of driver probeerde 
 <strong>Expert Inzicht:</strong> In 90% van de gevallen op moderne Windows-installaties wordt dit veroorzaakt door een corrupte driver na een automatische update, of een fysiek/logisch geheugenprobleem in je RAM-sticks.
 </div>
 
-## 1. Defecte of incompatible stuurprogramma's (Drivers): Vaak een netwerkkaart- of GPU-driver die na een update een ongeldige geheugenpointer gebruikt.
+1. Defecte of incompatible stuurprogramma's (Drivers): Vaak een netwerkkaart- of GPU-driver die na een update een ongeldige geheugenpointer gebruikt.
 
-## 2. Geheugencorruptie (RAM): Een fysiek defecte RAM-module of instabiele XMP/DOCP-profielen in het BIOS.
+2. Geheugencorruptie (RAM): Een fysiek defecte RAM-module of instabiele XMP/DOCP-profielen in het BIOS.
 
-## 3. Softwareconflicten met beveiligingssoftware: Kernel-level anti-virus of monitoringstools die elkaar bijten tijdens het opstarten.
+3. Softwareconflicten met beveiligingssoftware: Kernel-level anti-virus of monitoringstools die elkaar bijten tijdens het opstarten.
 
 ---
 
@@ -53,13 +54,13 @@ Omdat de foutcode vaak gelinkt is aan geheugenadressering, beginnen we bij de ba
 
 Als je net een nieuwe update hebt geïnstalleerd voordat het blauwe scherm verscheen, moeten we die driver direct terugdraaien.
 
-## 1. Klik met je rechtermuisknop op de Start-knop en open Apparaatbeheer (*Device Manager*).
+1. Klik met je rechtermuisknop op de Start-knop en open Apparaatbeheer (*Device Manager*).
 
-## 2. Zoek naar het recent bijgewerkte apparaat (meestal onder Netwerkadapters, Beeldschermadapters of Besturingssystemen).
+2. Zoek naar het recent bijgewerkte apparaat (meestal onder Netwerkadapters, Beeldschermadapters of Besturingssystemen).
 
-## 3. Klik met rechts op het apparaat, kies Eigenschappenen ga naar het tabbladStuurprogramma (*Driver*).
+3. Klik met rechts op het apparaat, kies Eigenschappenen ga naar het tabbladStuurprogramma (*Driver*).
 
-## 4. Klik op de knop Vorig stuurprogramma (*Roll Back Driver*) als deze actief is. 
+4. Klik op de knop Vorig stuurprogramma (*Roll Back Driver*) als deze actief is. 
 
 <div style="border-left: 4px solid #1e40af; padding: 12px 16px; margin: 20px 0; background-color: rgba(30,64,175,0.05); border-radius: 4px; color: #111827;">
 <strong>Pro-Tip:</strong> Kun je Windows niet meer normaal opstarten? Start dan op in de Veilige Modus (Safe Mode) door tijdens het booten herhaaldelijk op F8 te drukken of via de geavanceerde opstartopties, en voer dan bovenstaande stappen uit.
@@ -89,12 +90,12 @@ Voorkomen is beter dan genezen, zeker als je midden in een project zit.
 
 ## Veelgestelde Vragen (FAQ)
 
-## 1. Kan ik mijn computer nog gebruiken als deze fout af en toe optreedt? Nee, negeer dit niet. Een 0x0000000a fout treedt op in de kernel-modus, wat betekent dat het hele besturingssysteem crasht om datacorruptie op de harde schijf te voorkomen. Als dit vaker gebeurt, loop je risico op permanent file-verlies.
+1. Kan ik mijn computer nog gebruiken als deze fout af en toe optreedt? Nee, negeer dit niet. Een 0x0000000a fout treedt op in de kernel-modus, wat betekent dat het hele besturingssysteem crasht om datacorruptie op de harde schijf te voorkomen. Als dit vaker gebeurt, loop je risico op permanent file-verlies.
 
-## 2. Hoe weet ik exact welke driver dit veroorzaakt heeft?
+2. Hoe weet ik exact welke driver dit veroorzaakt heeft?
 
 Hiervoor kun je het gratis programma *BlueScreenView* gebruiken, of de geheugendump (memory dump) analyseren via *WinDbg* (Windows Debugger). Zoek naar het bestand dat vermeld staat bij de foutmelding (bijv. `ntoskrnl.exe` of een specifieke `.sys` file).
 
-## 3. Helpt een schone Windows-installatie altijd?
+3. Helpt een schone Windows-installatie altijd?
 
 Ja, als het een hardnekkig software- of driverconflict betreft dat niet te traceren is, lost een schone installatie het in 99% van de gevallen op. Blijft het probleem daarna aanhouden? Dan is je RAM-latje of moederbord fysiek defect.

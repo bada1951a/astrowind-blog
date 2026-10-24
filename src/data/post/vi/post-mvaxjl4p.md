@@ -13,6 +13,7 @@ theme: "Dracula Purple Dev"
 
 
 
+
 Sáng thứ Hai đầu tuần tại văn phòng ở Duy Tân (Cầu Giấy, Hà Nội), sếp lớn gọi gấp vào phòng họp để chuẩn bị màn thuyết trình cho đối tác quan trọng. Tôi vừa mở chiếc laptop Windows 10 quen thuộc lên thì hỡi ôi, vòng tròn xoay quay vòng vòng, màn hình đứng im phăng phắc gần 5 phút đồng hồ. Cả phòng họp nín thở nhìn tôi trong khi thanh Taskbar mãi vẫn chưa load xong các icon ứng dụng. Đổ mồ hôi hột, tôi biết ngay thủ phạm là đám phần mềm "tự sướng" cứ tự động chui lên chiếm hết tài nguyên CPU và RAM ngay từ giây phút bấm nút nguồn.
 
 <div style="border-left: 4px solid #bd93f9; padding: 12px 16px; margin: 20px 0; background-color: rgba(189,147,249,0.1); border-radius: 4px; color: #111827;">
@@ -23,13 +24,13 @@ Sáng thứ Hai đầu tuần tại văn phòng ở Duy Tân (Cầu Giấy, Hà 
 
 Sau nhiều năm hỗ trợ kỹ thuật cho các hệ thống từ văn phòng nhỏ đến doanh nghiệp lớn, tôi đúc rút ra 3 nguyên nhân chính khiến máy tính của bạn biến thành "rùa bò" mỗi khi khởi động:
 
-## 1. Hiệu ứng "Domino" của ứng dụng bên thứ b
+1. Hiệu ứng "Domino" của ứng dụng bên thứ b
 
 a: Mỗi khi bạn cài đặt Zalo, Skype, Discord, Spotify hoặc các trình duyệt, chúng thường lén lút tích chọn mục "Run when computer starts" mà không hỏi ý kiến người dùng.
 
-## 2. Quá tải I/O ổ cứng (Đặc biệt với HDD cũ): Khi bật máy, hàng chục tiến trình cùng lúc lao vào đọc/ghi ổ cứng. Nếu bạn dùng HDD truyền thống, hiện tượng nghẽn cổ chai (bottleneck) là điều hiển nhiên.
+2. Quá tải I/O ổ cứng (Đặc biệt với HDD cũ): Khi bật máy, hàng chục tiến trình cùng lúc lao vào đọc/ghi ổ cứng. Nếu bạn dùng HDD truyền thống, hiện tượng nghẽn cổ chai (bottleneck) là điều hiển nhiên.
 
-## 3. Tiến trình ngầm chiếm dụng RAM: RAM bị ngốn ngay từ giây đầu tiên, khiến Windows không đủ tài nguyên để load các dịch vụ cốt lõi (System Services).
+3. Tiến trình ngầm chiếm dụng RAM: RAM bị ngốn ngay từ giây đầu tiên, khiến Windows không đủ tài nguyên để load các dịch vụ cốt lõi (System Services).
 
 ---
 
@@ -66,13 +67,13 @@ Việc tinh chỉnh Startup không làm ảnh hưởng đến dữ liệu hay t�
 
 ## Câu hỏi thường gặp (FAQ)
 
-### 1. Nếu tôi vô tình Disable nhầm ứng dụng quan trọng thì có sao không?
+1. Nếu tôi vô tình Disable nhầm ứng dụng quan trọng thì có sao không?
 Hoàn toàn không có gì nguy hiểm. Hệ thống sẽ không bị hỏng. Bạn chỉ cần mở lại Task Manager theo đúng các bước trên, tìm đến ứng dụng đó, click chuột phải và chọn Enable là xong.
 
 ![Tech & IT Solution Guide](https://picsum.photos/seed/computer289/1000/550)
 
-### 2. Tại sao tôi đã Disable ứng dụng rồi mà nó vẫn tự bật lên?
+2. Tại sao tôi đã Disable ứng dụng rồi mà nó vẫn tự bật lên?
 Một số ứng dụng cứng đầu (đặc biệt là các phần mềm chat hoặc tool chỉnh sửa ảnh) có cài đặt ẩn bên trong tùy chọn (Settings) riêng của chúng. Bạn cần mở ứng dụng đó lên, vào mục Cài đặt và tìm dòng "Khởi động cùng Windows" để tắt hẳn đi.
 
-### 3. Có nên dùng phần mềm bên thứ ba như CCleaner để tối ưu Startup không?
+3. Có nên dùng phần mềm bên thứ ba như CCleaner để tối ưu Startup không?
 Theo quan điểm thực chiến của tôi là Không nên. Các công cụ tối ưu bên thứ ba đôi khi dọn dẹp quá đà, làm xáo trộn Registry hoặc cài thêm quảng cáo rác (bloatware). Công cụ Task Manager sẵn có trên Windows 10 là quá đủ, an toàn và tối ưu nhất cho người dùng phổ thông.

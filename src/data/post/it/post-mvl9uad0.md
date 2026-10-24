@@ -13,6 +13,7 @@ theme: "Pastel Lavender Tech"
 
 
 
+
 L'altra mattina mi trovavo nel cuore del Centro Direzionale di Milano, esattamente nella sala riunioni principale di un nostro cliente importante. Eravamo a pochi minuti dall'inizio della demo ufficiale: i dirigenti erano seduti intorno al tavolo e i responsabili di reparto erano pronti a osservare in tempo reale la condivisione dello schermo del mio sistema per testare la nuova configurazione. Ho chiuso tutte le finestre di lavoro, ho cliccato su Arresta il sistema dal menu Start e ho scollegato i cavi di rete diBackup, convinto di poter spostare la postazione. Invece, la brutta sorpresa: gli schermi si erano spenti, ma le ventole del case continuavano a girare a pieno regime, i LED della scheda madre erano accesi e il sistema non dava segni di voler tagliare completamente l'alimentazione. Sudore freddo. Riavviare tenendo premuto il tasto di accensione avrebbe significato rischiare la corruzione dei database locali aperti poco prima. Dovevo trovare una soluzione immediata senza perdere la faccia davanti ai manager milanesi.
 
 <div style="border-left: 4px solid #7c3aed; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
@@ -23,11 +24,11 @@ Nota del sistemista: Questo fastidioso difetto in cui Windows sembra spegnersi m
 
 Perché succede questo? Spesso ci si perde a cercare guasti sulla scheda madre o a testare l'alimentatore, ma la radice del problema è quasi sempre software e legata alla gestione energetica del sistema operativo. Ecco i tre motivi principali per cui il computer si rifiuta di spegnersi del tutto:
 
-## 1. La funzione di Avvio Rapido (Fast Startup) attiva in Windows mantiene inalterato un file di ibernazione del kernel. Quando dai il comando di spegnimento, il sistema non fa un boot pulito, ma iberna i driver di basso livello. Se un driver della scheda di rete o del chipset non risponde correttamente al segnale di chiusura, il processo si blocca a metà e il PC resta in un limbo energetico.
+1. La funzione di Avvio Rapido (Fast Startup) attiva in Windows mantiene inalterato un file di ibernazione del kernel. Quando dai il comando di spegnimento, il sistema non fa un boot pulito, ma iberna i driver di basso livello. Se un driver della scheda di rete o del chipset non risponde correttamente al segnale di chiusura, il processo si blocca a metà e il PC resta in un limbo energetico.
 
-## 2. Problemi di compatibilità con i driver Intel Management Engine o dei controller USB (xhci). Spesso, dopo un aggiornamento cumulativo di Windows, questi driver perdono la corretta sincronizzazione con gli stati di risparmio energetico S5 (spegnimento completo).
+2. Problemi di compatibilità con i driver Intel Management Engine o dei controller USB (xhci). Spesso, dopo un aggiornamento cumulativo di Windows, questi driver perdono la corretta sincronizzazione con gli stati di risparmio energetico S5 (spegnimento completo).
 
-## 3. Opzioni di Risparmio Energia avanzate configurate male nel BIOS o nel Pannello di Controllo, che impediscono alla scheda madre di ricevere l'impulso finale di interruzione della corrente sui rail a 5V e 12V.
+3. Opzioni di Risparmio Energia avanzate configurate male nel BIOS o nel Pannello di Controllo, che impediscono alla scheda madre di ricevere l'impulso finale di interruzione della corrente sui rail a 5V e 12V.
 
 La buona notizia è che non serve smontare il PC o perdere ore nel registro di sistema. La soluzione definitiva richiede pochissimi passaggi mirati. Vediamo come procedere passo dopo passo per riprendere il controllo del computer.
 

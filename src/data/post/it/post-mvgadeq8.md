@@ -13,6 +13,7 @@ theme: "Retro Monokai"
 
 
 
+
 Erano le 17:45 in un frenetico lunedì pomeriggio in un ufficio del Centro direzionale di Milano. Mancavano quindici minuti alla scadenza tassativa per l'invio del report trimestrale alla direzione centrale, e la mia postazione principale aveva deciso di fare le bizze. Sull'angolo in basso a destra dello schermo, campeggiava fissa l'odiata scritta "Attiva Windows". Fin qui niente di tragico, se non fosse che il software aziendale per la compilazione dei PDF aveva deciso di andare in conflitto con quell'overlay grafico, bloccando l'esportazione del file e coprendo parte dei pulsanti di invio. Il panico totale: il cliente che chiama per sollecitare, il capo che passa dietro la scrivania e il sistema piantato. 
 
 Nei primi minuti di panico totale ho fatto l'errore classico: ho iniziato a cliccare a caso nelle Impostazionidi Windows cercando una scorciatoia rapida, riavviando il servizio di Esplora risorse daGestione attivitàe persino smanettando nelPannello di controllo. Risultato? Dieci minuti buttati nel wc, il report ancora bloccato e quella filigrana trasparente ma fastidiosa sempre lì, pronta a coprire i dati critici della tabella finanziaria che stavo per inviare. 
@@ -23,11 +24,11 @@ Il problema non era solo estetico, ma bloccava letteralmente l'interazione con l
 
 Ecco i 3 motivi tecnici principali per cui questo fastidio visivo si trasforma in un blocco operativo:
 
-## 1. Conflitto di rendering Direct3D: Nelle versioni non attivate, Windows gestisce i livelli grafici della filigrana in sovrimpressione, mandando in tilt l'accelerazione hardware di alcune applicazioni gestionali legacy.
+1. Conflitto di rendering Direct3D: Nelle versioni non attivate, Windows gestisce i livelli grafici della filigrana in sovrimpressione, mandando in tilt l'accelerazione hardware di alcune applicazioni gestionali legacy.
 
-## 2. Coda di stampa e spooler sovraccarichi: Spesso la notifica persistente occupa la memoria video dedicata (VRAM) causando stuttering nei software di produttività pesante.
+2. Coda di stampa e spooler sovraccarichi: Spesso la notifica persistente occupa la memoria video dedicata (VRAM) causando stuttering nei software di produttività pesante.
 
-## 3. Criteri di Group Policy bloccati: Se il PC fa parte di un dominio aziendale disallineato, il sistema tenta continuamente di aggiornare lo stato di attivazione, congelando temporaneamente i thread dell'interfaccia utente.
+3. Criteri di Group Policy bloccati: Se il PC fa parte di un dominio aziendale disallineato, il sistema tenta continuamente di aggiornare lo stato di attivazione, congelando temporaneamente i thread dell'interfaccia utente.
 
 Per evitare di perdere ore dietro a script scaricati da forum sconosciuti che rischiano solo di infettare la macchina con malware, la via più pulita, rapida e sicura passa attraverso il Prompt dei comandi (`cmd`) nativo di Windows, sfruttando una procedura di gestione della licenza pulita o arrestando temporaneamente il processo di notifica senza toccare i file di sistema critici.
 
@@ -40,9 +41,9 @@ a:
 
 ### Procedura passo-passo tramite CMD
 
-## 1. Apri il Prompt dei comandi come Amministratore:Premi il tasto Windows sulla tastiera, digita `cmd`, fai clic con il tasto destro suPrompt dei comandinei risultati della ricerca e selezionaEsegui come amministratore.
+1. Apri il Prompt dei comandi come Amministratore:Premi il tasto Windows sulla tastiera, digita `cmd`, fai clic con il tasto destro suPrompt dei comandinei risultati della ricerca e selezionaEsegui come amministratore.
 
-## 2. Verifica lo stato della licenz
+2. Verifica lo stato della licenz
 
 a:
    Nella finestra nera del terminale, digita il comando di controllo della licenza per identificare il canale di attivazione:
@@ -51,7 +52,7 @@ a:
    ```
    Premi Invio e attendi la finestra di dialogo che conferma lo stato attuale del sistema operativo.
 
-## 3. Arresta temporaneamente il servizio di notific
+3. Arresta temporaneamente il servizio di notific
 
 a:
    Per impedire al sistema di ridisegnare la filigrana sopra le tue finestre di lavoro, puoi reimpostare il periodo di prova o fermare il gestore delle notifiche tramite il comando di gestione script:

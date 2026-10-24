@@ -13,6 +13,7 @@ theme: "Teal Matrix Digital"
 
 
 
+
 Mới sáng thứ Hai đầu tuần, chiếc máy trạm của một đồng nghiệp trong văn phòng công nghệ của tôi tại khu vực Cầu Giấy, Hà Nội bất ngờ lăn đùng ra sập nguồn với màn hình xanh chết chóc (BSOD) quen thuộc nhưng đầy ám ảnh: mã lỗi 0x0000000a (IRQL_NOT_LESS_OR_EQUAL). Đây là ác mộng của bất kỳ kỹ sư hay nhân viên văn phòng nào đang chạy đua với deadline dự án, bởi máy cứ lặp đi lặp lại vòng lặp khởi động rồi lại sập ngay khi vào đến màn hình desktop.
 
 Đừng hoảng loạn cài lại Windows vội. Hãy cùng tôi đi thẳng vào quy trình chẩn đoán và xử lý thực chiến đã được kiểm chứng qua hàng loạt hệ thống tại các văn phòng công nghệ Việt Nam.
@@ -31,11 +32,11 @@ a:</strong> Lỗi 0x0000000a xảy ra khi một tiến trình chế độ kernel
 
 Trước khi chạm tay vào câu lệnh hay tháo ốc máy, chúng ta cần hiểu rõ tại sao hệ thống lại từ chối vận hành:
 
-## 1. Lỗi xung đột Driver phần cứng (Kernel-mode Driver Conflict): Sau khi Windows Update tự động đẩy về một bản driver card màn hình hoặc driver mạng mới, đoạn mã này xung đột trực tiếp với nhân hệ điều hành (kernel), gây ra hiện tượng tràn bộ nhớ hoặc truy cập sai vùng nhớ IRQL.
+1. Lỗi xung đột Driver phần cứng (Kernel-mode Driver Conflict): Sau khi Windows Update tự động đẩy về một bản driver card màn hình hoặc driver mạng mới, đoạn mã này xung đột trực tiếp với nhân hệ điều hành (kernel), gây ra hiện tượng tràn bộ nhớ hoặc truy cập sai vùng nhớ IRQL.
 
-## 2. Phần cứng RAM xuống cấp hoặc lỏng khe cắm: Thanh RAM bị bám bụi, chân đồng oxy hóa, hoặc các chip nhớ bên trong gặp lỗi phân vùng (bad sector trên RAM). Khi hệ điều hành gọi đến vùng nhớ lỗi đó, màn hình xanh xuất hiện lập tức.
+2. Phần cứng RAM xuống cấp hoặc lỏng khe cắm: Thanh RAM bị bám bụi, chân đồng oxy hóa, hoặc các chip nhớ bên trong gặp lỗi phân vùng (bad sector trên RAM). Khi hệ điều hành gọi đến vùng nhớ lỗi đó, màn hình xanh xuất hiện lập tức.
 
-## 3. Ép xung (Overload/Overclock) không ổn định: Cấu hình XMP/DOCP trong BIOS đẩy thanh RAM chạy ở mức xung nhịp và điện áp vượt quá giới hạn chịu đựng thực tế của bo mạch chủ.
+3. Ép xung (Overload/Overclock) không ổn định: Cấu hình XMP/DOCP trong BIOS đẩy thanh RAM chạy ở mức xung nhịp và điện áp vượt quá giới hạn chịu đựng thực tế của bo mạch chủ.
 
 ---
 
