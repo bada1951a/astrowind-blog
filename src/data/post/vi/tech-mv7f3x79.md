@@ -12,6 +12,7 @@ theme: "Cobalt Enterprise Lab"
 
 
 
+
 <div style="border-left: 4px solid #1e40af; padding: 14px 18px; margin: 20px 0; background-color: rgba(30, 64, 175, 0.04); border-radius: 4px;">
   <strong style="color: #1e40af; font-size: 1.05rem;">BÁO CÁO KỸ THUẬT PHÒNG THỬ NGHIỆM QA (ENTERPRISE LAB REPORT)</strong><br>
   <span style="font-size: 0.92rem; color: #334155;">Mã hồ sơ: <code>LAB-DISP-2026-V4</code> | Phân loại: Video Signal Integrity & Driver Stack Failure | Tỉ lệ lỗi ghi nhận trên 450 máy trạm doanh nghiệp: <strong>14.2%</strong> (Dell Latitude 5000/7000 Series, ThinkPad T/P Series, HP EliteBook).</span>
@@ -98,13 +99,13 @@ Việc gỡ driver qua giao diện thông thường của Windows luôn để l�
 
 ## 5. Trong mục Select device type, chọnGPU.
 
-6. Trong mục Select device, chọn hãng sản xuất card màn hình tích hợp trước (Intel hoặc AMD).
+**Q6.** Trong mục Select device, chọn hãng sản xuất card màn hình tích hợp trước (Intel hoặc AMD).
 
-7. Nhấp vào nút Clean and do NOT restart.
+**Q7.** Nhấp vào nút Clean and do NOT restart.
 
-8. Tiếp tục chọn lại mục Select devicesang card rời (NVIDIA/AMD) và bấmClean and restart.
+**Q8.** Tiếp tục chọn lại mục Select devicesang card rời (NVIDIA/AMD) và bấmClean and restart.
 
-9. Sau khi hệ thống khởi động lại, truy cập trang hỗ trợ chính thức của hãng laptop (Dell Service Tag, Lenovo Support, HP Support) để cài đặt đúng gói driver đồ họa đã được OEM chứng thực tính tương thích, tuyệt đối không dùng các công cụ tự động tìm driver bên thứ ba. ```
+**Q9.** Sau khi hệ thống khởi động lại, truy cập trang hỗ trợ chính thức của hãng laptop (Dell Service Tag, Lenovo Support, HP Support) để cài đặt đúng gói driver đồ họa đã được OEM chứng thực tính tương thích, tuyệt đối không dùng các công cụ tự động tìm driver bên thứ ba. ```
 Cấu hình chuẩn luồng cài đặt driver đồ họa laptop:
 [OS Clean Boot] → [Cài đặt Intel/AMD iGPU Driver trước] → [Khởi động lại] → [Cài đặt NVIDIA dGPU Driver sau] → [Khởi động lại]
 ```

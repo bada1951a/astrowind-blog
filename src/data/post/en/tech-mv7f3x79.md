@@ -12,6 +12,7 @@ theme: "Sunset Horizon Coral"
 
 
 
+
 Last Friday at 4:30 PM, right as our deployment sprint was winding down, an engineering lead brought her flagship Dell Precision workstation into my lab. She was running dual external 4K monitors through a Thunderbolt 4 dock. Every twenty seconds, panel two would drop to black, display the dreaded "No Signal" banner, wake up, and drag the primary panel into an agonizing three-second stutter loop. She had already swapped cables three times and rebooted twice.
 
 In production environments, this issue is rarely fried silicon. Nine times out of ten, dual-monitor signal dropouts on modern laptops boil down to a corrupted display pipeline state: botched DisplayPort link training, aggressive Windows Update driver clobbering, or an invalidated EDID cache in the registry. 
@@ -100,7 +101,8 @@ Before touching the drivers, purge the accumulated multi-monitor topology config
 ## 5. Navigate to:
 
    `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\GraphicsDrivers`
-6. Back up your registry first (`File` > `Export`). Then right-click and delete these three subkeys entirely:
+
+**Q6.** Back up your registry first (`File` > `Export`). Then right-click and delete these three subkeys entirely:
    * `Configuration`
    * `Connectivity`
    * `ScaleFactors`
@@ -166,7 +168,7 @@ Now we rebuild the physical display link without triggering an MST sync error.
 
 ## 5. Press `Win + I` to open Settings, go to `System` > `Display` > `Advanced display`.
 
-6. Select each monitor individually from the top drop-down menu and lock down their refresh rates:
+**Q6.** Select each monitor individually from the top drop-down menu and lock down their refresh rates:
    * Disable any Dynamic (Variable) refresh rate settings.
    * Explicitly choose a fixed refresh rate (e.g., straight `60.00 Hz` or `120.00 Hz`). Avoid fractionals like `59.94 Hz` on secondary screens if the primary is running a locked integer clock.
 

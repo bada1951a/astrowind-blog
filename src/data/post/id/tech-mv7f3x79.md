@@ -12,6 +12,7 @@ theme: "Deep Ocean Cobalt"
 
 
 
+
 Sebagai staf infrastruktur IT yang mengelola ratusan workstation di gedung perkantoran multi-tenant, kasus monitor eksternal mendadak menampilkan pesan *"No Signal"* atau berkedip hitam (*flickering*) setiap beberapa detik adalah makanan sehari-hari. Masalah ini kerap memuncak pada Senin pagi, terutama setelah sistem operasi mengunduh pembaruan rutin akhir pekan atau ketika laptop baru saja dilepas-pasang dari docking station Type-C/Thunderbolt. 
 
 Ketika pengguna mendapati layar kedua mereka mati, reaksi pertama biasanya menyalahkan kabel HDMI yang longgar atau menganggap monitor rusak total. Namun, dalam lebih dari 80% kasus yang saya tangani di lapangan, sumber masalah utamanya berakar pada kegagalan komunikasi lapisan perangkat lunak grafis: tumpukan driver (*driver stack*) yang korup, kegagalan negosiasi EDID (*Extended Display Identification Data*), serta konflik manajemen daya antara chip grafis terintegrasi (iGPU) dan grafis diskrit (dGPU).
@@ -104,7 +105,7 @@ a:
 
 ## 5. Jangan khawatir, folder-folder ini aman dihapus karena Windows akan otomatis membuatnya kembali dalam kondisi default (*fresh*) begitu sistem mendeteksi layar aktif.
 
-6. Lakukan *restart* laptop Anda. ```
+**Q6.** Lakukan *restart* laptop Anda. ```
 [GraphicsDrivers Registry Hierarchy]
 └── GraphicsDrivers
     ├── Configuration  ───> [HAPUS UNTUK RESET PROFIL DISPLAY]
@@ -129,9 +130,9 @@ a: *Intel(R) Iris(R) Xe Graphics* atau *AMD Radeon Graphics*), pilih Properties.
 
    * *Perhatian:* Jangan centang opsi *"Attempt to remove the driver for this device"* pada tahap ini.
 
-6. Perluas juga kategori Monitors, klik kanan pada semua entri bertuliskanGeneric PnP Monitor, dan pilihUninstall device.
+**Q6.** Perluas juga kategori Monitors, klik kanan pada semua entri bertuliskanGeneric PnP Monitor, dan pilihUninstall device.
 
-7. Pada menu bar bagian atas Device Manager, klik ikon Scan for hardware changes (ikon komputer dengan kaca pembesar). Layar akan mendeteksi ulang adaptor dan monitor secara otomatis.
+**Q7.** Pada menu bar bagian atas Device Manager, klik ikon Scan for hardware changes (ikon komputer dengan kaca pembesar). Layar akan mendeteksi ulang adaptor dan monitor secara otomatis.
 
 ```
 Device Manager

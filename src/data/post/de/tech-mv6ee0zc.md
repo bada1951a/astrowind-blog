@@ -12,6 +12,7 @@ theme: "Midnight Navy Royal"
 
 
 
+
 Es ist 02:47 Uhr während einer regulären Wartungsnacht im RZ-Bereich Frankfurt-Nord. Ich sitze an der primären Konsole für die Core-Switches, will per SSH ein Konfigurations-Update aufspielen – und das Terminal verweigert den Dienst. Fehlermeldung: *Authentication failure*. Nach drei Versuchen schaue ich mir die Eingabe im Klartext-Notizblock an: Statt `passwort` steht dort `passsswwort`. Meine treue mechanische Tastatur mit taktilen Cherry-MX-Switches hat beschlossen, massives Key Chattering (Tastenprellen) auf der Taste `S` und zeitgleich sporadische Kontaktabbrüche bei der Leertaste an den Tag zu legen.
 
 Im Sysadmin-Alltag ist so etwas kein bloßes Ärgernis, sondern ein echtes Betriebsrisiko. Wenn ein `rm -rf /var/log/app/*` durch ein verschlucktes Zeichen oder doppelten Anschlag im falschen Verzeichnis landet, brennt der Baum. Wer in solchen Situationen nicht sofort 150 Euro für ein neues Board ausgeben will, greift zur systematischen Instandsetzung. In diesem Logbuch dokumentiere ich den exakten Ablauf, wie wir Tastenaussetzer und Chattering physikalisch wie logisch analysieren und mechanische Schalter fachgerecht revitalisieren.
@@ -91,9 +92,9 @@ Bevor wir zur Flasche mit dem Kontaktreiniger greifen, stellen wir sicher, dass 
 
 ## 5. Applikation:Geben Sieeinen einzigen, ultrakurzen Sprühstoß (weniger als eine halbe Sekunde) in den Schalter. Der Schalter soll nicht "ertrinken".
 
-6. Einarbeiten: Betätigen Sie den Switch sofort danach 50 bis 80 Mal schnell hintereinander mit dem Finger. Dadurch reibt sich der Schmutz von den Kontaktzungen ab, und das Lösungsmittel verteilt sich über die gesamte Oberfläche.
+**Q6.** Einarbeiten: Betätigen Sie den Switch sofort danach 50 bis 80 Mal schnell hintereinander mit dem Finger. Dadurch reibt sich der Schmutz von den Kontaktzungen ab, und das Lösungsmittel verteilt sich über die gesamte Oberfläche.
 
-7. Verdunstungszeit einhalten: Warten Sie mindestens 20 bis 30 Minuten, bis das Lösungsmittel restlos verflüchtigt ist. Nutzen Sie ggf. Druckluftspray aus der Dose, um Reste herauszublasen.
+**Q7.** Verdunstungszeit einhalten: Warten Sie mindestens 20 bis 30 Minuten, bis das Lösungsmittel restlos verflüchtigt ist. Nutzen Sie ggf. Druckluftspray aus der Dose, um Reste herauszublasen.
 
 ```
 [Switch-Querschnitt - Injektionspunkt]

@@ -12,6 +12,7 @@ theme: "Nordic Clean Ice"
 
 
 
+
 <blockquote style="border-left: 3px solid #0284c7; margin: 24px 0; padding: 12px 20px; font-style: italic; color: #334155; background: #f8fafc; border-radius: 0 8px 8px 0;">
 "In una postazione di lavoro moderna, la stabilità visiva non è un lusso: un solo secondo di schermo nero durante una sessione di debug o una presentazione aziendale interrompe il flusso cognitivo e rivela un’instabilità architetturale che va risolta alla radice."
 </blockquote>
@@ -94,9 +95,9 @@ a:
 
 ## 5. Seleziona il produttore della scheda (es. Intel, AMD o NVIDIA) e clicca su Pulisci e NON riavviare.
 
-6. Se possiedi una configurazione a doppia GPU, ripeti l'operazione selezionando il secondo produttore.
+**Q6.** Se possiedi una configurazione a doppia GPU, ripeti l'operazione selezionando il secondo produttore.
 
-7. Al termine delle pulizie, riavvia la macchina in modalità standard.
+**Q7.** Al termine delle pulizie, riavvia la macchina in modalità standard.
 
 ```cmd
 # Verifica dello stato dei pacchetti driver video residui nel Driver Store
@@ -115,7 +116,7 @@ pnputil /enum-drivers | findstr /I "video display graphic"
 
 ## 5. Scorri verso il basso fino a Impostazioni schermo avanzate.
 
-6. Seleziona il monitor secondario e imposta manualmente una frequenza di aggiornamento standard (es. 59.94 Hz o 60.00 Hz invece di valori non standard o variabili come Dynamic Refresh Rate).
+**Q6.** Seleziona il monitor secondario e imposta manualmente una frequenza di aggiornamento standard (es. 59.94 Hz o 60.00 Hz invece di valori non standard o variabili come Dynamic Refresh Rate).
 
 ---
 

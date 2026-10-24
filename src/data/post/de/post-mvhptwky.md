@@ -12,6 +12,7 @@ theme: "Electric Cyan Speed"
 
 
 
+
 Es ist kurz vor 10:00 Uhr morgens im Frankfurter Bankenviertel. In einer halben Stunde startet die wichtige Kundenpräsentation für ein neues Finanz-Dashboard, und mein Kollege aus der Abteilung Corporate Finance sitzt schwitzend vor seinem frisch auf Windows 11 aktualisierten ThinkPad. Er will nur schnell ein ZIP-Archiv entpacken und die Logdateien kopieren – doch jedes Mal scheitert er an diesem neuen, abgespeckten Windows 11 Rechtsklick-Menü. Statt der gewohnten Tools von 7-Zip oder Notepad++ sieht er nur ein minimalistisches Pop-up und muss jedes Mal umständlich auf "Weitere Optionen anzeigen" klicken. Mitten im Live-Stress bricht bei ihm fast Panik aus. Wer professionell unter Zeitdruck arbeitet, hat keine Sekunde für solche unnötigen Klick-Umwege.
 
 <div style="border-left: 4px solid #06b6d4; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">

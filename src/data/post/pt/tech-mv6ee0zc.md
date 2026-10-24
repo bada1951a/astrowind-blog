@@ -12,6 +12,7 @@ theme: "Cyberpunk Terminal"
 
 
 
+
 <div style="border-left: 4px solid #00ffcc; padding: 12px 16px; margin: 20px 0; background-color: rgba(0, 255, 204, 0.05); font-family: monospace; border-radius: 4px;">
 <strong>[TERMINAL_INIT: SUBSYSTEM_INPUT_DIAGNOSTICS]</strong><br/>
 STATUS: DETECTED_KEY_CHATTERING_ANOMALY<br/>
@@ -92,7 +93,7 @@ Antes de desmontar qualquer peça, certifique-se de que a falha não é decorren
 
 ## 5. Desconecte o cabo USB do teclado, aguarde 10 segundos e reconecte em uma porta USB traseira direta da placa-mãe (evite hubs ou extensores). O Windows reinstalará os drivers padrão limpos.
 
-6. Abra um software de teste de latência e repique (como *Keyboard Chattering Fix Tool* ou *Switch Hitter*). Pressione a tecla defeituosa 100 vezes seguidas em cadência moderada. Se o log acusar repiques com intervalos inferiores a 30 milissegundos, o problema é comprovadamente físico.
+**Q6.** Abra um software de teste de latência e repique (como *Keyboard Chattering Fix Tool* ou *Switch Hitter*). Pressione a tecla defeituosa 100 vezes seguidas em cadência moderada. Se o log acusar repiques com intervalos inferiores a 30 milissegundos, o problema é comprovadamente físico.
 
 ### Etapa 2: Preparação de Bancada e Desenergização Completa
 A regra de ouro de hardware: nunca aplique substâncias químicas condutoras ou solventes com o dispositivo energizado.
@@ -128,9 +129,9 @@ Aqui está o ponto central do procedimento. Você precisa de um spray Limpa-Cont
 
 ## 5. Imediatamente após a borrifada, pressione a tecla repetidamente e com firmeza de 60 a 80 vezes seguidas. Esse movimento mecânico faz as lâminas rasparem uma contra a outra enquanto o solvente está úmido, desalojando o óxido e os resíduos microscópicos.
 
-6. Coloque o teclado virado de cabeça para baixo sobre um pano de microfibra limpo ou papel absorvente industrial para permitir que o excesso do fluido escorra trazendo as impurezas.
+**Q6.** Coloque o teclado virado de cabeça para baixo sobre um pano de microfibra limpo ou papel absorvente industrial para permitir que o excesso do fluido escorra trazendo as impurezas.
 
-7. Aguarde a evaporação completa por no mínimo 15 a 20 minutos.
+**Q7.** Aguarde a evaporação completa por no mínimo 15 a 20 minutos.
 
 ### Etapa 4: Troca do Switch em Teclados Hot-Swap ou Re-solda
 Se o método do limpa-contato não resolver (indicando desgaste físico irreversível ou quebra da lâmina):

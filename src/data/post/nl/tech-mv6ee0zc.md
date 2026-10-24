@@ -12,6 +12,7 @@ theme: "Pastel Lavender Tech"
 
 
 
+
 Als werkplekbeheerder en IT-infrastructuurspecialist krijg ik regelmatig randapparatuur op mijn werkbank die door collega's al bijna is afgeschreven. Vorige week nog stond een senior software developer aan mijn bureau: zijn op maat gemaakte mechanische toetsenbord met Cherry MX Brown switches registreerde bij de 'E'-toets willekeurig dubbele aanslagen (`ee`) en liet de spatiebalk regelmatig steken. Voor een programmeur is dit funest; één onbedoelde dubbele letter breekt variabelen en veroorzaakt syntaxfouten. 
 
 In plaats van direct een nieuw toetsenbord van tweehonderd euro uit het IT-budget te trekken of direct de soldeerbout aan te slingeren, heb ik het probleem binnen twintig minuten permanent verholpen. In deze technische handleiding deel ik de exacte diagnose- en herstelprocedure voor chattering(toetsstuiting of dubbelslag) enmissende aanslagen, inclusief de veilige toepassing van elektronica-contactspray.
@@ -101,13 +102,13 @@ Dit is de meest effectieve methode om haperende switches en chattering op te los
 
 ## 5. Plaats het fijne spuitrietje van de contactspray direct in de opening langs de stam, gericht op de hoek waar het koperen bladveertje zich bevindt (meestal de zijde met het logo op de switchbehuizing).
 
-6. Geef één zeer korte, gecontroleerde puls (minder dan een halve seconde). De vloeistof moet naar binnen vloeien, maar de switch mag niet verzuipen.
+**Q6.** Geef één zeer korte, gecontroleerde puls (minder dan een halve seconde). De vloeistof moet naar binnen vloeien, maar de switch mag niet verzuipen.
 
-7. Druk direct daarna de switch 60 tot 80 keer snel en ritmisch handmatig in. Hiermee wrijft de chemische reiniger over het koperen bladveertje, waardoor de oxidatielaag microscopisch wordt weggeschuurd.
+**Q7.** Druk direct daarna de switch 60 tot 80 keer snel en ritmisch handmatig in. Hiermee wrijft de chemische reiniger over het koperen bladveertje, waardoor de oxidatielaag microscopisch wordt weggeschuurd.
 
-8. Draai het toetsenbord om op een microvezeldoek en laat overtollig oplosmiddel weglopen.
+**Q8.** Draai het toetsenbord om op een microvezeldoek en laat overtollig oplosmiddel weglopen.
 
-9. Wachttijd: Laat het toetsenbord minimaal 20 tot 30 minuten rusten op kamertemperatuur tot het drijfgas en de dragende alcohol volledig zijn verdampt.
+**Q9.** Wachttijd: Laat het toetsenbord minimaal 20 tot 30 minuten rusten op kamertemperatuur tot het drijfgas en de dragende alcohol volledig zijn verdampt.
 
 ```
 +-------------------------------------------------------------+

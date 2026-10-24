@@ -12,6 +12,7 @@ theme: "Industrial Blueprint"
 
 
 
+
 Llevo más de una década gestionando el parque microinformático de una multinacional con más de 800 puestos operativos, y si hay una incidencia que entra a diario en el sistema de tickets de soporte técnico con la etiqueta de "urgente", es el colapso del puesto de trabajo multimonitor. El escenario siempre es el mismo: el usuario llega por la mañana, conecta su portátil corporativo a la base de conexión (docking station) o directamente por HDMI/DisplayPort, y se encuentra con el temido mensaje de "Sin señal" (No Signal) o, peor aún, un parpadeo intermitente cada tres segundos que deja el equipo totalmente inútil para trabajar.
 
 Muchas veces se culpa a la pantalla o al cable de inmediato. Sin embargo, en el 90% de las intervenciones que realizo en planta, el fallo no reside en el panel físico, sino en una desincronización crítica en el handshake digital de la GPU, microcortes de tensión en el protocolo de enlace (DisplayPort Alternate Mode) o la corrupción de los controladores gráficos tras una actualización en segundo plano de Windows Update. En esta guía técnica voy a desglosar cómo aislar la avería a nivel de esquema funcional y resolverla de forma definitiva mediante software e instrumentación del sistema. <div style="border-left: 4px solid #f59e0b; padding: 14px 18px; margin: 24px 0; background-color: rgba(245, 158, 11, 0.05); border-radius: 4px; font-family: monospace; font-size: 0.95em;">
@@ -101,13 +102,13 @@ Para garantizar que no queden residuos en las claves del registro, debemos recur
 
 ## 5. En la pestaña Arranque, marca la casillaArranque a prueba de errorescon la opciónMínimo. Aplica y reinicia el sistema.
 
-6. Una vez dentro del Modo Seguro:
+**Q6.** Una vez dentro del Modo Seguro:
    - Ejecuta DDU como Administrador.
    - Selecciona el tipo de dispositivo: GPU.
    - Selecciona el fabricante (Intel / NVIDIA / AMD).
    - Haz clic en Limpiar y reiniciar.
 
-7. Repite el proceso para ambos adaptadores si dispones de un sistema híbrido (primero la gráfica integrada y luego la dedicada).
+**Q7.** Repite el proceso para ambos adaptadores si dispones de un sistema híbrido (primero la gráfica integrada y luego la dedicada).
 
 ### Paso 4: Reinstalación limpia y configuración de temporización
 

@@ -12,6 +12,7 @@ theme: "Bronze Artisan Workshop"
 
 
 
+
 Es ist 14:45 Uhr im Frankfurter Bankenviertel. Um 15:30 Uhr soll die wichtigste Pitch-Präsentation des Quartals für einen neuen Großkunden starten. Der Konferenzraum ist voll, die Kollegen warten gespannt, und ich stehe schwitzend vor dem Chef-Laptop. Plötzlich: Totale Stille im System. Keine Mausbewegung, kein blauer Bildschirm, einfach ein eingefrorenes Windows 11. Kein Tastendruck reagiert, der Task-Manager lässt sich nicht aufrufen. Nach drei gefühlten Ewigkeit hilft nur noch der harte Reset über den Power-Knopf. Zehn Minuten später dasselbe Spiel. Ein klassischer, zufälliger Freeze (Random Freezing), der jeden Sysadmin an den Rand des Wahnsinns treibt.
 
 ### Die Werkzeugkiste: Was wir für die Diagnose brauchen

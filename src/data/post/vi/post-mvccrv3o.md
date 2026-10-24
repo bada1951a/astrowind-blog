@@ -12,6 +12,7 @@ theme: "Teal Matrix Digital"
 
 
 
+
 Mới sáng thứ Hai đầu tuần, chiếc máy trạm của một đồng nghiệp trong văn phòng công nghệ của tôi tại khu vực Cầu Giấy, Hà Nội bất ngờ lăn đùng ra sập nguồn với màn hình xanh chết chóc (BSOD) quen thuộc nhưng đầy ám ảnh: mã lỗi 0x0000000a (IRQL_NOT_LESS_OR_EQUAL). Đây là ác mộng của bất kỳ kỹ sư hay nhân viên văn phòng nào đang chạy đua với deadline dự án, bởi máy cứ lặp đi lặp lại vòng lặp khởi động rồi lại sập ngay khi vào đến màn hình desktop.
 
 Đừng hoảng loạn cài lại Windows vội. Hãy cùng tôi đi thẳng vào quy trình chẩn đoán và xử lý thực chiến đã được kiểm chứng qua hàng loạt hệ thống tại các văn phòng công nghệ Việt Nam.

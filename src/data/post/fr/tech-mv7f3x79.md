@@ -12,6 +12,7 @@ theme: "Graphite Technical Paper"
 
 
 
+
 Dans le cadre du déploiement et de la maintenance de parcs informatiques en entreprise, la gestion de l'affichage multi-écrans sur stations mobiles (ultrabooks et stations de travail portables) représente l'un des postes de sollicitation les plus fréquents auprès des équipes d'infrastructure. Qu’il s’agisse d’une liaison directe via HDMI/DisplayPort ou d'un transit par station d’accueil Thunderbolt/USB-C, les symptômes d'« absence de signal » (*No Signal*) et de scintillement intermittent (*black screens* aléatoires d'une ou deux secondes) ne relèvent que rarement d'une panne matérielle franche de la dalle. 
 
 Dans plus de 85 % des cas observés sur le terrain, ces anomalies résultent d'une désynchronisation critique de la pile logicielle vidéo, d'une altération du cache topologique du système d'exploitation ou d'un échec de négociation protocolaire au niveau de la couche matérielle de transmission. Ce document formalise une approche méthodique de diagnostic et de remédiation par réinitialisation en profondeur des sous-systèmes graphiques sous Windows.
@@ -69,7 +70,7 @@ Avant toute manipulation de pilotes, il est impératif d'assainir la mémoire de
 
 ## 5. Cliquez avec le bouton droit sur chacune de ces trois clés et sélectionnez Supprimer (Windows les recréera automatiquement avec des valeurs saines lors du prochain démarrage).
 
-6. Redémarrez le système d'exploitation.
+**Q6.** Redémarrez le système d'exploitation.
 
 ```
 [Arborescence GraphicsDrivers]
@@ -107,9 +108,9 @@ Si le scintillement persiste, une corruption profonde de la bibliothèque de lie
   <strong>Remarque sur les systèmes hybrides :</strong> Sur les ordinateurs portables équipés d'un processeur avec contrôleur intégré (iGPU Intel/AMD) et d'un GPU dédié (dGPU NVIDIA), effectuez systématiquement le nettoyage de l'iGPU en premier, car c'est lui qui gère la table de routage physique des sorties vidéo sur la majorité des architectures non équipées d'un commutateur MUX matériel.
 </div>
 
-6. De retour sur votre session standard hors-ligne (déconnectez temporairement le Wi-Fi pour empêcher Windows Update d'installer un pilote générique tronqué), installez le package de pilote préalablement téléchargé.
+**Q6.** De retour sur votre session standard hors-ligne (déconnectez temporairement le Wi-Fi pour empêcher Windows Update d'installer un pilote générique tronqué), installez le package de pilote préalablement téléchargé.
 
-7. Cochez l'option Effectuer une nouvelle installation si le programme d'installation le propose (notamment chez NVIDIA).
+**Q7.** Cochez l'option Effectuer une nouvelle installation si le programme d'installation le propose (notamment chez NVIDIA).
 
 ### Étape 4 : Étalonnage des paramètres de liaison dans Windows
 

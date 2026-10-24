@@ -12,6 +12,7 @@ theme: "Sandstone Desert Minimal"
 
 
 
+
 Es war kurz vor zwei Uhr nachmittags in unserem Büro im Frankfurter Bankenviertel. Auf dem Tisch lag ein dringender Auftrag von einem externen Kooperationspartner: Ein massives Archiv voller verschlüsselter CAD-Zeichnungen und Dokumentationen war per Download eingetroffen, das ich für die anstehende Sicherheitsprüfung im internen Netzwerk vorbereiten sollte. Ich wollte gerade die begleitende Audio-Briefing-Datei des externen Projektleiters abspielen, um die letzten Details zu klappen – doch aus den Lautsprechern kam absolut nichts. Kein Rauschen, kein Piepsen, absolute Totenstille. Der Windows 11 Lautstärkeregler stand auf Maximum, das Wiedergabegerät schien laut Taskleiste aktiv zu sein, aber der Audiotreiber hatte sich nach dem Eintreffen der großen Datenpakete offenbar komplett verabschiedet. 
 
 Solche unerklärlichen Audio-Aussetzer kosten im hektischen Arbeitsalltag wertvolle Minuten. Wenn man gerade mitten in der Analyse steckt und Videokonferenzen oder Sprachnachrichten anstehen, brennt der Hut. Lassen Sie uns das Problem Schritt für Schritt analysieren und dauerhaft beheben, ohne gleich das Betriebssystem neu zu installieren.
@@ -62,7 +63,7 @@ Wenn der Dienst allein nicht hilft, werfen wir einen Blick auf die Hardware-Eben
 
 ## 5. Klicken Sie im Menü oben auf Aktionund wählen SieNach geänderter Hardware suchen.
 
-6. Sollte das Problem bestehen bleiben, wählen Sie Treiber aktualisieren>Auf meinem Computer nach Treibern suchen und wählen Sie einen bereits installierten kompatiblen Treiber aus.
+**Q6.** Sollte das Problem bestehen bleiben, wählen Sie Treiber aktualisieren>Auf meinem Computer nach Treibern suchen und wählen Sie einen bereits installierten kompatiblen Treiber aus.
 
 ### Schritt 3: Die Systemsteuerung für tiefere Klangeinstellungen nutzen
 Das moderne Windows 11 Einstellungsmenü ist schick, aber für Audio-Fehler greifen wir Profis oft lieber auf die bewährte Systemsteuerung zurück.

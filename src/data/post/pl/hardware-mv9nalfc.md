@@ -12,6 +12,7 @@ theme: "Cyberpunk Terminal"
 
 
 
+
 Siedzę w biurowcu w samym sercu Warszawy, za oknem szarość, a na moim monitorze miga przerażający komunikat: "Mało miejsca na dysku (C:)". Masakra. Za dokładnie dwie godziny mamy wysłać kluczowy pakiet danych do klienta, a mój dysk zewnętrzny właśnie postanowił wyzionąć ducha i odmawia współpracy. System niespodziewanie zablokował się przy próbie skopiowania gigantycznego projektu, bo na partycji systemowej zostało równe 420 megabajtów wolnej przestrzeni. W takich momentach człowiek czuje, jak pot spływa po plecach, a wszystkie nerwy z lat pracy z IT kumulują się w jednym punkcie.
 
 Próbowałem na szybko odinstalować kilka programów, ale deinstalatory domagają się wolnego miejsca do utworzenia własnych kopii zapasowych. Klasyczny bloker systemowy. Godzina ucieka, dysk zewnętrzny dalej leży martwy na biurku, a ja bezskutecznie szukam, gdzie system ukrył te wszystkie gigabajty śmieci. 
@@ -57,7 +58,7 @@ Zapomnij o prostym usuwaniu folderu pobranych plików. Zróbmy to porządnie:
 
 ## 5. Zaznacz ptaszkami wszystkie najcięższe pozycje: *Poprzednie instalacje systemu Windows*, *Tymczasowe pliki instalacyjne systemu*, *Pliki dziennika aktualizacji Windows* oraz *Kosz*.
 
-6. Kliknij OK i pozwól systemowi usunąć ten balast.
+**Q6.** Kliknij OK i pozwól systemowi usunąć ten balast.
 
 ### Krok 3: Ręczne czyszczenie folderów Temp przez konsolę
 Jeżeli potrzebujesz natychmiastowego efektu, oto najszybsza metoda na usunięcie bieżących śmieci:

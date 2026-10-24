@@ -12,6 +12,7 @@ theme: "Graphite Technical Paper"
 
 
 
+
 Eram 19h45 em um hub de tecnologia na região da Avenida Paulista, em São Paulo, e o clima na sala de reuniões estava tenso. Precisávamos entregar um relatório de BI consolidado para a diretoria às 9h do dia seguinte, mas o notebook principal da equipe simplesmente decidiu travar na tela de reinicialização com o famigerado aviso de "Atualizando o Windows: 100% concluído. Não desligue o computador". Passaram-se trinta minutos, quarenta minutos, e a porcentagem não saía do lugar. O cooler do aparelho rodava no talo, o prazo apertava, e reiniciar no botão físico trazia o medo clássico de corromper o sistema de vez.
 
 Essa cena é o pesadelo de qualquer profissional de TI ou usuário que depende de estabilidade. Depois de perder valiosos minutos tentando alternativas ineficientes, o diagnóstico certeiro apontou para o que costuma falhar nesses momentos: arquivos corrompidos no cache do Windows Update, especificamente na pasta onde o sistema armazena os pacotes de instalação temporários.

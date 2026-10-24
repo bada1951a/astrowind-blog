@@ -12,6 +12,7 @@ theme: "Midnight Navy Royal"
 
 
 
+
 Tijdens een nachtdienst op de IT-infrastructuurdesk van een corporate kantoor in Amsterdam zag ik de tickets plotseling binnenstromen: direct na de uitrol van een cumulatieve Windows 11-update via ons WSUS-platform meldden tientallen gebruikers die 's ochtends vroeg inlogden identieke symptomen. Laptops aangesloten op Thunderbolt 4-dockingstations gaven massaal de melding "Geen signaal" op het primaire externe beeldscherm, terwijl het secundaire scherm om de vier seconden zwart knipperde. 
 
 Wanneer een gebruiker geconfronteerd wordt met een knipperend beeldscherm of een volslagen gebrek aan videosignaal op een tweede of derde monitor, grijpt men vrijwel altijd direct naar de fysieke bekabeling. In meer dan 85% van de zakelijke incidenten die ik behandel, is de hardware echter kerngezond. Het probleem ligt dieper: een vastgelopen DisplayPort-handshake, corrupte DCH-stuurprogrammabestanden of een bandbreedteconflict in het subsysteem van de grafische processor (GPU). 
@@ -87,7 +88,7 @@ Als de snelle reset het probleem niet verhelpt, is het stuurprogramma in een ong
 
 ## 5. Verwijder alle grijs weergegeven schermen (dit zijn zogeheten "ghost monitors" met verouderde EDID-caches) door met de rechtermuisknop te klikken en te kiezen voor Apparaat verwijderen.
 
-6. Klik met de rechtermuisknop op je primaire geïntegreerde beeldschermadapter en kies Stuurprogramma bijwerken->Op mijn computer naar stuurprogramma's zoeken->Ik wil kiezen uit een lijst met stuurprogramma's op mijn computer. Selecteer de vorige stabiele driverversie indien beschikbaar en voltooi de wizard.
+**Q6.** Klik met de rechtermuisknop op je primaire geïntegreerde beeldschermadapter en kies Stuurprogramma bijwerken->Op mijn computer naar stuurprogramma's zoeken->Ik wil kiezen uit een lijst met stuurprogramma's op mijn computer. Selecteer de vorige stabiele driverversie indien beschikbaar en voltooi de wizard.
 
 ## Stap 3: Uitvoeren van een Schone Driverinstallatie (DDU Methode)
 Wanneer Windows Update de stuurprogrammacache heeft beschadigd, biedt alleen een rigoureuze schoonmaak uitkomst.
@@ -102,9 +103,9 @@ Wanneer Windows Update de stuurprogrammacache heeft beschadigd, biedt alleen een
 
 ## 5. Herhaal deze actie direct voor de discrete GPU (indien aanwezig).
 
-6. Sluit DDU af en herstart de laptop normaal.
+**Q6.** Sluit DDU af en herstart de laptop normaal.
 
-7. Installeer het vooraf gedownloade OEM-stuurprogrammabestand. Sluit de externe schermen pas weer aan nadat de installatie 100% is voltooid en de machine eenmaal opnieuw is opgestart.
+**Q7.** Installeer het vooraf gedownloade OEM-stuurprogrammabestand. Sluit de externe schermen pas weer aan nadat de installatie 100% is voltooid en de machine eenmaal opnieuw is opgestart.
 
 ## Stap 4: Reset van de Windows Display Cache via het Register
 Windows bewaart elke schermconfiguratie die je ooit hebt aangesloten in het register. Als deze configuratiesleutel beschadigd raakt, blijft het besturingssysteem proberen om foute resoluties of vernieuwingsfrequenties te forceren.

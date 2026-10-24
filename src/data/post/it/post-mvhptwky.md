@@ -12,6 +12,7 @@ theme: "Modern Minimalist Slate"
 
 
 
+
 Erano le 17:45 in un frenetico ufficio al Centro direzionale di Milano, con la deadline per l'invio del report trimestrale fissata tassativamente per le 18:00. Stavo preparando gli ultimi allegati compressi in formato ZIP quando, per una questione di abitudine consolidata in anni di lavoro su Windows 10, ho cliccato con il tasto destro su una cartella per accedere subito a 7-Zip e rinominare il file al volo. Il risultato? Un menu contestuale ridotto all'osso, con le opzioni avanzate nascoste dietro un ulteriore e snervante clic sulla voce "Mostra altre opzioni". Nel panico del momento, con il capo che passava nel corridoio e il cliente che incalzava via email, quel singolo passaggio in più si è trasformato in un blocco operativo frustrante che mi ha fatto perdere preziosi minuti preziosi. Quante volte vi è capitato di imprecare contro questa interfaccia "moderna" ma poco pratica?
 
 <div style="border-left: 4px solid #3b82f6; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
@@ -60,11 +61,11 @@ reg.exe add "HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\
 
 ## 5. Vedrete la scritta "Operazione completata con successo".
 
-6. Ora, per rendere effettiva la modifica senza riavviare l'intero PC, aprite Gestione attività (potete usare la scorciatoia da tastiera `Ctrl + Maiusc + Esc`).
+**Q6.** Ora, per rendere effettiva la modifica senza riavviare l'intero PC, aprite Gestione attività (potete usare la scorciatoia da tastiera `Ctrl + Maiusc + Esc`).
 
-7. Nella scheda *Processi*, scorrete l'elenco fino a trovare Esplora risorse (explorer.exe).
+**Q7.** Nella scheda *Processi*, scorrete l'elenco fino a trovare Esplora risorse (explorer.exe).
 
-8. Cliccateci sopra con il tasto destro e selezionate Riavvia. In meno di dieci secondi, la barra delle applicazioni e il desktop lampeggeranno brevemente: da questo momento in poi, cliccando con il tasto destro su un file o una cartella, apparirà direttamente il buon vecchio menu classico di Windows 10, con tutte le opzioni subito visibili.
+**Q8.** Cliccateci sopra con il tasto destro e selezionate Riavvia. In meno di dieci secondi, la barra delle applicazioni e il desktop lampeggeranno brevemente: da questo momento in poi, cliccando con il tasto destro su un file o una cartella, apparirà direttamente il buon vecchio menu classico di Windows 10, con tutte le opzioni subito visibili.
 
 ---
 

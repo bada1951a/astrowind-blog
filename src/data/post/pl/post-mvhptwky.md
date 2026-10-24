@@ -12,6 +12,7 @@ theme: "Industrial Blueprint"
 
 
 
+
 Siedzę w szklanej sali konferencyjnej w warszawskim centrum biznesowym przy Rondzie Daszyńskiego. Za dziesięć minut ma się zacząć kluczowe spotkanie zarządu z inwestorami, a dyrektor finansowy pan Marek blady jak ściana patrzy na swój nowy służbowy laptop z Windows 11 i cicho przeklina pod nosem. Próbował na szybko spakować cztery pliki Excela do archiwum ZIP, ale zamiast klasycznego menu pod prawym przyciskiem myszy wyskoczył mu ten nowoczesny, minimalistyczny potwór z ukrytą opcją "Pokaż więcej opcji". Trzy kliknięcia zamiast jednego, 7 sekund zwłoki przy każdym pliku, a zegar tyka nieubłaganie. Pan Marek patrzy na mnie błagalnym wzrokiem: "Panie inżynierze, zrób pan z tym coś, zaraz wchodzą Niemcy!".
 
 Znam ten ból na pamięć. Nowy interfejs w Windows 11 miał być "czysty" i "przyjazny", ale dla analityków, programistów i sysadminów, którzy codziennie operują dziesiątkami plików, skrótów i narzędzi deweloperskich, ukrywanie tradycyjnych opcji za dodatkowym kliknięciem to czysta patologia produktywności. Klienci korporacyjni dzwonią do mojego serwisu w tej sprawie przynajmniej kilka razy w tygodniu.
@@ -59,9 +60,9 @@ Nie potrzebujemy do tego żadnych zewnętrznych programów instalowanych z podej
 
 ## 5. Wewnątrz klucza `InprocServer32` spójrz na prawą stronę ekranu. Kliknij dwukrotnie na domyślną wartość (Domyślna) (Default).
 
-6. Upewnij się, że pole "Dane wartości" jest całkowicie puste, po czym kliknij OK. Wartość domyślna powinna przyjąć stan `(wartość nie ustawiona)`.
+**Q6.** Upewnij się, że pole "Dane wartości" jest całkowicie puste, po czym kliknij OK. Wartość domyślna powinna przyjąć stan `(wartość nie ustawiona)`.
 
-7. Ostatni krok techniczny to restart interfejsu systemowego. Otwórz Menedżer zadań(skrót `Ctrl + Shift + Esc`), znajdź na liście procesówEksplorator Windows(Windows Explorer), kliknij na niego prawym przyciskiem myszy i wybierzUruchom ponownie.
+**Q7.** Ostatni krok techniczny to restart interfejsu systemowego. Otwórz Menedżer zadań(skrót `Ctrl + Shift + Esc`), znajdź na liście procesówEksplorator Windows(Windows Explorer), kliknij na niego prawym przyciskiem myszy i wybierzUruchom ponownie.
 
 <div style="border-left: 4px solid #f59e0b; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Wskazówka inżynier

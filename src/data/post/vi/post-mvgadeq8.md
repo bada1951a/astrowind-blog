@@ -12,6 +12,7 @@ theme: "High-Contrast Charcoal"
 
 
 
+
 Mới 2 giờ chiều tại văn phòng giữa trung tâm Quận 1, TP.HCM, không khí đang cực kỳ căng thẳng vì chỉ còn đúng 30 phút nữa là đến hạn chót nộp bản báo cáo tài chính quý cho sếp tổng. Đúng lúc đó, màn hình chiếc máy tính chính của chị kế toán trưởng bỗng xuất hiện một dòng chữ mờ khó chịu ở góc dưới bên phải: "Activate Windows - Go to Settings to activate Windows". Đáng nói hơn, dòng chữ này cứ bám chặt lấy màn hình, che mất một phần số liệu quan trọng trong bảng Excel, thậm chí còn chặn luôn một số thao tác cá nhân hóa. Chị hoảng hốt gọi tôi qua xử lý gấp, miệng liên tục than thở vì sợ sếp thấy lại tưởng máy móc công ty có vấn đề bảo mật.
 
 <div style="border-left: 4px solid #e11d48; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">

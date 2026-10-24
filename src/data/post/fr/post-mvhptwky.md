@@ -12,6 +12,7 @@ theme: "Pastel Lavender Tech"
 
 
 
+
 Il est 17h55 dans notre open space de La Défense. La clôture des dossiers trimestriels tombe à 18h00, mes écrans sont pleins à craquer de fichiers compressés et de PDF, et je dois renommer et envoyer d'urgence un package à la direction. Je fais un clic droit rapide pour archiver le tout avec 7-Zip, et là... c'est le drame. Ce nouveau menu contextuel épuré de Windows 11 s'affiche. L'option indispensable de mon logiciel de compression a disparu. Je suis obligé de cliquer sur "Afficher plus d'options" à chaque manipulation, perdant de précieuses secondes qui me font suer à grosses gouttes à l'approche de la deadline.
 
 Ce genre de micro-frustration ergonomique au bureau, multiplié par des centaines de clics par jour, finit par plomber totalement la productivité des équipes. En tant qu'ingénieur support, j'ai vu trop de collègues pester contre cette interface moderne mais peu pratique. Heureusement, il existe une solution radicale et propre pour retrouver le comportement classique de Windows 10 en quelques clics.
