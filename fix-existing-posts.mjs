@@ -3,10 +3,6 @@ import path from 'path';
 
 const POSTS_BASE_DIR = path.resolve('src/data/post');
 
-def cleanAndRestructureMarkdown(content) { // eslint-disable-line no-undef
-  // 스크립트 문법 오류 방지를 위해 함수명 수정
-}
-
 function cleanMarkdownStrict(content) {
   const fmMatch = content.match(/^---[\s\S]*?---\n*/);
   if (!fmMatch) return content;
