@@ -26,6 +26,7 @@ theme: "Bronze Artisan Workshop"
 
 
 
+
 Il est 19h45 dans notre bureau tech près de la place de la République à Paris, et la pression monte d'un cran. Nous sommes en plein sprint de livraison pour notre nouveau client, et mon poste de travail principal décide de s'bloquer net à 100% sur l'installation de la dernière mise à jour cumulative Windows 11. Le curseur ne bouge plus depuis quarante minutes, le disque SSD ronronne en continu, et redémarrer la machine de force risque de corrompre l'image système. Impossible de lancer nos scripts de test ou de compiler nos environnements Docker dans cet état.
 
 J'ai déjà vécu cette situation ubuesque des dizaines de fois en entreprise. Plutôt que de paniquer ou d'attendre un miracle qui ne viendra pas, il faut agir à la source. Le coupable idéal dans ce genre de scénario ? Un cache de mise à jour corrompu qui boucle sur lui-même en essayant d'appliquer des paquets figés.
@@ -108,6 +109,6 @@ Foire aux Questions (FAQ)
 
 2. Que faire si la commande `net stop wuauserv` reste bloquée sur "Arrêt en cours" ? C'est un classique lorsque le service est totalement gelé. Ouvrez le Gestionnaire tâches (Ctrl + Maj + Échap), allez dans l'ongletServices, cherchez `wuauserv`, faites un clic droit dessus et choisissezArrêter. Si cela ne suffit pas, un redémarrage de la machine s'impose.
 
-3. Pourquoi Windows 11 bloque-t-il si souvent à 100 pourcent lors des mises à jour ?
+## 3. Pourquoi Windows 11 bloque-t-il si souvent à 100 pourcent lors des mises à jour ?
 
 Le blocage à 100% correspond généralement à la phase finale d'écriture dans le registre et de nettoyage des composants. Si un pilote tiers, un antivirus un peu trop zélé ou un secteur disque défectueux interrompt cette séquence, le processus s'arrête indéfiniment en attendant une réponse qui ne viendra jamais.

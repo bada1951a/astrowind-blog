@@ -26,6 +26,7 @@ theme: "High-Contrast Charcoal"
 
 
 
+
 Kwadrans przed kluczową prezentacją dla zarządu w warszawskim centrum biznesowym podchodzi do mnie blady jak ściana dyrektor handlowy. Na środku jego ekranu, dokładnie nad wykresami rocznej sprzedaży, dumnie widnieje irytujący, półprzezroczysty napis: „Aktywuj system Windows – przejdź do Ustawień, aby aktywować system”. Klienci mają wejść do sali za dokładnie dziesięć minut, rzutnik jest już rozstawiony, a ten nieszczęsny znak wodny zasłania kluczowe dane w Excelu. Każdy geek wie, że Windows po prostu przypomina o braku aktywacji, ale w warunkach korporacyjnych taki widok przed zarządem to wizerunkowa katastrofa. Szybki restart nie pomógł, a próby przeklinania pod nosem tylko podniosły ciśnienie. Zamiast panikować i szukać podejrzanych programów z internetu, które mogłyby zainfekować stację roboczą malwarem, musiałem działać szybko, legalnie (w ramach procedur testowych) i bezpośrednio z poziomu systemu.
 
 Dlaczego ten cholerny napis w ogóle się pojawia?
@@ -85,6 +86,6 @@ Najczęściej zadawane pytania (FAQ)
 
 2. Co zrobić, jeśli polecenie zwraca błąd o odmowie dostępu? Najczęstszą przyczyną jest uruchomienie Wiersza polecenia bez uprawnień administratora. Upewnij się, że nad ikoną konsoli widniał napis "Administrator", a w razie problemów sprawdź wMenedżerze zadań, czy nie działają w tle zablokowane procesy skryptowe, które blokują pliki systemowe.
 
-3. Czy ten trik działa na każdej wersji systemu Windows 10 i 11?
+## 3. Czy ten trik działa na każdej wersji systemu Windows 10 i 11?
 
 Tak, komenda `slmgr` (Software Licensing Management Tool) jest standardowym narzędziem wbudowanym w jądro systemów Windows od czasów Visty, działającym bez zarzutu zarówno w edycjach Pro, jak i Enterprise.

@@ -26,6 +26,7 @@ theme: "Acid Lime Hacker Space"
 
 
 
+
 Jam sudah menunjukkan pukul 16:50 WIB. Hari Jumat sore, minggu penutupan laporan bulanan, dan *big boss* baru saja kirim pesan singkat via WhatsApp: *"Meeting jam 5 sore ini kita pakai ruang utama ya, presentasi data lo udah siap kan?"* Jantung langsung copot. Pas saya buru-buru pencet tombol power PC meja kerja, kipas *case* nyala bergemuruh, lampu RGB *motherboard* kedap-kedip sok ganteng, tapi... layar monitor *dead silent*. Kosong melompong dengan tulisan ikonik: "No Signal". 
 
 Mau teriak tapi malu sama anak-anak *dev* sebelah. Mau reboot paksa sampai lima kali hasilnya tetap sam
@@ -52,13 +53,13 @@ Step-by-Step Eksekusi: Patch Darurat Hardware ala Teknisi Lapangan
 
 Karena kita lagi ngejar deadline mepet, nggak usah pusing buka-buka command prompt atau ngecek Device Manager dulu—lah wong layar monitor aja gelap gulita, Windows-nya aja belum jalan! Kita langsung main fisik.
 
-1. Buang Sisa Arus Statis (Power Drain)
+## 1. Buang Sisa Arus Statis (Power Drain)
 * Cabut kabel power dari colokan listrik dinding.
 * Tekan dan tahan tombol power (*Power Button*) di casing selama 15-20 detik. Ini trik wajib buat mengosongkan sisa kapasitansi di *motherboard*.
 
 ![Hardware Diagnostic & Troubleshooting](https://picsum.photos/seed/hardware-95/1000/550)
 
-2. Operasi Pembersihan Kepingan RAM
+## 2. Operasi Pembersihan Kepingan RAM
 * Buka *casing* samping PC. Cari letak RAM (biasanya dekat kipas prosesor).
 * Tekan klip pengunci di kedua ujung slot RAM, lalu angkat modulnya pelan-pelan.
 * Trik Lapangan: Ambil penghapus pensil karet (yang warna putih bersih dan agak lunak). Gosok pelan-pelan bagian kuningan emas RAM (*gold fingers*) searah. Jangan bolak-balik terlalu kasar. Setelah itu, tiup sisa serpihan penghapus (jangan ditiup pakai ludah ya, bro!).
@@ -74,11 +75,11 @@ Simulasi Logika POST BIOS saat RAM Normal vs Error
        Booting to OS (Windows/Linux)... Success
 ```
 
-3. Cek dan Pindah Slot RAM (Slot Migration)
+## 3. Cek dan Pindah Slot RAM (Slot Migration)
 * Kalau RAM-nya ada dua keping, coba pasang satu keping dulu di slot pertama (biasanya slot A2 atau DIMM_1 yang paling dekat dengan kipas CPU).
 * Kalau tetap nggak mau nyala, pindahkan kepingan tadi ke slot sebelahnya. Kadang ada jalur pin di *motherboard* yang kotor atau retak rambut akibat panas berlebih.
 
-4. Clear CMOS (Opsional tapi Ampuh)
+## 4. Clear CMOS (Opsional tapi Ampuh)
 * Kalau langkah di atas belum ngefek, cari baterai koin di *motherboard* (CR2032). Lepas baterai tersebut selama 3 menit, atau jumper pin `CLR_CMOS` pakai obeng minus selama 5 detik buat mereset BIOS balik ke pengaturan pabrik.
 
 ---

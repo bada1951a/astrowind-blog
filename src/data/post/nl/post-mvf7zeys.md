@@ -26,6 +26,7 @@ theme: "Cobalt Enterprise Lab"
 
 
 
+
 Het was kwart voor twee op een gure dinsdagmiddag in het Zuidas zakendistrict in Amsterdam. Om twee uur zou een van onze senior consultants een beslissende pitch geven aan een grote internationale cliënt. Paniek brak los toen zijn high-end laptop plotseling veranderde in een straaljager: de ventilatoren loeiden op volle toeren, de cursor schokschoot over het scherm en PowerPoint weigerde nog te reageren. Ik snelde naar zijn flexplek toe, drukte op Ctrl+Shift+Esc en zag het onmiddellijk in Taakbeheer: het proces 'Systeem' (System) slurpte doodleuk 99 tot 100 procent van zijn dure processor op. De temperatuur van de CPU schoot door naar 92°C en de presentatie stond op knappen.
 
 <div style="border-left: 4px solid #1e40af; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
@@ -85,11 +86,11 @@ Soms is de kernel zelf beschadigd door een onvoltooide update. Dit herstellen we
 
 1. Klik op Start, typ `cmd`, klik met rechts op Opdrachtprompten kiesAls administrator uitvoeren.
 
-2. Typ het volgende commando in en druk op Enter:
+## 2. Typ het volgende commando in en druk op Enter:
 
    `DISM.exe /Online /Cleanup-image /Restorehealth`
 
-3. Wacht tot dit klaar is en typ dan het tweede reddingsmiddel in:
+## 3. Wacht tot dit klaar is en typ dan het tweede reddingsmiddel in:
 
    `sfc /scannow`
 
@@ -107,6 +108,6 @@ Veelgestelde Vragen (FAQ)
 
 2. Mijn laptop blijft loeien, ook na een reboot. Loopt de koelpasta soms stuk? Dat kan op termijn, maar als Taakbeheer aangeeft dat de CPU op 100% draait, ligt het primair aan softwarematige belasting en niet direct aan uitgedroogde koelpasta. Zodra het Systeem-proces is gekalmeerd, zakken de temperaturen binnen 30 seconden naar een gezonde 40 tot 50 graden.
 
-3. Heeft het uitschakelen van 'SysMain' (voorheen Superfetch) zin?
+## 3. Heeft het uitschakelen van 'SysMain' (voorheen Superfetch) zin?
 
 Ja, in heel veel gevallen wel. SysMain probeert apps voor te laden in het geheugen, maar dit kan bij intensief gebruik van de SSD of HDD zorgen voor extreme achtergrondactiviteit in het Systeem-proces. Je schakelt dit uit door in de zoekbalk `Services` te typen, naar SysMain te scrollen, rechts te klikken op *Eigenschappen* en het op *Uitgeschakeld* te zetten.

@@ -26,6 +26,7 @@ theme: "Graphite Technical Paper"
 
 
 
+
 Siedzę w naszym biurze we wrocławskim parku technologicznym, zegar wskazuje za pięć dwunasta, a za dokładnie trzydzieści minut zaczynamy kluczowy audyt stabilności infrastruktury przed wejściem zewnętrznego klienta. W tym momencie, jak na złość, główna stacja robocza odmawia posłuszeństwa – dolny pasek zadań w Windows 11 zamroził się na amen. Klikam w menu Start, próbuję przełączyć okna, macham kursorem nad ikoną Wi-Fi – zero reakcji. Ekran niby żyje, aplikacje w tle działają, ale sam pasek zadań wygląda, jakby zastygł w betonie. Resetowanie komputera w ciemno nie wchodzi w grę, bo w tle trwają niezapisane sesje diagnostyczne. Trzeba działać chirurgicznie.
 
 <div style="border-left: 4px solid #475569; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
@@ -61,7 +62,7 @@ To najbardziej niezawodny pierwszy krok ratunkowy.
 
 4. Kliknij na niego prawym przyciskiem myszy i wybierz Uruchom ponownie (lub zaznacz go i kliknij przycisk restartu w prawym górnym rogu okna).
 
-5. Ekran na ułamek sekundy zgaśnie, znikną ikony i pasek zadań – to całkowicie normalne. Po chwili proces wstał na nowo, a pasek zadań powinien znowu reagować na kliknięcia. ## Krok 2: Użycie Terminala lub PowerShell do twardego restartu powłoki
+## 5. Ekran na ułamek sekundy zgaśnie, znikną ikony i pasek zadań – to całkowicie normalne. Po chwili proces wstał na nowo, a pasek zadań powinien znowu reagować na kliknięcia. ## Krok 2: Użycie Terminala lub PowerShell do twardego restartu powłoki
 
 Jeśli Menedżer zadań zawodzi lub potrzebujesz podejścia bardziej zautomatyzowanego, użyj wiersza poleceń.
 
@@ -69,12 +70,12 @@ Jeśli Menedżer zadań zawodzi lub potrzebujesz podejścia bardziej zautomatyzo
 
 2. Ewentualnie wciśnij `Win + R`, wpisz `cmd` i wciśnij Enter.
 
-3. Wpisz poniższą komendę, aby natychmiastowo ubicić proces eksplorator
+## 3. Wpisz poniższą komendę, aby natychmiastowo ubicić proces eksplorator
 
 a:
    `taskkill /f /im explorer.exe`
 
-4. Następnie uruchom go ponownie, wpisując:
+## 4. Następnie uruchom go ponownie, wpisując:
 
    `start explorer.exe`
 
@@ -85,7 +86,7 @@ Jeśli problem powraca jak bumerang, konieczna może być ponowna rejestracja pa
 
 1. Otwórz TerminallubPowerShell jako Administrator.
 
-2. Wklej poniższe polecenie i zatwierdź je klawiszem Enter:
+## 2. Wklej poniższe polecenie i zatwierdź je klawiszem Enter:
 
    `Get-AppXPackage -AllUsers | Foreach {Add-AppxPackage -DisableDevelopmentMode -Register "(_.InstallLocation)\AppXManifest.xml"}`
 
@@ -110,12 +111,12 @@ a:</strong> Unikaj instalowania nielicencjonowanych narzędzi do personalizacji 
 
 Często zadawane pytania (FAQ)
 
-1. Co zrobić, jeśli skrót Ctrl + Shift + Esc również nie działa?
+## 1. Co zrobić, jeśli skrót Ctrl + Shift + Esc również nie działa?
 
 Jeśli system całkowicie przestał reagować na skróty klawiszowe, wciśnij `Ctrl + Alt + Del`, przejdź do ekranu blokady, a następnie kliknij ikonę zasilania w prawym dolnym rogu i wybierz opcję *Uruchom ponownie* przytrzymując wciśnięty klawisz `Shift`. To wymusi uruchomienie komputera w trybie odzyskiwania, skąd można bezpiecznie zdiagnozować błędy.
 
 2. Czy restart Eksploratora Windows usuwa niezapisaną pracę w aplikacjach? Nie. Restart procesu `explorer.exe` dotyczy wyłącznie warstwy wizualnej pulpitu, paska zadań i okien folderów. Uruchomione aplikacje robocze (takie jak edytory tekstu, przeglądarki czy IDE programistyczne) działają w osobnych procesach i nie zostaną zamknięte.
 
-3. Dlaczego problem z zamrożonym paskiem zadań powraca po każdym włączeniu komputera?
+## 3. Dlaczego problem z zamrożonym paskiem zadań powraca po każdym włączeniu komputera?
 
 Jeśli usterka występuje cyklicznie, zazwyczaj winny jest konkretny program startowy lub uszkodzony profil użytkownika. Uruchom menedżer zadań, przejdź do zakładki *Aplikacje startowe* i wyłącz podejrzane programy firm trzecich (szczególnie nakładki graficzne, programy antywirusowe starej generacji lub narzędzia optymalizujące).

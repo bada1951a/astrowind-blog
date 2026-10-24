@@ -26,6 +26,7 @@ theme: "Midnight Navy Royal"
 
 
 
+
 <div style="border-left: 4px solid #1d4ed8; padding: 12px 16px; margin: 20px 0; background-color: rgba(29, 78, 216, 0.05); border-radius: 4px; color: #111827;">
 <strong>Registro Notturno - Laboratorio Hardware Milano</strong><br>
 Timestamp: 02:42 AM. Chiamata urgente da uno studio di design in zona Porta Nuov
@@ -49,7 +50,7 @@ Prima di mettere mano al sistema, capiamo cosa sta intasando la nostra unità pr
 
 2. Punti di ripristino e copie Shadow (VSS): Windows crea autonomamente backup di sicurezza del sistema. Se non vengono regolati, occupano una fetta enorme del disco C, strozzando letteralmente l'archiviazione disponibile.
 
-3. Cartella Download dimenticat
+## 3. Cartella Download dimenticat
 
 a: Può sembrare banale, ma centinaia di utenti accumulano file ISO, archivi ZIP enormi e installativi nella cartella Download senza mai svuotarla. ---
 
@@ -89,12 +90,12 @@ Evita assolutamente di scaricare programmi "Cleaner" gratuiti trovati online che
 
 Domande Frequenti (FAQ)
 
-1. Posso svuotare la cartella Windows.old senza problemi?
+## 1. Posso svuotare la cartella Windows.old senza problemi?
 
 Sì, ma attenzione: la cartella *Windows.old* contiene i file della tua precedente versione o installazione di Windows. Se il sistema attuale è stabile e non hai bisogno di effettuare un rollback (tornare indietro alla versione precedente del sistema operativo), puoi eliminarla tranquillamente tramite la Pulizia disco per recuperare decine di gigabyte.
 
 2. Cosa faccio se un file temporaneo si rifiuta di essere cancellato? Significa che c'è un processo in background o un'applicazione attiva che lo sta utilizzando in quel momento. ApriGestione attività(`Ctrl + Shift + Esc`), individua il programma sospetto, chiudilo forzatamente e riprova a cancellare il file.
 
-3. Quanto spazio libero devo lasciare sempre sul disco C?
+## 3. Quanto spazio libero devo lasciare sempre sul disco C?
 
 Come regola generale nel mio laboratorio, raccomando di mantenere *sempre* almeno il 15-20% della capacità totale dell'SSD o dell'HDD libera. Questo spazio serve a Windows per gestire la deframmentazione dinamica, il file di paging e l'usura delle celle di memoria (wear leveling) nel caso degli SSD.

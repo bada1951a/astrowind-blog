@@ -26,6 +26,7 @@ theme: "Deep Ocean Cobalt"
 
 
 
+
 Eram exatamente 14h50 de uma terça-feira movimentada no nosso hub de tecnologia na Zona Sul de São Paulo. A entrega do projeto para o cliente final estava marcada para as 15h30, e o time inteiro revisava os últimos pulls no GitHub. De repente, fui chamado às pressas na mesa do nosso desenvolvedor sênior: a barra de tarefas do Windows 11 simplesmente congelou. O menu Iniciar não abria, os ícones fixados ignoravam qualquer clique e o relógio parecia estático no tempo. Com o cliente no chat cobrando a build final, reiniciar a máquina do zero levaria preciosos minutos preciosos que não tínhamos. Precisávamos de uma solução cirúrgica e imediata, sem perder o fluxo de trabalho.
 
 Se você já passou por isso, sabe o nível de frustração. O Windows 11 é excelente em design, mas o Explorador de Arquivos e a camada gráfica da barra de tarefas (que agora dependem fortemente de pacotes modernos do sistema) ainda sofrem com engasgos intermitentes. 
@@ -70,7 +71,7 @@ Este é o método mais rápido e eficiente para recuperar a barra de tarefas sem
 
 4. Clique com o botão direito em cima dele e selecione Reiniciar.
 
-5. *O que acontece agor
+## 5. *O que acontece agor
 
 a:* A barra de tarefas sumirá por um segundo junto com a área de trabalho e voltará a funcionar normalmente, já limpa e reestabilizada. ---
 
@@ -84,7 +85,7 @@ Se o Método 1 não resolveu e o congelamento persiste, o problema pode estar no
 
 3. Na caixa de texto que abrir, digite `powershell` (marque a caixa "Criar esta tarefa com privilégios administrativos").
 
-4. Copie e cole o comando abaixo exatamente como está e aperte Enter:
+## 4. Copie e cole o comando abaixo exatamente como está e aperte Enter:
 
 ```powershell
 Get-AppXPackage -AllUsers -Name Microsoft.Windows.ShellExperienceHost | Foreach {Add-AppxPackage -DisableDevelopmentMode -Register "(_.InstallLocation)\AppXManifest.xml"}
@@ -100,7 +101,7 @@ Se o travamento for recorrente ao longo dos dias, arquivos do sistema podem esta
 
 1. Clique com o botão direito no menu Iniciar (ou use o atalho `Win + X`) e selecione Terminal (Administrador)ouPrompt de Comando (Administrador).
 
-2. Digite o seguinte comando e aperte Enter:
+## 2. Digite o seguinte comando e aperte Enter:
 
    ```cmd
    sfc /scannow
@@ -128,6 +129,6 @@ Evite também softwares de terceiros que prometem modificar profundamente o visu
 
 2. Esse problema de travamento da barra de tarefas é um vírus? Raramente. Na grande maioria dos casos, trata-se de um bug legítimo do próprio processo gráfico do Windows 11 (`explorer.exe`) ou conflito após uma atualização recente. Manter o Windows Defender ou seu antivírus corporativo atualizado garante que não há ameaças reais.
 
-3. Posso usar softwares de terceiros para substituir a barra de tarefas do Windows 11?
+## 3. Posso usar softwares de terceiros para substituir a barra de tarefas do Windows 11?
 
 Sim, existem ferramentas populares no mercado, mas lembre-se: quanto mais camadas de software você adiciona sobre a interface nativa do Windows 11, maior é a chance de instabilidade após grandes atualizações do sistema operacional. Prefira sempre usar os recursos nativos sempre que possível.

@@ -26,6 +26,7 @@ theme: "Deep Indigo System"
 
 
 
+
 W pracy inżyniera wsparcia IT niewiele jest scenariuszy równie powtarzalnych i frustrujących dla użytkownika, jak nagła utrata stabilności wielomonitorowej stacji roboczej. Scenariusz z reguły wygląda identycznie: pracownik podłącza nowoczesnego ultrabooka do stacji dokującej Thunderbolt lub replikatora portów USB-C z dwoma monitorami roboczymi. Zamiast płynnego rozszerzenia pulpitu, jeden z ekranów cyklicznie gaśnie co kilkanaście sekund, a drugi wita komunikatem „Brak sygnału” (No Signal). W dziennikach systemowych pojawia się lawina ostrzeżeń o resecie sterownika ekranu, a użytkownik traci możliwość pracy.
 
 <div style="border-left: 4px solid #4338ca; padding: 12px 16px; margin: 20px 0; background-color: rgba(67, 56, 202, 0.04); border-radius: 4px;">
@@ -42,12 +43,12 @@ Anatomia usterki: 3 źródła problemu na poziomie jądra i magistrali
 
 Zrozumienie, dlaczego system traci synchronizację z monitorem zewnętrznym, wymaga spojrzenia na architekturę przesyłu sygnału w nowoczesnych laptopach wyposażonych w dwa układy graficzne (iGPU + dGPU).
 
-1. Kolizja bufora ramki i architektury hybrydowej (Optimus / CrossFire)
+## 1. Kolizja bufora ramki i architektury hybrydowej (Optimus / CrossFire)
 W architekturze hybrydowej wyjścia wideo USB-C/DisplayPort fizycznie przechodzą przez magistralę zintegrowanego procesora graficznego (iGPU – Intel Iris Xe lub AMD Radeon), podczas gdy obciążenia 3D renderuje dedykowany procesor (dGPU – NVIDIA RTX). Jeśli wersje sterowników iGPU i dGPU posiadają niespójne biblioteki WDDM (Windows Display Driver Model), systemowy menedżer okien (*Desktop Window Manager* - `dwm.exe`) gubi klatki synchronizacji pionowej, wywołując reset sterownika i charakterystyczne czarne mignięcie.
 
 ![Hardware Diagnostic & Troubleshooting](https://images.unsplash.com/photo-1504384308090-c894fdcc538d? auto=format&fit=crop&w=1000&h=550&q=80)
 
-2.  Timeout mechanizmu TDR w jądrze `dxgkrnl.sys`
+## 2.  Timeout mechanizmu TDR w jądrze `dxgkrnl.sys`
 Podsystem graficzny DirectX monitoruje czas odpowiedzi karty. Jeśli kontroler DisplayPort Alternate Mode lub transceiver stacji dokującej opóźni handshake EDID o więcej niż 2 sekundy podczas negocjacji szyfrowania HDCP, jądro systemu uznaje sterownik za zawieszony. Uruchamiana jest procedura TDR: jądro resetuje akcelerator graficzny, co objawia się natychmiastowym zgaśnięciem wszystkich paneli i przejściem drugiego monitora w tryb uśpienia. ## 3. Zaśmiecona pamięć podręczna EDID w gałęzi `GraphicsDrivers`
 System Windows agresywnie cachuje informacje o każdym podłączonym kiedykolwiek wyświetlaczu. Gdy laptop jest regularnie przepinany między różnymi salami konferencyjnymi a domowym biurkiem, wpisy w rejestrze dotyczące konfiguracji, pozycji i profilu timingów ulegają fragmentacji i korupcji. System próbuje wymusić nieobsługiwane taktowanie pikseli (pixel clock) lub pasmo Display Stream Compression (DSC), co skutkuje całkowitym brakiem sygnału.
 
@@ -61,7 +62,7 @@ Zanim przejdziemy do modyfikacji plików binarnych, musimy precyzyjnie ustalić,
 
 1. Uruchom narzędzie Menedżer urządzeń(kombinacja `Win + X` -> wybierzMenedżer urządzeń).
 
-2. Rozwiń sekcję Karty graficzne.
+## 2. Rozwiń sekcję Karty graficzne.
 
 3. Kliknij prawym przyciskiem myszy na zintegrowaną kartę (np. *Intel Iris Xe Graphics*) i wybierz Właściwości.
 
@@ -98,12 +99,12 @@ Operacja ta zmusza podsystem graficzny Windows do ponownego odpytania wszystkich
 
 1. Wciśnij `Win + R`, wpisz `regedit` i zatwierdź z uprawnieniami administratora.
 
-2. Przejdź do następującego klucz
+## 2. Przejdź do następującego klucz
 
 a:
    `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\GraphicsDrivers`
 
-3. Odszukaj trzy podkatalogi:
+## 3. Odszukaj trzy podkatalogi:
 
    * `Configuration`
    * `Connectivity`
@@ -121,12 +122,12 @@ Zwykłe odinstalowanie sterownika z poziomu Menedżera urządzeń pozostawia pli
 
 1. Pobierz narzędzie Display Driver Uninstaller (DDU).
 
-2. Uruchom system w trybie awaryjnym:
+## 2. Uruchom system w trybie awaryjnym:
 
    * Przytrzymaj klawisz `Shift` i kliknij Uruchom ponownie w menu Start.
    * Przejdź do: Rozwiąż problemy->Opcje zaawansowane->Ustawienia uruchamiania-> wciśnij klawisz `4` (Włącz tryb awaryjny).
 
-3. Uruchom DDU z uprawnieniami administrator
+## 3. Uruchom DDU z uprawnieniami administrator
 
 a:
    * Jako typ urządzenia wybierz Karta graficzna. * Wybierz producenta dedykowanego układu (np. NVIDIA) i kliknij Wyczyść i NIE restartuj.
@@ -177,12 +178,12 @@ Praca na niskopoziomowych komponentach wideo niesie za sobą ryzyko utraty obraz
 
 Często zadawane pytania (FAQ)
 
-1. Czy uszkodzony lub zbyt długi kabel może wywoływać błędy systemowe TDR w dzienniku zdarzeń?  
+## 1. Czy uszkodzony lub zbyt długi kabel może wywoływać błędy systemowe TDR w dzienniku zdarzeń?
 
 Tak. Jeżeli kabel ma długość przekraczającą 2 metry bez aktywnego wzmacniacza sygnału lub nie posiada odpowiedniego ekranowania, na liniach transmisyjnych pojawia się zjawisko *DisplayPort link training error*. Karta graficzna próbuje obniżyć taktowanie lub renegocjować pasmo, co zamraża potok renderowania i zmusza sterownik `dxgkrnl.sys` do zainicjowania procedury naprawczej TDR.
 
 2. Dlaczego pojedynczy monitor działa perfekcyjnie, a problem pojawia się dopiero po wpięciu drugiego ekranu? Obsługa dwóch monitorów wymaga podwojenia przepustowości na współdzielonym łączu PCIe oraz aktywacji technologii MST (Multi-Stream Transport). Wielu tańszych producentów stacji dokujących implementuje huby MST, które wchodzą w konflikt z mechanizmem zarządzania energią ASPM (Active State Power Management) w laptopie. W efekcie kontroler odcina zasilanie drugiego strumienia wideo przy braku gwałtownych zmian obrazu.
 
-3. Czy wyłączenie zintegrowanej karty graficznej (iGPU) w Menedżerze urządzeń rozwiąże konflikt?  
+## 3. Czy wyłączenie zintegrowanej karty graficznej (iGPU) w Menedżerze urządzeń rozwiąże konflikt?
 
 W żadnym wypadku nie wolno tego robić w laptopach bez sprzętowego przełącznika MUX switch. W większości konstrukcji matryca laptopa oraz porty wyjściowe są fizycznie podpięte pod piny wyjściowe iGPU. Wyłączenie zintegrowanego układu w Menedżerze urządzeń spowoduje całkowite wyłączenie akceleracji sprzętowej, spadek rozdzielczości do trybu podstawowego Microsoft Basic Display Driver i brak możliwości wyprowadzenia sygnału na jakiekolwiek ekrany zewnętrzne.

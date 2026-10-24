@@ -26,6 +26,7 @@ theme: "Mint Fresh Engineering"
 
 
 
+
 Sáng nay vừa bước chân vào văn phòng ở khu công nghệ phần mềm Đà Nẵng, đồng nghiệp bên bàn kế bên đã hớt hải chạy sang kêu cứu vì chiếc laptop làm việc chính cứ đơ cứng ở màn hình "Working on updates... 100%" suốt hơn hai tiếng đồng hồ. Sếp lớn thì đang chuẩn bị cuộc họp trực tuyến với đối tác, còn thanh niên này thì bất lực nhìn vòng tròn quay đều không lối thoát. Khởi động lại bằng nút nguồn cứng thì máy lại lăn ra lỗi vòng lặp boot, đúng là một cú sốc đầu ngày khiến bao kế hoạch đổ bể.
 
 <div style="border-left: 4px solid #059669; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
@@ -94,13 +95,13 @@ Lời khuyên từ chuyên gia hệ thống
 
 Những câu hỏi thường gặp (FAQ)
 
-1. Việc đổi tên thư mục SoftwareDistribution có làm mất dữ liệu cá nhân không?
+## 1. Việc đổi tên thư mục SoftwareDistribution có làm mất dữ liệu cá nhân không?
 Tuyệt đối không. Thư mục này chỉ chứa các bản cập nhật tải tạm thời từ máy chủ Microsoft. Dữ liệu, ứng dụng và tài liệu cá nhân của bạn hoàn toàn được giữ nguyên vẹn.
 
 ![Tech & IT Solution Guide](https://picsum.photos/seed/computer17/1000/550)
 
-2. Tại sao Windows 11 hay gặp lỗi kẹt update ở bản dựng gần đây?
+## 2. Tại sao Windows 11 hay gặp lỗi kẹt update ở bản dựng gần đây?
 Nguyên nhân chủ yếu do sự không tương thích phần cứng ngầm hoặc các bản vá bảo mật cumulative update có dung lượng lớn, dễ bị nghẽn mạng hoặc lỗi xung đột driver thiết bị ngoại vi trong quá trình giải nén.
 
-3. Tôi có thể xóa hẳn thư mục SoftwareDistribution.old sau khi máy đã chạy ổn định không?
+## 3. Tôi có thể xóa hẳn thư mục SoftwareDistribution.old sau khi máy đã chạy ổn định không?
 Có. Sau khi máy tính đã khởi động lên màn hình chính và hoạt động mượt mà, bạn có thể xóa thư mục `.old` đó đi để giải phóng dung lượng ổ cứng C mà không gặp bất kỳ vấn đề gì.

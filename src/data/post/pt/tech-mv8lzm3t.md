@@ -26,6 +26,7 @@ theme: "Cobalt Enterprise Lab"
 
 
 
+
 Eram exatos 08h45 de uma segunda-feira chuvosa quando o diretor comercial brotou atrás da minha cadeira com aquela clássica frase que tira dez anos de vida de qualquer analista de suporte: *"Meu notebook tá demorando dez minutos pra abrir o Excel, a reunião com o cliente é às 9h, resolve aí rapidão"*. O bicho tava tão lento que o logo do Windows 10 parecia uma tela de loading de jogo de disquete. A ventoinha do i7 gritando, o disco em 100% de uso no Gerenciador de Tarefas, e eu suando frio olhando pro relógio. 
 
 A gente sabe como é: o usuário instala aplicativo de chat da empresa, utilitário de impressora que roda desde o século passado, antivírus corporativo pesadíssimo e atualizações acumuladas. Tudo isso decide carregar no *startup* ao mesmo tempo. O resultado? Um gargalo miserável que transforma uma máquina com SSD NVMe numa carroça de tração animal. 
@@ -67,7 +68,7 @@ Esqueça programas de terceiros duvidosos como *CCleaner*. O próprio Windows j�
 
 3. Vá direto para a aba Inicializar (ou o ícone de medidor de velocidade nas versões mais recentes do Windows 11).
 
-4.  Ordene os itens por Impacto na inicialização.
+## 4.  Ordene os itens por Impacto na inicialização.
 
 5. Clique com o botão direito nos aplicativos desnecessários (tipo Steam, Epic Games, Cortana, utilitários de celular) e selecione Desabilitar. Deixe ativo apenas o antivírus e o driver de vídeo.
 
@@ -85,20 +86,20 @@ Agora vamos rodar a artilharia pesada para varrer o lixo acumulado que corrompe 
 
 1. Pressione `Windows + R`, digite `cmd`, e aperte `Ctrl + Shift + Enter` para abrir o Prompt de Comando como Administrador.
 
-2. Digite o comando abaixo para verificar a integridade dos arquivos de sistema corrompidos que podem travar o boot:
+## 2. Digite o comando abaixo para verificar a integridade dos arquivos de sistema corrompidos que podem travar o boot:
 
    ```cmd
    DISM.exe /Online /Cleanup-image /Restorehealth
    ```
    *(Espere rodar até 100%...)*
 
-3. Em seguida, rode o bom e velho escaneamento de arquivos protegidos:
+## 3. Em seguida, rode o bom e velho escaneamento de arquivos protegidos:
 
    ```cmd
    sfc /scannow
    ```
 
-4. Para finalizar a limpeza física de arquivos temporários de boot, abra o menu Iniciar, digite Limpeza de Disco(`cleanmgr`), selecione a unidade `C:`, marque todas as caixas de arquivos temporários, despejo de memória e cache, e clique emLimpar arquivos do sistema. ---
+## 4. Para finalizar a limpeza física de arquivos temporários de boot, abra o menu Iniciar, digite Limpeza de Disco(`cleanmgr`), selecione a unidade `C:`, marque todas as caixas de arquivos temporários, despejo de memória e cache, e clique emLimpar arquivos do sistema. ---
 
 Alerta Vermelho da TI: Cuidados para não transformar o PC em peso de papel
 
@@ -115,6 +116,6 @@ FAQ Técnico: Dúvidas Comuns da Bancada
 
 2. Devo usar programas milagrosos de otimization da internet? Evite ao máximo. A maioria desses softwares chamados "Game Boosters" ou "PC Cleaners" genéricos só serve para entupir o sistema de adware, rodar scripts inúteis e, ironicamente, adicionar mais processos residentes em segundo plano que deixam o computador ainda mais lento. O ecossistema nativo do Windows já possui ferramentas suficientes.
 
-3. O relatório de inicialização do Gerenciador de Tarefas mostra "Tempo da última BIOS: X segundos". O que isso significa?
+## 3. O relatório de inicialização do Gerenciador de Tarefas mostra "Tempo da última BIOS: X segundos". O que isso significa?
 
 Isso indica o tempo que a placa-mãe leva para fazer o autoteste (POST) e inicializar o firmware antes de passar o bastão para o Windows. Se esse tempo estiver muito alto (acima de 15-20 segundos sem justificativa), pode ser hora de atualizar a BIOS da placa-mãe ou desativar dispositivos de hardware legados que não são mais utilizados nas portas USB/PCIe.

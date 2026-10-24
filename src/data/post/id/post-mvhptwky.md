@@ -26,6 +26,7 @@ theme: "Retro Monokai"
 
 
 
+
 Jam menunjukkan pukul 16.45 WIB di salah satu gedung perkantoran kawasan Sudirman, Jakarta. Tenggat waktu (deadline) laporan keuangan tahunan tinggal 15 menit lagi, dan suasana di kubikal saya mendadak mencekam. PC salah satu manajer keuangan mengalami crash mendadak akibat pembaruan sistem yang gagal. Setelah melakukan force restart dan sistem berhasil menyala kembali, sang manajer panik bukan kepalang karena kebiasaan kerjanya terganggu. Menu klik kanan (right-click context menu) di Windows 11 berubah total menjadi tampilan modern minimalis yang menyembunyikan opsi "Show more options" atau tombol pintas lama seperti WinRAR, 7-Zip, dan pengaturan driver penting.
 
 Bayangkan betapa frustrasinya harus mengklik dua kali hanya untuk melakukan ekstrak file atau scan antivirus di detik-detik krusial menjelang pengumpulan laporan. Waktu terbuang percuma untuk melakukan trial-and-error mengklik menu tersembunyi yang tidak responsif di bawah tekanan tenggat waktu yang begitu ketat.
@@ -60,7 +61,7 @@ Cara Cepat via Command Prompt (Rekomendasi Utama)
 
 2. Pada hasil pencarian, klik kanan pada Command Promptdan pilihRun as administrator (atau Jalankan sebagai administrator).
 
-3. Salin dan tempel (paste) kode perintah di bawah ini ke dalam jendela Command Prompt, lalu tekan Enter:
+## 3. Salin dan tempel (paste) kode perintah di bawah ini ke dalam jendela Command Prompt, lalu tekan Enter:
 
 ```cmd
 reg.exe add "HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\InprocServer32" /f /ve
@@ -90,7 +91,7 @@ Pertanyaan yang Sempurna (FAQ)
 
 2. Apakah cara ini akan hilang otomatis jika komputer melakukan update Windows? Sebagian besar pembaruan kumulatif (cumulative update) bulanan tidak akan menghapus tweak registry ini. Namun, pada pembaruan fitur besar tahunan (major OS upgrade), ada kemungkinan pengaturan ini mereset ke default dan Anda perlu menjalankan ulang perintah Command Prompt di atas.
 
-3. Bagaimana cara mengembalikan ke menu bawaan Windows 11 jika saya berubah pikiran?
+## 3. Bagaimana cara mengembalikan ke menu bawaan Windows 11 jika saya berubah pikiran?
 
 Sangat mudah. Buka kembali Command Prompt sebagai Administrator, lalu ketik perintah berikut untuk menghapus kunciny
 

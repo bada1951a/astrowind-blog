@@ -26,6 +26,7 @@ theme: "Pure Titanium Clean"
 
 
 
+
 The Slack notifications were blowing up my second monitor, our product release sync was starting in exactly four minutes, and my mouse suddenly refused to register a single click on the Windows 11 taskbar. Clicking the Start menu did nothing, the system tray icons were completely unresponsive, and switching between my open IDE windows felt like trying to drive a car with square wheels. When you are sitting in a fast-paced Silicon Valley tech firm trying to push a pre-release build, a frozen taskbar isn't just an annoyance—it is an absolute workflow emergency. 
 
 We have all been there. You mash the Windows key, you frantically click around the clock and Wi-Fi icons, and nothing moves. Instead of panic-rebooting your entire machine and losing your open dev environments, let's walk through why this happens and how to fix it in under two minutes using native tools.
@@ -74,7 +75,7 @@ If the explorer restart doesn't stick or Task Manager itself is acting sluggish,
 
 3. Type `cmd` into the open field, check the box that says Create this task with administrative privileges, and hit Enter.
 
-4. In the Command Prompt window, type the following commands one by one and press Enter after each:
+## 4. In the Command Prompt window, type the following commands one by one and press Enter after each:
 
    ```cmd
    taskkill /f /im explorer.exe
@@ -88,7 +89,7 @@ If the taskbar freezes repeatedly after every reboot, the underlying modern app 
 
 1. Press `Ctrl + Shift + Esc` and open a new task as administrator, typing `powershell` instead of `cmd`.
 
-2. Copy and paste the following clean PowerShell command into the terminal and press Enter:
+## 2. Copy and paste the following clean PowerShell command into the terminal and press Enter:
 
    ```powershell
    Get-AppxPackage -AllUsers -Name Microsoft.Windows.ShellExperienceHost | Foreach {Add-AppxPackage -DisableDevelopmentMode -Register "(_.InstallLocation)\AppXManifest.xml"}

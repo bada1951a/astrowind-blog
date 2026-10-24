@@ -26,6 +26,7 @@ theme: "Matte Black stealth"
 
 
 
+
 Es war kurz vor 17 Uhr in unserem Büro in Berlin-Mitte. Mitten in der finalen Vorbereitung für den Rollout unserer neuen Microservices-Architektur ploppte auf meinem Hauptrechner die gefürchtete rote Warnmeldung auf: "Speicherplatz auf C: wird knapp. Nur noch 1,2 GB verfügbar." Der Build-Prozess in Docker brach ab, Visual Studio Code fror ein und die Lüfter drehten am Limit. Keine Zeit für langes Rätselraten – das System musste sofort bereinigt werden, ohne dass wichtige Konfigurationen oder Logs für den Release verloren gingen.
 
 Wer in einer schnelllebigen IT-Umgebung arbeitet, kennt das Problem. Windows 11 neigt dazu, sich im Laufe der Zeit unbemerkt mit Gigabytes an temporärem Datenmüll vollzusaugen. Hier ist mein praxiserprobter Leitfaden, wie du deine C-Platte in wenigen Minuten wieder freiräumst, ohne dein System zu gefährden.
@@ -58,13 +59,13 @@ Schritt 1: Die offizielle Speicher-Übersicht und temporäre Dateien nutzen
 
 3. Klicke direkt oben auf Temporäre Dateien. Windows scannt nun das System nach nicht mehr benötigten Daten.
 
-4. Setze die Haken bei den zu löschenden Kategorien. Achte besonders auf:
+## 4. Setze die Haken bei den zu löschenden Kategorien. Achte besonders auf:
 
    - *Windows Update-Bereinigung* (gibt oft mehrere Gigabyte frei)
    - *Temporäre Dateien*
    - *Thumbnails (Miniaturansichten)*
 
-5. Klicke auf Dateien entfernen.
+## 5. Klicke auf Dateien entfernen.
 
 Schritt 2: Manuelles Leeren der Benutzer-Caches via Ausführen-Dialog
 
@@ -88,7 +89,7 @@ Damit das Problem vor dem nächsten Release nicht wieder auftritt, automatisiere
 
 2. Aktiviere den Schalter bei Speicheroptimierung (Storage Sense).
 
-3. Klicke auf den Text "Speicheroptimierung", um die Details zu konfigurieren:
+## 3. Klicke auf den Text "Speicheroptimierung", um die Details zu konfigurieren:
 
    - Lass Windows temporäre Dateien automatisch bereinigen.
    - Lege fest, wie oft der Papierkorb oder der Downloads-Ordner bereinigt werden soll.

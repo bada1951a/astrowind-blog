@@ -26,6 +26,7 @@ theme: "Mint Fresh Engineering"
 
 
 
+
 Il est 17h45 dans notre open space à Paris La Défense. La pression monte d'un cran : le rapport financier trimestriel doit être bouclé et envoyé au comité de direction avant 18h30. Soudain, c'est le drame. Mon écran se fige net. La souris ne répond plus, le curseur est immobile, et le clavier refuse d'afficher le moindre caractère. Pas de BSOD (écran bleu) classique, juste un gel total de Windows 11. Impossible de basculer sur une autre application ou de faire un simple Ctrl+Alt+Suppr. Le ventirad du processeur continue de tourner, mais la machine est complètement sourde. Dix minutes perdues à attendre, puis l'angoisse de devoir forcer le redémarrage via le bouton physique du boîtier en croisant les doigts pour que le document Excel n'ait pas été corrompu. 
 
 Face à ce genre de panne aléatoire, la pire erreur est de jouer aux devinettes en changeant des pièces au hasard. En tant qu'ingénieur support, j'ai vu trop de collègues formater des machines ou racheter des barrettes de RAM sans savoir ce qui se passait réellement sous le capot. 
@@ -48,18 +49,18 @@ Avant de lancer les outils de diagnostic, faisons le point sur ce qui provoque g
 
 Puisque le plantage vient de se produire, nous allons utiliser l'outil natif de Windows pour remonter le fil du crime. Suivez exactement cette procédure :
 
-1. Ouvrir l'Observateur d'événements
+## 1. Ouvrir l'Observateur d'événements
 Cliquez sur le menu Démarrer, tapez Observateur d'événements (Event Viewer) et validez. 
 Dans la colonne de gauche, développez l'arborescence : Journaux Windows->Système.
 
 ![Tech Troubleshooting Guide](/images/tech-photo/display%20(14).png)
 
-2.  Filtrer les erreurs critiques (Kernel-Power)
+## 2.  Filtrer les erreurs critiques (Kernel-Power)
 Un freeze brutal se solde presque toujours par une coupure forcée. Cherchez dans la liste centrale l'événement portant l'ID 41 (source *Kernel-Power*). 
 *   *Attention :* Cet événement indique simplement que le système a redémarré sans s'éteindre proprement. Ce n'est pas la cause du problème, mais la conséquence de votre redémarrage forcé. 
 *   Il faut donc regarder dans les 2 à 5 minutes qui précèdent cet événement ID 41 pour trouver les véritables alertes.
 
-3. Identifier les coupables récurrents
+## 3. Identifier les coupables récurrents
 Filtrez ou lisez les avertissements et erreurs juste avant le plantage. Voici ce que vous devez chercher :
 *   ID 10010 (DistributedCOM) : Souvent bénin, lié à un délai d'attente dépassé pour une application.
 *   Alerte nvlddmkm ou amdkmdap : Problème direct avec le pilote de votre carte graphique NVIDIA ou AMD.

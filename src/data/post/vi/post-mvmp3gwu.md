@@ -17,7 +17,8 @@ theme: "Sandstone Desert Minimal"
 
 
 
-1. Tình huống khẩn cấp tại văn phòng
+
+## 1. Tình huống khẩn cấp tại văn phòng
 
 Hôm nay là một ngày bận rộn tại văn phòng nằm ngay trung tâm Quận 1, TP. Hồ Chí Minh. Tôi vừa nhấp ngụm cà phê sáng thì đồng nghiệp ngồi bàn bên hoảng hốt gọi tôi đến hỗ trợ chiếc máy tính xách tay của anh ấy. Số là bên ngoài hợp tác xã và đối tác vừa gửi qua một tệp nén (ZIP) chứa các bản vẽ kỹ thuật và dữ liệu quan trọng. Anh ấy đang định dùng tổ hợp phím **Win + Shift + S** quen thuộc để cắt vài tấm hình chi tiết gửi ngay cho cấp trên kiểm tra tiến độ, nhưng bấm hoài mà màn hình cứ trơ ra, không có một chút phản hồi nào. Cửa sổ chụp ảnh màn hình của Snipping Tool hoàn toàn biến mất, khiến tiến độ công việc bị chững lại ngay lập tức.
 
@@ -27,7 +28,7 @@ Hôm nay là một ngày bận rộn tại văn phòng nằm ngay trung tâm Qu�
 
 ![Tech Troubleshooting Guide](/images/tech-photo/tech-photo%20(37).jpg)
 
-2. Nguyên nhân cốt lõi gây lỗi
+## 2. Nguyên nhân cốt lõi gây lỗi
 
 Trước khi đi vào các bước khắc phục, chúng ta hãy điểm qua ba nguyên nhân chính khiến tổ hợp phím chụp màn hình trên Windows 11 "đình công":
 
@@ -35,7 +36,7 @@ Trước khi đi vào các bước khắc phục, chúng ta hãy điểm qua ba 
 * **Cài đặt thông báo (Notifications) bị chặn:** Windows 11 yêu cầu quyền hiển thị thông báo để đưa ảnh chụp vào khay nhớ tạm (clipboard). Nếu bạn vô tình tắt thông báo của Snipping Tool, tính năng sẽ không hoạt động đúng cách.
 * **Xung đột ứng dụng bên thứ ba:** Các phần mềm chụp màn hình khác như Lightshot, Greenshot hoặc các công cụ quay màn hình game đang chiếm quyền điều khiển phím tắt.
 
-3. Các bước xử lý chi tiết
+## 3. Các bước xử lý chi tiết
 
 Để giải quyết triệt để tình trạng này mà không làm mất thời gian mở lại các phần mềm vẽ CAD đang chạy dở, chúng ta sẽ thực hiện lần lượt các bước sau đây ngay trên giao diện Windows 11.
 
@@ -65,14 +66,14 @@ Nếu hai bước trên chưa đem lại kết quả, chúng ta sẽ tiến hàn
 <strong>Lưu ý quan trọng:</strong> Việc bấm Reset sẽ xóa sạch bộ nhớ đệm cũ của ứng dụng, giúp loại bỏ hoàn toàn các tệp cấu hình bị hỏng do xung đột phần mềm trước đó.
 </div>
 
-4. Lời khuyên từ chuyên gia CNTT
+## 4. Lời khuyên từ chuyên gia CNTT
 
 Trong quá trình hỗ trợ xử lý sự cố cho các văn phòng tại TP. Hồ Chí Minh, tôi nhận thấy nhiều anh chị em nhân viên văn phòng thường cài đặt rất nhiều phần mềm bên thứ ba để hỗ trợ công việc. 
 
 - Hãy kiểm tra xem bàn phím của bạn có đang bật chế độ **Fn Lock** hoặc phím **Win Lock** hay không. Một số dòng laptop văn phòng có tính năng khóa phím Windows để tránh bấm nhầm khi chơi game, điều này vô tình làm vô hiệu hóa mọi tổ hợp phím có chứa phím Win.
 - Thường xuyên cập nhật bản vá bảo mật mới nhất cho Windows 11 thông qua Windows Update để hạn chế tối đa các lỗi vặt liên quan đến giao diện hệ thống.
 
-5. Câu hỏi thường gặp (FAQ)
+## 5. Câu hỏi thường gặp (FAQ)
 
 Q: Tại sao tôi bấm Win + Shift + S nhưng không thấy ảnh lưu vào Clipboard?
 

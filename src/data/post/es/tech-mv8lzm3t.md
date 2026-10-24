@@ -26,6 +26,7 @@ theme: "Acid Lime Hacker Space"
 
 
 
+
 Eran las 8:55 AM, a solo cinco minutos de que el *Director General* entrara a la sala de juntas para una presentación global con inversores. El pobre Carlos, de finanzas, me llama por Teams con la voz quebrad
 
 a: su ThinkPad se había quedado congelado en la pantalla de bienvenida con la rueda de carga dando vueltas eternas. El ventilador parecía un motor de Boeing 747 a punto de despegar, y el tipo sudaba frío mirando el reloj. Si esa máquina no arrancaba en tres minutos, la reunión se caía y mi cabeza rodaba por el pasillo.
@@ -77,7 +78,7 @@ Un arranque lento a veces oculta un problema de particionado o falta de alineaci
 
 2. Verifica que la partición del sistema operativo tenga al menos un 15% o 20% de espacio libre real. Los SSD sufren caídas drásticas de velocidad de lectura/escritura aleatoria (IOPS) cuando rozan el límite de su capacidad.
 
-3. Si detectas particiones de recuperación obsoletas de equipos antiguos, límpialas usando la utilidad CLI nativ
+## 3. Si detectas particiones de recuperación obsoletas de equipos antiguos, límpialas usando la utilidad CLI nativ
 
 a:
 

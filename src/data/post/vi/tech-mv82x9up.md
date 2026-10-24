@@ -26,6 +26,7 @@ theme: "Rosewood Hardware Guide"
 
 
 
+
 **Q1.** 0 phút nữa là đến giờ sếp tổng họp chiến lược quý để duyệt ngân sách IT, tự nhiên cái máy trạm của ông Kế toán trưởng lăn ra chứng "màn hình đen xì". Quạt tản nhiệt nước hú lên như máy bay phản lực cất cánh, đèn LED trên Mainboard sáng rực, bàn phím gõ NumLock không thèm nhấp nháy một cái. Nhìn mặt ổng lúc đó tái mét, mồ hôi hột tuôn rơi vì toàn bộ file báo cáo dòng tiền năm chưa kịp backup nằm trọn trong đó. Đứng sau lưng thở dốc, mẹ kiếp, cảm giác cái ghế IT của mình lúc đó nó lung lay dữ dội hơn bao giờ hết.
 
 Góc nhìn chuyên sâu từ phần cứng: Triệu chứng "Hồn lìa khỏi xác"
@@ -85,13 +86,13 @@ Cảnh báo từ chuyên gia IT: Sai lầm chết người cần tránh
 
 Câu hỏi thường gặp (FAQ)
 
-1. Tại sao vệ sinh RAM sạch sẽ rồi mà cắm vào máy vẫn kêu tiếng bíp dài liên tục?
+## 1. Tại sao vệ sinh RAM sạch sẽ rồi mà cắm vào máy vẫn kêu tiếng bíp dài liên tục?
 Tiếng bíp dài liên tục (hoặc chu kỳ bíp lặp lại) thường báo hiệu Mainboard không nhận diện được RAM. Có hai nguyên nhân: một là thanh RAM chưa được ấn sập khớp hoàn toàn, hai là chân cắm trong khe RAM bị kẹt bụi. Hãy dùng cọ mềm quét sạch khe cắm hoặc thử đổi sang khe RAM khác.
 
 ![Hardware Diagnostic & Troubleshooting](https://picsum.photos/seed/hardware-168/1000/550)
 
-2. Có cần thiết phải bôi mỡ tản nhiệt hay dung dịch bảo vệ chân RAM không?
+## 2. Có cần thiết phải bôi mỡ tản nhiệt hay dung dịch bảo vệ chân RAM không?
 Tuyệt đối không bôi bất kỳ loại mỡ tản nhiệt hay dầu mỡ nào vào chân RAM. Chân tiếp điểm RAM cần độ khô ráo tuyệt đối để truyền dẫn tín hiệu điện tử với tốc độ cao hàng nghìn MHz. Việc bôi chất lạ sẽ làm cản trở tiếp xúc và gây chập cháy.
 
-3. Máy công ty thỉnh thoảng lại bị lỗi màn hình đen này thì phải xử lý tận gốc thế nào?
+## 3. Máy công ty thỉnh thoảng lại bị lỗi màn hình đen này thì phải xử lý tận gốc thế nào?
 Nếu tình trạng này lặp lại thường xuyên trên nhiều máy trong văn phòng, vấn đề nằm ở độ ẩm phòng làm việc quá cao hoặc nguồn điện không ổn định. Doanh nghiệp nên trang bị máy hút ẩm cho phòng server/phòng làm việc và sử dụng ổ cắm lọc nguồn, ổn áp chất lượng cao để bảo vệ phần cứng.

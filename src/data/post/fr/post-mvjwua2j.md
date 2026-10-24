@@ -26,6 +26,7 @@ theme: "Sandstone Desert Minimal"
 
 
 
+
 Vendredi, 17h45. Le compte à rebours est lancé dans notre open space de La Défense, et l'ambiance est électrique. Dans 15 minutes, c'est le week-end, mais surtout, je dois absolument envoyer le rapport de clôture hebdomadaire final par e-mail à notre directeur et aux membres du comité de direction. Pour couronner le tout, une dernière vérification vidéo s'impose avec mon chef d'équipe sur un point crucial du dossier. Je clique sur la vidéo, et là... c'est le drame absolu. Un silence de mort. Pas un seul son ne sort de mes haut-parleurs, et mon casque sans fil refuse désespérément de diffuser la moindre note. La petite icône de haut-parleur dans la barre des tâches affiche une fichue croix rouge, et mes mains commencent à transpirer. Le stress monte en flèche.
 
 <div style="border-left: 4px solid #a16207; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">

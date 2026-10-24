@@ -26,6 +26,7 @@ theme: "Crimson Emergency Field"
 
 
 
+
 <div style="border-left: 4px solid #ef4444; padding: 12px 16px; margin: 20px 0; background-color: rgba(239, 68, 68, 0.08); border-radius: 4px; color: #111827;">
 <strong>Kritieke Systeemwaarschuwing:</strong> Sta je op het punt om een belangrijk videogesprek te starten op je kantoor aan de Zuidas, en hoor je opeens helemaal niets meer na een onverwachte BSOD? Geen paniek. Dit stappenplan brengt je geluid binnen enkele minuten terug.
 </div>

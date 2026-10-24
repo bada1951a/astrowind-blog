@@ -26,6 +26,7 @@ theme: "Retro Monokai"
 
 
 
+
 Eram exatamente 13:45 em um escritório na Avenida Paulista, São Paulo. A reunião de diretoria começaria às 14:00 em ponto, e a apresentação principal estava salva na máquina do nosso diretor financeiro. O problema? O notebook dele simplesmente congelou. As ventoinhas pareciam uma turbina de boeing tentando decolar, o cursor do mouse arrastava na tela como se estivesse na lama e, ao abrir o Gerenciador de Tarefas, lá estava a sentença de morte: o uso da CPU cravado em 100%, dominado por um misterioso processo do sistema (*System* ou *Interrupções de Sistema*). 
 
 Se você já passou por isso, sabe que o desespero bate na hora. Reiniciar a máquina não adiantava, pois o Windows travava na tela de carregamento ou voltava com o mesmo gargalo infernal devido a indexações corrompidas, serviços de atualização travados ou conflitos de driver de hardware. 
@@ -84,7 +85,7 @@ Se o passo anterior aliviou o problema, precisamos limpar a pasta onde o Windows
 
 2. Apague todo o conteúdo de dentro das pastas DownloadeDataStore. (Se o sistema disser que algum arquivo está em uso, pare o serviço do Windows Update novamente pelo `services.msc` e tente de novo).
 
-3. Reinicie a máquina normalmente.
+## 3. Reinicie a máquina normalmente.
 
 Passo 4: Verificando drivers no Gerenciador de Dispositivos
 Se o processo *Interrupções de Sistema* continua sugando o processador, o problema é hardware ou driver.

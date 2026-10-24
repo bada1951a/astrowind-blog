@@ -26,6 +26,7 @@ theme: "Pure Titanium Clean"
 
 
 
+
 Godzina 8:45 rano, warszawskie centrum biznesowe na Mokotowie. Za piętnaście minut kluczowa telekonferencja zarządu z inwestorami, a stacja robocza dyrektora finansowego wydaje z siebie dźwięk startującego odrzutowca. Wentylatory wyją na maksymalnych obrotach, kursor myszy skacze po ekranie jak szalony, a w Menedżerze zadań proces „System”lub„System i przerwania”dumnie wyświetla równe100% użycia procesora. Ekran zamarza przy próbie otwarcia prezentacji PowerPoint. Panika w oczach użytkownika sięga zenitu, a ja wkraczam do akcji z walizką serwisową.
 
 Znam ten ból na pamięć. Zanim wpadłem na właściwy trop, straciłem mnóstwo czasu na bezmyślne restarty komputera, odinstalowywanie pakietu Office czy skanowanie antywirusem, które w tym konkretnym scenariuszu nie dawały absolutnie nic. Problem leżał głębiej – w sterownikach, uszkodzonej usłudze Windows Update lub konflikcie podzespołów. 
@@ -66,32 +67,32 @@ Krok 1: Identyfikacja winowajcy w Menedżerze Zadań
 
 3. Jeśli widzisz, że proces o nazwie „System”lub„System i przerwania”(System and compressed memory) pożera 80-100% CPU, kliknij na niego prawym przyciskiem myszy i wybierzPrzejdź do szczegółów.
 
-4. Zobaczysz proces ntoskrnl.exe. To potwierdzenie, że problem leży w jądrze systemu lub sterownikach urządzeń, a nie w zwykłej aplikacji użytkownika. ## Krok 2: Czyszczenie kolejki Windows Update (Częsty punkt zapalny)
+## 4. Zobaczysz proces ntoskrnl.exe. To potwierdzenie, że problem leży w jądrze systemu lub sterownikach urządzeń, a nie w zwykłej aplikacji użytkownika. ## Krok 2: Czyszczenie kolejki Windows Update (Częsty punkt zapalny)
 
 Jeśli proces systemowy obciąża procesor z powodu zaciętych aktualizacji, musimy zresetować komponenty usługi Update:
 
 1. Kliknij Start, wpisz `cmd`, kliknij prawym przyciskiem myszy na Wiersz poleceniai wybierzUruchom jako administrator.
 
-2. Wpisz poniższe komendy, zatwierdzając każdą klawiszem Enter:
+## 2. Wpisz poniższe komendy, zatwierdzając każdą klawiszem Enter:
 
    * `net stop wuauserv`
    * `net stop cryptSvc`
    * `net stop bits`
    * `net stop msiserver`
 
-3. Następnie zresetuj foldery pamięci podręcznej, wpisując:
+## 3. Następnie zresetuj foldery pamięci podręcznej, wpisując:
 
    * `ren C:\Windows\SoftwareDistribution SoftwareDistribution.old`
    * `ren C:\Windows\System32\catroot2 Catroot2.old`
 
-4. Uruchom usługi ponownie:
+## 4. Uruchom usługi ponownie:
 
    * `net start wuauserv`
    * `net start cryptSvc`
    * `net start bits`
    * `net start msiserver`
 
-5. Zrestartuj komputer.
+## 5. Zrestartuj komputer.
 
 Krok 3: Aktualizacja lub wycofanie sterowników w Menedżerze Urządzeń
 Jeżeli reset Windows Update nie pomógł, winny jest najpewniej sterownik sprzętowy.
@@ -122,6 +123,6 @@ Często zadawane pytania (FAQ)
 
 2. Co zrobić, jeśli po restrykcyjnym skanowaniu antywirusem problem nadal występuje? Jeśli program antywirusowy nie wykrył zagrożeń, a proces systemowy nadal dusi procesor, problem na 99% nie wynika z infekcji złośliwym oprogramowaniem. Skup się na aktualizacji BIOS-u płyty głównej oraz sterowników chipsetu (szczególnie sterowników Intel Management Engine lub AMD Chipset Drivers).
 
-3. Czy wyłączenie szybkiego uruchamiania (Fast Startup) w Panelu sterowania może pomóc?
+## 3. Czy wyłączenie szybkiego uruchamiania (Fast Startup) w Panelu sterowania może pomóc?
 
 Tak! Funkcja szybkiego uruchamiania w Windows często zapisuje uszkodzony stan jądra systemowego do pliku hibernacji podczas zamykania komputera. Aby to wyłączyć, wejdź w *Panel sterowania -> Opcje zasilania -> Wybierz działanie przycisków zasilania*, odznacz *Włącz szybkie uruchamianie* i zrestartuj komputer. To rozwiązuje problem w co trzecim przypadków biurowych stacji roboczych.

@@ -26,6 +26,7 @@ theme: "Retro Monokai"
 
 
 
+
 <div style="border-left: 4px solid #a6e22e; padding: 12px 16px; margin: 20px 0; background-color: #272822; color: #f8f8f2; border-radius: 4px; font-family: 'Courier New', Courier, monospace;">
 [08:45:12] SYSTEM_ALERT: CPU Load 98% | RAM Usage 95% | User Panic Level: MAXIMUM<br>
 [08:45:18] LOG: "Mas, laptop gue stuck di logo Windows! Padahal 5 menit lagi mau meeting sama client VIP!"<br>
@@ -111,14 +112,14 @@ Expert Warning & Pro Tips
 
 ## Frequently Asked Questions (FAQ)
 
-1. Apakah mendisable aplikasi di Startup bakal bikin aplikasinya ke-hapus?
+## 1. Apakah mendisable aplikasi di Startup bakal bikin aplikasinya ke-hapus?
 
 Nggak sama sekali. *Disable* cuma berarti aplikasi tersebut nggak bakal otomatis jalan di latar belakang pas laptop dinyalain. Lu tetep bisa buka aplikasinya secara manual lewat shortcut desktop atau menu Start kapan pun lu butuh.
 
-2. Kenapa laptop gue masih lemot padahal startup udah bersih semua? Kalau startup udah bersih tapi booting tetap memakan waktu lebih dari 2-3 menit, besar kemungkinan media penyimpanan lu masih menggunakan Hard Disk Drive (HDD) jadul, atau kesehatan (Health) SSD lu udah drop di bawah 50%. Solusi permanennya adalah migrasi sistem operasi ke SSD NVMe/SAT
+## 2. Kenapa laptop gue masih lemot padahal startup udah bersih semua? Kalau startup udah bersih tapi booting tetap memakan waktu lebih dari 2-3 menit, besar kemungkinan media penyimpanan lu masih menggunakan Hard Disk Drive (HDD) jadul, atau kesehatan (Health) SSD lu udah drop di bawah 50%. Solusi permanennya adalah migrasi sistem operasi ke SSD NVMe/SAT
 
 A.
 
-3. Amankah mematikan semua service non-Microsoft di msconfig?
+## 3. Amankah mematikan semua service non-Microsoft di msconfig?
 
 Aman, asalkan aplikasi tersebut adalah aplikasi tambahan pihak ketiga (seperti updater game atau utility printer tambahan). Tapi kalau ragu dengan nama servicenya, biarkan default atau cari tahu dulu fungsi service tersebut di internet sebelum di-disable.

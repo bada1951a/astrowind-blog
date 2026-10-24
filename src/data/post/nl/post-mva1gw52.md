@@ -26,6 +26,7 @@ theme: "Warm Coffee Latte"
 
 
 
+
 Het was half drie op een drukke dinsdagmiddag op onze tech-campus in Eindhoven. Terwijl ik midden in een complexe troubleshoot-sessie zat voor een lokale partner, plofte er een paniekerig Slack-bericht binnen: een van onze developers kon geen code meer pushen omdat haar Windows 11 C-schijfklokje op rood stond—0 bytes vrije ruimte over. Het systeem liep vast, projectbestanden wilden niet opslaan en de ventilatoren loeiden als een opstijgende KLM-Boeing. Een acute performance-crisis die we direct moesten oplossen zonder belangrijke data te verliezen.
 
 <div style="border-left: 4px solid #78350f; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
@@ -55,20 +56,20 @@ We beginnen met de modernste en veiligste methode in Windows 11.
 
 1. Klik op Starten openInstellingen (het tandwielicoon).
 
-2.  Ga naar Systeemen kies vervolgens voorOpslag.
+## 2.  Ga naar Systeemen kies vervolgens voorOpslag.
 
 3. Klik bovenaan op Tijdelijke bestanden. Windows scant nu je hele systeem op overbodige data zoals Windows Update-opschoning, logboeken van fouten en eerdere installaties.
 
 4. Vink de items aan die je wilt verwijderen (laat persoonlijke downloads eventueel staan als je die nog wilt controleren).
 
-5. Klik op Bestanden verwijderen.
+## 5. Klik op Bestanden verwijderen.
 
 Stap 2: De diepe handmatige snoei via Schijfopruiming
 Voor het échte oude hang- en sluitwerk pakken we het klassieke hulpprogramma erbij.
 
 1. Druk op de toetsencombinatie Windows-toets + R, typ `cleanmgr` en druk op Enter.
 
-2. Selecteer je C-schijf en klik op OK.
+## 2. Selecteer je C-schijf en klik op OK.
 
 3. Klik in het volgende venster direct op de knop Systeembestanden opschonen. Dit zorgt ervoor dat ook oude update-installaties worden meegenomen in de scan.
 
@@ -95,7 +96,7 @@ Veelgestelde Vragen (FAQ)
 
 1. Kan ik zomaar alle bestanden in de map `%temp%` handmatig verwijderen? Ja, in principe wel. Druk op `Windows + R`, typ `%temp%` en selecteer alles met `Ctrl + A` om het te wissen. Bestanden die momenteel door een openstaand programma worden gebruikt, kun je simpelweg overslaan ("overslaan" kiezen als Windows daarom vraagt).
 
-2. Wat gebeurt er als ik de map `Windows.old` permanent verwijder?
+## 2. Wat gebeurt er als ik de map `Windows.old` permanent verwijder?
 
 Deze map wordt gebruikt om terug te keren naar een eerdere versie van Windows 11 als een update mislukt. Als je computer nu stabiel werkt en je hebt de schijfruimte hard nodig, kun je deze map veilig wissen via *Schijfopruiming*. Je kunt daarna alleen niet meer eenvoudig terugkeren naar de vorige OS-versie.
 

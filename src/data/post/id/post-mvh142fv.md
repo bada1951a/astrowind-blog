@@ -26,6 +26,7 @@ theme: "Industrial Blueprint"
 
 
 
+
 Suasana di salah satu gedung perkantoran kawasan Sudirman, Jakarta, mendadak mencekam. Jam menunjukkan pukul 16:45 WIB, tepat lima belas menit sebelum tenggat waktu pengiriman laporan keuangan kuartalan ke direksi. Tiba-tiba, layar monitor manajer operasional nge-freeze total. Mouse tidak bergerak, tombol Caps Lock ditekan tidak merespons, dan angka-angka laporan di Excel seolah mengejek dari balik layar yang membeku. Panik melanda karena belum sempat *save*. Dengan terpaksa, tombol *power* ditahan selama lima detik hingga PC mati paksa. Begitu PC dinyalakan ulang, dokumen yang dikerjakan hilang setengahnya, dan kepanikan berubah menjadi kejengkelan karena masalah *random freezing* seperti ini sudah terjadi tiga kali dalam seminggu terakhir.
 
 ![Tech Troubleshooting Guide](/images/tech-photo/tech-photos%20(42).jpg)
@@ -63,7 +64,7 @@ Karena log sistem sangat banyak, kita tidak perlu membaca semuanya satu per satu
 
 1. Di panel sebelah kanan, klik Filter Current Log...
 
-2. Pada bagian *Logged*, pilih rentang waktu kejadian (misalny
+## 2. Pada bagian *Logged*, pilih rentang waktu kejadian (misalny
 
 a: *Last 1 hour* atau *Last 24 hours*).
 
@@ -103,7 +104,7 @@ Setelah Anda menemukan biang keroknya melalui Event Viewer, lakukan langkah peng
 
 2. Rutin Cek Kesehatan Storage: Seringkali *random freezing* di Windows 11 disebabkan oleh SSD yang mulai kehabisan *spare area*. Pastikan selalu menyisakan minimal 10-15% kapasitas kosong pada drive sistem (C:).
 
-3. Update BIOS Secara Berkal
+## 3. Update BIOS Secara Berkal
 
 a: Beberapa motherboard memiliki bug pada manajemen daya C-States yang memicu freeze acak di Windows 11. Pembaruan BIOS sering kali menjadi solusi pamungkas.
 

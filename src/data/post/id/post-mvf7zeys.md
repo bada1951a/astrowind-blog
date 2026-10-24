@@ -26,6 +26,7 @@ theme: "Deep Indigo System"
 
 
 
+
 Jam 4 sore di sebuah gedung perkantoran kawasan Sudirman Jakarta, suasana mendadak tegang luar biasa. Batas waktu pengiriman laporan keuangan tinggal satu jam lagi, tapi layar monitor tiba-tiba membeku (*freezing*). Kipas PC berputar kencang menderu bagaikan mesin jet yang mau lepas landas, sementara kursor tetikus bergerak sangat lambat seperti terjebak di dalam lumpur. Saat tombol kombinasi keramat ditekan untuk membuka Task Manager, pemandangannya bikin jantungan: penggunaan CPU mentok di angka 100 persen penuh, dan pelakunya bukanlah aplikasi berat seperti game atau software rendering, melainkan proses bawaan Windows bernama "System" atau "System and Compressed Memory". 
 
 Panik? Pastinya. Rekan kerja di sebelah mulai keringat dingin karena dokumen Excel penting belum sempat tersimpan. Berbagai cara amatiran langsung dicoba, mulai dari menekan tombol restart paksa di CPU berulang kali, mencabut kabel power, hingga memukul-mukul meja karena kesal. Padahal, tindakan asal-asalan seperti itu justru berisiko merusak sektor *hard drive* atau membuat file laporan korup total. 
@@ -43,15 +44,15 @@ Kenapa Proses "System" Bisa Bikin CPU Kerja Kerja Kerja Terus?
 
 Sebelum masuk ke tombol-tombol pengaturan, kita harus paham dulu kenapa proses inti Windows ini mendadak menjadi "vampir" yang menyedot daya komputasi secara brutal. Berdasarkan pengalaman di lapangan, ada 3 penyebab utama yang paling sering terjadi:
 
-1. Konflik Driver Perangkat Keras (Hardware Driver Conflict)
+## 1. Konflik Driver Perangkat Keras (Hardware Driver Conflict)
 
    Driver komponen seperti chipset motherboard, LAN card, atau driver grafis yang sudah kedaluwarsa atau korup sering kali memicu *interrupt storm*. Akibatnya, proses *System* di Windows terus-menerus memproses sinyal interupsi yang tak berkesudahan.
 
-2. Layanan Windows Update yang Nyangkut (Stuck Update)
+## 2. Layanan Windows Update yang Nyangkut (Stuck Update)
 
    Pembaruan sistem yang gagal terunduh atau macet di tengah jalan kerap memaksa proses latar belakang bekerja secara repetitif tanpa hasil, memakan kapasitas inti CPU hingga maksimal.
 
-3. Kerusakan File Sistem (Corrupted System Files)
+## 3. Kerusakan File Sistem (Corrupted System Files)
 
    Sektor file sistem utama Windows yang rusak akibat mati lampu mendadak atau infeksi malware ringan membuat proses inti gagal membaca instruksi normal, berujung pada lonjakan penggunaan sumber daya hardware.
 
@@ -92,11 +93,11 @@ a:
 
 1. Klik tombol Start, ketik `cmd`, lalu klik kanan padaCommand Promptdan pilihRun as administrator.
 
-2. Ketik perintah berikut tanpa tanda kutip untuk memeriksa file sistem: `sfc /scannow`
+## 2. Ketik perintah berikut tanpa tanda kutip untuk memeriksa file sistem: `sfc /scannow`
 
 3. Tekan Enter dan tunggu proses pemindaian selesai (biasanya memakan waktu 10 hingga 15 menit). Sistem akan otomatis memperbaiki file yang rusak.
 
-4. Setelah selesai, lanjutkan dengan mengetik perintah pemeliharaan citra sistem: `DISM /Online /Cleanup-Image /RestoreHealth`
+## 4. Setelah selesai, lanjutkan dengan mengetik perintah pemeliharaan citra sistem: `DISM /Online /Cleanup-Image /RestoreHealth`
 
 5. Nyalakan ulang (*Restart*) komputer Anda setelah kedua proses tersebut tuntas.
 
