@@ -3,7 +3,7 @@ import path from 'path';
 
 const POSTS_BASE_DIR = path.resolve('src/data/post');
 
-function cleanMarkdownVerified(content) {
+function cleanMarkdownSafe(content) {
   const fmMatch = content.match(/^---[\s\S]*?---\n*/);
   if (!fmMatch) return content;
 
@@ -20,39 +20,37 @@ function cleanMarkdownVerified(content) {
   const processedLines = lines.map(line => {
     const trimmed = line.trim();
 
-    // 빈 줄은 그대로 유지
     if (!trimmed) return line;
 
-    // A. 대제목(H2) 통합 패턴: 숫자형, 서술형, FAQ, 실무 노트 등을 완벽하게 동시 포착
-    const isH2 = 
-      /^[1-5]\.\s+/.test(trimmed) ||
+    // A. 진짜 대제목(H2) 판별: 본문 속 단순 번호 매기기(예: "1. 설정에서...", "3. 클립보드...")는 절대 제외하고,
+    // 명확한 대단원 키워드 및 문서 구조 타이틀만 정확히 타겟팅
+    const isTrueH2 = 
       /^자주\s*묻는\s*질문/i.test(trimmed) ||
       /^Frequently\s+Asked\s+Questions/i.test(trimmed) ||
       /실무\s*노트/i.test(trimmed) ||
       /실무\s*예방\s*조언/i.test(trimmed) ||
       /전문가가\s*전하는/i.test(trimmed) ||
       /주요\s*원인/i.test(trimmed) ||
-      /해결\s*가이드/i.test(trimmed);
+      /해결\s*가이드/i.test(trimmed) ||
+      /Root\s*Cause\s*Breakdown/i.test(trimmed) ||
+      /Step-by-Step\s*Resolution/i.test(trimmed) ||
+      /Expert\s*Advice/i.test(trimmed) ||
+      // 숫자로 시작하더라도 문장형 설명이 아닌 단원 제목 형태인 경우만 허용
+      (/^[1-5]\.\s+\[/.test(trimmed) && !trimmed.endsWith('.'));
 
-    if (isH2) {
-      // 본문 안의 긴 서술형 설명문(마침표로 끝나거나 길이가 너무 긴 문장)은 대제목에서 철저히 제외
-      if (trimmed.endsWith('.') && trimmed.length > 50) {
-        return line;
+    if (isTrueH2) {
+      if (trimmed.endsWith('.') && trimmed.length > 40) {
+        return line; // 긴 서술형 문장은 대제목에서 제외
       }
       const cleanTitle = trimmed.replace(/^#+\s*/, '').replace(/\*\*/g, '').trim();
       return `## ${cleanTitle}`;
     }
 
-    // B. 소제목(H3) 판별 패턴: '[단계 1]', '방법 1', 'Step 1' 등
+    // B. 소제목(H3) 판별 패턴
     const isH3 = /^(\[[단계\s0-9]+\]|방법\s*[0-9]+|Step\s*[0-9]+)/i.test(trimmed);
     if (isH3) {
       const cleanTitle = trimmed.replace(/^#+\s*/, '').replace(/\*\*/g, '').trim();
       return `### ${cleanTitle}`;
-    }
-
-    // C. 본문 내 과도한 볼드체(굵은 글씨) 제거 (애드센스 최적화)
-    if (/^[0-9]+\.\s+\*\*/.test(trimmed)) {
-      return line.replace(/\*\*/g, '');
     }
 
     return line;
@@ -90,7 +88,7 @@ function run() {
       totalScanned++;
       const filePath = path.join(targetDir, file);
       const original = fs.readFileSync(filePath, 'utf-8');
-      const cleaned = cleanMarkdownVerified(original);
+      const cleaned = cleanMarkdownSafe(original);
 
       if (original !== cleaned) {
         fs.writeFileSync(filePath, cleaned, 'utf-8');
@@ -99,7 +97,7 @@ function run() {
     }
   }
 
-  console.log(`\n🎉 모든 제목 위계 동시 정돈 완료!`);
+  console.log(`\n🎉 안전 모드 마크다운 정돈 완료!`);
   console.log(`- 총 스캔된 파일: ${totalScanned}개`);
   console.log(`- 교정된 파일: ${totalUpdated}개`);
 }
