@@ -27,6 +27,7 @@ theme: "Pastel Lavender Tech"
 
 
 
+
 Als werkplekbeheerder en IT-infrastructuurspecialist krijg ik regelmatig randapparatuur op mijn werkbank die door collega's al bijna is afgeschreven. Vorige week nog stond een senior software developer aan mijn bureau: zijn op maat gemaakte mechanische toetsenbord met Cherry MX Brown switches registreerde bij de 'E'-toets willekeurig dubbele aanslagen (`ee`) en liet de spatiebalk regelmatig steken. Voor een programmeur is dit funest; één onbedoelde dubbele letter breekt variabelen en veroorzaakt syntaxfouten. 
 
 In plaats van direct een nieuw toetsenbord van tweehonderd euro uit het IT-budget te trekken of direct de soldeerbout aan te slingeren, heb ik het probleem binnen twintig minuten permanent verholpen. In deze technische handleiding deel ik de exacte diagnose- en herstelprocedure voor chattering(toetsstuiting of dubbelslag) enmissende aanslagen, inclusief de veilige toepassing van elektronica-contactspray.
@@ -62,13 +63,13 @@ Voordat we naar de werkbank grijpen, moeten we begrijpen wat er fysiek gebeurt b
 
 Wanneer dit proces faalt, ligt dat vrijwel altijd aan een van de volgende drie mechanismen:
 
-## 1. Oppervlakte-oxidatie en microverontreiniging van het bladveertje
+1. Oppervlakte-oxidatie en microverontreiniging van het bladveertje
 Het contactpunt in de switch bestaat uit verguld of vertind koperlegering. Door omgevingslucht, vocht, microdeeltjes en de wrijving van duizenden aanslagen slijt de toplaag minimaal en ontstaat er microscopische oxidatie. Wanneer er bovendien stof of huidschilfers tussen de contactpuntjes terechtkomen, sluit het contact niet meer zuiver in één keer. De elektrische weerstand fluctueert, wat de toetsenbordcontroller interpreteert als meerdere afzonderlijke pulsen (*bouncing*).
 
-## 2. Mechanische frictie en toleranties in hot-swap sockets
+2. Mechanische frictie en toleranties in hot-swap sockets
 Bij moderne toetsenborden met Kailh- of Gateron hot-swap sockets zitten de schakelaars niet vastgesoldeerd, maar rusten ze in klemcontacten aan de achterzijde van de printplaat (PCB). Door veelvuldig wisselen van switches of mechanische druk tijdens transport kunnen deze klemmen uitbuigen. Dit leidt tot een instabiele verbinding: de switch werkt met tussenpozen niet, of trilt tijdens het typen, wat resulteert in schijnbaar willekeurige dubbele aanslagen.
 
-## 3. Falende debounce-algoritmen en polling rate interferentie
+3. Falende debounce-algoritmen en polling rate interferentie
 Elke mechanische schakelaar stuitert van nature fysiek na (ongeveer 2 tot 5 milliseconden). De microcontroller van het toetsenbord filtert dit weg via een zogeheten *debounce-algoritme* (zoals Eager PR of Symmetric Defer). Wanneer de fysieke slijtage van het koperen bladveertje ervoor zorgt dat de stuitertijd langer duurt dan de softwarematige filterdrempel (vaak ingesteld op 5ms), wordt de stuitering geregistreerd als een volwaardige tweede toetsaanslag.
 
 ---
@@ -174,11 +175,11 @@ Door de debounce-tijd te verhogen van `5` naar `8` of `10` milliseconden geef je
 
 Veelgestelde vragen (FAQ)
 
-## 1. Kan ik een switch smeren met Krytox 205g0 om chattering op te lossen?
+1. Kan ik een switch smeren met Krytox 205g0 om chattering op te lossen?
 Nee, integendeel. Krytox 205g0 of TriboSys switchesmeermiddelen zijn diëlektrisch (niet-geleidend) en bedoeld om de wrijving tussen de plastic onderdelen (de stem en de behuizing) te verminderen. Als er smeermiddel op het metalen bladveertje of de contactpuntjes terechtkomt, vormt dit juist een isolerende barrière. Dit resulteert in haperende of compleet weigerende toetsen. Krijg je chattering na het handmatig smeren van je switches, dan moet je de contactpunten juist ontvetten met contactspray of pure isopropanol.
 
-## 2. Is contactspray schadelijk voor de RGB-leds op de printplaat?
+2. Is contactspray schadelijk voor de RGB-leds op de printplaat?
 Residuvrije elektronica-contactspray en 99,9% isopropanol tasten surface-mount device (SMD) ledjes niet aan, mits de stroomtoevoer volledig is afgesloten en het toetsenbord volledig droog is voor gebruik. Vermijd echter agressieve remmenreinigers of acetonhoudende ontvetters; deze lossen de doorzichtige epoxy- en polycarbonaatbehuizingen van de ledjes en de switch direct op.
 
-## 3. Hoe herken ik een gescheurde soldeerverbinding bij hot-swap sockets?
+3. Hoe herken ik een gescheurde soldeerverbinding bij hot-swap sockets?
 Wanneer een toets alleen registreert als je er zijwaartse druk op uitoefent, is de kans groot dat het soldeereilandje aan de achterkant van de printplaat is losgescheurd. Dit gebeurt wanneer een switch te hardhandig met verbogen pinnetjes in de socket is geduwd. Je kunt dit controleren door de PCB uit de behuizing te halen en de achterkant onder fel licht te bekijken. Een haarscheur in het soldeertin rondom het koperen contactpad vereist een korte aanraking met een soldeerbout en een drupje vers soldeertin (met vloeimiddel) om het contact te herstellen.

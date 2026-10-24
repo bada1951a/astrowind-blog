@@ -27,6 +27,7 @@ theme: "Matte Black stealth"
 
 
 
+
 Lundi matin, 8h52. La réunion stratégique avec le N+2 commence dans 8 minutes. Évidemment, ma machine décide de faire une mise à jour de ses grands morts et se fige sur l'écran de chargement. Le ventilo souffle comme un A380 au décollage, le curseur freeze, et je transite lentement vers l'angoisse pure en voyant la barre de progression bloquée à 98%. J'ai failli balancer mon ThinkPad par la fenêtre. 
 
 Ce genre de galère, en tant qu'ingénieur système, ça me met hors de moi. On a sous les doigts des bécanes sous i7 avec 32 Go de RAM, et pourtant, à cause d'une ribambelle de bloatwares et de services tiers qui s'invitent au boot, nos machines rament comme des Pentium 4 sous Windows 98. 
@@ -86,15 +87,15 @@ sc config "NomDuServiceFoireux" start= disabled
 Étape 3 : Vérification de la santé du stockage via la Gestion des disques et PowerShell
 Un boot lent peut aussi cacher un SSD en fin de vie ou un système de fichiers corrompu à force de crashs.
 
-## 1. Ouvrez un terminal PowerShell en admin.
+1. Ouvrez un terminal PowerShell en admin.
 
-## 2.  Lancez un diagnostic d'intégrité du système :
+2.  Lancez un diagnostic d'intégrité du système :
 
 ```powershell
 sfc /scannow
 ```
 
-## 3. Vérifiez l'état S.M.
+3. Vérifiez l'état S.M.
 
 A.R.T de votre SSD pour être sûr qu'il ne rende pas l'âme :
 ```powershell

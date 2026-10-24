@@ -27,6 +27,7 @@ theme: "Nordic Clean Ice"
 
 
 
+
 <div style="border-left: 4px solid #0284c7; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 Đang là thời điểm nước rút chuẩn bị cho kỳ khóa sổ kế toán cuối năm. Ngồi cặm cụi đối chiếu từng trang bảng tính Excel khối lượng dữ liệu khổng lồ với hệ thống phần mềm ERP của công ty tại văn phòng ở một tòa nhà trung tâm Quận 1, TP. Hồ Chí Minh. Tôi chuẩn bị gọi cuộc họp trực tuyến khẩn cấp với các bộ phận để chốt số liệu thì hỡi ôi, biểu tượng loa góc phải màn hình xuất hiện dấu nhân đỏ chói lọi. Không một âm thanh phát ra, thông báo lỗi thiết bị đầu ra biến mất hoàn toàn ngay trước giờ G.
 </div>
@@ -41,7 +42,7 @@ Trước khi lao vào sửa lỗi, chúng ta cần hiểu tại sao chiếc máy
 
 1. Xung đột driver sau bản cập nhật hệ thống: Windows Update đôi khi tự động đè driver âm thanh chính hãng bằng driver chung (Generic Audio Driver) khiến hệ thống không nhận diện đúng phần cứng Realtek hoặc Intel Audio.
 
-## 2. Thiết bị đầu ra (Audio Output Device) bị vô hiệu hó
+2. Thiết bị đầu ra (Audio Output Device) bị vô hiệu hó
 
 a: Do vô tình bấm nhầm phím tắt hoặc một ứng dụng gọi thoại bên thứ ba chiếm quyền điều khiển, chuyển luồng âm thanh sang thiết bị ảo (như tai nghe Bluetooth đã ngắt kết nối hoặc cáp màn hình HDMI).
 
@@ -108,6 +109,6 @@ Các câu hỏi thường gặp (FAQ)
 
 2. Tại sao tai nghe Bluetooth của tôi vẫn kết nối nhưng không nghe được âm thanh trên Windows 11? Lỗi này thường do Windows tách biệt âm thanh cuộc gọi (Calls) và âm thanh giải trí (Music). Hãy vàoCài đặt(Settings) ->Bluetooth & thiết bị(Bluetooth & devices), ngắt kết nối (Disconnect) và kết nối lại tai nghe. Đồng thời kiểm tra trong mục Sound Output xem đã chọn đúng profile âm thanh của tai nghe chưa.
 
-## 3. Sau mỗi lần cập nhật Windows là máy tôi lại mất âm thanh, có cách nào ngăn chặn triệt để không?
+3. Sau mỗi lần cập nhật Windows là máy tôi lại mất âm thanh, có cách nào ngăn chặn triệt để không?
 
 Bạn có thể tạm dừng cập nhật Windows trong một khoảng thời gian nhất định hoặc sử dụng công cụ ẩn bản cập nhật driver cụ thể của Microsoft để tránh việc hệ thống tự động đè driver âm thanh cũ vốn đang hoạt động ổn định.

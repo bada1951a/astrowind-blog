@@ -27,6 +27,7 @@ theme: "High-Contrast Charcoal"
 
 
 
+
 Es war kurz vor 16:00 Uhr an einem hektischen Dienstag im Frankfurter Büroalltag, als der Ernstfall eintrat: Mitten während der kritischen Datenübertragung wichtiger Quartalsberichte poppte plötzlich eine knallrote Windows-Warnung auf. „Speicherplatz auf C: fast voll.“ Wenige Sekunden später fror das System ein. Keine Rückmeldung mehr im Outlook, der Explorer streikte, und die Panik stieg, weil die finalen Projektdateien noch im temporären Cache hingen und ein abrupter Neustart den totalen Datenverlust hätte bedeuten können. Der berüchtigte rote Balken im Arbeitsplatz stand auf 0 Byte.
 
 Zuerst verfiel ich in blinden Aktionismus. Ich löschte ein paar größere PDF-Dateien und den Ordner „Downloads“, aber das brachte gerade einmal magere 500 Megabyte. Windows meldete sofort wieder volle Hütte. Der Übeltäter war nicht meine Musiksammlung oder meine Apps, sondern Gigabytes an unsichtbarem Datenmüll, den das Betriebssystem und diverse Anwendungen über Monate im Hintergrund angesammelt hatten. Erst der Griff zu den richtigen Systemwerkzeugen und das gezielte Bereinigen der versteckten Temp-Verzeichnisse brachte die ersehnte Rettung und gab über 40 Gigabyte frei.
@@ -73,7 +74,7 @@ Für alte Systemdateien brauchen wir tiefere Admin-Rechte:
 
 1. Öffne das Startmenü, tippe Datenträgerverwaltungoder besser nochDatenträgerbereinigung ein und starte sie. (Noch besser: Rechtsklick auf die App und als Administrator ausführen).
 
-## 2. Wähle das Laufwerk `C:` aus.
+2. Wähle das Laufwerk `C:` aus.
 
 3. Klicke im neuen Fenster unten links auf Systemdateien bereinigen.
 
@@ -89,13 +90,13 @@ Für alte Systemdateien brauchen wir tiefere Admin-Rechte:
 
 Häufig gestellte Fragen (FAQ)
 
-## 1. Kann ich den Ruhezustand (Hibernation) komplett deaktivieren, um Platz zu sparen?
+1. Kann ich den Ruhezustand (Hibernation) komplett deaktivieren, um Platz zu sparen?
 Ja, wenn du den Schnellstart oder den Ruhezustand nie nutzt. Öffne die Eingabeaufforderung als Administrator (Rechtsklick im Startmenü) und tippe den Befehl `powercfg /hibernate off` ein und drücke Enter. Damit verschwindet die tonnenschwere `hiberfil.sys` sofort von deinem C-Laufwerk und gibt den Speicherplatz frei.
 
 ![Tech Hardware Guide](https://images.unsplash.com/photo-1587202372775-e229f172b9d7? auto=format&fit=crop&w=1200&h=675&q=85)
 
-## 2. Warum füllt sich mein C-Laufwerk nach dem Löschen sofort wieder?
+2. Warum füllt sich mein C-Laufwerk nach dem Löschen sofort wieder?
 Das liegt meist an automatischen Hintergrundprozessen wie Windows Update, die im Moment des Aufräumens neue Installationspakete herunterladen, oder an Browsern wie Google Chrome, die riesige Caches aufbauen. Es empfiehlt sich, nach der Bereinigung einmal den Task-Manager zu öffnen, um zu prüfen, ob gerade ein Update-Prozess im Hintergrund läuft.
 
-## 3. Soll ich Drittanbieter-Tools wie CCleaner verwenden?
+3. Soll ich Drittanbieter-Tools wie CCleaner verwenden?
 Aus professioneller IT-Sicht: Besser nicht. Die modernen Windows-Bordmittel (Speicherunterstützung und Datenträgerbereinigung) erledigen diesen Job mittlerweile absolut zuverlässig und ohne das Risiko, dass wichtige Registry-Schlüssel beschädigt oder versehentlich essenzielle Log-Dateien gelöscht werden, die für die Fehlerdiagnose im Büro benötigt werden.

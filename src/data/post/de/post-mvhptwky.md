@@ -27,6 +27,7 @@ theme: "Electric Cyan Speed"
 
 
 
+
 Es ist kurz vor 10:00 Uhr morgens im Frankfurter Bankenviertel. In einer halben Stunde startet die wichtige Kundenpräsentation für ein neues Finanz-Dashboard, und mein Kollege aus der Abteilung Corporate Finance sitzt schwitzend vor seinem frisch auf Windows 11 aktualisierten ThinkPad. Er will nur schnell ein ZIP-Archiv entpacken und die Logdateien kopieren – doch jedes Mal scheitert er an diesem neuen, abgespeckten Windows 11 Rechtsklick-Menü. Statt der gewohnten Tools von 7-Zip oder Notepad++ sieht er nur ein minimalistisches Pop-up und muss jedes Mal umständlich auf "Weitere Optionen anzeigen" klicken. Mitten im Live-Stress bricht bei ihm fast Panik aus. Wer professionell unter Zeitdruck arbeitet, hat keine Sekunde für solche unnötigen Klick-Umwege.
 
 <div style="border-left: 4px solid #06b6d4; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
@@ -55,7 +56,7 @@ Methode 1: Der Express-Weg über das Terminal (Empfohlen)
 
 1. Drücken Sie die Tastenkombination Windows + Xund öffnen Sie dasTerminal (oder die *Eingabeaufforderung* als Administrator).
 
-## 2. Kopieren Sie den folgenden Befehl und fügen Sie ihn ein:
+2. Kopieren Sie den folgenden Befehl und fügen Sie ihn ein:
 
    ```cmd
    reg add "HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\InprocServer32" /f /ve
@@ -73,7 +74,7 @@ Wer es lieber visuell mag, macht das Ganze über den Editor:
 
 1. Drücken Sie Windows + R, tippen Sie `regedit` ein und bestätigen Sie mit Enter.
 
-## 2. Navigieren Sie zum Pfad: `HKEY_CURRENT_USER\Software\Classes\CLSID`
+2. Navigieren Sie zum Pfad: `HKEY_CURRENT_USER\Software\Classes\CLSID`
 
 3. Erstellen Sie einen neuen Schlüssel (Ordner) mit dem Namen `{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}`.
 
@@ -89,12 +90,12 @@ Häufig gestellte Fragen (FAQ)
 
 1. Verliere ich durch diesen Registry-Hack Windows-Updates oder Stabilität? Nein. Dieser Registry-Schlüssel nutzt eine offiziell verbliebene Rückfalloption (Fallback-ID) von Microsoft selbst, die für Entwickler gedacht ist. Das System bleibt absolut stabil und Updates laufen problemlos durch.
 
-## 2. Wie mache ich die Änderung wieder rückgängig, falls es mir nicht gefällt?
+2. Wie mache ich die Änderung wieder rückgängig, falls es mir nicht gefällt?
 
 Öffnen Sie erneut das *Terminal* als Administrator und geben Sie diesen Befehl ein, um den Schlüssel zu löschen:
 `reg delete "HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}" /f`
 Danach den Explorer im *Task-Manager* neustarten, und Windows 11 verhält sich wieder im Auslieferungszustand.
 
-## 3. Gilt diese Einstellung für alle Benutzer auf dem PC?
+3. Gilt diese Einstellung für alle Benutzer auf dem PC?
 
 Nein, der Befehl greift über den Pfad `HKEY_CURRENT_USER` jeweils nur auf das Profil des aktuell angemeldeten Benutzers. Wenn Sie das für alle Arbeitsplatzrechner im Unternehmen ausrollen wollen, lässt sich das wunderbar über eine Gruppenrichtlinie (GPO) oder ein Skript verteilen.

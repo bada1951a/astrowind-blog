@@ -27,6 +27,7 @@ theme: "Mint Fresh Engineering"
 
 
 
+
 Nel mio lavoro quotidiano sui terminali di gestione e nei laboratori di collaudo hardware, uno strumento di input inaffidabile rappresenta un collo di bottiglia critico. Qualche mese fa, durante la configurazione in loco di un cluster di virtualizzazione, la tastiera meccanica della mia workstation da campo ha iniziato a mostrare sintomi subdoli: digitando credenziali complesse su terminale SSH, alcune lettere venivano registrate due volte (*key chattering* o rimbalzo), mentre la barra spaziatrice e il tasto `Tab` perdevano colpi in modo casuale (*key skipping*). 
 
 In un ambiente di produzione, dover cancellare backspace a raffica o fallire l'autenticazione per via di un doppio carattere non è solo frustrante: rischia di bloccare account di dominio o generare errori di sintassi distruttivi nei file di configurazione.
@@ -49,19 +50,19 @@ Un interruttore meccanico (switch) basa il proprio funzionamento sulla chiusura 
        └─► 3. Sfasamento Debounce Firmware / PCB  ───► Interruzione logica del segnale
 ```
 
-## 1. 1 Ossidazione superficiale e accumulo di particolato dielettrico
+1. 1 Ossidazione superficiale e accumulo di particolato dielettrico
 L'aria ambiente, l'umidità e la deposizione di micro-polveri all'interno dell'alloggiamento (*housing*) creano una patina isolante sulle piazzole di contatto dorate o argentate della lamella. Quando lo stelo (*stem*) spinge la lamella mobile, la resistenza di transizione sale da frazioni di ohm a diversi chilo-ohm. Il controller a bordo tastiera rileva una tensione fluttuante che non supera la soglia di trigger logico basso/alto, determinando la perdita totale del carattere premuto.
 
-## 1. 2 Snervamento meccanico e fallimento dell'isteresi (Key Chattering)
+1. 2 Snervamento meccanico e fallimento dell'isteresi (Key Chattering)
 Tutti gli interruttori fisici soffrono fisiologicamente di rimbalzo (*contact bounce*): all'impatto, la lamella vibra per 1-5 millisecondi prima di stabilizzarsi. Normalmente, il microcontrollore filtra questo disturbo tramite un algoritmo software di *debounce*. Tuttavia, quando la lamina metallica subisce una micro-deformazione plastica o microscopici archi elettrici creano imperfezioni sulla superficie di contatto, il tempo di oscillazione supera la finestra temporale di sicurezza del firmware (ad esempio 5 ms). Di conseguenza, un'unica pressione meccanica viene interpretata dal sistema come due, tre o più impulsi distinti.
 
-## 1. 3 Cedimento strutturale delle saldature o dei socket Hot-Swap
+1. 3 Cedimento strutturale delle saldature o dei socket Hot-Swap
 Nelle tastiere moderne dotate di socket a innesto rapido (Kailh o Gateron hot-swap), i terminali a pinzetta saldati sul retro del circuito stampato (PCB) subiscono sollecitazioni torsionali continue. Con il tempo, le alette del socket perdono forza di serraggio oppure si sviluppano micro-crepe da fatica nella lega di stagno (*cold solder joints*). Il contatto diventa quindi intermittente in base alla pressione e all'angolo con cui il tasto viene colpito.
 
 ---
 ![Tech Diagnostics](https://images.unsplash.com/photo-1517430816045-df4b7de11d1d? auto=format&fit=crop&w=1000&h=550&q=80)
 
-## 2. Protocollo Operativo di Ripristino Passo-Passo
+2. Protocollo Operativo di Ripristino Passo-Passo
 
 Prima di procedere con solventi chimici o saldatori, è obbligatorio isolare il problema a livello software ed escludere interferenze da parte del sistema operativo o di driver periferica corrotti.
 
@@ -93,7 +94,7 @@ Prima di intervenire fisicamente, verifichiamo che il sottosistema USB di Window
 
 4. Nella scheda Risparmio energia (se presente), deseleziona l'opzione: *Consenti al computer di spegnere il dispositivo per risparmiare energia*.
 
-## 5. Apri il Prompt dei comandi con privilegi elevati (Esegui come amministratore) per verificare che l'input non sia alterato da ritardi di buffer di sistema:
+5. Apri il Prompt dei comandi con privilegi elevati (Esegui come amministratore) per verificare che l'input non sia alterato da ritardi di buffer di sistema:
 ```cmd
 reg query "HKCU\Control Panel\Keyboard" /v KeyboardSpeed
 reg query "HKCU\Control Panel\Keyboard" /v KeyboardDelay
@@ -110,7 +111,7 @@ Passo 2: Isolamento Fisico del Tasto Compromesso
 
 2. Utilizzando un estrattore per copritasti ad anello (*wire keycap puller*), estrai il tasto interessato tirando perpendicolarmente verso l'alto per non rompere la crociera dello stelo.
 
-## 3. Rimuovi la polvere perimetrale con un soffiatore manuale o una bomboletta di aria compressa, tenendo l'ugello ad almeno 10 cm di distanza per evitare condensa criogenica. ---
+3. Rimuovi la polvere perimetrale con un soffiatore manuale o una bomboletta di aria compressa, tenendo l'ugello ad almeno 10 cm di distanza per evitare condensa criogenica. ---
 
 Passo 3: Trattamento Mirato con Disossidante per Contatti Elettrici
 Il prodotto da utilizzare deve essere rigorosamente un disossidante per contatti elettronici a secco, a rapida evaporazione e a residuo zero (es. *WD-40 Specialist Detergente Contatti*, *Kontakt Chemie 60/61*, o *CRC QD Electronic Cleaner*).
@@ -158,14 +159,14 @@ Se il disossidante non risolve l'anomalia, il problema risiede nell'accoppiament
 
 3. Ispeziona i fori del PCB. Se il contatto interno è allargato, comprimi leggermente le lamine del socket da dietro il PCB con un ago da sutura o una sonda metallica sottile.
 
-## 4. Se la tastiera è saldata e lo switch continua a generare chattering persistente, procedi alla dissaldatur
+4. Se la tastiera è saldata e lo switch continua a generare chattering persistente, procedi alla dissaldatur
 
 a:
    - Riscalda la piazzola a 330°C con stazione saldante.
    - Aspira lo stagno vecchio con pompetta a vuoto o treccia dissaldante.
    - Sostituisci l'interruttore con uno nuovo dello stesso tipo (es. Gateron/Cherry MX) e risalda con lega Sn99.3Cu0.7 e flussante a base di colofonia. ---
 
-## 3. Avvertenze Tecniche e Prevenzione Guasti
+3. Avvertenze Tecniche e Prevenzione Guasti
 
 Operare sulla componentistica di input richiede cautela per non convertire un semplice falso contatto in un guasto permanente della scheda madre:
 
@@ -174,7 +175,7 @@ Operare sulla componentistica di input richiede cautela per non convertire un se
 
 ---
 
-## 4. Domande Frequenti (FAQ)
+4. Domande Frequenti (FAQ)
 
 Posso usare l'alcol isopropilico (IPA) al 99.9% al posto dello spray per contatti dedicato?
 Sì, ma solo con somministrazione manuale controllata tramite pipetta o siringa (non più di una o due gocce). L'isopropanolo è un ottimo sgrassante e non lascia residui, tuttavia non contiene gli additivi tensioattivi dei disossidanti specifici per contatti elettrici che disgregano l'ossido metallico per via chimica. Inoltre, un bagno d'alcol eccessivo può opacizzare irreversibilmente le plastiche in policarbonato trasparente (*housing RGB*) di alcuni switch moderni.

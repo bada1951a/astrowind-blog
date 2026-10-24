@@ -27,6 +27,7 @@ theme: "Modern Minimalist Slate"
 
 
 
+
 Eran las 18:45 en nuestra oficina tecnológica en el distrito 22@ de Barcelona. Faltaban apenas quince horas para el lanzamiento crítico de un software en el que habíamos estado trabajando durante meses con el equipo de Madrid. El estrés en el canal de Slack era palpable y las notificaciones no paraban de llover. De repente, fui a hacer clic en el menú de Inicio de Windows 11 para abrir la consola de comandos y... nada. La barra de tareas entera se había quedado completamente congelada. El cursor se movía por el escritorio, pero ni el icono de Windows, ni los accesos directos, ni el reloj respondían a los clics. Reiniciar de la manera tradicional era imposible porque el menú estaba bloqueado, y un reinicio forzoso con el botón físico corría el riesgo de corromper un despliegue local crítico. Tenía que solucionarlo en cuestión de minutos.
 
 Si te ha pasado lo mismo justo cuando más prisa tienes, sabes la frustración que genera. Vamos a ir directos al grano con los métodos reales que utilizamos los ingenieros de soporte para solucionar este fallo clásico de Windows 11 sin perder la paciencia ni los datos.
@@ -43,7 +44,7 @@ Si te ha pasado lo mismo justo cuando más prisa tienes, sabes la frustración q
 
 Antes de aplicar la solución, es útil entender qué está pasando bajo el capó para evitar que vuelva a suceder:
 
-## 1. El Explorador de archivos colaps
+1. El Explorador de archivos colaps
 
 a: En Windows 11, la barra de tareas y el menú de inicio están estrechamente integrados con el proceso `explorer.exe`. Si este proceso se bloquea debido a una app de terceros o a un pico de memoria, arrastra consigo toda la interfaz inferior.
 
@@ -79,7 +80,7 @@ A veces el bloqueo es tan profundo que ni siquiera el Administrador de tareas re
 
 3. Escribe `cmd` (marca la casilla para crearlo con privilegios administrativos si lo consideras necesario) y pulsa `Enter`.
 
-## 4. En la ventana negra que se abre, escribe el siguiente comando para matar el proceso a la fuerza y reiniciarlo:
+4. En la ventana negra que se abre, escribe el siguiente comando para matar el proceso a la fuerza y reiniciarlo:
 
    `taskkill /f /im explorer.exe && start explorer.exe`
 
@@ -92,7 +93,7 @@ Si el fallo persiste cada vez que reinicias el ordenador, el problema está en l
 
 2. Escribe `powershell` y pulsa `Ctrl` + `Shift` + `Enter` para abrirlo como Administrador.
 
-## 3. Copia y pega el siguiente comando de recuperación profund
+3. Copia y pega el siguiente comando de recuperación profund
 
 a:
    `Get-AppXPackage -AllUsers | Foreach {Add-AppxPackage -DisableDevelopmentMode -Register "(_.InstallLocation)\AppXManifest.xml"}`
@@ -114,6 +115,6 @@ Preguntas Frecuentes (FAQ)
 
 2. ¿Qué hago si el comando de PowerShell da errores en rojo? Es totalmente normal. PowerShell intentará re registrar todos los paquetes nativos de Windows; aquellos que estén abiertos o bloqueados en ese momento mostrarán un aviso en rojo que puedes ignorar por completo. Lo importante es que el script complete el ciclo.
 
-## 3. ¿Es recomendable usar puntos de restauración del sistema para esto?
+3. ¿Es recomendable usar puntos de restauración del sistema para esto?
 
 Solo como última alternativa si los comandos anteriores fallan. Por lo general, un fallo en la barra de tareas es un problema de servicios locales que se resuelve limpiando la caché o reiniciando el proceso del explorador, sin necesidad de retroceder el estado del sistema.

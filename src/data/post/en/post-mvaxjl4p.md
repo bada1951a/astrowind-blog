@@ -27,6 +27,7 @@ theme: "High-Contrast Charcoal"
 
 
 
+
 My Slack was blowing up with notifications, and our executive tech sync for the upcoming product release was scheduled to start in literally five minutes. I slammed the lid of my laptop open at my desk in our Manhattan office, only to watch the Windows 10 login screen freeze for a agonizing three minutes while loading twenty different background utilities I never asked for. If you have ever stared at a spinning circle while your CPU fan roars like a jet engine right before a critical meeting, you know the exact brand of panic I was feeling. 
 
 Let's fix this right now so it never happens to you again. You can reclaim your boot time in less than a minute.
@@ -66,7 +67,7 @@ You will see a list of applications that launch automatically when Windows start
 <strong>Pro Tip for Corporate Laptops:</strong> Make sure you leave your VPN client, security endpoint agents, and hardware control software (like audio or mouse management tools) enabled unless your internal IT policy specifies otherwise.
 </div>
 
-Expert Advice for Long-Term System Health
+## Expert Advice for Long-Term System Health
 
 Disabling startup programs is the fastest band-aid, but maintaining a snappy workflow requires a bit of ongoing hygiene. Every few months, review your startup tab again. Software developers love to re-enable auto-start flags during major application updates. If you notice your boot times creeping back up, a quick 30-second trip to Task Manager will keep your machine running at peak Silicon Valley efficiency.
 

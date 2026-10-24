@@ -27,6 +27,7 @@ theme: "Cyberpunk Terminal"
 
 
 
+
 <div style="border-left: 4px solid #00ffcc; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,255,204,0.05); border-radius: 4px; font-family: monospace;">
 root@silicon-valley-h
 
@@ -44,7 +45,7 @@ Here is the exact battle-tested playbook I used to slash my boot times from a ag
 
 ---
 
-Root Cause Breakdown: Why Your Workstation Crawls on Boot
+## Root Cause Breakdown: Why Your Workstation Crawls on Boot
 
 Before we touch any configuration files, we need to understand what's actually murdering your system resources the second the kernel initializes.
 
@@ -56,7 +57,7 @@ Before we touch any configuration files, we need to understand what's actually m
 
 ---
 
-Step-by-Step Resolution: The CLI & Native OS Diagnostic Drill
+## Step-by-Step Resolution: The CLI & Native OS Diagnostic Drill
 
 We aren't going to click around useless graphical menus. We are going straight to the metal using built-in Windows diagnostic tools and CLI commands.
 
@@ -85,7 +86,7 @@ DISM.exe /Online /Cleanup-image /Restorehealth
 sfc /scannow
 </div>
 
-## 1. Open Command Prompt as Administrator.
+1. Open Command Prompt as Administrator.
 
 2. Run the deployment image servicing and system file checker commands shown above to repair corrupted DLLs that slow down service initialization.
 
@@ -94,9 +95,9 @@ sfc /scannow
 ### Step 3: Prune Registry Run Keys (Advanced)
 For persistent bloatware that refuses to disappear from your startup list:
 
-## 1. Press `Win + R`, type `regedit`, and hit Enter.
+1. Press `Win + R`, type `regedit`, and hit Enter.
 
-## 2. Navigate to:
+2. Navigate to:
 
    `HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run`
    and

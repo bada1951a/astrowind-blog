@@ -27,6 +27,7 @@ theme: "Modern Minimalist Slate"
 
 
 
+
 Đồng hồ góc phải màn hình nhảy tưng tưng chỉ còn vỏn vẹn 15 phút nữa là đến hạn chót nộp báo cáo tài chính quý cho sếp tổng tại văn phòng trung tâm TP.HCM, thế nhưng chiếc máy tính để bàn bỗng dưng đơ cứng toàn tập. Chuột di chuyển giật cục từng nhịp, file Excel nặng hơn 20MB quay vòng tròn bất tận và tiếng quạt tản nhiệt hú lên như máy bay phản lực chuẩn bị cất cánh. Mở Task Manager lên xem, tôi chết lặng khi thấy cột CPU đứng im phăng phắc ở mức 100 phần trăm, mà kẻ "thủ ác" ngốn tài nguyên không ai khác chính là tiến trình System Process quen mặt.
 
 Trước đó, phản ứng bản năng của tôi là khởi động lại máy bằng nút nguồn cứng. Nhưng đời không như mơ, vừa bật lên vào lại Windows được đúng 2 phút, máy lại tiếp tục ì ạch, đơ quắc cần câu ngay khi mở trình duyệt Chrome. Thời gian trôi qua từng giây, mồ hôi hột túa ra vì sợ mất dữ liệu chưa kịp lưu. Loay hoay đủ kiểu từ quét virus bằng phần mềm bên thứ ba cho đến rút cả cáp mạng internet ra nhưng tình hình vẫn hoàn toàn vô vọng. 
@@ -65,13 +66,13 @@ Bước 2: Chạy lệnh quét và phục hồi tệp hệ thống bằng SFC v�
 
 2. Click chuột phải vào Command Promptvà chọnRun as administrator (Chạy với quyền quản trị viên).
 
-## 3. Trong cửa sổ đen hiện ra, gõ chính xác dòng lệnh sau rồi nhấn Enter:
+3. Trong cửa sổ đen hiện ra, gõ chính xác dòng lệnh sau rồi nhấn Enter:
 
    `sfc /scannow`
 
 4. Ngồi chờ khoảng 5 đến 10 phút để Windows tự động tìm kiếm và vá lại các tệp hệ thống bị hỏng.
 
-## 5. Sau khi quét xong, tiếp tục gõ lệnh sau để làm sạch bộ nhớ đệm hệ thống:
+5. Sau khi quét xong, tiếp tục gõ lệnh sau để làm sạch bộ nhớ đệm hệ thống:
 
    `DISM /Online /Cleanup-Image /RestoreHealth`
 
@@ -94,13 +95,13 @@ Nhiều trường hợp tiến trình System cố gắng tải xuống hoặc c�
 
 Những câu hỏi thường gặp (FAQ) khi xử lý lỗi CPU System Process
 
-## 1. Tôi có nên bấm End Task trực tiếp vào tiến trình System trong Task Manager không?
+1. Tôi có nên bấm End Task trực tiếp vào tiến trình System trong Task Manager không?
 Tuyệt đối không. System là tiến trình gốc của nhân hệ điều hành Windows. Nếu bạn cố tình ép kết thúc (End Task), máy tính sẽ ngay lập tức xuất hiện màn hình xanh (BSOD) và khởi động lại, khiến toàn bộ dữ liệu chưa lưu trong Word hay Excel bốc hơi vĩnh viễn.
 
 ![How to Fix 100 Percent CPU Usage Caused by System Process Tech Guide](/images/tech-photo/keyboard (14).png)
 
-## 2. Tại sao sau khi khởi động lại máy một lúc thì lỗi 100 phần trăm CPU lại quay trở lại?
+2. Tại sao sau khi khởi động lại máy một lúc thì lỗi 100 phần trăm CPU lại quay trở lại?
 Điều này chứng tỏ có một tác vụ nền hoặc bản cập nhật phần cứng đang bị kẹt vòng lặp liên tục. Bạn cần kiểm tra lại mục Device Manager, tìm xem thiết bị nào có dấu chấm than vàng (thường là driver card mạng hoặc âm thanh) để tiến hành cập nhật hoặc gỡ cài đặt phiên bản driver đó đi.
 
-## 3. Nhiệt độ máy tính tăng cao khi bị lỗi này có làm cháy CPU không?
+3. Nhiệt độ máy tính tăng cao khi bị lỗi này có làm cháy CPU không?
 Các dòng CPU hiện đại ngày nay đều có cơ chế tự ngắt điện khẩn cấp khi nhiệt độ vượt ngưỡng giới hạn an toàn (thường là trên 100 độ C) nên rất khó xảy ra hiện tượng cháy nổ. Tuy nhiên, việc để linh kiện chịu nhiệt độ cao thường xuyên sẽ làm giảm tuổi thọ đáng kể của bo mạch chủ và pin laptop.

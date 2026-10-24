@@ -27,6 +27,7 @@ theme: "High-Contrast Charcoal"
 
 
 
+
 Eram exatamente 8h45 da manhã em um hub de tecnologia na Zona Sul de São Paulo. A reunião de alinhamento técnico urgente antes da entrega do sprint com a diretoria estava prestes a começar, e meu cliente de videochamada travou. O motivo? Meu notebook decidiu fazer uma varredura completa e atualizar tudo no exato segundo em que cliquei para abrir o projeto. A barra de tarefas congelada, o cooler gritando como uma turbina de avião e o relógio correndo. Foi o empurrão que eu precisava para resolver de vez o calcanhar de Aquiles do Windows 10: a inicialização lenta entupida de aplicativos desnecessários.
 
 Se você já passou pela humilhação de ver o computador demorar dez minutos para abrir uma simples planilha enquanto o Teams tenta conectar dez vezes, você sabe exatamente do que estou falando. 
@@ -86,6 +87,6 @@ Perguntas Frequentes (FAQ)
 
 2. O que acontece se eu desativar um programa por engano? Nada grave. Se você notar que algum aplicativo que você usa com frequência deixou de abrir sozinho, basta voltar ao Gerenciador de Tarefas (Ctrl + Shift + Esc), ir na aba "Inicializar", clicar com o botão direito nele e selecionar "Habilitar".
 
-## 3. Preciso reiniciar o computador imediatamente após fazer isso?
+3. Preciso reiniciar o computador imediatamente após fazer isso?
 
 Não é obrigatório para que a alteração seja salva, mas é altamente recomendável reiniciar a máquina logo em seguida para testar o novo tempo de boot e sentir a diferença na prática.

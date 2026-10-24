@@ -27,6 +27,7 @@ theme: "Dark Velvet Obsidian"
 
 
 
+
 There I was, sitting at my workstation in our Silicon Valley office, watching the clock tick down just 15 minutes before our final project handoff to the client. Suddenly, a jarring red notification popped up in my taskbar: Low Disk Space on Local Disk (C:). Free space remaining: 420 megabytes. Windows was throwing a fit, refusing to compile our build files or cache our Docker containers. To make matters worse, my external backup drive had unceremoniously failed just an hour prior. My heart skipped a beat as I stared at a completely locked-up system, desperately needing to free up gigabytes immediately without breaking our development environment.
 
 We've all been there. You click on File Explorer, look at your C drive glowing bright red, and wonder where all your storage actually went. You start deleting your personal photos and downloaded PDFs, but it barely makes a dent. The real culprit isn't your files—it's the invisible mountain of temporary junk files that Windows, web browsers, and background installers leave behind in hidden system directories.
@@ -39,7 +40,7 @@ We've all been there. You click on File Explorer, look at your C drive glowing b
 
 ---
 
-Root Cause Breakdown: Why Is Your C Drive Always Full?
+## Root Cause Breakdown: Why Is Your C Drive Always Full?
 
 Before we jump into the cleanup, let's look at why your system drive fills up so mysteriously. Understanding these three root causes will help you keep your workstation running lean:
 
@@ -51,7 +52,7 @@ Before we jump into the cleanup, let's look at why your system drive fills up so
 
 ---
 
-Step-by-Step Resolution: The Deep Clean Protocol
+## Step-by-Step Resolution: The Deep Clean Protocol
 
 Let's clear out that storage safely using native Windows tools. No sketchy third-party cleaner software required. Follow this step-by-step timeline to reclaim your disk space.
 

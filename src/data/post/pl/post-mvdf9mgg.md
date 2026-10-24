@@ -27,6 +27,7 @@ theme: "Forest Emerald Bio"
 
 
 
+
 Była dokładnie 21:40, gdy w naszym biurze we wrocławskim parku technologicznym panowała niemal grobowa cisza. Zostały zaledwie dwa dni do kluczowego audytu stabilności infrastruktury przed wejściem zewnętrznego klienta, a mój główny stacja robocza testowa ugrzęzła na ekranie blokady z denerwującym komunikatem: *„Trwa przygotowywanie aktualizacji. Nie wyłączaj komputera. 100% ukończono”*. Komputer stał tak bezczynnie od ponad dwóch godzin. Dysk pracował na minimalnych obrotach, procesor spał, a ja czułem, jak pot spływa mi po plecach, bo na tym hoście miałem postawione ostatnie środowiska testowe pod bazy danych. Restart na twardo? Ryzyko uszkodzenia partycji rozruchowej i korupcji rejestru było zbyt wielkie.
 
 Zamiast panikować, sięgnąłem po sprawdzoną procedurę awaryjną, którą stosuję w takich sytuacjach od lat. Problem nie tkwił w samej procedurze instalacji poprawek, lecz w uszkodzonym buforze systemu Windows Update. Usługa pobierania utknęła w martwym punkcie, próbując zweryfikować zablokowane pliki tymczasowe.
@@ -45,7 +46,7 @@ Zanim przejdziemy do naprawy, warto zrozumieć root cause tego fenomenu. Dlaczeg
 
 2. Korupcja bazy danych katalogu aktualizacji: Plik `catroot2` lub baza `DataStore` w folderze `SoftwareDistribution` uległy uszkodzeniu podczas pobierania pakietu zbiorczego (Cumulative Update), przez co system zapętlił się w fazie weryfikacji sum kontrolnych.
 
-## 3. Przerwane połączenie lub timeout dysku: Chwilowy spadek wydajności macierzy lub dysku NVMe w momencie zapisu kluczowych kluczy rejestru sprawił, że instalator stracił synchronizację z sekwencją bootowania. ## Krok po kroku: Jak zresetować pamięć podręczną aktualizacji
+3. Przerwane połączenie lub timeout dysku: Chwilowy spadek wydajności macierzy lub dysku NVMe w momencie zapisu kluczowych kluczy rejestru sprawił, że instalator stracił synchronizację z sekwencją bootowania. ## Krok po kroku: Jak zresetować pamięć podręczną aktualizacji
 
 Skoro standardowe metody zawiodły, musimy wymusić na systemie porzucenie uszkodzonego bufora i wyczyszczenie koleki zadań. Robimy to z poziomu uprawnień administratora. ### Krok 1: Uruchomienie Terminala jako Administrator
 Kliknij prawym przyciskiem myszy na menu Start i wybierz Terminal (Administrator)lubWiersz polecenia (Administrator). 
@@ -95,6 +96,6 @@ Często Zadawane Pytania (FAQ)
 
 2. Co zrobić, jeśli polecenie `net stop wuauserv` zwraca błąd o odmowie dostępu? Upewnij się, że uruchomiłeś Wiersz polecenia lub Terminal, klikając na ikonę prawym przyciskiem myszy i wybierając opcję „Uruchom jako administrator”. Zwykłe konto użytkownika nie posiada uprawnień do zarządzania kluczowymi usługami systemowymi.
 
-## 3. Czy po wykonaniu tego zabiegu system będzie pobierał aktualizacje od nowa?
+3. Czy po wykonaniu tego zabiegu system będzie pobierał aktualizacje od nowa?
 
 Tak. Ponieważ stary, uszkodzony bufor został zarchiwizowany w folderze `.bak`, Windows 11 pobierze pakiety aktualizacyjne całkowicie na świeżo z serwerów Microsoft Update. Zalecamy wykonanie tej operacji przy stabilnym i szybkim połączeniu internetowym.

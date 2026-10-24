@@ -27,6 +27,7 @@ theme: "Modern Minimalist Slate"
 
 
 
+
 Eran las 18:30 en nuestra oficina corporativa en Madrid. A solo media hora de enviar el paquete definitivo del proyecto trimestral a dirección, el ordenador principal de la estación de trabajo comenzó a emitir un zumbido ensordecedor en los ventiladores. La pantalla se congeló por completo. Al abrir a duras penas el Administrador de tareas, el diagnóstico era alarmante: la CPU estaba clavada en el 100 por ciento de uso, y el único responsable en la lista era un proceso aparentemente inofensivo llamado simplemente "System" (Sistema y memoria comprimida en algunas versiones). El cursor apenas se movía, el correo no respondía y la tensión en la sala cortaba el aire con cuchillo.
 
 Durante los primeros diez minutos, caí en el típico error de desesperación: reinicié el equipo tres veces seguidas a la fuerza manteniendo presionado el botón de encendido. Grave error. Lo único que conseguí fue corrupción temporal en la caché de Windows y perder valiosos minutos valiosos que debimos usar para estabilizar el sistema operativo.
@@ -92,10 +93,10 @@ Preguntas Frecuentes (FAQ)
 
 1. ¿Es seguro deshabilitar el servicio SysMain (Superfetch) en Windows 10 u 11? Sí, totalmente seguro. Superfetch fue diseñado para pre-cargar aplicaciones en la memoria RAM en equipos con discos mecánicos tradicionales (HDD). Si tu ordenador corporativo utiliza un disco de estado sólido (SSD moderno), este servicio es totalmente innecesario y muchas veces causa picos de uso del 100 por ciento en el proceso System.
 
-## 2. ¿Por qué el Administrador de tareas me muestra 100% de CPU pero la velocidad está por debajo de 1.00 GHz?
+2. ¿Por qué el Administrador de tareas me muestra 100% de CPU pero la velocidad está por debajo de 1.00 GHz?
 
 Esto ocurre por un fenómeno conocido como *Thermal Throttling* o por un fallo en el plan de energía de Windows. El procesador reduce drásticamente su velocidad para protegerse del calor o debido a un controlador de ACPI corrupto. Ve al Panel de control > *Opciones de energía* y asegúrate de restablecer el plan a "Equilibrado".
 
-## 3. ¿Qué debo hacer si ninguna de estas soluciones software funciona?
+3. ¿Qué debo hacer si ninguna de estas soluciones software funciona?
 
 Si el uso de la CPU persiste incluso después de limpiar controladores y servicios, es hora de revisar el hardware físico. Desconecta todos los periféricos USB (impresoras, discos externos, dongles de ratón inalámbricos). A veces, un puerto USB en cortocircuito obliga al proceso System a consumir recursos infinitos intentando gestionar la comunicación con el dispositivo averiado.

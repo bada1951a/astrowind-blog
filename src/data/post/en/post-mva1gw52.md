@@ -27,6 +27,7 @@ theme: "Industrial Blueprint"
 
 
 
+
 My Slack was blowing up right in the middle of a high-stakes executive sync in our San Francisco office. We were twenty minutes away from pushing a massive client-facing build to production, and my primary workstation flashed a terrifying red warning: "C: Drive Full. 0 bytes free." Visual Studio wouldn't compile, Docker containers were throwing disk space allocation errors, and Windows Update refused to budge. Instead of panicking, I had to drop everything and clean out gigabytes of digital clutter under intense pressure. If you are staring at a completely red C drive right now and wondering what is safe to delete, let me walk you through the battle-tested blueprint to reclaim your storage safely.
 
 <div style="border-left: 4px solid #f59e0b; padding: 12px 16px; margin: 20px 0; background-color: rgba(245,158,11,0.08); border-radius: 4px; color: #111827;">
@@ -70,16 +71,16 @@ Before we fix the issue, let us look at the structural architecture of how Windo
 
 ---
 
-Step-by-Step Resolution: Reclaiming Gigabytes on Windows 11
+## Step-by-Step Resolution: Reclaiming Gigabytes on Windows 11
 
 Follow these exact steps using official Windows 11 administrative utilities to safely purge junk data without breaking your workflow.
 
 ### Step 1: Run Windows 11 Storage Sense (The Modern Approach)
 Skip third-party applications. Windows 11 has a robust built-in tool designed specifically for this.
 
-## 1. Press `Windows Key + I` to open Settings.
+1. Press `Windows Key + I` to open Settings.
 
-## 2. Navigate to System>Storage.
+2. Navigate to System>Storage.
 
 3. Toggle Storage SensetoOn, then click directly on theStorage Sense text menu to configure it.
 
@@ -107,7 +108,7 @@ If you are a developer or power user, your Windows Component Store accumulates y
 
 1. Right-click the Start menu and select Terminal (Admin)orCommand Prompt (Admin).
 
-## 2. Type the following command and press Enter:
+2. Type the following command and press Enter:
 
    `DISM.exe /Online /Cleanup-Image /StartComponentCleanup`
 

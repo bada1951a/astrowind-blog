@@ -27,6 +27,7 @@ theme: "Midnight Navy Royal"
 
 
 
+
 Chỉ còn đúng 15 phút nữa là đến cuộc họp tổng kết dự án quý tại văn phòng ở quận 1, TP.HCM. Sếp đã ngồi sẵn trong phòng họp, máy chiếu đang chờ, và tất cả tài liệu slide thuyết trình quan trọng đều nằm trong chiếc ổ cứng di động. Tôi cắm ổ cứng vào cổng USB của máy tính, nhưng màn hình hoàn toàn im lìm. Không có tiếng *ting-tong* quen thuộc, đèn LED trên ổ cứng nhấp nháy yếu ớt rồi tắt ngấm. Ngay lúc đó, một thông báo đỏ lòm hiện lên góc màn hình: "Low Disk Space - C Drive is almost full". Ổ C đỏ rực, dung lượng trống về mức 0 byte, khiến máy tính vừa chậm như rùa vừa không thể nhận diện thêm thiết bị ngoại vi do thiếu bộ nhớ ảo và cache hệ thống. Hít một hơi thật sâu, tôi bắt đầu cuộc chiến sửa lỗi "chữa cháy" ngay trên bàn làm việc giữa cái nóng oi ả của Sài Gòn.
 
 <div style="border-left: 4px solid #1d4ed8; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
@@ -83,13 +84,13 @@ Cảnh báo từ chuyên gia phần cứng
 
 Các câu hỏi thường gặp (FAQ)
 
-## 1. Tại sao tôi đã xóa hết phim và nhạc ở ổ C nhưng dung lượng trống vẫn rất ít?
+1. Tại sao tôi đã xóa hết phim và nhạc ở ổ C nhưng dung lượng trống vẫn rất ít?
 Trả lời: Windows thường lưu trữ các bản vá lỗi cập nhật cũ, điểm khôi phục hệ thống (System Restore) và file ngủ đông (hiberfil.sys) ẩn sâu bên trong. Bạn cần dùng công cụ *Disk Cleanup* chọn mục *Clean up system files* để xóa sạch các bản backup Windows Update cũ, nơi thường ngốn từ 10GB đến 30GB dung lượng ổ C mà người dùng không hề hay biết.
 
 ![Hardware Diagnostic & Troubleshooting](https://picsum.photos/seed/gadget710/1000/550)
 
-## 2. Ổ cứng ngoài cắm vào máy tính có đèn sáng nhưng không hiện trong My Computer thì xử lý thế nào?
+2. Ổ cứng ngoài cắm vào máy tính có đèn sáng nhưng không hiện trong My Computer thì xử lý thế nào?
 Trả lời: Trường hợp này 90% là do ổ cứng chưa được gán tên ký tự ổ đĩa hoặc thiếu nguồn điện. Hãy thử cắm ổ cứng vào cổng USB ở phía sau thùng máy (kết nối trực tiếp với bo mạch chủ Mainboard thay vì cổng phía trước case) và tiến hành gán lại ký tự trong *Disk Management* như hướng dẫn ở Bước 2.
 
-## 3. Có nên tắt tính năng Hibernation trên laptop để tiết kiệm dung lượng ổ C không?
+3. Có nên tắt tính năng Hibernation trên laptop để tiết kiệm dung lượng ổ C không?
 Trả lời: Hoàn toàn nên nếu bạn dùng SSD dung lượng nhỏ (128GB hoặc 256GB). Tính năng Hibernation tạo ra file hiberfil.sys có dung lượng ngang bằng với lượng RAM máy bạn (ví dụ RAM 16GB thì file này chiếm đúng 16GB). Bạn có thể mở Command Prompt (Admin) và gõ lệnh `powercfg /hibernate off` để xóa vĩnh viễn file này và lấy lại không gian trống cho ổ C.

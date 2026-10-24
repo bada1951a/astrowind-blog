@@ -27,6 +27,7 @@ theme: "Bronze Artisan Workshop"
 
 
 
+
 Es ist 14:45 Uhr im Frankfurter Bankenviertel. Um 15:30 Uhr soll die wichtigste Pitch-Präsentation des Quartals für einen neuen Großkunden starten. Der Konferenzraum ist voll, die Kollegen warten gespannt, und ich stehe schwitzend vor dem Chef-Laptop. Plötzlich: Totale Stille im System. Keine Mausbewegung, kein blauer Bildschirm, einfach ein eingefrorenes Windows 11. Kein Tastendruck reagiert, der Task-Manager lässt sich nicht aufrufen. Nach drei gefühlten Ewigkeit hilft nur noch der harte Reset über den Power-Knopf. Zehn Minuten später dasselbe Spiel. Ein klassischer, zufälliger Freeze (Random Freezing), der jeden Sysadmin an den Rand des Wahnsinns treibt.
 
 Die Werkzeugkiste: Was wir für die Diagnose brauchen
@@ -105,10 +106,10 @@ Häufig gestellte Fragen (FAQ)
 
 1. Warum taucht in der Ereignisanzeige direkt vor dem Freeze überhaupt kein Fehler auf? Wenn ein PC komplett einfriert (Hard Freeze), hat das Betriebssystem oft keine Millisekunde mehr Zeit, den Fehler auf die Festplatte zu schreiben. Der letzte Log-Eintrag liegt dann oft Minuten zurück. In diesem Fall liegt zu 90% ein handfestes Hardware-Problem vor (RAM, Netzteil, CPU-Spannung oder überhitzte Chipsätze).
 
-## 2. Was bedeutet der berüchtigte WHEA-Logger Fehler in den Protokollen?
+2. Was bedeutet der berüchtigte WHEA-Logger Fehler in den Protokollen?
 
 WHEA steht für *Windows Hardware Error Architecture*. Wenn Sie hier Einträge finden, meldet die CPU oder das PCIe-Subsystem einen Hardware-internen Paritäts- oder Bus-Fehler. Das ist ein ernstes Indiz für instabile Spannungen, defekten RAM oder beschädigte CPU-Kerne.
 
-## 3. Soll ich Windows 11 einfach komplett neu installieren?
+3. Soll ich Windows 11 einfach komplett neu installieren?
 
 Nur als allerletzten Ausweg. Wenn das Problem durch einen fehlerhaften Chipsatztreiber, ein BIOS-Problem oder instabile Hardware verursacht wird, löst eine Neuinstallation das Problem exakt null Tage lang – der Freeze wird nach der Einrichtung aller Updates wieder auftreten. Finden Sie erst die Ursache über die Logs!

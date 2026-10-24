@@ -27,6 +27,7 @@ theme: "Tokyo Neon Violet"
 
 
 
+
 Durante anos gerenciando bancadas de suporte e estações de alta performance para desenvolvedores e jogadores competitivos, perdi a conta de quantas vezes me deparei com o mesmo chamado: *"Conectei meu monitor externo no notebook gamer/corporativo e a tela simplesmente não dá sinal, ou pior, fica piscando a cada 20 segundos"*. Esse comportamento instável — o infame *flickering* ou a perda total de sincronia com a clássica mensagem de "Sem Sinal" (*No Signal*) — raramente é um defeito físico no painel do monitor. 
 
 Na esmagadora maioria dos casos práticos que analisei em laboratório, o vilão é uma colisão na pilha de drivers gráficos híbridos (a dança sensível entre a iGPU do processador e a dGPU dedicada), corrupção de tabelas EDID ou uma tentativa do Windows de forçar uma taxa de quadros e largura de banda que o barramento físico atual não consegue sustentar. 
@@ -60,15 +61,15 @@ Para intervir com precisão cirúrgica sem perder tempo trocando peças à toa, 
                              +-----------------+
 ```
 
-## 1. Quebra de Handshake HDCP e Corrupção de Metadados EDID
+1. Quebra de Handshake HDCP e Corrupção de Metadados EDID
 Ao conectar o cabo HDMI ou DisplayPort (via USB-C Alt Mode), a GPU e o monitor trocam pacotes de identificação (*Extended Display Identification Data* - EDID) e negociam chaves de proteção HDCP. Se o notebook estiver alternando estados de energia ou se a iGPU assumir a interface externa enquanto a dGPU tenta renderizar a cena, essa troca de chaves falha. O monitor perde a sincronia de clock pixel a pixel, desliga a luz de fundo por proteção e tenta reconectar segundos depois, gerando o efeito de tela piscando em loop.
 
 ![Hardware Diagnostic & Troubleshooting](https://images.unsplash.com/photo-1527443224154-c4a3942d3acf? auto=format&fit=crop&w=1000&h=550&q=80)
 
-## 2. Conflito de Drivers e Descompasso do Windows Update
+2. Conflito de Drivers e Descompasso do Windows Update
 O Windows Update tem o péssimo hábito de sobrescrever silenciosamente drivers homologados (seja da NVIDIA, AMD ou Intel) por versões genéricas da biblioteca WHQL. Isso quebra a integração do subsistema *Multi-Plane Overlay* (MPO). Quando o MPO é acionado para renderizar janelas transparentes, aceleração por hardware em navegadores ou jogos em modo janela sem bordas, a interface gráfica perde o quadro e o sinal cai momentaneamente.
 
-## 3. Saturação da Largura de Banda de Transmissão (Bandwidth Starvation)
+3. Saturação da Largura de Banda de Transmissão (Bandwidth Starvation)
 Muitos usuários conectam monitores Quad HD (1440p) ou 4K com taxas de atualização elevadas (144Hz, 165Hz ou 240Hz) usando cabos genéricos ou adaptadores USB-C/HDMI 1.4 legados. Se o sinal ultrapassar o teto térmico e elétrico do conversor ou a capacidade de compressão de fluxo (*Display Stream Compression* - DSC), os pacotes de dados sofrem descarte (*packet drop*). O resultado imediato é tela preta intermitente, atraso no mouse e ruído digital na tela. ---
 
 Benchmark de Conexão: Taxa de Atualização, Latência e Estabilidade
@@ -98,7 +99,7 @@ Antes de intervir no software, force o Windows a reiniciar os buffers de renderi
 
 a:
 
-## 1. Com o monitor externo conectado, pressione simultaneamente as teclas:
+1. Com o monitor externo conectado, pressione simultaneamente as teclas:
 
    `Win + Ctrl + Shift + B`
 
@@ -138,7 +139,7 @@ a:
 
 3. Pressione `Win + R`, digite `msconfig` e pressione Enter. Na abaInicialização do Sistema, marque a caixaInicialização segura (Modo Mínimo) e reinicie o notebook.
 
-## 4. No Modo de Segurança, abra o DDU:
+4. No Modo de Segurança, abra o DDU:
 
    - Selecione o tipo de dispositivo: GPU.
    - Selecione a fabricante: Intel / AMD (GPU integrada primeiro).
@@ -179,9 +180,9 @@ Desativação do MPO (Multi-Plane Overlay) via Registro
 
 Se o seu monitor continua apresentando micro-piscadas pretas esporádicas ao alternar janelas ou ver vídeos no YouTube em segundo plano enquanto trabalha, desative a chave MPO do Windows:
 
-## 1.  Abra o Prompt de Comando como Administrador.
+1.  Abra o Prompt de Comando como Administrador.
 
-## 2. Copie e cole o comando abaixo, pressionando Enter:
+2. Copie e cole o comando abaixo, pressionando Enter:
 
 ```cmd
 reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "OverlayTestMode" /t REG_DWORD /d 5 /f
@@ -205,11 +206,11 @@ Alertas Críticos de Manutenção e Prevenção de Danos
 
 Perguntas Frequentes (FAQ)
 
-## 1. Meu monitor funciona perfeitamente em 60Hz, mas pisca ininterruptamente em 144Hz ou 165Hz. O que é?
+1. Meu monitor funciona perfeitamente em 60Hz, mas pisca ininterruptamente em 144Hz ou 165Hz. O que é?
 Esse é o sintoma clássico de saturação de banda do cabo ou da porta de saída. Em 1080p ou 1440p a 144Hz+, o fluxo de dados exige condutores de alta pureza e blindagem contra interferência eletromagnética (EMI). Se o cabo for HDMI 1.4 antigo ou um cabo USB-C sem certificação DP 1.4 com suporte a HBR3, os pacotes sofrerão descarte contínuo. Substitua o cabo por um modelo HDMI 2.0/2.1 certificado ou um cabo USB-C para DisplayPort com suporte a 32.4 Gbps.
 
-## 2. O atalho `Win + Ctrl + Shift + B` resolve o problema de tela preta permanentemente?
+2. O atalho `Win + Ctrl + Shift + B` resolve o problema de tela preta permanentemente?
 Não. Esse atalho funciona apenas como um alívio imediato para reiniciar o buffer do driver de vídeo em memória. Se a causa subjacente for um driver corrompido, sobreposição quebrada de MPO ou cabo com perda de pacotes, a tela voltará a piscar assim que o subsistema for exigido novamente por cargas gráficas mais altas. A solução definitiva requer a limpeza com DDU e a fixação das taxas corretas de transmissão.
 
-## 3. Usar um hub USB-C multipor portas comuns aumenta o input lag em jogos competitivos?
+3. Usar um hub USB-C multipor portas comuns aumenta o input lag em jogos competitivos?
 Sim. Docks e adaptadores simples que não utilizam linhas DisplayPort diretas (DisplayPort Alternate Mode) processam o sinal por meio de controladores intermediários (como chipsets DisplayLink genéricos) baseados em compressão por software via CPU. Isso adiciona uma fila de renderização com atraso de sinal de 15 a 35 milissegundos, gerando uma sensação perceptível de atraso no mouse (*mouse drift*). Para jogos competitivos, conecte o monitor diretamente a uma porta USB-C com saída nativa para a dGPU ou à porta HDMI nativa do notebook.

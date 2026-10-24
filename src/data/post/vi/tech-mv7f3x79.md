@@ -27,6 +27,7 @@ theme: "Cobalt Enterprise Lab"
 
 
 
+
 <div style="border-left: 4px solid #1e40af; padding: 14px 18px; margin: 20px 0; background-color: rgba(30, 64, 175, 0.04); border-radius: 4px;">
   <strong style="color: #1e40af; font-size: 1.05rem;">BÁO CÁO KỸ THUẬT PHÒNG THỬ NGHIỆM QA (ENTERPRISE LAB REPORT)</strong><br>
   <span style="font-size: 0.92rem; color: #334155;">Mã hồ sơ: <code>LAB-DISP-2026-V4</code> | Phân loại: Video Signal Integrity & Driver Stack Failure | Tỉ lệ lỗi ghi nhận trên 450 máy trạm doanh nghiệp: <strong>14.2%</strong> (Dell Latitude 5000/7000 Series, ThinkPad T/P Series, HP EliteBook).</span>
@@ -40,7 +41,7 @@ Bài viết này chia sẻ quy trình chuẩn mà đội ngũ kỹ sư phần c�
 
 ---
 
-Phân Tích Nguyên Nhân Kỹ Thuật (Root Cause Breakdown)
+## Phân Tích Nguyên Nhân Kỹ Thuật (Root Cause Breakdown)
 
 Dưới góc độ phân tích tín hiệu phần cứng và kiến trúc driver WDDM (Windows Display Driver Model), hiện tượng mất hình hoặc chớp nháy xuất phát từ ba điểm nghẽn cốt lõi sau:
 
@@ -59,19 +60,19 @@ Dưới góc độ phân tích tín hiệu phần cứng và kiến trúc driver
 [Màn hình ngoài (Panel Controller)]
 ```
 
-## 1. Xung Đột Bắt Tay Tín Hiệu Trên Hệ Thống Hybrid Graphics (Optimus / Dynamic Switchable)
+1. Xung Đột Bắt Tay Tín Hiệu Trên Hệ Thống Hybrid Graphics (Optimus / Dynamic Switchable)
 Hầu hết laptop hiện đại đều chạy kiến trúc đồ họa lai: iGPU (Intel UHD/Iris Xe hoặc AMD Radeon) chịu trách nhiệm quản lý hiển thị khung hình nền (Frame Buffer) và xuất tín hiệu ra cổng vật lý, trong khi dGPU (NVIDIA hoặc AMD rời) chỉ can thiệp khi có tác vụ 3D nặng. 
 
 Khi cắm thêm màn hình thứ hai, hệ điều hành phải phân luồng tín hiệu qua cơ chế MSHybrid. Nếu Driver DCH của iGPU và dGPU bị lệch phiên bản (do Windows Update tự ý tải đè driver generic lên driver tùy biến từ OEM của Dell/Lenovo), quá trình bắt tay tín hiệu (Handshake) giữa hai bộ điều khiển hiển thị bị gián đoạn. Kết quả là card đồ họa liên tục reset cổng xuất hình (Display Pipe Reset), tạo ra hiện tượng màn hình phụ chớp đen ngắt quãng.
 
 ![Hardware Diagnostic & Troubleshooting](https://images.unsplash.com/photo-1550745165-9bc0b252726f? auto=format&fit=crop&w=1000&h=550&q=80)
 
-## 2. Thất Bại Trong Quy Trình Bắt Tay Băng Thông (Link Training Failure) & Suy Hao Tín Hiệu
+2. Thất Bại Trong Quy Trình Bắt Tay Băng Thông (Link Training Failure) & Suy Hao Tín Hiệu
 Giao thức DisplayPort và HDMI tốc độ cao (FRL/TMDS) đòi hỏi quá trình "Link Training" giữa laptop và màn hình ngoài phải diễn ra trong vài mili-giây để xác định số lượng làn dữ liệu (Lanes) và điện áp truyền tải. 
 
 Nếu bạn sử dụng cáp chuyển đổi thụ động (Passive Dongle), cáp có chiều dài trên 2 mét chất lượng kém, hoặc băng thông bị nghẽn qua Docking Station chuẩn DisplayLink, tỷ lệ suy hao gói tin (Bit Error Rate - BER) sẽ vượt ngưỡng cho phép. Màn hình ngoài không thể giải mã đầy đủ luồng dữ liệu liên tục, dẫn đến việc bộ điều khiển màn hình (Scaler IC) tự ngắt tín hiệu để bảo vệ panel, sau đó tái khởi động lại kết nối—đây chính là chu kỳ chớp tắt lặp đi lặp lại.
 
-## 3. Lỗi Cơ Chế Multi-Plane Overlay (MPO) & Xung Đột Hồ Sơ EDID Trên Registry
+3. Lỗi Cơ Chế Multi-Plane Overlay (MPO) & Xung Đột Hồ Sơ EDID Trên Registry
 Từ phiên bản Windows 10 (20H2) và đặc biệt trên Windows 11, Microsoft đẩy mạnh tính năng Multi-Plane Overlay (MPO) nhằm giảm độ trễ dựng hình và tiết kiệm điện năng cho GPU. 
 
 Tuy nhiên, phần cứng của nhiều dòng chip đồ họa tích hợp xử lý MPO rất kém khi phải gánh hai màn hình có độ phân giải và tần số quét lệch pha (ví dụ: màn laptop 14 inch Full HD 60Hz ghép với màn ngoài 27 inch 2K 144Hz hoặc 4K 60Hz). Khi có sự chuyển đổi giữa các lớp ứng dụng phần cứng (như trình duyệt dùng tăng tốc phần cứng, bảng tính Excel hay phần mềm đồ họa), MPO gây hiện tượng tràn bộ đệm khung hình (Buffer Underrun), khiến GPU driver crash tạm thời và tự hồi phục, biểu hiện ra ngoài là màn hình phụ tắt ngúm rồi sáng lại. Đồng thời, các hồ sơ EDID (Extended Display Identification Data) lưu tạm trong Registry bị phân mảnh sau nhiều lần cắm/rút màn hình ở các môi trường khác nhau cũng gây nghẽn quá trình nhận dạng.
@@ -91,7 +92,7 @@ Dưới đây là thống kê thực tế từ 1.200 giờ đo kiểm tín hiệ
 
 ---
 
-Quy Trình Xử Lý Kỹ Thuật Từng Bước (Step-by-Step Resolution)
+## Quy Trình Xử Lý Kỹ Thuật Từng Bước (Step-by-Step Resolution)
 
 Quy trình chuẩn hóa sau đây được thiết kế để loại bỏ triệt để lỗi logic về driver, cache tín hiệu và cấu hình hệ điều hành mà không làm mất mát dữ liệu của người dùng.
 
@@ -111,7 +112,7 @@ Việc gỡ driver qua giao diện thông thường của Windows luôn để l�
 
 4. Khi máy tính đã vào chế độ Safe Mode, mở công cụDisplay Driver Uninstaller.exe.
 
-## 5. Trong mục Select device type, chọnGPU.
+5. Trong mục Select device type, chọnGPU.
 
 **Q6.** Trong mục Select device, chọn hãng sản xuất card màn hình tích hợp trước (Intel hoặc AMD).
 
@@ -141,7 +142,7 @@ Giao diện quản lý: Device Manager
 
 3. Nhấp đúp vào từng mục USB Root Hub (USB 3.0)hoặcGeneric SuperSpeed USB Hub.
 
-## 4. Chuyển sang thẻ Power Management, bỏ dấu tích ở dòng:
+4. Chuyển sang thẻ Power Management, bỏ dấu tích ở dòng:
 
    `Allow the computer to turn off this device to save power`
 
@@ -153,13 +154,13 @@ Giải pháp triệt tiêu hiện tượng màn hình phụ nhấp nháy khi lư
 
 1. Nhấn phím `Windows`, gõ `cmd`, nhấp chuột phải vào Command Promptvà chọnRun as administrator.
 
-## 2. Dán đoạn lệnh sau vào cửa sổ dòng lệnh để tạo khóa ghi đè cấu hình MPO:
+2. Dán đoạn lệnh sau vào cửa sổ dòng lệnh để tạo khóa ghi đè cấu hình MPO:
 
 ```cmd
 reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v OverlayTestMode /t REG_DWORD /d 00000005 /f
 ```
 
-## 3. Nhấn Enter. Hệ thống sẽ phản hồi `The operation completed successfully.`
+3. Nhấn Enter. Hệ thống sẽ phản hồi `The operation completed successfully.`
 
 4. Lệnh này buộc Windows DWM quay về cơ chế render truyền thống an toàn, loại bỏ hoàn toàn các lỗi xung đột bộ đệm giữa hai màn hình không đồng nhất tần số quét.
 
@@ -169,11 +170,11 @@ Nếu laptop của bạn từng cắm vào nhiều màn hình khác nhau (màn h
 
 1. Nhấn `Windows + R`, gõ `regedit` và nhấn Enterđể mởRegistry Editor.
 
-## 2. Điều hướng chính xác theo đường dẫn sau:
+2. Điều hướng chính xác theo đường dẫn sau:
 
    `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\GraphicsDrivers`
 
-## 3. Tại nhánh này, bạn sẽ thấy ba thư mục con quan trọng:
+3. Tại nhánh này, bạn sẽ thấy ba thư mục con quan trọng:
 
    - `Configuration`
    - `Connectivity`
@@ -181,7 +182,7 @@ Nếu laptop của bạn từng cắm vào nhiều màn hình khác nhau (màn h
 
 4. Nhấp chuột phải vào lần lượt từng thư mục trên và chọn Delete. Đừng lo lắng, đây chỉ là các bộ nhớ đệm tạm thời. Hệ điều hành sẽ tự động tạo lại các khóa này với giá trị chuẩn xác ngay khi bạn cắm lại cáp màn hình.
 
-## 5. Khởi động lại laptop.
+5. Khởi động lại laptop.
 
 ```
 [Registry GraphicsDrivers Reset]
@@ -197,7 +198,7 @@ Sau khi tín hiệu đã lên, bạn cần loại bỏ tính năng tần số qu
 
 1. Nhấp chuột phải lên màn hình Desktop, chọn Display settings.
 
-## 2. Cuộn xuống và chọn Advanced display.
+2. Cuộn xuống và chọn Advanced display.
 
 3. Trong mục Select a display to view or change its settings, chọn màn hình phụ bị lỗi.
 
@@ -219,11 +220,11 @@ Cảnh Báo Chuyên Gia & Khuyến Cáo Vận Hành Phần Cứng
 
 Câu Hỏi Thường Gặp (FAQ)
 
-## 1. Tại sao màn hình phụ chỉ bị chớp tắt khi tôi cắm sạc laptop, còn khi dùng pin thì xuất hình ổn định?
+1. Tại sao màn hình phụ chỉ bị chớp tắt khi tôi cắm sạc laptop, còn khi dùng pin thì xuất hình ổn định?
 Đây là dấu hiệu kinh điển của việc hệ thống điện bị nhiễu sóng hài hoặc củ sạc laptop bị rò điện (đặc biệt phổ biến với các củ sạc GaN bên thứ ba không có mạch lọc nhiễu EMI đạt chuẩn). Khi cắm sạc, xung điện cao tần từ bộ biến áp xung can thiệp trực tiếp vào đường truyền vi sai tốc độ cao (TMDS/DisplayPort differential pairs), làm suy giảm biên độ xung tín hiệu và gây rớt gói tin. Ngoài ra, việc cắm sạc sẽ chuyển cấu hình điện năng của Windows từ chế độ *Balanced* sang *High Performance*, kích hoạt card đồ họa rời nâng xung nhịp, dẫn đến xung đột tần số quét tức thời nếu profile driver chưa được hiệu chỉnh chuẩn xác theo Bước 3 và Bước 4 ở trên.
 
-## 2. Tôi nên ưu tiên dùng cáp Type-C sang DisplayPort hay Type-C sang HDMI để tránh lỗi No Signal?
+2. Tôi nên ưu tiên dùng cáp Type-C sang DisplayPort hay Type-C sang HDMI để tránh lỗi No Signal?
 Xét về mặt kiến trúc phần cứng, cáp Type-C sang DisplayPort luôn vượt trội và ổn định hơn hẳn. Cổng USB-C trên hầu hết các laptop hiện nay hỗ trợ giao thức gọi là *DisplayPort Alternate Mode* (DP Alt Mode) – nghĩa là các làn tín hiệu dữ liệu tốc độ cao của GPU được dẫn thẳng ra chân tiếp xúc của cổng Type-C mà không qua bất kỳ khâu biên dịch nào. Khi bạn dùng cáp Type-C sang HDMI, sợi cáp hoặc đầu chuyển buộc phải tích hợp một con chip chuyển đổi tín hiệu tích cực (Protocol Converter / LSPCON) từ DisplayPort sang HDMI. Con chip này sinh nhiệt rất cao trong quá trình hoạt động, dễ gây quá nhiệt làm rớt kết nối hoặc lỗi bắt tay HDCP sau vài giờ sử dụng liên tục.
 
-## 3. Có nên bật tính năng FreeSync/G-Sync trên màn hình phụ khi kết nối với laptop văn phòng qua cổng Type-C không?
+3. Có nên bật tính năng FreeSync/G-Sync trên màn hình phụ khi kết nối với laptop văn phòng qua cổng Type-C không?
 Nếu bạn sử dụng màn hình cho các tác vụ văn phòng, lập trình, chỉnh sửa ảnh hoặc kế toán, lời khuyên dứt khoát từ các kỹ sư phần cứng là NÊN TẮT HOÀN TOÀN FreeSync/G-Sync (Adaptive-Sync) trong menu OSD phần cứng của màn hình. Công nghệ tần số quét biến thiên được thiết kế tối ưu cho trải nghiệm chơi game với kết nối trực tiếp từ card đồ họa máy bàn (Desktop PCIe). Khi chạy qua các kết nối di động, hub đa năng, hoặc môi trường Hybrid Graphics trên laptop, tính năng này thường xuyên hiểu nhầm sự thay đổi khung hình tĩnh của các ứng dụng văn phòng là hiện tượng sụt FPS nghiêm trọng, dẫn đến việc liên tục thay đổi chu kỳ làm tươi của panel màn hình, tạo ra ảo giác màn hình bị chớp giật hoặc tối sầm bất thình lình.

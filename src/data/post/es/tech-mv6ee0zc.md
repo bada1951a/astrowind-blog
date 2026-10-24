@@ -27,13 +27,14 @@ theme: "Deep Ocean Cobalt"
 
 
 
+
 Como responsable del puesto de trabajo e infraestructura técnica en entornos de desarrollo y centros de operaciones de red (NOC), me encuentro con frecuencia con incidencias de teclado que desconciertan a los usuarios: caracteres duplicados de forma aleatoria (el temido *chattering* o rebote de conmutador) o combinaciones de teclas que se niegan a registrarse en momentos críticos, como la introducción de contraseñas de privilegios o comandos de consola en producción. 
 
 En un parque de cientos de estaciones equipadas con periféricos de perfil mecánico orientados a programadores, desechar inmediatamente un equipo de 150 euros por un conmutador defectuoso no solo es ineficiente desde el punto de vista presupuestario, sino que incumple las normativas de sostenibilidad del departamento de TI. A continuación, detallo el protocolo técnico para diagnosticar y recuperar estos conmutadores mediante el uso estandarizado de agentes de limpieza dieléctricos de residuo cero.
 
 ---
 
-## 1. Análisis Causa-Raíz (RCA)
+1. Análisis Causa-Raíz (RCA)
 
 El fallo de pulsación (*missed stroke*) y la duplicación involuntaria (*key chatter*) son dos caras de la misma degradación electromecánica en el interior del switch. Para comprender la avería, debemos analizar cómo el microcontrolador del periférico interpreta el cierre del circuito.
 
@@ -61,22 +62,22 @@ El fallo de pulsación (*missed stroke*) y la duplicación involuntaria (*key ch
    +-----------------------+
 ```
 
-## 1. ## 1. Micro-oxidación y contaminación de las láminas de contacto
+1. ## 1. Micro-oxidación y contaminación de las láminas de contacto
 
 En los conmutadores de estilo tradicional (Cherry MX y sus derivados directos), dos láminas de aleación de cobre y berilio o bronce fosforoso con chapado de oro/plata hacen contacto físico al descender el vástago. Aunque las corrientes involucradas son mínimas (del orden de 5V y microamperios dentro del bus USB HID), la exposición al aire ambiental degrada las capas superficiales. La acumulación de polvo microscópico, restos de lubricante degradado o sales transportadas por la humedad ambiental crean una resistencia transitoria de contacto que el microcontrolador lee como interrupciones oscilantes de alta frecuencia. ### 1.
 
-## 2. Deformación mecánica y pérdida de histéresis elástica
+2. Deformación mecánica y pérdida de histéresis elástica
 
 La lámina flexible interna depende de una constante elástica calculada al milímetro para proporcionar el retorno mecánico y la histéresis requerida. Si el usuario somete ciertas teclas de alta frecuencia operativa (como `W`, `A`, `S`, `D`, `Espacio` o `Enter`) a impactos sistemáticos o fatiga prolongada, la lámina pierde tensión. Al juntarse con la lámina estática, no impacta con una fuerza de retención neta constante, sino que vibra físicamente contra el terminal fijo, superando el tiempo de tolerancia de amortiguación.
 
-## 1. ## 3. Desincronización con el algoritmo de desrebote (*debounce algorithm*)
+1. ## 3. Desincronización con el algoritmo de desrebote (*debounce algorithm*)
 
 Los microcontroladores integrados (ARM Cortex-M0, ATmega32U4, etc.) ejecutan un bucle de escaneo de matriz a intervalos de entre 1000 Hz y 8000 Hz. Dado que ningún contacto metálico es perfecto al cerrarse, se aplica un filtro por software denominado *debounce time* (típicamente entre 5 y 15 milisegundos) que ignora las fluctuaciones rápidas. Si la degradación física del conmutador prolonga la vibración de la señal por encima de la ventana de desrebote configurada en el firmware, el teclado registra dos, tres o más eventos `KeyDown` para una única pulsación.
 
 ---
 ![Tech Diagnostics](https://images.unsplash.com/photo-1607604276583-eef5d076aa5f? auto=format&fit=crop&w=1000&h=550&q=80)
 
-## 2. Protocolo de Resolución Paso a Paso
+2. Protocolo de Resolución Paso a Paso
 
 <div style="border-left: 4px solid #2563eb; padding: 12px 16px; margin: 20px 0; background-color: rgba(37, 99, 235, 0.04); border-radius: 4px;">
 <strong>DIRECTIVA TÉCNICA OBLIGATORI
@@ -92,7 +93,7 @@ Antes de desmontar elementos, debemos aislar el problema respecto al subsistema 
    - Despliegue el nodo Dispositivos de interfaz de usuario (HID)yTeclados.
    - Verifique que ningún controlador presente advertencias triangulares amarillas. Si existen duplicados huérfanos provocados por hubs USB, haga clic derecho sobre el dispositivo y seleccione Desinstalar el dispositivo.
 
-## 2. Validación de la pila de entrada vía consol
+2. Validación de la pila de entrada vía consol
 
 a:- Abra elSímbolo del sistema (`cmd.exe`) o PowerShell con privilegios elevados y reinicie el servicio de entrada de interfaz humana para purgar colas de eventos en memori
 
@@ -101,14 +102,14 @@ a:
    net stop hidserv && net start hidserv
    ```
 
-## 3. Prueba de latencia y registro de matrices:
+3. Prueba de latencia y registro de matrices:
 
    - Utilice utilidades de diagnóstico especializadas (como el software de prueba de hardware de su fabricante o herramientas de testeo de eventos de teclado en navegador como *Keyboard Switch Tester* o *Switch Hitter*).
    - Configure el umbral de detección en 30 ms. Si al presionar la tecla conflictiva el monitor muestra múltiples eventos en un intervalo inferior a 20 ms, el fallo es estrictamente de hardware (rebote mecánico no filtrable).
 
 Fase 2: Preparación del conmutador
 
-## 1. Desconexión físic
+1. Desconexión físic
 
 a: Extraiga el conector USB-C/USB-A del concentrador o torre.
 
@@ -145,15 +146,15 @@ Para esta intervención se requiere exclusivamente un limpiador de contactos de 
 
 1. Hundimiento mecánico del vástago: Con una herramienta no metálica o su propio dedo, presione el vástago del conmutador hasta el tope de su recorrido (aproximadamente 4 mm).
 
-## 2. Aplicación controlad
+2. Aplicación controlad
 
 a: Inserte la cánula de precisión en la holgura existente entre el vástago y la carcasa superior (*housing*), orientándola hacia la zona interna donde se alojan las láminas de contacto (habitualmente el lado superior del switch, identificable por la muesca del LED).
 
-## 3. Inyección en ráfag
+3. Inyección en ráfag
 
 a:Administre una ráfaga extremadamente corta, de no más demedio segundo. La presión del disolvente desplazará los micro-residuos y disolverá películas oxidadas.
 
-## 4. Ciclo de purga mecánic
+4. Ciclo de purga mecánic
 
 a:De inmediato, libere el aerosol y comience a pulsar repetidamente y a fondo el vástago del conmutador entre60 y 80 veces consecutivas. Esta acción de fricción dinámica fuerza a las láminas de contacto a frotarse entre sí, permitiendo que el solvente en evaporación arrastre mecánicamente las partículas hacia el fondo inerte o las disuelva por fricción galvánica.
 
@@ -161,7 +162,7 @@ a:De inmediato, libere el aerosol y comience a pulsar repetidamente y a fondo el
 
 ---
 
-## 3. Advertencias de Infraestructura y Recomendaciones Técnicas
+3. Advertencias de Infraestructura y Recomendaciones Técnicas
 
 Como política técnica corporativa para estaciones de trabajo de alto rendimiento, deben adoptarse las siguientes directrices preventivas:
 
@@ -170,7 +171,7 @@ Como política técnica corporativa para estaciones de trabajo de alto rendimien
 
 ---
 
-## 4. Preguntas Frecuentes (FAQ)
+4. Preguntas Frecuentes (FAQ)
 
 ¿Puedo utilizar alcohol isopropílico al 99% directamente en lugar de un spray limpiador de contactos?
 El alcohol isopropílico (IPA) de alta pureza es seguro químicamente para la mayoría de plásticos, pero su aplicación mediante gotero carece de la fuerza cinética que aporta el propelente presurizado del spray. La presión del aerosol es fundamental para desincrustar mecánicamente las partículas microscópicas aprisionadas entre las dos caras de la lámina de contacto. Además, el isopropanol puede tardar más en evaporarse dentro de la cámara sellada del conmutador si no existe flujo de aire forzado.

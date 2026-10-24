@@ -27,6 +27,7 @@ theme: "Deep Indigo System"
 
 
 
+
 Godzina 18:40, a we wrocławskim parku technologicznym atmosfera robi się gęsta. Jutro rano mamy kluczowy audyt stabilności infrastruktury przed wejściem zewnętrznego klienta, a stacja robocza lead architekta nagle sypie się do niebieskiego ekranu. Na monitorze dumnie widnieje kod błędu: `IRQL_NOT_LESS_OR_EQUAL` czyli klasyczny 0x0000000
 
 a. Serce na chwilę zamiera, bo reset komputera pomagał tylko na dokładnie pięć minut pracy pod obciążeniem. 
@@ -63,7 +64,7 @@ Zanim zaczniemy szukać winnych w oprogramowaniu, wykluczmy kwestie fizyczne.
 Krok 2: Identyfikacja winowajcy w zrzutach pamięci (Minidump)
 Potrzebujemy dowodów. System zapisuje pliki zrzutów za każdym razem, gdy występuje BSoD.
 
-## 1. Przejdź do folderu `C:\Windows\Minidump`.
+1. Przejdź do folderu `C:\Windows\Minidump`.
 
 2. Skopiuj najnowszy plik `.dmp` na pulpit (żeby ominąć uprawnienia administratora przy odczycie).
 
@@ -102,11 +103,11 @@ a. Instalują one ogólne paczki zamiast dedykowanych sterowników od producenta
 
 Często zadawane pytania (FAQ)
 
-## 1. Co zrobić, jeśli komputer restartuje się tak szybko, że nie zdążam odczytać kodu błędu?
+1. Co zrobić, jeśli komputer restartuje się tak szybko, że nie zdążam odczytać kodu błędu?
 Kliknij Start, wpisz `Zaawansowane ustawienia systemu` (Advanced system settings), w zakładce *Zaawansowane* znajdź sekcję *Uruchamianie i odzyskiwanie* i kliknij *Ustawienia*. W sekcji *Awaria systemu* odznacz opcję "Automatycznie uruchom ponownie". Dzięki temu system zatrzyma się na niebieskim ekranie, dając Ci czas na sfotografowanie kodu i nazwy pliku sterownika. ![Tech & IT Solution Guide](https://picsum.photos/seed/computer564/1000/550)
 
-## 2. Czy błąd 0x0000000a może być spowodowany przez uszkodzony dysk SSD?
+2. Czy błąd 0x0000000a może być spowodowany przez uszkodzony dysk SSD?
 Tak. Jeśli kontroler dysku NVMe gubi spójność danych w pamięci podręcznej, jądro systemu traci dostęp do sektorów wymiany, co kończy się identycznym błędem IRQL. Warto sprawdzić stan dysku za pomocą aplikacji diagnostycznej producenta (np. Samsung Magician, CrystalDiskInfo).
 
-## 3. Jak uruchomić tryb awaryjny, gdy Windows w ogóle nie startuje?
+3. Jak uruchomić tryb awaryjny, gdy Windows w ogóle nie startuje?
 Włącz komputer, a gdy tylko pojawią się kropki ładowania systemu, przytrzymaj przycisk zasilania przez 5 sekund, aby go wyprzeć. Powtórz tę procedurę trzykrotnie. Przy czwartym uruchomieniu Windows automatycznie przejdzie w tryb naprawy automatycznej, skąd w opcjach zaawansowanych (`Rozwiązywanie problemów` -> `Opcje zaawansowane` -> `Ustawienia uruchamiania`) włączysz Tryb Awaryjny (klawisz 4 lub F4).

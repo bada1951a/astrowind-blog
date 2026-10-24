@@ -27,6 +27,7 @@ theme: "Solarized Amber Warm"
 
 
 
+
 Jam 8 malam di kantor startup kawasan SCBD Jakarta. Tim *engineering* sedang bersiap merilis pembaruan besar sistem internal, tiba-tiba salah satu PC workstation utama yang menangani *deployment pipeline* mendadak mati total dan menampilkan layar biru pekat dengan kode *stop error* yang bikin jantungan: IRQL_NOT_LESS_OR_EQUALatau kode heksadesimal0x0000000
 
 a. Panik? Jelas. Pengerjaan sistem internal langsung tersendat karena mesin tersebut tidak mau masuk ke sistem operasi dan terus-menerus mengalami *reboot loop*.
@@ -49,7 +50,7 @@ Sebelum masuk ke langkah perbaikan, mari kita bedah tiga penyebab utama yang ser
 
 2. Inkonsistensi atau Kerusakan Modul RAM: Ada sektor pada kepingan RAM yang mengalami *bad sector* atau pemasangan pin yang kurang klop setelah terkena getaran atau perubahan suhu ruangan server.
 
-## 3. Layanan Latar Belakang Pihak Ketig
+3. Layanan Latar Belakang Pihak Ketig
 
 a: Aplikasi utilitas atau antivirus lawas yang menancapkan modul *driver*-nya langsung ke kernel sistem operasi sehingga memicu pelanggaran akses memori.
 
@@ -92,10 +93,10 @@ Tanya Jawab Populer (FAQ)
 
 1. Apakah error 0x0000000a pasti menandakan RAM saya rusak? Tidak selalu. Meskipun kode ini berkaitan dengan memori, 70% kasus justru disebabkan oleh driver software yang mencoba mengakses alamat memori secara ilegal, bukan kerusakan fisik RAM itu sendiri.
 
-## 2. Bagaimana jika saya tidak bisa masuk ke Safe Mode sama sekali?
+2. Bagaimana jika saya tidak bisa masuk ke Safe Mode sama sekali?
 
 Jika komputer terus mengalami *loop* dan gagal masuk Safe Mode, Anda perlu menyiapkan *bootable USB flash drive* berisi installer Windows. Gunakan fitur *Repair your computer* dari media instalasi tersebut untuk mengakses Command Prompt eksternal atau melakukan pemulihan sistem (*System Restore*).
 
-## 3. Apakah membersihkan kontak kepingan RAM dengan penghapus pensil aman?
+3. Apakah membersihkan kontak kepingan RAM dengan penghapus pensil aman?
 
 Secara tradisional metode ini sering dipakai teknisi untuk membersihkan oksidasi ringan pada pin kuningan RAM. Namun, pastikan menggunakan penghapus bersih dan hindari residu sisa penghapus menempel pada slot motherboard. Cara yang lebih modern adalah menggunakan cairan *contact cleaner* khusus elektronik.

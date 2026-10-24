@@ -27,6 +27,7 @@ theme: "Pure Titanium Clean"
 
 
 
+
 Mới sáng thứ Hai đầu tuần, sếp tổng gọi gấp vào phòng họp để present cái báo cáo quý. Mồ hôi hột vã ra như tắm khi cái laptop chiến thần của mình bấm nút nguồn lên xong... đứng hình ở logo Windows đúng 10 phút tròn. Nhìn thanh Task Manager lúc mở được máy thì ôi thôi, Disk 100%, CPU quạt hú như phản lực cất cánh. Đám app "ăn hại" từ Zalo, KakaoTalk, OneDrive cho đến mấy cái phần mềm diệt virus rác tự động nhảy vào chạy ngầm (Startup) khiến cỗ máy i7 đời cũ nghẹt thở.
 
 Đó là lúc anh em kỹ sư IT như tụi mình phải bật chế độ "cấp cứu" ngay lập tức. Đừng vội mang ra tiệm tốn tiền hay cài lại Win mất thời gian, bài viết này tôi sẽ chỉ cho anh em cách "phẫu thuật" tận gốc bệnh khởi động chậm trễ này chỉ trong vòng một nốt nhạc.
@@ -100,6 +101,6 @@ Câu hỏi thường gặp (FAQ)
 
 2. Tính năng Fast Startup có gây hại gì cho máy không?> Fast Startup hoàn toàn an toàn, tuy nhiên đôi khi nó gây lỗi hiển thị hoặc xung đột driver phần cứng đời cũ (đặc biệt là card màn hình Nvidia). Nếu máy bạn thỉnh thoảng bị treo logo khi bật lên, hãy thử tắt Fast Startup đi để kiểm tra.
 
-## 3. Có nên dùng các phần mềm bên thứ ba như CCleaner để tối ưu khởi động không?
+3. Có nên dùng các phần mềm bên thứ ba như CCleaner để tối ưu khởi động không?
 
 > Tuyệt đối hạn chế. Các phần mềm tối ưu bên thứ ba thường quét sâu vào Registry, đôi khi xóa nhầm các khóa quan trọng khiến hệ điều hành lỗi nặng. Hãy tận dụng các công cụ native sẵn có của Windows như Task Manager và Command Prompt là quá đủ dùng cho một kỹ sư chuyên nghiệp.

@@ -27,6 +27,7 @@ theme: "Graphite Technical Paper"
 
 
 
+
 Eram 19h45 em um hub de tecnologia na região da Avenida Paulista, em São Paulo, e o clima na sala de reuniões estava tenso. Precisávamos entregar um relatório de BI consolidado para a diretoria às 9h do dia seguinte, mas o notebook principal da equipe simplesmente decidiu travar na tela de reinicialização com o famigerado aviso de "Atualizando o Windows: 100% concluído. Não desligue o computador". Passaram-se trinta minutos, quarenta minutos, e a porcentagem não saía do lugar. O cooler do aparelho rodava no talo, o prazo apertava, e reiniciar no botão físico trazia o medo clássico de corromper o sistema de vez.
 
 Essa cena é o pesadelo de qualquer profissional de TI ou usuário que depende de estabilidade. Depois de perder valiosos minutos tentando alternativas ineficientes, o diagnóstico certeiro apontou para o que costuma falhar nesses momentos: arquivos corrompidos no cache do Windows Update, especificamente na pasta onde o sistema armazena os pacotes de instalação temporários.
@@ -103,11 +104,11 @@ Recomendações de Segurança e Boas Práticas
 
 Perguntas Frequentes (FAQ)
 
-## 1. Se eu desligar o computador no botão físico enquanto está em 100%, vou perder meus arquivos?
+1. Se eu desligar o computador no botão físico enquanto está em 100%, vou perder meus arquivos?
 Na maioria das vezes, seus arquivos pessoais (documentos, fotos) ficam seguros nas pastas de usuário. No entanto, o sistema operacional pode corromper arquivos de registro, exigindo reparo de inicialização ou o procedimento de limpeza de cache que mostramos neste guia. ![Tech & IT Solution Guide](https://picsum.photos/seed/computer725/1000/550)
 
-## 2. Posso apagar totalmente a pasta SoftwareDistribution.old depois que o PC ligar?
+2. Posso apagar totalmente a pasta SoftwareDistribution.old depois que o PC ligar?
 Sim. Depois que o Windows iniciar normalmente e você verificar que tudo está funcionando e atualizado, você pode deletar a pasta `SoftwareDistribution.old` para liberar espaço em disco (pode ser necessário usar a limpeza de disco do sistema para permissões).
 
-## 3. Por que isso acontece com tanta frequência no Windows 11?
+3. Por que isso acontece com tanta frequência no Windows 11?
 O Windows 11 gerencia pacotes cumulativos grandes e complexos. Quedas mínimas de conexão durante o download em segundo plano ou oscilações de energia no SSD durante a gravação final geram bits corrompidos que confundem o assistente de instalação. Manter o SSD saudável e usar uma conexão de internet estável minimiza drasticamente o problema.

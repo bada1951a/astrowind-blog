@@ -27,6 +27,7 @@ theme: "Midnight Navy Royal"
 
 
 
+
 Il est 7h45 ce mardi matin. Je suis assis à mon bureau dans une tour de verre à La Défense, le souffle court, les yeux rivés sur mon écran qui refuse obstanément d'ouvrir PowerPoint. À 9h, je dois monter dans leTGV en direction de Lyon pour une réunion matinale extrêmement tendue avec un client historique. Mon PC portable souffre d'une lenteur maladive : le ventilateur hurle à la mort, le curseur de la souris saccade, et chaque clic déclenche cette fichue roue de chargement bleue. Le coupable ? Windows 11 qui, dans sa grande générosité, décide de synchroniser le monde entier en tâche de fond pendant que j'essaie simplement de bosser.
 
 Ce genre de panne n'attend jamais le bon moment. Si vous aussi, votre bécane a l'air de traîner un boulet invisible alors que vous avez juste besoin d'efficacité immédiate, sortez votre carnet de notes. Voici le journal de bord de mon intervention d'urgence, heure par heure, pour redonner vie à un Windows 11 essoufflé.

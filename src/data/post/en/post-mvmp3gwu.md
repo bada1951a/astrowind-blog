@@ -18,6 +18,7 @@ theme: "Cobalt Enterprise Lab"
 
 
 
+
 ## 1. [Opening Story/Problem]
 
 There I was, aboard the high-speed train cutting through the countryside, tethering my laptop to a notoriously choppy mobile hotspot. An urgent email from the New York finance executive just hit my inbox: the client's production deployment report contained a critical UI glitch, and they needed visual proof immediately. I instinctively pressed **Win + Shift + S** to capture the exact error window. 
@@ -78,7 +79,7 @@ Sometimes the shortcut gets toggled off or notifications are blocked.
 
 As an enterprise troubleshooter, I always advise keeping a fallback plan handy. If you manage corporate fleets via Group Policy or Intune, ensure that security baselines are not overly aggressively disabling background apps or modern shell features. Furthermore, check your physical keyboard's **Fn Lock** or gaming mode switches—many mechanical keyboards disable the Windows key entirely when a hardware profile switch is accidentally triggered, which instantly breaks any shortcut involving the **Win** key.
 
-## 5. Frequently Asked Questions
+5. Frequently Asked Questions
 
 Q: What should I do if **Win + Shift + S** still does not work after trying all these steps?
 

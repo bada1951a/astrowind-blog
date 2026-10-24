@@ -27,6 +27,7 @@ theme: "Warm Coffee Latte"
 
 
 
+
 Godzina 14:50 w piątek. Za dziesięć minut miałem kończyć kwartalny raport z wdrażania nowego korporacyjnego środowiska, a w tle już chłodził się browar w lodówce. Nagle z biurka mojego key account managera dobiega cichy, złowrogi jęk wiatraków, po którym następuje przerażająca cisza. Ekran – czarny jak sumienie praktykanta po skasowaniu bazy produkcyjnej. Wiatraki kręcą się na najwyższych obrotach, klawiatura ani mrugnie, a na monitorze dumnie wisi komunikat *„Brak sygnału”*. Krawaciarz patrzy na mnie szklistym wzrokiem, a ja czuję, jak po plecach spływa mi strużka lodowatego potu. 
 
 Znamy to wszyscy, prawda? Komputer ożywa, diody świecą, dyski szumią, ale ekran uparcie pozostaje martwy. Pierwsza myśl? Padła karta graficzna. Druga? Płyta główna poszła z dymem. Ale spokojnie, odłóżcie młotki i wyciągnijcie ten kubek z letnią kawą latte – zapraszam na krótką, inżynieryjną opowieść z okopów warszawskiego supportu, jak bez wydawania ani grosza postawić taki grat na nogi za pomocą zwykłej gumki do ścierania. ![Hardware Diagnostic & Troubleshooting](https://picsum.photos/seed/hardware-22/1000/550)
@@ -88,6 +89,6 @@ Często Zadawane Pytania (FAQ)
 
 2. Komputer wstał, ale po ponownym uruchomieniu znowu jest czarny ekran. Co jest grane? To klasyczny objaw uszkodzonego zatrzasku w slocie RAM lub samej kości, która poluzowała się pod wpływem drgań wentylatora. Sprawdź, czy zatrzask "kliknął" podczas wpinania. Jeśli problem wraca, zamień kości miejscami lub przetestuj je pojedynczo w pierwszym slocie.
 
-## 3. Czy zepsuty RAM może uszkodzić procesor lub płytę główną?
+3. Czy zepsuty RAM może uszkodzić procesor lub płytę główną?
 
 Bardzo rzadko. Najczęściej płyta główna po prostu zablokuje rozruch (włączając diodę DEBUG LED z napisem DRAM) lub wyda serię piknięć alarmowych z głośniczka systemowego (tzw. beepera), zanim dojdzie do jakichkolwiek uszkodzeń termicznych czy elektrycznych.

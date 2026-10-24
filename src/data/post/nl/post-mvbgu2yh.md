@@ -27,6 +27,7 @@ theme: "Graphite Technical Paper"
 
 
 
+
 Het was gisterochtend rond negen uur op onze tech-campus aan de Amsterdamse Zuidas. De sprintplanning stond op het punt te beginnen, mijn Slack ontplofte met meldingen van developers, en uitgerekend op dat moment besloot Windows 11 om volledig dwars te liggen. Ik klikte op het Start-menu: nul reactie. Ik probeerde met de rechtermuisknop op de taakbalk te klikken om Taakbeheer te openen: ook totaal geen beweging. Je cursor verandert in een ronddraaiend cirkeltje of reageert gewoon helemaal nergens meer op, terwijl je actieve vensters zoals je browser of IDE wel gewoon blijven draaien. Een klassiek geval van een bevroren Windows 11 Shell, en als je midden in een acute prestatieprobleem-oplossing zit, kun je dit echt niet gebruiken.
 
 <div style="border-left: 4px solid #475569; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
@@ -73,22 +74,22 @@ Blijft de taakbalk hardnekkig weigeren of crasht hij direct opnieuw? Dan moeten 
 
 2. Klik op Bestand>Nieuwe taak uitvoeren, typ `wt` of `cmd`, vink het hokje aan voor "Deze taak uitvoeren met beheerdersrechten" en druk op Enter.
 
-## 3. Plak het volgende commando in de opdrachtprompt en druk op Enter:
+3. Plak het volgende commando in de opdrachtprompt en druk op Enter:
 
    `DISM.exe /Online /Cleanup-image /Restorehealth`
 
-## 4. Wacht tot dit proces op 100% staat. Plak daarna het volgende commando om je systeembestanden te controleren en te repareren:
+4. Wacht tot dit proces op 100% staat. Plak daarna het volgende commando om je systeembestanden te controleren en te repareren:
 
    `sfc /scannow`
 
-## 5. Start na afloop je pc volledig opnieuw op.
+5. Start na afloop je pc volledig opnieuw op.
 
 Stap 3: De XAML-cache en Start-menu Resetten
 Lost dit het nog steeds niet op? Dan gaan we de gebruikersinterface-cache geforceerd legen via PowerShell.
 
 1. Open wederom Taakbeheer en start een nieuwe taak als beheerder (`cmd` of `powershell`).
 
-## 2. Voer het volgende commando uit om het Start-menu registratieproces te herstellen:
+2. Voer het volgende commando uit om het Start-menu registratieproces te herstellen:
 
    `Get-AppXPackage -AllUsers -Name Microsoft.Windows.ShellExperienceHost | Foreach {Add-AppxPackage -DisableDevelopmentMode -Register "(_.InstallLocation)\AppXManifest.xml"}`
 
@@ -112,6 +113,6 @@ Veelgestelde Vragen (FAQ)
 
 2. Kan een virus of malware ervoor zorgen dat mijn taakbalk bevriest? Ja, dat is mogelijk. Sommige malware verstopt zich in achtergrondprocessen die lijken op legitieme Windows-services, waardoor systemen vastlopen. Voer na een herstart voor de zekerheid een snelle scan uit via Windows Defender of je enterprise antivirusoplossing.
 
-## 3. Waarom gebeurt dit zo vaak specifiek op Windows 11 en niet op Windows 10?
+3. Waarom gebeurt dit zo vaak specifiek op Windows 11 en niet op Windows 10?
 
 Windows 11 maakt gebruik van een volledig vernieuwde, modernere grafische schil gebouwd op XAML en WinUI. Hoewel dit er geliktheid uitziet, is het gevoeliger voor conflicten met achtergrondsoftware en grafische stuurprogramma's dan de oudere Win32-architectuur van Windows 10.

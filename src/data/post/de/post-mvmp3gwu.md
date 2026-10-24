@@ -18,7 +18,8 @@ theme: "Sandstone Desert Minimal"
 
 
 
-## 1. Das Problem mit Win+Shift+S im mobilen Einsatz
+
+1. Das Problem mit Win+Shift+S im mobilen Einsatz
 
 Es war ein typischer Dienstagnachmittag in einem gut besuchten Café in der Münchener Maxvorstadt. Draußen nieselte es leicht, drinnen roch es nach frisch geröstetem Espresso. Ich saß mit meinem Laptop am Holztisch, verbunden mit dem Smartphone-Hotspot via Tethering, um letzte Korrekturen an einer komplexen Kalkulation und den dazugehörigen CAD-Plänen für einen wichtigen Kunden im Frankfurter Bankenviertel vorzunehmen. Der Abgabetermin rückte bedrohlich näher. Plötzlich musste ich einen bestimmten Ausschnitt aus einer Excel-Tabelle und einen Teil des Architekturplans direkt in einer E-Mail dokumentieren. 
 
@@ -69,7 +70,7 @@ Wenn die Benachrichtigungen stimmen, setzen wir die App über die Systemsteuerun
 
 1. Gehen Sie in den **Einstellungen** auf **Apps > Installierte Apps**.
 
-## 2. Suchen Sie nach Snipping Tool.
+2. Suchen Sie nach Snipping Tool.
 
 3. Klicken Sie auf die drei Punkte daneben und wählen Sie **Erweiterte Optionen**.
 
@@ -80,7 +81,7 @@ Greift keine der vorherigen Methoden, zwingen wir Windows dazu, das Tool komplet
 
 1. Drücken Sie **Win + X** und wählen Sie **Terminal (Administrator)** oder **PowerShell (Administrator)**.
 
-## 2. Fügen Sie folgenden Befehl ein und drücken Sie Enter:
+2. Fügen Sie folgenden Befehl ein und drücken Sie Enter:
 
 ```powershell
 Get-AppxPackage *ScreenSketch* -AllUsers | Foreach {Add-AppxPackage -DisableDevelopmentMode -Register "(_.InstallLocation)\AppXManifest.xml"}
@@ -92,7 +93,7 @@ Get-AppxPackage *ScreenSketch* -AllUsers | Foreach {Add-AppxPackage -DisableDeve
 
 Als IT-Diagnostiker rate ich Ihnen: Vermeiden Sie in stressigen Momenten blinden Aktionismus wie das sofortige Deinstallieren von Grafiktreibern. Das Snipping Tool hängt eng mit der Windows-Zwischenablage und dem Benachrichtigungssystem zusammen. Wenn Sie merken, dass Tastenkombinationen insgesamt träge reagieren, prüfen Sie als Erstes, ob Energiesparmodi (wie der Windows-Energiesparmodus im Akkubetrieb über Tethering) Hintergrundprozesse drosseln. Halten Sie Ihr Windows 11 stets aktuell, da Microsoft bekannte Bugs bezüglich des Snipping Tools regelmäßig über kumulative Updates behebt.
 
-## 5. Frequently Asked Questions
+5. Frequently Asked Questions
 
 Q: Was kann ich tun, wenn der Shortcut nach all diesen Schritten immer noch nicht funktioniert?
 

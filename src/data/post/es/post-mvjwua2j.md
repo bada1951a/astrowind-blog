@@ -27,6 +27,7 @@ theme: "Nordic Clean Ice"
 
 
 
+
 Eran las siete de la tarde en las Torres Kio, en pleno distrito financiero de Madrid. Estábamos a pocas horas de cerrar el ejercicio fiscal, con la tensión cortándose en el ambiente, cuando mi equipo de contabilidad empezó a emitir alertas de voz automatizadas y pitidos de validación que de repente... enmudecieron por completo. Justo en el momento más crítico, cuando necesitábamos cruzar los datos de un año entero de hojas de cálculo de Excel con el sistema central del ERP corporativo, el ordenador principal se quedó totalmente mudo. No podíamos escuchar las alertas de discrepancias ni las llamadas de confirmación del departamento financiero.
 
 El pánico se apoderó de la oficina. En medio del estrés por cumplir con los plazos de la auditoría, los compañeros empezaron a desconectar los auriculares, a reiniciar el PC a lo loco y a golpear ligeramente el puerto Jack de 3.5mm pensando que era un fallo físico de los cascos. Por supuesto, eso solo empeoró las cosas y nos hizo perder valiosos minutos valiosos. Como técnico de sistemas de la casa, me tocó intervenir de inmediato para aplicar una solución rápida, limpia y definitiva en Windows 11 sin perder ni un solo dato del cierre contable.
@@ -92,7 +93,7 @@ Si los servicios están activos pero seguimos mudos, el problema recae directame
 
 4. Si la actualización no surte efecto, haz clic derecho otra vez, selecciona Desinstalar el dispositivo, marca la casilla que dice "Intentar quitar el controlador de este dispositivo" y haz clic enDesinstalar.
 
-## 5. Finalmente, reinicia tu ordenador. Windows 11 detectará el hardware faltante al arrancar y reinstalará un controlador limpio y funcional de manera automática. ---
+5. Finalmente, reinicia tu ordenador. Windows 11 detectará el hardware faltante al arrancar y reinstalará un controlador limpio y funcional de manera automática. ---
 
 Advertencia del especialista en hardware
 
@@ -106,6 +107,6 @@ Preguntas frecuentes (FAQ)
 
 2. ¿Por qué el icono de volumen aparece con una pequeña cruz roja en Windows 11? Ese símbolo de advertencia indica que el servicio principal de audio está deshabilitado o que el controlador del dispositivo de hardware ha sufrido un fallo crítico. Ve al [Administrador de dispositivos], busca si hay algún elemento con un triángulo amarillo y aplica el proceso de reinicio de servicios que explicamos en el Paso 2.
 
-## 3. ¿Pueden las conexiones físicas causar este fallo repentino en la oficina?
+3. ¿Pueden las conexiones físicas causar este fallo repentino en la oficina?
 
 Sí, aunque parezca software, la acumulación de polvo en el puerto Jack frontal de la torre o un falso contacto en el conector USB de unos cascos modernos puede hacer que Windows desactive el canal de audio por motivos de protección eléctrica. Prueba siempre a conectar el dispositivo en un puerto diferente antes de modificar la configuración del sistema.

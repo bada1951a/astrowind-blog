@@ -27,6 +27,7 @@ theme: "Sunset Horizon Coral"
 
 
 
+
 Afgelopen dinsdagmiddag, midden in de hectiek op kantoor op de Zuidas in Amsterdam, stond ik op het punt om een cruciale kwartaalrapportage naar onze belangrijkste investeerder te sturen. Nog even snel de laatste grafieken bijwerken, dacht ik. Maar toen gebeurde het: een felrood pop-upvenster onder in mijn scherm. *Onvoldoende schijfruimte op C:.* Niet lang daarna begon Windows te haperen, crashte mijn Excel-bestand en zat ik met het zweet in mijn handen te staren naar een computer die plotseling weigerde op te slaan. Paniek! Een acute opslagcrisis op de werkvloer, en dat midden op een drukke werkdag.
 
 <div style="border-left: 4px solid #f97316; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
@@ -95,6 +96,6 @@ Veelgestelde Vragen (FAQ)
 
 2. Wat moet ik doen als mijn schijf na deze stappen binnen de kortste keren weer volloopt? Als je schijf snel volloopt ondanks deze opschoning, is de kans groot dat je te maken hebt met een groeiende map van een cloudservice (zoals OneDrive of Dropbox die onbeperkt lokaal synchroniseren) of dat je downloadmap uitpuilt met zware installatiebestanden. Verplaats grote persoonlijke media naar een externe schijf of de cloud.
 
-## 3. Is het verstandig om gratis opschoonsoftware van derden te downloaden?
+3. Is het verstandig om gratis opschoonsoftware van derden te downloaden?
 
 Over het algemeen raden we dit af voor de doorsnee gebruiker. Veel van dit soort programma's zitten vol met agressieve reclame, bundleware of onnodige achtergrondprocessen die je systeem juist vertragen. De ingebouwde Windows-tools zoals *Opslag* en *Schijfopruiming* zijn meer dan voldoende en volledig veilig.

@@ -27,6 +27,7 @@ theme: "Cyberpunk Terminal"
 
 
 
+
 <div style="border-left: 4px solid #00ffcc; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,255,204,0.08); border-radius: 4px; font-family: monospace; color: #111827;">
 [ACCÈS RAPIDE CLI / RACCOURCI] Ctrl + Shift + Échap -> Onglet "Démarrage" -> Désactiver l'inutile.
 </div>
@@ -88,6 +89,6 @@ Foire Aux Questions (FAQ)
 
 2. Que faire si certaines applications persistent à se lancer malgré la désactivation ? Certains logiciels récalcitrants possèdent leurs propres paramètres internes de lancement automatique. Ouvrez les préférences ou les paramètres de l'application concernée (comme Discord ou Steam) et décochez l'option "Lancer au démarrage de l'ordinateur" dans l'interface du logiciel lui-même.
 
-## 3. Pourquoi mon PC reste-t-il lent malgré le nettoyage du démarrage ?
+3. Pourquoi mon PC reste-t-il lent malgré le nettoyage du démarrage ?
 
 Si le temps de boot reste anormalement long après cette manipulation, le problème est probablement matériel. Un disque système (C:) saturé à plus de 90% ou un disque dur mécanique (HDD) en fin de vie provoquent ces symptômes. L'achat et l'installation d'un SSD NVMe résoudront définitivement le problème.

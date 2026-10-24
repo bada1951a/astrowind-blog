@@ -27,6 +27,7 @@ theme: "Matte Black stealth"
 
 
 
+
 Sáng nay tại văn phòng công ty công nghệ ở quận Cầu Giấy, Hà Nội, cú đấm thép của deadline dự án vừa dội xuống thì chiếc laptop cá nhân của tôi dở chứng. Thanh Taskbar trên Windows 11 bỗng nhiên tê liệt hoàn toàn. Click vào nút Start không phản hồi, icon các ứng dụng ghim sẵn đứng im như tượng đá, thậm chí đồng hồ góc phải cũng chết cứng. Cả một hệ thống đang cần xử lý gấp các yêu cầu tối ưu hiệu năng mà ngay cả việc mở Task Manager bằng chuột phải cũng bất khả thi.
 
 Nếu bạn cũng đang phát bực với lỗi kinh điển này của Windows 11, đừng vội khởi động lại máy hay cài lại Win. Dưới đây là quy trình xử lý thực chiến từ góc nhìn của một kỹ sư hệ thống.
@@ -80,9 +81,9 @@ Nhiều anh em kỹ thuật tại văn phòng sau khi dính update KB mới nh�
 
 a:
 
-## 1. Mở Cài đặt bằng phím tắt Windows + I.
+1. Mở Cài đặt bằng phím tắt Windows + I.
 
-## 2. Chọn Windows Update ở cột bên trái.
+2. Chọn Windows Update ở cột bên trái.
 
 3. Chọn tiếp Update history-> Cuộn xuống dưới chọnUninstall updates.
 
@@ -107,13 +108,13 @@ a: Nhiều người bất ngờ khi biết Driver GPU quá cũ cũng gây ra hi�
 
 Câu hỏi thường gặp (FAQ)
 
-## 1. Nếu tôi không thể mở được Task Manager bằng phím tắt Ctrl + Shift + Esc thì phải làm sao?
+1. Nếu tôi không thể mở được Task Manager bằng phím tắt Ctrl + Shift + Esc thì phải làm sao?
 Trong trường hợp phím tắt bị khóa hoặc máy đơ toàn tập, hãy bấm Ctrl + Alt + Delete, sau đó chọnSign out (Đăng xuất) rồi đăng nhập lại, hoặc giữ nút nguồn cứng 5 giây để tắt hẳn máy và khởi động nguội (Cold Boot).
 
 ![Tech & IT Solution Guide](https://picsum.photos/seed/computer685/1000/550)
 
-## 2. Lỗi Taskbar này có phải do virus hay mã độc không?
+2. Lỗi Taskbar này có phải do virus hay mã độc không?
 Rất hiếm khi. Phần lớn lỗi Taskbar không bấm được là do xung đột tiến trình nội bộ của Windows 11 sau các bản update hoặc do ứng dụng bên thứ ba gây ra tranh chấp tài nguyên RAM.
 
-## 3. Tại sao Windows 11 hay gặp lỗi vặt liên quan đến Taskbar như vậy?
+3. Tại sao Windows 11 hay gặp lỗi vặt liên quan đến Taskbar như vậy?
 Bởi vì thanh Taskbar trên Windows 11 được viết hoàn toàn lại bằng mã nguồn XAML và công nghệ hiện đại thay vì nền tảng Win32 cũ kỹ như Windows 10. Sự thay đổi kiến trúc này mang lại vẻ đẹp mượt mà nhưng đồng thời cũng đi kèm với độ ổn định chưa thực sự hoàn hảo ở một số cấu hình phần cứng khác nhau.

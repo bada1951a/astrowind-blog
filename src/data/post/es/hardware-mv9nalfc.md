@@ -27,6 +27,7 @@ theme: "Deep Indigo System"
 
 
 
+
 Eran las 6:30 de la tarde en nuestra oficina en Madrid. Teníamos sobre la mesa una entrega de proyecto crítico para un cliente multinacional que debía enviarse a las 7:00 en punto. De repente, la pantalla de mi ordenador principal se congeló durante unos segundos y apareció esa temida ventana emergente: "Espacio insuficiente en el disco local (C:)". El sistema operativo comenzó a lanzar advertencias en cadena, bloqueando la sincronización con la nube y negándose a guardar los cambios finales del paquete de diseño y software. El corazón se me encogió; un fallo crítico del sistema justo en el peor momento posible, con los minutos contando en nuestra contra y el cliente esperando los archivos finales.
 
 En medio del pánico inicial, mi primer instinto fue empezar a vaciar la papelera de reciclaje y borrar un par de carpetas pesadas de descargas. Pero no era suficiente. El sistema seguía ahogado, marcando apenas 400 megabytes libres en una partición de 500 gigas que misteriosamente se había llenado hasta el tope. Probé a desinstalar programas a la carrera, perdiendo preciosos minutos valiosos viendo cómo la barra de progreso apenas semovía mientras el ventilador del procesador zumbaba al máximo. 
@@ -64,7 +65,7 @@ Olvídate de buscar carpeta por carpeta. Windows incluye una utilidad fantástic
 
 1. Haz clic en el botón de Inicio y entra en la Configuración (el icono de la rueda dentada).
 
-## 2. Ve a Sistemay luego haz clic enAlmacenamiento.
+2. Ve a Sistemay luego haz clic enAlmacenamiento.
 
 3. Verás una barra que desglosa qué está ocupando tu disco. Haz clic en Archivos temporales.
 
@@ -81,7 +82,7 @@ Si necesitas una limpieza más a fondo a nivel de administrador:
 
 3. En la ventana que aparece, haz clic en el botón inferior que dice Limpiar archivos del sistema. Vuelve a seleccionar la unidad C:.
 
-## 4. Esta vez, la lista incluirá opciones avanzadas. Marca "Limpieza de actualizaciones de Windows" y "Archivos de instalación temporales de Windows". Haz clic en Aceptar para proceder con la limpieza profunda. ## Paso 3: Borrado manual de carpetas temporales ocultas
+4. Esta vez, la lista incluirá opciones avanzadas. Marca "Limpieza de actualizaciones de Windows" y "Archivos de instalación temporales de Windows". Haz clic en Aceptar para proceder con la limpieza profunda. ## Paso 3: Borrado manual de carpetas temporales ocultas
 
 Si aún necesitas raspar más gigabytes, vamos a limpiar los directorios de usuario manualmente:
 
@@ -89,7 +90,7 @@ Si aún necesitas raspar más gigabytes, vamos a limpiar los directorios de usua
 
 2. Selecciona todo presionando `Ctrl + A` y elimínalo pulsando `Shift + Supr` (para borrarlo permanentemente sin pasar por la papelera).
 
-## 3. *Not
+3. *Not
 
 a:* Si Windows te avisa que algún archivo está abierto o en uso por un programa activo, simplemente haz clic en "Omitir".
 

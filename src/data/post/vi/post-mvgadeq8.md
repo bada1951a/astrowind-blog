@@ -27,6 +27,7 @@ theme: "High-Contrast Charcoal"
 
 
 
+
 Mới 2 giờ chiều tại văn phòng giữa trung tâm Quận 1, TP.HCM, không khí đang cực kỳ căng thẳng vì chỉ còn đúng 30 phút nữa là đến hạn chót nộp bản báo cáo tài chính quý cho sếp tổng. Đúng lúc đó, màn hình chiếc máy tính chính của chị kế toán trưởng bỗng xuất hiện một dòng chữ mờ khó chịu ở góc dưới bên phải: "Activate Windows - Go to Settings to activate Windows". Đáng nói hơn, dòng chữ này cứ bám chặt lấy màn hình, che mất một phần số liệu quan trọng trong bảng Excel, thậm chí còn chặn luôn một số thao tác cá nhân hóa. Chị hoảng hốt gọi tôi qua xử lý gấp, miệng liên tục than thở vì sợ sếp thấy lại tưởng máy móc công ty có vấn đề bảo mật.
 
 <div style="border-left: 4px solid #e11d48; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
@@ -77,6 +78,6 @@ Những câu hỏi thường gặp (FAQ)
 
 2. Tại sao tôi đã gõ đúng lệnh nhưng màn hình lại báo lỗi "Access Denied"? Lỗi này xảy ra 100% do bạn mở CMD bằng tài khoản User thông thường thay vì quyền Admin. Hãy tắt cửa sổ đó đi, làm lại thao tác nhấn chuột phải vào Command Prompt và chọnRun as administratorlà được.
 
-## 3. Sau vài tuần dòng chữ Activate Windows có bị hiện lại không?
+3. Sau vài tuần dòng chữ Activate Windows có bị hiện lại không?
 
 Có thể. Nếu máy tính của công ty sử dụng hình thức kích hoạt theo mạng nội bộ (KMS) mà máy tính đó cứ để ngoại tuyến liên tục trên 180 ngày, trạng thái bản quyền sẽ hết hạn. Lúc đó bạn chỉ cần kết nối lại mạng nội bộ của công ty để hệ thống tự động đồng bộ hóa là xong.

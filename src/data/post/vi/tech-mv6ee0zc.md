@@ -27,6 +27,7 @@ theme: "Midnight Navy Royal"
 
 
 
+
 [INCIDENT LOG 01:15 AM] Bối Cảnh Sự Cố Tại Bàn Trực Vận Hành
 
 Đồng hồ hệ thống điểm 01:15 sáng. Trong phòng máy chủ yên tĩnh chỉ có tiếng quạt tản nhiệt server rít đều đặn, đồng chí kỹ sư trực ca bên cạnh bắt đầu đập bàn phím liên hồi kèm theo tiếng thở dài. Anh ta đang cấu hình dở cụm Kubernetes qua terminal thì phím `e` liên tục bị "chattering" (gõ một lần nhưng máy nhận thành `ee` hoặc `eee`), trong khi phím `Enter` thì nhấn 3 lần mới ăn được 1 lần. 
@@ -56,17 +57,17 @@ Phân Tích Căn Nguyên Kỹ Thuật (Root Cause Analysis)
 ```
 ![Tech Diagnostics](https://images.unsplash.com/photo-1555680202-c86f0e12f086? auto=format&fit=crop&w=1000&h=550&q=80)
 
-## 1. Nhiễm Bụi Vi Mô Và Oxy Hóa Bề Mặt Lá Đồng (Oxidation & Contamination)
+1. Nhiễm Bụi Vi Mô Và Oxy Hóa Bề Mặt Lá Đồng (Oxidation & Contamination)
 Khi bạn nhấn phím, stem trượt xuống tách hoặc đẩy hai lá đồng chạm vào nhau để khép kín mạch điện. Điểm tiếp xúc này thường được mạ vàng hoặc hợp kim chống rỉ mỏng. Sau 1-2 năm sử dụng trong môi trường văn phòng nóng ẩm tại Việt Nam:
 * Bụi mịn, tế bào da chết, tàn thuốc lá hoặc hơi ẩm len qua khe hở của switch lọt vào bên trong.
 * Dầu bôi trơn (lube) quá hạn bị biến chất, đông kết lại thành lớp màng cản điện.
 * Bề mặt tiếp xúc kim loại bị oxy hóa cục bộ, khiến điện trở tiếp xúc tăng cao đột biến. Khi lá đồng chạm nhau, dòng điện chạy qua không đủ ổn định, vi điều khiển (MCU) hiểu nhầm rằng người dùng đang nhấp nhả phím nhiều lần trong một phần nghìn giây.
 
-## 2. Thuật Toán Khử Rung Phím (Debounce Time Threshold) Gặp Lỗi
+2. Thuật Toán Khử Rung Phím (Debounce Time Threshold) Gặp Lỗi
 Về mặt vật lý học, không có hai miếng kim loại nào chạm vào nhau mà dừng lại ngay lập tức; chúng luôn rung nhẹ (bounce) trước khi tiếp xúc tĩnh hoàn toàn. Firmware của bàn phím cơ luôn cài đặt một thuật toán gọi là Debounce Time (thời gian trễ khử rung, thường từ 5ms đến 15ms) để bỏ qua các tín hiệu dao động này. 
 Nếu switch bị lão hóa, độ đàn hồi của lá đồng suy giảm, thời gian rung vật lý vượt quá ngưỡng Debounce Time của firmware, hiện tượng gõ một ra hai (chattering) sẽ xuất hiện ngay lập tức trên hệ điều hành.
 
-## 3. Hỏng Hóc Mối Hàn Hoặc Giãn Chân Socket Hot-swap
+3. Hỏng Hóc Mối Hàn Hoặc Giãn Chân Socket Hot-swap
 Đối với bàn phím mạch hàn (solder), các mối thiếc dưới đáy PCB sau thời gian chịu lực gõ mạnh có thể bị nứt chân chim (cold solder joint). Đối với bàn phím hỗ trợ thay switch nhanh (Hot-swap), hai ngàm kẹp bằng đồng của socket Kailh hoặc Gateron dưới bo mạch có thể bị toét rộng ra do rút cắm switch sai góc, dẫn đến tình trạng mất tiếp xúc chập chờn – lúc bấm ăn, lúc bấm trơ ra. ---
 
 Quy Trình Xử Lý Thực Chiến (Runbook Step-by-Step)
@@ -116,7 +117,7 @@ Các bước thao tác chuẩn:1.Ngắt toàn bộ nguồn điện: Rút cáp k�
 
 2. Tháo Keycap: Dùng dụng cụ rút phím (Keycap puller) rút phím bị lỗi theo phương thẳng đứng 90 độ, tránh bẻ nghiêng gây gãy chân stem.
 
-## 3. Nhỏ/Xịt dung dịch vào buồng tiếp điểm:
+3. Nhỏ/Xịt dung dịch vào buồng tiếp điểm:
 
    * Lắp vòi xịt mảnh đi kèm bình BW-100 / DeoxIT.
    * Dùng ngón tay nhấn giữ stem của switch xuống mức kịch kim (đáy hành trình). Lúc này bạn sẽ thấy khe hở nhỏ dẫn thẳng xuống buồng chứa lá đồng.
@@ -145,9 +146,9 @@ Nếu sau khi xử lý dung dịch mà phím vẫn còn hiện tượng nuốt n
 
 * Đối với bàn phím Mạch hàn (Solder):
 
-## 1. Mở vỏ bàn phím, lật mặt sau PCB.
+1. Mở vỏ bàn phím, lật mặt sau PCB.
 
-## 2. Bật mỏ hàn ở nhiệt độ 320°C - 350°C.
+2. Bật mỏ hàn ở nhiệt độ 320°C - 350°C.
 
 3. Chấm một lượng nhỏ thiếc hàn mới có chứa lõi trợ hàn (flux) vào hai mối hàn của switch lỗi để làm mới mối nối (solder reflow), loại bỏ triệt để hiện tượng nứt chân hàn li ti do mỏi nhiệt.
 
@@ -170,11 +171,11 @@ Sau khi xử lý thành công cho kỹ sư trực ca, chúng tôi đưa chiếc 
 
 Câu Hỏi Thường Gặp (FAQ)
 
-## 1. Dùng cồn y tế 70 độ hoặc cồn đỏ để nhỏ vào switch phím cơ được không?
+1. Dùng cồn y tế 70 độ hoặc cồn đỏ để nhỏ vào switch phím cơ được không?
 Tuyệt đối không.Cồn y tế 70 độ chứa tới 30% là nước cất. Nước sẽ đọng lại rất lâu bên trong buồng switch kín, không thể bay hơi nhanh và sẽ thúc đẩy quá trình rỉ sét của lò xo thép cũng như lá đồng diễn ra nhanh hơn gấp nhiều lần. Nếu bất đắc dĩ không có chai xịt tiếp điểm, bạn chỉ được phép dùng cồn Isopropyl Alcohol (IPA) độ tinh khiết từ99% trở lên và phải để khô tối thiểu 1 tiếng trước khi cắm điện.
 
-## 2. Tại sao sau khi xịt BW-100 thì phím dùng ngon được 1 tuần rồi lại bị chattering tiếp?
+2. Tại sao sau khi xịt BW-100 thì phím dùng ngon được 1 tuần rồi lại bị chattering tiếp?
 Hiện tượng này xảy ra khi lớp mạ chống oxy hóa trên lá đồng đã bị bào mòn vật lý đến mức trơ lõi kim loại tạp chất bên dưới, hoặc lá đồng đã mất hoàn toàn lực đàn hồi (kim loại bị mỏi). Dung dịch xịt chỉ tạm thời rửa sạch cặn bẩn, nhưng kim loại mộc tiếp xúc với oxy trong không khí sẽ bị rỉ trở lại chỉ sau vài ngày. Giải pháp duy nhất lúc này là thay thế hoàn toàn switch mới.
 
-## 3. Có thể dùng phần mềm trên máy tính để sửa triệt để lỗi double phím vĩnh viễn không?
+3. Có thể dùng phần mềm trên máy tính để sửa triệt để lỗi double phím vĩnh viễn không?
 Các phần mềm can thiệp Debounce (hoặc tính năng chỉnh Debounce Time trong app của bàn phím như QMK/VIA, Razer Synapse) chỉ là biện pháp chữa cháy tạm thời bằng cách nâng thời gian trễ nhận phím lên mức cao (ví dụ từ 5ms lên 20-30ms). Cách này sẽ che giấu hiện tượng chattering tạm thời nhưng sẽ làm tăng đáng kể độ trễ phản hồi (input lag) của bàn phím, gây bất lợi lớn khi bạn chơi game phản xạ nhanh hoặc gõ văn bản tốc độ cao. Xử lý triệt để phần cứng vẫn là giải pháp bắt buộc.

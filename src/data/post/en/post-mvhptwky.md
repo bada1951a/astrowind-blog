@@ -27,6 +27,7 @@ theme: "Industrial Blueprint"
 
 
 
+
 <div style="border-left: 4px solid #f59e0b; padding: 12px 16px; margin: 20px 0; background-color: rgba(245,158,11,0.08); border-radius: 4px; color: #111827;">
 <strong>IT Emergency Context:</strong> It is 9:40 AM in our Manhattan office. A company-wide board meeting starts in exactly 20 minutes, and our VP of Operations is staring at her new Windows 11 laptop, visibly frustrated. She needs to rename a dozen critical PDF manifests quickly, but every time she right-clicks, she is greeted by the simplified Windows 11 context menu. The option she needs is buried behind a "Show more options" click. That extra click 50 times a day kills workflow rhythm. As the senior IT systems engineer, I need to fix this permanently right now.
 </div>
@@ -39,7 +40,7 @@ Let us look at why this happens and how you can restore the classic right-click 
 
 ---
 
-Root Cause Breakdown: Why Windows 11 Hid Your Menu
+## Root Cause Breakdown: Why Windows 11 Hid Your Menu
 
 Before jumping into the fix, let us understand what is happening under the hood of the Windows Shell.
 
@@ -51,7 +52,7 @@ Before jumping into the fix, let us understand what is happening under the hood 
 
 ---
 
-Step-by-Step Resolution: Bringing Back the Classic Menu
+## Step-by-Step Resolution: Bringing Back the Classic Menu
 
 You do not need to install sketchy third-party software or pay for registry tweakers. You can achieve this using a simple command line or a quick registry adjustment. Here is how we fixed it for our VP in time for the board meeting.
 
@@ -60,13 +61,13 @@ You can apply this fix via PowerShell or Command Prompt. It creates the necessar
 
 1. Click on your Start menu, type `cmd`, right-click on Command Prompt, and selectRun as administrator.
 
-## 2. Copy and paste the following command into the terminal window:
+2. Copy and paste the following command into the terminal window:
 
    ```cmd
    reg add "HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\InprocServer32" /f /ve
    ```
 
-## 3. Press Enter. You should see the message: `The operation completed successfully.`
+3. Press Enter. You should see the message: `The operation completed successfully.`
 
 4. Restart Windows Explorer to apply the changes immediately. Open Task Manager(Ctrl + Shift + Esc), findWindows Explorerin the processes list, right-click it, and selectRestart.
 
@@ -83,15 +84,15 @@ If you prefer doing things manually or need to verify the registry key yourself,
 
 2. Type `regedit` and press Enter (approve any User Account Control prompts).
 
-## 3. Navigate through the left-hand tree structure to:
+3. Navigate through the left-hand tree structure to:
 
    `HKEY_CURRENT_USER \ Software \ Classes \ CLSID`
 
-## 4. Right-click the CLSIDkey, selectNew > Key, and name the new key exactly this:
+4. Right-click the CLSIDkey, selectNew > Key, and name the new key exactly this:
 
    `{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}`
 
-## 5. Inside that new key, right-click the default sub-key folder, select New > Key, and name it:
+5. Inside that new key, right-click the default sub-key folder, select New > Key, and name it:
 
    `InprocServer32`
 

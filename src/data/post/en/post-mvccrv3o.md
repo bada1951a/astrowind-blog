@@ -27,16 +27,17 @@ theme: "Pastel Lavender Tech"
 
 
 
+
 <div style="border-left: 4px solid #7c3aed; padding: 12px 16px; margin: 20px 0; background-color: rgba(124,58,237,0.06); border-radius: 4px; color: #111827;">
 <strong>Quick Summary FAQ (Top 5 User Questions):</strong><br>
 
-## 1. <strong>What causes Stop Code 0x0000000a?</strong> It points to IRQL_NOT_LESS_OR_EQUAL, usually triggered by a bad kernel-mode driver or failing RAM.<br>
+1. <strong>What causes Stop Code 0x0000000a?</strong> It points to IRQL_NOT_LESS_OR_EQUAL, usually triggered by a bad kernel-mode driver or failing RAM.<br>
 
-## 2. <strong>Can bad RAM alone cause this?</strong> Absolutely. Faulty memory addresses often trigger abrupt kernel crashes.<br>
+2. <strong>Can bad RAM alone cause this?</strong> Absolutely. Faulty memory addresses often trigger abrupt kernel crashes.<br>
 
-## 3. <strong>How do I run a memory check?</strong> Use the built-in Windows Memory Diagnostic tool via Win+R and type <code>mdsched.exe</code>.<br>
+3. <strong>How do I run a memory check?</strong> Use the built-in Windows Memory Diagnostic tool via Win+R and type <code>mdsched.exe</code>.<br>
 
-## 4. <strong>What if the crash happened right after a driver update?</strong> Boot into Safe Mode and roll back the driver immediately via Device Manager.<br>
+4. <strong>What if the crash happened right after a driver update?</strong> Boot into Safe Mode and roll back the driver immediately via Device Manager.<br>
 
 5. <strong>Should I use third-party driver updaters?</strong> No, stick to official vendor packages to avoid registry corruption and signature mismatches.
 
@@ -46,7 +47,7 @@ It was 4:50 PM on a Thursday at our Palo Alto office. We were twenty minutes awa
 
 ![Tech & IT Solution Guide](https://picsum.photos/seed/computer980/1000/550)
 
-Root Cause Breakdown: Why 0x0000000a Happens
+## Root Cause Breakdown: Why 0x0000000a Happens
 
 Before tearing apart hardware or wiping a drive, let's look at what this specific stop code actually means under the hood. The `0x0000000a` error code indicates that a kernel-mode process or driver attempted to access a memory address it had no business touching while at a process Internal Request Level (IRQL) that was too high. 
 
@@ -59,7 +60,7 @@ a:</strong><br>
 - <strong>Corrupted System Files:</strong> Interrupted Windows updates leaving behind misaligned system binaries.
 </div>
 
-Step-by-Step Resolution Guide
+## Step-by-Step Resolution Guide
 
 To conquer this crash without losing your afternoon, follow this battle-tested triage workflow.
 
@@ -85,7 +86,7 @@ If the memory test comes back clean, a rogue driver is almost certainly the culp
 
 3. Upon reboot, press `4` or `F4` to enable Safe Mode.
 
-## 4. Once you are on the desktop, open the Terminal or Command Prompt as an Administrator and run a quick system file check to repair any collateral damage:
+4. Once you are on the desktop, open the Terminal or Command Prompt as an Administrator and run a quick system file check to repair any collateral damage:
 
    ```cmd
    sfc /scannow
@@ -110,7 +111,7 @@ Now it is time to reverse the bad update that ruined your afternoon sprint.
 Always keep a stable, manufacturer-verified network driver installer saved in a local backup directory on your machine. If a botched update knocks out your internet connection during troubleshooting, you will thank yourself later.
 </div>
 
-Expert Advice and Preventing Recurrence
+## Expert Advice and Preventing Recurrence
 
 BSODs like `0x0000000a` are annoying, but they serve as a valuable canary in the coal mine. To keep your development workstation pristine:
 - Avoid bleeding-edge optional preview updates on mission-critical work machines.
@@ -125,6 +126,6 @@ BSODs like `0x0000000a` are annoying, but they serve as a valuable canary in the
 
 2. How do I analyze the minidump file to find the exact driver name? You can download and install WinDbg from the Microsoft Store, open the crash dump located in `C:\Windows\Minidump`, and run the analysis command `!analyze -v`. Look for the `MODULE_NAME` or `IMAGE_NAME` to identify the exact file name causing the fault.
 
-## 3. Is it safe to use third-party driver updater tools?
+3. Is it safe to use third-party driver updater tools?
 
 As a rule of thumb in enterprise IT, we strongly advise against them. They frequently pull generic, WHQL-unverified drivers that break hardware integration and cause these exact kernel stop codes. Stick to OEM support pages or Windows Update.
