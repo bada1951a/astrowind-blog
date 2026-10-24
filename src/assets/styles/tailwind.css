@@ -119,9 +119,7 @@
   @apply rotate-45 translate-y-[-8px] translate-x-[14px];
 }
 
-/* Current page in the header navigation (set server-side in Header.astro and
-   kept in sync on client-side navigations). Override --aw-color-link in
-   CustomStyles.astro to change the colour. */
+/* Current page in the header navigation */
 #header nav .aw-link-active {
   @apply text-link;
 }
@@ -130,8 +128,7 @@
   margin-top: 0;
 }
 
-/* Blog prose: inline code without the typography plugin's backticks, and
-   code blocks that follow the light/dark theme (Shiki dual themes). */
+/* Blog prose */
 .prose :where(code):not(:where(pre *)) {
   background-color: color-mix(in oklab, var(--aw-color-text-default) 8%, transparent);
   border-radius: 0.25rem;
@@ -152,67 +149,76 @@
 }
 
 /* ============================================================
-   [최종 종결] 12개국 공통 가독성 극대화 (18px 본문 & 시원한 여백)
+   [최종 종결] 타이포그래피 완벽 제어 (글자 크기 시원하게 확대 & 명확한 위계)
    ============================================================ */
 
-/* 1. 본문 대주제 (H2) - 큼직하고 분명한 영역 구분 */
-.prose h2 {
-  font-size: 1.65rem !important;
-  line-height: 1.4 !important;
+/* 1. 본문 대주제 (H2) - 32px 묵직하고 시원한 크기 + 하단 라인 */
+:is(.prose, .prose-md, .prose-lg) h2 {
+  font-size: 2rem !important; /* 32px */
+  line-height: 1.35 !important;
   font-weight: 800 !important;
-  margin-top: 3.5rem !important;
-  margin-bottom: 1.25rem !important;
+  margin-top: 4.5rem !important;
+  margin-bottom: 1.5rem !important;
   color: var(--aw-color-text-heading) !important;
+  border-bottom: 2px solid color-mix(in oklab, var(--aw-color-text-default) 15%, transparent) !important;
+  padding-bottom: 0.6rem !important;
 }
 
-/* 2. 단계별 소제목 (H3, H4) - 본문보다 확실히 크고 선명하게 */
-.prose h3,
-.prose h4 {
-  font-size: 1.35rem !important;
-  line-height: 1.45 !important;
+/* 2. 단계별 소제목 (H3) - 24px로 본문과 확연히 구분 */
+:is(.prose, .prose-md, .prose-lg) h3 {
+  font-size: 1.5rem !important; /* 24px */
+  line-height: 1.4 !important;
   font-weight: 700 !important;
-  margin-top: 2.5rem !important;
+  margin-top: 3rem !important;
   margin-bottom: 1rem !important;
   color: var(--aw-color-text-heading) !important;
 }
 
-/* 3. 본문 텍스트 - 시원시원한 18px 폰트와 넉넉한 단락 여백 */
-.prose p {
-  font-size: 1.125rem !important; /* 18px */
-  line-height: 1.85 !important;
+:is(.prose, .prose-md, .prose-lg) h4 {
+  font-size: 1.25rem !important; /* 20px */
+  line-height: 1.4 !important;
+  font-weight: 700 !important;
+  margin-top: 2rem !important;
+  margin-bottom: 0.75rem !important;
+}
+
+/* 3. 본문 문단 - 18.5px 시원시원한 폰트 & 24px 단락 여백 */
+:is(.prose, .prose-md, .prose-lg) p {
+  font-size: 1.15rem !important; /* 약 18.5px */
+  line-height: 1.9 !important;
   margin-top: 0 !important;
-  margin-bottom: 1.5rem !important; /* 문단 사이 24px 여백으로 벽돌 현상 해소 */
+  margin-bottom: 1.6rem !important; /* 문단 간격 */
   word-break: keep-all !important;
 }
 
-/* 4. 번호 목록 및 세부 리스트 (18px & 행간 분리) */
-.prose ol,
-.prose ul {
+/* 4. 번호 목록 및 세부 단계 (18.5px & 줄바꿈 여백 확보) */
+:is(.prose, .prose-md, .prose-lg) ol,
+:is(.prose, .prose-md, .prose-lg) ul {
   margin-top: 1rem !important;
   margin-bottom: 2rem !important;
-  padding-left: 1.5rem !important;
+  padding-left: 1.75rem !important;
 }
 
-.prose ol > li,
-.prose ul > li {
-  font-size: 1.125rem !important; /* 18px */
+:is(.prose, .prose-md, .prose-lg) ol > li,
+:is(.prose, .prose-md, .prose-lg) ul > li {
+  font-size: 1.15rem !important; /* 약 18.5px */
   line-height: 1.85 !important;
   margin-top: 0.75rem !important;
   margin-bottom: 0.75rem !important;
 }
 
 /* 5. 볼드 텍스트 및 FAQ 질문 강조 */
-.prose strong,
-.prose b {
+:is(.prose, .prose-md, .prose-lg) strong,
+:is(.prose, .prose-md, .prose-lg) b {
   font-weight: 700 !important;
   color: var(--aw-color-text-heading) !important;
 }
 
-/* 6. 콜아웃/팁 상자 여백 정돈 */
-.prose blockquote {
-  font-size: 1.0625rem !important;
-  line-height: 1.75 !important;
-  margin-top: 2rem !important;
-  margin-bottom: 2rem !important;
+/* 6. 콜아웃/팁 상자 여백 및 본문 분리 */
+:is(.prose, .prose-md, .prose-lg) blockquote {
+  font-size: 1.1rem !important;
+  line-height: 1.8 !important;
+  margin-top: 2.5rem !important;
+  margin-bottom: 2.5rem !important;
   padding: 1.25rem 1.5rem !important;
 }
