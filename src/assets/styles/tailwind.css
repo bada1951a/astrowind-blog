@@ -149,10 +149,10 @@
 }
 
 /* ============================================================
-   [최종 종결] 타이포그래피 완벽 제어 (글자 크기 시원하게 확대 & 명확한 위계)
+   [최종 종결] 12개국 타이포그래피 완벽 강제 (시원한 폰트 & 가독성 극대화)
    ============================================================ */
 
-/* 1. 본문 대주제 (H2) - 32px 묵직하고 시원한 크기 + 하단 라인 */
+/* 1. 대주제 (H2) */
 :is(.prose, .prose-md, .prose-lg) h2 {
   font-size: 2rem !important; /* 32px */
   line-height: 1.35 !important;
@@ -164,7 +164,7 @@
   padding-bottom: 0.6rem !important;
 }
 
-/* 2. 단계별 소제목 (H3) - 24px로 본문과 확연히 구분 */
+/* 2. 단계별 소제목 (H3) */
 :is(.prose, .prose-md, .prose-lg) h3 {
   font-size: 1.5rem !important; /* 24px */
   line-height: 1.4 !important;
@@ -175,23 +175,23 @@
 }
 
 :is(.prose, .prose-md, .prose-lg) h4 {
-  font-size: 1.25rem !important; /* 20px */
+  font-size: 1.25rem !important;
   line-height: 1.4 !important;
   font-weight: 700 !important;
   margin-top: 2rem !important;
   margin-bottom: 0.75rem !important;
 }
 
-/* 3. 본문 문단 - 18.5px 시원시원한 폰트 & 24px 단락 여백 */
+/* 3. 본문 텍스트 - 시원한 18.5px & 26px 문단 여백 */
 :is(.prose, .prose-md, .prose-lg) p {
   font-size: 1.15rem !important; /* 약 18.5px */
   line-height: 1.9 !important;
   margin-top: 0 !important;
-  margin-bottom: 1.6rem !important; /* 문단 간격 */
+  margin-bottom: 1.65rem !important;
   word-break: keep-all !important;
 }
 
-/* 4. 번호 목록 및 세부 단계 (18.5px & 줄바꿈 여백 확보) */
+/* 4. 번호 목록 및 세부 단계 (18.5px) */
 :is(.prose, .prose-md, .prose-lg) ol,
 :is(.prose, .prose-md, .prose-lg) ul {
   margin-top: 1rem !important;
@@ -201,20 +201,20 @@
 
 :is(.prose, .prose-md, .prose-lg) ol > li,
 :is(.prose, .prose-md, .prose-lg) ul > li {
-  font-size: 1.15rem !important; /* 약 18.5px */
+  font-size: 1.15rem !important;
   line-height: 1.85 !important;
-  margin-top: 0.75rem !important;
-  margin-bottom: 0.75rem !important;
+  margin-top: 0.85rem !important;
+  margin-bottom: 0.85rem !important;
 }
 
-/* 5. 볼드 텍스트 및 FAQ 질문 강조 */
+/* 5. 볼드 텍스트 (소제목 대용으로 쓰인 Langkah, Paso, 1단계 등 강조) */
 :is(.prose, .prose-md, .prose-lg) strong,
 :is(.prose, .prose-md, .prose-lg) b {
-  font-weight: 700 !important;
+  font-weight: 800 !important;
   color: var(--aw-color-text-heading) !important;
 }
 
-/* 6. 콜아웃/팁 상자 여백 및 본문 분리 */
+/* 6. 콜아웃/팁 상자 */
 :is(.prose, .prose-md, .prose-lg) blockquote {
   font-size: 1.1rem !important;
   line-height: 1.8 !important;
