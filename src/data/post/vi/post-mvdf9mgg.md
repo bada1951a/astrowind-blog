@@ -19,6 +19,7 @@ theme: "Mint Fresh Engineering"
 
 
 
+
 Sáng nay vừa bước chân vào văn phòng ở khu công nghệ phần mềm Đà Nẵng, đồng nghiệp bên bàn kế bên đã hớt hải chạy sang kêu cứu vì chiếc laptop làm việc chính cứ đơ cứng ở màn hình "Working on updates... 100%" suốt hơn hai tiếng đồng hồ. Sếp lớn thì đang chuẩn bị cuộc họp trực tuyến với đối tác, còn thanh niên này thì bất lực nhìn vòng tròn quay đều không lối thoát. Khởi động lại bằng nút nguồn cứng thì máy lại lăn ra lỗi vòng lặp boot, đúng là một cú sốc đầu ngày khiến bao kế hoạch đổ bể.
 
 <div style="border-left: 4px solid #059669; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
@@ -29,11 +30,11 @@ Sáng nay vừa bước chân vào văn phòng ở khu công nghệ phần mềm
 
 Sau nhiều năm bám trụ với nghề tối ưu hệ thống, tôi nhận ra thủ phạm đứng sau tình trạng này hiếm khi nằm ở phần cứng, mà thường xuất phát từ ba nguyên nhân chính sau:
 
-### 1. Xung đột gói tin trong thư mục SoftwareDistribution: Đây là nơi Windows lưu trữ tạm thời các file cài đặt tải về. Khi một file nào đó bị lỗi checksum hoặc bị treo quyền đọc/ghi, tiến trình giải nén sẽ đứng hình vĩnh viễn ở mốc cuối cùng.
+1. Xung đột gói tin trong thư mục SoftwareDistribution: Đây là nơi Windows lưu trữ tạm thời các file cài đặt tải về. Khi một file nào đó bị lỗi checksum hoặc bị treo quyền đọc/ghi, tiến trình giải nén sẽ đứng hình vĩnh viễn ở mốc cuối cùng.
 
-### 2. Tiến trình ngầm Windows Update (wuauserv) bị kẹt: Dịch vụ quản lý cập nhật bị treo trạng thái "Stopping" hoặc "Starting", làm tắc nghẽn toàn bộ luồng xử lý của hệ thống.
+2. Tiến trình ngầm Windows Update (wuauserv) bị kẹt: Dịch vụ quản lý cập nhật bị treo trạng thái "Stopping" hoặc "Starting", làm tắc nghẽn toàn bộ luồng xử lý của hệ thống.
 
-### 3. Lỗi phân quyền file hệ thống (ACLs): Một số bản vá yêu cầu quyền truy cập đặc biệt nhưng các bản cập nhật cũ để lại phân quyền cũ kỹ, khiến bộ cài không thể ghi đè file cốt lõi.
+3. Lỗi phân quyền file hệ thống (ACLs): Một số bản vá yêu cầu quyền truy cập đặc biệt nhưng các bản cập nhật cũ để lại phân quyền cũ kỹ, khiến bộ cài không thể ghi đè file cốt lõi.
 
 ## Giải pháp thực chiến: Dọn dẹp và Reset thư mục Cache Update
 

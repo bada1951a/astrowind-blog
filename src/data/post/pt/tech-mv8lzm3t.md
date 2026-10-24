@@ -19,6 +19,7 @@ theme: "Cobalt Enterprise Lab"
 
 
 
+
 Eram exatos 08h45 de uma segunda-feira chuvosa quando o diretor comercial brotou atrás da minha cadeira com aquela clássica frase que tira dez anos de vida de qualquer analista de suporte: *"Meu notebook tá demorando dez minutos pra abrir o Excel, a reunião com o cliente é às 9h, resolve aí rapidão"*. O bicho tava tão lento que o logo do Windows 10 parecia uma tela de loading de jogo de disquete. A ventoinha do i7 gritando, o disco em 100% de uso no Gerenciador de Tarefas, e eu suando frio olhando pro relógio. 
 
 A gente sabe como é: o usuário instala aplicativo de chat da empresa, utilitário de impressora que roda desde o século passado, antivírus corporativo pesadíssimo e atualizações acumuladas. Tudo isso decide carregar no *startup* ao mesmo tempo. O resultado? Um gargalo miserável que transforma uma máquina com SSD NVMe numa carroça de tração animal. 
@@ -41,11 +42,11 @@ a: Por que o seu Windows virou uma carroça?
 
 Antes de sair metendo o louco e desinstalando coisa aleatória, vamos abrir o capô e entender o que está gerando esse atrito sistêmico. Na nossa esteira de testes aqui na TI, mapeamos três vilões clássicos:
 
-### 1. Efeito "Cemitério de Softwares" (Bloatware de Inicialização): Todo santo programa que você instala (Teams, Spotify, Discord, OneDrive, utilitários da Adobe) acha que é a prioridade máxima do universo e se injeta na chave de registro do *Run*. Resultado: o sistema tenta iniciar 40 processos simultâneos logo no boot.
+1. Efeito "Cemitério de Softwares" (Bloatware de Inicialização): Todo santo programa que você instala (Teams, Spotify, Discord, OneDrive, utilitários da Adobe) acha que é a prioridade máxima do universo e se injeta na chave de registro do *Run*. Resultado: o sistema tenta iniciar 40 processos simultâneos logo no boot.
 
-### 2. Degradação do Gerenciamento de Disco e Paginação: Arquivos temporários acumulados na partição do sistema (`C:`) e setores lógicos fragmentados (especialmente se ainda há HDs mecânicos antigos no parque) matam o IOPS na inicialização.
+2. Degradação do Gerenciamento de Disco e Paginação: Arquivos temporários acumulados na partição do sistema (`C:`) e setores lógicos fragmentados (especialmente se ainda há HDs mecânicos antigos no parque) matam o IOPS na inicialização.
 
-### 3. Serviços em Segundo Plano Zumbis: Softwares legados que rodam como serviços do Windows (`services.msc`) sem necessidade imediata, consumindo recursos de CPU e memória RAM antes mesmo de você ver a barra de tarefas.
+3. Serviços em Segundo Plano Zumbis: Softwares legados que rodam como serviços do Windows (`services.msc`) sem necessidade imediata, consumindo recursos de CPU e memória RAM antes mesmo de você ver a barra de tarefas.
 
 ---
 
@@ -60,7 +61,7 @@ Esqueça programas de terceiros duvidosos como *CCleaner*. O próprio Windows j�
 
 3. Vá direto para a aba Inicializar (ou o ícone de medidor de velocidade nas versões mais recentes do Windows 11).
 
-## 4.  Ordene os itens por Impacto na inicialização.
+4.  Ordene os itens por Impacto na inicialização.
 
 5. Clique com o botão direito nos aplicativos desnecessários (tipo Steam, Epic Games, Cortana, utilitários de celular) e selecione Desabilitar. Deixe ativo apenas o antivírus e o driver de vídeo.
 
@@ -85,7 +86,7 @@ Agora vamos rodar a artilharia pesada para varrer o lixo acumulado que corrompe 
    ```
    *(Espere rodar até 100%...)*
 
-### 3. Em seguida, rode o bom e velho escaneamento de arquivos protegidos:
+3. Em seguida, rode o bom e velho escaneamento de arquivos protegidos:
 
    ```cmd
    sfc /scannow

@@ -19,6 +19,7 @@ theme: "Warm Coffee Latte"
 
 
 
+
 Jantung saya rasanya mau copot. Waktu menunjukkan pukul 09.55 pagi di apartemen saya kawasan Sudirman, Jakarta. Lima menit lagi, meeting koordinasi kuartal via Microsoft Teams dengan para petinggi kantor di SCBD harus dimulai. Sialnya, malam tadi saya ketiduran saat merangkap tugas WFH, dan pagi ini saya langsung menyalakan laptop kantor, menyambungkan VPN perusahaan agar akses server internal aman, lalu membuka aplikasi meeting. Tiba-tiba, sunyi senyap. Ketika saya coba memutar video di YouTube untuk mengetes suara, sama sekali tidak ada output audio yang keluar dari speaker laptop. Ikon speaker di taskbar kanan bawah berikon silang merah dengan keterangan [No Audio Output Device is Installed]. Bayangkan rasany
 
 a: bos besar sudah standby di layar, VPN aktif, tapi laptop malah siuman bisu. 
@@ -33,11 +34,11 @@ Mari kita bedah apa yang sebenarnya terjadi di balik layar sistem operasi Anda. 
 
 Sebelum kita masuk ke tombol eksekusi, kenali dulu tiga musuh utama penyebab audio laptop mendadak hilang:
 
-### 1. Layanan Audio Windows (Windows Audio Service) Berhenti Mendadak: Seringkali karena konflik memori atau proses latar belakang yang terganggu saat VPN aktif, layanan utama penggerak suara *crash* atau *stop* sendiri.
+1. Layanan Audio Windows (Windows Audio Service) Berhenti Mendadak: Seringkali karena konflik memori atau proses latar belakang yang terganggu saat VPN aktif, layanan utama penggerak suara *crash* atau *stop* sendiri.
 
-### 2. Driver Audio Rusak atau 'Rollback': Windows Update yang berjalan di latar belakang malam hari kerap mengganti driver Realtek atau Intel Smart Sound Technology dengan driver generik yang tidak kompatibel.
+2. Driver Audio Rusak atau 'Rollback': Windows Update yang berjalan di latar belakang malam hari kerap mengganti driver Realtek atau Intel Smart Sound Technology dengan driver generik yang tidak kompatibel.
 
-### 3. Salah Pilih Perangkat Output (Default Playback Device): Saat VPN atau headset bluetooth terhubung, Windows sering kebingungan dan mengalihkan jalur suara ke perangkat virtual atau *dummy output* yang tidak aktif.
+3. Salah Pilih Perangkat Output (Default Playback Device): Saat VPN atau headset bluetooth terhubung, Windows sering kebingungan dan mengalihkan jalur suara ke perangkat virtual atau *dummy output* yang tidak aktif.
 
 <div style="border-left: 4px solid #78350f; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Catatan Teknisi:</strong> Jika Anda sedang terhubung ke VPN perusahaan, putuskan (disconnect) sementara VPN tersebut jika memungkinkan selama proses troubleshooting agar routing jaringan lokal tidak mengganggu deteksi hardware audio.

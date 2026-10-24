@@ -19,6 +19,7 @@ theme: "Pure Titanium Clean"
 
 
 
+
 Freitag, 16:50 Uhr. Zehn Minuten vor dem verdienten Feierabend brennt mal wieder der Baum. Der wichtigste Kunde ruft an, will sofort einen geänderten Report, und mein Rechner entscheidet sich, das Windows-Logo für gefühlte zwölfeinhalb Minuten auf den Bildschirm zu malen, während die Lüfter hochdrehen wie eine Boeing 747 beim Start. Ich sitze da, schwitze, der Chef läuft im Gang auf und ab, und das System friert im Login-Screen ein, weil im Hintergrund gerade gefühlt zwanzig Update-Agenten, Updater für Chat-Tools, die ich nie benutze, und Cloud-Dienste gleichzeitig um die CPU-Zyklen prügeln. Wer das schon mal erlebt hat, weiß: In diesem Moment hasst man seinen eigenen Computer.
 
 <div style="border-left: 4px solid #334155; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
@@ -31,11 +32,11 @@ Freitag, 16:50 Uhr. Zehn Minuten vor dem verdienten Feierabend brennt mal wieder
 
 Bevor wir die Werkzeuge auspacken, müssen wir verstehen, wer hier eigentlich bremst. Nach Jahren im Support sehe ich immer wieder dieselben Übeltäter:
 
-### 1. Der "Ich will wichtig sein"-Effekt von Software: Gefühlt jede App (von Spotify über Discord bis zum Drucker-Treiber) installiert sich heimlich im Autostart. Sie wollen sofort da sein, wenn du den PC einschaltest – selbst wenn du sie monatelang nicht anfasst.
+1. Der "Ich will wichtig sein"-Effekt von Software: Gefühlt jede App (von Spotify über Discord bis zum Drucker-Treiber) installiert sich heimlich im Autostart. Sie wollen sofort da sein, wenn du den PC einschaltest – selbst wenn du sie monatelang nicht anfasst.
 
-### 2. Hintergrund-Dienste und geplante Tasks: Windows hat seine eigenen Mechanismen, aber Drittanbieter-Tools blähen den Task-Planer (*Aufgabenplanung*) mit unnötigem Ballast auf.
+2. Hintergrund-Dienste und geplante Tasks: Windows hat seine eigenen Mechanismen, aber Drittanbieter-Tools blähen den Task-Planer (*Aufgabenplanung*) mit unnötigem Ballast auf.
 
-### 3. Zerspannte System-Ressourcen: Wenn die Boot-Platte (besonders, wenn noch eine alte HDD verbaut ist, aber selbst bei SSDs) voll ist und das System beim Start permanent virtuelle Speicherseiten jonglieren muss, geht gar nichts mehr vorwärts.
+3. Zerspannte System-Ressourcen: Wenn die Boot-Platte (besonders, wenn noch eine alte HDD verbaut ist, aber selbst bei SSDs) voll ist und das System beim Start permanent virtuelle Speicherseiten jonglieren muss, geht gar nichts mehr vorwärts.
 
 ### Der Befreiungsschlag: Schritt-für-Schritt-Anleitung
 

@@ -19,6 +19,7 @@ theme: "Modern Minimalist Slate"
 
 
 
+
 Jam 4 sore di salah satu gedung perkantoran kawasan Sudirman Jakarta, suasana mendadak tegang luar biasa. Tenggat waktu laporan keuangan tahunan tinggal dua jam lagi, namun layar PC salah satu manajer tiba-tiba tertutup tulisan transparan mengganggu di pojok kanan bawah: *Activate Windows - Go to Settings to activate Windows*. Bukan cuma soal estetika presentasi yang mau dikirim ke direksi, watermark menyebalkan ini bikin beberapa aplikasi shortcut terkunci dan performa sistem terasa nge-lag gara-gara proses background Windows Script Host yang nyangkut. Panik? Pastinya. Apalagi tombol pengaturan lisensi di Control Panel malah mental *error code* gara-gara koneksi kantor yang dibatasi *firewall*.
 
 Sebelum panik berlanjut dan berujung bongkar hardware atau install ulang yang bakal makan waktu berjam-jam, sebagai teknisi infrastruktur IT, saya punya trik kilat yang aman, legal secara fungsional untuk *staging* darurat, dan pastinya bersih dari virus atau file *crack* abal-abal yang sering disebar situs download ilegal. Kita cukup pakai Command Prompt (CMD) bawaan sistem.
@@ -33,11 +34,11 @@ Sebelum panik berlanjut dan berujung bongkar hardware atau install ulang yang ba
 
 Sebelum kita eksekusi kodenya, mari kita pahami dulu tiga akar penyebab utama kenapa masalah ini sering muncul mendadak di lingkungan korporat:
 
-### 1. Sinkronisasi KMS Server Kantor Terputus: PC Anda biasanya terhubung ke server aktivasi internal kantor. Kalau VPN terputus atau jaringan lokal office <i>drop</i> sesaat, Windows gagal memvalidasi token dan langsung memunculkan watermark peringatan.
+1. Sinkronisasi KMS Server Kantor Terputus: PC Anda biasanya terhubung ke server aktivasi internal kantor. Kalau VPN terputus atau jaringan lokal office <i>drop</i> sesaat, Windows gagal memvalidasi token dan langsung memunculkan watermark peringatan.
 
-### 2. Update Windows Otomatis Mereset Status Lisensi: Seringkali patch keamanan terbaru dari Microsoft mereset *cache* status aktivasi, terutama jika lisensi sebelumnya menggunakan jalur aktivasi OEM yang mulai 'lelah'.
+2. Update Windows Otomatis Mereset Status Lisensi: Seringkali patch keamanan terbaru dari Microsoft mereset *cache* status aktivasi, terutama jika lisensi sebelumnya menggunakan jalur aktivasi OEM yang mulai 'lelah'.
 
-### 3. Perubahan Hardware Signifikan: Pergantian komponen mendadak (misalnya SSD NVMe baru atau penggantian motherboard oleh tim IT sebelumnya) membuat algoritma keamanan Windows mengira ini adalah unit PC yang berbeda. ---
+3. Perubahan Hardware Signifikan: Pergantian komponen mendadak (misalnya SSD NVMe baru atau penggantian motherboard oleh tim IT sebelumnya) membuat algoritma keamanan Windows mengira ini adalah unit PC yang berbeda. ---
 
 ## Langkah-Langkah Eksekusi: Menghilangkan Watermark via CMD
 

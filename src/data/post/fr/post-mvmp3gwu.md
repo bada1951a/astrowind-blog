@@ -10,6 +10,7 @@ theme: "Warm Coffee Latte"
 
 
 
+
 ## 1. [Opening Story/Problem]
 
 C'était un mardi matin bien chargé dans notre tour à La Défense. Avec le système de smart office et les bureaux en libre-service, je venais de m'installer à un nouvel emplacement pour la journée. J'avais soigneusement branché mon nouveau dock USB-C, relié mes deux écrans externes, et j'étais prêt à attaquer mes revues de code et mes rapports graphiques. 
@@ -86,7 +87,7 @@ En environnement de bureau partagé ou en télétravail, les stations d'accueil 
 
 De plus, méfiez-vous des logiciels tiers de capture d'écran (comme Greenshot, Snagit ou ShareX) que vous auriez pu installer : ils monopolisent parfois les mêmes touches de raccourci, créant un conflit direct avec l'outil natif de Windows 11.
 
-## 5. Frequently Asked Questions
+5. Frequently Asked Questions
 
 Q: Le raccourci fonctionne mais l'écran ne s'assombrit pas, que faire ?
 

@@ -19,6 +19,7 @@ theme: "Deep Indigo System"
 
 
 
+
 Godzina 18:40, a we wrocławskim parku technologicznym atmosfera robi się gęsta. Jutro rano mamy kluczowy audyt stabilności infrastruktury przed wejściem zewnętrznego klienta, a stacja robocza lead architekta nagle sypie się do niebieskiego ekranu. Na monitorze dumnie widnieje kod błędu: `IRQL_NOT_LESS_OR_EQUAL` czyli klasyczny 0x0000000
 
 a. Serce na chwilę zamiera, bo reset komputera pomagał tylko na dokładnie pięć minut pracy pod obciążeniem. 
@@ -33,11 +34,11 @@ Zamiast panikować i stawiać system od nowa, podwinąłem rękawy, odłączyłe
 
 Zanim przejdziesz do bezmyślnego formatowania dysku, warto zrozumieć, co dokładnie wywołało ten stan w systemie Windows:
 
-### 1. Niestabilne sterowniki urządzeń niskiego poziomu: Świeżo zainstalowany sterownik karty sieciowej, kontrolera NVMe lub oprogramowania VPN próbuje odwołać się do wirtualnego adresu w pamięci RAM, który został zwolniony lub nie należy do niego.
+1. Niestabilne sterowniki urządzeń niskiego poziomu: Świeżo zainstalowany sterownik karty sieciowej, kontrolera NVMe lub oprogramowania VPN próbuje odwołać się do wirtualnego adresu w pamięci RAM, który został zwolniony lub nie należy do niego.
 
-### 2. Problemy z taktowaniem lub degradacją pamięci RAM: Zbyt agresywny profil XMP/DOCP w BIOS-ie, mikroskopijne błędy w komórkach pamięci pod obciążeniem albo poluzowana kość w slocie DIMM.
+2. Problemy z taktowaniem lub degradacją pamięci RAM: Zbyt agresywny profil XMP/DOCP w BIOS-ie, mikroskopijne błędy w komórkach pamięci pod obciążeniem albo poluzowana kość w slocie DIMM.
 
-### 3. Konflikt usług systemowych po aktualizacji: Uszkodzone pliki kernela (`ntoskrnl.exe`) lub nakładające się na siebie filtry systemowe (np. oprogramowanie antywirusowe starej generacji).
+3. Konflikt usług systemowych po aktualizacji: Uszkodzone pliki kernela (`ntoskrnl.exe`) lub nakładające się na siebie filtry systemowe (np. oprogramowanie antywirusowe starej generacji).
 
 ---
 
@@ -55,7 +56,7 @@ Zanim zaczniemy szukać winnych w oprogramowaniu, wykluczmy kwestie fizyczne.
 ### Krok 2: Identyfikacja winowajcy w zrzutach pamięci (Minidump)
 Potrzebujemy dowodów. System zapisuje pliki zrzutów za każdym razem, gdy występuje BSoD.
 
-## 1. Przejdź do folderu `C:\Windows\Minidump`.
+1. Przejdź do folderu `C:\Windows\Minidump`.
 
 2. Skopiuj najnowszy plik `.dmp` na pulpit (żeby ominąć uprawnienia administratora przy odczycie).
 

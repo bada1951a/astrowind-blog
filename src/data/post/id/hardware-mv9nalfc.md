@@ -19,6 +19,7 @@ theme: "Retro Monokai"
 
 
 
+
 Jam menunjukkan pukul 10 malam di sebuah gedung perkantoran kawasan SCBD, Jakarta. AC sentral kantor sudah mulai mati, dan saya harus segera merampungkan laporan keuangan untuk klien besok pagi. Tiba-tiba, layar monitor saya kedap-kedip memunculkan notifikasi merah menyala dari Windows: *Low Disk Space*. Drive C saya tinggal menyisakan 300 megabita dari kapasitas 512 gigabita! Sontak file Excel besar yang sedang saya kerjakan gagal disimpan, dan aplikasi *rendering* data mendadak *force close*. Panik? Pasti. Lembur ditemani kopi sachet dan PC yang ngadat gara-gara memori internal penuh adalah mimpi buruk setiap pekerja kantoran.
 
 Awalnya saya mengira SSD NVMe saya rusak atau tidak terbaca karena panas berlebih akibat kerja nonstop. Saya sempat bolak-balik mencabut pasang kabel dan masuk ke menu BIOS, padahal masalahnya jauh lebih sepele namun tersembunyi: tumpukan file sampah sistem yang tidak pernah dibersihkan selama bertahun-tahun.
@@ -33,11 +34,11 @@ Awalnya saya mengira SSD NVMe saya rusak atau tidak terbaca karena panas berlebi
 
 Sebelum kita masuk ke cara pembersihan total, mari pahami tiga penyebab utama kenapa drive sistem Anda tiba-tiba kesurupan memori penuh:
 
-### 1. Akumulasi File Temporary (Temp & Prefetch): Setiap kali Windows membuka aplikasi, melakukan *update*, atau Anda berselancar di internet, sistem membuat file salinan sementara. Seringkali Windows lupa menghapusnya otomatis.
+1. Akumulasi File Temporary (Temp & Prefetch): Setiap kali Windows membuka aplikasi, melakukan *update*, atau Anda berselancar di internet, sistem membuat file salinan sementara. Seringkali Windows lupa menghapusnya otomatis.
 
-### 2. File Hiberfil.sys dan Pagefile.sys: Fitur *Hibernate* dan manajemen RAM virtual Windows mengalokasikan ruang gigabita demi gigabita dari SSD utama Anda secara permanen.
+2. File Hiberfil.sys dan Pagefile.sys: Fitur *Hibernate* dan manajemen RAM virtual Windows mengalokasikan ruang gigabita demi gigabita dari SSD utama Anda secara permanen.
 
-### 3. Cache Update Windows yang Tertinggal: File instalasi pembaruan masa lalu (SoftwareDistribution) sering mengendap dan memakan puluhan gigabita ruang penyimpanan tanpa izin.
+3. Cache Update Windows yang Tertinggal: File instalasi pembaruan masa lalu (SoftwareDistribution) sering mengendap dan memakan puluhan gigabita ruang penyimpanan tanpa izin.
 
 ---
 
@@ -57,9 +58,9 @@ Mari kita selesaikan masalah ini dengan cepat menggunakan fitur bawaan Windows t
 
 4. Ulangi proses Windows + R, ketik `temp` (tanpa tanda persen), lalu hapus semua isinya. ## Langkah 2: Jalankan Disk Cleanup Bawaan Windows
 
-### 1. Buka File Explorer, klik kanan padaLocal Disk (C:), lalu pilihProperties.
+1. Buka File Explorer, klik kanan padaLocal Disk (C:), lalu pilihProperties.
 
-## 2.  Pada tab *General*, klik tombol Disk Cleanup.
+2.  Pada tab *General*, klik tombol Disk Cleanup.
 
 3. Setelah sistem selesai memindai, klik tombol Clean up system files di bagian bawah.
 
@@ -72,7 +73,7 @@ Jika Anda tidak pernah menggunakan mode *Hibernate* pada laptop atau PC kerja An
 
 1. Klik tombol *Start*, ketik Command Prompt, lalu klik kanan dan pilihRun as administrator.
 
-### 2. Ketik perintah berikut: `powercfg.exe /hibernate off` lalu tekan Enter.
+2. Ketik perintah berikut: `powercfg.exe /hibernate off` lalu tekan Enter.
 
 3. Ruang penyimpanan drive C Anda akan langsung bertambah belasan gigabita secara instan.
 

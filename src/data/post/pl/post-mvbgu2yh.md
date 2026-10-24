@@ -19,6 +19,7 @@ theme: "Graphite Technical Paper"
 
 
 
+
 Siedzę w naszym biurze we wrocławskim parku technologicznym, zegar wskazuje za pięć dwunasta, a za dokładnie trzydzieści minut zaczynamy kluczowy audyt stabilności infrastruktury przed wejściem zewnętrznego klienta. W tym momencie, jak na złość, główna stacja robocza odmawia posłuszeństwa – dolny pasek zadań w Windows 11 zamroził się na amen. Klikam w menu Start, próbuję przełączyć okna, macham kursorem nad ikoną Wi-Fi – zero reakcji. Ekran niby żyje, aplikacje w tle działają, ale sam pasek zadań wygląda, jakby zastygł w betonie. Resetowanie komputera w ciemno nie wchodzi w grę, bo w tle trwają niezapisane sesje diagnostyczne. Trzeba działać chirurgicznie.
 
 <div style="border-left: 4px solid #475569; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
@@ -31,11 +32,11 @@ Siedzę w naszym biurze we wrocławskim parku technologicznym, zegar wskazuje za
 
 Zanim przejdziemy do konkretnych komend, warto zrozumieć, co właściwie poszło nie tak. Z perspektywy administracji systemami, problem ten rzadko wynika z uszkodzenia samego sprzętu. Najczęstsze przyczyny to:
 
-### 1. Zawieszenie procesu Eksploratora plików (Explorer.exe): Pasek zadań w Windows 11 nie jest już osobną, prostą aplikacją – jest głęboko zintegrowany z procesem zarządzającym całym interfejsem graficznym i pulpitem.
+1. Zawieszenie procesu Eksploratora plików (Explorer.exe): Pasek zadań w Windows 11 nie jest już osobną, prostą aplikacją – jest głęboko zintegrowany z procesem zarządzającym całym interfejsem graficznym i pulpitem.
 
 2. Konflikty po aktualizacjach pakietów UX (Windows Feature Experience Pack): Pakiety te potrafią zakłócić działanie powłoki, zwłaszcza gdy w tle działają wirtualne pulpity lub oprogramowanie firm trzecich modyfikujące wygląd systemu.
 
-### 3. Uszkodzona pamięć podręczna powłoki (XAML/StartMenuExperienceHost): Procesy odpowiedzialne za menu Start oraz nowoczesne animacje ulegają czasem zapętleniu lub wyciekowi pamięci.
+3. Uszkodzona pamięć podręczna powłoki (XAML/StartMenuExperienceHost): Procesy odpowiedzialne za menu Start oraz nowoczesne animacje ulegają czasem zapętleniu lub wyciekowi pamięci.
 
 ---
 
@@ -67,7 +68,7 @@ Jeśli Menedżer zadań zawodzi lub potrzebujesz podejścia bardziej zautomatyzo
 a:
    `taskkill /f /im explorer.exe`
 
-## 4. Następnie uruchom go ponownie, wpisując:
+4. Następnie uruchom go ponownie, wpisując:
 
    `start explorer.exe`
 
@@ -78,7 +79,7 @@ Jeśli problem powraca jak bumerang, konieczna może być ponowna rejestracja pa
 
 1. Otwórz TerminallubPowerShell jako Administrator.
 
-### 2. Wklej poniższe polecenie i zatwierdź je klawiszem Enter:
+2. Wklej poniższe polecenie i zatwierdź je klawiszem Enter:
 
    `Get-AppXPackage -AllUsers | Foreach {Add-AppxPackage -DisableDevelopmentMode -Register "(_.InstallLocation)\AppXManifest.xml"}`
 

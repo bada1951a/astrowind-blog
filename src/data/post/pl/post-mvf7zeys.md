@@ -19,6 +19,7 @@ theme: "Pure Titanium Clean"
 
 
 
+
 Godzina 8:45 rano, warszawskie centrum biznesowe na Mokotowie. Za piętnaście minut kluczowa telekonferencja zarządu z inwestorami, a stacja robocza dyrektora finansowego wydaje z siebie dźwięk startującego odrzutowca. Wentylatory wyją na maksymalnych obrotach, kursor myszy skacze po ekranie jak szalony, a w Menedżerze zadań proces „System”lub„System i przerwania”dumnie wyświetla równe100% użycia procesora. Ekran zamarza przy próbie otwarcia prezentacji PowerPoint. Panika w oczach użytkownika sięga zenitu, a ja wkraczam do akcji z walizką serwisową.
 
 Znam ten ból na pamięć. Zanim wpadłem na właściwy trop, straciłem mnóstwo czasu na bezmyślne restarty komputera, odinstalowywanie pakietu Office czy skanowanie antywirusem, które w tym konkretnym scenariuszu nie dawały absolutnie nic. Problem leżał głębiej – w sterownikach, uszkodzonej usłudze Windows Update lub konflikcie podzespołów. 
@@ -33,11 +34,11 @@ Dziś pokażę Ci szybką, sprawdzoną metodę krok po kroku, jak opanować tę 
 
 Zanim klikniemy cokolwiek w systemie, warto zrozumieć, z czym walczymy. Proces systemowy (System / ntoskrnl.exe) to jądro systemu Windows. Jeśli pożera całą moc obliczeniową procesora, oznacza to, że hardware lub sterownik nisko poziomowy utknął w pętli błędów. Oto 3 najczęstsze winowajcy:
 
-### 1. Konflikt sterowników kontrolera pamięci masowej lub sieciowej: Najczęściej po aktualizacji Windowsa stary sterownik kontrolera SATA/NVMe lub karty sieciowej Intela wariuje i generuje nieskończone przerwania (Hardware Interrupts).
+1. Konflikt sterowników kontrolera pamięci masowej lub sieciowej: Najczęściej po aktualizacji Windowsa stary sterownik kontrolera SATA/NVMe lub karty sieciowej Intela wariuje i generuje nieskończone przerwania (Hardware Interrupts).
 
-### 2. Zawieszona kolejka Windows Update: Usługa aktualizacji próbuje pobrać lub zainstalować poprawkę, ale pliki uległy uszkodzeniu, co powoduje ciągłe mielenie w tle przez proces systemowy.
+2. Zawieszona kolejka Windows Update: Usługa aktualizacji próbuje pobrać lub zainstalować poprawkę, ale pliki uległy uszkodzeniu, co powoduje ciągłe mielenie w tle przez proces systemowy.
 
-### 3. Problem z zarządzaniem energią (ACPI): Błędy w komunikacji między systemem a płytą główną (często po wybudzeniu ze stanu uśpienia), które zmuszają procesor do pracy na maksymalnych lub niestabilnych częstotliwościach.
+3. Problem z zarządzaniem energią (ACPI): Błędy w komunikacji między systemem a płytą główną (często po wybudzeniu ze stanu uśpienia), które zmuszają procesor do pracy na maksymalnych lub niestabilnych częstotliwościach.
 
 ---
 
@@ -65,26 +66,26 @@ Jeśli proces systemowy obciąża procesor z powodu zaciętych aktualizacji, mus
 
 1. Kliknij Start, wpisz `cmd`, kliknij prawym przyciskiem myszy na Wiersz poleceniai wybierzUruchom jako administrator.
 
-### 2. Wpisz poniższe komendy, zatwierdzając każdą klawiszem Enter:
+2. Wpisz poniższe komendy, zatwierdzając każdą klawiszem Enter:
 
    * `net stop wuauserv`
    * `net stop cryptSvc`
    * `net stop bits`
    * `net stop msiserver`
 
-### 3. Następnie zresetuj foldery pamięci podręcznej, wpisując:
+3. Następnie zresetuj foldery pamięci podręcznej, wpisując:
 
    * `ren C:\Windows\SoftwareDistribution SoftwareDistribution.old`
    * `ren C:\Windows\System32\catroot2 Catroot2.old`
 
-## 4. Uruchom usługi ponownie:
+4. Uruchom usługi ponownie:
 
    * `net start wuauserv`
    * `net start cryptSvc`
    * `net start bits`
    * `net start msiserver`
 
-## 5. Zrestartuj komputer.
+5. Zrestartuj komputer.
 
 ### Krok 3: Aktualizacja lub wycofanie sterowników w Menedżerze Urządzeń
 Jeżeli reset Windows Update nie pomógł, winny jest najpewniej sterownik sprzętowy.

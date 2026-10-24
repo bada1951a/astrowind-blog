@@ -19,6 +19,7 @@ theme: "Crimson Emergency Field"
 
 
 
+
 <div style="border-left: 4px solid #ef4444; padding: 12px 16px; margin: 20px 0; background-color: rgba(239, 68, 68, 0.08); border-radius: 4px; color: #111827;">
 <strong>Kritieke Systeemwaarschuwing:</strong> Sta je op het punt om een belangrijk videogesprek te starten op je kantoor aan de Zuidas, en hoor je opeens helemaal niets meer na een onverwachte BSOD? Geen paniek. Dit stappenplan brengt je geluid binnen enkele minuten terug.
 </div>
@@ -35,11 +36,11 @@ In de hectiek begin je dan al snel te stressen. Eerst klik je willekeurig op het
 
 Voordat we direct ingrijpen, is het handig om te begrijpen wat er onder de motorkap van Windows 11 gebeurt tijdens een harde systeemreboot:
 
-### 1. Vastgelopen Audio-services (Windows Audio & Endpoint Builder): Na een abrupte crash weigeren essentiële achtergrondservices soms automatisch opnieuw op te starten, waardoor Windows de communicatie met je geluidskaart verliest.
+1. Vastgelopen Audio-services (Windows Audio & Endpoint Builder): Na een abrupte crash weigeren essentiële achtergrondservices soms automatisch opnieuw op te starten, waardoor Windows de communicatie met je geluidskaart verliest.
 
-### 2. Corruptie van de Stuurprogrammacache (Driver Conflict): Een plotselinge stroomonderbreking of harde reset kan de actieve audio-driver (Realtek, Conexant, of USB-audio) in een status van datacorruptie achterlaten.
+2. Corruptie van de Stuurprogrammacache (Driver Conflict): Een plotselinge stroomonderbreking of harde reset kan de actieve audio-driver (Realtek, Conexant, of USB-audio) in een status van datacorruptie achterlaten.
 
-### 3. Standaard Apparaat Reset: Windows raakt in de war over welke fysieke uitgang prioriteit heeft, waardoor je hoofdtelefoon of ingebouwde speakers ineens op 'Uitgeschakeld' of 'Niet aangesloten' springen.
+3. Standaard Apparaat Reset: Windows raakt in de war over welke fysieke uitgang prioriteit heeft, waardoor je hoofdtelefoon of ingebouwde speakers ineens op 'Uitgeschakeld' of 'Niet aangesloten' springen.
 
 ---
 

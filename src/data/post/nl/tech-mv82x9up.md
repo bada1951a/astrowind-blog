@@ -19,6 +19,7 @@ theme: "Dracula Purple Dev"
 
 
 
+
 Vrijdagmiddag, kwart over vier. Mijn grootste afnemer belde net dat de staging-omgeving eruit ligt voor de maandagse release, en op dat exact verkeerde moment besluit mijn workstation om zwart scherm te geven. De ventilatoren loeien alsof er een Boeing opstijgt, de RGB-verlichting knippert vrolijk in al zijn regenboogpracht, maar mijn monitor blijft koppig op *No Signal* staan. Mijn manager staat al achter me met een kop lauwe koffie en de klassieke vraag: *"Is het al opgelost?"* Je zweet breekt je uit, je drukt op goed geluk op Ctrl + Shift + Win + B om de grafische driver te resetten, maar er gebeurt werkelijk helemaal niets.
 
 Dit soort situaties kosten je levensjaren. Je vervloekt de hardware, denkt meteen dat je moederbord naar de haaien is, en ziet je weekend in duigen vallen. Maar na jaren meedraaien in de IT-infrastructuur weet ik inmiddels beter: in negen van de tien gevallen is het een banale contactfout. Tijd om die kast open te schroeven en handen uit de mouwen te steken.
@@ -37,11 +38,11 @@ Dit soort situaties kosten je levensjaren. Je vervloekt de hardware, denkt metee
 
 Voordat je blind onderdelen gaat bestellen of de helpdesk van de facilitaire dienst belt met paniek in je stem, moeten we even nuchter naar de drie meest voorkomende boosdoeners kijken:
 
-### 1. Micro-oxidatie en stofophoping: Door temperatuurverschillen op kantoor (airco aan, airco uit) zetten componenten uit en krimpen ze. Hierdoor ontstaat er na verloop van tijd een microscopisch dun oxidatielaagje op de goudkleurige contactpinnen van je RAM-sticks. Gevolg: geen datatransmissie meer met de geheugencontroller.
+1. Micro-oxidatie en stofophoping: Door temperatuurverschillen op kantoor (airco aan, airco uit) zetten componenten uit en krimpen ze. Hierdoor ontstaat er na verloop van tijd een microscopisch dun oxidatielaagje op de goudkleurige contactpinnen van je RAM-sticks. Gevolg: geen datatransmissie meer met de geheugencontroller.
 
-### 2. Fysieke vibraties of 'RAM-sag': Zit je kast dichtbij een drukke gang of stamp je wel eens per ongeluk tegen je bureau na een mislukte merge request? Dan kan een zware RAM-module (vooral van die dikke heatsink-bakbeesten) heel langzaam iets uit zijn slot trillen.
+2. Fysieke vibraties of 'RAM-sag': Zit je kast dichtbij een drukke gang of stamp je wel eens per ongeluk tegen je bureau na een mislukte merge request? Dan kan een zware RAM-module (vooral van die dikke heatsink-bakbeesten) heel langzaam iets uit zijn slot trillen.
 
-### 3. Slot-corruptie of instabiele XMP/EXPO profielen: Soms heeft het slot zelf een optater gehad door statische elektriciteit, of is de geheugencontroller op je CPU even van het padje geraakt door een mislukte geheugenoverklok in de BIOS.
+3. Slot-corruptie of instabiele XMP/EXPO profielen: Soms heeft het slot zelf een optater gehad door statische elektriciteit, of is de geheugencontroller op je CPU even van het padje geraakt door een mislukte geheugenoverklok in de BIOS.
 
 ---
 
@@ -62,7 +63,7 @@ Als je vier sticks hebt, test ze dan niet allemaal tegelijk terug.
 
 2. Druk hem stevig aan tot je een duidelijke *klik* hoort van de sluiting.
 
-## 3. Zet de stroom erop en boot het systeem.
+3. Zet de stroom erop en boot het systeem.
 
 Als het scherm nu wel aanspringt, weet je dat ten minste één stick en dat specifieke slot functioneren. 
 

@@ -19,6 +19,7 @@ theme: "Pastel Lavender Tech"
 
 
 
+
 Il est 16h45 dans notre bureau tech près de la place de la République à Paris. Le dernier sprint de la semaine bat son plein et nous devons absolument déployer une mise à jour critique de notre application interne avant le point de validation avec la direction. Subitement, l'écran de mon poste de travail s'illumine d'une alerte rouge vif : *Espace disque insuffisant sur le lecteur C:*. Le système refuse d'initialiser l'environnement de build, les logs bloquent, et la barre de progression reste figée à zéro. Impossible de compiler quoi que ce soit. Le disque principal de 512 Go est totalement saturé par des gigaoctets de fichiers invisibles, accumulés au fil des mois sans crier gare.
 
 Dans l'urgence, le premier réflexe est souvent de supprimer des dossiers au hasard ou de vider la corbeille en espérant un miracle. C'est exactement là que l'on commet l'irréparable en effaçant des caches de développement essentiels ou des points de restauration cruciaux. Après plusieurs minutes de tâtonnements et un diagnostic rapide des dossiers cachés, la cause de la panne est devenue évidente : l'accumulation massive de fichiers temporaires système, de résidus d'anciennes mises à jour Windows Update et de caches d'applications obsolètes. 
@@ -42,11 +43,11 @@ Voici la méthode éprouvée, rapide et 100% sécurisée pour reprendre le contr
 
 Avant de foncer tête baissée dans le nettoyage, comprenons pourquoi Windows 11 grignote autant d'espace. Trois coupables principaux reviennent constamment dans nos environnements de travail :
 
-### 1. Les fichiers temporaires applicatifs et système : À chaque installation de mise à jour, compilation de code ou navigation web, Windows et vos logiciels stockent des données de secours dans des dossiers invisibles (`AppData\Local\Temp`). Souvent, ces fichiers ne sont jamais supprimés automatiquement.
+1. Les fichiers temporaires applicatifs et système : À chaque installation de mise à jour, compilation de code ou navigation web, Windows et vos logiciels stockent des données de secours dans des dossiers invisibles (`AppData\Local\Temp`). Souvent, ces fichiers ne sont jamais supprimés automatiquement.
 
-### 2. Le cache de Windows Update et les fichiers d'installation : Windows conserve précieusement les anciennes versions des fichiers système pour permettre un retour en arrière (rétrogradation) en cas de bug. Sur plusieurs mois, cela représente facilement entre 10 Go et 30 Go.
+2. Le cache de Windows Update et les fichiers d'installation : Windows conserve précieusement les anciennes versions des fichiers système pour permettre un retour en arrière (rétrogradation) en cas de bug. Sur plusieurs mois, cela représente facilement entre 10 Go et 30 Go.
 
-### 3. L'hibernation et la mémoire virtuelle (pagefile.sys / hiberfile.sys) : Ces fichiers système réservent une portion fixe de votre disque équivalant à votre quantité de RAM, ce qui peut bloquer un espace considérable sur des SSD de taille modeste.
+3. L'hibernation et la mémoire virtuelle (pagefile.sys / hiberfile.sys) : Ces fichiers système réservent une portion fixe de votre disque équivalant à votre quantité de RAM, ce qui peut bloquer un espace considérable sur des SSD de taille modeste.
 
 ---
 
@@ -59,7 +60,7 @@ Plutôt que de chercher manuellement, confions le travail de chaufferie à l'out
 
 1. Ouvrez les Paramètres de Windows 11 (raccourci `Touche Windows + I`).
 
-## 2.  Allez dans Système, puis cliquez surStockage.
+2.  Allez dans Système, puis cliquez surStockage.
 
 3. Activez l'interrupteur du Senseur de stockage (Storage Sense).
 
@@ -70,7 +71,7 @@ L'outil classique de nettoyage libère une première couche, mais il faut aller 
 
 1. Appuyez sur la touche `Windows`, tapez Nettoyage de disque et lancez l'application.
 
-## 2. Sélectionnez votre lecteur `C:` et validez.
+2. Sélectionnez votre lecteur `C:` et validez.
 
 3. Cliquez sur le bouton Nettoyer les fichiers système (administrateur).
 

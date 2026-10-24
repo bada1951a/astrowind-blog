@@ -19,6 +19,7 @@ theme: "Midnight Navy Royal"
 
 
 
+
 Es ist 02:47 Uhr während einer regulären Wartungsnacht im RZ-Bereich Frankfurt-Nord. Ich sitze an der primären Konsole für die Core-Switches, will per SSH ein Konfigurations-Update aufspielen – und das Terminal verweigert den Dienst. Fehlermeldung: *Authentication failure*. Nach drei Versuchen schaue ich mir die Eingabe im Klartext-Notizblock an: Statt `passwort` steht dort `passsswwort`. Meine treue mechanische Tastatur mit taktilen Cherry-MX-Switches hat beschlossen, massives Key Chattering (Tastenprellen) auf der Taste `S` und zeitgleich sporadische Kontaktabbrüche bei der Leertaste an den Tag zu legen.
 
 Im Sysadmin-Alltag ist so etwas kein bloßes Ärgernis, sondern ein echtes Betriebsrisiko. Wenn ein `rm -rf /var/log/app/*` durch ein verschlucktes Zeichen oder doppelten Anschlag im falschen Verzeichnis landet, brennt der Baum. Wer in solchen Situationen nicht sofort 150 Euro für ein neues Board ausgeben will, greift zur systematischen Instandsetzung. In diesem Logbuch dokumentiere ich den exakten Ablauf, wie wir Tastenaussetzer und Chattering physikalisch wie logisch analysieren und mechanische Schalter fachgerecht revitalisieren.
@@ -32,7 +33,7 @@ Im Sysadmin-Alltag ist so etwas kein bloßes Ärgernis, sondern ein echtes Betri
 
 ---
 
-## 1. Ursachenanalyse (Root Cause Breakdown)
+1. Ursachenanalyse (Root Cause Breakdown)
 
 Mechanische Tastaturschalter arbeiten fast ausnahmslos mit galvanischen Schaltkontakten: Zwei feine Metallplättchen (meist aus einer Kupferlegierung mit Goldbeschichtung) werden durch den mechanischen Stempel (*Stem*) getrennt oder zusammengeführt. Funktioniert dieses Prinzip nicht mehr zuverlässig, liegt die Ursache in der Regel in einem der folgenden drei Szenarien:
 
@@ -88,11 +89,11 @@ Bevor wir zur Flasche mit dem Kontaktreiniger greifen, stellen wir sicher, dass 
 
 ## Die "Straw-and-Stem"-Methode (Ohne Gehäuseöffnung)
 
-### 1. Stromlos schalten: Ziehen Sie das USB-Kabel zwingend ab. Das Board muss vollständig stromlos sein.
+1. Stromlos schalten: Ziehen Sie das USB-Kabel zwingend ab. Das Board muss vollständig stromlos sein.
 
-### 2. Keycap entfernen: Ziehen Sie die Tastenkappe der betroffenen Taste mit einem Draht-Keycap-Puller senkrecht nach oben ab. Verwenden Sie keinen Schraubendreher, um die Haltenasen des Stempels nicht zu beschädigen.
+2. Keycap entfernen: Ziehen Sie die Tastenkappe der betroffenen Taste mit einem Draht-Keycap-Puller senkrecht nach oben ab. Verwenden Sie keinen Schraubendreher, um die Haltenasen des Stempels nicht zu beschädigen.
 
-### 3. Stempel herabdrücken: Drücken Sie den Schalterstempel mit einer Pinzette oder einem Zahnstocher vollständig nach unten, sodass die Öffnung zum Schalterinneren freigelegt wird.
+3. Stempel herabdrücken: Drücken Sie den Schalterstempel mit einer Pinzette oder einem Zahnstocher vollständig nach unten, sodass die Öffnung zum Schalterinneren freigelegt wird.
 
 4. Dosierung: Setzen Sie das feine Sprühröhrchen des Kontaktreinigers schräg an den Rand des Stempels an – genau dort, wo die interne Blattfeder sitzt.
 
@@ -127,7 +128,7 @@ Sollte das Chattering nach Phase 2 weiterhin auftreten, ist die Blattfeder entwe
 
 ---
 
-## 3. Experten-Warnung & Brandmelder-Prävention
+3. Experten-Warnung & Brandmelder-Prävention
 
 Im RZ-Betrieb gelten strenge Richtlinien für Flüssigkeiten und Gase. Bei Heim- und Büroarbeitsplätzen wird der Umgang mit Kontaktsprays dagegen oft fahrlässig gehandhabt.
 
@@ -141,15 +142,15 @@ Im RZ-Betrieb gelten strenge Richtlinien für Flüssigkeiten und Gase. Bei Heim-
 
 ---
 
-## 4. Post-Mortem & Vorbeugemaßnahmen
+4. Post-Mortem & Vorbeugemaßnahmen
 
 Im industriellen IT-Betrieb endet kein Incident ohne Vorbeugemaßnahmen. Um erneute Ausfälle zu verhindern:
 
-### 1. Staubschutzabdeckung etablieren: Bei längerer Nichtbenutzung der Workstation eine Acryl-Abdeckung über die Tastatur legen. Das verhindert 90 % aller Partikeleinträge.
+1. Staubschutzabdeckung etablieren: Bei längerer Nichtbenutzung der Workstation eine Acryl-Abdeckung über die Tastatur legen. Das verhindert 90 % aller Partikeleinträge.
 
-### 2. QMK/VIA Debounce-Konfiguration anpassen:Wenn Ihre Tastatur Open-Source-Firmware (QMK/ZMK) unterstützt, flashen Sie ein Profil mit angepasstem Entprell-Algorithmus. Wechseln Sie vom aggressiven `sym_defer_g` auf `asym_eager_defer_pk` mit einer Zeitspanne von8 bis 10 ms. Dies maskiert Alterungserscheinungen der Feder komplett, ohne dass eine spürbare Latenz entsteht.
+2. QMK/VIA Debounce-Konfiguration anpassen:Wenn Ihre Tastatur Open-Source-Firmware (QMK/ZMK) unterstützt, flashen Sie ein Profil mit angepasstem Entprell-Algorithmus. Wechseln Sie vom aggressiven `sym_defer_g` auf `asym_eager_defer_pk` mit einer Zeitspanne von8 bis 10 ms. Dies maskiert Alterungserscheinungen der Feder komplett, ohne dass eine spürbare Latenz entsteht.
 
-### 3. Firmware-Updates einspielen: Hersteller wie Ducky, Corsair oder Razer veröffentlichen regelmäßig Firmware-Patches, die gezielt die Debounce-Filterung für prellende Schalterserien optimieren.
+3. Firmware-Updates einspielen: Hersteller wie Ducky, Corsair oder Razer veröffentlichen regelmäßig Firmware-Patches, die gezielt die Debounce-Filterung für prellende Schalterserien optimieren.
 
 ---
 

@@ -19,6 +19,7 @@ theme: "Retro Monokai"
 
 
 
+
 Freitagnachmittag, 16:45 Uhr. Der letzte Deployment-Lauf für das Release am Montag läuft durch, der Kaffee ist kalt, und ich will eigentlich nur noch den Rechner zuklappen und ins Wochenende starten. Plötzlich fängt die Kiste neben mir an zu röhren wie ein startender A380 – die Gehäuselüfter drehen auf 100%, die RGB-Beleuchtung glimmt in traurigem Monokai-Grün, aber der Dell-Monitor bleibt eisern im Standby. Kein POST-Screen, kein BIOS-Logo, absolut tote Hose. Und natürlich wartet der Abteilungsleiter im Teams auf den finalen Build. Herzlichen Glückwunsch, der klassische Hardware-Gau.
 
 <div style="border-left: 4px solid #a6e22e; padding: 12px 16px; margin: 20px 0; background-color: rgba(166,226,46,0.05); border-radius: 4px; color: #111827; font-family: monospace;">
@@ -33,11 +34,11 @@ Freitagnachmittag, 16:45 Uhr. Der letzte Deployment-Lauf für das Release am Mon
 
 Bevor man panikartig anfängt, neue Hardware zu bestellen, muss man verstehen, was unter der Haube schiefgelaufen ist. In 90% solcher Fälle bei Bestandsgeräten liegt es nicht an einem defekten Bauteil, sondern an schleichenden Umwelteinflüssen.
 
-### 1. Mikro-Vibrationen & Thermischer Stress: Durch ständiges Aufheizen und Abkühlen arbeiten sich die RAM-Riegel minimal aus ihren Slots. Die vergoldeten Kontakte verlieren den mechanischen Anpressdruck.
+1. Mikro-Vibrationen & Thermischer Stress: Durch ständiges Aufheizen und Abkühlen arbeiten sich die RAM-Riegel minimal aus ihren Slots. Die vergoldeten Kontakte verlieren den mechanischen Anpressdruck.
 
-### 2. Oxidation & Staub: Feuchtigkeit im Büro und feiner Staub tun ihr Übriges. Es bildet sich ein unsichtbarer Isolierfilm auf den Kontaktelementen des Arbeitsspeichers.
+2. Oxidation & Staub: Feuchtigkeit im Büro und feiner Staub tun ihr Übriges. Es bildet sich ein unsichtbarer Isolierfilm auf den Kontaktelementen des Arbeitsspeichers.
 
-### 3. Statische Entladung / CMOS-Hänger: Das UEFI/BIOS hat sich verschluckt und versucht, die RAM-Timings mit Werten zu initialisieren, die der Speicher nach einem Kaltstart nicht mehr packt.
+3. Statische Entladung / CMOS-Hänger: Das UEFI/BIOS hat sich verschluckt und versucht, die RAM-Timings mit Werten zu initialisieren, die der Speicher nach einem Kaltstart nicht mehr packt.
 
 ## Step-by-Step Resolution: Debugging im Editor-Style
 
@@ -60,7 +61,7 @@ Wenn du zwei oder vier RAM-Riegel hast, stecke nur einen einzigen Riegel in den 
 
 2. Netzkabel wieder rein, Monitor anschließen (direkt ans Mainboard oder an die GPU, je nach Setup).
 
-## 3. Einschalten.
+3. Einschalten.
 
 Wenn der POST-Screen kommt: Glückwunsch, der Riegel lebt. Wenn nicht, nimm den nächsten Riegel und teste denselben Slot, um einen defekten Riegel auszuschließen.
 

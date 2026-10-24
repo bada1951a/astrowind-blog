@@ -19,6 +19,7 @@ theme: "Nordic Clean Ice"
 
 
 
+
 > *"A misplaced semicolon will break your build, but an intermittent switch leaf will break your sanity. In production environments, deterministic hardware input is not an amenity—it is an absolute operational baseline."*
 
 Late last winter, during an urgent infrastructure migration on an internal Kubernetes cluster, my terminal suddenly spat out syntax errors during a critical namespace eviction. My custom 75% hot-swap board—built with tuned linear switches—had begun randomly dropping strokes on the `T` key and double-registering the `E` key (`eerror: unexpeected token`). 
@@ -86,12 +87,12 @@ Before picking up any chemical solvents or tools, systematically isolate the ope
 
 ### Phase 1: Software and Interface Triage
 
-## 1. Check HID Drivers in Device Manager:
+1. Check HID Drivers in Device Manager:
 
    Press `Windows Key + X` and select Device Manager. ExpandHuman Interface DevicesandKeyboards. 
    Look for duplicate driver entries, yellow warning glyphs, or selective suspend power-saving states. Right-click your active keyboard device, choose Properties, navigate toPower Management, and uncheck *Allow the computer to turn off this device to save power*.
 
-## 2. Execute a Clean State Test:
+2. Execute a Clean State Test:
 
    Launch an administrative shell and run the system file verification tool to ensure driver subsystem integrity:
    ```cmd
@@ -147,7 +148,7 @@ Allow the board to sit unpowered for at least 15 to 20 minutes. Even fast-evapor
 
 If chemical cleaning fails to resolve the issue, the switch has either suffered irreversible leaf deformation or the hot-swap socket has loosened.
 
-## 1. Retensioning Hot-Swap Sockets
+1. Retensioning Hot-Swap Sockets
 If your keyboard uses Kailh-style hot-swap sockets, the underlying metal leaf springs on the *PCB's backside* may have widened over time:
 
 1. Unplug the keyboard, remove the keycap, and use a switch puller to gently remove the switch from the hot-swap plate.
@@ -158,7 +159,7 @@ If your keyboard uses Kailh-style hot-swap sockets, the underlying metal leaf sp
 
 4. Reinstall the switch, taking extra care that the pins slide directly into the socket without bending against the PCB surface.
 
-## 2. Physical Leaf Straightening or Replacement
+2. Physical Leaf Straightening or Replacement
 If the board is soldered, you can open the switch housing *in situ* using switch opening clips (for loose plates) to gently reshape the curved metal contact leaf. However, at that point, the spring metal has likely fatigued past its elastic limit. The most reliable fix is desoldering the degraded switch and replacing it with a fresh, factory-tested unit.
 
 ---

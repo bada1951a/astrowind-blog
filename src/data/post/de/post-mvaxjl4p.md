@@ -19,6 +19,7 @@ theme: "Warm Coffee Latte"
 
 
 
+
 Es war kurz vor 9 Uhr morgens in unserem Berliner Tech-Hub in Mitte. Der Espresso in meiner Lieblingstasse war noch heiß, und der große Sprint-Review für unseren anstehenden Software-Rollout stand unmittelbar bevor. Als ich mein ThinkPad aufklappte, um die letzten Systemdiagnosen zu checken, passierte es: Der Windows-Desktop hing im gefühlten ewigen Ladezustand fest. Minuten vergingen, während im Hintergrund munter Update-Agenten, Chat-Tools, Cloud-Synchronisierungen und Updater für Software starteten, die ich seit Monaten nicht mehr angefasst hatte. Die CPU-Auslastung schoss durch die Decke, die Lüfter jammerten, und mein Puls stieg mit. Mitten in der Hektik vor dem Meeting wurde mir klar: So kann das nicht weitergehen.
 
 <div style="border-left: 4px solid #78350f; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
@@ -31,11 +32,11 @@ Es war kurz vor 9 Uhr morgens in unserem Berliner Tech-Hub in Mitte. Der Espress
 
 Bevor wir zur Tat schreiten, werfen wir einen kurzen Blick unter die Motorhaube. Warum bricht ein eigentlich potenter Laptop beim Booten eigentlich so ein?
 
-### 1. Die "Ich muss immer da sein"-Mentalität von Apps: Viele moderne Anwendungen (wie Spotify, Teams, Skype, Steam oder diverse Update-Helfer) tragen sich ungefragt in den Autostart ein. Sie wollen sofort nach dem Hochfahren bereitstehen, obwohl man sie vielleicht erst Stunden später braucht.
+1. Die "Ich muss immer da sein"-Mentalität von Apps: Viele moderne Anwendungen (wie Spotify, Teams, Skype, Steam oder diverse Update-Helfer) tragen sich ungefragt in den Autostart ein. Sie wollen sofort nach dem Hochfahren bereitstehen, obwohl man sie vielleicht erst Stunden später braucht.
 
-### 2. Altlasten und verwaiste Registry-Einträge: Jedes Mal, wenn du ein kleines Tool deinstallierst, bleibt oft ein winziger Autostart-Eintrag zurück, der ins Leere läuft und Windows beim Start unnötig ausbremst.
+2. Altlasten und verwaiste Registry-Einträge: Jedes Mal, wenn du ein kleines Tool deinstallierst, bleibt oft ein winziger Autostart-Eintrag zurück, der ins Leere läuft und Windows beim Start unnötig ausbremst.
 
-### 3. Der Flaschenhals bei Hintergrunddiensten: Selbst wenn du eine schnelle SSD hast, müssen alle Autostart-Programme sequenziell oder parallel initialisiert werden. Das blockiert Systemressourcen in den kritischen ersten Minuten nach dem Login.
+3. Der Flaschenhals bei Hintergrunddiensten: Selbst wenn du eine schnelle SSD hast, müssen alle Autostart-Programme sequenziell oder parallel initialisiert werden. Das blockiert Systemressourcen in den kritischen ersten Minuten nach dem Login.
 
 ---
 
@@ -54,7 +55,7 @@ Du siehst nun eine Liste aller Programme, die beim Start von Windows 10 automati
 
 1. Klicke mit der rechten Maustaste auf ein Programm, das du beim Systemstart nicht zwingend brauchst (zum Beispiel den Epic Games Launcher, Cortana, Spotify oder diverse Drucker-Helfer).
 
-## 2. Wähle im Kontextmenü "Deaktivieren".
+2. Wähle im Kontextmenü "Deaktivieren".
 
 3. Wiederhole das für alle nicht essenziellen Anwendungen.
 

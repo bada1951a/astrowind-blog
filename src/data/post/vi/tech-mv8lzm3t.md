@@ -19,6 +19,7 @@ theme: "Pure Titanium Clean"
 
 
 
+
 Mới sáng thứ Hai đầu tuần, sếp tổng gọi gấp vào phòng họp để present cái báo cáo quý. Mồ hôi hột vã ra như tắm khi cái laptop chiến thần của mình bấm nút nguồn lên xong... đứng hình ở logo Windows đúng 10 phút tròn. Nhìn thanh Task Manager lúc mở được máy thì ôi thôi, Disk 100%, CPU quạt hú như phản lực cất cánh. Đám app "ăn hại" từ Zalo, KakaoTalk, OneDrive cho đến mấy cái phần mềm diệt virus rác tự động nhảy vào chạy ngầm (Startup) khiến cỗ máy i7 đời cũ nghẹt thở.
 
 Đó là lúc anh em kỹ sư IT như tụi mình phải bật chế độ "cấp cứu" ngay lập tức. Đừng vội mang ra tiệm tốn tiền hay cài lại Win mất thời gian, bài viết này tôi sẽ chỉ cho anh em cách "phẫu thuật" tận gốc bệnh khởi động chậm trễ này chỉ trong vòng một nốt nhạc.
@@ -31,11 +32,11 @@ Mới sáng thứ Hai đầu tuần, sếp tổng gọi gấp vào phòng họp 
 
 Trước khi vung dao mổ xẻ, phải bắt đúng bệnh thì mới trị dứt điểm được. Dưới đây là 3 thủ phạm chính:
 
-### 1. Rác Startup quá tải (Startup Bloatware): Mỗi lần anh em cài app mới (như Zalo, Steam, Adobe, v.v.), bọn chúng mặc định tích vào ô *"Run when Windows starts"*. Cứ thế, 30-40 tiến trình chạy ngầm ngốn hết RAM và ổ cứng ngay từ giây đầu tiên bấm nút nguồn.
+1. Rác Startup quá tải (Startup Bloatware): Mỗi lần anh em cài app mới (như Zalo, Steam, Adobe, v.v.), bọn chúng mặc định tích vào ô *"Run when Windows starts"*. Cứ thế, 30-40 tiến trình chạy ngầm ngốn hết RAM và ổ cứng ngay từ giây đầu tiên bấm nút nguồn.
 
 2. Ổ cứng HDD lão hóa hoặc SSD hết dung lượng trống: Máy ai còn dùng HDD cơ quay tít thò lò thì xác định khởi động mất 5 phút là bình thường. Còn dùng SSD mà để đầy dung lượng (dưới 10% trống), tốc độ đọc ghi (Read/Write) sẽ rớt thảm hại do không còn không gian cho bộ nhớ ảo (Pagefile).
 
-### 3. Driver phần cứng hoặc BIOS lỗi thời: Xung đột driver card màn hình hoặc chipset khiến tiến trình khởi động của hệ điều hành bị nghẽn (boot bottleneck).
+3. Driver phần cứng hoặc BIOS lỗi thời: Xung đột driver card màn hình hoặc chipset khiến tiến trình khởi động của hệ điều hành bị nghẽn (boot bottleneck).
 
 ---
 

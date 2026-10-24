@@ -19,6 +19,7 @@ theme: "Graphite Technical Paper"
 
 
 
+
 Đồng hồ góc phải màn hình nhảy đúng 15:45, chỉ còn 15 phút nữa là đến hạn chót nộp báo cáo doanh thu quý cho sếp tổng tại văn phòng trung tâm Quận 1, TP.HCM. Đột nhiên, chiếc máy tính Windows 11 đời mới của tôi khựng lại. Chuột cứng ngắc, bàn phím bấm không ăn, màn hình đứng hình ở một slide PowerPoint dang dở. Khởi động nóng bằng nút nguồn, vào lại chưa đầy 3 phút sau lại tiếp tục đóng băng hoàn toàn mà không kịp báo lỗi màn hình xanh (BSOD). Mồ hôi túa ra như tắm giữa phòng máy lạnh, khách hàng và cấp trên đang giục dồn dập qua tin nhắn.
 
 Trước đây, khi gặp tình trạng này, phản xạ đầu tiên của dân văn phòng lẫn nhiều anh em làm IT non tay là cài lại toàn bộ Windows, hoặc tháo tung thùng máy ra phủi bụi, cắm lại thanh RAM cho có lệ. Nhưng cách làm mò mẫm đó ngốn cả tiếng đồng hồ quý giá và thường chẳng giải quyết được tận gốc vấn đề, để rồi ngày mai lỗi cũ lại tái diễn.
@@ -39,9 +40,9 @@ a:</strong> Lỗi đơ cứng ngẫu nhiên (random freezing) trên Windows 11 t
 
 Trước khi mở công cụ tra cứu, chúng ta cần hiểu rõ ba nguyên nhân phổ biến nhất khiến máy tính bỗng nhiên "đóng băng" tại chỗ:
 
-### 1. Lỗi Kernel-Power (Mã sự kiện Event ID 41): Hệ thống bị ngắt nguồn đột ngột hoặc treo cứng bắt buộc phải giữ nút nguồn tắt máy. Điều này thường liên quan đến nguồn điện (Power Supply Unit), nhiệt độ CPU quá cao hoặc driver card đồ họa bị lỗi nặng.
+1. Lỗi Kernel-Power (Mã sự kiện Event ID 41): Hệ thống bị ngắt nguồn đột ngột hoặc treo cứng bắt buộc phải giữ nút nguồn tắt máy. Điều này thường liên quan đến nguồn điện (Power Supply Unit), nhiệt độ CPU quá cao hoặc driver card đồ họa bị lỗi nặng.
 
-### 2. Xung đột Driver thiết bị (Đặc biệt là Card mạng và GPU): Các bản cập nhật Windows Update gần đây đôi khi cài đè driver không tương thích, gây nghẽn luồng xử lý ngầm (Interrupt Handling) dẫn đến treo máy toàn tập.
+2. Xung đột Driver thiết bị (Đặc biệt là Card mạng và GPU): Các bản cập nhật Windows Update gần đây đôi khi cài đè driver không tương thích, gây nghẽn luồng xử lý ngầm (Interrupt Handling) dẫn đến treo máy toàn tập.
 
 3. Ổ cứng SSD NVMe bị quá nhiệt hoặc mất kết nối chớp nhoáng: Khi phân vùng chứa hệ điều hành bị mất tín hiệu đọc/ghi dữ liệu trong tích tắc, Windows 11 sẽ lập tức đơ cứng vì không thể truy xuất trang nhớ ảo (Pagefile).
 

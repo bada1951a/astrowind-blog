@@ -19,6 +19,7 @@ theme: "High-Contrast Charcoal"
 
 
 
+
 Sáng nay vừa bước chân vào văn phòng công nghệ ở khu vực ven biển Đà Nẵng, mở laptop lên để chuẩn bị pull request bản update phần mềm cho khách hàng thì đập vào mắt tôi là dòng cảnh báo đỏ lòm: ổ C chỉ còn trống chưa đầy 500MB. Windows liên tục bắn thông báo "Low Disk Space", các ứng dụng nặng bắt đầu văng ra liên tục, máy giật đơ như đá tảng. Đồng nghiệp ngồi bên cạnh cứ bấm nút Restart liên tục với hy vọng máy sẽ tự khá hơn, nhưng tình hình chỉ càng tệ đi vì bộ nhớ ảo (pagefile) không còn chỗ để thở.
 
 <div style="border-left: 4px solid #e11d48; padding: 12px 16px; margin: 20px 0; background-color: rgba(225,29,72,0.05); border-radius: 4px; color: #111827;">
@@ -31,11 +32,11 @@ Sáng nay vừa bước chân vào văn phòng công nghệ ở khu vực ven bi
 
 Trước khi lao vào xóa bừa bãi các thư mục, chúng ta cần hiểu rõ tại sao ổ C lại biến thành một bãi rác khổng lồ chỉ sau vài tháng sử dụng:
 
-### 1. Tích tụ tệp tạm (Temp Files) từ Windows Update và ứng dụng: Mỗi lần hệ thống cập nhật các bản vá bảo mật, các tệp cài đặt cũ (Windows.old) và tệp log chẩn đoán lỗi đều được lưu lại. Thậm chí các app như Chrome, Zalo, Teams cũng vô tình ngốn hàng chục GB cache ẩn.
+1. Tích tụ tệp tạm (Temp Files) từ Windows Update và ứng dụng: Mỗi lần hệ thống cập nhật các bản vá bảo mật, các tệp cài đặt cũ (Windows.old) và tệp log chẩn đoán lỗi đều được lưu lại. Thậm chí các app như Chrome, Zalo, Teams cũng vô tình ngốn hàng chục GB cache ẩn.
 
-### 2. Thư mục Downloads và Desktop bị lạm dụng: Thói quen lưu trữ mọi file cài đặt, file nén (.zip, .iso) nặng hàng GB trực tiếp vào thư mục mặc định nằm trên ổ C chính là "sát thủ" thầm lặng.
+2. Thư mục Downloads và Desktop bị lạm dụng: Thói quen lưu trữ mọi file cài đặt, file nén (.zip, .iso) nặng hàng GB trực tiếp vào thư mục mặc định nằm trên ổ C chính là "sát thủ" thầm lặng.
 
-### 3. Tính năng Hibernation và Virtual Memory quá khổ: Nếu máy tính của bạn có RAM 16GB hoặc 32GB, tệp ngủ đông (`hiberfil.sys`) và tệp hoán đổi RAM (`pagefile.sys`) có thể chiếm trọn từ 20GB đến 40GB dung lượng cố định.
+3. Tính năng Hibernation và Virtual Memory quá khổ: Nếu máy tính của bạn có RAM 16GB hoặc 32GB, tệp ngủ đông (`hiberfil.sys`) và tệp hoán đổi RAM (`pagefile.sys`) có thể chiếm trọn từ 20GB đến 40GB dung lượng cố định.
 
 ---
 

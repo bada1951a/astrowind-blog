@@ -10,6 +10,7 @@ theme: "High-Contrast Charcoal"
 
 
 
+
 ## 1. [Opening Story/Problem]
 
 丸の内のオフィスビルで総務・セキュリティ担当として働く私に、冷や汗が出るような瞬間が訪れました。今日は四半期に一度の社内ITセキュリティ監査の提出期限。あと30分で自社の端末状況を示す自己診断リポートを完成させ、管理システムへアップロードしなければならないという緊迫した状況です。
@@ -76,7 +77,7 @@ Get-AppxPackage Microsoft.ScreenSketch -AllUsers | Foreach {Add-AppxPackage -Dis
 
 ハードウェア的な観点からも補足します。一部のゲーミングキーボードや外付けキーボードでは、「Winキーロック（Win Lock）」が物理的あるいはソフトウェア的に有効になっており、これが原因で **Win** キーを含むショートカットがすべて無効化されている場合があります。キーボード本体のインジケーターランプ（通常は鍵マーク）を確認してください。
 
-## 5. Frequently Asked Questions
+5. Frequently Asked Questions
 
 Q. 修復やリセットを行っても、どうしても Win + Shift + S が反応しません。他に手はありますか？
 

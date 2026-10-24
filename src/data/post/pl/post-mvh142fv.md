@@ -19,6 +19,7 @@ theme: "High-Contrast Charcoal"
 
 
 
+
 Była dokładnie 10:45 rano, a w warszawskim centrum biznesowym przy Rondzie Daszyńskiego panowała gęsta atmosfera. Za kwadrans miało ruszyć kluczowe spotkanie zarządu z inwestorami z Frankfurtu, a stacja robocizna naszego głównego analityka finansowego zamarzła na amen. Ekran zamroził się w bezruchu, kursor myszy nie reagował, a twardy reset przyciskiem na obudowie to była jedyna deska ratunku. Najgorsze było to, że to nie pierwszy taki zwis w tym tygodniu. Klient patrzył na mnie z paniką w oczach, pytając, czy jego modele finansowe przetrwały. Jako inżynier wsparcia IT wiedziałem, że bezmyślne przeinstalowywanie systemu nic tu nie da. Czas było wreszcie sprawdzić, co tak naprawdę boli ten komputer.
 
 ### Trzy najczęstsze powody losowych zwiech w Windows 11
@@ -27,9 +28,9 @@ Była dokładnie 10:45 rano, a w warszawskim centrum biznesowym przy Rondzie Das
 
 Zanim przejdziemy do diagnostyki, warto zrozumieć, dlaczego nowoczesny sprzęt nagle przestaje odpowiadać. Losowe zamrożenia (tzw. freezy) rzadko są dziełem przypadku. W mojej praktyce serwisowej na pierwszym miejscu stawiam zazwyczaj trzy scenariusze:
 
-### 1. Problemy ze stanami C-state procesora i zasilaniem płyt głównych: Nowe procesory dynamicznie obniżają napięcia w stanie spoczynku. Czasami jednak płyta główna lub BIOS nie radzą sobie z tym płynnie, co prowadzi do nagłego braku stabilności.
+1. Problemy ze stanami C-state procesora i zasilaniem płyt głównych: Nowe procesory dynamicznie obniżają napięcia w stanie spoczynku. Czasami jednak płyta główna lub BIOS nie radzą sobie z tym płynnie, co prowadzi do nagłego braku stabilności.
 
-### 2. Przegrzewanie się pamięci podręcznej NVMe lub sekcji zasilania (VRM): Współczesne dyski M.2 potrafią osiągać piekielne temperatury. Gdy radiator nie odprowadza ciepła, kontroler dysku zawiesza cały system operacyjny, czekając na obniżenie temperatury.
+2. Przegrzewanie się pamięci podręcznej NVMe lub sekcji zasilania (VRM): Współczesne dyski M.2 potrafią osiągać piekielne temperatury. Gdy radiator nie odprowadza ciepła, kontroler dysku zawiesza cały system operacyjny, czekając na obniżenie temperatury.
 
 3. Niestabilne sterowniki karty graficznej (szczególnie po aktualizacjach Windows Update): Konflikt między nowym sterownikiem ekranu a kompozytorem okien Windows 11 potrafi zatrzymać interfejs w ułamku sekundy.
 

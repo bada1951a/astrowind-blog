@@ -19,6 +19,7 @@ theme: "Industrial Blueprint"
 
 
 
+
 <div style="border-left: 4px solid #f59e0b; padding: 12px 16px; margin: 20px 0; background-color: rgba(245,158,11,0.08); border-radius: 4px; color: #111827;">
 <strong>IT Emergency Context:</strong> It is 9:40 AM in our Manhattan office. A company-wide board meeting starts in exactly 20 minutes, and our VP of Operations is staring at her new Windows 11 laptop, visibly frustrated. She needs to rename a dozen critical PDF manifests quickly, but every time she right-clicks, she is greeted by the simplified Windows 11 context menu. The option she needs is buried behind a "Show more options" click. That extra click 50 times a day kills workflow rhythm. As the senior IT systems engineer, I need to fix this permanently right now.
 </div>
@@ -35,11 +36,11 @@ Let us look at why this happens and how you can restore the classic right-click 
 
 Before jumping into the fix, let us understand what is happening under the hood of the Windows Shell.
 
-### 1. UWP Modernization Shift: Microsoft migrated the context menu from a legacy Win32 implementation to a modern Universal Windows Platform (UWP) framework to improve performance and memory usage in the shell.
+1. UWP Modernization Shift: Microsoft migrated the context menu from a legacy Win32 implementation to a modern Universal Windows Platform (UWP) framework to improve performance and memory usage in the shell.
 
-### 2. Namespace Extension Isolation: Third-party applications (like 7-Zip, Git, or enterprise security scanners) used to hook directly into the legacy shell handler, occasionally causing explorer.exe crashes. The new menu isolates these extensions into a secondary "Show more options" layer.
+2. Namespace Extension Isolation: Third-party applications (like 7-Zip, Git, or enterprise security scanners) used to hook directly into the legacy shell handler, occasionally causing explorer.exe crashes. The new menu isolates these extensions into a secondary "Show more options" layer.
 
-### 3. Lack of Native Enterprise Toggle: Frustratingly, Microsoft did not include a simple toggle switch inside the standard Settings app to revert to the classic layout permanently, forcing administrators to use registry keys or command-line overrides.
+3. Lack of Native Enterprise Toggle: Frustratingly, Microsoft did not include a simple toggle switch inside the standard Settings app to revert to the classic layout permanently, forcing administrators to use registry keys or command-line overrides.
 
 ---
 
@@ -52,13 +53,13 @@ You can apply this fix via PowerShell or Command Prompt. It creates the necessar
 
 1. Click on your Start menu, type `cmd`, right-click on Command Prompt, and selectRun as administrator.
 
-### 2. Copy and paste the following command into the terminal window:
+2. Copy and paste the following command into the terminal window:
 
    ```cmd
    reg add "HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\InprocServer32" /f /ve
    ```
 
-### 3. Press Enter. You should see the message: `The operation completed successfully.`
+3. Press Enter. You should see the message: `The operation completed successfully.`
 
 4. Restart Windows Explorer to apply the changes immediately. Open Task Manager(Ctrl + Shift + Esc), findWindows Explorerin the processes list, right-click it, and selectRestart.
 
@@ -75,7 +76,7 @@ If you prefer doing things manually or need to verify the registry key yourself,
 
 2. Type `regedit` and press Enter (approve any User Account Control prompts).
 
-### 3. Navigate through the left-hand tree structure to:
+3. Navigate through the left-hand tree structure to:
 
    `HKEY_CURRENT_USER \ Software \ Classes \ CLSID`
 

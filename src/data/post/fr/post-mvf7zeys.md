@@ -19,6 +19,7 @@ theme: "Cyberpunk Terminal"
 
 
 
+
 Il est 17h55, un vendredi de clôture trimestrielle dans notre open space de La Défense. Le rapport financier consolidé doit partir à la direction générale avant 18h30. Soudain, mon poste de travail se fige net. Le ventilateur du processeur s'emballe au maximum au point de faire un bruit de turbine d'avion, l'écran devient totalement unresponsive, et la souris saccade horriblement. Je regarde le Gestionnaire des tâches : le "Processus système" (System) et `ntoskrnl.exe` s'accaparent 100% de la puissance du CPU. Impossible de cliquer sur quoi que ce soit, les fichiers Excel tournent en arrière-plan sans sauvegarder. La panique totale s'installe.
 
 Ce genre de panne soudaine, je l'ai vue cent fois sur les bureaux de mes collègues. Avant de céder à la tentation de balancer l'unité centrale par la fenêtre du 15ème étage, voyons comment diagnostiquer et terrasser ce bug de surconsommation CPU en quelques minutes.
@@ -37,11 +38,11 @@ Pour couper court aux lenteurs extrêmes, ouvrez l'Invite de commandes en mode a
 
 Avant de bidouiller au hasard, comprenons ce qui se passe sous le capot. Lorsque le "Processus système" s'emballe à 100%, ce n'est généralement pas un virus classique, mais plutôt un dysfonctionnement de bas niveau matériel ou logiciel :
 
-### 1. Une fuite de mémoire ou un pilote défectueux (Driver Leak) : Un pilote de périphérique obsolète (souvent la carte réseau Wi-Fi/Ethernet ou le contrôleur de stockage NVMe) boucle en arrière-plan et sature les interruptions matérielles (DPC).
+1. Une fuite de mémoire ou un pilote défectueux (Driver Leak) : Un pilote de périphérique obsolète (souvent la carte réseau Wi-Fi/Ethernet ou le contrôleur de stockage NVMe) boucle en arrière-plan et sature les interruptions matérielles (DPC).
 
-### 2. Windows Update bloqué ou en boucle : Une mise à jour s'est mal installée, et le service de maintenance tente désespérément de l'appliquer en arrière-plan, monopolisant le processeur.
+2. Windows Update bloqué ou en boucle : Une mise à jour s'est mal installée, et le service de maintenance tente désespérément de l'appliquer en arrière-plan, monopolisant le processeur.
 
-### 3. Un indexeur de recherche corrompu (Windows Search) : L'assistant d'indexation tente d'analyser un fichier corrompu ou un dossier réseau saturé, ce qui provoque une boucle infinie du processus `SearchIndexer.exe` ou `System`.
+3. Un indexeur de recherche corrompu (Windows Search) : L'assistant d'indexation tente d'analyser un fichier corrompu ou un dossier réseau saturé, ce qui provoque une boucle infinie du processus `SearchIndexer.exe` ou `System`.
 
 ---
 
@@ -66,7 +67,7 @@ Puisque le problème touche le cœur du système d'exploitation, nous allons uti
 
 2. Ouvrez l'Invite de commandes en tant qu'administrateur (tapez `cmd` dans la recherche, clic droit -> *Exécuter en tant qu'administrateur*).
 
-### 3. Saisissez la commande de vérification des fichiers intègres : `sfc /scannow` puis validez par Entrée. Laissez l'outil analyser et réparer les fichiers corrompus (comptez 5 à 10 minutes).
+3. Saisissez la commande de vérification des fichiers intègres : `sfc /scannow` puis validez par Entrée. Laissez l'outil analyser et réparer les fichiers corrompus (comptez 5 à 10 minutes).
 
 ### Étape 3 : Gérer les services Windows récalcitrants
 Si le problème persiste après le redémarrage, le coupable est souvent un service en conflit :

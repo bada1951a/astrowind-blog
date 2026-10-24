@@ -19,6 +19,7 @@ theme: "Deep Indigo System"
 
 
 
+
 Jam 4 sore di sebuah gedung perkantoran kawasan Sudirman Jakarta, suasana mendadak tegang luar biasa. Batas waktu pengiriman laporan keuangan tinggal satu jam lagi, tapi layar monitor tiba-tiba membeku (*freezing*). Kipas PC berputar kencang menderu bagaikan mesin jet yang mau lepas landas, sementara kursor tetikus bergerak sangat lambat seperti terjebak di dalam lumpur. Saat tombol kombinasi keramat ditekan untuk membuka Task Manager, pemandangannya bikin jantungan: penggunaan CPU mentok di angka 100 persen penuh, dan pelakunya bukanlah aplikasi berat seperti game atau software rendering, melainkan proses bawaan Windows bernama "System" atau "System and Compressed Memory". 
 
 Panik? Pastinya. Rekan kerja di sebelah mulai keringat dingin karena dokumen Excel penting belum sempat tersimpan. Berbagai cara amatiran langsung dicoba, mulai dari menekan tombol restart paksa di CPU berulang kali, mencabut kabel power, hingga memukul-mukul meja karena kesal. Padahal, tindakan asal-asalan seperti itu justru berisiko merusak sektor *hard drive* atau membuat file laporan korup total. 
@@ -85,7 +86,7 @@ a:
 
 1. Klik tombol Start, ketik `cmd`, lalu klik kanan padaCommand Promptdan pilihRun as administrator.
 
-### 2. Ketik perintah berikut tanpa tanda kutip untuk memeriksa file sistem: `sfc /scannow`
+2. Ketik perintah berikut tanpa tanda kutip untuk memeriksa file sistem: `sfc /scannow`
 
 3. Tekan Enter dan tunggu proses pemindaian selesai (biasanya memakan waktu 10 hingga 15 menit). Sistem akan otomatis memperbaiki file yang rusak.
 

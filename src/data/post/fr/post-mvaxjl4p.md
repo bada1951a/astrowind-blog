@@ -19,6 +19,7 @@ theme: "Cyberpunk Terminal"
 
 
 
+
 <div style="border-left: 4px solid #00ffcc; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,255,204,0.08); border-radius: 4px; font-family: monospace; color: #111827;">
 [ACCÈS RAPIDE CLI / RACCOURCI] Ctrl + Shift + Échap -> Onglet "Démarrage" -> Désactiver l'inutile.
 </div>
@@ -33,11 +34,11 @@ Ce genre de lenteur extrême au boot n'arrive jamais par hasard. Après avoir pe
 
 Pourquoi Windows 10 finit-il par s'effondrer au boot après quelques mois d'utilisation intensive ? Trois coupables reviennent constamment dans nos environnements de travail :
 
-### 1. L'effet "Parasite" des logiciels tiers : À chaque installation (Teams, Spotify, Discord, utilitaires divers), ces applications s'insèrent sournoisement dans le processus de démarrage automatique. Résultat : votre machine essaie de lancer 40 programmes en même temps que le noyau système.
+1. L'effet "Parasite" des logiciels tiers : À chaque installation (Teams, Spotify, Discord, utilitaires divers), ces applications s'insèrent sournoisement dans le processus de démarrage automatique. Résultat : votre machine essaie de lancer 40 programmes en même temps que le noyau système.
 
-### 2. La saturation des E/S du disque : Sur un disque dur classique (HDD) ou même sur un SSD un peu fatigué, faire concourir des dizaines de processus pour accéder au stockage sature instantanément la bande passante. Le processeur s'ennuie, mais le système d'exploitation attend que chaque service réponde.
+2. La saturation des E/S du disque : Sur un disque dur classique (HDD) ou même sur un SSD un peu fatigué, faire concourir des dizaines de processus pour accéder au stockage sature instantanément la bande passante. Le processeur s'ennuie, mais le système d'exploitation attend que chaque service réponde.
 
-### 3. Le service de préchargement inadapté : Des outils de mise à jour automatique en arrière-plan (Adobe, Java, navigateurs) décident de vérifier leurs versions avant même que vous n'ayez pu ouvrir un seul dossier.
+3. Le service de préchargement inadapté : Des outils de mise à jour automatique en arrière-plan (Adobe, Java, navigateurs) décident de vérifier leurs versions avant même que vous n'ayez pu ouvrir un seul dossier.
 
 <div style="border-left: 4px solid #00ffcc; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,255,204,0.08); border-radius: 4px; color: #111827;">
 <strong>Diagnostic minute :</strong> Ne cherchez pas midi à quatorze heures. Dans 90% des cas sur Windows 10, le problème vient directement de la liste des applications lancées en arrière-plan au démarrage de la session.

@@ -19,6 +19,7 @@ theme: "Rosewood Hardware Guide"
 
 
 
+
 **Q1.** 0 phút nữa là đến giờ sếp tổng họp chiến lược quý để duyệt ngân sách IT, tự nhiên cái máy trạm của ông Kế toán trưởng lăn ra chứng "màn hình đen xì". Quạt tản nhiệt nước hú lên như máy bay phản lực cất cánh, đèn LED trên Mainboard sáng rực, bàn phím gõ NumLock không thèm nhấp nháy một cái. Nhìn mặt ổng lúc đó tái mét, mồ hôi hột tuôn rơi vì toàn bộ file báo cáo dòng tiền năm chưa kịp backup nằm trọn trong đó. Đứng sau lưng thở dốc, mẹ kiếp, cảm giác cái ghế IT của mình lúc đó nó lung lay dữ dội hơn bao giờ hết.
 
 ## Góc nhìn chuyên sâu từ phần cứng: Triệu chứng "Hồn lìa khỏi xác"
@@ -29,11 +30,11 @@ theme: "Rosewood Hardware Guide"
 
 Trong môi trường văn phòng doanh nghiệp, có 3 thủ phạm chính gây ra vụ án này:
 
-### 1. Oxi hóa chân tiếp điểm vàng (Golden Fingers): Độ ẩm không khí kết hợp với bụi mịn lọt qua khe case lâu ngày tạo thành một lớp màng cách điện mỏng như tờ giấy lụa.
+1. Oxi hóa chân tiếp điểm vàng (Golden Fingers): Độ ẩm không khí kết hợp với bụi mịn lọt qua khe case lâu ngày tạo thành một lớp màng cách điện mỏng như tờ giấy lụa.
 
-### 2. Lỏng khe cắm do sốc nhiệt hoặc rung lắc: Máy dùng lâu năm, quá trình co giãn vì nhiệt làm chân socket RAM bị hở nhẹ chân tín hiệu (Pins).
+2. Lỏng khe cắm do sốc nhiệt hoặc rung lắc: Máy dùng lâu năm, quá trình co giãn vì nhiệt làm chân socket RAM bị hở nhẹ chân tín hiệu (Pins).
 
-### 3. Lỗi phân vùng bus hoặc dung tích RAM xung đột: Xảy ra sau khi anh em vừa táy máy nâng cấp thêm thanh RAM mới nhưng chưa clear CMOS hoặc bus RAM không đồng bộ.
+3. Lỗi phân vùng bus hoặc dung tích RAM xung đột: Xảy ra sau khi anh em vừa táy máy nâng cấp thêm thanh RAM mới nhưng chưa clear CMOS hoặc bus RAM không đồng bộ.
 
 ---
 
@@ -58,13 +59,13 @@ Tắt nguồn hoàn toàn, rút dây nguồn PSU phía sau. Quan trọng nhất:
 
 Ngay khi máy boot vào được Windows, đừng vội mừng mà tắt máy đi ngủ. Anh em cần chẩn đoán xem hệ thống có bị lỗi phần mềm đi kèm hay không bằng cách tận dụng các công cụ native của Windows:
 
-### 1. Kiểm tra trạng thái thiết bị:Nhấn tổ hợp phím `Windows + X` chọnDevice Manager, kiểm tra xem có dấu chấm vàng nào ở phần System Devices hay bộ nhớ không.
+1. Kiểm tra trạng thái thiết bị:Nhấn tổ hợp phím `Windows + X` chọnDevice Manager, kiểm tra xem có dấu chấm vàng nào ở phần System Devices hay bộ nhớ không.
 
-### 2. Chẩn đoán bộ nhớ Windows (Windows Memory Diagnostic):- MởCommand Prompt bằng quyền Administrator (`cmd` -> Run as Administrator).
+2. Chẩn đoán bộ nhớ Windows (Windows Memory Diagnostic):- MởCommand Prompt bằng quyền Administrator (`cmd` -> Run as Administrator).
 
    - Gõ lệnh: `mdsched.exe` để tiến hành quét lỗi phần cứng RAM toàn diện khi máy khởi động lại lần tiếp theo.
 
-### 3. Quản lý ổ đĩa & phân vùng (Disk Management):Nhấn `Windows + X` -> chọnDisk Management để kiểm tra chắc chắn các ổ cứng cơ hoặc NVMe vẫn nhận đủ phân vùng, không bị ảnh hưởng bởi cú sốc phần cứng vừa rồi.
+3. Quản lý ổ đĩa & phân vùng (Disk Management):Nhấn `Windows + X` -> chọnDisk Management để kiểm tra chắc chắn các ổ cứng cơ hoặc NVMe vẫn nhận đủ phân vùng, không bị ảnh hưởng bởi cú sốc phần cứng vừa rồi.
 
 ---
 

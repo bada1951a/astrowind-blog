@@ -19,6 +19,7 @@ theme: "Bronze Artisan Workshop"
 
 
 
+
 Eram por volta das dez da manhã em um escritório comercial na agitada Avenida Paulista, em São Paulo. O ritmo estava frenético: com o chat corporativo apitando sem parar com pedidos urgentes de correção de erros e cinco ferramentas de trabalho abertas simultaneamente na minha tela, eu precisava entrar em uma reunião de emergência via Teams. Cliquei no link, mas o caos se instalou: silêncio absoluto. Nenhum som saía do meu headset ou das caixas de som, enquanto o ícone de volume na barra de tarefas exibia aquele maldito X vermelho. O desespero bateu, pois os chamados acumulavam e a reunião exigia minha participação imediata. Trabalhando no suporte de TI, sei que esse tipo de falha paralisa qualquer profissional. Depois de testar cabos e reiniciar o navegador às cegas sem sucesso, parei por um instante para aplicar o método correto de diagnóstico no Windows 11. Se você também passou por isso, respire fundo. Vamos resolver essa pane de áudio agora mesmo, direto ao ponto e sem enrolação teórica. <div style="border-left: 4px solid #b45309; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Ferramentas e Atalhos Essenciais:</strong> Tenha sempre à mão o <strong>Gerenciador de Dispositivos</strong>, as <strong>Configurações</strong> do Windows (atalho [Windows + I]) e o bom e velho <strong>Painel de Controle</strong> clássico.
 </div>
@@ -27,11 +28,11 @@ Eram por volta das dez da manhã em um escritório comercial na agitada Avenida 
 
 Antes de sair clicando em tudo, vale entender o que costuma causar essa dor de cabeça nos computadores corporativos de São Paulo:
 
-### 1. Conflito ou corrupção de driver: Atualizações automáticas do Windows Update muitas vezes sobrescrevem o driver de áudio (Realtek, Intel Smart Sound, etc.) por uma versão genérica que simplesmente não conversa direito com o seu hardware.
+1. Conflito ou corrupção de driver: Atualizações automáticas do Windows Update muitas vezes sobrescrevem o driver de áudio (Realtek, Intel Smart Sound, etc.) por uma versão genérica que simplesmente não conversa direito com o seu hardware.
 
-### 2. Dispositivo padrão incorreto: Com múltiplos monitores HDMI, fones Bluetooth e docks USB conectados, o Windows 11 frequentemente se perde e tenta enviar o som para uma saída que está desligada ou desconectada.
+2. Dispositivo padrão incorreto: Com múltiplos monitores HDMI, fones Bluetooth e docks USB conectados, o Windows 11 frequentemente se perde e tenta enviar o som para uma saída que está desligada ou desconectada.
 
-### 3. Serviços de áudio travados: O serviço central de gerenciamento de áudio do sistema operacional pode ter sofrido um crash silencioso em segundo plano devido ao alto uso de memória na multitarefa. ---
+3. Serviços de áudio travados: O serviço central de gerenciamento de áudio do sistema operacional pode ter sofrido um crash silencioso em segundo plano devido ao alto uso de memória na multitarefa. ---
 
 ## Passo a Passo para Recuperar o Som do seu PC
 
@@ -43,7 +44,7 @@ Muitas vezes o problema é apenas a rota do som configurada errada.
 
 1. Pressione [Windows + I] para abrir asConfigurações.
 
-## 2. Vá em Sistemae depois clique emSom.
+2. Vá em Sistemae depois clique emSom.
 
 3. Na seção Saída, verifique qual dispositivo está selecionado. Clique na seta ao lado para expandir e certifique-se de que o seu fone ou alto-falante principal está escolhido.
 
@@ -67,7 +68,7 @@ Quando o sistema operacional trava o subsistema de som, reiniciar o serviço res
 
 1. Pressione [Windows + R] para abrir a caixa Executar.
 
-## 2. Digite `services.msc` e aperte Enter.
+2. Digite `services.msc` e aperte Enter.
 
 3. Na lista de serviços, role para baixo até encontrar Áudio do Windows (*Windows Audio*).
 
