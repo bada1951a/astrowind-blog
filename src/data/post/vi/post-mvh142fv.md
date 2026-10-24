@@ -10,6 +10,7 @@ theme: "Graphite Technical Paper"
 
 
 
+
 Đồng hồ góc phải màn hình nhảy đúng 15:45, chỉ còn 15 phút nữa là đến hạn chót nộp báo cáo doanh thu quý cho sếp tổng tại văn phòng trung tâm Quận 1, TP.HCM. Đột nhiên, chiếc máy tính Windows 11 đời mới của tôi khựng lại. Chuột cứng ngắc, bàn phím bấm không ăn, màn hình đứng hình ở một slide PowerPoint dang dở. Khởi động nóng bằng nút nguồn, vào lại chưa đầy 3 phút sau lại tiếp tục đóng băng hoàn toàn mà không kịp báo lỗi màn hình xanh (BSOD). Mồ hôi túa ra như tắm giữa phòng máy lạnh, khách hàng và cấp trên đang giục dồn dập qua tin nhắn.
 
 Trước đây, khi gặp tình trạng này, phản xạ đầu tiên của dân văn phòng lẫn nhiều anh em làm IT non tay là cài lại toàn bộ Windows, hoặc tháo tung thùng máy ra phủi bụi, cắm lại thanh RAM cho có lệ. Nhưng cách làm mò mẫm đó ngốn cả tiếng đồng hồ quý giá và thường chẳng giải quyết được tận gốc vấn đề, để rồi ngày mai lỗi cũ lại tái diễn.

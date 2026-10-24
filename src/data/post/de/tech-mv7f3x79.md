@@ -10,6 +10,7 @@ theme: "Dracula Purple Dev"
 
 
 
+
 Montagmorgen, 08:15 Uhr im Großraumbüro. Ein Kollege schließt sein ThinkPad an die Thunderbolt-Dockingstation an. Auf dem internen Display läuft alles geschmeidig, doch die beiden externen 4K-Bildschirme verhalten sich katastrophal: Monitor 1 meldet stoisch *„Kein Signal – Eingang wird gesucht“*, während Monitor 2 im Dreisekundentakt zwischen tiefem Schwarz und zuckendem Desktop hin- und herflackert. Das Phänomen begegnet mir in meiner täglichen Praxis als Systemadministrator dutzende Male im Monat – insbesondere nach kumulativen Windows-Updates oder Firmware-Pushes. 
 
 Die Ursache liegt selten an defekten Panels, sondern fast ausnahmslos in korrupten Treiberzuständen, asynchronen Handshakes im Display-Subsystem oder fehlerhaft interpretierten EDID-Tabellen. Wenn einfaches Aus- und Einstecken keine Besserung bringt, müssen Sie tiefer in den Windows-Grafikstack eingreifen. In diesem Leitfaden zeige ich Ihnen exakt die Methodik, mit der wir solche Störungen im Enterprise-Support reproduzierbar lösen.

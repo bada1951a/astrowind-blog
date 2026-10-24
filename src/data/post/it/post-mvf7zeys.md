@@ -10,6 +10,7 @@ theme: "Pure Titanium Clean"
 
 
 
+
 Erano le 17:50 di un martedì infernale nel nostro ufficio al Centro direzionale di Milano. Mancavano dieci minuti alla deadline tassativa per l'invio del report trimestrale al board europeo, e la postazione principale del controllo di gestione si è letteralmente congelata. La ventola del PC sembrava stesse per decollare verso Linate, lo schermo rispondeva ai click con minuti di ritardo e il cursore si muoveva a scatti. Ho aperto di scatto *Gestione attività* usando la combinazione rapida Ctrl+Maiusc+Esc, e lo spettacolo era impietoso: l'utilizzo della CPU inchiodato al 100%, con il famigerato processo di sistema "System" (e il relativo modulo `ntoskrnl.exe`) che divorava ogni singolo ciclo di clock disponibile. 
 
 All'inizio il panico ha quasi preso il sopravvento. La prima reazione istintiva di chiunque sarebbe stata quella di tenere premuto il tasto di accensione per un hard reset brutale. Ma spegnere la macchina in quel momento esatto significava perdere gli ultimi dati non salvati del foglio di calcolo, corrompere il file di database locale e mancare la consegna al board. 

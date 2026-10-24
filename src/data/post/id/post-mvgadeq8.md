@@ -10,6 +10,7 @@ theme: "Modern Minimalist Slate"
 
 
 
+
 Jam 4 sore di salah satu gedung perkantoran kawasan Sudirman Jakarta, suasana mendadak tegang luar biasa. Tenggat waktu laporan keuangan tahunan tinggal dua jam lagi, namun layar PC salah satu manajer tiba-tiba tertutup tulisan transparan mengganggu di pojok kanan bawah: *Activate Windows - Go to Settings to activate Windows*. Bukan cuma soal estetika presentasi yang mau dikirim ke direksi, watermark menyebalkan ini bikin beberapa aplikasi shortcut terkunci dan performa sistem terasa nge-lag gara-gara proses background Windows Script Host yang nyangkut. Panik? Pastinya. Apalagi tombol pengaturan lisensi di Control Panel malah mental *error code* gara-gara koneksi kantor yang dibatasi *firewall*.
 
 Sebelum panik berlanjut dan berujung bongkar hardware atau install ulang yang bakal makan waktu berjam-jam, sebagai teknisi infrastruktur IT, saya punya trik kilat yang aman, legal secara fungsional untuk *staging* darurat, dan pastinya bersih dari virus atau file *crack* abal-abal yang sering disebar situs download ilegal. Kita cukup pakai Command Prompt (CMD) bawaan sistem.

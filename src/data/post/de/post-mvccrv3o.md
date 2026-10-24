@@ -10,6 +10,7 @@ theme: "Nordic Clean Ice"
 
 
 
+
 Es war exakt 21:45 Uhr an einem Donnerstagabend in unserem Berliner Tech-Hub im Prenzlauer Berg. Wir standen kurz vor dem finalen Rollout unserer neuen Microservices-Infrastruktur, als auf dem Haupt-Build-Server plötzlich der berüchtigte blaue Bildschirm flackerte: STOP 0x0000000
 
 a: IRQL_NOT_LESS_OR_EQUAL. 

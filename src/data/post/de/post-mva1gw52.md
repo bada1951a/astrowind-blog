@@ -10,6 +10,7 @@ theme: "Matte Black stealth"
 
 
 
+
 Es war kurz vor 17 Uhr in unserem Büro in Berlin-Mitte. Mitten in der finalen Vorbereitung für den Rollout unserer neuen Microservices-Architektur ploppte auf meinem Hauptrechner die gefürchtete rote Warnmeldung auf: "Speicherplatz auf C: wird knapp. Nur noch 1,2 GB verfügbar." Der Build-Prozess in Docker brach ab, Visual Studio Code fror ein und die Lüfter drehten am Limit. Keine Zeit für langes Rätselraten – das System musste sofort bereinigt werden, ohne dass wichtige Konfigurationen oder Logs für den Release verloren gingen.
 
 Wer in einer schnelllebigen IT-Umgebung arbeitet, kennt das Problem. Windows 11 neigt dazu, sich im Laufe der Zeit unbemerkt mit Gigabytes an temporärem Datenmüll vollzusaugen. Hier ist mein praxiserprobter Leitfaden, wie du deine C-Platte in wenigen Minuten wieder freiräumst, ohne dein System zu gefährden.

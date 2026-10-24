@@ -10,6 +10,7 @@ theme: "Retro Monokai"
 
 
 
+
 <div style="border-left: 4px solid #a6e22e; padding: 12px 16px; margin: 20px 0; background-color: #272822; color: #f8f8f2; border-radius: 4px; font-family: 'Courier New', Courier, monospace;">
 [08:45:12] SYSTEM_ALERT: CPU Load 98% | RAM Usage 95% | User Panic Level: MAXIMUM<br>
 [08:45:18] LOG: "Mas, laptop gue stuck di logo Windows! Padahal 5 menit lagi mau meeting sama client VIP!"<br>

@@ -10,6 +10,7 @@ theme: "Pure Titanium Clean"
 
 
 
+
 The Slack notifications were blowing up my second monitor, our product release sync was starting in exactly four minutes, and my mouse suddenly refused to register a single click on the Windows 11 taskbar. Clicking the Start menu did nothing, the system tray icons were completely unresponsive, and switching between my open IDE windows felt like trying to drive a car with square wheels. When you are sitting in a fast-paced Silicon Valley tech firm trying to push a pre-release build, a frozen taskbar isn't just an annoyance—it is an absolute workflow emergency. 
 
 We have all been there. You mash the Windows key, you frantically click around the clock and Wi-Fi icons, and nothing moves. Instead of panic-rebooting your entire machine and losing your open dev environments, let's walk through why this happens and how to fix it in under two minutes using native tools.

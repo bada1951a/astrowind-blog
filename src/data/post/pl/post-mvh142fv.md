@@ -10,6 +10,7 @@ theme: "High-Contrast Charcoal"
 
 
 
+
 Była dokładnie 10:45 rano, a w warszawskim centrum biznesowym przy Rondzie Daszyńskiego panowała gęsta atmosfera. Za kwadrans miało ruszyć kluczowe spotkanie zarządu z inwestorami z Frankfurtu, a stacja robocizna naszego głównego analityka finansowego zamarzła na amen. Ekran zamroził się w bezruchu, kursor myszy nie reagował, a twardy reset przyciskiem na obudowie to była jedyna deska ratunku. Najgorsze było to, że to nie pierwszy taki zwis w tym tygodniu. Klient patrzył na mnie z paniką w oczach, pytając, czy jego modele finansowe przetrwały. Jako inżynier wsparcia IT wiedziałem, że bezmyślne przeinstalowywanie systemu nic tu nie da. Czas było wreszcie sprawdzić, co tak naprawdę boli ten komputer.
 
 ### Trzy najczęstsze powody losowych zwiech w Windows 11
