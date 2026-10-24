@@ -16,7 +16,8 @@ theme: "High-Contrast Charcoal"
 
 
 
-1. [Opening Story/Problem]
+
+## 1. [Opening Story/Problem]
 
 丸の内のオフィスビルで総務・セキュリティ担当として働く私に、冷や汗が出るような瞬間が訪れました。今日は四半期に一度の社内ITセキュリティ監査の提出期限。あと30分で自社の端末状況を示す自己診断リポートを完成させ、管理システムへアップロードしなければならないという緊迫した状況です。
 
@@ -26,7 +27,7 @@ theme: "High-Contrast Charcoal"
 
 ![Tech Troubleshooting Guide](/images/tech-photo/tech-photo%20(11).jpg)
 
-2. [Root Cause Breakdown]
+## 2. [Root Cause Breakdown]
 
 なぜ、突然 **Win + Shift + S** が反応しなくなるのでしょうか。現場のサポート経験から、主な原因は以下の3つに集約されます。
 
@@ -41,7 +42,7 @@ theme: "High-Contrast Charcoal"
 3. アプリパッケージの破損（ファイル破損）
    Windows Updateの適用直後などに、Snipping Toolのシステムファイルやレジストリの一部が破損し、正常に起動できなくなっている状態。
 
-3. [Step-by-Step Resolution]
+## 3. [Step-by-Step Resolution]
 
 ここからは、実際に監査提出前の緊迫した現場で実行し、数秒で問題を解決した具体的なステップを順に解説します。
 
@@ -74,7 +75,7 @@ Windowsの通知センターやクリップボード機能がブロックして�
 Get-AppxPackage Microsoft.ScreenSketch -AllUsers | Foreach {Add-AppxPackage -DisableDevelopmentMode -Register "(_.InstallLocation)\AppXManifest.xml"}
 ```
 
-4. [Expert Advice]
+## 4. [Expert Advice]
 
 <div style="border-left: 4px solid #e11d48; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>プロからのデータ損失防止アドバイス：</strong> 監査や提出物を作成する際は、必ず定期的なローカルバックアップ（Ctrl + S）を癖づけてください。また、万が一Snipping Toolが復旧しない場合の代替策として、ペイントアプリをあらかじめ起動しておくか、Windows標準の「Print Screen（PrtScn）」キー単体で画面全体をピクチャフォルダに自動保存する設定（設定 ＞ アクセシビリティ ＞ キーボード ＞ Print Screenボタンを使用して画面領域切り取りを開く）を有効にしておくと、いざという時の保険になります。
@@ -82,7 +83,7 @@ Get-AppxPackage Microsoft.ScreenSketch -AllUsers | Foreach {Add-AppxPackage -Dis
 
 ハードウェア的な観点からも補足します。一部のゲーミングキーボードや外付けキーボードでは、「Winキーロック（Win Lock）」が物理的あるいはソフトウェア的に有効になっており、これが原因で **Win** キーを含むショートカットがすべて無効化されている場合があります。キーボード本体のインジケーターランプ（通常は鍵マーク）を確認してください。
 
-## 5. Frequently Asked Questions
+5. Frequently Asked Questions
 
 Q. 修復やリセットを行っても、どうしても Win + Shift + S が反応しません。他に手はありますか？
 

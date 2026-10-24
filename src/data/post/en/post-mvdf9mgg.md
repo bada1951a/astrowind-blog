@@ -25,6 +25,7 @@ theme: "Electric Cyan Speed"
 
 
 
+
 The Slack workspace for our Mountain View office engineering team was blowing up right before our quarterly release sync. My machine decided it was the absolute best moment to install a cumulative Windows 11 update, and of course, it completely froze at 100 percent. The status bar had been mocking me for over 45 minutes, the fan was spinning at jet-engine speeds, and my presentation deck was trapped behind a non-responsive lock screen. Hard-rebooting during a finalizing state is a gamble nobody wants to take, but staring at an immobile progress ring while executives wait on a Google Meet call forces your hand. 
 
 <div style="border-left: 4px solid #06b6d4; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
@@ -92,7 +93,7 @@ When dealing with low-level OS components, a few precautions will save you from 
 - Avoid Third-Party "Registry Cleaners": They often strip critical permission ACLs from the `SoftwareDistribution` folder, making future updates impossible without a manual permissions reset.
 - Run DISM Before Re-trying: If a fresh cache download still hangs, run `DISM.exe /Online /Cleanup-image /Restorehealth` followed by `sfc /scannow` in your admin terminal to repair the underlying system image before attempting the update again.
 
-Frequently Asked Questions
+## Frequently Asked Questions
 
 Is it safe to delete everything inside the SoftwareDistribution folder?
 Yes, absolutely. This folder is purely a staging and cache directory for downloaded update files. Once you clear it, Windows will simply re-download any missing installation packages cleanly.

@@ -16,7 +16,8 @@ theme: "Cobalt Enterprise Lab"
 
 
 
-1. [Opening Story/Problem]
+
+## 1. [Opening Story/Problem]
 
 There I was, aboard the high-speed train cutting through the countryside, tethering my laptop to a notoriously choppy mobile hotspot. An urgent email from the New York finance executive just hit my inbox: the client's production deployment report contained a critical UI glitch, and they needed visual proof immediately. I instinctively pressed **Win + Shift + S** to capture the exact error window. 
 
@@ -32,7 +33,7 @@ If you are reading this because your **Win + Shift + S** shortcut suddenly stopp
 
 ![Tech Troubleshooting Guide](/images/tech-photo/keyboard%20(2).png)
 
-2. [Root Cause Breakdown]
+## 2. [Root Cause Breakdown]
 
 Before blindly mashing keys or restarting your PC, let us look at why this specific Windows 11 shortcut breaks. In my experience troubleshooting hundreds of enterprise laptops, the issue usually boils down to three main culprits:
 
@@ -42,7 +43,7 @@ Before blindly mashing keys or restarting your PC, let us look at why this speci
 
 3. Corrupted App Package or Missing Updates: The modern WinRT application package for Screen Sketch (the engine behind the modern Snipping Tool) often becomes corrupted due to failed Windows updates or aggressive endpoint security software clearing background app states.
 
-3. [Step-by-Step Resolution]
+## 3. [Step-by-Step Resolution]
 
 Let us roll up our sleeves and fix this step by step. Follow these exact procedures right from your desktop.
 
@@ -72,11 +73,11 @@ Sometimes the shortcut gets toggled off or notifications are blocked.
 <code>Get-AppxPackage *Microsoft.ScreenSketch* -AllUsers | Foreach {Add-AppxPackage -DisableDevelopmentMode -Register "(_.InstallLocation)\AppXManifest.xml"}</code>
 </div>
 
-4. [Expert Advice]
+## 4. [Expert Advice]
 
 As an enterprise troubleshooter, I always advise keeping a fallback plan handy. If you manage corporate fleets via Group Policy or Intune, ensure that security baselines are not overly aggressively disabling background apps or modern shell features. Furthermore, check your physical keyboard's **Fn Lock** or gaming mode switches—many mechanical keyboards disable the Windows key entirely when a hardware profile switch is accidentally triggered, which instantly breaks any shortcut involving the **Win** key.
 
-## 5. Frequently Asked Questions
+5. Frequently Asked Questions
 
 Q: What should I do if **Win + Shift + S** still does not work after trying all these steps?
 

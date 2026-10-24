@@ -25,6 +25,7 @@ theme: "Cyberpunk Terminal"
 
 
 
+
 Eran las 4:55 PM de un viernes. El *jefe de proyectos* tenía que presentar los números del Q3 en diez minutos a la dirección general, y su estación de trabajo decidió hacer un cosplay perfecto de un pisapapeles caro: los ventiladores rugían a tope, las luces RGB parpadeaban con alegría, pero el monitor seguía completamente negro, soltando el maldito aviso de *Sin señal*. El tipo estaba a un segundo de estampar el teclado contra el monitor. Sudor frío, la sala de juntas esperándoles, y yo con cara de payaso intentando averiguar por qué la BIOS ni siquiera hacía el clásico *beep* de arranque.
 
 <div style="border-left: 4px solid #00ffcc; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,255,204,0.05); border-radius: 4px; font-family: monospace;">
@@ -103,7 +104,7 @@ Además, si al encender el equipo escuchas una sinfonía de pitidos continuos (b
 
 ---
 
-Frequently Asked Questions (FAQ)
+## Frequently Asked Questions (FAQ)
 
 Q1: ¿Por qué el PC enciende (giran los ventiladores y encienden luces) pero la pantalla sigue negra si el problema es la RAM?  
 *R:* Porque la placa base tiene energía para alimentar los periféricos básicos y ventiladores, pero el procesador no puede ejecutar el código de la BIOS (POST) sin la memoria RAM activa. Sin RAM, el sistema operativo ni siquiera empieza a cargar, por lo que la tarjeta gráfica no recibe la orden de enviar señal de vídeo al monitor.

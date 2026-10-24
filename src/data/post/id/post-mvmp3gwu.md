@@ -16,7 +16,8 @@ theme: "Teal Matrix Digital"
 
 
 
-1. [Opening Story/Problem]
+
+## 1. [Opening Story/Problem]
 
 Pagi yang cukup sibuk di kawasan SCBD Jakarta, tepatnya di salah satu lantai gedung perkantoran modern. Hari itu, saya baru saja merakit dan menyiapkan sebuah PC spesifikasi tinggi baru untuk keperluan *development* dan *graphic design* berat. Sebagai bagian dari standar operasional IT, saya harus segera memasang berbagai lisensi software perusahaan, mengambil tangkapan layar dokumentasi instalasi, dan mengirimkannya ke tim manajemen aset. 
 
@@ -24,7 +25,7 @@ Di tengah proses setup yang serba cepat ini, tiba-tiba tombol kombinasi keramat 
 
 ![Tech Troubleshooting Guide](/images/tech-photo/system%20(5).png)
 
-2. [Root Cause Breakdown]
+## 2. [Root Cause Breakdown]
 
 Setelah melakukan penelusuran cepat ala *troubleshooter* senior, masalah gagalnya shortcut **Win + Shift + S** di Windows 11 umumnya disebabkan oleh beberapa hal teknis yang sering luput dari perhatian:
 
@@ -36,7 +37,7 @@ Setelah melakukan penelusuran cepat ala *troubleshooter* senior, masalah gagalny
 <strong>Catatan Trigger Sistem:</strong> Pada PC workstation baru, seringkali modul integrasi sistem Windows mengalami tunda muat (delay loading) akibat proses sinkronisasi cloud akun Microsoft yang berjalan bersamaan di latar belakang.
 </div>
 
-3. [Step-by-Step Resolution]
+## 3. [Step-by-Step Resolution]
 
 Mari kita selesaikan masalah ini langkah demi langkah dengan panduan praktis yang mudah diikuti langsung dari meja kerja Anda.
 
@@ -75,11 +76,11 @@ Jika kedua cara di atas belum membuahkan hasil, kita perlu melakukan *Reset* ata
 
 5. Gulir ke bawah, klik tombol **Repair**. Jika masih belum bisa, klik tombol **Reset** di bawahnya untuk mengembalikan aplikasi ke kondisi seperti baru terinstal.
 
-4. [Expert Advice]
+## 4. [Expert Advice]
 
 Sebagai catatan tambahan dari pengalaman di lapangan, hindari menggunakan aplikasi pihak ketiga pembersih *registry* sembarangan yang sering mengklaim bisa "mengoptimalkan" Windows 11. Seringkali aplikasi pembersih tersebut justru menghapus *registry key* penting yang mengatur asosiasi shortcut global seperti **Win + Shift + S**. Selalu lakukan pembaruan sistem (*Windows Update*) secara berkala karena Microsoft sering merilis *patch* perbaikan khusus untuk bug UWP apps seperti ini.
 
-## 5. Frequently Asked Questions
+5. Frequently Asked Questions
 
 Q: Kenapa shortcut Win + Shift + S saya tiba-tiba berubah fungsi menjadi membuka aplikasi lain?
 

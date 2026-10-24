@@ -25,6 +25,7 @@ theme: "Dracula Purple Dev"
 
 
 
+
 Montagmorgen, 08:15 Uhr im Großraumbüro. Ein Kollege schließt sein ThinkPad an die Thunderbolt-Dockingstation an. Auf dem internen Display läuft alles geschmeidig, doch die beiden externen 4K-Bildschirme verhalten sich katastrophal: Monitor 1 meldet stoisch *„Kein Signal – Eingang wird gesucht“*, während Monitor 2 im Dreisekundentakt zwischen tiefem Schwarz und zuckendem Desktop hin- und herflackert. Das Phänomen begegnet mir in meiner täglichen Praxis als Systemadministrator dutzende Male im Monat – insbesondere nach kumulativen Windows-Updates oder Firmware-Pushes. 
 
 Die Ursache liegt selten an defekten Panels, sondern fast ausnahmslos in korrupten Treiberzuständen, asynchronen Handshakes im Display-Subsystem oder fehlerhaft interpretierten EDID-Tabellen. Wenn einfaches Aus- und Einstecken keine Besserung bringt, müssen Sie tiefer in den Windows-Grafikstack eingreifen. In diesem Leitfaden zeige ich Ihnen exakt die Methodik, mit der wir solche Störungen im Enterprise-Support reproduzierbar lösen.
@@ -40,7 +41,7 @@ Bevor wir Komponenten deinstallieren, müssen wir verstehen, an welcher Schnitts
   Die meisten modernen Business-Laptops nutzen eine <em>Hybrid-Architektur</em> (Intel Iris Xe / AMD Radeon 600M/700M als iGPU gekoppelt mit einer dedizierten NVIDIA RTX Laptop GPU). Externe Videoausgänge werden häufig direkt von der dGPU bedient oder über den MUX-Switch durch die iGPU geroutet. Stimmt die interne Kommunikation zwischen Desktop Window Manager (DWM) und Grafiktreiber nicht, bricht der Handshake zusammen.
 </div>
 
-## 1. DWM- und HDCP-Handshake-Timeouts im Hybrid-Grafikverbund
+1. DWM- und HDCP-Handshake-Timeouts im Hybrid-Grafikverbund
 Beim Anschließen eines externen Monitors handeln Grafikkarte und Display via I2C-Bus über das DDC/CI-Protokoll die unterstützten Auflösungen (EDID) sowie den Kopierschutzverschlüsselungs-Status (HDCP) aus. 
 * Schlägt die HDCP-Aushandlung fehl – oft ausgelöst durch veraltete TCON-Controller-Firmware im Monitor oder Buggy-Treiber-Overlays –, deaktiviert der Treiber die TMDS- bzw. DisplayPort-Lanes präventiv.
 * Das Resultat: Das Bild verschwindet für 1 bis 2 Sekunden, kehrt zurück, sobald der Treiber einen Retry wagt, und bricht erneut ab. Es entsteht das typische rhythmische Flackern (*Flicker-Loop*).

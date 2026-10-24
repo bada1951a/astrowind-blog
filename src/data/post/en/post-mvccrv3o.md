@@ -25,6 +25,7 @@ theme: "Pastel Lavender Tech"
 
 
 
+
 <div style="border-left: 4px solid #7c3aed; padding: 12px 16px; margin: 20px 0; background-color: rgba(124,58,237,0.06); border-radius: 4px; color: #111827;">
 <strong>Quick Summary FAQ (Top 5 User Questions):</strong><br>
 
@@ -117,7 +118,7 @@ BSODs like `0x0000000a` are annoying, but they serve as a valuable canary in the
 
 ---
 
-Frequently Asked Questions (FAQ)
+## Frequently Asked Questions (FAQ)
 
 1. Can an overheating CPU cause stop code 0x0000000a? Indirectly, yes. Extreme thermal throttling or unstable voltage delivery can cause memory controller glitches on the CPU die, leading to memory access violations. Ensure your cooling fans and heatsinks are clear of dust.
 

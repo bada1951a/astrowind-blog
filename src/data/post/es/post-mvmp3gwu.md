@@ -16,6 +16,7 @@ theme: "Industrial Blueprint"
 
 
 
+
 1. El Momento de Pánico en la Sala de Reuniones
 
 Eran las 10:45 de la mañana en el flamante edificio corporativo situado en pleno Paseo de la Castellana en Madrid. Todo estaba listo para la gran demostración ante los directivos de nuestro principal cliente. Tenía mi portátil conectado al proyector de la sala principal y el proyector mostraba la pantalla de inicio perfectamente. En cuestión de minutos, los directivos entrarían para ver en vivo una nueva arquitectura de red y la interfaz de usuario optimizada que habíamos preparado durante semanas. 
@@ -32,7 +33,7 @@ Volví a pulsar el teclado con más fuerza, asegurándome de presionar bien cada
 
 ![Tech Troubleshooting Guide](/images/tech-photo/tech-photos%20(3).jpg)
 
-## 2. Root Cause Breakdown
+2. Root Cause Breakdown
 
 ¿Por qué demonios deja de funcionar un atajo tan básico en Windows 11? Tras revisar cientos de equipos en entornos corporativos, el problema rara vez es un fallo físico del teclado. En el 99 por ciento de los casos, la raíz del problema se divide en tres culpables habituales dentro del ecosistema de software de Microsoft:
 
@@ -42,7 +43,7 @@ Volví a pulsar el teclado con más fuerza, asegurándome de presionar bien cada
 
 3. Corrupción en la caché de la aplicación o actualizaciones pendientes: A veces, una actualización acumulativa de Windows corrompe el registro o la caché de la aplicación universal (UWP), impidiendo que el servicio responda a los ganchos de teclado (*keyboard hooks*).
 
-## 3. Step-by-Step Resolution
+3. Step-by-Step Resolution
 
 Para solucionar este inconveniente de forma quirúrgica y rápida, vamos a seguir tres métodos infalibles ordenados del más rápido al más avanzado. No necesitas reiniciar el equipo si sigues estos pasos al pie de la letra.
 
@@ -91,7 +92,7 @@ Si los métodos anteriores fallan, vamos a limpiar los datos corruptos de la apl
 Get-AppxPackage *ScreenSketch* -AllUsers | Foreach {Add-AppxPackage -DisableDevelopmentMode -Register "(_.InstallLocation)\AppXManifest.xml"}
 ```
 
-## 4. Expert Advice
+4. Expert Advice
 
 Como técnico de soporte hardware y sistemas, déjame darte un consejo de campo para evitar pasar vergüenza ante un cliente. Siempre ten un plan B en tu arsenal. 
 
@@ -100,7 +101,7 @@ Si estás en medio de una crisis de tiempo y el atajo de Windows 11 sigue fallan
 * **La tecla Impr Pant (PrtScn):** Puedes configurar Windows en **Configuración > Accesibilidad > Teclado** para que la tecla de impresión de pantalla abra directamente la herramienta de recortes sin necesidad de pulsar tres teclas a la vez.
 * **Software alternativo portátil:** Lleva siempre en tu memoria USB corporativa herramientas ligeras y portátiles como *Greenshot* o *Lightshot*. No requieren instalación pesada, corren desde el explorador y salvan cualquier demostración en cuestión de segundos.
 
-## 5. Frequently Asked Questions
+5. Frequently Asked Questions
 
 Q: ¿Qué hago si mi teclado no tiene la tecla Windows o está dañada?
 

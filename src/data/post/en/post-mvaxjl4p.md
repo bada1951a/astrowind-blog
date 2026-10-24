@@ -25,6 +25,7 @@ theme: "High-Contrast Charcoal"
 
 
 
+
 My Slack was blowing up with notifications, and our executive tech sync for the upcoming product release was scheduled to start in literally five minutes. I slammed the lid of my laptop open at my desk in our Manhattan office, only to watch the Windows 10 login screen freeze for a agonizing three minutes while loading twenty different background utilities I never asked for. If you have ever stared at a spinning circle while your CPU fan roars like a jet engine right before a critical meeting, you know the exact brand of panic I was feeling. 
 
 Let's fix this right now so it never happens to you again. You can reclaim your boot time in less than a minute.
@@ -68,7 +69,7 @@ Expert Advice for Long-Term System Health
 
 Disabling startup programs is the fastest band-aid, but maintaining a snappy workflow requires a bit of ongoing hygiene. Every few months, review your startup tab again. Software developers love to re-enable auto-start flags during major application updates. If you notice your boot times creeping back up, a quick 30-second trip to Task Manager will keep your machine running at peak Silicon Valley efficiency.
 
-Frequently Asked Questions
+## Frequently Asked Questions
 
 Will disabling a program in Startup prevent me from using it later?
 No. Disabling an app from starting automatically simply means it won't run in the background from the moment you turn on your PC. You can still open and use the application normally by clicking its desktop icon or searching for it in the Start menu whenever you actually need it.

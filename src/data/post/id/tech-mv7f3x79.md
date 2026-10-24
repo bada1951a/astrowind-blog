@@ -25,6 +25,7 @@ theme: "Deep Ocean Cobalt"
 
 
 
+
 Sebagai staf infrastruktur IT yang mengelola ratusan workstation di gedung perkantoran multi-tenant, kasus monitor eksternal mendadak menampilkan pesan *"No Signal"* atau berkedip hitam (*flickering*) setiap beberapa detik adalah makanan sehari-hari. Masalah ini kerap memuncak pada Senin pagi, terutama setelah sistem operasi mengunduh pembaruan rutin akhir pekan atau ketika laptop baru saja dilepas-pasang dari docking station Type-C/Thunderbolt. 
 
 Ketika pengguna mendapati layar kedua mereka mati, reaksi pertama biasanya menyalahkan kabel HDMI yang longgar atau menganggap monitor rusak total. Namun, dalam lebih dari 80% kasus yang saya tangani di lapangan, sumber masalah utamanya berakar pada kegagalan komunikasi lapisan perangkat lunak grafis: tumpukan driver (*driver stack*) yang korup, kegagalan negosiasi EDID (*Extended Display Identification Data*), serta konflik manajemen daya antara chip grafis terintegrasi (iGPU) dan grafis diskrit (dGPU).
@@ -63,7 +64,7 @@ Sebelum melangkah ke tindakan perbaikan, penting untuk memetakan di mana kegagal
 
 Berdasarkan arsitektur di atas, tiga akar masalah teknis yang paling sering memicu malfungsi dual monitor adalah:
 
-## 1. Kegagalan Handshake EDID dan Akumulasi Cache Registri
+1. Kegagalan Handshake EDID dan Akumulasi Cache Registri
 Setiap monitor mengirimkan data EDID yang berisi resolusi native, profil warna, dan batas *refresh rate* ke kartu grafis. Windows menyimpan data ini di dalam registri sistem. Ketika laptop sering terhubung ke berbagai monitor, proyektor ruang rapat, atau docking station yang berbeda, cache registri display menjadi tumpang tindih (*stale configuration*). Akibatnya, GPU mencoba mengirimkan parameter sinyal yang tidak lagi didukung oleh monitor tujuan.
 
 ![Hardware Diagnostic & Troubleshooting](https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe? auto=format&fit=crop&w=1000&h=550&q=80)

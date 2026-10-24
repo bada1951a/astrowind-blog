@@ -25,6 +25,7 @@ theme: "Mint Fresh Engineering"
 
 
 
+
 Sáng nay vừa bước chân vào văn phòng ở khu công nghệ phần mềm Đà Nẵng, đồng nghiệp bên bàn kế bên đã hớt hải chạy sang kêu cứu vì chiếc laptop làm việc chính cứ đơ cứng ở màn hình "Working on updates... 100%" suốt hơn hai tiếng đồng hồ. Sếp lớn thì đang chuẩn bị cuộc họp trực tuyến với đối tác, còn thanh niên này thì bất lực nhìn vòng tròn quay đều không lối thoát. Khởi động lại bằng nút nguồn cứng thì máy lại lăn ra lỗi vòng lặp boot, đúng là một cú sốc đầu ngày khiến bao kế hoạch đổ bể.
 
 <div style="border-left: 4px solid #059669; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">

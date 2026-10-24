@@ -25,6 +25,7 @@ theme: "Cyberpunk Terminal"
 
 
 
+
 Il est 17h55, un vendredi de clôture trimestrielle dans notre open space de La Défense. Le rapport financier consolidé doit partir à la direction générale avant 18h30. Soudain, mon poste de travail se fige net. Le ventilateur du processeur s'emballe au maximum au point de faire un bruit de turbine d'avion, l'écran devient totalement unresponsive, et la souris saccade horriblement. Je regarde le Gestionnaire des tâches : le "Processus système" (System) et `ntoskrnl.exe` s'accaparent 100% de la puissance du CPU. Impossible de cliquer sur quoi que ce soit, les fichiers Excel tournent en arrière-plan sans sauvegarder. La panique totale s'installe.
 
 Ce genre de panne soudaine, je l'ai vue cent fois sur les bureaux de mes collègues. Avant de céder à la tentation de balancer l'unité centrale par la fenêtre du 15ème étage, voyons comment diagnostiquer et terrasser ce bug de surconsommation CPU en quelques minutes.

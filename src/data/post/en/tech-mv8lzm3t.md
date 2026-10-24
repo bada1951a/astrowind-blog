@@ -25,6 +25,7 @@ theme: "Cyberpunk Terminal"
 
 
 
+
 <div style="border-left: 4px solid #00ffcc; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,255,204,0.05); border-radius: 4px; font-family: monospace;">
 root@silicon-valley-h
 
@@ -114,7 +115,7 @@ When cleaning up startup items, resist the urge to nuke everything blindly. Disa
 
 ---
 
-Frequently Asked Questions (FAQ)
+## Frequently Asked Questions (FAQ)
 
 Q: Will disabling startup apps delete my files or uninstall my programs?
 

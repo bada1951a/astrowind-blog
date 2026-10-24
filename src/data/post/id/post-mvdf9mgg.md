@@ -25,6 +25,7 @@ theme: "Rosewood Hardware Guide"
 
 
 
+
 Suasana di kantor *startup* teknologi kami di kawasan Jakarta Selatan mendadak tegang ketika laptop *deployment* utama untuk tim *internal server* mendadak macet total. Layar menampilkan progress pembaruan Windows 11 yang sudah menyentuh angka 100 persen, namun tidak ada pergerakan sama sekali selama lebih dari tiga jam. Padahal, kami harus segera merilis *patch* keamanan mendesak sore itu juga. Mematikan paksa laptop tersebut berisiko merusak sistem operasi dan membuat *boot loop*, tapi membiarkannya berarti mengorbankan tenggat waktu proyek yang ketat.
 
 Setelah mencoba berbagai cara standar seperti *restart* tombol daya dan menunggu dalam keresahan—yang tentu saja berujung nihil—saya mulai menganalisis akar masalahnya. Ternyata, kendala ini klasik: prosesor dan layanan sistem terjebak dalam *infinite loop* karena berkas instalasi pembaruan di dalam direktori *cache* mengalami korupsi data (*data corruption*) atau terkunci oleh proses latar belakang yang tidak mau berhenti.
@@ -45,7 +46,7 @@ Sebelum masuk ke eksekusi pembersihan, penting untuk memahami kenapa masalah ini
 
 2. Layanan Windows Update Terkunci: Layanan penting seperti *Windows Update* (`wuauserv`) dan *Cryptographic Services* masih mencoba membaca *file* yang sama secara terus-menerus, menciptakan siklus buntu (*deadlock*).
 
-## 3. Konflik Antivirus Pihak Ketig
+3. Konflik Antivirus Pihak Ketig
 
 a: Terkadang utilitas keamanan memindai berkas instalasi yang sedang aktif di latar belakang, sehingga proses instalasi tahap akhir tertahan tanpa batas waktu.
 

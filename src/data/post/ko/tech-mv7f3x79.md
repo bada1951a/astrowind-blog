@@ -25,6 +25,7 @@ theme: "Midnight Navy Royal"
 
 
 
+
 <div style="border-left: 4px solid #1d4ed8; padding: 14px 18px; margin: 20px 0; background-color: rgba(29, 78, 216, 0.04); border-radius: 4px; color: #111827;">
   <strong style="color: #1d4ed8; font-size: 0.95rem; text-transform: uppercase; letter-spacing: 0.5px;">[INCIDENT LOG #20261014-SYS] 판교 데이터센터 파견 인프라 당직 로그</strong><br>
   <span style="font-size: 0.9rem; color: #334155;">새벽 02시 40분, 관제 모니터링 콘솔용 랩톱 3대에서 동시다발적으로 외장 디스플레이 신호 단절 및 3~5초 간격의 간헐적 블랙아웃(암전) 현상 발생. 단순 케이블 재연결로 복구되지 않는 디스플레이 파이프라인 교착 상태 확인 후 드라이버 서브시스템 재구축 및 핸드셰이크 초기화 절차 수행.</span>

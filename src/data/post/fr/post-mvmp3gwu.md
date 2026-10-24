@@ -16,7 +16,8 @@ theme: "Warm Coffee Latte"
 
 
 
-1. [Opening Story/Problem]
+
+## 1. [Opening Story/Problem]
 
 C'était un mardi matin bien chargé dans notre tour à La Défense. Avec le système de smart office et les bureaux en libre-service, je venais de m'installer à un nouvel emplacement pour la journée. J'avais soigneusement branché mon nouveau dock USB-C, relié mes deux écrans externes, et j'étais prêt à attaquer mes revues de code et mes rapports graphiques. 
 
@@ -28,7 +29,7 @@ Puis, le drame : un collègue m'envoie un message urgent sur Teams me demandant 
 
 ![Tech Troubleshooting Guide](/images/tech-photo/tech-photos%20(30).jpg)
 
-2. [Root Cause Breakdown]
+## 2. [Root Cause Breakdown]
 
 Pourquoi ce raccourci magique nous lâche-t-il soudainement, surtout lors du passage à un bureau flexible ou multi-écrans ? Après avoir analysé des dizaines de cas similaires sur les parcs Windows 11 de l'entreprise, voici les trois coupables les plus fréquents :
 
@@ -36,7 +37,7 @@ Pourquoi ce raccourci magique nous lâche-t-il soudainement, surtout lors du pas
 - **Le cache de l'application ou les notifications bloquées :** Windows 11 gère les captures via le centre de notification. Si les notifications pour l'Outil Capture d'écran sont désactivées ou si le cache est corrompu, le raccourci ne renvoie aucun résultat visuel.
 - **Conflit de résolution ou de pilote graphique avec le dock :** Le passage d'un écran de laptop unique à une configuration en double moniteur via une station d'accueil peut perturber l'affichage initial de la superposition de capture.
 
-3. [Step-by-Step Resolution]
+## 3. [Step-by-Step Resolution]
 
 Voici la méthode infaillible, étape par étape, pour redonner vie à votre raccourci. Nous allons procéder par ordre, du plus simple au plus radical.
 
@@ -86,13 +87,13 @@ Get-AppxPackage *ScreenSketch* -AllUsers | Foreach {Add-AppxPackage -DisableDeve
 
 3. Redémarrez votre PC pour valider les changements.
 
-4. [Expert Advice]
+## 4. [Expert Advice]
 
 En environnement de bureau partagé ou en télétravail, les stations d'accueil USB-C et Thunderbolt jouent un rôle crucial. Lorsque vous connectez votre PC à des moniteurs externes pour la première fois de la journée, donnez à Windows quelques secondes pour stabiliser la fréquence d'affichage et la disposition des écrans avant d'enchaîner les raccourcis clavier complexes. 
 
 De plus, méfiez-vous des logiciels tiers de capture d'écran (comme Greenshot, Snagit ou ShareX) que vous auriez pu installer : ils monopolisent parfois les mêmes touches de raccourci, créant un conflit direct avec l'outil natif de Windows 11.
 
-## 5. Frequently Asked Questions
+5. Frequently Asked Questions
 
 Q: Le raccourci fonctionne mais l'écran ne s'assombrit pas, que faire ?
 

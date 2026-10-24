@@ -25,6 +25,7 @@ theme: "Pastel Lavender Tech"
 
 
 
+
 Il est 16h45 dans notre bureau tech près de la place de la République à Paris. Le dernier sprint de la semaine bat son plein et nous devons absolument déployer une mise à jour critique de notre application interne avant le point de validation avec la direction. Subitement, l'écran de mon poste de travail s'illumine d'une alerte rouge vif : *Espace disque insuffisant sur le lecteur C:*. Le système refuse d'initialiser l'environnement de build, les logs bloquent, et la barre de progression reste figée à zéro. Impossible de compiler quoi que ce soit. Le disque principal de 512 Go est totalement saturé par des gigaoctets de fichiers invisibles, accumulés au fil des mois sans crier gare.
 
 Dans l'urgence, le premier réflexe est souvent de supprimer des dossiers au hasard ou de vider la corbeille en espérant un miracle. C'est exactement là que l'on commet l'irréparable en effaçant des caches de développement essentiels ou des points de restauration cruciaux. Après plusieurs minutes de tâtonnements et un diagnostic rapide des dossiers cachés, la cause de la panne est devenue évidente : l'accumulation massive de fichiers temporaires système, de résidus d'anciennes mises à jour Windows Update et de caches d'applications obsolètes. 

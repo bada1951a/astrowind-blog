@@ -25,6 +25,7 @@ theme: "Rosewood Hardware Guide"
 
 
 
+
 The clock on the wall of our NYC office was glaring at me: 2:40 PM. The company-wide board meeting starts at 3:00 PM, and I am the lead IT systems engineer responsible for projecting the Q3 financial models. Suddenly, right as I switch to the master slide deck, my top-tier workstation locks up completely. The mouse pointer is frozen in place, the audio is buzzing like a trapped hornet, and keyboard inputs do nothing. Panic sets in. I force a hard reboot by holding the power button, cross my fingers, and pray it boots up before the executive team walks through the doors. 
 
 If you work in IT or manage high-performance setups, you know this gut-wrenching feeling all too well. Windows 11 random freezing is arguably the most frustrating diagnostic nightmare because it leaves zero error messages on your screen when it happens. 
@@ -97,7 +98,7 @@ Expert Warning and Hardware Safeguards
 
 ---
 
-Frequently Asked Questions (FAQ)
+## Frequently Asked Questions (FAQ)
 
 Q1: What does Event ID 41 mean, and does it mean my power supply is broken?
 

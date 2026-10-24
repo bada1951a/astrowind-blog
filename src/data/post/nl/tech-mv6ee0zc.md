@@ -25,6 +25,7 @@ theme: "Pastel Lavender Tech"
 
 
 
+
 Als werkplekbeheerder en IT-infrastructuurspecialist krijg ik regelmatig randapparatuur op mijn werkbank die door collega's al bijna is afgeschreven. Vorige week nog stond een senior software developer aan mijn bureau: zijn op maat gemaakte mechanische toetsenbord met Cherry MX Brown switches registreerde bij de 'E'-toets willekeurig dubbele aanslagen (`ee`) en liet de spatiebalk regelmatig steken. Voor een programmeur is dit funest; één onbedoelde dubbele letter breekt variabelen en veroorzaakt syntaxfouten. 
 
 In plaats van direct een nieuw toetsenbord van tweehonderd euro uit het IT-budget te trekken of direct de soldeerbout aan te slingeren, heb ik het probleem binnen twintig minuten permanent verholpen. In deze technische handleiding deel ik de exacte diagnose- en herstelprocedure voor chattering(toetsstuiting of dubbelslag) enmissende aanslagen, inclusief de veilige toepassing van elektronica-contactspray.
@@ -63,7 +64,7 @@ Wanneer dit proces faalt, ligt dat vrijwel altijd aan een van de volgende drie m
 1. Oppervlakte-oxidatie en microverontreiniging van het bladveertje
 Het contactpunt in de switch bestaat uit verguld of vertind koperlegering. Door omgevingslucht, vocht, microdeeltjes en de wrijving van duizenden aanslagen slijt de toplaag minimaal en ontstaat er microscopische oxidatie. Wanneer er bovendien stof of huidschilfers tussen de contactpuntjes terechtkomen, sluit het contact niet meer zuiver in één keer. De elektrische weerstand fluctueert, wat de toetsenbordcontroller interpreteert als meerdere afzonderlijke pulsen (*bouncing*).
 
-## 2. Mechanische frictie en toleranties in hot-swap sockets
+2. Mechanische frictie en toleranties in hot-swap sockets
 Bij moderne toetsenborden met Kailh- of Gateron hot-swap sockets zitten de schakelaars niet vastgesoldeerd, maar rusten ze in klemcontacten aan de achterzijde van de printplaat (PCB). Door veelvuldig wisselen van switches of mechanische druk tijdens transport kunnen deze klemmen uitbuigen. Dit leidt tot een instabiele verbinding: de switch werkt met tussenpozen niet, of trilt tijdens het typen, wat resulteert in schijnbaar willekeurige dubbele aanslagen.
 
 3. Falende debounce-algoritmen en polling rate interferentie

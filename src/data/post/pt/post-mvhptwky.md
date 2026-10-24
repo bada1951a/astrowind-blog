@@ -25,6 +25,7 @@ theme: "Rosewood Hardware Guide"
 
 
 
+
 Eram exatamente 13h45 em um escritório na Avenida Paulista, e a tensão na sala de reuniões era palpable. Faltavam quinze minutos para a apresentação trimestral da diretoria quando o nosso gerente de operações chamou no rádio: o notebook corporativo recém-atualizado para o Windows 11 simplesmente travou na hora de anexar os arquivos finais compactados. O motivo? Aquela maldita interface simplificada do botão direito que esconde as opções essenciais de compactação e ferramentas de terceiros atrás de um clique extra em "Mostrar mais opções". Para quem precisa de agilidade e executa dezenas de tarefas por minuto, perder preciosos segundos caçando menus ocultos sob pressão é o cenário perfeito para um desastre corporativo.
 
 <div style="border-left: 4px solid #be123c; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
@@ -39,7 +40,7 @@ Antes de aplicar a solução definitiva que salvou nossa reunião, vale a pena e
 
 1. Isolamento de Processos (AppX Packages): A Microsoft migrou o menu clássico para uma arquitetura moderna baseada em UWP/WinRT, o que impede que programas legados (como WinRAR, 7-Zip e clientes FTP antigos) se injetem diretamente na raiz do menu sem uma adaptação profunda por parte dos desenvolvedores.
 
-## 2. Falta de Compatibilidade Nativa Imediat
+2. Falta de Compatibilidade Nativa Imediat
 
 a: Milhares de softwares corporativos essenciais ainda usam as chaves antigas de registro do shell do Windows. Sem o ajuste correto, eles ficam ocultos no submenu secundário.
 
