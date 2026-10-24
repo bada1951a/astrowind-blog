@@ -61,34 +61,28 @@ function getKstPublishDateIso(index) {
 }
 
 // =========================================================================
-// [최종 안정형 마크다운 정제 함수] 소제목 보존 + 단어 쪼개짐 방지 + 개행 보정
+// [최종 안정형 마크다운 정제 함수] 볼드 보존 + Q&A 줄바꿈 오류 원천 차단
 // =========================================================================
 function sanitizeMarkdownFormatting(content) {
   let cleaned = content;
 
-  // 1) 소제목(##, ### 등)에 붙은 볼드 기호 정제 (### **제목** -> ### 제목)
+  // 1) 소제목 헤딩(#) 바로 뒤에 붙은 불필요한 볼드 기호 정제 (### **제목** -> ### 제목)
   cleaned = cleaned.replace(/^(#{1,6}\s*)\*\*(.*?)\*\*/gm, '$1$2');
 
-  // 2) 혹시 단독 줄로 생성된 볼드 소제목이 있으면 마크다운 헤딩으로 복원
-  cleaned = cleaned.replace(/^(\s*)\*\*([0-9A-Za-z가-힣].*?)\*\*(\s*)$/gm, '$1### $2$3');
+  // 2) Q&A 볼드 뭉침 방어: **Q1:**, **Q.**, **A1:**, **A.** 등의 머리말 앞을 무조건 2줄 개행으로 분리
+  cleaned = cleaned.replace(/([^\n])\s*(\*\*?[QA][0-9]*\s*[:.]\*\*?)/gi, '$1\n\n$2');
 
-  // 3) 본문 속 남아있는 볼드(**) 기호만 깔끔히 제거 (문장 및 띄어쓰기 훼손 방지)
-  cleaned = cleaned.replace(/\*\*(.*?)\*\*/g, '$1');
+  // 3) 마크다운 볼드가 없는 일반 Q/A 머리말도 앞줄과 강제 2줄 개행 분리
+  cleaned = cleaned.replace(/([^\n])\s+([QA][0-9]*\s*[:.])/g, '$1\n\n$2');
 
-  // 4) 숫자 뒤 마침표(1. 2.)는 보존하고, 일반 문장 끝 부호 뒤의 ¿ 만 분리
-  cleaned = cleaned.replace(/([^0-9][.?!])\s*([¿¡])/g, '$1\n\n$2');
+  // 4) 문장 끝 부호(.!?) 뒤에 곧바로 Q/A나 번호 목록(1., 2.)이 붙어 나오는 현상 분리
+  cleaned = cleaned.replace(/([.!?])\s*(\*\*?[QA][0-9]*\s*[:.]\*\*?|[0-9]+\.\s+)/gi, '$1\n\n$2');
 
   // 5) 물음표 뒤 띄어쓰기 누락 보정 (?단어 -> ? 단어)
   cleaned = cleaned.replace(/\?([A-Za-z\u00C0-\u024F\u1EA0-\u1EF9가-힣])/g, '? $1');
 
-  // 6) 물음표 뒤에 대문자 Q/A(Q:, A:, Q1:, A1: 등)가 올 때 강제 2줄 개행
-  cleaned = cleaned.replace(/\?\s*([QA][0-9]*\s*[:.])/g, '?\n\n$1');
-
-  // 7) 문장 끝 부호(.!) 뒤에 대문자 Q/A 또는 번호 목록(1., 2.)이 올 때 강제 2줄 개행
-  cleaned = cleaned.replace(/([.!])\s*([QA][0-9]*\s*[:.]|[0-9]+\.\s+)/g, '$1\n\n$2');
-
-  // 8) 줄바꿈 없이 본문 중에 들어간 대문자 Q/A 머리말 줄바꿈 확보
-  cleaned = cleaned.replace(/([^\n])\s+([QA][0-9]*\s*[:.])/g, '$1\n\n$2');
+  // 6) 스페인어/다국어 특수 기호 분리
+  cleaned = cleaned.replace(/([^0-9][.?!])\s*([¿¡])/g, '$1\n\n$2');
   cleaned = cleaned.replace(/([.!])\s*(D:|R:|Risposta|Domande)/gi, '$1\n\n$2');
 
   return cleaned;
@@ -188,7 +182,7 @@ const TARGET_LANGS = [
   { code: 'nl', name: 'Dutch', persona: 'Allround IT-systeembeheerder en computer hardware specialist', osUi: 'Taakbeheer, Configuratiescherm, Apparaatbeheer, Instellingen', localeContext: 'Zuidas zakendistrict in Amsterdam' },
   { code: 'pl', name: 'Polish', persona: 'Inżynier wsparcia IT i serwisant sprzętu komputerowego', osUi: 'Menedżer zadań, Panel sterowania, Menedżer urządzeń, Ustawienia', localeContext: 'Warszawskie centrum biznesowe i technologiczne' },
   { code: 'id', name: 'Indonesian', persona: 'Teknisi senior infrastruktur IT dan troubleshoot hardware komputer', osUi: 'Task Manager, Control Panel, Device Manager, Pengaturan', localeContext: 'Kawasan bisnis Sudirman Central Business District (SCBD) Jakarta' },
-  { code: 'vi', name: 'Vietnamese', persona: 'Kỹ sư công nghệ thông tin chuyên xử lý sự cố máy tính và phần 구성', osUi: 'Task Manager, Control Panel, Device Manager, Cài đặt', localeContext: 'Tòa nhà văn phòng trung tâm Quận 1, TP. Hồ Chí Minh' }
+  { code: 'vi', name: 'Vietnamese', persona: 'Kỹ sư công nghệ thông tin chuyên xử lý sự cố máy tính 및 phần 구성', osUi: 'Task Manager, Control Panel, Device Manager, Cài đặt', localeContext: 'Tòa nhà văn phòng trung tâm Quận 1, TP. Hồ Chí Minh' }
 ];
 
 const delay = (ms) => new Promise((res) => setTimeout(res, ms));
@@ -256,9 +250,10 @@ ${currentTopic}
       * ## 3. [Step-by-Step Resolution]
       * ## 4. [Expert Advice]
       * ## 5. Frequently Asked Questions
-    - NEVER put markdown asterisks inside headings. Write clean headings like "## 2. Root Cause Breakdown".
+    - NEVER put markdown asterisks inside headings. Keep clean headings like "## 2. Root Cause Breakdown".
 2. BOLD FORMATTING RULE:
-    - Absolutely DO NOT use markdown bold asterisks (**) inside normal body sentences or FAQ. Keep body paragraphs in natural plain text.
+    - Use markdown bold (**) naturally and moderately ONLY for key action words, UI menu buttons, or core technical terms.
+    - NEVER bold an entire sentence or overuse bold on every phrase.
 3. COMMANDS & CODE BLOCKS:
     - Always wrap long terminal/registry commands (like reg.exe add, slmgr, PowerShell scripts) in standard 3-backtick code blocks (\`\`\`cmd or \`\`\`bash).
 4. NO LATEX & NO TILDE:
@@ -288,7 +283,8 @@ ${currentTopic}
 2. Root Cause Breakdown: Clearly explain 3 realistic root causes behind the bottleneck or error.
 3. Step-by-Step Resolution: Provide exact clicks matching "${lang.osUi}".
 4. Expert Warning / Advice: Practical precautions regarding hardware, power, or data safety.
-5. Frequently Asked Questions (FAQ): Exactly 3 realistic, high-value Q&As that everyday users would ask. (CRITICAL: Every Q and A must start on a fresh new line without markdown bolding like Q1. ... and A1.).
+5. Frequently Asked Questions (FAQ): Exactly 3 realistic, high-value Q&As that everyday users would ask.
+   * CRITICAL: Every single Question (Q) and Answer (A) MUST start on its own separate new line, separated by an empty blank line. Never run Q and A together.
 
 [Length & Richness Rules]
 - Korean (ko): Minimum 2,500 characters of rich, deep, non-repetitive text.
@@ -339,7 +335,7 @@ theme: "${selectedTheme.name}"
       frontmatter = frontmatter.replace(/publishDate:\s*[^\n\r]+/i, `publishDate: ${pubDateIso}`);
       frontmatter = frontmatter.replace(/image:\s*["'][^"']*["']/i, `image: '${coverUrl}'`);
 
-      // 안전 정제 함수 적용 (소제목 구조 보존)
+      // 안전 정제 함수 적용 (볼드는 보존하고 Q&A 개행만 완벽 보호)
       body = sanitizeMarkdownFormatting(body);
 
       const middleImageMarkdown = `\n\n![Tech Troubleshooting Guide](${bodyUrl})\n\n`;
