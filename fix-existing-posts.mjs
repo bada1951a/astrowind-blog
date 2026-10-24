@@ -3,7 +3,7 @@ import path from 'path';
 
 const POSTS_BASE_DIR = path.resolve('src/data/post');
 
-function cleanMarkdownSafe(content) {
+function cleanMarkdownAdsenseReady(content) {
   const fmMatch = content.match(/^---[\s\S]*?---\n*/);
   if (!fmMatch) return content;
 
@@ -13,44 +13,49 @@ function cleanMarkdownSafe(content) {
   // 1. 인코딩 깨짐 복원
   body = body.replace(/ðŸ’¡/g, '💡');
 
-  // 2. 본문 중간에 잘못 들어간 불필요한 헤딩 기호 초기화
-  body = body.replace(/^#{1,6}\s+/gm, '');
-
   const lines = body.split('\n');
+  let inCodeBlock = false;
+
   const processedLines = lines.map(line => {
-    const trimmed = line.trim();
+    // 코드 블록 내부 보호
+    if (line.trim().startsWith('```')) {
+      inCodeBlock = !inCodeBlock;
+      return line;
+    }
+    if (inCodeBlock) return line;
 
-    if (!trimmed) return line;
+    // 기존에 잘못 붙은 헤딩 기호(#) 일단 모두 리셋
+    let cleanLine = line.replace(/^#{1,6}\s+/, '').trim();
+    if (!cleanLine) return '';
 
-    // A. 진짜 대제목(H2) 판별: 본문 속 단순 번호 매기기(예: "1. 설정에서...", "3. 클립보드...")는 절대 제외하고,
-    // 명확한 대단원 키워드 및 문서 구조 타이틀만 정확히 타겟팅
-    const isTrueH2 = 
-      /^자주\s*묻는\s*질문/i.test(trimmed) ||
-      /^Frequently\s+Asked\s+Questions/i.test(trimmed) ||
-      /실무\s*노트/i.test(trimmed) ||
-      /실무\s*예방\s*조언/i.test(trimmed) ||
-      /전문가가\s*전하는/i.test(trimmed) ||
-      /주요\s*원인/i.test(trimmed) ||
-      /해결\s*가이드/i.test(trimmed) ||
-      /Root\s*Cause\s*Breakdown/i.test(trimmed) ||
-      /Step-by-Step\s*Resolution/i.test(trimmed) ||
-      /Expert\s*Advice/i.test(trimmed) ||
-      // 숫자로 시작하더라도 문장형 설명이 아닌 단원 제목 형태인 경우만 허용
-      (/^[1-5]\.\s+\[/.test(trimmed) && !trimmed.endsWith('.'));
+    // [핵심 안전 장치] 마침표(.)로 끝나거나 60자가 넘는 긴 문장은 100% 본문이므로 대제목에서 제외
+    const isLongOrSentence = cleanLine.endsWith('.') || cleanLine.length > 60;
 
-    if (isTrueH2) {
-      if (trimmed.endsWith('.') && trimmed.length > 40) {
-        return line; // 긴 서술형 문장은 대제목에서 제외
-      }
-      const cleanTitle = trimmed.replace(/^#+\s*/, '').replace(/\*\*/g, '').trim();
-      return `## ${cleanTitle}`;
+    // A. 진짜 대제목(H2) 판별
+    const isH2Keyword = 
+      /^자주\s*묻는\s*질문/i.test(cleanLine) ||
+      /^Frequently\s+Asked\s+Questions/i.test(cleanLine) ||
+      /Root\s*Cause/i.test(cleanLine) ||
+      /Step-by-Step/i.test(cleanLine) ||
+      /Expert\s*Advice/i.test(cleanLine) ||
+      /실무\s*노트/i.test(cleanLine) ||
+      /실무\s*예방\s*조언/i.test(cleanLine) ||
+      /해결\s*가이드/i.test(cleanLine) ||
+      /주요\s*원인/i.test(cleanLine);
+
+    // 숫자로 시작하는 대단원 제목 (단, 문장형 설명이나 마침표가 포함된 본문 순번은 절대 제외)
+    const isNumberedH2 = /^[1-5]\.\s+/.test(cleanLine) && !isLongOrSentence;
+
+    if (isH2Keyword || isNumberedH2) {
+      const titleText = cleanLine.replace(/\*\*/g, '').trim();
+      return `\n\n## ${titleText}\n`;
     }
 
-    // B. 소제목(H3) 판별 패턴
-    const isH3 = /^(\[[단계\s0-9]+\]|방법\s*[0-9]+|Step\s*[0-9]+)/i.test(trimmed);
-    if (isH3) {
-      const cleanTitle = trimmed.replace(/^#+\s*/, '').replace(/\*\*/g, '').trim();
-      return `### ${cleanTitle}`;
+    // B. 소제목(H3) 판별 ([단계 1], Step 1 등)
+    const isH3 = /^(\[[단계\s0-9]+\]|방법\s*[0-9]+|Step\s*[0-9]+)/i.test(cleanLine);
+    if (isH3 && !isLongOrSentence) {
+      const titleText = cleanLine.replace(/\*\*/g, '').trim();
+      return `\n\n### ${titleText}\n`;
     }
 
     return line;
@@ -58,8 +63,7 @@ function cleanMarkdownSafe(content) {
 
   body = processedLines.join('\n');
 
-  // 3. 공백 및 잔여 기호 정돈
-  body = body.replace(/^\s*\*\*\s*$/gm, '');
+  // 3. 공백 및 과도한 개행 정돈
   body = body.replace(/\n{3,}/g, '\n\n').trim();
 
   return `${frontmatter}\n${body}\n`;
@@ -88,7 +92,7 @@ function run() {
       totalScanned++;
       const filePath = path.join(targetDir, file);
       const original = fs.readFileSync(filePath, 'utf-8');
-      const cleaned = cleanMarkdownSafe(original);
+      const cleaned = cleanMarkdownAdsenseReady(original);
 
       if (original !== cleaned) {
         fs.writeFileSync(filePath, cleaned, 'utf-8');
@@ -97,7 +101,7 @@ function run() {
     }
   }
 
-  console.log(`\n🎉 안전 모드 마크다운 정돈 완료!`);
+  console.log(`\n🎉 애드센스 최적화 마크다운 최종 정돈 완료!`);
   console.log(`- 총 스캔된 파일: ${totalScanned}개`);
   console.log(`- 교정된 파일: ${totalUpdated}개`);
 }
