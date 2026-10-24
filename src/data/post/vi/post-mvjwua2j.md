@@ -16,6 +16,7 @@ theme: "Nordic Clean Ice"
 
 
 
+
 <div style="border-left: 4px solid #0284c7; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 Đang là thời điểm nước rút chuẩn bị cho kỳ khóa sổ kế toán cuối năm. Ngồi cặm cụi đối chiếu từng trang bảng tính Excel khối lượng dữ liệu khổng lồ với hệ thống phần mềm ERP của công ty tại văn phòng ở một tòa nhà trung tâm Quận 1, TP. Hồ Chí Minh. Tôi chuẩn bị gọi cuộc họp trực tuyến khẩn cấp với các bộ phận để chốt số liệu thì hỡi ôi, biểu tượng loa góc phải màn hình xuất hiện dấu nhân đỏ chói lọi. Không một âm thanh phát ra, thông báo lỗi thiết bị đầu ra biến mất hoàn toàn ngay trước giờ G.
 </div>

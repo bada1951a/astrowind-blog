@@ -16,6 +16,7 @@ theme: "High-Contrast Charcoal"
 
 
 
+
 Sáng nay vừa bước chân vào văn phòng công nghệ ở khu vực ven biển Đà Nẵng, mở laptop lên để chuẩn bị pull request bản update phần mềm cho khách hàng thì đập vào mắt tôi là dòng cảnh báo đỏ lòm: ổ C chỉ còn trống chưa đầy 500MB. Windows liên tục bắn thông báo "Low Disk Space", các ứng dụng nặng bắt đầu văng ra liên tục, máy giật đơ như đá tảng. Đồng nghiệp ngồi bên cạnh cứ bấm nút Restart liên tục với hy vọng máy sẽ tự khá hơn, nhưng tình hình chỉ càng tệ đi vì bộ nhớ ảo (pagefile) không còn chỗ để thở.
 
 <div style="border-left: 4px solid #e11d48; padding: 12px 16px; margin: 20px 0; background-color: rgba(225,29,72,0.05); border-radius: 4px; color: #111827;">

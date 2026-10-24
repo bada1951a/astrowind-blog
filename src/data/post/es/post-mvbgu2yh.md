@@ -16,6 +16,7 @@ theme: "Modern Minimalist Slate"
 
 
 
+
 Eran las 18:45 en nuestra oficina tecnológica en el distrito 22@ de Barcelona. Faltaban apenas quince horas para el lanzamiento crítico de un software en el que habíamos estado trabajando durante meses con el equipo de Madrid. El estrés en el canal de Slack era palpable y las notificaciones no paraban de llover. De repente, fui a hacer clic en el menú de Inicio de Windows 11 para abrir la consola de comandos y... nada. La barra de tareas entera se había quedado completamente congelada. El cursor se movía por el escritorio, pero ni el icono de Windows, ni los accesos directos, ni el reloj respondían a los clics. Reiniciar de la manera tradicional era imposible porque el menú estaba bloqueado, y un reinicio forzoso con el botón físico corría el riesgo de corromper un despliegue local crítico. Tenía que solucionarlo en cuestión de minutos.
 
 Si te ha pasado lo mismo justo cuando más prisa tienes, sabes la frustración que genera. Vamos a ir directos al grano con los métodos reales que utilizamos los ingenieros de soporte para solucionar este fallo clásico de Windows 11 sin perder la paciencia ni los datos.

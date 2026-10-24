@@ -16,6 +16,7 @@ theme: "Cobalt Enterprise Lab"
 
 
 
+
 Eram exatos 08h45 de uma segunda-feira chuvosa quando o diretor comercial brotou atrás da minha cadeira com aquela clássica frase que tira dez anos de vida de qualquer analista de suporte: *"Meu notebook tá demorando dez minutos pra abrir o Excel, a reunião com o cliente é às 9h, resolve aí rapidão"*. O bicho tava tão lento que o logo do Windows 10 parecia uma tela de loading de jogo de disquete. A ventoinha do i7 gritando, o disco em 100% de uso no Gerenciador de Tarefas, e eu suando frio olhando pro relógio. 
 
 A gente sabe como é: o usuário instala aplicativo de chat da empresa, utilitário de impressora que roda desde o século passado, antivírus corporativo pesadíssimo e atualizações acumuladas. Tudo isso decide carregar no *startup* ao mesmo tempo. O resultado? Um gargalo miserável que transforma uma máquina com SSD NVMe numa carroça de tração animal. 

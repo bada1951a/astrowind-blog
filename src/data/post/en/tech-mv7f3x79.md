@@ -16,6 +16,7 @@ theme: "Sunset Horizon Coral"
 
 
 
+
 Last Friday at 4:30 PM, right as our deployment sprint was winding down, an engineering lead brought her flagship Dell Precision workstation into my lab. She was running dual external 4K monitors through a Thunderbolt 4 dock. Every twenty seconds, panel two would drop to black, display the dreaded "No Signal" banner, wake up, and drag the primary panel into an agonizing three-second stutter loop. She had already swapped cables three times and rebooted twice.
 
 In production environments, this issue is rarely fried silicon. Nine times out of ten, dual-monitor signal dropouts on modern laptops boil down to a corrupted display pipeline state: botched DisplayPort link training, aggressive Windows Update driver clobbering, or an invalidated EDID cache in the registry. 

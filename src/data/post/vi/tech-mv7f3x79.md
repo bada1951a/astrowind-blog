@@ -16,6 +16,7 @@ theme: "Cobalt Enterprise Lab"
 
 
 
+
 <div style="border-left: 4px solid #1e40af; padding: 14px 18px; margin: 20px 0; background-color: rgba(30, 64, 175, 0.04); border-radius: 4px;">
   <strong style="color: #1e40af; font-size: 1.05rem;">BÁO CÁO KỸ THUẬT PHÒNG THỬ NGHIỆM QA (ENTERPRISE LAB REPORT)</strong><br>
   <span style="font-size: 0.92rem; color: #334155;">Mã hồ sơ: <code>LAB-DISP-2026-V4</code> | Phân loại: Video Signal Integrity & Driver Stack Failure | Tỉ lệ lỗi ghi nhận trên 450 máy trạm doanh nghiệp: <strong>14.2%</strong> (Dell Latitude 5000/7000 Series, ThinkPad T/P Series, HP EliteBook).</span>

@@ -16,6 +16,7 @@ theme: "Deep Ocean Cobalt"
 
 
 
+
 Como responsable del puesto de trabajo e infraestructura técnica en entornos de desarrollo y centros de operaciones de red (NOC), me encuentro con frecuencia con incidencias de teclado que desconciertan a los usuarios: caracteres duplicados de forma aleatoria (el temido *chattering* o rebote de conmutador) o combinaciones de teclas que se niegan a registrarse en momentos críticos, como la introducción de contraseñas de privilegios o comandos de consola en producción. 
 
 En un parque de cientos de estaciones equipadas con periféricos de perfil mecánico orientados a programadores, desechar inmediatamente un equipo de 150 euros por un conmutador defectuoso no solo es ineficiente desde el punto de vista presupuestario, sino que incumple las normativas de sostenibilidad del departamento de TI. A continuación, detallo el protocolo técnico para diagnosticar y recuperar estos conmutadores mediante el uso estandarizado de agentes de limpieza dieléctricos de residuo cero.

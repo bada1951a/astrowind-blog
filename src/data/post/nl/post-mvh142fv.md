@@ -16,6 +16,7 @@ theme: "Crimson Emergency Field"
 
 
 
+
 Het is kwart voor negen 's ochtends in een glazen kantoorpand op de Zuidas in Amsterdam. Over precies vijftien minuten begint een cruciale pitch voor een nieuwe internationale cliënt. Terwijl ik nog snel de laatste grafieken in de PowerPoint-presentatie wil zetten, slaat het scherm ineens dood. Geen blauw scherm van de dood, geen foutmelding, helemaal niks. De muisaanwijzer bevriest, de klok in de taakbalk blijft stilstaan op 08:42 uur, en zelfs de Caps Lock-toets reageert niet meer op het toetsenbord. Paniek. Een harde reset met de aan-uitknop is de enige optie, maar de spanning stijgt naar een kookpunt omdat de tijd wegtikt.
 
 Dit soort willekeurige vastlopers onder Windows 11 zijn de ultieme nachtmerrie van elke kantoormedewerker en systeembeheerder. Je eerste neiging is om maar wat te roepen: "Het zal wel aan de laatste Windows-update liggen!" of "Die SSD is vast kapot!". Vervolgens verspil je kostbare tijd met het willekeurig herinstalleren van stuurprogramma's, het loskoppelen van alle USB-apparaten en het draaien van eindeloze virusscans die niets opleveren. Maar als IT-specialist weet ik inmiddels beter: gissen is missen. We moeten de ingebouwde rechercheur van Windows inschakelen om de exacte dader te ontmaskeren.

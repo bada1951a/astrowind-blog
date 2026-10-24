@@ -16,6 +16,7 @@ theme: "Matte Black stealth"
 
 
 
+
 Sáng nay tại văn phòng công ty công nghệ ở quận Cầu Giấy, Hà Nội, cú đấm thép của deadline dự án vừa dội xuống thì chiếc laptop cá nhân của tôi dở chứng. Thanh Taskbar trên Windows 11 bỗng nhiên tê liệt hoàn toàn. Click vào nút Start không phản hồi, icon các ứng dụng ghim sẵn đứng im như tượng đá, thậm chí đồng hồ góc phải cũng chết cứng. Cả một hệ thống đang cần xử lý gấp các yêu cầu tối ưu hiệu năng mà ngay cả việc mở Task Manager bằng chuột phải cũng bất khả thi.
 
 Nếu bạn cũng đang phát bực với lỗi kinh điển này của Windows 11, đừng vội khởi động lại máy hay cài lại Win. Dưới đây là quy trình xử lý thực chiến từ góc nhìn của một kỹ sư hệ thống.
