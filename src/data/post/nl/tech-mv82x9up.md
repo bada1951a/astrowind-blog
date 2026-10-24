@@ -14,6 +14,7 @@ theme: "Dracula Purple Dev"
 
 
 
+
 Vrijdagmiddag, kwart over vier. Mijn grootste afnemer belde net dat de staging-omgeving eruit ligt voor de maandagse release, en op dat exact verkeerde moment besluit mijn workstation om zwart scherm te geven. De ventilatoren loeien alsof er een Boeing opstijgt, de RGB-verlichting knippert vrolijk in al zijn regenboogpracht, maar mijn monitor blijft koppig op *No Signal* staan. Mijn manager staat al achter me met een kop lauwe koffie en de klassieke vraag: *"Is het al opgelost?"* Je zweet breekt je uit, je drukt op goed geluk op Ctrl + Shift + Win + B om de grafische driver te resetten, maar er gebeurt werkelijk helemaal niets.
 
 Dit soort situaties kosten je levensjaren. Je vervloekt de hardware, denkt meteen dat je moederbord naar de haaien is, en ziet je weekend in duigen vallen. Maar na jaren meedraaien in de IT-infrastructuur weet ik inmiddels beter: in negen van de tien gevallen is het een banale contactfout. Tijd om die kast open te schroeven en handen uit de mouwen te steken.
@@ -44,13 +45,13 @@ Voordat je blind onderdelen gaat bestellen of de helpdesk van de facilitaire die
 
 Genoeg gepraat, we gaan diagnosticeren en oplossen. Zorg dat de stekker uit het stopcontact is en raak even de metalen behuizing aan om statische ontlading te voorkomen.
 
-## Stap 1: De hardware-reset en basisinspectie
+### Stap 1: De hardware-reset en basisinspectie
 We beginnen met het fysiek loskoppelen van de boosdoener. Open de kast, druk op de plastic clipjes aan weerszijden van het RAM-slot en haal de geheugenmodules er één voor één uit.
 
 * De reinigingssessie: Pak een schone, pluisvrije gum (ja, een potloodgum) en wrijf voorzichtig over de gouden contactpinnen van de RAM-stick om oxidatie en vuil te verwijderen. Blaas daarna alle restjes weg met perslucht (geen spuug!).
 * Het slot controleren: Schijn met een zaklantaarn in het DIMM-slot. Zie je pluisjes, stof of verbogen pinnetjes? Spuit het slot schoon met perslucht.
 
-## Stap 2: Testen met één enkele stick (Divide and Conquer)
+### Stap 2: Testen met één enkele stick (Divide and Conquer)
 Als je vier sticks hebt, test ze dan niet allemaal tegelijk terug.
 
 1. Plaats één schone RAM-stick terug in het primaire slot (meestal aangeduid als `DIMM_A2` in de handleiding van je moederbord).
@@ -61,7 +62,7 @@ Als je vier sticks hebt, test ze dan niet allemaal tegelijk terug.
 
 Als het scherm nu wel aanspringt, weet je dat ten minste één stick en dat specifieke slot functioneren. 
 
-## Stap 3: Systeemverificatie in het OS
+### Stap 3: Systeemverificatie in het OS
 Zodra je weer beeld hebt en door kunt booten naar Windows, wil je natuurlijk zeker weten dat je OS al het geheugen correct herkent en dat er geen corrupte sectoren zijn. Open je opdrachtprompt via Win + R, typ `cmd` en druk op `Ctrl + Shift + Enter` om het als Administrator uit te voeren:
 
 ```cmd

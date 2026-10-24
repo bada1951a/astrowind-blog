@@ -14,6 +14,7 @@ theme: "Sandstone Desert Minimal"
 
 
 
+
 Sebagai seorang teknisi IT yang sering menangani inventaris periferal di lingkungan kantor dan lab komputasi, pemandangan keyboard mekanikal yang "dibuang" ke gudang karena tombolnya mengetik ganda (*chattering*) atau macet (*miss-click*) adalah hal yang lumrah. Keluhan yang masuk ke meja kerja saya biasanya seragam: tombol spasi tiba-tiba melompat dua kali, atau huruf "W" dan "A" mendadak tidak merespons saat dipakai kerja maupun bermain game. 
 
 Banyak pengguna beranggapan bahwa ketika switch mekanikal mulai bertingkah, solusinya hanyalah membeli keyboard baru atau melakukan desoldering total yang merepotkan. Faktanya, sekitar 85% kasus kerusakan tombol keyboard mekanikal yang saya tangani di lapangan murni disebabkan oleh degradasi titik kontak tembaga akibat oksidasi mikro dan debu, bukan karena kerusakan mekanis permanen. 
@@ -31,8 +32,6 @@ Panduan ini saya susun berdasarkan protokol pemeliharaan perangkat keras mandiri
 Sebelum menyemprotkan cairan kimia atau membongkar perangkat, Anda wajib memahami apa yang sebenarnya terjadi di balik pelat muka (*faceplate*) keyboard Anda. Masalah input pada switch mekanikal umumnya terbagi ke dalam tiga faktor utam
 
 a:
-
-###
 
 A. Oksidasi dan Penumpukan Debu Mikro pada Contact Leaf
 Switch mekanikal bekerja menggunakan dua bilah logam tembaga lentur (*metal contact leaf*) di bagian dalam *housing*. Saat tombol ditekan, stem plastik akan mendorong salah satu bilah untuk bersentuhan dengan bilah pasangannya guna menutup sirkuit dan mengirim sinyal elektrik ke *controller*. 
@@ -160,15 +159,11 @@ a:
 Q:</b> Rangkuman atas pertanyaan yang paling sering diajukan saat perbaikan mandiri switch keyboard mekanikal.
 </div>
 
-###
-
 **Q1.** Bisakah saya menggunakan Isopropyl Alcohol (IPA) 99% sebagai pengganti contact cleaner kaleng?
 Bisa, tetapi dengan catatan teknis. Isopropil alkohol dengan kemurnian 99% murni aman untuk elektronik dan tidak meninggalkan residu air. Namun, IPA tidak memiliki tekanan gas semprot (*pressurized jet*) seperti kaleng aerosol contact cleaner. Anda harus meneteskannya secara hati-hati menggunakan pipet mikro ke celah stem, lalu menekan tombol berulang kali. Hindari IPA dengan kadar di bawah 90% karena kandungan airnya dapat mengendap di dasar housing switch dan memicu karat pada spring/per baja. ###
 
 **Q2.** Apakah penyemprotan contact cleaner akan melunturkan pelumas bawaan (lube) pada switch?
 Ya, tentu saja. Contact cleaner diformulasikan secara kimiawi untuk melarutkan oli, gemuk (*grease*), dan minyak. Jika keyboard Anda sebelumnya telah di-*lube* menggunakan cairan seperti Krytox 205g0, semprotan ini akan melunturkan lapisan pelumas di area stem dan rail. Switch Anda mungkin akan terasa sedikit lebih berpasir (*scratchy*) setelah kering. Untuk mengatasinya, Anda disarankan melumasi ulang switch menggunakan pelumas switch khusus secara presisi setelah proses perbaikan selesai.
-
-###
 
 **Q3.** Mengapa tombol tetap mengetik ganda (chattering) meskipun switch baru sudah dipasang pada board hot-swap?
 Jika switch baru sudah dipasang namun chattering tetap terjadi pada titik tombol yang sama, masalahnya berada di tingkat sirkuit PCB. Penyebab paling umum adalah:

@@ -14,6 +14,7 @@ theme: "Mint Fresh Engineering"
 
 
 
+
 Nel mio lavoro quotidiano sui terminali di gestione e nei laboratori di collaudo hardware, uno strumento di input inaffidabile rappresenta un collo di bottiglia critico. Qualche mese fa, durante la configurazione in loco di un cluster di virtualizzazione, la tastiera meccanica della mia workstation da campo ha iniziato a mostrare sintomi subdoli: digitando credenziali complesse su terminale SSH, alcune lettere venivano registrate due volte (*key chattering* o rimbalzo), mentre la barra spaziatrice e il tasto `Tab` perdevano colpi in modo casuale (*key skipping*). 
 
 In un ambiente di produzione, dover cancellare backspace a raffica o fallire l'autenticazione per via di un doppio carattere non è solo frustrante: rischia di bloccare account di dominio o generare errori di sintassi distruttivi nei file di configurazione.
@@ -80,9 +81,7 @@ Prima di intervenire fisicamente, verifichiamo che il sottosistema USB di Window
 
 4. Nella scheda Risparmio energia (se presente), deseleziona l'opzione: *Consenti al computer di spegnere il dispositivo per risparmiare energia*.
 
-5. Apri il Prompt dei comandi con privilegi elevati (Esegui come amministratore) per verificare che l'input non sia alterato da ritardi di buffer di sistem
-
-a:
+5. Apri il Prompt dei comandi con privilegi elevati (Esegui come amministratore) per verificare che l'input non sia alterato da ritardi di buffer di sistema:
 ```cmd
 reg query "HKCU\Control Panel\Keyboard" /v KeyboardSpeed
 reg query "HKCU\Control Panel\Keyboard" /v KeyboardDelay

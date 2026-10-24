@@ -14,6 +14,7 @@ theme: "Teal Matrix Digital"
 
 
 
+
 Wczoraj rano, tuż przed kluczowym audytem stabilności infrastruktury dla naszego zagranicznego klienta we wrocławskim parku technologicznym, mój laptop z Windowsem 10 postanowił zrobić strajk włoski. Restart po aktualizacji bezpieczeństwa ciągnął się w nieskończoność. Pasek postępu stał w miejscu, a ja patrzyłem na zegarek, czując jak z każdą sekundą rośnie napięcie przed spotkaniem na Zoomie. Kiedy system w końcu łaskawie się podniósł, otwarcie prostego terminala czy przeglądarki graniczyło z cudem, bo w tle cicho i bezczelnie uruchamiało się naraz trzydzieści różnych komunikatorów, launcherów gier i "niezbędnych" pomocników producenta sprzętu. Zamiast panikować, odpaliłem szybką procedurę ratunkową, która zajęła mi dosłownie kilkadziesiąt sekund.
 
 <div style="border-left: 4px solid #14b8a6; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
@@ -38,13 +39,13 @@ Zanim przejdziemy do klikania, spójrzmy prawdzie w oczy – skąd ten narastaj�
 
 Nie potrzebujesz skomplikowanych skryptów ani zewnętrznych optymalizatorów w stylu "PC Cleaner". Zrobimy to natywnymi narzędziami Windowsa 10.
 
-## Krok 1: Otwórz Menedżer Zadań
+### Krok 1: Otwórz Menedżer Zadań
 Naciśnij na klawiaturze kombinację klawiszy Ctrl + Shift + Esc, aby bezpośrednio uruchomić *Menedżer zadań*. Jeśli widzisz uproszczoną wersję okna, kliknij na dole po lewej stronie przycisk "Więcej szczegółów".
 
-## Krok 2: Przejdź do zakładki "Uruchamianie"
+### Krok 2: Przejdź do zakładki "Uruchamianie"
 Na górnym paska menu znajdź i kliknij zakładkę Uruchamianie. Zobaczysz tam pełną listę aplikacji, które startują razem z uruchomieniem systemu operacyjnego.
 
-## Krok 3: Ocena wpływu na start i wyłączenie zbędnych pozycji
+### Krok 3: Ocena wpływu na start i wyłączenie zbędnych pozycji
 Zwróć uwagę na kolumnę Wpływ na uruchamianie (Startup impact). Szukaj pozycji oznaczonych jako *Wysoki* (High). 
 
 <div style="border-left: 4px solid #14b8a6; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">

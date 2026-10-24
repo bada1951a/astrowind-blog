@@ -14,6 +14,7 @@ theme: "Cyberpunk Terminal"
 
 
 
+
 Mới tuần trước, trong một chuyến công tác xa, tôi kẹt lại ở sảnh chờ khách sạn tại Quận 1 khi pin chiếc laptop chỉ còn vỏn vẹn 18เปอร์เซ็นต์ (18%). Giữa lúc mạng Wi-Fi chập chờn, tôi buộc phải bật máy lên để mở gấp một tài liệu chia sẻ quan trọng từ văn phòng tổng công ty. Sau khi xem xong, tôi cẩn thận bấm lệnh Shutdown trong menu Start, gập màn hình lại và nhét vội máy vào balo để chuẩn bị ra xe di chuyển. Thế nhưng, chỉ khoảng 20 phút sau, khi xách balo lên vai, tôi giật mình thấy góc túi đựng nóng ran như lò nướng. Mở balo ra kiểm tra, chiếc laptop vẫn đang chạy ngầm rầm rộ, quạt tản tố kêu vù vù và pin lúc này đã tụt sạch về mức 0เปอร์เซ็นต์ (0%), sập nguồn hoàn toàn khiến tôi mất luôn bản nháp tài liệu chưa kịp lưu đồng bộ trên trình duyệt.
 
 Đó không phải là lần đầu tiên tôi gặp tình huống trớ trêu này trong nghề IT. Lỗi máy tính không chịu tắt nguồn hẳn sau khi bấm Shutdown là một bệnh cực kỳ phổ biến trên Windows 10 và Windows 11. Đa số mọi người khi gặp tình trạng này thường nghĩ ngay đến việc lỗi ổ cứng, lỗi win hoặc hỏng nút nguồn vật lý. Họ mất hàng giờ liền để cài lại driver chipset, quét virus tổng thể hoặc thậm chí là ghost lại máy nhưng rốt cuộc lỗi vẫn hoàn lỗi. Nguyên nhân cốt lõi thực ra rất đơn giản và nằm ở một tính năng mặc định của hệ điều hành mang tên Fast Startup. Khi tính năng này bật, thay vì tắt máy hoàn toàn, Windows sẽ đóng băng một phần trạng thái kernel vào ổ cứng để lần sau khởi động nhanh hơn, vô tình khiến máy bị treo ở trạng thái lửng lơ, không ngắt hẳn dòng điện cấp cho bo mạch chủ và linh kiện.
@@ -26,15 +27,15 @@ Cảnh báo nhanh: Việc để laptop tiếp tục chạy ngầm trong balo kí
 
 Để giải quyết dứt điểm tình trạng này, chúng ta cần đi thẳng vào nguyên nhân gốc rễ và vô hiệu hóa tính năng khởi động nhanh rắc rối đó. Dưới đây là các bước thao tác chuẩn xác mà tôi thường hướng dẫn cho đồng nghiệp và khách hàng xử lý ngay tại chỗ:
 
-Bước 1: Mở công cụ quản lý hệ thống nhanh bằng cách nhấn tổ hợp phím Windows + R trên bàn phím để mở hộp thoại Run. Tại khung trống, bạn gõ từ khóa control rồi nhấn Enter để mở bảng điều khiển truyền thống Control Panel.
+### Bước 1: Mở công cụ quản lý hệ thống nhanh bằng cách nhấn tổ hợp phím Windows + R trên bàn phím để mở hộp thoại Run. Tại khung trống, bạn gõ từ khóa control rồi nhấn Enter để mở bảng điều khiển truyền thống Control Panel.
 
-Bước 2: Ở góc trên bên phải của cửa sổ Control Panel, tại mục View by, bạn hãy chuyển từ Category sang Large icons hoặc Small icons để hiển thị toàn bộ các tùy chọn ẩn.
+### Bước 2: Ở góc trên bên phải của cửa sổ Control Panel, tại mục View by, bạn hãy chuyển từ Category sang Large icons hoặc Small icons để hiển thị toàn bộ các tùy chọn ẩn.
 
-Bước 3: Tìm và nhấp chọn mục Power Options. Tại đây, nhìn sang cột menu bên trái màn hình, bạn sẽ thấy dòng chữ Choose what the power buttons do, hãy nhấp vào đó.
+### Bước 3: Tìm và nhấp chọn mục Power Options. Tại đây, nhìn sang cột menu bên trái màn hình, bạn sẽ thấy dòng chữ Choose what the power buttons do, hãy nhấp vào đó.
 
-Bước 4: Mặc định các tùy chọn bên dưới sẽ bị mờ đi và bạn không thể chỉnh sửa được. Hãy tìm dòng chữ Change settings that are currently unavailable ở phía trên cùng và nhấp chuột vào đó với quyền quản trị viên.
+### Bước 4: Mặc định các tùy chọn bên dưới sẽ bị mờ đi và bạn không thể chỉnh sửa được. Hãy tìm dòng chữ Change settings that are currently unavailable ở phía trên cùng và nhấp chuột vào đó với quyền quản trị viên.
 
-Bước 5: Nhìn xuống phần Shutdown settings ở dưới cùng của cửa sổ, bạn sẽ thấy ô vuông cạnh dòng Turn on fast startup (recommended) đang được tích chọn. Hãy bỏ dấu tích ở ô này đi, sau đó bấm nút Save changes ở góc dưới để lưu lại thay đổi.
+### Bước 5: Nhìn xuống phần Shutdown settings ở dưới cùng của cửa sổ, bạn sẽ thấy ô vuông cạnh dòng Turn on fast startup (recommended) đang được tích chọn. Hãy bỏ dấu tích ở ô này đi, sau đó bấm nút Save changes ở góc dưới để lưu lại thay đổi.
 
 Sau khi hoàn tất quy trình trên, bạn hãy thử bấm Shutdown một lần nữa để kiểm tra. Đèn báo nguồn trên thân máy và quạt tản nhiệt sẽ tắt hẳn sau vài giây, chấm dứt hoàn toàn nỗi lo máy tự nóng lên khi cất trong balo.
 

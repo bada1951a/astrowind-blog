@@ -14,6 +14,7 @@ theme: "Industrial Blueprint"
 
 
 
+
 Suasana di salah satu gedung perkantoran kawasan Sudirman, Jakarta, mendadak mencekam. Jam menunjukkan pukul 16:45 WIB, tepat lima belas menit sebelum tenggat waktu pengiriman laporan keuangan kuartalan ke direksi. Tiba-tiba, layar monitor manajer operasional nge-freeze total. Mouse tidak bergerak, tombol Caps Lock ditekan tidak merespons, dan angka-angka laporan di Excel seolah mengejek dari balik layar yang membeku. Panik melanda karena belum sempat *save*. Dengan terpaksa, tombol *power* ditahan selama lima detik hingga PC mati paksa. Begitu PC dinyalakan ulang, dokumen yang dikerjakan hilang setengahnya, dan kepanikan berubah menjadi kejengkelan karena masalah *random freezing* seperti ini sudah terjadi tiga kali dalam seminggu terakhir.
 
 ![Tech Troubleshooting Guide](/images/tech-photo/tech-photos%20(42).jpg)
@@ -46,7 +47,7 @@ Mari kita bedah kejadian di Sudirman tadi menggunakan langkah-langkah sistematis
 
 2. Pada panel sebelah kiri, klik dua kali pada Windows Logs, lalu pilihSystem. Di sinilah semua catatan aktivitas hardware dan driver sistem disimpan.
 
-## Langkah 2: Menyaring Kejadian Kritis (Critical & Error)
+### Langkah 2: Menyaring Kejadian Kritis (Critical & Error)
 Karena log sistem sangat banyak, kita tidak perlu membaca semuanya satu per satu. Kita cari waktu persis di mana PC Anda tadi freeze.
 
 1. Di panel sebelah kanan, klik Filter Current Log...
@@ -57,7 +58,7 @@ a: *Last 1 hour* atau *Last 24 hours*).
 
 3. Pada kotak centang *Event Level*, centang CriticaldanError, lalu klikOK.
 
-## Langkah 3: Berburu Kode Error (The Smoking Gun)
+### Langkah 3: Berburu Kode Error (The Smoking Gun)
 Cari kejadian tepat pada menit-menit sebelum PC Anda dipaksa mati. Perhatikan beberapa Event ID yang sering menjadi tersangka utam
 
 a:

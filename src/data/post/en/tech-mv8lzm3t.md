@@ -14,6 +14,7 @@ theme: "Cyberpunk Terminal"
 
 
 
+
 <div style="border-left: 4px solid #00ffcc; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,255,204,0.05); border-radius: 4px; font-family: monospace;">
 root@silicon-valley-h
 
@@ -52,7 +53,7 @@ We aren't going to click around useless graphical menus. We are going straight t
 systeminfo | findstr /C:"Boot Device" /C:"System Boot Time"
 </div>
 
-## Step 1: Purge the Startup Queue via Task Manager
+### Step 1: Purge the Startup Queue via Task Manager
 Forget third-party registry cleaners that promise miracles and deliver malware. Let's use the native orchestration tool.
 
 1. Hit `Ctrl + Shift + Esc` to launch the Task Manager directly.
@@ -63,7 +64,7 @@ Forget third-party registry cleaners that promise miracles and deliver malware. 
 
 4. Right-click and Disable every single non-essential utility (OneDrive, Cortana, third-party updaters, chat clients). Leave only your core hardware drivers and Windows Security.
 
-## Step 2: Deep System Diagnostics via Command Prompt & Device Manager
+### Step 2: Deep System Diagnostics via Command Prompt & Device Manager
 If disabling startup apps doesn't yield an immediate I/O boost, you might have failing hardware or corrupted system files slowing down the kernel handshake.
 
 <div style="border-left: 4px solid #00ffcc; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,255,204,0.05); border-radius: 4px; font-family: monospace;">
@@ -78,7 +79,7 @@ sfc /scannow
 
 3. Open Device Manager (`devmgmt.msc`), expand *Disk drives*, and check your primary NVMe/SSD health. If SMART data reports high reallocation sectors, your drive controller is choking your boot reads.
 
-## Step 3: Prune Registry Run Keys (Advanced)
+### Step 3: Prune Registry Run Keys (Advanced)
 For persistent bloatware that refuses to disappear from your startup list:
 
 1. Press `Win + R`, type `regedit`, and hit Enter.

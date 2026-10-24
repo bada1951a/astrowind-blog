@@ -14,6 +14,7 @@ theme: "Warm Coffee Latte"
 
 
 
+
 Es war kurz vor 9 Uhr morgens in unserem Berliner Tech-Hub in Mitte. Der Espresso in meiner Lieblingstasse war noch heiß, und der große Sprint-Review für unseren anstehenden Software-Rollout stand unmittelbar bevor. Als ich mein ThinkPad aufklappte, um die letzten Systemdiagnosen zu checken, passierte es: Der Windows-Desktop hing im gefühlten ewigen Ladezustand fest. Minuten vergingen, während im Hintergrund munter Update-Agenten, Chat-Tools, Cloud-Synchronisierungen und Updater für Software starteten, die ich seit Monaten nicht mehr angefasst hatte. Die CPU-Auslastung schoss durch die Decke, die Lüfter jammerten, und mein Puls stieg mit. Mitten in der Hektik vor dem Meeting wurde mir klar: So kann das nicht weitergehen.
 
 <div style="border-left: 4px solid #78350f; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
@@ -38,13 +39,13 @@ Bevor wir zur Tat schreiten, werfen wir einen kurzen Blick unter die Motorhaube.
 
 Genug geredet, machen wir Nägel mit Köpfen. Wir lösen das Problem direkt über die integrierten Windows-Bordmittel, ohne extra Tool-Downloads.
 
-## Schritt 1: Task-Manager öffnen
+### Schritt 1: Task-Manager öffnen
 Drücke die Tastenkombination `Strg + Umschalt + Esc`, um den Task-Manager direkt zu öffnen. (Alternativ kannst du auch mit der rechten Maustaste auf die Taskleiste klicken und den Task-Manager auswählen).
 
-## Schritt 2: Den Autostart-Reiter finden
+### Schritt 2: Den Autostart-Reiter finden
 Falls sich der Task-Manager in der kompakten Ansicht öffnet, klicke unten links auf "Mehr Details". Navigiere nun oben in der Reiterleiste zum Tab "Autostart" (das Symbol sieht aus wie ein kleines Tachometer oder ein Chip).
 
-## Schritt 3: Übeltäter identifizieren und deaktivieren
+### Schritt 3: Übeltäter identifizieren und deaktivieren
 Du siehst nun eine Liste aller Programme, die beim Start von Windows 10 automatisch geladen werden. In der Spalte "Startstatus" siehst du, was aktiv ist. In der Spalte "Startauswirkung" zeigt dir Windows an, wie stark das jeweilige Tool den Bootvorgang belastet (Hoch, Mittel, Niedrig).
 
 1. Klicke mit der rechten Maustaste auf ein Programm, das du beim Systemstart nicht zwingend brauchst (zum Beispiel den Epic Games Launcher, Cortana, Spotify oder diverse Drucker-Helfer).

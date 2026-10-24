@@ -14,6 +14,7 @@ theme: "Retro Monokai"
 
 
 
+
 Eram exatamente 13:45 em um escritório na Avenida Paulista, São Paulo. A reunião de diretoria começaria às 14:00 em ponto, e a apresentação principal estava salva na máquina do nosso diretor financeiro. O problema? O notebook dele simplesmente congelou. As ventoinhas pareciam uma turbina de boeing tentando decolar, o cursor do mouse arrastava na tela como se estivesse na lama e, ao abrir o Gerenciador de Tarefas, lá estava a sentença de morte: o uso da CPU cravado em 100%, dominado por um misterioso processo do sistema (*System* ou *Interrupções de Sistema*). 
 
 Se você já passou por isso, sabe que o desespero bate na hora. Reiniciar a máquina não adiantava, pois o Windows travava na tela de carregamento ou voltava com o mesmo gargalo infernal devido a indexações corrompidas, serviços de atualização travados ou conflitos de driver de hardware. 
@@ -46,13 +47,13 @@ Esqueça teorias complexas. Vamos direto aos comandos e cliques que funcionam no
 a:</strong> Se a máquina estiver totalmente travada, force o desligamento segurando o botão Power por 10 segundos e ligue-a novamente em <strong>Modo de Segurança</strong> (pressionando F8 ou Shift + Reiniciar) caso o erro persista na inicialização normal.
 </div>
 
-## Passo 1: Identificando o culpado no Gerenciador de Tarefas
+### Passo 1: Identificando o culpado no Gerenciador de Tarefas
 Pressione `Ctrl + Shift + Esc` para abrir o Gerenciador de Tarefas. 
 * Vá na aba Processose clique na colunaCPU para ordenar do maior para o menor uso.
 * Se o processo que consome 100% se chamar *Sistema* (System), *Serviço de Host* ou *Interrupções de Sistema*, anote o nome exato.
 * Clique com o botão direito sobre o processo problemático e selecione Ir para Serviços para ver qual serviço exato está atrelado a ele.
 
-## Passo 2: Parando o Windows Update e o Windows Search (Os maiores vilões)
+### Passo 2: Parando o Windows Update e o Windows Search (Os maiores vilões)
 Muitas vezes, interromper os serviços que gerenciam atualizações e buscas resolve o travamento instantaneamente.
 
 1. Pressione as teclas `Windows + R`, digite `services.msc` e dê Enter.
@@ -65,7 +66,7 @@ Muitas vezes, interromper os serviços que gerenciam atualizações e buscas res
 
 5. Volte ao Gerenciador de Tarefas e verifique se a CPU despencou para taxas normais (abaixo de 10%).
 
-## Passo 3: Limpando o Cache de Atualizações corrompidas
+### Passo 3: Limpando o Cache de Atualizações corrompidas
 Se o passo anterior aliviou o problema, precisamos limpar a pasta onde o Windows guarda os arquivos temporários de update corrompidos.
 
 1. Abra o Explorador de Arquivos e vá até `C:\Windows\SoftwareDistribution`.
@@ -74,7 +75,7 @@ Se o passo anterior aliviou o problema, precisamos limpar a pasta onde o Windows
 
 3. Reinicie a máquina normalmente.
 
-## Passo 4: Verificando drivers no Gerenciador de Dispositivos
+### Passo 4: Verificando drivers no Gerenciador de Dispositivos
 Se o processo *Interrupções de Sistema* continua sugando o processador, o problema é hardware ou driver.
 
 1. Clique com o botão direito no menu Iniciar e selecione Gerenciador de Dispositivos.

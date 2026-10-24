@@ -14,6 +14,7 @@ theme: "Nordic Clean Ice"
 
 
 
+
 Eram exatamente 14h45 em um escritório na Avenida Paulista, em São Paulo. Faltavam quinze minutos para a reunião mais importante do semestre com a diretoria, e a máquina principal do gerente de operações simplesmente congelou. Tela estática, mouse morto, o cooler rodando no talo e o pior: a apresentação de resultados aberta sem backup recente. No desespero, o botão físico de reset foi acionado. A máquina voltou, a reunião aconteceu no sufoco usando um notebook reserva, mas o problema voltou a se repetir duas vezes na mesma semana. Trocar peças às cegas estava fora de cogitação. Era hora de usar a ferramenta que todo bom profissional de suporte tem no arsenal: o Visualizador de Eventos do Windows.
 
 <div style="border-left: 4px solid #0284c7; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
@@ -59,9 +60,7 @@ Procure pelo evento com o horário exato em que o computador travou. Na aba Gera
 
 ## Verificações Complementares no Painel de Controle e Configurações
 
-Depois de identificar o rastro no Visualizador de Eventos, vale a pena checar o estado geral do hardware através de caminhos rápidos do sistem
-
-a:
+Depois de identificar o rastro no Visualizador de Eventos, vale a pena checar o estado geral do hardware através de caminhos rápidos do sistema:
 
 - Gerenciador de Dispositivos:Pressione `Windows + X` e abra oGerenciador de Dispositivos. Procure por triângulos amarelos em adaptadores de vídeo ou controladores de barramento universal (USB). Desinstale drivers corrompidos e reinstale a versão mais recente direto do fabricante.
 - Painel de Controle Tradicional:Vá emPainel de Controle>Opções de Energia. Altere o plano de energia paraAlto Desempenho e desative a opção de "Inicialização Rápida" (Fast Startup), que costuma carregar arquivos corrompidos de sessão anterior e gerar travamentos no Windows 11.

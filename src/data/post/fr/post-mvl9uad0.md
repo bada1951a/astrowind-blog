@@ -14,6 +14,7 @@ theme: "Electric Cyan Speed"
 
 
 
+
 Il est exactement une heure du matin ici au siege de notre entreprise a Paris La Defense. Je suis seul dans le grand plateau bureau, face a mon ecran qui clignote doucement, en plein milieu d'une migration critique de donnees et de deploiement de systemes prevue pour demain matin. La fatigue commence a peser lourd, mes yeux me picotent, et je veux simplement boucler cette derniere etape, ranger mon poste et rentrer enfin chez moi. Je clique sur Arreter dans le menu demarrer de Windows. L'ecran s'assombrit quelques secondes, mais les ventilateurs continuent de souffler a plein regime dans le boitier, les LED de la carte mere restent allumees, et le disque dur gratte encore un peu. J'attends dix minutes. Rien ne se passe. Le PC est coince dans un etat hybride, refusant categoriquement de couper l'alimentation electrique completement.
 
 Dans l'urgence absolue de cette nuit de travail, j'ai commence par le reflexe le plus brutal et le plus risque. J'ai appuye longuement sur le bouton d'alimentation physique du boitier pour forcer l'extinction electrique. Mauvaise idee quand on manipule des bases de donnees et des scripts de migration en cours de finalisation. En redarrant la machine pour verifier l'integrite de mes fichiers, rebelote : au moment de quitter le bureau pour une pause cafe rapide, impossible d'eteindre proprement la machine. Apres avoir perdu de precieuses minutes a debrancher des peripheriques USB un par un, a verifier le Gestionnaire des taches pour traquer un processus bloquant, et a fouiller dans les Parametres d'alimentation, j'ai identifie le coupable invisible de Windows.
@@ -34,10 +35,10 @@ Troisieme cause racine : les fonctionnalites de reveil reseau ou USB, comme le W
 
 Voici la procedure exacte et rapide en deux etapes pour regler definitivement ce probleme et retrouver un arret sain de votre station de travail.
 
-Etape 1 : Acceder au Panneau de configuration classique
+### Etape 1 : Acceder au Panneau de configuration classique
 Ouvrez le menu demarrer et tapez Panneau de configuration, puis validez. Dans la fenetre qui s'ouvre, assurez-vous d'afficher les elements par petites icones ou grandes icones en haut a droite. Cliquez ensuite sur Options d'alimentation.
 
-Etape 2 : Modifier les parametres d'arret
+### Etape 2 : Modifier les parametres d'arret
 Dans le volet de gauche, cliquez sur le lien Choisir l'action des boutons d'alimentation. Vous verrez vos options actuelles, mais la case pour modifier le demarrage rapide sera grisee. Cliquez tout en haut sur le lien Modifier des parametres actuellement non disponibles (une icone de bouclier administrateur apparaitra). Une fois les options debloquees, descendez tout en bas de la fenetre et décochez la case Activer le demarrage rapide (recommande). Cliquez enfin sur Enregistrer les modifications.
 
 <div style="border-left: 4px solid #06b6d4; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">

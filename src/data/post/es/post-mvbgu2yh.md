@@ -14,6 +14,7 @@ theme: "Modern Minimalist Slate"
 
 
 
+
 Eran las 18:45 en nuestra oficina tecnológica en el distrito 22@ de Barcelona. Faltaban apenas quince horas para el lanzamiento crítico de un software en el que habíamos estado trabajando durante meses con el equipo de Madrid. El estrés en el canal de Slack era palpable y las notificaciones no paraban de llover. De repente, fui a hacer clic en el menú de Inicio de Windows 11 para abrir la consola de comandos y... nada. La barra de tareas entera se había quedado completamente congelada. El cursor se movía por el escritorio, pero ni el icono de Windows, ni los accesos directos, ni el reloj respondían a los clics. Reiniciar de la manera tradicional era imposible porque el menú estaba bloqueado, y un reinicio forzoso con el botón físico corría el riesgo de corromper un despliegue local crítico. Tenía que solucionarlo en cuestión de minutos.
 
 Si te ha pasado lo mismo justo cuando más prisa tienes, sabes la frustración que genera. Vamos a ir directos al grano con los métodos reales que utilizamos los ingenieros de soporte para solucionar este fallo clásico de Windows 11 sin perder la paciencia ni los datos.
@@ -44,7 +45,7 @@ a: En Windows 11, la barra de tareas y el menú de inicio están estrechamente i
 
 Sigue esta secuencia ordenada para recuperar el control de tu equipo en menos de cinco minutos.
 
-## Paso 1: Reiniciar el proceso del Explorador de Windows (La solución rápida)
+### Paso 1: Reiniciar el proceso del Explorador de Windows (La solución rápida)
 Dado que no puedes acceder al Administrador de tareas de la forma habitual haciendo clic derecho en la barra, utilizaremos un atajo de teclado universal.
 
 1. Pulsa las teclas `Ctrl` + `Shift` + `Esc` simultáneamente para abrir el Administrador de tareas.
@@ -57,7 +58,7 @@ Dado que no puedes acceder al Administrador de tareas de la forma habitual hacie
 
 *Verás que la pantalla parpadea durante un segundo y la barra de tareas vuelve a la vida. *
 
-## Paso 2: Si el Administrador de tareas tampoco abre, usa la Terminal
+### Paso 2: Si el Administrador de tareas tampoco abre, usa la Terminal
 A veces el bloqueo es tan profundo que ni siquiera el Administrador de tareas responde al atajo clásico. Aquí es donde entra en juego la Terminal de comandos de emergencia.
 
 1. Pulsa `Ctrl` + `Alt` + `Supr` y selecciona Administrador de tareas desde esa pantalla de seguridad.
@@ -72,7 +73,7 @@ A veces el bloqueo es tan profundo que ni siquiera el Administrador de tareas re
 
 5. Pulsa `Enter`. La barra debería reactivarse de inmediato.
 
-## Paso 3: Reinstalar y re registrar el paquete de la barra de tareas vía PowerShell
+### Paso 3: Reinstalar y re registrar el paquete de la barra de tareas vía PowerShell
 Si el fallo persiste cada vez que reinicias el ordenador, el problema está en los archivos de registro del sistema operativo. Vamos a forzar a Windows a reconstruir la interfaz de usuario.
 
 1. Abre el menú Ejecutar pulsando la combinación `Windows` + `R`.

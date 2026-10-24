@@ -14,6 +14,7 @@ theme: "Midnight Navy Royal"
 
 
 
+
 <div style="border-left: 4px solid #1d4ed8; padding: 12px 16px; margin: 20px 0; background-color: rgba(29, 78, 216, 0.05); border-radius: 4px; color: #111827;">
 <strong>Registro Notturno - Laboratorio Hardware Milano</strong><br>
 Timestamp: 02:42 AM. Chiamata urgente da uno studio di design in zona Porta Nuov
@@ -45,7 +46,7 @@ a: Può sembrare banale, ma centinaia di utenti accumulano file ISO, archivi ZIP
 
 Mettiamoci all'opera. Segui questa sequenza esatta usando gli strumenti nativi di Windows. Niente software di terze parti sospetti o shareware che promettono miracoli e installano adware.
 
-## Passo 1: Sfruttare la Pulizia Disco avanzata
+### Passo 1: Sfruttare la Pulizia Disco avanzata
 Non fermarti alla pulizia superficiale. Dobbiamo agire come amministratori:
 - Premi i tasti `Windows + S` sulla tastiera e digita Pulizia disco.
 - Seleziona l'unità `C:` e premi Invio.
@@ -53,7 +54,7 @@ Non fermarti alla pulizia superficiale. Dobbiamo agire come amministratori:
 - Spunta tutte le voci più pesanti: *File di log degli aggiornamenti di Windows*, *Installazioni di Windows precedenti (Windows.old)*, *File temporanei di installazione* e *File di ottimizzazione recapito*.
 - Clicca su OK e lascia che il sistema elimini il superfluo.
 
-## Passo 2: Ripulire manualmente le directory nascoste della cache
+### Passo 2: Ripulire manualmente le directory nascoste della cache
 Ora andiamo a scavare dove Windows nasconde i file spazzatura più ostinati.
 - Premi `Windows + R` per aprire la finestra Esegui.
 - Digita `%temp%` e premi Invio. Si aprirà la cartella dei file temporanei utente.
@@ -61,7 +62,7 @@ Ora andiamo a scavare dove Windows nasconde i file spazzatura più ostinati.
 - Ripeti la procedura premendo di nuovo `Windows + R`, digitando questa volta `temp` (senza percentuali) e svuotando anche quella directory.
 - Infine, apri la cartella `Prefetch` digitando `prefetch` in Esegui e ripulisci anche lì dentro.
 
-## Passo 3: Gestire i file di ibernazione e la memoria virtuale (Opzionale ma efficace)
+### Passo 3: Gestire i file di ibernazione e la memoria virtuale (Opzionale ma efficace)
 Se hai ancora bisogno di spazio vitale e usi un SSD veloce, puoi disattivare l'ibernazione se non la usi mai:
 - Apri TerminaleoPrompt dei comandi come Amministratore (clicca col destro sul menu Start).
 - Digita il comando: `powercfg /hibernate off` e premi Invio. Questo eliminerà istantaneamente il file *hiberfil.sys* dalla root del disco C, liberando uno spazio pari alla tua memoria RAM installata (spesso 16 GB o 32 GB puliti!).

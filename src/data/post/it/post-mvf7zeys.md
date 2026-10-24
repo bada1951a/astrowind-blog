@@ -14,6 +14,7 @@ theme: "Pure Titanium Clean"
 
 
 
+
 Erano le 17:50 di un martedì infernale nel nostro ufficio al Centro direzionale di Milano. Mancavano dieci minuti alla deadline tassativa per l'invio del report trimestrale al board europeo, e la postazione principale del controllo di gestione si è letteralmente congelata. La ventola del PC sembrava stesse per decollare verso Linate, lo schermo rispondeva ai click con minuti di ritardo e il cursore si muoveva a scatti. Ho aperto di scatto *Gestione attività* usando la combinazione rapida Ctrl+Maiusc+Esc, e lo spettacolo era impietoso: l'utilizzo della CPU inchiodato al 100%, con il famigerato processo di sistema "System" (e il relativo modulo `ntoskrnl.exe`) che divorava ogni singolo ciclo di clock disponibile. 
 
 All'inizio il panico ha quasi preso il sopravvento. La prima reazione istintiva di chiunque sarebbe stata quella di tenere premuto il tasto di accensione per un hard reset brutale. Ma spegnere la macchina in quel momento esatto significava perdere gli ultimi dati non salvati del foglio di calcolo, corrompere il file di database locale e mancare la consegna al board. 
@@ -46,14 +47,14 @@ a:</strong> Non fermarti mai a terminare il processo "System" da Gestione attivi
 
 Per sbloccare la situazione rapidamente senza perdere i dati, segui questa sequenza testata sul campo.
 
-## Passo 1: Individuare l'interrupt anomalo con Monitor Risorse
+### Passo 1: Individuare l'interrupt anomalo con Monitor Risorse
 Prima di agire a tentoni, verifichiamo quale componente hardware sta sovraccaricando il kernel.
 - Premi `Windows + R`, digita `resmon` e premi Invio per aprire Monitoraggio risorse.
 - Vai sulla scheda CPU.
 - Espandi la sezione Processi con attività della CPU e individua `System`.
 - Spostati subito sotto nella sezione Servitù associateoInterrupt per vedere quale modulo driver (spesso finisce in `.sys`, come `dxgkrnl.sys` o driver di rete) sta generando un volume anomalo di chiamate.
 
-## Passo 2: Aggiornare o disabilitare i driver di rete e chipset da Gestione dispositivi
+### Passo 2: Aggiornare o disabilitare i driver di rete e chipset da Gestione dispositivi
 Nel caso specifico di Milano, il colpevole era il driver della scheda di rete cablata che andava in timeout continuo con il server aziendale.
 - Clicca col tasto destro sul pulsante Start e apri Gestione dispositivi.
 - Cerca la categoria Schede di rete.
@@ -64,7 +65,7 @@ Nel caso specifico di Milano, il colpevole era il driver della scheda di rete ca
 <strong>Consiglio pratico:</strong> Se il PC si blocca continuamente impedendoti di navigare nei menu, riavvia la macchina in <em>Modalità Provvisoria con rete</em> premendo Shift mentre clicchi su Riavvia dal menu Start.
 </div>
 
-## Passo 3: Pulizia dei file di sistema e verifica dell'integrità
+### Passo 3: Pulizia dei file di sistema e verifica dell'integrità
 Se il problema persiste dopo il riavvio, il file system o il registro del kernel potrebbero essersi corrotti durante il blocco improvviso.
 - Premi `Windows + S`, digita `cmd` e seleziona Esegui come amministratore sotto la voce *Prompt dei comandi*.
 - Digita il comando di controllo integrità file di sistema e premi Invio:

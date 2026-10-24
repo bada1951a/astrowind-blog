@@ -14,6 +14,7 @@ theme: "Acid Lime Hacker Space"
 
 
 
+
 Wtorek, kwadrans przed kluczową wideokonferencją z zarządem w nowo otwartej filii na Śląsku. Szybko wyciągam służbowego laptopa z torby i podpinam go pod stacjonarny monitor w sali konferencyjnej za pomocą kabla HDMI, żeby rzucić prezentację na wielki ekran. Prezentacja rusza bez zająknienia, slajdy wyglądają świetnie, ale gdy włączam materiał wideo z podkładem muzycznym… z głośników w sali dobiega całkowita cisza. Wszyscy patrzą na mnie, a systemowa ikonka głośnika w prawym dolnym rogu ekranu dumnie wyświetla mały, szary krzyżyk. Znam ten ból aż nazbyt dobrze.
 
 W takich momentach serce na chwilę zastyga, zwłaszcza gdy na szybkiej diagnozie zależy całemu zespołu. Jako inżynier wsparcia IT i serwisant sprzętu komputerowego przetestowałem już chyba każdy możliwy scenariusz awarii audio w systemie Windows 11. Zamiast panikować i tracić cenne minuty na przeinstalowywanie całego systemu, weźmy głęboki oddech i przejdźmy do konkretów. Oto sprawdzona procedura ratunkowa, którą wdrożysz w niespełna trzy minuty.
@@ -38,7 +39,7 @@ Zanim klikniemy cokolwiek na ślepo, warto zrozumieć, z czym właściwie walczy
 
 Jasne, moglibyśmy od razu grzebać w rejestrze, ale po co komplikować? Zacznijmy od najszybszych i najskuteczniejszych narzędzi diagnostycznych wbudowanych w Windows 11.
 
-## Krok 1: Weryfikacja panelu szybkiego dostępu i miksera głośności
+### Krok 1: Weryfikacja panelu szybkiego dostępu i miksera głośności
 Zacznij od absolutnej podstawy, która rozwiązuje 70% podobnych zgłoszeń w naszym biurze:
 - Kliknij lewym przyciskiem myszy na ikonę głośności obok zegarka w prawym dolnym rogu paska zadań.
 - Obok suwaka głośności kliknij małą strzałkę (Wybierz urządzenie wyjściowe dźwięku).
@@ -49,7 +50,7 @@ Zacznij od absolutnej podstawy, która rozwiązuje 70% podobnych zgłoszeń w na
 <strong>Wskazówka serwisu IT:</strong> Jeśli w menu wyboru urządzenia audio brakuje pożądanej pozycji, kliknij opcję „Więcej ustawień dźwięku”. Otworzy się klasyczny [<strong>Panel sterowania</strong>], gdzie w zakładce „Odtwarzanie” możesz kliknąć prawym przyciskiem myszy w puste pole i zaznaczyć „Pokaż wyłączone urządzenia”. Często sterownik HDMI po prostu ukrywa się po rozłączeniu.
 </div>
 
-## Krok 2: Czyszczenie i restart w Menedżerze urządzeń
+### Krok 2: Czyszczenie i restart w Menedżerze urządzeń
 Gdy proste przełączenie nie pomaga, sterownik audio prawdopodobnie złapał "zawiechę". Czas na cięższy sprzęt:
 - Kliknij prawym przyciskiem myszy na menu Start i wybierz [Menedżer urządzeń].
 - Rozwiń gałąź Kontrolery dźwięku, wideo i gieroraz sekcjęWejścia i wyjścia audio.

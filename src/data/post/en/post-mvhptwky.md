@@ -14,6 +14,7 @@ theme: "Industrial Blueprint"
 
 
 
+
 <div style="border-left: 4px solid #f59e0b; padding: 12px 16px; margin: 20px 0; background-color: rgba(245,158,11,0.08); border-radius: 4px; color: #111827;">
 <strong>IT Emergency Context:</strong> It is 9:40 AM in our Manhattan office. A company-wide board meeting starts in exactly 20 minutes, and our VP of Operations is staring at her new Windows 11 laptop, visibly frustrated. She needs to rename a dozen critical PDF manifests quickly, but every time she right-clicks, she is greeted by the simplified Windows 11 context menu. The option she needs is buried behind a "Show more options" click. That extra click 50 times a day kills workflow rhythm. As the senior IT systems engineer, I need to fix this permanently right now.
 </div>

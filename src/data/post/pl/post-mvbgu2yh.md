@@ -14,6 +14,7 @@ theme: "Graphite Technical Paper"
 
 
 
+
 Siedzę w naszym biurze we wrocławskim parku technologicznym, zegar wskazuje za pięć dwunasta, a za dokładnie trzydzieści minut zaczynamy kluczowy audyt stabilności infrastruktury przed wejściem zewnętrznego klienta. W tym momencie, jak na złość, główna stacja robocza odmawia posłuszeństwa – dolny pasek zadań w Windows 11 zamroził się na amen. Klikam w menu Start, próbuję przełączyć okna, macham kursorem nad ikoną Wi-Fi – zero reakcji. Ekran niby żyje, aplikacje w tle działają, ale sam pasek zadań wygląda, jakby zastygł w betonie. Resetowanie komputera w ciemno nie wchodzi w grę, bo w tle trwają niezapisane sesje diagnostyczne. Trzeba działać chirurgicznie.
 
 <div style="border-left: 4px solid #475569; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
@@ -38,7 +39,7 @@ Zanim przejdziemy do konkretnych komend, warto zrozumieć, co właściwie poszł
 
 Oto ścieżka szybkiej reakcji, którą przetestowałem w bojowych warunkach polskiego sektora IT. Wykonaj poniższe czynności po kolei.
 
-## Krok 1: Szybki restart Eksploratora Windows przez Menadżer Zadań
+### Krok 1: Szybki restart Eksploratora Windows przez Menadżer Zadań
 To najbardziej niezawodny pierwszy krok ratunkowy.
 
 1. Wciśnij kombinację klawiszy `Ctrl + Shift + Esc`, aby uruchomić Menedżer zadań. (Jeśli ta skrótowa ścieżka też nie działa, wciśnij `Ctrl + Alt + Del` i wybierz Menedżer zadań z menu pełnoekranowego).
@@ -68,7 +69,7 @@ a:
 
 5. Zamknij okno terminala. Pasek zadań jest z powrotem pod Twoją kontrolą.
 
-## Krok 3: Rejestracja powłoki systemowej przez PowerShell (Gdy nic innego nie pomaga)
+### Krok 3: Rejestracja powłoki systemowej przez PowerShell (Gdy nic innego nie pomaga)
 Jeśli problem powraca jak bumerang, konieczna może być ponowna rejestracja pakietów interfejsu użytkownika Windows 11.
 
 1. Otwórz TerminallubPowerShell jako Administrator.

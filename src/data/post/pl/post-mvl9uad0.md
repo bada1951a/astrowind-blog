@@ -14,6 +14,7 @@ theme: "Bronze Artisan Workshop"
 
 
 
+
 Wchodzę do biura w nowoczesnym centrum biznesowym przy ulicy Domaniewskiej, trzymając w ręku gorącą kawę i szykując się na spokojny poranek. Dzisiejszy poranek powitał mnie jednak nietypowym incydentem: u jednego z kluczowych analityków finansowych komputer odmówił posłuszeństwa dokładnie po tym, jak zakończyła się instalacja ubiegłorocznej, dużej kumulatywnej aktualizacji bezpieczeństwa systemu Windows. Zrobił pierwszy rozruch po nocnym łataniu systemu, a kiedy pracownik próbował go normalnie wyłączyć, wentylator nadal szumiał, diody świeciły, a ekran gasł, lecz jednostka centralna twardo odmawiała całkowitego odcięcia zasilania. Trzeba było uciekać się do awaryjnego przytrzymywania przycisku power, co w świecie stabilnych stacji roboczych jest zawsze bolesnym kompromisem.
 
 Jako inżynier wsparcia IT od razu wiedziałem, z czym mamy do czynienia. Nowe aktualizacje systemowe potrafią mocno namieszać w domyślnych planach zasilania i sterownikach płyty głównej.
@@ -36,17 +37,17 @@ Przejdźmy zatem do konkretów i naprawmy ten problem raz na zawsze, zanim strac
 
 Oto sprawdzona procedura krok po kroku, którą wykonuję w takich sytuacjach na każdym stanowisku w firmie:
 
-Krok 1: Otwórz Panel sterowania. Najszybciej zrobisz to, wpisując tę frazę w menu Start.
+### Krok 1: Otwórz Panel sterowania. Najszybciej zrobisz to, wpisując tę frazę w menu Start.
 
-Krok 2: W prawym górnym rogu zmień widok na "Małe ikony" lub "Duże ikony", a następnie kliknij opcję "Opcje zasilania".
+### Krok 2: W prawym górnym rogu zmień widok na "Małe ikony" lub "Duże ikony", a następnie kliknij opcję "Opcje zasilania".
 
-Krok 3: W menu po lewej stronie kliknij odnośnik "Wybierz działanie przycisków zasilania".
+### Krok 3: W menu po lewej stronie kliknij odnośnik "Wybierz działanie przycisków zasilania".
 
-Krok 4: Zobaczysz okno, w którym opcje dotyczące zamykania są wyszarzone. Aby to zmienić, kliknij najwyżej położony link "Zmień ustawienia, które są obecnie niedostępne" (wymaga uprawnień administratora).
+### Krok 4: Zobaczysz okno, w którym opcje dotyczące zamykania są wyszarzone. Aby to zmienić, kliknij najwyżej położony link "Zmień ustawienia, które są obecnie niedostępne" (wymaga uprawnień administratora).
 
-Krok 5: Na samym dole okna odznacz pole wyboru przy opcji "Włącz szybkie uruchamianie (zalecane)".
+### Krok 5: Na samym dole okna odznacz pole wyboru przy opcji "Włącz szybkie uruchamianie (zalecane)".
 
-Krok 6: Kliknij przycisk "Zapisz zmiany" na samym dole i zrestartuj komputer tradycyjną metodą.
+### Krok 6: Kliknij przycisk "Zapisz zmiany" na samym dole i zrestartuj komputer tradycyjną metodą.
 
 Jeśli problem nadal występuje, warto sprawdzić menedżer urządzeń pod kątem sterowników sieciowych lub kontrolerów USB, które często blokują przejście komputera w stan głębokiego snu lub całkowitego wyłączenia. Warto też upewnić się, że BIOS płyty głównej jest zaktualizowany do wersji wspierającej najnowsze pakiety systemu Windows.
 

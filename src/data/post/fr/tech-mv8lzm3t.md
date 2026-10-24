@@ -14,6 +14,7 @@ theme: "Matte Black stealth"
 
 
 
+
 Lundi matin, 8h52. La réunion stratégique avec le N+2 commence dans 8 minutes. Évidemment, ma machine décide de faire une mise à jour de ses grands morts et se fige sur l'écran de chargement. Le ventilo souffle comme un A380 au décollage, le curseur freeze, et je transite lentement vers l'angoisse pure en voyant la barre de progression bloquée à 98%. J'ai failli balancer mon ThinkPad par la fenêtre. 
 
 Ce genre de galère, en tant qu'ingénieur système, ça me met hors de moi. On a sous les doigts des bécanes sous i7 avec 32 Go de RAM, et pourtant, à cause d'une ribambelle de bloatwares et de services tiers qui s'invitent au boot, nos machines rament comme des Pentium 4 sous Windows 98. 
@@ -42,7 +43,7 @@ Avant de tout casser, faisons un état des lieux de la cata. Si votre poste met 
 
 On passe aux choses sérieuses. Pas de blabla, voici le protocole exact que j'applique sur les postes de mes collègues en détresse.
 
-## Étape 1 : Le grand ménage via le Gestionnaire des tâches
+### Étape 1 : Le grand ménage via le Gestionnaire des tâches
 Oubliez l'ancien `msconfig`. Sous Windows 10 et 11, tout se passe dans le Gestionnaire des tâches.
 
 1. Ouvrez-le via le raccourci `Ctrl` + `Shift` + `Esc`.
@@ -55,7 +56,7 @@ Oubliez l'ancien `msconfig`. Sous Windows 10 et 11, tout se passe dans le Gestio
 <strong>Action immédiate :</strong> Désactivez (clic droit -> Désactiver) tout ce qui est "Élevé" et dont vous n'avez pas besoin instantanément (OneDrive si vous ne l'utilisez pas, Cortana, les updateurs Adobe, Skype, etc.). Laissez uniquement l'antivirus et les drivers essentiels (Realtek, touchpad).
 </div>
 
-## Étape 2 : Nettoyage avancé avec l'Invite de commandes (`cmd`)
+### Étape 2 : Nettoyage avancé avec l'Invite de commandes (`cmd`)
 Si des services récalcitrants persistent en arrière-plan, on sort l'artillerie lourde. Ouvrez l'Invite de commandes en mode administrateur (`Win + R`, tapez `cmd`, puis `Ctrl` + `Shift` + `Enter`).
 
 Pour lister tous les services non-Microsoft qui se lancent au démarrage et identifier les coupables :
@@ -70,7 +71,7 @@ Si vous repérez un service foireux (par exemple, un vieux résidu de logiciel d
 sc config "NomDuServiceFoireux" start= disabled
 ```
 
-## Étape 3 : Vérification de la santé du stockage via la Gestion des disques et PowerShell
+### Étape 3 : Vérification de la santé du stockage via la Gestion des disques et PowerShell
 Un boot lent peut aussi cacher un SSD en fin de vie ou un système de fichiers corrompu à force de crashs.
 
 1. Ouvrez un terminal PowerShell en admin.

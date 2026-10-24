@@ -14,6 +14,7 @@ theme: "Pure Titanium Clean"
 
 
 
+
 Freitag, 16:50 Uhr. Zehn Minuten vor dem verdienten Feierabend brennt mal wieder der Baum. Der wichtigste Kunde ruft an, will sofort einen geänderten Report, und mein Rechner entscheidet sich, das Windows-Logo für gefühlte zwölfeinhalb Minuten auf den Bildschirm zu malen, während die Lüfter hochdrehen wie eine Boeing 747 beim Start. Ich sitze da, schwitze, der Chef läuft im Gang auf und ab, und das System friert im Login-Screen ein, weil im Hintergrund gerade gefühlt zwanzig Update-Agenten, Updater für Chat-Tools, die ich nie benutze, und Cloud-Dienste gleichzeitig um die CPU-Zyklen prügeln. Wer das schon mal erlebt hat, weiß: In diesem Moment hasst man seinen eigenen Computer.
 
 <div style="border-left: 4px solid #334155; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
@@ -36,7 +37,7 @@ Bevor wir die Werkzeuge auspacken, müssen wir verstehen, wer hier eigentlich br
 
 Wir fackeln nicht lange und gehen direkt ans Eingemachte. Kein Herumgeklicke in versteckten Untermenüs, sondern harte Fakten und präzise Sysadmin-Handgriffe.
 
-## Schritt 1: Der Task-Manager (Die erste Verteidigungslinie)
+### Schritt 1: Der Task-Manager (Die erste Verteidigungslinie)
 Vergiss alte Registry-Hacks aus Windows-XP-Zeiten. Wir nutzen die modernen Bordmittel.
 * Drücke die Tastenkombination `Strg + Umschalt + Esc`, um den Task-Manager direkt zu öffnen.
 * Klicke links auf das Tacho-Symbol (Autostart-Apps bzw. *Startup apps*).
@@ -46,7 +47,7 @@ Vergiss alte Registry-Hacks aus Windows-XP-Zeiten. Wir nutzen die modernen Bordm
 <strong>Faustregel für den Admin:</strong> Alles, was nicht absolut lebensnotwendig für den Systemstart ist (wie der Virenscanner oder der Touchpad-Treiber), wird deaktiviert. Discord, Steam, Epic Games, Cortana-Überbleibsel? <strong>Deaktivieren!</strong> Du kannst die Programme später immer noch manuell starten, wenn du sie brauchst.
 </div>
 
-## Schritt 2: Den tiefen Müll im System aufräumen (Eingabeaufforderung & Dienste)
+### Schritt 2: Den tiefen Müll im System aufräumen (Eingabeaufforderung & Dienste)
 Manchmal reicht der Task-Manager nicht, weil sich Dienste tief im System vergraben haben. 
 * Öffne die Eingabeaufforderung als Administrator (Rechtsklick auf Start -> Eingabeaufforderung / Terminal als Administrator).
 * Gib den Befehl `msconfig` ein und drücke Enter.
@@ -54,7 +55,7 @@ Manchmal reicht der Task-Manager nicht, weil sich Dienste tief im System vergrab
 * WICHTIG:Setze unten unbedingt den Haken bei "Alle Microsoft-Dienste ausblenden", sonst legst du das Betriebssystem lahm!
 * Gehe die verbleibende Liste durch und schalte alles ab, was zu Software gehört, die du deinstalliert oder ewig nicht genutzt hast (Adobe Updater, Apple Mobile Device, etc.).
 
-## Schritt 3: Speicher- und Hardware-Check (Datenträgerverwaltung & Geräte-Manager)
+### Schritt 3: Speicher- und Hardware-Check (Datenträgerverwaltung & Geräte-Manager)
 Wenn der Rechner trotz leerem Autostart ewig bootet, klemmt es oft an der Hardware-Front oder am Dateisystem.
 * Prüfe über die Datenträgerverwaltung (Rechtsklick auf das Start-Symbol -> *Datenträgerverwaltung*), ob deine Hauptpartition (C:) vor lauter Daten aus allen Nähten quillt. Wenn hier weniger als 15% Platz frei sind, bricht die Performance ein.
 * Öffne den Geräte-Manager, um zu prüfen, ob es unbekannte Geräte oder fehlerhafte Treiber gibt, die beim Booten in eine Timeout-Schleife laufen.

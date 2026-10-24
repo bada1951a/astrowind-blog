@@ -14,6 +14,7 @@ theme: "Deep Ocean Cobalt"
 
 
 
+
 Sebagai staf infrastruktur IT yang mengelola ratusan workstation di gedung perkantoran multi-tenant, kasus monitor eksternal mendadak menampilkan pesan *"No Signal"* atau berkedip hitam (*flickering*) setiap beberapa detik adalah makanan sehari-hari. Masalah ini kerap memuncak pada Senin pagi, terutama setelah sistem operasi mengunduh pembaruan rutin akhir pekan atau ketika laptop baru saja dilepas-pasang dari docking station Type-C/Thunderbolt. 
 
 Ketika pengguna mendapati layar kedua mereka mati, reaksi pertama biasanya menyalahkan kabel HDMI yang longgar atau menganggap monitor rusak total. Namun, dalam lebih dari 80% kasus yang saya tangani di lapangan, sumber masalah utamanya berakar pada kegagalan komunikasi lapisan perangkat lunak grafis: tumpukan driver (*driver stack*) yang korup, kegagalan negosiasi EDID (*Extended Display Identification Data*), serta konflik manajemen daya antara chip grafis terintegrasi (iGPU) dan grafis diskrit (dGPU).

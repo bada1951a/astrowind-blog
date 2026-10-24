@@ -14,6 +14,7 @@ theme: "High-Contrast Charcoal"
 
 
 
+
 Kwadrans przed kluczową prezentacją dla zarządu w warszawskim centrum biznesowym podchodzi do mnie blady jak ściana dyrektor handlowy. Na środku jego ekranu, dokładnie nad wykresami rocznej sprzedaży, dumnie widnieje irytujący, półprzezroczysty napis: „Aktywuj system Windows – przejdź do Ustawień, aby aktywować system”. Klienci mają wejść do sali za dokładnie dziesięć minut, rzutnik jest już rozstawiony, a ten nieszczęsny znak wodny zasłania kluczowe dane w Excelu. Każdy geek wie, że Windows po prostu przypomina o braku aktywacji, ale w warunkach korporacyjnych taki widok przed zarządem to wizerunkowa katastrofa. Szybki restart nie pomógł, a próby przeklinania pod nosem tylko podniosły ciśnienie. Zamiast panikować i szukać podejrzanych programów z internetu, które mogłyby zainfekować stację roboczą malwarem, musiałem działać szybko, legalnie (w ramach procedur testowych) i bezpośrednio z poziomu systemu.
 
 ### Dlaczego ten cholerny napis w ogóle się pojawia?
@@ -36,14 +37,14 @@ Zanim sięgnąłem po konsolę, muszę wyjaśnić, skąd bierze się ten problem
 
 Skoro zdiagnozowaliśmy problem, czas na szybkie działanie. Nie będziemy klikać dziesiątek okienek w Ustawieniach. Zastosujemy metodę czysto techniczną, która zresetuje stan powiadomień i wymusi odświeżenie licencji.
 
-## Krok 1: Uruchomienie Wiersza polecenia z uprawnieniami administratora
+### Krok 1: Uruchomienie Wiersza polecenia z uprawnieniami administratora
 Musimy mieć pełne prawa, aby zmodyfikować kluczowe parametry powiadomień.
 - Kliknij ikonę Menu Start (lub naciśnij klawisz Windows).
 - Wpisz frazę `cmd`.
 - Zamiast od razu wciskać Enter, kliknij prawym przyciskiem myszy na Wiersz poleceniai wybierz opcjęUruchom jako administrator.
 - Jeśli pojawi się okno kontroli konta użytkownika (UAC), potwierdź kliknięciem Tak.
 
-## Krok 2: Zatrzymanie usługi ochrony oprogramowania
+### Krok 2: Zatrzymanie usługi ochrony oprogramowania
 Zanim wyczyścimy cache licencji, musimy upewnić się, że system nie nadpisuje plików w tle. W otwartym czarnym oknie konsoli wpisz dokładnie poniższe polecenie i wciśnij Enter:
 ```text
 net stop sppsvc
@@ -52,7 +53,7 @@ net stop sppsvc
 
 a:* Jeśli otrzymasz komunikat, że usługa nie została uruchomiona, nie przejmuj się – przejdź do kolejnego kroku.
 
-## Krok 3: Wyczyszczenie i reset stanu powiadomień w rejestrze
+### Krok 3: Wyczyszczenie i reset stanu powiadomień w rejestrze
 Teraz wykonamy właściwą operację dezaktywacji denerwującego powiadomienia o braku aktywacji. Wpisz następujące polecenie resetujące licznik powiadomień i zatwierdź je klawiszem Enter:
 ```text
 slmgr /rearm

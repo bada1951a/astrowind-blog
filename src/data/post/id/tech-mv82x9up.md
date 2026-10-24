@@ -14,6 +14,7 @@ theme: "Acid Lime Hacker Space"
 
 
 
+
 Jam sudah menunjukkan pukul 16:50 WIB. Hari Jumat sore, minggu penutupan laporan bulanan, dan *big boss* baru saja kirim pesan singkat via WhatsApp: *"Meeting jam 5 sore ini kita pakai ruang utama ya, presentasi data lo udah siap kan?"* Jantung langsung copot. Pas saya buru-buru pencet tombol power PC meja kerja, kipas *case* nyala bergemuruh, lampu RGB *motherboard* kedap-kedip sok ganteng, tapi... layar monitor *dead silent*. Kosong melompong dengan tulisan ikonik: "No Signal". 
 
 Mau teriak tapi malu sama anak-anak *dev* sebelah. Mau reboot paksa sampai lima kali hasilnya tetap sam
@@ -43,8 +44,6 @@ Karena kita lagi ngejar deadline mepet, nggak usah pusing buka-buka command prom
 1. Buang Sisa Arus Statis (Power Drain)
 * Cabut kabel power dari colokan listrik dinding.
 * Tekan dan tahan tombol power (*Power Button*) di casing selama 15-20 detik. Ini trik wajib buat mengosongkan sisa kapasitansi di *motherboard*.
-
-#
 
 ![Hardware Diagnostic & Troubleshooting](https://picsum.photos/seed/hardware-95/1000/550)
 

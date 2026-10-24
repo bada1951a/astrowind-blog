@@ -14,6 +14,7 @@ theme: "Pure Titanium Clean"
 
 
 
+
 Mới sáng thứ Hai đầu tuần, sếp tổng gọi gấp vào phòng họp để present cái báo cáo quý. Mồ hôi hột vã ra như tắm khi cái laptop chiến thần của mình bấm nút nguồn lên xong... đứng hình ở logo Windows đúng 10 phút tròn. Nhìn thanh Task Manager lúc mở được máy thì ôi thôi, Disk 100%, CPU quạt hú như phản lực cất cánh. Đám app "ăn hại" từ Zalo, KakaoTalk, OneDrive cho đến mấy cái phần mềm diệt virus rác tự động nhảy vào chạy ngầm (Startup) khiến cỗ máy i7 đời cũ nghẹt thở.
 
 Đó là lúc anh em kỹ sư IT như tụi mình phải bật chế độ "cấp cứu" ngay lập tức. Đừng vội mang ra tiệm tốn tiền hay cài lại Win mất thời gian, bài viết này tôi sẽ chỉ cho anh em cách "phẫu thuật" tận gốc bệnh khởi động chậm trễ này chỉ trong vòng một nốt nhạc.
@@ -40,7 +41,7 @@ Trước khi vung dao mổ xẻ, phải bắt đúng bệnh thì mới trị d�
 <strong>Lưu ý kỹ thuật:</strong> Các thao tác dưới đây áp dụng trực tiếp trên Windows 10 và Windows 11. Hãy chuẩn bị sẵn sàng bàn phím và làm theo từng lệnh chuẩn xác.
 </div>
 
-## Bước 1: Dọn dẹp triệt để ứng dụng khởi động cùng Windows (Startup Apps)
+### Bước 1: Dọn dẹp triệt để ứng dụng khởi động cùng Windows (Startup Apps)
 
 Đây là việc cần làm ngay lập tức để giải cứu RAM và CPU lúc boot máy.
 
@@ -50,7 +51,7 @@ Trước khi vung dao mổ xẻ, phải bắt đúng bệnh thì mới trị d�
 *   Chuột phải vào các ứng dụng không cần thiết (Zalo, Skype, Discord, Cortana, OneDrive...) và chọn Disable. 
 *   *Lưu ý:* Chỉ Disable các phần mềm chat, tiện ích cá nhân. Giữ lại các service của hãng sản xuất như Realtek Audio, Windows Security.
 
-## Bước 2: Kiểm tra sức khỏe ổ cứng và phân vùng (Disk Management & Command Prompt)
+### Bước 2: Kiểm tra sức khỏe ổ cứng và phân vùng (Disk Management & Command Prompt)
 
 Ổ cứng chập chờn cũng là nguyên nhân khiến máy ì ạch. Ta sẽ dùng công cụ dòng lệnh để quét lỗi nhanh:
 
@@ -62,7 +63,7 @@ Trước khi vung dao mổ xẻ, phải bắt đúng bệnh thì mới trị d�
 *   Nếu máy hỏi lịch hẹn quét vào lần khởi động tới, nhấn Y rồi Enter, sau đó khởi động lại máy để hệ thống tự quét sâu.
 *   Tiếp theo, mở Disk Management (nhấn chuột phải vào nút Start chọn *Disk Management*) để đảm bảo ổ cài Win (thường là ổ C:) vẫn còn ít nhất 15-20% dung lượng trống màu xanh dương. Nếu đầy đỏ lòm, hãy dọn ngay thư mục `Downloads` hoặc `Temp`.
 
-## Bước 3: Tinh chỉnh Fast Startup trong Control Panel
+### Bước 3: Tinh chỉnh Fast Startup trong Control Panel
 
 Tính năng này giúp Windows lưu trạng thái kernel vào một file hibernation khi tắt máy, giúp lần bật sau nhanh hơn đáng kể.
 

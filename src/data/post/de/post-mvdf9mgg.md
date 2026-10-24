@@ -14,6 +14,7 @@ theme: "Matte Black stealth"
 
 
 
+
 Es ist mal wieder Freitag, kurz vor 17:00 Uhr in unserem Berliner Tech-Hub, und der dringend anstehende Rollout unserer neuen Entwicklungsumgebung droht komplett ins Wasser zu fallen. Auf dem Test-Laptop eines Kollegen lief das neueste Windows 11 Funktionsupdate – und hielt seit sage und schreibe zwei Stunden starr bei exakt 100 Prozent an. Kein Fortschritt, kein Bluescreen, nur der nervige kreisende Punkt und die subtile Panik im Team, dass wir das Gerät plattmachen und bei Null anfangen müssen. Ein erzwungener Neustart endete natürlich in einer automatischen Reparalschleife. Klassiker.
 
 <div style="border-left: 4px solid #ffffff; padding: 12px 16px; margin: 20px 0; background-color: rgba(255,255,255,0.05); border-radius: 4px; color: #111827;">
@@ -37,10 +38,10 @@ Nachdem ich den Laptop im betroffenen Zustand per erzwungenem Aus-Schalter (Powe
 
 Um den Laptop ohne Datenverlust oder Neuinstallation wieder flottzumachen, nutzen wir einen bewährten chirurgischen Eingriff: Wir stoppen die Update-Dienste, leeren den beschädigten Cache und starten den Prozess frisch. 
 
-## Schritt 1: Das Terminal als Administrator öffnen
+### Schritt 1: Das Terminal als Administrator öffnen
 Boote das System (notfalls über den abgesicherten Modus oder direkt nach dem erzwungenen Neustart). Drücke die Tastenkombination `Windows + X` und wähle Terminal (Administrator)oderEingabeaufforderung (Administrator) aus.
 
-## Schritt 2: Die blockierenden Update-Dienste stoppen
+### Schritt 2: Die blockierenden Update-Dienste stoppen
 Bevor wir die Cache-Ordner bereinigen dürfen, müssen wir Windows dazu bringen, die entsprechenden Ordner freizugeben. Tippe nacheinander folgende Befehle ein und bestätige jeweils mit Enter:
 
 ```cmd
@@ -50,7 +51,7 @@ net stop bits
 net stop msiserver
 ```
 
-## Schritt 3: Den SoftwareDistribution-Cache umbenennen oder leeren
+### Schritt 3: Den SoftwareDistribution-Cache umbenennen oder leeren
 Der Hauptverursacher liegt im Verzeichnis `SoftwareDistribution`. Anstatt alles mühsam einzeln zu löschen, benennen wir den Ordner einfach um, damit Windows beim nächsten Start automatisch einen sauberen Ordner anlegt. Gib diese Befehle ein:
 
 ```cmd
@@ -58,7 +59,7 @@ ren C:\Windows\SoftwareDistribution SoftwareDistribution.old
 ren C:\Windows\System32\catroot2 catroot2.old
 ```
 
-## Schritt 4: Dienste neu starten und Neustart einleiten
+### Schritt 4: Dienste neu starten und Neustart einleiten
 Jetzt, wo der beschädigte Ballast sicher isoliert ist, starten wir die Windows-Dienste wieder und stoßen das Update manuell an:
 
 ```cmd

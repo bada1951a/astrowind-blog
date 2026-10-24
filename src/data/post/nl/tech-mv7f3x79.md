@@ -14,6 +14,7 @@ theme: "Midnight Navy Royal"
 
 
 
+
 Tijdens een nachtdienst op de IT-infrastructuurdesk van een corporate kantoor in Amsterdam zag ik de tickets plotseling binnenstromen: direct na de uitrol van een cumulatieve Windows 11-update via ons WSUS-platform meldden tientallen gebruikers die 's ochtends vroeg inlogden identieke symptomen. Laptops aangesloten op Thunderbolt 4-dockingstations gaven massaal de melding "Geen signaal" op het primaire externe beeldscherm, terwijl het secundaire scherm om de vier seconden zwart knipperde. 
 
 Wanneer een gebruiker geconfronteerd wordt met een knipperend beeldscherm of een volslagen gebrek aan videosignaal op een tweede of derde monitor, grijpt men vrijwel altijd direct naar de fysieke bekabeling. In meer dan 85% van de zakelijke incidenten die ik behandel, is de hardware echter kerngezond. Het probleem ligt dieper: een vastgelopen DisplayPort-handshake, corrupte DCH-stuurprogrammabestanden of een bandbreedteconflict in het subsysteem van de grafische processor (GPU). 
@@ -31,8 +32,6 @@ Wanneer een laptop via USB-C, HDMI of DisplayPort een extern scherm aanstuurt, i
 
 1. DCH-Driverconflicten door Geforceerde Windows Update-overschrijvingen
 Het grootste pijnpunt in moderne Windows-omgevingen is de automatische vervanging van specifieke OEM-videodrivers door generieke stuurprogramma's via Windows Update. Als Windows een generieke Intel- of AMD-driver over een door de fabrikant (Lenovo, Dell, HP) geoptimaliseerde driver heen installeert, ontstaat er een incompatibiliteit tussen de stroombeheerfuncties van het moederbord en de DisplayPort Alternate Mode (DP Alt Mode) van de USB-C-controller. Het resultaat is dat de GPU de aangesloten monitor niet langer herkent zodra de PCIe-link naar een lagere energiebeheermodus (C-state) schakelt.
-
-#
 
 ![Hardware Diagnostic & Troubleshooting](https://images.unsplash.com/photo-1542751371-adc38448a05e? auto=format&fit=crop&w=1000&h=550&q=80)
 
@@ -63,7 +62,7 @@ Signaalverlies/Knipperen gedetecteerd
  └── Stap 3: Volledige Pipeline Reset via Veilige Modus & Registry Flush
 ```
 
-## Stap 1: De Snelle Herstart van de Graphics Pipeline
+### Stap 1: De Snelle Herstart van de Graphics Pipeline
 Voordat we diep in het register duiken, dwingen we het Desktop Window Manager (DWM) subsysteem om de beeldschermadapter opnieuw te initialiseren.
 
 1. Gebruik de sneltoets: Windows-toets + Ctrl + Shift + B.
@@ -72,7 +71,7 @@ Voordat we diep in het register duiken, dwingen we het Desktop Window Manager (D
 
 3. Helpt dit niet? Koppel de USB-C/HDMI-kabel los, wacht 10 seconden en sluit deze weer aan.
 
-## Stap 2: Diagnostiek en Driververwijdering via Apparaatbeheer
+### Stap 2: Diagnostiek en Driververwijdering via Apparaatbeheer
 Als de snelle reset het probleem niet verhelpt, is het stuurprogramma in een ongeldige toestand beland. We gaan de drivers isoleren.
 
 1. Klik met de rechtermuisknop op het Startmenu en selecteer Apparaatbeheer (Device Manager).
@@ -91,7 +90,7 @@ Als de snelle reset het probleem niet verhelpt, is het stuurprogramma in een ong
 
 **Q6.** Klik met de rechtermuisknop op je primaire geïntegreerde beeldschermadapter en kies Stuurprogramma bijwerken->Op mijn computer naar stuurprogramma's zoeken->Ik wil kiezen uit een lijst met stuurprogramma's op mijn computer. Selecteer de vorige stabiele driverversie indien beschikbaar en voltooi de wizard.
 
-## Stap 3: Uitvoeren van een Schone Driverinstallatie (DDU Methode)
+### Stap 3: Uitvoeren van een Schone Driverinstallatie (DDU Methode)
 Wanneer Windows Update de stuurprogrammacache heeft beschadigd, biedt alleen een rigoureuze schoonmaak uitkomst.
 
 1. Download de nieuwste OEM-driver via de ondersteuningspagina van je laptopfabrikant (installeer bij voorkeur géén generieke driver via Intel Driver Support Assistant als je een enterprise-dock gebruikt).
@@ -108,7 +107,7 @@ Wanneer Windows Update de stuurprogrammacache heeft beschadigd, biedt alleen een
 
 **Q7.** Installeer het vooraf gedownloade OEM-stuurprogrammabestand. Sluit de externe schermen pas weer aan nadat de installatie 100% is voltooid en de machine eenmaal opnieuw is opgestart.
 
-## Stap 4: Reset van de Windows Display Cache via het Register
+### Stap 4: Reset van de Windows Display Cache via het Register
 Windows bewaart elke schermconfiguratie die je ooit hebt aangesloten in het register. Als deze configuratiesleutel beschadigd raakt, blijft het besturingssysteem proberen om foute resoluties of vernieuwingsfrequenties te forceren.
 
 Open de Opdrachtprompt (cmd) als beheerder en voer de volgende stappen uit om de beeldschermcache veilig te legen:
@@ -121,7 +120,7 @@ reg delete "HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers\ScaleFactors" 
 
 Herstart de laptop direct na het uitvoeren van deze opdrachten. Windows zal de display-database opnieuw opbouwen op het moment dat de externe schermen opnieuw worden ingeplugd.
 
-## Stap 5: Handmatige Synchronisatie van de Vernieuwingsfrequentie (Hz)
+### Stap 5: Handmatige Synchronisatie van de Vernieuwingsfrequentie (Hz)
 Knipperende schermen ontstaan vaak doordat Windows probeert een paneel aan te sturen op 59.94 Hz terwijl de interne scaler van de monitor rekent op exact 60.00 Hz, of wanneer variabele vernieuwingsfrequentie (VRR/G-Sync) actief is op een dock dat dit niet ondersteunt.
 
 1. Open Instellingen(Windows-toets + I) ->Systeem->Beeldscherm.

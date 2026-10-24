@@ -14,6 +14,7 @@ theme: "Retro Monokai"
 
 
 
+
 Jam menunjukkan pukul 10 malam di sebuah gedung perkantoran kawasan SCBD, Jakarta. AC sentral kantor sudah mulai mati, dan saya harus segera merampungkan laporan keuangan untuk klien besok pagi. Tiba-tiba, layar monitor saya kedap-kedip memunculkan notifikasi merah menyala dari Windows: *Low Disk Space*. Drive C saya tinggal menyisakan 300 megabita dari kapasitas 512 gigabita! Sontak file Excel besar yang sedang saya kerjakan gagal disimpan, dan aplikasi *rendering* data mendadak *force close*. Panik? Pasti. Lembur ditemani kopi sachet dan PC yang ngadat gara-gara memori internal penuh adalah mimpi buruk setiap pekerja kantoran.
 
 Awalnya saya mengira SSD NVMe saya rusak atau tidak terbaca karena panas berlebih akibat kerja nonstop. Saya sempat bolak-balik mencabut pasang kabel dan masuk ke menu BIOS, padahal masalahnya jauh lebih sepele namun tersembunyi: tumpukan file sampah sistem yang tidak pernah dibersihkan selama bertahun-tahun.
@@ -40,7 +41,7 @@ Sebelum kita masuk ke cara pembersihan total, mari pahami tiga penyebab utama ke
 
 Mari kita selesaikan masalah ini dengan cepat menggunakan fitur bawaan Windows tanpa perlu menginstal software pihak ketiga yang mencurigakan.
 
-## Langkah 1: Bersihkan File Temp Menggunakan Run Command
+### Langkah 1: Bersihkan File Temp Menggunakan Run Command
 
 1. Tekan kombinasi tombol Windows + R pada keyboard Anda secara bersamaan.
 
@@ -62,7 +63,7 @@ Mari kita selesaikan masalah ini dengan cepat menggunakan fitur bawaan Windows t
 
 5. Klik OK dan biarkan sistem membersihkan file-file berat tersebut.
 
-## Langkah 3: Matikan Fitur Hibernasi (Opsional tapi Efektif)
+### Langkah 3: Matikan Fitur Hibernasi (Opsional tapi Efektif)
 Jika Anda tidak pernah menggunakan mode *Hibernate* pada laptop atau PC kerja Anda, fitur ini memakan ruang C drive yang setara dengan kapasitas RAM Anda.
 
 1. Klik tombol *Start*, ketik Command Prompt, lalu klik kanan dan pilihRun as administrator.

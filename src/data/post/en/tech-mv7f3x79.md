@@ -14,6 +14,7 @@ theme: "Sunset Horizon Coral"
 
 
 
+
 Last Friday at 4:30 PM, right as our deployment sprint was winding down, an engineering lead brought her flagship Dell Precision workstation into my lab. She was running dual external 4K monitors through a Thunderbolt 4 dock. Every twenty seconds, panel two would drop to black, display the dreaded "No Signal" banner, wake up, and drag the primary panel into an agonizing three-second stutter loop. She had already swapped cables three times and rebooted twice.
 
 In production environments, this issue is rarely fried silicon. Nine times out of ten, dual-monitor signal dropouts on modern laptops boil down to a corrupted display pipeline state: botched DisplayPort link training, aggressive Windows Update driver clobbering, or an invalidated EDID cache in the registry. 
@@ -49,8 +50,6 @@ Laptops routing dual displays handle a surprisingly fragile chain of handshakes 
 Modern laptops use hybrid graphics switching (NVIDIA Optimus or AMD SmartAccess). Even if a powerful RTX card powers your applications, your laptop's integrated Intel or AMD SoC physically drives the internal panel and the external display outputs via DisplayPort Alternate Mode. 
 
 When Windows Update pushes a generic WHQL DCH graphics driver in the background, it often overwrites custom OEM-tuned clock tables. This causes a desync between the iGPU frame presentation and the dGPU render queue, manifesting as intermittent black frames whenever dynamic refresh rates change or hardware acceleration initializes.
-
-#
 
 ![Hardware Diagnostic & Troubleshooting](https://images.unsplash.com/photo-1581092918056-0c4c3acd3789? auto=format&fit=crop&w=1000&h=550&q=80)
 
@@ -186,21 +185,15 @@ Now we rebuild the physical display link without triggering an MST sync error.
 
 ### Frequently Asked Questions
 
-##
-
 Q1: Why does hot-unplugging the cable fix the flicker for 15 minutes before the screen drops out again?
 Hot-unplugging forces the graphics adapter to reset the DisplayPort auxiliary (AUX) channel and re-run link training from scratch. At connection time, the link operates cleanly. 
 
 However, as thermal loads rise or minor line noise builds up on poor-quality cables, uncorrected link errors quickly exceed the transceiver's error budget. Once the bit error rate threshold is crossed, the driver drops the display link to protect against memory corruption, producing the exact flicker loop you started with.
 
-##
-
 Q2: Should I update my discrete GPU (NVIDIA) driver or integrated GPU (Intel/AMD) driver first?
 Always update the Integrated GPU driver first. On modern dual-GPU laptops, the integrated GPU directly controls the internal display engine and manages the physical video routing lines (DisplayPort Alternate Mode) exiting the motherboard. 
 
 The discrete GPU functions primarily as a compute accelerator, rendering frames off-screen and copying them to the iGPU's framebuffer. If the integrated platform driver is outdated or broken, updating the discrete GPU won't solve external monitor signal drops.
-
-##
 
 Q3: Can a damaged or cheap cable actually simulate a display driver crash?
 Yes. Modern high-resolution displays push massive amounts of data. Dual 4K at 60Hz requires significant bandwidth, demanding strict physical link integrity. Cheap or worn cables suffer from signal attenuation, impedance mismatches, and electromagnetic interference. 

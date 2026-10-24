@@ -14,6 +14,7 @@ theme: "Crimson Emergency Field"
 
 
 
+
 Godzina 8:52 rano. Za acht minut mam mieć gotowy raport dla zarządu i rzuconego na głęboką wodę klienta z Frankfurtu. Otwieram mojego ThinkPada, a on... wita mnie czarnym ekranem i kręcącym się kółkiem ładowania. Dysk NVMe mieli w kółko, procesor jedzie na 100% swoich możliwości, a wentylatory wyją jak odkurzacz w małym pokoju. W tle ładuje się Teams, Discord, Spotify, autoupdater do jakiejś głupiej gierki i pięć różnych programów do "optymalizacji", które jakiś geniusz z działu marketingu zainstalował bez pytania. Krew mnie zalała, pot oblał czoło – klasyczny piątkowy orkan w korpo, gdzie sprzęt decyduje się umrzeć w najmniej odpowiednim momencie.
 
 <div style="border-left: 4px solid #ef4444; padding: 12px 16px; margin: 20px 0; background-color: rgba(239, 68, 68, 0.05); border-radius: 4px;">
@@ -113,19 +114,13 @@ Zanim zaczniesz bezmyślnie klikać "Wyłącz", spójrz na tę krótką listę r
 
 ## Często Zadawane Pytania (FAQ)
 
-###
-
 Q1: Wyłączyłem aplikację w Menedżerze zadań, a ona dalej włącza się po restarcie. O co chodzi?
 
 A: Niektóre aplikacje mają własne ustawienia wewnętrzne, które przy każdym uruchomieniu programu same dopisują się z powrotem do autostartu. Wejdź w *Ustawienia* (Settings) danej aplikacji (np. Skype, Steam, Torrenty) i tam odznacz opcję "Uruchom wraz z systemem". Dopiero wtedy zniknie na dobre.
 
-###
-
 Q2: Czy czyszczenie autostartu jest bezpieczne dla moich danych?
 
 A:W 100% bezpieczne. Wyłączenie aplikacji w autostarcienie oznacza jej odinstalowania. Programy te nadal będą działać idealnie, gdy klikniesz ich ikonkę ręcznie. Po prostu przestaną marnować zasoby komputera w momencie, gdy Ty próbujesz spokojnie zacząć pracę.
-
-###
 
 Q3: Mój dysk to stary HDD. Czy samo wyłączenie autostartu mi pomoże?
 

@@ -14,6 +14,7 @@ theme: "Crimson Emergency Field"
 
 
 
+
 Eram exatamente 17h30 em um escritório na Avenida Paulista. O prazo da auditoria de segurança interna da nossa empresa vencia em trinta minutos, e eu precisava gerar e enviar o relatório de autodiagnóstico do meu departamento urgentemente. Cliquei em "Desligar" no menu Iniciar para reiniciar a máquina com um perfil limpo e garantir que o script de auditoria rodasse sem interferências, mas o monitor apagou e os coolers continuaram girando a toda velocidade. O LED do gabinete permaneceu aceso ininterruptamente. Tentei segurar o botão físico de energia por cinco segundos para forçar o desligamento, mas ao religar, o Windows retomou exatamente a mesma sessão travada, ignorando o comando anterior. O tempo estava correndo contra mim, o relatório não podia ser gerado com o sistema operacional preso nesse limbo de energia e a equipe de compliance estava monitorando o envio segundo a segundo.
 
 <div style="border-left: 4px solid #ef4444; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
@@ -32,15 +33,15 @@ Em terceiro lugar, conflitos nas configurações de Gerenciamento de Energia Ava
 
 Para resolver essa situação antes que o relógio zere e você perca o prazo, siga este passo a passo cirúrgico diretamente na interface do seu Windows:
 
-Passo 1: Acesse o Painel de Controle clássico. Clique no menu Iniciar, digite Painel de Controle e abra o aplicativo. No canto superior direito, ajuste a visualização para "Ícones grandes" ou "Ícones pequenos".
+### Passo 1: Acesse o Painel de Controle clássico. Clique no menu Iniciar, digite Painel de Controle e abra o aplicativo. No canto superior direito, ajuste a visualização para "Ícones grandes" ou "Ícones pequenos".
 
-Passo 2: Procure pela opção de Opções de Energia. Clique nela e, na coluna lateral esquerda da janela que se abrir, clique no link "Escolher a função dos botões de energia".
+### Passo 2: Procure pela opção de Opções de Energia. Clique nela e, na coluna lateral esquerda da janela que se abrir, clique no link "Escolher a função dos botões de energia".
 
-Passo 3: Você verá as configurações atuais, mas o botão para alterar o comportamento de desligamento estará cinza e bloqueado. No topo dessa janela, clique no link azul escrito "Alterar configurações não disponíveis atualmente". Isso exigirá privilégios de administrador.
+### Passo 3: Você verá as configurações atuais, mas o botão para alterar o comportamento de desligamento estará cinza e bloqueado. No topo dessa janela, clique no link azul escrito "Alterar configurações não disponíveis atualmente". Isso exigirá privilégios de administrador.
 
-Passo 4: Na parte inferior da mesma janela, localize a seção Configurações de desligamento. Desmarque a caixinha correspondente a "Ligar inicialização rápida (recomendado)".
+### Passo 4: Na parte inferior da mesma janela, localize a seção Configurações de desligamento. Desmarque a caixinha correspondente a "Ligar inicialização rápida (recomendado)".
 
-Passo 5: Clique no botão "Salvar alterações" localizado no rodapé direito.
+### Passo 5: Clique no botão "Salvar alterações" localizado no rodapé direito.
 
 Feito isso, teste o encerramento do sistema. Vá novamente ao menu Iniciar e clique em Desligar. Agora, o Windows executará um encerramento real e limpo, descarregando completamente o kernel da memória e cortando a energia de forma adequada. No meu caso na Paulista, essa simples alteração permitiu que o computador desligasse em segundos, ligasse limpo e eu pudesse gerar o relatório de auditoria e enviá-lo com cinco minutos de sobra.
 

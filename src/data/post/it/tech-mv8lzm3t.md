@@ -14,6 +14,7 @@ theme: "Cyberpunk Terminal"
 
 
 
+
 <div style="border-left: 4px solid #00ffcc; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,255,204,0.05); border-radius: 4px; font-family: monospace;">
 [SYS_ALERT] root@hardware-lab:~# tail -f /var/log/boot_sequence.log<br>
 CRITICAL: I/O bottleneck detected. Disk queue length > 5.
@@ -48,8 +49,6 @@ Prima di mettere le mani nel registro, usiamo gli strumenti nativi di Windows pe
 Premi la combinazione di tasti `Ctrl + Shift + Esc` per aprire la *Gestione attività*. Spostati sulla scheda Applicazioni in avvio (l'icona del tachimetro). Qui vedrai l'elenco completo di tutto ciò che si avvia con il sistema operativo, accompagnato dall'impatto stimato sull'avvio (*Basso*, *Medio*, *Alto*).
 
 Ordina la lista per "Impatto sull'avvio" e disabilita senza pietà tutto ciò che non è un driver critico o un antivirus. 
-
-#
 
 ![Hardware Diagnostic & Troubleshooting](https://picsum.photos/seed/hardware-688/1000/550)
 

@@ -14,6 +14,7 @@ theme: "Nordic Clean Ice"
 
 
 
+
 > *"A misplaced semicolon will break your build, but an intermittent switch leaf will break your sanity. In production environments, deterministic hardware input is not an amenity—it is an absolute operational baseline."*
 
 Late last winter, during an urgent infrastructure migration on an internal Kubernetes cluster, my terminal suddenly spat out syntax errors during a critical namespace eviction. My custom 75% hot-swap board—built with tuned linear switches—had begun randomly dropping strokes on the `T` key and double-registering the `E` key (`eerror: unexpeected token`). 
@@ -107,13 +108,13 @@ If software triage confirms that an isolated switch is dropping or chattering, t
   <strong>CRITICAL CHEMICAL WARNING:</strong> Do NOT use standard WD-40 Multi-Use Product, mineral oils, isopropyl alcohol (IPA) baths, or industrial brake cleaners. Standard WD-40 leaves a non-conductive, oil-based film that collects dust and destroys keyboard plastics (like Polycarbonate and ABS). Only use zero-residue, fast-evaporating, plastic-safe electronic contact cleaners.
 </div>
 
-## Step 1: Complete Power Isolation
+### Step 1: Complete Power Isolation
 Unplug the keyboard's USB cable directly from your PC. Never attempt chemical cleaning on an active electrical circuit. Even though electronic contact cleaners are non-conductive, the rapid drop in temperature during aerosol discharge can cause atmospheric condensation, which can short your PCB.
 
-## Step 2: Keycap Removal and Housing Exposure
+### Step 2: Keycap Removal and Housing Exposure
 Using a wire keycap puller, gently pull the affected keycap straight up to prevent side-loading the switch stem. Clear any stray dust around the switch using a brush or compressed air.
 
-## Step 3: Solvent Delivery via Capillary Flush
+### Step 3: Solvent Delivery via Capillary Flush
 
 1. Attach the micro-bore straw nozzle to the contact cleaner can.
 
@@ -130,10 +131,10 @@ Using a wire keycap puller, gently pull the affected keycap straight up to preve
    [Depressed Stem] ──> [Gap] ──> [Internal Contact Leaves]
 ```
 
-## Step 4: Rapid Manual Actuation
+### Step 4: Rapid Manual Actuation
 Immediately upon spraying—while the solvent is still wet inside the housing—press the switch stem vigorously 60 to 80 times over 15 seconds. This cycling causes the contacts to rub against each other, allowing the chemical solvent to scrub away loosened carbon buildup and flush micro-particulates out of the contact points.
 
-## Step 5: Complete Outgassing and Evaporation
+### Step 5: Complete Outgassing and Evaporation
 Allow the board to sit unpowered for at least 15 to 20 minutes. Even fast-evaporating solvents like BW-100 need time to outgas if trapped inside a sealed switch enclosure.
 
 ---

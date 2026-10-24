@@ -14,6 +14,7 @@ theme: "Modern Minimalist Slate"
 
 
 
+
 Es ist exakt 16:30 Uhr an einem Freitag im Frankfurter Bankenviertel. Genau in dreißig Minuten beginnt das lange Wochenende, und auf meinem Schreibtisch stapeln sich noch die letzten dringenden Freigabedokumente für das Q4-Budget. Ich will nur noch die letzten digitalen Signaturen setzen, die Dokumente abschicken und den Rechner in den Feierabend schicken. Ich klicke auf Herunterfahren. Der Bildschirm wird schwarz, die Lüfter heulen kurz auf – aber die Power-LED am Gehäuse leuchtet weiter. Auch nach fünf Minuten rührt sich nichts. Die Festplatten-LED ist tot, aber der Rechner zieht stur Strom. Wenn ich jetzt den Stecker ziehe oder den Power-Knopf lange gedrückt halte, riskiere ich Dateisystemfehler in den verschlüsselten Laufwerken. In Panik vor dem drohenden Datenverlust suche ich nach einer schnellen Lösung, um diesen störrischen Workstation-Kasten endlich auszubekommen.
 
 <div style="border-left: 4px solid #3b82f6; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
@@ -26,11 +27,11 @@ Hinter diesem frustrierenden Phänomen stecken meist drei konkrete Ursachen aus 
 
 Um das Problem ein für alle Mal zu lösen, müssen wir gezielt an den Energiesparoptionen schrauben. Da hilft kein langes Warten, sondern nur ein strukturierter Eingriff über die Systemsteuerung.
 
-Schritt 1: Öffne die klassische Systemsteuerung. Drücke dazu die Windows-Taste, tippe Systemsteuerung ein und öffne die App. Navigiere dort weiter zu Energieoptionen. Alternativ kannst du auch in den modernen Windows-Einstellungen nach Energiesparplan suchen.
+### Schritt 1: Öffne die klassische Systemsteuerung. Drücke dazu die Windows-Taste, tippe Systemsteuerung ein und öffne die App. Navigiere dort weiter zu Energieoptionen. Alternativ kannst du auch in den modernen Windows-Einstellungen nach Energiesparplan suchen.
 
-Schritt 2: Klicke in der linken Spalte auf den Punkt Auswählen, was beim Drücken von Netzschaltern geschehen soll. Da man hier im ersten Moment keine Checkboxen bearbeiten kann, klicken wir ganz oben auf Einige Einstellungen sind derzeit nicht verfügbar (mit dem kleinen Administrator-Schild davor), um die Berechtigungen freizuschalten.
+### Schritt 2: Klicke in der linken Spalte auf den Punkt Auswählen, was beim Drücken von Netzschaltern geschehen soll. Da man hier im ersten Moment keine Checkboxen bearbeiten kann, klicken wir ganz oben auf Einige Einstellungen sind derzeit nicht verfügbar (mit dem kleinen Administrator-Schild davor), um die Berechtigungen freizuschalten.
 
-Schritt 3: Schau ganz nach unten in das Fenster. Dort findest du den Bereich Einstellungen für das Herunterfahren. Nimm den Haken bei Schnellstart aktivieren (empfohlen) heraus. Klicke anschließend unten rechts auf Änderungen speichern.
+### Schritt 3: Schau ganz nach unten in das Fenster. Dort findest du den Bereich Einstellungen für das Herunterfahren. Nimm den Haken bei Schnellstart aktivieren (empfohlen) heraus. Klicke anschließend unten rechts auf Änderungen speichern.
 
 <div style="border-left: 4px solid #3b82f6; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 Pro-Tipp für Administratoren: Wenn der Haken für den Schnellstart ausgegraut ist oder sich partout nicht speichern lässt, kannst du die Funktion auch direkt über die Eingabeaufforderung mit Administratorrechten komplett ausschalten. Nutze dazu einfach den Befehl im folgenden Code-Block.

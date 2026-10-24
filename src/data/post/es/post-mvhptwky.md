@@ -14,6 +14,7 @@ theme: "Sunset Horizon Coral"
 
 
 
+
 Eran las 18:50 en nuestra oficina corporativa en Madrid. Quedaban apenas diez minutos para enviar el paquete definitivo del proyecto trimestral a la direccion y mi equipo principal empezo a fallar de la peor manera posible. Necesitaba comprimir carpetas urgentemente, renombrar lotes masivos de archivos PDF y aplicar scripts de automatizacion desde el explorador, pero cada vez que hacia clic derecho con el raton, Windows 11 me obligaba a dar un rodeo absurdo haciendo clic en "Mostrar mas opciones". Ese pequeño retraso de dos segundos por cada operacion se acumulaba, generando una frustracion monumental en medio del caos del cierre de proyecto.
 
 ### El problema diario: El infierno del nuevo diseño de Windows 11
@@ -47,14 +48,14 @@ a: El menu de Configuracion general de Windows 11 no incluye un interruptor simp
 Como tecnico de sistemas, detesto las soluciones complejas que requieren instalar software de terceros dudoso. Vamos a solucionarlo mediante un comando limpio directamente en la consola del sistema. ## Paso 1: Abrir la Terminal o Símbolo del sistema con privilegios
 Haz clic en el boton de Inicio, escribe `Terminal` o `cmd`, haz clic derecho sobre la aplicacion y selecciona "Ejecutar como administrador".
 
-## Paso 2: Ejecutar el comando de restauracion del Registro
+### Paso 2: Ejecutar el comando de restauracion del Registro
 Copia y pega el siguiente comando exacto en la ventana negra que acaba de aparecer y presiona Intro:
 
 ```cmd
 reg.exe add "HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\InprocServer32" /f /ve
 ```
 
-## Paso 3: Reiniciar el proceso del Explorador de archivos
+### Paso 3: Reiniciar el proceso del Explorador de archivos
 Para que los cambios surtan efecto de inmediato sin necesidad de reiniciar todo el ordenador, abre el Administrador de tareas(puedes usar el acceso directo Ctrl + Shift + Esc), busca la aplicacion llamadaExplorador de archivosen la lista, haz clic derecho sobre ella y seleccionaReiniciar.
 
 <div style="border-left: 4px solid #f97316; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">

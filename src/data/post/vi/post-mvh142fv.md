@@ -14,6 +14,7 @@ theme: "Graphite Technical Paper"
 
 
 
+
 Đồng hồ góc phải màn hình nhảy đúng 15:45, chỉ còn 15 phút nữa là đến hạn chót nộp báo cáo doanh thu quý cho sếp tổng tại văn phòng trung tâm Quận 1, TP.HCM. Đột nhiên, chiếc máy tính Windows 11 đời mới của tôi khựng lại. Chuột cứng ngắc, bàn phím bấm không ăn, màn hình đứng hình ở một slide PowerPoint dang dở. Khởi động nóng bằng nút nguồn, vào lại chưa đầy 3 phút sau lại tiếp tục đóng băng hoàn toàn mà không kịp báo lỗi màn hình xanh (BSOD). Mồ hôi túa ra như tắm giữa phòng máy lạnh, khách hàng và cấp trên đang giục dồn dập qua tin nhắn.
 
 Trước đây, khi gặp tình trạng này, phản xạ đầu tiên của dân văn phòng lẫn nhiều anh em làm IT non tay là cài lại toàn bộ Windows, hoặc tháo tung thùng máy ra phủi bụi, cắm lại thanh RAM cho có lệ. Nhưng cách làm mò mẫm đó ngốn cả tiếng đồng hồ quý giá và thường chẳng giải quyết được tận gốc vấn đề, để rồi ngày mai lỗi cũ lại tái diễn.
@@ -46,21 +47,21 @@ Trước khi mở công cụ tra cứu, chúng ta cần hiểu rõ ba nguyên nh
 
 Để tìm ra chính xác thủ phạm giấu mặt, hãy thực hiện tuần tự theo quy trình chuẩn sau đây ngay khi máy khởi động lại được:
 
-## Bước 1: Mở Event Viewer và truy cập Log hệ thống
+### Bước 1: Mở Event Viewer và truy cập Log hệ thống
 * Nhấn phím `Windows`, gõ chữ Event Viewer vào thanh tìm kiếm rồi nhấn Enter.
 * Ở cột bên trái của cửa sổ vừa hiện lên, bấm đúp chuột vào mục Windows Logsvà chọnSystem.
 
-## Bước 2: Lọc các mã lỗi nghiêm trọng (Critical & Error)
+### Bước 2: Lọc các mã lỗi nghiêm trọng (Critical & Error)
 * Nhìn sang cột thao tác (Actions) ở bên phải, bấm vào dòng Filter Current Log... (Lọc nhật ký hiện tại).
 * Trong hộp thoại vừa mở, tại ô Event Level, hãy tích chọn vào hai ôCritical(Nghiêm trọng) vàError(Lỗi), sau đó nhấnOK.
 
-## Bước 3: Khoanh vùng thời điểm xảy ra sự cố
+### Bước 3: Khoanh vùng thời điểm xảy ra sự cố
 * Nhìn vào danh sách hiển thị ở giữa, hãy dò tìm các dòng lỗi có mốc thời gian trùng khớp chính xác với phút mà máy tính của bạn vừa bị đơ cứng.
 * Click vào dòng lỗi đó và đọc phần mô tả (General) ở khung bên dưới:
   * Nếu xuất hiện mã Event ID 41 (Kernel-Power): Thủ phạm là nguồn điện, nhiệt độ hoặc ép xung không ổn định.
   * Nếu xuất hiện mã Event ID 10010 hoặc 7034 (DistributedCOM / Service Control Manager): Lỗi do phần mềm bên thứ ba hoặc dịch vụ hệ thống bị treo.
 
-## Bước 4: Khắc phục triệt để dựa trên kết quả
+### Bước 4: Khắc phục triệt để dựa trên kết quả
 * Cập nhật hoặc gỡ bỏ Driver GPU/Chipset:VàoDevice Manager, tìm đến Display Adapters, click chuột phải chọn Update driver hoặc gỡ bản driver mới nhất vừa cài gây lỗi.
 * Tắt tính năng Fast Startup:MởControl Panel-> ChọnPower Options-> ChọnChoose what the power buttons do-> Bỏ tích ôTurn on fast startup để tránh lỗi lưu trạng thái kernel khi khởi động lại.
 * Kiểm tra sức khỏe ổ cứng: Tải phần mềm CrystalDiskInfo để kiểm tra xem SSD có bị bad sector hoặc nhiệt độ vượt mức 70°C hay không.
