@@ -3,58 +3,48 @@ import path from 'path';
 
 const POSTS_BASE_DIR = path.resolve('src/data/post');
 
-function repairMarkdownPost(content) {
+function cleanAndRepairPost(content, lang) {
   const fmMatch = content.match(/^---[\s\S]*?---\n*/);
   if (!fmMatch) return content;
 
   const frontmatter = fmMatch[0];
   let body = content.slice(frontmatter.length);
 
-  // 1. 소제목(##) 강제 삽입 (문맥 기준)
-  body = body
-    .replace(/\n+(?=컴퓨터가 종료 명령을 내려도|시스템이 완전히 꺼지지 않고|전원이 꺼지지 않는 현상은)/g, '\n\n## 1. 시스템 종료 불량의 근본 원인 분석\n\n')
-    .replace(/\n+(?=이 문제를 가장 깔끔하고 확실하게|아래 순서대로 제어판과|먼저 윈도우 작업 표시줄의)/g, '\n\n## 2. 빠른 시작 끄기 및 전원 설정 단계별 해결법\n\n')
-    .replace(/\n+(?=현장에서 하드웨어 트러블슈팅을 진행할 때 주의|빠른 시작 기능을 끄더라도 부팅 속도가)/g, '\n\n## 3. 엔지니어 실무 점검 및 주의사항\n\n')
-    .replace(/\n+(?=현업에서 마주치는 다양한|자주 묻는 질문들을 모았습니다)/g, '\n\n## 4. 자주 묻는 질문 (FAQ)\n\n');
-
-  // 번호 목록(1. , 2. )으로 시작하는 다국어 패턴도 소제목화
-  body = body.replace(/^(?:\s*|\n*)([1-5]\.\s+[^\n]+)/gm, '\n\n## $1\n\n');
-  body = body.replace(/#{2,}\s*#{2,}/g, '##');
-
-  // 2. 주요 UI 클릭 경로 및 핵심 단어 볼드(**) 복원
-  const keyTerms = [
-    '빠른 시작(Fast Startup)',
-    '빠른 시작 켜기(권장)',
-    '빠른 시작',
-    '제어판',
-    '전원 옵션',
-    '전원 버튼 동작 변경',
-    '현재 사용할 수 없는 설정 변경',
-    '변경 내용 저장',
-    '장치 관리자',
-    '네트워크 어댑터',
-    '전원을 절약하기 위해 컴퓨터가 이 장치를 끌 수 있음',
-    '최대 절전 모드',
-    'powercfg /hibernate on'
-  ];
-
-  // 단어 중복 치환 방지하며 볼드 적용
-  for (const term of keyTerms) {
-    const escaped = term.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-    const regex = new RegExp(`(?<!\\*\\*)(?<![#\\w가-힣])${escaped}(?![\\w가-힣])(?!\\*\\*)`, 'g');
-    body = body.replace(regex, `**${term}**`);
+  // =========================================================================
+  // 1. [한국어 ko] 중복 누적된 소제목 라인들을 정식 마크다운 헤딩(##) 1개로 단일화
+  // =========================================================================
+  if (lang === 'ko') {
+    body = body.replace(/(?:#*\s*[0-9]\.\s*시스템 종료 불량의 근본 원인 분석[\s\n]*)+/g, '\n\n## 1. 시스템 종료 불량의 근본 원인 분석\n\n');
+    body = body.replace(/(?:#*\s*[0-9]\.\s*빠른 시작.*단계별 해결[법번][\s\n]*)+/g, '\n\n## 2. 빠른 시작 끄기 및 전원 설정 단계별 해결법\n\n');
+    body = body.replace(/(?:#*\s*[0-9]\.\s*엔지니어 실무 점검 및 주의사항[\s\n]*)+/g, '\n\n## 3. 엔지니어 실무 점검 및 주의사항\n\n');
+    body = body.replace(/(?:#*\s*[0-9]\.\s*자주 묻는 질문\s*\(FAQ\)[\s\n]*)+/g, '\n\n## 4. 자주 묻는 질문 (FAQ)\n\n');
   }
 
-  // 3. Q&A 줄바꿈 및 Q 강조 복구
-  body = body.replace(/([^\n])\s*(Q[0-9]*\.\s*)/g, '$1\n\n**$2**');
-  body = body.replace(/([^\n])\s*(A[0-9]*\.\s*)/g, '$1\n\n$2');
-  body = body.replace(/(\*\*Q[0-9]*\.[^\*]+\*\*)\s*(A[0-9]*\.)/g, '$1\n\n$2');
+  // =========================================================================
+  // 2. [전 세계 공통] 인용구(Callout) 마크다운 문법 정상화 (> 💡 )
+  // =========================================================================
+  const noteKeywords = 'Quick Diagnostic Tip|Pro Technical Note|Nota del técnico|Consejo profesional|Catatan Teknisi|Tips Tambahan|현장 엔지니어 노트|대량 데이터';
+  // 앞뒤에 붙은 불필요한 따옴표나 별표 기호 제거
+  body = body.replace(new RegExp(`^\\s*[\\*"\\”\']\\s*(${noteKeywords})`, 'gm'), '$1');
+  body = body.replace(new RegExp(`(${noteKeywords})(:[^\\n]+)[\\*"\\”\']`, 'g'), '$1$2');
+  // 인용구 블록(> 💡 )으로 변환
+  body = body.replace(new RegExp(`(?:^|\\n)(${noteKeywords}):?([^\\n]+)`, 'g'), '\n\n> 💡 **$1**:$2\n\n');
 
-  // 4. 인용구/안내 박스 복구
-  body = body.replace(/\n+(현장 엔지니어 노트:[^\n]+)/g, '\n\n> 💡 **$1**\n\n');
-  body = body.replace(/\n+(대량 데이터 처리 시 주의 박스[^\n]+)/g, '\n\n> ⚠️ **$1**\n\n');
+  // =========================================================================
+  // 3. [전 세계 공통] 엉킨 Q&A 볼드 문법(**Q1. ****, **01****) 완벽 표준화
+  // =========================================================================
+  // 질문 머리말: **Q1.** 형태로 통일
+  body = body.replace(/(?:^|\n)\s*\*{0,4}(?:Q|0)?([1-9])[\.\)]?\s*\*{0,4}\s*(?=[¿¡\w가-힣])/gi, '\n\n**Q$1.** ');
+  
+  // 답변 머리말: A1. 형태로 통일 및 줄바꿈 확보
+  body = body.replace(/(?:^|\n)\s*\*{0,4}(?:A|0)?([1-9])[\.\)]\s*\*{0,4}\s*/gi, '\n\nA$1. ');
 
-  // 5. 과도한 빈 줄 정리
+  // 본문 중에 3개 이상 연달아 붙어버린 찌꺼기 별표(***, ****)는 2개(**)로 정상화
+  body = body.replace(/\*{3,}/g, '**');
+
+  // =========================================================================
+  // 4. [공통] 레이아웃 여백 정리 (3줄 이상 빈 줄을 표준 2줄 개행으로 정돈)
+  // =========================================================================
   body = body.replace(/\n{3,}/g, '\n\n').trim();
 
   return `${frontmatter}\n${body}\n`;
@@ -81,7 +71,7 @@ function processAllPosts() {
     for (const file of files) {
       const filePath = path.join(targetDir, file);
       const originalText = fs.readFileSync(filePath, 'utf-8');
-      const repairedText = repairMarkdownPost(originalText);
+      const repairedText = cleanAndRepairPost(originalText, lang);
 
       if (originalText !== repairedText) {
         fs.writeFileSync(filePath, repairedText, 'utf-8');
@@ -90,7 +80,7 @@ function processAllPosts() {
     }
   }
 
-  console.log(`\n🎉 총 ${totalUpdated}개의 포스트 서식 및 볼드 복구 완료!`);
+  console.log(`\n🎉 구조 전용 마크다운 복구 완료! (수정된 파일: ${totalUpdated}개)`);
 }
 
 processAllPosts();
