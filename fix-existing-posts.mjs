@@ -10,31 +10,43 @@ function cleanMarkdown(content) {
   const frontmatter = fmMatch[0];
   let body = content.slice(frontmatter.length);
 
-  // 1. [인코딩 및 깨진 특수문자 복원]
+  // 1. [인코딩 복원] 깨진 UTF-8 전구 이모지 복원
   body = body.replace(/ðŸ’¡/g, '💡');
 
-  // 2. [단어 잘림 복원]
+  // 2. [단어 잘림 및 띄어쓰기 복원]
   body = body.replace(/sistem\n\na:/gi, 'sistema:');
+  body = body.replace(/TerminalorCommand/g, 'Terminal or Command');
+  body = body.replace(/clickRestart/g, 'click Restart');
+  body = body.replace(/turn\s*onStorage/gi, 'turn on Storage');
 
-  // 3. [12개국 단계별 소제목 정규화]
-  //    Paso 1:, Step 1:, Etape 1:, Langkah 1:, 1단계: 등을 정식 소제목(###)으로 승격
+  // 3. [대주제(H2) 표준화 및 역슬래시 제거]
+  //    "1\. 시스템...", "2\. 빠른..." 또는 일반 번호 대제목 앞에 ## 부착
+  body = body.replace(/^([0-9]+(?:\\\.|\.)\s+[^\n]{4,45})$/gm, (match) => {
+    const cleanTitle = match.replace(/\\\./g, '.').trim();
+    return `## ${cleanTitle}`;
+  });
+
+  // 언어별 주요 대주제 키워드 누락 방어 및 H2 승격
+  body = body.replace(/^#{3}\s*(Root Cause|Step-by-Step Resolution|Warum läuft|Langkah-Langkah|Akar Masalah|Causes racines|Häufig gestellte|자주 묻는 질문|FAQ|Preguntas frecuentes|Chronologie)/gim, '## $1');
+  body = body.replace(/^(자주 묻는 질문\s*\(?FAQ\)?|FAQ|Frequently Asked Questions|Chronologie de l'intervention|Guide de survie)$/gim, '## $1');
+
+  // 4. [12개국 단계별 소제목(H3) 표준화]
   const stepRegex = /^(?:#{1,4}\s*)?(\*{0,2}(?:Step|Paso|Schritt|Etape|Étape|Passo|Krok|Stap|Langkah|Bước|[0-9]+단계)\s*[0-9]+(?:\s*[:\.]|\s*[-–])\s*[^\n]+?\*{0,2})$/gim;
   body = body.replace(stepRegex, (match, p1) => {
     const cleanTitle = p1.replace(/\*\*/g, '').replace(/^#+\s*/, '').trim();
     return `### ${cleanTitle}`;
   });
 
-  // 4. [거대 폰트화된 본문 실행 리스트 정상화]
-  //    15자 이상 긴 설명 문장 앞에 ## 1. 이 붙은 것은 일반 번호 리스트로 강등
-  body = body.replace(/^#{2,4}\s*([0-9]+[\.\)])\s*(.{15,})$/gm, '$1 $2');
-  body = body.replace(/^\*\*([0-9]+[\.\)])\s*(.{15,})\*\*$/gm, '$1 $2');
+  // 5. [긴 설명 리스트 오작동 방어] 
+  //    45자 초과 긴 문장에 잘못 붙은 ## 가 있으면 일반 번호 리스트로 환원
+  body = body.replace(/^#{2,4}\s*([0-9]+(?:\\\.|\.)\s*)(.{45,})$/gm, '$1 $2');
 
-  // 5. [FAQ 고립된 ** 찌꺼기 및 유령 헤딩(#) 완전 소거]
+  // 6. [유령 헤딩 및 잔여 기호 소거]
   body = body.replace(/^\s*\*\*\s*$/gm, '');
   body = body.replace(/^\s*#{1,4}\s*$/gm, '');
   body = body.replace(/\*{3,}/g, '**');
 
-  // 6. [동일 헤딩 중복 방어 및 빈 줄 정돈]
+  // 7. [동일 헤딩 중복 방지 및 빈 줄 정돈]
   body = body.replace(/^(#{1,3}\s+[^\n]+)\n+(?:\1\n+)+/gm, '$1\n\n');
   body = body.replace(/\n{3,}/g, '\n\n').trim();
 
@@ -73,9 +85,9 @@ function run() {
     }
   }
 
-  console.log(`\n🎉 12개국 전수 교정 완료!`);
-  console.log(`- 전체 스캔된 글: ${totalScanned}개`);
-  console.log(`- 문법 오류 교정된 글: ${totalUpdated}개`);
+  console.log(`\n🎉 12개국 전체 포스트 전수 교정 완료!`);
+  console.log(`- 총 스캔된 파일: ${totalScanned}개`);
+  console.log(`- 서식이 교정된 파일: ${totalUpdated}개`);
 }
 
 run();
