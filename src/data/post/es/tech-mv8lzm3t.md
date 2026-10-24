@@ -11,6 +11,7 @@ theme: "Acid Lime Hacker Space"
 
 
 
+
 Eran las 8:55 AM, a solo cinco minutos de que el *Director General* entrara a la sala de juntas para una presentación global con inversores. El pobre Carlos, de finanzas, me llama por Teams con la voz quebrad
 
 a: su ThinkPad se había quedado congelado en la pantalla de bienvenida con la rueda de carga dando vueltas eternas. El ventilador parecía un motor de Boeing 747 a punto de despegar, y el tipo sudaba frío mirando el reloj. Si esa máquina no arrancaba en tres minutos, la reunión se caía y mi cabeza rodaba por el pasillo.

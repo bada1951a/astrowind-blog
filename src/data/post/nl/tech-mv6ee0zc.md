@@ -11,6 +11,7 @@ theme: "Pastel Lavender Tech"
 
 
 
+
 Als werkplekbeheerder en IT-infrastructuurspecialist krijg ik regelmatig randapparatuur op mijn werkbank die door collega's al bijna is afgeschreven. Vorige week nog stond een senior software developer aan mijn bureau: zijn op maat gemaakte mechanische toetsenbord met Cherry MX Brown switches registreerde bij de 'E'-toets willekeurig dubbele aanslagen (`ee`) en liet de spatiebalk regelmatig steken. Voor een programmeur is dit funest; één onbedoelde dubbele letter breekt variabelen en veroorzaakt syntaxfouten. 
 
 In plaats van direct een nieuw toetsenbord van tweehonderd euro uit het IT-budget te trekken of direct de soldeerbout aan te slingeren, heb ik het probleem binnen twintig minuten permanent verholpen. In deze technische handleiding deel ik de exacte diagnose- en herstelprocedure voor chattering(toetsstuiting of dubbelslag) enmissende aanslagen, inclusief de veilige toepassing van elektronica-contactspray.

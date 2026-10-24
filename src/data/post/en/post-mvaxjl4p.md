@@ -11,6 +11,7 @@ theme: "High-Contrast Charcoal"
 
 
 
+
 My Slack was blowing up with notifications, and our executive tech sync for the upcoming product release was scheduled to start in literally five minutes. I slammed the lid of my laptop open at my desk in our Manhattan office, only to watch the Windows 10 login screen freeze for a agonizing three minutes while loading twenty different background utilities I never asked for. If you have ever stared at a spinning circle while your CPU fan roars like a jet engine right before a critical meeting, you know the exact brand of panic I was feeling. 
 
 Let's fix this right now so it never happens to you again. You can reclaim your boot time in less than a minute.

@@ -11,6 +11,7 @@ theme: "Mint Fresh Engineering"
 
 
 
+
 Il est 17h45 dans notre open space à Paris La Défense. La pression monte d'un cran : le rapport financier trimestriel doit être bouclé et envoyé au comité de direction avant 18h30. Soudain, c'est le drame. Mon écran se fige net. La souris ne répond plus, le curseur est immobile, et le clavier refuse d'afficher le moindre caractère. Pas de BSOD (écran bleu) classique, juste un gel total de Windows 11. Impossible de basculer sur une autre application ou de faire un simple Ctrl+Alt+Suppr. Le ventirad du processeur continue de tourner, mais la machine est complètement sourde. Dix minutes perdues à attendre, puis l'angoisse de devoir forcer le redémarrage via le bouton physique du boîtier en croisant les doigts pour que le document Excel n'ait pas été corrompu. 
 
 Face à ce genre de panne aléatoire, la pire erreur est de jouer aux devinettes en changeant des pièces au hasard. En tant qu'ingénieur support, j'ai vu trop de collègues formater des machines ou racheter des barrettes de RAM sans savoir ce qui se passait réellement sous le capot. 

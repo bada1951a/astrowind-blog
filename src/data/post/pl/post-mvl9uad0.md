@@ -11,6 +11,7 @@ theme: "Bronze Artisan Workshop"
 
 
 
+
 Wchodzę do biura w nowoczesnym centrum biznesowym przy ulicy Domaniewskiej, trzymając w ręku gorącą kawę i szykując się na spokojny poranek. Dzisiejszy poranek powitał mnie jednak nietypowym incydentem: u jednego z kluczowych analityków finansowych komputer odmówił posłuszeństwa dokładnie po tym, jak zakończyła się instalacja ubiegłorocznej, dużej kumulatywnej aktualizacji bezpieczeństwa systemu Windows. Zrobił pierwszy rozruch po nocnym łataniu systemu, a kiedy pracownik próbował go normalnie wyłączyć, wentylator nadal szumiał, diody świeciły, a ekran gasł, lecz jednostka centralna twardo odmawiała całkowitego odcięcia zasilania. Trzeba było uciekać się do awaryjnego przytrzymywania przycisku power, co w świecie stabilnych stacji roboczych jest zawsze bolesnym kompromisem.
 
 Jako inżynier wsparcia IT od razu wiedziałem, z czym mamy do czynienia. Nowe aktualizacje systemowe potrafią mocno namieszać w domyślnych planach zasilania i sterownikach płyty głównej.
@@ -63,7 +64,7 @@ A1: Na nowoczesnych dyskach SSD różnica wynosi zazwyczaj zaledwie od dwóch do
 
 Q2: Co zrobić, jeśli opcja szybkiego uruchamiania w ogóle nie pojawia się w Panelu sterowania?
 
-A2: Oznacza to najczęściej, że funkcja hibernacji została wcześniej całkowicie wyłączona w systemie. Aby ją przywrócić i odblokować opcję szybkiego startu, otwórz wiersz poleceń jako administrator i wpisz komendę powercfg /hibernate on, a następnie odśwież okno Opcji zasilania.
+A2: Oznacza to najczęściej, że funkcja hibernacji została wcześniej całkowicie wyłączona w systemie. Aby ją przywrócić i odblokować opcję szybkiego startu, otwórz wiersz poleceń jako administrator i wpisz komendę **powercfg /hibernate on**, a następnie odśwież okno Opcji zasilania.
 
 Q3: Czy ten problem może powrócić po kolejnej aktualizacji systemu Windows?
 

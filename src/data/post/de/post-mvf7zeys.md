@@ -11,6 +11,7 @@ theme: "Sunset Horizon Coral"
 
 
 
+
 Es ist kurz vor 14:00 Uhr im Frankfurter Bankenviertel. Um 14:30 Uhr startet eine hochkarätige Kundenpräsentation im Konferenzraum im 30. Stock, und die Lüfter meines ThinkPads heulen auf wie eine startende Boeing 747. Der Bildschirm friert alle paar Sekunden ein, PowerPoint reagiert nicht mehr, und ein Blick in den Task-Manager zeigt das Grauen schlechthin: Der CPU-Lüfter dreht mit 6.000 Umdrehungen, und der Systemprozess (meist "NT Kernel & System" oder "System und komprimierter Speicher") frisst konstant 100 Prozent der Rechenleistung. Keine Fehlermeldung, kein blauer Bildschirm – einfach nur pure, blockierende CPU-Last, während der Vorstand im Nebenzimmer schon mit den Fingern trommelt.
 
 In Panik habe ich zuerst den Laptop einfach hart ausgeschaltet – ein klassischer Anfängerfehler, der natürlich das Dateisystem gefährdet und das Problem beim Neustart sofort wiedergebracht hat. Danach folgte das blinde Deaktivieren von Hintergrunddiensten in der MSConfig, was die Lage nur verschlimmerte, weil plötzlich essenzielle Netzwerkkomponenten fehlten. Erst als ich methodisch vorgegangen bin, konnte ich den Übeltäter entlarven. Hier ist der bewährte Leitfaden, wie du dieses Problem in unter 10 Minuten ohne Datenverlust löst.

@@ -11,6 +11,7 @@ theme: "Forest Emerald Bio"
 
 
 
+
 六本木のクライアントへ最終の総合結合テスト成果物を納品する、まさにその数時間前だった。愛用の開発用デスクトップPCから突然「プツン」と電源が落ち、見慣れぬ鮮やかな青い画面（ブルースクリーン）が出現した。エラーコードは 「0x0000000a (IRQL_NOT_LESS_OR_EQUAL)」。再起動をかけても数分おきに同じクラッシュがループし、Slackには進捗を急かすPMからのメンションが容赦なく飛んでくる。この絶望的な状況から、いかにして最短でシステムを復旧させたのか。そのリアルな記録と技術的な解決ノウハウを共有する。
 
 <div style="border-left: 4px solid #10b981; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">

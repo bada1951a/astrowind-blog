@@ -11,6 +11,7 @@ theme: "Dracula Purple Dev"
 
 
 
+
 Sáng thứ Hai đầu tuần tại văn phòng ở Duy Tân (Cầu Giấy, Hà Nội), sếp lớn gọi gấp vào phòng họp để chuẩn bị màn thuyết trình cho đối tác quan trọng. Tôi vừa mở chiếc laptop Windows 10 quen thuộc lên thì hỡi ôi, vòng tròn xoay quay vòng vòng, màn hình đứng im phăng phắc gần 5 phút đồng hồ. Cả phòng họp nín thở nhìn tôi trong khi thanh Taskbar mãi vẫn chưa load xong các icon ứng dụng. Đổ mồ hôi hột, tôi biết ngay thủ phạm là đám phần mềm "tự sướng" cứ tự động chui lên chiếm hết tài nguyên CPU và RAM ngay từ giây phút bấm nút nguồn.
 
 <div style="border-left: 4px solid #bd93f9; padding: 12px 16px; margin: 20px 0; background-color: rgba(189,147,249,0.1); border-radius: 4px; color: #111827;">

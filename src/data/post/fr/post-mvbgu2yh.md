@@ -11,6 +11,7 @@ theme: "Cobalt Enterprise Lab"
 
 
 
+
 Il est 14h30 dans notre bureau tech à Paris, la tension est palpable. Nous sommes en plein sprint critique pour le déploiement de notre nouvelle application interne, et soudain, catastrophe : sur ma station de travail principale, impossible de cliquer sur quoi que ce soit dans la barre des tâches. Le menu Démarrer reste sourd à mes clics, l'icône de Slack clignote sans que je puisse basculer sur la conversation de l'équipe, et mes fenêtres ouvertes sont comme piégées. Pour un ingénieur en pleines livraisons de code, avoir une barre des tâches de Windows 11 totalement gelée, c'est l'équivalent numérique d'un arrêt cardiaque en plein marathon.
 
 <div style="border-left: 4px solid #1e40af; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">

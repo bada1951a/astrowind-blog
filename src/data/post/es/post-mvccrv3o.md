@@ -11,6 +11,7 @@ theme: "Dark Velvet Obsidian"
 
 
 
+
 Eran las 18:30 en nuestra oficina del 22@ en Barcelona. Estábamos a menos de cuarenta y ocho horas del despliegue final de nuestra plataforma SaaS principal antes del lanzamiento oficial, cuando la estación de trabajo principal del equipo de arquitectura se quedó completamente congelada. De repente, el monitor principal se volvió de un azul intenso y apareció el temido código de error: IRQL_NOT_LESS_OR_EQUALcon el identificador0x0000000
 
 a. Justo en medio de una compilación pesada y con el cliente respirándonos en la nuca a través de Slack, el equipo se quedó en silencio. No podíamos permitirnos formatear ni perder los entornos de contenedores configurados para la demo del día siguiente.

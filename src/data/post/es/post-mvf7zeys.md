@@ -11,6 +11,7 @@ theme: "Modern Minimalist Slate"
 
 
 
+
 Eran las 18:30 en nuestra oficina corporativa en Madrid. A solo media hora de enviar el paquete definitivo del proyecto trimestral a dirección, el ordenador principal de la estación de trabajo comenzó a emitir un zumbido ensordecedor en los ventiladores. La pantalla se congeló por completo. Al abrir a duras penas el Administrador de tareas, el diagnóstico era alarmante: la CPU estaba clavada en el 100 por ciento de uso, y el único responsable en la lista era un proceso aparentemente inofensivo llamado simplemente "System" (Sistema y memoria comprimida en algunas versiones). El cursor apenas se movía, el correo no respondía y la tensión en la sala cortaba el aire con cuchillo.
 
 Durante los primeros diez minutos, caí en el típico error de desesperación: reinicié el equipo tres veces seguidas a la fuerza manteniendo presionado el botón de encendido. Grave error. Lo único que conseguí fue corrupción temporal en la caché de Windows y perder valiosos minutos valiosos que debimos usar para estabilizar el sistema operativo.

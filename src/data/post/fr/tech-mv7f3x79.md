@@ -11,6 +11,7 @@ theme: "Graphite Technical Paper"
 
 
 
+
 Dans le cadre du déploiement et de la maintenance de parcs informatiques en entreprise, la gestion de l'affichage multi-écrans sur stations mobiles (ultrabooks et stations de travail portables) représente l'un des postes de sollicitation les plus fréquents auprès des équipes d'infrastructure. Qu’il s’agisse d’une liaison directe via HDMI/DisplayPort ou d'un transit par station d’accueil Thunderbolt/USB-C, les symptômes d'« absence de signal » (*No Signal*) et de scintillement intermittent (*black screens* aléatoires d'une ou deux secondes) ne relèvent que rarement d'une panne matérielle franche de la dalle. 
 
 Dans plus de 85 % des cas observés sur le terrain, ces anomalies résultent d'une désynchronisation critique de la pile logicielle vidéo, d'une altération du cache topologique du système d'exploitation ou d'un échec de négociation protocolaire au niveau de la couche matérielle de transmission. Ce document formalise une approche méthodique de diagnostic et de remédiation par réinitialisation en profondeur des sous-systèmes graphiques sous Windows.

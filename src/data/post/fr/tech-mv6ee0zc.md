@@ -11,6 +11,7 @@ theme: "Pure Titanium Clean"
 
 
 
+
 En tant qu'ingénieur système, mon clavier n'est pas un simple périphérique de saisie : c'est l'interface directe avec les consoles de production, les hyperviseurs et les terminaux d'infrastructure. Rien n'est plus critique – et exaspérant – qu'un interrupteur mécanique qui commence à "bégaier" lors de la saisie d'une commande sensible sous SSH. Une touche `a` ou `Enter` qui enregistre deux frappes au lieu d'une, ou qui ignore purement et simplement la pression, peut transformer une commande d'administration anodine en incident d'exploitation.
 
 Ce dysfonctionnement, couramment appelé chattering (ou rebond de contact anormal), n'impose pas nécessairement le remplacement immédiat du matériel ou le recours au fer à souder. Dans plus de 80 % des cas rencontrés en environnement professionnel, une intervention ciblée à l'aide d'un nettoyant pour contacts électroniques permet de restaurer l'intégrité du signal. Voici notre procédure standard d'atelier pour diagnostiquer, décontaminer et pérenniser vos commutateurs mécaniques.
@@ -153,15 +154,21 @@ L'application de dégrippant universel standard (WD-40 classique), d'huile de si
 
 ###
 
-**Q1. **L'alcool isopropylique (IPA à 99,9 %) peut-il remplacer le nettoyant pour contacts ?
+**
+
+**Q1. ****L'alcool isopropylique (IPA à 99,9 %) peut-il remplacer le nettoyant pour contacts ?
 L'alcool isopropylique est un excellent dégraissant, mais il n'intègre pas d'agents désoxydants actifs conçus pour casser la passivation superficielle des métaux non ferreux. L'IPA diluera la crasse, mais ne traitera pas l'oxydation microscopique des lamelles. De plus, son temps d'évaporation au sein d'une chambre close non ventilée peut être plus long, augmentant le risque de piéger l'humidité atmosphérique lors du séchage. Le nettoyant contact diélectrique reste la solution technique supérieure.
 
 ###
 
-**Q2. **Peut-on compenser le chattering par voie logicielle plutôt que matérielle ?
+**
+
+**Q2. ****Peut-on compenser le chattering par voie logicielle plutôt que matérielle ?
 Il est techniquement possible d'augmenter le temps de debounce via des micrologiciels open source (comme QMK, VIA ou ZMK) ou via des utilitaires sous Windows (comme *Keyboard Chattering Fix*), en passant par exemple la valeur de rejet de 5 ms à 25 ms. Cependant, ce n'est qu'un pansement logiciel : cela masque la défaillance physique tout en augmentant la latence globale de saisie (*input lag*), ce qui est préjudiciable en jeu ou en saisie ultra-rapide. Il convient toujours de traiter la dégradation électromécanique à la racine.
 
 ###
 
-**Q3. **Que faire si l'injection de produit ne résout rien sur un interrupteur soudé ?
+**
+
+**Q3. ****Que faire si l'injection de produit ne résout rien sur un interrupteur soudé ?
 Si après deux applications et séchage complet le contact ne s'établit toujours pas ou continue de rebondir, la lamelle métallique souffre d'une déformation permanente ou d'une rupture de fatigue. Dans ce cas, l'unique issue sur un PCB non-hotswap consiste à démonter le châssis, chauffer les deux plots d'étain au fer à souder régulé (à 350 °C), aspirer la brasure à la pompe ou à la tresse de cuivre, et remplacer le composant par un commutateur neuf rigoureusement identique.

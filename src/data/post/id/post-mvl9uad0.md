@@ -11,6 +11,7 @@ theme: "Mint Fresh Engineering"
 
 
 
+
 Suasana di lantai 35 gedung perkantoran kawasan SCBD Jakarta sedang sangat tegang. Waktu sudah menunjukkan pukul 11 malam, dan batas waktu penyerahan laporan keuangan tinggal hitungan jam. Di tengah tekanan luar biasa menjelang tutup buku tahunan ini, saya sibuk melakukan pencocokan data krusial antara lembar kerja Excel 1 tahun penuh dengan sistem database pusat perusahaan. Kepala sudah pusing karena angka-angka yang harus direkonsiliasi sangat banyak, ditambah lagi komputer desktop di meja saya tiba-tiba bertingkah aneh. Ketika jam kerja usai dan saya mengklik tombol Shutdown, layar monitor memang mati, tetapi lampu indikator CPU, kipas pendingin, dan lampu pada port USB masih menyala terang benderang. 
 
 Awalnya saya mengira ini hanya gangguan kecil biasa. Saya coba tekan lama tombol power di casing komputer untuk mematikannya secara paksa, lalu menyalakannya kembali untuk melanjutkan pekerjaan rekonsiliasi. Namun, setiap kali selesai bekerja dan menekan Shutdown, masalah yang sama terus berulang. Komputer seolah-olah masuk ke mode tidur yang dalam, bukan benar-benar mati. Situasi ini membuat saya khawatir terjadi korupsi data pada file Excel laporan tahunan yang sedang saya verifikasi, mengingat proses tulis data ke SSD bisa terganggu jika PC tidak mati secara normal. 
@@ -64,14 +65,20 @@ Tips Tambahan: Jika setelah menonaktifkan Fast Startup komputer Anda masih belum
 
 ### Pertanyaan yang Sering Diajukan (FAQ)
 
-**Q1. **Apakah menonaktifkan Fast Startup akan membuat komputer saya menjadi sangat lambat saat dinyalakan keesokan harinya?
+**
+
+**Q1. ****Apakah menonaktifkan Fast Startup akan membuat komputer saya menjadi sangat lambat saat dinyalakan keesokan harinya?
 
 A1. Secara teori waktu booting akan sedikit bertambah, namun jika PC Anda sudah menggunakan SSD modern, perbedaan waktunya hanya sekitar 2 sampai 5 detik saja dan jauh lebih stabil tanpa risiko error daya.
 
-**Q2. **Kenapa opsi Fast Startup tidak muncul sama sekali di menu Power Options komputer saya?
+**
 
-A2. Hal tersebut biasanya terjadi karena fitur Hibernate pada Windows dalam kondisi nonaktif. Anda bisa mengaktifkannya kembali dengan membuka Command Prompt sebagai administrator lalu mengetik perintah powercfg /hibernate on.
+**Q2. ****Kenapa opsi Fast Startup tidak muncul sama sekali di menu Power Options komputer saya?
 
-**Q3. **Apakah masalah ini bisa merusak komponen hardware jika dibiarkan terus-menerus?
+A2. Hal tersebut biasanya terjadi karena fitur Hibernate pada Windows dalam kondisi nonaktif. Anda bisa mengaktifkannya kembali dengan membuka Command Prompt sebagai administrator lalu mengetik perintah **powercfg /hibernate on**.
+
+**
+
+**Q3. ****Apakah masalah ini bisa merusak komponen hardware jika dibiarkan terus-menerus?
 
 A3. Jika Anda selalu mematikannya secara paksa dengan menahan tombol power fisik di CPU, dalam jangka panjang hal tersebut berisiko merusak komponen motherboard serta menyebabkan kerusakan file data penting pada media penyimpanan.

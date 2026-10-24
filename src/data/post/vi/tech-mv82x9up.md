@@ -11,6 +11,7 @@ theme: "Rosewood Hardware Guide"
 
 
 
+
 10 phút nữa là đến giờ sếp tổng họp chiến lược quý để duyệt ngân sách IT, tự nhiên cái máy trạm của ông Kế toán trưởng lăn ra chứng "màn hình đen xì". Quạt tản nhiệt nước hú lên như máy bay phản lực cất cánh, đèn LED trên Mainboard sáng rực, bàn phím gõ NumLock không thèm nhấp nháy một cái. Nhìn mặt ổng lúc đó tái mét, mồ hôi hột tuôn rơi vì toàn bộ file báo cáo dòng tiền năm chưa kịp backup nằm trọn trong đó. Đứng sau lưng thở dốc, mẹ kiếp, cảm giác cái ghế IT của mình lúc đó nó lung lay dữ dội hơn bao giờ hết.
 
 ## Góc nhìn chuyên sâu từ phần cứng: Triệu chứng "Hồn lìa khỏi xác"

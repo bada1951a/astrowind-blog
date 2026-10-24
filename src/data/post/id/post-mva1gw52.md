@@ -11,6 +11,7 @@ theme: "Graphite Technical Paper"
 
 
 
+
 Layar monitor di ruang server kantor kami di kawasan SCBD mendadak menyala merah dengan notifikasi *Low Disk Space* tepat satu jam sebelum *sync-up* mingguan dengan tim manajemen. Laptop operasional salah satu analis data kami ngadat total; sistem Windows 11 menolak membuka aplikasi Excel karena kapasitas Drive C, yang berukuran 512GB NVMe, menyisakan ruang kosong persis 0 bytes. Tidak ada ruang *swap memory*, tidak bisa *save file*, bahkan proses *update* sistem tertahan di tengah jalan. Panik? Sedikit. Tapi sebagai anak IT yang sudah kenyang asam garam menangani kendala server dan sistem internal, saya tahu persis di mana Windows menyembunyikan "sampah" digitalnya. <div style="border-left: 4px solid #475569; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Catatan Lapangan IT:</strong> Masalah Drive C penuh di Windows 11 jarang sekali disebabkan oleh dokumen pekerjaan biasa. 90 persen kasus di lingkungan kantor kami berakar dari tumpukan *cache* aplikasi modern, *installer* sisa pembaruan sistem, dan file sementara (*temp files*) yang dibiarkan menumpuk selama berbulan-bulan.
 </div>
