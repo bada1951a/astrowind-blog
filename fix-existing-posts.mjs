@@ -19,26 +19,22 @@ function cleanMarkdown(content) {
   body = body.replace(/clickRestart/g, 'click Restart');
   body = body.replace(/turn\s*onStorage/gi, 'turn on Storage');
 
-  // 3. [대주제(H2) 표준화 및 역슬래시 제거]
-  body = body.replace(/^([0-9]+(?:\\\.|\.)\s+[^\n]{4,45})$/gm, (match) => {
-    const cleanTitle = match.replace(/\\\./g, '.').trim();
-    return `## ${cleanTitle}`;
-  });
+  // 3. [대주제(H2) 표준화] 명확한 섹션 번호 대제목만 H2로 지정
+  body = body.replace(/^([0-9]+\.\s+[^\n]{4,45})$/gm, '## $1');
 
-  // 주요 언어별 대주제 키워드 H2 승격 보장
+  // 주요 언어별 대주제 키워드 H2 승격
   body = body.replace(/^#{3}\s*(Root Cause|Step-by-Step Resolution|Warum läuft|Langkah-Langkah|Akar Masalah|Causes racines|Häufig gestellte|자주 묻는 질문|FAQ|Preguntas frecuentes|Chronologie|Guida pratica)/gim, '## $1');
   body = body.replace(/^(자주 묻는 질문\s*\(?FAQ\)?|FAQ|Frequently Asked Questions|Chronologie de l'intervention|Guide de survie|Guida pratica: come rimuovere)/gim, '## $1');
 
-  // 4. [핵심 위계 교정] 본문 내 번호 매겨진 원인/이유 항목(예: 1. Conflitto..., 2. Coda...)을 소제목(H3)으로 강제 격상
-  //    - 콜론(:)이나 설명이 포함된 10자~70자 사이의 번호 항목을 완벽한 독립 소제목으로 변환
-  body = body.replace(/^([1-3]\.\s+[A-ZÀ-ÖØ-ßa-zà-öø-ÿ가-힣][^\n]{10,70}[:：][^\n]*)$/gm, '### $1');
-
-  // 5. [12개국 단계별 소제목(H3) 표준화] (Step, Paso, Schritt, Langkah, 1단계 등)
+  // 4. [단계별 소제목(H3) 표준화] '1단계', 'Step 1', 'Paso 1' 등의 단계 타이틀만 H3로 지정 (본문 리스트 번호는 절대 건드리지 않음)
   const stepRegex = /^(?:#{1,4}\s*)?(\*{0,2}(?:Step|Paso|Schritt|Etape|Étape|Passo|Krok|Stap|Langkah|Bước|[0-9]+단계)\s*[0-9]+(?:\s*[:\.]|\s*[-–])\s*[^\n]+?\*{0,2})$/gim;
   body = body.replace(stepRegex, (match, p1) => {
-    const cleanTitle = p1.replace(/\ts*/g, '').replace(/\*\*/g, '').replace(/^#+\s*/, '').trim();
+    const cleanTitle = p1.replace(/\*\*/g, '').replace(/^#+\s*/, '').trim();
     return `### ${cleanTitle}`;
   });
+
+  // 5. [오류 방어] 본문 안의 실행 순서 리스트(1. 윈도우..., 3. 좌측...)가 헤딩으로 오인되어 커진 경우 일반 본문 리스트로 강제 환원
+  body = body.replace(/^#{1,4}\s+([0-9]+\.\s+[가-힣A-Za-zÀ-ÖØ-ßa-zà-öø-ÿ].*?)$/gm, '$1');
 
   // 6. [유령 헤딩 및 잔여 기호 소거]
   body = body.replace(/^\s*\*\*\s*$/gm, '');
@@ -84,7 +80,7 @@ function run() {
     }
   }
 
-  console.log(`\n🎉 12개국 전체 포스트 최종 전수 교정 완료!`);
+  console.log(`\n🎉 12개국 전체 포스트 최종 정화 완료!`);
   console.log(`- 총 스캔된 파일: ${totalScanned}개`);
   console.log(`- 서식이 교정된 파일: ${totalUpdated}개`);
 }
