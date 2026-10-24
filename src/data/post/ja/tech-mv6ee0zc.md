@@ -15,6 +15,7 @@ theme: "Dracula Purple Dev"
 
 
 
+
 本番環境のサーバー構築や障害対応時、ターミナルでコマンドを叩いている最中に「特定のキーだけ2回連続で入力される（チャタリング）」、あるいは「押したはずなのに文字が抜ける」現象ほど、エンジニアの作業効率と精神を削るものはありません。
 
 私自身、深夜のオンコール対応中にBastionサーバー経由でコマンドを流し込んでいる際、愛用していたCherry MX茶軸キーボードの <kbd style="background-color: #282a36; color: #bd93f9; border: 1px solid #bd93f9; padding: 2px 6px; border-radius: 4px; font-family: monospace; font-weight: bold;">Enter</kbd> キーと <kbd style="background-color: #282a36; color: #bd93f9; border: 1px solid #bd93f9; padding: 2px 6px; border-radius: 4px; font-family: monospace; font-weight: bold;">t</kbd> キーが突如チャタリングを起こし、予期せぬ引数の重複で冷や汗をかいた経験があります。

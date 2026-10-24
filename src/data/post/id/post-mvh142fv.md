@@ -15,6 +15,7 @@ theme: "Industrial Blueprint"
 
 
 
+
 Suasana di salah satu gedung perkantoran kawasan Sudirman, Jakarta, mendadak mencekam. Jam menunjukkan pukul 16:45 WIB, tepat lima belas menit sebelum tenggat waktu pengiriman laporan keuangan kuartalan ke direksi. Tiba-tiba, layar monitor manajer operasional nge-freeze total. Mouse tidak bergerak, tombol Caps Lock ditekan tidak merespons, dan angka-angka laporan di Excel seolah mengejek dari balik layar yang membeku. Panik melanda karena belum sempat *save*. Dengan terpaksa, tombol *power* ditahan selama lima detik hingga PC mati paksa. Begitu PC dinyalakan ulang, dokumen yang dikerjakan hilang setengahnya, dan kepanikan berubah menjadi kejengkelan karena masalah *random freezing* seperti ini sudah terjadi tiga kali dalam seminggu terakhir.
 
 ![Tech Troubleshooting Guide](/images/tech-photo/tech-photos%20(42).jpg)

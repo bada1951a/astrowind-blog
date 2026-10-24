@@ -15,6 +15,7 @@ theme: "Acid Lime Hacker Space"
 
 
 
+
 Wtorek, kwadrans przed kluczową wideokonferencją z zarządem w nowo otwartej filii na Śląsku. Szybko wyciągam służbowego laptopa z torby i podpinam go pod stacjonarny monitor w sali konferencyjnej za pomocą kabla HDMI, żeby rzucić prezentację na wielki ekran. Prezentacja rusza bez zająknienia, slajdy wyglądają świetnie, ale gdy włączam materiał wideo z podkładem muzycznym… z głośników w sali dobiega całkowita cisza. Wszyscy patrzą na mnie, a systemowa ikonka głośnika w prawym dolnym rogu ekranu dumnie wyświetla mały, szary krzyżyk. Znam ten ból aż nazbyt dobrze.
 
 W takich momentach serce na chwilę zastyga, zwłaszcza gdy na szybkiej diagnozie zależy całemu zespołu. Jako inżynier wsparcia IT i serwisant sprzętu komputerowego przetestowałem już chyba każdy możliwy scenariusz awarii audio w systemie Windows 11. Zamiast panikować i tracić cenne minuty na przeinstalowywanie całego systemu, weźmy głęboki oddech i przejdźmy do konkretów. Oto sprawdzona procedura ratunkowa, którą wdrożysz w niespełna trzy minuty.

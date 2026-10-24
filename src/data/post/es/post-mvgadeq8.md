@@ -15,6 +15,7 @@ theme: "Crimson Emergency Field"
 
 
 
+
 Eran las 4:50 de la tarde en nuestra oficina corporativa en Madrid. A solo diez minutos de enviar el paquete final del proyecto trimestral a la directiva, la pantalla del equipo principal de diseño comenzó a parpadear y, de la nada, apareció esa maldita marca transparente en la esquina inferior derech
 
 a: "Activa Windows: ve a Configuración para activar Windows". Para colmo, cubría justo los botones de exportación del software gráfico. El pánico se apoderó delux del estudio; el cliente estaba esperando los archivos y la interfaz parecía boicotearnos el trabajo.

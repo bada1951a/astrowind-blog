@@ -15,6 +15,7 @@ theme: "Sunset Horizon Coral"
 
 
 
+
 Eran las 18:50 en nuestra oficina corporativa en Madrid. Quedaban apenas diez minutos para enviar el paquete definitivo del proyecto trimestral a la direccion y mi equipo principal empezo a fallar de la peor manera posible. Necesitaba comprimir carpetas urgentemente, renombrar lotes masivos de archivos PDF y aplicar scripts de automatizacion desde el explorador, pero cada vez que hacia clic derecho con el raton, Windows 11 me obligaba a dar un rodeo absurdo haciendo clic en "Mostrar mas opciones". Ese pequeño retraso de dos segundos por cada operacion se acumulaba, generando una frustracion monumental en medio del caos del cierre de proyecto.
 
 ### El problema diario: El infierno del nuevo diseño de Windows 11

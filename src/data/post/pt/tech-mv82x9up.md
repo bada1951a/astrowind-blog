@@ -15,6 +15,7 @@ theme: "Graphite Technical Paper"
 
 
 
+
 Eram exatamente 8h45 de uma segunda-feira caótica quando o chefe do comercial brotou na minha baia com aquela cara de quem engoliu um parafuso. O relatório de fechamento de trimestre, que precisava ser apresentado para a diretoria às 10h, estava trancado na máquina principal dele. O sintoma? O gabinete ligava, os coolers berravam, o LED azul acendia bonitinho, mas o monitor continuava com aquela maldita mensagem flutuante de "Sem Sinal". Nada de BIOS, nada de POST, tela preta absoluta. <div style="border-left: 4px solid #475569; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px;">
 <strong>Nota do Analista (Estilo Paper Técnico):</strong> O cenário de "cooler roda mas não dá vídeo" é o clássico indicativo de que o processador não conseguiu inicializar o firmware básico (UEFI/BIOS). Na maioria das vezes, o culpado não é a placa-mãe moribunda, mas sim um falso contato nos barramentos de memória. </div>
 
