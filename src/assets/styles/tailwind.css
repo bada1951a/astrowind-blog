@@ -152,36 +152,67 @@
 }
 
 /* ============================================================
-   [최종 종결] 본문 내 비정상 거대 폰트 및 리스트 강제 표준화
+   [최종 종결] 12개국 공통 가독성 극대화 (18px 본문 & 시원한 여백)
    ============================================================ */
 
-/* 1. 본문 소제목(h2, h3, h4)이 본문 리스트를 집어삼키지 않도록 크기 상한선 고정 */
+/* 1. 본문 대주제 (H2) - 큼직하고 분명한 영역 구분 */
 .prose h2 {
+  font-size: 1.65rem !important;
+  line-height: 1.4 !important;
+  font-weight: 800 !important;
+  margin-top: 3.5rem !important;
+  margin-bottom: 1.25rem !important;
+  color: var(--aw-color-text-heading) !important;
+}
+
+/* 2. 단계별 소제목 (H3, H4) - 본문보다 확실히 크고 선명하게 */
+.prose h3,
+.prose h4 {
   font-size: 1.35rem !important;
-  line-height: 1.5 !important;
+  line-height: 1.45 !important;
   font-weight: 700 !important;
-  margin-top: 2rem !important;
+  margin-top: 2.5rem !important;
+  margin-bottom: 1rem !important;
+  color: var(--aw-color-text-heading) !important;
+}
+
+/* 3. 본문 텍스트 - 시원시원한 18px 폰트와 넉넉한 단락 여백 */
+.prose p {
+  font-size: 1.125rem !important; /* 18px */
+  line-height: 1.85 !important;
+  margin-top: 0 !important;
+  margin-bottom: 1.5rem !important; /* 문단 사이 24px 여백으로 벽돌 현상 해소 */
+  word-break: keep-all !important;
+}
+
+/* 4. 번호 목록 및 세부 리스트 (18px & 행간 분리) */
+.prose ol,
+.prose ul {
+  margin-top: 1rem !important;
+  margin-bottom: 2rem !important;
+  padding-left: 1.5rem !important;
+}
+
+.prose ol > li,
+.prose ul > li {
+  font-size: 1.125rem !important; /* 18px */
+  line-height: 1.85 !important;
+  margin-top: 0.75rem !important;
   margin-bottom: 0.75rem !important;
 }
 
-.prose h3,
-.prose h4 {
-  font-size: 1.15rem !important;
-  line-height: 1.5 !important;
+/* 5. 볼드 텍스트 및 FAQ 질문 강조 */
+.prose strong,
+.prose b {
   font-weight: 700 !important;
-  margin-top: 1.5rem !important;
-  margin-bottom: 0.5rem !important;
+  color: var(--aw-color-text-heading) !important;
 }
 
-/* 2. 번호 목록이나 긴 문장이 제목 태그로 들어간 경우 일반 본문 크기(16px)로 진압 */
-.prose h2:has(+ p),
-.prose h3:has(+ p) {
-  font-size: 1.1rem !important;
-}
-
-/* 3. 본문 텍스트 표준 가독성 확보 */
-.prose p {
-  font-size: 1rem !important;
+/* 6. 콜아웃/팁 상자 여백 정돈 */
+.prose blockquote {
+  font-size: 1.0625rem !important;
   line-height: 1.75 !important;
-  word-break: keep-all !important;
+  margin-top: 2rem !important;
+  margin-bottom: 2rem !important;
+  padding: 1.25rem 1.5rem !important;
 }
