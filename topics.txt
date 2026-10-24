@@ -1,4 +1,3 @@
-Fix Windows 11 Snipping Tool Shortcut Not Working Win Shift S
 How to Delete Files in Use by Another Program Force Delete
 How to Fix 100 Percent Disk Usage: Disable SysMain Service
 Stop Windows 11 Automatic Update Force Restart Policy
