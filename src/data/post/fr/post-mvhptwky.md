@@ -23,6 +23,7 @@ theme: "Pastel Lavender Tech"
 
 
 
+
 Il est 17h55 dans notre open space de La Défense. La clôture des dossiers trimestriels tombe à 18h00, mes écrans sont pleins à craquer de fichiers compressés et de PDF, et je dois renommer et envoyer d'urgence un package à la direction. Je fais un clic droit rapide pour archiver le tout avec 7-Zip, et là... c'est le drame. Ce nouveau menu contextuel épuré de Windows 11 s'affiche. L'option indispensable de mon logiciel de compression a disparu. Je suis obligé de cliquer sur "Afficher plus d'options" à chaque manipulation, perdant de précieuses secondes qui me font suer à grosses gouttes à l'approche de la deadline.
 
 Ce genre de micro-frustration ergonomique au bureau, multiplié par des centaines de clics par jour, finit par plomber totalement la productivité des équipes. En tant qu'ingénieur support, j'ai vu trop de collègues pester contre cette interface moderne mais peu pratique. Heureusement, il existe une solution radicale et propre pour retrouver le comportement classique de Windows 10 en quelques clics.
@@ -47,10 +48,10 @@ Guide étape par étape : Récupérer le menu classique
 
 Pour résoudre définitivement ce problème sur votre poste de travail, nous allons utiliser une commande rapide via le terminal ou une modification propre de la base de registre. Pas de panique, c'est sans danger si vous suivez la procédure à la lettre.
 
-### Étape 1 : Ouvrir le Terminal Windows en administrateur
+Étape 1 : Ouvrir le Terminal Windows en administrateur
 Faites un clic droit sur le bouton Démarrer (ou utilisez le raccourci clavier `Windows + X`) et sélectionnez TerminalouInvite de commandes (Admin).
 
-### Étape 2 : Exécuter la commande de modification du registre
+Étape 2 : Exécuter la commande de modification du registre
 Copiez et collez la ligne de commande suivante dans votre fenêtre de terminal, puis appuyez sur Entrée :
 
 ```cmd
@@ -59,7 +60,7 @@ reg.exe add "HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\
 
 Cette commande crée la clé de registre spécifique que l'explorateur Windows surveille pour basculer vers l'ancien comportement du menu contextuel.
 
-### Étape 3 : Redémarrer l'Explorateur Windows
+Étape 3 : Redémarrer l'Explorateur Windows
 Pour que la modification prenne effet immédiatement sans avoir à redémarrer tout le PC (ce qui vous ferait perdre vos fenêtres en cours), ouvrez le Gestionnaire des tâches (raccourci `Ctrl + Shift + Échap`).
 
 1. Dans l'onglet *Processus*, faites défiler vers le bas pour trouver Explorateur Windows (Windows Explorer).

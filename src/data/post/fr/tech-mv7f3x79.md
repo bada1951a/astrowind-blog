@@ -23,6 +23,7 @@ theme: "Graphite Technical Paper"
 
 
 
+
 Dans le cadre du déploiement et de la maintenance de parcs informatiques en entreprise, la gestion de l'affichage multi-écrans sur stations mobiles (ultrabooks et stations de travail portables) représente l'un des postes de sollicitation les plus fréquents auprès des équipes d'infrastructure. Qu’il s’agisse d’une liaison directe via HDMI/DisplayPort ou d'un transit par station d’accueil Thunderbolt/USB-C, les symptômes d'« absence de signal » (*No Signal*) et de scintillement intermittent (*black screens* aléatoires d'une ou deux secondes) ne relèvent que rarement d'une panne matérielle franche de la dalle. 
 
 Dans plus de 85 % des cas observés sur le terrain, ces anomalies résultent d'une désynchronisation critique de la pile logicielle vidéo, d'une altération du cache topologique du système d'exploitation ou d'un échec de négociation protocolaire au niveau de la couche matérielle de transmission. Ce document formalise une approche méthodique de diagnostic et de remédiation par réinitialisation en profondeur des sous-systèmes graphiques sous Windows.
@@ -58,7 +59,7 @@ Le sous-système graphique de Windows conserve l'historique complet de chaque mo
 
 Pour rétablir l'intégrité du signal d'affichage, nous appliquons une procédure normalisée en trois étapes séquentielles : purge du cache topologique, réinitialisation bas niveau du sous-système vidéo et réinstallation propre du pilote certifié WHQL.
 
-### Étape 1 : Purge du cache de configuration multi-écrans via la base de registre
+Étape 1 : Purge du cache de configuration multi-écrans via la base de registre
 
 Avant toute manipulation de pilotes, il est impératif d'assainir la mémoire de configuration d'affichage de Windows pour forcer une ré-énumération matérielle propre.
 
@@ -89,7 +90,7 @@ Avant toute manipulation de pilotes, il est impératif d'assainir la mémoire de
 └── ScaleFactors   (Supprimer le dossier complet)
 ```
 
-### Étape 2 : Réinitialisation à chaud du pipeline vidéo
+Étape 2 : Réinitialisation à chaud du pipeline vidéo
 
 Si le système refuse toujours de détecter le moniteur après rebranchement, exécutez la combinaison de touches native de bas niveau :
 
@@ -97,7 +98,7 @@ $$\text{Touches simultanées : } \mathbf{Win} + \mathbf{Ctrl} + \mathbf{Shift} +
 
 Cette commande force le sous-système Windows à purger la mémoire tampon d'affichage et à redémarrer immédiatement le pilote vidéo sans redémarrer la machine. Un signal sonore bref retentira et les écrans clignoteront une fois.
 
-### Étape 3 : Désinstallation propre via DDU et réinjection du pilote d'origine
+Étape 3 : Désinstallation propre via DDU et réinjection du pilote d'origine
 
 Si le scintillement persiste, une corruption profonde de la bibliothèque de liens dynamiques (.dll) du pilote est avérée. L'outil natif de désinstallation de Windows conservant souvent des fichiers résiduels, nous utilisons l'utilitaire de référence de l'industrie : Display Driver Uninstaller (DDU).
 
@@ -122,7 +123,7 @@ Si le scintillement persiste, une corruption profonde de la bibliothèque de lie
 
 **Q7.** Cochez l'option Effectuer une nouvelle installation si le programme d'installation le propose (notamment chez NVIDIA).
 
-### Étape 4 : Étalonnage des paramètres de liaison dans Windows
+Étape 4 : Étalonnage des paramètres de liaison dans Windows
 
 Une fois le pilote réinstallé, raccordez votre second moniteur et procédez aux ajustements de synchronisation temporelle :
 

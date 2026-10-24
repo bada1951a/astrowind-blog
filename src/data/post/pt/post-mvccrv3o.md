@@ -23,6 +23,7 @@ theme: "Industrial Blueprint"
 
 
 
+
 Eram 19h45 em um hub de tecnologia na Avenida Paulista, em São Paulo. O clima estava tenso na sala de reuniões: faltavam exatos 45 minutos para o alinhamento técnico urgente antes da entrega da sprint para o cliente corporativo, e a minha estação principal simplesmente travou com aquela clássica e temida Tela Azul da Morte (BSOD). O código impresso na tela escura era impiedoso: `IRQL_NOT_LESS_OR_EQUAL` ou, no bom e velho formato hexadecimal, 0x0000000
 
 a. O projeto estava na reta final e o computador recusava-se a manter o sistema estável por mais de cinco minutos.
@@ -49,7 +50,7 @@ Plano de Ação: Passo a Passo para Recuperação
 
 Para contornar o problema sem perder dados e garantir que a entrega aconteça no prazo, siga esta sequência validada em ambiente de produção:
 
-### Passo 1: Inicialização em Modo de Segurança (Safe Mode)
+Passo 1: Inicialização em Modo de Segurança (Safe Mode)
 Se o Windows sequer estabiliza na Área de Trabalho, force o desligamento físico duas vezes seguidas segurando o botão Power. Na terceira vez, o sistema abrirá o Ambiente de Recuperação do Windows (WinRE).
 * Vá em Solucionar problemas>Opções avançadas>Configurações de Inicialização>Reiniciar.
 * Pressione a tecla 4 ou F4 para habilitar o Modo de Segurança. ### Passo 2: Reversão do Driver Problemático (Driver Rollback)
@@ -59,7 +60,7 @@ No meu caso na Paulista, o culpado foi o driver da placa de rede Wi-Fi atualizad
 * Clique com o botão direito, selecione Propriedades, vá até a abaDrivere clique no botãoReverter Driver (Driver Rollback).
 * Reinicie o computador normalmente.
 
-### Passo 3: Diagnóstico de Memória do Windows (Windows Memory Diagnostic)
+Passo 3: Diagnóstico de Memória do Windows (Windows Memory Diagnostic)
 Se a reversão de drivers não estabilizar o sistema, o problema pode ser físico ou lógico na RAM.
 * Abra o menu Iniciar, digite `Diagnóstico de Memória do Windows` e abra o aplicativo.
 * Selecione a opção Reiniciar agora e verificar se há problemas (recomendado).

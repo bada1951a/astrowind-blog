@@ -23,6 +23,7 @@ theme: "High-Contrast Charcoal"
 
 
 
+
 Eram exatamente 8h45 da manhã em um hub de tecnologia na Zona Sul de São Paulo. A reunião de alinhamento técnico urgente antes da entrega do sprint com a diretoria estava prestes a começar, e meu cliente de videochamada travou. O motivo? Meu notebook decidiu fazer uma varredura completa e atualizar tudo no exato segundo em que cliquei para abrir o projeto. A barra de tarefas congelada, o cooler gritando como uma turbina de avião e o relógio correndo. Foi o empurrão que eu precisava para resolver de vez o calcanhar de Aquiles do Windows 10: a inicialização lenta entupida de aplicativos desnecessários.
 
 Se você já passou pela humilhação de ver o computador demorar dez minutos para abrir uma simples planilha enquanto o Teams tenta conectar dez vezes, você sabe exatamente do que estou falando. 
@@ -49,16 +50,16 @@ O Passo a Passo Definitivo para Resolver em 1 Minuto
 
 Esqueça softwares de terceiros milagrosos que prometem otimizações mágicas. O próprio Windows 10 possui uma ferramenta nativa, rápida e extremamente eficiente para gerenciar isso. Vamos direto ao ponto:
 
-### Passo 1: Acesse o Gerenciador de Tarefas
+Passo 1: Acesse o Gerenciador de Tarefas
 Pressione as teclas Ctrl + Shift + Escsimultaneamente no seu teclado. Esse é o atalho mais rápido para abrir oGerenciador de Tarefas. 
 
 *(Caso ele abra no modo compacto, clique em "Mais detalhes" na parte inferior da janela).*
 
-### Passo 2: Navegue até a Aba Inicializar
+Passo 2: Navegue até a Aba Inicializar
 Na barra superior do Gerenciador de Tarefas, clique na aba "Inicializar". 
 Você verá uma lista completa de todos os softwares configurados para abrir automaticamente junto com o Windows 10. Preste muita atenção na coluna "Impacto na inicialização", que classifica os processos em *Alto*, *Médio*, *Baixo* ou *Nenhum*.
 
-### Passo 3: Desative os Intrusos
+Passo 3: Desative os Intrusos
 Clique com o botão direito em cima do aplicativo que você nãoprecisa que rode em segundo plano logo na inicialização (por exemplo: utilitários de fabricantes que você nunca usa, players de música, launchers de jogos) e selecione "Desativar".
 
 <div style="border-left: 4px solid #e11d48; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">

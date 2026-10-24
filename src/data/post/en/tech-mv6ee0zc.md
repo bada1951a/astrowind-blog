@@ -23,6 +23,7 @@ theme: "Nordic Clean Ice"
 
 
 
+
 > *"A misplaced semicolon will break your build, but an intermittent switch leaf will break your sanity. In production environments, deterministic hardware input is not an amenity—it is an absolute operational baseline."*
 
 Late last winter, during an urgent infrastructure migration on an internal Kubernetes cluster, my terminal suddenly spat out syntax errors during a critical namespace eviction. My custom 75% hot-swap board—built with tuned linear switches—had begun randomly dropping strokes on the `T` key and double-registering the `E` key (`eerror: unexpeected token`). 
@@ -53,7 +54,7 @@ Every time a mechanical switch completes or breaks an electrical circuit, a micr
 
 Furthermore, environmental contaminants and airborne dust settle into the switch housing. When dust particles get trapped between the contacts, they burn during micro-arcing and create a non-conductive microscopic carbon scoria. This insulating layer increases contact resistance, causing dropped inputs or forcing you to mash the key harder to register a stroke.
 
-## 2. Contact Leaf Splay and Loss of Mechanical Tension
+2. Contact Leaf Splay and Loss of Mechanical Tension
 The movable leaf in a Cherry-MX style switch acts as a miniature cantilever spring. Over intense repetitive use, the physical elasticity of this phosphor bronze or copper-alloy leaf degrades. 
 
 If the leaf splays outward even a fraction of a millimeter, two distinct failures happen:
@@ -162,7 +163,7 @@ If your keyboard uses Kailh-style hot-swap sockets, the underlying metal leaf sp
 
 4. Reinstall the switch, taking extra care that the pins slide directly into the socket without bending against the PCB surface.
 
-## 2. Physical Leaf Straightening or Replacement
+2. Physical Leaf Straightening or Replacement
 If the board is soldered, you can open the switch housing *in situ* using switch opening clips (for loose plates) to gently reshape the curved metal contact leaf. However, at that point, the spring metal has likely fatigued past its elastic limit. The most reliable fix is desoldering the degraded switch and replacing it with a fresh, factory-tested unit.
 
 ---

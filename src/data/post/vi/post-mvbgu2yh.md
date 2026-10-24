@@ -23,6 +23,7 @@ theme: "Matte Black stealth"
 
 
 
+
 Sáng nay tại văn phòng công ty công nghệ ở quận Cầu Giấy, Hà Nội, cú đấm thép của deadline dự án vừa dội xuống thì chiếc laptop cá nhân của tôi dở chứng. Thanh Taskbar trên Windows 11 bỗng nhiên tê liệt hoàn toàn. Click vào nút Start không phản hồi, icon các ứng dụng ghim sẵn đứng im như tượng đá, thậm chí đồng hồ góc phải cũng chết cứng. Cả một hệ thống đang cần xử lý gấp các yêu cầu tối ưu hiệu năng mà ngay cả việc mở Task Manager bằng chuột phải cũng bất khả thi.
 
 Nếu bạn cũng đang phát bực với lỗi kinh điển này của Windows 11, đừng vội khởi động lại máy hay cài lại Win. Dưới đây là quy trình xử lý thực chiến từ góc nhìn của một kỹ sư hệ thống.
@@ -45,7 +46,7 @@ Trước khi mổ xẻ các bước fix lỗi, hãy điểm qua lý do tại sao
 
 Các bước xử lý thực chiến từ dễ đến chuyên sâu
 
-### Bước 1: Khởi động lại Windows Explorer (Cứu cánh nhanh nhất)
+Bước 1: Khởi động lại Windows Explorer (Cứu cánh nhanh nhất)
 
 Khi Taskbar không click được, việc đầu tiên bạn cần làm là ép tiến trình giao diện khởi động lại. Dùng phím tắt là chìa khóa vì chuột lúc này gần như vô tác dụng.
 
@@ -55,7 +56,7 @@ Khi Taskbar không click được, việc đầu tiên bạn cần làm là ép 
 * Click chuột phải vào nó và chọn Restart (Khởi động lại). 
 * Màn hình sẽ chớp đen một cái trong vòng 1-2 giây, thanh Taskbar sẽ được tái tạo và hoạt động trở lại bình thường.
 
-### Bước 2: Dùng Windows Terminal (PowerShell) để đăng ký lại XamlShell
+Bước 2: Dùng Windows Terminal (PowerShell) để đăng ký lại XamlShell
 
 Nếu khởi động lại Explorer mà vài phút sau Taskbar lại bị đơ, nguyên nhân nằm sâu hơn ở các gói app của hệ thống. Chúng ta cần "cài lại" thanh Taskbar thông qua dòng lệnh.
 
@@ -70,7 +71,7 @@ Get-AppxPackage -AllUsers | Foreach {Add-AppxPackage -DisableDevelopmentMode -Re
 
 * Chờ khoảng 1 đến 2 phút để hệ thống quét và sửa chữa các gói giao diện bị lỗi ngầm. Sau đó khởi động lại máy tính (Restart).
 
-### Bước 3: Gỡ bỏ bản cập nhật Windows lỗi (Windows Update Troubleshoot)
+Bước 3: Gỡ bỏ bản cập nhật Windows lỗi (Windows Update Troubleshoot)
 
 Nhiều anh em kỹ thuật tại văn phòng sau khi dính update KB mới nhất của Microsoft đã than trời vì Taskbar lăn ra chết. Nếu lỗi xuất hiện ngay sau khi máy tự động cập nhật, bạn cần gỡ nó r
 

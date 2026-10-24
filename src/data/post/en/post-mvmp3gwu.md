@@ -14,6 +14,7 @@ theme: "Cobalt Enterprise Lab"
 
 
 
+
 1. [Opening Story/Problem]
 
 There I was, aboard the high-speed train cutting through the countryside, tethering my laptop to a notoriously choppy mobile hotspot. An urgent email from the New York finance executive just hit my inbox: the client's production deployment report contained a critical UI glitch, and they needed visual proof immediately. I instinctively pressed **Win + Shift + S** to capture the exact error window. 

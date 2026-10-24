@@ -23,6 +23,7 @@ theme: "Mint Fresh Engineering"
 
 
 
+
 Đồng hồ góc màn hình nhảy đúng 15:45, chỉ còn 15 phút nữa là đến hạn chót nộp bản báo cáo tài chính tháng cho sếp tổng tại văn phòng trung tâm TP.HCM. Tay trái tôi bấm cuống cuồng, tay phải nhấp chuột phải vào tệp Excel chính để đổi tên và nén file gửi đi. Thế nhưng, đập vào mắt tôi lại là cái giao diện menu chuột phải tối giản mới tinh của Windows 11. Muốn nén file, tôi lại phải bấm thêm một nhịp "Show more options" (Hiển thị thêm tùy chọn) vô duyên vô phạt. Trong lúc hoảng loạn, cái click chuột chậm chạp ấy làm tôi trễ mất 3 giây, tim đập chân lạnh vì sợ treo cả hệ thống.
 
 Chuyện quái quỷ gì đang diễn ra với cái giao diện Windows 11 này vậy? Tại sao một thao tác vốn quen thuộc từ thời Windows 7, Windows 10 bỗng dưng bị "cách tân" thành một thảm họa thao tác cho dân văn phòng?
@@ -49,11 +50,11 @@ Hướng dẫn từng bước khôi phục Menu chuột phải cổ điển
 
 Chúng ta sẽ sử dụng công cụ Windows Terminal hoặc Command Prompt để can thiệp vào kho lưu trữ hệ thống Registry Editor. Đừng lo lắng, thao tác rất an toàn nếu bạn làm đúng từng bước sau đây.
 
-### Bước 1: Mở công cụ dòng lệnh hệ thống
+Bước 1: Mở công cụ dòng lệnh hệ thống
 Nhấn tổ hợp phím Windows + X trên bàn phím của bạn. Một menu nhanh sẽ hiện ra ở góc dưới bên trái màn hình. 
 - Trên các bản Windows 11 mới, hãy chọn TerminalhoặcCommand Prompt (Admin).
 
-### Bước 2: Nhập lệnh kích hoạt
+Bước 2: Nhập lệnh kích hoạt
 Sao chép chính xác dòng lệnh dưới đây, dán vào cửa sổ Terminal vừa mở và nhấn Enter:
 
 ```cmd
@@ -62,7 +63,7 @@ reg.exe add "HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\
 
 Ngay sau khi thông báo `The operation completed successfully` hiện lên, lệnh của bạn đã được ghi nhận vào hệ thống.
 
-### Bước 3: Khởi động lại tiến trình Explorer (File Explorer)
+Bước 3: Khởi động lại tiến trình Explorer (File Explorer)
 Để hệ thống cập nhật giao diện mới mà không cần khởi động lại toàn bộ máy tính (tránh làm mất các file đang soạn thảo), bạn làm như sau:
 
 1. Nhấn tổ hợp phím Ctrl + Shift + Escđể mởTask Manager.

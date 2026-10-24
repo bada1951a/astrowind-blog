@@ -23,6 +23,7 @@ theme: "Graphite Technical Paper"
 
 
 
+
 Layar monitor di ruang server kantor kami di kawasan SCBD mendadak menyala merah dengan notifikasi *Low Disk Space* tepat satu jam sebelum *sync-up* mingguan dengan tim manajemen. Laptop operasional salah satu analis data kami ngadat total; sistem Windows 11 menolak membuka aplikasi Excel karena kapasitas Drive C, yang berukuran 512GB NVMe, menyisakan ruang kosong persis 0 bytes. Tidak ada ruang *swap memory*, tidak bisa *save file*, bahkan proses *update* sistem tertahan di tengah jalan. Panik? Sedikit. Tapi sebagai anak IT yang sudah kenyang asam garam menangani kendala server dan sistem internal, saya tahu persis di mana Windows menyembunyikan "sampah" digitalnya. <div style="border-left: 4px solid #475569; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Catatan Lapangan IT:</strong> Masalah Drive C penuh di Windows 11 jarang sekali disebabkan oleh dokumen pekerjaan biasa. 90 persen kasus di lingkungan kantor kami berakar dari tumpukan *cache* aplikasi modern, *installer* sisa pembaruan sistem, dan file sementara (*temp files*) yang dibiarkan menumpuk selama berbulan-bulan.
 </div>
@@ -33,11 +34,11 @@ Bedah Masalah: 3 Akar Penyebab Utama Drive C Penuh
 
 Sebelum Anda gegabah menghapus file sembarangan yang justru bisa merusak sistem operasi, mari kita identifikasi tiga pelaku utama yang kerap membuat penyimpanan utama Windows 11 cepat ludes:
 
-## 1. Folder Temp Aplikasi dan Sistem yang Terlupakan
+1. Folder Temp Aplikasi dan Sistem yang Terlupakan
 
    Setiap kali aplikasi seperti browser, Discord, Slack, atau Microsoft Teams berjalan, mereka menulis data sementara ke folder `AppData\Local\Temp`. Masalahnya, banyak aplikasi pihak ketiga yang malas membersihkan sisa file mereka sendiri setelah proses ditutup.
 
-## 2. File Sisa Pembaruan Sistem (Windows Update Cleanup)
+2. File Sisa Pembaruan Sistem (Windows Update Cleanup)
 
    Setiap kali Windows 11 mendownload *major update* atau patch keamanan bulanan, OS ini menyimpan salinan file lama (Windows.old atau paket instalasi) sebagai cadangan jika proses *rollback* diperlukan. File-file ini bisa memakan ruang hingga puluhan gigabyte.
 
@@ -47,11 +48,11 @@ Sebelum Anda gegabah menghapus file sembarangan yang justru bisa merusak sistem 
 
 ---
 
-### Langkah-Langkah Eksekusi: Solusi Aman Tanpa Risiko
+Langkah-Langkah Eksekusi: Solusi Aman Tanpa Risiko
 
 Berikut adalah prosedur standar operasional (SOP) yang biasa kami terapkan di kantor untuk merebut kembali ruang penyimpanan Drive C secara bersih dan aman.
 
-### Langkah 1: Memanfaatkan Fitur Storage Sense Bawaan Windows 11
+Langkah 1: Memanfaatkan Fitur Storage Sense Bawaan Windows 11
 Daripada mengunduh aplikasi pembersih pihak ketiga yang kadang membawa *bloatware* atau iklan, mari gunakan fitur bawaan yang sudah dioptimalkan oleh Microsoft.
 
 * Buka Pengaturan (Settings) dengan menekan kombinasi tombol `Windows + I`.
@@ -64,7 +65,7 @@ Terkadang Storage Sense melewatkan beberapa direktori tersembunyi. Kita bisa mas
 * *Catatan Penting:* Jika ada file yang gagal dihapus dengan keterangan "File is in use", biarkan saja. Itu artinya file sedang digunakan oleh aplikasi yang sedang aktif berjalan.
 * Ulangi proses yang sama dengan menekan `Windows + R`, kali ini ketik `temp` (tanpa tanda persen) dan bersihkan isinya dengan hak akses administrator.
 
-### Langkah 3: Eksekusi Disk Cleanup Tingkat Lanjut (System Files)
+Langkah 3: Eksekusi Disk Cleanup Tingkat Lanjut (System Files)
 Untuk membersihkan file sisa pembaruan Windows yang tersembunyi, kita butuh hak akses tingkat lanjut melalui Alat Administratif.
 
 * Ketik Disk Cleanupdi kolom pencarian taskbar, lalu pilihRun as administrator.

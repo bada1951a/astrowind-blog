@@ -23,6 +23,7 @@ theme: "Cobalt Enterprise Lab"
 
 
 
+
 Eram exatos 08h45 de uma segunda-feira chuvosa quando o diretor comercial brotou atrás da minha cadeira com aquela clássica frase que tira dez anos de vida de qualquer analista de suporte: *"Meu notebook tá demorando dez minutos pra abrir o Excel, a reunião com o cliente é às 9h, resolve aí rapidão"*. O bicho tava tão lento que o logo do Windows 10 parecia uma tela de loading de jogo de disquete. A ventoinha do i7 gritando, o disco em 100% de uso no Gerenciador de Tarefas, e eu suando frio olhando pro relógio. 
 
 A gente sabe como é: o usuário instala aplicativo de chat da empresa, utilitário de impressora que roda desde o século passado, antivírus corporativo pesadíssimo e atualizações acumuladas. Tudo isso decide carregar no *startup* ao mesmo tempo. O resultado? Um gargalo miserável que transforma uma máquina com SSD NVMe numa carroça de tração animal. 
@@ -68,7 +69,7 @@ Esqueça programas de terceiros duvidosos como *CCleaner*. O próprio Windows j�
 
 5. Clique com o botão direito nos aplicativos desnecessários (tipo Steam, Epic Games, Cortana, utilitários de celular) e selecione Desabilitar. Deixe ativo apenas o antivírus e o driver de vídeo.
 
-### Passo 2: Auditoria de Serviços via Console (`services.msc`)
+Passo 2: Auditoria de Serviços via Console (`services.msc`)
 Muitos serviços inúteis continuam rodando no talo em segundo plano. Vamos desativar o que não presta.
 
 1. Pressione `Windows + R`, digite `services.msc` e dê Enter.
@@ -77,7 +78,7 @@ Muitos serviços inúteis continuam rodando no talo em segundo plano. Vamos desa
 
 3. Clique duas vezes no serviço, mude o Tipo de inicializaçãoparaDesativadoouManual, e clique emParar.
 
-### Passo 3: Faxina Profunda via Prompt de Comando (CMD) e Limpeza de Disco
+Passo 3: Faxina Profunda via Prompt de Comando (CMD) e Limpeza de Disco
 Agora vamos rodar a artilharia pesada para varrer o lixo acumulado que corrompe o registro e atrasa o carregamento dos arquivos do sistema.
 
 1. Pressione `Windows + R`, digite `cmd`, e aperte `Ctrl + Shift + Enter` para abrir o Prompt de Comando como Administrador.

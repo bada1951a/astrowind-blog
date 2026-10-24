@@ -23,6 +23,7 @@ theme: "Modern Minimalist Slate"
 
 
 
+
 Jam 4 sore di salah satu gedung perkantoran kawasan Sudirman Jakarta, suasana mendadak tegang luar biasa. Tenggat waktu laporan keuangan tahunan tinggal dua jam lagi, namun layar PC salah satu manajer tiba-tiba tertutup tulisan transparan mengganggu di pojok kanan bawah: *Activate Windows - Go to Settings to activate Windows*. Bukan cuma soal estetika presentasi yang mau dikirim ke direksi, watermark menyebalkan ini bikin beberapa aplikasi shortcut terkunci dan performa sistem terasa nge-lag gara-gara proses background Windows Script Host yang nyangkut. Panik? Pastinya. Apalagi tombol pengaturan lisensi di Control Panel malah mental *error code* gara-gara koneksi kantor yang dibatasi *firewall*.
 
 Sebelum panik berlanjut dan berujung bongkar hardware atau install ulang yang bakal makan waktu berjam-jam, sebagai teknisi infrastruktur IT, saya punya trik kilat yang aman, legal secara fungsional untuk *staging* darurat, dan pastinya bersih dari virus atau file *crack* abal-abal yang sering disebar situs download ilegal. Kita cukup pakai Command Prompt (CMD) bawaan sistem.
@@ -43,16 +44,16 @@ Sebelum kita eksekusi kodenya, mari kita pahami dulu tiga akar penyebab utama ke
 
 3. Perubahan Hardware Signifikan: Pergantian komponen mendadak (misalnya SSD NVMe baru atau penggantian motherboard oleh tim IT sebelumnya) membuat algoritma keamanan Windows mengira ini adalah unit PC yang berbeda. ---
 
-### Langkah-Langkah Eksekusi: Menghilangkan Watermark via CMD
+Langkah-Langkah Eksekusi: Menghilangkan Watermark via CMD
 
 Mari kita selesaikan masalah ini langsung dari balik layar sistem operasi menggunakan hak akses tertinggi. Ikuti langkah-langkah di bawah ini secara teliti:
 
-### Langkah 1: Buka Command Promptsebagai Administrator
+Langkah 1: Buka Command Promptsebagai Administrator
 * Klik tombol Start di pojok kiri bawah atau tekan tombol Windows di keyboard Anda. * Ketik `cmd` di kolom pencarian.
 * Jangan langsung di-klik biasa. Klik kanan pada aplikasi Command Prompt, lalu pilihRun as administrator. 
 * Jika muncul jendela konfirmasi User Account Control (UAC), klik Yes.
 
-### Langkah 2: Hentikan Layanan Lisensi yang Macet
+Langkah 2: Hentikan Layanan Lisensi yang Macet
 Di dalam jendela hitam CMD yang terbuka, kita perlu menyetop dulu layanan *Software Protection* agar tidak terjadi konflik saat kita menyegarkan token lisensi. Ketik perintah berikut lalu tekan Enter:
 
 ```text
@@ -60,7 +61,7 @@ net stop sppsvc
 ```
 *Tunggu beberapa detik sampai muncul keterangan bahwa layanan berhasil dihentikan.*
 
-### Langkah 3: Eksekusi Perintah Penyegar Token
+Langkah 3: Eksekusi Perintah Penyegar Token
 Selanjutnya, kita masukkan perintah untuk memperpanjang masa tenggang (*grace period*) aktivasi sistem operasi Anda. Ketik perintah ini di CMD lalu tekan Enter:
 
 ```text
@@ -68,7 +69,7 @@ slmgr -rearm
 ```
 Setelah Anda menekan Enter, sebuah kotak dialog kecil akan muncul di layar memberikan informasi bahwa perintah berhasil dijalankan (*Command completed successfully*). 
 
-### Langkah 4: Restart PC Anda
+Langkah 4: Restart PC Anda
 Jangan langsung menutup jendela CMD. Tutup semua pekerjaan dokumen yang sudah di-save, lalu ketik perintah *restart* kilat ini di CMD:
 
 ```text

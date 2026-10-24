@@ -23,6 +23,7 @@ theme: "Sunset Horizon Coral"
 
 
 
+
 C'était un mardi matin agité dans notre open space de La Défense. Je m'apprêtais à boucler le rapport trimestriel pour un client important quand, soudain, la catastrophe : notification rouge vif dans la barre des tâches de Windows. Le disque C est saturé, plus un seul gigaoctet de libre, et pour couronner le tout, mon SSD externe de secours n'est même pas détecté par le système. Panique à bord, impossible d'enregistrer le moindre fichier Word, et le PC qui commence à ramer à mort au pire moment possible.
 
 Dans ce genre de situation critique, on a tous tendance à faire n'importe quoi : vider la Corbeille en espérant un miracle, supprimer à la hache des dossiers dont on ne connait pas l'utilité, ou redémarrer la machine en boucle en espérant que l'espace va magiquement réapparaître. Évidemment, ça ne sert à rien. Le vrai coupable invisible, c'est l'accumulation silencieuse de fichiers temporaires, de caches système et de résidus de mises à jour qui étouffent votre partition principale sans que vous ne remarquiez rien.
@@ -49,7 +50,7 @@ Guide étape par étape : Nettoyage complet du disque C
 
 Voici la procédure exacte que j'applique sur les postes de bureau quand l'espace vital est menacé.
 
-### Étape 1 : Utiliser le Nettoyeur de disque natif en mode administrateur
+Étape 1 : Utiliser le Nettoyeur de disque natif en mode administrateur
 Oubliez les applications mystérieuses téléchargées sur le web. Windows intègre un outil redoutable.
 - Appuyez sur la touche Windows de votre clavier, tapez Nettoyeur de disque, puis faites un clic droit dessus pourExécuter en tant qu'administrateur.
 - Sélectionnez votre lecteur `C:` et validez.
@@ -57,14 +58,14 @@ Oubliez les applications mystérieuses téléchargées sur le web. Windows intè
 - Cochez toutes les cases importantes : *Fichiers journal de mise à jour Windows*, *Fichiers temporaires d'installation*, *Windows Defender*, *Fichiers Internet temporaires*, etc.
 - Cliquez sur OK et laissez le système purger tout ce fatras.
 
-### Étape 2 : Activer le Senseur de stockage (Storage Sense)
+Étape 2 : Activer le Senseur de stockage (Storage Sense)
 Pour éviter que le problème ne revienne sournoisement le mois prochain, automatisons le nettoyage.
 - Ouvrez les Paramètres de Windows (`Windows + I`).
 - Allez dans Système>Stockage.
 - Activez l'option Senseur de stockage.
 - Cliquez dessus pour configurer la fréquence : demandez à Windows de supprimer automatiquement les fichiers temporaires que vos applications n'utilisent pas et de vider la corbeille régulièrement.
 
-### Étape 3 : Nettoyer le dossier Temp manuellement (Le grand ménage)
+Étape 3 : Nettoyer le dossier Temp manuellement (Le grand ménage)
 Pour les irréductibles qui veulent aller plus loin et gratter les derniers gigaoctets :
 - Appuyez sur `Windows + R` pour ouvrir la boîte de dialogue Exécuter.
 - Tapez `%temp%` et validez par Entrée. Le dossier des fichiers temporaires utilisateur s'ouvre.

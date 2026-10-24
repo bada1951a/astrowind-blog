@@ -23,6 +23,7 @@ theme: "Dracula Purple Dev"
 
 
 
+
 Montagmorgen, 08:15 Uhr im Großraumbüro. Ein Kollege schließt sein ThinkPad an die Thunderbolt-Dockingstation an. Auf dem internen Display läuft alles geschmeidig, doch die beiden externen 4K-Bildschirme verhalten sich katastrophal: Monitor 1 meldet stoisch *„Kein Signal – Eingang wird gesucht“*, während Monitor 2 im Dreisekundentakt zwischen tiefem Schwarz und zuckendem Desktop hin- und herflackert. Das Phänomen begegnet mir in meiner täglichen Praxis als Systemadministrator dutzende Male im Monat – insbesondere nach kumulativen Windows-Updates oder Firmware-Pushes. 
 
 Die Ursache liegt selten an defekten Panels, sondern fast ausnahmslos in korrupten Treiberzuständen, asynchronen Handshakes im Display-Subsystem oder fehlerhaft interpretierten EDID-Tabellen. Wenn einfaches Aus- und Einstecken keine Besserung bringt, müssen Sie tiefer in den Windows-Grafikstack eingreifen. In diesem Leitfaden zeige ich Ihnen exakt die Methodik, mit der wir solche Störungen im Enterprise-Support reproduzierbar lösen.
@@ -57,11 +58,11 @@ Moderne Monitore fordern hohe Datenraten (z. B. 4K bei 60 Hz oder 144 Hz mit 10-
 
 ---
 
-### Schritt-für-Schritt-Anleitung: Grafiktreiber-Stack restlos bereinigen
+Schritt-für-Schritt-Anleitung: Grafiktreiber-Stack restlos bereinigen
 
 Gehen Sie planvoll vor. Beginnen Sie mit der schnellen Wiederbelebung und arbeiten Sie sich bei fortbestehendem Fehler bis zur Reinraum-Installation vor.
 
-### Schritt 1: Der Sofort-Reset per Shortcut
+Schritt 1: Der Sofort-Reset per Shortcut
 Wenn der Bildschirm schwarz bleibt, aber das Notebook noch auf Eingaben reagiert, erzwingen Sie einen Neustart des Grafiksubsystems.
 
 Drücken Sie folgende Tastenkombination simultan:
@@ -83,7 +84,7 @@ Drücken Sie folgende Tastenkombination simultan:
 
 ---
 
-### Schritt 2: Diagnose im Geräte-Manager
+Schritt 2: Diagnose im Geräte-Manager
 Reicht der Hotkey nicht aus, prüfen wir den physikalischen und logischen Status im System.
 
 ```markdown
@@ -103,7 +104,7 @@ Reicht der Hotkey nicht aus, prüfen wir den physikalischen und logischen Status
 
 ---
 
-### Schritt 3: Bereinigung via DDU im Abgesicherten Modus
+Schritt 3: Bereinigung via DDU im Abgesicherten Modus
 Wenn Treiberfragmente tiefer im System korrupt sind, reicht das normale Windows-Setup nicht aus. Hier nutzen wir das Branchenstandard-Tool Display Driver Uninstaller (DDU).
 
 <div style="border-left: 4px solid #ff79c6; background: #282a36; color: #f8f8f2; padding: 14px 18px; border-radius: 6px; margin: 20px 0;">
@@ -130,7 +131,7 @@ Wenn Treiberfragmente tiefer im System korrupt sind, reicht das normale Windows-
 
 ---
 
-### Schritt 4: Saubere Neuinstallation und PnP-Reinitialisierung
+Schritt 4: Saubere Neuinstallation und PnP-Reinitialisierung
 Nach dem Neustart befindet sich Ihr System auf dem Basis-Grafiktreiber von Microsoft.
 
 1. Installieren Sie zuerst den Treiber für die integrierte Prozessorgrafik (Intel Graphics oder AMD Adrenalin). Dies ist essenziell, da die Display-Pipelines fast immer physisch an der CPU hängen.
@@ -145,7 +146,7 @@ Nach dem Neustart befindet sich Ihr System auf dem Basis-Grafiktreiber von Micro
 
 ---
 
-### Schritt 5: Anpassung der Anzeigeparameter in Windows
+Schritt 5: Anpassung der Anzeigeparameter in Windows
 Manchmal flackert das Bild, weil Windows eine Bildwiederholrate erzwingt, die das Monitorkabel am Bandbreitenlimit betreibt.
 
 ```markdown

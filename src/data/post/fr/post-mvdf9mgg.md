@@ -23,6 +23,7 @@ theme: "Bronze Artisan Workshop"
 
 
 
+
 Il est 19h45 dans notre bureau tech près de la place de la République à Paris, et la pression monte d'un cran. Nous sommes en plein sprint de livraison pour notre nouveau client, et mon poste de travail principal décide de s'bloquer net à 100% sur l'installation de la dernière mise à jour cumulative Windows 11. Le curseur ne bouge plus depuis quarante minutes, le disque SSD ronronne en continu, et redémarrer la machine de force risque de corrompre l'image système. Impossible de lancer nos scripts de test ou de compiler nos environnements Docker dans cet état.
 
 J'ai déjà vécu cette situation ubuesque des dizaines de fois en entreprise. Plutôt que de paniquer ou d'attendre un miracle qui ne viendra pas, il faut agir à la source. Le coupable idéal dans ce genre de scénario ? Un cache de mise à jour corrompu qui boucle sur lui-même en essayant d'appliquer des paquets figés.
@@ -50,10 +51,10 @@ Guide étape par étape : Nettoyer le cache pour débloquer la situation
 
 Pour résoudre ce problème, nous allons devoir arrêter temporairement les services de mise à jour, vider le dossier de cache corrompu, puis relancer les processus. 
 
-### Étape 1 : Ouvrir le Terminal en mode Administrateur
+Étape 1 : Ouvrir le Terminal en mode Administrateur
 Faites un clic droit sur le bouton Démarrer de Windows 11, puis sélectionnez Terminal (Administrateur)ouInvite de commandes (Admin). Confirmez l'invite de contrôle de compte d'utilisateur (UAC).
 
-### Étape 2 : Arrêter les services de mise à jour et de cryptographie
+Étape 2 : Arrêter les services de mise à jour et de cryptographie
 Pour pouvoir supprimer ou renommer les fichiers du cache, les services Windows associés doivent être stoppés. Tapez les commandes suivantes une par une en appuyant sur Entrée :
 
 ```cmd
@@ -63,7 +64,7 @@ net stop bits
 net stop msiserver
 ```
 
-### Étape 3 : Renommer ou vider le dossier SoftwareDistribution
+Étape 3 : Renommer ou vider le dossier SoftwareDistribution
 Le dossier principal où Windows stocke les fichiers de mise à jour se trouve dans le répertoire système. Nous allons le renommer pour forcer Windows à en recréer un tout propre au prochain redémarrage.
 
 Naviguez vers le dossier via l'explorateur ou utilisez ces lignes de commande directes :
@@ -77,7 +78,7 @@ ren C:\Windows\System32\catroot2 catroot2.old
 <strong>Astuce de pro :</strong> Si Windows vous indique qu'un fichier est en cours d'utilisation, redémarrez votre PC en mode sans échec, effectuez la manipulation, puis redémarrez normalement.
 </div>
 
-### Étape 4 : Redémarrer les services et relancer Windows Update
+Étape 4 : Redémarrer les services et relancer Windows Update
 Maintenant que le cache corrompu a été isolé, red insérez les services système avec les commandes suivantes :
 
 ```cmd

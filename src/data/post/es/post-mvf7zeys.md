@@ -23,6 +23,7 @@ theme: "Modern Minimalist Slate"
 
 
 
+
 Eran las 18:30 en nuestra oficina corporativa en Madrid. A solo media hora de enviar el paquete definitivo del proyecto trimestral a dirección, el ordenador principal de la estación de trabajo comenzó a emitir un zumbido ensordecedor en los ventiladores. La pantalla se congeló por completo. Al abrir a duras penas el Administrador de tareas, el diagnóstico era alarmante: la CPU estaba clavada en el 100 por ciento de uso, y el único responsable en la lista era un proceso aparentemente inofensivo llamado simplemente "System" (Sistema y memoria comprimida en algunas versiones). El cursor apenas se movía, el correo no respondía y la tensión en la sala cortaba el aire con cuchillo.
 
 Durante los primeros diez minutos, caí en el típico error de desesperación: reinicié el equipo tres veces seguidas a la fuerza manteniendo presionado el botón de encendido. Grave error. Lo único que conseguí fue corrupción temporal en la caché de Windows y perder valiosos minutos valiosos que debimos usar para estabilizar el sistema operativo.
@@ -45,7 +46,7 @@ Guía paso a paso para solucionar el bloqueo
 
 Sigue estos pasos de forma ordenada. No saltes al paso final sin antes revisar el estado de tus controladores.
 
-### Paso 1: Aislar el conflicto mediante el Administrador de tareas avanzado
+Paso 1: Aislar el conflicto mediante el Administrador de tareas avanzado
 No te quedes solo en la pestaña de Procesos. Vamos a ver qué hilo exacto está quemando el procesador.
 
 1. Presiona las teclas `Ctrl + Shift + Esc` para abrir el Administrador de tareas.
@@ -56,7 +57,7 @@ No te quedes solo en la pestaña de Procesos. Vamos a ver qué hilo exacto está
 
 4. Se abrirá una ventana emergente que te mostrará qué otros procesos o servicios están bloqueando los hilos del sistema. Si ves algún servicio de terceros o controlador de audio/red en esa lista, anota su nombre.
 
-### Paso 2: Actualizar o deshabilitar controladores desde el Administrador de dispositivos
+Paso 2: Actualizar o deshabilitar controladores desde el Administrador de dispositivos
 En nuestro incidente de Madrid, el culpable resultó ser un driver de la controladora de red Ethernet que se había corrompido tras una actualización nocturna desatendida.
 
 1. Haz clic en el botón de Inicio, escribe Administrador de dispositivos y presiónalo.
@@ -67,7 +68,7 @@ En nuestro incidente de Madrid, el culpable resultó ser un driver de la control
 
 4. Si la actualización no surte efecto, haz clic en Desinstalar el dispositivo y reinicia el equipo. Windows reinstalará un controlador limpio y genérico al arrancar.
 
-### Paso 3: Desactivar temporalmente servicios de indexación y Superfetch (SysMain)
+Paso 3: Desactivar temporalmente servicios de indexación y Superfetch (SysMain)
 Si el hardware está bien, el problema suele ser la base de datos de archivos corrupta.
 
 1. Presiona `Windows + R`, escribe `services.msc` y presiona Enter para abrir la consola de Servicios.

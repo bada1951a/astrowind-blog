@@ -23,6 +23,7 @@ theme: "Graphite Technical Paper"
 
 
 
+
 Eram 19h45 em um hub de tecnologia na região da Avenida Paulista, em São Paulo, e o clima na sala de reuniões estava tenso. Precisávamos entregar um relatório de BI consolidado para a diretoria às 9h do dia seguinte, mas o notebook principal da equipe simplesmente decidiu travar na tela de reinicialização com o famigerado aviso de "Atualizando o Windows: 100% concluído. Não desligue o computador". Passaram-se trinta minutos, quarenta minutos, e a porcentagem não saía do lugar. O cooler do aparelho rodava no talo, o prazo apertava, e reiniciar no botão físico trazia o medo clássico de corromper o sistema de vez.
 
 Essa cena é o pesadelo de qualquer profissional de TI ou usuário que depende de estabilidade. Depois de perder valiosos minutos tentando alternativas ineficientes, o diagnóstico certeiro apontou para o que costuma falhar nesses momentos: arquivos corrompidos no cache do Windows Update, especificamente na pasta onde o sistema armazena os pacotes de instalação temporários.
@@ -45,13 +46,13 @@ Para entender o problema e nunca mais passar raiva, precisamos olhar debaixo do 
 
 ---
 
-### Passo a Passo Prático: Limpando o Cache e Destravando o Sistema
+Passo a Passo Prático: Limpando o Cache e Destravando o Sistema
 
 Se o seu sistema está inacessível pela interface gráfica normal, o caminho é iniciar em Modo de Segurança (Safe Mode) ou usar um ambiente de recuperação. Assumindo que você conseguiu acessar o Windows (mesmo que após um hard reset forçado) ou via Prompt de Comando na tela de Reparo Avançado, siga esta sequência exat
 
 a:
 
-### Passo 1: Parar os serviços de atualização
+Passo 1: Parar os serviços de atualização
 Abra o Terminalou oPrompt de Comando com privilégios de Administrador (clique com o botão direito no menu Iniciar e selecione "Terminal (Administrador)"). Digite os comandos abaixo um por um, pressionando Enter após cada linh
 
 a:
@@ -64,7 +65,7 @@ net stop msiserver
 ```
 *Isso garante que nenhum arquivo do sistema esteja em uso enquanto limpamos a bagunça. *
 
-### Passo 2: Renomear a pasta de cache (SoftwareDistribution)
+Passo 2: Renomear a pasta de cache (SoftwareDistribution)
 Ainda no Prompt de Comando, vamos renomear a pasta onde ficam os arquivos corrompidos para forçar o Windows a criar uma nova do zero limpinh
 
 a:
@@ -74,7 +75,7 @@ ren C:\Windows\SoftwareDistribution SoftwareDistribution.old
 ren C:\Windows\System32\catroot2 catroot2.old
 ```
 
-### Passo 3: Reiniciar os serviços e reiniciar o computador
+Passo 3: Reiniciar os serviços e reiniciar o computador
 Agora que o cache problemático foi isolado, reinicie os serviços essenciais e volte a rotina normal:
 
 ```text

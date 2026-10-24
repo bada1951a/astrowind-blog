@@ -23,6 +23,7 @@ theme: "Steel Silver Metallic"
 
 
 
+
 Vendredi, 17h45. Le commit final de la semaine est prêt à être poussé, la machine à café est vide, et mon manager débarque derrière mon épaule pour me demander un export critique des logs serveurs de la semaine. Je tape sur la touche Power de ma station de travail principale pour la sortir de veille... Et là, c'est le drame. Le boîtier s'illumine, les ventilateurs hurlent comme des turbines d'A380 en phase de décollage, mais le moniteur reste noir de chez noir, sans même un signal DisplayPort. Pas de BIOS, pas de logo, le néant total. La sueur froide commence à perler sur la nuque.
 
 <div style="border-left: 4px solid #64748b; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; font-family: monospace;">
@@ -48,15 +49,15 @@ Fiche de diagnostic et procédure d'urgence (Pas à pas)
 
 Bon, inutile de lancer un `journalctl -xe` ou de trifouiller le `Gestionnaire de périphériques` sous Windows, la machine ne boote même pas l'OS. On sort les tournevis et le matériel de nettoyage.
 
-### Étape 1 : Décharge électrostatique et démontage chirurgical
+Étape 1 : Décharge électrostatique et démontage chirurgical
 Éteignez l'alimentation à l'interrupteur, débranchez le câble secteur, et restez appuyé 10 secondes sur le bouton Power de la tour pour vider les condensateurs résiduels. Ouvrez le panneau latéral du boîtier (celui en acier brossé qui résiste toujours à vos vis).
 
-### Étape 2 : Extraction et nettoyage des barrettes de RAM
+Étape 2 : Extraction et nettoyage des barrettes de RAM
 Appuyez sur les loquets des slots DIMM pour libérer la mémoire. Ne touchez pas les puces avec vos doigts gras.
 * Prenez une bombe d'air sec (ou soufflez comme un bourrin si vous n'avez que ça) pour nettoyer les slots de la carte mère.
 * Munissez-vous d'une gomme à effacer blanche standard (oui, celle du collège). Frottez délicatement les contacts dorés de la barrette pour enlever l'oxydation. Nettoyez les résidus de gomme avec un pinceau antistatique ou un chiffon microfibre propre.
 
-### Étape 3 : Repositionnement stratégique
+Étape 3 : Repositionnement stratégique
 Si vous avez 4 slots et 2 barrettes, ne les remettez pas au même endroit par fierté. 
 * Testez d'abord avec une seule barrette sur le slot préconisé par le constructeur (souvent le second en partant du socket CPU, le slot `A2` ou `B2`).
 * Enfoncez-la fermement jusqu'à entendre le *clic* satisfaisant du loquet.

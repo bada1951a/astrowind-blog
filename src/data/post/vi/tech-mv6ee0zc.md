@@ -23,6 +23,7 @@ theme: "Midnight Navy Royal"
 
 
 
+
 [INCIDENT LOG 01:15 AM] Bối Cảnh Sự Cố Tại Bàn Trực Vận Hành
 
 Đồng hồ hệ thống điểm 01:15 sáng. Trong phòng máy chủ yên tĩnh chỉ có tiếng quạt tản nhiệt server rít đều đặn, đồng chí kỹ sư trực ca bên cạnh bắt đầu đập bàn phím liên hồi kèm theo tiếng thở dài. Anh ta đang cấu hình dở cụm Kubernetes qua terminal thì phím `e` liên tục bị "chattering" (gõ một lần nhưng máy nhận thành `ee` hoặc `eee`), trong khi phím `Enter` thì nhấn 3 lần mới ăn được 1 lần. 
@@ -82,7 +83,7 @@ Quy trình chuẩn hóa dưới đây được áp dụng trực tiếp tại b�
 [02:30 AM] Nghiệm Thu Kiểm Tra (Burn-in Test)
 ```
 
-### Bước 1: Cô Lập Lỗi Phần Mềm & Xác Định Tọa Độ Phím (01:30 AM)
+Bước 1: Cô Lập Lỗi Phần Mềm & Xác Định Tọa Độ Phím (01:30 AM)
 
 Trước khi can thiệp phần cứng, loại trừ toàn bộ nguyên nhân do driver hoặc hệ điều hành.
 
@@ -98,7 +99,7 @@ Trước khi can thiệp phần cứng, loại trừ toàn bộ nguyên nhân do
 
 ---
 
-### Bước 2: Tẩy Rửa Phục Hồi Tiếp Điểm Bằng Dung Dịch Chuyên Dụng (01:45 AM)
+Bước 2: Tẩy Rửa Phục Hồi Tiếp Điểm Bằng Dung Dịch Chuyên Dụng (01:45 AM)
 
 Đây là bước quan trọng nhất quyết định bạn cứu được switch hay phá hủy nó hoàn toàn.
 
@@ -125,7 +126,7 @@ Các bước thao tác chuẩn:1.Ngắt toàn bộ nguồn điện: Rút cáp k�
 
 ---
 
-### Bước 3: Can Thiệp Vật Lý Với Mạch Hot-Swap Hoặc Mạch Hàn (02:10 AM)
+Bước 3: Can Thiệp Vật Lý Với Mạch Hot-Swap Hoặc Mạch Hàn (02:10 AM)
 
 Nếu sau khi xử lý dung dịch mà phím vẫn còn hiện tượng nuốt nút (ấn không nhận):
 

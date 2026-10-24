@@ -23,6 +23,7 @@ theme: "Cobalt Enterprise Lab"
 
 
 
+
 Het was dinsdagochtend om 09:15 uur op onze tech-incubator nabij de Amsterdamse Zuidas. Terwijl we de laatste hand legden aan een cruciale demo voor een fintech-partner, sloeg het lot toe: een angstaanjagend blauw scherm, de beruchte STOP: 0x0000000a (IRQL_NOT_LESS_OR_EQUAL). Geen tijd voor paniek, want de directeur stond binnen een uur op de stoep voor een live evaluatie van onze systemen. Dit soort acute prestatieproblemen vragen om een directe, no-nonsense aanpak.
 
 In deze gids duiken we diep in de werkelijke oorzaken van deze specifieke stop-code en lopen we door een beproefd stappenplan om je werkstation of server direct weer stabiel te krijgen.
@@ -47,11 +48,11 @@ a. Dit duidt er bijna altijd op dat een kernel-modus proces of driver probeerde 
 
 ---
 
-### Stap-voor-stap naar een stabiel systeem
+Stap-voor-stap naar een stabiel systeem
 
 Genoeg diagnose, tijd voor actie. Volg deze stappen om het probleem systematisch te isoleren en op te lossen.
 
-### Stap 1: Geheugenproblemen uitsluiten met Windows Geheugendiagnose
+Stap 1: Geheugenproblemen uitsluiten met Windows Geheugendiagnose
 
 Omdat de foutcode vaak gelinkt is aan geheugenadressering, beginnen we bij de basis: het RAM-geheugen controleren.
 
@@ -59,7 +60,7 @@ Omdat de foutcode vaak gelinkt is aan geheugenadressering, beginnen we bij de ba
 * Kies voor de optie Nu opnieuw opstarten en naar problemen zoeken (aanbevolen).
 * Laat detest draaien. Kies gerust voor de 'Uitgebreide' (Extended) scan door op F1 te drukken als je vermoedens hebt van hardnekkige hardwarefouten.
 
-### Stap 2: De boosdoener vangen via Driver Rollback
+Stap 2: De boosdoener vangen via Driver Rollback
 
 Als je net een nieuwe update hebt geïnstalleerd voordat het blauwe scherm verscheen, moeten we die driver direct terugdraaien.
 
@@ -75,7 +76,7 @@ Als je net een nieuwe update hebt geïnstalleerd voordat het blauwe scherm versc
 <strong>Pro-Tip:</strong> Kun je Windows niet meer normaal opstarten? Start dan op in de Veilige Modus (Safe Mode) door tijdens het booten herhaaldelijk op F8 te drukken of via de geavanceerde opstartopties, en voer dan bovenstaande stappen uit.
 </div>
 
-### Stap 3: Systeembestanden herstellen via de Terminal
+Stap 3: Systeembestanden herstellen via de Terminal
 
 Soms is de boel zo beschadigd dat essentiële OS-bestanden dwarsliggen. Open de Terminal of Command Prompt als Administrator en draai de volgende commando's achter elkaar:
 

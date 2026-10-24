@@ -23,6 +23,7 @@ theme: "Industrial Blueprint"
 
 
 
+
 Llevo más de una década gestionando el parque microinformático de una multinacional con más de 800 puestos operativos, y si hay una incidencia que entra a diario en el sistema de tickets de soporte técnico con la etiqueta de "urgente", es el colapso del puesto de trabajo multimonitor. El escenario siempre es el mismo: el usuario llega por la mañana, conecta su portátil corporativo a la base de conexión (docking station) o directamente por HDMI/DisplayPort, y se encuentra con el temido mensaje de "Sin señal" (No Signal) o, peor aún, un parpadeo intermitente cada tres segundos que deja el equipo totalmente inútil para trabajar.
 
 Muchas veces se culpa a la pantalla o al cable de inmediato. Sin embargo, en el 90% de las intervenciones que realizo en planta, el fallo no reside en el panel físico, sino en una desincronización crítica en el handshake digital de la GPU, microcortes de tensión en el protocolo de enlace (DisplayPort Alternate Mode) o la corrupción de los controladores gráficos tras una actualización en segundo plano de Windows Update. En esta guía técnica voy a desglosar cómo aislar la avería a nivel de esquema funcional y resolverla de forma definitiva mediante software e instrumentación del sistema. <div style="border-left: 4px solid #f59e0b; padding: 14px 18px; margin: 24px 0; background-color: rgba(245, 158, 11, 0.05); border-radius: 4px; font-family: monospace; font-size: 0.95em;">
@@ -78,12 +79,12 @@ Para resolver la avería sin reinstalar el sistema operativo, aplicaremos un pro
  [Paso 1: Detección]  --> [Paso 2: Purga DDU] --> [Paso 3: Bloqueo GPO] --> [Paso 4: Calibración]
 ```
 
-### Paso 1: Restablecimiento forzado del subsistema de vídeo
+Paso 1: Restablecimiento forzado del subsistema de vídeo
 Antes de desinstalar nada, prueba a forzar el reinicio en caliente del subsistema gráfico del kernel ejecutando la combinación de teclas:
 `Win` + `Ctrl` + `Shift` + `B`.
 Escucharás un breve pitido del sistema y la pantalla parpadeará una vez. Si la señal vuelve de inmediato de forma estable, el problema residía en un bloqueo temporal de la cola de procesamiento del Administrador de ventanas de escritorio (dwm.exe).
 
-### Paso 2: Análisis en el Administrador de dispositivos
+Paso 2: Análisis en el Administrador de dispositivos
 
 1. Haz clic derecho sobre el botón de Inicio de Windows y selecciona Administrador de dispositivos.
 
@@ -99,7 +100,7 @@ Escucharás un breve pitido del sistema y la pantalla parpadeará una vez. Si la
 <div style="border-left: 4px solid #f59e0b; padding: 14px 18px; margin: 24px 0; background-color: rgba(245, 158, 11, 0.05); border-radius: 4px;">
   <strong>NOTA DE CAMPO:</strong> No uses la opción "Actualizar controlador" dentro de Windows. El catálogo interno prioriza drivers genéricos orientados a la estabilidad básica de oficina, omitiendo extensiones críticas de control de reloj para monitores duales de alta frecuencia. </div>
 
-### Paso 3: Purga absoluta de controladores en Modo Seguro mediante DDU
+Paso 3: Purga absoluta de controladores en Modo Seguro mediante DDU
 Para garantizar que no queden residuos en las claves del registro, debemos recurrir a la herramienta estándar del sector: Display Driver Uninstaller (DDU).
 
 1. Descarga el paquete oficial más reciente del controlador desde la web de soporte del fabricante del portátil o del diseñador del silicio (Intel, AMD o NVIDIA).
@@ -120,7 +121,7 @@ Para garantizar que no queden residuos en las claves del registro, debemos recur
 
 **Q7.** Repite el proceso para ambos adaptadores si dispones de un sistema híbrido (primero la gráfica integrada y luego la dedicada).
 
-### Paso 4: Reinstalación limpia y configuración de temporización
+Paso 4: Reinstalación limpia y configuración de temporización
 
 1. Tras reiniciar en modo normal (recuerda desactivar el arranque a prueba de errores en `msconfig` si no se quitó automáticamente), instala primero el controlador de la gráfica integrada (iGPU) y reinicia.
 

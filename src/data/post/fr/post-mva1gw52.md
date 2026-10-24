@@ -23,6 +23,7 @@ theme: "Pastel Lavender Tech"
 
 
 
+
 Il est 16h45 dans notre bureau tech près de la place de la République à Paris. Le dernier sprint de la semaine bat son plein et nous devons absolument déployer une mise à jour critique de notre application interne avant le point de validation avec la direction. Subitement, l'écran de mon poste de travail s'illumine d'une alerte rouge vif : *Espace disque insuffisant sur le lecteur C:*. Le système refuse d'initialiser l'environnement de build, les logs bloquent, et la barre de progression reste figée à zéro. Impossible de compiler quoi que ce soit. Le disque principal de 512 Go est totalement saturé par des gigaoctets de fichiers invisibles, accumulés au fil des mois sans crier gare.
 
 Dans l'urgence, le premier réflexe est souvent de supprimer des dossiers au hasard ou de vider la corbeille en espérant un miracle. C'est exactement là que l'on commet l'irréparable en effaçant des caches de développement essentiels ou des points de restauration cruciaux. Après plusieurs minutes de tâtonnements et un diagnostic rapide des dossiers cachés, la cause de la panne est devenue évidente : l'accumulation massive de fichiers temporaires système, de résidus d'anciennes mises à jour Windows Update et de caches d'applications obsolètes. 
@@ -58,7 +59,7 @@ Guide étape par étape : Nettoyer proprement le lecteur C
 
 Voici la procédure exacte à suivre pour récupérer plusieurs dizaines gigaoctets en moins de dix minutes, sans perturber vos outils de développement ou vos logiciels métiers.
 
-### Étape 1 : Activer le nettoyage intelligent (Senseur de stockage)
+Étape 1 : Activer le nettoyage intelligent (Senseur de stockage)
 Plutôt que de chercher manuellement, confions le travail de chaufferie à l'outil natif de Windows 11.
 
 1. Ouvrez les Paramètres de Windows 11 (raccourci `Touche Windows + I`).
@@ -69,7 +70,7 @@ Plutôt que de chercher manuellement, confions le travail de chaufferie à l'out
 
 4. Cliquez sur le texte "Senseur de stockage" pour configurer les règles : demandez-lui de nettoyer les fichiers temporaires non essentiels que vos applications n'utilisent pas.
 
-### Étape 2 : Nettoyer les fichiers système en profondeur
+Étape 2 : Nettoyer les fichiers système en profondeur
 L'outil classique de nettoyage libère une première couche, mais il faut aller chercher les fichiers obsolètes du système.
 
 1. Appuyez sur la touche `Windows`, tapez Nettoyage de disque et lancez l'application.
@@ -87,7 +88,7 @@ L'outil classique de nettoyage libère une première couche, mais il faut aller 
 
 5. Cliquez sur OK pour lancer la purge définitive.
 
-### Étape 3 : Purger manuellement les dossiers Temp récalcitrants
+Étape 3 : Purger manuellement les dossiers Temp récalcitrants
 Pour les caches de développement ou les fichiers temporaires persistants que l'interface graphique oublie parfois :
 
 1. Appuyez sur `Windows + R`, tapez `%temp%` et validez.

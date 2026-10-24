@@ -23,6 +23,7 @@ theme: "Teal Matrix Digital"
 
 
 
+
 Eram exatamente 16h45 em um hub de tecnologia na região da Avenida Paulista, em São Paulo. Nossa equipe estava a quinze minutos de uma reunião crítica de alinhamento técnico para a entrega de um grande projeto de arquitetura de dados com um cliente do setor financeiro. De repente, a tela do meu notebook principal pisca em vermelho: notificação crítica do Windows — "Espaço em disco insuficiente no Disco C:". O sistema travou bem na hora em que eu precisava compilar os logs finais e gerar o pacote de homologação. O coração acelera, o Slack da empresa começa a apitar com cobranças, e o Windows me avisa que restam apenas 800 MB livres em um SSD de 512 GB. Precisei agir rápido, sem perder dados e sem tempo para testar softwares milagrosos de internet.
 
 <div style="border-left: 4px solid #14b8a6; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
@@ -47,7 +48,7 @@ Guia Passo a Passo: Liberando Espaço com Segurança
 
 Para resolver o problema a tempo da nossa reunião em São Paulo, ignorei softwares de terceiros cheios de anúncios e fui direto às ferramentas nativas e seguras do Windows 11. Aqui está o procedimento exato que você deve seguir.
 
-### Passo 1: Usando o Sensor de Armazenamento (Storage Sense)
+Passo 1: Usando o Sensor de Armazenamento (Storage Sense)
 O Windows 11 possui uma ferramenta nativa excelente para gerenciar lixo digital sem riscos.
 
 * Pressione as teclas `Windows + I` para abrir as Configurações.
@@ -59,14 +60,14 @@ O Windows 11 possui uma ferramenta nativa excelente para gerenciar lixo digital 
 
 * Clique no botão Remover Arquivos.
 
-### Passo 2: Limpeza Avançada de Disco (Disk Cleanup)
+Passo 2: Limpeza Avançada de Disco (Disk Cleanup)
 Para garantir que resíduos profundos do sistema sejam eliminados, recorremos à ferramenta clássica otimizada. * Pressione `Windows + R`, digite `cleanmgr` e aperte `Enter`.
 * Selecione o drive `C:` e clique em OK.
 * Clique no botão Limpar arquivos do sistema (isso é crucial para liberar espaço de atualizações antigas).
 * Selecione novamente o drive `C:`.
 * Marque todas as caixas relevantes (especialmente "Limpeza do Windows Update" e "Arquivos de Instalação Temporários") e clique em OK para excluir.
 
-### Passo 3: Limpeza Manual das Pastas Temp Ocultas
+Passo 3: Limpeza Manual das Pastas Temp Ocultas
 Se você ainda precisa de mais alguns gigabytes urgentes, podemos acessar as pastas temporárias diretamente pelo explorador de arquivos.
 
 * Pressione `Windows + R`, digite `%temp%` e aperte `Enter`.

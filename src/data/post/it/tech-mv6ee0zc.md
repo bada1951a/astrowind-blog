@@ -23,6 +23,7 @@ theme: "Mint Fresh Engineering"
 
 
 
+
 Nel mio lavoro quotidiano sui terminali di gestione e nei laboratori di collaudo hardware, uno strumento di input inaffidabile rappresenta un collo di bottiglia critico. Qualche mese fa, durante la configurazione in loco di un cluster di virtualizzazione, la tastiera meccanica della mia workstation da campo ha iniziato a mostrare sintomi subdoli: digitando credenziali complesse su terminale SSH, alcune lettere venivano registrate due volte (*key chattering* o rimbalzo), mentre la barra spaziatrice e il tasto `Tab` perdevano colpi in modo casuale (*key skipping*). 
 
 In un ambiente di produzione, dover cancellare backspace a raffica o fallire l'autenticazione per via di un doppio carattere non è solo frustrante: rischia di bloccare account di dominio o generare errori di sintassi distruttivi nei file di configurazione.
@@ -33,7 +34,7 @@ In un ambiente di produzione, dover cancellare backspace a raffica o fallire l'a
 
 ---
 
-## 1. Analisi delle Cause Radice (Root Cause Breakdown)
+1. Analisi delle Cause Radice (Root Cause Breakdown)
 
 Un interruttore meccanico (switch) basa il proprio funzionamento sulla chiusura fisica di un circuito tramite una coppia di lamine metalliche flessibili (generalmente in lega di rame-berillio o bronzo fosforoso). Il degrado di questo sistema elettromeccanico origina da tre vettori principali:
 
@@ -78,7 +79,7 @@ a: Rimozione Keycap & Switch]
 a: Test di Debounce & Continuità]
 ```
 
-### Passo 1: Diagnostica Logica ed Esclusione del Driver Host
+Passo 1: Diagnostica Logica ed Esclusione del Driver Host
 Prima di intervenire fisicamente, verifichiamo che il sottosistema USB di Windows non sia compromesso da conflitti di polling rate o risparmio energetico:
 
 1. Premi `Tasto Windows + X` e seleziona Gestione dispositivi.
@@ -100,7 +101,7 @@ reg query "HKCU\Control Panel\Keyboard" /v KeyboardDelay
   <strong>Strumento di Collaudo:</strong> Scarica un'utility portatile open-source dedicata al test degli switch (es. <em>Keyboard Chattering Fix</em> o <em>Switch Hitter</em>). Imposta la soglia di campionamento debounce a <strong>15ms</strong>. Se il software rileva eventi inferiori a questa finestra con un solo tocco, la causa è al 100% hardware.
 </div>
 
-### Passo 2: Isolamento Fisico del Tasto Compromesso
+Passo 2: Isolamento Fisico del Tasto Compromesso
 
 1. Scollega fisicamente il cavo USB dalla macchina. Lavorare sotto tensione su un circuito a 5V con liquidi volatili può causare cortocircuiti sul controller logico.
 
@@ -108,7 +109,7 @@ reg query "HKCU\Control Panel\Keyboard" /v KeyboardDelay
 
 3. Rimuovi la polvere perimetrale con un soffiatore manuale o una bomboletta di aria compressa, tenendo l'ugello ad almeno 10 cm di distanza per evitare condensa criogenica. ---
 
-### Passo 3: Trattamento Mirato con Disossidante per Contatti Elettrici
+Passo 3: Trattamento Mirato con Disossidante per Contatti Elettrici
 Il prodotto da utilizzare deve essere rigorosamente un disossidante per contatti elettronici a secco, a rapida evaporazione e a residuo zero (es. *WD-40 Specialist Detergente Contatti*, *Kontakt Chemie 60/61*, o *CRC QD Electronic Cleaner*).
 
 <div style="border-left: 4px solid #dc2626; padding: 12px 16px; margin: 20px 0; background-color: rgba(220, 38, 38, 0.05); border-radius: 4px;">
@@ -145,7 +146,7 @@ a: Attendi non meno di 15-20 minuti prima di alimentare nuovamente la periferica
 
 ---
 
-### Passo 4: Riparazione Avanzata su Tastiere Hot-Swap e Saldatura
+Passo 4: Riparazione Avanzata su Tastiere Hot-Swap e Saldatura
 Se il disossidante non risolve l'anomalia, il problema risiede nell'accoppiamento elettrico a valle:
 
 1. Se la tastiera supporta l'hot-swap, utilizza l'estrattore per switch (*switch puller*). Aggancia le due clip di rilascio a nord e sud dello switch ed estrailo verticalmente.
@@ -161,7 +162,7 @@ a:
    - Aspira lo stagno vecchio con pompetta a vuoto o treccia dissaldante.
    - Sostituisci l'interruttore con uno nuovo dello stesso tipo (es. Gateron/Cherry MX) e risalda con lega Sn99.3Cu0.7 e flussante a base di colofonia. ---
 
-## 3. Avvertenze Tecniche e Prevenzione Guasti
+3. Avvertenze Tecniche e Prevenzione Guasti
 
 Operare sulla componentistica di input richiede cautela per non convertire un semplice falso contatto in un guasto permanente della scheda madre:
 
@@ -170,7 +171,7 @@ Operare sulla componentistica di input richiede cautela per non convertire un se
 
 ---
 
-## 4. Domande Frequenti (FAQ)
+4. Domande Frequenti (FAQ)
 
 Posso usare l'alcol isopropilico (IPA) al 99.9% al posto dello spray per contatti dedicato?
 Sì, ma solo con somministrazione manuale controllata tramite pipetta o siringa (non più di una o due gocce). L'isopropanolo è un ottimo sgrassante e non lascia residui, tuttavia non contiene gli additivi tensioattivi dei disossidanti specifici per contatti elettrici che disgregano l'ossido metallico per via chimica. Inoltre, un bagno d'alcol eccessivo può opacizzare irreversibilmente le plastiche in policarbonato trasparente (*housing RGB*) di alcuni switch moderni.

@@ -23,6 +23,7 @@ theme: "Midnight Navy Royal"
 
 
 
+
 <div style="border-left: 4px solid #1d4ed8; padding: 14px 18px; margin: 20px 0; background-color: rgba(29, 78, 216, 0.04); border-radius: 4px; color: #111827;">
   <strong style="color: #1d4ed8; font-size: 0.95rem; text-transform: uppercase; letter-spacing: 0.5px;">[INCIDENT LOG #20261014-SYS] 판교 데이터센터 파견 인프라 당직 로그</strong><br>
   <span style="font-size: 0.9rem; color: #334155;">새벽 02시 40분, 관제 모니터링 콘솔용 랩톱 3대에서 동시다발적으로 외장 디스플레이 신호 단절 및 3~5초 간격의 간헐적 블랙아웃(암전) 현상 발생. 단순 케이블 재연결로 복구되지 않는 디스플레이 파이프라인 교착 상태 확인 후 드라이버 서브시스템 재구축 및 핸드셰이크 초기화 절차 수행.</span>
@@ -36,7 +37,7 @@ theme: "Midnight Navy Royal"
 
 ---
 
-## 1. 근본 원인 분석 (Root Cause Breakdown)
+1. 근본 원인 분석 (Root Cause Breakdown)
 
 단순히 "드라이버를 지웠다 깔아보라"는 식의 접근은 근본적인 해결책이 되지 못합니다. 왜 노트북 환경에서 외장 모니터 신호 단절이 유독 자주 일어나는지 3가지 기술적 메커니즘을 이해해야 합니다.
 
@@ -150,7 +151,7 @@ pnputil /enum-devices /class Display
 
 ---
 
-## 4.  자주 묻는 질문 (FAQ)
+4.  자주 묻는 질문 (FAQ)
 
 **Q1.** 케이블을 새로 교체했는데도 4K 해상도에서 화면이 5초 간격으로 꺼졌다 켜집니다.
 케이블 규격 미달(대역폭 병목)일 확률이 매우 높습니다. 4K 60Hz HDR 이상 환경은 최소 18Gbps(HDMI 2.0)에서 48Gbps(HDMI 2.1) 및 DP 1.4(32.4Gbps) 수준의 순수 대역폭을 요구합니다. 시중의 저가형 '4K 지원' 케이블 중 상당수가 실측 대역폭 미달로 신호 감쇄(Attenuation)를 일으켜 화면이 깜빡입니다. 반드시 공인 인증된 Ultra High Speed HDMI(HDMI 2.1)또는VESA 인증 DP 1.4/DP 2.1 케이블을 선택하십시오.

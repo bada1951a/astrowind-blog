@@ -14,6 +14,7 @@ theme: "Sandstone Desert Minimal"
 
 
 
+
 1. Tình huống khẩn cấp tại văn phòng
 
 Hôm nay là một ngày bận rộn tại văn phòng nằm ngay trung tâm Quận 1, TP. Hồ Chí Minh. Tôi vừa nhấp ngụm cà phê sáng thì đồng nghiệp ngồi bàn bên hoảng hốt gọi tôi đến hỗ trợ chiếc máy tính xách tay của anh ấy. Số là bên ngoài hợp tác xã và đối tác vừa gửi qua một tệp nén (ZIP) chứa các bản vẽ kỹ thuật và dữ liệu quan trọng. Anh ấy đang định dùng tổ hợp phím **Win + Shift + S** quen thuộc để cắt vài tấm hình chi tiết gửi ngay cho cấp trên kiểm tra tiến độ, nhưng bấm hoài mà màn hình cứ trơ ra, không có một chút phản hồi nào. Cửa sổ chụp ảnh màn hình của Snipping Tool hoàn toàn biến mất, khiến tiến độ công việc bị chững lại ngay lập tức.
@@ -36,21 +37,21 @@ Trước khi đi vào các bước khắc phục, chúng ta hãy điểm qua ba 
 
 Để giải quyết triệt để tình trạng này mà không làm mất thời gian mở lại các phần mềm vẽ CAD đang chạy dở, chúng ta sẽ thực hiện lần lượt các bước sau đây ngay trên giao diện Windows 11.
 
-### Bước 1: Khởi động lại hoặc kết thúc tiến trình Snipping Tool qua Task Manager
+Bước 1: Khởi động lại hoặc kết thúc tiến trình Snipping Tool qua Task Manager
 Đôi khi ứng dụng đang chạy ngầm bị lỗi vòng lặp. Chúng ta cần tắt nó đi để hệ thống tự tải lại.
 - Nhấn tổ hợp phím **Ctrl + Shift + Esc** để mở **Task Manager**.
 - Tại tab **Processes**, bạn tìm kiếm từ khóa `Snipping Tool` hoặc cuộn xuống tìm tiến trình có tên tương tự.
 - Nhấp chuột phải vào ứng dụng và chọn **End task**.
 - Thử bấm lại **Win + Shift + S** xem đã hoạt động chưa.
 
-### Bước 2: Kiểm tra quyền thông báo trong Cài đặt (Settings)
+Bước 2: Kiểm tra quyền thông báo trong Cài đặt (Settings)
 Snipping Tool trên Windows 11 phụ thuộc rất nhiều vào hệ thống thông báo để lưu trữ và hiển thị ảnh.
 - Nhấp vào nút Start, chọn **Cài đặt (Settings)** hình bánh răng cưa, hoặc bấm nhanh **Win + I**.
 - Truy cập vào mục **Hệ thống (System)** rồi chọn **Thông báo (Notifications)**.
 - Cuộn danh sách ứng dụng xuống dưới để tìm **Snipping Tool**.
 - Đảm bảo rằng công tắc bật/tắt thông báo đã ở trạng thái **Bật (On)**. Hãy chắc chắn các tùy chọn hiển thị banner thông báo cũng được kích hoạt.
 
-### Bước 3: Sửa lỗi và Đặt lại (Repair & Reset) ứng dụng
+Bước 3: Sửa lỗi và Đặt lại (Repair & Reset) ứng dụng
 Nếu hai bước trên chưa đem lại kết quả, chúng ta sẽ tiến hành làm mới hoàn toàn cấu hình của ứng dụng thông qua menu ứng dụng hệ thống.
 - Mở **Cài đặt (Settings)** và chọn mục **Ứng dụng (Apps)** ở cột bên trái.
 - Nhấp vào **Ứng dụng đã cài đặt (Installed apps)**.

@@ -14,7 +14,8 @@ theme: "Deep Ocean Cobalt"
 
 
 
-## 1. De Paniek in de Vergaderruimte
+
+1. De Paniek in de Vergaderruimte
 
 Laatst stond ik voor een flinke uitdaging. Ik was af gereisd naar een regionaal kantoor ergens in het land voor een belangrijke strategische sessie. Net toen ik ter plekke in de vergaderruimte mijn laptop aansloot op een ietwat verouderde externe monitor en een overijverige projector, liep ik tegen een typische frustratie aan. Ik wilde snel een belangrijk configuratieschema vastleggen van het scherm met de bekende sneltoets **Win + Shift + S**, maar er gebeurde helemaal niets. Geen schermverduistering, geen melding in het actiecentrum, en het Knipprogramma (Snipping Tool) leek volledig te slapen. 
 
@@ -26,7 +27,7 @@ In zo'n hectische situatie, met een groep collega's die direct resultaat verwach
 
 ![Tech Troubleshooting Guide](/images/tech-photo/bsod%20(10).png)
 
-## 2. Waarom de Sneltoets Weigert
+2. Waarom de Sneltoets Weigert
 
 Voordat we direct ingrijpen met technische handelingen, is het handig om te begrijpen waarom de sneltoets **Win + Shift + S** opeens kan uitvallen, zeker wanneer je wisselt van hardware zoals docking stations of externe schermen. Er zijn drie hoofdoorzaken:
 
@@ -34,11 +35,11 @@ Voordat we direct ingrijpen met technische handelingen, is het handig om te begr
 * **Uitschakeling in de Instellingen:** Meldingen of achtergrondmachtigingen voor de app zijn onbedoeld uitgeschakeld, vaak door energiebesparende profielen of groepsbeleid.
 * **Corrupte App-installatie of Cache:** De Windows-app voor het Knipprogramma is beschadigd geraakt, wat vaak gebeurt bij onvolledige Windows-updates of na een abrupte hardwarewissel met een projector.
 
-## 3. Stapsgewijze Oplossing
+3. Stapsgewijze Oplossing
 
 Als systeembeheerder hou ik van een gestructureerde aanpak. Volg deze stappen in **Instellingen**, **Taakbeheer** of **Configuratiescherm** om de sneltoets direct weer tot leven te wekken.
 
-### Stap 1: Het proces geforceerd afsluiten via Taakbeheer
+Stap 1: Het proces geforceerd afsluiten via Taakbeheer
 Soms draait er een corrupte instantie van de app op de achtergrond.
 
 1. Druk op **Ctrl + Shift + Esc** om **Taakbeheer** te openen.
@@ -49,7 +50,7 @@ Soms draait er een corrupte instantie van de app op de achtergrond.
 
 4. Probeer direct opnieuw de sneltoets **Win + Shift + S** in te drukken.
 
-### Stap 2: Controleren via Windows Instellingen
+Stap 2: Controleren via Windows Instellingen
 Het kan zijn dat de app geen toestemming heeft om op de achtergrond te draaien of dat meldingen zijn geblokkeerd.
 
 1. Open de **Instellingen** via de sneltoets **Win + I**.
@@ -62,7 +63,7 @@ Het kan zijn dat de app geen toestemming heeft om op de achtergrond te draaien o
 
 5. Controleer ook of meldingen zijn ingeschakeld via **Systeem > Meldingen**, aangezien pop-ups van het Knipprogramma hier afhankelijk van zijn.
 
-### Stap 3: Sneltoets koppelen aan de Print Screen-toets als alternatief
+Stap 3: Sneltoets koppelen aan de Print Screen-toets als alternatief
 Als de toetscombinatie hardnekkig weigert op een specifieke laptop, kun je de functionaliteit direct toewijzen aan een fysieke knop.
 
 1. Open **Instellingen** (**Win + I**).

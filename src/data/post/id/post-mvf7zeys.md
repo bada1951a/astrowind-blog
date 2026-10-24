@@ -23,6 +23,7 @@ theme: "Deep Indigo System"
 
 
 
+
 Jam 4 sore di sebuah gedung perkantoran kawasan Sudirman Jakarta, suasana mendadak tegang luar biasa. Batas waktu pengiriman laporan keuangan tinggal satu jam lagi, tapi layar monitor tiba-tiba membeku (*freezing*). Kipas PC berputar kencang menderu bagaikan mesin jet yang mau lepas landas, sementara kursor tetikus bergerak sangat lambat seperti terjebak di dalam lumpur. Saat tombol kombinasi keramat ditekan untuk membuka Task Manager, pemandangannya bikin jantungan: penggunaan CPU mentok di angka 100 persen penuh, dan pelakunya bukanlah aplikasi berat seperti game atau software rendering, melainkan proses bawaan Windows bernama "System" atau "System and Compressed Memory". 
 
 Panik? Pastinya. Rekan kerja di sebelah mulai keringat dingin karena dokumen Excel penting belum sempat tersimpan. Berbagai cara amatiran langsung dicoba, mulai dari menekan tombol restart paksa di CPU berulang kali, mencabut kabel power, hingga memukul-mukul meja karena kesal. Padahal, tindakan asal-asalan seperti itu justru berisiko merusak sektor *hard drive* atau membuat file laporan korup total. 
@@ -44,23 +45,23 @@ Sebelum masuk ke tombol-tombol pengaturan, kita harus paham dulu kenapa proses i
 
    Driver komponen seperti chipset motherboard, LAN card, atau driver grafis yang sudah kedaluwarsa atau korup sering kali memicu *interrupt storm*. Akibatnya, proses *System* di Windows terus-menerus memproses sinyal interupsi yang tak berkesudahan.
 
-## 2. Layanan Windows Update yang Nyangkut (Stuck Update)
+2. Layanan Windows Update yang Nyangkut (Stuck Update)
 
    Pembaruan sistem yang gagal terunduh atau macet di tengah jalan kerap memaksa proses latar belakang bekerja secara repetitif tanpa hasil, memakan kapasitas inti CPU hingga maksimal.
 
-## 3. Kerusakan File Sistem (Corrupted System Files)
+3. Kerusakan File Sistem (Corrupted System Files)
 
    Sektor file sistem utama Windows yang rusak akibat mati lampu mendadak atau infeksi malware ringan membuat proses inti gagal membaca instruksi normal, berujung pada lonjakan penggunaan sumber daya hardware.
 
 ---
 
-### Langkah Eksekusi Cepat: Menjinakkan CPU 100 Persen
+Langkah Eksekusi Cepat: Menjinakkan CPU 100 Persen
 
 Buka kembali Task Manager Anda menggunakan tombol pintas `Ctrl + Shift + Esc`. Jika gerakan mouse masih memungkinkan, ikuti langkah-langkah terstruktur berikut untuk memulihkan performa PC kantor And
 
 a:
 
-### Langkah 1: Identifikasi dan Hentikan Layanan yang Bentrok
+Langkah 1: Identifikasi dan Hentikan Layanan yang Bentrok
 
 1. Di dalam jendela Task Manager, arahkan pandangan ke tabProcesses.
 
@@ -72,7 +73,7 @@ a:
 
 5. Cari layanan seperti SysMain(sebelumnya dikenal sebagai Superfetch) atauWindows Update, klik kanan, lalu pilihStop. Layanan ini sering kali menjadi dalang utama pembengkakan memori dan CPU.
 
-### Langkah 2: Perbarui atau Rollback Driver yang Bermasalah
+Langkah 2: Perbarui atau Rollback Driver yang Bermasalah
 
 1. Klik tombol Start, ketikDevice Manager, lalu tekan Enter.
 
@@ -82,7 +83,7 @@ a:
 
 4. Jika tidak, pilih Update Driver dan arahkan pencarian secara otomatis secara daring.
 
-### Langkah 3: Jalankan Pemindaian Integritas Sistem (SFC & DISM)
+Langkah 3: Jalankan Pemindaian Integritas Sistem (SFC & DISM)
 Jika langkah manual di atas belum sepenuhnya meredakan beban CPU, mari kita perbaiki file sistem yang mungkin rusak dari akarny
 
 a:

@@ -14,6 +14,7 @@ theme: "Sandstone Desert Minimal"
 
 
 
+
 1. Das Problem mit Win+Shift+S im mobilen Einsatz
 
 Es war ein typischer Dienstagnachmittag in einem gut besuchten Café in der Münchener Maxvorstadt. Draußen nieselte es leicht, drinnen roch es nach frisch geröstetem Espresso. Ich saß mit meinem Laptop am Holztisch, verbunden mit dem Smartphone-Hotspot via Tethering, um letzte Korrekturen an einer komplexen Kalkulation und den dazugehörigen CAD-Plänen für einen wichtigen Kunden im Frankfurter Bankenviertel vorzunehmen. Der Abgabetermin rückte bedrohlich näher. Plötzlich musste ich einen bestimmten Ausschnitt aus einer Excel-Tabelle und einen Teil des Architekturplans direkt in einer E-Mail dokumentieren. 
@@ -34,11 +35,11 @@ Nachdem ich das Projekt erfolgreich übergeben hatte, widmete ich mich in Ruhe d
 - **Deaktivierte Benachrichtigungen:** Das Snipping Tool nutzt das Windows-Benachrichtigungscenter, um den Screenshot-Hinweis anzuzeigen. Ist der "Nicht stören"-Modus aktiv oder sind Benachrichtigungen blockiert, scheint es, als würde nichts passieren.
 - **Beschädigte App-Pakete:** Durch fehlerhafte Windows-Updates oder unerwartete Systemabbrüche (wie sie beim schnellen Wechsel zwischen WLAN und Hotspot vorkommen können) beschädigt Windows bisweilen die Registrierung der UWP-App.
 
-3. Step-by-Step Resolution
+## 3. Step-by-Step Resolution
 
 Gehen wir die Sache systematisch an. Wir nutzen dabei die gängigen Windows-Bordmittel wie **Task-Manager**, **Einstellungen** und die **PowerShell**, um das Problem schnell zu beheben.
 
-### Schritt 1: Den Hintergrundprozess beenden
+Schritt 1: Den Hintergrundprozess beenden
 Oft blockiert eine eingefrorene Instanz das System.
 
 1. Drücken Sie **Strg + Shift + Esc**, um den **Task-Manager** zu öffnen.
@@ -49,7 +50,7 @@ Oft blockiert eine eingefrorene Instanz das System.
 
 4. Testen Sie den Shortcut **Win + Shift + S** erneut.
 
-### Schritt 2: Benachrichtigungen und Hintergrundberechtigungen prüfen
+Schritt 2: Benachrichtigungen und Hintergrundberechtigungen prüfen
 Wenn das Tool im Hintergrund läuft, aber keine UI anzeigt, liegt es meist an den App-Einstellungen.
 
 1. Öffnen Sie die **Einstellungen** über das Startmenü oder mit **Win + I**.
@@ -60,7 +61,7 @@ Wenn das Tool im Hintergrund läuft, aber keine UI anzeigt, liegt es meist an de
 
 4. Prüfen Sie zudem unter **Apps > Installierte Apps**, ob die App im Hintergrund ausgeführt werden darf.
 
-### Schritt 3: App zurücksetzen oder reparieren
+Schritt 3: App zurücksetzen oder reparieren
 Wenn die Benachrichtigungen stimmen, setzen wir die App über die Systemsteuerung zurück.
 
 1. Gehen Sie in den **Einstellungen** auf **Apps > Installierte Apps**.
@@ -71,7 +72,7 @@ Wenn die Benachrichtigungen stimmen, setzen wir die App über die Systemsteuerun
 
 4. Scrollen Sie nach unten und klicken Sie auf **Reparieren**. Hilft das nicht, nutzen Sie direkt darunter den Button **Zurücksetzen**.
 
-### Schritt 4: Das App-Paket via PowerShell neu registrieren
+Schritt 4: Das App-Paket via PowerShell neu registrieren
 Greift keine der vorherigen Methoden, zwingen wir Windows dazu, das Tool komplett neu zu installieren.
 
 1. Drücken Sie **Win + X** und wählen Sie **Terminal (Administrator)** oder **PowerShell (Administrator)**.

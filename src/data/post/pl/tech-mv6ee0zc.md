@@ -23,6 +23,7 @@ theme: "Sunset Horizon Coral"
 
 
 
+
 Jako inżynier wsparcia IT w środowisku korporacyjnym widziałem już setki peryferiów skazanych na przedwczesną utylizację. W zeszły piątek na mój stół warsztatowy trafiła klawiatura jednego z naszych senior developerów – customowy mechanik na przełącznikach Gateron Yellow, w którym klawisze `W` oraz `E` naprzemiennie gubiły wciśnięcia albo generowały irytujący podwójny klik (*chattering*). Zamiast wpisać prostą komendę w terminalu, system rejestrował `wwweee`. Użytkownik był przekonany, że kontroler na płytce PCB uległ uszkodzeniu, a sprzęt nadaje się wyłącznie do kosza. Rzeczywistość w 90% takich przypadków jest znacznie bardziej prozaiczn
 
 a: zanieczyszczenia mikroskopowe, utlenienie styków lub chwilowa utrata elastyczności blaszki kontaktowej wewnątrz samego switcha. Zanim wydasz kilkaset złotych na nowy zestaw przełączników lub nową klawiaturę, możesz przeprowadzić skuteczną regenerację w ramach weekendowego serwisu DIY. Poniżej przedstawiam sprawdzoną w bojach procedurę czyszczenia i chemicznej rewitalizacji przełączników mechanicznych.
@@ -67,7 +68,7 @@ Zjawisko *key chatteringu* (odbijania styków) oraz gubienia wciśnięć (*key s
 
 Procedura krok po kroku: Diagnostyka i chemiczna regeneracja styków
 
-### Krok 1: Weryfikacja programowa w środowisku Windows
+Krok 1: Weryfikacja programowa w środowisku Windows
 
 Zanim rozbierzesz klawiaturę, musimy wykluczyć usterki po stronie warstwy systemowej i sterowników HID.
 
@@ -85,7 +86,7 @@ Następnie uruchom przeglądarkowy tester klawiatury (np. *Keyboard Event Viewer
 a:</strong> Przed rozpoczęciem jakichkolwiek prac fizycznych bezwzględnie <strong>odłącz przewód USB</strong> klawiatury od komputera, a w modelach bezprzewodowych wyłącz przełącznik zasilania bateryjnego na spodzie obudowy. Płytka drukowana nie może znajdować się pod napięciem podczas aplikacji chemii.
 </div>
 
-### Krok 2: Przygotowanie przełącznika (Hot-swap vs. Switch lutowany)
+Krok 2: Przygotowanie przełącznika (Hot-swap vs. Switch lutowany)
 
 1. Za pomocą drucianego pullera zdejmij nakładkę (*keycap*) z uszkodzonego klawisza oraz klawiszy sąsiadujących, aby uzyskać wygodne pole manewru.
 
@@ -93,7 +94,7 @@ a:</strong> Przed rozpoczęciem jakichkolwiek prac fizycznych bezwzględnie <str
 
 3. Klawiatury z przełącznikami lutowanymi: Jeśli nie planujesz wylutowywania całego komponentu stacją lutowniczą, zabieg można wykonać metodą inwazyjną bez demontażu, wstrzykując preparat przez wciśnięty trzpień.
 
-### Krok 3: Prawidłowa aplikacja preparatu do styków (Technika ciśnieniowa)
+Krok 3: Prawidłowa aplikacja preparatu do styków (Technika ciśnieniowa)
 
 Do tego celu najlepiej sprawdza się schemat dwuetapowy: preparat rozpuszczający tlenki (*np. Kontakt 60*) oraz preparat myjący/wypłukujący (*Kontakt U* lub *czysty alkohol izopropylowy 99,9%*).
 
@@ -103,11 +104,11 @@ a: Wciśnij plastikowy trzonek (*stem*) do oporu w dół za pomocą małego wkr�
 
 2. Precyzyjny wtrysk: Załóż cienką rurkę na zawór puszki preparatu do czyszczenia styków. Przystaw końcówkę do krawędzi wciśniętego trzpienia po stronie, gdzie znajdują się blaszki (zazwyczaj strona z logo producenta switcha).
 
-## 3. Mikrodawk
+3. Mikrodawk
 
 a:Zaaplikuj dosłownieułamek sekundy aerozolu – wystarczy jedna mikrokropla. Zbyt duża ilość chemii wypłucze fabryczny smar prowadnic i zaleje wnętrze obudowy.
 
-## 4. Aktywacja mechaniczn
+4. Aktywacja mechaniczn
 
 a: Natychmiast po wstrzyknięciu środka zacznij energicznie i rytmicznie wciskać trzonek klawisza (około 60–80 razy w ciągu 30 sekund). Ruch ten powoduje mechaniczne przetarcie blaszek w obecności rozpuszczalnika, zrywając patynę i emulgując brud.
 
@@ -132,7 +133,7 @@ a: Natychmiast po wstrzyknięciu środka zacznij energicznie i rytmicznie wciska
 +-------------------------------------------------------------------+
 ```
 
-### Krok 4: Przedmuchanie i sezonowanie
+Krok 4: Przedmuchanie i sezonowanie
 
 Użyj sprężonego powietrza, trzymając puszkę wyłącznie w pozycji pionowej (aby nie pryskać ciekłym gazem nośnym), i przedmuchaj wnętrze switcha przy wciśniętym trzpieniu. Nadmiar cieczy wypłynie na kołnierz obudowy – zbierz go natychmiast bezpyłową chusteczką. 
 

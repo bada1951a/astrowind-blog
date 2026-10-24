@@ -23,6 +23,7 @@ theme: "High-Contrast Charcoal"
 
 
 
+
 Sáng nay vừa bước chân vào văn phòng công nghệ ở khu vực ven biển Đà Nẵng, mở laptop lên để chuẩn bị pull request bản update phần mềm cho khách hàng thì đập vào mắt tôi là dòng cảnh báo đỏ lòm: ổ C chỉ còn trống chưa đầy 500MB. Windows liên tục bắn thông báo "Low Disk Space", các ứng dụng nặng bắt đầu văng ra liên tục, máy giật đơ như đá tảng. Đồng nghiệp ngồi bên cạnh cứ bấm nút Restart liên tục với hy vọng máy sẽ tự khá hơn, nhưng tình hình chỉ càng tệ đi vì bộ nhớ ảo (pagefile) không còn chỗ để thở.
 
 <div style="border-left: 4px solid #e11d48; padding: 12px 16px; margin: 20px 0; background-color: rgba(225,29,72,0.05); border-radius: 4px; color: #111827;">
@@ -47,7 +48,7 @@ Hướng dẫn từng bước giải cứu ổ C an toàn, không làm hỏng h�
 
 Chúng ta sẽ không dùng mấy phần mềm dọn rác bên thứ ba trôi nổi trên mạng rất dễ dính mã độc hay quảng cáo phiền phức. Toàn bộ các bước dưới đây đều sử dụng công cụ tích hợp sẵn chính hãng Microsoft.
 
-### Bước 1: Kích hoạt Storage Sense và dọn rác hệ thống thông minh
+Bước 1: Kích hoạt Storage Sense và dọn rác hệ thống thông minh
 
 Hãy để Windows tự động làm việc thay vì mò mẫm thủ công từng thư mục.
 
@@ -60,7 +61,7 @@ Hãy để Windows tự động làm việc thay vì mò mẫm thủ công từn
 <strong>MẸO THỰC CHIẾN:</strong> Khi danh sách hiện ra, hãy tích chọn vào: <em>Bản cài đặt Windows trước (Windows previous installations)</em>, <em>Tệp nhật ký nâng cấp Windows</em>, và <em>Thùng rác (Recycle Bin)</em>. Cân nhắc kỹ trước khi tích vào thư mục <em>Downloads</em> nếu bạn sợ xóa nhầm tài liệu quan trọng. Sau đó bấm <strong>Xóa tệp (Remove files)</strong>.
 </div>
 
-### Bước 2: Dọn dẹp tận gốc bằng Disk Cleanup chuyên sâu
+Bước 2: Dọn dẹp tận gốc bằng Disk Cleanup chuyên sâu
 
 Công cụ kinh điển này đôi khi tìm thấy những thứ mà giao diện Cài đặt hiện đại bỏ sót.
 
@@ -68,7 +69,7 @@ Công cụ kinh điển này đôi khi tìm thấy những thứ mà giao diện
 * Chọn ổ đĩa C: và bấm OK.
 * Khi bảng thông báo hiện ra, bấm vào nút Dọn dẹp tệp hệ thống (Clean up system files) ở góc dưới bên trái, chọn lại ổ C một lần nữa. * Tích chọn toàn bộ các ô có dung lượng lớn (đặc biệt chú ý ô *Windows Update Cleanup* thường chiếm từ 5GB đến 15GB). Nhấn OK để tiến hành xóa sạch sẽ.
 
-### Bước 3: Di chuyển vị trí thư mục Downloads ra khỏi ổ C
+Bước 3: Di chuyển vị trí thư mục Downloads ra khỏi ổ C
 
 Đây là cách triệt để nhất để bảo vệ ổ C trong dài hạn đối với anh em làm văn phòng hay kỹ thuật:
 

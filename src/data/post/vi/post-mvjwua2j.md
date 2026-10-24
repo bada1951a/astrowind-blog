@@ -23,6 +23,7 @@ theme: "Nordic Clean Ice"
 
 
 
+
 <div style="border-left: 4px solid #0284c7; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 Đang là thời điểm nước rút chuẩn bị cho kỳ khóa sổ kế toán cuối năm. Ngồi cặm cụi đối chiếu từng trang bảng tính Excel khối lượng dữ liệu khổng lồ với hệ thống phần mềm ERP của công ty tại văn phòng ở một tòa nhà trung tâm Quận 1, TP. Hồ Chí Minh. Tôi chuẩn bị gọi cuộc họp trực tuyến khẩn cấp với các bộ phận để chốt số liệu thì hỡi ôi, biểu tượng loa góc phải màn hình xuất hiện dấu nhân đỏ chói lọi. Không một âm thanh phát ra, thông báo lỗi thiết bị đầu ra biến mất hoàn toàn ngay trước giờ G.
 </div>
@@ -49,7 +50,7 @@ Các bước xử lý thực chiến từng bước một
 
 Hãy hít một hơi thật sâu và làm theo đúng các bước sau đây trên Windows 11 của bạn.
 
-### Bước 1: Kiểm tra nhanh Thiết bị Đầu ra (Audio Output Device)
+Bước 1: Kiểm tra nhanh Thiết bị Đầu ra (Audio Output Device)
 Nhiều trường hợp máy không hỏng phần cứng mà chỉ đang chọn nhầm cổng xuất âm thanh.
 
 1. Nhấp chuột vào biểu tượng loa ở góc dưới bên phải màn hình (thanh Taskbar).
@@ -58,7 +59,7 @@ Nhiều trường hợp máy không hỏng phần cứng mà chỉ đang chọn 
 
 3. Kiểm tra xem hệ thống có đang chọn nhầm sang thiết bị không tồn tại (như màn hình rời không tích hợp loa) hay không. Hãy chuyển lại đúng loa tích hợp của máy (Speakers) hoặc tai nghe có dây quen thuộc.
 
-### Bước 2: Khởi động lại dịch vụ Windows Audio trong Task Manager
+Bước 2: Khởi động lại dịch vụ Windows Audio trong Task Manager
 Khi các tiến trình ngầm bị treo, việc khởi động lại dịch vụ hệ thống là cách nhanh nhất.
 
 1. Nhấn tổ hợp phím Ctrl + Shift + Escđể mởTask Manager.
@@ -73,7 +74,7 @@ Khi các tiến trình ngầm bị treo, việc khởi động lại dịch vụ
 <strong>Mẹo nhỏ từ kỹ sư:</strong> Nếu thao tác trên Task Manager không có tác dụng, hãy nhấn tổ hợp phím [Windows + R], gõ `services.msc` rồi nhấn Enter. Tìm đếnWindows Audio, nhấp đúp vào đó, chuyển phần [Startup type] thànhAutomatic, nhấnStoprồi bấmStart lại từ đầu.
 </div>
 
-### Bước 3: Cập nhật hoặc Gỡ cài đặt Driver trong Device Manager
+Bước 3: Cập nhật hoặc Gỡ cài đặt Driver trong Device Manager
 Đây là bước quyết định nếu nguyên nhân đến từ driver âm thanh bị lỗi thời hoặc xung đột.
 
 1. Nhấp chuột phải vào nút Starttrên thanh Taskbar, chọnDevice Manager.

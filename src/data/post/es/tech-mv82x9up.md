@@ -23,6 +23,7 @@ theme: "Cyberpunk Terminal"
 
 
 
+
 Eran las 4:55 PM de un viernes. El *jefe de proyectos* tenía que presentar los números del Q3 en diez minutos a la dirección general, y su estación de trabajo decidió hacer un cosplay perfecto de un pisapapeles caro: los ventiladores rugían a tope, las luces RGB parpadeaban con alegría, pero el monitor seguía completamente negro, soltando el maldito aviso de *Sin señal*. El tipo estaba a un segundo de estampar el teclado contra el monitor. Sudor frío, la sala de juntas esperándoles, y yo con cara de payaso intentando averiguar por qué la BIOS ni siquiera hacía el clásico *beep* de arranque.
 
 <div style="border-left: 4px solid #00ffcc; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,255,204,0.05); border-radius: 4px; font-family: monospace;">
@@ -48,7 +49,7 @@ Antes de volverte loco cambiando piezas, hay que entender qué está pasando en 
 
 ---
 
-### Step-by-Step Resolution: Protocolo de Resurrección de RAM
+Step-by-Step Resolution: Protocolo de Resurrección de RAM
 
 Vamos a dejar los blablablás y a ensuciarnos las manos. Apaga el equipo, desconéctate de la corriente (¡saca el cable de la fuente, por favor, no queremos freír nada!) y ten a la mano una borra de nata (goma de borrar blanca de toda la vida) y aire comprimido.
 
@@ -67,18 +68,18 @@ a:<br>
 
 </div>
 
-### Paso 1: Extracción y limpieza quirúrgica de los módulos
+Paso 1: Extracción y limpieza quirúrgica de los módulos
 Abre el chasis. Presiona las pestañas de seguridad de los extremos de la ranura RAM y saca los módulos con cuidado. 
 * Pásale una goma de borrar blanca suavemente por los contactos dorados (pines) de la RAM para quitar la capa de grasa y óxido. 
 * Elimina los residuos de goma con un pincel antiestático o aire comprimido. Nunca toques los circuitos integrados (chips negros) con los dedos descalzos si hay riesgo estática. ## Paso 2: Limpieza de slots (Zócalos DIMM)
 Usa aire comprimido en spray para soplar dentro de las ranuras de la placa base. A veces hay acumulaciones de pelusa que impiden que el módulo entre hasta el fondo.
 
-### Paso 3: Prueba de aislamiento y reubicación
+Paso 3: Prueba de aislamiento y reubicación
 Si tienes varios módulos, no los metas todos de golpe. 
 * Coloca un solo módulo en el slot primario recomendado por el fabricante (usualmente el segundo slot desde el procesador, conocido como `DIMM_A2`).
 * Asegúrate de escuchar el clic mecánico de las pestañas cerrándose solas. Si no hace clic, no está bien sentado.
 
-### Paso 4: Diagnóstico post-arranque (Verificación en caliente)
+Paso 4: Diagnóstico post-arranque (Verificación en caliente)
 Conecta la corriente y enciende. Si da vídeo, entra a Windows y ejecuta el diagnóstico oficial para descartar errores lógicos o sectores dañados:
 
 ```cmd

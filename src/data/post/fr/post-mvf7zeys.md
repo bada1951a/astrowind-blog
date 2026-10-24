@@ -23,6 +23,7 @@ theme: "Cyberpunk Terminal"
 
 
 
+
 Il est 17h55, un vendredi de clôture trimestrielle dans notre open space de La Défense. Le rapport financier consolidé doit partir à la direction générale avant 18h30. Soudain, mon poste de travail se fige net. Le ventilateur du processeur s'emballe au maximum au point de faire un bruit de turbine d'avion, l'écran devient totalement unresponsive, et la souris saccade horriblement. Je regarde le Gestionnaire des tâches : le "Processus système" (System) et `ntoskrnl.exe` s'accaparent 100% de la puissance du CPU. Impossible de cliquer sur quoi que ce soit, les fichiers Excel tournent en arrière-plan sans sauvegarder. La panique totale s'installe.
 
 Ce genre de panne soudaine, je l'ai vue cent fois sur les bureaux de mes collègues. Avant de céder à la tentation de balancer l'unité centrale par la fenêtre du 15ème étage, voyons comment diagnostiquer et terrasser ce bug de surconsommation CPU en quelques minutes.
@@ -53,7 +54,7 @@ Résolution étape par étape : Reprenez le contrôle
 
 Oubliez les heures perdues à redémarrer en boucle sans réfléchir. Suivez cette procédure chirurgicale directement depuis votre poste.
 
-### Étape 1 : Identifier le coupable exact via le Gestionnaire des tâches
+Étape 1 : Identifier le coupable exact via le Gestionnaire des tâches
 
 1. Appuyez simultanément sur les touches `Ctrl + Maj + Échap` pour ouvrir le Gestionnaire des tâches.
 
@@ -63,7 +64,7 @@ Oubliez les heures perdues à redémarrer en boucle sans réfléchir. Suivez cet
 
 4. Identifiez si c'est bien `System`, `Interruption du système` ou `Antimalware Service Executable` qui monopolise les ressources.
 
-### Étape 2 : Nettoyer et réparer les fichiers système corrompus
+Étape 2 : Nettoyer et réparer les fichiers système corrompus
 Puisque le problème touche le cœur du système d'exploitation, nous allons utiliser les outils de diagnostic natifs de Windows :
 
 1. Faites un clic droit sur le bouton Démarrer et sélectionnez Paramètres (ou tapez Paramètres dans la barre de recherche).
@@ -72,7 +73,7 @@ Puisque le problème touche le cœur du système d'exploitation, nous allons uti
 
 3. Saisissez la commande de vérification des fichiers intègres : `sfc /scannow` puis validez par Entrée. Laissez l'outil analyser et réparer les fichiers corrompus (comptez 5 à 10 minutes).
 
-### Étape 3 : Gérer les services Windows récalcitrants
+Étape 3 : Gérer les services Windows récalcitrants
 Si le problème persiste après le redémarrage, le coupable est souvent un service en conflit :
 
 1. Appuyez sur `Windows + R`, tapez `services.msc` et validez.

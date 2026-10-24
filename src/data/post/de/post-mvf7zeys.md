@@ -23,6 +23,7 @@ theme: "Sunset Horizon Coral"
 
 
 
+
 Es ist kurz vor 14:00 Uhr im Frankfurter Bankenviertel. Um 14:30 Uhr startet eine hochkarätige Kundenpräsentation im Konferenzraum im 30. Stock, und die Lüfter meines ThinkPads heulen auf wie eine startende Boeing 747. Der Bildschirm friert alle paar Sekunden ein, PowerPoint reagiert nicht mehr, und ein Blick in den Task-Manager zeigt das Grauen schlechthin: Der CPU-Lüfter dreht mit 6.000 Umdrehungen, und der Systemprozess (meist "NT Kernel & System" oder "System und komprimierter Speicher") frisst konstant 100 Prozent der Rechenleistung. Keine Fehlermeldung, kein blauer Bildschirm – einfach nur pure, blockierende CPU-Last, während der Vorstand im Nebenzimmer schon mit den Fingern trommelt.
 
 In Panik habe ich zuerst den Laptop einfach hart ausgeschaltet – ein klassischer Anfängerfehler, der natürlich das Dateisystem gefährdet und das Problem beim Neustart sofort wiedergebracht hat. Danach folgte das blinde Deaktivieren von Hintergrunddiensten in der MSConfig, was die Lage nur verschlimmerte, weil plötzlich essenzielle Netzwerkkomponenten fehlten. Erst als ich methodisch vorgegangen bin, konnte ich den Übeltäter entlarven. Hier ist der bewährte Leitfaden, wie du dieses Problem in unter 10 Minuten ohne Datenverlust löst.
@@ -43,11 +44,11 @@ Bevor wir zur Tat schreiten, müssen wir verstehen, warum Windows sich selbst au
 
 ---
 
-### Schritt-für-Schritt-Anleitung zur Problemlösung
+Schritt-für-Schritt-Anleitung zur Problemlösung
 
 Lass uns das System ohne Neustart (oder mit minimalem Neustart-Aufwand) wieder stabilisieren.
 
-### Schritt 1: Den wahren Verursacher im Task-Manager entlarven
+Schritt 1: Den wahren Verursacher im Task-Manager entlarven
 
 Öffne den Task-Manager (Tastenkombination `Strg` + `Shift` + `Esc`).
 
@@ -59,7 +60,7 @@ Lass uns das System ohne Neustart (oder mit minimalem Neustart-Aufwand) wieder s
 
 A.sys` für Intel RST oder ein Realtek LAN-Treiber) Amok läuft.
 
-### Schritt 2: Den fehlerhaften Treiber oder Dienst stoppen
+Schritt 2: Den fehlerhaften Treiber oder Dienst stoppen
 
 Häufig ist es der Windows-Indexierungsdienst oder ein Netzwerktreiber.
 
@@ -77,7 +78,7 @@ Häufig ist es der Windows-Indexierungsdienst oder ein Netzwerktreiber.
    ```
    Lass diesen Scan durchlaufen. Das dauert meist 3 bis 5 Minuten.
 
-### Schritt 3: Den Übeltäter im Geräte-Manager zurücksetzen
+Schritt 3: Den Übeltäter im Geräte-Manager zurücksetzen
 
 Wenn ein Gerätetreiber die CPU auslastet, hilft oft ein schneller Reset im Geräte-Manager:
 

@@ -23,6 +23,7 @@ theme: "Pastel Lavender Tech"
 
 
 
+
 Eran las 8:50 de la mañana en nuestra oficina del distrito 22@ en Barcelona. A solo diez minutos de una reunión clave con el equipo de producto para revisar el despliegue de la nueva versión de nuestra plataforma, mi ordenador principal decidió hacer una actualización fantasma y quedarse congelado en la pantalla de bienvenida. El ventilador rugía como un motor de avión y el cursor apenas se arrastraba por el escritorio. Los Slack de mis compañeros parpadeaban con avisos de urgencia y yo sudando frío mirando cómo pasaban los segundos. El cuello de botella no era falta de hardware; era que el sistema operativo intentaba cargar al mismo tiempo dieciocho aplicaciones que ni siquiera recordaba haber instalado. 
 
 <div style="border-left: 4px solid #7c3aed; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
@@ -45,11 +46,11 @@ Guía paso a paso: Cómo desactivar los programas de inicio
 
 Vamos a solucionar este problema de raíz utilizando las herramientas nativas de Windows 10. No necesitas instalar programas de terceros sospechosos ni herramientas de optimización milagrosas que solo llenan tu equipo de publicidad.
 
-### Paso 1: Abre el Administrador de tareas avanzado
+Paso 1: Abre el Administrador de tareas avanzado
 No busques comandos complejos en la Terminal. Simplemente utiliza el acceso directo universal del teclado presionando las teclas Ctrl + Shift + Esc. Si se abre la ventana compacta, haz clic en la esquina inferior que dice "Más detalles" para ver la vista completa. ### Paso 2: Navega a la pestaña "Inicio"
 En el menú superior de pestañas (Procesos, Rendimiento, Historial de aplicaciones...), haz clic en la pestaña "Inicio". Verás una lista completa de todas las aplicaciones configuradas para ejecutarse automáticamente cuando inicias sesión en Windows.
 
-### Paso 3: Identifica los procesos vampiro y deshabilítalos
+Paso 3: Identifica los procesos vampiro y deshabilítalos
 Fíjate especialmente en la columna de la derecha llamada "Impacto de inicio". Aquellas apps marcadas como "Alto" o "Medio" son las culpables de que tu equipo tarde tanto. 
 
 Haz clic con el botón derecho sobre los programas que no necesites tener activos todo el tiempo (como Cortana, OneDrive si no lo usas, launchers de juegos o apps de chat secundarias) y selecciona "Deshabilitar".

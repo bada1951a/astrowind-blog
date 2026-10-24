@@ -23,6 +23,7 @@ theme: "Midnight Navy Royal"
 
 
 
+
 Il est 7h45 ce mardi matin. Je suis assis à mon bureau dans une tour de verre à La Défense, le souffle court, les yeux rivés sur mon écran qui refuse obstanément d'ouvrir PowerPoint. À 9h, je dois monter dans leTGV en direction de Lyon pour une réunion matinale extrêmement tendue avec un client historique. Mon PC portable souffre d'une lenteur maladive : le ventilateur hurle à la mort, le curseur de la souris saccade, et chaque clic déclenche cette fichue roue de chargement bleue. Le coupable ? Windows 11 qui, dans sa grande générosité, décide de synchroniser le monde entier en tâche de fond pendant que j'essaie simplement de bosser.
 
 Ce genre de panne n'attend jamais le bon moment. Si vous aussi, votre bécane a l'air de traîner un boulet invisible alors que vous avez juste besoin d'efficacité immédiate, sortez votre carnet de notes. Voici le journal de bord de mon intervention d'urgence, heure par heure, pour redonner vie à un Windows 11 essoufflé.
@@ -53,7 +54,7 @@ Guide de survie : Le plan d'action étape par étape
 
 Pas besoin d'être ingénieur système pour régler ça. Voici la procédure exacte que j'ai appliquée à la va-vite entre deux gorgées de café serré pour sauver ma matinée.
 
-### Étape 1 : Mettre au pas les applications en arrière-plan
+Étape 1 : Mettre au pas les applications en arrière-plan
 Par défaut, Windows autorise presque tout le monde à s'activer en cachette. On va siffler la fin de la récréation.
 
 - Ouvrez les Paramètres de Windows (raccourci clavier : `Touche Windows + I`).
@@ -66,7 +67,7 @@ Par défaut, Windows autorise presque tout le monde à s'activer en cachette. On
 <strong>Astuce du technicien :</strong> Pour un nettoyage de printemps radical des applications qui se lancent au démarrage avec Windows, faites un <code>Ctrl + Maj + Échap</code> pour ouvrir le <strong>Gestionnaire des tâches</strong>, allez sur l'icône de jauge de vitesse (Applications de démarrage) et désactivez tout ce qui n'est pas vital (Spotify, Cortana, Steam, etc.).
 </div>
 
-### Étape 2 : Couper les effets visuels superflus
+Étape 2 : Couper les effets visuels superflus
 On retire le maquillage inutile pour privilégier la performance pure.
 
 - Ouvrez à nouveau les Paramètres (`Touche Windows + I`).

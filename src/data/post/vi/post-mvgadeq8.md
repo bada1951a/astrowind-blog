@@ -23,6 +23,7 @@ theme: "High-Contrast Charcoal"
 
 
 
+
 Mới 2 giờ chiều tại văn phòng giữa trung tâm Quận 1, TP.HCM, không khí đang cực kỳ căng thẳng vì chỉ còn đúng 30 phút nữa là đến hạn chót nộp bản báo cáo tài chính quý cho sếp tổng. Đúng lúc đó, màn hình chiếc máy tính chính của chị kế toán trưởng bỗng xuất hiện một dòng chữ mờ khó chịu ở góc dưới bên phải: "Activate Windows - Go to Settings to activate Windows". Đáng nói hơn, dòng chữ này cứ bám chặt lấy màn hình, che mất một phần số liệu quan trọng trong bảng Excel, thậm chí còn chặn luôn một số thao tác cá nhân hóa. Chị hoảng hốt gọi tôi qua xử lý gấp, miệng liên tục than thở vì sợ sếp thấy lại tưởng máy móc công ty có vấn đề bảo mật.
 
 <div style="border-left: 4px solid #e11d48; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
@@ -45,20 +46,20 @@ Các bước xử lý nhanh bằng Command Prompt (CMD) chuẩn kỹ thuật
 
 Thay vì loay hoay vào mục *Cài đặt* (Settings) rồi *Update & Security* vốn đang bị khóa tính năng, chúng ta sẽ dùng ngay công cụ dòng lệnh quen thuộc để ép hệ thống làm mới trạng thái bản quyền một cách an toàn nhất.
 
-### Bước 1: Mở Command Prompt với quyền Quản trị viên (Administrator)
+Bước 1: Mở Command Prompt với quyền Quản trị viên (Administrator)
 Nhấn phím Windowstrên bàn phím, gõ chữ `cmd`. Ngay lập tức, kết quảCommand Promptsẽ hiện ra. Bạnkhông đượcnhấp chuột trái thông thường, hãynhấp chuột phảivào đó và chọnRun as administrator. Thao tác này cực kỳ quan trọng vì nếu không có quyền cao nhất, mọi lệnh can thiệp vào hệ thống đều sẽ bị từ chối.
 
-### Bước 2: Kiểm tra trạng thái bản quyền hiện tại
+Bước 2: Kiểm tra trạng thái bản quyền hiện tại
 Tại cửa sổ màu đen vừa hiện lên, hãy gõ chính xác dòng lệnh sau để kiểm tra xem Windows đang gặp lỗi gì:
 `slmgr /xpr`
 Một bảng thông báo nhỏ sẽ hiện ra cho biết trạng thái giấy phép của máy. Nếu nó báo máy chưa được kích hoạt, chúng ta chuyển sang bước tiếp theo.
 
-### Bước 3: Dừng và khởi động lại dịch vụ quản lý bản quyền
+Bước 3: Dừng và khởi động lại dịch vụ quản lý bản quyền
 Đôi khi dịch vụ chạy ngầm bị treo. Hãy gõ lần lượt các lệnh sau và nhấn Enter:
 - `net stop sppsvc` (Dừng dịch vụ bảo vệ phần mềm)
 - `net start sppsvc` (Khởi động lại dịch vụ)
 
-### Bước 4: Làm mới và ép hệ thống nhận diện lại Key bản quyền
+Bước 4: Làm mới và ép hệ thống nhận diện lại Key bản quyền
 Gõ tiếp lệnh sau để xóa các thông tin kích hoạt cũ bị lỗi và ghim lại cấu hình sạch:
 `slmgr /rearm`
 Sau khi nhập lệnh này, hệ thống sẽ yêu cầu bạn khởi động lại máy tính. Hãy bấm OK, nhanh chóng lưu lại các file Excel đang dang dở và khởi động lại máy ngay lập tức. Khi máy tính lên nguồn trở lại, dòng chữ watermark kia sẽ biến mất hoàn toàn, trả lại không gian hiển thị sạch sẽ để kịp giờ nộp báo cáo.

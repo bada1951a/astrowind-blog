@@ -14,7 +14,8 @@ theme: "Deep Indigo System"
 
 
 
-## 1. O Desespero do Momento e a Falha na Tela
+
+1. O Desespero do Momento e a Falha na Tela
 
 Era uma tarde típica de alta demanda aqui na Avenida Paulista, com o movimento intenso de escritórios corporativos ao redor. Eu estava executando uma query massiva no banco de dados de clientes na estação de trabalho principal, monitorando as tabelas e os logs de execução em tempo real para evitar qualquer gargalo de performance no cluster. De repente, notei um comportamento anômalo em um dos blocos de dados. Precisei registrar imediatamente a evidência visual daquele pico de uso para o relatório de auditoria e... apertei **Win + Shift + S**. 
 
@@ -36,11 +37,11 @@ Para resolver esse problema de vez, precisamos entender por que o atalho da Ferr
 * **Notificações e Permissões em Segundo Plano:** Se o sistema estiver configurado para bloquear notificações ou se o aplicativo não tiver permissão para rodar em segundo plano, a interface visual da ferramenta falha ao ser chamada.
 * **Corrupção no Pacote UWP (Appx):** Atualizações cumulativas do Windows 11 frequentemente corrompem o registro dos aplicativos nativos da Microsoft Store, exigindo um reparo ou reistalação limpa via PowerShell.
 
-3. Step-by-Step Resolution
+## 3. Step-by-Step Resolution
 
 Vamos ao que interessa. Vou te mostrar o passo a passo exato para destravar o seu sistema agora mesmo, utilizando as ferramentas nativas do Windows 11.
 
-### Passo 1: Matar processos travados no Gerenciador de Tarefas
+Passo 1: Matar processos travados no Gerenciador de Tarefas
 Primeiro, vamos limpar a memória de qualquer instância zumbi da ferramenta.
 
 1. Pressione **Ctrl + Shift + Esc** para abrir o **Gerenciador de Tarefas**.
@@ -51,7 +52,7 @@ Primeiro, vamos limpar a memória de qualquer instância zumbi da ferramenta.
 
 4. Teste o atalho **Win + Shift + S** novamente. Se ainda não funcionar, vá para o próximo passo.
 
-### Passo 2: Ajustar as Configurações de Notificação e Histórico da Área de Transferência
+Passo 2: Ajustar as Configurações de Notificação e Histórico da Área de Transferência
 Muitas vezes, o atalho funciona, mas a notificação visual está desativada, dando a impressão de que nada aconteceu.
 
 1. Abra as **Configurações** do Windows (atalho **Win + I**).
@@ -62,7 +63,7 @@ Muitas vezes, o atalho funciona, mas a notificação visual está desativada, da
 
 4. Volte para **Sistema** > **Área de transferência** e certifique-se de que o recurso **Histórico da área de transferência** está ativado.
 
-### Passo 3: Reparar e Redefinir o Aplicativo nas Configurações
+Passo 3: Reparar e Redefinir o Aplicativo nas Configurações
 Se o processo estiver corrompido, podemos forçar o Windows a reparar os arquivos do aplicativo sem perder dados.
 
 1. Abra as **Configurações** (**Win + I**).
@@ -75,7 +76,7 @@ Se o processo estiver corrompido, podemos forçar o Windows a reparar os arquivo
 
 5. Role para baixo e clique primeiro em **Reparar**. Se o problema persistir, retorne ao mesmo menu e clique em **Redefinir** (isso limpa os dados corrompidos do app).
 
-### Passo 4: Reinstalação rápida via PowerShell (Caso extremo)
+Passo 4: Reinstalação rápida via PowerShell (Caso extremo)
 Se nada disso funcionou, vamos reinstalar o pacote do aplicativo usando um comando rápido no terminal.
 
 1. Clique no menu Iniciar, digite **PowerShell**, clique com o botão direito em cima dele e escolha **Executar como Administrador**.

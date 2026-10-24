@@ -23,6 +23,7 @@ theme: "Tokyo Neon Violet"
 
 
 
+
 Durante anos gerenciando bancadas de suporte e estações de alta performance para desenvolvedores e jogadores competitivos, perdi a conta de quantas vezes me deparei com o mesmo chamado: *"Conectei meu monitor externo no notebook gamer/corporativo e a tela simplesmente não dá sinal, ou pior, fica piscando a cada 20 segundos"*. Esse comportamento instável — o infame *flickering* ou a perda total de sincronia com a clássica mensagem de "Sem Sinal" (*No Signal*) — raramente é um defeito físico no painel do monitor. 
 
 Na esmagadora maioria dos casos práticos que analisei em laboratório, o vilão é uma colisão na pilha de drivers gráficos híbridos (a dança sensível entre a iGPU do processador e a dGPU dedicada), corrupção de tabelas EDID ou uma tentativa do Windows de forçar uma taxa de quadros e largura de banda que o barramento físico atual não consegue sustentar. 
@@ -61,7 +62,7 @@ Ao conectar o cabo HDMI ou DisplayPort (via USB-C Alt Mode), a GPU e o monitor t
 
 ![Hardware Diagnostic & Troubleshooting](https://images.unsplash.com/photo-1527443224154-c4a3942d3acf? auto=format&fit=crop&w=1000&h=550&q=80)
 
-## 2. Conflito de Drivers e Descompasso do Windows Update
+2. Conflito de Drivers e Descompasso do Windows Update
 O Windows Update tem o péssimo hábito de sobrescrever silenciosamente drivers homologados (seja da NVIDIA, AMD ou Intel) por versões genéricas da biblioteca WHQL. Isso quebra a integração do subsistema *Multi-Plane Overlay* (MPO). Quando o MPO é acionado para renderizar janelas transparentes, aceleração por hardware em navegadores ou jogos em modo janela sem bordas, a interface gráfica perde o quadro e o sinal cai momentaneamente.
 
 3. Saturação da Largura de Banda de Transmissão (Bandwidth Starvation)

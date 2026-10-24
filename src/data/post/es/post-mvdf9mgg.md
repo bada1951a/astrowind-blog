@@ -23,6 +23,7 @@ theme: "Solarized Amber Warm"
 
 
 
+
 Eran las 7:30 de la tarde en nuestra oficina tecnológica del distrito 22@ en Barcelona. Estábamos a menos de cuarenta y ocho horas de liberar una nueva versión crítica de nuestro software principal, y decidí reiniciar mi estación de trabajo tras aplicar el último parche acumulativo de Windows 11. Grave error. La pantalla se quedó congelada de forma impertinente en un fatídico "100% completado. No apague el equipo" durante más de una hora. El ventilador rugía como un reactor y el grupo de Slack echaba humo con compañeros preguntando por los binarios de la compilación previa al lanzamiento. Tenía la máquina principal totalmente secuestrada por el asistente de actualización.
 
 <div style="border-left: 4px solid #d97706; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
@@ -41,11 +42,11 @@ Tras rescatar el equipo mediante un reinicio forzoso y revisar los registros del
 
 3. Interferencias de software de seguridad o políticas de red corporativas: Un corte breve de la VPN de la oficina justo cuando descargaba el último manifiesto binario.
 
-### Pasos para la solución: Vaciado de la caché y reseteo de servicios
+Pasos para la solución: Vaciado de la caché y reseteo de servicios
 
 Para salir de este apuro sin tener que formatear ni perder la configuración de desarrollo, vamos a detener los servicios críticos de actualización mediante la Terminal y a vaciar manualmente la caché corrupta. Abre el menú Inicio, escribe Terminal(o Símbolo del sistema), haz clic derecho y seleccionaEjecutar como administrador.
 
-### Paso 1: Detener los servicios de actualización
+Paso 1: Detener los servicios de actualización
 Copia y pega los siguientes comandos para apagar los procesos que están bloqueando los archivos:
 
 ```cmd
@@ -55,7 +56,7 @@ net stop bits
 net stop msiserver
 ```
 
-### Paso 2: Renombrar las carpetas de caché
+Paso 2: Renombrar las carpetas de caché
 En lugar de borrar directamente el contenido (lo que a veces genera conflictos de permisos), lo más seguro es renombrar las carpetas clave para que Windows 11 cree unas nuevas y limpias automáticamente:
 
 ```cmd
@@ -63,7 +64,7 @@ ren C:\Windows\SoftwareDistribution SoftwareDistribution.bak
 ren C:\Windows\System32\catroot2 catroot2.bak
 ```
 
-### Paso 3: Reiniciar los servicios del sistema
+Paso 3: Reiniciar los servicios del sistema
 Una vez purgada la caché corrupta, volvemos a poner en marcha los motores del sistema operativo:
 
 ```cmd

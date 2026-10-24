@@ -23,6 +23,7 @@ theme: "Bronze Artisan Workshop"
 
 
 
+
 Es ist 14:45 Uhr im Frankfurter Bankenviertel. Um 15:30 Uhr soll die wichtigste Pitch-Präsentation des Quartals für einen neuen Großkunden starten. Der Konferenzraum ist voll, die Kollegen warten gespannt, und ich stehe schwitzend vor dem Chef-Laptop. Plötzlich: Totale Stille im System. Keine Mausbewegung, kein blauer Bildschirm, einfach ein eingefrorenes Windows 11. Kein Tastendruck reagiert, der Task-Manager lässt sich nicht aufrufen. Nach drei gefühlten Ewigkeit hilft nur noch der harte Reset über den Power-Knopf. Zehn Minuten später dasselbe Spiel. Ein klassischer, zufälliger Freeze (Random Freezing), der jeden Sysadmin an den Rand des Wahnsinns treibt.
 
 Die Werkzeugkiste: Was wir für die Diagnose brauchen
@@ -51,18 +52,18 @@ In meiner jahrelangen Praxis als Hardware-Diagnostiker haben sich drei übliche 
 
 ---
 
-### Schritt-für-Schritt-Anleitung: Den Übeltäter in der Ereignisanzeige entlarven
+Schritt-für-Schritt-Anleitung: Den Übeltäter in der Ereignisanzeige entlarven
 
 Hören Sie auf, im Trüben zu fischen. Gehen wir systematisch vor, um den genauen Zeitpunkt des Absturzes zu finden.
 
-### Schritt 1: Den exakten Zeitpunkt des Einfrierens notieren
+Schritt 1: Den exakten Zeitpunkt des Einfrierens notieren
 Schauen Sie sofort nach dem harten Neustart auf die Uhr oder merken Sie sich die ungefähre Minute des Freeze. Das ist unser Anker für die Log-Analyse.
 
-### Schritt 2: Öffnen der Ereignisanzeige
+Schritt 2: Öffnen der Ereignisanzeige
 - Drücken Sie die Tastenkombination `Windows + R`, tippen Sie `eventvwr.msc` ein und drücken Sie Enter.
 - Alternativ öffnen Sie das Startmenü, tippen Ereignisanzeige ein und öffnen die App.
 
-### Schritt 3: Der Blick ins System-Protokoll
+Schritt 3: Der Blick ins System-Protokoll
 - Navigieren Sie in der linken Spalte zu: `Windows-Protokolle` -> `System`.
 - Da das Protokoll Tausende Einträge enthält, nutzen wir die rechte Spalte und klicken auf Aktuelles Protokoll filtern....
 - Setzen Sie bei Ereignisquellen ein Häkchen bei `Kernel-Power` (kritische Fehler wie die ID 41, die den harten Neustart dokumentieren) oder filtern Sie nach den Ereignisebenen `Kritisch` und `Fehler`.
@@ -74,7 +75,7 @@ Wichtige Event-IDs für die Diagnose:
 - Event-ID 4101 (Display): Der Anzeigetreiber wurde nach einem Timeout wiederhergestellt (Oft der Vorbote eines GPU-Freezes!).
 ```
 
-### Schritt 4: Die Minutenzahl vor dem Event-ID 41 prüfen
+Schritt 4: Die Minutenzahl vor dem Event-ID 41 prüfen
 Suchen Sie im System-Log exakt nach dem Eintrag Event-ID 41(Das war Ihr erzwungener Neustart). Gehen Sie nun in der Liste genau2 bis 5 Minuten vor diesen Zeitstempel. Welche Warnungen oder Fehler stehen dort? 
 - Taucht dort ein Fehler mit der Quelle `WHEA-Logger` (Event-ID 18 oder 19) auf? Herzlichen Glückwunsch, Sie haben ein Hardware- oder CPU-Stabilitätsproblem.
 - Taucht dort ein Fehler des Treibers auf? Dann wissen wir, welcher Komponententreiber spinnt.

@@ -23,6 +23,7 @@ theme: "Cyberpunk Terminal"
 
 
 
+
 <div style="border-left: 4px solid #00ffcc; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,255,204,0.05); border-radius: 4px; font-family: monospace;">
 root@silicon-valley-h
 
@@ -52,7 +53,7 @@ Before we touch any configuration files, we need to understand what's actually m
 
 ---
 
-### Step-by-Step Resolution: The CLI & Native OS Diagnostic Drill
+Step-by-Step Resolution: The CLI & Native OS Diagnostic Drill
 
 We aren't going to click around useless graphical menus. We are going straight to the metal using built-in Windows diagnostic tools and CLI commands.
 

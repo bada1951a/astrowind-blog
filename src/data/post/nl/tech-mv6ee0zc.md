@@ -23,6 +23,7 @@ theme: "Pastel Lavender Tech"
 
 
 
+
 Als werkplekbeheerder en IT-infrastructuurspecialist krijg ik regelmatig randapparatuur op mijn werkbank die door collega's al bijna is afgeschreven. Vorige week nog stond een senior software developer aan mijn bureau: zijn op maat gemaakte mechanische toetsenbord met Cherry MX Brown switches registreerde bij de 'E'-toets willekeurig dubbele aanslagen (`ee`) en liet de spatiebalk regelmatig steken. Voor een programmeur is dit funest; één onbedoelde dubbele letter breekt variabelen en veroorzaakt syntaxfouten. 
 
 In plaats van direct een nieuw toetsenbord van tweehonderd euro uit het IT-budget te trekken of direct de soldeerbout aan te slingeren, heb ik het probleem binnen twintig minuten permanent verholpen. In deze technische handleiding deel ik de exacte diagnose- en herstelprocedure voor chattering(toetsstuiting of dubbelslag) enmissende aanslagen, inclusief de veilige toepassing van elektronica-contactspray.
@@ -70,11 +71,11 @@ Elke mechanische schakelaar stuitert van nature fysiek na (ongeveer 2 tot 5 mill
 ---
 ![Tech Diagnostics](https://images.unsplash.com/photo-1527443224154-c4a3942d3acf? auto=format&fit=crop&w=1000&h=550&q=80)
 
-### Stapsgewijze probleemoplossing en herstelprocedure
+Stapsgewijze probleemoplossing en herstelprocedure
 
 Volg onderstaande stappen systematisch. We beginnen met niet-invasieve softwaretests en werken toe naar het gericht reinigen van het schakelmechanisme.
 
-### Stap 1: Sluit het besturingssysteem en drivers uit
+Stap 1: Sluit het besturingssysteem en drivers uit
 Voordat we de fysieke hardware demonteren, controleren we of er geen driverconflicten of USB-stroombeheerproblemen zijn binnen Windows.
 
 1. Koppel het toetsenbord los en open Apparaatbeheer via `devmgmt.msc` in het venster Uitvoeren (`Win + R`).
@@ -89,7 +90,7 @@ Voordat we de fysieke hardware demonteren, controleren we of er geen driverconfl
   <strong>Diagnostische softwaretip:</strong> Open een gespecialiseerde chattering-tester zoals <em>Keyboard Event Viewer</em> of <em>Switch Hitter</em>. Stel de drempelwaarde in op 30 milliseconden. Druk de problematische toets 50 keer snel achter elkaar in. Registreert de software toetsaanslagen onder de 15-20 ms? Dan is mechanische switch-chattering definitief bewezen.
 </div>
 
-### Stap 2: Grondige voorbereiding van de werkplek en materiaalkeuze
+Stap 2: Grondige voorbereiding van de werkplek en materiaalkeuze
 Om de switch te herstellen zonder de printplaat te beschadigen, heb je specifiek gereedschap nodig:
 
 *   Keycap puller (draadmodel, voorkomt krassen op ABS/PBT plastics).
@@ -98,7 +99,7 @@ Om de switch te herstellen zonder de printplaat te beschadigen, heb je specifiek
 *   Spuitmondje/dun rietje voor gerichte applicatie.
 *   Persluchtbus of een elektrische antistatische blaasbalg.
 
-### Stap 3: De switch flashen met contactspray (zonder desolderen)
+Stap 3: De switch flashen met contactspray (zonder desolderen)
 
 Dit is de meest effectieve methode om haperende switches en chattering op te lossen zonder te hoeven solderen:
 
@@ -130,7 +131,7 @@ Dit is de meest effectieve methode om haperende switches en chattering op te los
 +-------------------------------------------------------------+
 ```
 
-### Stap 4: Hot-swap sockets herstellen en PCB-sporen inspecteren
+Stap 4: Hot-swap sockets herstellen en PCB-sporen inspecteren
 Heeft het flashen met contactspray geen effect? Dan ligt de fout dieper in het mechanische contact:
 
 1. Trek bij een hot-swap toetsenbord de switch recht omhoog met een switch puller. Verbuig de koperen pootjes niet.

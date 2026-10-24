@@ -23,6 +23,7 @@ theme: "Crimson Emergency Field"
 
 
 
+
 Godzina 8:52 rano. Za acht minut mam mieć gotowy raport dla zarządu i rzuconego na głęboką wodę klienta z Frankfurtu. Otwieram mojego ThinkPada, a on... wita mnie czarnym ekranem i kręcącym się kółkiem ładowania. Dysk NVMe mieli w kółko, procesor jedzie na 100% swoich możliwości, a wentylatory wyją jak odkurzacz w małym pokoju. W tle ładuje się Teams, Discord, Spotify, autoupdater do jakiejś głupiej gierki i pięć różnych programów do "optymalizacji", które jakiś geniusz z działu marketingu zainstalował bez pytania. Krew mnie zalała, pot oblał czoło – klasyczny piątkowy orkan w korpo, gdzie sprzęt decyduje się umrzeć w najmniej odpowiednim momencie.
 
 <div style="border-left: 4px solid #ef4444; padding: 12px 16px; margin: 20px 0; background-color: rgba(239, 68, 68, 0.05); border-radius: 4px;">
@@ -71,7 +72,7 @@ A:</strong><br>
 Jeśli nie masz pewności, czym jest dany proces (np. nazwa to losowy ciąg liter typu <code>jhi_service.exe</code> albo <code>RtkAudUService64.exe</code>), wrzuć go w Google przed wyłączeniem. Nie wyłączaj sterowników Realteka, grafiki (NVIDIA/AMD) ani oprogramowania zabezpieczającego.
 </div>
 
-### Krok 2: Głębokie Cięcie przez Wiersz Polecenia (Dla ambitnych)
+Krok 2: Głębokie Cięcie przez Wiersz Polecenia (Dla ambitnych)
 Jeśli standardowy interfejs zawodzi albo podejrzewasz, że w systemie siedzi ukryty syf, sprawdźmy klucz rejestru odpowiedzialny za start systemu bezpośrednio z poziomu konsoli.
 
 1. Wciśnij Win + R, wpisz `cmd`, a następnie wciśnijCtrl + Shift + Enter, aby uruchomićWiersz polecenia jako Administrator.
@@ -94,7 +95,7 @@ Jeśli standardowy interfejs zawodzi albo podejrzewasz, że w systemie siedzi uk
    reg delete "HKCU\Software\Microsoft\Windows\CurrentVersion\Run" /v "NazwaPodejrzanejAplikacji" /f
    ```
 
-### Krok 3: Harmonogram Zadań (Task Scheduler) – Ukryte Zło
+Krok 3: Harmonogram Zadań (Task Scheduler) – Ukryte Zło
 Wielu cwaniaków w branży oprogramowania omija autostart rejestru i wrzuca swoje procesy bezpośrednio do Harmonogramu Zadań, żeby uruchamiały się po zalogowaniu użytkownika.
 
 1. Wciśnij Win + R, wpisz `taskschd.msc` i zatwierdź Enterem.

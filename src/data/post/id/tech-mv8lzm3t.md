@@ -23,6 +23,7 @@ theme: "Retro Monokai"
 
 
 
+
 <div style="border-left: 4px solid #a6e22e; padding: 12px 16px; margin: 20px 0; background-color: #272822; color: #f8f8f2; border-radius: 4px; font-family: 'Courier New', Courier, monospace;">
 [08:45:12] SYSTEM_ALERT: CPU Load 98% | RAM Usage 95% | User Panic Level: MAXIMUM<br>
 [08:45:18] LOG: "Mas, laptop gue stuck di logo Windows! Padahal 5 menit lagi mau meeting sama client VIP!"<br>
@@ -54,11 +55,11 @@ Berdasarkan pengalaman gue ngadepin ratusan user di kantor, ada tiga tersangka u
 
 ---
 
-### Step-by-Step Resolution: Eksekusi Bersih-Bersih Ala Teknisi IT
+Step-by-Step Resolution: Eksekusi Bersih-Bersih Ala Teknisi IT
 
 Nggak perlu pake software cleaner abal-abal yang malah bikin laptop lu kena *adware*. Kita pake tools bawaan Windows yang udah paling bener dan aman. Sediakan kopi, buka terminal/menu, dan ikuti langkah-langkah di bawah ini.
 
-### Langkah 1: Lumpuhkan Startup Sampah via Task Manager (`Ctrl + Shift + Esc`)
+Langkah 1: Lumpuhkan Startup Sampah via Task Manager (`Ctrl + Shift + Esc`)
 
 Ini cara paling cepet dan manjur buat nendang aplikasi yang nggak penting dari antrian booting.
 
@@ -75,7 +76,7 @@ Ini cara paling cepet dan manjur buat nendang aplikasi yang nggak penting dari a
 
 ---
 
-### Langkah 2: Bedah Lebih Dalam Lewat System Configuration (`msconfig`)
+Langkah 2: Bedah Lebih Dalam Lewat System Configuration (`msconfig`)
 
 Buat mastiin nggak ada service siluman yang lolos dari pengamatan Task Manager, kita panggil menu *legacy* Windows yang sakti ini.
 
@@ -86,7 +87,7 @@ Buat mastiin nggak ada service siluman yang lolos dari pengamatan Task Manager, 
 *   Lihat daftar service yang tersisa. Hilangkan centang pada service aplikasi yang nggak butuh jalan otomatis (contoh: *Adobe Acrobat Update Service*, *Google Update Service*, dll).
 *   Klik ApplylaluOK. Restart laptop lu dan rasakan bedanya. ---
 
-### Langkah 3: Cek Kesehatan Disk via Command Prompt (Bonus Diagnostik)
+Langkah 3: Cek Kesehatan Disk via Command Prompt (Bonus Diagnostik)
 
 Kadang masalah booting lemot bukan cuma dari software startup, tapi fisik HDD/SSD yang udah mau "koit". Mari kita cek lewat Command Prompt (CMD) sebagai Administrator.
 

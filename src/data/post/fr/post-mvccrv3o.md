@@ -23,6 +23,7 @@ theme: "High-Contrast Charcoal"
 
 
 
+
 Il est 17h45 dans notre bureau tech du 11e arrondissement à Paris. Nous sommes à J-2 d'une livraison critique pour un client majeur, le canal Slack crépite d'urgences, et soudain, c'est le drame : mon poste de travail principal bascule net sur un magnifique écran bleu de la mort avec le code d'erreur `0x0000000a` (IRQL_NOT_LESS_OR_EQUAL). Impossible de redémarrer, le système replonge dans l'abysse à chaque tentative de chargement de session. Le stress monte d'un cran : perdre deux heures de configuration en plein sprint, c'est tout simplement inacceptable.
 
 Pourquoi ce fichu écran bleu surgit-il sans prévenir ?
@@ -46,7 +47,7 @@ Résolution pas à pas : Diagnostic mémoire et retour arrière
 
 Pas question de formater la machine. Voici la méthodologie exacte que j'ai appliquée pour rétablir la situation en moins de trente minutes.
 
-### Étape 1 : Isoler le problème matériel via le Diagnostic de mémoire Windows
+Étape 1 : Isoler le problème matériel via le Diagnostic de mémoire Windows
 Avant de chercher du côté des pilotes, il faut écarter tout problème physique sur la RAM.
 
 1. Redémarrez votre PC en mode récupération (ou tapez "Diagnostic de mémoire Windows" dans la barre de recherche si le PC tient quelques minutes allumé).
@@ -55,7 +56,7 @@ Avant de chercher du côté des pilotes, il faut écarter tout problème physiqu
 
 3. Laissez tourner l'outil au démarrage (le mode *Standard* suffit). Si une erreur est détectée, une barrette de RAM est physiquement endommagée ou mal insérée dans son slot. Heureusement, dans mon cas, le rapport est revenu vierge, pointant directement vers une défaillance logicielle.
 
-### Étape 2 : Identifier le coupable dans les fichiers Minidump
+Étape 2 : Identifier le coupable dans les fichiers Minidump
 Pour savoir quel pilote a provoqué le plantage, j'ai utilisé un utilitaire portable indispensable.
 
 1. Téléchargez et lancez BlueScreenViewouWhoCrashed depuis une clé USB ou le mode sans échec avec prise en charge réseau.
@@ -64,7 +65,7 @@ Pour savoir quel pilote a provoqué le plantage, j'ai utilisé un utilitaire por
 
 3. Regardez la ligne Caused by driver. Chez moi, il s'agissait d'un pilote de contrôleur réseau (`exfirewall.sys` ou un vieux pilote VPN tiers mis à jour la veille).
 
-### Étape 3 : Effectuer un retour arrière (Driver Rollback) ou désinstallation propre
+Étape 3 : Effectuer un retour arrière (Driver Rollback) ou désinstallation propre
 Une fois le pilote fautif identifié, il faut reprendre le contrôle depuis le Gestionnaire de périphériques.
 
 1. Faites un clic droit sur le bouton Démarrer et ouvrez le Gestionnaire de périphériques.

@@ -14,6 +14,7 @@ theme: "Teal Matrix Digital"
 
 
 
+
 1. [Opening Story/Problem]
 
 Pagi yang cukup sibuk di kawasan SCBD Jakarta, tepatnya di salah satu lantai gedung perkantoran modern. Hari itu, saya baru saja merakit dan menyiapkan sebuah PC spesifikasi tinggi baru untuk keperluan *development* dan *graphic design* berat. Sebagai bagian dari standar operasional IT, saya harus segera memasang berbagai lisensi software perusahaan, mengambil tangkapan layar dokumentasi instalasi, dan mengirimkannya ke tim manajemen aset. 
@@ -38,7 +39,7 @@ Setelah melakukan penelusuran cepat ala *troubleshooter* senior, masalah gagalny
 
 Mari kita selesaikan masalah ini langkah demi langkah dengan panduan praktis yang mudah diikuti langsung dari meja kerja Anda.
 
-### Langkah 1: Paksa Hentikan Proses via Task Manager
+Langkah 1: Paksa Hentikan Proses via Task Manager
 Jika proses aplikasi mengalami *hang*, kita harus mematikannya secara paksa agar sistem memuat ulang modulnya dari awal.
 
 1. Tekan kombinasi tombol **Ctrl + Shift + Esc** untuk membuka **Task Manager**.
@@ -49,7 +50,7 @@ Jika proses aplikasi mengalami *hang*, kita harus mematikannya secara paksa agar
 
 4. Coba kembali tekan **Win + Shift + S** untuk menguji apakah sudah berfungsi normal.
 
-### Langkah 2: Periksa Pengaturan Notifikasi dan Clipboard
+Langkah 2: Periksa Pengaturan Notifikasi dan Clipboard
 Terkadang, notifikasi *Snipping Tool* diblokir oleh sistem atau fitur *Clipboard History* dalam keadaan mati sehingga hasil tangkapan layar gagal disimpan.
 
 1. Buka menu **Pengaturan (Settings)** dengan menekan **Win + I**.
@@ -60,7 +61,7 @@ Terkadang, notifikasi *Snipping Tool* diblokir oleh sistem atau fitur *Clipboard
 
 4. Pastikan opsi **Clipboard history** diatur ke posisi **On**.
 
-### Langkah 3: Perbaikan Melalui Menu Aplikasi Terinstal
+Langkah 3: Perbaikan Melalui Menu Aplikasi Terinstal
 Jika kedua cara di atas belum membuahkan hasil, kita perlu melakukan *Reset* atau *Repair* melalui menu pengaturan sistem.
 
 1. Buka **Pengaturan (Settings)** (**Win + I**).

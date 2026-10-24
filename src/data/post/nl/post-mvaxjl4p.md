@@ -23,6 +23,7 @@ theme: "Steel Silver Metallic"
 
 
 
+
 Afgelopen dinsdagochtend om kwart voor negen op de High Tech Campus in Eindhoven: de koffieautomaat had net de brui eraan gegeven en ik stond met een spoedticket van een senior developer die zijn laptop opnieuw moest opstarten voor een cruciale client-demo. Het systeem deed er bijna vier minuten over om überhaupt door het vergrendelscherm heen te breken. Vier minuten in tech-tijd staat gelijk aan eeneeuw. Alle logfiles en Teams-meldingen stapelden zich op, en de frustratie was compleet. Dit soort acute prestatieproblemen vragen niet om een langdurige herinstallatie, maar om een directe, no-nonsense ingreep.
 
 <div style="border-left: 4px solid #64748b; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
@@ -41,7 +42,7 @@ Waarom kruipt je pc na een paar jaar gebruik ineens over de vloer bij het opstar
 
 3. Verouderde servicemanagers: Veel gebruikers denken dat ze geavanceerde tools nodig hebben om dit op te lossen, terwijl Windows 10 al jaren een ingebouwde, razendsnelle manager heeft die direct inzicht geeft in de opstartimpact.
 
-### Stap-voor-stap oplossen: In 1 minuut naar een snelle pc
+Stap-voor-stap oplossen: In 1 minuut naar een snelle pc
 
 Laten we direct actie ondernemen. Geen ingewikkelde registersleutels of derde-partij software die je systeem alleen maar vervuilt, maar een directe ingreep via de officiële Windows-interumgeving.
 

@@ -23,6 +23,7 @@ theme: "Warm Coffee Latte"
 
 
 
+
 Het was half drie op een drukke dinsdagmiddag op onze tech-campus in Eindhoven. Terwijl ik midden in een complexe troubleshoot-sessie zat voor een lokale partner, plofte er een paniekerig Slack-bericht binnen: een van onze developers kon geen code meer pushen omdat haar Windows 11 C-schijfklokje op rood stond—0 bytes vrije ruimte over. Het systeem liep vast, projectbestanden wilden niet opslaan en de ventilatoren loeiden als een opstijgende KLM-Boeing. Een acute performance-crisis die we direct moesten oplossen zonder belangrijke data te verliezen.
 
 <div style="border-left: 4px solid #78350f; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
@@ -43,11 +44,11 @@ In de praktijk zie ik bij Nederlandse werkplekken en thuis-setups meestal dezelf
 
 ---
 
-### Stap-voor-stap: Veilig en rigoureus opruimen
+Stap-voor-stap: Veilig en rigoureus opruimen
 
 We gaan nu methodisch te werk. Geen rommelige derde-partij "downloader-apps" met adware, maar gewoon de ingebouwde, betrouwbare Windows-tools.
 
-### Stap 1: Gebruik de ingebouwde Opslag-inzichten (Storage Sense)
+Stap 1: Gebruik de ingebouwde Opslag-inzichten (Storage Sense)
 We beginnen met de modernste en veiligste methode in Windows 11.
 
 1. Klik op Starten openInstellingen (het tandwielicoon).
@@ -60,7 +61,7 @@ We beginnen met de modernste en veiligste methode in Windows 11.
 
 5. Klik op Bestanden verwijderen.
 
-### Stap 2: De diepe handmatige snoei via Schijfopruiming
+Stap 2: De diepe handmatige snoei via Schijfopruiming
 Voor het échte oude hang- en sluitwerk pakken we het klassieke hulpprogramma erbij.
 
 1. Druk op de toetsencombinatie Windows-toets + R, typ `cleanmgr` en druk op Enter.
@@ -77,7 +78,7 @@ Voor het échte oude hang- en sluitwerk pakken we het klassieke hulpprogramma er
 <strong>Pro-Tip van de Consultant:</strong> Als je merkt dat de map `C:\Windows\Temp` of `%temp%` alsnog volloopt door vastgelopen installaties, open dan de Opdrachtprompt als Administrator en voer een snelle schijfcontrole uit of leeg handmatig wat daar achterblijft na een reboot.
 </div>
 
-### Stap 3: Apps en grote bestanden verplaatsen
+Stap 3: Apps en grote bestanden verplaatsen
 Heb je na de opschoning nog steeds te weinig ademruimte? Dan wordt het tijd om grootverbruikers aan te pakken.
 
 1. Ga opnieuw naar Instellingen > Systeem > Opslag.

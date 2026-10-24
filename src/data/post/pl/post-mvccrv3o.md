@@ -23,6 +23,7 @@ theme: "Deep Indigo System"
 
 
 
+
 Godzina 18:40, a we wrocławskim parku technologicznym atmosfera robi się gęsta. Jutro rano mamy kluczowy audyt stabilności infrastruktury przed wejściem zewnętrznego klienta, a stacja robocza lead architekta nagle sypie się do niebieskiego ekranu. Na monitorze dumnie widnieje kod błędu: `IRQL_NOT_LESS_OR_EQUAL` czyli klasyczny 0x0000000
 
 a. Serce na chwilę zamiera, bo reset komputera pomagał tylko na dokładnie pięć minut pracy pod obciążeniem. 
@@ -45,9 +46,9 @@ Zanim przejdziesz do bezmyślnego formatowania dysku, warto zrozumieć, co dokł
 
 ---
 
-### Krok po kroku: Jak uratować system przed audytem
+Krok po kroku: Jak uratować system przed audytem
 
-### Krok 1: Diagnostyka pamięci RAM (Weryfikacja sprzętowa)
+Krok 1: Diagnostyka pamięci RAM (Weryfikacja sprzętowa)
 Zanim zaczniemy szukać winnych w oprogramowaniu, wykluczmy kwestie fizyczne.
 
 1. Wciśnij kombinację klawiszy `Windows + R`, wpisz `mdsched.exe` i zatwierdź Enterem.
@@ -56,7 +57,7 @@ Zanim zaczniemy szukać winnych w oprogramowaniu, wykluczmy kwestie fizyczne.
 
 3. Komputer uruchomi się ponownie w trybie diagnostycznym Windows Memory Diagnostic. Jeśli standardowy test wykryje błędy, wejdź do BIOS-u, wyłącz profil XMP/DOCP i przetestuj komputer ponownie na domyślnych taktowaniach płyty głównej.
 
-### Krok 2: Identyfikacja winowajcy w zrzutach pamięci (Minidump)
+Krok 2: Identyfikacja winowajcy w zrzutach pamięci (Minidump)
 Potrzebujemy dowodów. System zapisuje pliki zrzutów za każdym razem, gdy występuje BSoD.
 
 1. Przejdź do folderu `C:\Windows\Minidump`.
@@ -67,7 +68,7 @@ Potrzebujemy dowodów. System zapisuje pliki zrzutów za każdym razem, gdy wyst
 
 4. Otwórz plik zrzutu i spójrz na linię Caused By Driver. Jeśli widnieje tam nazwa sterownika trzeciego (np. `nvlddmkm.sys`, `extend_net.sys`), masz bezpośredniego sprawcę.
 
-### Krok 3: Cofnięcie feralnego sterownika (Driver Rollback)
+Krok 3: Cofnięcie feralnego sterownika (Driver Rollback)
 Jeśli system pozwala na uruchomienie w trybie awaryjnym (Safe Mode), czas na cofnięcie zmiany, która zepsuła stabilność.
 
 1. Kliknij prawym przyciskiem myszy na Start i wybierz Menedżer urządzeń (Device Manager).

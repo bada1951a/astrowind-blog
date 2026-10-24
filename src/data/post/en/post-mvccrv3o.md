@@ -23,6 +23,7 @@ theme: "Pastel Lavender Tech"
 
 
 
+
 <div style="border-left: 4px solid #7c3aed; padding: 12px 16px; margin: 20px 0; background-color: rgba(124,58,237,0.06); border-radius: 4px; color: #111827;">
 <strong>Quick Summary FAQ (Top 5 User Questions):</strong><br>
 
@@ -55,7 +56,7 @@ a:</strong><br>
 - <strong>Corrupted System Files:</strong> Interrupted Windows updates leaving behind misaligned system binaries.
 </div>
 
-### Step-by-Step Resolution Guide
+Step-by-Step Resolution Guide
 
 To conquer this crash without losing your afternoon, follow this battle-tested triage workflow.
 

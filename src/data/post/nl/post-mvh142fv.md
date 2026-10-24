@@ -23,6 +23,7 @@ theme: "Crimson Emergency Field"
 
 
 
+
 Het is kwart voor negen 's ochtends in een glazen kantoorpand op de Zuidas in Amsterdam. Over precies vijftien minuten begint een cruciale pitch voor een nieuwe internationale cliënt. Terwijl ik nog snel de laatste grafieken in de PowerPoint-presentatie wil zetten, slaat het scherm ineens dood. Geen blauw scherm van de dood, geen foutmelding, helemaal niks. De muisaanwijzer bevriest, de klok in de taakbalk blijft stilstaan op 08:42 uur, en zelfs de Caps Lock-toets reageert niet meer op het toetsenbord. Paniek. Een harde reset met de aan-uitknop is de enige optie, maar de spanning stijgt naar een kookpunt omdat de tijd wegtikt.
 
 Dit soort willekeurige vastlopers onder Windows 11 zijn de ultieme nachtmerrie van elke kantoormedewerker en systeembeheerder. Je eerste neiging is om maar wat te roepen: "Het zal wel aan de laatste Windows-update liggen!" of "Die SSD is vast kapot!". Vervolgens verspil je kostbare tijd met het willekeurig herinstalleren van stuurprogramma's, het loskoppelen van alle USB-apparaten en het draaien van eindeloze virusscans die niets opleveren. Maar als IT-specialist weet ik inmiddels beter: gissen is missen. We moeten de ingebouwde rechercheur van Windows inschakelen om de exacte dader te ontmaskeren.
@@ -41,27 +42,27 @@ Voordat we diep in de logboeken duiken, is het handig om te begrijpen waar we na
 
 ---
 
-### Stap voor stap de crash achterhalen via Logboeken (Event Viewer)
+Stap voor stap de crash achterhalen via Logboeken (Event Viewer)
 
 Genoeg gepraat over hypotheses, we gaan nu gericht sporen zoeken. Volg deze nauwkeurige stappen om de precieze seconde van de crash te achterhalen en de schuldige aan te wijzen.
 
-### Stap 1: Open het Logboeken-hulpprogramma
+Stap 1: Open het Logboeken-hulpprogramma
 Klik op de Start-knop onderaan je scherm en typ direct het woord Logboeken in de zoekbalk. Klik op de applicatie die verschijnt (Event Viewer in de Engelse versie). Dit is het centrale archief waar Windows alles opslaat wat er onder de motorkap gebeurt.
 
-### Stap 2: Navigeer naar de Kritieke Systeemgebeurtenissen
+Stap 2: Navigeer naar de Kritieke Systeemgebeurtenissen
 In het linkerdeelvenster zie je een boomstructuur.
 
 1. Klik op het pijltje voor Logboeken van Windows.
 
 2. Klik vervolgens op Systeem. Dit kan even duren omdat Windows hier alle hardware- en drivermeldingen laadt.
 
-### Stap 3: Filter op de exacte crash-tijd
+Stap 3: Filter op de exacte crash-tijd
 Omdat je pc zojuist is vastgelopen en je hem met de knop hebt moeten herstarten, is er direct na het opnieuw opstarten een specifieke gebeurtenis weggeschreven.
 *   Kijk in het rechterdeelvenster en klik op Huidig logboek filteren...
 *   Vink bij het vakje Gebeurtenisniveausin ieder gevalKritiekenFout aan.
 *   Bevestig met OK.
 
-### Stap 4: Speur naar de beruchte Gebeurtenis-ID 41
+Stap 4: Speur naar de beruchte Gebeurtenis-ID 41
 Scroll door de gefilterde lijst naar het tijdstip waarop je computer net bevroor. Zoek naar Bron: Kernel-PowermetGebeurtenis-ID (Event ID): 41. 
 
 <div style="border-left: 4px solid #ef4444; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">

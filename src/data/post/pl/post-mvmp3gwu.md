@@ -14,6 +14,7 @@ theme: "Pastel Lavender Tech"
 
 
 
+
 1. Ostatnia deska ratunku w środku korporacyjnego chaosu
 
 Siedzę przy biurku w naszym warszawskim biurowcu, a na wewnętrznym komunikatorze pali się czerwona lampka za czerwoną. Trwa gorący okres raportowania, a ja mam na ekranie otwartych dokładnie pięć różnych systemów ERP, arkusze kalkulacyjne, panel administracyjny i okno czatu z zirytowanym menedżerem projektu. W tym momencie potrzebuję na szybko zrobić zrzut ekranu fragmentu kodu i błędu, żeby wysłać go do zespołu wsparcia. Wciskam **Win + Shift + S**, odruchowo czekając na zaciemnienie ekranu i paletę wycinania. I... absolutnie nic. Ekran ani drgnie, żadna ikonka się nie pojawia, a ja zostaję z palcem na klawiaturze i rosnącą frustracją.
@@ -38,7 +39,7 @@ Jako serwisant sprzętu i wsparcia IT spotykam się z tym zgłoszeniem przynajmn
 
 Nie musimy od razu grzebać w rejestrze ani przeinstalowywać systemu. Przejdźmy przez sprawdzone procedury naprawcze, które stosuję na co dzień w biurze.
 
-### Krok pierwszy: Szybki restart procesu w Menedżerze zadań
+Krok pierwszy: Szybki restart procesu w Menedżerze zadań
 Zacznijmy od oczyszczenia pamięci operacyjnej z zawieszonych instancji.
 
 1. Otwórz **Menedżer zadań**, wciskając kombinację **Ctrl + Shift + Esc**.
@@ -47,7 +48,7 @@ Zacznijmy od oczyszczenia pamięci operacyjnej z zawieszonych instancji.
 
 3. Jeśli tam jest, kliknij na nią prawym przyciskiem myszy i wybierz **Zadanie końcowe**.
 
-### Krok drugi: Sprawdzenie aplikacji w Ustawieniach systemu
+Krok drugi: Sprawdzenie aplikacji w Ustawieniach systemu
 Jeśli zamknięcie procesu nie pomogło, musimy zresetować ustawienia samej aplikacji.
 
 1. Otwórz menu Start i przejdź do **Ustawienia** (ikonka koła zębatego).
@@ -60,7 +61,7 @@ Jeśli zamknięcie procesu nie pomogło, musimy zresetować ustawienia samej apl
 
 5. Przewiń w dół i kliknij najpierw **Napraw**, a jeśli to nie pomoże, kliknij **Resetuj** (co wyczyści pamięć podręczną aplikacji).
 
-### Krok trzeci: Weryfikacja powiadomień i klawisza Print Screen
+Krok trzeci: Weryfikacja powiadomień i klawisza Print Screen
 Często problem wynika z niepoprawnie skonfigurowanych skrótów klawiszowych w systemie.
 
 1. Wróć do **Ustawienia**, wybierz **Dostępność**, a następnie **Klawiatura**.

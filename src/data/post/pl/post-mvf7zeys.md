@@ -23,6 +23,7 @@ theme: "Pure Titanium Clean"
 
 
 
+
 Godzina 8:45 rano, warszawskie centrum biznesowe na Mokotowie. Za piętnaście minut kluczowa telekonferencja zarządu z inwestorami, a stacja robocza dyrektora finansowego wydaje z siebie dźwięk startującego odrzutowca. Wentylatory wyją na maksymalnych obrotach, kursor myszy skacze po ekranie jak szalony, a w Menedżerze zadań proces „System”lub„System i przerwania”dumnie wyświetla równe100% użycia procesora. Ekran zamarza przy próbie otwarcia prezentacji PowerPoint. Panika w oczach użytkownika sięga zenitu, a ja wkraczam do akcji z walizką serwisową.
 
 Znam ten ból na pamięć. Zanim wpadłem na właściwy trop, straciłem mnóstwo czasu na bezmyślne restarty komputera, odinstalowywanie pakietu Office czy skanowanie antywirusem, które w tym konkretnym scenariuszu nie dawały absolutnie nic. Problem leżał głębiej – w sterownikach, uszkodzonej usłudze Windows Update lub konflikcie podzespołów. 
@@ -55,7 +56,7 @@ Do działania potrzebujemy pełnych uprawnień administratora. Otwórzmy Menedż
 <strong>Złota zasada serwisu:</strong> Zanim zaczniesz grzebać w sterownikach, odłącz wszystkie niepotrzebne urządzenia zewnętrzne (stacje dokujące USB-C, pendrive'y, drukarki sieciowe). Często to wadliwy hub USB powoduje 100% obciążenia procesora przez przerwania systemowe!
 </div>
 
-### Krok 1: Identyfikacja winowajcy w Menedżerze Zadań
+Krok 1: Identyfikacja winowajcy w Menedżerze Zadań
 
 1. Wciśnij skrót `Ctrl + Shift + Esc`, aby uruchomić Menedżer zadań.
 
@@ -90,7 +91,7 @@ Jeśli proces systemowy obciąża procesor z powodu zaciętych aktualizacji, mus
 
 5. Zrestartuj komputer.
 
-### Krok 3: Aktualizacja lub wycofanie sterowników w Menedżerze Urządzeń
+Krok 3: Aktualizacja lub wycofanie sterowników w Menedżerze Urządzeń
 Jeżeli reset Windows Update nie pomógł, winny jest najpewniej sterownik sprzętowy.
 
 1. Kliknij prawym przyciskiem myszy na Start i wybierz Menedżer urządzeń.

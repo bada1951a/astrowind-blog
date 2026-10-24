@@ -23,6 +23,7 @@ theme: "Acid Lime Hacker Space"
 
 
 
+
 Eran las 8:55 AM, a solo cinco minutos de que el *Director General* entrara a la sala de juntas para una presentación global con inversores. El pobre Carlos, de finanzas, me llama por Teams con la voz quebrad
 
 a: su ThinkPad se había quedado congelado en la pantalla de bienvenida con la rueda de carga dando vueltas eternas. El ventilador parecía un motor de Boeing 747 a punto de despegar, y el tipo sudaba frío mirando el reloj. Si esa máquina no arrancaba en tres minutos, la reunión se caía y mi cabeza rodaba por el pasillo.
@@ -51,7 +52,7 @@ Protocolo de Intervención: Parcheo y Limpieza Extrema
 
 Para evitar que esto vuelva a ocurrir en el parque informático de la empresa, diseñé un procedimiento basado en utilidades de código abierto y herramientas oficiales de Windows, emulando un parche de firmware digno de un *hacker space*.
 
-### Paso 1: Diagnóstico Quirúrgico con el Administrador de Tareas y Autoruns
+Paso 1: Diagnóstico Quirúrgico con el Administrador de Tareas y Autoruns
 No uses CCleaner ni herramientas milagrosas de dudosa procedencia. Vamos directo al núcleo del sistema operativo.
 
 1. Presiona `Ctrl + Shift + Esc` para abrir el Administrador de tareas.
@@ -67,7 +68,7 @@ Si quieres ir un nivel más allá (estilo sysadmin pro), clona o descarga el scr
 chkdsk C: /f /r
 ```
 
-### Paso 2: Gestión de Discos y Particiones (Administración de discos)
+Paso 2: Gestión de Discos y Particiones (Administración de discos)
 Un arranque lento a veces oculta un problema de particionado o falta de alineación en discos de estado sólido (SSD).
 
 1. Haz clic derecho en el botón de Inicio y abre Administración de discos (*Disk Management*).
@@ -83,7 +84,7 @@ Abrir PowerShell como Administrador para listar volúmenes y comprobar estado de
 Get-Volume | Select-Object DriveLetter, FileSystemLabel, FileSystem, HealthStatus, SizeRemaining
 ```
 
-### Paso 3: Optimización de Servicios del Sistema (services.msc)
+Paso 3: Optimización de Servicios del Sistema (services.msc)
 Muchos servicios de Windows vienen activados por defecto ("Automático") sin que ninguna estación de trabajo los necesite realmente.
 
 1. Presiona `Win + R`, escribe `services.msc` y pulsa Enter.

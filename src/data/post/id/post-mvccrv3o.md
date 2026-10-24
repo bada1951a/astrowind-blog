@@ -23,6 +23,7 @@ theme: "Solarized Amber Warm"
 
 
 
+
 Jam 8 malam di kantor startup kawasan SCBD Jakarta. Tim *engineering* sedang bersiap merilis pembaruan besar sistem internal, tiba-tiba salah satu PC workstation utama yang menangani *deployment pipeline* mendadak mati total dan menampilkan layar biru pekat dengan kode *stop error* yang bikin jantungan: IRQL_NOT_LESS_OR_EQUALatau kode heksadesimal0x0000000
 
 a. Panik? Jelas. Pengerjaan sistem internal langsung tersendat karena mesin tersebut tidak mau masuk ke sistem operasi dan terus-menerus mengalami *reboot loop*.
@@ -45,22 +46,22 @@ Sebelum masuk ke langkah perbaikan, mari kita bedah tiga penyebab utama yang ser
 
 2. Inkonsistensi atau Kerusakan Modul RAM: Ada sektor pada kepingan RAM yang mengalami *bad sector* atau pemasangan pin yang kurang klop setelah terkena getaran atau perubahan suhu ruangan server.
 
-## 3. Layanan Latar Belakang Pihak Ketig
+3. Layanan Latar Belakang Pihak Ketig
 
 a: Aplikasi utilitas atau antivirus lawas yang menancapkan modul *driver*-nya langsung ke kernel sistem operasi sehingga memicu pelanggaran akses memori.
 
 ---
 
-### Langkah Eksekusi: Panduan Pemulihan Step-by-Step
+Langkah Eksekusi: Panduan Pemulihan Step-by-Step
 
 Karena PC workstation tadi tidak bisa masuk ke mode normal, langkah pertama yang wajib kita lakukan adalah masuk ke Safe Mode. Nyalakan komputer, lalu paksa matikan sebanyak tiga kali saat logo Windows muncul untuk memicu *Automatic Repair*, lalu pilih *Advanced Startup* > *Startup Settings* > pilih opsi 4 atau F4 untuk *Enable Safe Mode*.
 
-### Langkah 1: Jalankan Diagnostik Memori Bawaan Windows
+Langkah 1: Jalankan Diagnostik Memori Bawaan Windows
 Seringkali masalah bersumber dari perangkat keras RAM. Mari kita uji kesehatannya tanpa perlu software pihak ketiga. * Buka menu Pengaturan, ketikWindows Memory Diagnostic di kolom pencarian.
 * Pilih opsi Restart now and check for problems (recommended).
 * Biarkan komputer melakukan *reboot* dan menjalankan pemindaian memori. Proses ini memakan waktu sekitar 15 hingga 30 menit tergantung kapasitas RAM Anda. * Jika ditemukan error pada laporan setelah masuk sistem, pastikan Anda membersihkan slot RAM atau mengganti kepingan yang rusak.
 
-### Langkah 2: Lakukan Driver Rollback pada Perangkat Terbaru
+Langkah 2: Lakukan Driver Rollback pada Perangkat Terbaru
 Jika memori dalam kondisi prima, besar kemungkinan pelakunya adalah *driver* yang baru saja diperbarui sebelum error terjadi.
 * Masuk ke Pengaturan> klikInformasi Sistematau klik kanan tombol Start lalu pilihDevice Manager.
 * Cari komponen yang dicurigai (biasanya *Display adapters*, *Network adapters*, atau *Universal Serial Bus controllers*).
@@ -71,8 +72,8 @@ Jika memori dalam kondisi prima, besar kemungkinan pelakunya adalah *driver* yan
 <strong>Tips Pro:</strong> Jika tombol <em>Roll Back Driver</em> berwarna abu-abu (tidak bisa diklik), unduh driver versi stabil sebelumnya langsung dari situs web resmi produsen komponen (seperti Intel, AMD, atau NVIDIA), lalu lakukan instalasi manual lewat opsi <em>Browse my computer for drivers</em>.
 </div>
 
-### Langkah 3: Verifikasi Integritas Berkas Sistem (SFC & DISM)
-### Langkah pamungkas untuk memastikan tidak ada file sistem inti yang rusak akibat *crash* mendadak.
+Langkah 3: Verifikasi Integritas Berkas Sistem (SFC & DISM)
+Langkah pamungkas untuk memastikan tidak ada file sistem inti yang rusak akibat *crash* mendadak.
 * Buka TerminalatauCommand Prompt dengan hak akses Administrator (Run as Administrator).
 * Ketik perintah `DISM.exe /Online /Cleanup-image /Restorehealth` lalu tekan Enter. Tunggu hingga proses selesai 100%.
 * Setelah itu, ketik perintah `sfc /scannow` dan tekan Enter. Perintah ini akan memindai dan memperbaiki file sistem yang rusak secara otomatis.

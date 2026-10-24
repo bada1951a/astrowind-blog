@@ -23,6 +23,7 @@ theme: "Cyberpunk Terminal"
 
 
 
+
 <div style="border-left: 4px solid #00ffcc; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,255,204,0.08); border-radius: 4px; font-family: monospace; color: #111827;">
 [ACCÈS RAPIDE CLI / RACCOURCI] Ctrl + Shift + Échap -> Onglet "Démarrage" -> Désactiver l'inutile.
 </div>
@@ -51,13 +52,13 @@ Résolution express : Nettoyer le démarrage en 60 secondes
 
 Pas besoin de scripts PowerShell complexes ou de réinstaller tout le système. Voici la méthode officielle et directe pour reprendre le contrôle de votre machine, validée par notre équipe support.
 
-### Étape 1 : Ouvrir le Gestionnaire des tâches
+Étape 1 : Ouvrir le Gestionnaire des tâches
 Faites le raccourci clavier universel Ctrl + Shift + Échappour lancer directement le Gestionnaire des tâches. Si la fenêtre s'ouvre en mode réduit, cliquez sur "Plus de détails" tout en bas pour afficher l'interface complète.
 
-### Étape 2 : Naviguer vers l'onglet Démarrage
+Étape 2 : Naviguer vers l'onglet Démarrage
 Repérez l'onglet "Démarrage" dans la barre supérieure (généralement la quatrième icône en partant de la gauche). Vous y découvrirez la liste exhaustive de tous les logiciels programmés pour s'exécuter dès que vous entrez votre mot de passe Windows.
 
-### Étape 3 : Traquer l'impact et désactiver
+Étape 3 : Traquer l'impact et désactiver
 Regardez la colonne "Impact du démarrage". C'est votre indicateur clé :
 - Élevé : À neutraliser d'urgence si vous ne vous en servez pas immédiatement.
 - Faible / Aucun : Peut rester actif sans impacter votre productivité.

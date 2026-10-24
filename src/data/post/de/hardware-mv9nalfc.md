@@ -23,6 +23,7 @@ theme: "High-Contrast Charcoal"
 
 
 
+
 Es war kurz vor 16:00 Uhr an einem hektischen Dienstag im Frankfurter Büroalltag, als der Ernstfall eintrat: Mitten während der kritischen Datenübertragung wichtiger Quartalsberichte poppte plötzlich eine knallrote Windows-Warnung auf. „Speicherplatz auf C: fast voll.“ Wenige Sekunden später fror das System ein. Keine Rückmeldung mehr im Outlook, der Explorer streikte, und die Panik stieg, weil die finalen Projektdateien noch im temporären Cache hingen und ein abrupter Neustart den totalen Datenverlust hätte bedeuten können. Der berüchtigte rote Balken im Arbeitsplatz stand auf 0 Byte.
 
 Zuerst verfiel ich in blinden Aktionismus. Ich löschte ein paar größere PDF-Dateien und den Ordner „Downloads“, aber das brachte gerade einmal magere 500 Megabyte. Windows meldete sofort wieder volle Hütte. Der Übeltäter war nicht meine Musiksammlung oder meine Apps, sondern Gigabytes an unsichtbarem Datenmüll, den das Betriebssystem und diverse Anwendungen über Monate im Hintergrund angesammelt hatten. Erst der Griff zu den richtigen Systemwerkzeugen und das gezielte Bereinigen der versteckten Temp-Verzeichnisse brachte die ersehnte Rettung und gab über 40 Gigabyte frei.
@@ -43,17 +44,17 @@ Bevor wir zur Tat schreiten, müssen wir verstehen, woher dieser Datenmüll eige
 
 ---
 
-### Schritt-für-Schritt-Anleitung: Temporäre Dateien restlos löschen
+Schritt-für-Schritt-Anleitung: Temporäre Dateien restlos löschen
 
 Gehen wir das Problem systematisch an. Wir nutzen dabei ausschließlich Windows-Bordmittel, die du aus dem Arbeitsalltag im Büro bestens kennst. Keine dubiosen Registry-Cleaner aus dem Internet, die am Ende mehr zerstören als helfen.
 
-### Schritt 1: Die integrierte Windows-Speicheranalyse nutzen
+Schritt 1: Die integrierte Windows-Speicheranalyse nutzen
 Drücke die Tastenkombination `Windows-Taste + i`, um die Einstellungen zu öffnen. Navigiere zu Systemund klicke aufSpeicher. 
 * Hier siehst du sofort auf einen Blick, welcher Bereich (Apps, Dokumente, temporäre Dateien) deinen Speicher frisst.
 * Klicke auf Temporäre Dateien. Windows scannt nun das System nach veralteten Installationsdateien, Windows-Update-Bereinigungen und alten Protokollen.
 * Setze die Haken bei den Speicherfressern (wähle aber mit Bedacht, ob du deinen "Downloads"-Ordner wirklich leeren möchtest!) und klicke auf Dateien entfernen.
 
-### Schritt 2: Den versteckten AppData-Temp-Ordner manuell leeren
+Schritt 2: Den versteckten AppData-Temp-Ordner manuell leeren
 Manchmal greift die automatische Bereinigung nicht tief genug.
 
 1. Drücke `Windows-Taste + R`, tippe `%temp%` ein und bestätige mit Enter.
@@ -64,7 +65,7 @@ Manchmal greift die automatische Bereinigung nicht tief genug.
 
 4. *Hinweis:* Dateien, die aktuell von einem offenen Programm (wie Word oder Chrome) verwendet werden, verweigert Windows zu löschen. Klicke hier einfach auf „Überspringen“. Das ist völlig normal.
 
-### Schritt 3: Die erweiterte Datenträgerbereinigung als Administrator
+Schritt 3: Die erweiterte Datenträgerbereinigung als Administrator
 Für alte Systemdateien brauchen wir tiefere Admin-Rechte:
 
 1. Öffne das Startmenü, tippe Datenträgerverwaltungoder besser nochDatenträgerbereinigung ein und starte sie. (Noch besser: Rechtsklick auf die App und als Administrator ausführen).

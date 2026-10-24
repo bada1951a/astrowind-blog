@@ -23,6 +23,7 @@ theme: "Rosewood Hardware Guide"
 
 
 
+
 **Q1.** 0 phút nữa là đến giờ sếp tổng họp chiến lược quý để duyệt ngân sách IT, tự nhiên cái máy trạm của ông Kế toán trưởng lăn ra chứng "màn hình đen xì". Quạt tản nhiệt nước hú lên như máy bay phản lực cất cánh, đèn LED trên Mainboard sáng rực, bàn phím gõ NumLock không thèm nhấp nháy một cái. Nhìn mặt ổng lúc đó tái mét, mồ hôi hột tuôn rơi vì toàn bộ file báo cáo dòng tiền năm chưa kịp backup nằm trọn trong đó. Đứng sau lưng thở dốc, mẹ kiếp, cảm giác cái ghế IT của mình lúc đó nó lung lay dữ dội hơn bao giờ hết.
 
 Góc nhìn chuyên sâu từ phần cứng: Triệu chứng "Hồn lìa khỏi xác"
@@ -45,15 +46,15 @@ Cẩm nang xử lý thực chiến: Từ hiện trường đến khi boot máy t
 
 Không dài dòng tháo tung máy, quy trình chuẩn của một IT sừng sỏ là phải "bắt mạch" chuẩn xác từng bước một.
 
-### Bước 1: Xử lý tĩnh điện và tháo RAM đúng cách
+Bước 1: Xử lý tĩnh điện và tháo RAM đúng cách
 Tắt nguồn hoàn toàn, rút dây nguồn PSU phía sau. Quan trọng nhất: Nhấn giữ nút nguồn (Power Button) khoảng 5-10 giây để xả toàn bộ điện dư tụ trên Mainboard. Mở nắp case, dùng tay ấn nhẹ lẫy hai đầu khe RAM để đẩy thanh RAM lên.
 
-### Bước 2: Vệ sinh chuyên sâu chân tiếp điểm RAM
+Bước 2: Vệ sinh chuyên sâu chân tiếp điểm RAM
 <div style="border-left: 4px solid #be123c; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px;">
 <strong>Mẹo tinh tế từ thợ phần cứng:</strong> Tuyệt đối đừng dùng cục gôm (tẩy) học sinh rẻ tiền để chà chân RAM vì nó để lại vụn cao su dính keo hóa học, phá hủy lớp mạ vàng. Hãy dùng khăn vải microfiber chuyên dụng thấm một ít dung dịch cồn Isopropyl (IPA 99%) lau nhẹ dọc theo bề mặt chân đồng cho đến khi sáng bóng. Sau đó thổi sạch bằng bóng xịt khí.
 </div>
 
-### Bước 3: Kiểm tra khe cắm (Slot) và Test đơn lẻ
+Bước 3: Kiểm tra khe cắm (Slot) và Test đơn lẻ
 Đừng cắm lại cả cụm ngay. Hãy cắm từng thanh một vào khe ưu tiên (thường là khe thứ 2 từ CPU ra, theo chuẩn của các hãng Main như ASUS, MSI, Gigabyte). Khởi động lại máy. Nếu màn hình lên BIOS, chúc mừng anh em đã cứu cánh thành công 80% công việc.
 
 ---

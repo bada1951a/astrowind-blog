@@ -23,6 +23,7 @@ theme: "Midnight Navy Royal"
 
 
 
+
 Chỉ còn đúng 15 phút nữa là đến cuộc họp tổng kết dự án quý tại văn phòng ở quận 1, TP.HCM. Sếp đã ngồi sẵn trong phòng họp, máy chiếu đang chờ, và tất cả tài liệu slide thuyết trình quan trọng đều nằm trong chiếc ổ cứng di động. Tôi cắm ổ cứng vào cổng USB của máy tính, nhưng màn hình hoàn toàn im lìm. Không có tiếng *ting-tong* quen thuộc, đèn LED trên ổ cứng nhấp nháy yếu ớt rồi tắt ngấm. Ngay lúc đó, một thông báo đỏ lòm hiện lên góc màn hình: "Low Disk Space - C Drive is almost full". Ổ C đỏ rực, dung lượng trống về mức 0 byte, khiến máy tính vừa chậm như rùa vừa không thể nhận diện thêm thiết bị ngoại vi do thiếu bộ nhớ ảo và cache hệ thống. Hít một hơi thật sâu, tôi bắt đầu cuộc chiến sửa lỗi "chữa cháy" ngay trên bàn làm việc giữa cái nóng oi ả của Sài Gòn.
 
 <div style="border-left: 4px solid #1d4ed8; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
@@ -45,7 +46,7 @@ Dựa trên hàng trăm ca cứu hộ máy tính văn phòng tại các tòa nh�
 
 Không cần cài thêm phần mềm bên thứ ba rườm rà, chúng ta sẽ tận dụng ngay các công cụ có sẵn trong Windows để xử lý triệt để tình huống khẩn cấp này.
 
-### Bước 1: Tổng vệ sinh file rác hệ thống bằng Storage Sense và lệnh Temp
+Bước 1: Tổng vệ sinh file rác hệ thống bằng Storage Sense và lệnh Temp
 Đừng mất thời gian xóa từng file thủ công. Hãy làm theo đường dẫn nhanh sau đây để dọn dẹp hàng gigabyte rác:
 - Mở Settings(Nhấn phím Windows + I) > ChọnSystem> ChọnStorage.
 - Bật tính năng Storage Sensevà bấm vàoTemporary files.
@@ -58,13 +59,13 @@ Tiếp theo, để dọn tận gốc rác ẩn, nhấn tổ hợp phím Windows 
 <strong>Mẹo thực chiến:</strong> Sau khi xóa xong thư mục Temp và chạy Storage Sense, dung lượng trống ổ C của tôi lập tức hồi phục từ 200MB lên đến 8.4GB. Đủ khoảng trống để hệ thống thở và bắt đầu nhận thiết bị ngoại vi.
 </div>
 
-### Bước 2: Đánh thức ổ cứng ngoài thông qua Device Manager và Quản lý ổ đĩa
+Bước 2: Đánh thức ổ cứng ngoài thông qua Device Manager và Quản lý ổ đĩa
 Ngay sau khi ổ C đã có không gian trống, việc kết nối ổ cứng ngoài sẽ trở nên khả thi hơn. Hãy thực hiện các bước sau để ép Windows nhận diện thiết bị:
 - Nhấp chuột phải vào nút Start, chọn Device Manager (Quản lý thiết bị).
 - Tìm đến mục Universal Serial Bus controllers, nhấp chuột phải vào từng dòng *USB Root Hub* (hoặc *Extensible Host Controller*), chọn Properties> ThẻPower Management>Bỏ tích ở ô *"Allow the computer to turn off this device to save power"*. Thao tác này đảm bảo cổng USB luôn cấp đủ điện 5V cho ổ cứng ngoài.
 - Tiếp tục nhấn chuột phải vào Start, chọn Disk Management (Quản lý ổ đĩa). Kéo xuống danh sách phía dưới để tìm ổ cứng ngoài của bạn (thường hiển thị ở trạng thái *Unallocated* hoặc thiếu tên ký tự). Nhấp chuột phải vào phân vùng của ổ cứng ngoài, chọn Change Drive Letter and Paths... rồi gán cho nó một ký tự mới (ví dụ ổ Z hoặc ổ H).
 
-### Bước 3: Kiểm tra hệ thống file bằng Command Prompt (Chống lỗi Bad Sector)
+Bước 3: Kiểm tra hệ thống file bằng Command Prompt (Chống lỗi Bad Sector)
 Để chắc chắn ổ cứng ngoài không bị lỗi phân vùng nặng do rút đột ngột trước đó, hãy mở Command Prompt với quyền Admin (gõ `cmd` vào thanh tìm kiếm, chọn *Run as administrator*) và gõ lệnh sau:
 `chkdsk X: /f /r`
 *(Thay chữ X bằng ký tự ổ đĩa thực tế của ổ cứng ngoài của bạn).* Công cụ này sẽ tự động quét và sửa chữa các lỗi file hệ thống ngay lập tức.

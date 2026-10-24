@@ -14,6 +14,7 @@ theme: "Matte Black stealth"
 
 
 
+
 1. [Opening Story/Problem]
 
 L'altra settimana ero in trasferta presso la nostra filiale produttiva fuori Milano, chiamato a supportare una riunione tecnica urgente nella sala conferenze principale. Mentre cercavo di collegare il mio portatile aziendale ai monitor esterni e al proiettore della sala, avevo disperatamente bisogno di catturare rapidamente una schermata delle impostazioni di rete e dei log di proiezione per condividerli in tempo reale con il team di sviluppo. Ho premuto la combinazione di tasti a cui sono abituato da anni: **Win + Shift + S**. 
@@ -36,17 +37,17 @@ Perché la combinazione **Win + Shift + S** smette improvvisamente di funzionare
 
 3. **Corruzione dei file di configurazione dell'app:** Gli aggiornamenti cumulativi di Windows 11 a volte corrompono la cache dell'applicazione UWP (Universal Windows Platform) dello Strumento di cattura, rendendo necessario un reset forzato tramite le **Impostazioni**.
 
-3. Step-by-Step Resolution
+## 3. Step-by-Step Resolution
 
 Ecco la procedura esatta, testata sul campo, per ripristinare il corretto funzionamento della scorciatoia in pochi passaggi mirati.
 
-### Passo 1: Terminare i processi bloccati tramite Gestione attività
+Passo 1: Terminare i processi bloccati tramite Gestione attività
 Prima di tutto, verifichiamo che non ci siano istanze corrotte dell'applicazione in esecuzione.
 - Premi la combinazione **Ctrl + Shift + Esc** per aprire **Gestione attività**.
 - Nella scheda **Processi**, scorri l'elenco alla ricerca di **Strumento di cattura** o *Snipping Tool*.
 - Se lo trovi, cliccaci sopra con il tasto destro del mouse e seleziona **Termina attività**.
 
-### Passo 2: Verificare lo stato dell'app tramite le Impostazioni
+Passo 2: Verificare lo stato dell'app tramite le Impostazioni
 Se il problema persiste, dobbiamo resettare i dati dell'applicazione.
 - Apri il menu Start e vai su **Impostazioni** (l'icona dell'ingranaggio).
 - Seleziona la voce **App** nel menu laterale di sinistra, quindi clicca su **App installate**.
@@ -54,7 +55,7 @@ Se il problema persiste, dobbiamo resettare i dati dell'applicazione.
 - Clicca sui tre puntini accanto all'applicazione e seleziona **Opzioni avanzate**.
 - Scorri verso il basso fino a trovare i pulsanti **Termina**, **Ripristina** e **Reimposta**. Clicca prima su **Ripristina** e, se non basta, su **Reimposta** per pulire la cache corrotta.
 
-### Passo 3: Controllare le impostazioni di Notifica e della tastiera nel Pannello di controllo
+Passo 3: Controllare le impostazioni di Notifica e della tastiera nel Pannello di controllo
 Molti utenti non sanno che se le notifiche sono bloccate, lo strumento sembra non rispondere.
 - Vai su **Impostazioni** > **Sistema** > **Notifiche**.
 - Assicurati che le notifiche siano attive e controlla che l'applicazione **Strumento di cattura** sia autorizzata a inviare notifiche (banner e suoni).

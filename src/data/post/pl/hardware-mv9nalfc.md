@@ -23,6 +23,7 @@ theme: "Cyberpunk Terminal"
 
 
 
+
 Siedzę w biurowcu w samym sercu Warszawy, za oknem szarość, a na moim monitorze miga przerażający komunikat: "Mało miejsca na dysku (C:)". Masakra. Za dokładnie dwie godziny mamy wysłać kluczowy pakiet danych do klienta, a mój dysk zewnętrzny właśnie postanowił wyzionąć ducha i odmawia współpracy. System niespodziewanie zablokował się przy próbie skopiowania gigantycznego projektu, bo na partycji systemowej zostało równe 420 megabajtów wolnej przestrzeni. W takich momentach człowiek czuje, jak pot spływa po plecach, a wszystkie nerwy z lat pracy z IT kumulują się w jednym punkcie.
 
 Próbowałem na szybko odinstalować kilka programów, ale deinstalatory domagają się wolnego miejsca do utworzenia własnych kopii zapasowych. Klasyczny bloker systemowy. Godzina ucieka, dysk zewnętrzny dalej leży martwy na biurku, a ja bezskutecznie szukam, gdzie system ukrył te wszystkie gigabajty śmieci. 
@@ -45,17 +46,17 @@ Zanim przejdziemy do czyszczenia, warto zrozumieć, dlaczego dysk C puchnie bez 
 
 ---
 
-### Krok po kroku: Jak skutecznie oczyścić dysk C
+Krok po kroku: Jak skutecznie oczyścić dysk C
 
 Do diagnostyki i szybkiego czyszczenia wykorzystamy wbudowane narzędzia systemowe, takie jak Menedżer zadań,Wiersz polecenia oraz klasyczne menu oczyszczania dysku.
 
-### Krok 1: Wstępna diagnoza i zamknięcie procesów w tle
+Krok 1: Wstępna diagnoza i zamknięcie procesów w tle
 Zanim skasujesz cokolwiek, upewnij się, że żadna zawieszona aplikacja nie zapisuje właśnie gigantycznego pliku dziennika (logów).
 * Otwórz Menedżer zadań (skrót `Ctrl + Shift + Esc`).
 * Przejdź do zakładki *Wydajność*, a następnie kliknij *Otwórz Monitor zasobów*.
 * Sprawdź w zakładce *Dysk*, które procesy najmocniej obciążają obecnie partycję systemową i w razie potrzeby je zakończ.
 
-### Krok 2: Użycie zaawansowanego oczyszczania dysku
+Krok 2: Użycie zaawansowanego oczyszczania dysku
 Zapomnij o prostym usuwaniu folderu pobranych plików. Zróbmy to porządnie:
 
 1. Wpisz w menu Start frazę Wiersz polecenia, kliknij na niego prawym przyciskiem myszy i wybierz *Uruchom jako administrator*.
@@ -70,7 +71,7 @@ Zapomnij o prostym usuwaniu folderu pobranych plików. Zróbmy to porządnie:
 
 **Q6.** Kliknij OK i pozwól systemowi usunąć ten balast.
 
-### Krok 3: Ręczne czyszczenie folderów Temp przez konsolę
+Krok 3: Ręczne czyszczenie folderów Temp przez konsolę
 Jeżeli potrzebujesz natychmiastowego efektu, oto najszybsza metoda na usunięcie bieżących śmieci:
 * Otwórz ponownie Wiersz polecenia jako administrator.
 * Wpisz polecenie `start %temp%` i naciśnij Enter. Otworzy się folder tymczasowy użytkownika. * Zaznacz wszystko (`Ctrl + A`) i usuń (`Shift + Delete`). 

@@ -23,6 +23,7 @@ theme: "Warm Coffee Latte"
 
 
 
+
 Godzina 14:50 w piątek. Za dziesięć minut miałem kończyć kwartalny raport z wdrażania nowego korporacyjnego środowiska, a w tle już chłodził się browar w lodówce. Nagle z biurka mojego key account managera dobiega cichy, złowrogi jęk wiatraków, po którym następuje przerażająca cisza. Ekran – czarny jak sumienie praktykanta po skasowaniu bazy produkcyjnej. Wiatraki kręcą się na najwyższych obrotach, klawiatura ani mrugnie, a na monitorze dumnie wisi komunikat *„Brak sygnału”*. Krawaciarz patrzy na mnie szklistym wzrokiem, a ja czuję, jak po plecach spływa mi strużka lodowatego potu. 
 
 Znamy to wszyscy, prawda? Komputer ożywa, diody świecą, dyski szumią, ale ekran uparcie pozostaje martwy. Pierwsza myśl? Padła karta graficzna. Druga? Płyta główna poszła z dymem. Ale spokojnie, odłóżcie młotki i wyciągnijcie ten kubek z letnią kawą latte – zapraszam na krótką, inżynieryjną opowieść z okopów warszawskiego supportu, jak bez wydawania ani grosza postawić taki grat na nogi za pomocą zwykłej gumki do ścierania. ![Hardware Diagnostic & Troubleshooting](https://picsum.photos/seed/hardware-22/1000/550)
@@ -44,17 +45,17 @@ a:</strong> W ponad 70% przypadków "czarnego ekranu przy działających wiatrak
 
 ---
 
-### Krok po kroku: Jak przywrócić sygnał do życia (Inżynieryjny Proceder)
+Krok po kroku: Jak przywrócić sygnał do życia (Inżynieryjny Proceder)
 
 Oto procedura operacyjna, którą stosuję w biurze, gdy dyrektor finansowy stoi nade mną z zegarkiem w ręku. Bez owijania w bawełnę – robimy to chirurgicznie.
 
-### Krok 1: Bezpieczne odcięcie zasilania i uziemienie
+Krok 1: Bezpieczne odcięcie zasilania i uziemienie
 Wyłącz komputer trzymający przycisk zasilania przez 5 sekund, a następnie koniecznie wyciągnij wtyczkę z gniazdka ściennego. Dotknij metalowego elementu obudowy, aby odprowadzić ładunki elektrostatyczne (ESD) ze swojego ciała – chyba że chcesz uwalić płytę główną za pomocą własnego swetra. ### Krok 2: Demontaż kości RAM (Procedura czyszczenia)
 Otwórz bok obudowy. Znajdź moduły pamięci RAM. Odchyl plastikowe zatrzaski na obu końcach slotu, a kość wyskoczy sama. * Weź zwykłą, szkolną białą gumkę do ścierania (taką do ołówka, żadnych kolorowych z brokatem!).
 * Delikatnie przetrzyj złote styki (finger prints) na kości RAM, usuwając szarawy nalot.
 * Oczyść sloty pędzelkiem z miękkiego włosia lub po prostu mocno dmuchnij, by pozbyć się kurzu (uwaga na ślinę!).
 
-### Krok 3: Weryfikacja programowa w systemie (Zarządzanie urządzeniami)
+Krok 3: Weryfikacja programowa w systemie (Zarządzanie urządzeniami)
 Gdy już uda nam się uruchomić maszynę (a wierz mi, po oczyszczeniu RAM-u zazwyczaj wstaje od razu), musimy sprawdzić, czy Windows widzi całą pamięć poprawnie. Otwórz menu Start, wpisz `Informacje o systemie` lub przejdź do konsoli diagnostycznej.
 
 Dla zaawansowanych – szybki test stabilności z poziomu wiersza poleceń (uruchom jako Administrator):

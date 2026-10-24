@@ -23,6 +23,7 @@ theme: "Industrial Blueprint"
 
 
 
+
 Es ist exakt 14:45 Uhr an einem Dienstag in unserem Berliner Büro am Hackeschen Markt. In einer Viertelstunde startet der finale System-Rollout für unsere neue Microservice-Architektur, und mein primärer Arbeitsrechner beschließt kollektiv den Dienst: Die Windows 11 Taskleiste ist komplett eingefroren. Ein Klick auf das Startmenü? Keine Reaktion. Die Pinnwand-Symbole? Tot. Weder der Explorer-Neustart über den gewohnten Affengriff noch frustriertes Hämmern auf die Windows-Taste bringen auch nur ein Pixel in Bewegung. Mitten in der Hochphase der Vorbereitung bricht Panik aus, denn ohne funktionierende Taskleiste und Schnellstart-Verknüpfungen läuft hier gar nichts mehr.
 
 <div style="border-left: 4px solid #f59e0b; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
@@ -39,11 +40,11 @@ Nachdem ich das Problem damals in Rekordzeit gelöst hatte (und der Rollout dank
 
 3. Korrupte Xaml-Oberflächenkomponenten: Das moderne Xaml-Framework von Windows 11 reagiert empfindlich auf RAM-Spitzen oder Treiberkonflikte, wodurch Startmenü und Taskleistenelemente unresponsive werden.
 
-### Schritt-für-Schritt-Lösung: Schnelle Hilfe im Ernstfall
+Schritt-für-Schritt-Lösung: Schnelle Hilfe im Ernstfall
 
 Wenn die Taskleiste streikt, hilft klassisches Klicken meist nicht weiter. Wir müssen über Shortcuts und administrative Schnittstellen arbeiten.
 
-### Schritt 1: Den Windows-Explorer über den Task-Manager neu starten
+Schritt 1: Den Windows-Explorer über den Task-Manager neu starten
 Der schnellste und oft wirksamste Weg, um die Taskleiste wieder zum Leben zu erwecken.
 
 * Drücken Sie die Tastenkombination `Strg + Umschalt + Esc`, um den Task-Manager direkt zu öffnen. (Sollte das nicht gehen, nutzen Sie `Strg + Alt + Entf` und wählen Sie den Task-Manager aus).
@@ -52,7 +53,7 @@ Der schnellste und oft wirksamste Weg, um die Taskleiste wieder zum Leben zu erw
 * Setzen Sie den Haken bei Diesen Task mit Administratorprivilegien erstellen, falls verfügbar, und bestätigen Sie mit Enter.
 * *Ergebnis:* Der Bildschirm flackert kurz auf, der Desktop baut sich neu auf – und in den allermeisten Fällen reagiert die Taskleiste sofort wieder.
 
-### Schritt 2: PowerShell-Keulenschlag zur Neuregistrierung (Falls Schritt 1 fehlschlägt)
+Schritt 2: PowerShell-Keulenschlag zur Neuregistrierung (Falls Schritt 1 fehlschlägt)
 Wenn der Explorer-Neustart nicht reicht, müssen wir die Systempakete der Taskleiste via PowerShell zwingen, sich neu zu initialisieren.
 
 * Drücken Sie `Strg + Umschalt + Esc` (oder `Windows + X`, falls das Kontextmenü noch reagiert).
@@ -66,7 +67,7 @@ Get-AppxPackage -AllUsers | Foreach {Add-AppxPackage -DisableDevelopmentMode -Re
 
 * Lassen Sie den Befehl durchlaufen (kann ein paar Sekunden dauern). Dieser Prozess repariert beschädigte Windows-App-Pakete, zu denen auch das Startmenü und die moderne Taskleiste gehören.
 
-### Schritt 3: Systemdateien auf Integrität prüfen (SFC & DISM)
+Schritt 3: Systemdateien auf Integrität prüfen (SFC & DISM)
 Manchmal liegt die Ursache tiefer in beschädigten Systemdateien nach einem fehlerhaften Windows-Update.
 
 * Öffnen Sie das Terminaloder dieEingabeaufforderung als Administrator.

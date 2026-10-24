@@ -23,6 +23,7 @@ theme: "Dark Velvet Obsidian"
 
 
 
+
 Eran las 18:30 en nuestra oficina del 22@ en Barcelona. Estábamos a menos de cuarenta y ocho horas del despliegue final de nuestra plataforma SaaS principal antes del lanzamiento oficial, cuando la estación de trabajo principal del equipo de arquitectura se quedó completamente congelada. De repente, el monitor principal se volvió de un azul intenso y apareció el temido código de error: IRQL_NOT_LESS_OR_EQUALcon el identificador0x0000000
 
 a. Justo en medio de una compilación pesada y con el cliente respirándonos en la nuca a través de Slack, el equipo se quedó en silencio. No podíamos permitirnos formatear ni perder los entornos de contenedores configurados para la demo del día siguiente.
@@ -48,14 +49,14 @@ Plan de acción paso a paso para resolver el conflicto
 
 Dado que el sistema entraba en bucle al arrancar de forma normal, tuvimos que actuar con precisión quirúrgica utilizando las herramientas nativas del sistema operativo.
 
-### Paso 1: Entrar en Modo Seguro y aislar el volcado de memoria (Dump)
+Paso 1: Entrar en Modo Seguro y aislar el volcado de memoria (Dump)
 Si el equipo te permite llegar al escritorio unos segundos antes de colapsar, o si puedes entrar mediante el menú de recuperación avanzada (Reiniciar manteniendo presionada la tecla Shift):
 - Navega a Configuración > Actualización y seguridad > Recuperación > Inicio avanzado.
 - Selecciona Solucionar problemas > Opciones avanzadas > Configuración de inicioy reinicia. Pulsa la tecla `4` o `F4` para habilitar elModo seguro.
 
 Una vez dentro, necesitamos analizar el archivo de volcado (`C:\Windows\Minidump\*.dmp`) con herramientas como *BlueScreenView* o WinDbg para ver exactamente qué archivo DLL o SYS provocó el fallo (habitualmente asociado a `ntoskrnl.exe` o drivers gráficos).
 
-### Paso 2: Ejecutar el Diagnóstico de Memoria de Windows
+Paso 2: Ejecutar el Diagnóstico de Memoria de Windows
 Descartemos primero el hardware. No puedes solucionar un problema de drivers si la memoria física está devolviendo datos corruptos.
 
 1. Abre el menú de inicio, escribe Diagnóstico de memoria de Windows y ejecútalo como administrador.
@@ -68,7 +69,7 @@ Descartemos primero el hardware. No puedes solucionar un problema de drivers si 
 <strong>Consejo de rendimiento:</strong> Si tienes perfiles XMP o DOCP activados en la BIOS, desactívalos temporalmente para dejar la RAM a su velocidad JEDEC nominal de fábrica (por ejemplo, 2133MHz o 2666MHz). Muchos pantallazos 0x0000000a desaparecen instantáneamente al eliminar el overclocking inestable.
 </div>
 
-### Paso 3: Reversión de Drivers (Driver Rollback) o Desinstalación limpia
+Paso 3: Reversión de Drivers (Driver Rollback) o Desinstalación limpia
 Si la memoria está perfecta, el problema es indudablemente software. Para revertir el driver conflictivo que se instaló antes del fallo:
 
 1. Haz clic derecho en el menú de inicio y abre Administrador de dispositivos.

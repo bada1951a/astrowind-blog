@@ -23,6 +23,7 @@ theme: "Modern Minimalist Slate"
 
 
 
+
 Het was vrijdagochtend, kwart voor negen. Om negen uur stond de weekly stand-up gepland met de hele directie en ik moest de Q3-infrastructuurdemo geven. Mijn laptop, een beest van een apparaat dat normaal gesproken binnen vijf seconden klaar voor actie was, besloot om een update te forceren. Zwarte scherm, draaiende bolletjes, en de minuten tikten weg. Terwijl mijn ademhaling versnelde en het zweet op mijn rug stond, keek ik naar de klok: 08:55. Mijn manager stond al achter me met een kop koffie in zijn hand en vroeg: "Is de presentatie er bijna klaar voor, of moeten we via papier praten?" 
 
 Dat moment van pure paniek kent iedereen in de IT wel. Je zit vast achter een scherm dat weigert door te starten, terwijl de stress door je aderen giert. Na die bijna-ramp heb ik de boel eens flink onder de loep genomen. Geen vage fabels over "register opschonen" met duistere freeware, maar gewoon een no-nonsense aanpak zoals we die op de supportafdeling gewend zijn.
@@ -47,11 +48,11 @@ a: Apps zoals Spotify, Discord, OneDrive en diverse printertools vinden het nodi
 
 ---
 
-### Stap voor Stap naar een Ultrasnelle Boot
+Stap voor Stap naar een Ultrasnelle Boot
 
 Laten we de bezem er doorheen halen. Geen ingewikkelde tools, maar gewoon gebruik maken van wat Windows ons zelf biedt.
 
-### Stap 1: Het Taakbeheer (Task Manager) opschonen
+Stap 1: Het Taakbeheer (Task Manager) opschonen
 
 Vergeet de oude `msconfig`-trucs; sinds Windows 10 en 11 regelen we dit direct via de Task Manager.
 
@@ -69,7 +70,7 @@ Vergeet de oude `msconfig`-trucs; sinds Windows 10 en 11 regelen we dit direct v
 <strong>Pro-Tip:</strong> Wees niet bang om stuurprogramma-gerelateerde software uit te schakelen (zoals audio-configuraties of RGB-software). Je hardware blijft gewoon werken; alleen de onnodige grafische schillen laden niet meer direct mee.
 </div>
 
-### Stap 2: Diepe systeemdiagnose via Opdrachtprompt
+Stap 2: Diepe systeemdiagnose via Opdrachtprompt
 
 Soms zit het dieper en is de opstartsector of de harde schijf zelf vervuild. Laten we de Opdrachtprompt (Command Prompt) erbij pakken als Administrator.
 
@@ -89,7 +90,7 @@ Soms zit het dieper en is de opstartsector of de harde schijf zelf vervuild. Lat
    ```
    Dit repareert ontbrekende of corrupte DLL's en systeembestanden die je boot-tijd vertragen.
 
-### Stap 3: Snelle Start (Fast Startup) optimaliseren via Schijfbeheer en Energiebeheer
+Stap 3: Snelle Start (Fast Startup) optimaliseren via Schijfbeheer en Energiebeheer
 
 Windows gebruikt een hybride slaapstand genaamd *Fast Startup*. Handig, tenzij het crasht.
 

@@ -23,6 +23,7 @@ theme: "Crimson Emergency Field"
 
 
 
+
 Eran las 4:50 de la tarde en nuestra oficina corporativa en Madrid. A solo diez minutos de enviar el paquete final del proyecto trimestral a la directiva, la pantalla del equipo principal de diseño comenzó a parpadear y, de la nada, apareció esa maldita marca transparente en la esquina inferior derech
 
 a: "Activa Windows: ve a Configuración para activar Windows". Para colmo, cubría justo los botones de exportación del software gráfico. El pánico se apoderó delux del estudio; el cliente estaba esperando los archivos y la interfaz parecía boicotearnos el trabajo.
@@ -53,11 +54,11 @@ Antes de aplicar la solución, es bueno entender qué provocó el fallo en nuest
 
 ---
 
-### Pasos rápidos para limpiar la marca de agua mediante CMD
+Pasos rápidos para limpiar la marca de agua mediante CMD
 
 Para solucionar este inconveniente sin instalar herramientas peligrosas, vamos a detener temporalmente los servicios de evaluación y reiniciar el temporizador de licencias de forma nativa. Sigue estos clics y comandos con atención:
 
-### Paso 1: Abrir la consola con privilegios de administrador
+Paso 1: Abrir la consola con privilegios de administrador
 
 1. Dirígete al menú de inicio de Windows.
 
@@ -65,7 +66,7 @@ Para solucionar este inconveniente sin instalar herramientas peligrosas, vamos a
 
 3. Haz clic derecho sobre Símbolo del sistemay selecciona "Ejecutar como administrador" (es vital tener permisos elevados para modificar los servicios del sistema).
 
-### Paso 2: Detener los servicios de protección de software
+Paso 2: Detener los servicios de protección de software
 Una vez dentro de la ventana negra de comandos, introduce las siguientes líneas una por una presionando *Enter* después de cada un
 
 a:
@@ -75,7 +76,7 @@ net stop sppsvc
 ```
 *(Este comando detiene el servicio de protección de software de Windows que gestiona las licencias).*
 
-### Paso 3: Reconfigurar el contador de gracia y los archivos de licencia
+Paso 3: Reconfigurar el contador de gracia y los archivos de licencia
 Para limpiar el estado visual temporalmente y forzar al sistema a reevaluar el estado actual sin errores gráficos, ejecuta el siguiente comando:
 
 ```cmd
@@ -85,7 +86,7 @@ slmgr -rearm
 
 a: Si te sale un mensaje indicando que el comando se ejecutó con éxito, aparecerá una ventana emergente indicando que debes reiniciar el equipo.*
 
-### Paso 4: Reiniciar el equipo de forma limpia
+Paso 4: Reiniciar el equipo de forma limpia
 No cierres el día operativo sin hacer un reinicio completo. Ve a Configuración > Inicio/Apagado > Reiniciar. Al volver a encender la máquina, el servicio se reiniciará de forma limpia y la molesta marca de agua habrá desaparecido, permitiéndote trabajar con la pantalla despejada. ---
 
 Consejos del técnico de soporte

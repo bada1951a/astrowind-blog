@@ -23,6 +23,7 @@ theme: "Rosewood Hardware Guide"
 
 
 
+
 Eram exatamente 13h45 em um escritório na Avenida Paulista, e a tensão na sala de reuniões era palpable. Faltavam quinze minutos para a apresentação trimestral da diretoria quando o nosso gerente de operações chamou no rádio: o notebook corporativo recém-atualizado para o Windows 11 simplesmente travou na hora de anexar os arquivos finais compactados. O motivo? Aquela maldita interface simplificada do botão direito que esconde as opções essenciais de compactação e ferramentas de terceiros atrás de um clique extra em "Mostrar mais opções". Para quem precisa de agilidade e executa dezenas de tarefas por minuto, perder preciosos segundos caçando menus ocultos sob pressão é o cenário perfeito para um desastre corporativo.
 
 <div style="border-left: 4px solid #be123c; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
@@ -37,7 +38,7 @@ Antes de aplicar a solução definitiva que salvou nossa reunião, vale a pena e
 
 1. Isolamento de Processos (AppX Packages): A Microsoft migrou o menu clássico para uma arquitetura moderna baseada em UWP/WinRT, o que impede que programas legados (como WinRAR, 7-Zip e clientes FTP antigos) se injetem diretamente na raiz do menu sem uma adaptação profunda por parte dos desenvolvedores.
 
-## 2. Falta de Compatibilidade Nativa Imediat
+2. Falta de Compatibilidade Nativa Imediat
 
 a: Milhares de softwares corporativos essenciais ainda usam as chaves antigas de registro do shell do Windows. Sem o ajuste correto, eles ficam ocultos no submenu secundário.
 
@@ -49,11 +50,11 @@ Assim que cheguei à mesa do diretor, a primeira reação instintiva de qualquer
 
 Perdemos quase 3 minutos preciosos tentando tutoriais antigos da internet que recomendavam apagar chaves complexas no Editor do Registro (Regedit) manualmente, o que em máquinas com políticas de segurança de domínio ativas (Group Policy) causava erros de permissão e negação de acesso. Precisávamos de algo rápido, cirúrgico e que funcionasse via linha de comando ou chave direta. ---
 
-### Passo a Passo Definitivo: Restaurando o Menu Clássico
+Passo a Passo Definitivo: Restaurando o Menu Clássico
 
 Como sou adepto de soluções limpas e que não exigem softwares de terceiros pesados rodando em segundo plano, utilizo o procedimento via Prompt de Comando com privilégios administrativos. É seguro, rápido e pode ser aplicado via script em massa na sua rede.
 
-### Passo 1: Acessando o Terminal com Poderes de Administrador
+Passo 1: Acessando o Terminal com Poderes de Administrador
 
 1. Vá até a barra de tarefas e clique no menu Iniciar.
 
@@ -61,7 +62,7 @@ Como sou adepto de soluções limpas e que não exigem softwares de terceiros pe
 
 3. Clique com o botão direito sobre o aplicativo e selecione Executar como Administrador. (Se o Controle de Conta de Usuário perguntar se permite alterações, clique em Sim).
 
-### Passo 2: Injetando a Chave de Correção do Registro
+Passo 2: Injetando a Chave de Correção do Registro
 Copie e cole o comando exato abaixo na janela do terminal e aperte Enter:
 
 ```cmd
@@ -72,7 +73,7 @@ reg.exe add "HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\
 <strong>Nota do Técnico:</strong> Essa chave de registro força o Windows 11 a desativar o manipulador moderno do Explorer e retornar ao comportamento padrão e robusto das versões anteriores.
 </div>
 
-### Passo 3: Reiniciando o Explorador de Arquivos
+Passo 3: Reiniciando o Explorador de Arquivos
 Para que a alteração tenha efeito imediato sem precisar reiniciar a máquina inteira (o que nos faria perder a reunião), finalize o processo do shell gráfico:
 
 1. Pressione Ctrl + Shift + Escpara abrir oGerenciador de Tarefas.

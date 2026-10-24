@@ -23,6 +23,7 @@ theme: "Deep Indigo System"
 
 
 
+
 W pracy inżyniera wsparcia IT niewiele jest scenariuszy równie powtarzalnych i frustrujących dla użytkownika, jak nagła utrata stabilności wielomonitorowej stacji roboczej. Scenariusz z reguły wygląda identycznie: pracownik podłącza nowoczesnego ultrabooka do stacji dokującej Thunderbolt lub replikatora portów USB-C z dwoma monitorami roboczymi. Zamiast płynnego rozszerzenia pulpitu, jeden z ekranów cyklicznie gaśnie co kilkanaście sekund, a drugi wita komunikatem „Brak sygnału” (No Signal). W dziennikach systemowych pojawia się lawina ostrzeżeń o resecie sterownika ekranu, a użytkownik traci możliwość pracy.
 
 <div style="border-left: 4px solid #4338ca; padding: 12px 16px; margin: 20px 0; background-color: rgba(67, 56, 202, 0.04); border-radius: 4px;">
@@ -90,7 +91,7 @@ Procedura naprawcza krok po kroku
 [Krok 4: Wymuszenie opóźnienia jądra (TdrDelay)] ─────► (Eliminacja migotania)
 ```
 
-### Krok 1: Reset bufora konfiguracji monitorów w Edytorze rejestru
+Krok 1: Reset bufora konfiguracji monitorów w Edytorze rejestru
 Operacja ta zmusza podsystem graficzny Windows do ponownego odpytania wszystkich podłączonych ekranów o ich natywne tablice EDID i wyczyszczenia błędnych profili multi-monitor.
 
 1. Wciśnij `Win + R`, wpisz `regedit` i zatwierdź z uprawnieniami administratora.
@@ -113,7 +114,7 @@ a:
 reg export "HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers\Configuration" C:\Backup_Config.reg
 ```
 
-### Krok 2: Usunięcie sterowników widmowych i czyszczenie magazynu sterowników
+Krok 2: Usunięcie sterowników widmowych i czyszczenie magazynu sterowników
 Zwykłe odinstalowanie sterownika z poziomu Menedżera urządzeń pozostawia pliki INF w magazynie `DriverStore`. Wykorzystamy dedykowane narzędzie do całkowitej sanacji.
 
 1. Pobierz narzędzie Display Driver Uninstaller (DDU).
@@ -123,7 +124,7 @@ Zwykłe odinstalowanie sterownika z poziomu Menedżera urządzeń pozostawia pli
    * Przytrzymaj klawisz `Shift` i kliknij Uruchom ponownie w menu Start.
    * Przejdź do: Rozwiąż problemy->Opcje zaawansowane->Ustawienia uruchamiania-> wciśnij klawisz `4` (Włącz tryb awaryjny).
 
-## 3. Uruchom DDU z uprawnieniami administrator
+3. Uruchom DDU z uprawnieniami administrator
 
 a:
    * Jako typ urządzenia wybierz Karta graficzna. * Wybierz producenta dedykowanego układu (np. NVIDIA) i kliknij Wyczyść i NIE restartuj.
@@ -133,7 +134,7 @@ a:
 <strong>Ważne:</strong> Odłącz kabel sieciowy Ethernet oraz rozłącz Wi-Fi przed restartem. Zapobiegnie to automatycznemu zaciągnięciu przestarzałego sterownika generycznego przez usługę Windows Update w trakcie rozruchu.
 </div>
 
-### Krok 3: Prawidłowa sekwencja instalacji pakietów sterowników
+Krok 3: Prawidłowa sekwencja instalacji pakietów sterowników
 Zainstalowanie oprogramowania w złej kolejności to najczęstszy błąd administratorów. W architekturze zintegrowanej obowiązuje rygorystyczna hierarchi
 
 a:
@@ -146,7 +147,7 @@ a:
 
 4. Dopiero po zainstalowaniu kompletu podłącz monitory do stacji lub portów USB-C.
 
-### Krok 4: Modyfikacja tolerancji TDR w Wierszu polecenia
+Krok 4: Modyfikacja tolerancji TDR w Wierszu polecenia
 Jeśli monitory nadal wykazują sporadyczne migotanie pod obciążeniem (np. przy przełączaniu okien przeglądarki z akceleracją sprzętową), należy zwiększyć margines tolerancji jądra dla opóźnień magistrali DisplayPort.
 
 Uruchom Wiersz polecenia jako administrator i wprowadź poniższe poleceni

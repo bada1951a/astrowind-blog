@@ -23,6 +23,7 @@ theme: "Sandstone Desert Minimal"
 
 
 
+
 Es war kurz vor zwei Uhr nachmittags in unserem Büro im Frankfurter Bankenviertel. Auf dem Tisch lag ein dringender Auftrag von einem externen Kooperationspartner: Ein massives Archiv voller verschlüsselter CAD-Zeichnungen und Dokumentationen war per Download eingetroffen, das ich für die anstehende Sicherheitsprüfung im internen Netzwerk vorbereiten sollte. Ich wollte gerade die begleitende Audio-Briefing-Datei des externen Projektleiters abspielen, um die letzten Details zu klappen – doch aus den Lautsprechern kam absolut nichts. Kein Rauschen, kein Piepsen, absolute Totenstille. Der Windows 11 Lautstärkeregler stand auf Maximum, das Wiedergabegerät schien laut Taskleiste aktiv zu sein, aber der Audiotreiber hatte sich nach dem Eintreffen der großen Datenpakete offenbar komplett verabschiedet. 
 
 Solche unerklärlichen Audio-Aussetzer kosten im hektischen Arbeitsalltag wertvolle Minuten. Wenn man gerade mitten in der Analyse steckt und Videokonferenzen oder Sprachnachrichten anstehen, brennt der Hut. Lassen Sie uns das Problem Schritt für Schritt analysieren und dauerhaft beheben, ohne gleich das Betriebssystem neu zu installieren.
@@ -45,11 +46,11 @@ Nach jahrelanger Erfahrung im Support auf verschiedenen Technologie-Campi und in
 
 ---
 
-### Schritt-für-Schritt-Anleitung zur Problemlösung
+Schritt-für-Schritt-Anleitung zur Problemlösung
 
 Gehen wir die Sache systematisch an. Wir nutzen dabei die klassischen Windows-Bordmittel, die jeder Administrator im Schlaf beherrscht.
 
-### Schritt 1: Den Windows-Audiodienst neu starten
+Schritt 1: Den Windows-Audiodienst neu starten
 Manchmal muss man dem Unterbau einfach nur einen Schubs geben.
 
 1. Drücken Sie die Tastenkombination `Windows + R`, tippen Sie `services.msc` ein und bestätigen Sie mit Enter.
@@ -60,7 +61,7 @@ Manchmal muss man dem Unterbau einfach nur einen Schubs geben.
 
 4. Wiederholen Sie diesen Vorgang direkt auch für den Dienst Windows-Audio-Endpunkt-Generator.
 
-### Schritt 2: Den Geräte-Manager bereinigen und Treiber aktualisieren
+Schritt 2: Den Geräte-Manager bereinigen und Treiber aktualisieren
 Wenn der Dienst allein nicht hilft, werfen wir einen Blick auf die Hardware-Ebene.
 
 1. Öffnen Sie den Geräte-Manager (Rechtsklick auf das Startmenü oder `devmgmt.msc`).
@@ -75,7 +76,7 @@ Wenn der Dienst allein nicht hilft, werfen wir einen Blick auf die Hardware-Eben
 
 **Q6.** Sollte das Problem bestehen bleiben, wählen Sie Treiber aktualisieren>Auf meinem Computer nach Treibern suchen und wählen Sie einen bereits installierten kompatiblen Treiber aus.
 
-### Schritt 3: Die Systemsteuerung für tiefere Klangeinstellungen nutzen
+Schritt 3: Die Systemsteuerung für tiefere Klangeinstellungen nutzen
 Das moderne Windows 11 Einstellungsmenü ist schick, aber für Audio-Fehler greifen wir Profis oft lieber auf die bewährte Systemsteuerung zurück.
 
 1. Öffnen Sie die Systemsteuerung (einfach in die Taskleiste eintippen).

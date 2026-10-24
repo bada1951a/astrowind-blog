@@ -23,6 +23,7 @@ theme: "Sandstone Desert Minimal"
 
 
 
+
 Vendredi, 17h45. Le compte à rebours est lancé dans notre open space de La Défense, et l'ambiance est électrique. Dans 15 minutes, c'est le week-end, mais surtout, je dois absolument envoyer le rapport de clôture hebdomadaire final par e-mail à notre directeur et aux membres du comité de direction. Pour couronner le tout, une dernière vérification vidéo s'impose avec mon chef d'équipe sur un point crucial du dossier. Je clique sur la vidéo, et là... c'est le drame absolu. Un silence de mort. Pas un seul son ne sort de mes haut-parleurs, et mon casque sans fil refuse désespérément de diffuser la moindre note. La petite icône de haut-parleur dans la barre des tâches affiche une fichue croix rouge, et mes mains commencent à transpirer. Le stress monte en flèche.
 
 <div style="border-left: 4px solid #a16207; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
@@ -47,7 +48,7 @@ Guide de résolution étape par étape
 
 Sortons de cette impasse immédiatement grâce à une méthode pragmatique et rapide, pensée pour les professionnels sous pression.
 
-### Étape 1 : Vérifier le routage dans les Paramètres rapides
+Étape 1 : Vérifier le routage dans les Paramètres rapides
 Ne cherchez pas midi à quatorze heure. Commençons par le plus simple et le plus fréquent.
 
 1. Appuyez sur les touches Windows + Apour ouvrir le panneau desParamètres rapides de Windows 11.
@@ -60,7 +61,7 @@ Ne cherchez pas midi à quatorze heure. Commençons par le plus simple et le plu
 <strong>Astuce Pro :</strong> Si le son ne sort toujours pas, ouvrez le <strong>Panneau de configuration</strong> classique (tapez "Panneau de configuration" dans la barre de recherche), allez dans <strong>Son</strong>, puis assurez-vous que votre périphérique de prédilection est défini comme "Périphérique par défaut".
 </div>
 
-### Étape 2 : Redémarrer le service audio via le Gestionnaire des tâches
+Étape 2 : Redémarrer le service audio via le Gestionnaire des tâches
 Quand Windows 11 pédoue dans la semoule, un simple rafraîchissement des services de fond remet les pendules à l'heure.
 
 1. Faites un clic droit sur le bouton Démarrer et ouvrez le Gestionnaire des tâches(ou utilisez le raccourciCtrl + Shift + Échap).
@@ -73,7 +74,7 @@ Quand Windows 11 pédoue dans la semoule, un simple rafraîchissement des servic
 
 5. Faites de même pour le service AudioEndpointBuilder si nécessaire. Le son revient généralement à la vie dans la seconde qui suit.
 
-### Étape 3 : Réinitialiser le pilote dans le Gestionnaire de périphériques
+Étape 3 : Réinitialiser le pilote dans le Gestionnaire de périphériques
 Si le matériel refuse obstinément de coopérer, le problème vient probablement du pilote.
 
 1. Faites un clic droit sur le menu Démarrer et choisissez Gestionnaire de périphériques.

@@ -23,6 +23,7 @@ theme: "Nordic Clean Ice"
 
 
 
+
 <blockquote style="border-left: 3px solid #0284c7; margin: 24px 0; padding: 12px 20px; font-style: italic; color: #334155; background: #f8fafc; border-radius: 0 8px 8px 0;">
 "In una postazione di lavoro moderna, la stabilità visiva non è un lusso: un solo secondo di schermo nero durante una sessione di debug o una presentazione aziendale interrompe il flusso cognitivo e rivela un’instabilità architetturale che va risolta alla radice."
 </blockquote>
@@ -50,7 +51,7 @@ L'EDID (*Extended Display Identification Data*) è la struttura dati con cui il 
 
 ![Hardware Diagnostic & Troubleshooting](https://images.unsplash.com/photo-1517430816045-df4b7de11d1d? auto=format&fit=crop&w=1000&h=550&q=80)
 
-## 2. Timeout Detection and Recovery (TDR) ciclico del Driver
+2. Timeout Detection and Recovery (TDR) ciclico del Driver
 Sotto Windows, se la GPU non risponde entro due secondi a una richiesta di scheduling grafico, il sistema innesca una procedura TDR (`TdrDelay`). Questo riavvia il thread del driver video in background. All'utente il fenomeno appare esattamente come uno sfarfallio persistente o un black screen di 1-3 secondi accompagnato dal suono di periferica disconnessa. ## 3. Conflitto del Livello MUX e Assegnazione Risorse tra GPU Integrata e Dedicata
 Nei laptop dotati di architettura ibrida, le uscite video fisiche possono essere cablate direttamente alla GPU dedicata (dGPU) o instradate attraverso il frame buffer della GPU integrata (iGPU Intel Iris Xe o AMD Radeon 600M/700M). Se il driver della dGPU e quello della iGPU tentano di negoziare la pipeline di scaling in modo asincrono, si creano instabilità croniche sul clock del pixel.
 

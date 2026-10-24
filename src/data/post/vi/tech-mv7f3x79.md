@@ -23,6 +23,7 @@ theme: "Cobalt Enterprise Lab"
 
 
 
+
 <div style="border-left: 4px solid #1e40af; padding: 14px 18px; margin: 20px 0; background-color: rgba(30, 64, 175, 0.04); border-radius: 4px;">
   <strong style="color: #1e40af; font-size: 1.05rem;">BÁO CÁO KỸ THUẬT PHÒNG THỬ NGHIỆM QA (ENTERPRISE LAB REPORT)</strong><br>
   <span style="font-size: 0.92rem; color: #334155;">Mã hồ sơ: <code>LAB-DISP-2026-V4</code> | Phân loại: Video Signal Integrity & Driver Stack Failure | Tỉ lệ lỗi ghi nhận trên 450 máy trạm doanh nghiệp: <strong>14.2%</strong> (Dell Latitude 5000/7000 Series, ThinkPad T/P Series, HP EliteBook).</span>
@@ -91,7 +92,7 @@ Quy Trình Xử Lý Kỹ Thuật Từng Bước (Step-by-Step Resolution)
 
 Quy trình chuẩn hóa sau đây được thiết kế để loại bỏ triệt để lỗi logic về driver, cache tín hiệu và cấu hình hệ điều hành mà không làm mất mát dữ liệu của người dùng.
 
-### Bước 1: Dọn Sạch Hoàn Toàn Display Driver Bằng DDU Trong Safe Mode
+Bước 1: Dọn Sạch Hoàn Toàn Display Driver Bằng DDU Trong Safe Mode
 
 Việc gỡ driver qua giao diện thông thường của Windows luôn để lại các file DLL và Registry rác. Để thiết lập lại một pipeline đồ họa sạch, chúng ta bắt buộc phải sử dụng công cụ chuyên dụng Display Driver Uninstaller (DDU) trong môi trường cách ly.
 
@@ -120,7 +121,7 @@ Cấu hình chuẩn luồng cài đặt driver đồ họa laptop:
 [OS Clean Boot] → [Cài đặt Intel/AMD iGPU Driver trước] → [Khởi động lại] → [Cài đặt NVIDIA dGPU Driver sau] → [Khởi động lại]
 ```
 
-### Bước 2: Thiết Lập Quản Lý Năng Lượng Trong Device Manager
+Bước 2: Thiết Lập Quản Lý Năng Lượng Trong Device Manager
 
 Khi hệ điều hành kích hoạt chế độ tiết kiệm năng lượng, các cổng bus PCI Express và Controller USB-C sẽ bị hạ điện áp ngẫu nhiên, gây mất tín hiệu đột ngột sang màn hình phụ.
 
@@ -143,7 +144,7 @@ Giao diện quản lý: Device Manager
 
 5. Chuyển xuống mục MonitorstrongDevice Manager, nhấp chuột phải vào các mục hiển thị tên màn hình phụ (hoặcGeneric PnP Monitor), chọnUpdate driver->Search automatically for drivers. Nếu thiết bị hiển thị dấu chấm than màu vàng, chọnUninstall device, sau đó nhấp vào menuActiontrên thanh công cụ và chọnScan for hardware changes.
 
-### Bước 3: Vô Hiệu Hóa Multi-Plane Overlay (MPO) Bằng Command Prompt
+Bước 3: Vô Hiệu Hóa Multi-Plane Overlay (MPO) Bằng Command Prompt
 
 Giải pháp triệt tiêu hiện tượng màn hình phụ nhấp nháy khi lướt web, mở video hoặc làm việc đa tác vụ là can thiệp trực tiếp vào Registry của Desktop Window Manager (DWM).
 
@@ -159,7 +160,7 @@ reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v OverlayTestMode /t REG_DWORD /d
 
 4. Lệnh này buộc Windows DWM quay về cơ chế render truyền thống an toàn, loại bỏ hoàn toàn các lỗi xung đột bộ đệm giữa hai màn hình không đồng nhất tần số quét.
 
-### Bước 4: Xóa Toàn Bộ Bộ Nhớ Đệm Kết Nối Màn Hình (Display Cache Reset)
+Bước 4: Xóa Toàn Bộ Bộ Nhớ Đệm Kết Nối Màn Hình (Display Cache Reset)
 
 Nếu laptop của bạn từng cắm vào nhiều màn hình khác nhau (màn hình ở nhà, máy chiếu phòng họp, màn hình công ty), Windows sẽ lưu lại hàng loạt profile cấu hình bị chồng chéo trong Registry. Việc xóa sạch cache này sẽ ép Windows phải đọc lại thông số EDID mới nhất từ màn hình hiện tại.
 
@@ -187,7 +188,7 @@ Nếu laptop của bạn từng cắm vào nhiều màn hình khác nhau (màn h
 *Hệ điều hành sẽ tự động biên dịch lại cây cấu hình sạch sau khi khởi động.
 ```
 
-### Bước 5: Cố Định Tần Số Quét (Refresh Rate) Đồng Nhất
+Bước 5: Cố Định Tần Số Quét (Refresh Rate) Đồng Nhất
 
 Sau khi tín hiệu đã lên, bạn cần loại bỏ tính năng tần số quét biến thiên (Dynamic Refresh Rate) vì đây là tác nhân gây nhấp nháy trên các màn hình văn phòng tiêu chuẩn:
 

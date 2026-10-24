@@ -23,6 +23,7 @@ theme: "Nordic Clean Ice"
 
 
 
+
 Eran las siete de la tarde en las Torres Kio, en pleno distrito financiero de Madrid. Estábamos a pocas horas de cerrar el ejercicio fiscal, con la tensión cortándose en el ambiente, cuando mi equipo de contabilidad empezó a emitir alertas de voz automatizadas y pitidos de validación que de repente... enmudecieron por completo. Justo en el momento más crítico, cuando necesitábamos cruzar los datos de un año entero de hojas de cálculo de Excel con el sistema central del ERP corporativo, el ordenador principal se quedó totalmente mudo. No podíamos escuchar las alertas de discrepancias ni las llamadas de confirmación del departamento financiero.
 
 El pánico se apoderó de la oficina. En medio del estrés por cumplir con los plazos de la auditoría, los compañeros empezaron a desconectar los auriculares, a reiniciar el PC a lo loco y a golpear ligeramente el puerto Jack de 3.5mm pensando que era un fallo físico de los cascos. Por supuesto, eso solo empeoró las cosas y nos hizo perder valiosos minutos valiosos. Como técnico de sistemas de la casa, me tocó intervenir de inmediato para aplicar una solución rápida, limpia y definitiva en Windows 11 sin perder ni un solo dato del cierre contable.
@@ -62,7 +63,7 @@ Muchas veces el controlador está perfecto, pero Windows ha cambiado la ruta de 
 
 4. Si el problema persiste, abre [Configuración] (atajo de teclado: `Windows + I`), navega hastaSistema>Sonido y comprueba que el volumen principal no esté silenciado y que el formato de audio sea el correcto.
 
-### Paso 2: Reiniciar los servicios de audio desde el Administrador de tareas
+Paso 2: Reiniciar los servicios de audio desde el Administrador de tareas
 Cuando el motor de audio interno colapsa, reiniciarlo de forma forzosa suele hacer milagros.
 
 1. Abre el [Administrador de tareas] pulsando `Ctrl + Shift + Esc`.
@@ -77,7 +78,7 @@ Cuando el motor de audio interno colapsa, reiniciarlo de forma forzosa suele hac
 <strong>Consejo Pro:</strong> También puedes hacer esto rápidamente abriendo la terminal como Administrador y ejecutando un reinicio rápido de los servicios de audio mediante comandos net stop y net start si el entorno gráfico responde con lentitud.
 </div>
 
-### Paso 3: Actualizar, desinstalar o revertir el controlador en el Administrador de dispositivos
+Paso 3: Actualizar, desinstalar o revertir el controlador en el Administrador de dispositivos
 Si los servicios están activos pero seguimos mudos, el problema recae directamente sobre el driver de la tarjeta de sonido.
 
 1. Haz clic derecho en el botón de Inicio de Windows y selecciona [Administrador de dispositivos].

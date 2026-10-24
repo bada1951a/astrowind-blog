@@ -14,6 +14,7 @@ theme: "Warm Coffee Latte"
 
 
 
+
 1. [Opening Story/Problem]
 
 C'était un mardi matin bien chargé dans notre tour à La Défense. Avec le système de smart office et les bureaux en libre-service, je venais de m'installer à un nouvel emplacement pour la journée. J'avais soigneusement branché mon nouveau dock USB-C, relié mes deux écrans externes, et j'étais prêt à attaquer mes revues de code et mes rapports graphiques. 
@@ -38,7 +39,7 @@ Pourquoi ce raccourci magique nous lâche-t-il soudainement, surtout lors du pas
 
 Voici la méthode infaillible, étape par étape, pour redonner vie à votre raccourci. Nous allons procéder par ordre, du plus simple au plus radical.
 
-### Étape 1 : Forcer l'arrêt via le Gestionnaire des tâches
+Étape 1 : Forcer l'arrêt via le Gestionnaire des tâches
 Si l'application est simplement gelée en arrière-plan, il faut nettoyer la table.
 
 1. Faites un clic droit sur le menu Démarrer et ouvrez le **Gestionnaire des tâches**.
@@ -49,7 +50,7 @@ Si l'application est simplement gelée en arrière-plan, il faut nettoyer la tab
 
 4. Testez à nouveau le raccourci **Win + Shift + S**.
 
-### Étape 2 : Réinitialiser et réparer l'application dans les Paramètres
+Étape 2 : Réinitialiser et réparer l'application dans les Paramètres
 Si le processus n'était pas en cause, l'application a besoin d'un petit rafraîchissement logiciel.
 
 1. Ouvrez les **Paramètres** de Windows 11 (raccourci **Win + I**).
@@ -62,7 +63,7 @@ Si le processus n'était pas en cause, l'application a besoin d'un petit rafraî
 
 5. Faites défiler vers le bas, cliquez d'abord sur **Réparer**. Si cela ne suffit pas, cliquez sur **Réinitialiser** (cela effacera les données corrompues de l'appli).
 
-### Étape 3 : Vérifier l'autorisation des notifications
+Étape 3 : Vérifier l'autorisation des notifications
 L'Outil Capture d'écran a besoin d'afficher des bannières de notification pour vous prévenir que l'image est copiée.
 
 1. Dans les **Paramètres**, allez dans **Système** puis **Notifications**.
@@ -71,7 +72,7 @@ L'Outil Capture d'écran a besoin d'afficher des bannières de notification pour
 
 3. Descendez la liste pour trouver **Outil Capture d'écran** et vérifiez que le commutateur est bien sur **Activé**.
 
-### Étape 4 : Réenregistrer l'application via PowerShell (Cas extrêmes)
+Étape 4 : Réenregistrer l'application via PowerShell (Cas extrêmes)
 Si rien n'y fait, nous allons réinstaller proprement le package système.
 
 1. Ouvrez le menu Démarrer, tapez **PowerShell**, faites un clic droit et choisissez **Exécuter en tant d'administrateur**.

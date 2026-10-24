@@ -23,6 +23,7 @@ theme: "Warm Coffee Latte"
 
 
 
+
 Jantung saya rasanya mau copot. Waktu menunjukkan pukul 09.55 pagi di apartemen saya kawasan Sudirman, Jakarta. Lima menit lagi, meeting koordinasi kuartal via Microsoft Teams dengan para petinggi kantor di SCBD harus dimulai. Sialnya, malam tadi saya ketiduran saat merangkap tugas WFH, dan pagi ini saya langsung menyalakan laptop kantor, menyambungkan VPN perusahaan agar akses server internal aman, lalu membuka aplikasi meeting. Tiba-tiba, sunyi senyap. Ketika saya coba memutar video di YouTube untuk mengetes suara, sama sekali tidak ada output audio yang keluar dari speaker laptop. Ikon speaker di taskbar kanan bawah berikon silang merah dengan keterangan [No Audio Output Device is Installed]. Bayangkan rasany
 
 a: bos besar sudah standby di layar, VPN aktif, tapi laptop malah siuman bisu. 
@@ -49,18 +50,18 @@ Sebelum kita masuk ke tombol eksekusi, kenali dulu tiga musuh utama penyebab aud
 
 ---
 
-### Langkah Cepat Pemulihan (Step-by-Step Fix)
+Langkah Cepat Pemulihan (Step-by-Step Fix)
 
 Karena waktu Anda tinggal beberapa menit sebelum meeting dimulai, mari kita lakukan eksekusi bertahap yang paling mujarab untuk Windows 11.
 
-### Langkah 1: Restart Layanan Audio Utama (Task Manager / Services)
+Langkah 1: Restart Layanan Audio Utama (Task Manager / Services)
 Cara paling cepat memancing driver agar sadar tanpa restart komputer adalah dengan me-refresh layanan sistemnya. - Tekan kombinasi tombol Ctrl + Shift + Escuntuk membukaTask Manager.
 - Klik tab Services (ikon roda gigi di sisi kiri).
 - Cari layanan bernama Audiosrv (Windows Audio).
 - Klik kanan pada Audiosrv, lalu pilihRestart. 
 - Jika ada layanan pendukung bernama AudioEndpointBuilder, lakukan *Restart* juga pada layanan tersebut.
 
-### Langkah 2: Periksa dan Atur Ulang di [Pengaturan] (Settings)
+Langkah 2: Periksa dan Atur Ulang di [Pengaturan] (Settings)
 Kadang kala perangkat suara Anda hanya "tersembunyi" atau *disabled*.
 - Klik tombol Startlalu bukaPengaturan(ikon roda gigi) atau tekanWin + I.
 - Pilih menu Sistem(System) di sebelah kiri, lalu klikSuara (Sound).
@@ -68,7 +69,7 @@ Kadang kala perangkat suara Anda hanya "tersembunyi" atau *disabled*.
 - Pastikan perangkat *speaker* atau *headphones* Anda tidak berada dalam status *Disabled*. Jika mati, klik perangkat tersebut lalu pilih tombol Izinkan (Allow).
 - Kembali ke menu Suara, pastikan pada bagianPilih tempat untuk memutar suara (Choose where to play sound), perangkat yang benar (misal: *Speakers / Realtek Audio*) yang sedang terpilih.
 
-### Langkah 3: Perbarui atau Paksa Instal Ulang Driver via Device Manager
+Langkah 3: Perbarui atau Paksa Instal Ulang Driver via Device Manager
 Jika langkah di atas belum mempan, masalahnya ada di driver hardware yang korup.
 - Klik kanan tombol Start, lalu pilihDevice Manager.
 - Cari dan klik panah di sebelah kiri menu Pengontrol suara, video, dan game (Sound, video and game controllers).

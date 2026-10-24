@@ -23,6 +23,7 @@ theme: "Nordic Clean Ice"
 
 
 
+
 Eram exatamente 14h45 em um escritório na Avenida Paulista, em São Paulo. Faltavam quinze minutos para a reunião mais importante do semestre com a diretoria, e a máquina principal do gerente de operações simplesmente congelou. Tela estática, mouse morto, o cooler rodando no talo e o pior: a apresentação de resultados aberta sem backup recente. No desespero, o botão físico de reset foi acionado. A máquina voltou, a reunião aconteceu no sufoco usando um notebook reserva, mas o problema voltou a se repetir duas vezes na mesma semana. Trocar peças às cegas estava fora de cogitação. Era hora de usar a ferramenta que todo bom profissional de suporte tem no arsenal: o Visualizador de Eventos do Windows.
 
 <div style="border-left: 4px solid #0284c7; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
@@ -43,25 +44,25 @@ Antes de abrir qualquer ferramenta, precisamos entender o que costuma derrubar o
 
 ---
 
-### Passo a Passo: Rastreando o Erro no Visualizador de Eventos
+Passo a Passo: Rastreando o Erro no Visualizador de Eventos
 
 Esqueça achismos. Vamos abrir a ferramenta nativa do Windows para encontrar o código de erro exato (Event ID) que provocou o congelamento.
 
-### Passo 1: Acessando o Visualizador de Eventos
+Passo 1: Acessando o Visualizador de Eventos
 Pressione as teclas `Windows + X` no seu teclado e selecione Visualizador de Eventos (ou digite "Visualizador de Eventos" na barra de pesquisa do menu Iniciar e abra o aplicativo).
 
-### Passo 2: Navegando até os Logs do Windows
+Passo 2: Navegando até os Logs do Windows
 Na coluna à esquerda, clique na seta ao lado de Logs do Windowse selecioneSistema. <div style="border-left: 4px solid #0284c7; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Dica de Ouro:</strong> Como a lista de eventos é gigantesca, clique em <strong>Filtrar Log Atual...</strong> no painel à direita para refinar a busca e economizar tempo precioso.
 </div>
 
-### Passo 3: Filtrando os Erros Críticos
+Passo 3: Filtrando os Erros Críticos
 No painel de filtro que vai se abrir:
 - Marque as caixas CríticoeErro.
 - No campo de IDs de eventos, digite o número `41` (que indica reinicialização inesperada, o famoso Kernel-Power).
 - Clique em OK.
 
-### Passo 4: Analisando o Culpado
+Passo 4: Analisando o Culpado
 Procure pelo evento com o horário exato em que o computador travou. Na aba Geral na parte inferior, você verá descrições cruciais. Se aparecer o Event ID 41 com Código de Bug (BugcheckCode) diferente de zero, anote esse número. Ele é a chave para o diagnóstico preciso no Google ou nos fóruns oficiais da Microsoft.
 
 ---

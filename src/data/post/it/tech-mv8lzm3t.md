@@ -23,6 +23,7 @@ theme: "Cyberpunk Terminal"
 
 
 
+
 <div style="border-left: 4px solid #00ffcc; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,255,204,0.05); border-radius: 4px; font-family: monospace;">
 [SYS_ALERT] root@hardware-lab:~# tail -f /var/log/boot_sequence.log<br>
 CRITICAL: I/O bottleneck detected. Disk queue length > 5.
@@ -60,7 +61,7 @@ Ordina la lista per "Impatto sull'avvio" e disabilita senza pietà tutto ciò ch
 
 ![Hardware Diagnostic & Troubleshooting](https://picsum.photos/seed/hardware-688/1000/550)
 
-## 2. Audit approfondito via Prompt dei comandi (CLI)
+2. Audit approfondito via Prompt dei comandi (CLI)
 Se vuoi avere una visione chirurgica e senza fronzoli dei processi attivi e dei servizi configurati in modalità automatica, apri il *Prompt dei comandi* come amministratore (`Win + R`, digita `cmd`, poi `Ctrl + Shift + Enter`) ed esegui questa query WMI:
 
 <div style="border-left: 4px solid #00ffcc; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.8); color: #00ffcc; border-radius: 4px; font-family: monospace;">

@@ -23,6 +23,7 @@ theme: "Cobalt Enterprise Lab"
 
 
 
+
 Il est 14h30 dans notre bureau tech à Paris, la tension est palpable. Nous sommes en plein sprint critique pour le déploiement de notre nouvelle application interne, et soudain, catastrophe : sur ma station de travail principale, impossible de cliquer sur quoi que ce soit dans la barre des tâches. Le menu Démarrer reste sourd à mes clics, l'icône de Slack clignote sans que je puisse basculer sur la conversation de l'équipe, et mes fenêtres ouvertes sont comme piégées. Pour un ingénieur en pleines livraisons de code, avoir une barre des tâches de Windows 11 totalement gelée, c'est l'équivalent numérique d'un arrêt cardiaque en plein marathon.
 
 <div style="border-left: 4px solid #1e40af; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
@@ -47,7 +48,7 @@ Guide de résolution étape par étape
 
 Voici la méthode rapide et efficace, testée et approuvée en environnement de production, pour reprendre le contrôle de votre poste.
 
-### Étape 1 : Redémarrer l'Explorateur Windows via le Gestionnaire des tâches
+Étape 1 : Redémarrer l'Explorateur Windows via le Gestionnaire des tâches
 
 C'est le réflexe numéro un. Pas besoin de redémarrer toute la machine.
 
@@ -61,7 +62,7 @@ C'est le réflexe numéro un. Pas besoin de redémarrer toute la machine.
 
 Votre écran va clignoter une fraction de seconde, la barre des tâches va disparaître puis réapparaître. Dans 80 pour cent des cas, le problème est résolu instantanément.
 
-### Étape 2 : Réinitialiser la barre des tâches via PowerShell (Si l'étape 1 échoue)
+Étape 2 : Réinitialiser la barre des tâches via PowerShell (Si l'étape 1 échoue)
 
 Si le simple redémarrage de l'explorateur ne suffit pas, il faut réenregistrer le package d'interface utilisateur de Windows 11 via la console.
 
@@ -81,7 +82,7 @@ Get-AppxPackage -AllUsers Microsoft.Windows.ShellExperienceHost | Foreach {Add-A
 
 Laissez le script s'exécuter, ignorez les éventuels avertissements en rouge, puis redémarrez votre PC.
 
-### Étape 3 : Nettoyer les fichiers système corrompus (SFC & DISM)
+Étape 3 : Nettoyer les fichiers système corrompus (SFC & DISM)
 
 Si le problème persiste, des fichiers système essentiels liés à l'interface de Windows 11 sont probablement endommagés suite à une mise à jour interrompue.
 

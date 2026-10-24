@@ -23,6 +23,7 @@ theme: "Nordic Clean Ice"
 
 
 
+
 Es war exakt 21:45 Uhr an einem Donnerstagabend in unserem Berliner Tech-Hub im Prenzlauer Berg. Wir standen kurz vor dem finalen Rollout unserer neuen Microservices-Infrastruktur, als auf dem Haupt-Build-Server plötzlich der berüchtigte blaue Bildschirm flackerte: STOP 0x0000000
 
 a: IRQL_NOT_LESS_OR_EQUAL. 
@@ -47,9 +48,9 @@ Bevor wir blind anfangen, Schraubenzieher zu schwingen oder das System neu aufzu
 
 ---
 
-### Schritt-für-Schritt-Anleitung zur Problemlösung
+Schritt-für-Schritt-Anleitung zur Problemlösung
 
-### Schritt 1: Speicherdiagnose (RAM prüfen)
+Schritt 1: Speicherdiagnose (RAM prüfen)
 Da der Fehler oft durch Speicherzugriffsverletzungen ausgelöst wird, testen wir zuerst den Arbeitsspeicher direkt über die integrierten Windows-Bordmittel.
 
 1. Drücken Sie die Tastenkombination `Windows + R`, tippen Sie `mdsched.exe` ein und bestätigen Sie mit Enter.
@@ -58,7 +59,7 @@ Da der Fehler oft durch Speicherzugriffsverletzungen ausgelöst wird, testen wir
 
 3. Der PC bootet neu und führt die Windows-Speicherdiagnose aus. Lassen Sie den Test im Standard-Modus durchlaufen. Sollten hier Fehler angezeigt werden, wissen Sie sofort, dass ein RAM-Riegel defekt ist oder nicht richtig im Slot sitzt.
 
-### Schritt 2: Der rettende Treiber-Rollback im Gerätemanager
+Schritt 2: Der rettende Treiber-Rollback im Gerätemanager
 Wenn der Speicher fehlerfrei ist, liegt es zu 90 Prozent an einem kürzlich installierten Treiber.
 
 1. Starten Sie Windows im Abgesicherten Modus(falls der normale Start fehlschlägt), oder öffnen Sie direkt dieVerwaltungstools über das Startmenü.
@@ -75,7 +76,7 @@ Wenn der Speicher fehlerfrei ist, liegt es zu 90 Prozent an einem kürzlich inst
 <strong>Profi-Befehl für das Terminal:</strong> Wenn Sie den fehlerhaften Treiber eingrenzen müssen, öffnen Sie das Terminal als Administrator und nutzen Sie den Befehl <code>driverquery /v</code>, um eine detaillierte Liste aller geladenen Treiber inklusive Installationsdatum abzurufen.
 </div>
 
-### Schritt 3: Systemdateien auf Integrität prüfen
+Schritt 3: Systemdateien auf Integrität prüfen
 Manchmal hinterlässt der Absturz beschädigte Systemdateien. Das lässt sich schnell über die Eingabeaufforderung reparieren:
 
 1. Öffnen Sie das Terminaloder dieEingabeaufforderung als Administrator.

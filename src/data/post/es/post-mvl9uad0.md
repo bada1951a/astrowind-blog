@@ -23,6 +23,7 @@ theme: "Rosewood Hardware Guide"
 
 
 
+
 Eran justo las cuatro y media de la tarde en pleno distrito financiero de Madrid. Tenía la responsabilidad de subir de urgencia el paquete completo con los archivos de la nueva normativa y los anexos explicativos al tablón de la intranet corporativa, un portal por el que pasan a diario cientos de empleados de toda la compañía. Todo iba sobre ruedas hasta que, al intentar cerrar la jornada y reiniciar la torre principal del puesto de trabajo para aplicar los últimos parches de seguridad, el ordenador decidió entrar en una especie de limbo digital. Le di a apagar en el menú de Windows, la pantalla se quedó en negro y los ventiladores seguían zumbando a toda pastilla, con las luces de la placa base parpadeando obstinadamente. Pasaron diez, quince minutos y el equipo seguía sin apagarse del todo. Forzar el apagado manteniendo pulsado el botón físico de la torre a la brava no era una opción sensata con la subida de datos a medio sincronizar en la red interna. Sudor frío en la frente, el servidor web interno echando humo y yo atrapado porque el sistema operativo no terminaba de cerrar los procesos de kernel.
 
 Si te ha pasado esto alguna vez, sabrás perfectamente la frustración que se siente. No es una avería de hardware catastrófica ni se ha quemado la fuente de alimentación; el verdadero culpable detrás de este comportamiento tan errático suele ser una función nativa de Windows llamada Inicio Rápido o Fast Startup. Aunque suena genial sobre el papel para acelerar los tiempos de arranque, en la práctica se convierte en un dolor de cabeza monumental cuando se acumulan errores temporales en el archivo de hibernación o algún controlador de la placa base no interpreta bien la orden de apagado profundo.
@@ -45,19 +46,19 @@ Tercero, la gestión de energía de los puertos USB y dispositivos conectados. A
 
 Para solucionar este inconveniente de manera definitiva y recuperar la normalidad en tu estación de trabajo, vamos a seguir un método directo y sin rodeos. Como especialista en soporte, te recomiendo seguir estos pasos exactos:
 
-### Paso 1: Entrar en el Panel de control clásico.
+Paso 1: Entrar en el Panel de control clásico.
 Haz clic en el botón de inicio de Windows y escribe Panel de control directamente en la barra de búsqueda. Selecciónalo en los resultados para abrir la interfaz tradicional de configuración.
 
-### Paso 2: Localizar las opciones de energía.
+Paso 2: Localizar las opciones de energía.
 Una vez dentro del Panel de control, asegúrate de que la vista esté configurada en iconos grandes o pequeños para encontrar todo más rápido. Haz clic en la opción llamada Opciones de energía.
 
-### Paso 3: Modificar el comportamiento de los botones de apagado.
+Paso 3: Modificar el comportamiento de los botones de apagado.
 En el menú de la columna de la izquierda, busca y haz clic en el enlace que dice "Elegir el comportamiento de los botones de apagado". Esto te llevará a la pantalla de configuración global del sistema de energía.
 
-### Paso 4: Desbloquear la configuración avanzada.
+Paso 4: Desbloquear la configuración avanzada.
 Verás las opciones de apagado en la parte inferior de la ventana, pero probablemente aparezcan en gris y no puedas hacer clic en ellas. Para solucionarlo, haz clic primero en el texto superior que dice "Cambiar la configuración actualmente no disponible". Te pedirá permisos de administrador; acéptalos.
 
-### Paso 5: Desactivar el Inicio Rápido.
+Paso 5: Desactivar el Inicio Rápido.
 Ahora busca la casilla situada en la sección de configuración de apagado que dice "Activar inicio rápido (recomendado)". Desmarca esa casilla para quitarle la palomita. Por último, haz clic en el botón inferior de "Guardar cambios".
 
 <div style="border-left: 4px solid #be123c; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">

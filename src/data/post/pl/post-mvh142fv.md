@@ -23,6 +23,7 @@ theme: "High-Contrast Charcoal"
 
 
 
+
 Była dokładnie 10:45 rano, a w warszawskim centrum biznesowym przy Rondzie Daszyńskiego panowała gęsta atmosfera. Za kwadrans miało ruszyć kluczowe spotkanie zarządu z inwestorami z Frankfurtu, a stacja robocizna naszego głównego analityka finansowego zamarzła na amen. Ekran zamroził się w bezruchu, kursor myszy nie reagował, a twardy reset przyciskiem na obudowie to była jedyna deska ratunku. Najgorsze było to, że to nie pierwszy taki zwis w tym tygodniu. Klient patrzył na mnie z paniką w oczach, pytając, czy jego modele finansowe przetrwały. Jako inżynier wsparcia IT wiedziałem, że bezmyślne przeinstalowywanie systemu nic tu nie da. Czas było wreszcie sprawdzić, co tak naprawdę boli ten komputer.
 
 Trzy najczęstsze powody losowych zwiech w Windows 11
@@ -43,7 +44,7 @@ Zanim przejdziemy do diagnostyki, warto zrozumieć, dlaczego nowoczesny sprzęt 
 a:</strong> Zanim zaczniesz grzebać w systemie, upewnij się, że masz wyłączoną "Szybką uruchamianie" (Fast Startup) w Panelu sterowania. Ta funkcja często przenosi uszkodzone stany jądra systemu z poprzedniej sesji, powodując powtarzające się zwiechy.
 </div>
 
-### Krok po kroku: Jak czytać Podgląd Zdarzeń jak zawodowiec
+Krok po kroku: Jak czytać Podgląd Zdarzeń jak zawodowiec
 
 Kiedy komputer wstaje po twardym resecie, nie zgadujmy. System zapisał dokładną przyczynę swojej śmierci. Otwórz menu Start, wpisz Podgląd Zdarzeń (Event Viewer) i wciśnij Enter. 
 
