@@ -4,7 +4,7 @@ import path from 'path';
 // 포스트 기본 경로
 const POSTS_BASE_DIR = path.resolve('src/data/post');
 
-// 12개국 공식 표준 소제목 사전
+// 12개국 표준 5대 소제목
 const I18N_TITLES = {
   ko: {
     s1: "## 1. 직장인 식은땀 나는 돌발 상황",
@@ -103,7 +103,7 @@ function repairMarkdownPost(rawText, langCode) {
   let frontmatter = fmMatch[0];
   let body = text.slice(frontmatter.length);
 
-  // 프론트매터 title 볼드 기호 제거
+  // title 볼드 기호 제거
   frontmatter = frontmatter.replace(/(title:\s*["'])([^"']*)(["'])/gi, (m, p1, p2, p3) => {
     return `${p1}${p2.replace(/\*\*/g, '').trim()}${p3}`;
   });
@@ -114,7 +114,7 @@ function repairMarkdownPost(rawText, langCode) {
     frontmatter = frontmatter.replace(/(description:\s*")([^"]*)(")/g, (m, p1, p2, p3) => `${p1}${p2.replace(/[가-힣]+/g, '').trim()}${p3}`);
   }
 
-  // 2. 상단 20여 줄 빈 줄 압축
+  // 2. 상단 20여 줄 빈 줄 제거
   body = body.replace(/^\n+/, '');
 
   // 3. 쪼개진 단어 복원
@@ -168,7 +168,7 @@ function repairMarkdownPost(rawText, langCode) {
     [/wählen SieNeu starten/g, 'wählen Sie Neu starten'],
     [/zu Systemund/g, 'zu System und'],
     [/klicke aufSpeicher/g, 'klicke auf Speicher'],
-    [/klicke rechts aufSpeicher/g, 'klicke rechts auf Speicher'],
+    [/klicke rights aufSpeicher/g, 'klicke rechts auf Speicher'],
     [/lösche sie mitEntf/g, 'lösche sie mit Entf'],
     [/Datenträgerverwaltungoder/g, 'Datenträgerverwaltung oder'],
     [/besser nochDatenträgerbereinigung/g, 'besser noch Datenträgerbereinigung'],
@@ -221,7 +221,6 @@ function repairMarkdownPost(rawText, langCode) {
   }
 
   // 6. 소제목 표준화
-  // 영문 템플릿 직격 변환
   body = body.replace(/^#{1,3}\s*1\.?\s*(\[Opening Story.*?\]|Opening Story.*?|\[Ouverture.*?\])/gmi, titles.s1);
   body = body.replace(/^#{1,3}\s*2\.?\s*(\[Root Cause.*?\]|Root Cause Breakdown.*?|Root Cause.*?)/gmi, titles.s2);
   body = body.replace(/^#{1,3}\s*3\.?\s*(\[Step-by-Step.*?\]|Step-by-Step Resolution.*?|Step-by-Step.*?)/gmi, titles.s3);
@@ -340,7 +339,7 @@ function repairMarkdownPost(rawText, langCode) {
   body = body.replace(/^(再発を防ぐためのエンジニア的.*?)/gm, `${titles.s4}\n\n$1`);
   body = body.replace(/^(プロが教えるトラブルシューティング.*?)/gm, `${titles.s4}\n\n$1`);
   body = body.replace(/^(4\.\s*プロが教える現場の教訓.*?)/gm, `${titles.s4}\n\n$1`);
-  body = body.replace(/^(プロフェッショナルからの実用的な.*?)/gm, `${titles.s4}\n\n$1`);
+  body = body.replace(/^(프로フェッショナルからの実用的な.*?)/gm, `${titles.s4}\n\n$1`);
 
   body = body.replace(/^(Conseils d'expert.*?)/gm, `${titles.s4}\n\n$1`);
   body = body.replace(/^(Précautions de l'expert.*?)/gm, `${titles.s4}\n\n$1`);
@@ -356,7 +355,7 @@ function repairMarkdownPost(rawText, langCode) {
   // Section 5 (FAQ) 표준화
   body = body.replace(/^#{0,3}\s*(\d\.\s*)?(자주 묻는 질문|Häufig gestellte Fragen|Frequently Asked Questions|よくある(ご)?質問|Questions Fréquemment Posées|Foire [Aa]ux Questions|Preguntas [Ff]recuentes|Fragen und Antworten|Expert FA).*?$/gmi, titles.s5);
 
-  // 헤딩(#)에 묻은 볼드 제거
+  // 헤딩(#) 볼드 제거
   body = body.replace(/^(#{1,6}\s*)\*\*(.*?)\*\*/gm, '$1$2');
 
   // 첫 문단 1번 소제목 주입
@@ -364,7 +363,10 @@ function repairMarkdownPost(rawText, langCode) {
     body = `${titles.s1}\n\n` + body;
   }
 
-  // 7. Q&A 표준 볼드 및 개행 교정
+  // ★ [핵심 정밀 타격] ## 1. 소제목 바로 다음 줄에 붙은 중복 '1. 문장'만 핀셋 제거
+  body = body.replace(/^(## 1\.[^\n]+)\n+(\s*1\.\s+[^\n]+)\n+/m, '$1\n\n');
+
+  // 7. Q&A 표준화
   body = body.replace(/([^\n])\s*\n\s*(Q[0-9]*\s*[:.])/gi, '$1\n\n**$2**');
   body = body.replace(/([^\n])\s*\n\s*(A[0-9]*\s*[:.])/gi, '$1\n\n**$2**');
   body = body.replace(/([^\n])\s*\n\s*(F[0-9]*\s*[:.])/gi, '$1\n\n**Q.**');
@@ -381,9 +383,9 @@ function repairMarkdownPost(rawText, langCode) {
   return frontmatter + body.trim() + '\n';
 }
 
-function runMasterFix() {
+function run() {
   console.log("==================================================");
-  console.log("🚀 [1호기 12개국 전수 조사 기반] 마스터 일괄 복구 시작");
+  console.log("🚀 [GitHub Actions] 12개국 포스트 정밀 일괄 복구 가동");
   console.log("==================================================");
 
   if (!fs.existsSync(POSTS_BASE_DIR)) {
@@ -402,7 +404,7 @@ function runMasterFix() {
     const langPath = path.join(POSTS_BASE_DIR, lang);
     const files = fs.readdirSync(langPath).filter(f => f.endsWith('.md'));
 
-    console.log(`\n📂 [${lang.toUpperCase()}] 총 ${files.length}개 파일 처리 중...`);
+    console.log(`\n📂 [${lang.toUpperCase()}] 총 ${files.length}개 파일 검사 중...`);
 
     for (const file of files) {
       totalScanned++;
@@ -412,7 +414,7 @@ function runMasterFix() {
 
       if (original !== fixed) {
         fs.writeFileSync(filePath, fixed, 'utf-8');
-        console.log(`  ✨ [복구 완료] ${file}`);
+        console.log(`  ✨ [정밀 복구 완료] ${file}`);
         totalFixed++;
       } else {
         console.log(`  ✔️ [이상 없음] ${file}`);
@@ -421,10 +423,10 @@ function runMasterFix() {
   }
 
   console.log("\n==================================================");
-  console.log(`🎉 1호기 12개국 마스터 복구 완료!`);
-  console.log(`- 전체 스캔 파일: ${totalScanned}개`);
-  console.log(`- 결함 수정 및 교정 완료: ${totalFixed}개`);
+  console.log(`🎉 전수 복구 작업 완료!`);
+  console.log(`- 스캔 파일: ${totalScanned}개`);
+  console.log(`- 교정 파일: ${totalFixed}개`);
   console.log("==================================================");
 }
 
-runMasterFix();
+run();
