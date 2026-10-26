@@ -28,9 +28,11 @@ theme: "Warm Coffee Latte"
 
 
 
+## 1. Situasi Darurat Kritis di Tempat Kerja
+
 Jantung saya rasanya mau copot. Waktu menunjukkan pukul 09.55 pagi di apartemen saya kawasan Sudirman, Jakarta. Lima menit lagi, meeting koordinasi kuartal via Microsoft Teams dengan para petinggi kantor di SCBD harus dimulai. Sialnya, malam tadi saya ketiduran saat merangkap tugas WFH, dan pagi ini saya langsung menyalakan laptop kantor, menyambungkan VPN perusahaan agar akses server internal aman, lalu membuka aplikasi meeting. Tiba-tiba, sunyi senyap. Ketika saya coba memutar video di YouTube untuk mengetes suara, sama sekali tidak ada output audio yang keluar dari speaker laptop. Ikon speaker di taskbar kanan bawah berikon silang merah dengan keterangan [No Audio Output Device is Installed]. Bayangkan rasany
 
-a: bos besar sudah standby di layar, VPN aktif, tapi laptop malah siuman bisu. 
+**a:** bos besar sudah standby di layar, VPN aktif, tapi laptop malah siuman bisu. 
 
 Sebagai teknisi infrastruktur IT yang biasa merawat ratusan unit PC kantor, saya tahu persis kepanikan ini. Jangan buru-buru banting laptop atau instal ulang Windows. Masalah ini sangat umum terjadi pada Windows 11, terutama saat sistem terbebani koneksi VPN yang mengubah routing jaringan atau ada konflik driver audio mendadak setelah *update* otomatis. 
 
@@ -94,14 +96,14 @@ Agar kejadian memalukan seperti ini tidak terulang saat Anda sedang presentasi p
 
 Pertanyaan yang Sering Diajukan (FAQ)
 
-Q: Apakah aman melakukan Uninstall Device pada driver audio di Device Manager?
+**Q:** Apakah aman melakukan Uninstall Device pada driver audio di Device Manager?
 
-A: Sangat aman. Ini adalah teknik standar teknisi IT. Ketika Anda me-restart laptop setelah uninstall, Windows 11 secara otomatis akan mendeteksi ulang komponen audio fisik Anda dan memasang driver dasarnya dari sistem.
+**A:** Sangat aman. Ini adalah teknik standar teknisi IT. Ketika Anda me-restart laptop setelah uninstall, Windows 11 secara otomatis akan mendeteksi ulang komponen audio fisik Anda dan memasang driver dasarnya dari sistem.
 
-Q: Mengapa suara saya hilang persis setelah menyalakan VPN kantor?
+**Q:** Mengapa suara saya hilang persis setelah menyalakan VPN kantor?
 
-A: Beberapa aplikasi VPN korporat memiliki fitur keamanan ketat yang memblokir perangkat periferal eksternal atau mengalihkan *audio gateway*. Cek pengaturan *split tunneling* atau matikan sementara VPN jika sedang tidak mengakses data internal.
+**A:** Beberapa aplikasi VPN korporat memiliki fitur keamanan ketat yang memblokir perangkat periferal eksternal atau mengalihkan *audio gateway*. Cek pengaturan *split tunneling* atau matikan sementara VPN jika sedang tidak mengakses data internal.
 
-Q: Ikon speaker di laptop saya ada tanda silang merah dan pesan "No Audio Output Device is Installed", apakah soundcard saya rusak secara fisik?
+**Q:** Ikon speaker di laptop saya ada tanda silang merah dan pesan "No Audio Output Device is Installed", apakah soundcard saya rusak secara fisik?
 
-A: 95% kasus dengan pesan ini bukanlah kerusakan hardware fisik (bukan karena soundcard terbakar), melainkan kegagalan sistem Windows membaca driver akibat *registry* yang korup atau layanan *Audiosrv* yang berhenti. Cukup ikuti Langkah 3 di atas untuk mengatasinya.
+**A:** 95% kasus dengan pesan ini bukanlah kerusakan hardware fisik (bukan karena soundcard terbakar), melainkan kegagalan sistem Windows membaca driver akibat *registry* yang korup atau layanan *Audiosrv* yang berhenti. Cukup ikuti Langkah 3 di atas untuk mengatasinya.

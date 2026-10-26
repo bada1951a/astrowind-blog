@@ -28,11 +28,13 @@ theme: "Midnight Navy Royal"
 
 
 
+## 1. Emergenza improvvisa sul posto di lavoro
+
 <div style="border-left: 4px solid #1d4ed8; padding: 12px 16px; margin: 20px 0; background-color: rgba(29, 78, 216, 0.05); border-radius: 4px; color: #111827;">
 <strong>Registro Notturno - Laboratorio Hardware Milano</strong><br>
 Timestamp: 02:42 AM. Chiamata urgente da uno studio di design in zona Porta Nuov
 
-a: Windows è andato in crash totale durante il salvataggio di un pacchetto di file vettoriali da 4 GB. Schermata blu fugace e riavvio forzato. Risultato? C: drive completamente saturo a 0 byte liberi, file di progetto corrotti e sistema operativo immobile che rifiuta di aprire qualsiasi applicazione.
+**a:** Windows è andato in crash totale durante il salvataggio di un pacchetto di file vettoriali da 4 GB. Schermata blu fugace e riavvio forzato. Risultato? C: drive completamente saturo a 0 byte liberi, file di progetto corrotti e sistema operativo immobile che rifiuta di aprire qualsiasi applicazione.
 </div>
 
 Quante volte vi è capitato di guardare l'icona del vostro disco principale e vederla colorata di un rosso allarmante? Quando lo spazio sul disco C si riduce a zero, Windows va letteralmente in tilt. Non riesce a creare i file di paginazione (*pagefile.sys*), non può gestire la memoria virtuale e va in crash continuo. 
@@ -53,7 +55,7 @@ Prima di mettere mano al sistema, capiamo cosa sta intasando la nostra unità pr
 
 3. Cartella Download dimenticat
 
-a: Può sembrare banale, ma centinaia di utenti accumulano file ISO, archivi ZIP enormi e installativi nella cartella Download senza mai svuotarla. ---
+**a:** Può sembrare banale, ma centinaia di utenti accumulano file ISO, archivi ZIP enormi e installativi nella cartella Download senza mai svuotarla. ---
 
 Procedura passo-passo per la pulizia profonda
 
@@ -95,7 +97,9 @@ Domande Frequenti (FAQ)
 
 Sì, ma attenzione: la cartella *Windows.old* contiene i file della tua precedente versione o installazione di Windows. Se il sistema attuale è stabile e non hai bisogno di effettuare un rollback (tornare indietro alla versione precedente del sistema operativo), puoi eliminarla tranquillamente tramite la Pulizia disco per recuperare decine di gigabyte.
 
-2. Cosa faccio se un file temporaneo si rifiuta di essere cancellato? Significa che c'è un processo in background o un'applicazione attiva che lo sta utilizzando in quel momento. ApriGestione attività(`Ctrl + Shift + Esc`), individua il programma sospetto, chiudilo forzatamente e riprova a cancellare il file.
+**Q.** Cosa faccio se un file temporaneo si rifiuta di essere cancellato?
+
+**A.** Significa che c'è un processo in background o un'applicazione attiva che lo sta utilizzando in quel momento. ApriGestione attività(`Ctrl + Shift + Esc`), individua il programma sospetto, chiudilo forzatamente e riprova a cancellare il file.
 
 3. Quanto spazio libero devo lasciare sempre sul disco C?
 

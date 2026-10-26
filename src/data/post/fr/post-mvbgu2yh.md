@@ -28,6 +28,8 @@ theme: "Cobalt Enterprise Lab"
 
 
 
+## 1. Situation d'urgence critique au bureau
+
 Il est 14h30 dans notre bureau tech à Paris, la tension est palpable. Nous sommes en plein sprint critique pour le déploiement de notre nouvelle application interne, et soudain, catastrophe : sur ma station de travail principale, impossible de cliquer sur quoi que ce soit dans la barre des tâches. Le menu Démarrer reste sourd à mes clics, l'icône de Slack clignote sans que je puisse basculer sur la conversation de l'équipe, et mes fenêtres ouvertes sont comme piégées. Pour un ingénieur en pleines livraisons de code, avoir une barre des tâches de Windows 11 totalement gelée, c'est l'équivalent numérique d'un arrêt cardiaque en plein marathon.
 
 <div style="border-left: 4px solid #1e40af; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
@@ -35,6 +37,8 @@ Il est 14h30 dans notre bureau tech à Paris, la tension est palpable. Nous somm
 </div>
 
 ![Tech & IT Solution Guide](https://picsum.photos/seed/computer174/1000/550)
+
+## 2. Analyse des causes principales de l'erreur
 
 Pourquoi votre barre des tâches Windows 11 se fige-t-elle ?
 
@@ -48,6 +52,8 @@ Après avoir analysé ce comportement à plusieurs reprises lors de nos sessions
 
 ---
 
+## 3. Guide de résolution étape par étape
+
 Guide de résolution étape par étape
 
 Voici la méthode rapide et efficace, testée et approuvée en environnement de production, pour reprendre le contrôle de votre poste.
@@ -56,7 +62,7 @@ Voici la méthode rapide et efficace, testée et approuvée en environnement de 
 
 C'est le réflexe numéro un. Pas besoin de redémarrer toute la machine.
 
-1. Appuyez simultanément sur les touches Ctrl + Shift + Escpour ouvrir leGestionnaire des tâches(si le raccourci ne fonctionne pas, faitesCtrl + Alt + Del puis choisissez Gestionnaire des tâches).
+1. Appuyez simultanément sur les touches Ctrl + Shift + Esc pour ouvrir le Gestionnaire des tâches(si le raccourci ne fonctionne pas, faitesCtrl + Alt + Del puis choisissez Gestionnaire des tâches).
 
 2. Cliquez sur l'onglet Processus (l'icône de jauge à gauche).
 
@@ -111,14 +117,15 @@ Si le problème persiste, des fichiers système essentiels liés à l'interface 
 </div>
 
 ---
+## 5. Foire Aux Questions (FAQ)
 
-Foire Aux Questions (FAQ)
+**Q.** Que faire si je ne peux même pas ouvrir le Gestionnaire des tâches avec les raccourcis clavier ?
 
-1. Que faire si je ne peux même pas ouvrir le Gestionnaire des tâches avec les raccourcis clavier ? Si le système est totalement figé, effectuez un redémarrage forcé en maintenez le bouton d'alimentation de votre PC enfoncé pendant 10 secondes. Une fois redémarré, appliquez immédiatement l'Étape 3 pour vérifier l'intégrité de vos fichiers.
+**A.** Si le système est totalement figé, effectuez un redémarrage forcé en maintenez le bouton d'alimentation de votre PC enfoncé pendant 10 secondes. Une fois redémarré, appliquez immédiatement l'Étape 3 pour vérifier l'intégrité de vos fichiers.
 
-2. Est-ce qu'une mise à jour de Windows peut causer ce bug de manière récurrente ?
+**Q.** Est-ce qu'une mise à jour de Windows peut causer ce bug de manière récurrente ?
 
-Oui. Certaines mises à jour cumulatives optionnelles ou de sécurité de Windows 11 ont parfois introduit des régressions sur le composant `ShellExperienceHost`. Pensez à vérifier dans les *Paramètres > Windows Update* si une mise à jour corrective récente est disponible.
+**A.** Oui. Certaines mises à jour cumulatives optionnelles ou de sécurité de Windows 11 ont parfois introduit des régressions sur le composant `ShellExperienceHost`. Pensez à vérifier dans les *Paramètres > Windows Update* si une mise à jour corrective récente est disponible.
 
 3. Le mode sans échec résout-il le problème ?
 

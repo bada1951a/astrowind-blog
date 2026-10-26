@@ -28,6 +28,8 @@ theme: "Industrial Blueprint"
 
 
 
+## 1. Kritische Fehlersituation am Arbeitsplatz
+
 Es ist exakt 14:45 Uhr an einem Dienstag in unserem Berliner Büro am Hackeschen Markt. In einer Viertelstunde startet der finale System-Rollout für unsere neue Microservice-Architektur, und mein primärer Arbeitsrechner beschließt kollektiv den Dienst: Die Windows 11 Taskleiste ist komplett eingefroren. Ein Klick auf das Startmenü? Keine Reaktion. Die Pinnwand-Symbole? Tot. Weder der Explorer-Neustart über den gewohnten Affengriff noch frustriertes Hämmern auf die Windows-Taste bringen auch nur ein Pixel in Bewegung. Mitten in der Hochphase der Vorbereitung bricht Panik aus, denn ohne funktionierende Taskleiste und Schnellstart-Verknüpfungen läuft hier gar nichts mehr.
 
 <div style="border-left: 4px solid #f59e0b; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
@@ -43,6 +45,8 @@ Nachdem ich das Problem damals in Rekordzeit gelöst hatte (und der Rollout dank
 2. Hängende Explorer-Prozesse: Der klassische `explorer.exe` steuert nicht nur die Ordneransichten, sondern tiefgreifend auch die Taskleiste und den Desktop-Hintergrund.
 
 3. Korrupte Xaml-Oberflächenkomponenten: Das moderne Xaml-Framework von Windows 11 reagiert empfindlich auf RAM-Spitzen oder Treiberkonflikte, wodurch Startmenü und Taskleistenelemente unresponsive werden.
+
+## 3. Schritt-für-Schritt-Lösungsanleitung
 
 Schritt-für-Schritt-Lösung: Schnelle Hilfe im Ernstfall
 
@@ -74,15 +78,14 @@ Get-AppxPackage -AllUsers | Foreach {Add-AppxPackage -DisableDevelopmentMode -Re
 Schritt 3: Systemdateien auf Integrität prüfen (SFC & DISM)
 Manchmal liegt die Ursache tiefer in beschädigten Systemdateien nach einem fehlerhaften Windows-Update.
 
-* Öffnen Sie das Terminaloder dieEingabeaufforderung als Administrator.
+* Öffnen Sie das Terminal oder die Eingabeaufforderung als Administrator.
 * Tippen Sie `sfc /scannow` ein und bestätigen Sie. Windows prüft nun alle geschützten Systemdateien und ersetzt beschädigte Versionen automatisch.
 * Nach dem Durchlauf geben Sie zusätzlich `DISM.exe /Online /Cleanup-image /Restorehealth` ein, um das Windows-Wimage zu reparieren.
 
 <div style="border-left: 4px solid #f59e0b; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Experten-Tipp für Administratoren:</strong> Wenn Sie in einer Unternehmensumgebung arbeiten (wie unserem Berliner Tech-Hub), prüfen Sie nach solchen Vorfällen stets, ob Gruppenrichtlinien oder veraltete Grafiktreiber das Problem triggern. Ein aktueller GPU-Treiber wirkt oft Wunder bei UI-Freezes unter Windows 11.
 </div>
-
-Häufig gestellte Fragen (FAQ)
+## 5. Häufig gestellte Fragen (FAQ)
 
 1. Was kann ich tun, wenn sich nicht einmal mehr der Task-Manager öffnen lässt?
 Wenn Tastenkombinationen komplett blockiert sind, hilft meist nur ein erzwungener Neustart über den physischen Power-Knopf Ihres PCs oder Laptops (ca. 5 bis 10 Sekunden gedrückt halten). Danach greifen die oben genannten Schritte in einer sauberen Umgebung.

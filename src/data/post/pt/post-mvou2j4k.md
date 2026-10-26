@@ -19,11 +19,9 @@ Após ajustar as configurações de boot que haviam resetado com o update (mudan
 <strong>Dica do Especialista:</strong> Nunca ignore arquivos residuais de atualizações profundas de firmware. Eles costumam carregar permissões restritas de sistema (TrustedInstaller) que impedem a remoção manual simples.
 </div>
 
-
-
 ![Tech Troubleshooting Guide](/images/tech-photo/display%20(3).png)
 
-## 2. Root Cause Breakdown
+## 2. Análise da causa raiz do problema
 
 Para resolver o problema de arquivos "presos" que desafiam o botão "Delete" do teclado, primeiro precisamos entender o porquê técnico de isso acontecer. Aqui estão as três causas raiz mais comuns que enfrentamos no dia a dia de suporte técnico:
 
@@ -33,7 +31,7 @@ Para resolver o problema de arquivos "presos" que desafiam o botão "Delete" do 
 
 3. **Mapeamento de cache corrompido no Explorador de Arquivos:** O próprio Explorer.exe pode travar o cache de miniaturas ou propriedades do arquivo, achando que ele está ativo quando, na verdade, o processo já foi encerrado.
 
-## 3. Step-by-Step Resolution
+## 3. Guia prático de resolução passo a passo
 
 Quando o método tradicional falha, recorremos a ferramentas nativas e procedimentos estruturados do Windows. Siga estes passos exatos para forçar a exclusão com segurança:
 
@@ -62,20 +60,20 @@ Caso o prompt retorne um erro de acesso negado, vá até a pasta onde o arquivo 
 
 4. Marque a caixa **Substituir o proprietário em subcontêineres e objetos** e aplique. Feche e abra as propriedades novamente para garantir permissão de Controle Total antes de tentar a exclusão.
 
-## 4. Expert Advice
+## 4. Recomendações e alertas de especialistas
 
 Trabalhar com atualizações de BIOS e limpeza profunda de diretórios exige cautela rigorosa com o hardware. Sempre certifique-se de que sua estação de trabalho está conectada a um no-break confiável durante intervenções no sistema principal. Nunca force a exclusão de arquivos essenciais do diretório `System32` ou arquivos de paginação (`pagefile.sys`) sem saber exatamente o que está fazendo, pois isso pode corromper permanentemente o registro do Windows, exigindo uma formatação limpa. Mantenha sempre um pendrive bootável de recuperação por perto em suas manutenções na Paulista.
 
-## 5. Frequently Asked Questions
+## 5. Perguntas Frecuentes (FAQ)
 
-Q: O comando DEL no Prompt diz que o arquivo está sendo usado por outro processo. O que fazer?
+**Q:** O comando DEL no Prompt diz que o arquivo está sendo usado por outro processo. O que fazer?
 
-A: Reinicie o computador em Modo de Segurança ou utilize o Monitor de Recursos do Windows (abra o menu Iniciar, digite `resmon`, vá na aba **CPU** e procure o nome do arquivo em "Identificadores Associados") para fechar o processo exato que o está bloqueando.
+**A:** Reinicie o computador em Modo de Segurança ou utilize o Monitor de Recursos do Windows (abra o menu Iniciar, digite `resmon`, vá na aba **CPU** e procure o nome do arquivo em "Identificadores Associados") para fechar o processo exato que o está bloqueando.
 
-Q: Posso usar softwares de terceiros como Unlocker ou LockHunter?
+**Q:** Posso usar softwares de terceiros como Unlocker ou LockHunter?
 
-A: Embora sejam práticos, prefira sempre as ferramentas nativas do Windows em ambientes corporativos para evitar a instalação indesejada de adware ou pacotes de DLLs desconhecidos que possam comprometer a segurança da rede da empresa.
+**A:** Embora sejam práticos, prefira sempre as ferramentas nativas do Windows em ambientes corporativos para evitar a instalação indesejada de adware ou pacotes de DLLs desconhecidos que possam comprometer a segurança da rede da empresa.
 
-Q: Atualizar a BIOS sempre causa esse tipo de problema de arquivos presos?
+**Q:** Atualizar a BIOS sempre causa esse tipo de problema de arquivos presos?
 
-A: Não. Isso ocorre geralmente quando o sistema é interrompido de forma abrupta durante a reinicialização pós-flash ou quando há perda de sincronia nas configurações de data, hora e cache do chip CMOS da placa-mãe.
+**A:** Não. Isso ocorre geralmente quando o sistema é interrompido de forma abrupta durante a reinicialização pós-flash ou quando há perda de sincronia nas configurações de data, hora e cache do chip CMOS da placa-mãe.

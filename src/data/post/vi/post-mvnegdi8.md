@@ -9,7 +9,7 @@ theme: "Solarized Amber Warm"
 ---
 
 
-## 1. [Opening Story/Problem]
+## 1. Tình huống sự cố khẩn cấp tại văn phòng
 
 Hôm đó tôi đang ngồi tại sảnh chờ của sân bay Tân Sơn Nhất để chuẩn bị bay chuyến công tác quan trọng ra nước ngoài. Chỉ còn đúng 20 phút nữa là cửa khởi hành đóng lại, sếp ở văn phòng trung tâm Quận 1 gọi điện dồn dập yêu cầu gửi ngay bản thảo hợp đồng cuối cùng đã chỉnh sửa để đối tác nước ngoài ký kết gấp. Tôi vội vàng mở máy tính xách tay, chỉnh sửa vài chữ cuối cùng trên tệp Word rồi bấm lưu. Nhưng khi kéo tệp này vào khung chat để gửi đi, màn hình bỗng hiện lên một thông báo phũ phàng: **The action can't be completed because the file is open in another program**. 
 
@@ -17,11 +17,9 @@ Tôi thử bấm **Try Again** mấy lần nhưng vẫn trơ trơ. Nhìn đồng
 
 ---
 
-
-
 ![Tech Troubleshooting Guide](/images/tech-photo/display%20(18).png)
 
-## 2. Root Cause Breakdown
+## 2. Phân tích nguyên nhân gốc rễ chi tiết
 
 <div style="border-left: 4px solid #d97706; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Góc nhìn kỹ thuật:</strong> Lỗi không xóa được file thực ra không phải do hệ điều hành Windows lỗi, mà do cơ chế bảo vệ dữ liệu của hệ thống. Dưới đây là 3 nguyên nhân phổ biến nhất khiến bạn rơi vào tình trạng dở khóc dở cười này.
@@ -33,7 +31,7 @@ Tôi thử bấm **Try Again** mấy lần nhưng vẫn trơ trơ. Nhìn đồng
 
 ---
 
-## 3. Step-by-Step Resolution
+## 3. Các bước khắc phục sự cố thực tế
 
 Khi gặp tình huống khẩn cấp như tôi ở sảnh chờ sân bay, bạn đừng hoảng loạn mà hãy thực hiện lần lượt các bước thực chiến sau đây để ép xóa file ngay lập tức.
 
@@ -80,7 +78,7 @@ del /f /q "Đường_dẫn_đến_file_của_bạn"
 
 ---
 
-## 4. Expert Advice
+## 4. Lời khuyên và lưu ý quan trọng từ kỹ sư IT
 
 Là một kỹ sư công nghệ thông tin đã hỗ trợ hàng ngàn ca sự cố văn phòng tại các tòa nhà lớn ở TP. Hồ Chí Minh, tôi có vài lời khuyên chân thành dành cho bạn để tránh những phút giây "tim nhảy ra ngoài lồng ngực" như câu chuyện ở sân bay:
 
@@ -89,16 +87,16 @@ Là một kỹ sư công nghệ thông tin đã hỗ trợ hàng ngàn ca sự c
 
 ---
 
-## 5. Frequently Asked Questions
+## 5. Các câu hỏi thường gặp (FAQ)
 
-Q: Tôi đã dùng Task Manager để tắt hết phần mềm nhưng máy vẫn báo lỗi không xóa được file thì phải làm sao?
+**Q:** Tôi đã dùng Task Manager để tắt hết phần mềm nhưng máy vẫn báo lỗi không xóa được file thì phải làm sao?
 
-A: Trường hợp này có thể do tệp tin đang được mở bởi một tiến trình hệ thống ẩn hoặc tính năng xem trước hình ảnh của File Explorer. Bạn hãy thử khởi động lại máy tính (Restart) hoặc đăng xuất tài khoản rồi đăng nhập lại, đây là cách nhanh nhất để làm mới hoàn toàn các quyền truy cập file.
+**A:** Trường hợp này có thể do tệp tin đang được mở bởi một tiến trình hệ thống ẩn hoặc tính năng xem trước hình ảnh của File Explorer. Bạn hãy thử khởi động lại máy tính (Restart) hoặc đăng xuất tài khoản rồi đăng nhập lại, đây là cách nhanh nhất để làm mới hoàn toàn các quyền truy cập file.
 
-Q: Lệnh `del /f /q` trong Command Prompt có làm mất dữ liệu quan trọng khác của máy không?
+**Q:** Lệnh `del /f /q` trong Command Prompt có làm mất dữ liệu quan trọng khác của máy không?
 
-A: Hoàn toàn không. Lệnh này chỉ tác động chính xác đến đường dẫn tệp tin mà bạn đã chỉ định trong dấu ngoặc kép. Tuy nhiên, bạn cần phải cẩn thận gõ đúng đường dẫn vì một khi đã dùng lệnh ép xóa này, file sẽ biến mất vĩnh viễn chứ không nằm trong Thùng rác (Recycle Bin).
+**A:** Hoàn toàn không. Lệnh này chỉ tác động chính xác đến đường dẫn tệp tin mà bạn đã chỉ định trong dấu ngoặc kép. Tuy nhiên, bạn cần phải cẩn thận gõ đúng đường dẫn vì một khi đã dùng lệnh ép xóa này, file sẽ biến mất vĩnh viễn chứ không nằm trong Thùng rác (Recycle Bin).
 
-Q: Có phần mềm bên thứ ba nào giúp tự động mở khóa file nhanh không?
+**Q:** Có phần mềm bên thứ ba nào giúp tự động mở khóa file nhanh không?
 
-A: Có một số phần mềm kinh điển như LockHunter hoặc IObit Unlocker hỗ trợ việc này rất tốt bằng cách thêm tùy chọn bấm chuột phải để mở khóa file. Tuy nhiên, đối với dân văn phòng hoặc khi đang ở nơi công cộng không có quyền cài đặt phần mềm mới, việc sử dụng Resource Monitor hoặc Command Prompt có sẵn trên Windows vẫn là lựa chọn an toàn và nhanh chóng nhất.
+**A:** Có một số phần mềm kinh điển như LockHunter hoặc IObit Unlocker hỗ trợ việc này rất tốt bằng cách thêm tùy chọn bấm chuột phải để mở khóa file. Tuy nhiên, đối với dân văn phòng hoặc khi đang ở nơi công cộng không có quyền cài đặt phần mềm mới, việc sử dụng Resource Monitor hoặc Command Prompt có sẵn trên Windows vẫn là lựa chọn an toàn và nhanh chóng nhất.

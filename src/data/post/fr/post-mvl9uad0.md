@@ -28,6 +28,8 @@ theme: "Electric Cyan Speed"
 
 
 
+## 1. Situation d'urgence critique au bureau
+
 Il est exactement une heure du matin ici au siege de notre entreprise a Paris La Defense. Je suis seul dans le grand plateau bureau, face a mon ecran qui clignote doucement, en plein milieu d'une migration critique de donnees et de deploiement de systemes prevue pour demain matin. La fatigue commence a peser lourd, mes yeux me picotent, et je veux simplement boucler cette derniere etape, ranger mon poste et rentrer enfin chez moi. Je clique sur Arreter dans le menu demarrer de Windows. L'ecran s'assombrit quelques secondes, mais les ventilateurs continuent de souffler a plein regime dans le boitier, les LED de la carte mere restent allumees, et le disque dur gratte encore un peu. J'attends dix minutes. Rien ne se passe. Le PC est coince dans un etat hybride, refusant categoriquement de couper l'alimentation electrique completement.
 
 Dans l'urgence absolue de cette nuit de travail, j'ai commence par le reflexe le plus brutal et le plus risque. J'ai appuye longuement sur le bouton d'alimentation physique du boitier pour forcer l'extinction electrique. Mauvaise idee quand on manipule des bases de donnees et des scripts de migration en cours de finalisation. En redarrant la machine pour verifier l'integrite de mes fichiers, rebelote : au moment de quitter le bureau pour une pause cafe rapide, impossible d'eteindre proprement la machine. Apres avoir perdu de precieuses minutes a debrancher des peripheriques USB un par un, a verifier le Gestionnaire des taches pour traquer un processus bloquant, et a fouiller dans les Parametres d'alimentation, j'ai identifie le coupable invisible de Windows.
@@ -62,14 +64,14 @@ Si le probleme persiste malgre la desactivation du demarrage rapide, je vous con
 
 Voici les reponses aux questions les plus frequentes que l'on me pose au support informatique concernant ce dysfonctionnement agacant.
 
-Q1 : Est-ce que forcer l'arret avec le bouton d'alimentation risque d'abimer mon materiel ?
+**Q1 :** Est-ce que forcer l'arret avec le bouton d'alimentation risque d'abimer mon materiel ?
 
-A1 : Une coupure forcee ponctuelle ne detruit pas physiquement vos composants, mais elle coupe brutalement l'ecriture sur le disque. Cela peut entrainer une corruption de fichiers systeme Windows ou la perte de donnees non enregistrees dans vos logiciels ouverts.
+**A1 :** Une coupure forcee ponctuelle ne detruit pas physiquement vos composants, mais elle coupe brutalement l'ecriture sur le disque. Cela peut entrainer une corruption de fichiers systeme Windows ou la perte de donnees non enregistrees dans vos logiciels ouverts.
 
-Q2 : Pourquoi ce probleme apparait-il soudainement apres une mise a jour Windows ?
+**Q2 :** Pourquoi ce probleme apparait-il soudainement apres une mise a jour Windows ?
 
-A2 : Les mises a jour majeures de Windows modifient parfois les parametres par defaut ou remplacent les pilotes de gestion d'alimentation de la carte mere, ce qui reactive malencontreusement le demarrage rapide ou cree des conflits avec vos composants actuels.
+**A2 :** Les mises a jour majeures de Windows modifient parfois les parametres par defaut ou remplacent les pilotes de gestion d'alimentation de la carte mere, ce qui reactive malencontreusement le demarrage rapide ou cree des conflits avec vos composants actuels.
 
-Q3 : Si je desactive le demarrage rapide, est-ce que mes logiciels de travail s'ouvriront plus lentement ?
+**Q3 :** Si je desactive le demarrage rapide, est-ce que mes logiciels de travail s'ouvriront plus lentement ?
 
-A3 : Non, cela affecte uniquement le temps de chargement du noyau de Windows lors de l'allumage initial. Vos logiciels et vos fichiers se lanceront exactement a la meme vitesse une fois le bureau affiche.
+**A3 :** Non, cela affecte uniquement le temps de chargement du noyau de Windows lors de l'allumage initial. Vos logiciels et vos fichiers se lanceront exactement a la meme vitesse une fois le bureau affiche.

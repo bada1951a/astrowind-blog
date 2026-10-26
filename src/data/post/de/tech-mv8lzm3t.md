@@ -28,6 +28,8 @@ theme: "Pure Titanium Clean"
 
 
 
+## 1. Kritische Fehlersituation am Arbeitsplatz
+
 Freitag, 16:50 Uhr. Zehn Minuten vor dem verdienten Feierabend brennt mal wieder der Baum. Der wichtigste Kunde ruft an, will sofort einen geänderten Report, und mein Rechner entscheidet sich, das Windows-Logo für gefühlte zwölfeinhalb Minuten auf den Bildschirm zu malen, während die Lüfter hochdrehen wie eine Boeing 747 beim Start. Ich sitze da, schwitze, der Chef läuft im Gang auf und ab, und das System friert im Login-Screen ein, weil im Hintergrund gerade gefühlt zwanzig Update-Agenten, Updater für Chat-Tools, die ich nie benutze, und Cloud-Dienste gleichzeitig um die CPU-Zyklen prügeln. Wer das schon mal erlebt hat, weiß: In diesem Moment hasst man seinen eigenen Computer.
 
 <div style="border-left: 4px solid #334155; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
@@ -35,6 +37,8 @@ Freitag, 16:50 Uhr. Zehn Minuten vor dem verdienten Feierabend brennt mal wieder
 </div>
 
 ![Tech Hardware Guide](https://images.unsplash.com/photo-1581092160607-ee22621dd758? auto=format&fit=crop&w=1200&h=675&q=85)
+
+## 2. Detaillierte Ursachenanalyse
 
 Warum der Rechner zur Krücke wird: Die 3 Hauptverdächtigen
 
@@ -45,6 +49,8 @@ Bevor wir die Werkzeuge auspacken, müssen wir verstehen, wer hier eigentlich br
 2. Hintergrund-Dienste und geplante Tasks: Windows hat seine eigenen Mechanismen, aber Drittanbieter-Tools blähen den Task-Planer (*Aufgabenplanung*) mit unnötigem Ballast auf.
 
 3. Zerspannte System-Ressourcen: Wenn die Boot-Platte (besonders, wenn noch eine alte HDD verbaut ist, aber selbst bei SSDs) voll ist und das System beim Start permanent virtuelle Speicherseiten jonglieren muss, geht gar nichts mehr vorwärts.
+
+## 3. Schritt-für-Schritt-Lösungsanleitung
 
 Der Befreiungsschlag: Schritt-für-Schritt-Anleitung
 
@@ -75,18 +81,19 @@ Wenn der Rechner trotz leerem Autostart ewig bootet, klemmt es oft an der Hardwa
 
 ---
 
+## 4. Praxistipps und Warnungen vom System-Admin
+
 Admin-Warnung: Was du auf gar keinen Fall tun solltest!
 
 Finger weg von dubiosen "One-Click-Turbo-Boost"-Programmen aus dem Internet! Die versprechen oft das Blaue vom Himmel, installieren aber meistens nur Adware, verstellen Registry-Schlüssel willkürlich und zerschießen dir im schlimmsten Fall das ganze Windows-Profil. Vertraue auf die Windows-Bordmittel oder Sysinternals-Tools wie *Autoruns*, wenn du ein Profi bist. Und lösche niemals Systemdienste, deren Funktion du nicht zu 100 % verstehst.
 
 ---
+## 5. Häufig gestellte Fragen (FAQ)
 
-Häufig gestellte Fragen (FAQ)
+**Q.** Soll ich den Windows-Virenscanner (Defender) im Autostart deaktivieren, um Zeit zu sparen?
 
-F: Soll ich den Windows-Virenscanner (Defender) im Autostart deaktivieren, um Zeit zu sparen?
+**A:** Um Himmels willen:Nein!Der Echtzeitschutz muss beim Booten sofort greifen. Wer hier spart, öffnet Ransomware Tür und Tor.F: Nach dem Aufräumen startet der PC immer noch langsam. Was nun?
 
-A: Um Himmels willen:Nein!Der Echtzeitschutz muss beim Booten sofort greifen. Wer hier spart, öffnet Ransomware Tür und Tor.F: Nach dem Aufräumen startet der PC immer noch langsam. Was nun?
+**A:** Wenn du noch eine mechanische Festplatte (HDD) als Systemlaufwerk nutzt, ist der Zeitpunkt für ein Upgrade gekommen. Investiere in eine günstige NVMe- oder SATA-SSD. Das ist der absolute Gamechanger und lässt selbst fünf Jahre alte Hardware wieder fliegen.F: Windows schaltet bestimmte Apps von selbst wieder in den Autostart ein. Warum?
 
-A: Wenn du noch eine mechanische Festplatte (HDD) als Systemlaufwerk nutzt, ist der Zeitpunkt für ein Upgrade gekommen. Investiere in eine günstige NVMe- oder SATA-SSD. Das ist der absolute Gamechanger und lässt selbst fünf Jahre alte Hardware wieder fliegen.F: Windows schaltet bestimmte Apps von selbst wieder in den Autostart ein. Warum?
-
-A: Viele moderne Apps (vor allem Electron-basierte wie Browser oder Messenger) ignorieren beim Update die lokalen Einstellungen und schreiben sich klammheimlich wieder in den Autostart. Du musst diesen Apps in ihren eigenen Einstellungen die Option "Beim Systemstart ausführen" explizit verbieten.
+**A:** Viele moderne Apps (vor allem Electron-basierte wie Browser oder Messenger) ignorieren beim Update die lokalen Einstellungen und schreiben sich klammheimlich wieder in den Autostart. Du musst diesen Apps in ihren eigenen Einstellungen die Option "Beim Systemstart ausführen" explizit verbieten.

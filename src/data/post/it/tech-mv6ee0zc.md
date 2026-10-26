@@ -28,6 +28,8 @@ theme: "Mint Fresh Engineering"
 
 
 
+## 1. Emergenza improvvisa sul posto di lavoro
+
 Nel mio lavoro quotidiano sui terminali di gestione e nei laboratori di collaudo hardware, uno strumento di input inaffidabile rappresenta un collo di bottiglia critico. Qualche mese fa, durante la configurazione in loco di un cluster di virtualizzazione, la tastiera meccanica della mia workstation da campo ha iniziato a mostrare sintomi subdoli: digitando credenziali complesse su terminale SSH, alcune lettere venivano registrate due volte (*key chattering* o rimbalzo), mentre la barra spaziatrice e il tasto `Tab` perdevano colpi in modo casuale (*key skipping*). 
 
 In un ambiente di produzione, dover cancellare backspace a raffica o fallire l'autenticazione per via di un doppio carattere non è solo frustrante: rischia di bloccare account di dominio o generare errori di sintassi distruttivi nei file di configurazione.
@@ -72,7 +74,7 @@ Prima di procedere con solventi chimici o saldatori, è obbligatorio isolare il 
                  ▼
 [Ispezione Meccanic
 
-a: Rimozione Keycap & Switch]
+**a:** Rimozione Keycap & Switch]
                  │
                  ▼
 [Trattamento Chimico: Disossidante Contatti a Secco]
@@ -80,7 +82,7 @@ a: Rimozione Keycap & Switch]
                  ▼
 [Verifica Elettric
 
-a: Test di Debounce & Continuità]
+**a:** Test di Debounce & Continuità]
 ```
 
 Passo 1: Diagnostica Logica ed Esclusione del Driver Host
@@ -119,7 +121,7 @@ Il prodotto da utilizzare deve essere rigorosamente un disossidante per contatti
 <div style="border-left: 4px solid #dc2626; padding: 12px 16px; margin: 20px 0; background-color: rgba(220, 38, 38, 0.05); border-radius: 4px;">
   <strong>ATTENZIONE CRITIC
 
-A:</strong> Non usare MAI il classico WD-40 multifunzione o spray sbloccanti oleosi. Contengono oli minerali idrocarburici conduttivi che distruggono la plastica (POM/policarbonato) degli switch e attraggono polvere, trasformando il contatto in una pasta isolante permanente.
+**A:**</strong> Non usare MAI il classico WD-40 multifunzione o spray sbloccanti oleosi. Contengono oli minerali idrocarburici conduttivi che distruggono la plastica (POM/policarbonato) degli switch e attraggono polvere, trasformando il contatto in una pasta isolante permanente.
 </div>
 
 1. Inserisci la cannuccia di precisione sull'erogatore dello spray.
@@ -134,7 +136,7 @@ A:</strong> Non usare MAI il classico WD-40 multifunzione o spray sbloccanti ole
 
 **Q6.** Fase di asciugatura passiv
 
-a: Attendi non meno di 15-20 minuti prima di alimentare nuovamente la periferica. Il solvente deve evaporare completamente.
+**a:** Attendi non meno di 15-20 minuti prima di alimentare nuovamente la periferica. Il solvente deve evaporare completamente.
 
 ```
         [Cannuccia spray]
@@ -161,7 +163,7 @@ Se il disossidante non risolve l'anomalia, il problema risiede nell'accoppiament
 
 4. Se la tastiera è saldata e lo switch continua a generare chattering persistente, procedi alla dissaldatur
 
-a:
+**a:**
    - Riscalda la piazzola a 330°C con stazione saldante.
    - Aspira lo stagno vecchio con pompetta a vuoto o treccia dissaldante.
    - Sostituisci l'interruttore con uno nuovo dello stesso tipo (es. Gateron/Cherry MX) e risalda con lega Sn99.3Cu0.7 e flussante a base di colofonia. ---

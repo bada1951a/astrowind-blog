@@ -28,6 +28,8 @@ theme: "Cyberpunk Terminal"
 
 
 
+## 1. Emergencia crítica en el trabajo
+
 Eran las 4:55 PM de un viernes. El *jefe de proyectos* tenía que presentar los números del Q3 en diez minutos a la dirección general, y su estación de trabajo decidió hacer un cosplay perfecto de un pisapapeles caro: los ventiladores rugían a tope, las luces RGB parpadeaban con alegría, pero el monitor seguía completamente negro, soltando el maldito aviso de *Sin señal*. El tipo estaba a un segundo de estampar el teclado contra el monitor. Sudor frío, la sala de juntas esperándoles, y yo con cara de payaso intentando averiguar por qué la BIOS ni siquiera hacía el clásico *beep* de arranque.
 
 <div style="border-left: 4px solid #00ffcc; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,255,204,0.05); border-radius: 4px; font-family: monospace;">
@@ -60,7 +62,7 @@ Vamos a dejar los blablablás y a ensuciarnos las manos. Apaga el equipo, descon
 <div style="border-left: 4px solid #00ffcc; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,255,204,0.05); border-radius: 4px; font-family: monospace;">
 Secuencia de comandos para diagnóstico físico en terminal human
 
-a:<br>
+**a:**<br>
 
 1.  shutdown -s -t 0 (Corte total de energía)<br>
 
@@ -89,12 +91,14 @@ Conecta la corriente y enciende. Si da vídeo, entra a Windows y ejecuta el diag
 ```cmd
 Abre el Símbolo del sistema (CMD) como Administrador y ejecut
 
-a:
+**a:**
 mdsched.exe
 ```
 *(Selecciona "Reiniciar ahora y comprobar si existen problemas" para que la herramienta nativa de Windows valide la integridad de los chips de memoria).*
 
 ---
+
+## 4. Advertencias y consejos de un técnico
 
 Expert Warning / Advice: Lo que los tutoriales de YouTube no te dicen
 
@@ -106,15 +110,15 @@ Además, si al encender el equipo escuchas una sinfonía de pitidos continuos (b
 
 ---
 
-## Frequently Asked Questions (FAQ)
+## 5. Preguntas Frecuentes (FAQ)
 
-Q1: ¿Por qué el PC enciende (giran los ventiladores y encienden luces) pero la pantalla sigue negra si el problema es la RAM?  
+**Q1:** ¿Por qué el PC enciende (giran los ventiladores y encienden luces) pero la pantalla sigue negra si el problema es la RAM?  
 *R:* Porque la placa base tiene energía para alimentar los periféricos básicos y ventiladores, pero el procesador no puede ejecutar el código de la BIOS (POST) sin la memoria RAM activa. Sin RAM, el sistema operativo ni siquiera empieza a cargar, por lo que la tarjeta gráfica no recibe la orden de enviar señal de vídeo al monitor.
 
-Q2: ¿Puedo mezclar memorias RAM de diferentes marcas o frecuencias si una falló?  
+**Q2:** ¿Puedo mezclar memorias RAM de diferentes marcas o frecuencias si una falló?  
 *R:* Para probar y salir del paso en una emergencia, sí, el sistema suele arrancar ajustándose a la frecuencia y latencias del módulo más lento. Sin embargo, para entornos de producción estables, es altamente recomendable usar módulos idénticos (mismo kit, frecuencia y latencia) para evitar pantallas azules (*BSOD*) por desincronización del controlador de memoria.
 
-Q3: Limpié los contactos, cambié de slot y sigue sin dar vídeo.
+**Q3:** Limpié los contactos, cambié de slot y sigue sin dar vídeo.
 
 ¿Qué sigue?  
 *R:* Si ya descartaste la RAM, el siguiente sospechoso en la línea de fuego es la fuente de alimentación (que no entrega suficiente voltaje en el riel de 12V para la gráfica o el procesador) o un problema de cortocircuito en los Standoffs (separadores) de la placa base con el chasis. Desconecta todo lo secundario y prueba hacer un *Clear CMOS* para resetear la BIOS a fábrica.

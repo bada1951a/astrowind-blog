@@ -28,6 +28,8 @@ theme: "Deep Ocean Cobalt"
 
 
 
+## 1. Situasi Darurat Kritis di Tempat Kerja
+
 Sebagai staf infrastruktur IT yang mengelola ratusan workstation di gedung perkantoran multi-tenant, kasus monitor eksternal mendadak menampilkan pesan *"No Signal"* atau berkedip hitam (*flickering*) setiap beberapa detik adalah makanan sehari-hari. Masalah ini kerap memuncak pada Senin pagi, terutama setelah sistem operasi mengunduh pembaruan rutin akhir pekan atau ketika laptop baru saja dilepas-pasang dari docking station Type-C/Thunderbolt. 
 
 Ketika pengguna mendapati layar kedua mereka mati, reaksi pertama biasanya menyalahkan kabel HDMI yang longgar atau menganggap monitor rusak total. Namun, dalam lebih dari 80% kasus yang saya tangani di lapangan, sumber masalah utamanya berakar pada kegagalan komunikasi lapisan perangkat lunak grafis: tumpukan driver (*driver stack*) yang korup, kegagalan negosiasi EDID (*Extended Display Identification Data*), serta konflik manajemen daya antara chip grafis terintegrasi (iGPU) dan grafis diskrit (dGPU).
@@ -111,7 +113,7 @@ Jika cache konfigurasi tampilan telah korup, sistem akan terus memuat konfiguras
 
 3. Di dalam folder `GraphicsDrivers`, cari tiga subfolder utam
 
-a:
+**a:**
    * `Configuration`
    * `Connectivity`
    * `ScaleFactors`
@@ -137,7 +139,7 @@ Jika sinyal masih terputus, langkah berikutnya adalah mereset adaptor display da
 
 3. Klik kanan pada kartu grafis Anda (misalny
 
-a: *Intel(R) Iris(R) Xe Graphics* atau *AMD Radeon Graphics*), pilih Properties.
+**a:** *Intel(R) Iris(R) Xe Graphics* atau *AMD Radeon Graphics*), pilih Properties.
 
 4. Masuk ke tab Driver, lalu klik opsiRoll Back Driver jika opsi tersebut aktif (ini berguna jika masalah muncul tepat setelah pembaruan otomatis).
 

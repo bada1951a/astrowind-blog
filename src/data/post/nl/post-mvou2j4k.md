@@ -19,11 +19,9 @@ Toen ik de definitieve map wilde opschonen en een oud conceptbestand wilde weggo
 <strong>Korte noodsituatie:</strong> Zit je vast in een vergelijkbare situatie vlak voor een deadline? Blijf rustig en ga niet onnodig je hele systeem opnieuw opstarten. Vaak blokkeert een onzichtbaar achtergrondproces of een thumbnail-generator de toegang.
 </div>
 
-
-
 ![Tech Troubleshooting Guide](/images/tech-photo/system%20(2).png)
 
-## 2. Root Cause Breakdown
+## 2. Grondige analyse van de hoofdoorzaak
 
 Waarom weigert Windows toch zo hardnekkig om dat ene bestand te verwijderen? In de praktijk van het systeembeheer komen we meestal drie hoofdoorzaken tegen die dit soort blokkades veroorzaken:
 
@@ -33,7 +31,7 @@ Waarom weigert Windows toch zo hardnekkig om dat ene bestand te verwijderen? In 
 
 3. **Netwerkshares of synchronisatieservices:** Omdat ik via tethering werkte, kon het zijn dat OneDrive of Dropbox net op dat moment bezig was met een synchronisatieslag, waardoor het bestand een tijdelijk 'alleen-lezen' of 'in gebruik' attribuut meekreeg van de cloud-client.
 
-## 3. Step-by-Step Resolution
+## 3. Stapsgewijze praktische oplossing
 
 Als je direct actie moet ondernemen, volg dan dit stappenplan om het hardnekkige bestand alsnog te lozen. We beginnen bij de basis en werken toe naar de krachtigste methoden via **Taakbeheer** en de opdrachtprompt.
 
@@ -61,22 +59,22 @@ del /f /q "C:\Pad\Naar\Jouw\Bestand.docx"
 <strong>Waarschuwing bij de opdrachtprompt:</strong> Wees altijd uiterst voorzichtig met het `/f` (force) commando. Zorg ervoor dat je zeker weet dat je het juiste bestand verwijdert, want via de opdrachtprompt passeer je de prullenbak en ben je het bestand direct definitief kwijt.
 </div>
 
-## 4. Expert Advice
+## 4. Belangrijke waarschuwingen van IT-specialisten
 
 Als IT-hardware specialist geef ik je nog een gouden tip mee voor onderweg. Als je vaak met externe schijven, trage verbindingen of mobiele hotspots werkt zoals ik die middag in Amsterdam, kan energiebesparing of een haperende schijfcache ook corrupte file-locks veroorzaken. 
 
 Zorg dat je altijd goed controleert of je USB-apparaten of netwerkschijven correct loskoppelt via **Instellingen** of het systeemvak rechtsonder. Mocht je vaker tegen dit soort problemen aanlopen, overweeg dan om een lichtgewicht en betrouwbare tool zoals *PowerToys File Locksmith* te installeren. Hiermee zie je direct in een oogopslag welke app je bestand gijzelt en kun je dat proces met één klik de nek omdragen.
 
-## 5. Frequently Asked Questions
+## 5. Veelgestelde Vragen (FAQ)
 
-Q: Wat moet ik doen als Taakbeheer het proces niet wil afsluiten?
+**Q:** Wat moet ik doen als Taakbeheer het proces niet wil afsluiten?
 
-A: Soms heeft een proces beheerdersrechten nodig om afgesloten te worden. Open Taakbeheer of de Opdrachtprompt als Administrator, of start je laptop tijdelijk opnieuw op in de Veilige Modus om het hardnekkige bestand te wissen.
+**A:** Soms heeft een proces beheerdersrechten nodig om afgesloten te worden. Open Taakbeheer of de Opdrachtprompt als Administrator, of start je laptop tijdelijk opnieuw op in de Veilige Modus om het hardnekkige bestand te wissen.
 
-Q: Kan ik een bestand ook verwijderen door mijn pc in de Veilige Modus op te starten?
+**Q:** Kan ik een bestand ook verwijderen door mijn pc in de Veilige Modus op te starten?
 
-A: Jazeker. In de Veilige Modus worden alleen de essentiële Windows-stuurprogramma's geladen. Achtergrondprocessen en applicaties van derden starten dan niet op, waardoor vrijwel elk bestand direct vrij is om te worden verwijderd.
+**A:** Jazeker. In de Veilige Modus worden alleen de essentiële Windows-stuurprogramma's geladen. Achtergrondprocessen en applicaties van derden starten dan niet op, waardoor vrijwel elk bestand direct vrij is om te worden verwijderd.
 
-Q: Is het gevaarlijk om de Windows Verkenner zomaar opnieuw te starten?
+**Q:** Is het gevaarlijk om de Windows Verkenner zomaar opnieuw te starten?
 
-A: Nee, dat is volkomen veilig. Het is een standaardbeheerhandeling die je bureaublad en taakbalk ververst zonder dat je openstaande documenten in actieve programma's kwijtraakt (al is het altijd verstandig om je werk tussentijds op te slaan).
+**A:** Nee, dat is volkomen veilig. Het is een standaardbeheerhandeling die je bureaublad en taakbalk ververst zonder dat je openstaande documenten in actieve programma's kwijtraakt (al is het altijd verstandig om je werk tussentijds op te slaan).

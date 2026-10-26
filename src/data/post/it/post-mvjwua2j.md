@@ -28,12 +28,14 @@ theme: "Warm Coffee Latte"
 
 
 
+## 1. Emergenza improvvisa sul posto di lavoro
+
 Erano le undici e mezza del mattino qui al Centro Direzionale di Milano, uno di quei giorni in cui l'aria profuma di caffè macchiato bevuto di fretta e le scadenze sembrano rincorrersi. Sulla mia scrivania, tra fogli di calcolo e monitor secondari, la situazione era incandescente: saette di richieste di supporto si rovesciavano sulla chat aziendale e, per sbrigarmi, avevo appena aperto contemporaneamente cinque diverse applicazioni gestionali, il client di posta, la VPN e una chiamata di riunione urgente. Clicca di qui, trascina di là, ed ecco che il disastro si compie: improvvisamente, il silenzio più assoluto. Dalle cuffie non esce un singolo suono, proprio mentre il capo reparto cerca di connettersi per un riscontro in tempo reale. Il panico sale, la riunione è già avviata e l'icona dell'altoparlante in basso a destra mostra quella maledetta crocetta rossa o, peggio, sembra tutto attivo ma l'audio non si decide a uscire.
 
 <div style="border-left: 4px solid #78350f; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Nota del Sistemist
 
-a:</strong> Non perdere la testa se Windows decide di ammutolirsi proprio durante il carico di lavoro più intenso. Nel 90% dei casi non è un guasto hardware irreparabile, ma un conflitto di driver o una periferica predefinita che è saltata a causa del multitasking spinto.
+**a:**</strong> Non perdere la testa se Windows decide di ammutolirsi proprio durante il carico di lavoro più intenso. Nel 90% dei casi non è un guasto hardware irreparabile, ma un conflitto di driver o una periferica predefinita che è saltata a causa del multitasking spinto.
 </div>
 
 ![Tech Troubleshooting Guide](/images/tech-photo/tech-p%20(21).jpg)
@@ -46,7 +48,7 @@ Prima di metterci a smanettare a casaccio perdendo ore preziose, capiamo cosa è
 
 2. Periferica di output predefinita modificat
 
-a: Windows ha scambiato le cuffie USB o il monitor HDMI con gli altoparlanti integrati del notebook, o viceversa, a causa di una disconnessione millisecondale della porta USB dovuta al sovraccarico energetico.
+**a:** Windows ha scambiato le cuffie USB o il monitor HDMI con gli altoparlanti integrati del notebook, o viceversa, a causa di una disconnessione millisecondale della porta USB dovuta al sovraccarico energetico.
 
 3. Servizi Windows Audio disattivati: Il motore principale che gestisce i flussi sonori si è piantato e necessita di un riavvio forzato.
 
@@ -84,12 +86,12 @@ Domande Frequenti (FAQ)
 
 D: Ho seguito tutti i passaggi ma l'icona dell'audio ha ancora una X rossa e dice "Nessun dispositivo audio installato". Che faccio?
 
-R: Questo è un classico sintomo di blocco temporaneo del chipset della scheda madre dovuto a un picco di corrente sulle porte USB o a un aggiornamento di Windows Update installato a metà. Spegni completamente il PC, stacca il cavo di alimentazione (o tieni premuto il tasto di accensione per 30 secondi se sei su notebook per azzerare i condensatori), riaccendi e controlla di nuovo in [Gestione dispositivi].
+**A.** Questo è un classico sintomo di blocco temporaneo del chipset della scheda madre dovuto a un picco di corrente sulle porte USB o a un aggiornamento di Windows Update installato a metà. Spegni completamente il PC, stacca il cavo di alimentazione (o tieni premuto il tasto di accensione per 30 secondi se sei su notebook per azzerare i condensatori), riaccendi e controlla di nuovo in [Gestione dispositivi].
 
 D: Dopo ogni aggiornamento di Windows 11 perdo l'audio delle casse integrate. Come evito che accada?
 
-R: Gli aggiornamenti cumulativi di Windows spesso sovrascrivono i driver Realtek con versioni generiche Microsoft che funzionano male. La soluzione definitiva è scaricare il pacchetto driver proprietario direttamente dal sito del produttore del tuo PC (Dell, Lenovo, HP, ecc.) e disabilitare temporaneamente l'installazione automatica dei driver tramite Windows Update.
+**A.** Gli aggiornamenti cumulativi di Windows spesso sovrascrivono i driver Realtek con versioni generiche Microsoft che funzionano male. La soluzione definitiva è scaricare il pacchetto driver proprietario direttamente dal sito del produttore del tuo PC (Dell, Lenovo, HP, ecc.) e disabilitare temporaneamente l'installazione automatica dei driver tramite Windows Update.
 
 D: Le cuffie funzionano su YouTube ma muoiono appena apro il software gestionale dell'azienda. Perché?
 
-R: Significa che il software gestionale o la piattaforma di Unified Communication sta monopolizzando l'uso esclusivo della scheda audio. Vai nelle impostazioni avanzate dell'app che causa il blocco e disabilita l'opzione "Consenti alle applicazioni di assumere il controllo esclusivo del dispositivo" nel pannello classico dei suoni (`mmsys.cpl`, tab Proprietà del dispositivo -> Avanzate).
+**A.** Significa che il software gestionale o la piattaforma di Unified Communication sta monopolizzando l'uso esclusivo della scheda audio. Vai nelle impostazioni avanzate dell'app che causa il blocco e disabilita l'opzione "Consenti alle applicazioni di assumere il controllo esclusivo del dispositivo" nel pannello classico dei suoni (`mmsys.cpl`, tab Proprietà del dispositivo -> Avanzate).

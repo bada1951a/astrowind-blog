@@ -28,6 +28,8 @@ theme: "Tokyo Neon Violet"
 
 
 
+## 1. Nagła awaria w miejscu pracy
+
 Wczoraj rano, tuż przed kluczowym audytem stabilności infrastruktury dla naszego zagranicznego klienta we wrocławskim parku technologicznym, mój główny terminal roboczy zaczął wyrzucać krytyczne błędy braku pamięci wirtualnej. Pasek dysku C zaświecił się na złowrogi, krwisty czerwony kolor – zostało równe 420 megabajtów wolnej przestrzeni. Zamiast analizować logi, musiałem w kilka minut opanować kryzys, zanim system zszedłby na kolana w trakcie prezentacji przed zarządem.
 
 Okazało się, że Windows 11 po ostatniej dużej aktualizacji i intensywnych testach środowiskowych zostawił po sobie gigantyczny śmietnik w ukrytych folderach tymczasowych. Jeśli u Ciebie też dysk C pęka w szwach, a nie masz pojęcia, co bezpiecznie skasować, oto prosty, sprawdzony plan ratunkowy.
@@ -35,7 +37,7 @@ Okazało się, że Windows 11 po ostatniej dużej aktualizacji i intensywnych te
 <div style="border-left: 4px solid #8b5cf6; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Wskazówka ekspert
 
-a:</strong> Zanim cokolwiek skasujesz ręcznie z katalogów systemowych, upewnij się, że masz wyłączoną hibernację, jeśli z niej nie korzystasz – komenda <code>powercfg /hibernate off</code> potrafi od ręki uwolnić tyle gigabajtów, ile wynosi Twoja pamięć RAM.
+**a:**</strong> Zanim cokolwiek skasujesz ręcznie z katalogów systemowych, upewnij się, że masz wyłączoną hibernację, jeśli z niej nie korzystasz – komenda <code>powercfg /hibernate off</code> potrafi od ręki uwolnić tyle gigabajtów, ile wynosi Twoja pamięć RAM.
 </div>
 
 Gdzie ucieka miejsce? Główne źródła problemu na dysku C
@@ -60,7 +62,7 @@ Często instalatory programów zostawiają śmieci w folderach użytkownika. - W
 - Zaznacz wszystko (Ctrl + A) i wciśnijShift + Delete (by ominąć Kosz).
 - *Uwag
 
-a:* Jeśli wyskoczy komunikat, że plik jest aktualnie używany przez inny program, po prostu kliknij "Pomiń" dla tych konkretnych plików.
+**a:*** Jeśli wyskoczy komunikat, że plik jest aktualnie używany przez inny program, po prostu kliknij "Pomiń" dla tych konkretnych plików.
 - Następnie powtórz operację, wpisując w oknie Uruchom zwykłe `temp` (bez procentów) i wyczyść ten folder jako administrator.
 
 3. Oczyszczanie dysku z uprawnieniami administratora

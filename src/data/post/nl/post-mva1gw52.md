@@ -28,6 +28,8 @@ theme: "Warm Coffee Latte"
 
 
 
+## 1. Noodsituatie op de werkvloer
+
 Het was half drie op een drukke dinsdagmiddag op onze tech-campus in Eindhoven. Terwijl ik midden in een complexe troubleshoot-sessie zat voor een lokale partner, plofte er een paniekerig Slack-bericht binnen: een van onze developers kon geen code meer pushen omdat haar Windows 11 C-schijfklokje op rood stond—0 bytes vrije ruimte over. Het systeem liep vast, projectbestanden wilden niet opslaan en de ventilatoren loeiden als een opstijgende KLM-Boeing. Een acute performance-crisis die we direct moesten oplossen zonder belangrijke data te verliezen.
 
 <div style="border-left: 4px solid #78350f; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">

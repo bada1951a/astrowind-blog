@@ -28,6 +28,8 @@ theme: "Retro Monokai"
 
 
 
+## 1. Situasi Darurat Kritis di Tempat Kerja
+
 <div style="border-left: 4px solid #a6e22e; padding: 12px 16px; margin: 20px 0; background-color: #272822; color: #f8f8f2; border-radius: 4px; font-family: 'Courier New', Courier, monospace;">
 [08:45:12] SYSTEM_ALERT: CPU Load 98% | RAM Usage 95% | User Panic Level: MAXIMUM<br>
 [08:45:18] LOG: "Mas, laptop gue stuck di logo Windows! Padahal 5 menit lagi mau meeting sama client VIP!"<br>
@@ -40,7 +42,7 @@ Pernah ngalamin nggak? Pagi-pagi dateng ke kantor, pas mau buka file presentasi 
 
 Begitu gue pegang itu laptop dan buka Task Manager, *jebret!* Keliatan banget penyebab utamany
 
-a: ada 45 aplikasi, dari mulai Steam, Epic Games, Spotify, Discord, sampe bloatware bawaan vendor laptop, jalan serentak begitu tombol power ditekan. Ini bukan lagi *booting*, tapi ritual pemanggilan arwah!
+**a:** ada 45 aplikasi, dari mulai Steam, Epic Games, Spotify, Discord, sampe bloatware bawaan vendor laptop, jalan serentak begitu tombol power ditekan. Ini bukan lagi *booting*, tapi ritual pemanggilan arwah!
 
 <div style="border: 1px dashed #a6e22e; padding: 15px; margin: 20px 0; background-color: #1e1e1e; color: #a6e22e; border-radius: 4px;">
 <strong>DEBUGGING_NOTE:</strong> Jangan langsung vonis hardware rusak atau SSD minta ganti baru. Seringkali masalah utamanya ada di barisan "antrian siluman" yang numpuk pas sistem operasi nyala. </div>
@@ -105,13 +107,15 @@ Kadang masalah booting lemot bukan cuma dari software startup, tapi fisik HDD/SS
 
 ---
 
+## 4. Tips & Peringatan Penting Teknisi IT
+
 Expert Warning & Pro Tips
 
 > Catatan dari Lapangan: Jangan pernah percaya klaim aplikasi "PC Booster" atau "RAM Cleaner" gratisan di internet. 90% dari mereka justru adalah *bloatware* atau bahkan *malware* berkedok optimizer yang bikin RAM lu malah abis dipake iklan mereka sendiri. Cukup optimasi manual lewat sistem bawaan Windows secara berkala tiap 3 bulan sekali.
 
 ---
 
-## Frequently Asked Questions (FAQ)
+## 5. Pertanyaan yang Sering Diajukan (FAQ)
 
 1. Apakah mendisable aplikasi di Startup bakal bikin aplikasinya ke-hapus?
 
@@ -119,7 +123,7 @@ Nggak sama sekali. *Disable* cuma berarti aplikasi tersebut nggak bakal otomatis
 
 2. Kenapa laptop gue masih lemot padahal startup udah bersih semua? Kalau startup udah bersih tapi booting tetap memakan waktu lebih dari 2-3 menit, besar kemungkinan media penyimpanan lu masih menggunakan Hard Disk Drive (HDD) jadul, atau kesehatan (Health) SSD lu udah drop di bawah 50%. Solusi permanennya adalah migrasi sistem operasi ke SSD NVMe/SAT
 
-A.
+**A.**
 
 3. Amankah mematikan semua service non-Microsoft di msconfig?
 

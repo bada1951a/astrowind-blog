@@ -19,6 +19,8 @@ theme: "Pastel Lavender Tech"
 
 
 
+## 1. Nagła awaria w miejscu pracy
+
 1. Ostatnia deska ratunku w środku korporacyjnego chaosu
 
 Siedzę przy biurku w naszym warszawskim biurowcu, a na wewnętrznym komunikatorze pali się czerwona lampka za czerwoną. Trwa gorący okres raportowania, a ja mam na ekranie otwartych dokładnie pięć różnych systemów ERP, arkusze kalkulacyjne, panel administracyjny i okno czatu z zirytowanym menedżerem projektu. W tym momencie potrzebuję na szybko zrobić zrzut ekranu fragmentu kodu i błędu, żeby wysłać go do zespołu wsparcia. Wciskam **Win + Shift + S**, odruchowo czekając na zaciemnienie ekranu i paletę wycinania. I... absolutnie nic. Ekran ani drgnie, żadna ikonka się nie pojawia, a ja zostaję z palcem na klawiaturze i rosnącą frustracją.
@@ -84,14 +86,14 @@ Podczas intensywnej pracy wielozadaniowej łatwo nieświadomie wcisnąć kombina
 
 5. Często zadawane pytania (FAQ)
 
-Q: Co zrobić, jeśli skrót Win+Shift+S nadal nie działa po zresetowaniu aplikacji w Ustawieniach?
+**Q:** Co zrobić, jeśli skrót Win+Shift+S nadal nie działa po zresetowaniu aplikacji w Ustawieniach?
 
-A: W takiej sytuacji najskuteczniejszą metodą jest ponowna instalacja pakietu aplikacji przez PowerShell. Otwórz terminal jako administrator i wpisz odpowiednią komendę rejestrującą aplikacje na nowo lub skorzystaj ze sklepu Microsoft Store, aby zaktualizować Narzędzie wycinanie.
+**A:** W takiej sytuacji najskuteczniejszą metodą jest ponowna instalacja pakietu aplikacji przez PowerShell. Otwórz terminal jako administrator i wpisz odpowiednią komendę rejestrującą aplikacje na nowo lub skorzystaj ze sklepu Microsoft Store, aby zaktualizować Narzędzie wycinanie.
 
-Q: Czy wycinki gdzieś się zapisują, nawet jeśli nie pojawia się powiadomienie?
+**Q:** Czy wycinki gdzieś się zapisują, nawet jeśli nie pojawia się powiadomienie?
 
-A: Tak, domyślnie każdy zrzut ekranu wykonany tym skrótem trafia bezpośrednio do schowka systemowego. Możesz go wkleić (Ctrl + V) wklejając np. do Painta lub okna czatu, nawet jeśli miniatura nie wyświetliła się w prawym dolnym rogu ekranu.
+**A:** Tak, domyślnie każdy zrzut ekranu wykonany tym skrótem trafia bezpośrednio do schowka systemowego. Możesz go wkleić (Ctrl + V) wklejając np. do Painta lub okna czatu, nawet jeśli miniatura nie wyświetliła się w prawym dolnym rogu ekranu.
 
-Q: Czy tryb oszczędzania energii może blokować Narzędzie wycinanie?
+**Q:** Czy tryb oszczędzania energii może blokować Narzędzie wycinanie?
 
-A: Rzadko, ale agresywne tryby oszczędzania energii lub włączony tryb "Skupienia" mogą wyciszać powiadomienia o zrobionym zrzucie, przez co użytkownik ma wrażenie, że funkcja w ogóle nie zadziałała. Warto sprawdzić ustawienia powiadomień w centrum akcji.
+**A:** Rzadko, ale agresywne tryby oszczędzania energii lub włączony tryb "Skupienia" mogą wyciszać powiadomienia o zrobionym zrzucie, przez co użytkownik ma wrażenie, że funkcja w ogóle nie zadziałała. Warto sprawdzić ustawienia powiadomień w centrum akcji.

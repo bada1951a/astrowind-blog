@@ -28,9 +28,11 @@ theme: "Sunset Horizon Coral"
 
 
 
+## 1. Nagła awaria w miejscu pracy
+
 Jako inżynier wsparcia IT w środowisku korporacyjnym widziałem już setki peryferiów skazanych na przedwczesną utylizację. W zeszły piątek na mój stół warsztatowy trafiła klawiatura jednego z naszych senior developerów – customowy mechanik na przełącznikach Gateron Yellow, w którym klawisze `W` oraz `E` naprzemiennie gubiły wciśnięcia albo generowały irytujący podwójny klik (*chattering*). Zamiast wpisać prostą komendę w terminalu, system rejestrował `wwweee`. Użytkownik był przekonany, że kontroler na płytce PCB uległ uszkodzeniu, a sprzęt nadaje się wyłącznie do kosza. Rzeczywistość w 90% takich przypadków jest znacznie bardziej prozaiczn
 
-a: zanieczyszczenia mikroskopowe, utlenienie styków lub chwilowa utrata elastyczności blaszki kontaktowej wewnątrz samego switcha. Zanim wydasz kilkaset złotych na nowy zestaw przełączników lub nową klawiaturę, możesz przeprowadzić skuteczną regenerację w ramach weekendowego serwisu DIY. Poniżej przedstawiam sprawdzoną w bojach procedurę czyszczenia i chemicznej rewitalizacji przełączników mechanicznych.
+**a:** zanieczyszczenia mikroskopowe, utlenienie styków lub chwilowa utrata elastyczności blaszki kontaktowej wewnątrz samego switcha. Zanim wydasz kilkaset złotych na nowy zestaw przełączników lub nową klawiaturę, możesz przeprowadzić skuteczną regenerację w ramach weekendowego serwisu DIY. Poniżej przedstawiam sprawdzoną w bojach procedurę czyszczenia i chemicznej rewitalizacji przełączników mechanicznych.
 
 ---
 
@@ -43,7 +45,7 @@ a: zanieczyszczenia mikroskopowe, utlenienie styków lub chwilowa utrata elastyc
     • <strong>Ściągacze (Pullery):</strong> druciany keycap puller oraz stalowy switch puller (jeśli masz PCB hot-swap).<br>
     • <strong>Chemia techniczn
 
-a:</strong> dedykowany preparat do regeneracji styków elektrycznych (np. <em>Kontakt 60</em> lub <em>Kontakt S</em> do czyszczenia oraz <em>Kontakt IPA</em> lub <em>Kontakt U</em> do płukania). <u>Nigdy zwykłe WD-40!</u><br>
+**a:**</strong> dedykowany preparat do regeneracji styków elektrycznych (np. <em>Kontakt 60</em> lub <em>Kontakt S</em> do czyszczenia oraz <em>Kontakt IPA</em> lub <em>Kontakt U</em> do płukania). <u>Nigdy zwykłe WD-40!</u><br>
     • <strong>Aplikatory:</strong> precyzyjna rurka do aerozolu lub medyczna strzykawka 2 ml z tępą igłą 0.8 mm.<br>
     • <strong>Ochrona i czyszczenie:</strong> sprężone powietrze, pędzelek antystatyczny ESD oraz ściereczka z mikrofibry.
   </p>
@@ -87,7 +89,7 @@ Zanim rozbierzesz klawiaturę, musimy wykluczyć usterki po stronie warstwy syst
 Następnie uruchom przeglądarkowy tester klawiatury (np. *Keyboard Event Viewer* lub *Keyboard Chatter Strip*) albo otwórz Wiersz polecenia (`cmd.exe`) i wykonaj serię 50 szybkich, powtarzalnych uderzeń w felerny klawisz. Zwróć uwagę na czas powrotu (*bounce time*). Czas rejestracji poniżej 15–20 ms z wielokrotnym wpisem jednoznacznie wskazuje na usterkę sprzętową switcha. <div style="border-left: 4px solid #f97316; padding: 14px 18px; margin: 20px 0; background-color: rgba(249, 115, 22, 0.05); border-radius: 4px;">
   <strong style="color: #f97316;">Wskazówka serwisow
 
-a:</strong> Przed rozpoczęciem jakichkolwiek prac fizycznych bezwzględnie <strong>odłącz przewód USB</strong> klawiatury od komputera, a w modelach bezprzewodowych wyłącz przełącznik zasilania bateryjnego na spodzie obudowy. Płytka drukowana nie może znajdować się pod napięciem podczas aplikacji chemii.
+**a:**</strong> Przed rozpoczęciem jakichkolwiek prac fizycznych bezwzględnie <strong>odłącz przewód USB</strong> klawiatury od komputera, a w modelach bezprzewodowych wyłącz przełącznik zasilania bateryjnego na spodzie obudowy. Płytka drukowana nie może znajdować się pod napięciem podczas aplikacji chemii.
 </div>
 
 Krok 2: Przygotowanie przełącznika (Hot-swap vs. Switch lutowany)
@@ -104,17 +106,17 @@ Do tego celu najlepiej sprawdza się schemat dwuetapowy: preparat rozpuszczając
 
 1. Wciśnięcie trzpieni
 
-a: Wciśnij plastikowy trzonek (*stem*) do oporu w dół za pomocą małego wkrętaka lub pęsety, odsłaniając szczelinę prowadnicy, pod którą ukryte są miedziane blaszki.
+**a:** Wciśnij plastikowy trzonek (*stem*) do oporu w dół za pomocą małego wkrętaka lub pęsety, odsłaniając szczelinę prowadnicy, pod którą ukryte są miedziane blaszki.
 
 2. Precyzyjny wtrysk: Załóż cienką rurkę na zawór puszki preparatu do czyszczenia styków. Przystaw końcówkę do krawędzi wciśniętego trzpienia po stronie, gdzie znajdują się blaszki (zazwyczaj strona z logo producenta switcha).
 
 3. Mikrodawk
 
-a:Zaaplikuj dosłownieułamek sekundy aerozolu – wystarczy jedna mikrokropla. Zbyt duża ilość chemii wypłucze fabryczny smar prowadnic i zaleje wnętrze obudowy.
+**a:**Zaaplikuj dosłownieułamek sekundy aerozolu – wystarczy jedna mikrokropla. Zbyt duża ilość chemii wypłucze fabryczny smar prowadnic i zaleje wnętrze obudowy.
 
 4. Aktywacja mechaniczn
 
-a: Natychmiast po wstrzyknięciu środka zacznij energicznie i rytmicznie wciskać trzonek klawisza (około 60–80 razy w ciągu 30 sekund). Ruch ten powoduje mechaniczne przetarcie blaszek w obecności rozpuszczalnika, zrywając patynę i emulgując brud.
+**a:** Natychmiast po wstrzyknięciu środka zacznij energicznie i rytmicznie wciskać trzonek klawisza (około 60–80 razy w ciągu 30 sekund). Ruch ten powoduje mechaniczne przetarcie blaszek w obecności rozpuszczalnika, zrywając patynę i emulgując brud.
 
 5. Wypłukanie (opcjonalnie, ale zalecane): Po 5 minutach odparowania powtórz procedurę z użyciem *Kontaktu U* lub czystego alkoholu izopropylowego w celu usunięcia chemicznie agresywnych resztek rozpuszczalnika siarczków.
 
@@ -160,12 +162,12 @@ W poniższej tabeli zestawiłem parametry pracy klawiatury testowej przed wykona
 
 Ostrzeżenia ekspert
 
-a: Czego pod żadnym pozorem nie wolno robić
+**a:** Czego pod żadnym pozorem nie wolno robić
 
 <div style="border-left: 4px solid #f97316; padding: 14px 18px; margin: 20px 0; background-color: rgba(249, 115, 22, 0.05); border-radius: 4px;">
   <strong style="color: #f97316;">UWAG
 
-A: Zwykłe WD-40 niszczy klawiatury mechaniczne!</strong>
+**A:** Zwykłe WD-40 niszczy klawiatury mechaniczne!</strong>
   <p style="margin: 6px 0 0 0; font-size: 14px; line-height: 1.5;">
     Najczęstszy błąd domorosłych serwisantów to użycie klasycznego, uniwersalnego preparatu <strong>WD-40 Multi-Use</strong>. Zawiera on ciężkie oleje mineralne oraz destylaty naftowe. Płyn ten:
     <br>1. <strong>Rozpuszcza i deformuje tworzywa sztuczne</strong> (szczególnie poliwęglan i POM, z których buduje się obudowy switchy).

@@ -28,6 +28,8 @@ theme: "Sandstone Desert Minimal"
 
 
 
+## 1. Situation d'urgence critique au bureau
+
 Vendredi, 17h45. Le compte à rebours est lancé dans notre open space de La Défense, et l'ambiance est électrique. Dans 15 minutes, c'est le week-end, mais surtout, je dois absolument envoyer le rapport de clôture hebdomadaire final par e-mail à notre directeur et aux membres du comité de direction. Pour couronner le tout, une dernière vérification vidéo s'impose avec mon chef d'équipe sur un point crucial du dossier. Je clique sur la vidéo, et là... c'est le drame absolu. Un silence de mort. Pas un seul son ne sort de mes haut-parleurs, et mon casque sans fil refuse désespérément de diffuser la moindre note. La petite icône de haut-parleur dans la barre des tâches affiche une fichue croix rouge, et mes mains commencent à transpirer. Le stress monte en flèche.
 
 <div style="border-left: 4px solid #a16207; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
@@ -35,6 +37,8 @@ Vendredi, 17h45. Le compte à rebours est lancé dans notre open space de La Dé
 </div>
 
 ![Tech Troubleshooting Guide](/images/tech-photo/tech-photos%20(26).jpg)
+
+## 2. Analyse des causes principales de l'erreur
 
 Pourquoi votre PC Windows 11 est-il soudainement muet ?
 
@@ -47,6 +51,8 @@ En tant qu'ingénieur support informatique, je vois ce genre de panne survenir a
 3. Les services Windows audio suspendus : Le service "Windows Audio" ou son outil de point de terminaison s'est arrêté de tourner en arrière-plan.
 
 ---
+
+## 3. Guide de résolution étape par étape
 
 Guide de résolution étape par étape
 
@@ -101,11 +107,10 @@ Avant de tripatouiller vos composants ou de jeter votre casque par la fenêtre, 
 * Méfiez-vous des logiciels tiers : Des applications comme Nahimic, Dolby Atmos ou Realtek Audio Control installées par les fabricants bloquent parfois le flux audio si elles entrent en conflit avec les dernières mises à jour de Windows 11. En cas de doute, désactivez leurs effets dans leurs applications dédiées.
 
 ---
+## 5. Foire Aux Questions (FAQ)
 
-Foire Aux Questions (FAQ)
+**Q1 :** L'icône de son a une croix rouge et affiche "Aucun périphérique de sortie audio n'est installé". Que faire ? C'est le signe classique d'un pilote manquant ou désactivé suite à une mise à jour. Rendez-vous immédiatement dans leGestionnaire de périphériques, faites un clic droit sur le nom de votre PC tout en haut de la liste, et cliquez surRechercher les modifications sur le matériel. Si cela ne suffit pas, téléchargez le pilote audio officiel depuis le site du fabricant de votre PC (Dell, HP, Lenovo).
 
-Q1 : L'icône de son a une croix rouge et affiche "Aucun périphérique de sortie audio n'est installé". Que faire ? C'est le signe classique d'un pilote manquant ou désactivé suite à une mise à jour. Rendez-vous immédiatement dans leGestionnaire de périphériques, faites un clic droit sur le nom de votre PC tout en haut de la liste, et cliquez surRechercher les modifications sur le matériel. Si cela ne suffit pas, téléchargez le pilote audio officiel depuis le site du fabricant de votre PC (Dell, HP, Lenovo).
+**Q2 :** Le son fonctionne sur YouTube, mais mes applications de visioconférence (Teams, Zoom) restent muettes. Pourquoi ? Windows 11 gère les flux audio par application. Ouvrez lesParamètresde Windows (Paramètres > Système > Son > Volume des applications et appareils), ou les paramètres internes de Teams/Zoom, et vérifiez que le microphone et le haut-parleur sélectionnés correspondent bien à votre matériel actif et non à un périphérique virtuel ou débranché.
 
-Q2 : Le son fonctionne sur YouTube, mais mes applications de visioconférence (Teams, Zoom) restent muettes. Pourquoi ? Windows 11 gère les flux audio par application. Ouvrez lesParamètresde Windows (Paramètres > Système > Son > Volume des applications et appareils), ou les paramètres internes de Teams/Zoom, et vérifiez que le microphone et le haut-parleur sélectionnés correspondent bien à votre matériel actif et non à un périphérique virtuel ou débranché.
-
-Q3 : Est-ce qu'une simple mise à jour de Windows Update peut casser l'audio ? Oui, c'est malheureusement fréquent. Microsoft pousse parfois des pilotes génériques qui écrasent les configurations constructeur spécifiques. Si votre son a disparu subitement après un redémarrage matinal, allez dansParamètres > Windows Update > Historique des mises à jour, et vérifiez si un correctif de pilote audio n'a pas été appliqué récemment. Vous pourrez alors choisir de rétrograder le pilote depuis leGestionnaire de périphériques.
+**Q3 :** Est-ce qu'une simple mise à jour de Windows Update peut casser l'audio ? Oui, c'est malheureusement fréquent. Microsoft pousse parfois des pilotes génériques qui écrasent les configurations constructeur spécifiques. Si votre son a disparu subitement après un redémarrage matinal, allez dansParamètres > Windows Update > Historique des mises à jour, et vérifiez si un correctif de pilote audio n'a pas été appliqué récemment. Vous pourrez alors choisir de rétrograder le pilote depuis leGestionnaire de périphériques.

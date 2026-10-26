@@ -28,9 +28,11 @@ theme: "Deep Indigo System"
 
 
 
+## 1. Nagła awaria w miejscu pracy
+
 Godzina 18:40, a we wrocławskim parku technologicznym atmosfera robi się gęsta. Jutro rano mamy kluczowy audyt stabilności infrastruktury przed wejściem zewnętrznego klienta, a stacja robocza lead architekta nagle sypie się do niebieskiego ekranu. Na monitorze dumnie widnieje kod błędu: `IRQL_NOT_LESS_OR_EQUAL` czyli klasyczny 0x0000000
 
-a. Serce na chwilę zamiera, bo reset komputera pomagał tylko na dokładnie pięć minut pracy pod obciążeniem. 
+**a.** Serce na chwilę zamiera, bo reset komputera pomagał tylko na dokładnie pięć minut pracy pod obciążeniem. 
 
 Zamiast panikować i stawiać system od nowa, podwinąłem rękawy, odłączyłem zbędne peryferia i odpaliłem procedurę ratunkową. Poniżej opisuję krok po kroku, jak szybko zidentyfikować, czy winny jest niestabilny profil XMP na kościach RAM, czy może świeża aktualizacja sterownika kontrolera dysków.
 
@@ -86,7 +88,7 @@ Jeśli system pozwala na uruchomienie w trybie awaryjnym (Safe Mode), czas na co
 <div style="border-left: 4px solid #4338ca; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Wskazówka architekt
 
-a:</strong> Jeśli przycisk cofania jest nieaktywny, przejdź do wiersza poleceń uruchomionego jako Administrator (Terminal) i wpisz komendę: <code>sfc /scannow</code>, a zaraz potem <code>DISM /Online /Cleanup-Image /RestoreHealth</code>. Pomoże to naprawić ewentualne uszkodzenia plikowe w warstwie WinSxS.
+**a:**</strong> Jeśli przycisk cofania jest nieaktywny, przejdź do wiersza poleceń uruchomionego jako Administrator (Terminal) i wpisz komendę: <code>sfc /scannow</code>, a zaraz potem <code>DISM /Online /Cleanup-Image /RestoreHealth</code>. Pomoże to naprawić ewentualne uszkodzenia plikowe w warstwie WinSxS.
 </div>
 
 ---
@@ -95,7 +97,7 @@ Ważne ostrzeżenia i dobre praktyki
 
 * Unikaj "magicznych" programów do aktualizacji sterowników: Narzędzia typu Driver Booster to najczęstsza przyczyna błędów 0x0000000
 
-a. Instalują one ogólne paczki zamiast dedykowanych sterowników od producenta płyty głównej.
+**a.** Instalują one ogólne paczki zamiast dedykowanych sterowników od producenta płyty głównej.
 * Kontroluj wersje BIOS-u: Czasami najnowsza aktualizacja UEFI wprowadza poprawki mikrokodu CPU, które rozwiązują problemy z adresowaniem pamięci wywołujące ten konkretny BSoD.
 * Kopia zapasowa rejestru: Przed każdą większą zmianą w sterownikach kluczowych komponentów wykonaj punkt przywracania systemu (`sysdm.cpl` -> Ochrona systemu).
 

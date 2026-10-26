@@ -28,6 +28,8 @@ theme: "Graphite Technical Paper"
 
 
 
+## 1. Tình huống sự cố khẩn cấp tại văn phòng
+
 Đồng hồ góc phải màn hình nhảy đúng 15:45, chỉ còn 15 phút nữa là đến hạn chót nộp báo cáo doanh thu quý cho sếp tổng tại văn phòng trung tâm Quận 1, TP.HCM. Đột nhiên, chiếc máy tính Windows 11 đời mới của tôi khựng lại. Chuột cứng ngắc, bàn phím bấm không ăn, màn hình đứng hình ở một slide PowerPoint dang dở. Khởi động nóng bằng nút nguồn, vào lại chưa đầy 3 phút sau lại tiếp tục đóng băng hoàn toàn mà không kịp báo lỗi màn hình xanh (BSOD). Mồ hôi túa ra như tắm giữa phòng máy lạnh, khách hàng và cấp trên đang giục dồn dập qua tin nhắn.
 
 Trước đây, khi gặp tình trạng này, phản xạ đầu tiên của dân văn phòng lẫn nhiều anh em làm IT non tay là cài lại toàn bộ Windows, hoặc tháo tung thùng máy ra phủi bụi, cắm lại thanh RAM cho có lệ. Nhưng cách làm mò mẫm đó ngốn cả tiếng đồng hồ quý giá và thường chẳng giải quyết được tận gốc vấn đề, để rồi ngày mai lỗi cũ lại tái diễn.
@@ -39,7 +41,7 @@ Thực tế, Windows 11 lưu giữ toàn bộ "lý lịch tử vong" của hệ 
 <div style="border-left: 4px solid #475569; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Lưu ý từ chuyên gi
 
-a:</strong> Lỗi đơ cứng ngẫu nhiên (random freezing) trên Windows 11 thường do xung đột driver phần cứng, ổ cứng SSD sắp hỏng hoặc thiết lập nguồn điện (Power Plan) không tương thích. Đừng vội mang máy đi sửa phần cứng khi chưa kiểm tra nhật ký hệ thống.
+**a:**</strong> Lỗi đơ cứng ngẫu nhiên (random freezing) trên Windows 11 thường do xung đột driver phần cứng, ổ cứng SSD sắp hỏng hoặc thiết lập nguồn điện (Power Plan) không tương thích. Đừng vội mang máy đi sửa phần cứng khi chưa kiểm tra nhật ký hệ thống.
 </div>
 
 ---

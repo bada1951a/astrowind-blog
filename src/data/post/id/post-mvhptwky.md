@@ -28,6 +28,8 @@ theme: "Retro Monokai"
 
 
 
+## 1. Situasi Darurat Kritis di Tempat Kerja
+
 Jam menunjukkan pukul 16.45 WIB di salah satu gedung perkantoran kawasan Sudirman, Jakarta. Tenggat waktu (deadline) laporan keuangan tahunan tinggal 15 menit lagi, dan suasana di kubikal saya mendadak mencekam. PC salah satu manajer keuangan mengalami crash mendadak akibat pembaruan sistem yang gagal. Setelah melakukan force restart dan sistem berhasil menyala kembali, sang manajer panik bukan kepalang karena kebiasaan kerjanya terganggu. Menu klik kanan (right-click context menu) di Windows 11 berubah total menjadi tampilan modern minimalis yang menyembunyikan opsi "Show more options" atau tombol pintas lama seperti WinRAR, 7-Zip, dan pengaturan driver penting.
 
 Bayangkan betapa frustrasinya harus mengklik dua kali hanya untuk melakukan ekstrak file atau scan antivirus di detik-detik krusial menjelang pengumpulan laporan. Waktu terbuang percuma untuk melakukan trial-and-error mengklik menu tersembunyi yang tidak responsif di bawah tekanan tenggat waktu yang begitu ketat.
@@ -96,6 +98,6 @@ Pertanyaan yang Sempurna (FAQ)
 
 Sangat mudah. Buka kembali Command Prompt sebagai Administrator, lalu ketik perintah berikut untuk menghapus kunciny
 
-a:
+**a:**
 `reg.exe delete "HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}" /f`
 Setelah itu, restart Windows Explorer Anda.

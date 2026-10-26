@@ -28,6 +28,8 @@ theme: "Nordic Clean Ice"
 
 
 
+## 1. Workplace Emergency Situation
+
 > *"A misplaced semicolon will break your build, but an intermittent switch leaf will break your sanity. In production environments, deterministic hardware input is not an amenity—it is an absolute operational baseline."*
 
 Late last winter, during an urgent infrastructure migration on an internal Kubernetes cluster, my terminal suddenly spat out syntax errors during a critical namespace eviction. My custom 75% hot-swap board—built with tuned linear switches—had begun randomly dropping strokes on the `T` key and double-registering the `E` key (`eerror: unexpeected token`). 
@@ -172,6 +174,8 @@ If the board is soldered, you can open the switch housing *in situ* using switch
 
 ---
 
+## 4. Professional Engineer Precautions & Tips
+
 Expert Warning: Protecting Your Hardware
 
 ```
@@ -189,7 +193,7 @@ Expert Warning: Protecting Your Hardware
 
 ---
 
-## Frequently Asked Questions
+## 5. Frequently Asked Questions (FAQ)
 
 1. Can I use 99% Isopropyl Alcohol (IPA) instead of aerosol contact cleaner?
 While 99% IPA is safe on most cured electronics, it is not ideal for switch cleaning. IPA takes significantly longer to evaporate inside an enclosed switch housing, and it lacks the propellant force needed to actively blast away microscopic debris from between the contact points. 

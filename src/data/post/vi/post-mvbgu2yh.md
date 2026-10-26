@@ -28,6 +28,8 @@ theme: "Matte Black stealth"
 
 
 
+## 1. Tình huống sự cố khẩn cấp tại văn phòng
+
 Sáng nay tại văn phòng công ty công nghệ ở quận Cầu Giấy, Hà Nội, cú đấm thép của deadline dự án vừa dội xuống thì chiếc laptop cá nhân của tôi dở chứng. Thanh Taskbar trên Windows 11 bỗng nhiên tê liệt hoàn toàn. Click vào nút Start không phản hồi, icon các ứng dụng ghim sẵn đứng im như tượng đá, thậm chí đồng hồ góc phải cũng chết cứng. Cả một hệ thống đang cần xử lý gấp các yêu cầu tối ưu hiệu năng mà ngay cả việc mở Task Manager bằng chuột phải cũng bất khả thi.
 
 Nếu bạn cũng đang phát bực với lỗi kinh điển này của Windows 11, đừng vội khởi động lại máy hay cài lại Win. Dưới đây là quy trình xử lý thực chiến từ góc nhìn của một kỹ sư hệ thống.
@@ -79,7 +81,7 @@ Bước 3: Gỡ bỏ bản cập nhật Windows lỗi (Windows Update Troublesho
 
 Nhiều anh em kỹ thuật tại văn phòng sau khi dính update KB mới nhất của Microsoft đã than trời vì Taskbar lăn ra chết. Nếu lỗi xuất hiện ngay sau khi máy tự động cập nhật, bạn cần gỡ nó r
 
-a:
+**a:**
 
 1. Mở Cài đặt bằng phím tắt Windows + I.
 
@@ -98,7 +100,7 @@ Lời khuyên từ chuyên gia IT để phòng ngừa tái phát
 * Hạn chế dùng các phần mềm tinh chỉnh giao diện (Customization Tools): Các tool giả lập Taskbar cũ hoặc đổi màu sắc can thiệp sâu vào mã nguồn mở của Windows 11 thường không tương thích tốt với các bản vá bảo mật hàng tháng của Microsoft.
 * Luôn cập nhật Driver Card đồ họ
 
-a: Nhiều người bất ngờ khi biết Driver GPU quá cũ cũng gây ra hiện tượng giật lag, đơ cứng thanh Taskbar vì Windows 11 sử dụng phần cứng rất nhiều để render giao diện đồ họa. * Tạo điểm khôi phục (System Restore Point): Trước khi thử nghiệm các bản tweak hệ thống hoặc cài phần mềm lạ, hãy tạo sẵn một điểm backup để có thể quay đầu bất cứ lúc nào.
+**a:** Nhiều người bất ngờ khi biết Driver GPU quá cũ cũng gây ra hiện tượng giật lag, đơ cứng thanh Taskbar vì Windows 11 sử dụng phần cứng rất nhiều để render giao diện đồ họa. * Tạo điểm khôi phục (System Restore Point): Trước khi thử nghiệm các bản tweak hệ thống hoặc cài phần mềm lạ, hãy tạo sẵn một điểm backup để có thể quay đầu bất cứ lúc nào.
 
 <div style="border-left: 4px solid #ffffff; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Ghi nhớ:</strong> Đa phần 90% lỗi Taskbar trên Windows 11 đều được giải quyết gọn gàng chỉ bằng Bước 1 hoặc Bước 2. Đừng vội vàng cài lại Win tốn thời gian!

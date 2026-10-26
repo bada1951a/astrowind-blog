@@ -28,6 +28,8 @@ theme: "Cyberpunk Terminal"
 
 
 
+## 1. Situation d'urgence critique au bureau
+
 Il est 17h55, un vendredi de clôture trimestrielle dans notre open space de La Défense. Le rapport financier consolidé doit partir à la direction générale avant 18h30. Soudain, mon poste de travail se fige net. Le ventilateur du processeur s'emballe au maximum au point de faire un bruit de turbine d'avion, l'écran devient totalement unresponsive, et la souris saccade horriblement. Je regarde le Gestionnaire des tâches : le "Processus système" (System) et `ntoskrnl.exe` s'accaparent 100% de la puissance du CPU. Impossible de cliquer sur quoi que ce soit, les fichiers Excel tournent en arrière-plan sans sauvegarder. La panique totale s'installe.
 
 Ce genre de panne soudaine, je l'ai vue cent fois sur les bureaux de mes collègues. Avant de céder à la tentation de balancer l'unité centrale par la fenêtre du 15ème étage, voyons comment diagnostiquer et terrasser ce bug de surconsommation CPU en quelques minutes.
@@ -42,6 +44,8 @@ Pour couper court aux lenteurs extrêmes, ouvrez l'Invite de commandes en mode a
 
 ---
 
+## 2. Analyse des causes principales de l'erreur
+
 Pourquoi votre processeur s'affole-t-il ? (Analyse des 3 causes principales)
 
 Avant de bidouiller au hasard, comprenons ce qui se passe sous le capot. Lorsque le "Processus système" s'emballe à 100%, ce n'est généralement pas un virus classique, mais plutôt un dysfonctionnement de bas niveau matériel ou logiciel :
@@ -53,6 +57,8 @@ Avant de bidouiller au hasard, comprenons ce qui se passe sous le capot. Lorsque
 3. Un indexeur de recherche corrompu (Windows Search) : L'assistant d'indexation tente d'analyser un fichier corrompu ou un dossier réseau saturé, ce qui provoque une boucle infinie du processus `SearchIndexer.exe` ou `System`.
 
 ---
+
+## 3. Guide de résolution étape par étape
 
 Résolution étape par étape : Reprenez le contrôle
 
@@ -90,6 +96,8 @@ Si le problème persiste après le redémarrage, le coupable est souvent un serv
 
 ---
 
+## 4. Conseils et précautions d'un expert système
+
 Conseils d'expert et prévention matérielle
 
 En tant que technicien support, voici quelques règles d'or pour éviter que cela ne se reproduise en plein milieu d'une deadline critique :
@@ -98,12 +106,12 @@ En tant que technicien support, voici quelques règles d'or pour éviter que cel
 - Surveillez les températures : Un processeur qui surchauffe (à cause de la poussière accumulée dans les ventilateurs du bureau) va automatiquement baisser sa fréquence (thermal throttling), ce qui perturbe le planificateur de tâches de Windows et déclenche des boucles système. Un coup de bombe à air comprimé dans les grilles d'aération fait des miracles.
 
 ---
+## 5. Foire Aux Questions (FAQ)
 
-Foire Aux Questions (FAQ)
+**Q1 :** Mon PC freeze tellement que je ne peux même pas ouvrir le Gestionnaire des tâches, que faire ? R1 : Utilisez le raccourci d'urgence `Ctrl + Alt + Suppr` qui possède un canal prioritaire dans le noyau Windows. De là, cliquez sur "Gestionnaire des tâches" ou, en dernier recours, maintenez le bouton physique d'alimentation de votre tour ou portable pendant 5 secondes pour forcer l'extinction, puis redémarrez.
 
-Q1 : Mon PC freeze tellement que je ne peux même pas ouvrir le Gestionnaire des tâches, que faire ? R1 : Utilisez le raccourci d'urgence `Ctrl + Alt + Suppr` qui possède un canal prioritaire dans le noyau Windows. De là, cliquez sur "Gestionnaire des tâches" ou, en dernier recours, maintenez le bouton physique d'alimentation de votre tour ou portable pendant 5 secondes pour forcer l'extinction, puis redémarrez.
+**Q2 :** Est-ce que réinitialiser mon PC est indispensable si le processus Système recommence ? R2 : Non, dans 90% des cas, un nettoyage des pilotes réseau et une désactivation temporaire de l'indexation Windows suffisent amplement à régler le problème définitivement sans formater.
 
-Q2 : Est-ce que réinitialiser mon PC est indispensable si le processus Système recommence ? R2 : Non, dans 90% des cas, un nettoyage des pilotes réseau et une désactivation temporaire de l'indexation Windows suffisent amplement à régler le problème définitivement sans formater.
+**Q3 :** Pourquoi le ventilateur fait-il autant de bruit quand le CPU est à 100 pourcent ?
 
-Q3 : Pourquoi le ventilateur fait-il autant de bruit quand le CPU est à 100 pourcent ?
-R3 : C'est une réaction physique normale. Lorsque l'utilisation du processeur atteint son maximum, la dissipation thermique augmente fortement. Le BIOS accélère automatiquement la ventilation pour éviter la surchauffe et la fusion des composants.
+**A.** C'est une réaction physique normale. Lorsque l'utilisation du processeur atteint son maximum, la dissipation thermique augmente fortement. Le BIOS accélère automatiquement la ventilation pour éviter la surchauffe et la fusion des composants.

@@ -28,6 +28,8 @@ theme: "Cobalt Enterprise Lab"
 
 
 
+## 1. Noodsituatie op de werkvloer
+
 Het was dinsdagochtend om 09:15 uur op onze tech-incubator nabij de Amsterdamse Zuidas. Terwijl we de laatste hand legden aan een cruciale demo voor een fintech-partner, sloeg het lot toe: een angstaanjagend blauw scherm, de beruchte STOP: 0x0000000a (IRQL_NOT_LESS_OR_EQUAL). Geen tijd voor paniek, want de directeur stond binnen een uur op de stoep voor een live evaluatie van onze systemen. Dit soort acute prestatieproblemen vragen om een directe, no-nonsense aanpak.
 
 In deze gids duiken we diep in de werkelijke oorzaken van deze specifieke stop-code en lopen we door een beproefd stappenplan om je werkstation of server direct weer stabiel te krijgen.
@@ -38,7 +40,7 @@ Waarom deze crash je workflow sloopt: De 3 hoofdoorzaken
 
 Voordat we willekeurig knoppen indrukken, moeten we begrijpen wat er onder de motorkap gebeurt bij foutcode 0x0000000
 
-a. Dit duidt er bijna altijd op dat een kernel-modus proces of driver probeerde geheugenlocaties te benaderen waartoe het geen toegang had. 
+**a.** Dit duidt er bijna altijd op dat een kernel-modus proces of driver probeerde geheugenlocaties te benaderen waartoe het geen toegang had. 
 
 <div style="border-left: 4px solid #1e40af; padding: 12px 16px; margin: 20px 0; background-color: rgba(30,64,175,0.05); border-radius: 4px; color: #111827;">
 <strong>Expert Inzicht:</strong> In 90% van de gevallen op moderne Windows-installaties wordt dit veroorzaakt door een corrupte driver na een automatische update, of een fysiek/logisch geheugenprobleem in je RAM-sticks.

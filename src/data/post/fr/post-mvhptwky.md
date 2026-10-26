@@ -28,6 +28,8 @@ theme: "Pastel Lavender Tech"
 
 
 
+## 1. Situation d'urgence critique au bureau
+
 Il est 17h55 dans notre open space de La Défense. La clôture des dossiers trimestriels tombe à 18h00, mes écrans sont pleins à craquer de fichiers compressés et de PDF, et je dois renommer et envoyer d'urgence un package à la direction. Je fais un clic droit rapide pour archiver le tout avec 7-Zip, et là... c'est le drame. Ce nouveau menu contextuel épuré de Windows 11 s'affiche. L'option indispensable de mon logiciel de compression a disparu. Je suis obligé de cliquer sur "Afficher plus d'options" à chaque manipulation, perdant de précieuses secondes qui me font suer à grosses gouttes à l'approche de la deadline.
 
 Ce genre de micro-frustration ergonomique au bureau, multiplié par des centaines de clics par jour, finit par plomber totalement la productivité des équipes. En tant qu'ingénieur support, j'ai vu trop de collègues pester contre cette interface moderne mais peu pratique. Heureusement, il existe une solution radicale et propre pour retrouver le comportement classique de Windows 10 en quelques clics.
@@ -38,15 +40,19 @@ Ce genre de micro-frustration ergonomique au bureau, multiplié par des centaine
 <strong>Note du technicien :</strong> Cette modification ne désactive pas les nouveautés de Windows 11, elle rétablit simplement le menu complet par défaut directement au premier clic, exactement comme sur les versions précédentes.
 </div>
 
+## 2. Analyse des causes principales de l'erreur
+
 Pourquoi ce changement de menu nous ralentit-il autant ?
 
 Avant de plonger dans le cambouis technique, comprenons ce qui se passe sous le capot de Windows 11. Microsoft a voulu faire du propre, mais l'expérience utilisateur en a pris un coup pour les profils techniques et administratifs.
 
 - Le cloisonnement des applications tierces : Microsoft force les éditeurs de logiciels à utiliser une nouvelle API UWP pour intégrer leurs raccourcis. Tant que les développeurs ne mettent pas à jour leurs outils, leurs fonctions se retrouvent cachées dans le sous-menu "Afficher plus d'options".
 - La perte de temps comportementale : Ajouter un clic supplémentaire (le fameux clic de trop) sur des centaines d'actions quotidiennes génère des troubles musculo-squelettiques et une fatigue mentale évitable.
-- L'absence d'option native visible :Aucun interrupteur simple dans l'applicationParamètres ne permet de basculer l'affichage de manière permanente, obligeant à modifier le registre système ou à passer par des commandes ciblées.
+- L'absence d'option native visible :Aucun interrupteur simple dans l'application Paramètres ne permet de basculer l'affichage de manière permanente, obligeant à modifier le registre système ou à passer par des commandes ciblées.
 
 ---
+
+## 3. Guide de résolution étape par étape
 
 Guide étape par étape : Récupérer le menu classique
 
@@ -81,6 +87,8 @@ Votre barre des tâches va disparaître et réapparaître une fraction de second
 
 ---
 
+## 4. Conseils et précautions d'un expert système
+
 Conseils de sécurité et bonnes pratiques IT
 
 En tant que spécialiste de la maintenance, je vois souvent des scripts ou des logiciels tiers (souvent payants) téléchargés juste pour modifier cette simple clé de registre. 
@@ -89,13 +97,16 @@ En tant que spécialiste de la maintenance, je vois souvent des scripts ou des l
 - Environnement professionnel (Active Directory) : Si vous gérez un parc informatique d'entreprise, vous pouvez déployer cette modification à grande échelle via une Stratégie de Groupe (GPO) ou un script PowerShell centralisé pour éviter que vos collaborateurs ne perdent du temps.
 
 ---
+## 5. Foire Aux Questions (FAQ)
 
-Foire Aux Questions (FAQ)
+**Q.** Cette manipulation est-elle réversible si je souhaite revenir au menu par défaut de Windows 11 ?
 
-1. Cette manipulation est-elle réversible si je souhaite revenir au menu par défaut de Windows 11 ? Absolument. Il suffit d'ouvrir à nouveau le Terminal en administrateur et de supprimer la clé avec la commande suivante : `reg.exe delete "HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}" /f`, puis de redémarrer l'Explorateur Windows via le Gestionnaire des tâches.
+**A.** Absolument. Il suffit d'ouvrir à nouveau le Terminal en administrateur et de supprimer la clé avec la commande suivante : `reg.exe delete "HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}" /f`, puis de redémarrer l'Explorateur Windows via le Gestionnaire des tâches.
 
-2. Est-ce que cela fonctionne sur toutes les versions de Windows 11 ? Oui, cette astuce fonctionne sur les versions initiales ainsi que sur les mises à jour récentes (22H2, 23H2 et ultérieures). Microsoft n'a pas bloqué cette clé de contournement, car elle est tolérée pour des raisons de rétrocompatibilité.
+**Q.** Est-ce que cela fonctionne sur toutes les versions de Windows 11 ?
 
-3. Vais-je perdre mes applications récentes dans le menu ?
+**A.** Oui, cette astuce fonctionne sur les versions initiales ainsi que sur les mises à jour récentes (22H2, 23H2 et ultérieures). Microsoft n'a pas bloqué cette clé de contournement, car elle est tolérée pour des raisons de rétrocompatibilité.
 
-Non. Vos logiciels habituels (comme 7-Zip, Notepad++, ou vos outils de gestion de documents) réapparaîtront directement au premier clic, sans que vous ayez besoin de chercher dans les sous-menus.
+**Q.** Vais-je perdre mes applications récentes dans le menu ?
+
+**A.** Non. Vos logiciels habituels (comme 7-Zip, Notepad++, ou vos outils de gestion de documents) réapparaîtront directement au premier clic, sans que vous ayez besoin de chercher dans les sous-menus.

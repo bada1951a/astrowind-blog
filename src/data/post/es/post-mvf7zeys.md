@@ -28,6 +28,8 @@ theme: "Modern Minimalist Slate"
 
 
 
+## 1. Emergencia crítica en el trabajo
+
 Eran las 18:30 en nuestra oficina corporativa en Madrid. A solo media hora de enviar el paquete definitivo del proyecto trimestral a dirección, el ordenador principal de la estación de trabajo comenzó a emitir un zumbido ensordecedor en los ventiladores. La pantalla se congeló por completo. Al abrir a duras penas el Administrador de tareas, el diagnóstico era alarmante: la CPU estaba clavada en el 100 por ciento de uso, y el único responsable en la lista era un proceso aparentemente inofensivo llamado simplemente "System" (Sistema y memoria comprimida en algunas versiones). El cursor apenas se movía, el correo no respondía y la tensión en la sala cortaba el aire con cuchillo.
 
 Durante los primeros diez minutos, caí en el típico error de desesperación: reinicié el equipo tres veces seguidas a la fuerza manteniendo presionado el botón de encendido. Grave error. Lo único que conseguí fue corrupción temporal en la caché de Windows y perder valiosos minutos valiosos que debimos usar para estabilizar el sistema operativo.
@@ -38,6 +40,8 @@ Al ver que el reinicio en frío no servía de nada porque el problema volvía a 
 <strong>Consejo del Técnico:</strong> Cuando el proceso "System" consume toda la CPU, casi nunca se trata de un virus troyano común, sino de un conflicto a nivel de controladores de hardware, servicios de indexación desbocados o errores en la gestión de energía del núcleo de Windows.
 </div>
 
+## 2. Análisis detallado de la causa raíz
+
 ¿Por qué el proceso "System" devora tu CPU?
 
 Antes de pasar a los clics, entendamos brevemente qué está pasando bajo el capó. El proceso del sistema (`ntoskrnl.exe`) gestiona las tareas esenciales del núcleo de Windows, controladores y memoria física. Cuando se dispara al máximo, las causas más comunes son:
@@ -45,6 +49,8 @@ Antes de pasar a los clics, entendamos brevemente qué está pasando bajo el cap
 - Controladores de hardware obsoletos o corruptos: Generalmente tarjetas de red (Wi-Fi/Ethernet) o controladores de almacenamiento NVMe que entran en bucle infinito de interrupciones.
 - Servicios de Windows en conflicto: El Administrador de impresión, Windows Update o el sistema de indexación de archivos (`Windows Search`) intentando reparar un índice dañado.
 - Periféricos USB defectuosos: Hubs o dispositivos externos que saturan las líneas de comunicación PCIe del bus del sistema. ---
+
+## 3. Solución práctica paso a paso
 
 Guía paso a paso para solucionar el bloqueo
 
@@ -66,7 +72,7 @@ En nuestro incidente de Madrid, el culpable resultó ser un driver de la control
 
 1. Haz clic en el botón de Inicio, escribe Administrador de dispositivos y presiónalo.
 
-2. Despliega la sección Adaptadores de red(y posteriormenteControladoras de bus serie universal si sospechas de USBs).
+2. Despliega la sección Adaptadores de red (y posteriormente Controladoras de bus serie universal si sospechas de USBs).
 
 3. Haz clic derecho sobre tu adaptador de red principal y selecciona Actualizar controlador > *Buscar controladores automáticamente*.
 
@@ -79,7 +85,7 @@ Si el hardware está bien, el problema suele ser la base de datos de archivos co
 
 2. Busca en la lista el servicio llamado SysMain (conocido antiguamente como Superfetch).
 
-3. Haz clic derecho sobre él, selecciona Propiedades, cambia el tipo de inicio aDeshabilitadoy haz clic enDetener.
+3. Haz clic derecho sobre él, selecciona Propiedades, cambia el tipo de inicio a Deshabilitado y haz clic en Detener.
 
 4. Haz lo mismo con el servicio Windows Search si notas que el disco duro o SSD no deja de parpadear.
 
@@ -88,15 +94,16 @@ Si el hardware está bien, el problema suele ser la base de datos de archivos co
 </div>
 
 ---
+## 5. Preguntas Frecuentes (FAQ)
 
-Preguntas Frecuentes (FAQ)
+**Q.** ¿Es seguro deshabilitar el servicio SysMain (Superfetch) en Windows 10 u 11?
 
-1. ¿Es seguro deshabilitar el servicio SysMain (Superfetch) en Windows 10 u 11? Sí, totalmente seguro. Superfetch fue diseñado para pre-cargar aplicaciones en la memoria RAM en equipos con discos mecánicos tradicionales (HDD). Si tu ordenador corporativo utiliza un disco de estado sólido (SSD moderno), este servicio es totalmente innecesario y muchas veces causa picos de uso del 100 por ciento en el proceso System.
+**A.** Sí, totalmente seguro. Superfetch fue diseñado para pre-cargar aplicaciones en la memoria RAM en equipos con discos mecánicos tradicionales (HDD). Si tu ordenador corporativo utiliza un disco de estado sólido (SSD moderno), este servicio es totalmente innecesario y muchas veces causa picos de uso del 100 por ciento en el proceso System.
 
-2. ¿Por qué el Administrador de tareas me muestra 100% de CPU pero la velocidad está por debajo de 1.00 GHz?
+**Q.** ¿Por qué el Administrador de tareas me muestra 100% de CPU pero la velocidad está por debajo de 1.00 GHz?
 
-Esto ocurre por un fenómeno conocido como *Thermal Throttling* o por un fallo en el plan de energía de Windows. El procesador reduce drásticamente su velocidad para protegerse del calor o debido a un controlador de ACPI corrupto. Ve al Panel de control > *Opciones de energía* y asegúrate de restablecer el plan a "Equilibrado".
+**A.** Esto ocurre por un fenómeno conocido como *Thermal Throttling* o por un fallo en el plan de energía de Windows. El procesador reduce drásticamente su velocidad para protegerse del calor o debido a un controlador de ACPI corrupto. Ve al Panel de control > *Opciones de energía* y asegúrate de restablecer el plan a "Equilibrado".
 
-3. ¿Qué debo hacer si ninguna de estas soluciones software funciona?
+**Q.** ¿Qué debo hacer si ninguna de estas soluciones software funciona?
 
-Si el uso de la CPU persiste incluso después de limpiar controladores y servicios, es hora de revisar el hardware físico. Desconecta todos los periféricos USB (impresoras, discos externos, dongles de ratón inalámbricos). A veces, un puerto USB en cortocircuito obliga al proceso System a consumir recursos infinitos intentando gestionar la comunicación con el dispositivo averiado.
+**A.** Si el uso de la CPU persiste incluso después de limpiar controladores y servicios, es hora de revisar el hardware físico. Desconecta todos los periféricos USB (impresoras, discos externos, dongles de ratón inalámbricos). A veces, un puerto USB en cortocircuito obliga al proceso System a consumir recursos infinitos intentando gestionar la comunicación con el dispositivo averiado.

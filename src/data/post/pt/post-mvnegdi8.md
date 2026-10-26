@@ -19,11 +19,9 @@ O relógio correndo, o diretor executivo esperando a retomada da reunião, e o b
 <strong>Dica do Especialista:</strong> Nunca force o desligamento bruto (segurando o botão Power) se houver arquivos de spool ou drivers de mídia travados. Isso pode corromper a tabela de alocação de arquivos (NTFS) e piorar ainda mais a latência DPC.
 </div>
 
-
-
 ![Tech Troubleshooting Guide](/images/tech-photo/tech-photo%20(7).jpg)
 
-## 2. Root Cause Breakdown
+## 2. Análise da causa raiz do problema
 
 Por que o Windows insiste em bloquear a exclusão de arquivos mesmo quando fechamos os aplicativos visíveis? Na minha rotina de manutenção de redes e hardware, identifico três principais vilões para esse comportamento irritante:
 
@@ -31,7 +29,7 @@ Por que o Windows insiste em bloquear a exclusão de arquivos mesmo quando fecha
 * **Locks de Hardware e DPC Latency:** Quando um driver de dispositivo (como o da placa de som ou da placa de captura de vídeo) falha em liberar o buffer, o sistema mantém o arquivo de log ou cache preso para evitar crash de tela azul (BSOD).
 * **Indexação e Serviço de Criptografia:** O indexador de arquivos do Windows (Windows Search) ou o System Insights tenta ler o arquivo milissegundos antes da exclusão, criando um conflito de acesso concorrente.
 
-## 3. Step-by-Step Resolution
+## 3. Guia prático de resolução passo a passo
 
 Quando a interface gráfica padrão falha, nós, profissionais de TI, recorremos a métodos cirúrgicos via linha de comando ou ferramentas nativas do sistema. Siga estes passos para resolver o problema de forma definitiva:
 
@@ -63,22 +61,22 @@ Caso o arquivo continue protegido por restrições de segurança do sistema:
 
 3. Se necessário, reinicie o computador em **Modo de Segurança** (segurando a tecla Shift enquanto clica em Reiniciar, indo em **Solucionar problemas** > **Opções avançadas** > **Configurações de Inicialização**). No modo seguro, nenhum driver de terceiro bloqueia arquivos de log, permitindo a exclusão imediata.
 
-## 4. Expert Advice
+## 4. Recomendações e alertas de especialistas
 
 Trabalhar com suporte corporativo em São Paulo me ensinou que a prevenção é o melhor remédio contra falhas de hardware e arquivos bloqueados. Sempre mantenha seus drivers de chipset, áudio e vídeo atualizados diretamente pelo **Gerenciador de Dispositivos** ou pelos utilitários oficiais dos fabricantes. 
 
 Evite o uso de softwares de terceiros "desbloqueadores de arquivos" baixados de fontes duvidosas, pois muitos vêm acompanhados de adwares ou podem corromper permissões NTFS críticas do diretório **System32**. Prefira sempre os métodos nativos do Windows (`taskkill`, PowerShell ou o modo de segurança).
 
-## 5. Frequently Asked Questions
+## 5. Perguntas Frecuentes (FAQ)
 
-Q: Posso usar o comando DEL comum no Prompt para apagar arquivos bloqueados?
+**Q:** Posso usar o comando DEL comum no Prompt para apagar arquivos bloqueados?
 
-A: Não diretamente. Se o arquivo estiver aberto por outro processo ativo na memória, o comando `del` retornará um erro de acesso negado. É necessário encerrar o processo responsável primeiro com o `taskkill`.
+**A:** Não diretamente. Se o arquivo estiver aberto por outro processo ativo na memória, o comando `del` retornará um erro de acesso negado. É necessário encerrar o processo responsável primeiro com o `taskkill`.
 
-Q: O que causa o aumento da DPC Latency durante reuniões online?
+**Q:** O que causa o aumento da DPC Latency durante reuniões online?
 
-A: A latência DPC (Deferred Procedure Call) geralmente ocorre quando drivers de hardware (especialmente placas de som USB, webcams ou adaptadores Wi-Fi) demoram muito para processar interrupções, fazendo o sistema travar arquivos de cache e gerar engasgos na transmissão.
+**A:** A latência DPC (Deferred Procedure Call) geralmente ocorre quando drivers de hardware (especialmente placas de som USB, webcams ou adaptadores Wi-Fi) demoram muito para processar interrupções, fazendo o sistema travar arquivos de cache e gerar engasgos na transmissão.
 
-Q: É seguro deletar arquivos de cache e logs temporários com o computador ligado?
+**Q:** É seguro deletar arquivos de cache e logs temporários com o computador ligado?
 
-A: Sim, desde que não sejam arquivos essenciais do sistema operacional em execução. Arquivos em pastas temporárias (`temp` ou `%userprofile%\AppData\Local\Temp`) criados por aplicativos de terceiros podem ser limpos sem riscos para liberar espaço e resolver conflitos de travamento.
+**A:** Sim, desde que não sejam arquivos essenciais do sistema operacional em execução. Arquivos em pastas temporárias (`temp` ou `%userprofile%\AppData\Local\Temp`) criados por aplicativos de terceiros podem ser limpos sem riscos para liberar espaço e resolver conflitos de travamento.

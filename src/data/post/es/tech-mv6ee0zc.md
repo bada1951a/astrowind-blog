@@ -28,6 +28,8 @@ theme: "Deep Ocean Cobalt"
 
 
 
+## 1. Emergencia crítica en el trabajo
+
 Como responsable del puesto de trabajo e infraestructura técnica en entornos de desarrollo y centros de operaciones de red (NOC), me encuentro con frecuencia con incidencias de teclado que desconciertan a los usuarios: caracteres duplicados de forma aleatoria (el temido *chattering* o rebote de conmutador) o combinaciones de teclas que se niegan a registrarse en momentos críticos, como la introducción de contraseñas de privilegios o comandos de consola en producción. 
 
 En un parque de cientos de estaciones equipadas con periféricos de perfil mecánico orientados a programadores, desechar inmediatamente un equipo de 150 euros por un conmutador defectuoso no solo es ineficiente desde el punto de vista presupuestario, sino que incumple las normativas de sostenibilidad del departamento de TI. A continuación, detallo el protocolo técnico para diagnosticar y recuperar estos conmutadores mediante el uso estandarizado de agentes de limpieza dieléctricos de residuo cero.
@@ -82,22 +84,22 @@ Los microcontroladores integrados (ARM Cortex-M0, ATmega32U4, etc.) ejecutan un 
 <div style="border-left: 4px solid #2563eb; padding: 12px 16px; margin: 20px 0; background-color: rgba(37, 99, 235, 0.04); border-radius: 4px;">
 <strong>DIRECTIVA TÉCNICA OBLIGATORI
 
-A:</strong> Antes de proceder con cualquier manipulación química sobre el hardware, el teclado debe estar físicamente desconectado de la estación de trabajo. Jamás aplique limpiadores presurizados con el bus USB energizado.
+**A:**</strong> Antes de proceder con cualquier manipulación química sobre el hardware, el teclado debe estar físicamente desconectado de la estación de trabajo. Jamás aplique limpiadores presurizados con el bus USB energizado.
 </div>
 
 Fase 1: Diagnóstico lógico en el sistema operativo
 Antes de desmontar elementos, debemos aislar el problema respecto al subsistema de software de Windows.
 
-1. Inspección en el Administrador de dispositivos:- Presione `Windows + R`, escriba `devmgmt.msc` y pulse Intro para abrir elAdministrador de dispositivos.
+1. Inspección en el Administrador de dispositivos:- Presione `Windows + R`, escriba `devmgmt.msc` y pulse Intro para abrir el Administrador de dispositivos.
 
    - Despliegue el nodo Dispositivos de interfaz de usuario (HID)yTeclados.
    - Verifique que ningún controlador presente advertencias triangulares amarillas. Si existen duplicados huérfanos provocados por hubs USB, haga clic derecho sobre el dispositivo y seleccione Desinstalar el dispositivo.
 
 2. Validación de la pila de entrada vía consol
 
-a:- Abra elSímbolo del sistema (`cmd.exe`) o PowerShell con privilegios elevados y reinicie el servicio de entrada de interfaz humana para purgar colas de eventos en memori
+**a:**- Abra elSímbolo del sistema (`cmd.exe`) o PowerShell con privilegios elevados y reinicie el servicio de entrada de interfaz humana para purgar colas de eventos en memori
 
-a:
+**a:**
    ```cmd
    net stop hidserv && net start hidserv
    ```
@@ -111,7 +113,7 @@ Fase 2: Preparación del conmutador
 
 1. Desconexión físic
 
-a: Extraiga el conector USB-C/USB-A del concentrador o torre.
+**a:** Extraiga el conector USB-C/USB-A del concentrador o torre.
 
 2. Extracción del capuchón (*Keycap*): Utilice un extractor de teclas de alambre (*wire keycap puller*). Evite las pinzas de plástico rígido, ya que rayan los laterales de teclas de policarbonato o PBT. Tire verticalmente hacia arriba a 90 grados exactos para no doblar el vástago cruzado del conmutador.
 
@@ -148,15 +150,15 @@ Para esta intervención se requiere exclusivamente un limpiador de contactos de 
 
 2. Aplicación controlad
 
-a: Inserte la cánula de precisión en la holgura existente entre el vástago y la carcasa superior (*housing*), orientándola hacia la zona interna donde se alojan las láminas de contacto (habitualmente el lado superior del switch, identificable por la muesca del LED).
+**a:** Inserte la cánula de precisión en la holgura existente entre el vástago y la carcasa superior (*housing*), orientándola hacia la zona interna donde se alojan las láminas de contacto (habitualmente el lado superior del switch, identificable por la muesca del LED).
 
 3. Inyección en ráfag
 
-a:Administre una ráfaga extremadamente corta, de no más demedio segundo. La presión del disolvente desplazará los micro-residuos y disolverá películas oxidadas.
+**a:**Administre una ráfaga extremadamente corta, de no más demedio segundo. La presión del disolvente desplazará los micro-residuos y disolverá películas oxidadas.
 
 4. Ciclo de purga mecánic
 
-a:De inmediato, libere el aerosol y comience a pulsar repetidamente y a fondo el vástago del conmutador entre60 y 80 veces consecutivas. Esta acción de fricción dinámica fuerza a las láminas de contacto a frotarse entre sí, permitiendo que el solvente en evaporación arrastre mecánicamente las partículas hacia el fondo inerte o las disuelva por fricción galvánica.
+**a:**De inmediato, libere el aerosol y comience a pulsar repetidamente y a fondo el vástago del conmutador entre60 y 80 veces consecutivas. Esta acción de fricción dinámica fuerza a las láminas de contacto a frotarse entre sí, permitiendo que el solvente en evaporación arrastre mecánicamente las partículas hacia el fondo inerte o las disuelva por fricción galvánica.
 
 5. Tiempo de evaporación y desgasificación:Deje reposar la unidad durante un mínimo de15 a 20 minutos. El vehículo solvente debe evaporarse por completo para garantizar una constante dieléctrica idónea y eliminar cualquier condensación térmica inducida por el gas propelente.
 
@@ -170,8 +172,7 @@ Como política técnica corporativa para estaciones de trabajo de alto rendimien
 * Límite de intervenciones: Si un switch requiere más de dos tratamientos con limpiador de contactos en un lapso de tres meses, la lámina ha perdido sus propiedades metalúrgicas de tensión (fatiga de material). En teclados con placa base *Hot-Swap* (con zócalos Kailh o Gateron), la política estándar debe ser la sustitución física del conmutador por una unidad nueva. * Riesgo en conmutadores soldados: En teclados donde los conmutadores están soldados directamente al circuito impreso (PCB), la inundación excesiva de disolvente puede degradar la máscara de soldadura o arrastrar flux residual hacia los pines del diodo SMD de la matriz. Aplique siempre cantidades mínimas.
 
 ---
-
-4. Preguntas Frecuentes (FAQ)
+## 5. Preguntas Frecuentes (FAQ)
 
 ¿Puedo utilizar alcohol isopropílico al 99% directamente en lugar de un spray limpiador de contactos?
 El alcohol isopropílico (IPA) de alta pureza es seguro químicamente para la mayoría de plásticos, pero su aplicación mediante gotero carece de la fuerza cinética que aporta el propelente presurizado del spray. La presión del aerosol es fundamental para desincrustar mecánicamente las partículas microscópicas aprisionadas entre las dos caras de la lámina de contacto. Además, el isopropanol puede tardar más en evaporarse dentro de la cámara sellada del conmutador si no existe flujo de aire forzado.

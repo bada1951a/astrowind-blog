@@ -28,6 +28,8 @@ theme: "Electric Cyan Speed"
 
 
 
+## 1. Kritische Fehlersituation am Arbeitsplatz
+
 Es ist kurz vor 10:00 Uhr morgens im Frankfurter Bankenviertel. In einer halben Stunde startet die wichtige Kundenpräsentation für ein neues Finanz-Dashboard, und mein Kollege aus der Abteilung Corporate Finance sitzt schwitzend vor seinem frisch auf Windows 11 aktualisierten ThinkPad. Er will nur schnell ein ZIP-Archiv entpacken und die Logdateien kopieren – doch jedes Mal scheitert er an diesem neuen, abgespeckten Windows 11 Rechtsklick-Menü. Statt der gewohnten Tools von 7-Zip oder Notepad++ sieht er nur ein minimalistisches Pop-up und muss jedes Mal umständlich auf "Weitere Optionen anzeigen" klicken. Mitten im Live-Stress bricht bei ihm fast Panik aus. Wer professionell unter Zeitdruck arbeitet, hat keine Sekunde für solche unnötigen Klick-Umwege.
 
 <div style="border-left: 4px solid #06b6d4; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
@@ -35,6 +37,8 @@ Es ist kurz vor 10:00 Uhr morgens im Frankfurter Bankenviertel. In einer halben 
 </div>
 
 ![Tech Troubleshooting Guide](/images/tech-photo/tech-photos%20(5).jpg)
+
+## 2. Detaillierte Ursachenanalyse
 
 Warum Windows 11 uns das Leben schwer macht (Die 3 Ursachen)
 
@@ -48,13 +52,15 @@ Bevor wir den Schraubenzieher digital ansetzen, müssen wir verstehen, warum Mic
 
 Im ersten Moment versuchten wir es natürlich klassisch: Über die *Einstellungen* und den *Task-Manager* den Windows-Explorer neu starten – völlig sinnlos, da das Menü hardcodiert im Betriebssystem verankert ist. Auch ein Blick in die *Systemsteuerung* brachte keine Abhilfe. Der Frust wuchs, während die Uhr tickte. 
 
+## 3. Schritt-für-Schritt-Lösungsanleitung
+
 Die Lösung: Schritt-für-Schritt zur klassischen Ansicht
 
 Zum Glück lässt sich das Verhalten mit einem einfachen Registry-Eintrag oder einem kurzen Befehl in der Eingabeaufforderung korrigieren. Keine Sorge, das dauert keine 60 Sekunden.
 
 Methode 1: Der Express-Weg über das Terminal (Empfohlen)
 
-1. Drücken Sie die Tastenkombination Windows + Xund öffnen Sie dasTerminal (oder die *Eingabeaufforderung* als Administrator).
+1. Drücken Sie die Tastenkombination Windows + X und öffnen Sie das Terminal (oder die *Eingabeaufforderung* als Administrator).
 
 2. Kopieren Sie den folgenden Befehl und fügen Sie ihn ein:
 
@@ -64,7 +70,7 @@ Methode 1: Der Express-Weg über das Terminal (Empfohlen)
 
 3. Drücken Sie Enter. Die Meldung "Der Vorgang wurde erfolgreich abgeschlossen" bestätigt den Erfolg.
 
-4. Starten Sie nun den Task-Manager(Strg + Shift + Esc), suchen Sie in der Liste nach dem ProzessWindows-Explorer, machen Sie einen Rechtsklick darauf und wählen SieNeu starten.
+4. Starten Sie nun den Task-Manager(Strg + Shift + Esc), suchen Sie in der Liste nach dem Prozess Windows-Explorer, machen Sie einen Rechtsklick darauf und wählen Sie Neu starten.
 
 Boom! Sobald der Explorer neu geladen ist, haben Sie bei jedem Rechtsklick sofort wieder das klassische, voll funktionsfähige Kontextmenü vor sich – ohne den Umweg über "Weitere Optionen anzeigen".
 
@@ -85,8 +91,7 @@ Wer es lieber visuell mag, macht das Ganze über den Editor:
 <div style="border-left: 4px solid #06b6d4; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Wichtiger Sicherheitshinweis:</strong> Bevor Sie Änderungen in der Registry vornehmen, exportieren Sie zur Sicherheit immer den betroffenen Unterschlüssel. So lässt sich im Ernstfall per Doppelklick alles in den Ursprungszustand zurückversetzen.
 </div>
-
-Häufig gestellte Fragen (FAQ)
+## 5. Häufig gestellte Fragen (FAQ)
 
 1. Verliere ich durch diesen Registry-Hack Windows-Updates oder Stabilität? Nein. Dieser Registry-Schlüssel nutzt eine offiziell verbliebene Rückfalloption (Fallback-ID) von Microsoft selbst, die für Entwickler gedacht ist. Das System bleibt absolut stabil und Updates laufen problemlos durch.
 

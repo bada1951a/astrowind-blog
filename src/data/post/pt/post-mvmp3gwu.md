@@ -19,6 +19,8 @@ theme: "Deep Indigo System"
 
 
 
+## 1. Situação de emergência no trabalho
+
 1. O Desespero do Momento e a Falha na Tela
 
 Era uma tarde típica de alta demanda aqui na Avenida Paulista, com o movimento intenso de escritórios corporativos ao redor. Eu estava executando uma query massiva no banco de dados de clientes na estação de trabalho principal, monitorando as tabelas e os logs de execução em tempo real para evitar qualquer gargalo de performance no cluster. De repente, notei um comportamento anômalo em um dos blocos de dados. Precisei registrar imediatamente a evidência visual daquele pico de uso para o relatório de auditoria e... apertei **Win + Shift + S**. 
@@ -33,7 +35,7 @@ O relógio correndo, a query rodando e o desespero batendo por não conseguir ti
 
 ![Tech Troubleshooting Guide](/images/tech-photo/keyboard%20(12).png)
 
-## 2. Root Cause Breakdown
+## 2. Análise da causa raiz do problema
 
 Para resolver esse problema de vez, precisamos entender por que o atalho da Ferramenta de Captura (Snipping Tool) simplesmente morre no Windows 11. Na minha rotina de suporte técnico, identifico três causas principais para essa falha:
 
@@ -41,7 +43,7 @@ Para resolver esse problema de vez, precisamos entender por que o atalho da Ferr
 * **Notificações e Permissões em Segundo Plano:** Se o sistema estiver configurado para bloquear notificações ou se o aplicativo não tiver permissão para rodar em segundo plano, a interface visual da ferramenta falha ao ser chamada.
 * **Corrupção no Pacote UWP (Appx):** Atualizações cumulativas do Windows 11 frequentemente corrompem o registro dos aplicativos nativos da Microsoft Store, exigindo um reparo ou reistalação limpa via PowerShell.
 
-## 3. Step-by-Step Resolution
+## 3. Guia prático de resolução passo a passo
 
 Vamos ao que interessa. Vou te mostrar o passo a passo exato para destravar o seu sistema agora mesmo, utilizando as ferramentas nativas do Windows 11.
 
@@ -93,22 +95,22 @@ Get-AppxPackage *ScreenSketch* -AllUsers | Foreach {Add-AppxPackage -DisableDeve
 
 3. Aguarde o término do processo, feche o terminal e teste o atalho **Win + Shift + S**.
 
-## 4. Expert Advice
+## 4. Recomendações e alertas de especialistas
 
 Como profissional de infraestrutura, recomendo fortemente que você evite usar softwares de terceiros desconhecidos para capturar tela apenas porque o atalho nativo falhou uma vez. Muitas dessas ferramentas gratuitas da internet capturam dados sensíveis da sua área de transferência ou sobrecarregam a inicialização do sistema operacional. 
 
 Além disso, mantenha sempre os drivers do seu teclado atualizados através do **Gerenciador de Dispositivos**, especialmente se você utiliza teclados mecânicos gamers que possuem softwares proprietários de macro. Às vezes, o software do teclado bloqueia combinações específicas de teclas como o **Win + Shift + S** achando que se trata de um comando de macro personalizado.
 
-5. Frequently Asked Questions
+## 5. Perguntas Frecuentes (FAQ)
 
-Q: O atalho ainda não funciona mesmo após seguir todos os passos. O que pode ser?
+**Q:** O atalho ainda não funciona mesmo após seguir todos os passos. O que pode ser?
 
-A: Verifique se a tecla **Windows (Win)** do seu teclado não possui uma função de bloqueio físico ativada (comum em teclados mecânicos através de combinações como Fn + Win).
+**A:** Verifique se a tecla **Windows (Win)** do seu teclado não possui uma função de bloqueio físico ativada (comum em teclados mecânicos através de combinações como Fn + Win).
 
-Q: Posso alterar o atalho da Ferramenta de Captura para outra tecla?
+**Q:** Posso alterar o atalho da Ferramenta de Captura para outra tecla?
 
-A: Sim. Você pode ir em **Configurações** > **Acessibilidade** > **Teclado** e ativar a opção "Usar o botão PrtScn para abrir a captura de tela".
+**A:** Sim. Você pode ir em **Configurações** > **Acessibilidade** > **Teclado** e ativar a opção "Usar o botão PrtScn para abrir a captura de tela".
 
-Q: As capturas de tela sumiram e não salvam na Área de Transferência. Como corrigir?
+**Q:** As capturas de tela sumiram e não salvam na Área de Transferência. Como corrigir?
 
-A: Abra o aplicativo da Ferramenta de Captura diretamente pelo menu Iniciar, vá em configurações dentro do app e certifique-se de que a opção de salvar automaticamente as capturas está habilitada.
+**A:** Abra o aplicativo da Ferramenta de Captura diretamente pelo menu Iniciar, vá em configurações dentro do app e certifique-se de que a opção de salvar automaticamente as capturas está habilitada.

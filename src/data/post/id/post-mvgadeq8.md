@@ -28,6 +28,8 @@ theme: "Modern Minimalist Slate"
 
 
 
+## 1. Situasi Darurat Kritis di Tempat Kerja
+
 Jam 4 sore di salah satu gedung perkantoran kawasan Sudirman Jakarta, suasana mendadak tegang luar biasa. Tenggat waktu laporan keuangan tahunan tinggal dua jam lagi, namun layar PC salah satu manajer tiba-tiba tertutup tulisan transparan mengganggu di pojok kanan bawah: *Activate Windows - Go to Settings to activate Windows*. Bukan cuma soal estetika presentasi yang mau dikirim ke direksi, watermark menyebalkan ini bikin beberapa aplikasi shortcut terkunci dan performa sistem terasa nge-lag gara-gara proses background Windows Script Host yang nyangkut. Panik? Pastinya. Apalagi tombol pengaturan lisensi di Control Panel malah mental *error code* gara-gara koneksi kantor yang dibatasi *firewall*.
 
 Sebelum panik berlanjut dan berujung bongkar hardware atau install ulang yang bakal makan waktu berjam-jam, sebagai teknisi infrastruktur IT, saya punya trik kilat yang aman, legal secara fungsional untuk *staging* darurat, dan pastinya bersih dari virus atau file *crack* abal-abal yang sering disebar situs download ilegal. Kita cukup pakai Command Prompt (CMD) bawaan sistem.
@@ -95,14 +97,14 @@ Tips Keamanan & Saran Pakar Infrastruktur IT
 
 Pertanyaan yang Sering Diajukan (FAQ)
 
-Q: Apakah cara ini akan menghapus data atau file laporan saya yang belum tersimpan?
+**Q:** Apakah cara ini akan menghapus data atau file laporan saya yang belum tersimpan?
 
-A: Tidak sama sekali. Perintah CMD di atas hanya berinteraksi dengan modul manajemen lisensi Windows (*Software Licensing Service*), sehingga file dokumen Word, Excel, atau aplikasi kerja Anda di Task Managertetap aman seratus persen.
+**A:** Tidak sama sekali. Perintah CMD di atas hanya berinteraksi dengan modul manajemen lisensi Windows (*Software Licensing Service*), sehingga file dokumen Word, Excel, atau aplikasi kerja Anda di Task Managertetap aman seratus persen.
 
-Q: Kenapa setelah beberapa minggu watermarknya bisa muncul lagi?
+**Q:** Kenapa setelah beberapa minggu watermarknya bisa muncul lagi?
 
-A: Perintah `slmgr -rearm` sifatnya memperpanjang masa tenggang (*grace period*). Jika PC Anda tidak kunjung terhubung kembali ke server lisensi resmi kantor atau jaringan internal perusahaan, sistem akan kembali meminta validasi ulang.
+**A:** Perintah `slmgr -rearm` sifatnya memperpanjang masa tenggang (*grace period*). Jika PC Anda tidak kunjung terhubung kembali ke server lisensi resmi kantor atau jaringan internal perusahaan, sistem akan kembali meminta validasi ulang.
 
-Q: Apakah metode ini aman untuk laptop kantor yang terhubung domain perusahaan?
+**Q:** Apakah metode ini aman untuk laptop kantor yang terhubung domain perusahaan?
 
-A: Sangat aman karena menggunakan utilitas bawaan asli Microsoft (`slmgr`). Metode ini tidak memodifikasi file sistem inti (*system files*) layaknya menggunakan *patch* ilegal atau bajakan.
+**A:** Sangat aman karena menggunakan utilitas bawaan asli Microsoft (`slmgr`). Metode ini tidak memodifikasi file sistem inti (*system files*) layaknya menggunakan *patch* ilegal atau bajakan.

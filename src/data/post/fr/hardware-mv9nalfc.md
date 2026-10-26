@@ -28,6 +28,8 @@ theme: "Sunset Horizon Coral"
 
 
 
+## 1. Situation d'urgence critique au bureau
+
 C'était un mardi matin agité dans notre open space de La Défense. Je m'apprêtais à boucler le rapport trimestriel pour un client important quand, soudain, la catastrophe : notification rouge vif dans la barre des tâches de Windows. Le disque C est saturé, plus un seul gigaoctet de libre, et pour couronner le tout, mon SSD externe de secours n'est même pas détecté par le système. Panique à bord, impossible d'enregistrer le moindre fichier Word, et le PC qui commence à ramer à mort au pire moment possible.
 
 Dans ce genre de situation critique, on a tous tendance à faire n'importe quoi : vider la Corbeille en espérant un miracle, supprimer à la hache des dossiers dont on ne connait pas l'utilité, ou redémarrer la machine en boucle en espérant que l'espace va magiquement réapparaître. Évidemment, ça ne sert à rien. Le vrai coupable invisible, c'est l'accumulation silencieuse de fichiers temporaires, de caches système et de résidus de mises à jour qui étouffent votre partition principale sans que vous ne remarquiez rien.
@@ -40,6 +42,8 @@ Heureusement, après des années à dépanner les postes de l'équipe, j'ai une 
 <strong>L'astuce du technicien :</strong> Ne cherchez pas à tout supprimer à la main dans l'explorateur de fichiers. Windows cache ses plus gros fichiers temporaires dans des dossiers protégés (`AppData`, `Temp`, `WinSxS`) qu'il faut nettoyer via les utilitaires dédiés pour éviter les plantages.
 </div>
 
+## 2. Analyse des causes principales de l'erreur
+
 Pourquoi votre disque C se remplit tout seul ?
 
 Avant de passer à l'action, il est bon de comprendre ce qui s'est passé dans les coulisses de votre machine.
@@ -49,6 +53,8 @@ Avant de passer à l'action, il est bon de comprendre ce qui s'est passé dans l
 2. Les restes de Windows Update : Chaque mise à jour majeure du système conserve une copie de secours (le dossier `Windows.old` ou les packages dans `WinSxS`) au cas où il faudrait rétrograder. C'est souvent là que se cachent 20 à 40 Go de données fantômes.
 
 3. Les fichiers de mise en veille prolongée et mémoire virtuelle : Les fichiers `hiberfil.sys` et `pagefile.sys` taillent directement dans votre SSD en réservant l'équivalent de votre mémoire vive, parfois bien plus que nécessaire.
+
+## 3. Guide de résolution étape par étape
 
 Guide étape par étape : Nettoyage complet du disque C
 
@@ -94,13 +100,14 @@ Voici concrètement ce que vous pouvez espérer récupérer sur un PC de bureau 
 | Total récupéré estimé|25 à 63 Go|100% Sécurisé |
 
 ---
+## 5. Foire Aux Questions (FAQ)
 
-Questions Fréquemment Posées (FAQ)
+**Q1 :** Est-ce que vider le dossier `%temp%` risque de supprimer mes documents de travail ? R : Absolument pas. Le dossier `Temp` porte bien son nom : il ne contient que des données éphémères générées par les logiciels pour fonctionner. Vos documents personnels (Word, Excel, PDF, photos) stockés dans Documents ou Bureau ne sont jamais touchés.
 
-Q1 : Est-ce que vider le dossier `%temp%` risque de supprimer mes documents de travail ? R : Absolument pas. Le dossier `Temp` porte bien son nom : il ne contient que des données éphémères générées par les logiciels pour fonctionner. Vos documents personnels (Word, Excel, PDF, photos) stockés dans Documents ou Bureau ne sont jamais touchés.
+**Q2 :** Que faire si mon disque C se remplit à nouveau tout seul en quelques jours ?
 
-Q2 : Que faire si mon disque C se remplit à nouveau tout seul en quelques jours ?
-R : C'est souvent le signe d'un cache applicatif qui s'emballe (souvent un logiciel de visioconférence, un client de téléchargement de jeux ou un outil de synchronisation cloud mal configuré). Utilisez un outil gratuit comme *WizTree* ou *WinDirStat* pour identifier visuellement quel dossier pèse le plus lourd sur votre SSD.
+**A.** C'est souvent le signe d'un cache applicatif qui s'emballe (souvent un logiciel de visioconférence, un client de téléchargement de jeux ou un outil de synchronisation cloud mal configuré). Utilisez un outil gratuit comme *WizTree* ou *WinDirStat* pour identifier visuellement quel dossier pèse le plus lourd sur votre SSD.
 
-Q3 : Pourquoi mon SSD externe n'était-il pas détecté au début de ma panne ?
-R : Quand un PC sature complètement au niveau de son stockage et de sa mémoire virtuelle sur le disque C, le système d'exploitation (Windows) n'a plus assez de "respiration" ni d'espace d'échange pour allouer les pilotes nécessaires à la reconnaissance des périphériques USB branchés à chaud. En libérant de l'espace sur le disque C, le gestionnaire de périphériques retrouve sa pleine capacité de fonctionnement et redétecte vos disques externes sans broncher.
+**Q3 :** Pourquoi mon SSD externe n'était-il pas détecté au début de ma panne ?
+
+**A.** Quand un PC sature complètement au niveau de son stockage et de sa mémoire virtuelle sur le disque C, le système d'exploitation (Windows) n'a plus assez de "respiration" ni d'espace d'échange pour allouer les pilotes nécessaires à la reconnaissance des périphériques USB branchés à chaud. En libérant de l'espace sur le disque C, le gestionnaire de périphériques retrouve sa pleine capacité de fonctionnement et redétecte vos disques externes sans broncher.

@@ -28,6 +28,8 @@ theme: "Tokyo Neon Violet"
 
 
 
+## 1. Situação de emergência no trabalho
+
 Durante anos gerenciando bancadas de suporte e estações de alta performance para desenvolvedores e jogadores competitivos, perdi a conta de quantas vezes me deparei com o mesmo chamado: *"Conectei meu monitor externo no notebook gamer/corporativo e a tela simplesmente não dá sinal, ou pior, fica piscando a cada 20 segundos"*. Esse comportamento instável — o infame *flickering* ou a perda total de sincronia com a clássica mensagem de "Sem Sinal" (*No Signal*) — raramente é um defeito físico no painel do monitor. 
 
 Na esmagadora maioria dos casos práticos que analisei em laboratório, o vilão é uma colisão na pilha de drivers gráficos híbridos (a dança sensível entre a iGPU do processador e a dGPU dedicada), corrupção de tabelas EDID ou uma tentativa do Windows de forçar uma taxa de quadros e largura de banda que o barramento físico atual não consegue sustentar. 
@@ -38,7 +40,7 @@ Abaixo, detalho as causas profundas desse sintoma, comparo o impacto das taxas d
 
 Raízes do Problem
 
-a: O Que Causa a Falha de Sinal e o Flickering?
+**a:** O Que Causa a Falha de Sinal e o Flickering?
 
 Para intervir com precisão cirúrgica sem perder tempo trocando peças à toa, precisamos dissecar a arquitetura de vídeo de um notebook contemporâneo.
 
@@ -76,7 +78,7 @@ Benchmark de Conexão: Taxa de Atualização, Latência e Estabilidade
 
 Na tabela técnica abaixo, comparo os cenários de conexão mais comuns que analisamos em bancada, correlacionando a taxa de atualização, a estabilidade do sinal e o impacto na latência percebid
 
-a:
+**a:**
 
 | Interface & Protocolo | Resolução / Taxa Alvo | Uso de Largura de Banda | Input Lag Médio | Estabilidade Operacional |
 | :--- | :--- | :--- | :--- | :--- |
@@ -97,7 +99,7 @@ Procedimento Passo a Passo de Resolução
 Siga estritamente a ordem descrita abaixo para isolar o problema e resetar o pipeline de vídeo com precisão técnica. ### Etapa 1: Reset a Frio do Pipeline Gráfico
 Antes de intervir no software, force o Windows a reiniciar os buffers de renderização e descarregar o driver ativo sem desligar a máquin
 
-a:
+**a:**
 
 1. Com o monitor externo conectado, pressione simultaneamente as teclas:
 
@@ -131,7 +133,7 @@ Etapa 3: Purga Completa de Drivers Gráficos com DDU (Display Driver Uninstaller
 
 A reinstalação convencional via instaladores executáveis costuma falhar porque deixa resíduos no registro e arquivos de cache corrompidos. Faremos uma instalação limp
 
-a:
+**a:**
 
 1. Baixe a versão mais recente do utilitário DDU (Display Driver Uninstaller) de um portal confiável.
 
@@ -171,7 +173,7 @@ Após a instalação limpa, alinhe as frequências de operação para evitar des
 <div style="border-left: 4px solid #8b5cf6; padding: 14px 18px; margin: 24px 0; background-color: rgba(139, 92, 246, 0.05); border-radius: 6px;">
   <strong style="color: #8b5cf6; font-size: 1.05rem;">Dica de Otimização Competitiv
 
-a:</strong> Se você joga com taxa de atualização alta e quer latência mínima sem oscilações, abra o <strong>Painel de Controle da NVIDIA</strong>, vá em <em>Gerenciar as configurações em 3D</em> > <em>Modo de gerenciamento de energia</em> e selecione <strong>Preferência por desempenho máximo</strong> apenas para os executáveis dos seus jogos, mantendo "Normal" no escopo global para não sobreaquecer o notebook no uso diário.
+**a:**</strong> Se você joga com taxa de atualização alta e quer latência mínima sem oscilações, abra o <strong>Painel de Controle da NVIDIA</strong>, vá em <em>Gerenciar as configurações em 3D</em> > <em>Modo de gerenciamento de energia</em> e selecione <strong>Preferência por desempenho máximo</strong> apenas para os executáveis dos seus jogos, mantendo "Normal" no escopo global para não sobreaquecer o notebook no uso diário.
 </div>
 
 ---
@@ -212,5 +214,6 @@ Esse é o sintoma clássico de saturação de banda do cabo ou da porta de saíd
 2. O atalho `Win + Ctrl + Shift + B` resolve o problema de tela preta permanentemente?
 Não. Esse atalho funciona apenas como um alívio imediato para reiniciar o buffer do driver de vídeo em memória. Se a causa subjacente for um driver corrompido, sobreposição quebrada de MPO ou cabo com perda de pacotes, a tela voltará a piscar assim que o subsistema for exigido novamente por cargas gráficas mais altas. A solução definitiva requer a limpeza com DDU e a fixação das taxas corretas de transmissão.
 
-3. Usar um hub USB-C multipor portas comuns aumenta o input lag em jogos competitivos?
-Sim. Docks e adaptadores simples que não utilizam linhas DisplayPort diretas (DisplayPort Alternate Mode) processam o sinal por meio de controladores intermediários (como chipsets DisplayLink genéricos) baseados em compressão por software via CPU. Isso adiciona uma fila de renderização com atraso de sinal de 15 a 35 milissegundos, gerando uma sensação perceptível de atraso no mouse (*mouse drift*). Para jogos competitivos, conecte o monitor diretamente a uma porta USB-C com saída nativa para a dGPU ou à porta HDMI nativa do notebook.
+**Q.** Usar um hub USB-C multipor portas comuns aumenta o input lag em jogos competitivos?
+
+**A.** Sim. Docks e adaptadores simples que não utilizam linhas DisplayPort diretas (DisplayPort Alternate Mode) processam o sinal por meio de controladores intermediários (como chipsets DisplayLink genéricos) baseados em compressão por software via CPU. Isso adiciona uma fila de renderização com atraso de sinal de 15 a 35 milissegundos, gerando uma sensação perceptível de atraso no mouse (*mouse drift*). Para jogos competitivos, conecte o monitor diretamente a uma porta USB-C com saída nativa para a dGPU ou à porta HDMI nativa do notebook.

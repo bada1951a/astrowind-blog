@@ -28,6 +28,8 @@ theme: "Industrial Blueprint"
 
 
 
+## 1. Workplace Emergency Situation
+
 The clock on the wall in our Manhattan office read 9:40 AM. Exactly twenty minutes from now, our CEO was scheduled to stream a major quarterly update to the entire enterprise, and my primary presentation machine—a top-spec workstation—decided to throw a tantrum. The cooling fans were screaming like a jet engine preparing for takeoff, the mouse cursor was moving in sluggish, frame-dropping jerks, and Task Manager revealed a terrifying reality: the generic "System" process was locking the CPU flat at 100 percent usage. Powerpoint wouldn't open, Teams was frozen, and the entire system was effectively paralyzed. 
 
 Panic instantly set in. For the past ten minutes, I had been blindly stumbling through typical quick fixes—frantically smashing keyboard shortcuts, force-closing random background apps, and rebooting the machine twice, only to watch the CPU peg back at maximum capacity the moment the Windows login screen loaded. Restarting was getting us nowhere, and the clock was ticking down fast.
@@ -37,6 +39,8 @@ Panic instantly set in. For the past ten minutes, I had been blindly stumbling t
 That's when I had to step back, put away the panic, and rely on systematic IT troubleshooting. If you are staring at a frozen screen right now with your CPU pinned at 100 percent due to a stubborn System process, take a deep breath. Here is the exact, battle-tested playbook I used to regain control in under five minutes—and how you can do it too.
 
 ---
+
+## 2. Root Cause Breakdown
 
 Understanding the Blueprint: Why Is the "System" Process Eating Your CPU?
 
@@ -107,6 +111,8 @@ Quick Comparison of Diagnostic Approaches
 
 ---
 
+## 4. Professional Engineer Precautions & Tips
+
 Expert Warning: Hardware and Data Safety
 
 <div style="border-left: 4px solid #f59e0b; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
@@ -117,16 +123,16 @@ Avoid blindly disabling critical startup drivers in Device Manager unless you ha
 
 ---
 
-## Frequently Asked Questions (FAQ)
+## 5. Frequently Asked Questions (FAQ)
 
-Q: Can I just force-shutdown my PC by holding the power button when this happens?
+**Q:** Can I just force-shutdown my PC by holding the power button when this happens?
 
-A: Yes, if the system is completely frozen and unresponsive to mouse inputs, holding the power button for 5 to 10 seconds is your last resort. While it carries a slight risk of file corruption, modern NTFS journaling handles hard resets much better than older file systems. Use it only when all input methods fail.
+**A:** Yes, if the system is completely frozen and unresponsive to mouse inputs, holding the power button for 5 to 10 seconds is your last resort. While it carries a slight risk of file corruption, modern NTFS journaling handles hard resets much better than older file systems. Use it only when all input methods fail.
 
-Q: Why does the System process spike right after I log in?
+**Q:** Why does the System process spike right after I log in?
 
-A: This is usually caused by startup tasks, background Windows Updates initializing, or third-party antivirus software indexing your local drives simultaneously. Give the machine 3 to 5 minutes upon boot to settle before launching heavy apps.
+**A:** This is usually caused by startup tasks, background Windows Updates initializing, or third-party antivirus software indexing your local drives simultaneously. Give the machine 3 to 5 minutes upon boot to settle before launching heavy apps.
 
-Q: Does disabling SysMain (Superfetch) still help fix 100% CPU usage?
+**Q:** Does disabling SysMain (Superfetch) still help fix 100% CPU usage?
 
-A: On modern NVMe SSDs, the SysMain service is rarely the culprit anymore, and disabling it can sometimes hinder memory preloading efficiency. It's usually better to check for corrupted storage drivers or pending Windows updates first before tinkering with memory caching services.
+**A:** On modern NVMe SSDs, the SysMain service is rarely the culprit anymore, and disabling it can sometimes hinder memory preloading efficiency. It's usually better to check for corrupted storage drivers or pending Windows updates first before tinkering with memory caching services.

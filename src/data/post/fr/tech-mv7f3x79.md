@@ -28,6 +28,8 @@ theme: "Graphite Technical Paper"
 
 
 
+## 1. Situation d'urgence critique au bureau
+
 Dans le cadre du déploiement et de la maintenance de parcs informatiques en entreprise, la gestion de l'affichage multi-écrans sur stations mobiles (ultrabooks et stations de travail portables) représente l'un des postes de sollicitation les plus fréquents auprès des équipes d'infrastructure. Qu’il s’agisse d’une liaison directe via HDMI/DisplayPort ou d'un transit par station d’accueil Thunderbolt/USB-C, les symptômes d'« absence de signal » (*No Signal*) et de scintillement intermittent (*black screens* aléatoires d'une ou deux secondes) ne relèvent que rarement d'une panne matérielle franche de la dalle. 
 
 Dans plus de 85 % des cas observés sur le terrain, ces anomalies résultent d'une désynchronisation critique de la pile logicielle vidéo, d'une altération du cache topologique du système d'exploitation ou d'un échec de négociation protocolaire au niveau de la couche matérielle de transmission. Ce document formalise une approche méthodique de diagnostic et de remédiation par réinitialisation en profondeur des sous-systèmes graphiques sous Windows.
@@ -44,13 +46,13 @@ Pour intervenir efficacement sans procéder à des réinstallations système sup
 
 Hypothèse
 
-A : Désynchronisation de la pile WDDM et conflit de négociation EDID/HDCP
+**A :** Désynchronisation de la pile WDDM et conflit de négociation EDID/HDCP
 Lorsqu'un moniteur externe est branché, Windows interroge les données EDID (*Extended Display Identification Data*) via le bus DDC/I2C afin d'identifier les résolutions et fréquences natives. Si le pilote graphique (Intel Graphics, AMD Radeon Software ou NVIDIA Display Driver) subit un timeout de réponse ou applique un profil colorimétrique incompatible (par exemple, forçage du format RGB 10-bit sur une liaison DisplayPort limitée à 8-bit), le gestionnaire de fenêtrage du bureau (*Desktop Window Manager - DWM.exe*) réinitialise la liaison vidéo en boucle, générant ces micro-coupures caractéristiques.
 
 Hypothèse B : Saturation de la bande passante et instabilité MST (Multi-Stream Transport)
 Sur les configurations exploitant des hubs ou docks USB-C utilisant le protocole DisplayPort Alternate Mode, la bande passante vidéo partage les lignes différentielles avec les données USB 3.x et l'alimentation *Power Delivery*. L'activation sans compression DSC (*Display Stream Compression*) de deux dalles 1440p ou 4K dépasse fréquemment le débit binaire maximal supporté par la norme DP 1.4 HB
 
-R3. Le contrôleur graphique tente alors d'ajuster dynamiquement l'horloge pixel, provoquant des extinctions transitoires.
+**A.** Le contrôleur graphique tente alors d'ajuster dynamiquement l'horloge pixel, provoquant des extinctions transitoires.
 
 Hypothèse C : Corruption du cache de topologie d'affichage Windows
 Le sous-système graphique de Windows conserve l'historique complet de chaque moniteur déjà raccordé au sein de ruches de registre dédiées. Lorsqu'un ordinateur portable alterne fréquemment entre le télétravail, les salles de réunion et les docks de bureau, ce cache accumule des profils d'agencement orphelins et contradictoires, interdisant l'initialisation correcte du pipeline vidéo secondaire.
@@ -152,8 +154,7 @@ Pour pérenniser la liaison vidéo et prévenir la dégradation progressive des 
 * Mise à jour du microprogramme (Firmware) du contrôleur DisplayPort : Les stations d'accueil professionnelles intègrent des puces de démultiplexage (ex: Synaptics VMMxxxx) dont le micrologiciel nécessite d'être mis à niveau pour corriger les bugs de handshake avec les nouveaux processeurs Intel Core Ultra ou AMD Ryzen.
 
 ---
-
-4. Questions fréquemment posées (FAQ)
+## 5. Foire Aux Questions (FAQ)
 
 Pourquoi mon écran externe fonctionne-t-il correctement en 30 Hz mais perd-il le signal dès que je le configure en 60 Hz ?
 Ce comportement est le symptôme typique d'une bande passante physique insuffisante au niveau de la chaîne de transmission. En passant de 30 Hz à 60 Hz, le débit de données requis double instantanément. Si votre câble n'est pas certifié (ex. un câble HDMI 1.4 utilisé pour transporter un flux 4K), ou si votre hub USB-C ne prend en charge que le DP Alt Mode sur 2 lignes (*2-lane*) sans compression DSC en présence de périphériques USB 3.0 actifs, la carte graphique coupe le flux pour éviter la corruption des trames.
@@ -161,6 +162,6 @@ Ce comportement est le symptôme typique d'une bande passante physique insuffisa
 Faut-il privilégier le pilote vidéo du fabricant de l'ordinateur portable (OEM) ou celui du fondeur (Intel/NVIDIA/AMD) ?
 En environnement d'entreprise, la règle d'ingénierie priorise le pilote OEM (validé par Dell, Lenovo, HP), car il intègre les profils de régulation thermique (*TGP/PL1/PL2*) et le routage des lignes PCIe spécifiques à la carte mère de l'appareil. Cependant, en cas de bogue d'affichage persistant sur des écrans récents, l'installation du pilote générique du fondeur (Intel Graphics Driver ou NVIDIA Studio/Game Ready) s'avère indispensable pour bénéficier des correctifs de conformité de la norme DisplayPort 2.1 / HDMI 2.
 
-1. ### Est-il possible qu'un câble vidéo provoque des micro-coupures sans être totalement hors service ?
+**Q.** ### Est-il possible qu'un câble vidéo provoque des micro-coupures sans être totalement hors service ?
 
-Absolument. Un câble présentant un blindage électromagnétique déficient ou une continuité marginale sur la broche HPD (*Hot Plug Detect*) peut transporter sans encombre les signaux basse résolution, mais générer des pertes de paquets massives lors de pics de charge vidéo ou lors du passage de signaux protégés HDCP. De simples interférences induites par le câble d'alimentation du moniteur longeant un câble vidéo bas de gamme suffisent à provoquer un écran noir intermittent d'une seconde.
+**A.** Absolument. Un câble présentant un blindage électromagnétique déficient ou une continuité marginale sur la broche HPD (*Hot Plug Detect*) peut transporter sans encombre les signaux basse résolution, mais générer des pertes de paquets massives lors de pics de charge vidéo ou lors du passage de signaux protégés HDCP. De simples interférences induites par le câble d'alimentation du moniteur longeant un câble vidéo bas de gamme suffisent à provoquer un écran noir intermittent d'une seconde.

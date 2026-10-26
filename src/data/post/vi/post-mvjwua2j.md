@@ -28,6 +28,8 @@ theme: "Nordic Clean Ice"
 
 
 
+## 1. Tình huống sự cố khẩn cấp tại văn phòng
+
 <div style="border-left: 4px solid #0284c7; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 Đang là thời điểm nước rút chuẩn bị cho kỳ khóa sổ kế toán cuối năm. Ngồi cặm cụi đối chiếu từng trang bảng tính Excel khối lượng dữ liệu khổng lồ với hệ thống phần mềm ERP của công ty tại văn phòng ở một tòa nhà trung tâm Quận 1, TP. Hồ Chí Minh. Tôi chuẩn bị gọi cuộc họp trực tuyến khẩn cấp với các bộ phận để chốt số liệu thì hỡi ôi, biểu tượng loa góc phải màn hình xuất hiện dấu nhân đỏ chói lọi. Không một âm thanh phát ra, thông báo lỗi thiết bị đầu ra biến mất hoàn toàn ngay trước giờ G.
 </div>
@@ -44,7 +46,7 @@ Trước khi lao vào sửa lỗi, chúng ta cần hiểu tại sao chiếc máy
 
 2. Thiết bị đầu ra (Audio Output Device) bị vô hiệu hó
 
-a: Do vô tình bấm nhầm phím tắt hoặc một ứng dụng gọi thoại bên thứ ba chiếm quyền điều khiển, chuyển luồng âm thanh sang thiết bị ảo (như tai nghe Bluetooth đã ngắt kết nối hoặc cáp màn hình HDMI).
+**a:** Do vô tình bấm nhầm phím tắt hoặc một ứng dụng gọi thoại bên thứ ba chiếm quyền điều khiển, chuyển luồng âm thanh sang thiết bị ảo (như tai nghe Bluetooth đã ngắt kết nối hoặc cáp màn hình HDMI).
 
 3. Lỗi tiến trình dịch vụ âm thanh (Windows Audio Service): Các tiến trình cốt lõi quản lý âm thanh của Windows bị treo ngầm do thiếu hụt tài nguyên khi máy chạy đa nhiệm quá nặng với các file Excel dung lượng khủng.
 
@@ -98,7 +100,7 @@ Lưu ý quan trọng từ chuyên gia
 - Kiểm tra phần cứng vật lý: Đừng quên kiểm tra các nút bấm cứng mute/volume trên bàn phím laptop hoặc giắc cắm tai nghe 3.5mm xem có bị bám bụi hay cắm chưa chặt hay không.
 - Tránh dùng phần mềm bên thứ b
 
-a: Tránh tải các phần mềm "Driver Updater" trôi nổi trên mạng vì chúng thường cài nhầm driver không tương thích, làm tình trạng âm thanh tồi tệ hơn.
+**a:** Tránh tải các phần mềm "Driver Updater" trôi nổi trên mạng vì chúng thường cài nhầm driver không tương thích, làm tình trạng âm thanh tồi tệ hơn.
 - Sao lưu dữ liệu: Trong lúc máy đang xử lý các tác vụ nặng về phần cứng và hệ thống như thế này, hãy luôn nhớ nhấnCtrl + S để lưu lại bảng tính Excel đang làm việc nhằm tránh mất dữ liệu đáng tiếc.
 
 ---

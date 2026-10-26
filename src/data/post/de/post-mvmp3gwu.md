@@ -19,6 +19,8 @@ theme: "Sandstone Desert Minimal"
 
 
 
+## 1. Kritische Fehlersituation am Arbeitsplatz
+
 1. Das Problem mit Win+Shift+S im mobilen Einsatz
 
 Es war ein typischer Dienstagnachmittag in einem gut besuchten Café in der Münchener Maxvorstadt. Draußen nieselte es leicht, drinnen roch es nach frisch geröstetem Espresso. Ich saß mit meinem Laptop am Holztisch, verbunden mit dem Smartphone-Hotspot via Tethering, um letzte Korrekturen an einer komplexen Kalkulation und den dazugehörigen CAD-Plänen für einen wichtigen Kunden im Frankfurter Bankenviertel vorzunehmen. Der Abgabetermin rückte bedrohlich näher. Plötzlich musste ich einen bestimmten Ausschnitt aus einer Excel-Tabelle und einen Teil des Architekturplans direkt in einer E-Mail dokumentieren. 
@@ -31,7 +33,7 @@ Ich drückte wie gewohnt die Tastenkombination **Win + Shift + S**, um das Snipp
 
 ![Tech Troubleshooting Guide](/images/tech-photo/tech-p%20(11).jpg)
 
-## 2. Root Cause Breakdown
+## 2. Detaillierte Ursachenanalyse
 
 Nachdem ich das Projekt erfolgreich übergeben hatte, widmete ich mich in Ruhe der Fehlersuche. Warum verweigert ausgerechnet das so oft genutzte Snipping Tool unter Windows 11 seinen Dienst über den Shortcut? Nach meiner Erfahrung als Systemadministrator gibt es drei Hauptursachen:
 
@@ -39,7 +41,7 @@ Nachdem ich das Projekt erfolgreich übergeben hatte, widmete ich mich in Ruhe d
 - **Deaktivierte Benachrichtigungen:** Das Snipping Tool nutzt das Windows-Benachrichtigungscenter, um den Screenshot-Hinweis anzuzeigen. Ist der "Nicht stören"-Modus aktiv oder sind Benachrichtigungen blockiert, scheint es, als würde nichts passieren.
 - **Beschädigte App-Pakete:** Durch fehlerhafte Windows-Updates oder unerwartete Systemabbrüche (wie sie beim schnellen Wechsel zwischen WLAN und Hotspot vorkommen können) beschädigt Windows bisweilen die Registrierung der UWP-App.
 
-## 3. Step-by-Step Resolution
+## 3. Schritt-für-Schritt-Lösungsanleitung
 
 Gehen wir die Sache systematisch an. Wir nutzen dabei die gängigen Windows-Bordmittel wie **Task-Manager**, **Einstellungen** und die **PowerShell**, um das Problem schnell zu beheben.
 
@@ -89,20 +91,20 @@ Get-AppxPackage *ScreenSketch* -AllUsers | Foreach {Add-AppxPackage -DisableDeve
 
 3. Starten Sie Ihren Laptop einmal neu. Danach greift der Shortcut **Win + Shift + S** garantiert wieder wie gewohnt.
 
-## 4. Expert Advice
+## 4. Praxistipps und Warnungen vom System-Admin
 
 Als IT-Diagnostiker rate ich Ihnen: Vermeiden Sie in stressigen Momenten blinden Aktionismus wie das sofortige Deinstallieren von Grafiktreibern. Das Snipping Tool hängt eng mit der Windows-Zwischenablage und dem Benachrichtigungssystem zusammen. Wenn Sie merken, dass Tastenkombinationen insgesamt träge reagieren, prüfen Sie als Erstes, ob Energiesparmodi (wie der Windows-Energiesparmodus im Akkubetrieb über Tethering) Hintergrundprozesse drosseln. Halten Sie Ihr Windows 11 stets aktuell, da Microsoft bekannte Bugs bezüglich des Snipping Tools regelmäßig über kumulative Updates behebt.
 
-5. Frequently Asked Questions
+## 5. Häufig gestellte Fragen (FAQ)
 
-Q: Was kann ich tun, wenn der Shortcut nach all diesen Schritten immer noch nicht funktioniert?
+**Q:** Was kann ich tun, wenn der Shortcut nach all diesen Schritten immer noch nicht funktioniert?
 
-A: Prüfen Sie, ob eine Drittanbieter-Software (wie Greenshot, ShareX oder Gaming-Overlays von Nvidia/Discord) den Hotkey **Win + Shift + S** blockiert. Deaktivieren Sie diese Programme testweise im Task-Manager.
+**A:** Prüfen Sie, ob eine Drittanbieter-Software (wie Greenshot, ShareX oder Gaming-Overlays von Nvidia/Discord) den Hotkey **Win + Shift + S** blockiert. Deaktivieren Sie diese Programme testweise im Task-Manager.
 
-Q: Gibt es eine alternative Tastenkombination für Screenshots unter Windows 11?
+**Q:** Gibt es eine alternative Tastenkombination für Screenshots unter Windows 11?
 
-A: Ja, Sie können in den **Einstellungen** unter **Erleichterte Bedienung > Tastatur** die Option aktivieren, dass die **Druck-Taste (PrtScn)** das Snipping Tool direkt öffnet, ohne dass Sie drei Tasten gleichzeitig drücken müssen.
+**A:** Ja, Sie können in den **Einstellungen** unter **Erleichterte Bedienung > Tastatur** die Option aktivieren, dass die **Druck-Taste (PrtScn)** das Snipping Tool direkt öffnet, ohne dass Sie drei Tasten gleichzeitig drücken müssen.
 
-Q: Warum speichert das Snipping Tool die Screenshots manchmal nicht automatisch in der Zwischenablage?
+**Q:** Warum speichert das Snipping Tool die Screenshots manchmal nicht automatisch in der Zwischenablage?
 
-A: Das liegt meist an einem deaktivierten Verlauf der Zwischenablage. Drücken Sie **Win + V**, um den Verlauf zu aktivieren und zu überprüfen, ob Ihre Screenshots dort aufgelistet werden.
+**A:** Das liegt meist an einem deaktivierten Verlauf der Zwischenablage. Drücken Sie **Win + V**, um den Verlauf zu aktivieren und zu überprüfen, ob Ihre Screenshots dort aufgelistet werden.

@@ -28,6 +28,8 @@ theme: "Bronze Artisan Workshop"
 
 
 
+## 1. Nagła awaria w miejscu pracy
+
 Wchodzę do biura w nowoczesnym centrum biznesowym przy ulicy Domaniewskiej, trzymając w ręku gorącą kawę i szykując się na spokojny poranek. Dzisiejszy poranek powitał mnie jednak nietypowym incydentem: u jednego z kluczowych analityków finansowych komputer odmówił posłuszeństwa dokładnie po tym, jak zakończyła się instalacja ubiegłorocznej, dużej kumulatywnej aktualizacji bezpieczeństwa systemu Windows. Zrobił pierwszy rozruch po nocnym łataniu systemu, a kiedy pracownik próbował go normalnie wyłączyć, wentylator nadal szumiał, diody świeciły, a ekran gasł, lecz jednostka centralna twardo odmawiała całkowitego odcięcia zasilania. Trzeba było uciekać się do awaryjnego przytrzymywania przycisku power, co w świecie stabilnych stacji roboczych jest zawsze bolesnym kompromisem.
 
 Jako inżynier wsparcia IT od razu wiedziałem, z czym mamy do czynienia. Nowe aktualizacje systemowe potrafią mocno namieszać w domyślnych planach zasilania i sterownikach płyty głównej.
@@ -74,14 +76,14 @@ Zanim przejdziemy do sekcji pytań i odpowiedzi, przypominam o zachowaniu podsta
 
 FAQ
 
-Q1: Czy wyłączenie szybkiego uruchamiania sprawi, że mój komputer będzie się włączał dużo wolniej?
+**Q1:** Czy wyłączenie szybkiego uruchamiania sprawi, że mój komputer będzie się włączał dużo wolniej?
 
-A1: Na nowoczesnych dyskach SSD różnica wynosi zazwyczaj zaledwie od dwóch do pięciu sekund, co jest absolutnie niezauważalne w codziennej pracy biurowej, a zyskujesz w zamian pełną stabilność i pewność, że system poprawnie wyłączy się po każdym dniu pracy.
+**A1:** Na nowoczesnych dyskach SSD różnica wynosi zazwyczaj zaledwie od dwóch do pięciu sekund, co jest absolutnie niezauważalne w codziennej pracy biurowej, a zyskujesz w zamian pełną stabilność i pewność, że system poprawnie wyłączy się po każdym dniu pracy.
 
-Q2: Co zrobić, jeśli opcja szybkiego uruchamiania w ogóle nie pojawia się w Panelu sterowania?
+**Q2:** Co zrobić, jeśli opcja szybkiego uruchamiania w ogóle nie pojawia się w Panelu sterowania?
 
-A2: Oznacza to najczęściej, że funkcja hibernacji została wcześniej całkowicie wyłączona w systemie. Aby ją przywrócić i odblokować opcję szybkiego startu, otwórz wiersz poleceń jako administrator i wpisz komendę **powercfg /hibernate on**, a następnie odśwież okno Opcji zasilania.
+**A2:** Oznacza to najczęściej, że funkcja hibernacji została wcześniej całkowicie wyłączona w systemie. Aby ją przywrócić i odblokować opcję szybkiego startu, otwórz wiersz poleceń jako administrator i wpisz komendę **powercfg /hibernate on**, a następnie odśwież okno Opcji zasilania.
 
-Q3: Czy ten problem może powrócić po kolejnej aktualizacji systemu Windows?
+**Q3:** Czy ten problem może powrócić po kolejnej aktualizacji systemu Windows?
 
-A3: Niestety tak. Duże pakiety aktualizacyjne czasami resetują spersonalizowane ustawienia zasilania do wartości domyślnych. Jeśli po kolejnym patchu problem powróci, wystarczy ponownie powtórzyć procedurę wyłączenia szybkiego startu opisaną w tym poradniku.
+**A3:** Niestety tak. Duże pakiety aktualizacyjne czasami resetują spersonalizowane ustawienia zasilania do wartości domyślnych. Jeśli po kolejnym patchu problem powróci, wystarczy ponownie powtórzyć procedurę wyłączenia szybkiego startu opisaną w tym poradniku.

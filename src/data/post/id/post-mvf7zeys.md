@@ -28,6 +28,8 @@ theme: "Deep Indigo System"
 
 
 
+## 1. Situasi Darurat Kritis di Tempat Kerja
+
 Jam 4 sore di sebuah gedung perkantoran kawasan Sudirman Jakarta, suasana mendadak tegang luar biasa. Batas waktu pengiriman laporan keuangan tinggal satu jam lagi, tapi layar monitor tiba-tiba membeku (*freezing*). Kipas PC berputar kencang menderu bagaikan mesin jet yang mau lepas landas, sementara kursor tetikus bergerak sangat lambat seperti terjebak di dalam lumpur. Saat tombol kombinasi keramat ditekan untuk membuka Task Manager, pemandangannya bikin jantungan: penggunaan CPU mentok di angka 100 persen penuh, dan pelakunya bukanlah aplikasi berat seperti game atau software rendering, melainkan proses bawaan Windows bernama "System" atau "System and Compressed Memory". 
 
 Panik? Pastinya. Rekan kerja di sebelah mulai keringat dingin karena dokumen Excel penting belum sempat tersimpan. Berbagai cara amatiran langsung dicoba, mulai dari menekan tombol restart paksa di CPU berulang kali, mencabut kabel power, hingga memukul-mukul meja karena kesal. Padahal, tindakan asal-asalan seperti itu justru berisiko merusak sektor *hard drive* atau membuat file laporan korup total. 
@@ -63,7 +65,7 @@ Langkah Eksekusi Cepat: Menjinakkan CPU 100 Persen
 
 Buka kembali Task Manager Anda menggunakan tombol pintas `Ctrl + Shift + Esc`. Jika gerakan mouse masih memungkinkan, ikuti langkah-langkah terstruktur berikut untuk memulihkan performa PC kantor And
 
-a:
+**a:**
 
 Langkah 1: Identifikasi dan Hentikan Layanan yang Bentrok
 
@@ -90,7 +92,7 @@ Langkah 2: Perbarui atau Rollback Driver yang Bermasalah
 Langkah 3: Jalankan Pemindaian Integritas Sistem (SFC & DISM)
 Jika langkah manual di atas belum sepenuhnya meredakan beban CPU, mari kita perbaiki file sistem yang mungkin rusak dari akarny
 
-a:
+**a:**
 
 1. Klik tombol Start, ketik `cmd`, lalu klik kanan padaCommand Promptdan pilihRun as administrator.
 
@@ -116,14 +118,14 @@ Selalu pastikan sirkulasi udara pada casing PC atau laptop Anda tidak terhalang 
 
 Tanya Jawab Populer (FAQ)
 
-Q: Apakah aman mematikan layanan SysMain (Superfetch) secara permanen?
+**Q:** Apakah aman mematikan layanan SysMain (Superfetch) secara permanen?
 
-A: Sangat aman. Bagi komputer kantor yang menggunakan SSD sebagai penyimpanan utamanya, layanan SysMain justru sering kali tidak diperlukan dan malah membebani kinerja baca-tulis serta proses latar belakang CPU.
+**A:** Sangat aman. Bagi komputer kantor yang menggunakan SSD sebagai penyimpanan utamanya, layanan SysMain justru sering kali tidak diperlukan dan malah membebani kinerja baca-tulis serta proses latar belakang CPU.
 
-Q: Kenapa kipas laptop saya tetap berbunyi kencang meskipun Task Manager sudah menunjukkan penggunaan CPU di bawah 10 persen?
+**Q:** Kenapa kipas laptop saya tetap berbunyi kencang meskipun Task Manager sudah menunjukkan penggunaan CPU di bawah 10 persen?
 
-A: Sensor suhu pada prosesor membutuhkan waktu beberapa menit untuk mendinginkan diri setelah bekerja keras di angka 100 persen. Selama suhu fisik chip belum turun ke ambang normal (di bawah 50 derajat Celsius), putaran kipas akan dipertahankan pada kecepatan tinggi.
+**A:** Sensor suhu pada prosesor membutuhkan waktu beberapa menit untuk mendinginkan diri setelah bekerja keras di angka 100 persen. Selama suhu fisik chip belum turun ke ambang normal (di bawah 50 derajat Celsius), putaran kipas akan dipertahankan pada kecepatan tinggi.
 
-Q: Apakah reinstall Windows adalah satu-satunya jalan jika cara di atas gagal?
+**Q:** Apakah reinstall Windows adalah satu-satunya jalan jika cara di atas gagal?
 
-A: Tidak selalu. Biasanya masalah *System process* yang membandel dapat diselesaikan dengan melakukan *In-Place Upgrade* menggunakan file ISO Windows tanpa harus menghapus data dokumen kerja Anda yang tersimpan di drive C.
+**A:** Tidak selalu. Biasanya masalah *System process* yang membandel dapat diselesaikan dengan melakukan *In-Place Upgrade* menggunakan file ISO Windows tanpa harus menghapus data dokumen kerja Anda yang tersimpan di drive C.

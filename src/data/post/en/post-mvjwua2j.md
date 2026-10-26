@@ -28,6 +28,8 @@ theme: "Industrial Blueprint"
 
 
 
+## 1. Workplace Emergency Situation
+
 Pinging Slack channels were blowing up with urgent bug reports from our engineering leads in San Francisco, while my New York finance stakeholders were frantically asking for updated Q3 model projections on Zoom. To handle the chaos, I had five different heavy work tools open simultaneously: Bloomberg Terminal, a local Docker environment, three sprawling Excel workbooks, Jira boards, and a live client presentation deck. Suddenly, my headset went completely dead right as an incoming escalation call hit. No notification chimes, no system sounds, and zero audio output. 
 
 Panicking, I frantically clicked the speaker icon on the Windows 11 taskbar, only to see the dreaded red X over the volume control. The system output device had completely vanished into thin air right in the middle of a high-pressure workday.
@@ -61,7 +63,7 @@ Instead of a full system reboot, kickstart the audio backend directly from the s
 
 3. Scroll down to find Windows Audio.
 
-4. Right-click Windows Audioand selectRestart. (If prompted to restart dependent services like Windows Audio Endpoint Builder, click Yes).
+4. Right-click Windows Audioand select Restart. (If prompted to restart dependent services like Windows Audio Endpoint Builder, click Yes).
 
 5. Check your taskbar speaker icon to verify if the red X has disappeared.
 
@@ -107,7 +109,7 @@ To help you diagnose future audio issues faster, use this quick reference matrix
 
 ---
 
-## Frequently Asked Questions (FAQ)
+## 5. Frequently Asked Questions (FAQ)
 
 1. Why does my audio keep disappearing every time I dock or undock my laptop?
 This is typically caused by Thunderbolt or USB-C dock firmware mismatches. When you dock, Windows attempts to reroute audio through the monitor's HDMI/DisplayPort output. Update your dock's firmware and Intel Thunderbolt software via your corporate IT software center.

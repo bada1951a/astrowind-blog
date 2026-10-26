@@ -28,12 +28,14 @@ theme: "Deep Indigo System"
 
 
 
+## 1. Nagła awaria w miejscu pracy
+
 W pracy inżyniera wsparcia IT niewiele jest scenariuszy równie powtarzalnych i frustrujących dla użytkownika, jak nagła utrata stabilności wielomonitorowej stacji roboczej. Scenariusz z reguły wygląda identycznie: pracownik podłącza nowoczesnego ultrabooka do stacji dokującej Thunderbolt lub replikatora portów USB-C z dwoma monitorami roboczymi. Zamiast płynnego rozszerzenia pulpitu, jeden z ekranów cyklicznie gaśnie co kilkanaście sekund, a drugi wita komunikatem „Brak sygnału” (No Signal). W dziennikach systemowych pojawia się lawina ostrzeżeń o resecie sterownika ekranu, a użytkownik traci możliwość pracy.
 
 <div style="border-left: 4px solid #4338ca; padding: 12px 16px; margin: 20px 0; background-color: rgba(67, 56, 202, 0.04); border-radius: 4px;">
 <strong>Diagnostyka wstępn
 
-a:</strong> Gdy oba zewnętrzne panele wyświetlają objawy desynchronizacji, w 85% przypadków wina nie leży w uszkodzeniu fizycznym przewodu, lecz w kolizji mechanizmu TDR (Timeout Detection and Recovery) jądra Windows oraz uszkodzonym buforze topologii w rejestrze systemowym.
+**a:**</strong> Gdy oba zewnętrzne panele wyświetlają objawy desynchronizacji, w 85% przypadków wina nie leży w uszkodzeniu fizycznym przewodu, lecz w kolizji mechanizmu TDR (Timeout Detection and Recovery) jądra Windows oraz uszkodzonym buforze topologii w rejestrze systemowym.
 </div>
 
 Poniższy przewodnik opisuje procedurę, którą wdrażam w środowiskach korporacyjnych, gdy standardowe wciśnięcie skrótu `Win + Ctrl + Shift + B` zawodzi. Przejdziemy przez analizę niskopoziomową, inspekcję identyfikatorów Device ID oraz manualne czyszczenie stosu WDDM.
@@ -57,7 +59,7 @@ System Windows agresywnie cachuje informacje o każdym podłączonym kiedykolwie
 
 Diagnostyka sprzętow
 
-a: Identyfikatory Hardware ID
+**a:** Identyfikatory Hardware ID
 
 Zanim przejdziemy do modyfikacji plików binarnych, musimy precyzyjnie ustalić, który kontroler odpowiada za błądzący port wideo.
 
@@ -102,7 +104,7 @@ Operacja ta zmusza podsystem graficzny Windows do ponownego odpytania wszystkich
 
 2. Przejdź do następującego klucz
 
-a:
+**a:**
    `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\GraphicsDrivers`
 
 3. Odszukaj trzy podkatalogi:
@@ -130,7 +132,7 @@ Zwykłe odinstalowanie sterownika z poziomu Menedżera urządzeń pozostawia pli
 
 3. Uruchom DDU z uprawnieniami administrator
 
-a:
+**a:**
    * Jako typ urządzenia wybierz Karta graficzna. * Wybierz producenta dedykowanego układu (np. NVIDIA) i kliknij Wyczyść i NIE restartuj.
    * Następnie wybierz producenta zintegrowanego układu (Intel/AMD) i wybierz Wyczyść i uruchom ponownie.
 
@@ -141,7 +143,7 @@ a:
 Krok 3: Prawidłowa sekwencja instalacji pakietów sterowników
 Zainstalowanie oprogramowania w złej kolejności to najczęstszy błąd administratorów. W architekturze zintegrowanej obowiązuje rygorystyczna hierarchi
 
-a:
+**a:**
 
 1. Magistrala i Thunderbolt: Zainstaluj najnowszy pakiet *Intel Serial IO Driver* oraz *Thunderbolt Controller Driver* (jeśli laptop korzysta z procesora Intel Core).
 
@@ -156,7 +158,7 @@ Jeśli monitory nadal wykazują sporadyczne migotanie pod obciążeniem (np. prz
 
 Uruchom Wiersz polecenia jako administrator i wprowadź poniższe poleceni
 
-a:
+**a:**
 
 ```cmd
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers" /v TdrDelay /t REG_DWORD /d 8 /f

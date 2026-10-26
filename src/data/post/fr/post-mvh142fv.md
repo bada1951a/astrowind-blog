@@ -28,6 +28,8 @@ theme: "Mint Fresh Engineering"
 
 
 
+## 1. Situation d'urgence critique au bureau
+
 Il est 17h45 dans notre open space à Paris La Défense. La pression monte d'un cran : le rapport financier trimestriel doit être bouclé et envoyé au comité de direction avant 18h30. Soudain, c'est le drame. Mon écran se fige net. La souris ne répond plus, le curseur est immobile, et le clavier refuse d'afficher le moindre caractère. Pas de BSOD (écran bleu) classique, juste un gel total de Windows 11. Impossible de basculer sur une autre application ou de faire un simple Ctrl+Alt+Suppr. Le ventirad du processeur continue de tourner, mais la machine est complètement sourde. Dix minutes perdues à attendre, puis l'angoisse de devoir forcer le redémarrage via le bouton physique du boîtier en croisant les doigts pour que le document Excel n'ait pas été corrompu. 
 
 Face à ce genre de panne aléatoire, la pire erreur est de jouer aux devinettes en changeant des pièces au hasard. En tant qu'ingénieur support, j'ai vu trop de collègues formater des machines ou racheter des barrettes de RAM sans savoir ce qui se passait réellement sous le capot. 
@@ -35,6 +37,8 @@ Face à ce genre de panne aléatoire, la pire erreur est de jouer aux devinettes
 <div style="border-left: 4px solid #059669; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Conseil du pro :</strong> Un PC qui se fige aléatoirement laisse toujours des traces numériques. Inutile de paniquer ou de démonter le PC tout de suite, le vrai coupable se cache dans les journaux système de Windows.
 </div>
+
+## 2. Analyse des causes principales de l'erreur
 
 Anatomie d'un freeze : les 3 causes racines les plus fréquentes
 
@@ -52,7 +56,7 @@ Puisque le plantage vient de se produire, nous allons utiliser l'outil natif de 
 
 1. Ouvrir l'Observateur d'événements
 Cliquez sur le menu Démarrer, tapez Observateur d'événements (Event Viewer) et validez. 
-Dans la colonne de gauche, développez l'arborescence : Journaux Windows->Système.
+Dans la colonne de gauche, développez l'arborescence : Journaux Windows -> Système.
 
 ![Tech Troubleshooting Guide](/images/tech-photo/display%20(14).png)
 
@@ -85,6 +89,8 @@ Une fois la piste identifiée dans les journaux, passons à la résolution prati
 
 ---
 
+## 4. Conseils et précautions d'un expert système
+
 Précautions d'expert et sécurité des données
 
 Quand un PC se fige de manière aléatoire, le système de fichiers (surtout si vous utilisez des disques NVMe rapides) souffre énormément lors des arrêts forcés. 
@@ -93,11 +99,10 @@ Quand un PC se fige de manière aléatoire, le système de fichiers (surtout si 
 *   Surveillance thermique : Installez un outil de monitoring léger pour vérifier que vos températures au repos ne dépassent pas 45-50°C et en charge 80-85°C. Une surchauffe invisible est la première cause de gel matériel.
 
 ---
+## 5. Foire Aux Questions (FAQ)
 
-Foire Aux Questions (FAQ)
+**Q1 :** Mon Observateur d'événements affiche des dizaines d'erreurs au démarrage, est-ce normal ? R :Oui, Windows génère de nombreux avertissements non critiques (services non démarrés à temps, timeouts mineurs) dès le boot. Ne paniquez pas. Concentrez-vous uniquement sur l'horodatage exact correspondant à la minute qui précède votre gel d'écran.
 
-Q1 : Mon Observateur d'événements affiche des dizaines d'erreurs au démarrage, est-ce normal ? R :Oui, Windows génère de nombreux avertissements non critiques (services non démarrés à temps, timeouts mineurs) dès le boot. Ne paniquez pas. Concentrez-vous uniquement sur l'horodatage exact correspondant à la minute qui précède votre gel d'écran.
+**Q2 :** Est-ce qu'une barrette de RAM défectueuse peut provoquer ces blocages sans afficher d'écran bleu ? R : Tout à fait. Une erreur mémoire silencieuse corrompt instantanément l'espace d'adressage de l'OS, ce qui gèle le processus principal de Windows au lieu de déclencher un plantage avec écran bleu. Utilisez l'outil natif *Diagnostic de la mémoire Windows* pour vérifier cela.
 
-Q2 : Est-ce qu'une barrette de RAM défectueuse peut provoquer ces blocages sans afficher d'écran bleu ? R : Tout à fait. Une erreur mémoire silencieuse corrompt instantanément l'espace d'adressage de l'OS, ce qui gèle le processus principal de Windows au lieu de déclencher un plantage avec écran bleu. Utilisez l'outil natif *Diagnostic de la mémoire Windows* pour vérifier cela.
-
-Q3 : Comment savoir si le SSD est responsable des freezes ? R : Si vos freezes s'accompagnent d'un ralentissement extrême où le gestionnaire des tâches indique 100% d'utilisation du disque avec un temps de réponse de plusieurs milliers de millisecondes, téléchargez le logiciel de diagnostic officiel de la marque de votre SSD (Samsung Magician, CrystalDiskInfo, etc.) pour vérifier son état de santé global et mettre à jour son firmware.
+**Q3 :** Comment savoir si le SSD est responsable des freezes ? R : Si vos freezes s'accompagnent d'un ralentissement extrême où le gestionnaire des tâches indique 100% d'utilisation du disque avec un temps de réponse de plusieurs milliers de millisecondes, téléchargez le logiciel de diagnostic officiel de la marque de votre SSD (Samsung Magician, CrystalDiskInfo, etc.) pour vérifier son état de santé global et mettre à jour son firmware.

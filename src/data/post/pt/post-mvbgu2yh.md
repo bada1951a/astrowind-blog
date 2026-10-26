@@ -28,6 +28,8 @@ theme: "Deep Ocean Cobalt"
 
 
 
+## 1. Situação de emergência no trabalho
+
 Eram exatamente 14h50 de uma terça-feira movimentada no nosso hub de tecnologia na Zona Sul de São Paulo. A entrega do projeto para o cliente final estava marcada para as 15h30, e o time inteiro revisava os últimos pulls no GitHub. De repente, fui chamado às pressas na mesa do nosso desenvolvedor sênior: a barra de tarefas do Windows 11 simplesmente congelou. O menu Iniciar não abria, os ícones fixados ignoravam qualquer clique e o relógio parecia estático no tempo. Com o cliente no chat cobrando a build final, reiniciar a máquina do zero levaria preciosos minutos preciosos que não tínhamos. Precisávamos de uma solução cirúrgica e imediata, sem perder o fluxo de trabalho.
 
 Se você já passou por isso, sabe o nível de frustração. O Windows 11 é excelente em design, mas o Explorador de Arquivos e a camada gráfica da barra de tarefas (que agora dependem fortemente de pacotes modernos do sistema) ainda sofrem com engasgos intermitentes. 
@@ -40,7 +42,7 @@ Abaixo, detalho o passo a passo exato que utilizei naquele momento de pressão p
 
 🔍 Raiz do Problem
 
-a: Por que a Barra de Tarefas trava no Windows 11?
+**a:** Por que a Barra de Tarefas trava no Windows 11?
 
 Antes de aplicar os comandos, vale entender o que acontece por trás dos panos. Na maioria das vezes, o travamento não é um defeito físico do hardware, mas sim uma falha de sincronia em processos do sistema operacional:
 
@@ -57,7 +59,7 @@ Antes de aplicar os comandos, vale entender o que acontece por trás dos panos. 
 <div style="border-left: 4px solid #2563eb; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Atalho de Emergênci
 
-a:</strong> Se o mouse ainda funcionar minimamente, tente abrir o Gerenciador de Tarefas pressionando <strong>Ctrl + Shift + Esc</strong>. Se nem isso funcionar, use <strong>Ctrl + Alt + Del</strong> e selecione "Gerenciador de Tarefas".
+**a:**</strong> Se o mouse ainda funcionar minimamente, tente abrir o Gerenciador de Tarefas pressionando <strong>Ctrl + Shift + Esc</strong>. Se nem isso funcionar, use <strong>Ctrl + Alt + Del</strong> e selecione "Gerenciador de Tarefas".
 </div>
 
 Método 1: Reiniciar o Explorador de Arquivos (A solução definitiva de 30 segundos)
@@ -74,7 +76,7 @@ Este é o método mais rápido e eficiente para recuperar a barra de tarefas sem
 
 5. *O que acontece agor
 
-a:* A barra de tarefas sumirá por um segundo junto com a área de trabalho e voltará a funcionar normalmente, já limpa e reestabilizada. ---
+**a:*** A barra de tarefas sumirá por um segundo junto com a área de trabalho e voltará a funcionar normalmente, já limpa e reestabilizada. ---
 
 Método 2: Registrar novamente a Barra de Tarefas via PowerShell
 
@@ -116,7 +118,7 @@ Se o travamento for recorrente ao longo dos dias, arquivos do sistema podem esta
 
 ⚠️ Dica do Especialist
 
-a: Prevenção e Boas Práticas
+**a:** Prevenção e Boas Práticas
 
 Para evitar que esse tipo de situação volte a atrapalhar reuniões importantes ou entregas de última hora, recomendo manter o seu Windows 11 atualizado através das Configurações > Windows Update. Muitas das falhas de congelamento da barra de tarefas mapeadas nos últimos meses foram corrigidas diretamente em pacotes cumulativos opcionais que a Microsoft lança no meio de cada mês.
 
@@ -130,6 +132,6 @@ Evite também softwares de terceiros que prometem modificar profundamente o visu
 
 2. Esse problema de travamento da barra de tarefas é um vírus? Raramente. Na grande maioria dos casos, trata-se de um bug legítimo do próprio processo gráfico do Windows 11 (`explorer.exe`) ou conflito após uma atualização recente. Manter o Windows Defender ou seu antivírus corporativo atualizado garante que não há ameaças reais.
 
-3. Posso usar softwares de terceiros para substituir a barra de tarefas do Windows 11?
+**Q.** Posso usar softwares de terceiros para substituir a barra de tarefas do Windows 11?
 
-Sim, existem ferramentas populares no mercado, mas lembre-se: quanto mais camadas de software você adiciona sobre a interface nativa do Windows 11, maior é a chance de instabilidade após grandes atualizações do sistema operacional. Prefira sempre usar os recursos nativos sempre que possível.
+**A.** Sim, existem ferramentas populares no mercado, mas lembre-se: quanto mais camadas de software você adiciona sobre a interface nativa do Windows 11, maior é a chance de instabilidade após grandes atualizações do sistema operacional. Prefira sempre usar os recursos nativos sempre que possível.

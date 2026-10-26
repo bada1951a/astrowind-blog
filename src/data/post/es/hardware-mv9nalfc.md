@@ -28,6 +28,8 @@ theme: "Deep Indigo System"
 
 
 
+## 1. Emergencia crítica en el trabajo
+
 Eran las 6:30 de la tarde en nuestra oficina en Madrid. Teníamos sobre la mesa una entrega de proyecto crítico para un cliente multinacional que debía enviarse a las 7:00 en punto. De repente, la pantalla de mi ordenador principal se congeló durante unos segundos y apareció esa temida ventana emergente: "Espacio insuficiente en el disco local (C:)". El sistema operativo comenzó a lanzar advertencias en cadena, bloqueando la sincronización con la nube y negándose a guardar los cambios finales del paquete de diseño y software. El corazón se me encogió; un fallo crítico del sistema justo en el peor momento posible, con los minutos contando en nuestra contra y el cliente esperando los archivos finales.
 
 En medio del pánico inicial, mi primer instinto fue empezar a vaciar la papelera de reciclaje y borrar un par de carpetas pesadas de descargas. Pero no era suficiente. El sistema seguía ahogado, marcando apenas 400 megabytes libres en una partición de 500 gigas que misteriosamente se había llenado hasta el tope. Probé a desinstalar programas a la carrera, perdiendo preciosos minutos valiosos viendo cómo la barra de progreso apenas semovía mientras el ventilador del procesador zumbaba al máximo. 
@@ -37,12 +39,14 @@ En medio del pánico inicial, mi primer instinto fue empezar a vaciar la papeler
 <div style="border-left: 4px solid #4338ca; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Diagnóstico de emergenci
 
-a:</strong> Cuando Windows se queda sin espacio libre en la partición principal de forma repentina, el culpable rara vez son tus archivos personales. El verdadero villano son gigabytes y gigabytes de datos invisibles acumulados en segundo plano.
+**a:**</strong> Cuando Windows se queda sin espacio libre en la partición principal de forma repentina, el culpable rara vez son tus archivos personales. El verdadero villano son gigabytes y gigabytes de datos invisibles acumulados en segundo plano.
 </div>
 
 Por suerte, mi compañero de sistemas se acercó con calma, abrió el menú oculto de almacenamiento y aplicó el procedimiento exacto que salvó nuestra entrega. Aquí te comparto el diagnóstico y el paso a paso definitivo para limpiar tu unidad C: de una vez por todas.
 
 ---
+
+## 2. Análisis detallado de la causa raíz
 
 ¿Por qué se llena el disco C: sin que te des cuenta?
 
@@ -56,6 +60,8 @@ Antes de lanzarnos a borrar cosas a lo loco, entendamos cuáles son las tres cau
 
 ---
 
+## 3. Solución práctica paso a paso
+
 Guía paso a paso: Cómo eliminar archivos temporales y recuperar tu disco C:
 
 Para solucionar esto de manera segura y profesional, vamos a utilizar las herramientas nativas de Windows sin arriesgarnos a romper el sistema operativo.
@@ -65,7 +71,7 @@ Olvídate de buscar carpeta por carpeta. Windows incluye una utilidad fantástic
 
 1. Haz clic en el botón de Inicio y entra en la Configuración (el icono de la rueda dentada).
 
-2. Ve a Sistemay luego haz clic enAlmacenamiento.
+2. Ve a Sistema y luego haz clic en Almacenamiento.
 
 3. Verás una barra que desglosa qué está ocupando tu disco. Haz clic en Archivos temporales.
 
@@ -90,13 +96,13 @@ Si aún necesitas raspar más gigabytes, vamos a limpiar los directorios de usua
 
 2. Selecciona todo presionando `Ctrl + A` y elimínalo pulsando `Shift + Supr` (para borrarlo permanentemente sin pasar por la papelera).
 
-3. *Not
-
-a:* Si Windows te avisa que algún archivo está abierto o en uso por un programa activo, simplemente haz clic en "Omitir".
+3. *Nota:* Si Windows te avisa que algún archivo está abierto o en uso por un programa activo, simplemente haz clic en "Omitir".
 
 4. Repite el proceso presionando `Windows + R`, escribiendo esta vez `temp` (sin los porcentajes) y repitiendo el borrado de archivos.
 
 ---
+
+## 4. Advertencias y consejos de un técnico
 
 Advertencias del experto técnico
 
@@ -104,8 +110,7 @@ Advertencias del experto técnico
 <strong>Precaución vital:</strong> Nunca descargues programas milagrosos de internet que prometen "limpiar el registro con un clic". Muchos de estos programas son adware o pueden corromper rutas críticas del sistema operativo. Utiliza siempre las herramientas nativas de Windows descritas en esta guía. </div>
 
 ---
-
-Preguntas frecuentes (FAQ)
+## 5. Preguntas Frecuentes (FAQ)
 
 ¿Es seguro borrar todo lo que aparece en la carpeta Temp? Sí, al 100%. Los archivos dentro de las carpetas Temp son únicamente residuos temporales que los programas ya terminaron de utilizar. Si un archivo está siendo usado activamente por una aplicación abierta, Windows simplemente te impedirá borrarlo, por lo que no hay riesgo de dañar el sistema operativo.
 

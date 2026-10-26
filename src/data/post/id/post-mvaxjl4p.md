@@ -28,6 +28,8 @@ theme: "Sunset Horizon Coral"
 
 
 
+## 1. Situasi Darurat Kritis di Tempat Kerja
+
 Jam menunjukkan pukul 08.55 WIB. Lima menit lagi *daily standup meeting* via Zoom akan dimulai di ruang *huddle* kantor startup kami di kawasan SCBD, Jakarta. Sialnya, laptop Windows 10 operasional saya baru saja dinyalakan karena habis melakukan *update* sistem semalam. Layar *desktop* sudah muncul, tapi kursor mutar-mutar terus, kipas bergemuruh kencang, dan aplikasi Slack serta Chrome sama sekali tidak mau dibuka. Keringat dingin mulai bercucuran karena saya harus segera membagikan laporan server internal yang down semalam. Masalah klasik: laptop kehabisan napas karena puluhan aplikasi langsung *nyala* bersamaan saat *booting*.
 
 Situasi seperti ini pasti sering bikin darah tinggi, kan? Kalau Anda bekerja di lingkungan cepat seperti *startup* Jakarta, menunggu laptop *loading* selama 5 sampai 10 menit adalah kemewahan yang tidak kita miliki. 
@@ -46,7 +48,7 @@ Akar Masalah: Kenapa Windows 10 Bisa Mendadak Lemot Saat Dinyalakan?
 
 Sebelum masuk ke eksekusi, kita harus paham dulu apa yang sebenarnya terjadi di balik layar laptop And
 
-a:
+**a:**
 
 1. Aplikasi "Numpang Nyala" Otomatis: Banyak aplikasi seperti Steam, Spotify, Discord, hingga aplikasi kantor seperti Teams dan OneDrive yang secara *default* mencentang opsi "Run at startup" saat instalasi.
 

@@ -28,9 +28,11 @@ theme: "Acid Lime Hacker Space"
 
 
 
+## 1. Emergencia crítica en el trabajo
+
 Eran las 8:55 AM, a solo cinco minutos de que el *Director General* entrara a la sala de juntas para una presentación global con inversores. El pobre Carlos, de finanzas, me llama por Teams con la voz quebrad
 
-a: su ThinkPad se había quedado congelado en la pantalla de bienvenida con la rueda de carga dando vueltas eternas. El ventilador parecía un motor de Boeing 747 a punto de despegar, y el tipo sudaba frío mirando el reloj. Si esa máquina no arrancaba en tres minutos, la reunión se caía y mi cabeza rodaba por el pasillo.
+**a:** su ThinkPad se había quedado congelado en la pantalla de bienvenida con la rueda de carga dando vueltas eternas. El ventilador parecía un motor de Boeing 747 a punto de despegar, y el tipo sudaba frío mirando el reloj. Si esa máquina no arrancaba en tres minutos, la reunión se caía y mi cabeza rodaba por el pasillo.
 
 <div style="border-left: 4px solid #84cc16; padding: 12px 16px; margin: 20px 0; background-color: rgba(132, 204, 22, 0.05); border-radius: 4px;">
 <strong>⚠️ Alerta de Emergencia TI:</strong> Un arranque lento en entornos corporativos no es solo molestia; es pérdida de productividad en masa. Olvídate de reiniciar a lo loco; aquí aplicamos ingeniería inversa al problema con herramientas de sysadmin veterano.
@@ -81,7 +83,7 @@ Un arranque lento a veces oculta un problema de particionado o falta de alineaci
 
 3. Si detectas particiones de recuperación obsoletas de equipos antiguos, límpialas usando la utilidad CLI nativ
 
-a:
+**a:**
 
 ```powershell
 Abrir PowerShell como Administrador para listar volúmenes y comprobar estado de optimización
@@ -105,12 +107,12 @@ Muchos servicios de Windows vienen activados por defecto ("Automático") sin que
 
 FA
 
-Q: Dudas de trinchera sobre optimización de equipos
+**Q:** Dudas de trinchera sobre optimización de equipos
 
 P: ¿Desactivar aplicaciones en el inicio afecta a su funcionamiento normal cuando las abro manualmente?
 
-R: Para nada. Lo único que evitas es que el programa cargue su proceso en segundo plano desde el preciso instante en que enciendes el ordenador. Se abrirá un poco más lento la primera vez que lo invoques, pero liberarás memoria RAM y ciclos de CPU críticos durante el boot.P: ¿Es recomendable usar scripts de GitHub que prometen "optimizar Windows con un solo clic"?
+**A.** Para nada. Lo único que evitas es que el programa cargue su proceso en segundo plano desde el preciso instante en que enciendes el ordenador. Se abrirá un poco más lento la primera vez que lo invoques, pero liberarás memoria RAM y ciclos de CPU críticos durante el boot.P: ¿Es recomendable usar scripts de GitHub que prometen "optimizar Windows con un solo clic"?
 
-R: Depende del repositorio. Muchos scripts públicos en GitHub automatizan tareas excelentes (eliminación de bloatware, desactivación de telemetría), pero debes revisar el código fuente antes de ejecutarlo en entornos de producción para evitar que rompan políticas de dominio de Active Directory o rompan la VPN corporativa. P: ¿Por qué mi SSD sigue lento incluso después de limpiar el inicio y formatear?
+**A.** Depende del repositorio. Muchos scripts públicos en GitHub automatizan tareas excelentes (eliminación de bloatware, desactivación de telemetría), pero debes revisar el código fuente antes de ejecutarlo en entornos de producción para evitar que rompan políticas de dominio de Active Directory o rompan la VPN corporativa. P: ¿Por qué mi SSD sigue lento incluso después de limpiar el inicio y formatear?
 
-R: Si el software está limpio y el arranque sigue siendo lento, el problema ya es hardware puro: celdas NAND flash degradadas, falta de actualización de la BIOS/UEFI de la placa base, o un perfil XMP/EXPO mal configurado en la memoria RAM que obliga al controlador a trabajar en frecuencias de seguridad por defecto.
+**A.** Si el software está limpio y el arranque sigue siendo lento, el problema ya es hardware puro: celdas NAND flash degradadas, falta de actualización de la BIOS/UEFI de la placa base, o un perfil XMP/EXPO mal configurado en la memoria RAM que obliga al controlador a trabajar en frecuencias de seguridad por defecto.

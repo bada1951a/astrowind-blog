@@ -28,12 +28,14 @@ theme: "Teal Matrix Digital"
 
 
 
+## 1. Nagła awaria w miejscu pracy
+
 Wczoraj rano, tuż przed kluczowym audytem stabilności infrastruktury dla naszego zagranicznego klienta we wrocławskim parku technologicznym, mój laptop z Windowsem 10 postanowił zrobić strajk włoski. Restart po aktualizacji bezpieczeństwa ciągnął się w nieskończoność. Pasek postępu stał w miejscu, a ja patrzyłem na zegarek, czując jak z każdą sekundą rośnie napięcie przed spotkaniem na Zoomie. Kiedy system w końcu łaskawie się podniósł, otwarcie prostego terminala czy przeglądarki graniczyło z cudem, bo w tle cicho i bezczelnie uruchamiało się naraz trzydzieści różnych komunikatorów, launcherów gier i "niezbędnych" pomocników producenta sprzętu. Zamiast panikować, odpaliłem szybką procedurę ratunkową, która zajęła mi dosłownie kilkadziesiąt sekund.
 
 <div style="border-left: 4px solid #14b8a6; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Sytuacja kryzysow
 
-a:</strong> Zbyt duża liczba aplikacji startujących razem z systemem to główny zabójca wydajności dysków HDD oraz SSD podczas rozruchu. Na szczęście Windows 10 ma wbudowane narzędzia, by to okiełznać bez instalowania podejrzanego softu z sieci.
+**a:**</strong> Zbyt duża liczba aplikacji startujących razem z systemem to główny zabójca wydajności dysków HDD oraz SSD podczas rozruchu. Na szczęście Windows 10 ma wbudowane narzędzia, by to okiełznać bez instalowania podejrzanego softu z sieci.
 </div>
 
 ![Tech & IT Solution Guide](https://picsum.photos/seed/computer143/1000/550)
@@ -64,7 +66,7 @@ Zwróć uwagę na kolumnę Wpływ na uruchamianie (Startup impact). Szukaj pozyc
 <div style="border-left: 4px solid #14b8a6; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Wskazówka praktyczn
 
-a:</strong> Kliknij prawym przyciskiem myszy na wybraną aplikację (np. uciążliwy komunikator lub launcher) i wybierz <strong>Wyłącz</strong> (Disable). Nic nie tracisz – program nadal będzie działał normalnie, gdy włączysz go ręcznie, ale przestanie marnować zasoby podczas rozruchu komputera. </div>
+**a:**</strong> Kliknij prawym przyciskiem myszy na wybraną aplikację (np. uciążliwy komunikator lub launcher) i wybierz <strong>Wyłącz</strong> (Disable). Nic nie tracisz – program nadal będzie działał normalnie, gdy włączysz go ręcznie, ale przestanie marnować zasoby podczas rozruchu komputera. </div>
 
 ---
 
@@ -74,10 +76,10 @@ Podczas audytów w firmach często widzę przestrzelone optymalizacje, gdzie uż
 
 * Zostaw w spokoju sterowniki i zabezpieczeni
 
-a: Aplikacje powiązane z kartą graficzną (np. *NVIDIA Container*, *Realtek Audio Universal Service*) oraz program antywirusowy (np. *Windows Security notification icon*) powinny pozostać włączone.
+**a:** Aplikacje powiązane z kartą graficzną (np. *NVIDIA Container*, *Realtek Audio Universal Service*) oraz program antywirusowy (np. *Windows Security notification icon*) powinny pozostać włączone.
 * Bezpieczna zasad
 
-a: Jeśli nazwa procesu nic Ci nie mówi, a wydawca to *Microsoft Corporation*, lepiej tego nie dotykaj. Jeśli to program firm trzecich (np. Steam, Skype, OneDrive), śmiało możesz go uśpić w autostarcie.
+**a:** Jeśli nazwa procesu nic Ci nie mówi, a wydawca to *Microsoft Corporation*, lepiej tego nie dotykaj. Jeśli to program firm trzecich (np. Steam, Skype, OneDrive), śmiało możesz go uśpić w autostarcie.
 
 ---
 

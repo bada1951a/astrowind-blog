@@ -28,9 +28,11 @@ theme: "Solarized Amber Warm"
 
 
 
+## 1. Situasi Darurat Kritis di Tempat Kerja
+
 Jam 8 malam di kantor startup kawasan SCBD Jakarta. Tim *engineering* sedang bersiap merilis pembaruan besar sistem internal, tiba-tiba salah satu PC workstation utama yang menangani *deployment pipeline* mendadak mati total dan menampilkan layar biru pekat dengan kode *stop error* yang bikin jantungan: IRQL_NOT_LESS_OR_EQUALatau kode heksadesimal0x0000000
 
-a. Panik? Jelas. Pengerjaan sistem internal langsung tersendat karena mesin tersebut tidak mau masuk ke sistem operasi dan terus-menerus mengalami *reboot loop*.
+**a.** Panik? Jelas. Pengerjaan sistem internal langsung tersendat karena mesin tersebut tidak mau masuk ke sistem operasi dan terus-menerus mengalami *reboot loop*.
 
 Setelah berjibaku selama dua jam mencoba berbagai cara instan seperti mematikan paksa dan mencabut kabel daya yang ternyata tidak membuahkan hasil, saya mulai melakukan penelusuran sistematis. Kode error 0x0000000a ini sebenarnya memberikan petunjuk yang sangat spesifik: ada proses di level *kernel* atau *driver* yang mencoba mengakses alamat memori yang tidak diizinkan. 
 
@@ -39,7 +41,7 @@ Setelah berjibaku selama dua jam mencoba berbagai cara instan seperti mematikan 
 <div style="border-left: 4px solid #d97706; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Catatan Lapangan IT:</strong> Jangan buru-buru melakukan instal ulang Windows saat menghadapi error 0x0000000
 
-a. Sembilan puluh persen kasus ini bisa diselesaikan lewat investigasi RAM fisik atau pembaruan/penurunan versi driver yang bermasalah.
+**a.** Sembilan puluh persen kasus ini bisa diselesaikan lewat investigasi RAM fisik atau pembaruan/penurunan versi driver yang bermasalah.
 </div>
 
 Akar Masalah: Kenapa Error 0x0000000a Bisa Muncul?
@@ -52,7 +54,7 @@ Sebelum masuk ke langkah perbaikan, mari kita bedah tiga penyebab utama yang ser
 
 3. Layanan Latar Belakang Pihak Ketig
 
-a: Aplikasi utilitas atau antivirus lawas yang menancapkan modul *driver*-nya langsung ke kernel sistem operasi sehingga memicu pelanggaran akses memori.
+**a:** Aplikasi utilitas atau antivirus lawas yang menancapkan modul *driver*-nya langsung ke kernel sistem operasi sehingga memicu pelanggaran akses memori.
 
 ---
 

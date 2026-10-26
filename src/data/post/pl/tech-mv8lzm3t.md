@@ -28,6 +28,8 @@ theme: "Crimson Emergency Field"
 
 
 
+## 1. Nagła awaria w miejscu pracy
+
 Godzina 8:52 rano. Za acht minut mam mieć gotowy raport dla zarządu i rzuconego na głęboką wodę klienta z Frankfurtu. Otwieram mojego ThinkPada, a on... wita mnie czarnym ekranem i kręcącym się kółkiem ładowania. Dysk NVMe mieli w kółko, procesor jedzie na 100% swoich możliwości, a wentylatory wyją jak odkurzacz w małym pokoju. W tle ładuje się Teams, Discord, Spotify, autoupdater do jakiejś głupiej gierki i pięć różnych programów do "optymalizacji", które jakiś geniusz z działu marketingu zainstalował bez pytania. Krew mnie zalała, pot oblał czoło – klasyczny piątkowy orkan w korpo, gdzie sprzęt decyduje się umrzeć w najmniej odpowiednim momencie.
 
 <div style="border-left: 4px solid #ef4444; padding: 12px 16px; margin: 20px 0; background-color: rgba(239, 68, 68, 0.05); border-radius: 4px;">
@@ -54,7 +56,7 @@ Zanim przejdziemy do chirurgicznego usuwania problemów, ustalmy, dlaczego Twój
 
 Procedura Awaryjn
 
-a: Krok po Kroku do Wolności
+**a:** Krok po Kroku do Wolności
 
 Odrzucamy wszelkie szemrane programy "szuwarek-optimizer" z internetu. Zrobimy to jak profesjonalni inżynierowie wsparcia – szybko, czysto i za pomocą wbudowanych narzędzi Windowsa. ### Krok 1: Oczyszczanie Menedżera Zadania (Task Manager)
 Zapomnij o starym `msconfig`. Od czasów Windows 10 i 11 mamy do dyspozycji dedykowaną zakładkę w Menedżerze Zadań, która bezlitośnie obnaża zasobożerność startera.
@@ -72,7 +74,7 @@ Zapomnij o starym `msconfig`. Od czasów Windows 10 i 11 mamy do dyspozycji dedy
 <div style="border-left: 4px solid #ef4444; padding: 12px 16px; margin: 20px 0; background-color: rgba(239, 68, 68, 0.05); border-radius: 4px;">
 <strong>ZŁOTA ZASADA INŻYNIER
 
-A:</strong><br>
+**A:**</strong><br>
 Jeśli nie masz pewności, czym jest dany proces (np. nazwa to losowy ciąg liter typu <code>jhi_service.exe</code> albo <code>RtkAudUService64.exe</code>), wrzuć go w Google przed wyłączeniem. Nie wyłączaj sterowników Realteka, grafiki (NVIDIA/AMD) ani oprogramowania zabezpieczającego.
 </div>
 
@@ -114,7 +116,7 @@ Wielu cwaniaków w branży oprogramowania omija autostart rejestru i wrzuca swoj
 
 ⚠️ Ostrzeżenie Inżynier
 
-a: Czego NIGDY Nie Ruszać?
+**a:** Czego NIGDY Nie Ruszać?
 
 Zanim zaczniesz bezmyślnie klikać "Wyłącz", spójrz na tę krótką listę ratunkową. Ubicie tych komponentów oznacza bilet w jedną stronę do trybu awaryjnego (Safe Mode):
 
@@ -127,14 +129,14 @@ Zanim zaczniesz bezmyślnie klikać "Wyłącz", spójrz na tę krótką listę r
 
 Często Zadawane Pytania (FAQ)
 
-Q1: Wyłączyłem aplikację w Menedżerze zadań, a ona dalej włącza się po restarcie. O co chodzi?
+**Q1:** Wyłączyłem aplikację w Menedżerze zadań, a ona dalej włącza się po restarcie. O co chodzi?
 
-A: Niektóre aplikacje mają własne ustawienia wewnętrzne, które przy każdym uruchomieniu programu same dopisują się z powrotem do autostartu. Wejdź w *Ustawienia* (Settings) danej aplikacji (np. Skype, Steam, Torrenty) i tam odznacz opcję "Uruchom wraz z systemem". Dopiero wtedy zniknie na dobre.
+**A:** Niektóre aplikacje mają własne ustawienia wewnętrzne, które przy każdym uruchomieniu programu same dopisują się z powrotem do autostartu. Wejdź w *Ustawienia* (Settings) danej aplikacji (np. Skype, Steam, Torrenty) i tam odznacz opcję "Uruchom wraz z systemem". Dopiero wtedy zniknie na dobre.
 
-Q2: Czy czyszczenie autostartu jest bezpieczne dla moich danych?
+**Q2:** Czy czyszczenie autostartu jest bezpieczne dla moich danych?
 
-A:W 100% bezpieczne. Wyłączenie aplikacji w autostarcienie oznacza jej odinstalowania. Programy te nadal będą działać idealnie, gdy klikniesz ich ikonkę ręcznie. Po prostu przestaną marnować zasoby komputera w momencie, gdy Ty próbujesz spokojnie zacząć pracę.
+**A:**W 100% bezpieczne. Wyłączenie aplikacji w autostarcienie oznacza jej odinstalowania. Programy te nadal będą działać idealnie, gdy klikniesz ich ikonkę ręcznie. Po prostu przestaną marnować zasoby komputera w momencie, gdy Ty próbujesz spokojnie zacząć pracę.
 
-Q3: Mój dysk to stary HDD. Czy samo wyłączenie autostartu mi pomoże?
+**Q3:** Mój dysk to stary HDD. Czy samo wyłączenie autostartu mi pomoże?
 
-A: Pomoże, ale na krótko. Tradycyjne dyski talerzowe (HDD) mają dramatycznie niski wskaźnik IOPS (operacji wejścia/wyjścia na sekundę). Przy starcie Windowsa głowica dysku skacze w tysiące miejsc jednocześnie, próbując załadować wszystko naraz. Jeśli chcesz autentycznego kopa, jedynym trwałym rozwiązaniem jest migracja systemu na dysk SSD (M.2 NVMe lub SATA). Autostart to tylko półśrodek, choć niezwykle skuteczny na start.
+**A:** Pomoże, ale na krótko. Tradycyjne dyski talerzowe (HDD) mają dramatycznie niski wskaźnik IOPS (operacji wejścia/wyjścia na sekundę). Przy starcie Windowsa głowica dysku skacze w tysiące miejsc jednocześnie, próbując załadować wszystko naraz. Jeśli chcesz autentycznego kopa, jedynym trwałym rozwiązaniem jest migracja systemu na dysk SSD (M.2 NVMe lub SATA). Autostart to tylko półśrodek, choć niezwykle skuteczny na start.

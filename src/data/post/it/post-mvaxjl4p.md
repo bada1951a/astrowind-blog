@@ -28,21 +28,23 @@ theme: "Deep Indigo System"
 
 
 
+## 1. Emergenza improvvisa sul posto di lavoro
+
 Lunedì mattina, ore 8:55. Sono seduto alla mia scrivania nella nostra sede di Milano, con il caffè fumante ancora intatto, quando il responsabile commerciale mi si avvicina con la faccia di chi ha un'emergenz
 
-a: "Il portatile aziendale ci mette dieci minuti solo per accendersi, non riesco ad aprire neanche Teams per il meeting delle nove con i clienti!". Una scena che, se lavori nel settore IT o gestisci un'infrastruttura, ti farà sicuramente scattare un campanello d'allarme familiare. Il problema non è l'hardware obsoleto, ma la quantità industriale di applicazioni che si caricano silenziosamente in background nel momento esatto in cui premi il tasto di accensione.
+**a:** "Il portatile aziendale ci mette dieci minuti solo per accendersi, non riesco ad aprire neanche Teams per il meeting delle nove con i clienti!". Una scena che, se lavori nel settore IT o gestisci un'infrastruttura, ti farà sicuramente scattare un campanello d'allarme familiare. Il problema non è l'hardware obsoleto, ma la quantità industriale di applicazioni che si caricano silenziosamente in background nel momento esatto in cui premi il tasto di accensione.
 
 <div style="border-left: 4px solid #4338ca; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Il Collo di Bottigli
 
-a:</strong> Quando accendi Windows 10, decine di software non necessari (updater, chat, tool di sincronizzazione) si mettono in coda per l'accesso al disco e alla CPU, bloccando l'intera sequenza di boot prima ancora che tu possa inserire la password.
+**a:**</strong> Quando accendi Windows 10, decine di software non necessari (updater, chat, tool di sincronizzazione) si mettono in coda per l'accesso al disco e alla CPU, bloccando l'intera sequenza di boot prima ancora che tu possa inserire la password.
 </div>
 
 ![Tech & IT Solution Guide](https://picsum.photos/seed/computer924/1000/550)
 
 Analisi del Problem
 
-a: Perché Windows 10 rallenta all'avvio?
+**a:** Perché Windows 10 rallenta all'avvio?
 
 Prima di mettere mano al sistema, capiamo cosa sta succedendo sotto il cofano. Nella mia esperienza quotidiana di ottimizzazione delle prestazioni, ho notato che i rallentamenti in fase di boot sono quasi sempre causati da tre fattori precisi:
 
@@ -62,7 +64,7 @@ Ecco la sequenza esatta da seguire per ripulire l'avvio in meno di sessanta seco
 
 2. Espandi la finestr
 
-a: Se vedi una visualizzazione ridotta, clicca su "Più dettagli" in basso a sinistra per accedere alla vista avanzata.
+**a:** Se vedi una visualizzazione ridotta, clicca su "Più dettagli" in basso a sinistra per accedere alla vista avanzata.
 
 3. Vai alla scheda Avvio:Clicca sulla schedaAvvio nella barra superiore. Qui vedrai la lista completa dei programmi configurati per avviarsi insieme a Windows 10.
 
@@ -72,7 +74,7 @@ a: Se vedi una visualizzazione ridotta, clicca su "Più dettagli" in basso a sin
 
 <strong>Consiglio Pro dall'Infrastruttur
 
-a:</strong> Non toccare mai i driver hardware essenziali o i software di sicurezza come il tuo antivirus (Windows Defender o soluzioni aziendali). Concentrati solo sulle applicazioni di consumo e sui tool di terze parti.
+**a:**</strong> Non toccare mai i driver hardware essenziali o i software di sicurezza come il tuo antivirus (Windows Defender o soluzioni aziendali). Concentrati solo sulle applicazioni di consumo e sui tool di terze parti.
 </div>
 
 Consigli dell'Esperto per la Stabilità del Sistema

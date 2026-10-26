@@ -28,6 +28,8 @@ theme: "Cyberpunk Terminal"
 
 
 
+## 1. Tình huống sự cố khẩn cấp tại văn phòng
+
 Mới tuần trước, trong một chuyến công tác xa, tôi kẹt lại ở sảnh chờ khách sạn tại Quận 1 khi pin chiếc laptop chỉ còn vỏn vẹn 18เปอร์เซ็นต์ (18%). Giữa lúc mạng Wi-Fi chập chờn, tôi buộc phải bật máy lên để mở gấp một tài liệu chia sẻ quan trọng từ văn phòng tổng công ty. Sau khi xem xong, tôi cẩn thận bấm lệnh Shutdown trong menu Start, gập màn hình lại và nhét vội máy vào balo để chuẩn bị ra xe di chuyển. Thế nhưng, chỉ khoảng 20 phút sau, khi xách balo lên vai, tôi giật mình thấy góc túi đựng nóng ran như lò nướng. Mở balo ra kiểm tra, chiếc laptop vẫn đang chạy ngầm rầm rộ, quạt tản tố kêu vù vù và pin lúc này đã tụt sạch về mức 0เปอร์เซ็นต์ (0%), sập nguồn hoàn toàn khiến tôi mất luôn bản nháp tài liệu chưa kịp lưu đồng bộ trên trình duyệt.
 
 Đó không phải là lần đầu tiên tôi gặp tình huống trớ trêu này trong nghề IT. Lỗi máy tính không chịu tắt nguồn hẳn sau khi bấm Shutdown là một bệnh cực kỳ phổ biến trên Windows 10 và Windows 11. Đa số mọi người khi gặp tình trạng này thường nghĩ ngay đến việc lỗi ổ cứng, lỗi win hoặc hỏng nút nguồn vật lý. Họ mất hàng giờ liền để cài lại driver chipset, quét virus tổng thể hoặc thậm chí là ghost lại máy nhưng rốt cuộc lỗi vẫn hoàn lỗi. Nguyên nhân cốt lõi thực ra rất đơn giản và nằm ở một tính năng mặc định của hệ điều hành mang tên Fast Startup. Khi tính năng này bật, thay vì tắt máy hoàn toàn, Windows sẽ đóng băng một phần trạng thái kernel vào ổ cứng để lần sau khởi động nhanh hơn, vô tình khiến máy bị treo ở trạng thái lửng lơ, không ngắt hẳn dòng điện cấp cho bo mạch chủ và linh kiện.
@@ -64,12 +66,12 @@ Dưới đây là các câu hỏi thường gặp khi xử lý lỗi máy tính 
 
 **Q1.** Tại sao tôi đã tắt Fast Startup rồi nhưng thỉnh thoảng máy vẫn không chịu tắt nguồn?
 
-A1. Trường hợp này thường do các tiến trình nền của ứng dụng bên thứ ba như phần mềm diệt virus, Steam hoặc các dịch vụ ngầm của Windows chưa kịp giải phóng dung lượng trước khi lệnh Shutdown được thực thi. Bạn có thể thử khởi động lại máy trước khi bấm tắt nguồn, hoặc kiểm tra bằng Task Manager để đóng các ứng dụng đang bị treo.
+**A1.** Trường hợp này thường do các tiến trình nền của ứng dụng bên thứ ba như phần mềm diệt virus, Steam hoặc các dịch vụ ngầm của Windows chưa kịp giải phóng dung lượng trước khi lệnh Shutdown được thực thi. Bạn có thể thử khởi động lại máy trước khi bấm tắt nguồn, hoặc kiểm tra bằng Task Manager để đóng các ứng dụng đang bị treo.
 
 **Q2.** Việc tắt tính năng Fast Startup có làm giảm tuổi thọ của ổ cứng SSD không?
 
-A2. Hoàn toàn không. Ngược lại, việc tắt Fast Startup giúp giảm bớt số lượng thao tác ghi dữ liệu tạm thời vào phân vùng hệ thống mỗi lần tắt máy, từ đó giúp kéo dài tuổi thọ cho ổ cứng SSD của bạn theo thời gian.
+**A2.** Hoàn toàn không. Ngược lại, việc tắt Fast Startup giúp giảm bớt số lượng thao tác ghi dữ liệu tạm thời vào phân vùng hệ thống mỗi lần tắt máy, từ đó giúp kéo dài tuổi thọ cho ổ cứng SSD của bạn theo thời gian.
 
 **Q3.** Sau khi cập nhật Windows, tại sao tùy chọn Fast Startup lại tự động bật lại?
 
-A3. Một số bản cập nhật lớn tính năng (Feature Update) của hệ điều hành Windows có xu hướng khôi phục lại các thiết lập mặc định ban đầu của hệ thống. Do đó, nếu bạn thấy hiện tượng máy không tắt nguồn lặp lại sau khi update, hãy truy cập lại Control Panel và thực hiện lại thao tác vô hiệu hóa tính năng này.
+**A3.** Một số bản cập nhật lớn tính năng (Feature Update) của hệ điều hành Windows có xu hướng khôi phục lại các thiết lập mặc định ban đầu của hệ thống. Do đó, nếu bạn thấy hiện tượng máy không tắt nguồn lặp lại sau khi update, hãy truy cập lại Control Panel và thực hiện lại thao tác vô hiệu hóa tính năng này.

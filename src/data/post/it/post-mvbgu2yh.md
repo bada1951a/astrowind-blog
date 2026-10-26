@@ -28,12 +28,14 @@ theme: "Sunset Horizon Coral"
 
 
 
+## 1. Emergenza improvvisa sul posto di lavoro
+
 Erano le 16:30 di un martedì pomeriggio frenetico nella nostra azienda IT a Milano, eravamo in pieno fermento per l'ottimizzazione delle prestazioni dell'infrastruttura di un cliente chiave, quando all'improvviso il mio monitor principale si è trasformato in un incubo: la barra delle applicazioni di Windows 11 si è completamente congelata. Cliccavo sul menu Start, cercavo di aprire le impostazioni rapide, premevo sulle icone delle app aperte, ma nulla. Zero risposta. Con tre call urgenti aperte su Teams e una scadenza imminente per il deploy dei nuovi server, non potevo certo permettermi di riavviare il PC perdendo venti minuti di sessioni di lavoro. 
 
 <div style="border-left: 4px solid #f97316; padding: 12px 16px; margin: 20px 0; background-color: rgba(249,115,22,0.05); border-radius: 4px; color: #111827;">
 <strong>Situazione di emergenz
 
-a:</strong> Quando la taskbar di Windows 11 smette di rispondere, il panico è comprensibile, ma nella maggior parte dei casi non serve riavviare la macchina. Il colpevole è quasi sempre il gestore dell'interfaccia grafica. </div>
+**a:**</strong> Quando la taskbar di Windows 11 smette di rispondere, il panico è comprensibile, ma nella maggior parte dei casi non serve riavviare la macchina. Il colpevole è quasi sempre il gestore dell'interfaccia grafica. </div>
 
 ![Tech & IT Solution Guide](https://picsum.photos/seed/computer320/1000/550)
 
@@ -111,8 +113,10 @@ Domande Frequenti (FAQ)
 
 1. Perché la barra delle applicazioni si blocca sempre dopo l'avvio del PC? Spesso è colpa di un'applicazione di terze parti che si avvia in background e va in conflitto con la shell di Windows (spesso antivirus aggressivi o utility di personalizzazione estetica). Prova a disabilitare le app superflue dalla scheda "App di avvio" nel Task Manager.
 
-2. Posso usare il prompt dei comandi se il menu Start non si apre? Certamente. Anche se il menu Start e la taskbar sono totalmente bloccati, le scorciatoie da tastiera comeCtrl + Maiusc + Esc(per il Task Manager) oWin + R(per la finestra Esegui) continuano a funzionare nella maggior parte dei casi.
+**Q.** Posso usare il prompt dei comandi se il menu Start non si apre?
 
-3. Questo problema cancella i miei file o le applicazioni aperte?
+**A.** Certamente. Anche se il menu Start e la taskbar sono totalmente bloccati, le scorciatoie da tastiera comeCtrl + Maiusc + Esc(per il Task Manager) oWin + R(per la finestra Esegui) continuano a funzionare nella maggior parte dei casi.
 
-No. Riavviare *explorer.exe* interrompe unicamente l'interfaccia grafica del desktop e della barra delle applicazioni, lasciando intatte tutte le applicazioni di lavoro aperte e i documenti in corso.
+**Q.** Questo problema cancella i miei file o le applicazioni aperte?
+
+**A.** No. Riavviare *explorer.exe* interrompe unicamente l'interfaccia grafica del desktop e della barra delle applicazioni, lasciando intatte tutte le applicazioni di lavoro aperte e i documenti in corso.

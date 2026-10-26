@@ -28,6 +28,8 @@ theme: "Midnight Navy Royal"
 
 
 
+## 1. Kritische Fehlersituation am Arbeitsplatz
+
 Es ist 02:47 Uhr während einer regulären Wartungsnacht im RZ-Bereich Frankfurt-Nord. Ich sitze an der primären Konsole für die Core-Switches, will per SSH ein Konfigurations-Update aufspielen – und das Terminal verweigert den Dienst. Fehlermeldung: *Authentication failure*. Nach drei Versuchen schaue ich mir die Eingabe im Klartext-Notizblock an: Statt `passwort` steht dort `passsswwort`. Meine treue mechanische Tastatur mit taktilen Cherry-MX-Switches hat beschlossen, massives Key Chattering (Tastenprellen) auf der Taste `S` und zeitgleich sporadische Kontaktabbrüche bei der Leertaste an den Tag zu legen.
 
 Im Sysadmin-Alltag ist so etwas kein bloßes Ärgernis, sondern ein echtes Betriebsrisiko. Wenn ein `rm -rf /var/log/app/*` durch ein verschlucktes Zeichen oder doppelten Anschlag im falschen Verzeichnis landet, brennt der Baum. Wer in solchen Situationen nicht sofort 150 Euro für ein neues Board ausgeben will, greift zur systematischen Instandsetzung. In diesem Logbuch dokumentiere ich den exakten Ablauf, wie wir Tastenaussetzer und Chattering physikalisch wie logisch analysieren und mechanische Schalter fachgerecht revitalisieren.
@@ -47,7 +49,7 @@ Mechanische Tastaturschalter arbeiten fast ausnahmslos mit galvanischen Schaltko
 
 Ursache
 
-A: Mikroskopische Oxidation und Fremdkörperpartikel
+**A:** Mikroskopische Oxidation und Fremdkörperpartikel
 Mechanische Schalter sind selten hermetisch versiegelt. Im Laufe von Monaten dringen feiner Staub, Aerosole und mikroskopischer Abrieb in das Gehäuse ein. Setzen sich diese Partikel genau zwischen die Gold-Crosspoint-Kontakte, wird der Stromkreis beim Niederdrücken nicht stabil geschlossen. Das Resultat: Die Firmware registriert ein extremes Flattern des Pegels. Statt eines sauberen High-/Low-Signals interpretiert der Controller die Spannungsschwankungen als mehrfaches Drücken der Taste binnen weniger Millisekunden (Chattering) oder der Kontakt kommt schlicht gar nicht zustande.
 
 Ursache B: Materialermüdung und Dejustierung der Blattfeder
@@ -58,6 +60,8 @@ Jeder mechanische Schalter prellt von Natur aus einige Millisekunden beim Schlie
 
 ---
 ![Tech Hardware Guide](https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2? auto=format&fit=crop&w=1200&h=675&q=85)
+
+## 3. Schritt-für-Schritt-Lösungsanleitung
 
 2. Schritt-für-Schritt-Entstörung (Diagnose & Instandsetzung)
 
@@ -136,6 +140,8 @@ Sollte das Chattering nach Phase 2 weiterhin auftreten, ist die Blattfeder entwe
 
 ---
 
+## 4. Praxistipps und Warnungen vom System-Admin
+
 3. Experten-Warnung & Brandmelder-Prävention
 
 Im RZ-Betrieb gelten strenge Richtlinien für Flüssigkeiten und Gase. Bei Heim- und Büroarbeitsplätzen wird der Umgang mit Kontaktsprays dagegen oft fahrlässig gehandhabt.
@@ -161,8 +167,7 @@ Im industriellen IT-Betrieb endet kein Incident ohne Vorbeugemaßnahmen. Um erne
 3. Firmware-Updates einspielen: Hersteller wie Ducky, Corsair oder Razer veröffentlichen regelmäßig Firmware-Patches, die gezielt die Debounce-Filterung für prellende Schalterserien optimieren.
 
 ---
-
-Häufig gestellte Fragen (FAQ)
+## 5. Häufig gestellte Fragen (FAQ)
 
 1. Kann ich Isopropanol direkt in den Schalter träufeln, anstatt ein Kontaktspray zu nutzen?
 Ja, das ist sogar die von vielen Enthusiasten bevorzugte Methode, da reines Isopropanol (99,9 %) absolut rückstandsfrei verdampft und Kunststoffe nicht angreift. Nutzen Sie dafür am besten eine medizinische Spritze mit stumpfer Kanüle. Geben Sie maximal 2 bis 3 Tropfen direkt an den Schaft des heruntergedrückten Stempels, betätigen Sie den Schalter mehrfach und lassen Sie das Board mindestens eine halbe Stunde ablüften.

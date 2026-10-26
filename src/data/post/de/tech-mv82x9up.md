@@ -28,6 +28,8 @@ theme: "Retro Monokai"
 
 
 
+## 1. Kritische Fehlersituation am Arbeitsplatz
+
 Freitagnachmittag, 16:45 Uhr. Der letzte Deployment-Lauf für das Release am Montag läuft durch, der Kaffee ist kalt, und ich will eigentlich nur noch den Rechner zuklappen und ins Wochenende starten. Plötzlich fängt die Kiste neben mir an zu röhren wie ein startender A380 – die Gehäuselüfter drehen auf 100%, die RGB-Beleuchtung glimmt in traurigem Monokai-Grün, aber der Dell-Monitor bleibt eisern im Standby. Kein POST-Screen, kein BIOS-Logo, absolut tote Hose. Und natürlich wartet der Abteilungsleiter im Teams auf den finalen Build. Herzlichen Glückwunsch, der klassische Hardware-Gau.
 
 <div style="border-left: 4px solid #a6e22e; padding: 12px 16px; margin: 20px 0; background-color: rgba(166,226,46,0.05); border-radius: 4px; color: #111827; font-family: monospace;">
@@ -37,6 +39,8 @@ Freitagnachmittag, 16:45 Uhr. Der letzte Deployment-Lauf für das Release am Mon
 </div>
 
 ![Tech Hardware Guide](https://images.unsplash.com/photo-1544197150-b99a580bb7a8? auto=format&fit=crop&w=1200&h=675&q=85)
+
+## 2. Detaillierte Ursachenanalyse
 
 Root Cause Analysis: Warum streikt die Kiste genau jetzt?
 
@@ -85,6 +89,8 @@ Falls Windows wider Erwarten hochfährt, werfen wir noch einen Blick in den Ger�
 
 ---
 
+## 4. Praxistipps und Warnungen vom System-Admin
+
 Expert Warning: Was du unbedingt vermeiden solltest
 
 <div style="border-left: 4px solid #ff5555; padding: 12px 16px; margin: 20px 0; background-color: rgba(255,85,85,0.05); border-radius: 4px; color: #111827;">
@@ -92,8 +98,7 @@ Expert Warning: Was du unbedingt vermeiden solltest
 </div>
 
 ---
-
-Häufig gestellte Fragen (FAQ)
+## 5. Häufig gestellte Fragen (FAQ)
 
 1. Meine Mainboard-LED (EZ Debug LED) leuchtet permanent bei "CPU" oder "RAM", obwohl ich den RAM gereinigt habe. Was nun? Das kann an einem zu fest angezogenen CPU-Kühler liegen. Manchmal verzieht sich das PCB des Mainboards minimal, wodurch Pins im CPU-Sockel den Kontakt zu den PCIe- oder RAM-Lanzen verlieren. Löse die Schrauben des CPU-Kühlers um eine halbe Umdrehung.
 

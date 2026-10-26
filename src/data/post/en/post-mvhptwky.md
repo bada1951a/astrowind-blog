@@ -28,6 +28,8 @@ theme: "Industrial Blueprint"
 
 
 
+## 1. Workplace Emergency Situation
+
 <div style="border-left: 4px solid #f59e0b; padding: 12px 16px; margin: 20px 0; background-color: rgba(245,158,11,0.08); border-radius: 4px; color: #111827;">
 <strong>IT Emergency Context:</strong> It is 9:40 AM in our Manhattan office. A company-wide board meeting starts in exactly 20 minutes, and our VP of Operations is staring at her new Windows 11 laptop, visibly frustrated. She needs to rename a dozen critical PDF manifests quickly, but every time she right-clicks, she is greeted by the simplified Windows 11 context menu. The option she needs is buried behind a "Show more options" click. That extra click 50 times a day kills workflow rhythm. As the senior IT systems engineer, I need to fix this permanently right now.
 </div>
@@ -69,7 +71,7 @@ You can apply this fix via PowerShell or Command Prompt. It creates the necessar
 
 3. Press Enter. You should see the message: `The operation completed successfully.`
 
-4. Restart Windows Explorer to apply the changes immediately. Open Task Manager(Ctrl + Shift + Esc), findWindows Explorerin the processes list, right-click it, and selectRestart.
+4. Restart Windows Explorer to apply the changes immediately. Open Task Manager (Ctrl + Shift + Esc), find Windows Explorer in the processes list, right-click it, and select Restart.
 
 <div style="border-left: 4px solid #f59e0b; padding: 12px 16px; margin: 20px 0; background-color: rgba(245,158,11,0.08); border-radius: 4px; color: #111827;">
 <strong>Pro Tip:</strong> If you ever want to revert back to the default Windows 11 modern context menu for testing or compliance reasons, simply run this rollback command in admin CMD:
@@ -88,7 +90,7 @@ If you prefer doing things manually or need to verify the registry key yourself,
 
    `HKEY_CURRENT_USER \ Software \ Classes \ CLSID`
 
-4. Right-click the CLSIDkey, selectNew > Key, and name the new key exactly this:
+4. Right-click the CLSID key, selectNew > Key, and name the new key exactly this:
 
    `{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}`
 
@@ -96,11 +98,13 @@ If you prefer doing things manually or need to verify the registry key yourself,
 
    `InprocServer32`
 
-**Q6.** Click on InprocServer32, look at the right-hand pane, double-click the(Default)value, ensure the Value data field is completely blank, and clickOK.
+**Q6.** Click on InprocServer32, look at the right-hand pane, double-click the (Default) value, ensure the Value data field is completely blank, and click OK.
 
 **Q7.** Restart Windows Explorer via Task Manager as outlined in Method 1.
 
 ---
+
+## 4. Professional Engineer Precautions & Tips
 
 Expert Warning & Best Practices
 
@@ -112,16 +116,16 @@ Before rolling this out across your entire enterprise domain via Group Policy or
 
 ---
 
-## Frequently Asked Questions (FAQ)
+## 5. Frequently Asked Questions (FAQ)
 
-Q1: Does this tweak require a full system reboot?
+**Q1:** Does this tweak require a full system reboot?
 
-A1: No reboot is necessary. Simply restarting the `explorer.exe` process via Task Manager is enough to refresh the shell and make the classic context menu appear instantly.
+**A1:** No reboot is necessary. Simply restarting the `explorer.exe` process via Task Manager is enough to refresh the shell and make the classic context menu appear instantly.
 
-Q2: Will this break any native Windows 11 features?
+**Q2:** Will this break any native Windows 11 features?
 
-A2: No. Features like casting to device, modern sharing options, and pin-to-access remain fully functional. You are simply bypassing the extra "Show more options" submenu wrapper.
+**A2:** No. Features like casting to device, modern sharing options, and pin-to-access remain fully functional. You are simply bypassing the extra "Show more options" submenu wrapper.
 
-Q3: Can I deploy this via Microsoft Intune or Group Policy for 500+ machines?
+**Q3:** Can I deploy this via Microsoft Intune or Group Policy for 500+ machines?
 
-A3: Absolutely. You can package the registry command into a PowerShell script and deploy it as a Win32 app via Microsoft Intune, or push the registry hive modification directly through Group Policy Preferences (GPP).
+**A3:** Absolutely. You can package the registry command into a PowerShell script and deploy it as a Win32 app via Microsoft Intune, or push the registry hive modification directly through Group Policy Preferences (GPP).

@@ -28,6 +28,8 @@ theme: "Pure Titanium Clean"
 
 
 
+## 1. Situation d'urgence critique au bureau
+
 En tant qu'ingénieur système, mon clavier n'est pas un simple périphérique de saisie : c'est l'interface directe avec les consoles de production, les hyperviseurs et les terminaux d'infrastructure. Rien n'est plus critique – et exaspérant – qu'un interrupteur mécanique qui commence à "bégaier" lors de la saisie d'une commande sensible sous SSH. Une touche `a` ou `Enter` qui enregistre deux frappes au lieu d'une, ou qui ignore purement et simplement la pression, peut transformer une commande d'administration anodine en incident d'exploitation.
 
 Ce dysfonctionnement, couramment appelé chattering (ou rebond de contact anormal), n'impose pas nécessairement le remplacement immédiat du matériel ou le recours au fer à souder. Dans plus de 80 % des cas rencontrés en environnement professionnel, une intervention ciblée à l'aide d'un nettoyant pour contacts électroniques permet de restaurer l'intégrité du signal. Voici notre procédure standard d'atelier pour diagnostiquer, décontaminer et pérenniser vos commutateurs mécaniques.
@@ -48,7 +50,7 @@ Pour intervenir efficacement, il faut comprendre ce qui se passe sous le capucho
 [ Fermeture du circuit électrique ]
 ```
 
-A. L'oxydation microscopique des points de contact
+**A.** L'oxydation microscopique des points de contact
 Bien que les pastilles de contact soient généralement plaquées d'une fine couche d'or ou d'argent, l'humidité ambiante, les micro-arcs électriques générés par les cycles d'ouverture/fermeture et l'usure de friction finissent par exposer le métal sous-jacent. Une couche microscopique d'oxyde non conducteur se forme, créant une résistance de contact instable. Le microcontrôleur du clavier interprète ces fluctuations comme une succession rapide d'appuis et de relâchements.
 
 B. L'intrusion de micro-débris et la pollution particulaire
@@ -163,8 +165,7 @@ L'application de dégrippant universel standard (WD-40 classique), d'huile de si
 * Dégradation du lubrifiant d'origine : L'usage d'un solvant contact désoxydant va inévitablement dissoudre une partie de la graisse diélectrique appliquée en usine (comme le Krytox GPL 205g0). Le switch pourra sembler légèrement plus bruyant ou plus rêche au toucher après l'opération. Si vous recherchez une sensation de frappe optimale, prévoyez une micro-application de lubrifiant pour stabilisateurs et commutateurs après désoxydation.
 
 ---
-
-4. Foire aux questions (FAQ)
+## 5. Foire Aux Questions (FAQ)
 
 **Q1.** L'alcool isopropylique (IPA à 99,9 %) peut-il remplacer le nettoyant pour contacts ?
 L'alcool isopropylique est un excellent dégraissant, mais il n'intègre pas d'agents désoxydants actifs conçus pour casser la passivation superficielle des métaux non ferreux. L'IPA diluera la crasse, mais ne traitera pas l'oxydation microscopique des lamelles. De plus, son temps d'évaporation au sein d'une chambre close non ventilée peut être plus long, augmentant le risque de piéger l'humidité atmosphérique lors du séchage. Le nettoyant contact diélectrique reste la solution technique supérieure.

@@ -28,6 +28,8 @@ theme: "High-Contrast Charcoal"
 
 
 
+## 1. Nagła awaria w miejscu pracy
+
 Kwadrans przed kluczową prezentacją dla zarządu w warszawskim centrum biznesowym podchodzi do mnie blady jak ściana dyrektor handlowy. Na środku jego ekranu, dokładnie nad wykresami rocznej sprzedaży, dumnie widnieje irytujący, półprzezroczysty napis: „Aktywuj system Windows – przejdź do Ustawień, aby aktywować system”. Klienci mają wejść do sali za dokładnie dziesięć minut, rzutnik jest już rozstawiony, a ten nieszczęsny znak wodny zasłania kluczowe dane w Excelu. Każdy geek wie, że Windows po prostu przypomina o braku aktywacji, ale w warunkach korporacyjnych taki widok przed zarządem to wizerunkowa katastrofa. Szybki restart nie pomógł, a próby przeklinania pod nosem tylko podniosły ciśnienie. Zamiast panikować i szukać podejrzanych programów z internetu, które mogłyby zainfekować stację roboczą malwarem, musiałem działać szybko, legalnie (w ramach procedur testowych) i bezpośrednio z poziomu systemu.
 
 Dlaczego ten cholerny napis w ogóle się pojawia?
@@ -64,7 +66,7 @@ net stop sppsvc
 ```
 *Wskazówk
 
-a:* Jeśli otrzymasz komunikat, że usługa nie została uruchomiona, nie przejmuj się – przejdź do kolejnego kroku.
+**a:*** Jeśli otrzymasz komunikat, że usługa nie została uruchomiona, nie przejmuj się – przejdź do kolejnego kroku.
 
 Krok 3: Wyczyszczenie i reset stanu powiadomień w rejestrze
 Teraz wykonamy właściwą operację dezaktywacji denerwującego powiadomienia o braku aktywacji. Wpisz następujące polecenie resetujące licznik powiadomień i zatwierdź je klawiszem Enter:

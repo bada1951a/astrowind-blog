@@ -28,6 +28,8 @@ theme: "High-Contrast Charcoal"
 
 
 
+## 1. Nagła awaria w miejscu pracy
+
 Była dokładnie 10:45 rano, a w warszawskim centrum biznesowym przy Rondzie Daszyńskiego panowała gęsta atmosfera. Za kwadrans miało ruszyć kluczowe spotkanie zarządu z inwestorami z Frankfurtu, a stacja robocizna naszego głównego analityka finansowego zamarzła na amen. Ekran zamroził się w bezruchu, kursor myszy nie reagował, a twardy reset przyciskiem na obudowie to była jedyna deska ratunku. Najgorsze było to, że to nie pierwszy taki zwis w tym tygodniu. Klient patrzył na mnie z paniką w oczach, pytając, czy jego modele finansowe przetrwały. Jako inżynier wsparcia IT wiedziałem, że bezmyślne przeinstalowywanie systemu nic tu nie da. Czas było wreszcie sprawdzić, co tak naprawdę boli ten komputer.
 
 Trzy najczęstsze powody losowych zwiech w Windows 11
@@ -45,7 +47,7 @@ Zanim przejdziemy do diagnostyki, warto zrozumieć, dlaczego nowoczesny sprzęt 
 <div style="border-left: 4px solid #e11d48; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Wskazówka serwisow
 
-a:</strong> Zanim zaczniesz grzebać w systemie, upewnij się, że masz wyłączoną "Szybką uruchamianie" (Fast Startup) w Panelu sterowania. Ta funkcja często przenosi uszkodzone stany jądra systemu z poprzedniej sesji, powodując powtarzające się zwiechy.
+**a:**</strong> Zanim zaczniesz grzebać w systemie, upewnij się, że masz wyłączoną "Szybką uruchamianie" (Fast Startup) w Panelu sterowania. Ta funkcja często przenosi uszkodzone stany jądra systemu z poprzedniej sesji, powodując powtarzające się zwiechy.
 </div>
 
 Krok po kroku: Jak czytać Podgląd Zdarzeń jak zawodowiec
@@ -77,7 +79,7 @@ Gdy wiesz już z Podglądu Zdarzeń, co powoduje ból głowy, czas na konkretne 
 
 * Menedżer urządzeń: Jeśli w dziennikach widzisz błędy kontrolera grafiki lub sieci, wejdź w *Menedżer urządzeń*, znajdź problematyczny komponent, kliknij prawym przyciskiem myszy i wybierz *Wycofaj sterownik* (Roll Back Driver), jeśli aktualizacja była niedawno przeprowadzana. * Ustawienia zasilani
 
-a: Otwórz *Ustawienia* -> *Zasilanie i bateria*, a następnie zmień plan zasilania na "Wysoka wydajność", aby wyeliminować agresywne oszczędzanie energii przez procesor.
+**a:** Otwórz *Ustawienia* -> *Zasilanie i bateria*, a następnie zmień plan zasilania na "Wysoka wydajność", aby wyeliminować agresywne oszczędzanie energii przez procesor.
 * Menedżer zadań: Sprawdź zakładkę *Aplikacje startowe* i wyłącz wszystko, co nie jest absolutnie konieczne do pracy biurowej. Często nakładki producentów płyt głównych (jak Armoury Crate czy Dragon Center) powodują wycieki pamięci i zwiechy.
 
 <div style="border-left: 4px solid #e11d48; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">

@@ -28,6 +28,8 @@ theme: "Pastel Lavender Tech"
 
 
 
+## 1. Emergenza improvvisa sul posto di lavoro
+
 L'altra mattina mi trovavo nel cuore del Centro Direzionale di Milano, esattamente nella sala riunioni principale di un nostro cliente importante. Eravamo a pochi minuti dall'inizio della demo ufficiale: i dirigenti erano seduti intorno al tavolo e i responsabili di reparto erano pronti a osservare in tempo reale la condivisione dello schermo del mio sistema per testare la nuova configurazione. Ho chiuso tutte le finestre di lavoro, ho cliccato su Arresta il sistema dal menu Start e ho scollegato i cavi di rete diBackup, convinto di poter spostare la postazione. Invece, la brutta sorpresa: gli schermi si erano spenti, ma le ventole del case continuavano a girare a pieno regime, i LED della scheda madre erano accesi e il sistema non dava segni di voler tagliare completamente l'alimentazione. Sudore freddo. Riavviare tenendo premuto il tasto di accensione avrebbe significato rischiare la corruzione dei database locali aperti poco prima. Dovevo trovare una soluzione immediata senza perdere la faccia davanti ai manager milanesi.
 
 <div style="border-left: 4px solid #7c3aed; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
@@ -68,13 +70,13 @@ Domande frequenti (FAQ)
 
 D1. Disabilitando l'avvio rapido il mio computer diventerà molto più lento ad accendersi?
 
-A1. Nella stragrande maggioranza dei PC moderni dotati di unità SSD, la differenza di tempo nell'avvio a freddo è impercettibile, solitamente quantificabile in pochissimi secondi. Il guadagno in termini di stabilità e assenza di bug ripaga ampiamente questa minima perdita.
+**A1.** Nella stragrande maggioranza dei PC moderni dotati di unità SSD, la differenza di tempo nell'avvio a freddo è impercettibile, solitamente quantificabile in pochissimi secondi. Il guadagno in termini di stabilità e assenza di bug ripaga ampiamente questa minima perdita.
 
 D2. Posso eseguire questa procedura anche sui PC dei miei colleghi tramite riga di comando o PowerShell?
 
-A2. Sì, se gestisci un parco macchine aziendale puoi disabilitare l'avvio rapido agendo direttamente sul registro di sistema o tramite criteri di gruppo (GPO), modificando la chiave HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Session Manager\\Power e impostando il valore HiberbootEnabled a 0.
+**A2.** Sì, se gestisci un parco macchine aziendale puoi disabilitare l'avvio rapido agendo direttamente sul registro di sistema o tramite criteri di gruppo (GPO), modificando la chiave HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Session Manager\\Power e impostando il valore HiberbootEnabled a 0.
 
 D3. Ho disabilitato l'avvio rapido ma il problema persiste, cosa devo controllare adesso?
 
-A3. Se il PC continua a non spegnersi, il problema potrebbe essere legato ai driver della scheda di rete o della scheda video. Ti consiglio di aprire Gestione dispositivi, individuare la scheda di rete principale, accedere alle Proprietà, andare sulla scheda Risparmio energia e deselezionare "Consenti al computer di spegnere il dispositivo per risparmiare energia", procedendo poi con l'aggiornamento dei driver del chipset dal sito del produttore.
+**A3.** Se il PC continua a non spegnersi, il problema potrebbe essere legato ai driver della scheda di rete o della scheda video. Ti consiglio di aprire Gestione dispositivi, individuare la scheda di rete principale, accedere alle Proprietà, andare sulla scheda Risparmio energia e deselezionare "Consenti al computer di spegnere il dispositivo per risparmiare energia", procedendo poi con l'aggiornamento dei driver del chipset dal sito del produttore.
 ---

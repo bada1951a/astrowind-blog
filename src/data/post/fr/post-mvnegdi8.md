@@ -9,7 +9,7 @@ theme: "Electric Cyan Speed"
 ---
 
 
-## 1. [Ouverture et Scénario d'Urgence]
+## 1. Situation d'urgence critique au bureau
 
 Il est 14h00 dans nos bureaux de La Défense, et la pression monte. Je viens tout juste de télécharger une archive ZIP et des données CAO cruciales envoyées par un prestataire externe, avec l'intention de lancer immédiatement l'inspection technique en interne. Mais au moment de décompresser et de nettoyer le dossier de transit, le couperet tombe : un message d'erreur agaçant surgit. Windows refuse catégoriquement d'effacer les fichiers en m'affirmant qu'ils sont "en cours d'utilisation dans un autre programme". Le pire, c'est que je ne sais même pas quel processus bloque ces données, alors que la réunion de validation avec la direction approche à grand pas. C'est le genre de petit grain de sable informatique qui peut bloquer toute une équipe si l'on ne réagit pas avec la bonne méthode.
 
@@ -17,11 +17,9 @@ Il est 14h00 dans nos bureaux de La Défense, et la pression monte. Je viens tou
 <strong>Note du technicien :</strong> Ne perdez pas votre temps à redémarrer bêtement votre PC en pensant que cela va régler le problème. Il existe des méthodes de forçage directes bien plus rapides et adaptées à notre environnement professionnel.
 </div>
 
-
-
 ![Tech Troubleshooting Guide](/images/tech-photo/storage%20(1).png)
 
-## 2. Root Cause Breakdown
+## 2. Analyse des causes principales de l'erreur
 
 Pourquoi diable Windows s'obstine-t-il à bloquer la suppression d'un simple fichier ? En tant qu'ingénieur support, je vois ce cas de support tous les jours. Voici les trois coupables habituels derrière ce verrouillage :
 
@@ -29,7 +27,7 @@ Pourquoi diable Windows s'obstine-t-il à bloquer la suppression d'un simple fic
 - **L'explorateur Windows (explorer.exe) :** C'est le classique absolu. L'Explorateur essaie d'afficher les propriétés ou l'aperçu du fichier et maintient un crochet (handle) actif sur l'élément, empêchant toute modification ou suppression.
 - **Une synchronisation cloud ou un antivirus en cours :** Des outils comme OneDrive, Dropbox ou votre solution de sécurité d'entreprise analysent ou téléchargent le fichier à la fraction de seconde où vous tentez de le supprimer, créant ainsi un conflit d'accès immédiat.
 
-## 3. Step-by-Step Resolution
+## 3. Guide de résolution étape par étape
 
 Pour venir à bout de ce blocage en un temps record, nous allons procéder en deux étapes : d'abord le nettoyage rapide via les outils natifs de Windows, puis, si nécessaire, l'artillerie lourde avec une commande ciblée.
 
@@ -57,22 +55,22 @@ del /f /q /a "C:\Chemin\Vers\Votre\Fichier.zip"
 <strong>Astuce pro :</strong> Si vous ne souhaitez pas manipuler la ligne de commande, téléchargez un utilitaire gratuit et fiable comme <em>PowerToys</em> (développé par Microsoft) et utilisez son module <em>File Locksmith</em> qui indique instantanément quel processus bloque le fichier d'un simple clic droit.
 </div>
 
-## 4. Expert Advice
+## 4. Conseils et précautions d'un expert système
 
 En tant que spécialiste de la maintenance, je vous déconseille fortement d'utiliser des logiciels tiers louches trouvés sur des blogs douteux qui promettent de "nettoyer" votre PC. Beaucoup d'entre eux embarquent des logiciels publicitaires (adwares). Restez sur les outils natifs ou sur des solutions officielles comme Microsoft PowerToys. 
 
 Attention également : si un fichier système ou un composant critique du système d'exploitation est verrouillé, ne forcez jamais sa suppression au risque de corrompre votre installation de Windows. Réservez cette manipulation aux fichiers de données isolés, comme nos fameuses archives reçues des prestataires externes.
 
-## 5. Frequently Asked Questions
+## 5. Foire Aux Questions (FAQ)
 
-Q : Que faire si Windows m'affiche "Accès refusé" même après avoir fermé tous les programmes ?
+**Q :** Que faire si Windows m'affiche "Accès refusé" même après avoir fermé tous les programmes ?
 
-A : Cela signifie généralement que vous ne possédez pas les droits de propriétaire sur le fichier. Faites un clic droit sur le fichier ou le dossier, allez dans **Propriétés**, puis dans l'onglet **Sécurité**, cliquez sur **Avancé** et modifiez le propriétaire pour l'attribuer à votre compte utilisateur actuel.
+**A :** Cela signifie généralement que vous ne possédez pas les droits de propriétaire sur le fichier. Faites un clic droit sur le fichier ou le dossier, allez dans **Propriétés**, puis dans l'onglet **Sécurité**, cliquez sur **Avancé** et modifiez le propriétaire pour l'attribuer à votre compte utilisateur actuel.
 
-Q : Est-ce dangereux d'utiliser la commande "del /f" pour forcer la suppression ?
+**Q :** Est-ce dangereux d'utiliser la commande "del /f" pour forcer la suppression ?
 
-A : Non, tant que vous ciblez un fichier de données classique (comme un document Office, une archive ou une image). En revanche, l'utilisation de cette commande sur des fichiers système (situés dans les dossiers System32 ou Windows) peut rendre votre machine instable.
+**A :** Non, tant que vous ciblez un fichier de données classique (comme un document Office, une archive ou une image). En revanche, l'utilisation de cette commande sur des fichiers système (situés dans les dossiers System32 ou Windows) peut rendre votre machine instable.
 
-Q : Pourquoi le Gestionnaire des tâches ne m'affiche pas le programme qui utilise le fichier ?
+**Q :** Pourquoi le Gestionnaire des tâches ne m'affiche pas le programme qui utilise le fichier ?
 
-A : Certains services système ou modules d'analyse antivirus s'exécutent avec des privilèges de niveau supérieur (SYSTEM). Dans ce cas, l'utilisation d'un outil comme *Process Explorer* (disponible sur le site officiel de Microsoft Sysinternals) est nécessaire pour faire une recherche textuelle du nom du fichier et identifier précisément le processus parent.
+**A :** Certains services système ou modules d'analyse antivirus s'exécutent avec des privilèges de niveau supérieur (SYSTEM). Dans ce cas, l'utilisation d'un outil comme *Process Explorer* (disponible sur le site officiel de Microsoft Sysinternals) est nécessaire pour faire une recherche textuelle du nom du fichier et identifier précisément le processus parent.

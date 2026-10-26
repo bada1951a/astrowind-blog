@@ -19,6 +19,8 @@ theme: "Deep Ocean Cobalt"
 
 
 
+## 1. Noodsituatie op de werkvloer
+
 1. De Paniek in de Vergaderruimte
 
 Laatst stond ik voor een flinke uitdaging. Ik was af gereisd naar een regionaal kantoor ergens in het land voor een belangrijke strategische sessie. Net toen ik ter plekke in de vergaderruimte mijn laptop aansloot op een ietwat verouderde externe monitor en een overijverige projector, liep ik tegen een typische frustratie aan. Ik wilde snel een belangrijk configuratieschema vastleggen van het scherm met de bekende sneltoets **Win + Shift + S**, maar er gebeurde helemaal niets. Geen schermverduistering, geen melding in het actiecentrum, en het Knipprogramma (Snipping Tool) leek volledig te slapen. 
@@ -91,14 +93,14 @@ In een professionele kantooromgeving of tijdens klantbezoeken wil je niet voor v
 
 5. Veelgestelde Vragen
 
-Q: Wat moet ik doen als **Win + Shift + S** na al deze stappen nog steeds niet werkt?
+**Q:** Wat moet ik doen als **Win + Shift + S** na al deze stappen nog steeds niet werkt?
 
-A: Controleer of je toetsenbord een zogenaamde "Fn-vergrendeling" of "Win-lock" heeft. Sommige zakelijke toetsenborden hebben een speciale functietoets die de Windows-toets tijdelijk uitschakelt om ongewenste acties tijdens games of presentaties te voorkomen.
+**A:** Controleer of je toetsenbord een zogenaamde "Fn-vergrendeling" of "Win-lock" heeft. Sommige zakelijke toetsenborden hebben een speciale functietoets die de Windows-toets tijdelijk uitschakelt om ongewenste acties tijdens games of presentaties te voorkomen.
 
-Q: Waar worden de screenshots eigenlijk opgeslagen als ik ze maak?
+**Q:** Waar worden de screenshots eigenlijk opgeslagen als ik ze maak?
 
-A: Standaard worden ze direct gekopieerd naar het klembord. Je kunt ze direct plakken in bijvoorbeeld Outlook, Teams of Paint (met **Ctrl + V**). Daarnaast worden ze automatisch opgeslagen in de map **Afbeeldingen > Schermafbeeldingen** (Screenshots) als je de schermafbeelding direct volledig opslaat via de melding.
+**A:** Standaard worden ze direct gekopieerd naar het klembord. Je kunt ze direct plakken in bijvoorbeeld Outlook, Teams of Paint (met **Ctrl + V**). Daarnaast worden ze automatisch opgeslagen in de map **Afbeeldingen > Schermafbeeldingen** (Screenshots) als je de schermafbeelding direct volledig opslaat via de melding.
 
-Q: Kan ik het Knipprogramma volledig verwijderen en opnieuw installeren?
+**Q:** Kan ik het Knipprogramma volledig verwijderen en opnieuw installeren?
 
-A: Jazeker. Je kunt de app verwijderen via de instellingen of een PowerShell-opdracht, en daarna eenvoudig opnieuw downloaden via de officiële Microsoft Store om een schone lei te beginnen.
+**A:** Jazeker. Je kunt de app verwijderen via de instellingen of een PowerShell-opdracht, en daarna eenvoudig opnieuw downloaden via de officiële Microsoft Store om een schone lei te beginnen.

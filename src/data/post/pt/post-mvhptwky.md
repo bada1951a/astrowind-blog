@@ -28,12 +28,14 @@ theme: "Rosewood Hardware Guide"
 
 
 
+## 1. Situação de emergência no trabalho
+
 Eram exatamente 13h45 em um escritório na Avenida Paulista, e a tensão na sala de reuniões era palpable. Faltavam quinze minutos para a apresentação trimestral da diretoria quando o nosso gerente de operações chamou no rádio: o notebook corporativo recém-atualizado para o Windows 11 simplesmente travou na hora de anexar os arquivos finais compactados. O motivo? Aquela maldita interface simplificada do botão direito que esconde as opções essenciais de compactação e ferramentas de terceiros atrás de um clique extra em "Mostrar mais opções". Para quem precisa de agilidade e executa dezenas de tarefas por minuto, perder preciosos segundos caçando menus ocultos sob pressão é o cenário perfeito para um desastre corporativo.
 
 <div style="border-left: 4px solid #be123c; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Alerta de Bancad
 
-a:</strong> O novo menu de contexto do Windows 11 foi desenhado pensando em telas sensíveis ao toque e usuários casuais, mas para ambientes corporativos e analistas de TI, ele representa uma perda drástica de eficiência operacional.
+**a:**</strong> O novo menu de contexto do Windows 11 foi desenhado pensando em telas sensíveis ao toque e usuários casuais, mas para ambientes corporativos e analistas de TI, ele representa uma perda drástica de eficiência operacional.
 </div>
 
 Por Que Essa Mudança Incomoda Tanto os Profissionais?
@@ -44,7 +46,7 @@ Antes de aplicar a solução definitiva que salvou nossa reunião, vale a pena e
 
 2. Falta de Compatibilidade Nativa Imediat
 
-a: Milhares de softwares corporativos essenciais ainda usam as chaves antigas de registro do shell do Windows. Sem o ajuste correto, eles ficam ocultos no submenu secundário.
+**a:** Milhares de softwares corporativos essenciais ainda usam as chaves antigas de registro do shell do Windows. Sem o ajuste correto, eles ficam ocultos no submenu secundário.
 
 3. Ergonomia e Memória Muscular: Anos de uso do Windows 10 criaram uma memória muscular nos dedos. Parar o fluxo de trabalho para dar um clique duplo ou usar atalhos extras causa fadiga cognitiva desnecessária na equipe.
 
@@ -99,15 +101,16 @@ Cuidados Importantes e Segurança de Dados
 
 Perguntas Frequentes (FAQ)
 
-1. Esse procedimento funciona nas versões mais recentes do Windows 11?
-Sim. O comando afeta diretamente a estrutura de classes do shell do Windows e continua operacional nas builds mais recentes, pois a Microsoft mantém essa compatibilidade legada por razões de estabilidade empresarial.
+**Q.** Esse procedimento funciona nas versões mais recentes do Windows 11?
+
+**A.** Sim. O comando afeta diretamente a estrutura de classes do shell do Windows e continua operacional nas builds mais recentes, pois a Microsoft mantém essa compatibilidade legada por razões de estabilidade empresarial.
 
 ![Tech Troubleshooting Guide](/images/tech-photo/storage%20(15).png)
 
 2. Posso reverter a alteração caso eu me arrependa?
 Com certeza. Se quiser voltar ao menu padrão do Windows 11, basta abrir o Prompt de Comando como Administrador e executar o comando para remover a chave criad
 
-a:
+**a:**
 `reg.exe delete "HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}" /f`
 Em seguida, reinicie o Explorador de Arquivos pelo Gerenciador de Tarefas.
 

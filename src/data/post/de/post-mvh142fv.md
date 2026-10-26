@@ -28,6 +28,8 @@ theme: "Bronze Artisan Workshop"
 
 
 
+## 1. Kritische Fehlersituation am Arbeitsplatz
+
 Es ist 14:45 Uhr im Frankfurter Bankenviertel. Um 15:30 Uhr soll die wichtigste Pitch-Präsentation des Quartals für einen neuen Großkunden starten. Der Konferenzraum ist voll, die Kollegen warten gespannt, und ich stehe schwitzend vor dem Chef-Laptop. Plötzlich: Totale Stille im System. Keine Mausbewegung, kein blauer Bildschirm, einfach ein eingefrorenes Windows 11. Kein Tastendruck reagiert, der Task-Manager lässt sich nicht aufrufen. Nach drei gefühlten Ewigkeit hilft nur noch der harte Reset über den Power-Knopf. Zehn Minuten später dasselbe Spiel. Ein klassischer, zufälliger Freeze (Random Freezing), der jeden Sysadmin an den Rand des Wahnsinns treibt.
 
 Die Werkzeugkiste: Was wir für die Diagnose brauchen
@@ -55,6 +57,8 @@ In meiner jahrelangen Praxis als Hardware-Diagnostiker haben sich drei übliche 
 3. Instabiler Arbeitsspeicher (RAM / XPO / EXPO): Ein leicht zu aggressiv eingestelltes XMP-Profil im BIOS verursacht nach 20 Minuten unauffälligem Betrieb plötzlich einen Speicherfehler, der den Kernel sofort einfriert.
 
 ---
+
+## 3. Schritt-für-Schritt-Lösungsanleitung
 
 Schritt-für-Schritt-Anleitung: Den Übeltäter in der Ereignisanzeige entlarven
 
@@ -90,6 +94,8 @@ Suchen Sie im System-Log exakt nach dem Eintrag Event-ID 41(Das war Ihr erzwunge
 
 ---
 
+## 4. Praxistipps und Warnungen vom System-Admin
+
 Maßnahmen zur Sofortbehebung nach der Diagnose
 
 Haben Sie den Verdächtigen identifiziert, greifen folgende Sofortmaßnahmen:
@@ -101,8 +107,7 @@ Haben Sie den Verdächtigen identifiziert, greifen folgende Sofortmaßnahmen:
 3. XMP/EXPO-Profil im BIOS deaktivieren: Testweise den Arbeitsspeicher mit dem Standardtakt (z.B. 4800 MHz statt 6000 MHz) betreiben. Läuft der Rechner stabil, war das RAM-Profil zu scharf eingestellt.
 
 ---
-
-Häufig gestellte Fragen (FAQ)
+## 5. Häufig gestellte Fragen (FAQ)
 
 1. Warum taucht in der Ereignisanzeige direkt vor dem Freeze überhaupt kein Fehler auf? Wenn ein PC komplett einfriert (Hard Freeze), hat das Betriebssystem oft keine Millisekunde mehr Zeit, den Fehler auf die Festplatte zu schreiben. Der letzte Log-Eintrag liegt dann oft Minuten zurück. In diesem Fall liegt zu 90% ein handfestes Hardware-Problem vor (RAM, Netzteil, CPU-Spannung oder überhitzte Chipsätze).
 

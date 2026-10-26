@@ -9,17 +9,15 @@ theme: "Retro Monokai"
 ---
 
 
-## 1. [Opening Story/Problem]
+## 1. Nagła awaria w miejscu pracy
 
 Siedzę przy biurku w naszym warszawskim biurowcu na Mokotowie, kończąc diagnozę stacji roboczej dla jednego z grafików. Nagle system łapie całkowitą zwiechę. Ekran zamarza w ułamku sekundy, wentylatory w obudowie wkręcają się na maksymalne obroty, a kursor myszy porusza się z opóźnieniem rodem z komputera sprzed dwóch dekad. Szybko sięgam po skrót **Ctrl + Shift + Esc**, żeby otworzyć **Menedżer zadań**. Okazuje się, że tutejszy program antywirusowy wpadł w pętlę i nagle zjadł dokładnie 100% zasobów procesora, skanując w nieskończoność tymczasowy folder roboczy. 
 
 Gdy w końcu udaje mi się ubić ten proces i odzyskać panowanie nad systemem, próbuję usunąć skorumpowany plik dziennika, który wywołał całą awarię. Wyskakuje dobrze znany, irytujący komunikat: *„Nie można ukończyć akcji, ponieważ plik jest otwarty w innym programie”*. Brzmi znajomo? Znam to uczucie frustracji, gdy goni Cię deadline, a Windows uparcie broni dostępu do zwykłego pliku. Jako serwisant sprzętu i inżynier wsparcia IT przetrenowałem ten scenariusz setki razy. Dziś pokaże Ci, jak szybko i bezboleśnie przechytrzyć system i wymusić usunięcie takich upartych plików.
 
-
-
 ![Tech Troubleshooting Guide](/images/tech-photo/tech%20(9).jpg)
 
-## 2. [Root Cause Breakdown]
+## 2. Szczegółowa analiza przyczyn źródłowych
 
 Zanim przejdziemy do klikania, rzućmy okiem na zaplecze techniczne. Dlaczego Windows tak panicznie chroni niektóre pliki? Oto 3 najczęstsze przyczyny tego fenomenu w środowisku biurowym:
 
@@ -33,7 +31,7 @@ Zanim przejdziemy do klikania, rzućmy okiem na zaplecze techniczne. Dlaczego Wi
 <strong>Wskazówka serwisu:</strong> Zanim sięgniesz po drastyczne metody wymuszonego kasowania, upewnij się, że plik nie jest krytycznym komponentem systemu operacyjnego. Usunięcie pliku blokowanego przez kluczowe usługi Windows może doprowadzić do ekranu BSOD!
 </div>
 
-## 3. [Step-by-Step Resolution]
+## 3. Praktyczne rozwiązanie krok po kroku
 
 Gdy standardowe ponowne uruchomienie komputera nie wchodzi w grę, a plik trzeba usunąć natychmiast, korzystamy z zestawu sprawdzonych narzędzi diagnostycznych. Oto procedura krok po kroku:
 
@@ -70,22 +68,22 @@ del /f /q "C:\sciezka\do\zablokowanego_pliku.ext"
 ### Krok 4: Ustawienia i tryb awaryjny
 Jeśli plik nadal stawia opór, najprostszym rozwiązaniem jest ponowne uruchomienie systemu w **Ustawienia > System > Odzyskiwanie > Uruchamianie zaawansowane** (Tryb awaryjny / Safe Mode), gdzie żadne zewnętrzne programy biurowe nie blokują dostępu do dysku.
 
-## 4. [Expert Advice]
+## 4. Wskazówki i ostrzeżenia eksperta IT
 
 Jako osoba, która na co dzień ratuje dane i stacje robocze, muszę przypomnieć o jednej kluczowej zasadzie: **ostrożność przede wszystkim**. 
 
 Nigdy nie używaj narzędzi typu "Force Delete" na ślepo w katalogach systemowych typu `System32` czy `WinSxS`. Jeśli system zgłasza błąd pliku podczas pracy dysku SSD, warto wykonać szybki test kondycji nośnika (np. za pomocą narzędzia **CrystalDiskInfo** lub komendy `chkdsk` w terminalu). Czasami pliki stają się "zablokowane" nie przez programy, lecz przez uszkodzone sektory fizyczne na dysku, a siłowe kasowanie może pogłębić uszkodzenie struktury partycji NTFS.
 
-## 5. Frequently Asked Questions
+## 5. Najczęściej zadawane pytania (FAQ)
 
-Q: Czy bezpiecznie jest używać zewnętrznych programów typu Unlocker do usuwania plików?
+**Q:** Czy bezpiecznie jest używać zewnętrznych programów typu Unlocker do usuwania plików?
 
-A: Tak, lekkie aplikacje open-source służące do zwalniania uchwytów plików są bezpieczne, pod warunkiem że pobierasz je z zaufanych źródeł i używasz ich tylko do plików tymczasowych lub dokumentów użytkownika.
+**A:** Tak, lekkie aplikacje open-source służące do zwalniania uchwytów plików są bezpieczne, pod warunkiem że pobierasz je z zaufanych źródeł i używasz ich tylko do plików tymczasowych lub dokumentów użytkownika.
 
-Q: Co zrobić, gdy po zakończeniu procesu plik nadal nie chce się skasować?
+**Q:** Co zrobić, gdy po zakończeniu procesu plik nadal nie chce się skasować?
 
-A: Często winny jest eksplorator Windows (`explorer.exe`), który podtrzymuje bufor miniatur podglądu. Otwórz Menedżer zadań, znajdź *Eksplorator Windows*, kliknij *Uruchom ponownie*, a następnie spróbuj usunąć plik ponownie.
+**A:** Często winny jest eksplorator Windows (`explorer.exe`), który podtrzymuje bufor miniatur podglądu. Otwórz Menedżer zadań, znajdź *Eksplorator Windows*, kliknij *Uruchom ponownie*, a następnie spróbuj usunąć plik ponownie.
 
-Q: Czy błąd zablokowanego pliku może oznaczać infekcję złośliwym oprogramowaniem?
+**Q:** Czy błąd zablokowanego pliku może oznaczać infekcję złośliwym oprogramowaniem?
 
-A: Zdecydowanie tak. Zaawansowane trojany lub ransomware celowo blokują pliki dziennika oraz narzędzia antywirusowe, aby uniemożliwić ich usunięcie. Jeśli podejrzewasz wirusa, odłącz komputer od sieci i przeprowadź pełny skan w trybie offline.
+**A:** Zdecydowanie tak. Zaawansowane trojany lub ransomware celowo blokują pliki dziennika oraz narzędzia antywirusowe, aby uniemożliwić ich usunięcie. Jeśli podejrzewasz wirusa, odłącz komputer od sieci i przeprowadź pełny skan w trybie offline.

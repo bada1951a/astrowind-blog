@@ -28,6 +28,8 @@ theme: "Midnight Navy Royal"
 
 
 
+## 1. Situation d'urgence critique au bureau
+
 Il est 7h45 ce mardi matin. Je suis assis à mon bureau dans une tour de verre à La Défense, le souffle court, les yeux rivés sur mon écran qui refuse obstanément d'ouvrir PowerPoint. À 9h, je dois monter dans leTGV en direction de Lyon pour une réunion matinale extrêmement tendue avec un client historique. Mon PC portable souffre d'une lenteur maladive : le ventilateur hurle à la mort, le curseur de la souris saccade, et chaque clic déclenche cette fichue roue de chargement bleue. Le coupable ? Windows 11 qui, dans sa grande générosité, décide de synchroniser le monde entier en tâche de fond pendant que j'essaie simplement de bosser.
 
 Ce genre de panne n'attend jamais le bon moment. Si vous aussi, votre bécane a l'air de traîner un boulet invisible alors que vous avez juste besoin d'efficacité immédiate, sortez votre carnet de notes. Voici le journal de bord de mon intervention d'urgence, heure par heure, pour redonner vie à un Windows 11 essoufflé.
@@ -92,12 +94,12 @@ Pour ne plus jamais vous retrouver bloqué la sueur au front avant une réunion 
 - Surveillez la température : Si votre ventilateur continue de s'affoler après ces optimisations, vérifiez que les grilles d'aération sous votre PC ne sont pas bloquées par la poussière ou un tissu de sacoche.
 
 ---
+## 5. Foire Aux Questions (FAQ)
 
-Foire Aux Questions (FAQ)
+**Q1 :** Est-ce que désactiver les effets visuels va rendre mon écran moche ? R : Ça enlève les effets de transparence "verre dépoli" et les animations de glissement lorsque vous fermez ou ouvrez une fenêtre. Le rendu devient un peu plus brut, semblable à Windows 10, mais le gain de réactivité sur un PC de bureau ou un portable professionnel est immédiat et flagrant.
 
-Q1 : Est-ce que désactiver les effets visuels va rendre mon écran moche ? R : Ça enlève les effets de transparence "verre dépoli" et les animations de glissement lorsque vous fermez ou ouvrez une fenêtre. Le rendu devient un peu plus brut, semblable à Windows 10, mais le gain de réactivité sur un PC de bureau ou un portable professionnel est immédiat et flagrant.
+**Q2 :** Si je bloque les applications en arrière-plan, est-ce que je risque de rater des notifications importantes ? R : Uniquement pour les applications secondaires que vous aurez ciblées (comme l'application Météo ou des jeux). Vos logiciels de messagerie principaux (comme Outlook ou Teams si configurés correctement) resteront actifs lorsqu'ils sont ouverts au premier plan.
 
-Q2 : Si je bloque les applications en arrière-plan, est-ce que je risque de rater des notifications importantes ? R : Uniquement pour les applications secondaires que vous aurez ciblées (comme l'application Météo ou des jeux). Vos logiciels de messagerie principaux (comme Outlook ou Teams si configurés correctement) resteront actifs lorsqu'ils sont ouverts au premier plan.
+**Q3 :** Pourquoi mon PC redevient-il lent après quelques mois malgré cette optimisation ?
 
-Q3 : Pourquoi mon PC redevient-il lent après quelques mois malgré cette optimisation ?
-R : Windows réinstalle parfois des applications par défaut lors des grosses mises à jour semestrielles, et le cache accumulé par votre navigateur web finit par peser lourd. Un petit nettoyage trimestriel des applications installées s'impose pour garder une machine saine.
+**A.** Windows réinstalle parfois des applications par défaut lors des grosses mises à jour semestrielles, et le cache accumulé par votre navigateur web finit par peser lourd. Un petit nettoyage trimestriel des applications installées s'impose pour garder une machine saine.

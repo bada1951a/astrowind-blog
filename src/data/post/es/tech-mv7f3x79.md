@@ -28,6 +28,8 @@ theme: "Industrial Blueprint"
 
 
 
+## 1. Emergencia crítica en el trabajo
+
 Llevo más de una década gestionando el parque microinformático de una multinacional con más de 800 puestos operativos, y si hay una incidencia que entra a diario en el sistema de tickets de soporte técnico con la etiqueta de "urgente", es el colapso del puesto de trabajo multimonitor. El escenario siempre es el mismo: el usuario llega por la mañana, conecta su portátil corporativo a la base de conexión (docking station) o directamente por HDMI/DisplayPort, y se encuentra con el temido mensaje de "Sin señal" (No Signal) o, peor aún, un parpadeo intermitente cada tres segundos que deja el equipo totalmente inútil para trabajar.
 
 Muchas veces se culpa a la pantalla o al cable de inmediato. Sin embargo, en el 90% de las intervenciones que realizo en planta, el fallo no reside en el panel físico, sino en una desincronización crítica en el handshake digital de la GPU, microcortes de tensión en el protocolo de enlace (DisplayPort Alternate Mode) o la corrupción de los controladores gráficos tras una actualización en segundo plano de Windows Update. En esta guía técnica voy a desglosar cómo aislar la avería a nivel de esquema funcional y resolverla de forma definitiva mediante software e instrumentación del sistema. <div style="border-left: 4px solid #f59e0b; padding: 14px 18px; margin: 24px 0; background-color: rgba(245, 158, 11, 0.05); border-radius: 4px; font-family: monospace; font-size: 0.95em;">
@@ -157,21 +159,22 @@ Advertencias del especialista y prevención de fallos
 
 - Evita adaptadores en cascad
 
-a: La combinación de adaptadores (por ejemplo, Tipo C a DisplayPort, y de ahí un adaptador pasivo a HDMI) degrada el nivel de señal analógica y rompe el cifrado HDCP. Emplea siempre un único cable directo de alta velocidad certificado.
+**a:** La combinación de adaptadores (por ejemplo, Tipo C a DisplayPort, y de ahí un adaptador pasivo a HDMI) degrada el nivel de señal analógica y rompe el cifrado HDCP. Emplea siempre un único cable directo de alta velocidad certificado.
 - Bloquea la sobrescritura de drivers en Windows Update: En entornos corporativos o equipos de producción críticos, deshabilita la inclusión de controladores en las actualizaciones automáticas a través de las directivas de grupo local (`gpedit.msc`):  
   *Configuración del equipo > Plantillas administrativas > Componentes de Windows > Windows Update > No incluir controladores con las actualizaciones de Windows*.
 
 ---
+## 5. Preguntas Frecuentes (FAQ)
 
-Preguntas Frecuentes (FAQ)
+**Q.** ¿Por qué el monitor parpadea únicamente al abrir ciertas aplicaciones como Netflix o reproductores multimedia?
 
-1. ¿Por qué el monitor parpadea únicamente al abrir ciertas aplicaciones como Netflix o reproductores multimedia?
-Esto se debe a un fallo en la negociación del protocolo anticopia HDCP (High-bandwidth Digital Content Protection). Cuando reproduces contenido protegido, la GPU exige un nivel de cifrado de hardware que viaja a través del cable. Si el cable tiene pines dañados o el driver tiene un fallo de sincronización en sus módulos criptográficos, la pantalla se desconecta por seguridad durante medio segundo de forma cíclica. La solución pasa por actualizar el firmware del monitor o sustituir el cable por uno con certificación HDCP 2.2 o superior.
+**A.** Esto se debe a un fallo en la negociación del protocolo anticopia HDCP (High-bandwidth Digital Content Protection). Cuando reproduces contenido protegido, la GPU exige un nivel de cifrado de hardware que viaja a través del cable. Si el cable tiene pines dañados o el driver tiene un fallo de sincronización en sus módulos criptográficos, la pantalla se desconecta por seguridad durante medio segundo de forma cíclica. La solución pasa por actualizar el firmware del monitor o sustituir el cable por uno con certificación HDCP 2.2 o superior.
 
 2. He reinstalado los drivers con DDU pero el monitor sigue sin dar señal.
 
 ¿Cómo sé si el puerto del portátil está dañado?
 Abre el Símbolo del sistema con privilegios elevados o PowerShell y revisa los eventos del sistema. Desconecta y conecta el cable; si en el Administrador de dispositivos no se actualiza la lista automáticamente (el árbol de dispositivos no parpadea buscando cambios de hardware), el fallo está en el conector físico o en el fusible térmico del puerto USB-C/HDMI de la placa. Adicionalmente, prueba arrancando una distribución de Ubuntu en modo Live USB: si allí tampoco hay señal externa, el fallo es estrictamente de hardware (puerto, cable o scaler del monitor) y no de Windows.
 
-3. ¿Es mejor conectar la segunda pantalla por HDMI directo o mediante el puerto USB-C con soporte DisplayPort?
-Técnicamente, USB-C con soporte nativo DisplayPort (DP Alt Mode) ofrece una arquitectura de transmisión más moderna y flexible, con mayor ancho de banda nativo por carril (lane) y mejor soporte para tasas de refresco adaptativas que los puertos HDMI 1.4/2.0 habituales en portátiles. No obstante, el puerto HDMI suele ser más robusto a nivel mecánico y no depende de la negociación de perfiles energéticos que a veces saturan el controlador de bus Type-C. Si buscas fiabilidad absoluta en oficina para 1080p o 1440p a 60 Hz, un HDMI nativo suele dar menos incidencias en jornadas prolongadas.
+**Q.** ¿Es mejor conectar la segunda pantalla por HDMI directo o mediante el puerto USB-C con soporte DisplayPort?
+
+**A.** Técnicamente, USB-C con soporte nativo DisplayPort (DP Alt Mode) ofrece una arquitectura de transmisión más moderna y flexible, con mayor ancho de banda nativo por carril (lane) y mejor soporte para tasas de refresco adaptativas que los puertos HDMI 1.4/2.0 habituales en portátiles. No obstante, el puerto HDMI suele ser más robusto a nivel mecánico y no depende de la negociación de perfiles energéticos que a veces saturan el controlador de bus Type-C. Si buscas fiabilidad absoluta en oficina para 1080p o 1440p a 60 Hz, un HDMI nativo suele dar menos incidencias en jornadas prolongadas.

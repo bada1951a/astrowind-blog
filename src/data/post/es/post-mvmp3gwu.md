@@ -19,6 +19,8 @@ theme: "Industrial Blueprint"
 
 
 
+## 1. Emergencia crítica en el trabajo
+
 1. El Momento de Pánico en la Sala de Reuniones
 
 Eran las 10:45 de la mañana en el flamante edificio corporativo situado en pleno Paseo de la Castellana en Madrid. Todo estaba listo para la gran demostración ante los directivos de nuestro principal cliente. Tenía mi portátil conectado al proyector de la sala principal y el proyector mostraba la pantalla de inicio perfectamente. En cuestión de minutos, los directivos entrarían para ver en vivo una nueva arquitectura de red y la interfaz de usuario optimizada que habíamos preparado durante semanas. 
@@ -35,7 +37,7 @@ Volví a pulsar el teclado con más fuerza, asegurándome de presionar bien cada
 
 ![Tech Troubleshooting Guide](/images/tech-photo/tech-photos%20(3).jpg)
 
-## 2. Root Cause Breakdown
+## 2. Análisis detallado de la causa raíz
 
 ¿Por qué demonios deja de funcionar un atajo tan básico en Windows 11? Tras revisar cientos de equipos en entornos corporativos, el problema rara vez es un fallo físico del teclado. En el 99 por ciento de los casos, la raíz del problema se divide en tres culpables habituales dentro del ecosistema de software de Microsoft:
 
@@ -45,7 +47,7 @@ Volví a pulsar el teclado con más fuerza, asegurándome de presionar bien cada
 
 3. Corrupción en la caché de la aplicación o actualizaciones pendientes: A veces, una actualización acumulativa de Windows corrompe el registro o la caché de la aplicación universal (UWP), impidiendo que el servicio responda a los ganchos de teclado (*keyboard hooks*).
 
-## 3. Step-by-Step Resolution
+## 3. Solución práctica paso a paso
 
 Para solucionar este inconveniente de forma quirúrgica y rápida, vamos a seguir tres métodos infalibles ordenados del más rápido al más avanzado. No necesitas reiniciar el equipo si sigues estos pasos al pie de la letra.
 
@@ -94,7 +96,7 @@ Si los métodos anteriores fallan, vamos a limpiar los datos corruptos de la apl
 Get-AppxPackage *ScreenSketch* -AllUsers | Foreach {Add-AppxPackage -DisableDevelopmentMode -Register "(_.InstallLocation)\AppXManifest.xml"}
 ```
 
-## 4. Expert Advice
+## 4. Advertencias y consejos de un técnico
 
 Como técnico de soporte hardware y sistemas, déjame darte un consejo de campo para evitar pasar vergüenza ante un cliente. Siempre ten un plan B en tu arsenal. 
 
@@ -103,16 +105,16 @@ Si estás en medio de una crisis de tiempo y el atajo de Windows 11 sigue fallan
 * **La tecla Impr Pant (PrtScn):** Puedes configurar Windows en **Configuración > Accesibilidad > Teclado** para que la tecla de impresión de pantalla abra directamente la herramienta de recortes sin necesidad de pulsar tres teclas a la vez.
 * **Software alternativo portátil:** Lleva siempre en tu memoria USB corporativa herramientas ligeras y portátiles como *Greenshot* o *Lightshot*. No requieren instalación pesada, corren desde el explorador y salvan cualquier demostración en cuestión de segundos.
 
-5. Frequently Asked Questions
+## 5. Preguntas Frecuentes (FAQ)
 
-Q: ¿Qué hago si mi teclado no tiene la tecla Windows o está dañada?
+**Q:** ¿Qué hago si mi teclado no tiene la tecla Windows o está dañada?
 
-A: Puedes usar el teclado en pantalla de Windows escribiendo `OSK` en el menú de inicio, o bien buscar directamente "Herramienta Recortes" en la barra de búsqueda para abrirla de forma manual con el ratón.
+**A:** Puedes usar el teclado en pantalla de Windows escribiendo `OSK` en el menú de inicio, o bien buscar directamente "Herramienta Recortes" en la barra de búsqueda para abrirla de forma manual con el ratón.
 
-Q: ¿Por qué la captura se guarda sola en el portapapeles pero no aparece la notificación para editarla?
+**Q:** ¿Por qué la captura se guarda sola en el portapapeles pero no aparece la notificación para editarla?
 
-A: Esto ocurre porque las notificaciones emergentes de la aplicación están desactivadas en el Centro de Actividades. Ve a Configuración > Sistema > Notificaciones y actívalas manualmente.
+**A:** Esto ocurre porque las notificaciones emergentes de la aplicación están desactivadas en el Centro de Actividades. Ve a Configuración > Sistema > Notificaciones y actívalas manualmente.
 
-Q: ¿Una actualización de Windows Update puede romper este atajo permanentemente?
+**Q:** ¿Una actualización de Windows Update puede romper este atajo permanentemente?
 
-A: Raras veces de forma permanente, pero las actualizaciones acumulativas a veces corrompen los registros de las aplicaciones UWP. Aplicar el comando de PowerShell que mencionamos en el método 3 suele solucionar este problema específico de incompatibilidad post-actualización.
+**A:** Raras veces de forma permanente, pero las actualizaciones acumulativas a veces corrompen los registros de las aplicaciones UWP. Aplicar el comando de PowerShell que mencionamos en el método 3 suele solucionar este problema específico de incompatibilidad post-actualización.

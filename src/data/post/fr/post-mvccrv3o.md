@@ -28,7 +28,11 @@ theme: "High-Contrast Charcoal"
 
 
 
+## 1. Situation d'urgence critique au bureau
+
 Il est 17h45 dans notre bureau tech du 11e arrondissement à Paris. Nous sommes à J-2 d'une livraison critique pour un client majeur, le canal Slack crépite d'urgences, et soudain, c'est le drame : mon poste de travail principal bascule net sur un magnifique écran bleu de la mort avec le code d'erreur `0x0000000a` (IRQL_NOT_LESS_OR_EQUAL). Impossible de redémarrer, le système replonge dans l'abysse à chaque tentative de chargement de session. Le stress monte d'un cran : perdre deux heures de configuration en plein sprint, c'est tout simplement inacceptable.
+
+## 2. Analyse des causes principales de l'erreur
 
 Pourquoi ce fichu écran bleu surgit-il sans prévenir ?
 
@@ -46,6 +50,8 @@ Après un premier redémarrage forcé en mode sans échec, j'ai tout de suite an
 </div>
 
 ---
+
+## 3. Guide de résolution étape par étape
 
 Résolution pas à pas : Diagnostic mémoire et retour arrière
 
@@ -76,13 +82,15 @@ Une fois le pilote fautif identifié, il faut reprendre le contrôle depuis le G
 
 2. Retrouvez le matériel associé au pilote incriminé (par exemple dans *Cartes réseau* ou *Contrôleurs de bus USB*).
 
-3. Faites un clic droit dessus, sélectionnez Propriétés, puis allez sur l'ongletPilote.
+3. Faites un clic droit dessus, sélectionnez Propriétés, puis allez sur l'onglet Pilote.
 
 4. Cliquez sur le bouton Pilote de S1(ouRestaurer le pilote en français) pour revenir à la version stable précédente.
 
 5. Si l'option est grisée, désinstallez complètement le périphérique en cochant *Supprimer le pilote pour ce périphérique*, puis redémarrez immédiatement.
 
 ---
+
+## 4. Conseils et précautions d'un expert système
 
 Conseils d'expert pour éviter la récidive
 
@@ -97,15 +105,16 @@ Pour garantir la stabilité de vos postes de travail en période de forte charge
 </div>
 
 ---
-
-Foire Aux Questions (FAQ)
+## 5. Foire Aux Questions (FAQ)
 
 1. Mon PC redémarre en boucle et je n'ai pas accès au bureau pour lancer le retour arrière, que faire ?
 
 Forcez l'arrêt du PC trois fois de suite en maintenant le bouton d'alimentation enfoncé lors du logo Windows. Au quatrième démarrage, le système affichera automatiquement l'environnement de récupération (WinRE). Allez dans *Dépannage > Options avancées > Paramètres de démarrage*, puis redémarrez en *Mode sans échec*.
 
-2. Le diagnostic mémoire Windows indique une erreur, est-ce réparable ? Non, une erreur physique signalée par l'outil de diagnostic signifie généralement qu'une barrette de RAM est défectueuse. Il faut l'extraire physiquement de la carte mère, nettoyer les contacts, ou la remplacer purement et simplement.
+**Q.** Le diagnostic mémoire Windows indique une erreur, est-ce réparable ?
 
-3. Le retour arrière du pilote est grisé dans le Gestionnaire de périphériques, quelle est l'alternative ?
+**A.** Non, une erreur physique signalée par l'outil de diagnostic signifie généralement qu'une barrette de RAM est défectueuse. Il faut l'extraire physiquement de la carte mère, nettoyer les contacts, ou la remplacer purement et simplement.
 
-Cela signifie qu'aucune version précédente n'est stockée en cache local. Dans ce cas, téléchargez la version stable précédente directement sur le site du fabricant depuis un autre ordinateur, mettez-la sur une clé USB, puis procédez à une installation manuelle via l'option *Parcourir mon poste de ordinateur pour rechercher des pilotes*.
+**Q.** Le retour arrière du pilote est grisé dans le Gestionnaire de périphériques, quelle est l'alternative ?
+
+**A.** Cela signifie qu'aucune version précédente n'est stockée en cache local. Dans ce cas, téléchargez la version stable précédente directement sur le site du fabricant depuis un autre ordinateur, mettez-la sur une clé USB, puis procédez à une installation manuelle via l'option *Parcourir mon poste de ordinateur pour rechercher des pilotes*.

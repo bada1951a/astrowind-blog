@@ -28,13 +28,11 @@ theme: "Crimson Emergency Field"
 
 
 
-Eran las 4:50 de la tarde en nuestra oficina corporativa en Madrid. A solo diez minutos de enviar el paquete final del proyecto trimestral a la directiva, la pantalla del equipo principal de diseño comenzó a parpadear y, de la nada, apareció esa maldita marca transparente en la esquina inferior derech
+## 1. Emergencia crítica en el trabajo
 
-a: "Activa Windows: ve a Configuración para activar Windows". Para colmo, cubría justo los botones de exportación del software gráfico. El pánico se apoderó delux del estudio; el cliente estaba esperando los archivos y la interfaz parecía boicotearnos el trabajo.
+Eran las 4:50 de la tarde en nuestra oficina corporativa en Madrid. A solo diez minutos de enviar el paquete final del proyecto trimestral a la directiva, la pantalla del equipo principal de diseño comenzó a parpadear y, de la nada, apareció esa maldita marca transparente en la esquina inferior derecha: "Activa Windows: ve a Configuración para activar Windows". Para colmo, cubría justo los botones de exportación del software gráfico. El pánico se apoderó delux del estudio; el cliente estaba esperando los archivos y la interfaz parecía boicotearnos el trabajo.
 
-Intentamos de todo a la carrer
-
-a: reiniciar el explorador de archivos desde el Administrador de tareas, buscar opciones rápidas en elPanel de controly hasta revisar el estado del sistema enConfiguración, pero el aviso seguía ahí, estorbando en el peor momento posible. Los parches descargados de páginas dudosas solo advertían alertas de seguridad del antivirus corporativo. No podíamos arriesgarnos a corromper el sistema operativo a cinco minutos del cierre.
+Intentamos de todo a la carrera: reiniciar el explorador de archivos desde el Administrador de tareas, buscar opciones rápidas en el Panel de control y hasta revisar el estado del sistema en Configuración, pero el aviso seguía ahí, estorbando en el peor momento posible. Los parches descargados de páginas dudosas solo advertían alertas de seguridad del antivirus corporativo. No podíamos arriesgarnos a corromper el sistema operativo a cinco minutos del cierre.
 
 ![Tech Troubleshooting Guide](/images/tech-photo/tech-photos%20(5).jpg)
 
@@ -46,6 +44,8 @@ Por suerte, como técnico especialista, recordé un procedimiento rápido, limpi
 
 ---
 
+## 2. Análisis detallado de la causa raíz
+
 Por qué aparece este molesto aviso de activación
 
 Antes de aplicar la solución, es bueno entender qué provocó el fallo en nuestro entorno de trabajo:
@@ -54,9 +54,11 @@ Antes de aplicar la solución, es bueno entender qué provocó el fallo en nuest
 
 2. Actualización acumulativa reciente: Ciertos paquetes de actualización de Windows Update (como los parches de seguridad mensuales) reinician los servicios de licencias y fuerzan la revalidación del estado del sistema.
 
-3. Cambios en componentes de hardware:Una sustitución reciente de placa base o tarjeta de red en elAdministrador de dispositivos puede invalidar el token de activación digital guardado en el equipo.
+3. Cambios en componentes de hardware:Una sustitución reciente de placa base o tarjeta de red en el Administrador de dispositivos puede invalidar el token de activación digital guardado en el equipo.
 
 ---
+
+## 3. Solución práctica paso a paso
 
 Pasos rápidos para limpiar la marca de agua mediante CMD
 
@@ -71,9 +73,7 @@ Paso 1: Abrir la consola con privilegios de administrador
 3. Haz clic derecho sobre Símbolo del sistemay selecciona "Ejecutar como administrador" (es vital tener permisos elevados para modificar los servicios del sistema).
 
 Paso 2: Detener los servicios de protección de software
-Una vez dentro de la ventana negra de comandos, introduce las siguientes líneas una por una presionando *Enter* después de cada un
-
-a:
+Una vez dentro de la ventana negra de comandos, introduce las siguientes líneas una por una presionando *Enter* después de cada una:
 
 ```cmd
 net stop sppsvc
@@ -88,10 +88,12 @@ slmgr -rearm
 ```
 *Not
 
-a: Si te sale un mensaje indicando que el comando se ejecutó con éxito, aparecerá una ventana emergente indicando que debes reiniciar el equipo.*
+**a:** Si te sale un mensaje indicando que el comando se ejecutó con éxito, aparecerá una ventana emergente indicando que debes reiniciar el equipo.*
 
 Paso 4: Reiniciar el equipo de forma limpia
 No cierres el día operativo sin hacer un reinicio completo. Ve a Configuración > Inicio/Apagado > Reiniciar. Al volver a encender la máquina, el servicio se reiniciará de forma limpia y la molesta marca de agua habrá desaparecido, permitiéndote trabajar con la pantalla despejada. ---
+
+## 4. Advertencias y consejos de un técnico
 
 Consejos del técnico de soporte
 
@@ -100,8 +102,7 @@ Consejos del técnico de soporte
 * No abuses del comando -rearm: Windows permite un número limitado de veces este comando (generalmente tres). Si la marca vuelve a aparecer al par de días, el problema real es que la clave de licencia ha expirado o requiere una reactivación formal por parte del administrador de tu red.
 
 ---
-
-Preguntas Frecuentes (FAQ)
+## 5. Preguntas Frecuentes (FAQ)
 
 ¿Este método borra o desactiva permanentemente mi licencia oficial? No. Este procedimiento únicamente reinicia el servicio de evaluación visual y el contador de licencias del sistema operativo. Si tu equipo cuenta con una licencia legítima vinculada a la BIOS o a tu cuenta corporativa, Windows volverá a validarse correctamente en cuanto recupere la conexión con el servidor de licencias.
 

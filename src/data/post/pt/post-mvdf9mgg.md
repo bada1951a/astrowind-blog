@@ -28,6 +28,8 @@ theme: "Graphite Technical Paper"
 
 
 
+## 1. Situação de emergência no trabalho
+
 Eram 19h45 em um hub de tecnologia na região da Avenida Paulista, em São Paulo, e o clima na sala de reuniões estava tenso. Precisávamos entregar um relatório de BI consolidado para a diretoria às 9h do dia seguinte, mas o notebook principal da equipe simplesmente decidiu travar na tela de reinicialização com o famigerado aviso de "Atualizando o Windows: 100% concluído. Não desligue o computador". Passaram-se trinta minutos, quarenta minutos, e a porcentagem não saía do lugar. O cooler do aparelho rodava no talo, o prazo apertava, e reiniciar no botão físico trazia o medo clássico de corromper o sistema de vez.
 
 Essa cena é o pesadelo de qualquer profissional de TI ou usuário que depende de estabilidade. Depois de perder valiosos minutos tentando alternativas ineficientes, o diagnóstico certeiro apontou para o que costuma falhar nesses momentos: arquivos corrompidos no cache do Windows Update, especificamente na pasta onde o sistema armazena os pacotes de instalação temporários.
@@ -35,7 +37,7 @@ Essa cena é o pesadelo de qualquer profissional de TI ou usuário que depende d
 <div style="border-left: 4px solid #475569; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Nota do Especialist
 
-a:</strong> Nunca force o desligamento repetidas vezes sem um plano B. Se o Windows trava em 100 porcento, geralmente ele está tentando reescrever uma chave de registro ou aplicar um componente que entrou em conflito com algum driver legado ou arquivo temporário corrompido.
+**a:**</strong> Nunca force o desligamento repetidas vezes sem um plano B. Se o Windows trava em 100 porcento, geralmente ele está tentando reescrever uma chave de registro ou aplicar um componente que entrou em conflito com algum driver legado ou arquivo temporário corrompido.
 </div>
 
 Por que o Windows 11 trava em 100 porcento na atualização?
@@ -54,12 +56,12 @@ Passo a Passo Prático: Limpando o Cache e Destravando o Sistema
 
 Se o seu sistema está inacessível pela interface gráfica normal, o caminho é iniciar em Modo de Segurança (Safe Mode) ou usar um ambiente de recuperação. Assumindo que você conseguiu acessar o Windows (mesmo que após um hard reset forçado) ou via Prompt de Comando na tela de Reparo Avançado, siga esta sequência exat
 
-a:
+**a:**
 
 Passo 1: Parar os serviços de atualização
 Abra o Terminalou oPrompt de Comando com privilégios de Administrador (clique com o botão direito no menu Iniciar e selecione "Terminal (Administrador)"). Digite os comandos abaixo um por um, pressionando Enter após cada linh
 
-a:
+**a:**
 
 ```text
 net stop wuauserv
@@ -72,7 +74,7 @@ net stop msiserver
 Passo 2: Renomear a pasta de cache (SoftwareDistribution)
 Ainda no Prompt de Comando, vamos renomear a pasta onde ficam os arquivos corrompidos para forçar o Windows a criar uma nova do zero limpinh
 
-a:
+**a:**
 
 ```text
 ren C:\Windows\SoftwareDistribution SoftwareDistribution.old
@@ -107,8 +109,9 @@ Perguntas Frequentes (FAQ)
 1. Se eu desligar o computador no botão físico enquanto está em 100%, vou perder meus arquivos?
 Na maioria das vezes, seus arquivos pessoais (documentos, fotos) ficam seguros nas pastas de usuário. No entanto, o sistema operacional pode corromper arquivos de registro, exigindo reparo de inicialização ou o procedimento de limpeza de cache que mostramos neste guia. ![Tech & IT Solution Guide](https://picsum.photos/seed/computer725/1000/550)
 
-2. Posso apagar totalmente a pasta SoftwareDistribution.old depois que o PC ligar?
-Sim. Depois que o Windows iniciar normalmente e você verificar que tudo está funcionando e atualizado, você pode deletar a pasta `SoftwareDistribution.old` para liberar espaço em disco (pode ser necessário usar a limpeza de disco do sistema para permissões).
+**Q.** Posso apagar totalmente a pasta SoftwareDistribution.old depois que o PC ligar?
+
+**A.** Sim. Depois que o Windows iniciar normalmente e você verificar que tudo está funcionando e atualizado, você pode deletar a pasta `SoftwareDistribution.old` para liberar espaço em disco (pode ser necessário usar a limpeza de disco do sistema para permissões).
 
 3. Por que isso acontece com tanta frequência no Windows 11?
 O Windows 11 gerencia pacotes cumulativos grandes e complexos. Quedas mínimas de conexão durante o download em segundo plano ou oscilações de energia no SSD durante a gravação final geram bits corrompidos que confundem o assistente de instalação. Manter o SSD saudável e usar uma conexão de internet estável minimiza drasticamente o problema.

@@ -28,6 +28,8 @@ theme: "Dracula Purple Dev"
 
 
 
+## 1. Noodsituatie op de werkvloer
+
 Vrijdagmiddag, kwart over vier. Mijn grootste afnemer belde net dat de staging-omgeving eruit ligt voor de maandagse release, en op dat exact verkeerde moment besluit mijn workstation om zwart scherm te geven. De ventilatoren loeien alsof er een Boeing opstijgt, de RGB-verlichting knippert vrolijk in al zijn regenboogpracht, maar mijn monitor blijft koppig op *No Signal* staan. Mijn manager staat al achter me met een kop lauwe koffie en de klassieke vraag: *"Is het al opgelost?"* Je zweet breekt je uit, je drukt op goed geluk op Ctrl + Shift + Win + B om de grafische driver te resetten, maar er gebeurt werkelijk helemaal niets.
 
 Dit soort situaties kosten je levensjaren. Je vervloekt de hardware, denkt meteen dat je moederbord naar de haaien is, en ziet je weekend in duigen vallen. Maar na jaren meedraaien in de IT-infrastructuur weet ik inmiddels beter: in negen van de tien gevallen is het een banale contactfout. Tijd om die kast open te schroeven en handen uit de mouwen te steken.

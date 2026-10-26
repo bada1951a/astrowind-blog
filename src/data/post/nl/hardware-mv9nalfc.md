@@ -28,6 +28,8 @@ theme: "Sunset Horizon Coral"
 
 
 
+## 1. Noodsituatie op de werkvloer
+
 Afgelopen dinsdagmiddag, midden in de hectiek op kantoor op de Zuidas in Amsterdam, stond ik op het punt om een cruciale kwartaalrapportage naar onze belangrijkste investeerder te sturen. Nog even snel de laatste grafieken bijwerken, dacht ik. Maar toen gebeurde het: een felrood pop-upvenster onder in mijn scherm. *Onvoldoende schijfruimte op C:.* Niet lang daarna begon Windows te haperen, crashte mijn Excel-bestand en zat ik met het zweet in mijn handen te staren naar een computer die plotseling weigerde op te slaan. Paniek! Een acute opslagcrisis op de werkvloer, en dat midden op een drukke werkdag.
 
 <div style="border-left: 4px solid #f97316; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
@@ -78,7 +80,7 @@ Soms blijft er in de diepe krochten van Windows wat achter in de tijdelijke mapp
 
 Voor en n
 
-a: Wat levert het op?
+**a:** Wat levert het op?
 
 Om je een idee te geven van het verschil dat dit oplevert op een gemiddelde kantoorlaptop, zie je hieronder de typische status voor en na onze grondige schoonmaakbeurt:
 

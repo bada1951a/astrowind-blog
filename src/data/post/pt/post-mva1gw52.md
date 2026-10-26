@@ -28,12 +28,14 @@ theme: "Teal Matrix Digital"
 
 
 
+## 1. Situação de emergência no trabalho
+
 Eram exatamente 16h45 em um hub de tecnologia na região da Avenida Paulista, em São Paulo. Nossa equipe estava a quinze minutos de uma reunião crítica de alinhamento técnico para a entrega de um grande projeto de arquitetura de dados com um cliente do setor financeiro. De repente, a tela do meu notebook principal pisca em vermelho: notificação crítica do Windows — "Espaço em disco insuficiente no Disco C:". O sistema travou bem na hora em que eu precisava compilar os logs finais e gerar o pacote de homologação. O coração acelera, o Slack da empresa começa a apitar com cobranças, e o Windows me avisa que restam apenas 800 MB livres em um SSD de 512 GB. Precisei agir rápido, sem perder dados e sem tempo para testar softwares milagrosos de internet.
 
 <div style="border-left: 4px solid #14b8a6; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Contexto de Urgênci
 
-a:</strong> Quando o disco C: atinge o limite crítico de armazenamento, o Windows 11 perde capacidade de gerenciar a memória virtual (paginação), causando lentidão extrema, falhas em atualizações e travamentos em aplicativos pesados.
+**a:**</strong> Quando o disco C: atinge o limite crítico de armazenamento, o Windows 11 perde capacidade de gerenciar a memória virtual (paginação), causando lentidão extrema, falhas em atualizações e travamentos em aplicativos pesados.
 </div>
 
 Por que o Disco C: Fica Cheio Tão Rápido no Windows 11?
@@ -76,14 +78,12 @@ Se você ainda precisa de mais alguns gigabytes urgentes, podemos acessar as pas
 
 * Pressione `Windows + R`, digite `%temp%` e aperte `Enter`.
 * Pressione `Ctrl + A` para selecionar todos os arquivos da pasta e `Shift + Delete` para apagá-los permanentemente.
-* *Not
-
-a:* Alguns arquivos estarão em uso por aplicativos abertos. O Windows avisará sobre eles; basta clicar em "Ignorar" ou "Fazer isso para todos os itens atuais" e prosseguir.
+* *Nota:* Alguns arquivos estarão em uso por aplicativos abertos. O Windows avisará sobre eles; basta clicar em "Ignorar" ou "Fazer isso para todos os itens atuais" e prosseguir.
 * Repita o processo pressionando `Windows + R`, digitando `temp` (sem porcentagem) e limpando o conteúdo da pasta do sistema. ---
 
 Alerta do Especialist
 
-a: O que Nunca Fazer
+**a:** O que Nunca Fazer
 
 Trabalhando no suporte a infraestrutura corporativa, já vi muita gente perder dados importantes por falta de cuidado básico. Siga estas diretrizes para manter seu sistema estável:
 
@@ -94,8 +94,9 @@ Trabalhando no suporte a infraestrutura corporativa, já vi muita gente perder d
 
 Perguntas Frequentes (FAQ)
 
-1. Posso apagar a pasta Windows.old sem medo?
-Sim, desde que seu computador esteja funcionando perfeitamente após a última atualização do Windows. A pasta `Windows.old` serve apenas para reverter o sistema para uma versão anterior. Se você não planeja fazer downgrade, pode apagá-la sem receio através da Limpeza de Disco para recuperar dezenas de gigabytes.
+**Q.** Posso apagar a pasta Windows.old sem medo?
+
+**A.** Sim, desde que seu computador esteja funcionando perfeitamente após a última atualização do Windows. A pasta `Windows.old` serve apenas para reverter o sistema para uma versão anterior. Se você não planeja fazer downgrade, pode apagá-la sem receio através da Limpeza de Disco para recuperar dezenas de gigabytes.
 
 ![Tech & IT Solution Guide](https://picsum.photos/seed/computer698/1000/550)
 

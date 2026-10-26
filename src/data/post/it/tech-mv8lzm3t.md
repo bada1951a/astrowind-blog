@@ -28,6 +28,8 @@ theme: "Cyberpunk Terminal"
 
 
 
+## 1. Emergenza improvvisa sul posto di lavoro
+
 <div style="border-left: 4px solid #00ffcc; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,255,204,0.05); border-radius: 4px; font-family: monospace;">
 [SYS_ALERT] root@hardware-lab:~# tail -f /var/log/boot_sequence.log<br>
 CRITICAL: I/O bottleneck detected. Disk queue length > 5.
@@ -37,7 +39,7 @@ CRITICAL: I/O bottleneck detected. Disk queue length > 5.
 
 Erano le 8:45 di un venerdì mattina qualunque, e il mio capo era già dietro la mia scrivania con la tazza di caffè in mano, pronto a guardarmi lo schermo per l'ennesima demo urgente con un cliente chiave. Io premo il pulsante di accensione del mio workstation di test e... il nulla cosmico. Anzi, peggio: la rotellina di caricamento di Windows che gira imperterrita per sei interminabili minuti, mentre la spia del disco fisso (un vecchio SSD ormai alla frutta) lampeggia fissa come un semaforo impazzito. Il mio collega mi guarda e f
 
-a: *"Ti conviene reinstallare tutto da capo"*. Ma figurati se un sistemista si arrende a una formattazione prima di aver fatto sanguinare la tastiera. Il problema non era l'hardware in sé, ma il caos assoluto che si era accumulato nel registro di sistema e nella sequenza di boot. Ogni volta che installi una suite di office automation, un tool di messaggistica o un driver di periferica, questi software si infilano subdoli nella coda d'avvio. Risultato? All'accensione, la CPU e il controller SATA/NVMe vengono subissati da decine di daemon e updater inutili che strangolano il sistema prima ancora che tu possa aprire il Task Manager.
+**a:** *"Ti conviene reinstallare tutto da capo"*. Ma figurati se un sistemista si arrende a una formattazione prima di aver fatto sanguinare la tastiera. Il problema non era l'hardware in sé, ma il caos assoluto che si era accumulato nel registro di sistema e nella sequenza di boot. Ogni volta che installi una suite di office automation, un tool di messaggistica o un driver di periferica, questi software si infilano subdoli nella coda d'avvio. Risultato? All'accensione, la CPU e il controller SATA/NVMe vengono subissati da decine di daemon e updater inutili che strangolano il sistema prima ancora che tu possa aprire il Task Manager.
 
 Analizziamo i tre veri colpevoli di questo scempio prestazionale:
 
@@ -77,7 +79,7 @@ Questo comando ti sputerà a video l'elenco esatto dei binari che si caricano al
 3. Controllo dello stato dei dischi e dell'integrità
 Spesso un avvio lento non è solo colpa dei programmi, ma di un supporto di memoria che sta cedendo. Apri Gestione disco (`diskmgmt.msc`) o verifica lo stato S.M.
 
-A.R.T. da terminale con:
+**A.**R.T. da terminale con:
 
 <div style="border-left: 4px solid #00ffcc; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.8); color: #00ffcc; border-radius: 4px; font-family: monospace;">
 wmic diskdrive get status
@@ -95,12 +97,12 @@ Domande Frequenti (FAQ)
 
 D: Disabilitare i programmi dall'avvio mi impedisce di usarli in seguito?
 
-R: Assolutamente no. Significa solo che l'applicazione non si caricherà in background non appena accendi il computer. Potrai avviarla normalmente cliccando sulla sua icona quando ti serve davvero, risparmiando risorse preziose durante il boot.
+**A.** Assolutamente no. Significa solo che l'applicazione non si caricherà in background non appena accendi il computer. Potrai avviarla normalmente cliccando sulla sua icona quando ti serve davvero, risparmiando risorse preziose durante il boot.
 
 D: Ho disabilitato un servizio per errore e ora Windows fa i capricci, come ripristino?
 
-R: Niente panico. Premi `Win + R`, digita `msconfig`, vai alla scheda *Servizi*, spunta la casella "Nascondi tutti i servizi Microsoft" e clicca su "Abilita tutto". Riavvia la macchina e tornerà tutto allo stato originale.
+**A.** Niente panico. Premi `Win + R`, digita `msconfig`, vai alla scheda *Servizi*, spunta la casella "Nascondi tutti i servizi Microsoft" e clicca su "Abilita tutto". Riavvia la macchina e tornerà tutto allo stato originale.
 
 D: Conviene usare software di ottimizzazione "one-click" scaricati dal web?
 
-R: Da sistemista ti dico: evitali come la peste. La maggior parte di quei tool inserisce ulteriori pubblicità o modifiche invasive al registro che peggiorano la stabilità del sistema. Fai tutto manualmente tramite gli strumenti nativi di Windows.
+**A.** Da sistemista ti dico: evitali come la peste. La maggior parte di quei tool inserisce ulteriori pubblicità o modifiche invasive al registro che peggiorano la stabilità del sistema. Fai tutto manualmente tramite gli strumenti nativi di Windows.

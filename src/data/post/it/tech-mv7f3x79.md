@@ -28,6 +28,8 @@ theme: "Nordic Clean Ice"
 
 
 
+## 1. Emergenza improvvisa sul posto di lavoro
+
 <blockquote style="border-left: 3px solid #0284c7; margin: 24px 0; padding: 12px 20px; font-style: italic; color: #334155; background: #f8fafc; border-radius: 0 8px 8px 0;">
 "In una postazione di lavoro moderna, la stabilità visiva non è un lusso: un solo secondo di schermo nero durante una sessione di debug o una presentazione aziendale interrompe il flusso cognitivo e rivela un’instabilità architetturale che va risolta alla radice."
 </blockquote>
@@ -66,7 +68,7 @@ Procedura di Ripristino e Azzeramento Driver Passo dopo Passo
 Per ripristinare uno stack video corrotto non è sufficiente premere "Aggiorna driver" nelle impostazioni di sistema; serve una bonifica deterministica. <div style="border-left: 4px solid #0284c7; padding: 12px 16px; margin: 20px 0; background-color: rgba(2, 132, 199, 0.05); border-radius: 4px;">
 <strong>Scorciatoia di emergenz
 
-a:</strong> Se lo schermo esterno è completamente nero ma il portatile risponde, premi contemporaneamente <code>Tasto Windows + Ctrl + Shift + B</code>. Questa sequenza riavvia immediatamente il driver video e azzera il buffer del Desktop Window Manager senza chiudere le applicazioni in esecuzione.
+**a:**</strong> Se lo schermo esterno è completamente nero ma il portatile risponde, premi contemporaneamente <code>Tasto Windows + Ctrl + Shift + B</code>. Questa sequenza riavvia immediatamente il driver video e azzera il buffer del Desktop Window Manager senza chiudere le applicazioni in esecuzione.
 </div>
 
 Fase 1: Isolamento e Rimozione Tramite Gestione Dispositivi
@@ -96,7 +98,7 @@ Se i file del driver contengono riferimenti incoerenti nel registro di sistema (
 
 3. Riavvia Windows in Modalità provvisori
 
-a:
+**a:**
    - Apri Prompt dei comandi come amministratore.
    - Digita il comando:
      ```cmd
@@ -157,5 +159,6 @@ dism /online /cleanup-image /restorehealth
 ```
 Subito dopo, vai in Impostazioni schermo, seleziona il monitor cieco, cambia temporaneamente la risoluzione su `1280x720` a `60Hz`. Questo forza la scheda grafica a richiedere una larghezza di banda minima. Se a questa risoluzione compare il segnale, il problema risiede nella larghezza di banda del cavo o nei timing video avanzati non supportati dalla dock.
 
-3. È sicuro disattivare completamente la GPU integrata da Gestione dispositivi per usare solo quella dedicata?
-No, è caldamente sconsigliato. Sulla maggior parte dei moderni laptop con architettura mobile, il display integrato e talvolta persino le porte USB-C/DisplayPort sono collegate fisicamente ai pin di output della iGPU. Disattivando l'adattatore grafico integrato in *Gestione dispositivi*, Windows passerà forzatamente al *Microsoft Basic Display Adapter*, perdendo l'accelerazione hardware di sistema, il supporto a risoluzioni superiori a 1080p e l'output multimonitor.
+**Q.** È sicuro disattivare completamente la GPU integrata da Gestione dispositivi per usare solo quella dedicata?
+
+**A.** No, è caldamente sconsigliato. Sulla maggior parte dei moderni laptop con architettura mobile, il display integrato e talvolta persino le porte USB-C/DisplayPort sono collegate fisicamente ai pin di output della iGPU. Disattivando l'adattatore grafico integrato in *Gestione dispositivi*, Windows passerà forzatamente al *Microsoft Basic Display Adapter*, perdendo l'accelerazione hardware di sistema, il supporto a risoluzioni superiori a 1080p e l'output multimonitor.

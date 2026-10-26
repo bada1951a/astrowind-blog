@@ -28,6 +28,8 @@ theme: "Industrial Blueprint"
 
 
 
+## 1. Nagła awaria w miejscu pracy
+
 Siedzę w szklanej sali konferencyjnej w warszawskim centrum biznesowym przy Rondzie Daszyńskiego. Za dziesięć minut ma się zacząć kluczowe spotkanie zarządu z inwestorami, a dyrektor finansowy pan Marek blady jak ściana patrzy na swój nowy służbowy laptop z Windows 11 i cicho przeklina pod nosem. Próbował na szybko spakować cztery pliki Excela do archiwum ZIP, ale zamiast klasycznego menu pod prawym przyciskiem myszy wyskoczył mu ten nowoczesny, minimalistyczny potwór z ukrytą opcją "Pokaż więcej opcji". Trzy kliknięcia zamiast jednego, 7 sekund zwłoki przy każdym pliku, a zegar tyka nieubłaganie. Pan Marek patrzy na mnie błagalnym wzrokiem: "Panie inżynierze, zrób pan z tym coś, zaraz wchodzą Niemcy!".
 
 Znam ten ból na pamięć. Nowy interfejs w Windows 11 miał być "czysty" i "przyjazny", ale dla analityków, programistów i sysadminów, którzy codziennie operują dziesiątkami plików, skrótów i narzędzi deweloperskich, ukrywanie tradycyjnych opcji za dodatkowym kliknięciem to czysta patologia produktywności. Klienci korporacyjni dzwonią do mojego serwisu w tej sprawie przynajmniej kilka razy w tygodniu.
@@ -37,7 +39,7 @@ Znam ten ból na pamięć. Nowy interfejs w Windows 11 miał być "czysty" i "pr
 W tym artykule pokażę Ci sprawdzoną metodę inżynierską, jak raz na zawsze przywrócić stare, dobre klasyczne menu kontekstowe w Windows 11 za pomocą jednego polecenia w Edytorze Rejestru. Zero zbędnego oprogramowania, czysta inżynieria systemowa. <div style="border-left: 4px solid #f59e0b; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Notatka serwisow
 
-a:</strong> Poniższa procedura modyfikacji rejestru została przetestowana na setkach stacji roboczych z systemem Windows 11 (od wersji 21H2 do najnowszych wydań 24H2). Jest w 100% bezpieczna, pod warunkiem trzymania się instrukcji krok po kroku.
+**a:**</strong> Poniższa procedura modyfikacji rejestru została przetestowana na setkach stacji roboczych z systemem Windows 11 (od wersji 21H2 do najnowszych wydań 24H2). Jest w 100% bezpieczna, pod warunkiem trzymania się instrukcji krok po kroku.
 </div>
 
 Dlaczego Microsoft utrudnił nam życie? (Analiza problemu)
@@ -82,7 +84,7 @@ Krok po kroku do pełnej wydajności:
 <div style="border-left: 4px solid #f59e0b; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Wskazówka inżynier
 
-a:</strong> Po ponownym uruchomieniu Eksploratora pasek zadań na chwilę zniknie i pojawi się ponownie to całkowicie normalne. Oznacza to, że proces explorer.exe pomyślnie załadował nowe ustawienia rejestru.
+**a:**</strong> Po ponownym uruchomieniu Eksploratora pasek zadań na chwilę zniknie i pojawi się ponownie to całkowicie normalne. Oznacza to, że proces explorer.exe pomyślnie załadował nowe ustawienia rejestru.
 </div>
 
 ---
@@ -104,13 +106,13 @@ Profesjonalne ostrzeżenie i bezpieczeństwo danych
 
 Podczas pracy z edycją rejestru systemowego łatwo o pomyłkę, która może skutkować niestabilnością systemu operacyjnego. Zawsze trzymaj się następujących zasad bezpieczeństw
 
-a:
+**a:**
 * Kopia zapasow
 
-a: Zanim cokolwiek zmienisz w rejestrze, wykonaj jego eksport (`Plik` -> `Eksportuj`). W razie problemów wystarczy kliknąć plik kopii zapasowej, aby przywrócić pierwotny stan.
+**a:** Zanim cokolwiek zmienisz w rejestrze, wykonaj jego eksport (`Plik` -> `Eksportuj`). W razie problemów wystarczy kliknąć plik kopii zapasowej, aby przywrócić pierwotny stan.
 * Uprawnieni
 
-a: Modyfikację wykonuj na koncie z uprawnieniami administratora stacji roboczej.
+**a:** Modyfikację wykonuj na koncie z uprawnieniami administratora stacji roboczej.
 * Aktualizacje systemu: Microsoft co kilka miesięcy wydaje duże aktualizacje zbiorcze dla Windows 11. Choć rzadko, zdarza się, że aktualizacja funkcyjna nadpisuje ustawienia rejestru. Jeśli po dużej aktualizacji menu powróci do formy domyślnej, wystarczy ponownie wykonać powyższe kroki konfiguracji klucza CLSID.
 
 ---

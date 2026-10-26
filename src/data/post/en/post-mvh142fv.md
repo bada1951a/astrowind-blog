@@ -28,6 +28,8 @@ theme: "Rosewood Hardware Guide"
 
 
 
+## 1. Workplace Emergency Situation
+
 The clock on the wall of our NYC office was glaring at me: 2:40 PM. The company-wide board meeting starts at 3:00 PM, and I am the lead IT systems engineer responsible for projecting the Q3 financial models. Suddenly, right as I switch to the master slide deck, my top-tier workstation locks up completely. The mouse pointer is frozen in place, the audio is buzzing like a trapped hornet, and keyboard inputs do nothing. Panic sets in. I force a hard reboot by holding the power button, cross my fingers, and pray it boots up before the executive team walks through the doors. 
 
 If you work in IT or manage high-performance setups, you know this gut-wrenching feeling all too well. Windows 11 random freezing is arguably the most frustrating diagnostic nightmare because it leaves zero error messages on your screen when it happens. 
@@ -68,9 +70,9 @@ Loading every single system event will overwhelm you. We need to isolate the exa
 
 1. On the right-hand Action pane, click Filter Current Log...
 
-2. Under theLogged drop-down, select a relevant timeframe (e.g., "Last 1 hour" if it just happened).
+2. Under the Logged drop-down, select a relevant timeframe (e.g., "Last 1 hour" if it just happened).
 
-3. Under Event Level, check the boxes forCriticalandError. Click OK.
+3. Under Event Level, check the boxes for Critical and Error. Click OK.
 
 ### Step 3: Hunt Down the Timestamp Markers
 Scroll through the filtered list and look for events logged *literally one second before* your hard reboot. 
@@ -84,13 +86,17 @@ Scroll through the filtered list and look for events logged *literally one secon
 ### Step 4: Verify System Integrity via Command Prompt
 Once you identify potential corrupted system files or driver clashes in the logs, run a quick system health check:
 
-1. Press `Windows Key + X` and select Terminal (Admin)orCommand Prompt (Admin).
+1. Press `Windows Key + X` and select Terminal (Admin) or Command Prompt (Admin).
 
 2. Type `DISM.exe /Online /Cleanup-image /Restorehealth` and hit Enter.
 
 3. Once finished, type `sfc /scannow` and let Windows repair any foundational OS components.
 
 ---
+
+## 4. Professional Engineer Precautions & Tips
+
+## 4. Professional Engineer Precautions & Tips
 
 Expert Warning and Hardware Safeguards
 
@@ -100,16 +106,16 @@ Expert Warning and Hardware Safeguards
 
 ---
 
-## Frequently Asked Questions (FAQ)
+## 5. Frequently Asked Questions (FAQ)
 
-Q1: What does Event ID 41 mean, and does it mean my power supply is broken?
+**Q1:** What does Event ID 41 mean, and does it mean my power supply is broken?
 
-A:Event ID 41 simply means "The system has rebooted without cleanly shutting down first." While it can indicate a dying power supply, 80% of the time it is triggered by a sudden software lockup, unstable RAM overclock, or a crashed display driver that forced you to hold the physical power button.
+**A:**Event ID 41 simply means "The system has rebooted without cleanly shutting down first." While it can indicate a dying power supply, 80% of the time it is triggered by a sudden software lockup, unstable RAM overclock, or a crashed display driver that forced you to hold the physical power button.
 
-Q2: I see hundreds of errors in Event Viewer. Are they all causing my PC to freeze?
+**Q2:** I see hundreds of errors in Event Viewer. Are they all causing my PC to freeze?
 
-A: No. Windows logs background service timeouts and minor app glitches constantly during normal operation. Ignore older errors and focus strictly on the cluster of critical errors that occurred 1 to 5 minutes *before* your manual reboot timestamp.
+**A:** No. Windows logs background service timeouts and minor app glitches constantly during normal operation. Ignore older errors and focus strictly on the cluster of critical errors that occurred 1 to 5 minutes *before* your manual reboot timestamp.
 
-Q3: Can a failing SSD cause random total system freezes in Windows 11?
+**Q3:** Can a failing SSD cause random total system freezes in Windows 11?
 
-A: Absolutely. If your system drive drops connection for even a split second, Windows cannot page memory to disk, resulting in an immediate, total system lockup. Check Event Viewer for disk-related warnings mentioning `storahci`, `disk`, or `Ntfs` (Event ID 55 or 129).
+**A:** Absolutely. If your system drive drops connection for even a split second, Windows cannot page memory to disk, resulting in an immediate, total system lockup. Check Event Viewer for disk-related warnings mentioning `storahci`, `disk`, or `Ntfs` (Event ID 55 or 129).

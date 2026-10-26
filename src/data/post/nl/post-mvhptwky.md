@@ -28,6 +28,8 @@ theme: "Forest Emerald Bio"
 
 
 
+## 1. Noodsituatie op de werkvloer
+
 Het is kwart voor negen 's ochtends in een glazen kantoorpand midden op de Zuidas in Amsterdam. Over vijftien minuten start de cruciale kwartaalpresentatie voor een grote klant, en mijn collega Jeroen staat lijkbleek achter zijn laptop. Hij probeert snel een zwaar logbestand te comprimeren en naar de map van de directeur te slepen, maar hij loopt vast. Door de nieuwe interface van Windows 11 moet hij telkens op "Meer opties weergeven" klikken om bij zijn vertrouwde WinRAR-menu te komen. Bij elke klik verspeelt hij kostbare seconden, de spanning stijgt en de frustratie spat ervan af. Een acute computerstoring tijdens de piekuren, precies wat je als IT-systeembeheerder niet kunt gebruiken.
 
 Dit scenario is herkenbaar voor menig kantoormedewerker sinds de introductie van Windows 11. Microsoft vond het nodig om het rechtermuisknop contextmenu te moderniseren en te verbergen achter een extra klik. Hartstikke mooi voor de minimalistische thuisgebruiker, maar rampzalig voor professionals die blind willen vertrouwen op hun vertrouwde tools zoals 7-Zip, Notepad++ of specifieke ERP-snelkoppelingen.

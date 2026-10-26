@@ -28,6 +28,8 @@ theme: "Electric Cyan Speed"
 
 
 
+## 1. Emergencia crítica en el trabajo
+
 Eran las 18:30 en nuestras oficinas del 22@ en Barcelona. Estábamos a menos de dos horas de realizar el despliegue crítico de una nueva versión de nuestro software y, de repente, la pantalla de mi estación de trabajo principal se iluminó con esa maldita notificación en rojo: "Espacio en disco insuficiente en la unidad C:". El rendimiento cayó en picado justo cuando necesitaba compilar los últimos paquetes y empaquetar los artefactos. El disco de 500 GB estaba al límite absoluto, con apenas 400 MB libres, y el sistema operativo amenazaba con congelarse por completo en pleno proceso de release.
 
 <div style="border-left: 4px solid #06b6d4; padding: 12px 16px; margin: 20px 0; background-color: rgba(6,182,212,0.05); border-radius: 4px; color: #111827;">
@@ -35,6 +37,8 @@ Eran las 18:30 en nuestras oficinas del 22@ en Barcelona. Estábamos a menos de 
 </div>
 
 ![Tech & IT Solution Guide](https://picsum.photos/seed/computer552/1000/550)
+
+## 2. Análisis detallado de la causa raíz
 
 Por qué se llena tan rápido el disco C en Windows 11
 
@@ -48,6 +52,8 @@ Antes de empezar a borrar a lo loco y romper algo importante, hay que entender d
 
 ---
 
+## 3. Solución práctica paso a paso
+
 Guía paso a paso: Liberación rápida en 1 minutos y limpieza profunda
 
 Para salir del apuro sin arriesgar la estabilidad del sistema, aplicaremos un método de dos fases: una limpieza rápida mediante la interfaz nativa y una purga avanzada de archivos temporales ocultos.
@@ -57,7 +63,7 @@ Fase 1: Limpieza rápida desde la Configuración de Windows 11
 Esta es la ruta más segura para recuperar espacio al instante sin tocar archivos del sistema por error.
 
 * Presiona las teclas `Windows + I` para abrir la Configuración.
-* Ve a Sistemaen el menú de la izquierda y haz clic enAlmacenamiento.
+* Ve a Sistemaen el menú de la izquierda y haz clic en Almacenamiento.
 * Espera unos segundos a que el sistema analice el uso del disco. Verás un desglose detallado de aplicaciones, documentos y archivos temporales.
 * Haz clic en Archivos temporales. Windows escaneará los elementos que se pueden borrar sin peligro.
 * Marca las casillas correspondientes: *Instalaciones anteriores de Windows*, *Archivos temporales de Internet*, *Caché de sombreado de DirectX* y Archivos de registro de actualización de Windows.
@@ -74,9 +80,7 @@ Si la fase anterior no ha liberado suficiente espacio, necesitamos acceder manua
 
 2. Selecciona todo con `Ctrl + E` y bórralo con `Shift + Supr` (para eliminarlo permanentemente sin pasar por la papelera). 
 
-   * *Not
-
-a:* Si Windows te avisa de que un archivo está abierto en otra aplicación, simplemente haz clic en "Omitir".
+   * *Nota:* Si Windows te avisa de que un archivo está abierto en otra aplicación, simplemente haz clic en "Omitir".
 
 3. Vuelve a presionar `Windows + R`, escribe esta vez `temp` (sin porcentajes) y pulsa Intro. Repite el proceso de selección y borrado para los temporales del sistema (te pedirá permisos de Administrador).
 
@@ -86,6 +90,8 @@ a:* Si Windows te avisa de que un archivo está abierto en otra aplicación, sim
 
 ---
 
+## 4. Advertencias y consejos de un técnico
+
 Advertencias del experto técnico
 
 * Cuidado con los limpiadores de terceros: Evita usar programas milagrosos descargados de fuentes dudosas que prometen limpiar el registro con un clic. Muchas veces eliminan claves necesarias y rompen dependencias de software.
@@ -93,8 +99,7 @@ Advertencias del experto técnico
 * Mantenimiento preventivo:Configura elSensor de almacenamiento en la configuración de Windows 11 para que elimine automáticamente los archivos temporales de la papelera y la carpeta de descargas cada cierto tiempo.
 
 ---
-
-Preguntas frecuentes (FAQ)
+## 5. Preguntas Frecuentes (FAQ)
 
 ¿Es seguro borrar todo el contenido de la carpeta Temp (%temp%)? Sí, es completamente seguro. Los archivos que están en uso activo por el sistema o aplicaciones abiertas no se dejarán borrar y recibirás un aviso, por lo que no hay riesgo de corromper el sistema operativo.
 

@@ -19,11 +19,9 @@ El problema llegó de golpe cuando intenté purgar los archivos temporales de la
 <strong>Nota del especialista:</strong> Cuando un proceso de base de datos o un hilo de red mantiene un descriptor de archivo abierto, el sistema operativo bloquea cualquier intento de modificación o borrado para evitar corrupciones fatales en el almacenamiento.
 </div>
 
-
-
 ![Tech Troubleshooting Guide](/images/tech-photo/bsod%20(11).png)
 
-## 2. Root Cause Breakdown
+## 2. Análisis detallado de la causa raíz
 
 Para solucionar este tipo de bloqueos de forma eficiente, primero hay que entender por qué se producen en entornos de trabajo reales. Aquí te desgloso las tres causas principales:
 
@@ -31,7 +29,7 @@ Para solucionar este tipo de bloqueos de forma eficiente, primero hay que entend
 * **Bloqueos por servicios del sistema:** Herramientas de indexación de Windows, antivirus o software de copias de seguridad deciden escanear el archivo justo en el milisegundo en el que intentas borrarlo, generando un conflicto de acceso concurrente.
 * **Dependencias de librerías DLL o cachés persistentes:** Entornos de desarrollo y motores de consultas como SQL Server o contenedores locales suelen anclar archivos temporales que no se liberan hasta que se reinicia el servicio específico o el demonio encargado del proceso.
 
-## 3. Step-by-Step Resolution
+## 3. Solución práctica paso a paso
 
 Cuando los métodos tradicionales fallan, necesitamos recurrir a herramientas nativas y comandos directos para forzar la liberación y el borrado. Sigue estos pasos cuidadosamente desde tu estación de trabajo en la oficina.
 
@@ -72,22 +70,22 @@ Si el archivo sigue protegido por el sistema o por un servicio persistente, pued
 taskkill /f /im explorer.exe && start explorer.exe
 ```
 
-## 4. Expert Advice
+## 4. Advertencias y consejos de un técnico
 
 Como técnico de soporte, siempre recomiendo mantener la calma antes de recurrir a programas de terceros descargados de internet que prometen milagros para borrar archivos. Muchas de estas aplicaciones gratuitas vienen con adware o comprometen la seguridad del endpoint corporativo. 
 
 Asegúrate de comprobar que no estás interrumpiendo una transacción de base de datos activa o un guardado crítico. Forzar el borrado de un archivo de registro (*log*) o una base de datos en plena escritura puede corromper la integridad de toda la tabla. Si tienes dudas, detén el servicio responsable desde **Panel de control > Herramientas administrativas > Servicios** antes de eliminar cualquier cosa.
 
-## 5. Frequently Asked Questions
+## 5. Preguntas Frecuentes (FAQ)
 
-Q: ¿Qué hago si Windows me dice que el archivo ya no existe pero sigue apareciendo en la carpeta?
+**Q:** ¿Qué hago si Windows me dice que el archivo ya no existe pero sigue apareciendo en la carpeta?
 
-A: Esto suele ser un fallo de caché visual del Explorador de archivos. Presiona la tecla **F5** para actualizar la vista de la carpeta o reinicia el proceso del explorador desde el Administrador de tareas.
+**A:** Esto suele ser un fallo de caché visual del Explorador de archivos. Presiona la tecla **F5** para actualizar la vista de la carpeta o reinicia el proceso del explorador desde el Administrador de tareas.
 
-Q: ¿Es seguro utilizar software externo como Unlocker para estos casos?
+**Q:** ¿Es seguro utilizar software externo como Unlocker para estos casos?
 
-A: En entornos corporativos estrictos, las políticas de seguridad suelen bloquear la instalación de herramientas desconocidas. Es mucho más seguro y rápido usar el Monitor de recursos o PowerShell, que ya vienen integrados en Windows.
+**A:** En entornos corporativos estrictos, las políticas de seguridad suelen bloquear la instalación de herramientas desconocidas. Es mucho más seguro y rápido usar el Monitor de recursos o PowerShell, que ya vienen integrados en Windows.
 
-Q: ¿Por qué un archivo bloqueado puede dañar mi disco duro si lo borro a la fuerza?
+**Q:** ¿Por qué un archivo bloqueado puede dañar mi disco duro si lo borro a la fuerza?
 
-A: Si un proceso está escribiendo activamente datos en ese archivo y fuerzas el borrado de golpe, el sistema de archivos puede quedar en un estado inconsistente, requiriendo un análisis con el comando CHKDSK para reparar sectores lógicos dañados.
+**A:** Si un proceso está escribiendo activamente datos en ese archivo y fuerzas el borrado de golpe, el sistema de archivos puede quedar en un estado inconsistente, requiriendo un análisis con el comando CHKDSK para reparar sectores lógicos dañados.

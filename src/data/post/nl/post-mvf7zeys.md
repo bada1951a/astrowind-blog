@@ -1,5 +1,5 @@
 ---
-title: "Help, mijn laptop brandt af! 100% CPU-gebruik door 'Systeem' oplossen op de Zuidas"
+title: "Help, mijn laptop brandt af! 100% CPU-gebruik door'Systeem' oplossen op de Zuidas"
 description: "Ervaar je een muurvastlopende pc vlak voor een belangrijke meeting? Zo los je 100% CPU-gebruik door het Windows Systeem-proces direct op."
 publishDate: 2026-10-19T18:30:00.000Z
 image: '/images/tech-photo/keyboard (15).png'
@@ -27,6 +27,8 @@ theme: "Cobalt Enterprise Lab"
 
 
 
+
+## 1. Noodsituatie op de werkvloer
 
 Het was kwart voor twee op een gure dinsdagmiddag in het Zuidas zakendistrict in Amsterdam. Om twee uur zou een van onze senior consultants een beslissende pitch geven aan een grote internationale cliënt. Paniek brak los toen zijn high-end laptop plotseling veranderde in een straaljager: de ventilatoren loeiden op volle toeren, de cursor schokschoot over het scherm en PowerPoint weigerde nog te reageren. Ik snelde naar zijn flexplek toe, drukte op Ctrl+Shift+Esc en zag het onmiddellijk in Taakbeheer: het proces 'Systeem' (System) slurpte doodleuk 99 tot 100 procent van zijn dure processor op. De temperatuur van de CPU schoot door naar 92°C en de presentatie stond op knappen.
 

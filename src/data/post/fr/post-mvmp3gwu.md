@@ -19,7 +19,7 @@ theme: "Warm Coffee Latte"
 
 
 
-## 1. [Opening Story/Problem]
+## 1. Situation d'urgence critique au bureau
 
 C'était un mardi matin bien chargé dans notre tour à La Défense. Avec le système de smart office et les bureaux en libre-service, je venais de m'installer à un nouvel emplacement pour la journée. J'avais soigneusement branché mon nouveau dock USB-C, relié mes deux écrans externes, et j'étais prêt à attaquer mes revues de code et mes rapports graphiques. 
 
@@ -31,7 +31,9 @@ Puis, le drame : un collègue m'envoie un message urgent sur Teams me demandant 
 
 ![Tech Troubleshooting Guide](/images/tech-photo/tech-photos%20(30).jpg)
 
-## 2. [Root Cause Breakdown]
+## 2. Analyse des causes principales de l'erreur
+
+## 2. Analyse des causes principales de l'erreur
 
 Pourquoi ce raccourci magique nous lâche-t-il soudainement, surtout lors du passage à un bureau flexible ou multi-écrans ? Après avoir analysé des dizaines de cas similaires sur les parcs Windows 11 de l'entreprise, voici les trois coupables les plus fréquents :
 
@@ -39,7 +41,7 @@ Pourquoi ce raccourci magique nous lâche-t-il soudainement, surtout lors du pas
 - **Le cache de l'application ou les notifications bloquées :** Windows 11 gère les captures via le centre de notification. Si les notifications pour l'Outil Capture d'écran sont désactivées ou si le cache est corrompu, le raccourci ne renvoie aucun résultat visuel.
 - **Conflit de résolution ou de pilote graphique avec le dock :** Le passage d'un écran de laptop unique à une configuration en double moniteur via une station d'accueil peut perturber l'affichage initial de la superposition de capture.
 
-## 3. [Step-by-Step Resolution]
+## 3. Guide de résolution étape par étape
 
 Voici la méthode infaillible, étape par étape, pour redonner vie à votre raccourci. Nous allons procéder par ordre, du plus simple au plus radical.
 
@@ -89,22 +91,22 @@ Get-AppxPackage *ScreenSketch* -AllUsers | Foreach {Add-AppxPackage -DisableDeve
 
 3. Redémarrez votre PC pour valider les changements.
 
-## 4. [Expert Advice]
+## 4. Conseils et précautions d'un expert système
 
 En environnement de bureau partagé ou en télétravail, les stations d'accueil USB-C et Thunderbolt jouent un rôle crucial. Lorsque vous connectez votre PC à des moniteurs externes pour la première fois de la journée, donnez à Windows quelques secondes pour stabiliser la fréquence d'affichage et la disposition des écrans avant d'enchaîner les raccourcis clavier complexes. 
 
 De plus, méfiez-vous des logiciels tiers de capture d'écran (comme Greenshot, Snagit ou ShareX) que vous auriez pu installer : ils monopolisent parfois les mêmes touches de raccourci, créant un conflit direct avec l'outil natif de Windows 11.
 
-5. Frequently Asked Questions
+## 5. Foire Aux Questions (FAQ)
 
-Q: Le raccourci fonctionne mais l'écran ne s'assombrit pas, que faire ?
+**Q:** Le raccourci fonctionne mais l'écran ne s'assombrit pas, que faire ?
 
-A: Ce problème est souvent lié aux paramètres d'affichage de votre nouveau dock. Allez dans les **Paramètres** > **Système** > **Écran** et vérifiez que l'échelle d'affichage est bien réglée sur les valeurs recommandées (souvent 100% ou 125%) pour tous vos moniteurs.
+**A:** Ce problème est souvent lié aux paramètres d'affichage de votre nouveau dock. Allez dans les **Paramètres** > **Système** > **Écran** et vérifiez que l'échelle d'affichage est bien réglée sur les valeurs recommandées (souvent 100% ou 125%) pour tous vos moniteurs.
 
-Q: Puis-je modifier le raccourci Win + Shift + S pour utiliser une autre touche ?
+**Q:** Puis-je modifier le raccourci Win + Shift + S pour utiliser une autre touche ?
 
-A: Oui, tout à fait. Vous pouvez configurer la touche Impression écran (PrtScn) pour lancer l'Outil Capture d'écran. Allez dans **Paramètres** > **Accessibilité** > **Clavier** et activez l'option "Utiliser le bouton Impression écran pour ouvrir la capture d'écran".
+**A:** Oui, tout à fait. Vous pouvez configurer la touche Impression écran (PrtScn) pour lancer l'Outil Capture d'écran. Allez dans **Paramètres** > **Accessibilité** > **Clavier** et activez l'option "Utiliser le bouton Impression écran pour ouvrir la capture d'écran".
 
-Q: Pourquoi mes captures d'écran ne s'enregistrent-elles plus automatiquement dans le dossier Images ?
+**Q:** Pourquoi mes captures d'écran ne s'enregistrent-elles plus automatiquement dans le dossier Images ?
 
-A: Vérifiez les paramètres internes de l'application. Ouvrez l'**Outil Capture d'écran** manuellement, cliquez sur les trois points en haut à droite pour aller dans les **Paramètres**, et assurez-vous que l'option "Enregistrer automatiquement les captures d'écran" est bien activée.
+**A:** Vérifiez les paramètres internes de l'application. Ouvrez l'**Outil Capture d'écran** manuellement, cliquez sur les trois points en haut à droite pour aller dans les **Paramètres**, et assurez-vous que l'option "Enregistrer automatiquement les captures d'écran" est bien activée.

@@ -28,6 +28,8 @@ theme: "Modern Minimalist Slate"
 
 
 
+## 1. Emergencia crítica en el trabajo
+
 Eran las 18:45 en nuestra oficina tecnológica en el distrito 22@ de Barcelona. Faltaban apenas quince horas para el lanzamiento crítico de un software en el que habíamos estado trabajando durante meses con el equipo de Madrid. El estrés en el canal de Slack era palpable y las notificaciones no paraban de llover. De repente, fui a hacer clic en el menú de Inicio de Windows 11 para abrir la consola de comandos y... nada. La barra de tareas entera se había quedado completamente congelada. El cursor se movía por el escritorio, pero ni el icono de Windows, ni los accesos directos, ni el reloj respondían a los clics. Reiniciar de la manera tradicional era imposible porque el menú estaba bloqueado, y un reinicio forzoso con el botón físico corría el riesgo de corromper un despliegue local crítico. Tenía que solucionarlo en cuestión de minutos.
 
 Si te ha pasado lo mismo justo cuando más prisa tienes, sabes la frustración que genera. Vamos a ir directos al grano con los métodos reales que utilizamos los ingenieros de soporte para solucionar este fallo clásico de Windows 11 sin perder la paciencia ni los datos.
@@ -40,19 +42,23 @@ Si te ha pasado lo mismo justo cuando más prisa tienes, sabes la frustración q
 
 ---
 
+## 2. Análisis detallado de la causa raíz
+
 ¿Por qué se congela la barra de tareas en Windows 11?
 
 Antes de aplicar la solución, es útil entender qué está pasando bajo el capó para evitar que vuelva a suceder:
 
 1. El Explorador de archivos colaps
 
-a: En Windows 11, la barra de tareas y el menú de inicio están estrechamente integrados con el proceso `explorer.exe`. Si este proceso se bloquea debido a una app de terceros o a un pico de memoria, arrastra consigo toda la interfaz inferior.
+**a:** En Windows 11, la barra de tareas y el menú de inicio están estrechamente integrados con el proceso `explorer.exe`. Si este proceso se bloquea debido a una app de terceros o a un pico de memoria, arrastra consigo toda la interfaz inferior.
 
 2. Problemas con el paquete XamlShell: La interfaz moderna de Windows 11 depende de componentes XAML que a veces sufren pérdidas de memoria o bloqueos temporales al actualizar en segundo plano.
 
 3. Actualizaciones acumulativas recientes: Ciertas actualizaciones de seguridad de Windows han demostrado generar conflictos intermitentes con los complementos visuales del explorador.
 
 ---
+
+## 3. Solución práctica paso a paso
 
 Solución paso a paso: De lo más rápido a la artillería pesada
 
@@ -65,7 +71,7 @@ Dado que no puedes acceder al Administrador de tareas de la forma habitual hacie
 
 2. Si se abre en vista compacta, haz clic en Más detalles en la esquina inferior.
 
-3. Desplázate por la pestaña Procesoshasta encontrarExplorador de Windows (o busca `explorer.exe`).
+3. Desplázate por la pestaña Procesos hasta encontrar Explorador de Windows (o busca `explorer.exe`).
 
 4. Haz clic derecho sobre él y selecciona Reiniciar. 
 
@@ -93,9 +99,7 @@ Si el fallo persiste cada vez que reinicias el ordenador, el problema está en l
 
 2. Escribe `powershell` y pulsa `Ctrl` + `Shift` + `Enter` para abrirlo como Administrador.
 
-3. Copia y pega el siguiente comando de recuperación profund
-
-a:
+3. Copia y pega el siguiente comando de recuperación profunda:
    `Get-AppXPackage -AllUsers | Foreach {Add-AppxPackage -DisableDevelopmentMode -Register "(_.InstallLocation)\AppXManifest.xml"}`
 
 4. Ignora cualquier aviso en rojo que pueda aparecer (son aplicaciones del sistema que ya están en uso) y espera a que termine el proceso. Reinicia tu equipo normalmente.
@@ -105,16 +109,17 @@ a:
 Consejos de mantenimiento para evitar futuros bloqueos
 
 * Cuidado con las herramientas de personalización visual: Aplicaciones de terceros que modifican el aspecto de la barra de tareas (como antiguos parches de diseño o modificadores de menú de inicio) suelen ser la causa principal de incompatibilidades con las actualizaciones mensuales de Windows 11.
-* Mantén los controladores gráficos al dí
+* Mantén los controladores gráficos al día: Una GPU con drivers desactualizados puede corromper el renderizado de la interfaz gráfica de Windows. Revisa periódicamente las actualizaciones desde la aplicación oficial de tu tarjeta gráfica. ---
+## 5. Preguntas Frecuentes (FAQ)
 
-a: Una GPU con drivers desactualizados puede corromper el renderizado de la interfaz gráfica de Windows. Revisa periódicamente las actualizaciones desde la aplicación oficial de tu tarjeta gráfica. ---
+**Q.** ¿Perderé mis archivos abiertos si reinicio el Explorador de Windows?
 
-Preguntas Frecuentes (FAQ)
+**A.** No. Reiniciar `explorer.exe` solo afecta a la interfaz gráfica (barra de tareas, iconos del escritorio y carpetas abiertas). Los documentos de Word, Excel o las pestañas del navegador que tengas en uso no se cerrarán ni perderán su progreso.
 
-1. ¿Perderé mis archivos abiertos si reinicio el Explorador de Windows? No. Reiniciar `explorer.exe` solo afecta a la interfaz gráfica (barra de tareas, iconos del escritorio y carpetas abiertas). Los documentos de Word, Excel o las pestañas del navegador que tengas en uso no se cerrarán ni perderán su progreso.
+**Q.** ¿Qué hago si el comando de PowerShell da errores en rojo?
 
-2. ¿Qué hago si el comando de PowerShell da errores en rojo? Es totalmente normal. PowerShell intentará re registrar todos los paquetes nativos de Windows; aquellos que estén abiertos o bloqueados en ese momento mostrarán un aviso en rojo que puedes ignorar por completo. Lo importante es que el script complete el ciclo.
+**A.** Es totalmente normal. PowerShell intentará re registrar todos los paquetes nativos de Windows; aquellos que estén abiertos o bloqueados en ese momento mostrarán un aviso en rojo que puedes ignorar por completo. Lo importante es que el script complete el ciclo.
 
-3. ¿Es recomendable usar puntos de restauración del sistema para esto?
+**Q.** ¿Es recomendable usar puntos de restauración del sistema para esto?
 
-Solo como última alternativa si los comandos anteriores fallan. Por lo general, un fallo en la barra de tareas es un problema de servicios locales que se resuelve limpiando la caché o reiniciando el proceso del explorador, sin necesidad de retroceder el estado del sistema.
+**A.** Solo como última alternativa si los comandos anteriores fallan. Por lo general, un fallo en la barra de tareas es un problema de servicios locales que se resuelve limpiando la caché o reiniciando el proceso del explorador, sin necesidad de retroceder el estado del sistema.

@@ -9,7 +9,7 @@ theme: "Sandstone Desert Minimal"
 ---
 
 
-## 1. [Opening Story/Problem]
+## 1. Noodsituatie op de werkvloer
 
 Gisteren rond kwart over vijf, net toen ik op het punt stond om naar huis te gaan in ons kantoor op de Zuidas, liep de maandelijkse databackup volledig vast. Voor de veiligheid van onze projectdata was ik bezig met het overzetten van een flinke bak van zo'n 2TB aan kernbestanden naar een externe SSD en onze bedrijfs-NAS. Opeens verscheen de bekende, frustrerende Windows-foutmelding: *"Actie kan niet worden voltooid omdat het bestand is geopend in een ander programma."* 
 
@@ -19,11 +19,9 @@ Geen enkel idee welk programma de boosdoener was. Sluiten van alle zichtbare ven
 <strong>Kern-tip van de beheerder:</strong> Ga nooit lukraak bestanden geforceerd verwijderen als je niet zeker weet welk proces actief is; dit kan leiden tot datacorruptie op je externe schijf of NAS.
 </div>
 
-
-
 ![Tech Troubleshooting Guide](/images/tech-photo/system%20(17).png)
 
-## 2. [Root Cause Breakdown]
+## 2. Grondige analyse van de hoofdoorzaak
 
 Voordat we ingaan op de oplossing, is het handig om te begrijpen *waarom* Windows zo koppig doet. In de praktijk zie ik meestal drie hoofdoorzaken opduiken:
 
@@ -31,7 +29,7 @@ Voordat we ingaan op de oplossing, is het handig om te begrijpen *waarom* Window
 * **Openstaande netwerkverbindingen of verouderde handles:** Bij het overzetten naar een NAS kan de Server Message Block (SMB) sessie blijven hangen, waardoor de bron- of doelfunctie gelokt blijft staan.
 * **Crashende applicaties:** Een PDF-viewer, videospeler of archiveringstool (zoals 7-Zip of WinRAR) is op de achtergrond gecrasht, maar het proces draait vrolijk door in Taakbeheer en claimt exclusieve toegang tot het bestand.
 
-## 3. [Step-by-Step Resolution]
+## 3. Stapsgewijze praktische oplossing
 
 Genoeg gepraat over de theorie, tijd voor actie. Hier is het stappenplan dat ik zelf toepas in dit soort noodsituaties. We gaan van mild naar streng ingrijpen via **Taakbeheer**, de opdrachtprompt en handige tools.
 
@@ -65,7 +63,7 @@ openfiles /query
 <strong>Pro-tip:</strong> Download de officiële tool <em>PowerToys</em> van Microsoft. De ingebouwde functie "File Locksmith" laat je direct in het contextmenu van de Verkenner zien welk proces een bestand blokkeert en sluit dit met één klik af.
 </div>
 
-## 4. [Expert Advice]
+## 4. Belangrijke waarschuwingen van IT-specialisten
 
 Als hardware- en systeembeheerder geef ik je nog een paar belangrijke voorzorgsmaatregelen mee:
 
@@ -73,16 +71,16 @@ Als hardware- en systeembeheerder geef ik je nog een paar belangrijke voorzorgsm
 * **Controleer je externe hardware:** Als je net zoals ik werkt met een externe SSD of NAS en dit probleem treedt vaak op, controleer dan of je kabel goed vastzit of dat de USB-controller in **Apparaatbeheer** geen stroombesparingsproblemen heeft.
 * **Veilig ontkoppelen:** Vergeet na afloop nooit om je externe opslag via **Instellingen** of het systeemvak netjes te ontkoppelen om datacorruptie te voorkomen.
 
-## 5. Frequently Asked Questions
+## 5. Veelgestelde Vragen (FAQ)
 
-Q: Kan ik mijn pc niet gewoon geforceerd uitzetten met de powerknop?
+**Q:** Kan ik mijn pc niet gewoon geforceerd uitzetten met de powerknop?
 
-A: Dat raden we ten zeerste af. Een harde reset tijdens een 2TB datatransfer naar een NAS of SSD kan leiden tot ernstige bestandscorruptie en beschadigde partities. Gebruik liever de stappen in dit artikel.
+**A:** Dat raden we ten zeerste af. Een harde reset tijdens een 2TB datatransfer naar een NAS of SSD kan leiden tot ernstige bestandscorruptie en beschadigde partities. Gebruik liever de stappen in dit artikel.
 
-Q: Waarom blijft Windows beweren dat een bestand in gebruik is terwijl ik alles heb afgesloten?
+**Q:** Waarom blijft Windows beweren dat een bestand in gebruik is terwijl ik alles heb afgesloten?
 
-A: Dit komt doordat Windows Verkenner soms een miniatuurweergave (thumbnail) of indexeringsproces op de achtergrond blijft uitvoeren. Het herstarten van de Verkenner (Stap 2) lost dit in 90% van de gevallen direct op.
+**A:** Dit komt doordat Windows Verkenner soms een miniatuurweergave (thumbnail) of indexeringsproces op de achtergrond blijft uitvoeren. Het herstarten van de Verkenner (Stap 2) lost dit in 90% van de gevallen direct op.
 
-Q: Is het veilig om externe software zoals Unlocker te gebruiken?
+**Q:** Is het veilig om externe software zoals Unlocker te gebruiken?
 
-A: Wees voorzichtig met verouderde freeware-tools van onbekende websites, omdat deze soms adware bevatten. Maak liever gebruik van vertrouwde tools zoals Microsoft Sysinternals Process Explorer of de officiële Microsoft PowerToys.
+**A:** Wees voorzichtig met verouderde freeware-tools van onbekende websites, omdat deze soms adware bevatten. Maak liever gebruik van vertrouwde tools zoals Microsoft Sysinternals Process Explorer of de officiële Microsoft PowerToys.

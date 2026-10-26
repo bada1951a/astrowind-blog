@@ -28,6 +28,8 @@ theme: "Sunset Horizon Coral"
 
 
 
+## 1. Kritische Fehlersituation am Arbeitsplatz
+
 Es ist kurz vor 14:00 Uhr im Frankfurter Bankenviertel. Um 14:30 Uhr startet eine hochkarätige Kundenpräsentation im Konferenzraum im 30. Stock, und die Lüfter meines ThinkPads heulen auf wie eine startende Boeing 747. Der Bildschirm friert alle paar Sekunden ein, PowerPoint reagiert nicht mehr, und ein Blick in den Task-Manager zeigt das Grauen schlechthin: Der CPU-Lüfter dreht mit 6.000 Umdrehungen, und der Systemprozess (meist "NT Kernel & System" oder "System und komprimierter Speicher") frisst konstant 100 Prozent der Rechenleistung. Keine Fehlermeldung, kein blauer Bildschirm – einfach nur pure, blockierende CPU-Last, während der Vorstand im Nebenzimmer schon mit den Fingern trommelt.
 
 In Panik habe ich zuerst den Laptop einfach hart ausgeschaltet – ein klassischer Anfängerfehler, der natürlich das Dateisystem gefährdet und das Problem beim Neustart sofort wiedergebracht hat. Danach folgte das blinde Deaktivieren von Hintergrunddiensten in der MSConfig, was die Lage nur verschlimmerte, weil plötzlich essenzielle Netzwerkkomponenten fehlten. Erst als ich methodisch vorgegangen bin, konnte ich den Übeltäter entlarven. Hier ist der bewährte Leitfaden, wie du dieses Problem in unter 10 Minuten ohne Datenverlust löst.
@@ -35,6 +37,8 @@ In Panik habe ich zuerst den Laptop einfach hart ausgeschaltet – ein klassisch
 <div style="border-left: 4px solid #f97316; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Admin-Tipp für den Notfall:</strong> Bevor du irgendetwas tust, stecke das Netzteil aus und wieder ein und trenne unnötige USB-Peripherie (Dockingstationen, externe Festplatten). Oft triggert ein hängender Hardware-Interrupt diesen Systemlast-Loop!
 </div>
+
+## 2. Detaillierte Ursachenanalyse
 
 Warum der Systemprozess Amok läuft: Die 3 Hauptursachen
 
@@ -47,6 +51,8 @@ Bevor wir zur Tat schreiten, müssen wir verstehen, warum Windows sich selbst au
 3. Beschädigte Windows Update-Reste oder fehlerhafte Indexierung: Der Windows Search Indexer oder das Windows Update Modul hängen in einer Endlosschleife fest, während der Systemprozess die CPU-Zyklen verbrennt.
 
 ---
+
+## 3. Schritt-für-Schritt-Lösungsanleitung
 
 Schritt-für-Schritt-Anleitung zur Problemlösung
 
@@ -62,7 +68,7 @@ Schritt 1: Den wahren Verursacher im Task-Manager entlarven
 
 3. Da man den Systemprozess selbst (PID 4) nicht einfach beenden kann, müssen wir tiefer graben. Öffne die Ereignisanzeige (Suche im Startmenü nach `Ereignisanzeige`). Navigiere zu *Windows-Protokolle* -> *System* und suche nach roten Kritisch- oder Fehler-Einträgen der letzten 10 Minuten. Meistens siehst du hier, welcher Treiber (z. B. `iaStor
 
-A.sys` für Intel RST oder ein Realtek LAN-Treiber) Amok läuft.
+**A.**sys` für Intel RST oder ein Realtek LAN-Treiber) Amok läuft.
 
 Schritt 2: Den fehlerhaften Treiber oder Dienst stoppen
 
@@ -110,8 +116,7 @@ Vorher-Nachher-Vergleich
 | Präsentations-Bereitschaft | Panik im Bankenviertel | Entspannter Start ohne Hänger |
 
 ---
-
-Häufig gestellte Fragen (FAQ)
+## 5. Häufig gestellte Fragen (FAQ)
 
 1. Kann ich den Prozess "System" im Task-Manager einfach abschießen?
 Nein, das geht absolut nicht. PID 4 (System) ist der Windows-Kernel selbst. Wenn du diesen Prozess erzwingen würdest zu stoppen, stürzt das Betriebssystem sofort mit einem Bluescreen (Critical Process Died) ab. Du musst immer die darunterliegende Hardware oder den fehlerhaften Treiber finden.

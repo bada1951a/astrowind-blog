@@ -28,6 +28,8 @@ theme: "Forest Emerald Bio"
 
 
 
+## 1. Nagła awaria w miejscu pracy
+
 Była dokładnie 21:40, gdy w naszym biurze we wrocławskim parku technologicznym panowała niemal grobowa cisza. Zostały zaledwie dwa dni do kluczowego audytu stabilności infrastruktury przed wejściem zewnętrznego klienta, a mój główny stacja robocza testowa ugrzęzła na ekranie blokady z denerwującym komunikatem: *„Trwa przygotowywanie aktualizacji. Nie wyłączaj komputera. 100% ukończono”*. Komputer stał tak bezczynnie od ponad dwóch godzin. Dysk pracował na minimalnych obrotach, procesor spał, a ja czułem, jak pot spływa mi po plecach, bo na tym hoście miałem postawione ostatnie środowiska testowe pod bazy danych. Restart na twardo? Ryzyko uszkodzenia partycji rozruchowej i korupcji rejestru było zbyt wielkie.
 
 Zamiast panikować, sięgnąłem po sprawdzoną procedurę awaryjną, którą stosuję w takich sytuacjach od lat. Problem nie tkwił w samej procedurze instalacji poprawek, lecz w uszkodzonym buforze systemu Windows Update. Usługa pobierania utknęła w martwym punkcie, próbując zweryfikować zablokowane pliki tymczasowe.
@@ -64,7 +66,7 @@ net stop msiserver
 Krok 3: Zmiana nazwy (lub wyczyszczenie) folderów bufora
 Zamiast usuwać zawartość, bezpieczniej jest zmienić nazwy folderów na wersje archiwalne. Dzięki temu w razie problemów łatwo przywrócimy stan wyjściowy. Wpisz te poleceni
 
-a:
+**a:**
 
 ```cmd
 ren C:\Windows\SoftwareDistribution SoftwareDistribution.bak
@@ -73,7 +75,7 @@ ren C:\Windows\System32\catroot2 catroot2.bak
 
 *Wskazówk
 
-a:* Jeśli system zgłosi błąd, że pliki są używane, upewnij się, że uruchomiłeś konsolę jako Administrator, lub wykonaj tę operację po uruchomieniu komputera w Trybie Awaryjnym (Safe Mode).
+**a:*** Jeśli system zgłosi błąd, że pliki są używane, upewnij się, że uruchomiłeś konsolę jako Administrator, lub wykonaj tę operację po uruchomieniu komputera w Trybie Awaryjnym (Safe Mode).
 
 Krok 4: Ponowne uruchomienie usług systemowych
 Po pomyślnej zmianie nazw folderów, czas włączyć silnik aktualizacji na czysto. System automatycznie utworzy nowe, czyste katalogi `SoftwareDistribution` i `catroot2`.

@@ -19,8 +19,6 @@ El corazón da un vuelco. Pruebo a cerrar las aplicaciones visibles en la barra 
 <strong>Consejo del técnico:</strong> Nunca entres en pánico si Windows bloquea un archivo crítico antes de una presentación. El problema casi siempre se debe a un proceso en segundo plano que se ha quedado colgado y que podemos matar de inmediato con las herramientas nativas del sistema.
 </div>
 
-
-
 ![Tech Troubleshooting Guide](/images/tech-photo/keyboard%20(9).png)
 
 ## 2. Por qué ocurre este molesto bloqueo
@@ -72,16 +70,16 @@ Trabajar con comandos de borrado forzoso requiere disciplina. Ten en cuenta esta
 - **Permisos de administrador:** Si el sistema te indica que "necesitas permisos para realizar esta acción", asegúrate de que tu cuenta de usuario pertenece al grupo de administradores locales o ejecuta la consola de comandos con privilegios elevados.
 - **Herramientas externas:** Aunque existen aplicaciones de terceros muy populares como LockHunter o Process Explorer, en entornos corporativos estrictos a veces las políticas de seguridad impiden instalar software nuevo. Por ello, dominar los métodos nativos de Windows es una habilidad obligatoria.
 
-## 5. Preguntas frecuentes
+## 5. Preguntas Frecuentes (FAQ)
 
-Q: ¿Qué hago si tras reiniciar el Explorador de Windows el archivo sigue bloqueado?
+**Q:** ¿Qué hago si tras reiniciar el Explorador de Windows el archivo sigue bloqueado?
 
-A: Lo más probable es que un servicio del sistema o un software de seguridad corporativo esté analizándolo. Te recomiendo reiniciar el equipo en modo seguro o utilizar la consola de comandos con privilegios de administrador antes de que carguen los servicios de terceros.
+**A:** Lo más probable es que un servicio del sistema o un software de seguridad corporativo esté analizándolo. Te recomiendo reiniciar el equipo en modo seguro o utilizar la consola de comandos con privilegios de administrador antes de que carguen los servicios de terceros.
 
-Q: ¿Es seguro utilizar el comando DEL /F en servidores de producción?
+**Q:** ¿Es seguro utilizar el comando DEL /F en servidores de producción?
 
-A: Debe usarse con extrema precaución. En servidores, un archivo bloqueado suele pertenecer a una base de datos o a un servicio activo. Forzar su borrado puede provocar corrupción de datos si el servicio no se ha detenido correctamente antes.
+**A:** Debe usarse con extrema precaución. En servidores, un archivo bloqueado suele pertenecer a una base de datos o a un servicio activo. Forzar su borrado puede provocar corrupción de datos si el servicio no se ha detenido correctamente antes.
 
-Q: ¿Por qué Windows no me dice exactamente qué programa está usando el archivo?
+**Q:** ¿Por qué Windows no me dice exactamente qué programa está usando el archivo?
 
-A: Es una limitación histórica del diseño del núcleo de Windows en el manejo de los manejadores (file handles). Aunque las versiones modernas han mejorado, las herramientas nativas simplifican los avisos, por lo que recurrir al Administrador de tareas o a la línea de comandos sigue siendo el método más fiable.
+**A:** Es una limitación histórica del diseño del núcleo de Windows en el manejo de los manejadores (file handles). Aunque las versiones modernas han mejorado, las herramientas nativas simplifican los avisos, por lo que recurrir al Administrador de tareas o a la línea de comandos sigue siendo el método más fiable.

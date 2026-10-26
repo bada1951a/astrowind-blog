@@ -28,11 +28,15 @@ theme: "Dracula Purple Dev"
 
 
 
+## 1. Kritische Fehlersituation am Arbeitsplatz
+
 Montagmorgen, 08:15 Uhr im Großraumbüro. Ein Kollege schließt sein ThinkPad an die Thunderbolt-Dockingstation an. Auf dem internen Display läuft alles geschmeidig, doch die beiden externen 4K-Bildschirme verhalten sich katastrophal: Monitor 1 meldet stoisch *„Kein Signal – Eingang wird gesucht“*, während Monitor 2 im Dreisekundentakt zwischen tiefem Schwarz und zuckendem Desktop hin- und herflackert. Das Phänomen begegnet mir in meiner täglichen Praxis als Systemadministrator dutzende Male im Monat – insbesondere nach kumulativen Windows-Updates oder Firmware-Pushes. 
 
 Die Ursache liegt selten an defekten Panels, sondern fast ausnahmslos in korrupten Treiberzuständen, asynchronen Handshakes im Display-Subsystem oder fehlerhaft interpretierten EDID-Tabellen. Wenn einfaches Aus- und Einstecken keine Besserung bringt, müssen Sie tiefer in den Windows-Grafikstack eingreifen. In diesem Leitfaden zeige ich Ihnen exakt die Methodik, mit der wir solche Störungen im Enterprise-Support reproduzierbar lösen.
 
 ---
+
+## 2. Detaillierte Ursachenanalyse
 
 3 Typische Fehlerursachen im Detail
 
@@ -61,6 +65,8 @@ Moderne Monitore fordern hohe Datenraten (z. B. 4K bei 60 Hz oder 144 Hz mit 10-
 * Der Bildschirm meldet abrupt *„Kein Signal“*, obwohl das System fälschlicherweise meldet, die Anzeige sei aktiv geschaltet.
 
 ---
+
+## 3. Schritt-für-Schritt-Lösungsanleitung
 
 Schritt-für-Schritt-Anleitung: Grafiktreiber-Stack restlos bereinigen
 
@@ -182,8 +188,7 @@ Sysadmin-Praxistipps: Fatale Fehler vermeiden
 * Keine passiven DisplayPort-auf-HDMI-Kabel nutzen:Achten Sie bei Adaptern zwingend auf die Kennzeichnung„Aktiv“ mit integriertem Level-Shifter/Konverter-Chip. Passive Kabel verlassen sich auf DP++, was an vielen modernen USB-C-Docks nicht mehr implementiert ist und zu unberechenbarem Signalabriss führt.
 
 ---
-
-Häufig gestellte Fragen (FAQ)
+## 5. Häufig gestellte Fragen (FAQ)
 
 1. Warum tritt das Flackern oft erst auf, nachdem das Notebook aus dem Standby aufgeweckt wurde?
 Das liegt an asynchronen Aufwachzeiten (D3cold-to-D0 State Transitions) im Modern-Standby-Modus von Windows 11. Wenn das Notebook aufwacht, initialisiert der PCIe-Root-Komplex schneller als der externe MST-Hub im Monitor oder in der Dockingstation. Der Grafiktreiber sendet ein Signal, erhält keine Antwort innerhalb des definierten Timeout-Fensters (TDR – *Timeout Detection and Recovery*) und kappt die Verbindung. Das Problem lässt sich meist durch Deaktivieren des Schnellstarts (*Fast Startup*) in der Systemsteuerung oder ein Update der Monitor-Firmware beheben.

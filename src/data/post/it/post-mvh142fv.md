@@ -28,11 +28,13 @@ theme: "Dracula Purple Dev"
 
 
 
+## 1. Emergenza improvvisa sul posto di lavoro
+
 Erano le 17:45 in un frenetico lunedì pomeriggio nel nostro ufficio al centro direzionale di Milano. Mancavano esattamente quindici minuti alla scadenza per l'invio del report trimestrale di bilancio alla direzione generale, quando lo schermo del mio PC principale si è improvvisamente congelato. Nessun messaggio di errore, mouse immobile, tastiera completamente disattivata. La ventola della CPU ha continuato a girare a regime costante, come a prendersi gioco del mio panico crescente. Dopo tre minuti di attesa vana, ho dovuto procedere al famigerato reset hardware tenendo premuto il tasto di accensione. Risultato? Dieci pagine di analisi finanziaria non salvate e un cliente interno furioso.
 
 Nei giorni successivi, quel maledetto blocco casuale ha iniziato a ripresentarsi con una regolarità esasperante: a volte mentre aprivo Outlook, altre volte semplicemente mentre il PC era in idle. Le classiche soluzioni da bar dello sport digitale non servivano a null
 
-a: reinstallare i driver video alla cieca, pulire la polvere con l'aria compressa o dare calci leggeri allo chassis non avevano sortito alcun effetto. 
+**a:** reinstallare i driver video alla cieca, pulire la polvere con l'aria compressa o dare calci leggeri allo chassis non avevano sortito alcun effetto. 
 
 ![Tech Troubleshooting Guide](/images/tech-photo/tech%20(8).jpg)
 
@@ -41,7 +43,7 @@ Prima di mettermi a smontare banchi di RAM o a ordinare un nuovo alimentatore su
 <div style="border-left: 4px solid #bd93f9; padding: 12px 16px; margin: 20px 0; background-color: rgba(189, 147, 249, 0.05); border-radius: 4px; color: #111827;">
 <strong>Consiglio del sistemist
 
-a:</strong> Quando Windows si pianta improvvisamente senza una schermata blu (BSOD), il Visualizzatore Eventi è l'unico strumento nativo che può dirti esattamente quale componente hardware o driver ha smesso di rispondere prima del crash.
+**a:**</strong> Quando Windows si pianta improvvisamente senza una schermata blu (BSOD), il Visualizzatore Eventi è l'unico strumento nativo che può dirti esattamente quale componente hardware o driver ha smesso di rispondere prima del crash.
 </div>
 
 ---
@@ -104,12 +106,12 @@ Domande Frequenti (FAQ)
 
 D: Il Visualizzatore Eventi mostra sempre la causa esatta del blocco?
 
-R: Non sempre in modo esplicito. Nei freeze totali causati da problemi hardware profondi (come una micro-interruzione di corrente sulla scheda madre o una tensione instabile dell'alimentatore), Windows si blocca così istantaneamente da non riuscire neppure a scrivere l'ultimo log su disco. In quel caso, l'assenza di un log specifico è già un indizio che punta verso l'hardware puro o l'alimentazione.
+**A.** Non sempre in modo esplicito. Nei freeze totali causati da problemi hardware profondi (come una micro-interruzione di corrente sulla scheda madre o una tensione instabile dell'alimentatore), Windows si blocca così istantaneamente da non riuscire neppure a scrivere l'ultimo log su disco. In quel caso, l'assenza di un log specifico è già un indizio che punta verso l'hardware puro o l'alimentazione.
 
 D: Come faccio a distinguere un problema software da un guasto hardware?
 
-R: Se dopo aver reinstallato Windows da zero e aggiornato tutti i driver ufficiali il PC continua a bloccarsi casualmente, la probabilità che si tratti di un problema hardware (RAM difettosa, SSD che perde colpi o surriscaldamento) sale al 95%.
+**A.** Se dopo aver reinstallato Windows da zero e aggiornato tutti i driver ufficiali il PC continua a bloccarsi casualmente, la probabilità che si tratti di un problema hardware (RAM difettosa, SSD che perde colpi o surriscaldamento) sale al 95%.
 
 D: I test della RAM come MemTest86 sono ancora affidabili su Windows 11?
 
-R: Assolutamente sì. Se i log di sistema mostrano errori legati alla memoria o se non trovi un colpevole software chiaro, lascia girare MemTest86 da una chiavetta USB per qualche ora prima di dichiararti sconfitto.
+**A.** Assolutamente sì. Se i log di sistema mostrano errori legati alla memoria o se non trovi un colpevole software chiaro, lascia girare MemTest86 da una chiavetta USB per qualche ora prima di dichiararti sconfitto.

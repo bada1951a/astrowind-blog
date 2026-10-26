@@ -28,6 +28,8 @@ theme: "Matte Black stealth"
 
 
 
+## 1. Situation d'urgence critique au bureau
+
 Lundi matin, 8h52. La réunion stratégique avec le N+2 commence dans 8 minutes. Évidemment, ma machine décide de faire une mise à jour de ses grands morts et se fige sur l'écran de chargement. Le ventilo souffle comme un A380 au décollage, le curseur freeze, et je transite lentement vers l'angoisse pure en voyant la barre de progression bloquée à 98%. J'ai failli balancer mon ThinkPad par la fenêtre. 
 
 Ce genre de galère, en tant qu'ingénieur système, ça me met hors de moi. On a sous les doigts des bécanes sous i7 avec 32 Go de RAM, et pourtant, à cause d'une ribambelle de bloatwares et de services tiers qui s'invitent au boot, nos machines rament comme des Pentium 4 sous Windows 98. 
@@ -39,6 +41,8 @@ Ce genre de galère, en tant qu'ingénieur système, ça me met hors de moi. On 
 </div>
 
 ---
+
+## 2. Analyse des causes principales de l'erreur
 
 Pourquoi votre machine met trois plombes à démarrer ?
 
@@ -97,7 +101,7 @@ sfc /scannow
 
 3. Vérifiez l'état S.M.
 
-A.R.T de votre SSD pour être sûr qu'il ne rende pas l'âme :
+**A.**R.T de votre SSD pour être sûr qu'il ne rende pas l'âme :
 ```powershell
 Get-PhysicalDisk | Select-Object FriendlyName, OperationalStatus, HealthStatus
 ```
@@ -105,6 +109,8 @@ Get-PhysicalDisk | Select-Object FriendlyName, OperationalStatus, HealthStatus
 Si le statut renvoie autre chose que *Healthy*, sauvez vos données immédiatement, votre SSD est en train de mourir.
 
 ---
+
+## 4. Conseils et précautions d'un expert système
 
 Précautions d'expert (Avertissements)
 
@@ -114,9 +120,10 @@ Ne désactivez pas tout bêtement. Si vous désactivez les services liés au bus
 
 FAQ Technique
 
-Q : Est-ce que je risque de casser Windows si je désactive un mauvais programme au démarrage ? R : Non. Le Gestionnaire des tâches ne vous laisse pas désactiver les services critiques du noyau Windows. Au pire, une application ne se lancera pas toute seule et vous devrez l'ouvrir manuellement quand vous en aurez besoin.
+**Q :** Est-ce que je risque de casser Windows si je désactive un mauvais programme au démarrage ? R : Non. Le Gestionnaire des tâches ne vous laisse pas désactiver les services critiques du noyau Windows. Au pire, une application ne se lancera pas toute seule et vous devrez l'ouvrir manuellement quand vous en aurez besoin.
 
-Q : Pourquoi mon PC met quand même du temps à s'allumer alors que le démarrage est vide ? R : C'est souvent la "Démarrage rapide" (Fast Startup) de Windows qui met le bazar en combinant une hibernation hybride vérolée. Désactivez-le dans le Panneau de configuration -> Options d'alimentation -> Choisir l'action des boutons d'alimentation.
+**Q :** Pourquoi mon PC met quand même du temps à s'allumer alors que le démarrage est vide ? R : C'est souvent la "Démarrage rapide" (Fast Startup) de Windows qui met le bazar en combinant une hibernation hybride vérolée. Désactivez-le dans le Panneau de configuration -> Options d'alimentation -> Choisir l'action des boutons d'alimentation.
 
-Q : Les logiciels de défragmentation de registre servent-ils à quelque chose ?  
-R : En 2026, sur un SSD NVMe, c'est du pipeau marketing total. Ça ne fait que grappiller quelques millisecondes au prix d'une instabilité potentielle du registre. Restez sur les outils natifs.
+**Q :** Les logiciels de défragmentation de registre servent-ils à quelque chose ?
+
+**A.** En 2026, sur un SSD NVMe, c'est du pipeau marketing total. Ça ne fait que grappiller quelques millisecondes au prix d'une instabilité potentielle du registre. Restez sur les outils natifs.

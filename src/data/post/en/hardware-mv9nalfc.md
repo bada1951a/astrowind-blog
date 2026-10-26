@@ -28,6 +28,8 @@ theme: "Dark Velvet Obsidian"
 
 
 
+## 1. Workplace Emergency Situation
+
 There I was, sitting at my workstation in our Silicon Valley office, watching the clock tick down just 15 minutes before our final project handoff to the client. Suddenly, a jarring red notification popped up in my taskbar: Low Disk Space on Local Disk (C:). Free space remaining: 420 megabytes. Windows was throwing a fit, refusing to compile our build files or cache our Docker containers. To make matters worse, my external backup drive had unceremoniously failed just an hour prior. My heart skipped a beat as I stared at a completely locked-up system, desperately needing to free up gigabytes immediately without breaking our development environment.
 
 We've all been there. You click on File Explorer, look at your C drive glowing bright red, and wonder where all your storage actually went. You start deleting your personal photos and downloaded PDFs, but it barely makes a dent. The real culprit isn't your files—it's the invisible mountain of temporary junk files that Windows, web browsers, and background installers leave behind in hidden system directories.
@@ -66,7 +68,7 @@ Instead of downloading unverified registry cleaners, use the heavy-duty utility 
 
 ### Step 2: Purge the Hidden User Temp Folders via PowerShell
 Now it is time to hit the deep hidden directories where applications dump their daily trash.
-* Press `Windows Key + X` and select TerminalorPowerShell (run as Administrator).
+* Press `Windows Key + X` and select Terminal or PowerShell (run as Administrator).
 * Type the following command to open your user temp folder directly in File Explorer:
   `explorer %temp%`
 * Once the folder opens, press `Ctrl + A` to select all files, then press `Shift + Delete` to permanently remove them. 
@@ -84,19 +86,18 @@ Next, let's tackle the system-wide temporary repository.
 </div>
 
 ---
+## 5. Frequently Asked Questions (FAQ)
 
-Expert FA
+**Q:** Common Questions Answered
 
-Q: Common Questions Answered
+**Q:** Is it safe to delete everything inside the `%temp%` folder?
 
-Q: Is it safe to delete everything inside the `%temp%` folder?
+**A:** Yes! The contents of temporary folders are strictly meant to be short-term storage for running applications and installers. If a file is currently being used by an active program, Windows will simply block you from deleting it, keeping your system safe from crashes.
 
-A: Yes! The contents of temporary folders are strictly meant to be short-term storage for running applications and installers. If a file is currently being used by an active program, Windows will simply block you from deleting it, keeping your system safe from crashes.
+**Q:** How can I prevent my C drive from filling up again next month?
 
-Q: How can I prevent my C drive from filling up again next month?
+**A:** turn on Storage Sensein your Windows Settings (`System > Storage > Storage Sense`). Set it to automatically run during low-disk situations and configure it to purge your Recycle Bin and temporary cloud-content files on a regular schedule.
 
-A: turn on Storage Sensein your Windows Settings (`System > Storage > Storage Sense`). Set it to automatically run during low-disk situations and configure it to purge your Recycle Bin and temporary cloud-content files on a regular schedule.
+**Q:** My drive is still full even after deleting temp files. What should I check next?
 
-Q: My drive is still full even after deleting temp files. What should I check next?
-
-A: Download and runTreeSize FreeorWizTree. These lightweight tools instantly scan your C drive and visually map out every single folder by file size, allowing you to easily spot massive forgotten video files, virtual machine disks, or old game installations hiding in obscure directories.
+**A:** Download and runTreeSize FreeorWizTree. These lightweight tools instantly scan your C drive and visually map out every single folder by file size, allowing you to easily spot massive forgotten video files, virtual machine disks, or old game installations hiding in obscure directories.

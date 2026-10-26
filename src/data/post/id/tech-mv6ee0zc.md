@@ -28,6 +28,8 @@ theme: "Sandstone Desert Minimal"
 
 
 
+## 1. Situasi Darurat Kritis di Tempat Kerja
+
 Sebagai seorang teknisi IT yang sering menangani inventaris periferal di lingkungan kantor dan lab komputasi, pemandangan keyboard mekanikal yang "dibuang" ke gudang karena tombolnya mengetik ganda (*chattering*) atau macet (*miss-click*) adalah hal yang lumrah. Keluhan yang masuk ke meja kerja saya biasanya seragam: tombol spasi tiba-tiba melompat dua kali, atau huruf "W" dan "A" mendadak tidak merespons saat dipakai kerja maupun bermain game. 
 
 Banyak pengguna beranggapan bahwa ketika switch mekanikal mulai bertingkah, solusinya hanyalah membeli keyboard baru atau melakukan desoldering total yang merepotkan. Faktanya, sekitar 85% kasus kerusakan tombol keyboard mekanikal yang saya tangani di lapangan murni disebabkan oleh degradasi titik kontak tembaga akibat oksidasi mikro dan debu, bukan karena kerusakan mekanis permanen. 
@@ -44,14 +46,14 @@ Panduan ini saya susun berdasarkan protokol pemeliharaan perangkat keras mandiri
 
 Sebelum menyemprotkan cairan kimia atau membongkar perangkat, Anda wajib memahami apa yang sebenarnya terjadi di balik pelat muka (*faceplate*) keyboard Anda. Masalah input pada switch mekanikal umumnya terbagi ke dalam tiga faktor utam
 
-a:
+**a:**
 
 A. Oksidasi dan Penumpukan Debu Mikro pada Contact Leaf
 Switch mekanikal bekerja menggunakan dua bilah logam tembaga lentur (*metal contact leaf*) di bagian dalam *housing*. Saat tombol ditekan, stem plastik akan mendorong salah satu bilah untuk bersentuhan dengan bilah pasangannya guna menutup sirkuit dan mengirim sinyal elektrik ke *controller*. 
 
 Seiring waktu, udara lembap dan partikel debu halus menyusup melalui celah stem. Gesekan terus-menerus antara kedua bilah kontak menghasilkan serpihan mikroskopis yang, bersamaan dengan kelembapan, membentuk lapisan oksidasi tipis non-konduktif. Hasilny
 
-a:
+**a:**
 * Jika arus terhambat total, switch mengalami miss-click (tombol ditekan tapi tidak ada input di layar).
 * Jika arus tersendat-sendat dalam hitungan milidetik, mikrokontroler membacanya sebagai penekanan berulang kali, memicu chattering / double-input.
 
@@ -156,7 +158,7 @@ Meskipun contact cleaner berlabel cepat kering (*fast drying*), cairan yang terp
 
 Sebagai teknisi, saya harus menegaskan beberapa batasan teknis yang tidak boleh dilanggar demi keselamatan sirkuit elektronik And
 
-a:
+**a:**
 
 * Bahaya Arus Pendek (Short Circuit): Meskipun cairan berstatus non-konduktif, beberapa formula pelarut dapat menghantarkan listrik mikro sesaat saat bercampur dengan partikel debu basah di papan sirkuit. Jangan pernah menyemprotkan cairan saat kabel USB masih menancap ke PC atau saat baterai lithium masih terhubung.
 * Kerusakan Bantalan Hot-Swap (Socket Popping): Saat mengembalikan switch pada keyboard hot-swap, pastikan pin tembaga di bawah switch benar-benar lurus. Mendorong switch dengan pin bengkok dapat menjebol *hot-swap socket* dari PCB, yang membutuhkan perbaikan jalur jumper rumit.
@@ -169,7 +171,7 @@ a:
 <div style="background-color: #fdfcfb; border-left: 4px solid #a16207; padding: 8px 16px; margin: 10px 0 20px 0; font-size: 0.92rem; color: #78350f; font-weight: 500;">
 💡 <b>FA
 
-Q:</b> Rangkuman atas pertanyaan yang paling sering diajukan saat perbaikan mandiri switch keyboard mekanikal.
+**Q:**</b> Rangkuman atas pertanyaan yang paling sering diajukan saat perbaikan mandiri switch keyboard mekanikal.
 </div>
 
 **Q1.** Bisakah saya menggunakan Isopropyl Alcohol (IPA) 99% sebagai pengganti contact cleaner kaleng?

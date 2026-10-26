@@ -28,11 +28,13 @@ theme: "Acid Lime Hacker Space"
 
 
 
+## 1. Situasi Darurat Kritis di Tempat Kerja
+
 Jam sudah menunjukkan pukul 16:50 WIB. Hari Jumat sore, minggu penutupan laporan bulanan, dan *big boss* baru saja kirim pesan singkat via WhatsApp: *"Meeting jam 5 sore ini kita pakai ruang utama ya, presentasi data lo udah siap kan?"* Jantung langsung copot. Pas saya buru-buru pencet tombol power PC meja kerja, kipas *case* nyala bergemuruh, lampu RGB *motherboard* kedap-kedip sok ganteng, tapi... layar monitor *dead silent*. Kosong melompong dengan tulisan ikonik: "No Signal". 
 
 Mau teriak tapi malu sama anak-anak *dev* sebelah. Mau reboot paksa sampai lima kali hasilnya tetap sam
 
-a: mesin hidup, angin AC CPU muter kenceng, tapi display nihil. Buat ukuran anak IT lapangan, pemandangan kayak gini tuh udah biasa bikin asam lambung naik seketika. <div style="border-left: 4px solid #84cc16; padding: 12px 16px; margin: 20px 0; background-color: rgba(132, 204, 22, 0.05); border-radius: 4px;">
+**a:** mesin hidup, angin AC CPU muter kenceng, tapi display nihil. Buat ukuran anak IT lapangan, pemandangan kayak gini tuh udah biasa bikin asam lambung naik seketika. <div style="border-left: 4px solid #84cc16; padding: 12px 16px; margin: 20px 0; background-color: rgba(132, 204, 22, 0.05); border-radius: 4px;">
 <strong>Catatan Firmware & Open Source Hardware:</strong> Panduan ini disusun ala patch firmware darurat. Kita bakal pakai metode diagnostik level rendah, mirip waktu nge-flash ulang BIOS atau nge-check log kernel lewat serial interface. Jangan panik, hardware lama pun kalau "masuk angin" cuma butuh sentuhan mekanis yang pas.
 </div>
 
@@ -85,6 +87,8 @@ Simulasi Logika POST BIOS saat RAM Normal vs Error
 
 ---
 
+## 4. Tips & Peringatan Penting Teknisi IT
+
 Expert Warning: Jangan Asal Main Colok!
 
 <div style="border-left: 4px solid #84cc16; padding: 12px 16px; margin: 20px 0; background-color: rgba(132, 204, 22, 0.05); border-radius: 4px;">
@@ -96,16 +100,16 @@ Expert Warning: Jangan Asal Main Colok!
 
 FAQ (Pertanyaan Sering Muncul Seputar Masalah RAM & Layar Gelap)
 
-Q: Kenapa PC nyala, kipas muter, tapi nggak ada suara *beep* sama sekali dari speaker internal?
+**Q:** Kenapa PC nyala, kipas muter, tapi nggak ada suara *beep* sama sekali dari speaker internal?
 >
 
-A: Kalau tidak ada suara *beep* sama sekali (bahkan beep pendek tanda normal), biasanya masalahnya ada di suplai daya utama (Power Supply / PSU) atau korsleting di jalur 12V CPU, bukan cuma di RAM. Tapi kalau ada bunyi *beep* berulang (misal *beep* panjang 3 kali), itu fix masalah RAM atau VGA card kurang nancap.
+**A:** Kalau tidak ada suara *beep* sama sekali (bahkan beep pendek tanda normal), biasanya masalahnya ada di suplai daya utama (Power Supply / PSU) atau korsleting di jalur 12V CPU, bukan cuma di RAM. Tapi kalau ada bunyi *beep* berulang (misal *beep* panjang 3 kali), itu fix masalah RAM atau VGA card kurang nancap.
 
-Q: Apakah aman membersihkan pin RAM menggunakan amplas halus?>
+**Q:** Apakah aman membersihkan pin RAM menggunakan amplas halus?>
 
-A:HARAM!Jangan pernah pakai amplas, cutter, atau benda tajam buat ngilangin oksidasi di kuningan RAM. Lapisan emas tipis di pin itu gampang banget terkelupas. Kalau lapisan emasnya abis, RAM bakal permanen rusak dan nggak bakal terbaca sama sekali. Cukup pakai penghapus pensil karet.
+**A:**HARAM!Jangan pernah pakai amplas, cutter, atau benda tajam buat ngilangin oksidasi di kuningan RAM. Lapisan emas tipis di pin itu gampang banget terkelupas. Kalau lapisan emasnya abis, RAM bakal permanen rusak dan nggak bakal terbaca sama sekali. Cukup pakai penghapus pensil karet.
 
-Q: Setelah RAM dibersihkan dan dipasang lagi, kenapa PC malah bunyi *beep* panjang terus-menerus?
+**Q:** Setelah RAM dibersihkan dan dipasang lagi, kenapa PC malah bunyi *beep* panjang terus-menerus?
 >
 
-A: Itu tandanya posisi pasang RAM lo kurang masuk atau posisinya miring. Pastikan kaitan pengunci di kiri-kanan slot berbunyi "klik" secara otomatis waktu RAM didorong ke bawah. Kalau klipnya belum ngunci sendiri, berarti kontak pin belum pas seratus persen.
+**A:** Itu tandanya posisi pasang RAM lo kurang masuk atau posisinya miring. Pastikan kaitan pengunci di kiri-kanan slot berbunyi "klik" secara otomatis waktu RAM didorong ke bawah. Kalau klipnya belum ngunci sendiri, berarti kontak pin belum pas seratus persen.

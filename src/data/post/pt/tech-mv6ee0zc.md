@@ -28,6 +28,8 @@ theme: "Cyberpunk Terminal"
 
 
 
+## 1. Situação de emergência no trabalho
+
 <div style="border-left: 4px solid #00ffcc; padding: 12px 16px; margin: 20px 0; background-color: rgba(0, 255, 204, 0.05); font-family: monospace; border-radius: 4px;">
 <strong>[TERMINAL_INIT: SUBSYSTEM_INPUT_DIAGNOSTICS]</strong><br/>
 STATUS: DETECTED_KEY_CHATTERING_ANOMALY<br/>
@@ -47,7 +49,7 @@ Get-WmiObject Win32_Keyboard | Format-Table Name, Description, DeviceID
 
 Em um ambiente corporativo crítico ou em uma estação de trabalho de infraestrutura, um periférico de entrada não é apenas um acessório: é a interface primária entre o engenheiro e o núcleo do sistema operacional. Já passei pela situação frustrante de ter um teclado mecânico de ponta falhando durante uma janela de manutenção de emergência às 02h00 da madrugada. Eu precisava executar comandos encadeados e, de repente, a tecla `Enter` ou a barra de espaço registrava dois ou três toques involuntários para cada pulso físico. Pior aind
 
-a: em comandos de deleção ou migração de containers, a perda de precisão pode ser catastrófica. Esse comportamento errático — conhecido no meio técnico como key chattering(repique ou duplicação de toques) ekey skipping (falha intermitente de acionamento) — é comum em teclados com switches mecânicos tradicionais baseados em lâminas de contato metálicas (folhas de cobre/ouro). O usuário leigo costuma presumir que a controladora queimou ou que o switch morreu definitivamente. Na maioria esmagadora das vezes em que atendi chamados de bancada, tratava-se de oxidação superficial microscópica, poeira dielétrica ou degradação na leitura do algoritmo de debounce. 
+**a:** em comandos de deleção ou migração de containers, a perda de precisão pode ser catastrófica. Esse comportamento errático — conhecido no meio técnico como key chattering(repique ou duplicação de toques) ekey skipping (falha intermitente de acionamento) — é comum em teclados com switches mecânicos tradicionais baseados em lâminas de contato metálicas (folhas de cobre/ouro). O usuário leigo costuma presumir que a controladora queimou ou que o switch morreu definitivamente. Na maioria esmagadora das vezes em que atendi chamados de bancada, tratava-se de oxidação superficial microscópica, poeira dielétrica ou degradação na leitura do algoritmo de debounce. 
 
 Neste guia prático de laboratório, mostro o protocolo exato que utilizo para diagnosticar, isolar e reparar esses switches em nível cirúrgico, fazendo uso correto de produtos químicos de grau eletrônico sem destruir as propriedades dos plásticos internos.
 
@@ -56,7 +58,7 @@ Neste guia prático de laboratório, mostro o protocolo exato que utilizo para d
 
 2. Anatomia da Falh
 
-a: As 3 Causas Raiz do Chattering
+**a:** As 3 Causas Raiz do Chattering
 
 Para intervir com eficácia, é indispensável entender o que acontece dentro do invólucro do switch quando a chave é pressionada. Abaixo estão as três causas fundamentais identificadas em diagnósticos de hardware.
 
@@ -174,12 +176,12 @@ PERIGO: Nunca utilize WD-40 Multiuso tradicional, óleos lubrificantes, desengri
 P1: O uso frequente de limpa-contato remove a lubrificação original de fábrica do switch?
 Respost
 
-a: Sim. O solvente dielétrico do spray limpa-contato dissolve óleos e graxas industriais (como Krytox GPL 205g0 ou graxas sintéticas à base de PTFE). Se o seu teclado utilizava switches lineares suaves ou lubrificados manualmente para entusiastas, o solvente deixará o deslizamento da haste sensivelmente mais áspero e com ruído de atrito perceptível ("scratchy"). Nesses casos, o ideal para puristas é desmontar o switch (*switch opener*), limpar as peças individualmente, passar o limpa-contato apenas nas lâminas metálicas e relubrificar os trilhos plásticos antes de remontar.
+**a:** Sim. O solvente dielétrico do spray limpa-contato dissolve óleos e graxas industriais (como Krytox GPL 205g0 ou graxas sintéticas à base de PTFE). Se o seu teclado utilizava switches lineares suaves ou lubrificados manualmente para entusiastas, o solvente deixará o deslizamento da haste sensivelmente mais áspero e com ruído de atrito perceptível ("scratchy"). Nesses casos, o ideal para puristas é desmontar o switch (*switch opener*), limpar as peças individualmente, passar o limpa-contato apenas nas lâminas metálicas e relubrificar os trilhos plásticos antes de remontar.
 
 P2: Aumentar o "debounce time" no firmware do teclado resolve a falha em definitivo?
 Respost
 
-a: Não, apenas mascara o problema temporariamente. Alguns teclados de marcas premium (como Corsair, Wooting ou modelos compatíveis com QMK/VIA) permitem elevar o tempo de debounce de 5 ms para 15 ms ou 20 ms nas configurações de firmware. Isso faz o microcontrolador esperar mais tempo antes de aceitar um novo comando da mesma tecla, ignorando os repiques da lâmina danificada. Contudo, a oxidação ou fadiga metálica continuará progredindo. Conforme a folha de contato se deteriora, o tempo de vibração ultrapassará até mesmo o novo limite, resultando finalmente na parada total do switch. Trate o ajuste de debounce apenas como medida paliativa de contingência. ### P3: Como diferenciar se a falha é do switch mecânico ou do soquete Hot-Swap frouxo?
+**a:** Não, apenas mascara o problema temporariamente. Alguns teclados de marcas premium (como Corsair, Wooting ou modelos compatíveis com QMK/VIA) permitem elevar o tempo de debounce de 5 ms para 15 ms ou 20 ms nas configurações de firmware. Isso faz o microcontrolador esperar mais tempo antes de aceitar um novo comando da mesma tecla, ignorando os repiques da lâmina danificada. Contudo, a oxidação ou fadiga metálica continuará progredindo. Conforme a folha de contato se deteriora, o tempo de vibração ultrapassará até mesmo o novo limite, resultando finalmente na parada total do switch. Trate o ajuste de debounce apenas como medida paliativa de contingência. ### P3: Como diferenciar se a falha é do switch mecânico ou do soquete Hot-Swap frouxo?
 Respost
 
-a: Se ao pressionar a tecla em um ângulo específico ela registrar repiques, mas em pressão vertical reta funcionar perfeitamente, remova o switch e examine os contatos metálicos da parte de trás do PCB (os clipes de encaixe do soquete Hot-Swap). Com o tempo, trocas repetitivas de switches podem afrouxar os contatos de cobre do soquete, fazendo com que os pinos metálicos fiquem folgados. A solução técnica consiste em usar uma pinça de ponta fina para fechar suavemente as abas do soquete por trás do circuito ou refazer os pontos de solda do conector na placa de circuito impresso.
+**a:** Se ao pressionar a tecla em um ângulo específico ela registrar repiques, mas em pressão vertical reta funcionar perfeitamente, remova o switch e examine os contatos metálicos da parte de trás do PCB (os clipes de encaixe do soquete Hot-Swap). Com o tempo, trocas repetitivas de switches podem afrouxar os contatos de cobre do soquete, fazendo com que os pinos metálicos fiquem folgados. A solução técnica consiste em usar uma pinça de ponta fina para fechar suavemente as abas do soquete por trás do circuito ou refazer os pontos de solda do conector na placa de circuito impresso.
