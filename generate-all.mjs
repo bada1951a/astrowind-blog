@@ -115,7 +115,7 @@ const I18N_SECTIONS = {
   it: {
     s1: "1. Emergenza improvvisa sul posto di lavoro",
     s2: "2. Analisi approfondita della causa principale",
-    s3: "3. Soluzione pratica passo dopo passo",
+    s3: "3. Soluzione practical passo dopo passo",
     s4: "4. Avvertenze e suggerimenti dell'esperto",
     s5: "5. Domande Frequenti (FAQ)",
     tags: ["Consigli Tech", "Hardware", "Risoluzione Problemi", "Assistenza PC"]
@@ -336,12 +336,11 @@ async function generateSinglePost(lang, index) {
   const selectedScenario = IT_CRISIS_SCENARIOS_30[Math.floor(Math.random() * IT_CRISIS_SCENARIOS_30.length)];
   const i18n = I18N_SECTIONS[lang.code] || I18N_SECTIONS.ko;
 
-  console.log(`\n🚀 [${index + 1}/12] ${lang.name} (${lang.code}) 포스팅 생성 중... (테마: ${selectedTheme.name})`);
+  console.log(`\n🚀 [${index + 1}/12] ${lang.name} (${lang.code}) 1호기 메인 IT 포스팅 생성 중... (테마: ${selectedTheme.name})`);
 
   const { coverUrl, bodyUrl } = getPostImages(index);
   const pubDateIso = getKstPublishDateIso(index);
 
-  // [섹션별 글자 수 및 세부 서술 규격 강제 프롬프트]
   const prompt = `
 You are a ${lang.persona}.
 Write a definitive, exhaustive, highly professional IT troubleshooting guide natively in ${lang.name}.
@@ -454,10 +453,28 @@ theme: "${selectedTheme.name}"
       // 🛡️ [이중 방어] 12개국 고유 언어로 강제 치환 및 볼드 서식 완벽 정제
       body = sanitizeMarkdownFormatting(body, lang.code);
 
-      // 🛡️ [글자 수 검증 안전장치] 한국어 포스팅 본문이 2,200자 미만이면 경고 출력
+      // 🛡️ [글자 수 물리적 강제 루프: 2,200자 미만 시 즉시 재작성]
+      let retryCount = 0;
+      while (lang.code === 'ko' && body.length < 2200 && retryCount < 2) {
+        console.warn(`⚠️ [1호기 분량 부족] 현재 ${body.length}자 -> 목표 2,500자 충족을 위해 재작성 시도 (${retryCount + 1}/2)...`);
+        const retryPrompt = prompt + "\n\nCRITICAL ENFORCEMENT: The previous generated post was strictly too short. You MUST write at least 4 very long, deeply detailed paragraphs for EACH section. Elaborate on every technical concept and troubleshooting step exhaustively to exceed 2,500 Korean characters.";
+        
+        let retryRawText = await fetchWithRetry(retryPrompt);
+        let retryText = retryRawText.trim();
+        if (retryText.startsWith('```markdown')) retryText = retryText.replace(/^```markdown\n/, '').replace(/\n```$/, '');
+        if (retryText.startsWith('```')) retryText = retryText.replace(/^```\n/, '').replace(/\n```$/, '');
+
+        const newFmMatch = retryText.match(/^---[\s\S]*?---\n*/);
+        if (newFmMatch) {
+          let newBody = retryText.slice(newFmMatch[0].length).trim();
+          newBody = newBody.replace(/^#\s+[^\n]+\n+/, '');
+          body = sanitizeMarkdownFormatting(newBody, lang.code);
+        }
+        retryCount++;
+      }
+
       if (lang.code === 'ko') {
-        const charCount = body.length;
-        console.log(`📏 [한국어 본문 글자 수 측정] 현재: ${charCount}자 (목표: 2,500자 이상)`);
+        console.log(`📏 [1호기 한국어 본문 최종 글자 수] ${body.length}자 (목표: 2,500자 이상)`);
       }
 
       const middleImageMarkdown = `\n\n![Tech Troubleshooting Guide](${bodyUrl})\n\n`;
