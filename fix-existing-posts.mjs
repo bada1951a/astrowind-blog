@@ -1,10 +1,10 @@
 import fs from 'fs';
 import path from 'path';
 
-// 1호기 포스트 기본 경로 (src/data/post)
+// 포스트 기본 경로
 const POSTS_BASE_DIR = path.resolve('src/data/post');
 
-// 12개국 공식 표준 5대 소제목 사전
+// 12개국 공식 표준 소제목 사전
 const I18N_TITLES = {
   ko: {
     s1: "## 1. 직장인 식은땀 나는 돌발 상황",
@@ -60,7 +60,7 @@ const I18N_TITLES = {
     s2: "## 2. Análise da causa raiz do problema",
     s3: "## 3. Guia prático de resolução passo a passo",
     s4: "## 4. Recomendações e alertas de especialistas",
-    s5: "## 5. Perguntas Frequentes (FAQ)"
+    s5: "## 5. Perguntas Frecuentes (FAQ)"
   },
   nl: {
     s1: "## 1. Noodsituatie op de werkvloer",
@@ -96,28 +96,28 @@ function repairMarkdownPost(rawText, langCode) {
   let text = rawText;
   const titles = I18N_TITLES[langCode] || I18N_TITLES.ko;
 
-  // 1. 프론트매터 추출
+  // 1. 프론트매터 분리
   const fmMatch = text.match(/^---[\s\S]*?---\n*/);
   if (!fmMatch) return rawText;
 
   let frontmatter = fmMatch[0];
   let body = text.slice(frontmatter.length);
 
-  // 프론트매터 내 title 볼드 기호 제거
+  // 프론트매터 title 볼드 기호 제거
   frontmatter = frontmatter.replace(/(title:\s*["'])([^"']*)(["'])/gi, (m, p1, p2, p3) => {
     return `${p1}${p2.replace(/\*\*/g, '').trim()}${p3}`;
   });
 
-  // 비한국어 글의 프론트매터 내 잔여 한글 제거
+  // 비한국어 글 프론트매터 잔여 한글 제거
   if (langCode !== 'ko') {
     frontmatter = frontmatter.replace(/(title:\s*")([^"]*)(")/g, (m, p1, p2, p3) => `${p1}${p2.replace(/[가-힣]+/g, '').trim()}${p3}`);
     frontmatter = frontmatter.replace(/(description:\s*")([^"]*)(")/g, (m, p1, p2, p3) => `${p1}${p2.replace(/[가-힣]+/g, '').trim()}${p3}`);
   }
 
-  // 2. 상단 15~22줄 빈 줄 압축
+  // 2. 상단 20여 줄 빈 줄 압축
   body = body.replace(/^\n+/, '');
 
-  // 3. 쪼개진 단어 버그 복원
+  // 3. 쪼개진 단어 복원
   body = body.replace(/derech\s*\n\s*a:/gi, 'derecha:')
              .replace(/a la carrer\s*\n\s*a:/gi, 'a la carrera:')
              .replace(/cada un\s*\n\s*a:/gi, 'cada una:')
@@ -126,16 +126,15 @@ function repairMarkdownPost(rawText, langCode) {
              .replace(/con la energi\s*\n\s*a:/gi, 'con la energía:')
              .replace(/preventiv\s*\n\s*a:/gi, 'preventiva:')
              .replace(/recuperación profund\s*\n\s*a:/gi, 'recuperación profunda:')
-             .replace(/gráficos al dí\n\s*a:/gi, 'gráficos al día:')
+             .replace(/gráficos al dí\s*\n\s*a:/gi, 'gráficos al día:')
              .replace(/Delt\s*\n\s*a:/gi, 'Delta:')
              .replace(/STOP 0x0000000\s*\n\s*a:?/gi, 'STOP 0x0000000a:');
 
-  // 4. 이미지 링크 내부 오타 공백 제거
+  // 4. 이미지 링크 내부 공백 오타 수정
   body = body.replace(/\?\s+auto=format/g, '?auto=format');
 
-  // 5. 붙어버린 단어(띄어쓰기 뭉침) 일괄 교정
-  const universalWordSpacings = [
-    // 공통 및 UI
+  // 5. 붙어버린 띄어쓰기 교정
+  const wordFixes = [
     [/Ctrl \+ Shift \+ Escsimultaneously/g, 'Ctrl + Shift + Esc simultaneously'],
     [/Task Manager\(Ctrl/g, 'Task Manager (Ctrl'],
     [/Processestab/g, 'Processes tab'],
@@ -151,7 +150,6 @@ function repairMarkdownPost(rawText, langCode) {
     [/TerminalorPowerShell/g, 'Terminal or PowerShell'],
     [/TerminalorInvite/g, 'Terminal or Invite'],
     [/hitCheck for updates/g, 'hit Check for updates'],
-    // 한국어
     [/Windows 탐색기앱/g, 'Windows 탐색기 앱'],
     [/명령 프롬프트앱/g, '명령 프롬프트 앱'],
     [/작업 관리자실행/g, '작업 관리자 실행'],
@@ -164,7 +162,6 @@ function repairMarkdownPost(rawText, langCode) {
     [/파일인WinDbg/g, '파일인 WinDbg'],
     [/면봉에무수소/g, '면봉에 무수소'],
     [/꿀팁:흔히/g, '꿀팁: 흔히'],
-    // 독일어
     [/Windows \+ Xund/g, 'Windows + X und'],
     [/dasTerminal/g, 'das Terminal'],
     [/ProzessWindows-Explorer/g, 'Prozess Windows-Explorer'],
@@ -187,7 +184,6 @@ function repairMarkdownPost(rawText, langCode) {
     [/dieSystemsteuerung/g, 'die Systemsteuerung'],
     [/denTask-Manager/g, 'den Task-Manager'],
     [/Eingabeaufforderungund/g, 'Eingabeaufforderung und'],
-    // 스페인어
     [/elPanel de controly/g, 'el Panel de control y'],
     [/enConfiguración/g, 'en Configuración'],
     [/elAdministrador de dispositivos/g, 'el Administrador de dispositivos'],
@@ -205,7 +201,6 @@ function repairMarkdownPost(rawText, langCode) {
     [/posteriormenteControladoras/g, 'posteriormente Controladoras'],
     [/inicio aDeshabilitadoy/g, 'inicio a Deshabilitado y'],
     [/haz clic enDetener/g, 'haz clic en Detener'],
-    // 프랑스어
     [/Échappour lancer/g, 'Échap pour lancer'],
     [/Escpour ouvrir/g, 'Esc pour ouvrir'],
     [/ouvrir leGestionnaire/g, 'ouvrir le Gestionnaire'],
@@ -221,13 +216,12 @@ function repairMarkdownPost(rawText, langCode) {
     [/l'applicationParamètres/g, 'l\'application Paramètres']
   ];
 
-  for (const [pattern, replacement] of universalWordSpacings) {
+  for (const [pattern, replacement] of wordFixes) {
     body = body.replace(pattern, replacement);
   }
 
-  // 6. 소제목 헤더 강제 치환 및 정상화 (1번 ~ 5번)
-
-  // (1) 영문 대괄호 템플릿 및 기본 템플릿 직격 변환
+  // 6. 소제목 표준화
+  // 영문 템플릿 직격 변환
   body = body.replace(/^#{1,3}\s*1\.?\s*(\[Opening Story.*?\]|Opening Story.*?|\[Ouverture.*?\])/gmi, titles.s1);
   body = body.replace(/^#{1,3}\s*2\.?\s*(\[Root Cause.*?\]|Root Cause Breakdown.*?|Root Cause.*?)/gmi, titles.s2);
   body = body.replace(/^#{1,3}\s*3\.?\s*(\[Step-by-Step.*?\]|Step-by-Step Resolution.*?|Step-by-Step.*?)/gmi, titles.s3);
@@ -240,8 +234,7 @@ function repairMarkdownPost(rawText, langCode) {
   body = body.replace(/^4\.\s*\[Expert.*?\]/gmi, titles.s4);
   body = body.replace(/^5\.\s*(Frequently Asked Questions|\[Frequently Asked Questions\])/gmi, titles.s5);
 
-  // (2) 헤딩(#)이 누락되었던 각 언어별 실제 소제목 문장들 승격
-  // Section 2 승격
+  // 헤딩 누락 문장 승격
   body = body.replace(/^(왜\s+(갑자기|내|하필|맨날|윈도우|이\s+에러).*?)/gm, `${titles.s2}\n\n$1`);
   body = body.replace(/^(원인 분석:.*?)/gm, `${titles.s2}\n\n$1`);
   body = body.replace(/^(1\.\s+시스템 종료 불량의 근본 원인.*?)/gm, `${titles.s2}\n\n$1`);
@@ -270,7 +263,7 @@ function repairMarkdownPost(rawText, langCode) {
   body = body.replace(/^(¿Por qué\s+(se llena|se congela|ocurre esto|se queda|el proceso).*?)/gm, `${titles.s2}\n\n$1`);
   body = body.replace(/^(Diagnostico de Causas Raiz.*?)/gm, `${titles.s2}\n\n$1`);
 
-  // Section 3 승격
+  // 3번 섹션 승격
   body = body.replace(/^(\d단계\s*:\s*.*실전.*)/gm, `${titles.s3}\n\n$1`);
   body = body.replace(/^(단계별 해결 (방법|가이드|프로세스).*?)/gm, `${titles.s3}\n\n$1`);
   body = body.replace(/^(실무자가 검증한.*?)/gm, `${titles.s3}\n\n$1`);
@@ -316,7 +309,7 @@ function repairMarkdownPost(rawText, langCode) {
   body = body.replace(/^(Pasos para la solución:.*?)/gm, `${titles.s3}\n\n$1`);
   body = body.replace(/^(Guía paso a paso para solucionar.*?)/gm, `${titles.s3}\n\n$1`);
 
-  // Section 4 승격
+  // 4번 섹션 승격
   body = body.replace(/^(엔지니어의 실무 조언.*?)/gm, `${titles.s4}\n\n$1`);
   body = body.replace(/^(전문가 조언 및 향후.*?)/gm, `${titles.s4}\n\n$1`);
   body = body.replace(/^(설정 전후 비교 및.*?)/gm, `${titles.s4}\n\n$1`);
@@ -363,10 +356,10 @@ function repairMarkdownPost(rawText, langCode) {
   // Section 5 (FAQ) 표준화
   body = body.replace(/^#{0,3}\s*(\d\.\s*)?(자주 묻는 질문|Häufig gestellte Fragen|Frequently Asked Questions|よくある(ご)?質問|Questions Fréquemment Posées|Foire [Aa]ux Questions|Preguntas [Ff]recuentes|Fragen und Antworten|Expert FA).*?$/gmi, titles.s5);
 
-  // 헤딩에 붙은 볼드 제거
+  // 헤딩(#)에 묻은 볼드 제거
   body = body.replace(/^(#{1,6}\s*)\*\*(.*?)\*\*/gm, '$1$2');
 
-  // 첫 문단 1번 소제목 주입 (헤딩으로 시작하지 않는 파일 보정)
+  // 첫 문단 1번 소제목 주입
   if (!body.startsWith('## 1.')) {
     body = `${titles.s1}\n\n` + body;
   }
@@ -378,14 +371,11 @@ function repairMarkdownPost(rawText, langCode) {
   body = body.replace(/([^\n])\s*\n\s*(R[0-9]*\s*[:.])/gi, '$1\n\n**A.**');
   body = body.replace(/([^\n])\s*(\*\*?[QA][0-9]*\s*[:.]\*\*?)/gi, '$1\n\n$2');
 
-  // 스페인어/프랑스어 질문 기호 교정
   body = body.replace(/^(\d+\.\s+)(¿.*?\?)\s*(.*)/gm, '**Q.** $2\n\n**A.** $3');
   body = body.replace(/^(\d+\.\s+)(.*?\?)\s*(Oui|Non|Si|No|Absolument|Para nada|E'|C'est|Ce)/gm, '**Q.** $2\n\n**A.** $3');
-
-  // 물음표 뒤 띄어쓰기 누락 보정
   body = body.replace(/\?([A-Za-z\u00C0-\u024F\u1EA0-\u1EF9가-힣])/g, '? $1');
 
-  // 과도한 3줄 이상 연속 개행을 2줄로 압축
+  // 과도한 빈 줄 압축
   body = body.replace(/\n{3,}/g, '\n\n');
 
   return frontmatter + body.trim() + '\n';
@@ -412,7 +402,7 @@ function runMasterFix() {
     const langPath = path.join(POSTS_BASE_DIR, lang);
     const files = fs.readdirSync(langPath).filter(f => f.endsWith('.md'));
 
-    console.log(`\n📂 [${lang.toUpperCase()}] 총 ${files.length}개 파일 정밀 검수 중...`);
+    console.log(`\n📂 [${lang.toUpperCase()}] 총 ${files.length}개 파일 처리 중...`);
 
     for (const file of files) {
       totalScanned++;
