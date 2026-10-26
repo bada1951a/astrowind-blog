@@ -40,6 +40,8 @@ Eran las 18:30 en nuestras oficinas del 22@ en Barcelona. Estábamos a menos de 
 
 ## 2. Análisis detallado de la causa raíz
 
+## 2. Análisis detallado de la causa raíz
+
 Por qué se llena tan rápido el disco C en Windows 11
 
 Antes de empezar a borrar a lo loco y romper algo importante, hay que entender dónde se esconde realmente la basura digital en este sistema operativo. Tras investigar el origen del colapso en mi equipo, identifiqué tres culpables principales:
@@ -51,6 +53,8 @@ Antes de empezar a borrar a lo loco y romper algo importante, hay que entender d
 3. La carpeta de Descargas y la caché de navegadores: Archivos pesados que descargamos para pruebas rápidas y que se quedan acumulados en carpetas predeterminadas del perfil de usuario.
 
 ---
+
+## 3. Solución práctica paso a paso
 
 ## 3. Solución práctica paso a paso
 
@@ -89,6 +93,8 @@ Si la fase anterior no ha liberado suficiente espacio, necesitamos acceder manua
    `Dism.exe /Online /Cleanup-Image /StartComponentCleanup`
 
 ---
+
+## 4. Advertencias y consejos de un técnico
 
 ## 4. Advertencias y consejos de un técnico
 

@@ -45,6 +45,8 @@ Si te encuentras en una situation similar, aqui tienes el metodo directo para de
 
 ## 2. Análisis detallado de la causa raíz
 
+## 2. Análisis detallado de la causa raíz
+
 Diagnostico de Causas Raiz
 
 Antes de hacer clic en cualquier sitio, debemos entender que buscan nuestros ojos expertos en los registros:
@@ -56,6 +58,8 @@ Antes de hacer clic en cualquier sitio, debemos entender que buscan nuestros ojo
 2. ## 3. Inestabilidad por perfiles de memoria agresivos (XMP/EXPO): Pequeñas desincronizaciones en los timings de la memoria RAM que provocan que Windows 11 colapse al gestionar paginacion pesada de memoria virtual.
 
 ---
+
+## 3. Solución práctica paso a paso
 
 ## 3. Solución práctica paso a paso
 
@@ -84,6 +88,8 @@ Anota mentalmente la hora exacta en la que tu PC se congelo hoy. Ahora, busca en
 <strong>Consejo Pro:</strong> Si encuentras errores recurrentes del controlador de disco justo antes del bloqueo, entra inmediatamente en el <strong>Administrador de dispositivos</strong> (haz clic derecho en el boton de Inicio y seleccionalo), busca tus unidades de disco, haz clic derecho en tu SSD principal, selecciona desinstalar el dispositivo y reinicia para que Windows 11 reconstruya la pila de drivers limpia. </div>
 
 ---
+
+## 4. Advertencias y consejos de un técnico
 
 ## 4. Advertencias y consejos de un técnico
 

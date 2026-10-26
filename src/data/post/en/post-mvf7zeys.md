@@ -42,6 +42,8 @@ That's when I had to step back, put away the panic, and rely on systematic IT tr
 
 ## 2. Root Cause Breakdown
 
+## 2. Root Cause Breakdown
+
 Understanding the Blueprint: Why Is the "System" Process Eating Your CPU?
 
 Before we click anything, we need to understand what we are fighting. In Windows, the System process (process ID 4) isn't a single application; it's a wrapper for core operating system threads, hardware drivers, and kernel-level routines. When it spikes to 100%, it usually means something at the hardware or driver level is stuck in an endless interrupt loop. 
@@ -110,6 +112,8 @@ Quick Comparison of Diagnostic Approaches
 | Device Manager Driver Rollback | Moderate | Medium | Fixing hardware-level interrupt storms |
 
 ---
+
+## 4. Professional Engineer Precautions & Tips
 
 ## 4. Professional Engineer Precautions & Tips
 

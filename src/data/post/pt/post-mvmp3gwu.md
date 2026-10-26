@@ -21,8 +21,6 @@ theme: "Deep Indigo System"
 
 ## 1. Situação de emergência no trabalho
 
-1. O Desespero do Momento e a Falha na Tela
-
 Era uma tarde típica de alta demanda aqui na Avenida Paulista, com o movimento intenso de escritórios corporativos ao redor. Eu estava executando uma query massiva no banco de dados de clientes na estação de trabalho principal, monitorando as tabelas e os logs de execução em tempo real para evitar qualquer gargalo de performance no cluster. De repente, notei um comportamento anômalo em um dos blocos de dados. Precisei registrar imediatamente a evidência visual daquele pico de uso para o relatório de auditoria e... apertei **Win + Shift + S**. 
 
 Nada aconteceu. A tela não congelou, o menu superior de seleção de captura não apareceu. Tentei de novo, com mais força nas teclas. Silêncio absoluto do sistema. 

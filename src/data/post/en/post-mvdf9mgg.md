@@ -40,6 +40,8 @@ The Slack workspace for our Mountain View office engineering team was blowing up
 
 ## 2. Root Cause Breakdown
 
+## 2. Root Cause Breakdown
+
 Why Your Windows 11 Update Gets Stuck at 100 Percent
 
 After getting past the panic and successfully unfreezing the system, I dug into the logs to understand what actually went wrong. When Windows 11 gets stuck right at the finish line, it is almost never because it is downloading files; it is trapped in the finalization and component store registration phase.
@@ -92,6 +94,8 @@ net start msiserver
 ```
 
 Reboot your machine normally, head back into Settings > Windows Update, and hit Check for updates. Windows will re-verify the system state and breeze past that 100 percent mark in a fraction of the time.
+
+## 4. Professional Engineer Precautions & Tips
 
 ## 4. Professional Engineer Precautions & Tips
 

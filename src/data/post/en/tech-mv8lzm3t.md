@@ -111,6 +111,8 @@ For persistent bloatware that refuses to disappear from your startup list:
 
 ## 4. Professional Engineer Precautions & Tips
 
+## 4. Professional Engineer Precautions & Tips
+
 Expert Warning / Advice
 
 <div style="border-left: 4px solid #ff0055; padding: 12px 16px; margin: 20px 0; background-color: rgba(255,0,85,0.05); border-radius: 4px; font-family: monospace;">

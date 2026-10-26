@@ -40,6 +40,8 @@ Freitag, 16:50 Uhr. Zehn Minuten vor dem verdienten Feierabend brennt mal wieder
 
 ## 2. Detaillierte Ursachenanalyse
 
+## 2. Detaillierte Ursachenanalyse
+
 Warum der Rechner zur Krücke wird: Die 3 Hauptverdächtigen
 
 Bevor wir die Werkzeuge auspacken, müssen wir verstehen, wer hier eigentlich bremst. Nach Jahren im Support sehe ich immer wieder dieselben Übeltäter:
@@ -49,6 +51,8 @@ Bevor wir die Werkzeuge auspacken, müssen wir verstehen, wer hier eigentlich br
 2. Hintergrund-Dienste und geplante Tasks: Windows hat seine eigenen Mechanismen, aber Drittanbieter-Tools blähen den Task-Planer (*Aufgabenplanung*) mit unnötigem Ballast auf.
 
 3. Zerspannte System-Ressourcen: Wenn die Boot-Platte (besonders, wenn noch eine alte HDD verbaut ist, aber selbst bei SSDs) voll ist und das System beim Start permanent virtuelle Speicherseiten jonglieren muss, geht gar nichts mehr vorwärts.
+
+## 3. Schritt-für-Schritt-Lösungsanleitung
 
 ## 3. Schritt-für-Schritt-Lösungsanleitung
 
@@ -80,6 +84,8 @@ Wenn der Rechner trotz leerem Autostart ewig bootet, klemmt es oft an der Hardwa
 * Öffne den Geräte-Manager, um zu prüfen, ob es unbekannte Geräte oder fehlerhafte Treiber gibt, die beim Booten in eine Timeout-Schleife laufen.
 
 ---
+
+## 4. Praxistipps und Warnungen vom System-Admin
 
 ## 4. Praxistipps und Warnungen vom System-Admin
 

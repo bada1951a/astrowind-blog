@@ -44,6 +44,8 @@ Heureusement, il existe une méthode propre, rapide et sécurisée via l'invite 
 
 ## 2. Analyse des causes principales de l'erreur
 
+## 2. Analyse des causes principales de l'erreur
+
 Pourquoi ce filigrane apparaît-il soudainement en plein milieu de vos tâches ?
 
 Avant de manipuler le système, comprenons l'origine technique de ce blocage pour éviter les fausses manœuvres :
@@ -53,6 +55,8 @@ Avant de manipuler le système, comprenons l'origine technique de ce blocage pou
 2. Mise à jour cumulative bloquée : Une mise à jour récente (notamment via Windows Update) a réinitialisé les caches graphiques du bureau et l'état des services de vérification visuelle.
 
 3. Corruption du cache de l'Explorateur (explorer.exe) : Le processus gérant l'interface graphique panique et affiche les couches de texte d'état d'activation par défaut en surimpression prioritaire.
+
+## 3. Guide de résolution étape par étape
 
 ## 3. Guide de résolution étape par étape
 

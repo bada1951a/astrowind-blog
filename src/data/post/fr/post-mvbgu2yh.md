@@ -40,6 +40,8 @@ Il est 14h30 dans notre bureau tech à Paris, la tension est palpable. Nous somm
 
 ## 2. Analyse des causes principales de l'erreur
 
+## 2. Analyse des causes principales de l'erreur
+
 Pourquoi votre barre des tâches Windows 11 se fige-t-elle ?
 
 Après avoir analysé ce comportement à plusieurs reprises lors de nos sessions de support informatique, trois coupables principaux reviennent constamment :
@@ -51,6 +53,8 @@ Après avoir analysé ce comportement à plusieurs reprises lors de nos sessions
 3. Conflits de services tiers ou pilotes graphiques : Une application résiduelle dans la zone de notification ou un pilote d'affichage instable peut bloquer le thread principal de la barre des tâches.
 
 ---
+
+## 3. Guide de résolution étape par étape
 
 ## 3. Guide de résolution étape par étape
 

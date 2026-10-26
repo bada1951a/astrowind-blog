@@ -42,6 +42,8 @@ Al ver que el reinicio en frío no servía de nada porque el problema volvía a 
 
 ## 2. Análisis detallado de la causa raíz
 
+## 2. Análisis detallado de la causa raíz
+
 ¿Por qué el proceso "System" devora tu CPU?
 
 Antes de pasar a los clics, entendamos brevemente qué está pasando bajo el capó. El proceso del sistema (`ntoskrnl.exe`) gestiona las tareas esenciales del núcleo de Windows, controladores y memoria física. Cuando se dispara al máximo, las causas más comunes son:
@@ -49,6 +51,8 @@ Antes de pasar a los clics, entendamos brevemente qué está pasando bajo el cap
 - Controladores de hardware obsoletos o corruptos: Generalmente tarjetas de red (Wi-Fi/Ethernet) o controladores de almacenamiento NVMe que entran en bucle infinito de interrupciones.
 - Servicios de Windows en conflicto: El Administrador de impresión, Windows Update o el sistema de indexación de archivos (`Windows Search`) intentando reparar un índice dañado.
 - Periféricos USB defectuosos: Hubs o dispositivos externos que saturan las líneas de comunicación PCIe del bus del sistema. ---
+
+## 3. Solución práctica paso a paso
 
 ## 3. Solución práctica paso a paso
 

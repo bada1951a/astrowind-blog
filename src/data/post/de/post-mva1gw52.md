@@ -38,6 +38,8 @@ Wer in einer schnelllebigen IT-Umgebung arbeitet, kennt das Problem. Windows 11 
 
 ## 2. Detaillierte Ursachenanalyse
 
+## 2. Detaillierte Ursachenanalyse
+
 Warum läuft das Laufwerk C: eigentlich immer wieder voll?
 
 Bevor wir blind Dateien löschen, müssen wir verstehen, woher der Ballast kommt. Das Hauptproblem liegt meistens in drei Bereichen:
@@ -51,6 +53,8 @@ Bevor wir blind Dateien löschen, müssen wir verstehen, woher der Ballast kommt
 <div style="border-left: 4px solid #ffffff; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Pro-Tipp aus der Praxis:</strong> Nutze niemals einfach Tools von Drittanbietern, die dir dubiose "Turbo-Cleanings" versprechen. Die integrierten Windows-Bordmittel arbeiten am zuverlässigsten und zerstören keine Systemverknüpfungen.
 </div>
+
+## 3. Schritt-für-Schritt-Lösungsanleitung
 
 ## 3. Schritt-für-Schritt-Lösungsanleitung
 
@@ -108,6 +112,8 @@ Damit das Problem vor dem nächsten Release nicht wieder auftritt, automatisiere
 
 Kann ich den Ordner `C:\Windows.old` einfach löschen?
 Ja, wenn dein Windows 11 stabil läuft und du kein Downgrade auf eine vorherige Version machen möchtest. Am sichersten löschst du ihn über die *Datenträgerbereinigung* (suche im Startmenü danach), indem du dort das Häkchen bei "Vorherige Windows-Installation(en)" setzt.
+
+## 2. Detaillierte Ursachenanalyse
 
 ## 2. Detaillierte Ursachenanalyse
 

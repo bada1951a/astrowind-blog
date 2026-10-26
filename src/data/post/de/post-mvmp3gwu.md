@@ -21,8 +21,6 @@ theme: "Sandstone Desert Minimal"
 
 ## 1. Kritische Fehlersituation am Arbeitsplatz
 
-1. Das Problem mit Win+Shift+S im mobilen Einsatz
-
 Es war ein typischer Dienstagnachmittag in einem gut besuchten Café in der Münchener Maxvorstadt. Draußen nieselte es leicht, drinnen roch es nach frisch geröstetem Espresso. Ich saß mit meinem Laptop am Holztisch, verbunden mit dem Smartphone-Hotspot via Tethering, um letzte Korrekturen an einer komplexen Kalkulation und den dazugehörigen CAD-Plänen für einen wichtigen Kunden im Frankfurter Bankenviertel vorzunehmen. Der Abgabetermin rückte bedrohlich näher. Plötzlich musste ich einen bestimmten Ausschnitt aus einer Excel-Tabelle und einen Teil des Architekturplans direkt in einer E-Mail dokumentieren. 
 
 Ich drückte wie gewohnt die Tastenkombination **Win + Shift + S**, um das Snipping Tool aufzurufen. Doch: Nichts passierte. Kein abdunkelnder Bildschirm, kein kleiner Ausschnitts-Cursor, absolut keine Reaktion. Panik machte sich breit. Ich versuchte es erneut, drückte fester auf die Tasten, startete das Touchpad neu – Fehlanzeige. Mitten im mobilen Workflow, fernab des Firmennetzwerks und ohne eingesteckte Maus, stand ich plötzlich ohne Screenshot-Werkzeug da. Ich musste die Datei mühsam als PDF exportieren, zuschneiden und als Bild speichern – ein zeitraubender Umweg, der mich wertvolle Minuten kostete.

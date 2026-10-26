@@ -51,6 +51,8 @@ Voici la méthode éprouvée, rapide et 100% sécurisée pour reprendre le contr
 
 ## 2. Analyse des causes principales de l'erreur
 
+## 2. Analyse des causes principales de l'erreur
+
 Pourquoi votre lecteur C se remplit-il tout seul ?
 
 Avant de foncer tête baissée dans le nettoyage, comprenons pourquoi Windows 11 grignote autant d'espace. Trois coupables principaux reviennent constamment dans nos environnements de travail :
@@ -62,6 +64,8 @@ Avant de foncer tête baissée dans le nettoyage, comprenons pourquoi Windows 11
 3. L'hibernation et la mémoire virtuelle (pagefile.sys / hiberfile.sys) : Ces fichiers système réservent une portion fixe de votre disque équivalant à votre quantité de RAM, ce qui peut bloquer un espace considérable sur des SSD de taille modeste.
 
 ---
+
+## 3. Guide de résolution étape par étape
 
 ## 3. Guide de résolution étape par étape
 

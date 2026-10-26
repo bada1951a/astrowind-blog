@@ -44,6 +44,8 @@ Si te ha pasado lo mismo justo cuando más prisa tienes, sabes la frustración q
 
 ## 2. Análisis detallado de la causa raíz
 
+## 2. Análisis detallado de la causa raíz
+
 ¿Por qué se congela la barra de tareas en Windows 11?
 
 Antes de aplicar la solución, es útil entender qué está pasando bajo el capó para evitar que vuelva a suceder:
@@ -57,6 +59,8 @@ Antes de aplicar la solución, es útil entender qué está pasando bajo el cap�
 3. Actualizaciones acumulativas recientes: Ciertas actualizaciones de seguridad de Windows han demostrado generar conflictos intermitentes con los complementos visuales del explorador.
 
 ---
+
+## 3. Solución práctica paso a paso
 
 ## 3. Solución práctica paso a paso
 

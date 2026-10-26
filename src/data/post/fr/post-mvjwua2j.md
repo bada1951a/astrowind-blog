@@ -40,6 +40,8 @@ Vendredi, 17h45. Le compte à rebours est lancé dans notre open space de La Dé
 
 ## 2. Analyse des causes principales de l'erreur
 
+## 2. Analyse des causes principales de l'erreur
+
 Pourquoi votre PC Windows 11 est-il soudainement muet ?
 
 En tant qu'ingénieur support informatique, je vois ce genre de panne survenir au pire moment possible. Voici les trois coupables habituels derrière cette absence totale de son :
@@ -51,6 +53,8 @@ En tant qu'ingénieur support informatique, je vois ce genre de panne survenir a
 3. Les services Windows audio suspendus : Le service "Windows Audio" ou son outil de point de terminaison s'est arrêté de tourner en arrière-plan.
 
 ---
+
+## 3. Guide de résolution étape par étape
 
 ## 3. Guide de résolution étape par étape
 

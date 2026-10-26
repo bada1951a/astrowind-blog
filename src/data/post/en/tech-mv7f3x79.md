@@ -191,6 +191,8 @@ Now we rebuild the physical display link without triggering an MST sync error.
 
 ## 4. Professional Engineer Precautions & Tips
 
+## 4. Professional Engineer Precautions & Tips
+
 Expert Warning: Prevent Hardware-Level Failures
 
 <div style="border-left: 4px solid #ef4444; padding: 14px 18px; margin: 24px 0; background-color: rgba(239, 68, 68, 0.04); border-radius: 4px;">

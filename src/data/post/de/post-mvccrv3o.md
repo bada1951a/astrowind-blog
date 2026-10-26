@@ -42,6 +42,8 @@ Keine Vorwarnung, kein sanftes Herunterfahren, einfach harter Kernel-Absturz. De
 
 ## 2. Detaillierte Ursachenanalyse
 
+## 2. Detaillierte Ursachenanalyse
+
 Die drei Hauptursachen für den Fehler 0x0000000a
 
 Bevor wir blind anfangen, Schraubenzieher zu schwingen oder das System neu aufzusetzen, müssen wir die echten Flaschenhälse identifizieren:
@@ -53,6 +55,8 @@ Bevor wir blind anfangen, Schraubenzieher zu schwingen oder das System neu aufzu
 3. Konflikte mit Hintergrunddiensten: Antiviren-Software oder Low-Level-Systemtools, die sich tief in den Windows-Kernel eingraben.
 
 ---
+
+## 3. Schritt-für-Schritt-Lösungsanleitung
 
 ## 3. Schritt-für-Schritt-Lösungsanleitung
 
@@ -96,6 +100,8 @@ Manchmal hinterlässt der Absturz beschädigte Systemdateien. Das lässt sich sc
 4. Warten Sie, bis der Scan abgeschlossen ist, und starten Sie das System neu.
 
 ---
+
+## 4. Praxistipps und Warnungen vom System-Admin
 
 ## 4. Praxistipps und Warnungen vom System-Admin
 

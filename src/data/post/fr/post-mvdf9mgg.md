@@ -40,6 +40,8 @@ Voici la méthode directe et sans fioritures pour purger ce cache et reprendre l
 
 ## 2. Analyse des causes principales de l'erreur
 
+## 2. Analyse des causes principales de l'erreur
+
 Pourquoi votre mise à jour Windows 11 reste-t-elle bloquée à 100 pourcent ?
 
 Avant de manipuler les fichiers système, comprenons ce qui se passe sous le capot. Lorsque Windows télécharge une mise à jour, il stocke les fichiers d'installation temporaires dans un dossier spécifique. 
@@ -54,6 +56,8 @@ Avant de manipuler les fichiers système, comprenons ce qui se passe sous le cap
 </div>
 
 ---
+
+## 3. Guide de résolution étape par étape
 
 ## 3. Guide de résolution étape par étape
 
@@ -101,6 +105,8 @@ net start msiserver
 Il ne vous reste plus qu'à redémarrer votre machine, puis à vous rendre dans Paramètres > Windows Update pour relancer la recherche de mises à jour. Le téléchargement repartira sur des bases saines.
 
 ---
+
+## 4. Conseils et précautions d'un expert système
 
 ## 4. Conseils et précautions d'un expert système
 

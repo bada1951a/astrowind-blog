@@ -44,6 +44,8 @@ Zuerst verfällt man natürlich in blinden Aktionismus. Man klickt sich panisch 
 
 ## 2. Detaillierte Ursachenanalyse
 
+## 2. Detaillierte Ursachenanalyse
+
 Warum das Wasserzeichen auftaucht: Die 3 Hauptursachen
 
 Bevor wir den Befehl absetzen, müssen wir verstehen, warum das System überhaupt meckert:
@@ -55,6 +57,8 @@ Bevor wir den Befehl absetzen, müssen wir verstehen, warum das System überhaup
 3. Build-Testphase: Auf dem Vorführgerät läuft testweise eine Enterprise-Evaluation-Version, deren Evaluierungszeitraum kurz vor dem Ablauf steht.
 
 ---
+
+## 3. Schritt-für-Schritt-Lösungsanleitung
 
 ## 3. Schritt-für-Schritt-Lösungsanleitung
 
@@ -78,6 +82,8 @@ Schritt 3: Neustart durchführen und prüfen
 Schließen Sie alle Fenster und starten Sie das System über das Startmenü neu. Nach dem Hochfahren ist der Desktop wieder absolut sauber, das Overlay verschwunden und die Präsentation kann makellos starten.
 
 ---
+
+## 4. Praxistipps und Warnungen vom System-Admin
 
 ## 4. Praxistipps und Warnungen vom System-Admin
 

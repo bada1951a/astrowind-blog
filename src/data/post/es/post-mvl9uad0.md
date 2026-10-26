@@ -44,6 +44,8 @@ Si te ha pasado esto alguna vez, sabrás perfectamente la frustración que se si
 
 ## 2. Análisis detallado de la causa raíz
 
+## 2. Análisis detallado de la causa raíz
+
 ¿Por qué ocurre esto exactamente? Analicemos los tres motivos principales por los que tu ordenador se niega a descansar cuando le das la orden:
 
 Primero, el conflicto con el Inicio Rápido. Esta característica de Windows no realiza un apagado limpio tradicional. En su lugar, cierra sesión en los programas de usuario pero vuelca una imagen híbrida del núcleo del sistema operativo en el disco duro (el archivo hiberfil.sys). Al encender de nuevo, carga esa imagen para ganar velocidad. Si hay un fallo de lectura o un controlador de terceros se queda enganchado en ese volcado, el equipo se congela en un bucle infinito al intentar apagar.

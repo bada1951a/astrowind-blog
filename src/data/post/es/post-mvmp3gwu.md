@@ -21,8 +21,6 @@ theme: "Industrial Blueprint"
 
 ## 1. Emergencia crítica en el trabajo
 
-1. El Momento de Pánico en la Sala de Reuniones
-
 Eran las 10:45 de la mañana en el flamante edificio corporativo situado en pleno Paseo de la Castellana en Madrid. Todo estaba listo para la gran demostración ante los directivos de nuestro principal cliente. Tenía mi portátil conectado al proyector de la sala principal y el proyector mostraba la pantalla de inicio perfectamente. En cuestión de minutos, los directivos entrarían para ver en vivo una nueva arquitectura de red y la interfaz de usuario optimizada que habíamos preparado durante semanas. 
 
 Para documentar las pantallas del sistema en tiempo real y enviarlas al equipo de soporte remoto, pulsé instintivamente la combinación sagrada: **Win + Shift + S**. 

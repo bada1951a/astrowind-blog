@@ -89,6 +89,8 @@ Simulasi Logika POST BIOS saat RAM Normal vs Error
 
 ## 4. Tips & Peringatan Penting Teknisi IT
 
+## 4. Tips & Peringatan Penting Teknisi IT
+
 Expert Warning: Jangan Asal Main Colok!
 
 <div style="border-left: 4px solid #84cc16; padding: 12px 16px; margin: 20px 0; background-color: rgba(132, 204, 22, 0.05); border-radius: 4px;">

@@ -41,6 +41,8 @@ Eran las 18:30 en nuestra oficina del 22@ en Barcelona. Estábamos a menos de cu
 
 ## 2. Análisis detallado de la causa raíz
 
+## 2. Análisis detallado de la causa raíz
+
 ¿Por qué ocurre esto? Análisis de las 3 causas raíz
 
 Para solucionar este fallo de inmediato sin perder tiempo probando soluciones aleatorias, debemos entender qué lo desencadenó:
@@ -52,6 +54,8 @@ Para solucionar este fallo de inmediato sin perder tiempo probando soluciones al
 3. Servicios de terceros en conflicto: Antivirus corporativos o herramientas de virtualización de bajo nivel que intentan engancharse a zonas de memoria protegidas durante procesos de alta carga de E/S.
 
 ---
+
+## 3. Solución práctica paso a paso
 
 ## 3. Solución práctica paso a paso
 
@@ -91,6 +95,8 @@ Si la memoria está perfecta, el problema es indudablemente software. Para rever
 4. Si el botón está desactivado, selecciona Desinstalar el dispositivo, marca la casilla *Intentar quitar el controlador de este equipo* y reinicia inmediatamente para que Windows cargue un driver genérico estable.
 
 ---
+
+## 4. Advertencias y consejos de un técnico
 
 ## 4. Advertencias y consejos de un técnico
 

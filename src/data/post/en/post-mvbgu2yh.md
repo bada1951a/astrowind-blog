@@ -44,6 +44,8 @@ We have all been there. You mash the Windows key, you frantically click around t
 
 ## 2. Root Cause Breakdown
 
+## 2. Root Cause Breakdown
+
 Why Your Windows 11 Taskbar Freezes
 
 To fix this issue permanently, it helps to understand what actually broke under the hood. In Windows 11, the taskbar is deeply intertwined with modern shell architecture, XAML islands, and background explorer processes. 

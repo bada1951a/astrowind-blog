@@ -40,6 +40,8 @@ Face à ce genre de panne aléatoire, la pire erreur est de jouer aux devinettes
 
 ## 2. Analyse des causes principales de l'erreur
 
+## 2. Analyse des causes principales de l'erreur
+
 Anatomie d'un freeze : les 3 causes racines les plus fréquentes
 
 Avant de lancer les outils de diagnostic, faisons le point sur ce qui provoque généralement ces blocages soudains sur les stations de travail modernes :
@@ -88,6 +90,8 @@ Une fois la piste identifiée dans les journaux, passons à la résolution prati
 3. Ajustement du plan d'alimentation :Allez dans lePanneau de configuration, puis *Options d'alimentation*. Si vous utilisez un profil d'économie d'énergie agressive, passez sur le mode *Performances élevées* pour tester si les freezes persistent.
 
 ---
+
+## 4. Conseils et précautions d'un expert système
 
 ## 4. Conseils et précautions d'un expert système
 

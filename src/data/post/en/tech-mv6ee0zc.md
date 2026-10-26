@@ -176,6 +176,8 @@ If the board is soldered, you can open the switch housing *in situ* using switch
 
 ## 4. Professional Engineer Precautions & Tips
 
+## 4. Professional Engineer Precautions & Tips
+
 Expert Warning: Protecting Your Hardware
 
 ```

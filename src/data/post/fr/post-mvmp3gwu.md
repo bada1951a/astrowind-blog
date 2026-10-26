@@ -35,6 +35,8 @@ Puis, le drame : un collègue m'envoie un message urgent sur Teams me demandant 
 
 ## 2. Analyse des causes principales de l'erreur
 
+## 2. Analyse des causes principales de l'erreur
+
 Pourquoi ce raccourci magique nous lâche-t-il soudainement, surtout lors du passage à un bureau flexible ou multi-écrans ? Après avoir analysé des dizaines de cas similaires sur les parcs Windows 11 de l'entreprise, voici les trois coupables les plus fréquents :
 
 - **Le processus de l'application est planté ou suspendu :** Parfois, l'exécutable de l'Outil Capture d'écran reste bloqué en arrière-plan à la suite d'une mauvaise déconnexion précédente, empêchant toute nouvelle instance de se lancer.

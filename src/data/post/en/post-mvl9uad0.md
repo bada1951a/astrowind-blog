@@ -44,6 +44,8 @@ Ten minutes later, as I unpack my backpack on the desk, I notice the laptop chas
 
 ## 2. Root Cause Breakdown
 
+## 2. Root Cause Breakdown
+
 Why Your PC Refuses to Turn Off: Root Causes
 
 When a modern Windows 10 or Windows 11 machine fails to power down completely, it is rarely a physical hardware switch failure. Instead, it usually boils down to three primary software and firmware culprits.

@@ -42,6 +42,8 @@ In front of a room full of venture capitalists and board members, projecting a m
 
 ## 2. Root Cause Breakdown
 
+## 2. Root Cause Breakdown
+
 The Trap: Why Standard Panic Leads to Broken Systems
 
 When faced with this annoying overlay, most panicked sysadmins or office workers make classic mistakes that waste precious minutes:
@@ -103,6 +105,8 @@ start explorer.exe
 Within two seconds, the desktop reloaded. The watermark was completely gone, leaving a pristine, professional background just in time for the CEO to plug his machine into the boardroom projector.
 
 ---
+
+## 4. Professional Engineer Precautions & Tips
 
 ## 4. Professional Engineer Precautions & Tips
 

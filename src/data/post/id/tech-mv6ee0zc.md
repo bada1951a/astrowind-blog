@@ -48,7 +48,9 @@ Sebelum menyemprotkan cairan kimia atau membongkar perangkat, Anda wajib memaham
 
 **a:**
 
-A. Oksidasi dan Penumpukan Debu Mikro pada Contact Leaf
+*
+
+*A.** Oksidasi dan Penumpukan Debu Mikro pada Contact Leaf
 Switch mekanikal bekerja menggunakan dua bilah logam tembaga lentur (*metal contact leaf*) di bagian dalam *housing*. Saat tombol ditekan, stem plastik akan mendorong salah satu bilah untuk bersentuhan dengan bilah pasangannya guna menutup sirkuit dan mengirim sinyal elektrik ke *controller*. 
 
 Seiring waktu, udara lembap dan partikel debu halus menyusup melalui celah stem. Gesekan terus-menerus antara kedua bilah kontak menghasilkan serpihan mikroskopis yang, bersamaan dengan kelembapan, membentuk lapisan oksidasi tipis non-konduktif. Hasilny

@@ -33,7 +33,7 @@ When Windows blocks you from deleting a file, it is almost always due to how the
 * **Network Share Locking:** If the file resides on a mapped network drive or a local folder shared over the corporate intranet, the SMB (Server Message Block) protocol sometimes holds onto the file lock even after the remote application disconnects.
 * **Corrupted Handle References:** An application crashed while reading or writing to the file, leaving an orphaned handle open in the kernel memory space. Standard user-mode attempts to close the application will not flush this kernel-level lock.
 
-## 3. Step-by-Step Practical Resolution
+## 3. Step-by-Step Practical Resolution Practical Resolution
 
 When standard point-and-click methods fail, you need to systematically track down the locking process and terminate its handle. Here is the battle-tested playbook I used that night to bypass the lock and clear our deployment path.
 

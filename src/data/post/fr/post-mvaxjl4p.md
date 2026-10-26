@@ -42,6 +42,8 @@ Ce genre de lenteur extrême au boot n'arrive jamais par hasard. Après avoir pe
 
 ## 2. Analyse des causes principales de l'erreur
 
+## 2. Analyse des causes principales de l'erreur
+
 Anatomie du goulot d'étranglement au démarrage
 
 Pourquoi Windows 10 finit-il par s'effondrer au boot après quelques mois d'utilisation intensive ? Trois coupables reviennent constamment dans nos environnements de travail :
@@ -55,6 +57,8 @@ Pourquoi Windows 10 finit-il par s'effondrer au boot après quelques mois d'util
 <div style="border-left: 4px solid #00ffcc; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,255,204,0.08); border-radius: 4px; color: #111827;">
 <strong>Diagnostic minute :</strong> Ne cherchez pas midi à quatorze heures. Dans 90% des cas sur Windows 10, le problème vient directement de la liste des applications lancées en arrière-plan au démarrage de la session.
 </div>
+
+## 3. Guide de résolution étape par étape
 
 ## 3. Guide de résolution étape par étape
 
@@ -78,6 +82,8 @@ Faites un clic droit sur les applications superflues (par exemple : Cortana, app
 *Attention : Ne touchez pas aux pilotes essentiels comme le gestionnaire audio Realtek ou votre antivirus principal (Windows Defender / l'icône de sécurité de votre éditeur tiers).*
 
 ---
+
+## 4. Conseils et précautions d'un expert système
 
 ## 4. Conseils et précautions d'un expert système
 

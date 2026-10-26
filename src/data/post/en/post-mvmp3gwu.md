@@ -45,7 +45,7 @@ Before blindly mashing keys or restarting your PC, let us look at why this speci
 
 3. Corrupted App Package or Missing Updates: The modern WinRT application package for Screen Sketch (the engine behind the modern Snipping Tool) often becomes corrupted due to failed Windows updates or aggressive endpoint security software clearing background app states.
 
-## 3. Step-by-Step Practical Resolution
+## 3. Step-by-Step Practical Resolution Practical Resolution
 
 Let us roll up our sleeves and fix this step by step. Follow these exact procedures right from your desktop.
 

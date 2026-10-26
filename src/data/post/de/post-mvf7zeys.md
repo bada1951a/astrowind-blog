@@ -40,6 +40,8 @@ In Panik habe ich zuerst den Laptop einfach hart ausgeschaltet – ein klassisch
 
 ## 2. Detaillierte Ursachenanalyse
 
+## 2. Detaillierte Ursachenanalyse
+
 Warum der Systemprozess Amok läuft: Die 3 Hauptursachen
 
 Bevor wir zur Tat schreiten, müssen wir verstehen, warum Windows sich selbst ausbremst. Der "System"-Prozess (PID 4) ist das Herzstück des Kernels. Wenn er 100 Prozent CPU zieht, liegt das fast nie an Windows selbst, sondern an externen Faktoren:
@@ -51,6 +53,8 @@ Bevor wir zur Tat schreiten, müssen wir verstehen, warum Windows sich selbst au
 3. Beschädigte Windows Update-Reste oder fehlerhafte Indexierung: Der Windows Search Indexer oder das Windows Update Modul hängen in einer Endlosschleife fest, während der Systemprozess die CPU-Zyklen verbrennt.
 
 ---
+
+## 3. Schritt-für-Schritt-Lösungsanleitung
 
 ## 3. Schritt-für-Schritt-Lösungsanleitung
 

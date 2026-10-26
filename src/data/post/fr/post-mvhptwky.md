@@ -42,6 +42,8 @@ Ce genre de micro-frustration ergonomique au bureau, multiplié par des centaine
 
 ## 2. Analyse des causes principales de l'erreur
 
+## 2. Analyse des causes principales de l'erreur
+
 Pourquoi ce changement de menu nous ralentit-il autant ?
 
 Avant de plonger dans le cambouis technique, comprenons ce qui se passe sous le capot de Windows 11. Microsoft a voulu faire du propre, mais l'expérience utilisateur en a pris un coup pour les profils techniques et administratifs.
@@ -51,6 +53,8 @@ Avant de plonger dans le cambouis technique, comprenons ce qui se passe sous le 
 - L'absence d'option native visible :Aucun interrupteur simple dans l'application Paramètres ne permet de basculer l'affichage de manière permanente, obligeant à modifier le registre système ou à passer par des commandes ciblées.
 
 ---
+
+## 3. Guide de résolution étape par étape
 
 ## 3. Guide de résolution étape par étape
 
@@ -86,6 +90,8 @@ Votre barre des tâches va disparaître et réapparaître une fraction de second
 </div>
 
 ---
+
+## 4. Conseils et précautions d'un expert système
 
 ## 4. Conseils et précautions d'un expert système
 

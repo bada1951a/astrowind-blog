@@ -44,6 +44,8 @@ Heureusement, après des années à dépanner les postes de l'équipe, j'ai une 
 
 ## 2. Analyse des causes principales de l'erreur
 
+## 2. Analyse des causes principales de l'erreur
+
 Pourquoi votre disque C se remplit tout seul ?
 
 Avant de passer à l'action, il est bon de comprendre ce qui s'est passé dans les coulisses de votre machine.
@@ -53,6 +55,8 @@ Avant de passer à l'action, il est bon de comprendre ce qui s'est passé dans l
 2. Les restes de Windows Update : Chaque mise à jour majeure du système conserve une copie de secours (le dossier `Windows.old` ou les packages dans `WinSxS`) au cas où il faudrait rétrograder. C'est souvent là que se cachent 20 à 40 Go de données fantômes.
 
 3. Les fichiers de mise en veille prolongée et mémoire virtuelle : Les fichiers `hiberfil.sys` et `pagefile.sys` taillent directement dans votre SSD en réservant l'équivalent de votre mémoire vive, parfois bien plus que nécessaire.
+
+## 3. Guide de résolution étape par étape
 
 ## 3. Guide de résolution étape par étape
 

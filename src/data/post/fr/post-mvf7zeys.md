@@ -46,6 +46,8 @@ Pour couper court aux lenteurs extrêmes, ouvrez l'Invite de commandes en mode a
 
 ## 2. Analyse des causes principales de l'erreur
 
+## 2. Analyse des causes principales de l'erreur
+
 Pourquoi votre processeur s'affole-t-il ? (Analyse des 3 causes principales)
 
 Avant de bidouiller au hasard, comprenons ce qui se passe sous le capot. Lorsque le "Processus système" s'emballe à 100%, ce n'est généralement pas un virus classique, mais plutôt un dysfonctionnement de bas niveau matériel ou logiciel :
@@ -57,6 +59,8 @@ Avant de bidouiller au hasard, comprenons ce qui se passe sous le capot. Lorsque
 3. Un indexeur de recherche corrompu (Windows Search) : L'assistant d'indexation tente d'analyser un fichier corrompu ou un dossier réseau saturé, ce qui provoque une boucle infinie du processus `SearchIndexer.exe` ou `System`.
 
 ---
+
+## 3. Guide de résolution étape par étape
 
 ## 3. Guide de résolution étape par étape
 
@@ -95,6 +99,8 @@ Si le problème persiste après le redémarrage, le coupable est souvent un serv
 4. Passez le type de démarrage sur Désactivétemporairement pour voir si votre utilisation du CPU redescend instantanément sous les 10%. Faites de même pourWindows Update si une mise à jour est plantée.
 
 ---
+
+## 4. Conseils et précautions d'un expert système
 
 ## 4. Conseils et précautions d'un expert système
 

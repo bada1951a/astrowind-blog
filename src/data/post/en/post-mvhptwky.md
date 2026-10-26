@@ -106,6 +106,8 @@ If you prefer doing things manually or need to verify the registry key yourself,
 
 ## 4. Professional Engineer Precautions & Tips
 
+## 4. Professional Engineer Precautions & Tips
+
 Expert Warning & Best Practices
 
 Before rolling this out across your entire enterprise domain via Group Policy or script deployment, keep these operational notes in mind:

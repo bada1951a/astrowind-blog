@@ -21,8 +21,6 @@ theme: "Deep Ocean Cobalt"
 
 ## 1. Noodsituatie op de werkvloer
 
-1. De Paniek in de Vergaderruimte
-
 Laatst stond ik voor een flinke uitdaging. Ik was af gereisd naar een regionaal kantoor ergens in het land voor een belangrijke strategische sessie. Net toen ik ter plekke in de vergaderruimte mijn laptop aansloot op een ietwat verouderde externe monitor en een overijverige projector, liep ik tegen een typische frustratie aan. Ik wilde snel een belangrijk configuratieschema vastleggen van het scherm met de bekende sneltoets **Win + Shift + S**, maar er gebeurde helemaal niets. Geen schermverduistering, geen melding in het actiecentrum, en het Knipprogramma (Snipping Tool) leek volledig te slapen. 
 
 In zo'n hectische situatie, met een groep collega's die direct resultaat verwacht op een vreemde hardware-opstelling, is het het laatste wat je kunt gebruiken. Handmatig zoeken naar het programma via het Start-menu kost kostbare tijd, en afdrukken via de Print Screen-toets leverde ook niet het gewenste selectieve resultaat op. Tijd om dit probleem eens en voor al de wereld uit te helpen.
