@@ -115,7 +115,7 @@ const I18N_SECTIONS = {
   it: {
     s1: "1. Emergenza improvvisa sul posto di lavoro",
     s2: "2. Analisi approfondita della causa principale",
-    s3: "3. Soluzione practical passo dopo passo",
+    s3: "3. Soluzione pratica passo dopo passo",
     s4: "4. Avvertenze e suggerimenti dell'esperto",
     s5: "5. Domande Frequenti (FAQ)",
     tags: ["Consigli Tech", "Hardware", "Risoluzione Problemi", "Assistenza PC"]
@@ -309,13 +309,13 @@ const delay = (ms) => new Promise((res) => setTimeout(res, ms));
 const fileSlug = `post-${Date.now().toString(36)}`;
 
 // =========================================================================
-// [출력 상한 잠금] maxOutputTokens: 8192로 모델의 중간 생략/축약 원천 차단
+// [영구 고정] gemini-3.5-flash-lite + maxOutputTokens 8192로 중간 절단 원천 차단
 // =========================================================================
 async function fetchWithRetry(prompt, maxRetries = 5, delayMs = 5000) {
   for (let attempt = 1; attempt <= maxRetries; attempt++) {
     try {
       const response = await ai.models.generateContent({
-        model: 'gemini-2.5-flash',
+        model: 'gemini-3.5-flash-lite',
         contents: prompt,
         config: {
           maxOutputTokens: 8192,
