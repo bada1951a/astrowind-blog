@@ -94,9 +94,9 @@ const { post, url } = Astro.props;
       }
     </header>
     
-    <!-- 모바일: 17px + 1.75배 행간 / PC(lg 이상): 기존처럼 시원한 prose-xl 유지 -->
+    <!-- 🛡️ 모바일 하위 p 태그 직격: prose-base [&>p]:text-[17px] [&>p]:leading-[1.75] / PC(lg 이상): 기존 시원한 prose-xl 유지 -->
     <div
-      class="mx-auto px-6 sm:px-6 max-w-3xl prose text-[17px] leading-[1.75] lg:prose-xl dark:prose-invert dark:prose-headings:text-slate-300 prose-headings:font-heading prose-headings:leading-tighter prose-headings:tracking-tighter prose-headings:font-bold prose-a:text-primary dark:prose-a:text-blue-400 prose-img:rounded-md prose-img:shadow-lg mt-8 prose-headings:scroll-mt-[80px] prose-li:my-0"
+      class="mx-auto px-6 sm:px-6 max-w-3xl prose prose-base text-[17px] [&>p]:text-[17px] [&>p]:leading-[1.75] lg:prose-xl dark:prose-invert dark:prose-headings:text-slate-300 prose-headings:font-heading prose-headings:leading-tighter prose-headings:tracking-tighter prose-headings:font-bold prose-a:text-primary dark:prose-a:text-blue-400 prose-img:rounded-md prose-img:shadow-lg mt-8 prose-headings:scroll-mt-[80px] prose-li:my-0"
     >
       <slot />
     </div>
@@ -135,7 +135,7 @@ const { post, url } = Astro.props;
             // 이미지 태그 생성 및 교체
             const imgP = document.createElement('p');
             imgP.className = 'my-6 text-center';
-            imgP.innerHTML = `<img src="${cleanSrc}" alt="${altText}" class="mx-auto rounded-md shadow-lg max-w-full h-auto inline-block" />;`;
+            imgP.innerHTML = `<img src="${cleanSrc}" alt="${altText}" class="mx-auto rounded-md shadow-lg max-w-full h-auto inline-block" />`;
             
             p1.parentNode.insertBefore(imgP, p1);
             p1.remove();
@@ -153,7 +153,7 @@ const { post, url } = Astro.props;
           const altText = match[1].trim();
           const cleanSrc = encodeURI(match[2].trim());
           p1.className = 'my-6 text-center';
-          p1.innerHTML = `<img src="${cleanSrc}" alt="${altText}" class="mx-auto rounded-md shadow-lg max-w-full h-auto inline-block" />;`;
+          p1.innerHTML = `<img src="${cleanSrc}" alt="${altText}" class="mx-auto rounded-md shadow-lg max-w-full h-auto inline-block" />`;
         }
       }
     }
