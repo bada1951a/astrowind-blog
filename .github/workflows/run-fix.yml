@@ -12,6 +12,8 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -30,5 +32,6 @@ jobs:
             echo "수정할 내용이 없습니다."
           else
             git commit -m "style: fix post headings and formatting"
+            git pull --rebase origin main || true
             git push
           fi
