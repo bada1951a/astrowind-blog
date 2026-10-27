@@ -88,6 +88,8 @@ Q2. Czy wymuszone usunięcie pliku za pomocą konsoli PowerShell może uszkodzi�
 
 A2. Użycie polecenia `del /f` w odniesieniu do zwykłych plików użytkownika, takich jak dokumenty tekstowe, arkusze czy pliki PDF, jest całkowicie bezpieczne dla stabilności systemu Windows. Zagrożenie pojawia się wyłącznie wtedy, gdy użytkownik podejmie próbę siłowego usunięcia krytycznych plików systemowych znajdujących się w katalogu `System32` lub plików rozruchowych, co może skutkować uniemożliwieniem ponownego uruchomienia komputer
 
-A.Q3. Dlaczego pendrive lub dysk zewnętrzny zgłasza błąd "Urządzenie jest obecnie używane" mimo zamknięcia wszystkich okien?
+A.
+
+Q3. Dlaczego pendrive lub dysk zewnętrzny zgłasza błąd "Urządzenie jest obecnie używane" mimo zamknięcia wszystkich okien?
 
 A3. Ten powszechny problem wynika z faktu, że system Windows domyślnie stosuje buforowanie zapisu (optymalizacja wydajności) dla zewnętrznych nośników danych. Oznacza to, że procesy systemowe w tle nadal przesyłają lub indeksują dane na dysku USB, nawet jeśli okno Eksploratora zostało zamknięte. Aby temu zaradzić, należy skorzystać z bezpiecznego usuwania sprzętu w zasobniku systemowym lub wymusić odmontowanie wolumenu za pomocą konsoli zarządzania dyskami.

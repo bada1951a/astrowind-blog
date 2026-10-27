@@ -131,13 +131,13 @@ Précautions de l'expert et bonnes pratiques
 ---
 ## 5. Foire Aux Questions (FAQ)
 
-**Q.** Est-ce que renommer le dossier SoftwareDistribution efface mes fichiers personnels ?
+Q. Est-ce que renommer le dossier SoftwareDistribution efface mes fichiers personnels ?
 
-**A.** Absolument pas. Ce dossier contient uniquement les fichiers temporaires téléchargés pour les mises à jour Windows. Vos documents, applications et paramètres personnels ne sont en aucun cas touchés.
+A. Absolument pas. Ce dossier contient uniquement les fichiers temporaires téléchargés pour les mises à jour Windows. Vos documents, applications et paramètres personnels ne sont en aucun cas touchés.
 
-**Q.** Que faire si la commande `net stop wuauserv` reste bloquée sur "Arrêt en cours" ?
+Q. Que faire si la commande `net stop wuauserv` reste bloquée sur "Arrêt en cours" ?
 
-**A.** C'est un classique lorsque le service est totalement gelé. Ouvrez le Gestionnaire tâches (Ctrl + Maj + Échap), allez dans l'ongletServices, cherchez `wuauserv`, faites un clic droit dessus et choisissez Arrêter. Si cela ne suffit pas, un redémarrage de la machine s'impose.
+A. C'est un classique lorsque le service est totalement gelé. Ouvrez le Gestionnaire tâches (Ctrl + Maj + Échap), allez dans l'ongletServices, cherchez `wuauserv`, faites un clic droit dessus et choisissez Arrêter. Si cela ne suffit pas, un redémarrage de la machine s'impose.
 
 3. Pourquoi Windows 11 bloque-t-il si souvent à 100 pourcent lors des mises à jour ?
 

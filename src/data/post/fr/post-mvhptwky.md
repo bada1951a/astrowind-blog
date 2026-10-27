@@ -117,14 +117,14 @@ En tant que spécialiste de la maintenance, je vois souvent des scripts ou des l
 ---
 ## 5. Foire Aux Questions (FAQ)
 
-**Q.** Cette manipulation est-elle réversible si je souhaite revenir au menu par défaut de Windows 11 ?
+Q. Cette manipulation est-elle réversible si je souhaite revenir au menu par défaut de Windows 11 ?
 
-**A.** Absolument. Il suffit d'ouvrir à nouveau le Terminal en administrateur et de supprimer la clé avec la commande suivante : `reg.exe delete "HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}" /f`, puis de redémarrer l'Explorateur Windows via le Gestionnaire des tâches.
+A. Absolument. Il suffit d'ouvrir à nouveau le Terminal en administrateur et de supprimer la clé avec la commande suivante : `reg.exe delete "HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}" /f`, puis de redémarrer l'Explorateur Windows via le Gestionnaire des tâches.
 
-**Q.** Est-ce que cela fonctionne sur toutes les versions de Windows 11 ?
+Q. Est-ce que cela fonctionne sur toutes les versions de Windows 11 ?
 
-**A.** Oui, cette astuce fonctionne sur les versions initiales ainsi que sur les mises à jour récentes (22H2, 23H2 et ultérieures). Microsoft n'a pas bloqué cette clé de contournement, car elle est tolérée pour des raisons de rétrocompatibilité.
+A. Oui, cette astuce fonctionne sur les versions initiales ainsi que sur les mises à jour récentes (22H2, 23H2 et ultérieures). Microsoft n'a pas bloqué cette clé de contournement, car elle est tolérée pour des raisons de rétrocompatibilité.
 
-**Q.** Vais-je perdre mes applications récentes dans le menu ?
+Q. Vais-je perdre mes applications récentes dans le menu ?
 
-**A.** Non. Vos logiciels habituels (comme 7-Zip, Notepad++, ou vos outils de gestion de documents) réapparaîtront directement au premier clic, sans que vous ayez besoin de chercher dans les sous-menus.
+A. Non. Vos logiciels habituels (comme 7-Zip, Notepad++, ou vos outils de gestion de documents) réapparaîtront directement au premier clic, sans que vous ayez besoin de chercher dans les sous-menus.

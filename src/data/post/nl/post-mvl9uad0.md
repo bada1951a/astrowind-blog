@@ -62,9 +62,9 @@ De enige echte oplossing om dit probleem voor eens en voor altijd de wereld uit 
 
 5. Je ziet nu een overzicht van de instellingen, maar de opties onderaan zijn waarschijnlijk grijs geklasseerd. Klik bovenaan op de tekst 'Instellingen wijzigen die momenteel niet beschikbaar zijn' (je hebt hier Administrator-rechten voor nodig).
 
-**Q6.** Vink onderaan bij de uitschakelinstellingen het hokje uit voor 'Snel opstarten inschakelen (aanbevolen)'.
+Q6. Vink onderaan bij de uitschakelinstellingen het hokje uit voor 'Snel opstarten inschakelen (aanbevolen)'.
 
-**Q7.** Klik rechtsonder op de knop 'Wijzigingen opslaan'.
+Q7. Klik rechtsonder op de knop 'Wijzigingen opslaan'.
 
 Als je na deze stappen je computer opnieuw opstart en vervolgens afsluit, zul je merken dat het systeem netjes en volledig de stroom uitschakelt. Mocht je daarnaast nog diepere problemen vermoeden, dan kun je via Apparaatbeheer controleren of je netwerkkaart of USB-controller toestemming heeft om de computer te wekken of actief te houden.
 
@@ -74,14 +74,14 @@ Pro-tip van de expert: Start na het uitschakelen van Snel opstarten altijd een h
 
 Veelgestelde Vragen
 
-**Q1.** Wordt mijn computer heel erg traag met opstarten als ik Snel opstarten uitschakel?
+Q1. Wordt mijn computer heel erg traag met opstarten als ik Snel opstarten uitschakel?
 
-**A1.** In de praktijk merk je hier op moderne SSD-systemen vrijwel niets van. Het verschil is hooguit een seconde of twee, terwijl je er een ijzersterke stabiliteit en een probleemloos afsluitende pc voor terugkrijgt.
+A1. In de praktijk merk je hier op moderne SSD-systemen vrijwel niets van. Het verschil is hooguit een seconde of twee, terwijl je er een ijzersterke stabiliteit en een probleemloos afsluitende pc voor terugkrijgt.
 
-**Q2.** Waarom staat de optie om Snel opstarten uit te schakelen bij mij niet in het Configuratiescherm?
+Q2. Waarom staat de optie om Snel opstarten uit te schakelen bij mij niet in het Configuratiescherm?
 
-**A2.** Dit komt meestal doordat de Slaapstand (Hibernate) volledig is uitgeschakeld op je machine. Snel opstarten maakt namelijk gebruik van de slaapstand-functionaliteit. Je kunt dit herstellen door via een verhoogde opdrachtprompt de opdracht '**powercfg /hibernate on**' uit te voeren.
+A2. Dit komt meestal doordat de Slaapstand (Hibernate) volledig is uitgeschakeld op je machine. Snel opstarten maakt namelijk gebruik van de slaapstand-functionaliteit. Je kunt dit herstellen door via een verhoogde opdrachtprompt de opdracht 'powercfg /hibernate on' uit te voeren.
 
-**Q3.** Wat moet ik doen als mijn computer na deze stappen alsnog weigert uit te schakelen?
+Q3. Wat moet ik doen als mijn computer na deze stappen alsnog weigert uit te schakelen?
 
-**A3.** Controleer dan of je BIOS/UEFI-firmware up-to-date is en of er specifieke Intel Management Engine of AMD chipset-drivers ontbreken. Veralgemeend verhelpt een update van de moederborddrivers de resterende ACPI-communicatieproblemen met de voeding.
+A3. Controleer dan of je BIOS/UEFI-firmware up-to-date is en of er specifieke Intel Management Engine of AMD chipset-drivers ontbreken. Veralgemeend verhelpt een update van de moederborddrivers de resterende ACPI-communicatieproblemen met de voeding.

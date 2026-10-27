@@ -11,7 +11,7 @@ theme: "Retro Monokai"
 
 ## 1. Nagła awaria w miejscu pracy
 
-Siedzę przy biurku w naszym warszawskim biurowcu na Mokotowie, kończąc diagnozę stacji roboczej dla jednego z grafików. Nagle system łapie całkowitą zwiechę. Ekran zamarza w ułamku sekundy, wentylatory w obudowie wkręcają się na maksymalne obroty, a kursor myszy porusza się z opóźnieniem rodem z komputera sprzed dwóch dekad. Szybko sięgam po skrót **Ctrl + Shift + Esc**, żeby otworzyć**Menedżer zadań**. Okazuje się, że tutejszy program antywirusowy wpadł w pętlę i nagle zjadł dokładnie 100% zasobów procesora, skanując w nieskończoność tymczasowy folder roboczy. 
+Siedzę przy biurku w naszym warszawskim biurowcu na Mokotowie, kończąc diagnozę stacji roboczej dla jednego z grafików. Nagle system łapie całkowitą zwiechę. Ekran zamarza w ułamku sekundy, wentylatory w obudowie wkręcają się na maksymalne obroty, a kursor myszy porusza się z opóźnieniem rodem z komputera sprzed dwóch dekad. Szybko sięgam po skrót Ctrl + Shift + Esc, żeby otworzyćMenedżer zadań. Okazuje się, że tutejszy program antywirusowy wpadł w pętlę i nagle zjadł dokładnie 100% zasobów procesora, skanując w nieskończoność tymczasowy folder roboczy. 
 
 Gdy w końcu udaje mi się ubić ten proces i odzyskać panowanie nad systemem, próbuję usunąć skorumpowany plik dziennika, który wywołał całą awarię. Wyskakuje dobrze znany, irytujący komunikat: *„Nie można ukończyć akcji, ponieważ plik jest otwarty w innym programie”*. Brzmi znajomo? Znam to uczucie frustracji, gdy goni Cię deadline, a Windows uparcie broni dostępu do zwykłego pliku. Jako serwisant sprzętu i inżynier wsparcia IT przetrenowałem ten scenariusz setki razy. Dziś pokaże Ci, jak szybko i bezboleśnie przechytrzyć system i wymusić usunięcie takich upartych plików.
 
@@ -21,7 +21,7 @@ Gdy w końcu udaje mi się ubić ten proces i odzyskać panowanie nad systemem, 
 
 Zanim przejdziemy do klikania, rzućmy okiem na zaplecze techniczne. Dlaczego Windows tak panicznie chroni niektóre pliki? Oto 3 najczęstsze przyczyny tego fenomenu w środowisku biurowym:
 
-1. **Uporczywe procesy w tle i usługi:** Program (często antywirus, indeksator plików Windows Search, czy zawieszona instancja pakietu Office) nadal trzyma uchwyt (*file handle*) do zasobu, nawet jeśli okno aplikacji zostało zamknięte.
+1. Uporczywe procesy w tle i usługi: Program (często antywirus, indeksator plików Windows Search, czy zawieszona instancja pakietu Office) nadal trzyma uchwyt (*file handle*) do zasobu, nawet jeśli okno aplikacji zostało zamknięte.
 
 2. Zawieszone procesy systemowe (Zombie Processes):Aplikacja uległa awarii, ale jej rdzeń nadal wisi w pamięci RAM, blokując dostęp do powiązanych plików tymczasowych lub baz danych.
 
@@ -38,9 +38,9 @@ Gdy standardowe ponowne uruchomienie komputera nie wchodzi w grę, a plik trzeba
 ### Krok 1: Ubicie procesu w Menedżerze zadań
 Najpierw sprawdzamy, co dokładnie trzyma plik.
 
-1. Otwórz**Menedżer zadań**(skrót**Ctrl + Shift + Esc**).
+1. OtwórzMenedżer zadań(skrótCtrl + Shift + Esc).
 
-2. Przejdź do zakładki**Procesy**lubSzczegóły.
+2. Przejdź do zakładkiProcesylubSzczegóły.
 
 3. Jeśli wiesz, jaka aplikacja mogła utworzyć plik, znajdź ją na liście, kliknij prawym przyciskiem myszy i wybierzZakończ zadanie.
 
@@ -48,7 +48,7 @@ Najpierw sprawdzamy, co dokładnie trzyma plik.
 Jeśli nie znasz nazwy procesu blokującego:
 1. Wpisz w menu Start frazę `resmon` i otwórzMonitor zasobów.
 
-2. Przejdź do zakładki**CPU**.
+2. Przejdź do zakładkiCPU.
 
 3. W sekcjiSkojarzone uchwytyw polu wyszukiwania wpisz nazwę pliku lub jego rozszerzenie.
 
@@ -57,7 +57,7 @@ Jeśli nie znasz nazwy procesu blokującego:
 ### Krok 3: Wykorzystanie wiersza poleceń (PowerShell / CMD)
 Dla administratorów i zaawansowanych użytkowników najszybszą metodą jest użycie konsoli w trybie administrator
 
-A. Otwórz**Terminal**lubWiersz poleceńjako administrator i skorzystaj z poniższych komend:
+A. OtwórzTerminallubWiersz poleceńjako administrator i skorzystaj z poniższych komend:
 
 ```cmd
 # Wymuszenie zamknięcia pliku lub sprawdzenie zajętości

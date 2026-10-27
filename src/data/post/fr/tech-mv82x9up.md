@@ -84,14 +84,14 @@ Pour éviter de vous retrouver à poil un vendredi soir :
 
 FAQ Technique
 
-**Q1.** Mon PC émet des bips bizarres (Beep codes) au démarrage, ça un rapport avec la RAM ?
+Q1. Mon PC émet des bips bizarres (Beep codes) au démarrage, ça un rapport avec la RAM ?
 
-**A.** Oh que oui. C'est le BIOS qui communique avec vous. Une séquence spécifique de bips courts (souvent 3 bips continus ou un bip long suivi de deux courts selon les constructeurs de cartes mères comme AMI ou Award) signifie clairement : *"Je ne trouve pas de mémoire valide, je suis aveugle"*. C'est le moment de sortir la gomme.
+A. Oh que oui. C'est le BIOS qui communique avec vous. Une séquence spécifique de bips courts (souvent 3 bips continus ou un bip long suivi de deux courts selon les constructeurs de cartes mères comme AMI ou Award) signifie clairement : *"Je ne trouve pas de mémoire valide, je suis aveugle"*. C'est le moment de sortir la gomme.
 
-**Q2.** Est-ce que je peux mélanger des barrettes de RAM de fréquences différentes si l'une est morte ?
+Q2. Est-ce que je peux mélanger des barrettes de RAM de fréquences différentes si l'une est morte ?
 
-**A.** Techniquement oui, le contrôleur mémoire va s'aligner sur la fréquence et les timings de la barrette la plus lente pour éviter le crash. Mais en environnement professionnel ou de dev, c'est la pire idée du monde : vous allez vous taper des kernel panics aléatoires ou des Blue Screens of Death (BSOD) en plein milieu de compilations lourdes.
+A. Techniquement oui, le contrôleur mémoire va s'aligner sur la fréquence et les timings de la barrette la plus lente pour éviter le crash. Mais en environnement professionnel ou de dev, c'est la pire idée du monde : vous allez vous taper des kernel panics aléatoires ou des Blue Screens of Death (BSOD) en plein milieu de compilations lourdes.
 
-**Q3.** Comment savoir si le slot DIMM de la carte mère est physiquement mort ?
+Q3. Comment savoir si le slot DIMM de la carte mère est physiquement mort ?
 
-**A.** Testez la même barrette de RAM dans chaque slot un par un. Si la machine boote avec la barrette sur le slot 2 et le slot 4, mais refuse catégoriquement de s'allumer (toujours le même écran noir) quand elle est insérée seule sur le slot 1 ou 3, c'est que les pistes du circuit imprimé de la carte mère sont endommagées ou qu'une pin du socket du processeur fait des siennes. Condoléances, il faudra envisager un remplacement de mobo.
+A. Testez la même barrette de RAM dans chaque slot un par un. Si la machine boote avec la barrette sur le slot 2 et le slot 4, mais refuse catégoriquement de s'allumer (toujours le même écran noir) quand elle est insérée seule sur le slot 1 ou 3, c'est que les pistes du circuit imprimé de la carte mère sont endommagées ou qu'une pin du socket du processeur fait des siennes. Condoléances, il faudra envisager un remplacement de mobo.

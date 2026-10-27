@@ -60,7 +60,7 @@ Every time a mechanical switch completes or breaks an electrical circuit, a micr
 
 Furthermore, environmental contaminants and airborne dust settle into the switch housing. When dust particles get trapped between the contacts, they burn during micro-arcing and create a non-conductive microscopic carbon scori
 
-**A.** This insulating layer increases contact resistance, causing dropped inputs or forcing you to mash the key harder to register a stroke.
+A. This insulating layer increases contact resistance, causing dropped inputs or forcing you to mash the key harder to register a stroke.
 
 2. Contact Leaf Splay and Loss of Mechanical Tension
 The movable leaf in a Cherry-MX style switch acts as a miniature cantilever spring. Over intense repetitive use, the physical elasticity of this phosphor bronze or copper-alloy leaf degrades. 

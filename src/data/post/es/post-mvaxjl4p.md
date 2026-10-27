@@ -32,9 +32,9 @@ theme: "Pastel Lavender Tech"
 
 Eran las 8:50 de la mañana en nuestra oficina del distrito 22@ en Barcelon
 
-**A.** A solo diez minutos de una reunión clave con el equipo de producto para revisar el despliegue de la nueva versión de nuestra plataforma, mi ordenador principal decidió hacer una actualización fantasma y quedarse congelado en la pantalla de bienvenid
+A. A solo diez minutos de una reunión clave con el equipo de producto para revisar el despliegue de la nueva versión de nuestra plataforma, mi ordenador principal decidió hacer una actualización fantasma y quedarse congelado en la pantalla de bienvenid
 
-**A.** El ventilador rugía como un motor de avión y el cursor apenas se arrastraba por el escritorio. Los Slack de mis compañeros parpadeaban con avisos de urgencia y yo sudando frío mirando cómo pasaban los segundos. El cuello de botella no era falta de hardware; era que el sistema operativo intentaba cargar al mismo tiempo dieciocho aplicaciones que ni siquiera recordaba haber instalado. 
+A. El ventilador rugía como un motor de avión y el cursor apenas se arrastraba por el escritorio. Los Slack de mis compañeros parpadeaban con avisos de urgencia y yo sudando frío mirando cómo pasaban los segundos. El cuello de botella no era falta de hardware; era que el sistema operativo intentaba cargar al mismo tiempo dieciocho aplicaciones que ni siquiera recordaba haber instalado. 
 
 <div style="border-left: 4px solid #7c3aed; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Resumen exprés para impacientes:</strong> Presiona Ctrl + Shift + Esc para abrir el Administrador de tareas, ve a la pestaña "Inicio", haz clic derecho sobre las aplicaciones que no necesites al encender y selecciona "Deshabilitar". Listo. Tu PC volverá a volar.
@@ -75,7 +75,7 @@ Vamos a solucionar este problema de raíz utilizando las herramientas nativas de
 Paso 1: Abre el Administrador de tareas avanzado
 No busques comandos complejos en la Terminal. Simplemente utiliza el acceso directo universal del teclado presionando las teclas Ctrl + Shift + Esc. Si se abre la ventana compacta, haz clic en la esquina inferior que dice "Más detalles" para ver la vista complet
 
-**A.** ### Paso 2: Navega a la pestaña "Inicio"
+A. ### Paso 2: Navega a la pestaña "Inicio"
 En el menú superior de pestañas (Procesos, Rendimiento, Historial de aplicaciones...), haz clic en la pestaña "Inicio". Verás una lista completa de todas las aplicaciones configuradas para ejecutarse automáticamente cuando inicias sesión en Windows.
 
 Paso 3: Identifica los procesos vampiro y deshabilítalos
@@ -93,7 +93,7 @@ Haz clic con el botón derecho sobre los programas que no necesites tener activo
 ¿Deshabilitar un programa en el inicio significa que ya no podré usarlo?
 Para nad
 
-**A.** Deshabilitar una aplicación en el inicio solo evita que se ejecute automáticamente en segundo plano cada vez que enciendes el ordenador. Podrás seguir abriendo el programa haciendo doble clic en su icono o acceso directo cuando realmente lo necesites, y funcionará exactamente igual.
+A. Deshabilitar una aplicación en el inicio solo evita que se ejecute automáticamente en segundo plano cada vez que enciendes el ordenador. Podrás seguir abriendo el programa haciendo doble clic en su icono o acceso directo cuando realmente lo necesites, y funcionará exactamente igual.
 
 ¿Qué pasa si desactivo algo por error y el ordenador falla?
 No te preocupes, no vas a romper el sistema operativo. Si notas que alguna aplicación dejó de funcionar correctamente o necesitas que se ejecute al inicio, solo tienes que volver a abrir el Administrador de tareas, ir a la pestaña "Inicio", hacer clic derecho sobre la aplicación y seleccionar "Habilitar".

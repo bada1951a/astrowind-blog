@@ -34,7 +34,7 @@ theme: "Midnight Navy Royal"
 <strong>Registro Notturno - Laboratorio Hardware Milano</strong><br>
 Timestamp: 02:42 AM. Chiamata urgente da uno studio di design in zona Porta Nuov
 
-**A.** Windows è andato in crash totale durante il salvataggio di un pacchetto di file vettoriali da 4 GB. Schermata blu fugace e riavvio forzato. Risultato? C: drive completamente saturo a 0 byte liberi, file di progetto corrotti e sistema operativo immobile che rifiuta di aprire qualsiasi applicazione.
+A. Windows è andato in crash totale durante il salvataggio di un pacchetto di file vettoriali da 4 GB. Schermata blu fugace e riavvio forzato. Risultato? C: drive completamente saturo a 0 byte liberi, file di progetto corrotti e sistema operativo immobile che rifiuta di aprire qualsiasi applicazione.
 </div>
 
 Quante volte vi è capitato di guardare l'icona del vostro disco principale e vederla colorata di un rosso allarmante? Quando lo spazio sul disco C si riduce a zero, Windows va letteralmente in tilt. Non riesce a creare i file di paginazione (*pagefile.sys*), non può gestire la memoria virtuale e va in crash continuo. 
@@ -53,19 +53,19 @@ Prima di mettere mano al sistema, capiamo cosa sta intasando la nostra unità pr
 
 2. Punti di ripristino e copie Shadow (VSS): Windows crea autonomamente backup di sicurezza del sistem
 
-**A.** Se non vengono regolati, occupano una fetta enorme del disco C, strozzando letteralmente l'archiviazione disponibile.
+A. Se non vengono regolati, occupano una fetta enorme del disco C, strozzando letteralmente l'archiviazione disponibile.
 
 3. Cartella Download dimenticat
 
-**A.** Può sembrare banale, ma centinaia di utenti accumulano file ISO, archivi ZIP enormi e installativi nella cartella Download senza mai svuotarl
+A. Può sembrare banale, ma centinaia di utenti accumulano file ISO, archivi ZIP enormi e installativi nella cartella Download senza mai svuotarl
 
-**A.** ---
+A. ---
 
 Procedura passo-passo per la pulizia profonda
 
 Mettiamoci all'oper
 
-**A.** Segui questa sequenza esatta usando gli strumenti nativi di Windows. Niente software di terze parti sospetti o shareware che promettono miracoli e installano adware.
+A. Segui questa sequenza esatta usando gli strumenti nativi di Windows. Niente software di terze parti sospetti o shareware che promettono miracoli e installano adware.
 
 Passo 1: Sfruttare la Pulizia Disco avanzata
 Non fermarti alla pulizia superficiale. Dobbiamo agire come amministratori:
@@ -94,7 +94,7 @@ Se hai ancora bisogno di spazio vitale e usi un SSD veloce, puoi disattivare l'i
 <strong>Consiglio del Tecnico</strong><br>
 Evita assolutamente di scaricare programmi "Cleaner" gratuiti trovati online che promettono di velocizzare il PC con un click. Molto spesso fanno più danni che altro, cancellando chiavi di registro essenziali o inserendo pubblicità invasiv
 
-**A.** Gli strumenti integrati in Windows, se usati con criterio, sono più che sufficienti.
+A. Gli strumenti integrati in Windows, se usati con criterio, sono più che sufficienti.
 </div>
 
 ---
@@ -105,12 +105,12 @@ Domande Frequenti (FAQ)
 
 Sì, ma attenzione: la cartella *Windows.old* contiene i file della tua precedente versione o installazione di Windows. Se il sistema attuale è stabile e non hai bisogno di effettuare un rollback (tornare indietro alla versione precedente del sistema operativo), puoi eliminarla tranquillamente tramite la Pulizia disco per recuperare decine di gigabyte.
 
-**Q.** Cosa faccio se un file temporaneo si rifiuta di essere cancellato?
+Q. Cosa faccio se un file temporaneo si rifiuta di essere cancellato?
 
-**A.** Significa che c'è un processo in background o un'applicazione attiva che lo sta utilizzando in quel momento. ApriGestione attività(`Ctrl + Shift + Esc`), individua il programma sospetto, chiudilo forzatamente e riprova a cancellare il file.
+A. Significa che c'è un processo in background o un'applicazione attiva che lo sta utilizzando in quel momento. ApriGestione attività(`Ctrl + Shift + Esc`), individua il programma sospetto, chiudilo forzatamente e riprova a cancellare il file.
 
 3. Quanto spazio libero devo lasciare sempre sul disco C?
 
 Come regola generale nel mio laboratorio, raccomando di mantenere *sempre* almeno il 15-20% della capacità totale dell'SSD o dell'HDD liber
 
-**A.** Questo spazio serve a Windows per gestire la deframmentazione dinamica, il file di paging e l'usura delle celle di memoria (wear leveling) nel caso degli SSD.
+A. Questo spazio serve a Windows per gestire la deframmentazione dinamica, il file di paging e l'usura delle celle di memoria (wear leveling) nel caso degli SSD.

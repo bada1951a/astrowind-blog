@@ -92,11 +92,11 @@ Na een harde reset durft Windows nog wel eens de standaard audio-output te verge
 
 Veelgestelde Vragen (FAQ)
 
-**Q1.** Mijn geluid werkt na deze stappen nog steeds niet en ik zie helemaal geen audioapparaten meer staan in Apparaatbeheer. Wat nu?
+Q1. Mijn geluid werkt na deze stappen nog steeds niet en ik zie helemaal geen audioapparaten meer staan in Apparaatbeheer. Wat nu?
 *Dit wijst er vaak op dat de audiocontroller in het BIOS/UEFI is uitgeschakeld door de crash, of dat er sprake is van een hardnekkig hardwareconflict. Herstart je computer, druk herhaaldelijk op `F2` of `Del` om in het BIOS te komen, controleer of 'HD Audio Controller' op [Enabled] staat, en sla de instellingen op.*
 
-**Q2.** Kan ik een herstelpunt gebruiken als de audiodriver definitief stuk is gegaan door de update of BSOD?
+Q2. Kan ik een herstelpunt gebruiken als de audiodriver definitief stuk is gegaan door de update of BSOD?
 *Zeker weten. Als je zeker weet dat een corrupte update of driver-conflict de boosdoener is, open dan het [Configuratiescherm], zoek op 'Herstel' en kies [Systeemherstel openen]. Selecteer een herstelpunt van vóór de crash. Je persoonlijke bestanden blijven veilig, maar je systeeminstellingen en drivers worden teruggezet.*
 
-**Q3.** Mijn Bluetooth-hooftelefoon geeft geen geluid meer na de crash, hoewel mijn bedrade oortjes wel werken.
+Q3. Mijn Bluetooth-hooftelefoon geeft geen geluid meer na de crash, hoewel mijn bedrade oortjes wel werken.
 *Bluetooth-stacks durven na een harde crash wel eens vast te lopen in de achtergrond. Ga naar [Instellingen] > [Bluetooth en apparaten], zet Bluetooth volledig uit en na 10 seconden weer aan. Verwijder eventueel het apparaat via [Apparaten verwijderen] en koppel je koptelefoon opnieuw via de koppelingsmodus.*

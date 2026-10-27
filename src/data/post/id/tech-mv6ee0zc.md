@@ -46,16 +46,16 @@ Panduan ini saya susun berdasarkan protokol pemeliharaan perangkat keras mandiri
 
 Sebelum menyemprotkan cairan kimia atau membongkar perangkat, Anda wajib memahami apa yang sebenarnya terjadi di balik pelat muka (*faceplate*) keyboard And
 
-**A.** Masalah input pada switch mekanikal umumnya terbagi ke dalam tiga faktor utam
+A. Masalah input pada switch mekanikal umumnya terbagi ke dalam tiga faktor utam
 
-**A.** *
+A. *
 
-**A.** Oksidasi dan Penumpukan Debu Mikro pada Contact Leaf
+A. Oksidasi dan Penumpukan Debu Mikro pada Contact Leaf
 Switch mekanikal bekerja menggunakan dua bilah logam tembaga lentur (*metal contact leaf*) di bagian dalam *housing*. Saat tombol ditekan, stem plastik akan mendorong salah satu bilah untuk bersentuhan dengan bilah pasangannya guna menutup sirkuit dan mengirim sinyal elektrik ke *controller*. 
 
 Seiring waktu, udara lembap dan partikel debu halus menyusup melalui celah stem. Gesekan terus-menerus antara kedua bilah kontak menghasilkan serpihan mikroskopis yang, bersamaan dengan kelembapan, membentuk lapisan oksidasi tipis non-konduktif. Hasilny
 
-**A.** * Jika arus terhambat total, switch mengalami miss-click (tombol ditekan tapi tidak ada input di layar).
+A. * Jika arus terhambat total, switch mengalami miss-click (tombol ditekan tapi tidak ada input di layar).
 * Jika arus tersendat-sendat dalam hitungan milidetik, mikrokontroler membacanya sebagai penekanan berulang kali, memicu chattering / double-input.
 
 B. Kegagalan Toleransi Debounce Filter pada Firmware
@@ -64,9 +64,9 @@ Setiap mikrokontroler keyboard memiliki algoritma bawaan bernama *debounce delay
 C. Retak Dingin Solderan (Cold Solder Joint) atau Pelumas Berlebih (Over-lubing)
 Jika Anda menggunakan keyboard custom yang dilumasi secara manual (*factory lubed* atau *hand lubed*), penggunaan gemuk (*grease*) sintetis seperti Krytox yang berlebihan sering kali merembes ke titik temu bilah kontak tembag
 
-**A.** Karakter pelumas yang bersifat isolator listrik ini memutus aliran sinyal. Selain itu, pada keyboard yang sering dipukul keras atau jatuh, titik solderan kaki switch ke PCB dapat mengalami keretakan mikro (*hairline crack*), menyebabkan input terputus-putus tergantung sudut tekanan jari And
+A. Karakter pelumas yang bersifat isolator listrik ini memutus aliran sinyal. Selain itu, pada keyboard yang sering dipukul keras atau jatuh, titik solderan kaki switch ke PCB dapat mengalami keretakan mikro (*hairline crack*), menyebabkan input terputus-putus tergantung sudut tekanan jari And
 
-**A.** ---
+A. ---
 ![Tech Diagnostics](https://images.unsplash.com/photo-1516321318423-f06f85e504b3? auto=format&fit=crop&w=1000&h=550&q=80)
 
 2. Prosedur Diagnostik Sistem Sebelum Tindakan Fisik
@@ -136,7 +136,7 @@ Jika keyboard Anda menggunakan switch tersolder (*soldered board*) dan Anda tida
 
 5. Segera tekan dan lepas stem tombol tersebut secara berulang-ulang dengan cepat (sebanyak 40–60 kali). Tindakan mekanis ini memungkinkan cairan meluruhkan oksidasi pada pelat tembaga yang saling bergesekan.
 
-**Q6.** Miringkan keyboard ke arah bawah di atas kain microfiber atau tisu tebal agar sisa pelarut mengalir keluar bersama kotoran terlarut.
+Q6. Miringkan keyboard ke arah bawah di atas kain microfiber atau tisu tebal agar sisa pelarut mengalir keluar bersama kotoran terlarut.
 
 Tahap 4: Alternatif untuk Keyboard Hot-Swap
 Jika keyboard Anda bertipe Hot-Swap (switch bisa dicabut):
@@ -155,7 +155,7 @@ Meskipun contact cleaner berlabel cepat kering (*fast drying*), cairan yang terp
 - Jangan mengeringkannya menggunakan pengering rambut (*hair dryer*) bersuhu panas tinggi karena dapat memuai dan merusak toleransi plastik stem.
 - Hubungkan kembali ke komputer dan buka aplikasi pengujian keyboard. Lakukan pengetikan cepat untuk memastikan gejala chattering telah hilang sepenuhny
 
-**A.** ---
+A. ---
 
 4. Peringatan Teknisi: Batasan Tindakan dan Pencegahan Bahaya
 
@@ -165,7 +165,7 @@ Meskipun contact cleaner berlabel cepat kering (*fast drying*), cairan yang terp
 
 Sebagai teknisi, saya harus menegaskan beberapa batasan teknis yang tidak boleh dilanggar demi keselamatan sirkuit elektronik And
 
-**A.** * Bahaya Arus Pendek (Short Circuit): Meskipun cairan berstatus non-konduktif, beberapa formula pelarut dapat menghantarkan listrik mikro sesaat saat bercampur dengan partikel debu basah di papan sirkuit. Jangan pernah menyemprotkan cairan saat kabel USB masih menancap ke PC atau saat baterai lithium masih terhubung.
+A. * Bahaya Arus Pendek (Short Circuit): Meskipun cairan berstatus non-konduktif, beberapa formula pelarut dapat menghantarkan listrik mikro sesaat saat bercampur dengan partikel debu basah di papan sirkuit. Jangan pernah menyemprotkan cairan saat kabel USB masih menancap ke PC atau saat baterai lithium masih terhubung.
 * Kerusakan Bantalan Hot-Swap (Socket Popping): Saat mengembalikan switch pada keyboard hot-swap, pastikan pin tembaga di bawah switch benar-benar lurus. Mendorong switch dengan pin bengkok dapat menjebol *hot-swap socket* dari PCB, yang membutuhkan perbaikan jalur jumper rumit.
 * Kelelahan Mekanis Permanen: Jika metode contact cleaner telah dicoba sebanyak dua kali namun chattering tetap muncul setelah beberapa hari, bilah tembaga di dalam switch telah mengalami deformasi plastis atau kehilangan elastisitas pegas. Pada titik ini, pembersihan kimia tidak akan membantu; switch tersebut wajib diganti secara fisik (*desolder* atau cabut modul).
 
@@ -176,20 +176,20 @@ Sebagai teknisi, saya harus menegaskan beberapa batasan teknis yang tidak boleh 
 <div style="background-color: #fdfcfb; border-left: 4px solid #a16207; padding: 8px 16px; margin: 10px 0 20px 0; font-size: 0.92rem; color: #78350f; font-weight: 500;">
 💡 <b>FA
 
-**Q.** </b> Rangkuman atas pertanyaan yang paling sering diajukan saat perbaikan mandiri switch keyboard mekanikal.
+Q. </b> Rangkuman atas pertanyaan yang paling sering diajukan saat perbaikan mandiri switch keyboard mekanikal.
 </div>
 
-**Q1.** Bisakah saya menggunakan Isopropyl Alcohol (IPA) 99% sebagai pengganti contact cleaner kaleng?
+Q1. Bisakah saya menggunakan Isopropyl Alcohol (IPA) 99% sebagai pengganti contact cleaner kaleng?
 Bisa, tetapi dengan catatan teknis. Isopropil alkohol dengan kemurnian 99% murni aman untuk elektronik dan tidak meninggalkan residu air. Namun, IPA tidak memiliki tekanan gas semprot (*pressurized jet*) seperti kaleng aerosol contact cleaner. Anda harus meneteskannya secara hati-hati menggunakan pipet mikro ke celah stem, lalu menekan tombol berulang kali. Hindari IPA dengan kadar di bawah 90% karena kandungan airnya dapat mengendap di dasar housing switch dan memicu karat pada spring/per baj
 
-**A.** ###
+A. ###
 
-**Q2.** Apakah penyemprotan contact cleaner akan melunturkan pelumas bawaan (lube) pada switch?
+Q2. Apakah penyemprotan contact cleaner akan melunturkan pelumas bawaan (lube) pada switch?
 Ya, tentu saj
 
-**A.** Contact cleaner diformulasikan secara kimiawi untuk melarutkan oli, gemuk (*grease*), dan minyak. Jika keyboard Anda sebelumnya telah di-*lube* menggunakan cairan seperti Krytox 205g0, semprotan ini akan melunturkan lapisan pelumas di area stem dan rail. Switch Anda mungkin akan terasa sedikit lebih berpasir (*scratchy*) setelah kering. Untuk mengatasinya, Anda disarankan melumasi ulang switch menggunakan pelumas switch khusus secara presisi setelah proses perbaikan selesai.
+A. Contact cleaner diformulasikan secara kimiawi untuk melarutkan oli, gemuk (*grease*), dan minyak. Jika keyboard Anda sebelumnya telah di-*lube* menggunakan cairan seperti Krytox 205g0, semprotan ini akan melunturkan lapisan pelumas di area stem dan rail. Switch Anda mungkin akan terasa sedikit lebih berpasir (*scratchy*) setelah kering. Untuk mengatasinya, Anda disarankan melumasi ulang switch menggunakan pelumas switch khusus secara presisi setelah proses perbaikan selesai.
 
-**Q3.** Mengapa tombol tetap mengetik ganda (chattering) meskipun switch baru sudah dipasang pada board hot-swap?
+Q3. Mengapa tombol tetap mengetik ganda (chattering) meskipun switch baru sudah dipasang pada board hot-swap?
 Jika switch baru sudah dipasang namun chattering tetap terjadi pada titik tombol yang sama, masalahnya berada di tingkat sirkuit PCB. Penyebab paling umum adalah:
 
 1. Retakan solder pada kaki soket hotswap di sisi bawah PCB, membuat arus mikro melompat-lompat akibat getaran ketikan.

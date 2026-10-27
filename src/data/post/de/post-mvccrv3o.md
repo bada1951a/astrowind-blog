@@ -32,7 +32,7 @@ theme: "Nordic Clean Ice"
 
 Es war exakt 21:45 Uhr an einem Donnerstagabend in unserem Berliner Tech-Hub im Prenzlauer Berg. Wir standen kurz vor dem finalen Rollout unserer neuen Microservices-Infrastruktur, als auf dem Haupt-Build-Server plötzlich der berüchtigte blaue Bildschirm flackerte: STOP 0x0000000
 
-**A.** IRQL_NOT_LESS_OR_EQUAL. 
+A. IRQL_NOT_LESS_OR_EQUAL. 
 
 Keine Vorwarnung, kein sanftes Herunterfahren, einfach harter Kernel-Absturz. Der Release-Termin am nächsten Morgen stand auf dem Spiel, und das gesamte Team hielt den Atem an. 
 
@@ -126,16 +126,16 @@ Vorsicht bei automatischen "Treiber-Update-Tools" aus dem Internet! Solche Softw
 ---
 ## 5. Häufig gestellte Fragen (FAQ)
 
-**Q.** Kann ich den PC im abgesicherten Modus starten, wenn der Bluescreen sofort beim Hochfahren auftritt?
+Q. Kann ich den PC im abgesicherten Modus starten, wenn der Bluescreen sofort beim Hochfahren auftritt?
 
-**A.** J
+A. J
 
-**A.** Schalten Sie den PC während des Bootvorgangs zweimal hintereinander hart aus (Netzstecker ziehen oder Powertaste gedrückt halten). Beim dritten Mal startet die automatische Windows-Reparaturumgebung. Navigieren Sie dort zu *Problembehandlung > Erweiterte Optionen > Startup Settings (Starteinstellungen)* und wählen Sie Neustart. Nach dem Neustart drücken Sie F4 oder 4 für den abgesicherten Modus.
+A. Schalten Sie den PC während des Bootvorgangs zweimal hintereinander hart aus (Netzstecker ziehen oder Powertaste gedrückt halten). Beim dritten Mal startet die automatische Windows-Reparaturumgebung. Navigieren Sie dort zu *Problembehandlung > Erweiterte Optionen > Startup Settings (Starteinstellungen)* und wählen Sie Neustart. Nach dem Neustart drücken Sie F4 oder 4 für den abgesicherten Modus.
 
-**Q.** Woran erkenne ich, welcher Treiber den Fehler exakt verursacht hat?
+Q. Woran erkenne ich, welcher Treiber den Fehler exakt verursacht hat?
 
-**A.** Nutzen Sie das kostenlose Tool *BlueScreenView* von NirSoft. Es liest die nach dem Absturz erstellten Minidump-Dateien (im Ordner `C:\Windows\Minidump`) aus und zeigt Ihnen direkt den Namen der fehlerhaften Datei an (z. B. `ntoskrnl.exe` oder spezifische `.sys`-Treiberdateien).
+A. Nutzen Sie das kostenlose Tool *BlueScreenView* von NirSoft. Es liest die nach dem Absturz erstellten Minidump-Dateien (im Ordner `C:\Windows\Minidump`) aus und zeigt Ihnen direkt den Namen der fehlerhaften Datei an (z. B. `ntoskrnl.exe` oder spezifische `.sys`-Treiberdateien).
 
-**Q.** Was tun, wenn weder RAM-Test noch Treiber-Rollback helfen?
+Q. Was tun, wenn weder RAM-Test noch Treiber-Rollback helfen?
 
-**A.** Wenn die Software-Ebene sauber ist und der RAM getestet wurde, liegt es oft an der BIOS/UEFI-Version. Ein BIOS-Update oder das Zurücksetzen der UEFI-Einstellungen auf die Werksempfehlungen (insbesondere das Deaktivieren von aggressivem RAM-Overclocking/XMP) löst das Problem in hartnäckigen Fällen.
+A. Wenn die Software-Ebene sauber ist und der RAM getestet wurde, liegt es oft an der BIOS/UEFI-Version. Ein BIOS-Update oder das Zurücksetzen der UEFI-Einstellungen auf die Werksempfehlungen (insbesondere das Deaktivieren von aggressivem RAM-Overclocking/XMP) löst das Problem in hartnäckigen Fällen.

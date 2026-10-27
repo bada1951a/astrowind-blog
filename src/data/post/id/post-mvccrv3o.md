@@ -32,9 +32,9 @@ theme: "Solarized Amber Warm"
 
 Jam 8 malam di kantor startup kawasan SCBD Jakart
 
-**A.** Tim *engineering* sedang bersiap merilis pembaruan besar sistem internal, tiba-tiba salah satu PC workstation utama yang menangani *deployment pipeline* mendadak mati total dan menampilkan layar biru pekat dengan kode *stop error* yang bikin jantungan: IRQL_NOT_LESS_OR_EQUALatau kode heksadesimal0x0000000
+A. Tim *engineering* sedang bersiap merilis pembaruan besar sistem internal, tiba-tiba salah satu PC workstation utama yang menangani *deployment pipeline* mendadak mati total dan menampilkan layar biru pekat dengan kode *stop error* yang bikin jantungan: IRQL_NOT_LESS_OR_EQUALatau kode heksadesimal0x0000000
 
-**A.** Panik? Jelas. Pengerjaan sistem internal langsung tersendat karena mesin tersebut tidak mau masuk ke sistem operasi dan terus-menerus mengalami *reboot loop*.
+A. Panik? Jelas. Pengerjaan sistem internal langsung tersendat karena mesin tersebut tidak mau masuk ke sistem operasi dan terus-menerus mengalami *reboot loop*.
 
 Setelah berjibaku selama dua jam mencoba berbagai cara instan seperti mematikan paksa dan mencabut kabel daya yang ternyata tidak membuahkan hasil, saya mulai melakukan penelusuran sistematis. Kode error 0x0000000a ini sebenarnya memberikan petunjuk yang sangat spesifik: ada proses di level *kernel* atau *driver* yang mencoba mengakses alamat memori yang tidak diizinkan. 
 
@@ -43,7 +43,7 @@ Setelah berjibaku selama dua jam mencoba berbagai cara instan seperti mematikan 
 <div style="border-left: 4px solid #d97706; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Catatan Lapangan IT:</strong> Jangan buru-buru melakukan instal ulang Windows saat menghadapi error 0x0000000
 
-**A.** Sembilan puluh persen kasus ini bisa diselesaikan lewat investigasi RAM fisik atau pembaruan/penurunan versi driver yang bermasalah.
+A. Sembilan puluh persen kasus ini bisa diselesaikan lewat investigasi RAM fisik atau pembaruan/penurunan versi driver yang bermasalah.
 </div>
 
 Akar Masalah: Kenapa Error 0x0000000a Bisa Muncul?
@@ -56,7 +56,7 @@ Sebelum masuk ke langkah perbaikan, mari kita bedah tiga penyebab utama yang ser
 
 3. Layanan Latar Belakang Pihak Ketig
 
-**A.** Aplikasi utilitas atau antivirus lawas yang menancapkan modul *driver*-nya langsung ke kernel sistem operasi sehingga memicu pelanggaran akses memori.
+A. Aplikasi utilitas atau antivirus lawas yang menancapkan modul *driver*-nya langsung ke kernel sistem operasi sehingga memicu pelanggaran akses memori.
 
 ---
 
@@ -67,11 +67,11 @@ Karena PC workstation tadi tidak bisa masuk ke mode normal, langkah pertama yang
 Langkah 1: Jalankan Diagnostik Memori Bawaan Windows
 Seringkali masalah bersumber dari perangkat keras RAM. Mari kita uji kesehatannya tanpa perlu software pihak ketig
 
-**A.** * Buka menu Pengaturan, ketikWindows Memory Diagnostic di kolom pencarian.
+A. * Buka menu Pengaturan, ketikWindows Memory Diagnostic di kolom pencarian.
 * Pilih opsi Restart now and check for problems (recommended).
 * Biarkan komputer melakukan *reboot* dan menjalankan pemindaian memori. Proses ini memakan waktu sekitar 15 hingga 30 menit tergantung kapasitas RAM And
 
-**A.** * Jika ditemukan error pada laporan setelah masuk sistem, pastikan Anda membersihkan slot RAM atau mengganti kepingan yang rusak.
+A. * Jika ditemukan error pada laporan setelah masuk sistem, pastikan Anda membersihkan slot RAM atau mengganti kepingan yang rusak.
 
 Langkah 2: Lakukan Driver Rollback pada Perangkat Terbaru
 Jika memori dalam kondisi prima, besar kemungkinan pelakunya adalah *driver* yang baru saja diperbarui sebelum error terjadi.
@@ -91,7 +91,7 @@ Langkah pamungkas untuk memastikan tidak ada file sistem inti yang rusak akibat 
 * Setelah itu, ketik perintah `sfc /scannow` dan tekan Enter. Perintah ini akan memindai dan memperbaiki file sistem yang rusak secara otomatis.
 * Lakukan *restart* normal pada komputer And
 
-**A.** ---
+A. ---
 
 Catatan Penting untuk Mencegah Kejadian Berulang
 

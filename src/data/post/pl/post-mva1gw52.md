@@ -37,7 +37,7 @@ Okazało się, że Windows 11 po ostatniej dużej aktualizacji i intensywnych te
 <div style="border-left: 4px solid #8b5cf6; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Wskazówka ekspert
 
-**A.** </strong> Zanim cokolwiek skasujesz ręcznie z katalogów systemowych, upewnij się, że masz wyłączoną hibernację, jeśli z niej nie korzystasz – komenda <code>powercfg /hibernate off</code> potrafi od ręki uwolnić tyle gigabajtów, ile wynosi Twoja pamięć RAM.
+A. </strong> Zanim cokolwiek skasujesz ręcznie z katalogów systemowych, upewnij się, że masz wyłączoną hibernację, jeśli z niej nie korzystasz – komenda <code>powercfg /hibernate off</code> potrafi od ręki uwolnić tyle gigabajtów, ile wynosi Twoja pamięć RAM.
 </div>
 
 Gdzie ucieka miejsce? Główne źródła problemu na dysku C
@@ -48,11 +48,11 @@ Zanim przejdziemy do klikania, warto zrozumieć, dlaczego Windows 11 tak szybko 
 *   Ukryte pliki Temp i pamięć podręczna aplikacji: Programy takie jak Teams, Slack czy przeglądarki zostawiają gigabajty danych w folderach `AppData`, do których rzadko zaglądamy.
 *   Punkty przywracania systemu (System Restore): Automatyczne snapshotsy potrafią w tle pożreć przydzieloną pulę gigabajtów bez wiedzy użytkownik
 
-**A.** ## Krok po kroku: Jak bezpiecznie odzyskać przestrzeń
+A. ## Krok po kroku: Jak bezpiecznie odzyskać przestrzeń
 
 Nie musisz instalować żadnych podejrzanych programów "optymalizujących", które często przynoszą więcej szkody niż pożytku. Windows 11 ma do tego świetne, wbudowane narzędzi
 
-**A.** ### 1. Użycie funkcji "Czyszczenie pamięci" (Storage Sense)
+A. ### 1. Użycie funkcji "Czyszczenie pamięci" (Storage Sense)
 Wejdź w menu Ustawienia(skrót Windows + I), przejdź do zakładkiSystem, a następniePamięć. 
 - Kliknij na Pliki tymczasowe.
 - System chwilę skanuje dysk w poszukiwaniu zbędnych danych.
@@ -64,11 +64,11 @@ Wejdź w menu Ustawienia(skrót Windows + I), przejdź do zakładkiSystem, a nas
 2. Ręczne czyszczenie folderu Temp przez okno Uruchom
 Często instalatory programów zostawiają śmieci w folderach użytkownik
 
-**A.** - Wciśnij kombinację klawiszy Windows + R, wpisz `%temp%` i wciśnij Enter.
+A. - Wciśnij kombinację klawiszy Windows + R, wpisz `%temp%` i wciśnij Enter.
 - Zaznacz wszystko (Ctrl + A) i wciśnijShift + Delete (by ominąć Kosz).
 - *Uwag
 
-**A.** Jeśli wyskoczy komunikat, że plik jest aktualnie używany przez inny program, po prostu kliknij "Pomiń" dla tych konkretnych plików.
+A. Jeśli wyskoczy komunikat, że plik jest aktualnie używany przez inny program, po prostu kliknij "Pomiń" dla tych konkretnych plików.
 - Następnie powtórz operację, wpisując w oknie Uruchom zwykłe `temp` (bez procentów) i wyczyść ten folder jako administrator.
 
 3. Oczyszczanie dysku z uprawnieniami administratora
@@ -85,7 +85,7 @@ Często zadawane pytania (FAQ)
 Czy bezpiecznie jest usuwać zawartość folderu `%temp%`?
 Tak, w 100%. Folder ten służy aplikacjom wyłącznie do przechowywania plików roboczych i tymczasowych podczas ich działani
 
-**A.** Jeśli program jest zamknięty, te pliki nie są do niczego potrzebne.
+A. Jeśli program jest zamknięty, te pliki nie są do niczego potrzebne.
 
 Co zrobić, jeśli dysk C znowu zapełni się za kilka dni?
 Najczęstszą przyczynami są rosnąca pamięć podręczna przeglądarki lub pliki pobierane bezpośrednio na pulpit. Warto zmienić domyślną lokalizację folderu Pobrane (Downloads) na dysk D lub E, jeśli taki posiadasz.

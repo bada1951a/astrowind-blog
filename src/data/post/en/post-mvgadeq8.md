@@ -130,14 +130,14 @@ While this command-line trick is a lifesaver for urgent boardroom presentations,
 
 ## 5. Frequently Asked Questions (FAQ)
 
-**Q1.** Will running `slmgr.vbs -rearm` delete my files or wipe my settings?
+Q1. Will running `slmgr.vbs -rearm` delete my files or wipe my settings?
 
-**A.** No. This command only resets the licensing evaluation timer and clears the activation token cache. Your personal files, applications, browser history, and desktop settings remain completely untouched.
+A. No. This command only resets the licensing evaluation timer and clears the activation token cache. Your personal files, applications, browser history, and desktop settings remain completely untouched.
 
-**Q2.** How many times can I use the rearm command?
+Q2. How many times can I use the rearm command?
 
-**A.** By default, Windows allows you to run the rearm command a limited number of times (usually up to 3 to 4 times depending on the specific edition). It is designed as a temporary grace period extension, not a permanent licensing solution.
+A. By default, Windows allows you to run the rearm command a limited number of times (usually up to 3 to 4 times depending on the specific edition). It is designed as a temporary grace period extension, not a permanent licensing solution.
 
-**Q3.** What should I do if the watermark comes back after restarting the computer?
+Q3. What should I do if the watermark comes back after restarting the computer?
 
-**A.** If the watermark returns after a reboot, it means the machine still cannot verify its license with your company's activation server. Connect the laptop to the corporate VPN, open Command Prompt as an administrator, and run `slmgr.vbs /ato` to force an online activation check against your internal KMS host.
+A. If the watermark returns after a reboot, it means the machine still cannot verify its license with your company's activation server. Connect the laptop to the corporate VPN, open Command Prompt as an administrator, and run `slmgr.vbs /ato` to force an online activation check against your internal KMS host.

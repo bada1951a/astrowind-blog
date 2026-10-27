@@ -96,7 +96,7 @@ Manchmal liegt die Ursache tiefer in beschädigten Systemdateien nach einem fehl
 1. Was kann ich tun, wenn sich nicht einmal mehr der Task-Manager öffnen lässt?
 Wenn Tastenkombinationen komplett blockiert sind, hilft meist nur ein erzwungener Neustart über den physischen Power-Knopf Ihres PCs oder Laptops (c
 
-**A.** 5 bis 10 Sekunden gedrückt halten). Danach greifen die oben genannten Schritte in einer sauberen Umgebung.
+A. 5 bis 10 Sekunden gedrückt halten). Danach greifen die oben genannten Schritte in einer sauberen Umgebung.
 
 ![Tech Hardware Guide](https://images.unsplash.com/photo-1593642632823-8f785ba67e45? auto=format&fit=crop&w=1200&h=675&q=85)
 

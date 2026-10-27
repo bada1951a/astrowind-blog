@@ -23,7 +23,7 @@ theme: "Pastel Lavender Tech"
 
 Siedzę przy biurku w naszym warszawskim biurowcu, a na wewnętrznym komunikatorze pali się czerwona lampka za czerwoną. Trwa gorący okres raportowania, a ja mam na ekranie otwartych dokładnie pięć różnych systemów ERP, arkusze kalkulacyjne, panel administracyjny i okno czatu z zirytowanym menedżerem projektu. W tym momencie potrzebuję na szybko zrobić zrzut ekranu fragmentu kodu i błędu, żeby wysłać go do zespołu wsparci
 
-**A. Wciskam **Win + Shift + S, odruchowo czekając na zaciemnienie ekranu i paletę wycinani
+A. Wciskam Win + Shift + S, odruchowo czekając na zaciemnienie ekranu i paletę wycinani
 
 A. I... absolutnie nic. Ekran ani drgnie, żadna ikonka się nie pojawia, a ja zostaję z palcem na klawiaturze i rosnącą frustracją.
 
@@ -44,8 +44,8 @@ A. </strong> Nie trać czasu na ponowne uruchamianie całego komputera za każdy
 Jako serwisant sprzętu i wsparcia IT spotykam się z tym zgłoszeniem przynajmniej kilka razy w tygodniu. Za ten konkretny problem odpowiada najczęściej kilka powtarzalnych czynników systemowych:
 
 * Zawieszenie procesu Ekranu wycinania (Snipping Tool): Aplikacja w tle przestała odpowiadać przez nałożenie się procesów wielozadaniowych.
-* **Wyłączone powiadomienia systemowe:** Windows 11 blokuje wyskakujące okienka wycinania, jeśli włączony jest tryb Skupienia (Focus) lub wyłączono powiadomienia dla aplikacji.
-* **Uszkodzony pakiet aplikacji systemowych:**SkładnikScreen Sketch(Narzędzie wycinanie) uległ korupcji w pamięci podręcznej i wymaga szybkiego zresetowania przezUstawienia.
+* Wyłączone powiadomienia systemowe: Windows 11 blokuje wyskakujące okienka wycinania, jeśli włączony jest tryb Skupienia (Focus) lub wyłączono powiadomienia dla aplikacji.
+* Uszkodzony pakiet aplikacji systemowych:SkładnikScreen Sketch(Narzędzie wycinanie) uległ korupcji w pamięci podręcznej i wymaga szybkiego zresetowania przezUstawienia.
 
 3. Krok po kroku do pełnej sprawności systemu
 
@@ -54,9 +54,9 @@ Nie musimy od razu grzebać w rejestrze ani przeinstalowywać systemu. Przejdźm
 Krok pierwszy: Szybki restart procesu w Menedżerze zadań
 Zacznijmy od oczyszczenia pamięci operacyjnej z zawieszonych instancji.
 
-1. OtwórzMenedżer zadań**, wciskając kombinację**Ctrl + Shift + Esc.
+1. OtwórzMenedżer zadań, wciskając kombinacjęCtrl + Shift + Esc.
 
-2. W zakładce**Procesy**poszukaj pozycji**Narzędzie wycinanie**(lubSnipping Tool).
+2. W zakładceProcesyposzukaj pozycjiNarzędzie wycinanie(lubSnipping Tool).
 
 3. Jeśli tam jest, kliknij na nią prawym przyciskiem myszy i wybierzZadanie końcowe.
 
@@ -65,18 +65,18 @@ Jeśli zamknięcie procesu nie pomogło, musimy zresetować ustawienia samej apl
 
 1. Otwórz menu Start i przejdź doUstawienia(ikonka koła zębatego).
 
-2. Wybierz zakładkę**Aplikacje**, a następnieZainstalowane aplikacje.
+2. Wybierz zakładkęAplikacje, a następnieZainstalowane aplikacje.
 
 3. Wpisz w wyszukiwarkę "Narzędzie wycinanie".
 
 4. Kliknij na trzy kropki obok nazwy aplikacji i wybierzOpcje zaawansowane.
 
-5. Przewiń w dół i kliknij najpierw**Napraw**, a jeśli to nie pomoże, kliknijResetuj(co wyczyści pamięć podręczną aplikacji).
+5. Przewiń w dół i kliknij najpierwNapraw, a jeśli to nie pomoże, kliknijResetuj(co wyczyści pamięć podręczną aplikacji).
 
 Krok trzeci: Weryfikacja powiadomień i klawisza Print Screen
 Często problem wynika z niepoprawnie skonfigurowanych skrótów klawiszowych w systemie.
 
-1. Wróć doUstawienia**, wybierz**Dostępność**, a następnie**Klawiatura.
+1. Wróć doUstawienia, wybierzDostępność, a następnieKlawiatura.
 
 2. Upewnij się, że opcjaUżyj przycisku PrtScn, aby otworzyć wycinanie ekranujest włączon
 

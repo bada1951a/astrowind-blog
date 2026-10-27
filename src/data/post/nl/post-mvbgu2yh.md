@@ -67,7 +67,7 @@ Als je geen taakbalk hebt om Taakbeheer te openen, gebruiken we de ultieme snelt
 
 5. Klik linksboven in Taakbeheer op Bestand>Nieuwe taak uitvoeren (Run new task).
 
-**Q6.** Typ in het venster exact `explorer.exe` en druk op Enter. De taakbalk en je bureaublad laden direct opnieuw.
+Q6. Typ in het venster exact `explorer.exe` en druk op Enter. De taakbalk en je bureaublad laden direct opnieuw.
 
 Stap 2: Het Windows Systeemherstel via Terminal (Als Stap 1 niet helpt)
 Blijft de taakbalk hardnekkig weigeren of crasht hij direct opnieuw? Dan moeten we mogelijke corrupte systeembestanden aanpakken.

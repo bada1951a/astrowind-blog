@@ -96,6 +96,8 @@ Q2. Co zrobić, jeśli opcja szybkiego uruchamiania w ogóle nie pojawia się w 
 
 A2. Oznacza to najczęściej, że funkcja hibernacji została wcześniej całkowicie wyłączona w systemie. Aby ją przywrócić i odblokować opcję szybkiego startu, otwórz wiersz poleceń jako administrator i wpisz komendępowercfg /hibernate on, a następnie odśwież okno Opcji zasilani
 
-A.Q3. Czy ten problem może powrócić po kolejnej aktualizacji systemu Windows?
+A.
+
+Q3. Czy ten problem może powrócić po kolejnej aktualizacji systemu Windows?
 
 A3. Niestety tak. Duże pakiety aktualizacyjne czasami resetują spersonalizowane ustawienia zasilania do wartości domyślnych. Jeśli po kolejnym patchu problem powróci, wystarczy ponownie powtórzyć procedurę wyłączenia szybkiego startu opisaną w tym poradniku.

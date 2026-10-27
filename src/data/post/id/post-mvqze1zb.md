@@ -58,7 +58,7 @@ A. ### Metode 2: Eksekusi Perintah Pembersihan via Command Line atau PowerShell
 
 Jika antarmuka grafis gagal merespons, penggunaan baris perintah dengan hak akses administrator adalah senjata pamungkas yang sangat efektif.
 
-1. Buka menu Start, ketik `cmd`, lalu klik kanan padaCommand Prompt**dan pilih**Run as administrator.
+1. Buka menu Start, ketik `cmd`, lalu klik kanan padaCommand Promptdan pilihRun as administrator.
 2. Gunakan utilitas bawaan `taskkill` untuk memaksa menghentikan proses berdasarkan nama citra (*image name*) dengan mengetikkan perintah berikut di dalam kotak kode:
 ```cmd
 taskkill /f /im EXCEL.EXE
@@ -75,7 +75,7 @@ del /f /q /a "C:\Path\Ke\File\Laporan_Keuangan.xlsx"
 Jika sistem masih melaporkan bahwa file terkunci meskipun aplikasi utama telah ditutup, kita harus melacak proses spesifik yang memegang *handle* file tersebut menggunakan Resource Monitor.
 
 1. Tekan tombol `Win + R` pada keyboard untuk membuka kotak dialog Run, ketik `resmon`, lalu tekan Enter.
-2. Di dalam jendela Resource Monitor, klik pada tab **CPU**.
+2. Di dalam jendela Resource Monitor, klik pada tab CPU.
 3. Pada bagianAssociated Handles, cari kotak input pencarian bertuliskan "Search Handle".
 4. Ketik nama file yang terkunci (misalnya `Laporan_Keuangan.xlsx`) ke dalam kotak pencarian tersebut.
 5. Resource Monitor akan memindai dan menampilkan daftar proses apa saja yang sedang menggunakan file tersebut secara real-time.

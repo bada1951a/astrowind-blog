@@ -15,12 +15,12 @@ Pernahkah Anda berada di situasi paling menegangkan di kantor? Siang itu, tepat 
 
 Panik? Jelas. Query database sedang berjalan di background, proses eksekusi tidak boleh terhenti, tapi file log tersebut harus segera dihapus karena kapasitas SSD utama hampir penuh seratus persen. Mengklik tombol "Try Again" sepuluh kali pun tidak memberikan hasil apa-ap
 
-**A.** Pesan error itu terus saja muncul mengejek di tengah gentingnya deadline laporan yang tinggal hitungan menit.
+A. Pesan error itu terus saja muncul mengejek di tengah gentingnya deadline laporan yang tinggal hitungan menit.
 
 <div style="border-left: 4px solid #14b8a6; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Catatan Teknisi:</strong> Jangan pernah meremehkan file yang terkunci sistem. Memaksa mencabut storage atau merestart paksa server di tengah proses database aktif bisa berakibat fatal pada integritas dat
 
-**A.** Kita butuh trik bedah sistem yang presisi.
+A. Kita butuh trik bedah sistem yang presisi.
 </div>
 
 ![Tech Troubleshooting Guide](/images/tech-photo/system%20(5).png)
@@ -29,13 +29,13 @@ Panik? Jelas. Query database sedang berjalan di background, proses eksekusi tida
 
 Sebelum kita main *force delete*, mari kita bedah dulu kenapa Windows sering rewel dan menolak menghapus sebuah file. Sebagai teknisi infrastruktur IT, akar masalah ini biasanya bersumber dari tiga hal utam
 
-**A.** 1. **Background Process Masih Menggantung:** Aplikasi atau layanan sistem (*services*) tertentu masih membaca, menulis, atau memegang pointer memori ke file tersebut meskipun jendelanya sudah ditutup.
+A. 1. Background Process Masih Menggantung: Aplikasi atau layanan sistem (*services*) tertentu masih membaca, menulis, atau memegang pointer memori ke file tersebut meskipun jendelanya sudah ditutup.
 
-2. **File Explorer yang Macet:** Terkadang proses *explorer.exe* di Windows gagal melepaskan *cache thumbnail* atau preview dari file yang ingin kita hapus, membuat sistem mengira file masih aktif digunakan.
+2. File Explorer yang Macet: Terkadang proses *explorer.exe* di Windows gagal melepaskan *cache thumbnail* atau preview dari file yang ingin kita hapus, membuat sistem mengira file masih aktif digunakan.
 
-3. **Handle oleh Pihak Ketig
+3. Handle oleh Pihak Ketig
 
-**A. Antivirus, tool indexing pencarian, atau aplikasi sync cloud (seperti OneDrive atau Google Drive) sedang melakukan *scanning* real-time pada file tersebut sehingga aksesnya dikunci secara eksklusif oleh sistem operasi.
+A. Antivirus, tool indexing pencarian, atau aplikasi sync cloud (seperti OneDrive atau Google Drive) sedang melakukan *scanning* real-time pada file tersebut sehingga aksesnya dikunci secara eksklusif oleh sistem operasi.
 
 ## 3. Panduan Langkah demi Langkah Penyelesaian Masalah
 
@@ -43,23 +43,23 @@ Berikut adalah tahapan praktis berstandar operasional prosedur (SOP) IT support 
 
 ### Langkah Pertam
 
-**A.** Menghentikan Proses Melalui Task Manager
+A. Menghentikan Proses Melalui Task Manager
 Cara paling aman pertama adalah mematikan akar prosesnya secara manual.
 
-1. Tekan kombinasi tombol **Ctrl + Shift + Esc**untuk membuka**Task Manager**.
+1. Tekan kombinasi tombol Ctrl + Shift + Escuntuk membukaTask Manager.
 
-2. Klik tab**Processes**, lalu cari nama aplikasi atau program yang dicurigai menggunakan file tersebut.
+2. Klik tabProcesses, lalu cari nama aplikasi atau program yang dicurigai menggunakan file tersebut.
 
-3. Klik kanan pada aplikasi tersebut, lalu pilih**End Task**.
+3. Klik kanan pada aplikasi tersebut, lalu pilihEnd Task.
 
-4. Jika tidak ketemu, buka**Resource Monitor**(ketik di menu pencarian Windows), masuk ke tab**CPU**, lalu cari nama file yang terkunci pada bagian**Associated Handles**untuk melihat proses mana yang memegangny
+4. Jika tidak ketemu, bukaResource Monitor(ketik di menu pencarian Windows), masuk ke tabCPU, lalu cari nama file yang terkunci pada bagianAssociated Handlesuntuk melihat proses mana yang memegangny
 
-**A.** ### Langkah Kedu
+A. ### Langkah Kedu
 
-**A.** Memakai Command Prompt (CMD) Mode Administrator
+A. Memakai Command Prompt (CMD) Mode Administrator
 Jika GUI Windows masih menolak, kita gunakan jalur eksekusi berbasis teks yang lebih bertenag
 
-**A.** 1. Klik tombol Start, ketik**cmd**, lalu klik kanan dan pilih**Run as administrator**.
+A. 1. Klik tombol Start, ketikcmd, lalu klik kanan dan pilihRun as administrator.
 
 2. Masuk ke direktori tempat file berada menggunakan perintah `cd`.
 
@@ -73,26 +73,26 @@ del /f /q /a "C:\Path\Ke\File\NamaFile.log"
 
 ### Langkah Ketig
 
-**A.** Masuk ke Safe Mode atau Memanfaatkan Tool Eksternal
-Jika kedua cara di atas masih gagal karena file dikunci oleh sistem kernel yang mendalam, opsi terakhir adalah menggunakan utilitas pihak ketiga yang aman dan ringan seperti **PowerToys File Locksmith**atau**LockHunter**. Cukup klik kanan pada file yang bermasalah, pilih menu *Unlock*, dan pilih *Unlock and Delete*.
+A. Masuk ke Safe Mode atau Memanfaatkan Tool Eksternal
+Jika kedua cara di atas masih gagal karena file dikunci oleh sistem kernel yang mendalam, opsi terakhir adalah menggunakan utilitas pihak ketiga yang aman dan ringan seperti PowerToys File LocksmithatauLockHunter. Cukup klik kanan pada file yang bermasalah, pilih menu *Unlock*, dan pilih *Unlock and Delete*.
 
 ## 4. Tips & Peringatan Penting Teknisi IT
 
 Sebagai praktisi infrastruktur IT senior, ada beberapa kaidah keselamatan hardware dan software yang wajib Anda ingat saat menghadapi masalah ini:
-- **Hindari Hard Reset:** Jangan pernah menekan tombol power fisik di casing atau mencabut kabel power saat file sistem sedang terkunci dan proses tulis sedang berjalan. Risiko *bad sector* pada HDD atau korupsi tabel NTFS pada SSD sangat tinggi.
-- **Perhatikan Hak Akses (Permissions):** Terkadang file tidak bisa dihapus bukan karena dipakai program, tapi karena Anda tidak memiliki hak akses administrator. Selalu pastikan akun Anda memiliki privilege *Full Control* pada folder tersebut lewat tab **Properties > Security**.
--**Backup Sebelum Eksekusi:** Jika file tersebut berada di direktori penting server atau workstation produksi, selalu buat salinan cadangan (*copy-paste* ke folder lain) sebelum Anda mengeksekusi perintah *force delete*.
+- Hindari Hard Reset: Jangan pernah menekan tombol power fisik di casing atau mencabut kabel power saat file sistem sedang terkunci dan proses tulis sedang berjalan. Risiko *bad sector* pada HDD atau korupsi tabel NTFS pada SSD sangat tinggi.
+- Perhatikan Hak Akses (Permissions): Terkadang file tidak bisa dihapus bukan karena dipakai program, tapi karena Anda tidak memiliki hak akses administrator. Selalu pastikan akun Anda memiliki privilege *Full Control* pada folder tersebut lewat tab Properties > Security.
+-Backup Sebelum Eksekusi: Jika file tersebut berada di direktori penting server atau workstation produksi, selalu buat salinan cadangan (*copy-paste* ke folder lain) sebelum Anda mengeksekusi perintah *force delete*.
 
 ## 5. Pertanyaan yang Sering Diajukan (FAQ)
 
-**Q.** Apakah aman menggunakan software pihak ketiga untuk menghapus file yang terkunci?
+Q. Apakah aman menggunakan software pihak ketiga untuk menghapus file yang terkunci?
 
-**A.** Sangat aman asalkan Anda mengunduh tool yang kredibel seperti LockHunter atau Sysinternals Process Explorer resmi dari situs Microsoft. Hindari software sembarangan dari internet yang berisiko menyisipkan adware.
+A. Sangat aman asalkan Anda mengunduh tool yang kredibel seperti LockHunter atau Sysinternals Process Explorer resmi dari situs Microsoft. Hindari software sembarangan dari internet yang berisiko menyisipkan adware.
 
-**Q.** Kenapa pesan "Access Denied" tetap muncul meskipun saya sudah login sebagai Administrator?
+Q. Kenapa pesan "Access Denied" tetap muncul meskipun saya sudah login sebagai Administrator?
 
-**A.** Ini biasanya terjadi karena file tersebut dikuasai oleh sistem bawaan Windows (seperti *TrustedInstaller*). Anda harus mengubah kepemilikan (*ownership*) folder tersebut terlebih dahulu melalui menu *Advanced Security Settings*.
+A. Ini biasanya terjadi karena file tersebut dikuasai oleh sistem bawaan Windows (seperti *TrustedInstaller*). Anda harus mengubah kepemilikan (*ownership*) folder tersebut terlebih dahulu melalui menu *Advanced Security Settings*.
 
-**Q.** Apakah fitur File Locksmith di Microsoft PowerToys efektif untuk mengatasi masalah ini?
+Q. Apakah fitur File Locksmith di Microsoft PowerToys efektif untuk mengatasi masalah ini?
 
-**A.** Sangat efektif. Fitur bawaan resmi dari Microsoft ini langsung menunjukkan proses aplikasi mana yang sedang menahan file tersebut dan memberikan tombol *Terminate process* dalam satu klik mudah.
+A. Sangat efektif. Fitur bawaan resmi dari Microsoft ini langsung menunjukkan proses aplikasi mana yang sedang menahan file tersebut dan memberikan tombol *Terminate process* dalam satu klik mudah.

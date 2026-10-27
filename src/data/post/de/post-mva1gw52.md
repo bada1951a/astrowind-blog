@@ -135,4 +135,4 @@ Das liegt meist an virtuellen Maschinen (Hyper-V, WSL2), Docker-Images oder gro�
 Ist es sicher, den Inhalt von `%temp%` komplett zu löschen?
 J
 
-**A.** Alle Dateien in diesem Ordner sind rein temporärer Natur. Programme, die aktuell laufen, sperren ihre eigenen Temp-Dateien, sodass Windows diese ohnehin schützt und das Löschen verweigert.
+A. Alle Dateien in diesem Ordner sind rein temporärer Natur. Programme, die aktuell laufen, sperren ihre eigenen Temp-Dateien, sodass Windows diese ohnehin schützt und das Löschen verweigert.

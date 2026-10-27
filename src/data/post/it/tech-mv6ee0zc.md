@@ -55,7 +55,7 @@ Un interruttore meccanico (switch) basa il proprio funzionamento sulla chiusura 
 1. 1 Ossidazione superficiale e accumulo di particolato dielettrico
 L'aria ambiente, l'umidità e la deposizione di micro-polveri all'interno dell'alloggiamento (*housing*) creano una patina isolante sulle piazzole di contatto dorate o argentate della lamell
 
-**A.** Quando lo stelo (*stem*) spinge la lamella mobile, la resistenza di transizione sale da frazioni di ohm a diversi chilo-ohm. Il controller a bordo tastiera rileva una tensione fluttuante che non supera la soglia di trigger logico basso/alto, determinando la perdita totale del carattere premuto.
+A. Quando lo stelo (*stem*) spinge la lamella mobile, la resistenza di transizione sale da frazioni di ohm a diversi chilo-ohm. Il controller a bordo tastiera rileva una tensione fluttuante che non supera la soglia di trigger logico basso/alto, determinando la perdita totale del carattere premuto.
 
 1. 2 Snervamento meccanico e fallimento dell'isteresi (Key Chattering)
 Tutti gli interruttori fisici soffrono fisiologicamente di rimbalzo (*contact bounce*): all'impatto, la lamella vibra per 1-5 millisecondi prima di stabilizzarsi. Normalmente, il microcontrollore filtra questo disturbo tramite un algoritmo software di *debounce*. Tuttavia, quando la lamina metallica subisce una micro-deformazione plastica o microscopici archi elettrici creano imperfezioni sulla superficie di contatto, il tempo di oscillazione supera la finestra temporale di sicurezza del firmware (ad esempio 5 ms). Di conseguenza, un'unica pressione meccanica viene interpretata dal sistema come due, tre o più impulsi distinti.
@@ -76,7 +76,7 @@ Prima di procedere con solventi chimici o saldatori, è obbligatorio isolare il 
                  ▼
 [Ispezione Meccanic
 
-**A.** Rimozione Keycap & Switch]
+A. Rimozione Keycap & Switch]
                  │
                  ▼
 [Trattamento Chimico: Disossidante Contatti a Secco]
@@ -84,7 +84,7 @@ Prima di procedere con solventi chimici o saldatori, è obbligatorio isolare il 
                  ▼
 [Verifica Elettric
 
-**A.** Test di Debounce & Continuità]
+A. Test di Debounce & Continuità]
 ```
 
 Passo 1: Diagnostica Logica ed Esclusione del Driver Host
@@ -100,7 +100,7 @@ Prima di intervenire fisicamente, verifichiamo che il sottosistema USB di Window
 
 5. Apri il Prompt dei comandi con privilegi elevati (Esegui come amministratore) per verificare che l'input non sia alterato da ritardi di buffer di sistem
 
-**A.** ```cmd
+A. ```cmd
 reg query "HKCU\Control Panel\Keyboard" /v KeyboardSpeed
 reg query "HKCU\Control Panel\Keyboard" /v KeyboardDelay
 ```
@@ -114,13 +114,13 @@ Passo 2: Isolamento Fisico del Tasto Compromesso
 
 1. Scollega fisicamente il cavo USB dalla macchin
 
-**A.** Lavorare sotto tensione su un circuito a 5V con liquidi volatili può causare cortocircuiti sul controller logico.
+A. Lavorare sotto tensione su un circuito a 5V con liquidi volatili può causare cortocircuiti sul controller logico.
 
 2. Utilizzando un estrattore per copritasti ad anello (*wire keycap puller*), estrai il tasto interessato tirando perpendicolarmente verso l'alto per non rompere la crociera dello stelo.
 
 3. Rimuovi la polvere perimetrale con un soffiatore manuale o una bomboletta di aria compressa, tenendo l'ugello ad almeno 10 cm di distanza per evitare condensa criogenic
 
-**A.** ---
+A. ---
 
 Passo 3: Trattamento Mirato con Disossidante per Contatti Elettrici
 Il prodotto da utilizzare deve essere rigorosamente un disossidante per contatti elettronici a secco, a rapida evaporazione e a residuo zero (es. *WD-40 Specialist Detergente Contatti*, *Kontakt Chemie 60/61*, o *CRC QD Electronic Cleaner*).
@@ -128,7 +128,7 @@ Il prodotto da utilizzare deve essere rigorosamente un disossidante per contatti
 <div style="border-left: 4px solid #dc2626; padding: 12px 16px; margin: 20px 0; background-color: rgba(220, 38, 38, 0.05); border-radius: 4px;">
   <strong>ATTENZIONE CRITIC
 
-**A.** </strong> Non usare MAI il classico WD-40 multifunzione o spray sbloccanti oleosi. Contengono oli minerali idrocarburici conduttivi che distruggono la plastica (POM/policarbonato) degli switch e attraggono polvere, trasformando il contatto in una pasta isolante permanente.
+A. </strong> Non usare MAI il classico WD-40 multifunzione o spray sbloccanti oleosi. Contengono oli minerali idrocarburici conduttivi che distruggono la plastica (POM/policarbonato) degli switch e attraggono polvere, trasformando il contatto in una pasta isolante permanente.
 </div>
 
 1. Inserisci la cannuccia di precisione sull'erogatore dello spray.
@@ -137,15 +137,15 @@ Il prodotto da utilizzare deve essere rigorosamente un disossidante per contatti
 
 3. Eroga un impulso brevissimo (frazione di secondo, uno "sbuffo"). Il liquido entrerà per capillarità nell'alloggiamento della lamell
 
-**A.** 4. Ciclo di azionamento meccanico immediato: Premi e rilascia rapidamente lo stelo per almeno 40-50 volte consecutive. Questa azione meccanica favorisce l'azione solvente, permettendo alla lamella di sfregare contro la piazzola e rimuovere le tracce di ossido o sporco.
+A. 4. Ciclo di azionamento meccanico immediato: Premi e rilascia rapidamente lo stelo per almeno 40-50 volte consecutive. Questa azione meccanica favorisce l'azione solvente, permettendo alla lamella di sfregare contro la piazzola e rimuovere le tracce di ossido o sporco.
 
 5. Capovolgi la tastiera su un panno assorbente per favorire il deflusso di solvente in eccesso.
 
-**Q6.** Fase di asciugatura passiv
+Q6. Fase di asciugatura passiv
 
-**A.** Attendi non meno di 15-20 minuti prima di alimentare nuovamente la periferic
+A. Attendi non meno di 15-20 minuti prima di alimentare nuovamente la periferic
 
-**A.** Il solvente deve evaporare completamente.
+A. Il solvente deve evaporare completamente.
 
 ```
         [Cannuccia spray]
@@ -172,11 +172,11 @@ Se il disossidante non risolve l'anomalia, il problema risiede nell'accoppiament
 
 4. Se la tastiera è saldata e lo switch continua a generare chattering persistente, procedi alla dissaldatur
 
-**A.** - Riscalda la piazzola a 330°C con stazione saldante.
+A. - Riscalda la piazzola a 330°C con stazione saldante.
    - Aspira lo stagno vecchio con pompetta a vuoto o treccia dissaldante.
    - Sostituisci l'interruttore con uno nuovo dello stesso tipo (es. Gateron/Cherry MX) e risalda con lega Sn99.3Cu0.7 e flussante a base di colofoni
 
-**A.** ---
+A. ---
 
 3. Avvertenze Tecniche e Prevenzione Guasti
 
@@ -184,7 +184,7 @@ Operare sulla componentistica di input richiede cautela per non convertire un se
 
 * Scariche Elettrostatiche (ESD): Quando smonti il telaio metallico o tocchi direttamente il PCB, indossa sempre un bracciale antistatico collegato a terr
 
-**A.** I microcontrollori moderni (spesso basati su architetture ARM Cortex-M o chip ATmega32U4) hanno linee dati USB sprovviste di protezione TVS avanzata su tastiere economiche. Una scarica elettrostatica sulle piste esposte può bruciare all'istante una colonna dell'intera matrice di scansione.
+A. I microcontrollori moderni (spesso basati su architetture ARM Cortex-M o chip ATmega32U4) hanno linee dati USB sprovviste di protezione TVS avanzata su tastiere economiche. Una scarica elettrostatica sulle piste esposte può bruciare all'istante una colonna dell'intera matrice di scansione.
 * Compatibilità dei Solventi Chimici: Molti produttori lubrificano gli stabilizzatori con grasso dielettrico (es. Krytox 205g0 o Permatex). Se applichi il disossidante spray in modo incontrollato su tutta la piastra, scioglierai il lubrificante degli stabilizzatori, riversandolo all'interno dei tasti adiacenti e provocando rumori metallici sgradevoli (*rattle*) e attrito viscoso anomalo.
 
 ---
@@ -194,7 +194,7 @@ Operare sulla componentistica di input richiede cautela per non convertire un se
 Posso usare l'alcol isopropilico (IPA) al 99.9% al posto dello spray per contatti dedicato?
 Sì, ma solo con somministrazione manuale controllata tramite pipetta o siringa (non più di una o due gocce). L'isopropanolo è un ottimo sgrassante e non lascia residui, tuttavia non contiene gli additivi tensioattivi dei disossidanti specifici per contatti elettrici che disgregano l'ossido metallico per via chimic
 
-**A.** Inoltre, un bagno d'alcol eccessivo può opacizzare irreversibilmente le plastiche in policarbonato trasparente (*housing RGB*) di alcuni switch moderni.
+A. Inoltre, un bagno d'alcol eccessivo può opacizzare irreversibilmente le plastiche in policarbonato trasparente (*housing RGB*) di alcuni switch moderni.
 
 Come faccio a capire se il chattering dipende dallo switch o da un problema della scheda madre/USB?
 Collega la tastiera a un secondo computer (preferibilmente con sistema operativo differente, ad esempio una live Linux o macOS). Se lo stesso identico tasto continua a raddoppiare gli input, il guasto risiede indiscutibilmente nella cinematica o nel circuito dello switch. Se invece il fenomeno scompare, il problema è a monte: conflitti di polling rate del controller USB, disturbi elettromagnetici causati da hub non alimentati o problemi del software di gestione periferiche proprietario (come Corsair iCUE o Razer Synapse).

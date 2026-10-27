@@ -117,7 +117,7 @@ Before touching the drivers, purge the accumulated multi-monitor topology config
 
    `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\GraphicsDrivers`
 
-**Q6.** Back up your registry first (`File` > `Export`). Then right-click and delete these three subkeys entirely:
+Q6. Back up your registry first (`File` > `Export`). Then right-click and delete these three subkeys entirely:
    * `Configuration`
    * `Connectivity`
    * `ScaleFactors`
@@ -183,7 +183,7 @@ Now we rebuild the physical display link without triggering an MST sync error.
 
 5. Press `Win + I` to open Settings, go to `System` > `Display` > `Advanced display`.
 
-**Q6.** Select each monitor individually from the top drop-down menu and lock down their refresh rates:
+Q6. Select each monitor individually from the top drop-down menu and lock down their refresh rates:
    * Disable any Dynamic (Variable) refresh rate settings.
    * Explicitly choose a fixed refresh rate (e.g., straight `60.00 Hz` or `120.00 Hz`). Avoid fractionals like `59.94 Hz` on secondary screens if the primary is running a locked integer clock.
 
@@ -208,19 +208,19 @@ Expert Warning: Prevent Hardware-Level Failures
 
 ## 5. Frequently Asked Questions (FAQ)
 
-**Q1.** Why does hot-unplugging the cable fix the flicker for 15 minutes before the screen drops out again?
+Q1. Why does hot-unplugging the cable fix the flicker for 15 minutes before the screen drops out again?
 Hot-unplugging forces the graphics adapter to reset the DisplayPort auxiliary (AUX) channel and re-run link training from scratch. At connection time, the link operates cleanly. 
 
 However, as thermal loads rise or minor line noise builds up on poor-quality cables, uncorrected link errors quickly exceed the transceiver's error budget. Once the bit error rate threshold is crossed, the driver drops the display link to protect against memory corruption, producing the exact flicker loop you started with.
 
-**Q2.** Should I update my discrete GPU (NVIDIA) driver or integrated GPU (Intel/AMD) driver first?
+Q2. Should I update my discrete GPU (NVIDIA) driver or integrated GPU (Intel/AMD) driver first?
 Always update the Integrated GPU driver first. On modern dual-GPU laptops, the integrated GPU directly controls the internal display engine and manages the physical video routing lines (DisplayPort Alternate Mode) exiting the motherboard. 
 
 The discrete GPU functions primarily as a compute accelerator, rendering frames off-screen and copying them to the iGPU's framebuffer. If the integrated platform driver is outdated or broken, updating the discrete GPU won't solve external monitor signal drops.
 
-**Q3.** Can a damaged or cheap cable actually simulate a display driver crash?
+Q3. Can a damaged or cheap cable actually simulate a display driver crash?
 Yes. Modern high-resolution displays push massive amounts of dat
 
-**A.** Dual 4K at 60Hz requires significant bandwidth, demanding strict physical link integrity. Cheap or worn cables suffer from signal attenuation, impedance mismatches, and electromagnetic interference. 
+A. Dual 4K at 60Hz requires significant bandwidth, demanding strict physical link integrity. Cheap or worn cables suffer from signal attenuation, impedance mismatches, and electromagnetic interference. 
 
 When signal packets drop, the GPU interprets the communication silence as a disconnected or unresponsive device. Windows responds by firing a display engine reset (TDR—Timeout Detection and Recovery), causing your entire desktop to freeze and flash black while it tries to restart the driver stack. Ensure all cables are certified for DisplayPort 1.4 or HDMI 2.1 specs.

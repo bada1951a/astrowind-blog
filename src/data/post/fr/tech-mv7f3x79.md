@@ -46,13 +46,13 @@ Pour intervenir efficacement sans procéder à des réinstallations système sup
 
 Hypothèse
 
-**A.** Désynchronisation de la pile WDDM et conflit de négociation EDID/HDCP
+A. Désynchronisation de la pile WDDM et conflit de négociation EDID/HDCP
 Lorsqu'un moniteur externe est branché, Windows interroge les données EDID (*Extended Display Identification Data*) via le bus DDC/I2C afin d'identifier les résolutions et fréquences natives. Si le pilote graphique (Intel Graphics, AMD Radeon Software ou NVIDIA Display Driver) subit un timeout de réponse ou applique un profil colorimétrique incompatible (par exemple, forçage du format RGB 10-bit sur une liaison DisplayPort limitée à 8-bit), le gestionnaire de fenêtrage du bureau (*Desktop Window Manager - DWM.exe*) réinitialise la liaison vidéo en boucle, générant ces micro-coupures caractéristiques.
 
 Hypothèse B : Saturation de la bande passante et instabilité MST (Multi-Stream Transport)
 Sur les configurations exploitant des hubs ou docks USB-C utilisant le protocole DisplayPort Alternate Mode, la bande passante vidéo partage les lignes différentielles avec les données USB 3.x et l'alimentation *Power Delivery*. L'activation sans compression DSC (*Display Stream Compression*) de deux dalles 1440p ou 4K dépasse fréquemment le débit binaire maximal supporté par la norme DP 1.4 HB
 
-**A.** Le contrôleur graphique tente alors d'ajuster dynamiquement l'horloge pixel, provoquant des extinctions transitoires.
+A. Le contrôleur graphique tente alors d'ajuster dynamiquement l'horloge pixel, provoquant des extinctions transitoires.
 
 Hypothèse C : Corruption du cache de topologie d'affichage Windows
 Le sous-système graphique de Windows conserve l'historique complet de chaque moniteur déjà raccordé au sein de ruches de registre dédiées. Lorsqu'un ordinateur portable alterne fréquemment entre le télétravail, les salles de réunion et les docks de bureau, ce cache accumule des profils d'agencement orphelins et contradictoires, interdisant l'initialisation correcte du pipeline vidéo secondaire.
@@ -87,7 +87,7 @@ Avant toute manipulation de pilotes, il est impératif d'assainir la mémoire de
 
 5. Cliquez avec le bouton droit sur chacune de ces trois clés et sélectionnez Supprimer (Windows les recréera automatiquement avec des valeurs saines lors du prochain démarrage).
 
-**Q6.** Redémarrez le système d'exploitation.
+Q6. Redémarrez le système d'exploitation.
 
 ```
 [Arborescence GraphicsDrivers]
@@ -125,9 +125,9 @@ Si le scintillement persiste, une corruption profonde de la bibliothèque de lie
   <strong>Remarque sur les systèmes hybrides :</strong> Sur les ordinateurs portables équipés d'un processeur avec contrôleur intégré (iGPU Intel/AMD) et d'un GPU dédié (dGPU NVIDIA), effectuez systématiquement le nettoyage de l'iGPU en premier, car c'est lui qui gère la table de routage physique des sorties vidéo sur la majorité des architectures non équipées d'un commutateur MUX matériel.
 </div>
 
-**Q6.** De retour sur votre session standard hors-ligne (déconnectez temporairement le Wi-Fi pour empêcher Windows Update d'installer un pilote générique tronqué), installez le package de pilote préalablement téléchargé.
+Q6. De retour sur votre session standard hors-ligne (déconnectez temporairement le Wi-Fi pour empêcher Windows Update d'installer un pilote générique tronqué), installez le package de pilote préalablement téléchargé.
 
-**Q7.** Cochez l'option Effectuer une nouvelle installation si le programme d'installation le propose (notamment chez NVIDIA).
+Q7. Cochez l'option Effectuer une nouvelle installation si le programme d'installation le propose (notamment chez NVIDIA).
 
 Étape 4 : Étalonnage des paramètres de liaison dans Windows
 
@@ -162,6 +162,6 @@ Ce comportement est le symptôme typique d'une bande passante physique insuffisa
 Faut-il privilégier le pilote vidéo du fabricant de l'ordinateur portable (OEM) ou celui du fondeur (Intel/NVIDIA/AMD) ?
 En environnement d'entreprise, la règle d'ingénierie priorise le pilote OEM (validé par Dell, Lenovo, HP), car il intègre les profils de régulation thermique (*TGP/PL1/PL2*) et le routage des lignes PCIe spécifiques à la carte mère de l'appareil. Cependant, en cas de bogue d'affichage persistant sur des écrans récents, l'installation du pilote générique du fondeur (Intel Graphics Driver ou NVIDIA Studio/Game Ready) s'avère indispensable pour bénéficier des correctifs de conformité de la norme DisplayPort 2.1 / HDMI 2.
 
-**Q.** ### Est-il possible qu'un câble vidéo provoque des micro-coupures sans être totalement hors service ?
+Q. ### Est-il possible qu'un câble vidéo provoque des micro-coupures sans être totalement hors service ?
 
-**A.** Absolument. Un câble présentant un blindage électromagnétique déficient ou une continuité marginale sur la broche HPD (*Hot Plug Detect*) peut transporter sans encombre les signaux basse résolution, mais générer des pertes de paquets massives lors de pics de charge vidéo ou lors du passage de signaux protégés HDCP. De simples interférences induites par le câble d'alimentation du moniteur longeant un câble vidéo bas de gamme suffisent à provoquer un écran noir intermittent d'une seconde.
+A. Absolument. Un câble présentant un blindage électromagnétique déficient ou une continuité marginale sur la broche HPD (*Hot Plug Detect*) peut transporter sans encombre les signaux basse résolution, mais générer des pertes de paquets massives lors de pics de charge vidéo ou lors du passage de signaux protégés HDCP. De simples interférences induites par le câble d'alimentation du moniteur longeant un câble vidéo bas de gamme suffisent à provoquer un écran noir intermittent d'une seconde.

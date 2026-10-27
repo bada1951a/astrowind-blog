@@ -38,9 +38,9 @@ Khi gặp tình huống khẩn cấp như tôi ở sảnh chờ sân bay, bạn 
 ### Bước 1: Kiểm tra và tắt tiến trình ngầm qua Task Manager
 Đầu tiên, chúng ta cần tìm xem ứng dụng nào đang giữ file đó làm con tin.
 
-1. Nhấn tổ hợp phímCtrl + Shift + Esc**để mở nhanh**Task Manager.
+1. Nhấn tổ hợp phímCtrl + Shift + Escđể mở nhanhTask Manager.
 
-2. Tại thẻ**Processes**, bạn tìm kiếm các ứng dụng quen thuộc như**Microsoft Word**,**Excel**, hoặc**Notepad**.
+2. Tại thẻProcesses, bạn tìm kiếm các ứng dụng quen thuộc nhưMicrosoft Word,**Excel**, hoặcNotepad.
 
 3. Nhấp chuột phải vào tên ứng dụng đó và chọnEnd Task.
 
@@ -49,9 +49,9 @@ Khi gặp tình huống khẩn cấp như tôi ở sảnh chờ sân bay, bạn 
 ### Bước 2: Sử dụng Resource Monitor để ngắt kết nối handle
 Cách này cực kỳ hữu ích khi Task Manager thông thường không giải quyết được vấn đề.
 
-1. Nhấn phímWindows**, gõ từ khóa**Resource Monitorrồi mở ứng dụng này lên.
+1. Nhấn phímWindows, gõ từ khóaResource Monitorrồi mở ứng dụng này lên.
 
-2. Chuyển sang thẻ**CPU**.
+2. Chuyển sang thẻCPU.
 
 3. Tại ô tìm kiếmAssociated Handles, bạn gõ tên file hoặc phần mở rộng của file (ví dụ: `.docx` hoặc tên file cụ thể).
 
@@ -60,13 +60,13 @@ Cách này cực kỳ hữu ích khi Task Manager thông thường không giải
 5. Bây giờ bạn quay lại thư mục chứa file và thực hiện xóa lại bình thường.
 
 <div style="border-left: 4px solid #d97706; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
-<strong>Mẹo nhỏ cho người bận rộn:</strong> Đôi khi chỉ cần khởi động lại Windows Explorer là giải quyết được 80% các lỗi kẹt file nhẹ nhàng. Bạn mở Task Manager, tìm đến dòngWindows Explorer**, nhấp chuột phải và chọn**Restart.
+<strong>Mẹo nhỏ cho người bận rộn:</strong> Đôi khi chỉ cần khởi động lại Windows Explorer là giải quyết được 80% các lỗi kẹt file nhẹ nhàng. Bạn mở Task Manager, tìm đến dòngWindows Explorer, nhấp chuột phải và chọnRestart.
 </div>
 
 ### Bước 3: Ép xóa bằng dòng lệnh trong trường hợp cứng đầu
 Nếu các cách trên vẫn không ăn thua, hãy dùng đến công cụ dòng lệnh quyền lực của hệ thống.
 
-1. Nhấn tổ hợp phímWindows + R**, gõ chữ `cmd` rồi nhấn**Ctrl + Shift + Enter**để chạy với quyền quản trị viên (**Administrator).
+1. Nhấn tổ hợp phímWindows + R, gõ chữ `cmd` rồi nhấnCtrl + Shift + Enterđể chạy với quyền quản trị viên (Administrator).
 
 2. Sử dụng lệnh xóa cưỡng bức file với cú pháp sau trong cửa sổ dòng lệnh:
 

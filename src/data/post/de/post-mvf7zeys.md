@@ -80,7 +80,7 @@ Schritt 1: Den wahren Verursacher im Task-Manager entlarven
 
 3. Da man den Systemprozess selbst (PID 4) nicht einfach beenden kann, müssen wir tiefer graben. Öffne die Ereignisanzeige (Suche im Startmenü nach `Ereignisanzeige`). Navigiere zu *Windows-Protokolle* -> *System* und suche nach roten Kritisch- oder Fehler-Einträgen der letzten 10 Minuten. Meistens siehst du hier, welcher Treiber (z. B. `iaStor
 
-**A.** sys` für Intel RST oder ein Realtek LAN-Treiber) Amok läuft.
+A. sys` für Intel RST oder ein Realtek LAN-Treiber) Amok läuft.
 
 Schritt 2: Den fehlerhaften Treiber oder Dienst stoppen
 

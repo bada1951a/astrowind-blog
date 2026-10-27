@@ -55,7 +55,7 @@ Om het vastgelopen bestand definitief te verwijderen, moeten we systematisch te 
 6. Bevestig de waarschuwing door opProces beëindigente klikken. Het bestand is nu ontdaan van zijn actieve handles.
 
 ### Methode 2: Geavanceerde terminalbesturing via PowerShell (CLI-methode)
-1. Open het startmenu, typ `powershell`, klik met de rechtermuisknop opWindows PowerShell**en kies**Als administrator uitvoeren.
+1. Open het startmenu, typ `powershell`, klik met de rechtermuisknop opWindows PowerShellen kiesAls administrator uitvoeren.
 2. Identificeer en beëindig het storende proces direct op basis van de proces-ID (PID) of naam met het volgende commando:
 ```cmd
 taskkill /f /im processnaam.exe
@@ -68,7 +68,7 @@ cmd /c del /f /q /a "C:\Pad\Naar\Uw\VastgelopenBestand.log"
 *Waar `/f` geforceerd wissen afdwingt, `/q` de stiltemodus inschakelt zonder bevestigingsvragen, en `/a` alle attributen zoals alleen-lezen overschrijft.*
 
 ### Methode 3: Windows Verkenner herstarten en Resource Monitor Handlenalyse
-1. Druk op `Ctrl + Shift + Esc` om Taakbeheer te openen en zoek naar **Windows Verkenner**(`explorer.exe`) in het tabblad**Processen**.
+1. Druk op `Ctrl + Shift + Esc` om Taakbeheer te openen en zoek naar Windows Verkenner(`explorer.exe`) in het tabbladProcessen.
 2. Klik met de rechtermuisknop opWindows Verkenneren selecteerOpnieuw starten. Dit verbreekt direct alle interne shell-handles en thumbnail-caches.
 3. Mocht dit niet afdoende zijn, druk dan op `Win + R`, typ `resmon` en druk op Enter om deResource Monitorte openen.
 4. Ga naar het tabbladCPU, vouw het gedeelteGekoppelde ingangen(Associated Handles) uit en voer de exacte bestandsnaam in bij het zoekvakZoek naar ingang.
@@ -80,4 +80,14 @@ In de praktijk van het systeembeheer wordt maar al te vaak gegrepen naar snelle 
 
 Daarnaast is het van cruciaal belang om te begrijpen dat het geforceerd verwijderen van actieve bestanden nooit zonder risico is. Wanneer u een bestand wist dat op dat exact moment door een actieve applicatie of databasesysteem wordt beschreven, dwingt u een abrupte onderbreking af van de I/O-operaties. Dit kan resulteren in fatale bestandssysteemcorruptie, waarbij niet alleen het gewraakte bestand onbruikbaar wordt, maar ook de omliggende mètadatastructuur van de NTFS-partitie beschadigd raakt. Voer daarom altijd eerst een gecontroleerde procesbeëindiging uit zoals beschreven in de stappenplannen, en maak waar mogelijk direct een back-up van de omliggende directory voordat u overgaat tot destructieve terminalcommando's.
 
-## 5. Veelgestelde Vragen (FAQ)Q1. Kan ik een bestand dat in gebruik is veilig verwijderen zonder dataverlies te riskeren? A1. In de meeste gevallen is het direct geforceerd verwijderen van een bestand dat door een actief proces wordt gebruikt niet geheel zonder risico op datacorruptie. Als het proces op dat moment gegevens naar de schijf schreef, zal het geforceerd afbreken van het proces of het wissen van het bestand resulteren in een incomplete staat. Het is daarom altijd sterk aan te raden om eerst te proberen de toepassing op een nette manier via de gebruikersinterface af te sluiten voordat u overgaat tot drastische maatregelen zoals `taskkill`.Q2. Waarom blijft Windows aangeven dat een bestand in gebruik is, zelfs nadat ik alle zichtbare programma's heb afgesloten? A2. Dit fenomeen wordt vrijwel altijd veroorzaakt door achtergrondprocessen, services of shell-extensies die blijven draaien nadat het hoofdprogramma is gesloten. Denk hierbij aan indexeringsdiensten, virusscanners die een scan uitvoeren, of weesprocessen zoals vastgelopen DLL-hosts. Het besturingssysteem houdt de handle vast om te voorkomen dat andere toepassingen schrijven naar een geheugenadres dat mogelijk nog in gebruik is, wat verklaart waarom de Verkenner weigert mee te werken.Q3. Is het verstandig om gebruik te maken van third-party software zoals LockHunter of Process Explorer voor dit soort problemen? A3. Professionele tools zoals Sysinternals Process Explorer (van Microsoft zelf) zijn uitstekend en volkomen veilig te gebruiken voor het opsporen en sluiten van hardnekkige handles in een enterprise-omgeving. Echter, wees altijd extreem voorzichtig met vage, onbekende freeware van derden die belooft bestanden met één muisklik te ontgrendelen, aangezien deze vaak beveiligingsrisico's met zich meebrengen en malafide componenten kunnen bevatten.
+## 5. Veelgestelde Vragen (FAQ)Q1. Kan ik een bestand dat in gebruik is veilig verwijderen zonder dataverlies te riskeren?
+
+A1. In de meeste gevallen is het direct geforceerd verwijderen van een bestand dat door een actief proces wordt gebruikt niet geheel zonder risico op datacorruptie. Als het proces op dat moment gegevens naar de schijf schreef, zal het geforceerd afbreken van het proces of het wissen van het bestand resulteren in een incomplete staat. Het is daarom altijd sterk aan te raden om eerst te proberen de toepassing op een nette manier via de gebruikersinterface af te sluiten voordat u overgaat tot drastische maatregelen zoals `taskkill`.
+
+Q2. Waarom blijft Windows aangeven dat een bestand in gebruik is, zelfs nadat ik alle zichtbare programma's heb afgesloten?
+
+A2. Dit fenomeen wordt vrijwel altijd veroorzaakt door achtergrondprocessen, services of shell-extensies die blijven draaien nadat het hoofdprogramma is gesloten. Denk hierbij aan indexeringsdiensten, virusscanners die een scan uitvoeren, of weesprocessen zoals vastgelopen DLL-hosts. Het besturingssysteem houdt de handle vast om te voorkomen dat andere toepassingen schrijven naar een geheugenadres dat mogelijk nog in gebruik is, wat verklaart waarom de Verkenner weigert mee te werken.
+
+Q3. Is het verstandig om gebruik te maken van third-party software zoals LockHunter of Process Explorer voor dit soort problemen?
+
+A3. Professionele tools zoals Sysinternals Process Explorer (van Microsoft zelf) zijn uitstekend en volkomen veilig te gebruiken voor het opsporen en sluiten van hardnekkige handles in een enterprise-omgeving. Echter, wees altijd extreem voorzichtig met vage, onbekende freeware van derden die belooft bestanden met één muisklik te ontgrendelen, aangezien deze vaak beveiligingsrisico's met zich meebrengen en malafide componenten kunnen bevatten.

@@ -62,7 +62,7 @@ A. exe`, `node.exe` ou o instalador travado).
 
 Quando a interface gráfica falha em liberar os recursos, a linha de comando executada com privilégios elevados oferece controle absoluto sobre o sistema de arquivos.
 
-1. Pressione `Win + X` e selecione **Terminal (Admin)**ouPrompt de Comando (Administrador) para abrir a sessão com privilégios de superusuário.
+1. Pressione `Win + X` e selecione Terminal (Admin)ouPrompt de Comando (Administrador) para abrir a sessão com privilégios de superusuário.
 2. Utilize a ferramenta de encerramento de processos por linha de comando para matar a aplicação pelo nome do executável e parâmetros de força brut
 
 A. Digite o seguinte comando e pressione Enter:
@@ -87,8 +87,8 @@ A. ```cmd
 
 Muitas vezes, nenhum aplicativo específico está travando o arquivo, mas sim o próprio shell gráfico do Windows retendo o cache de ícones e metadados.
 
-1. Abra o **Gerenciador de Tarefas**(`Ctrl + Shift + Esc`).
-2. Na aba**Processos**, localize o item**Explorador de Windows** (ou *Windows Explorer*).
+1. Abra o Gerenciador de Tarefas(`Ctrl + Shift + Esc`).
+2. Na abaProcessos, localize o itemExplorador de Windows (ou *Windows Explorer*).
 3. Clique com o botão direito sobre ele e selecione Reiniciar. A barra de tarefas e a área de trabalho sumirão por um segundo e retornarão limpas, recarregando todos os caches e liberando instantaneamente os ponteiros de arquivos travados na área de trabalho ou em pastas recentes.
 4. Caso o problema persista, utilize o Monitor de Recursos (`resmon.exe`), vá na abaCPU**, utilize o campo**Identificador Associado para pesquisar o nome exato do arquivo bloqueado, identifique o PID do processo correspondente, finalize-o na coluna respectiva e proceda com a exclusão imediat
 
@@ -106,7 +106,9 @@ Q1. Por que o Windows continua exibindo a mensagem de arquivo em uso mesmo após
 
 A1. O sistema operacional mantém o bloqueio porque muitos aplicativos modernos executam serviços residentes, processos filhos ocultos ou tarefas agendadas em segundo plano que continuam utilizando o arquivo. Mesmo que a janela principal tenha sido fechada pelo usuário, o identificador de recurso (*handle*) permanece ativo na tabela de memória RAM do kernel até que o processo específico seja encerrado à forç
 
-A.Q2. É seguro utilizar o comando `rd /s /q` no prompt de comando para apagar pastas inteiras que se recusavam a ser excluídas pela lixeira convencional?
+A.
+
+Q2. É seguro utilizar o comando `rd /s /q` no prompt de comando para apagar pastas inteiras que se recusavam a ser excluídas pela lixeira convencional?
 
 A2. Sim, desde que você tenha absoluta certeza de que a pasta não contém arquivos essenciais do sistema operacional ou dados críticos de configuração de softwares. O comando remove diretórios recursivamente de forma silenciosa e forçada, ignorando restrições de permissão e atributos de segurança, o que o torna uma ferramenta extremamente poderosa para administradores de sistemas.
 

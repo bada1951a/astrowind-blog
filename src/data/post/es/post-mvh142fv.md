@@ -32,14 +32,14 @@ theme: "Graphite Technical Paper"
 
 Eran las 18:45 en nuestra oficina corporativa en Madrid. A solo quince minutos de enviar el paquete definitivo de un proyecto clave para un cliente multinacional, la pantalla de la workstation principal se quedo totalmente congelad
 
-**A.** El cursor no respondia, el teclado estaba muerto y el ventilador seguia zumbando con una calma insultante. Un reinicio por botonazo nos costo diez minutos vitales y, por supuesto, la entrega se retraso, generando un ambiente de tension maxima en el departamento de sistemas. Lo peor no fue el bloqueo en si, sino que era la tercera vez en la semana que ocurria sin dejar rastro aparente.
+A. El cursor no respondia, el teclado estaba muerto y el ventilador seguia zumbando con una calma insultante. Un reinicio por botonazo nos costo diez minutos vitales y, por supuesto, la entrega se retraso, generando un ambiente de tension maxima en el departamento de sistemas. Lo peor no fue el bloqueo en si, sino que era la tercera vez en la semana que ocurria sin dejar rastro aparente.
 
 <div style="border-left: 4px solid #475569; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Nota del especialist
 
-**A.** </strong> Cuando un ordenador se congela de forma aleatoria (random freezing) y no muestra una pantalla azul de error (BSOD) tradicional, buscar a ciegas cambiando piezas o formateando es una perdida de tiempo y dinero. Hay que ir directo a los registros del sistem
+A. </strong> Cuando un ordenador se congela de forma aleatoria (random freezing) y no muestra una pantalla azul de error (BSOD) tradicional, buscar a ciegas cambiando piezas o formateando es una perdida de tiempo y dinero. Hay que ir directo a los registros del sistem
 
-**A.** </div>
+A. </div>
 
 ![Tech Troubleshooting Guide](/images/tech-photo/keyboard%20(2).png)
 
@@ -84,17 +84,17 @@ Vamos a aplicar el procedimiento tecnico estandar para extraer la verdad de los 
 Paso 1: Abrir el Visor de Eventos de Windows
 Usa la combinacion de teclas `Windows + X` en tu teclado y selecciona Visor de eventos en el menu rapido que aparece abajo a la izquierd
 
-**A.** Tambien puedes buscarlo directamente escribiendo "Visor de eventos" en la barra de tareas de Windows 11.
+A. Tambien puedes buscarlo directamente escribiendo "Visor de eventos" en la barra de tareas de Windows 11.
 
 Paso 2: Filtrar los registros criticos del sistema
 
 1. En la columna de la izquierda, haz clic en Registros de Windows y luego selecciona Sistem
 
-**A.** 2. En la columna de la derecha, haz clic en la opcion Filtrar registro actual....
+A. 2. En la columna de la derecha, haz clic en la opcion Filtrar registro actual....
 
 3. En la ventana que se abre, busca la casilla de Nivel de eventoy marca unicamente las opciones:Critico,ErroryAdvertenci
 
-**A.** Haz clic en Aceptar.
+A. Haz clic en Aceptar.
 
 Paso 3: Buscar las marcas de tiempo del congelamiento
 Anota mentalmente la hora exacta en la que tu PC se congelo hoy. Ahora, busca en la lista central los eventos registrados exactamente en esa franja horaria o 1-2 minutos antes. 
@@ -105,7 +105,7 @@ Anota mentalmente la hora exacta en la que tu PC se congelo hoy. Ahora, busca en
 <div style="border-left: 4px solid #475569; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Consejo Pro:</strong> Si encuentras errores recurrentes del controlador de disco justo antes del bloqueo, entra inmediatamente en el <strong>Administrador de dispositivos</strong> (haz clic derecho en el boton de Inicio y seleccionalo), busca tus unidades de disco, haz clic derecho en tu SSD principal, selecciona desinstalar el dispositivo y reinicia para que Windows 11 reconstruya la pila de drivers limpi
 
-**A.** </div>
+A. </div>
 
 ---
 
@@ -121,27 +121,27 @@ Precauciones y Consejos de Hardware
 
 - Atencion con la energí
 
-**A.** Si el Visor de eventos te muestra constantemente el error Kernel-Power ID 41 sin un codigo de error bugcheck previo, es casi seguro un problema fisico de la fuente de alimentacion o una regleta defectuosa en la oficin
+A. Si el Visor de eventos te muestra constantemente el error Kernel-Power ID 41 sin un codigo de error bugcheck previo, es casi seguro un problema fisico de la fuente de alimentacion o una regleta defectuosa en la oficin
 
-**A.** No descartes cambiar la fuente antes de seguir testeando software.
+A. No descartes cambiar la fuente antes de seguir testeando software.
 - Temperaturas bajo control: Utiliza herramientas de monitorizacion para asegurarte de que los sensores no superan los 85°C en picos de trabajo. Un procesador haciendo thermal throttling severo puede colgar por completo el bus PCIe de la placa base.
 - Copia de seguridad preventiv
 
-**A.** Antes de modificar parametros de energia o voltajes de RAM en la BIOS tras un analisis de eventos, asegúrate de respaldar tus documentos criticos en la nube corporativ
+A. Antes de modificar parametros de energia o voltajes de RAM en la BIOS tras un analisis de eventos, asegúrate de respaldar tus documentos criticos en la nube corporativ
 
-**A.** ---
+A. ---
 ## 5. Preguntas Frecuentes (FAQ)
 
-**Q.** ¿Por que el Visor de eventos muestra tantos errores en rojo que parece que mi PC esta rota y sin embargo funciona bien?
+Q. ¿Por que el Visor de eventos muestra tantos errores en rojo que parece que mi PC esta rota y sin embargo funciona bien?
 
-**A.** Es totalmente normal. Windows registra cientos de advertencias y errores menores en segundo plano (servicios que no arrancan a la primera, tiempos de espera agotados de aplicaciones secundarias). El secreto para un buen diagnostico tecnico es filtrar unicamente los errores que coinciden de forma milimetrica con la hora exacta en la que tu equipo sufrio el congelamiento real.
+A. Es totalmente normal. Windows registra cientos de advertencias y errores menores en segundo plano (servicios que no arrancan a la primera, tiempos de espera agotados de aplicaciones secundarias). El secreto para un buen diagnostico tecnico es filtrar unicamente los errores que coinciden de forma milimetrica con la hora exacta en la que tu equipo sufrio el congelamiento real.
 
-**Q.** Si el Visor de eventos muestra "Kernel-Power ID 41", significa 100% que mi fuente de alimentacion esta rota?
+Q. Si el Visor de eventos muestra "Kernel-Power ID 41", significa 100% que mi fuente de alimentacion esta rota?
 
-**A.** No necesariamente al cien por cien, pero es la causa principal en un 70% de los casos. El ID 41 simplemente significa que el equipo perdio la corriente de forma abrupta o se reinicio sin un apagado limpio. Tambien puede ser causado por un disyuntor en la placa base saltando por proteccion de voltaje, un enchufe flojo o una regleta de proteccion en mal estado.
+A. No necesariamente al cien por cien, pero es la causa principal en un 70% de los casos. El ID 41 simplemente significa que el equipo perdio la corriente de forma abrupta o se reinicio sin un apagado limpio. Tambien puede ser causado por un disyuntor en la placa base saltando por proteccion de voltaje, un enchufe flojo o una regleta de proteccion en mal estado.
 
-**Q.** ¿Debo tocar la configuracion de energia en el Panel de control si sufro estos congelamientos?
+Q. ¿Debo tocar la configuracion de energia en el Panel de control si sufro estos congelamientos?
 
-**A.** Si despues de revisar los logs sospechas de gestion energetica agresiva, entra en elPanel de control, buscaOpciones de energiay cambia temporalmente el plan predeterminado aAlto rendimiento. Esto evita que Windows apague los estados de energia de los puertos PCIe o del disco NVMe durante los momentos de inactividad o carga variable, lo cual suele solucionar muchos micro-congelamientos aleatorios en portatiles y equipos de oficin
+A. Si despues de revisar los logs sospechas de gestion energetica agresiva, entra en elPanel de control, buscaOpciones de energiay cambia temporalmente el plan predeterminado aAlto rendimiento. Esto evita que Windows apague los estados de energia de los puertos PCIe o del disco NVMe durante los momentos de inactividad o carga variable, lo cual suele solucionar muchos micro-congelamientos aleatorios en portatiles y equipos de oficin
 
-**A.**
+A.

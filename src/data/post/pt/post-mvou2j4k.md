@@ -42,11 +42,11 @@ Para resolver o problema de arquivos "presos" que desafiam o botão "Delete" do 
 Quando o método tradicional falha, recorremos a ferramentas nativas e procedimentos estruturados do Windows. Siga estes passos exatos para forçar a exclusão com seguranç
 
 A. ### Passo 1: Encerrar processos travados pelo Gerenciador de Tarefas
-Pressione as teclas**Ctrl + Shift + Esc**para abrir o**Gerenciador de Tarefas**. Na aba**Processos, procure por aplicativos em segundo plano ou utilitários que possam estar vinculados ao arquivo. Se for um arquivo genérico, clique com o botão direito emExplorador de Windows**(explorer.exe) e selecioneReiniciar. Isso costuma liberar o bloqueio visual do sistem
+Pressione as teclasCtrl + Shift + Esc**para abrir oGerenciador de Tarefas. Na aba**Processos, procure por aplicativos em segundo plano ou utilitários que possam estar vinculados ao arquivo. Se for um arquivo genérico, clique com o botão direito emExplorador de Windows(explorer.exe) e selecioneReiniciar. Isso costuma liberar o bloqueio visual do sistem
 
 A. ### Passo 2: Forçar a exclusão via Prompt de Comando (CMD)
 Se o Explorador de Arquivos continuar bloqueando a ação, vamos apelar para a linha de comando com privilégios elevados:
-1. Clique no menu Iniciar, digite `cmd`, clique com o botão direito em**Prompt de Comando**e selecioneExecutar como Administrador.
+1. Clique no menu Iniciar, digite `cmd`, clique com o botão direito emPrompt de Comandoe selecioneExecutar como Administrador.
 
 2. Utilize o comando abaixo para remover o arquivo à força, substituindo o caminho pelo local real do seu arquivo problemático:
 
@@ -60,9 +60,9 @@ O argumento `/f` força a exclusão de arquivos somente leitura, `/q` ativa o mo
 Caso o prompt retorne um erro de acesso negado, vá até a pasta onde o arquivo está localizado:
 1. Clique com o botão direito na pasta do arquivo e selecionePropriedades.
 
-2. Vá até a aba**Segurança**e clique no botão**Avançadas**.
+2. Vá até a abaSegurançae clique no botãoAvançadas.
 
-3. Ao lado do campo "Proprietário", clique em**Alterar, digite o seu nome de usuário atual ou `Administradores`, clique emVerificar Nomes**e depois em**OK**.
+3. Ao lado do campo "Proprietário", clique emAlterar, digite o seu nome de usuário atual ou `Administradores`, clique emVerificar Nomese depois em**OK**.
 
 4. Marque a caixaSubstituir o proprietário em subcontêineres e objetose aplique. Feche e abra as propriedades novamente para garantir permissão de Controle Total antes de tentar a exclusão.
 

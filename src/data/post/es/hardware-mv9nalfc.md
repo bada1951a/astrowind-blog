@@ -39,12 +39,12 @@ En medio del pánico inicial, mi primer instinto fue empezar a vaciar la papeler
 <div style="border-left: 4px solid #4338ca; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Diagnóstico de emergenci
 
-**A.** </strong> Cuando Windows se queda sin espacio libre en la partición principal de forma repentina, el culpable rara vez son tus archivos personales. El verdadero villano son gigabytes y gigabytes de datos invisibles acumulados en segundo plano.
+A. </strong> Cuando Windows se queda sin espacio libre en la partición principal de forma repentina, el culpable rara vez son tus archivos personales. El verdadero villano son gigabytes y gigabytes de datos invisibles acumulados en segundo plano.
 </div>
 
 Por suerte, mi compañero de sistemas se acercó con calma, abrió el menú oculto de almacenamiento y aplicó el procedimiento exacto que salvó nuestra entreg
 
-**A.** Aquí te comparto el diagnóstico y el paso a paso definitivo para limpiar tu unidad C: de una vez por todas.
+A. Aquí te comparto el diagnóstico y el paso a paso definitivo para limpiar tu unidad C: de una vez por todas.
 
 ---
 
@@ -83,7 +83,7 @@ Para solucionar esto de manera segura y profesional, vamos a utilizar las herram
 Paso 1: Usar el Sensor de almacenamiento de Windows
 Olvídate de buscar carpeta por carpet
 
-**A.** Windows incluye una utilidad fantástica para esto:
+A. Windows incluye una utilidad fantástica para esto:
 
 1. Haz clic en el botón de Inicio y entra en la Configuración (el icono de la rueda dentada).
 
@@ -104,21 +104,21 @@ Si necesitas una limpieza más a fondo a nivel de administrador:
 
 3. En la ventana que aparece, haz clic en el botón inferior que dice Limpiar archivos del sistem
 
-**A.** Vuelve a seleccionar la unidad C:.
+A. Vuelve a seleccionar la unidad C:.
 
 4. Esta vez, la lista incluirá opciones avanzadas. Marca "Limpieza de actualizaciones de Windows" y "Archivos de instalación temporales de Windows". Haz clic en Aceptar para proceder con la limpieza profund
 
-**A.** ## Paso 3: Borrado manual de carpetas temporales ocultas
+A. ## Paso 3: Borrado manual de carpetas temporales ocultas
 
 Si aún necesitas raspar más gigabytes, vamos a limpiar los directorios de usuario manualmente:
 
 1. Presiona `Windows + R`, escribe `%temp%` y presiona Enter. Se abrirá el Explorador de archivos con una carpeta llena de archivos basur
 
-**A.** 2. Selecciona todo presionando `Ctrl + A` y elimínalo pulsando `Shift + Supr` (para borrarlo permanentemente sin pasar por la papelera).
+A. 2. Selecciona todo presionando `Ctrl + A` y elimínalo pulsando `Shift + Supr` (para borrarlo permanentemente sin pasar por la papelera).
 
 3. *Not
 
-**A.** * Si Windows te avisa que algún archivo está abierto o en uso por un programa activo, simplemente haz clic en "Omitir".
+A. * Si Windows te avisa que algún archivo está abierto o en uso por un programa activo, simplemente haz clic en "Omitir".
 
 4. Repite el proceso presionando `Windows + R`, escribiendo esta vez `temp` (sin los porcentajes) y repitiendo el borrado de archivos.
 
@@ -137,7 +137,7 @@ Advertencias del experto técnico
 <div style="border-left: 4px solid #4338ca; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Precaución vital:</strong> Nunca descargues programas milagrosos de internet que prometen "limpiar el registro con un clic". Muchos de estos programas son adware o pueden corromper rutas críticas del sistema operativo. Utiliza siempre las herramientas nativas de Windows descritas en esta guí
 
-**A.** </div>
+A. </div>
 
 ---
 ## 5. Preguntas Frecuentes (FAQ)

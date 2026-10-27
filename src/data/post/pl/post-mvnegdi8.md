@@ -38,13 +38,13 @@ Skoro znamy już źródło problemu, przejdźmy do konkretnych kroków naprawczy
 ### Krok 1: Ubicie procesu w Menedżerze zadań
 Najpierw musimy zamknąć proces, który fizycznie trzyma plik.
 
-1. OtwórzMenedżer zadań**, naciskając kombinację klawiszy**Ctrl + Shift + Esc.
+1. OtwórzMenedżer zadań, naciskając kombinację klawiszyCtrl + Shift + Esc.
 
 2. W zakładceProcesyprzeszukaj listę pod kątem procesów powiązanych z problematycznym oprogramowaniem (np. instalator sterownika graficznego, aplikacja AMD Software lub NVIDIA Container).
 
 3. Kliknij na podejrzany proces prawym przyciskiem myszy i wybierzZakończ zadanie.
 
-4. Jeśli to nie pomaga, zwiń lub zamknij**Eksplorator Windows** (znajdź go na liście, kliknij prawym i wybierz *Uruchom ponownie* – to często uwalnia zablokowane pliki graficzne).
+4. Jeśli to nie pomaga, zwiń lub zamknijEksplorator Windows (znajdź go na liście, kliknij prawym i wybierz *Uruchom ponownie* – to często uwalnia zablokowane pliki graficzne).
 
 ### Krok 2: Użycie Panelu sterowania i Menedżera urządzeń do resetu sterownika
 Ponieważ nasza awaria zaczęła się od sterownika graficznego, przywróćmy stabilność systemu przez Menedżer urządzeń:
@@ -54,14 +54,14 @@ Ponieważ nasza awaria zaczęła się od sterownika graficznego, przywróćmy st
 
 3. Kliknij prawym przyciskiem myszy na swoją główną kartę i wybierzWłaściwości.
 
-4. Przejdź do zakładki**Sterownik**i kliknij przycisk**Przywróć poprz. sterownik**(jeśli jest aktywny) lubOdinstaluj urządzenie, zaznaczając opcję usunięcia oprogramowania sterownika dla tego urządzeni
+4. Przejdź do zakładkiSterowniki kliknij przyciskPrzywróć poprz. sterownik(jeśli jest aktywny) lubOdinstaluj urządzenie, zaznaczając opcję usunięcia oprogramowania sterownika dla tego urządzeni
 
 A. Dopiero teraz pliki instalacyjne dadzą się bez problemu usunąć.
 
 ### Krok 3: Siłowe usunięcie przez Wiersz polecenia (PowerShell / CMD)
 Jeśli graficzny interfejs systemu nadal protestuje, użyjemy niezawodnego terminala w trybie administrator
 
-**A. 1. Wpisz w menu Start frazę**cmd**, kliknij na**Wiersz polecenia**prawym przyciskiem myszy i wybierz**Uruchom jako administrator.
+A. 1. Wpisz w menu Start frazęcmd, kliknij na**Wiersz poleceniaprawym przyciskiem myszy i wybierz**Uruchom jako administrator.
 
 2. Aby bezpiecznie usunąć uporczywy plik, skorzystaj z polecenia wymuszenia kasowania wraz ze ścieżką do pliku. Przykładowo wpisz w konsoli:
 

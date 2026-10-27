@@ -126,10 +126,10 @@ En tant que technicien support, voici quelques règles d'or pour éviter que cel
 ---
 ## 5. Foire Aux Questions (FAQ)
 
-**Q1.** Mon PC freeze tellement que je ne peux même pas ouvrir le Gestionnaire des tâches, que faire ? R1 : Utilisez le raccourci d'urgence `Ctrl + Alt + Suppr` qui possède un canal prioritaire dans le noyau Windows. De là, cliquez sur "Gestionnaire des tâches" ou, en dernier recours, maintenez le bouton physique d'alimentation de votre tour ou portable pendant 5 secondes pour forcer l'extinction, puis redémarrez.
+Q1. Mon PC freeze tellement que je ne peux même pas ouvrir le Gestionnaire des tâches, que faire ? R1 : Utilisez le raccourci d'urgence `Ctrl + Alt + Suppr` qui possède un canal prioritaire dans le noyau Windows. De là, cliquez sur "Gestionnaire des tâches" ou, en dernier recours, maintenez le bouton physique d'alimentation de votre tour ou portable pendant 5 secondes pour forcer l'extinction, puis redémarrez.
 
-**Q2.** Est-ce que réinitialiser mon PC est indispensable si le processus Système recommence ? R2 : Non, dans 90% des cas, un nettoyage des pilotes réseau et une désactivation temporaire de l'indexation Windows suffisent amplement à régler le problème définitivement sans formater.
+Q2. Est-ce que réinitialiser mon PC est indispensable si le processus Système recommence ? R2 : Non, dans 90% des cas, un nettoyage des pilotes réseau et une désactivation temporaire de l'indexation Windows suffisent amplement à régler le problème définitivement sans formater.
 
-**Q3.** Pourquoi le ventilateur fait-il autant de bruit quand le CPU est à 100 pourcent ?
+Q3. Pourquoi le ventilateur fait-il autant de bruit quand le CPU est à 100 pourcent ?
 
-**A.** C'est une réaction physique normale. Lorsque l'utilisation du processeur atteint son maximum, la dissipation thermique augmente fortement. Le BIOS accélère automatiquement la ventilation pour éviter la surchauffe et la fusion des composants.
+A. C'est une réaction physique normale. Lorsque l'utilisation du processeur atteint son maximum, la dissipation thermique augmente fortement. Le BIOS accélère automatiquement la ventilation pour éviter la surchauffe et la fusion des composants.

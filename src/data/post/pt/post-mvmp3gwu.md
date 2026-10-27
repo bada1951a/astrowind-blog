@@ -39,7 +39,7 @@ A. </strong> Nunca subestime um atalho que parou de funcionar de repente. Geralm
 
 Para resolver esse problema de vez, precisamos entender por que o atalho da Ferramenta de Captura (Snipping Tool) simplesmente morre no Windows 11. Na minha rotina de suporte técnico, identifico três causas principais para essa falh
 
-**A. * **Processo travado do Screen Sketch: O aplicativo gerenciador de capturas do Windows fica suspenso ou com threads travadas na memória RAM, impedindo que o atalho global responda aos comandos do teclado.
+A. * Processo travado do Screen Sketch: O aplicativo gerenciador de capturas do Windows fica suspenso ou com threads travadas na memória RAM, impedindo que o atalho global responda aos comandos do teclado.
 * Notificações e Permissões em Segundo Plano: Se o sistema estiver configurado para bloquear notificações ou se o aplicativo não tiver permissão para rodar em segundo plano, a interface visual da ferramenta falha ao ser chamad
 
 A. * Corrupção no Pacote UWP (Appx):Atualizações cumulativas do Windows 11 frequentemente corrompem o registro dos aplicativos nativos da Microsoft Store, exigindo um reparo ou reistalação limpa via PowerShell.
@@ -53,33 +53,33 @@ A. Vou te mostrar o passo a passo exato para destravar o seu sistema agora mesmo
 Passo 1: Matar processos travados no Gerenciador de Tarefas
 Primeiro, vamos limpar a memória de qualquer instância zumbi da ferrament
 
-**A. 1. Pressione**Ctrl + Shift + Esc**para abrir o**Gerenciador de Tarefas.
+A. 1. PressioneCtrl + Shift + Escpara abrir oGerenciador de Tarefas.
 
-2. Na aba**Processos**, procure por**Ferramenta de Captura**ou**Snipping Tool** (ou o processo em inglês *ScreenClippingHost*).
+2. Na abaProcessos**, procure por**Ferramenta de CapturaouSnipping Tool (ou o processo em inglês *ScreenClippingHost*).
 
-3. Clique com o botão direito nele e selecione **Finalizar tarefa**.
+3. Clique com o botão direito nele e selecione Finalizar tarefa.
 
 4. Teste o atalhoWin + Shift + Snovamente. Se ainda não funcionar, vá para o próximo passo.
 
 Passo 2: Ajustar as Configurações de Notificação e Histórico da Área de Transferência
 Muitas vezes, o atalho funciona, mas a notificação visual está desativada, dando a impressão de que nada aconteceu.
 
-1. Abra asConfigurações**do Windows (atalho**Win + I).
+1. Abra asConfiguraçõesdo Windows (atalhoWin + I).
 
 2. Vá em Sistema e depois em Notificações.
 
 3. Certifique-se de que as notificações estão ativadas e procure na lista aFerramenta de Capturapara garantir que ela tem permissão para exibir avisos.
 
-4. Volte paraSistema**>**Área de transferência**e certifique-se de que o recurso**Histórico da área de transferênciaestá ativado.
+4. Volte paraSistema>Área de transferênciae certifique-se de que o recursoHistórico da área de transferênciaestá ativado.
 
 Passo 3: Reparar e Redefinir o Aplicativo nas Configurações
 Se o processo estiver corrompido, podemos forçar o Windows a reparar os arquivos do aplicativo sem perder dados.
 
 1. Abra as Configurações (Win + I).
 
-2. Navegue atéAplicativos**>**Aplicativos instalados.
+2. Navegue atéAplicativos>Aplicativos instalados.
 
-3. Procure por**Ferramenta de Captura**na barra de pesquis
+3. Procure porFerramenta de Capturana barra de pesquis
 
 A. 4. Clique nos três pontos ao lado do nome do aplicativo e selecioneOpções avançadas.
 
@@ -108,11 +108,11 @@ Além disso, mantenha sempre os drivers do seu teclado atualizados através doGe
 
 Q. O atalho ainda não funciona mesmo após seguir todos os passos. O que pode ser?
 
-**A. Verifique se a tecla**Windows (Win)do seu teclado não possui uma função de bloqueio físico ativada (comum em teclados mecânicos através de combinações como Fn + Win).
+A. Verifique se a teclaWindows (Win)do seu teclado não possui uma função de bloqueio físico ativada (comum em teclados mecânicos através de combinações como Fn + Win).
 
 Q. Posso alterar o atalho da Ferramenta de Captura para outra tecla?
 
-**A. Sim. Você pode ir em**Configurações**>**Acessibilidade**>**Tecladoe ativar a opção "Usar o botão PrtScn para abrir a captura de tela".
+A. Sim. Você pode ir emConfigurações**>**Acessibilidade>Tecladoe ativar a opção "Usar o botão PrtScn para abrir a captura de tela".
 
 Q. As capturas de tela sumiram e não salvam na Área de Transferênci
 

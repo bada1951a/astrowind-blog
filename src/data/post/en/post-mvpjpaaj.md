@@ -41,16 +41,16 @@ Furthermore, modern Windows desktop enhancements contribute heavily to unexpecte
 ### Method 1: GUI-Based Force Kill via Task Manager
 When time is running short and you need a reliable graphical interface to terminate the rogue application holding your file hostage, the built-in Task Manager is your first line of defense. 
 
-1. Press `Ctrl + Shift + Esc` simultaneously on your keyboard to instantly launch the **Task Manager**.
-2. If the Task Manager opens in its simplified compact view, click on the**More details**button at the bottom left to expand into the full administrative interface.
-3. Navigate to the**Processes**tab and look for the application associated with your locked file, such as `Microsoft Excel` or `Adobe Acrobat`.
+1. Press `Ctrl + Shift + Esc` simultaneously on your keyboard to instantly launch the Task Manager.
+2. If the Task Manager opens in its simplified compact view, click on theMore detailsbutton at the bottom left to expand into the full administrative interface.
+3. Navigate to theProcessestab and look for the application associated with your locked file, such as `Microsoft Excel` or `Adobe Acrobat`.
 4. If the application is not listed under Apps, scroll down through the exhaustive list of background processes to locate the matching executable, such as `EXCEL.EXE`.
-5. Right-click on the target process and select**End task**from the context menu to forcibly terminate the process execution thread and release all associated file handles.
+5. Right-click on the target process and selectEnd taskfrom the context menu to forcibly terminate the process execution thread and release all associated file handles.
 
 ### Method 2: Command Line / PowerShell Terminal Execution
 For rapid, absolute execution without navigating nested menus, the command line provides direct administrative power to destroy rogue processes and wipe locked files cleanly from the disk.
 
-1. Press `Win + X` on your keyboard, then select**Terminal (Admin)**or**Command Prompt (Admin)** from the quick-access menu.
+1. Press `Win + X` on your keyboard, then selectTerminal (Admin)orCommand Prompt (Admin) from the quick-access menu.
 2. Type the following command to forcefully terminate all running instances of Microsoft Excel, replacing the image name with your specific culprit if necessary, and press `Enter`:
 ```cmd
 taskkill /f /im EXCEL.EXE
@@ -65,9 +65,9 @@ del /f /q /a "C:\Users\Username\Documents\Acquisition_Model_Final_v3_OLD.xlsx"
 ### Method 3: Windows Explorer Process Restart
 If the file lock is being maintained by a hung shell extension or a deadlocked desktop window manager thread, restarting the Windows Explorer shell will instantly break all associated thumbnail and directory handles.
 
-1. Open the **Task Manager**by pressing `Ctrl + Shift + Esc`.
-2. Scroll down the**Processes**tab until you find**Windows Explorer**(process name `explorer.exe`).
-3. Right-click on**Windows Explorer**and select**Restart**. You will notice your taskbar and desktop icons flash and disappear for a brief second as the graphical shell reinitializes.
+1. Open the Task Managerby pressing `Ctrl + Shift + Esc`.
+2. Scroll down theProcessestab until you findWindows Explorer(process name `explorer.exe`).
+3. Right-click onWindows Explorerand selectRestart. You will notice your taskbar and desktop icons flash and disappear for a brief second as the graphical shell reinitializes.
 4. Immediately navigate back to your target directory in File Explorer, right-click the problematic file, and press `Delete`.
 
 ## 4. Professional Engineer Precautions & Tips
@@ -78,4 +78,4 @@ To minimize the frequency of recurring file locks, adopt proactive system mainte
 
 ## 5. Frequently Asked Questions (FAQ)
 
-**A3.** Modern software applications are engineered with sophisticated background caching, autosave routines, and crash-recovery daemons that continue running long after you close the main program window. Furthermore, Windows search indexing services and cloud storage synchronization agents continuously monitor active working folders, reading file headers and generating metadata thumbnails. These background hooks create momentary or persistent file locks that prevent immediate deletion until the background worker threads complete their scheduled tasks.
+A3. Modern software applications are engineered with sophisticated background caching, autosave routines, and crash-recovery daemons that continue running long after you close the main program window. Furthermore, Windows search indexing services and cloud storage synchronization agents continuously monitor active working folders, reading file headers and generating metadata thumbnails. These background hooks create momentary or persistent file locks that prevent immediate deletion until the background worker threads complete their scheduled tasks.

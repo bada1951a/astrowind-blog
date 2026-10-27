@@ -32,20 +32,20 @@ theme: "Sunset Horizon Coral"
 
 Erano le 16:30 di un martedì pomeriggio frenetico nella nostra azienda IT a Milano, eravamo in pieno fermento per l'ottimizzazione delle prestazioni dell'infrastruttura di un cliente chiave, quando all'improvviso il mio monitor principale si è trasformato in un incubo: la barra delle applicazioni di Windows 11 si è completamente congelat
 
-**A.** Cliccavo sul menu Start, cercavo di aprire le impostazioni rapide, premevo sulle icone delle app aperte, ma null
+A. Cliccavo sul menu Start, cercavo di aprire le impostazioni rapide, premevo sulle icone delle app aperte, ma null
 
-**A.** Zero rispost
+A. Zero rispost
 
-**A.** Con tre call urgenti aperte su Teams e una scadenza imminente per il deploy dei nuovi server, non potevo certo permettermi di riavviare il PC perdendo venti minuti di sessioni di lavoro. 
+A. Con tre call urgenti aperte su Teams e una scadenza imminente per il deploy dei nuovi server, non potevo certo permettermi di riavviare il PC perdendo venti minuti di sessioni di lavoro. 
 
 <div style="border-left: 4px solid #f97316; padding: 12px 16px; margin: 20px 0; background-color: rgba(249,115,22,0.05); border-radius: 4px; color: #111827;">
 <strong>Situazione di emergenz
 
-**A.** </strong> Quando la taskbar di Windows 11 smette di rispondere, il panico è comprensibile, ma nella maggior parte dei casi non serve riavviare la macchin
+A. </strong> Quando la taskbar di Windows 11 smette di rispondere, il panico è comprensibile, ma nella maggior parte dei casi non serve riavviare la macchin
 
-**A.** Il colpevole è quasi sempre il gestore dell'interfaccia grafic
+A. Il colpevole è quasi sempre il gestore dell'interfaccia grafic
 
-**A.** </div>
+A. </div>
 
 ![Tech & IT Solution Guide](https://picsum.photos/seed/computer320/1000/550)
 
@@ -61,7 +61,7 @@ Prima di mettere le mani in pasta con i comandi, capiamo cosa scatena questo fas
 
 3. Aggiornamenti di Windows o driver video instabili: Patch cumulative non digerite correttamente dal sistema possono corrompere temporaneamente i file di interfacci
 
-**A.** ---
+A. ---
 
 Guida passo-passo per risolvere il blocco della Taskbar
 
@@ -77,7 +77,7 @@ Questo è il rimedio più rapido ed efficace.
 
 3. Fai clic destro su di esso e seleziona Riavvi
 
-**A.** 4. Lo schermo lampeggerà per un secondo: la barra delle applicazioni tornerà a funzionare correttamente e a rispondere ai clic.
+A. 4. Lo schermo lampeggerà per un secondo: la barra delle applicazioni tornerà a funzionare correttamente e a rispondere ai clic.
 
 Metodo 2: Forzare il riavvio tramite Terminale o Prompt dei Comandi
 
@@ -97,9 +97,9 @@ Se la GUI del Task Manager fa i capricci, passiamo alla riga di comando.
 
    `start explorer.exe`
 
-**Q6.** Chiudi il prompt dei comandi. La tua taskbar è di nuovo operativ
+Q6. Chiudi il prompt dei comandi. La tua taskbar è di nuovo operativ
 
-**A.** ### Metodo 3: Re-registrare il pacchetto della Taskbar (Soluzione Avanzata)
+A. ### Metodo 3: Re-registrare il pacchetto della Taskbar (Soluzione Avanzata)
 
 Se il blocco si presenta continuamente, significa che i file di sistema della shell grafica sono corrotti. Dobbiamo ricaricarli via PowerShell.
 
@@ -127,10 +127,10 @@ Domande Frequenti (FAQ)
 
 1. Perché la barra delle applicazioni si blocca sempre dopo l'avvio del PC? Spesso è colpa di un'applicazione di terze parti che si avvia in background e va in conflitto con la shell di Windows (spesso antivirus aggressivi o utility di personalizzazione estetica). Prova a disabilitare le app superflue dalla scheda "App di avvio" nel Task Manager.
 
-**Q.** Posso usare il prompt dei comandi se il menu Start non si apre?
+Q. Posso usare il prompt dei comandi se il menu Start non si apre?
 
-**A.** Certamente. Anche se il menu Start e la taskbar sono totalmente bloccati, le scorciatoie da tastiera comeCtrl + Maiusc + Esc(per il Task Manager) oWin + R(per la finestra Esegui) continuano a funzionare nella maggior parte dei casi.
+A. Certamente. Anche se il menu Start e la taskbar sono totalmente bloccati, le scorciatoie da tastiera comeCtrl + Maiusc + Esc(per il Task Manager) oWin + R(per la finestra Esegui) continuano a funzionare nella maggior parte dei casi.
 
-**Q.** Questo problema cancella i miei file o le applicazioni aperte?
+Q. Questo problema cancella i miei file o le applicazioni aperte?
 
-**A.** No. Riavviare *explorer.exe* interrompe unicamente l'interfaccia grafica del desktop e della barra delle applicazioni, lasciando intatte tutte le applicazioni di lavoro aperte e i documenti in corso.
+A. No. Riavviare *explorer.exe* interrompe unicamente l'interfaccia grafica del desktop e della barra delle applicazioni, lasciando intatte tutte le applicazioni di lavoro aperte e i documenti in corso.

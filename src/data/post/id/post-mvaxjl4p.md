@@ -32,9 +32,9 @@ theme: "Sunset Horizon Coral"
 
 Jam menunjukkan pukul 08.55 WIB. Lima menit lagi *daily standup meeting* via Zoom akan dimulai di ruang *huddle* kantor startup kami di kawasan SCBD, Jakart
 
-**A.** Sialnya, laptop Windows 10 operasional saya baru saja dinyalakan karena habis melakukan *update* sistem semalam. Layar *desktop* sudah muncul, tapi kursor mutar-mutar terus, kipas bergemuruh kencang, dan aplikasi Slack serta Chrome sama sekali tidak mau dibuk
+A. Sialnya, laptop Windows 10 operasional saya baru saja dinyalakan karena habis melakukan *update* sistem semalam. Layar *desktop* sudah muncul, tapi kursor mutar-mutar terus, kipas bergemuruh kencang, dan aplikasi Slack serta Chrome sama sekali tidak mau dibuk
 
-**A.** Keringat dingin mulai bercucuran karena saya harus segera membagikan laporan server internal yang down semalam. Masalah klasik: laptop kehabisan napas karena puluhan aplikasi langsung *nyala* bersamaan saat *booting*.
+A. Keringat dingin mulai bercucuran karena saya harus segera membagikan laporan server internal yang down semalam. Masalah klasik: laptop kehabisan napas karena puluhan aplikasi langsung *nyala* bersamaan saat *booting*.
 
 Situasi seperti ini pasti sering bikin darah tinggi, kan? Kalau Anda bekerja di lingkungan cepat seperti *startup* Jakarta, menunggu laptop *loading* selama 5 sampai 10 menit adalah kemewahan yang tidak kita miliki. 
 
@@ -52,13 +52,13 @@ Akar Masalah: Kenapa Windows 10 Bisa Mendadak Lemot Saat Dinyalakan?
 
 Sebelum masuk ke eksekusi, kita harus paham dulu apa yang sebenarnya terjadi di balik layar laptop And
 
-**A.** 1. Aplikasi "Numpang Nyala" Otomatis: Banyak aplikasi seperti Steam, Spotify, Discord, hingga aplikasi kantor seperti Teams dan OneDrive yang secara *default* mencentang opsi "Run at startup" saat instalasi.
+A. 1. Aplikasi "Numpang Nyala" Otomatis: Banyak aplikasi seperti Steam, Spotify, Discord, hingga aplikasi kantor seperti Teams dan OneDrive yang secara *default* mencentang opsi "Run at startup" saat instalasi.
 
 2. Kapasitas Penyimpanan Terbebani: Jika laptop Anda masih menggunakan Hard Disk lama (HDD) alih-alih SSD, antrean baca tulis saat *booting* akan membuat sistem *not responding* dalam waktu lam
 
-**A.** 3. Pemeriksaan Keamanan Berlebihan: Antivirus pihak ketiga yang langsung melakukan pemindaian menyeluruh (*full system scan*) setiap kali komputer baru menyal
+A. 3. Pemeriksaan Keamanan Berlebihan: Antivirus pihak ketiga yang langsung melakukan pemindaian menyeluruh (*full system scan*) setiap kali komputer baru menyal
 
-**A.** ---
+A. ---
 
 Panduan Praktis: Matikan Aplikasi Startup dalam 1 Menit
 
@@ -67,7 +67,7 @@ Tidak perlu instal software tambahan atau masuk ke pengaturan BIOS yang ribet. C
 Langkah 1: Buka Task Manager
 Tekan kombinasi tombol Ctrl + Shift + Esc secara bersamaan di keyboard And
 
-**A.** Cara ini adalah jalan pintas paling cepat untuk memanggil Task Manager tanpa harus klik kanan *taskbar*.
+A. Cara ini adalah jalan pintas paling cepat untuk memanggil Task Manager tanpa harus klik kanan *taskbar*.
 
 Langkah 2: Masuk ke Tab "Startup"
 Pada jendela Task Manager yang muncul, klik tab Startup(biasanya berada di bagian atas, berikon speedometer atau meteran). Jika Anda tidak melihat tab tersebut, klikMore details di bagian bawah jendela terlebih dahulu.
@@ -80,7 +80,7 @@ Anda akan melihat daftar panjang aplikasi yang berjalan otomatis. Cari aplikasi 
 <div style="border-left: 4px solid #f97316; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Tips Pro:</strong> Perhatikan kolom <strong>Startup impact</strong>. Prioritaskan untuk mematikan aplikasi yang memiliki dampak <em>High</em> (Tinggi) agar performa <em>booting</em> langsung terasa peningkatanny
 
-**A.** </div>
+A. </div>
 
 ---
 

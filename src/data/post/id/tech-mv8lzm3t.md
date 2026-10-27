@@ -42,12 +42,12 @@ Pernah ngalamin nggak? Pagi-pagi dateng ke kantor, pas mau buka file presentasi 
 
 Begitu gue pegang itu laptop dan buka Task Manager, *jebret!* Keliatan banget penyebab utamany
 
-**A.** ada 45 aplikasi, dari mulai Steam, Epic Games, Spotify, Discord, sampe bloatware bawaan vendor laptop, jalan serentak begitu tombol power ditekan. Ini bukan lagi *booting*, tapi ritual pemanggilan arwah!
+A. ada 45 aplikasi, dari mulai Steam, Epic Games, Spotify, Discord, sampe bloatware bawaan vendor laptop, jalan serentak begitu tombol power ditekan. Ini bukan lagi *booting*, tapi ritual pemanggilan arwah!
 
 <div style="border: 1px dashed #a6e22e; padding: 15px; margin: 20px 0; background-color: #1e1e1e; color: #a6e22e; border-radius: 4px;">
 <strong>DEBUGGING_NOTE:</strong> Jangan langsung vonis hardware rusak atau SSD minta ganti baru. Seringkali masalah utamanya ada di barisan "antrian siluman" yang numpuk pas sistem operasi nyal
 
-**A.** </div>
+A. </div>
 
 ---
 
@@ -94,10 +94,10 @@ Buat mastiin nggak ada service siluman yang lolos dari pengamatan Task Manager, 
 *   PENTING:Centang dulu kotak "Hide all Microsoft services" di bagian bawah (biar lu nggak nggak sengaja mematikan sistem inti Windows).
 *   Lihat daftar service yang tersis
 
-**A.** Hilangkan centang pada service aplikasi yang nggak butuh jalan otomatis (contoh: *Adobe Acrobat Update Service*, *Google Update Service*, dll).
+A. Hilangkan centang pada service aplikasi yang nggak butuh jalan otomatis (contoh: *Adobe Acrobat Update Service*, *Google Update Service*, dll).
 *   Klik ApplylaluOK. Restart laptop lu dan rasakan bedany
 
-**A.** ---
+A. ---
 
 Langkah 3: Cek Kesehatan Disk via Command Prompt (Bonus Diagnostik)
 
@@ -135,6 +135,6 @@ Nggak sama sekali. *Disable* cuma berarti aplikasi tersebut nggak bakal otomatis
 
 2. Kenapa laptop gue masih lemot padahal startup udah bersih semua? Kalau startup udah bersih tapi booting tetap memakan waktu lebih dari 2-3 menit, besar kemungkinan media penyimpanan lu masih menggunakan Hard Disk Drive (HDD) jadul, atau kesehatan (Health) SSD lu udah drop di bawah 50%. Solusi permanennya adalah migrasi sistem operasi ke SSD NVMe/SAT
 
-**A.** 3. Amankah mematikan semua service non-Microsoft di msconfig?
+A. 3. Amankah mematikan semua service non-Microsoft di msconfig?
 
 Aman, asalkan aplikasi tersebut adalah aplikasi tambahan pihak ketiga (seperti updater game atau utility printer tambahan). Tapi kalau ragu dengan nama servicenya, biarkan default atau cari tahu dulu fungsi service tersebut di internet sebelum di-disable.

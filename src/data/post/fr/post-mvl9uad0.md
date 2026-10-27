@@ -64,14 +64,14 @@ Si le probleme persiste malgre la desactivation du demarrage rapide, je vous con
 
 Voici les reponses aux questions les plus frequentes que l'on me pose au support informatique concernant ce dysfonctionnement agacant.
 
-**Q1.** Est-ce que forcer l'arret avec le bouton d'alimentation risque d'abimer mon materiel ?
+Q1. Est-ce que forcer l'arret avec le bouton d'alimentation risque d'abimer mon materiel ?
 
-**A1.** Une coupure forcee ponctuelle ne detruit pas physiquement vos composants, mais elle coupe brutalement l'ecriture sur le disque. Cela peut entrainer une corruption de fichiers systeme Windows ou la perte de donnees non enregistrees dans vos logiciels ouverts.
+A1. Une coupure forcee ponctuelle ne detruit pas physiquement vos composants, mais elle coupe brutalement l'ecriture sur le disque. Cela peut entrainer une corruption de fichiers systeme Windows ou la perte de donnees non enregistrees dans vos logiciels ouverts.
 
-**Q2.** Pourquoi ce probleme apparait-il soudainement apres une mise a jour Windows ?
+Q2. Pourquoi ce probleme apparait-il soudainement apres une mise a jour Windows ?
 
-**A2.** Les mises a jour majeures de Windows modifient parfois les parametres par defaut ou remplacent les pilotes de gestion d'alimentation de la carte mere, ce qui reactive malencontreusement le demarrage rapide ou cree des conflits avec vos composants actuels.
+A2. Les mises a jour majeures de Windows modifient parfois les parametres par defaut ou remplacent les pilotes de gestion d'alimentation de la carte mere, ce qui reactive malencontreusement le demarrage rapide ou cree des conflits avec vos composants actuels.
 
-**Q3.** Si je desactive le demarrage rapide, est-ce que mes logiciels de travail s'ouvriront plus lentement ?
+Q3. Si je desactive le demarrage rapide, est-ce que mes logiciels de travail s'ouvriront plus lentement ?
 
-**A3.** Non, cela affecte uniquement le temps de chargement du noyau de Windows lors de l'allumage initial. Vos logiciels et vos fichiers se lanceront exactement a la meme vitesse une fois le bureau affiche.
+A3. Non, cela affecte uniquement le temps de chargement du noyau de Windows lors de l'allumage initial. Vos logiciels et vos fichiers se lanceront exactement a la meme vitesse une fois le bureau affiche.

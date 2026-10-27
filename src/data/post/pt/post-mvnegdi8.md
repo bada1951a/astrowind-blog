@@ -29,7 +29,7 @@ Por que o Windows insiste em bloquear a exclusão de arquivos mesmo quando fecha
 
 * Processos em Segundo Plano (Background Services): Aplicativos como suítes de videoconferência, utilitários de webcam e antivírus mantêm handles (ponteiros de arquivo) abertos na memória RAM, mesmo após a interface gráfica ser fechad
 
-A. * **Locks de Hardware e DPC Latency:** Quando um driver de dispositivo (como o da placa de som ou da placa de captura de vídeo) falha em liberar o buffer, o sistema mantém o arquivo de log ou cache preso para evitar crash de tela azul (BSOD).
+A. * Locks de Hardware e DPC Latency: Quando um driver de dispositivo (como o da placa de som ou da placa de captura de vídeo) falha em liberar o buffer, o sistema mantém o arquivo de log ou cache preso para evitar crash de tela azul (BSOD).
 * Indexação e Serviço de Criptografi
 
 A.O indexador de arquivos do Windows (Windows Search) ou o System Insights tenta ler o arquivo milissegundos antes da exclusão, criando um conflito de acesso concorrente.
@@ -42,15 +42,15 @@ A. Siga estes passos para resolver o problema de forma definitiv
 
 A. ### Passo 1: Encerrando processos zumbis pelo Gerenciador de Tarefas
 Se o arquivo pertencer a um software que se recusou a fechar completamente:
-1. Pressione as teclasCtrl + Shift + Esc**para abrir o**Gerenciador de Tarefas.
+1. Pressione as teclasCtrl + Shift + Escpara abrir oGerenciador de Tarefas.
 
 2. Na abaProcessos, procure pelo aplicativo suspeito (por exemplo, o utilitário da câmera ou a ferramenta de conferência).
 
-3. Clique com o botão direito sobre ele e selecioneFinalizar Tarefa**. Se persistir, vá até a aba**Detalhes, localize o arquivo executável correspondente, clique com o botão direito e escolhaEncerrar Processo.
+3. Clique com o botão direito sobre ele e selecioneFinalizar Tarefa. Se persistir, vá até a abaDetalhes, localize o arquivo executável correspondente, clique com o botão direito e escolhaEncerrar Processo.
 
 ### Passo 2: Desbloqueando o arquivo via Prompt de Comando (CMD)
 Se o Gerenciador de Tarefas não for suficiente, vamos usar o terminal como administrador:
-1. Clique no menu Iniciar, digite `cmd`, clique com o botão direito emPrompt de Comando**e selecione**Executar como Administrador.
+1. Clique no menu Iniciar, digite `cmd`, clique com o botão direito emPrompt de Comandoe selecioneExecutar como Administrador.
 
 2. Utilize o comando abaixo para identificar e fechar tarefas travadas ou use o comando de exclusão forçada se tiver o caminho exato.
 
@@ -63,11 +63,11 @@ taskkill /f /im nome_do_processo.exe
 ### Passo 3: Ajustando permissões e inicialização limpa (Configurações)
 Caso o arquivo continue protegido por restrições de segurança do sistem
 
-A. 1. Abra as**Configurações**do Windows ou vá direto aoPainel de Controle.
+A. 1. Abra asConfiguraçõesdo Windows ou vá direto aoPainel de Controle.
 
 2. Verifique se há atualizações pendentes de drivers de hardware que possam estar causando o travamento dos buffers.
 
-3. Se necessário, reinicie o computador emModo de Segurança(segurando a tecla Shift enquanto clica em Reiniciar, indo emSolucionar problemas**>**Opções avançadas**>**Configurações de Inicialização). No modo seguro, nenhum driver de terceiro bloqueia arquivos de log, permitindo a exclusão imediat
+3. Se necessário, reinicie o computador emModo de Segurança(segurando a tecla Shift enquanto clica em Reiniciar, indo emSolucionar problemas>**Opções avançadas**>Configurações de Inicialização). No modo seguro, nenhum driver de terceiro bloqueia arquivos de log, permitindo a exclusão imediat
 
 A. ## 4. Recomendações e alertas de especialistas
 

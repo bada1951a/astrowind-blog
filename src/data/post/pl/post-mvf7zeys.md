@@ -32,9 +32,9 @@ theme: "Pure Titanium Clean"
 
 Godzina 8:45 rano, warszawskie centrum biznesowe na Mokotowie. Za piętnaście minut kluczowa telekonferencja zarządu z inwestorami, a stacja robocza dyrektora finansowego wydaje z siebie dźwięk startującego odrzutowc
 
-**A.** Wentylatory wyją na maksymalnych obrotach, kursor myszy skacze po ekranie jak szalony, a w Menedżerze zadań proces „System”lub„System i przerwania”dumnie wyświetla równe100% użycia procesor
+A. Wentylatory wyją na maksymalnych obrotach, kursor myszy skacze po ekranie jak szalony, a w Menedżerze zadań proces „System”lub„System i przerwania”dumnie wyświetla równe100% użycia procesor
 
-**A.** Ekran zamarza przy próbie otwarcia prezentacji PowerPoint. Panika w oczach użytkownika sięga zenitu, a ja wkraczam do akcji z walizką serwisową.
+A. Ekran zamarza przy próbie otwarcia prezentacji PowerPoint. Panika w oczach użytkownika sięga zenitu, a ja wkraczam do akcji z walizką serwisową.
 
 Znam ten ból na pamięć. Zanim wpadłem na właściwy trop, straciłem mnóstwo czasu na bezmyślne restarty komputera, odinstalowywanie pakietu Office czy skanowanie antywirusem, które w tym konkretnym scenariuszu nie dawały absolutnie nic. Problem leżał głębiej – w sterownikach, uszkodzonej usłudze Windows Update lub konflikcie podzespołów. 
 
@@ -58,11 +58,11 @@ Zanim klikniemy cokolwiek w systemie, warto zrozumieć, z czym walczymy. Proces 
 
 Procedura naprawcz
 
-**A.** Krok po kroku do stabilnego systemu
+A. Krok po kroku do stabilnego systemu
 
 Do działania potrzebujemy pełnych uprawnień administrator
 
-**A.** Otwórzmy Menedżer zadań, przejdźmy do Panelu sterowania i Menedżera urządzeń. Oto co robimy po kolei.
+A. Otwórzmy Menedżer zadań, przejdźmy do Panelu sterowania i Menedżera urządzeń. Oto co robimy po kolei.
 
 <div style="border-left: 4px solid #334155; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Złota zasada serwisu:</strong> Zanim zaczniesz grzebać w sterownikach, odłącz wszystkie niepotrzebne urządzenia zewnętrzne (stacje dokujące USB-C, pendrive'y, drukarki sieciowe). Często to wadliwy hub USB powoduje 100% obciążenia procesora przez przerwania systemowe!
@@ -78,7 +78,7 @@ Krok 1: Identyfikacja winowajcy w Menedżerze Zadań
 
 4. Zobaczysz proces ntoskrnl.exe. To potwierdzenie, że problem leży w jądrze systemu lub sterownikach urządzeń, a nie w zwykłej aplikacji użytkownik
 
-**A.** ## Krok 2: Czyszczenie kolejki Windows Update (Częsty punkt zapalny)
+A. ## Krok 2: Czyszczenie kolejki Windows Update (Częsty punkt zapalny)
 
 Jeśli proces systemowy obciąża procesor z powodu zaciętych aktualizacji, musimy zresetować komponenty usługi Update:
 
@@ -125,7 +125,7 @@ Ważne ostrzeżenie serwisowe i dobre praktyki
 <div style="border-left: 4px solid #334155; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Uwaga dotyczące zasilania i temperatur:</strong> Długotrwałe utrzymywanie się 100% obciążenia procesora drastycznie podnosi temperaturę układu (często powyżej 85-90°C w laptopach). Upewnij się, że otwory wentylacyjne nie są zablokowane, a pasta termoprzewodząca nie wyschł
 
-**A.** Przegrzewający się procesor włączy tzw. thermal throttling, drastycznie obniżając taktowanie i uniemożliwiając normalną pracę.
+A. Przegrzewający się procesor włączy tzw. thermal throttling, drastycznie obniżając taktowanie i uniemożliwiając normalną pracę.
 </div>
 
 ---
@@ -140,4 +140,4 @@ Często zadawane pytania (FAQ)
 
 Tak! Funkcja szybkiego uruchamiania w Windows często zapisuje uszkodzony stan jądra systemowego do pliku hibernacji podczas zamykania komputer
 
-**A.** Aby to wyłączyć, wejdź w *Panel sterowania -> Opcje zasilania -> Wybierz działanie przycisków zasilania*, odznacz *Włącz szybkie uruchamianie* i zrestartuj komputer. To rozwiązuje problem w co trzecim przypadków biurowych stacji roboczych.
+A. Aby to wyłączyć, wejdź w *Panel sterowania -> Opcje zasilania -> Wybierz działanie przycisków zasilania*, odznacz *Włącz szybkie uruchamianie* i zrestartuj komputer. To rozwiązuje problem w co trzecim przypadków biurowych stacji roboczych.

@@ -137,14 +137,14 @@ Avoid blindly disabling critical startup drivers in Device Manager unless you ha
 
 ## 5. Frequently Asked Questions (FAQ)
 
-**Q.** Can I just force-shutdown my PC by holding the power button when this happens?
+Q. Can I just force-shutdown my PC by holding the power button when this happens?
 
-**A.** Yes, if the system is completely frozen and unresponsive to mouse inputs, holding the power button for 5 to 10 seconds is your last resort. While it carries a slight risk of file corruption, modern NTFS journaling handles hard resets much better than older file systems. Use it only when all input methods fail.
+A. Yes, if the system is completely frozen and unresponsive to mouse inputs, holding the power button for 5 to 10 seconds is your last resort. While it carries a slight risk of file corruption, modern NTFS journaling handles hard resets much better than older file systems. Use it only when all input methods fail.
 
-**Q.** Why does the System process spike right after I log in?
+Q. Why does the System process spike right after I log in?
 
-**A.** This is usually caused by startup tasks, background Windows Updates initializing, or third-party antivirus software indexing your local drives simultaneously. Give the machine 3 to 5 minutes upon boot to settle before launching heavy apps.
+A. This is usually caused by startup tasks, background Windows Updates initializing, or third-party antivirus software indexing your local drives simultaneously. Give the machine 3 to 5 minutes upon boot to settle before launching heavy apps.
 
-**Q.** Does disabling SysMain (Superfetch) still help fix 100% CPU usage?
+Q. Does disabling SysMain (Superfetch) still help fix 100% CPU usage?
 
-**A.** On modern NVMe SSDs, the SysMain service is rarely the culprit anymore, and disabling it can sometimes hinder memory preloading efficiency. It's usually better to check for corrupted storage drivers or pending Windows updates first before tinkering with memory caching services.
+A. On modern NVMe SSDs, the SysMain service is rarely the culprit anymore, and disabling it can sometimes hinder memory preloading efficiency. It's usually better to check for corrupted storage drivers or pending Windows updates first before tinkering with memory caching services.

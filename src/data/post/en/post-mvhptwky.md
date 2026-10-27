@@ -98,9 +98,9 @@ If you prefer doing things manually or need to verify the registry key yourself,
 
    `InprocServer32`
 
-**Q6.** Click on InprocServer32, look at the right-hand pane, double-click the (Default) value, ensure the Value data field is completely blank, and click OK.
+Q6. Click on InprocServer32, look at the right-hand pane, double-click the (Default) value, ensure the Value data field is completely blank, and click OK.
 
-**Q7.** Restart Windows Explorer via Task Manager as outlined in Method 1.
+Q7. Restart Windows Explorer via Task Manager as outlined in Method 1.
 
 ---
 
@@ -124,14 +124,14 @@ Before rolling this out across your entire enterprise domain via Group Policy or
 
 ## 5. Frequently Asked Questions (FAQ)
 
-**Q1.** Does this tweak require a full system reboot?
+Q1. Does this tweak require a full system reboot?
 
-**A1.** No reboot is necessary. Simply restarting the `explorer.exe` process via Task Manager is enough to refresh the shell and make the classic context menu appear instantly.
+A1. No reboot is necessary. Simply restarting the `explorer.exe` process via Task Manager is enough to refresh the shell and make the classic context menu appear instantly.
 
-**Q2.** Will this break any native Windows 11 features?
+Q2. Will this break any native Windows 11 features?
 
-**A2.** No. Features like casting to device, modern sharing options, and pin-to-access remain fully functional. You are simply bypassing the extra "Show more options" submenu wrapper.
+A2. No. Features like casting to device, modern sharing options, and pin-to-access remain fully functional. You are simply bypassing the extra "Show more options" submenu wrapper.
 
-**Q3.** Can I deploy this via Microsoft Intune or Group Policy for 500+ machines?
+Q3. Can I deploy this via Microsoft Intune or Group Policy for 500+ machines?
 
-**A3.** Absolutely. You can package the registry command into a PowerShell script and deploy it as a Win32 app via Microsoft Intune, or push the registry hive modification directly through Group Policy Preferences (GPP).
+A3. Absolutely. You can package the registry command into a PowerShell script and deploy it as a Win32 app via Microsoft Intune, or push the registry hive modification directly through Group Policy Preferences (GPP).

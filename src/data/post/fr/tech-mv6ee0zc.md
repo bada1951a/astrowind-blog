@@ -50,7 +50,7 @@ Pour intervenir efficacement, il faut comprendre ce qui se passe sous le capucho
 [ Fermeture du circuit électrique ]
 ```
 
-**A.** L'oxydation microscopique des points de contact
+A. L'oxydation microscopique des points de contact
 Bien que les pastilles de contact soient généralement plaquées d'une fine couche d'or ou d'argent, l'humidité ambiante, les micro-arcs électriques générés par les cycles d'ouverture/fermeture et l'usure de friction finissent par exposer le métal sous-jacent. Une couche microscopique d'oxyde non conducteur se forme, créant une résistance de contact instable. Le microcontrôleur du clavier interprète ces fluctuations comme une succession rapide d'appuis et de relâchements.
 
 B. L'intrusion de micro-débris et la pollution particulaire
@@ -167,11 +167,11 @@ L'application de dégrippant universel standard (WD-40 classique), d'huile de si
 ---
 ## 5. Foire Aux Questions (FAQ)
 
-**Q1.** L'alcool isopropylique (IPA à 99,9 %) peut-il remplacer le nettoyant pour contacts ?
+Q1. L'alcool isopropylique (IPA à 99,9 %) peut-il remplacer le nettoyant pour contacts ?
 L'alcool isopropylique est un excellent dégraissant, mais il n'intègre pas d'agents désoxydants actifs conçus pour casser la passivation superficielle des métaux non ferreux. L'IPA diluera la crasse, mais ne traitera pas l'oxydation microscopique des lamelles. De plus, son temps d'évaporation au sein d'une chambre close non ventilée peut être plus long, augmentant le risque de piéger l'humidité atmosphérique lors du séchage. Le nettoyant contact diélectrique reste la solution technique supérieure.
 
-**Q2.** Peut-on compenser le chattering par voie logicielle plutôt que matérielle ?
+Q2. Peut-on compenser le chattering par voie logicielle plutôt que matérielle ?
 Il est techniquement possible d'augmenter le temps de debounce via des micrologiciels open source (comme QMK, VIA ou ZMK) ou via des utilitaires sous Windows (comme *Keyboard Chattering Fix*), en passant par exemple la valeur de rejet de 5 ms à 25 ms. Cependant, ce n'est qu'un pansement logiciel : cela masque la défaillance physique tout en augmentant la latence globale de saisie (*input lag*), ce qui est préjudiciable en jeu ou en saisie ultra-rapide. Il convient toujours de traiter la dégradation électromécanique à la racine.
 
-**Q3.** Que faire si l'injection de produit ne résout rien sur un interrupteur soudé ?
+Q3. Que faire si l'injection de produit ne résout rien sur un interrupteur soudé ?
 Si après deux applications et séchage complet le contact ne s'établit toujours pas ou continue de rebondir, la lamelle métallique souffre d'une déformation permanente ou d'une rupture de fatigue. Dans ce cas, l'unique issue sur un PCB non-hotswap consiste à démonter le châssis, chauffer les deux plots d'étain au fer à souder régulé (à 350 °C), aspirer la brasure à la pompe ou à la tresse de cuivre, et remplacer le composant par un commutateur neuf rigoureusement identique.

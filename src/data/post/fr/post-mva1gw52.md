@@ -130,14 +130,14 @@ Pour les caches de développement ou les fichiers temporaires persistants que l'
 ---
 ## 5. Foire Aux Questions (FAQ)
 
-**Q.** Puis-je supprimer en toute sécurité le dossier Windows.old si mon PC fonctionne bien ?
+Q. Puis-je supprimer en toute sécurité le dossier Windows.old si mon PC fonctionne bien ?
 
-**A.** Oui, absolument. Si votre mise à jour vers Windows 11 est stable et que vous n'avez pas besoin de revenir à l'ancienne version, ce dossier pèse souvent entre 15 Go et 30 Go. Supprimez-le via l'outil "Nettoyage de disque -> Fichiers système" pour récupérer cet espace immédiatement.
+A. Oui, absolument. Si votre mise à jour vers Windows 11 est stable et que vous n'avez pas besoin de revenir à l'ancienne version, ce dossier pèse souvent entre 15 Go et 30 Go. Supprimez-le via l'outil "Nettoyage de disque -> Fichiers système" pour récupérer cet espace immédiatement.
 
-**Q.** Que faire si mon disque se remplit à nouveau en quelques jours sans action de ma part ?
+Q. Que faire si mon disque se remplit à nouveau en quelques jours sans action de ma part ?
 
-**A.** C'est souvent le signe d'un cache de navigateur web surdimensionné, de points de restauration trop nombreux, ou d'applications de messagerie qui téléchargent des fichiers volumineux en arrière-plan. Vérifiez les paramètres de stockage par catégorie dans les Paramètres Windows pour identifier l'application coupable.
+A. C'est souvent le signe d'un cache de navigateur web surdimensionné, de points de restauration trop nombreux, ou d'applications de messagerie qui téléchargent des fichiers volumineux en arrière-plan. Vérifiez les paramètres de stockage par catégorie dans les Paramètres Windows pour identifier l'application coupable.
 
-**Q.** Est-il recommandé de désactiver l'hibernation pour gagner de l'espace ?
+Q. Est-il recommandé de désactiver l'hibernation pour gagner de l'espace ?
 
-**A.** Si vous utilisez un ordinateur portable professionnel, l'hibernation (`hiberfil.sys`) est utile pour préserver la batterie en fin de journée. Sur un poste fixe de bureau toujours branché, vous pouvez la désactiver via le Terminal en mode administrateur avec la commande `powercfg /hibernate off` pour récupérer un espace disque égal à la taille de votre mémoire RAM.
+A. Si vous utilisez un ordinateur portable professionnel, l'hibernation (`hiberfil.sys`) est utile pour préserver la batterie en fin de journée. Sur un poste fixe de bureau toujours branché, vous pouvez la désactiver via le Terminal en mode administrateur avec la commande `powercfg /hibernate off` pour récupérer un espace disque égal à la taille de votre mémoire RAM.

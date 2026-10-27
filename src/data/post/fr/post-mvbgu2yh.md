@@ -131,13 +131,13 @@ Si le problème persiste, des fichiers système essentiels liés à l'interface 
 ---
 ## 5. Foire Aux Questions (FAQ)
 
-**Q.** Que faire si je ne peux même pas ouvrir le Gestionnaire des tâches avec les raccourcis clavier ?
+Q. Que faire si je ne peux même pas ouvrir le Gestionnaire des tâches avec les raccourcis clavier ?
 
-**A.** Si le système est totalement figé, effectuez un redémarrage forcé en maintenez le bouton d'alimentation de votre PC enfoncé pendant 10 secondes. Une fois redémarré, appliquez immédiatement l'Étape 3 pour vérifier l'intégrité de vos fichiers.
+A. Si le système est totalement figé, effectuez un redémarrage forcé en maintenez le bouton d'alimentation de votre PC enfoncé pendant 10 secondes. Une fois redémarré, appliquez immédiatement l'Étape 3 pour vérifier l'intégrité de vos fichiers.
 
-**Q.** Est-ce qu'une mise à jour de Windows peut causer ce bug de manière récurrente ?
+Q. Est-ce qu'une mise à jour de Windows peut causer ce bug de manière récurrente ?
 
-**A.** Oui. Certaines mises à jour cumulatives optionnelles ou de sécurité de Windows 11 ont parfois introduit des régressions sur le composant `ShellExperienceHost`. Pensez à vérifier dans les *Paramètres > Windows Update* si une mise à jour corrective récente est disponible.
+A. Oui. Certaines mises à jour cumulatives optionnelles ou de sécurité de Windows 11 ont parfois introduit des régressions sur le composant `ShellExperienceHost`. Pensez à vérifier dans les *Paramètres > Windows Update* si une mise à jour corrective récente est disponible.
 
 3. Le mode sans échec résout-il le problème ?
 

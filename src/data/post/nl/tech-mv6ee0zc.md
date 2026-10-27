@@ -119,13 +119,13 @@ Dit is de meest effectieve methode om haperende switches en chattering op te los
 
 5. Plaats het fijne spuitrietje van de contactspray direct in de opening langs de stam, gericht op de hoek waar het koperen bladveertje zich bevindt (meestal de zijde met het logo op de switchbehuizing).
 
-**Q6.** Geef één zeer korte, gecontroleerde puls (minder dan een halve seconde). De vloeistof moet naar binnen vloeien, maar de switch mag niet verzuipen.
+Q6. Geef één zeer korte, gecontroleerde puls (minder dan een halve seconde). De vloeistof moet naar binnen vloeien, maar de switch mag niet verzuipen.
 
-**Q7.** Druk direct daarna de switch 60 tot 80 keer snel en ritmisch handmatig in. Hiermee wrijft de chemische reiniger over het koperen bladveertje, waardoor de oxidatielaag microscopisch wordt weggeschuurd.
+Q7. Druk direct daarna de switch 60 tot 80 keer snel en ritmisch handmatig in. Hiermee wrijft de chemische reiniger over het koperen bladveertje, waardoor de oxidatielaag microscopisch wordt weggeschuurd.
 
-**Q8.** Draai het toetsenbord om op een microvezeldoek en laat overtollig oplosmiddel weglopen.
+Q8. Draai het toetsenbord om op een microvezeldoek en laat overtollig oplosmiddel weglopen.
 
-**Q9.** Wachttijd: Laat het toetsenbord minimaal 20 tot 30 minuten rusten op kamertemperatuur tot het drijfgas en de dragende alcohol volledig zijn verdampt.
+Q9. Wachttijd: Laat het toetsenbord minimaal 20 tot 30 minuten rusten op kamertemperatuur tot het drijfgas en de dragende alcohol volledig zijn verdampt.
 
 ```
 +-------------------------------------------------------------+

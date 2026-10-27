@@ -53,14 +53,14 @@ Este método es ideal para usuarios que prefieren un entorno visual pero con un 
 1. Abra el Administrador de tareas utilizando la combinación de teclas `Ctrl + Shift + Esc`.
 2. Haga clic en la pestaña de procesos y desplácese hasta localizar el proceso que sospecha que mantiene el bloqueo (por ejemplo, Microsoft Excel o procesos huérfanos de bloques de texto).
 3. Si el proceso principal no aparece, cambie a la pestaña Detallespara ver la lista completa de ejecutables en ejecución con sus respectivos identificadores de proceso (PID).
-4. Haga clic con el botón derecho sobre el proceso infractor (ej. `EXCEL.EXE`) y seleccione la opciónFinalizar tarea**(o**Finalizar árbol de procesos si desea cerrar todas las ramificaciones dependientes de ese hilo).
+4. Haga clic con el botón derecho sobre el proceso infractor (ej. `EXCEL.EXE`) y seleccione la opciónFinalizar tarea(oFinalizar árbol de procesos si desea cerrar todas las ramificaciones dependientes de ese hilo).
 5. Confirme la acción en el cuadro de diálogo emergente. Esto forzará al kernel a liberar todos los *handles* asociados a ese ejecutable, permitiendo borrar el archivo inmediatamente desde el Explorador de archivos.
 
 ### Método 2: Ejecución de comandos de anulación directa en PowerShell o Símbolo del sistema
 
 Cuando las interfaces gráficas se bloquean o el sistema operativo no responde a los clics del usuario, la consola con privilegios de administrador ofrece la vía más rápida y contundente.
 
-1. Pulse `Win + X` en su teclado y seleccione **Terminal (Administrador)**o**Símbolo del sistema (Administrador)**.
+1. Pulse `Win + X` en su teclado y seleccione Terminal (Administrador)oSímbolo del sistema (Administrador).
 2. Utilice el comando de cierre forzoso por nombre de imagen para fulminar cualquier instancia rebelde del programa en segundo plano ejecutando la siguiente instrucción:
 
 ```cmd
@@ -84,8 +84,8 @@ El parámetro `/f` fuerza la eliminación de archivos de solo lectura, `/q` sile
 Si el sistema sigue indicando que el archivo está en uso a pesar de haber cerrado las aplicaciones visibles, es necesario rastrear el *handle* exacto que mantiene cautivo el recurso.
 
 1. Abra el menú de inicio, escriba `Monitor de recursos` y ejecute la aplicación como Administrador.
-2. Diríjase a la pestaña **CPU**.
-3. En la sección**Asociaciones de archivos**, localice el campo de búsqueda que diceBuscar el archivo asociadoe introduzca el nombre exacto del archivo bloqueado o parte de su rut
+2. Diríjase a la pestaña CPU.
+3. En la secciónAsociaciones de archivos, localice el campo de búsqueda que diceBuscar el archivo asociadoe introduzca el nombre exacto del archivo bloqueado o parte de su rut
 
 A. 4. El sistema filtrará instantáneamente los procesos que mantienen un vínculo activo con dicho archivo.
 5. Haga clic con el botón derecho sobre el proceso listado en la parte inferior y seleccioneFinalizar proceso. Vuelva a su carpeta de origen y elimine el archivo con total normalidad.
@@ -110,6 +110,8 @@ Q2. ¿Es seguro utilizar el comando de fuerza bruta en la consola de comandos pa
 
 A2. El uso de comandos como `del /f /q /a` o la terminación forzosa mediante `taskkill /f` es completamente seguro siempre y cuando se aplique exclusivamente sobre archivos de usuario, documentos de trabajo o directorios temporales específicos. Sin embargo, utilizar estos comandos de manera indiscriminada sobre directorios protegidos del sistema operativo (como la carpeta `System32` o el directorio raíz de Windows) puede corromper el registro, dañar archivos críticos del kernel y dejar el equipo inoperativo, obligando a realizar una reinstalación limpia del sistem
 
-A.Q3. ¿Qué debo hacer si ni el Administrador de tareas ni los comandos de consola logran liberar el archivo bloqueado?
+A.
+
+Q3. ¿Qué debo hacer si ni el Administrador de tareas ni los comandos de consola logran liberar el archivo bloqueado?
 
 A3. Si el sistema operativo opone una resistencia persistente y ningún método de cierre de procesos surte efecto, la causa más probable es que el archivo esté siendo analizado activamente por el software antivirus corporativo o que se encuentre retenido por un bloqueo de red a nivel de controlador de dominio. En este escenario, la solución más limpia y recomendada consiste en reiniciar el equipo enModo seguro (*Safe Mode*), lo cual impide que se carguen controladores de terceros y servicios no esenciales, permitiendo gestionar y eliminar cualquier archivo bloqueado sin restricciones del kernel.

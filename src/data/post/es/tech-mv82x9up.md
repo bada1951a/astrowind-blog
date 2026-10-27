@@ -41,7 +41,7 @@ CRITICAL: POST_SCREEN_FAILURE - Display output null. RAM modules uninitialized. 
 
 No era la tarjeta gráfica, ni el cable HDMI. El verdadero culpable estaba escondido en la ranura DIMM, acumulando el polvo y el drama de tres años de oficin
 
-**A.** Si te ha pasado esto en medio de una urgencia, sabes perfectamente de lo que hablo. Vamos a destripar este problema como verdaderos ingenieros de sistemas.
+A. Si te ha pasado esto en medio de una urgencia, sabes perfectamente de lo que hablo. Vamos a destripar este problema como verdaderos ingenieros de sistemas.
 
 ---
 
@@ -64,7 +64,7 @@ Vamos a dejar los blablablás y a ensuciarnos las manos. Apaga el equipo, descon
 <div style="border-left: 4px solid #00ffcc; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,255,204,0.05); border-radius: 4px; font-family: monospace;">
 Secuencia de comandos para diagnóstico físico en terminal human
 
-**A.** <br>
+A. <br>
 
 1.  shutdown -s -t 0 (Corte total de energía)<br>
 
@@ -81,7 +81,7 @@ Abre el chasis. Presiona las pestañas de seguridad de los extremos de la ranura
 * Pásale una goma de borrar blanca suavemente por los contactos dorados (pines) de la RAM para quitar la capa de grasa y óxido. 
 * Elimina los residuos de goma con un pincel antiestático o aire comprimido. Nunca toques los circuitos integrados (chips negros) con los dedos descalzos si hay riesgo estátic
 
-**A.** ## Paso 2: Limpieza de slots (Zócalos DIMM)
+A. ## Paso 2: Limpieza de slots (Zócalos DIMM)
 Usa aire comprimido en spray para soplar dentro de las ranuras de la placa base. A veces hay acumulaciones de pelusa que impiden que el módulo entre hasta el fondo.
 
 Paso 3: Prueba de aislamiento y reubicación
@@ -95,7 +95,7 @@ Conecta la corriente y enciende. Si da vídeo, entra a Windows y ejecuta el diag
 ```cmd
 Abre el Símbolo del sistema (CMD) como Administrador y ejecut
 
-**A.** mdsched.exe
+A. mdsched.exe
 ```
 *(Selecciona "Reiniciar ahora y comprobar si existen problemas" para que la herramienta nativa de Windows valide la integridad de los chips de memoria).*
 
@@ -121,17 +121,19 @@ Además, si al encender el equipo escuchas una sinfonía de pitidos continuos (b
 
 ## 5. Preguntas Frecuentes (FAQ)
 
-**Q1.** ¿Por qué el PC enciende (giran los ventiladores y encienden luces) pero la pantalla sigue negra si el problema es la RAM?  
+Q1. ¿Por qué el PC enciende (giran los ventiladores y encienden luces) pero la pantalla sigue negra si el problema es la RAM?  
 *R:* Porque la placa base tiene energía para alimentar los periféricos básicos y ventiladores, pero el procesador no puede ejecutar el código de la BIOS (POST) sin la memoria RAM activ
 
-**A.** Sin RAM, el sistema operativo ni siquiera empieza a cargar, por lo que la tarjeta gráfica no recibe la orden de enviar señal de vídeo al monitor.
+A. Sin RAM, el sistema operativo ni siquiera empieza a cargar, por lo que la tarjeta gráfica no recibe la orden de enviar señal de vídeo al monitor.
 
-**Q2.** ¿Puedo mezclar memorias RAM de diferentes marcas o frecuencias si una falló?  
+Q2. ¿Puedo mezclar memorias RAM de diferentes marcas o frecuencias si una falló?  
 *R:* Para probar y salir del paso en una emergencia, sí, el sistema suele arrancar ajustándose a la frecuencia y latencias del módulo más lento. Sin embargo, para entornos de producción estables, es altamente recomendable usar módulos idénticos (mismo kit, frecuencia y latencia) para evitar pantallas azules (*BSOD*) por desincronización del controlador de memori
 
-**A.Q3.** Limpié los contactos, cambié de slot y sigue sin dar vídeo.
+A.
+
+Q3. Limpié los contactos, cambié de slot y sigue sin dar vídeo.
 
 ¿Qué sigue?  
 *R:* Si ya descartaste la RAM, el siguiente sospechoso en la línea de fuego es la fuente de alimentación (que no entrega suficiente voltaje en el riel de 12V para la gráfica o el procesador) o un problema de cortocircuito en los Standoffs (separadores) de la placa base con el chasis. Desconecta todo lo secundario y prueba hacer un *Clear CMOS* para resetear la BIOS a fábric
 
-**A.**
+A.

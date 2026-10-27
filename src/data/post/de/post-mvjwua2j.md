@@ -88,7 +88,7 @@ Wenn der Dienst allein nicht hilft, werfen wir einen Blick auf die Hardware-Eben
 
 5. Klicken Sie im Menü oben auf Aktionund wählen SieNach geänderter Hardware suchen.
 
-**Q6.** Sollte das Problem bestehen bleiben, wählen Sie Treiber aktualisieren>Auf meinem Computer nach Treibern suchen und wählen Sie einen bereits installierten kompatiblen Treiber aus.
+Q6. Sollte das Problem bestehen bleiben, wählen Sie Treiber aktualisieren>Auf meinem Computer nach Treibern suchen und wählen Sie einen bereits installierten kompatiblen Treiber aus.
 
 Schritt 3: Die Systemsteuerung für tiefere Klangeinstellungen nutzen
 Das moderne Windows 11 Einstellungsmenü ist schick, aber für Audio-Fehler greifen wir Profis oft lieber auf die bewährte Systemsteuerung zurück.

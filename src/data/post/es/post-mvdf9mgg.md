@@ -32,9 +32,9 @@ theme: "Solarized Amber Warm"
 
 Eran las 7:30 de la tarde en nuestra oficina tecnológica del distrito 22@ en Barcelon
 
-**A.** Estábamos a menos de cuarenta y ocho horas de liberar una nueva versión crítica de nuestro software principal, y decidí reiniciar mi estación de trabajo tras aplicar el último parche acumulativo de Windows 11. Grave error. La pantalla se quedó congelada de forma impertinente en un fatídico "100% completado. No apague el equipo" durante más de una hor
+A. Estábamos a menos de cuarenta y ocho horas de liberar una nueva versión crítica de nuestro software principal, y decidí reiniciar mi estación de trabajo tras aplicar el último parche acumulativo de Windows 11. Grave error. La pantalla se quedó congelada de forma impertinente en un fatídico "100% completado. No apague el equipo" durante más de una hor
 
-**A.** El ventilador rugía como un reactor y el grupo de Slack echaba humo con compañeros preguntando por los binarios de la compilación previa al lanzamiento. Tenía la máquina principal totalmente secuestrada por el asistente de actualización.
+A. El ventilador rugía como un reactor y el grupo de Slack echaba humo con compañeros preguntando por los binarios de la compilación previa al lanzamiento. Tenía la máquina principal totalmente secuestrada por el asistente de actualización.
 
 <div style="border-left: 4px solid #d97706; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Nota de campo desde el estudio:</strong> Cuando el proceso de Windows Update se congela exactamente en el 100%, casi nunca se debe a que el sistema esté instalando código complejo. En el 95% de los casos, el servicio se ha quedado intentando registrar componentes o procesando archivos corruptos dentro del directorio de caché local sin poder avanzar ni dar marcha atrás.
@@ -72,7 +72,7 @@ Pasos para la solución: Vaciado de la caché y reseteo de servicios
 
 Para salir de este apuro sin tener que formatear ni perder la configuración de desarrollo, vamos a detener los servicios críticos de actualización mediante la Terminal y a vaciar manualmente la caché corrupt
 
-**A.** Abre el menú Inicio, escribe Terminal (o Símbolo del sistema), haz clic derecho y seleccionaEjecutar como administrador.
+A. Abre el menú Inicio, escribe Terminal (o Símbolo del sistema), haz clic derecho y seleccionaEjecutar como administrador.
 
 Paso 1: Detener los servicios de actualización
 Copia y pega los siguientes comandos para apagar los procesos que están bloqueando los archivos:

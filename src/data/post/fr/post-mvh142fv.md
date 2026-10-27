@@ -113,8 +113,10 @@ Quand un PC se fige de manière aléatoire, le système de fichiers (surtout si 
 ---
 ## 5. Foire Aux Questions (FAQ)
 
-**Q1.** Mon Observateur d'événements affiche des dizaines d'erreurs au démarrage, est-ce normal ? R :Oui, Windows génère de nombreux avertissements non critiques (services non démarrés à temps, timeouts mineurs) dès le boot. Ne paniquez pas. Concentrez-vous uniquement sur l'horodatage exact correspondant à la minute qui précède votre gel d'écran.
+Q1. Mon Observateur d'événements affiche des dizaines d'erreurs au démarrage, est-ce normal ? R :Oui, Windows génère de nombreux avertissements non critiques (services non démarrés à temps, timeouts mineurs) dès le boot. Ne paniquez pas. Concentrez-vous uniquement sur l'horodatage exact correspondant à la minute qui précède votre gel d'écran.
 
-**Q2.** Est-ce qu'une barrette de RAM défectueuse peut provoquer ces blocages sans afficher d'écran bleu ? R : Tout à fait. Une erreur mémoire silencieuse corrompt instantanément l'espace d'adressage de l'OS, ce qui gèle le processus principal de Windows au lieu de déclencher un plantage avec écran bleu. Utilisez l'outil natif *Diagnostic de la mémoire Windows* pour vérifier cel
+Q2. Est-ce qu'une barrette de RAM défectueuse peut provoquer ces blocages sans afficher d'écran bleu ? R : Tout à fait. Une erreur mémoire silencieuse corrompt instantanément l'espace d'adressage de l'OS, ce qui gèle le processus principal de Windows au lieu de déclencher un plantage avec écran bleu. Utilisez l'outil natif *Diagnostic de la mémoire Windows* pour vérifier cel
 
-**A.Q3.** Comment savoir si le SSD est responsable des freezes ? R : Si vos freezes s'accompagnent d'un ralentissement extrême où le gestionnaire des tâches indique 100% d'utilisation du disque avec un temps de réponse de plusieurs milliers de millisecondes, téléchargez le logiciel de diagnostic officiel de la marque de votre SSD (Samsung Magician, CrystalDiskInfo, etc.) pour vérifier son état de santé global et mettre à jour son firmware.
+A.
+
+Q3. Comment savoir si le SSD est responsable des freezes ? R : Si vos freezes s'accompagnent d'un ralentissement extrême où le gestionnaire des tâches indique 100% d'utilisation du disque avec un temps de réponse de plusieurs milliers de millisecondes, téléchargez le logiciel de diagnostic officiel de la marque de votre SSD (Samsung Magician, CrystalDiskInfo, etc.) pour vérifier son état de santé global et mettre à jour son firmware.

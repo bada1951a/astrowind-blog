@@ -32,21 +32,21 @@ theme: "Crimson Emergency Field"
 
 Godzina 8:52 rano. Za acht minut mam mieć gotowy raport dla zarządu i rzuconego na głęboką wodę klienta z Frankfurtu. Otwieram mojego ThinkPada, a on... wita mnie czarnym ekranem i kręcącym się kółkiem ładowani
 
-**A.** Dysk NVMe mieli w kółko, procesor jedzie na 100% swoich możliwości, a wentylatory wyją jak odkurzacz w małym pokoju. W tle ładuje się Teams, Discord, Spotify, autoupdater do jakiejś głupiej gierki i pięć różnych programów do "optymalizacji", które jakiś geniusz z działu marketingu zainstalował bez pytani
+A. Dysk NVMe mieli w kółko, procesor jedzie na 100% swoich możliwości, a wentylatory wyją jak odkurzacz w małym pokoju. W tle ładuje się Teams, Discord, Spotify, autoupdater do jakiejś głupiej gierki i pięć różnych programów do "optymalizacji", które jakiś geniusz z działu marketingu zainstalował bez pytani
 
-**A.** Krew mnie zalała, pot oblał czoło – klasyczny piątkowy orkan w korpo, gdzie sprzęt decyduje się umrzeć w najmniej odpowiednim momencie.
+A. Krew mnie zalała, pot oblał czoło – klasyczny piątkowy orkan w korpo, gdzie sprzęt decyduje się umrzeć w najmniej odpowiednim momencie.
 
 <div style="border-left: 4px solid #ef4444; padding: 12px 16px; margin: 20px 0; background-color: rgba(239, 68, 68, 0.05); border-radius: 4px;">
 <strong>STATUS AWARYJNY: KRYTYCZNY SPADEK WYDAJNOŚCI</strong><br>
 Jeśli Twój system startuje dłużej niż parzenie porannej kawy, oznacza to, że Twoja pamięć operacyjna i podsystem dyskowy są dosłownie dławione przez zombie-procesy działające w tle od samego momentu włączenia komputer
 
-**A.** </div>
+A. </div>
 
 ![Hardware Diagnostic & Troubleshooting](https://picsum.photos/seed/hardware-907/1000/550)
 
 Przez pierwsze dziesięć minut borykałem się z tym badziewiem jak jakiś amator. Próbowałem odpalać *Zarządzanie dyskami*, sprawdzałem *Menedżer urządzeń*, czy mi karta sieciowa nie zwariowała, klikałem losowe ikonki w zasobniku systemowym (tray), tracąc bezcenny czas. Szybki rzut okiem na procesy w tle i wyszło szydło z worka – system walczył o życie z 47 aplikacjami rezydentnymi, które uznały, że są pępkiem wszechświat
 
-**A.** W tym poradniku wylejemy kubeł zimnej wody na te cyfrowe pijawki. Pokażę Ci, jak bezlitośnie przeorać autostart, żeby Twój blaszak lub laptop znowu dostawał kopa w plecy zaraz po wciśnięciu power.
+A. W tym poradniku wylejemy kubeł zimnej wody na te cyfrowe pijawki. Pokażę Ci, jak bezlitośnie przeorać autostart, żeby Twój blaszak lub laptop znowu dostawał kopa w plecy zaraz po wciśnięciu power.
 
 ---
 
@@ -54,7 +54,7 @@ Przez pierwsze dziesięć minut borykałem się z tym badziewiem jak jakiś amat
 
 Zanim przejdziemy do chirurgicznego usuwania problemów, ustalmy, dlaczego Twój system zamienił się w żółwi
 
-**A.** Oto trzy najczęstsze grzechy użytkowników i samych aplikacji:
+A. Oto trzy najczęstsze grzechy użytkowników i samych aplikacji:
 
 1. Syndrom "Każda apka musi być ważna": Instalatorzy softu (od pakietów Adobe po darmowe narzędzia PDF) domyślnie zaznaczają opcję *"Uruchom wraz z systemem Windows"*. Aplikacje te bezczelnie wrzucają swoje demony i usługi do autostartu, chociaż uruchamiasz je raz na kwartał.
 
@@ -66,18 +66,18 @@ Zanim przejdziemy do chirurgicznego usuwania problemów, ustalmy, dlaczego Twój
 
 Procedura Awaryjn
 
-**A.** Krok po Kroku do Wolności
+A. Krok po Kroku do Wolności
 
 Odrzucamy wszelkie szemrane programy "szuwarek-optimizer" z internetu. Zrobimy to jak profesjonalni inżynierowie wsparcia – szybko, czysto i za pomocą wbudowanych narzędzi Windows
 
-**A.** ### Krok 1: Oczyszczanie Menedżera Zadania (Task Manager)
+A. ### Krok 1: Oczyszczanie Menedżera Zadania (Task Manager)
 Zapomnij o starym `msconfig`. Od czasów Windows 10 i 11 mamy do dyspozycji dedykowaną zakładkę w Menedżerze Zadań, która bezlitośnie obnaża zasobożerność starter
 
-**A.** 1. Wciśnij skrót klawiszowy Ctrl + Shift + Esc, aby natychmiast uruchomićMenedżer zadań.
+A. 1. Wciśnij skrót klawiszowy Ctrl + Shift + Esc, aby natychmiast uruchomićMenedżer zadań.
 
 2. Jeśli widzisz uproszczony widok, kliknij Więcej szczegółów na dole okn
 
-**A.** 3. Przejdź do zakładki z ikoną licznika/miernika – Aplikacje startowe (lub *Autostart* w starszych wersjach).
+A. 3. Przejdź do zakładki z ikoną licznika/miernika – Aplikacje startowe (lub *Autostart* w starszych wersjach).
 
 4. Posortuj listę według kolumny Wpływ na uruchamianie (*Startup impact*).
 
@@ -86,7 +86,7 @@ Zapomnij o starym `msconfig`. Od czasów Windows 10 i 11 mamy do dyspozycji dedy
 <div style="border-left: 4px solid #ef4444; padding: 12px 16px; margin: 20px 0; background-color: rgba(239, 68, 68, 0.05); border-radius: 4px;">
 <strong>ZŁOTA ZASADA INŻYNIER
 
-**A.** </strong><br>
+A. </strong><br>
 Jeśli nie masz pewności, czym jest dany proces (np. nazwa to losowy ciąg liter typu <code>jhi_service.exe</code> albo <code>RtkAudUService64.exe</code>), wrzuć go w Google przed wyłączeniem. Nie wyłączaj sterowników Realteka, grafiki (NVIDIA/AMD) ani oprogramowania zabezpieczającego.
 </div>
 
@@ -116,7 +116,7 @@ Jeśli standardowy interfejs zawodzi albo podejrzewasz, że w systemie siedzi uk
 Krok 3: Harmonogram Zadań (Task Scheduler) – Ukryte Zło
 Wielu cwaniaków w branży oprogramowania omija autostart rejestru i wrzuca swoje procesy bezpośrednio do Harmonogramu Zadań, żeby uruchamiały się po zalogowaniu użytkownik
 
-**A.** 1. Wciśnij Win + R, wpisz `taskschd.msc` i zatwierdź Enterem.
+A. 1. Wciśnij Win + R, wpisz `taskschd.msc` i zatwierdź Enterem.
 
 2. Kliknij na Biblioteka harmonogramu zadań w lewym panelu.
 
@@ -128,7 +128,7 @@ Wielu cwaniaków w branży oprogramowania omija autostart rejestru i wrzuca swoj
 
 ⚠️ Ostrzeżenie Inżynier
 
-**A.** Czego NIGDY Nie Ruszać?
+A. Czego NIGDY Nie Ruszać?
 
 Zanim zaczniesz bezmyślnie klikać "Wyłącz", spójrz na tę krótką listę ratunkową. Ubicie tych komponentów oznacza bilet w jedną stronę do trybu awaryjnego (Safe Mode):
 
@@ -141,16 +141,16 @@ Zanim zaczniesz bezmyślnie klikać "Wyłącz", spójrz na tę krótką listę r
 
 Często Zadawane Pytania (FAQ)
 
-**Q1.** Wyłączyłem aplikację w Menedżerze zadań, a ona dalej włącza się po restarcie. O co chodzi?
+Q1. Wyłączyłem aplikację w Menedżerze zadań, a ona dalej włącza się po restarcie. O co chodzi?
 
-**A.** Niektóre aplikacje mają własne ustawienia wewnętrzne, które przy każdym uruchomieniu programu same dopisują się z powrotem do autostartu. Wejdź w *Ustawienia* (Settings) danej aplikacji (np. Skype, Steam, Torrenty) i tam odznacz opcję "Uruchom wraz z systemem". Dopiero wtedy zniknie na dobre.
+A. Niektóre aplikacje mają własne ustawienia wewnętrzne, które przy każdym uruchomieniu programu same dopisują się z powrotem do autostartu. Wejdź w *Ustawienia* (Settings) danej aplikacji (np. Skype, Steam, Torrenty) i tam odznacz opcję "Uruchom wraz z systemem". Dopiero wtedy zniknie na dobre.
 
-**Q2.** Czy czyszczenie autostartu jest bezpieczne dla moich danych?
+Q2. Czy czyszczenie autostartu jest bezpieczne dla moich danych?
 
-**A.** W 100% bezpieczne. Wyłączenie aplikacji w autostarcienie oznacza jej odinstalowani
+A. W 100% bezpieczne. Wyłączenie aplikacji w autostarcienie oznacza jej odinstalowani
 
-**A.** Programy te nadal będą działać idealnie, gdy klikniesz ich ikonkę ręcznie. Po prostu przestaną marnować zasoby komputera w momencie, gdy Ty próbujesz spokojnie zacząć pracę.
+A. Programy te nadal będą działać idealnie, gdy klikniesz ich ikonkę ręcznie. Po prostu przestaną marnować zasoby komputera w momencie, gdy Ty próbujesz spokojnie zacząć pracę.
 
-**Q3.** Mój dysk to stary HDD. Czy samo wyłączenie autostartu mi pomoże?
+Q3. Mój dysk to stary HDD. Czy samo wyłączenie autostartu mi pomoże?
 
-**A.** Pomoże, ale na krótko. Tradycyjne dyski talerzowe (HDD) mają dramatycznie niski wskaźnik IOPS (operacji wejścia/wyjścia na sekundę). Przy starcie Windowsa głowica dysku skacze w tysiące miejsc jednocześnie, próbując załadować wszystko naraz. Jeśli chcesz autentycznego kopa, jedynym trwałym rozwiązaniem jest migracja systemu na dysk SSD (M.2 NVMe lub SATA). Autostart to tylko półśrodek, choć niezwykle skuteczny na start.
+A. Pomoże, ale na krótko. Tradycyjne dyski talerzowe (HDD) mają dramatycznie niski wskaźnik IOPS (operacji wejścia/wyjścia na sekundę). Przy starcie Windowsa głowica dysku skacze w tysiące miejsc jednocześnie, próbując załadować wszystko naraz. Jeśli chcesz autentycznego kopa, jedynym trwałym rozwiązaniem jest migracja systemu na dysk SSD (M.2 NVMe lub SATA). Autostart to tylko półśrodek, choć niezwykle skuteczny na start.

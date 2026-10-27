@@ -41,16 +41,16 @@ Zur Behebung des Problems stehen Administratoren drei komplementäre Methoden zu
 Diese Methode eignet sich hervorragend für den schnellen grafischen Zugriff, wenn das System noch bedienbar ist.
 
 1. Drücken Sie die Tastenkombination `Ctrl + Shift + Esc`, um den Task-Manager direkt zu öffnen.
-2. Klicken Sie auf der linken Seite auf das Symbol **Prozesse**, falls die Detailansicht nicht aktiv ist.
+2. Klicken Sie auf der linken Seite auf das Symbol Prozesse, falls die Detailansicht nicht aktiv ist.
 3. Suchen Sie in der alphabetischen Liste nach Anwendungen wie Microsoft Excel, Word oder bekannten Hintergrunddiensten, die die betroffene Datei verwenden könnten.
-4. Klicken Sie mit der rechten Maustaste auf den entsprechenden Prozess und wählen Sie**Task beenden**aus dem Kontextmenü.
-5. Sollte der Prozess hartnäckig sein, wechseln Sie im Task-Manager auf den Reiter**Details**, suchen Sie den Prozess anhand seiner PID, machen Sie einen Rechtsklick und wählen Sie**Prozessstruktur beenden**, um alle abhängigen Sub-Prozesse zu terminieren.
+4. Klicken Sie mit der rechten Maustaste auf den entsprechenden Prozess und wählen SieTask beendenaus dem Kontextmenü.
+5. Sollte der Prozess hartnäckig sein, wechseln Sie im Task-Manager auf den ReiterDetails, suchen Sie den Prozess anhand seiner PID, machen Sie einen Rechtsklick und wählen SieProzessstruktur beenden, um alle abhängigen Sub-Prozesse zu terminieren.
 
 ### Methode 2: Konsolenbasierte Erzwungene Beendigung via PowerShell oder Eingabeaufforderung
 
 Für maximale Effizienz und zur Skripterstellung greift der Systemadministrator zur Kommandozeile.
 
-1. Drücken Sie `Win + X` und wählen Sie**Terminal (Admin)**oder**Eingabeaufforderung (Administrator)** aus dem Menü.
+1. Drücken Sie `Win + X` und wählen SieTerminal (Admin)oderEingabeaufforderung (Administrator) aus dem Menü.
 2. Identifizieren Sie den blockierenden Prozess und erzwingen Sie dessen Beendigung mit dem Befehl `taskkill`. Geben Sie dazu folgenden Befehl ein (am Beispiel von Excel):
    ```cmd
    taskkill /f /im EXCEL.EXE
@@ -67,10 +67,10 @@ Für maximale Effizienz und zur Skripterstellung greift der Systemadministrator 
 Wenn der Prozess unbekannt ist, hilft nur die direkte Suche nach dem blockierenden Dateihandle.
 
 1. Drücken Sie `Win + R`, tippen Sie `resmon` ein und bestätigen Sie mit Enter, um den Ressourcenmonitor zu öffnen.
-2. Navigieren Sie zum Reiter **CPU**.
-3. Suchen Sie im Bereich**Verknüpfte Handles**nach dem Namen der gesperrten Datei oder des Ordners.
+2. Navigieren Sie zum Reiter CPU.
+3. Suchen Sie im BereichVerknüpfte Handlesnach dem Namen der gesperrten Datei oder des Ordners.
 4. Notieren Sie sich die PID (Prozess-ID) des Prozesses, der das Handle hält.
-5. Machen Sie einen Rechtsklick auf den Prozess im Ressourcenmonitor und wählen Sie**Prozess beenden**, um die Blockade aufhebend zu erzwingen.
+5. Machen Sie einen Rechtsklick auf den Prozess im Ressourcenmonitor und wählen SieProzess beenden, um die Blockade aufhebend zu erzwingen.
 
 ## 4. Praxistipps und Warnungen vom System-Admin
 
@@ -80,14 +80,14 @@ Zur Vermeidung wiederkehrender Dateisperren empfiehlt sich die Etablierung saube
 
 ## 5. Häufig gestellte Fragen (FAQ)
 
-**Q1.** Warum zeigt Windows mir oft nicht an, welches konkrete Programm eine Datei sperrt?
+Q1. Warum zeigt Windows mir oft nicht an, welches konkrete Programm eine Datei sperrt?
 
-**A1.** Windows verwendet standardmäßig ein generisches Fehlersystem, das aus Sicherheits- und Performance-Gründen keine detaillierte Prozesszuordnung direkt im Explorer-Dialog vornimmt. Das Betriebssystem bündelt Dateizugriffe über den I/O-Manager, wodurch die exakte PID für den normalen Anwender verborgen bleibt. Um die Ursache dennoch zu ermitteln, müssen administrative Werkzeuge wie der Ressourcenmonitor oder Sysinternals Process Explorer verwendet werden, die die offenen Handles direkt auslesen.
+A1. Windows verwendet standardmäßig ein generisches Fehlersystem, das aus Sicherheits- und Performance-Gründen keine detaillierte Prozesszuordnung direkt im Explorer-Dialog vornimmt. Das Betriebssystem bündelt Dateizugriffe über den I/O-Manager, wodurch die exakte PID für den normalen Anwender verborgen bleibt. Um die Ursache dennoch zu ermitteln, müssen administrative Werkzeuge wie der Ressourcenmonitor oder Sysinternals Process Explorer verwendet werden, die die offenen Handles direkt auslesen.
 
-**Q2.** Kann das gewaltsame Beenden eines Prozesses zur Beschädigung der offenen Datei führen?
+Q2. Kann das gewaltsame Beenden eines Prozesses zur Beschädigung der offenen Datei führen?
 
-**A2.** Ja, das erzwungene Beenden eines Prozesses während eines Schreibvorgangs kann zu unvollständigen Datenstrukturen und Dateikorruption führen. Wenn eine Anwendung gerade Daten in die Datei schreibt und der Prozess abrupt terminiert wird, verbleiben ungespeicherte Puffer im RAM und werden nicht mehr auf den Datenträger geschrieben. Deshalb sollte ein erzwungener Kill immer nur dann eingesetzt werden, wenn die Anwendung hängt und keine aktiven Schreibprozesse mehr stattfinden.
+A2. Ja, das erzwungene Beenden eines Prozesses während eines Schreibvorgangs kann zu unvollständigen Datenstrukturen und Dateikorruption führen. Wenn eine Anwendung gerade Daten in die Datei schreibt und der Prozess abrupt terminiert wird, verbleiben ungespeicherte Puffer im RAM und werden nicht mehr auf den Datenträger geschrieben. Deshalb sollte ein erzwungener Kill immer nur dann eingesetzt werden, wenn die Anwendung hängt und keine aktiven Schreibprozesse mehr stattfinden.
 
-**Q3.** Was kann ich tun, wenn selbst administrative Konsolenbefehle das Löschen der Datei verweigern?
+Q3. Was kann ich tun, wenn selbst administrative Konsolenbefehle das Löschen der Datei verweigern?
 
-**A3.** Wenn selbst der Administrator über die PowerShell oder Eingabeaufforderung keinen Zugriff erhält, liegt meist eine tiefgreifende Berechtigungssperre oder eine Beschädigung der Master File Table vor. In solchen Fällen hilft es, den Computer im abgesicherten Modus zu starten, da hierbei die meisten Autostart-Programme und Drittanbieter-Dienste gar nicht erst geladen werden. Alternativ kann die Berechtigung der Datei temporär übernommen werden, indem man den Besitzer im Reiter Sicherheit auf den Administrator-Account ändert und Vollzugriff erteilt.
+A3. Wenn selbst der Administrator über die PowerShell oder Eingabeaufforderung keinen Zugriff erhält, liegt meist eine tiefgreifende Berechtigungssperre oder eine Beschädigung der Master File Table vor. In solchen Fällen hilft es, den Computer im abgesicherten Modus zu starten, da hierbei die meisten Autostart-Programme und Drittanbieter-Dienste gar nicht erst geladen werden. Alternativ kann die Berechtigung der Datei temporär übernommen werden, indem man den Besitzer im Reiter Sicherheit auf den Administrator-Account ändert und Vollzugriff erteilt.

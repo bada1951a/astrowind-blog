@@ -32,14 +32,14 @@ theme: "Pastel Lavender Tech"
 
 L'altra mattina mi trovavo nel cuore del Centro Direzionale di Milano, esattamente nella sala riunioni principale di un nostro cliente importante. Eravamo a pochi minuti dall'inizio della demo ufficiale: i dirigenti erano seduti intorno al tavolo e i responsabili di reparto erano pronti a osservare in tempo reale la condivisione dello schermo del mio sistema per testare la nuova configurazione. Ho chiuso tutte le finestre di lavoro, ho cliccato su Arresta il sistema dal menu Start e ho scollegato i cavi di rete diBackup, convinto di poter spostare la postazione. Invece, la brutta sorpres
 
-**A.** gli schermi si erano spenti, ma le ventole del case continuavano a girare a pieno regime, i LED della scheda madre erano accesi e il sistema non dava segni di voler tagliare completamente l'alimentazione. Sudore freddo. Riavviare tenendo premuto il tasto di accensione avrebbe significato rischiare la corruzione dei database locali aperti poco prim
+A. gli schermi si erano spenti, ma le ventole del case continuavano a girare a pieno regime, i LED della scheda madre erano accesi e il sistema non dava segni di voler tagliare completamente l'alimentazione. Sudore freddo. Riavviare tenendo premuto il tasto di accensione avrebbe significato rischiare la corruzione dei database locali aperti poco prim
 
-**A.** Dovevo trovare una soluzione immediata senza perdere la faccia davanti ai manager milanesi.
+A. Dovevo trovare una soluzione immediata senza perdere la faccia davanti ai manager milanesi.
 
 <div style="border-left: 4px solid #7c3aed; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 Nota del sistemist
 
-**A.** Questo fastidioso difetto in cui Windows sembra spegnersi ma in realtà resta in uno stato di ibernazione ibrida non risolto è quasi sempre causato da una funzione nativa introdotta anni fa per velocizzare l'avvio, ma che manda in tilt i driver ACPI di molti componenti hardware.
+A. Questo fastidioso difetto in cui Windows sembra spegnersi ma in realtà resta in uno stato di ibernazione ibrida non risolto è quasi sempre causato da una funzione nativa introdotta anni fa per velocizzare l'avvio, ma che manda in tilt i driver ACPI di molti componenti hardware.
 </div>
 
 ![Tech Troubleshooting Guide](/images/tech-photo/display%20(8).png)
@@ -54,15 +54,15 @@ Perché succede questo? Spesso ci si perde a cercare guasti sulla scheda madre o
 
 La buona notizia è che non serve smontare il PC o perdere ore nel registro di sistem
 
-**A.** La soluzione definitiva richiede pochissimi passaggi mirati. Vediamo come procedere passo dopo passo per riprendere il controllo del computer.
+A. La soluzione definitiva richiede pochissimi passaggi mirati. Vediamo come procedere passo dopo passo per riprendere il controllo del computer.
 
 Per prima cosa, apriamo la schermata di configurazione classic
 
-**A.** Clicca sul menu Start e digita Pannello di controllo, quindi aprilo. In alternativa, puoi usare la combinazione di tasti Windows più R, digitare control e premere Invio.
+A. Clicca sul menu Start e digita Pannello di controllo, quindi aprilo. In alternativa, puoi usare la combinazione di tasti Windows più R, digitare control e premere Invio.
 
 Nel Pannello di controllo, assicurati che la visualizzazione in alto a destra sia impostata su "Icone grandi" o "Icone piccole", poi individua e clicca su Opzioni di risparmio energi
 
-**A.** Sul menu laterale sinistro della finestra che si apre, fai clic sulla voce "Specificare il comportamento dei pulsanti di alimentazione".
+A. Sul menu laterale sinistro della finestra che si apre, fai clic sulla voce "Specificare il comportamento dei pulsanti di alimentazione".
 
 Ti troverai davanti a una schermata in cui le opzioni di arresto in basso sono dis噹e e in grigio. Per poterle modificare, devi sbloccare i privilegi amministrativi: clicca sulla scritta in alto che recita "Modifica le impostazioni attualmente non disponibili".
 
@@ -76,19 +76,19 @@ Consiglio professionale: Una volta disabilitato l'avvio rapido, effettua sempre 
 
 Prima di chiudere la pratica, voglio lasciarti un paio di raccomandazioni da sistemista vissuto sul campo. Se lavori spesso in mobilità o gestisci macchine aziendali, ricorda che disabilitare l'avvio rapido previene anche fastidiosi problemi di corruzione dei file system su disco SSD quando il computer viene chiuso nello zaino mentre sta ancora completando lo spegnimento fantasm
 
-**A.** Evita di affidarti a comandi forzati da terminale se non strettamente necessario: intervenire sulla gestione energetica tramite l'interfaccia grafica del Pannello di controllo rimane la via più sicura e pulit
+A. Evita di affidarti a comandi forzati da terminale se non strettamente necessario: intervenire sulla gestione energetica tramite l'interfaccia grafica del Pannello di controllo rimane la via più sicura e pulit
 
-**A.** Domande frequenti (FAQ)
+A. Domande frequenti (FAQ)
 
 D1. Disabilitando l'avvio rapido il mio computer diventerà molto più lento ad accendersi?
 
-**A1.** Nella stragrande maggioranza dei PC moderni dotati di unità SSD, la differenza di tempo nell'avvio a freddo è impercettibile, solitamente quantificabile in pochissimi secondi. Il guadagno in termini di stabilità e assenza di bug ripaga ampiamente questa minima perdit
+A1. Nella stragrande maggioranza dei PC moderni dotati di unità SSD, la differenza di tempo nell'avvio a freddo è impercettibile, solitamente quantificabile in pochissimi secondi. Il guadagno in termini di stabilità e assenza di bug ripaga ampiamente questa minima perdit
 
-**A.** D2. Posso eseguire questa procedura anche sui PC dei miei colleghi tramite riga di comando o PowerShell?
+A. D2. Posso eseguire questa procedura anche sui PC dei miei colleghi tramite riga di comando o PowerShell?
 
-**A2.** Sì, se gestisci un parco macchine aziendale puoi disabilitare l'avvio rapido agendo direttamente sul registro di sistema o tramite criteri di gruppo (GPO), modificando la chiave HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Session Manager\\Power e impostando il valore HiberbootEnabled a 0.
+A2. Sì, se gestisci un parco macchine aziendale puoi disabilitare l'avvio rapido agendo direttamente sul registro di sistema o tramite criteri di gruppo (GPO), modificando la chiave HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Session Manager\\Power e impostando il valore HiberbootEnabled a 0.
 
 D3. Ho disabilitato l'avvio rapido ma il problema persiste, cosa devo controllare adesso?
 
-**A3.** Se il PC continua a non spegnersi, il problema potrebbe essere legato ai driver della scheda di rete o della scheda video. Ti consiglio di aprire Gestione dispositivi, individuare la scheda di rete principale, accedere alle Proprietà, andare sulla scheda Risparmio energia e deselezionare "Consenti al computer di spegnere il dispositivo per risparmiare energia", procedendo poi con l'aggiornamento dei driver del chipset dal sito del produttore.
+A3. Se il PC continua a non spegnersi, il problema potrebbe essere legato ai driver della scheda di rete o della scheda video. Ti consiglio di aprire Gestione dispositivi, individuare la scheda di rete principale, accedere alle Proprietà, andare sulla scheda Risparmio energia e deselezionare "Consenti al computer di spegnere il dispositivo per risparmiare energia", procedendo poi con l'aggiornamento dei driver del chipset dal sito del produttore.
 ---

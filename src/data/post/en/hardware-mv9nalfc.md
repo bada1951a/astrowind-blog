@@ -88,16 +88,16 @@ Next, let's tackle the system-wide temporary repository.
 ---
 ## 5. Frequently Asked Questions (FAQ)
 
-**Q.** Common Questions Answered
+Q. Common Questions Answered
 
-**Q.** Is it safe to delete everything inside the `%temp%` folder?
+Q. Is it safe to delete everything inside the `%temp%` folder?
 
-**A.** Yes! The contents of temporary folders are strictly meant to be short-term storage for running applications and installers. If a file is currently being used by an active program, Windows will simply block you from deleting it, keeping your system safe from crashes.
+A. Yes! The contents of temporary folders are strictly meant to be short-term storage for running applications and installers. If a file is currently being used by an active program, Windows will simply block you from deleting it, keeping your system safe from crashes.
 
-**Q.** How can I prevent my C drive from filling up again next month?
+Q. How can I prevent my C drive from filling up again next month?
 
-**A.** turn on Storage Sensein your Windows Settings (`System > Storage > Storage Sense`). Set it to automatically run during low-disk situations and configure it to purge your Recycle Bin and temporary cloud-content files on a regular schedule.
+A. turn on Storage Sensein your Windows Settings (`System > Storage > Storage Sense`). Set it to automatically run during low-disk situations and configure it to purge your Recycle Bin and temporary cloud-content files on a regular schedule.
 
-**Q.** My drive is still full even after deleting temp files. What should I check next?
+Q. My drive is still full even after deleting temp files. What should I check next?
 
-**A.** Download and runTreeSize FreeorWizTree. These lightweight tools instantly scan your C drive and visually map out every single folder by file size, allowing you to easily spot massive forgotten video files, virtual machine disks, or old game installations hiding in obscure directories.
+A. Download and runTreeSize FreeorWizTree. These lightweight tools instantly scan your C drive and visually map out every single folder by file size, allowing you to easily spot massive forgotten video files, virtual machine disks, or old game installations hiding in obscure directories.

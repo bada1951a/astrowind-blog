@@ -110,14 +110,14 @@ Pour éviter de retomber dans les mêmes travers lors des prochains sprints :
 ---
 ## 5. Foire Aux Questions (FAQ)
 
-**Q.** Est-ce dangereux de désactiver des éléments dans l'onglet Démarrage ?
+Q. Est-ce dangereux de désactiver des éléments dans l'onglet Démarrage ?
 
-**A.** Non, absolument pas. Désactiver une application ici signifie simplement qu'elle ne se lancera plus toute seule en arrière-plan. Vous pourrez toujours l'ouvrir manuellement en double-cliquant sur son icône quand vous en aurez réellement besoin.
+A. Non, absolument pas. Désactiver une application ici signifie simplement qu'elle ne se lancera plus toute seule en arrière-plan. Vous pourrez toujours l'ouvrir manuellement en double-cliquant sur son icône quand vous en aurez réellement besoin.
 
-**Q.** Que faire si certaines applications persistent à se lancer malgré la désactivation ?
+Q. Que faire si certaines applications persistent à se lancer malgré la désactivation ?
 
-**A.** Certains logiciels récalcitrants possèdent leurs propres paramètres internes de lancement automatique. Ouvrez les préférences ou les paramètres de l'application concernée (comme Discord ou Steam) et décochez l'option "Lancer au démarrage de l'ordinateur" dans l'interface du logiciel lui-même.
+A. Certains logiciels récalcitrants possèdent leurs propres paramètres internes de lancement automatique. Ouvrez les préférences ou les paramètres de l'application concernée (comme Discord ou Steam) et décochez l'option "Lancer au démarrage de l'ordinateur" dans l'interface du logiciel lui-même.
 
-**Q.** Pourquoi mon PC reste-t-il lent malgré le nettoyage du démarrage ?
+Q. Pourquoi mon PC reste-t-il lent malgré le nettoyage du démarrage ?
 
-**A.** Si le temps de boot reste anormalement long après cette manipulation, le problème est probablement matériel. Un disque système (C:) saturé à plus de 90% ou un disque dur mécanique (HDD) en fin de vie provoquent ces symptômes. L'achat et l'installation d'un SSD NVMe résoudront définitivement le problème.
+A. Si le temps de boot reste anormalement long après cette manipulation, le problème est probablement matériel. Un disque système (C:) saturé à plus de 90% ou un disque dur mécanique (HDD) en fin de vie provoquent ces symptômes. L'achat et l'installation d'un SSD NVMe résoudront définitivement le problème.

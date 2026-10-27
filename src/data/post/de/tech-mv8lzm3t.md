@@ -108,10 +108,10 @@ Finger weg von dubiosen "One-Click-Turbo-Boost"-Programmen aus dem Internet! Die
 ---
 ## 5. Häufig gestellte Fragen (FAQ)
 
-**Q.** Soll ich den Windows-Virenscanner (Defender) im Autostart deaktivieren, um Zeit zu sparen?
+Q. Soll ich den Windows-Virenscanner (Defender) im Autostart deaktivieren, um Zeit zu sparen?
 
-**A.** Um Himmels willen:Nein!Der Echtzeitschutz muss beim Booten sofort greifen. Wer hier spart, öffnet Ransomware Tür und Tor.F: Nach dem Aufräumen startet der PC immer noch langsam. Was nun?
+A. Um Himmels willen:Nein!Der Echtzeitschutz muss beim Booten sofort greifen. Wer hier spart, öffnet Ransomware Tür und Tor.F: Nach dem Aufräumen startet der PC immer noch langsam. Was nun?
 
-**A.** Wenn du noch eine mechanische Festplatte (HDD) als Systemlaufwerk nutzt, ist der Zeitpunkt für ein Upgrade gekommen. Investiere in eine günstige NVMe- oder SATA-SSD. Das ist der absolute Gamechanger und lässt selbst fünf Jahre alte Hardware wieder fliegen.F: Windows schaltet bestimmte Apps von selbst wieder in den Autostart ein. Warum?
+A. Wenn du noch eine mechanische Festplatte (HDD) als Systemlaufwerk nutzt, ist der Zeitpunkt für ein Upgrade gekommen. Investiere in eine günstige NVMe- oder SATA-SSD. Das ist der absolute Gamechanger und lässt selbst fünf Jahre alte Hardware wieder fliegen.F: Windows schaltet bestimmte Apps von selbst wieder in den Autostart ein. Warum?
 
-**A.** Viele moderne Apps (vor allem Electron-basierte wie Browser oder Messenger) ignorieren beim Update die lokalen Einstellungen und schreiben sich klammheimlich wieder in den Autostart. Du musst diesen Apps in ihren eigenen Einstellungen die Option "Beim Systemstart ausführen" explizit verbieten.
+A. Viele moderne Apps (vor allem Electron-basierte wie Browser oder Messenger) ignorieren beim Update die lokalen Einstellungen und schreiben sich klammheimlich wieder in den Autostart. Du musst diesen Apps in ihren eigenen Einstellungen die Option "Beim Systemstart ausführen" explizit verbieten.

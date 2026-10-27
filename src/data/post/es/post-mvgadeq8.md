@@ -32,22 +32,22 @@ theme: "Crimson Emergency Field"
 
 Eran las 4:50 de la tarde en nuestra oficina corporativa en Madrid. A solo diez minutos de enviar el paquete final del proyecto trimestral a la directiva, la pantalla del equipo principal de diseño comenzó a parpadear y, de la nada, apareció esa maldita marca transparente en la esquina inferior derech
 
-**A.** "Activa Windows: ve a Configuración para activar Windows". Para colmo, cubría justo los botones de exportación del software gráfico. El pánico se apoderó delux del estudio; el cliente estaba esperando los archivos y la interfaz parecía boicotearnos el trabajo.
+A. "Activa Windows: ve a Configuración para activar Windows". Para colmo, cubría justo los botones de exportación del software gráfico. El pánico se apoderó delux del estudio; el cliente estaba esperando los archivos y la interfaz parecía boicotearnos el trabajo.
 
 Intentamos de todo a la carrer
 
-**A.** reiniciar el explorador de archivos desde el Administrador de tareas, buscar opciones rápidas en el Panel de control y hasta revisar el estado del sistema en Configuración, pero el aviso seguía ahí, estorbando en el peor momento posible. Los parches descargados de páginas dudosas solo advertían alertas de seguridad del antivirus corporativo. No podíamos arriesgarnos a corromper el sistema operativo a cinco minutos del cierre.
+A. reiniciar el explorador de archivos desde el Administrador de tareas, buscar opciones rápidas en el Panel de control y hasta revisar el estado del sistema en Configuración, pero el aviso seguía ahí, estorbando en el peor momento posible. Los parches descargados de páginas dudosas solo advertían alertas de seguridad del antivirus corporativo. No podíamos arriesgarnos a corromper el sistema operativo a cinco minutos del cierre.
 
 ![Tech Troubleshooting Guide](/images/tech-photo/tech-photos%20(5).jpg)
 
 Por suerte, como técnico especialista, recordé un procedimiento rápido, limpio y nativo mediante la consola de comandos que nos salvó la entrega sin tocar programas de terceros ni poner en riesgo la seguridad de la red de la empres
 
-**A.** Aquí te comparto el paso a paso exacto para salir de este apuro de inmediato.
+A. Aquí te comparto el paso a paso exacto para salir de este apuro de inmediato.
 
 <div style="border-left: 4px solid #ef4444; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>¡Aviso de Emergencia IT!</strong> No descargues activadores piratas de internet en equipos de oficin
 
-**A.** Pones en riesgo la red corporativa entera frente a ransomware y troyanos. Usa siempre métodos limpios basados en consola oficial.
+A. Pones en riesgo la red corporativa entera frente a ransomware y troyanos. Usa siempre métodos limpios basados en consola oficial.
 </div>
 
 ---
@@ -68,7 +68,7 @@ Antes de aplicar la solución, es bueno entender qué provocó el fallo en nuest
 
 2. Actualización acumulativa reciente: Ciertos paquetes de actualización de Windows Update (como los parches de seguridad mensuales) reinician los servicios de licencias y fuerzan la revalidación del estado del sistem
 
-**A.** 3. Cambios en componentes de hardware:Una sustitución reciente de placa base o tarjeta de red en el Administrador de dispositivos puede invalidar el token de activación digital guardado en el equipo.
+A. 3. Cambios en componentes de hardware:Una sustitución reciente de placa base o tarjeta de red en el Administrador de dispositivos puede invalidar el token de activación digital guardado en el equipo.
 
 ---
 
@@ -84,7 +84,7 @@ Pasos rápidos para limpiar la marca de agua mediante CMD
 
 Para solucionar este inconveniente sin instalar herramientas peligrosas, vamos a detener temporalmente los servicios de evaluación y reiniciar el temporizador de licencias de forma nativ
 
-**A.** Sigue estos clics y comandos con atención:
+A. Sigue estos clics y comandos con atención:
 
 Paso 1: Abrir la consola con privilegios de administrador
 
@@ -92,12 +92,12 @@ Paso 1: Abrir la consola con privilegios de administrador
 
 2. Escribe `cmd` en la barra de búsqued
 
-**A.** 3. Haz clic derecho sobre Símbolo del sistemay selecciona "Ejecutar como administrador" (es vital tener permisos elevados para modificar los servicios del sistema).
+A. 3. Haz clic derecho sobre Símbolo del sistemay selecciona "Ejecutar como administrador" (es vital tener permisos elevados para modificar los servicios del sistema).
 
 Paso 2: Detener los servicios de protección de software
 Una vez dentro de la ventana negra de comandos, introduce las siguientes líneas una por una presionando *Enter* después de cada un
 
-**A.** ```cmd
+A. ```cmd
 net stop sppsvc
 ```
 *(Este comando detiene el servicio de protección de software de Windows que gestiona las licencias).*
@@ -110,12 +110,12 @@ slmgr -rearm
 ```
 *Not
 
-**A.** Si te sale un mensaje indicando que el comando se ejecutó con éxito, aparecerá una ventana emergente indicando que debes reiniciar el equipo.*
+A. Si te sale un mensaje indicando que el comando se ejecutó con éxito, aparecerá una ventana emergente indicando que debes reiniciar el equipo.*
 
 Paso 4: Reiniciar el equipo de forma limpia
 No cierres el día operativo sin hacer un reinicio completo. Ve a Configuración > Inicio/Apagado > Reiniciar. Al volver a encender la máquina, el servicio se reiniciará de forma limpia y la molesta marca de agua habrá desaparecido, permitiéndote trabajar con la pantalla despejad
 
-**A.** ---
+A. ---
 
 ## 4. Advertencias y consejos de un técnico
 

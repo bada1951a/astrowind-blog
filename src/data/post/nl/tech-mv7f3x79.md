@@ -45,7 +45,7 @@ Wanneer een laptop via USB-C, HDMI of DisplayPort een extern scherm aanstuurt, i
 <div style="border-left: 4px solid #1d4ed8; padding: 14px 18px; margin: 20px 0; background-color: rgba(29, 78, 216, 0.05); border-radius: 4px;">
   <strong>Systeembeheerdersnotitie:</strong> Een extern beeldscherm dat periodiek op zwart springt (elke 3 tot 10 seconden), duidt in de regel op een time-out in de HDCP-authenticatie of een signaalstroom die de bandbreedtecapaciteit overschrijdt. Een monitor die direct overgaat in stand-by met de melding "Geen signaal" kampt vrijwel altijd met een mislukte EDID-uitlezing door een geblokkeerd stuurprogramm
 
-**A.** </div>
+A. </div>
 
 1. DCH-Driverconflicten door Geforceerde Windows Update-overschrijvingen
 Het grootste pijnpunt in moderne Windows-omgevingen is de automatische vervanging van specifieke OEM-videodrivers door generieke stuurprogramma's via Windows Update. Als Windows een generieke Intel- of AMD-driver over een door de fabrikant (Lenovo, Dell, HP) geoptimaliseerde driver heen installeert, ontstaat er een incompatibiliteit tussen de stroombeheerfuncties van het moederbord en de DisplayPort Alternate Mode (DP Alt Mode) van de USB-C-controller. Het resultaat is dat de GPU de aangesloten monitor niet langer herkent zodra de PCIe-link naar een lagere energiebeheermodus (C-state) schakelt.
@@ -105,7 +105,7 @@ Als de snelle reset het probleem niet verhelpt, is het stuurprogramma in een ong
 
 5. Verwijder alle grijs weergegeven schermen (dit zijn zogeheten "ghost monitors" met verouderde EDID-caches) door met de rechtermuisknop te klikken en te kiezen voor Apparaat verwijderen.
 
-**Q6.** Klik met de rechtermuisknop op je primaire geïntegreerde beeldschermadapter en kies Stuurprogramma bijwerken->Op mijn computer naar stuurprogramma's zoeken->Ik wil kiezen uit een lijst met stuurprogramma's op mijn computer. Selecteer de vorige stabiele driverversie indien beschikbaar en voltooi de wizard.
+Q6. Klik met de rechtermuisknop op je primaire geïntegreerde beeldschermadapter en kies Stuurprogramma bijwerken->Op mijn computer naar stuurprogramma's zoeken->Ik wil kiezen uit een lijst met stuurprogramma's op mijn computer. Selecteer de vorige stabiele driverversie indien beschikbaar en voltooi de wizard.
 
 Stap 3: Uitvoeren van een Schone Driverinstallatie (DDU Methode)
 Wanneer Windows Update de stuurprogrammacache heeft beschadigd, biedt alleen een rigoureuze schoonmaak uitkomst.
@@ -120,9 +120,9 @@ Wanneer Windows Update de stuurprogrammacache heeft beschadigd, biedt alleen een
 
 5. Herhaal deze actie direct voor de discrete GPU (indien aanwezig).
 
-**Q6.** Sluit DDU af en herstart de laptop normaal.
+Q6. Sluit DDU af en herstart de laptop normaal.
 
-**Q7.** Installeer het vooraf gedownloade OEM-stuurprogrammabestand. Sluit de externe schermen pas weer aan nadat de installatie 100% is voltooid en de machine eenmaal opnieuw is opgestart.
+Q7. Installeer het vooraf gedownloade OEM-stuurprogrammabestand. Sluit de externe schermen pas weer aan nadat de installatie 100% is voltooid en de machine eenmaal opnieuw is opgestart.
 
 Stap 4: Reset van de Windows Display Cache via het Register
 Windows bewaart elke schermconfiguratie die je ooit hebt aangesloten in het register. Als deze configuratiesleutel beschadigd raakt, blijft het besturingssysteem proberen om foute resoluties of vernieuwingsfrequenties te forceren.

@@ -129,10 +129,10 @@ Pour garantir la stabilité de vos postes de travail en période de forte charge
 
 Forcez l'arrêt du PC trois fois de suite en maintenant le bouton d'alimentation enfoncé lors du logo Windows. Au quatrième démarrage, le système affichera automatiquement l'environnement de récupération (WinRE). Allez dans *Dépannage > Options avancées > Paramètres de démarrage*, puis redémarrez en *Mode sans échec*.
 
-**Q.** Le diagnostic mémoire Windows indique une erreur, est-ce réparable ?
+Q. Le diagnostic mémoire Windows indique une erreur, est-ce réparable ?
 
-**A.** Non, une erreur physique signalée par l'outil de diagnostic signifie généralement qu'une barrette de RAM est défectueuse. Il faut l'extraire physiquement de la carte mère, nettoyer les contacts, ou la remplacer purement et simplement.
+A. Non, une erreur physique signalée par l'outil de diagnostic signifie généralement qu'une barrette de RAM est défectueuse. Il faut l'extraire physiquement de la carte mère, nettoyer les contacts, ou la remplacer purement et simplement.
 
-**Q.** Le retour arrière du pilote est grisé dans le Gestionnaire de périphériques, quelle est l'alternative ?
+Q. Le retour arrière du pilote est grisé dans le Gestionnaire de périphériques, quelle est l'alternative ?
 
-**A.** Cela signifie qu'aucune version précédente n'est stockée en cache local. Dans ce cas, téléchargez la version stable précédente directement sur le site du fabricant depuis un autre ordinateur, mettez-la sur une clé USB, puis procédez à une installation manuelle via l'option *Parcourir mon poste de ordinateur pour rechercher des pilotes*.
+A. Cela signifie qu'aucune version précédente n'est stockée en cache local. Dans ce cas, téléchargez la version stable précédente directement sur le site du fabricant depuis un autre ordinateur, mettez-la sur une clé USB, puis procédez à une installation manuelle via l'option *Parcourir mon poste de ordinateur pour rechercher des pilotes*.

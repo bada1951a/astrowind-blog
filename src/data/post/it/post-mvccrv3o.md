@@ -32,9 +32,9 @@ theme: "Bronze Artisan Workshop"
 
 Erano le 17:30 di un giovedì caotico nel nostro ufficio di consulenza IT in zona Porta Nuova a Milano. Stavamo ultimando l'ottimizzazione delle prestazioni dell'infrastruttura per un cliente del settore finanziario quando, di colpo, la mia workstation principale si è spenta mostrando la famigerata schermata blu con il codice di errore `0x0000000a` (IRQL_NOT_LESS_OR_EQUAL). Il panico iniziale è durato pochi secondi: con una deadline imminente e i log di produzione da esportare, non potevo permettermi di perdere tempo in tentativi alla ciec
 
-**A.** Sapevo benissimo che quel codice specifico puntava dritto a un conflitto di memoria o a un driver corrotto dopo l'ultimo aggiornamento di sistem
+A. Sapevo benissimo che quel codice specifico puntava dritto a un conflitto di memoria o a un driver corrotto dopo l'ultimo aggiornamento di sistem
 
-**A.** Dopo vent'anni passati a mettere le mani nei PC e nei server, ho imparato che le emergenze hardware e software non si affrontano con la disperazione, ma con un metodo chirurgico, degno di una bottega artigiana digitale. In questo articolo ti mostro esattamente come ho isolato il problema e come puoi risolverlo anche tu in pochi passaggi.
+A. Dopo vent'anni passati a mettere le mani nei PC e nei server, ho imparato che le emergenze hardware e software non si affrontano con la disperazione, ma con un metodo chirurgico, degno di una bottega artigiana digitale. In questo articolo ti mostro esattamente come ho isolato il problema e come puoi risolverlo anche tu in pochi passaggi.
 
 ![Tech & IT Solution Guide](https://picsum.photos/seed/computer345/1000/550)
 
@@ -46,13 +46,13 @@ Analisi delle Cause Radice
 
 Prima di mettere mano a comandi e cacciaviti, capiamo cosa scatena esattamente questo blocco di sistem
 
-**A.** 1. Driver di periferica instabili o corrotti: Spesso un aggiornamento automatico di Windows Update installa un driver di rete, audio o chipset non perfettamente stabile, che va in conflitto con il kernel di Windows.
+A. 1. Driver di periferica instabili o corrotti: Spesso un aggiornamento automatico di Windows Update installa un driver di rete, audio o chipset non perfettamente stabile, che va in conflitto con il kernel di Windows.
 
 2. Problemi di integrità della RAM (Banchi difettosi o overclock aggressivo): Se la memoria fisica presenta errori di lettura/scrittura o profili XMP/DOCP troppo spinti, il sistema operativo riceve dati corrotti a livello di interrupt request level (IRQL).
 
 3. Servizi di terze parti o antivirus invasivi: Software di sicurezza o utility di sistema non aggiornate che si agganciano profondamente al kernel possono causare violazioni di accesso alla memori
 
-**A.** ---
+A. ---
 
 Procedura Passo-Passo per la Risoluzione
 
@@ -66,7 +66,7 @@ La prima cosa da fare è escludere un guasto fisico o un'instabilità dei moduli
 
 2. Seleziona l'opzione consigliat
 
-**A.** "Riavvia ora e individua eventuali problemi".
+A. "Riavvia ora e individua eventuali problemi".
 
 3. Il PC si riavvierà in modalità di diagnostica UEFI/BIOS eseguendo il test standard.
 
@@ -90,7 +90,7 @@ Se la RAM risulta integra al 100%, il colpevole è quasi certamente un driver co
 
 5. Conferma l'operazione e riavvia il sistem
 
-**A.** Se Windows non ti permette di fare il rollback perché il pulsante è disattivato, puoi procedere alla disinstallazione pulita del driver scaricando la versione precedente direttamente dal sito del produttore (es. NVIDIA, AMD, Realtek).
+A. Se Windows non ti permette di fare il rollback perché il pulsante è disattivato, puoi procedere alla disinstallazione pulita del driver scaricando la versione precedente direttamente dal sito del produttore (es. NVIDIA, AMD, Realtek).
 
 ---
 
@@ -99,11 +99,11 @@ Consigli di Prevenzione e Best Practices
 Nel nostro lavoro quotidiano in azienda gestiamo decine di macchine e la regola d'oro per evitare queste interruzioni è la prudenza negli aggiornamenti:
 - Evita i driver bet
 
-**A.** Installa sempre driver certificati WHQL (Windows Hardware Quality Labs).
+A. Installa sempre driver certificati WHQL (Windows Hardware Quality Labs).
 - Punti di ripristino regolari: Prima di installare suite software complesse o aggiornare il BIOS della scheda madre, crea sempre un punto di ripristino manuale tramite *Strumenti di amministrazione*.
 - Manutenzione periodic
 
-**A.** Mantieni puliti i contatti dei banchi RAM dalla polvere; sbalzi termici e falsi contatti possono generare errori IRQL apparentemente inspiegabili.
+A. Mantieni puliti i contatti dei banchi RAM dalla polvere; sbalzi termici e falsi contatti possono generare errori IRQL apparentemente inspiegabili.
 
 ---
 

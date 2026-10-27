@@ -111,7 +111,7 @@ Veelgestelde Vragen (FAQ)
 
 2. Mijn laptop blijft loeien, ook na een reboot. Loopt de koelpasta soms stuk? Dat kan op termijn, maar als Taakbeheer aangeeft dat de CPU op 100% draait, ligt het primair aan softwarematige belasting en niet direct aan uitgedroogde koelpast
 
-**A.** Zodra het Systeem-proces is gekalmeerd, zakken de temperaturen binnen 30 seconden naar een gezonde 40 tot 50 graden.
+A. Zodra het Systeem-proces is gekalmeerd, zakken de temperaturen binnen 30 seconden naar een gezonde 40 tot 50 graden.
 
 3. Heeft het uitschakelen van 'SysMain' (voorheen Superfetch) zin?
 

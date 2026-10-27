@@ -84,7 +84,7 @@ A. ```cmd
 Se non si conosce il processo esatto che detiene il blocco, è possibile individuarlo tramite Monitoraggio Risorse.
 
 1. Premere la combinazione `Win + R`, digitare `resmon` e premere Invio per aprire il Monitoraggio Risorse di Windows.
-2. Fare clic sulla schedaCPU**e individuare la sezione denominata**Handle associati.
+2. Fare clic sulla schedaCPUe individuare la sezione denominataHandle associati.
 3. Nella barra di ricerca della casella degli handle, digitare il nome del file bloccato o parte del percorso della cartell
 
 A. 4. Il sistema elencherà tutti i processi attualmente agganciati a quel file specifico.
@@ -100,10 +100,16 @@ Per prevenire il riporsi di fastidiosi blocchi dei file durante le attività quo
 
 ## 5. Domande Frecuenti (FAQ)
 
-Q1.Perché Windows continua a dire che un file è in uso anche quando ho chiuso tutte le applicazioni visibili? A1. Questo comportamento si verifica perché molte applicazioni moderne utilizzano servizi in background, demoni di sistema o componenti aggiuntivi che continuano a girare in memoria anche dopo la chiusura della finestra principale dell'interfaccia utente. Inoltre, il servizio di indicizzazione di Windows Explorer o i sistemi di sincronizzazione cloud potrebbero aver iniziato a scansionare il file in quel preciso istante, trattenendo l'handle di lettura e impedendone la rimozione fino al completamento dell'operazione di scansione.
+Q1.Perché Windows continua a dire che un file è in uso anche quando ho chiuso tutte le applicazioni visibili?
 
-Q2.È sicuro utilizzare il comando taskkill dal prompt dei comandi con privilegi amministrativi? A2. Sì, l'utilizzo del comando taskkill con il flag di forzatura è una procedura standard e perfettamente sicura dal punto di vista dell'integrità del sistema operativo, a patto di non terminare processi critici di sistema come `csrss.exe` o `wininit.exe`. Terminare un processo applicativo bloccato tramite riga di comando equivale a chiudere forzatamente un'applicazione che non risponde, liberando immediatamente le risorse hardware e i puntatori ai file senza danneggiare il file system.
+A1. Questo comportamento si verifica perché molte applicazioni moderne utilizzano servizi in background, demoni di sistema o componenti aggiuntivi che continuano a girare in memoria anche dopo la chiusura della finestra principale dell'interfaccia utente. Inoltre, il servizio di indicizzazione di Windows Explorer o i sistemi di sincronizzazione cloud potrebbero aver iniziato a scansionare il file in quel preciso istante, trattenendo l'handle di lettura e impedendone la rimozione fino al completamento dell'operazione di scansione.
 
-Q3.Cosa devo fare se nemmeno il prompt dei comandi riesce a eliminare un file ostinato? A3. Se la riga di comando restituisce errori persistenti di accesso negato o file in uso anche dopo aver terminato tutti i processi correlati, il metodo più sicuro ed efficace consiste nell'avviare il computer in Modalità Provvisoria (Safe Mode). In questa modalità, Windows carica esclusivamente i driver e i servizi essenziali di base, impedendo a qualsiasi software di terze parti o processo anomalo di avviarsi e mantenere blocchi attivi sui file, consentendo una rimozione pulita e immediat
+Q2.È sicuro utilizzare il comando taskkill dal prompt dei comandi con privilegi amministrativi?
+
+A2. Sì, l'utilizzo del comando taskkill con il flag di forzatura è una procedura standard e perfettamente sicura dal punto di vista dell'integrità del sistema operativo, a patto di non terminare processi critici di sistema come `csrss.exe` o `wininit.exe`. Terminare un processo applicativo bloccato tramite riga di comando equivale a chiudere forzatamente un'applicazione che non risponde, liberando immediatamente le risorse hardware e i puntatori ai file senza danneggiare il file system.
+
+Q3.Cosa devo fare se nemmeno il prompt dei comandi riesce a eliminare un file ostinato?
+
+A3. Se la riga di comando restituisce errori persistenti di accesso negato o file in uso anche dopo aver terminato tutti i processi correlati, il metodo più sicuro ed efficace consiste nell'avviare il computer in Modalità Provvisoria (Safe Mode). In questa modalità, Windows carica esclusivamente i driver e i servizi essenziali di base, impedendo a qualsiasi software di terze parti o processo anomalo di avviarsi e mantenere blocchi attivi sui file, consentendo una rimozione pulita e immediat
 
 A.

@@ -34,19 +34,19 @@ Suasana di lantai 35 gedung perkantoran kawasan SCBD Jakarta sedang sangat tegan
 
 Awalnya saya mengira ini hanya gangguan kecil bias
 
-**A.** Saya coba tekan lama tombol power di casing komputer untuk mematikannya secara paksa, lalu menyalakannya kembali untuk melanjutkan pekerjaan rekonsiliasi. Namun, setiap kali selesai bekerja dan menekan Shutdown, masalah yang sama terus berulang. Komputer seolah-olah masuk ke mode tidur yang dalam, bukan benar-benar mati. Situasi ini membuat saya khawatir terjadi korupsi data pada file Excel laporan tahunan yang sedang saya verifikasi, mengingat proses tulis data ke SSD bisa terganggu jika PC tidak mati secara normal. 
+A. Saya coba tekan lama tombol power di casing komputer untuk mematikannya secara paksa, lalu menyalakannya kembali untuk melanjutkan pekerjaan rekonsiliasi. Namun, setiap kali selesai bekerja dan menekan Shutdown, masalah yang sama terus berulang. Komputer seolah-olah masuk ke mode tidur yang dalam, bukan benar-benar mati. Situasi ini membuat saya khawatir terjadi korupsi data pada file Excel laporan tahunan yang sedang saya verifikasi, mengingat proses tulis data ke SSD bisa terganggu jika PC tidak mati secara normal. 
 
 ![Tech Troubleshooting Guide](/images/tech-photo/keyboard%20(7).png)
 
 Sebagai seorang teknisi infrastruktur IT yang sudah belasan tahun mengurusi perangkat keras di area bisnis Jakarta, saya langsung paham apa biang keladiny
 
-**A.** Masalah klasik ini bukan karena komponen hardware yang rusak total, melainkan fitur bawaan Windows yang terlalu agresif dalam mempercepat proses booting. Mari kita bedah bersama akar masalahnya dan bagaimana cara menyelesaikannya dengan cepat tanpa bikin panik.
+A. Masalah klasik ini bukan karena komponen hardware yang rusak total, melainkan fitur bawaan Windows yang terlalu agresif dalam mempercepat proses booting. Mari kita bedah bersama akar masalahnya dan bagaimana cara menyelesaikannya dengan cepat tanpa bikin panik.
 
 <div style="border-left: 4px solid #059669; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 
-> 💡 **Catatan Teknisi**: Jangan pernah membiarkan komputer kantor Anda mengalami hang power state terlalu sering karena berisiko merusak sektor file system pada SSD atau HDD Anda, terutama saat musim tutup buku yang padat dat
+> 💡 Catatan Teknisi: Jangan pernah membiarkan komputer kantor Anda mengalami hang power state terlalu sering karena berisiko merusak sektor file system pada SSD atau HDD Anda, terutama saat musim tutup buku yang padat dat
 
-**A.** </div>
+A. </div>
 
 Akar Masalah: Kenapa PC Menolak Mati Total?
 
@@ -85,20 +85,22 @@ Klik tombol "Save changes" di bagian bawah. Selesai! Sekarang coba lakukan pengu
 
 <div style="border-left: 4px solid #059669; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 
-> 💡**Tips Tambahan**: Jika setelah menonaktifkan Fast Startup komputer Anda masih belum mau mati, coba lakukan pembaruan (update) driver BIOS motherboard dan driver chipset langsung dari situs resmi produsen laptop atau motherboard And
+> 💡Tips Tambahan: Jika setelah menonaktifkan Fast Startup komputer Anda masih belum mau mati, coba lakukan pembaruan (update) driver BIOS motherboard dan driver chipset langsung dari situs resmi produsen laptop atau motherboard And
 
-**A.** </div>
+A. </div>
 
 Pertanyaan yang Sering Diajukan (FAQ)
 
-**Q1.** Apakah menonaktifkan Fast Startup akan membuat komputer saya menjadi sangat lambat saat dinyalakan keesokan harinya?
+Q1. Apakah menonaktifkan Fast Startup akan membuat komputer saya menjadi sangat lambat saat dinyalakan keesokan harinya?
 
-**A1.** Secara teori waktu booting akan sedikit bertambah, namun jika PC Anda sudah menggunakan SSD modern, perbedaan waktunya hanya sekitar 2 sampai 5 detik saja dan jauh lebih stabil tanpa risiko error day
+A1. Secara teori waktu booting akan sedikit bertambah, namun jika PC Anda sudah menggunakan SSD modern, perbedaan waktunya hanya sekitar 2 sampai 5 detik saja dan jauh lebih stabil tanpa risiko error day
 
-**A.Q2.** Kenapa opsi Fast Startup tidak muncul sama sekali di menu Power Options komputer saya?
+A.
 
-**A2.** Hal tersebut biasanya terjadi karena fitur Hibernate pada Windows dalam kondisi nonaktif. Anda bisa mengaktifkannya kembali dengan membuka Command Prompt sebagai administrator lalu mengetik perintah**powercfg /hibernate on**.
+Q2. Kenapa opsi Fast Startup tidak muncul sama sekali di menu Power Options komputer saya?
 
-**Q3.** Apakah masalah ini bisa merusak komponen hardware jika dibiarkan terus-menerus?
+A2. Hal tersebut biasanya terjadi karena fitur Hibernate pada Windows dalam kondisi nonaktif. Anda bisa mengaktifkannya kembali dengan membuka Command Prompt sebagai administrator lalu mengetik perintahpowercfg /hibernate on.
 
-**A3.** Jika Anda selalu mematikannya secara paksa dengan menahan tombol power fisik di CPU, dalam jangka panjang hal tersebut berisiko merusak komponen motherboard serta menyebabkan kerusakan file data penting pada media penyimpanan.
+Q3. Apakah masalah ini bisa merusak komponen hardware jika dibiarkan terus-menerus?
+
+A3. Jika Anda selalu mematikannya secara paksa dengan menahan tombol power fisik di CPU, dalam jangka panjang hal tersebut berisiko merusak komponen motherboard serta menyebabkan kerusakan file data penting pada media penyimpanan.

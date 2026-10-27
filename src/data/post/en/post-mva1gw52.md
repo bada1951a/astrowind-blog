@@ -50,7 +50,7 @@ Why Your Windows 11 C Drive Fills Up So Fast
 
 Before we fix the issue, let us look at the structural architecture of how Windows 11 handles background dat
 
-**A.** Understanding these three primary bottlenecks prevents you from accidentally deleting files you actually need.
+A. Understanding these three primary bottlenecks prevents you from accidentally deleting files you actually need.
 
 <div style="margin: 20px 0; overflow-x: auto;">
 <table style="width: 100%; border-collapse: collapse; text-align: left; font-size: 14px; color: #111827;">
@@ -100,7 +100,7 @@ Skip third-party applications. Windows 11 has a robust built-in tool designed sp
 
 5. Check the boxes next to Windows Update Cleanup,Previous Windows installations, andTemporary files.
 
-**Q6.** Click Remove files.
+Q6. Click Remove files.
 
 ### Step 2: Manually Purge User and System Temp Directories
 Sometimes apps leave behind locked or stubborn temp files that standard settings miss. Let us clean them out safely via the Run dialog.

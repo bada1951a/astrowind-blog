@@ -32,12 +32,12 @@ theme: "Nordic Clean Ice"
 
 Jam menunjukkan pukul 09:15 pagi di kantor *startup* teknologi kami di kawasan SCBD, Jakart
 
-**A.** Grup Slack internal mendadak ramai oleh laporan tim operasional yang panik karena *taskbar* Windows 11 di laptop mereka mendadak membeku (*freeze*). Tombol Start tidak merespons, ikon aplikasi di bilah bawah tidak bisa diklik, dan mengeklik *system tray* sama sekali tidak membawa hasil. Padahal, rapat sinkronisasi server dan *deployment* sistem internal klien harus segera berjalan dalam waktu kurang dari setengah jam. Panik sempat melanda sejenak sebelum akhirnya kami mengeksekusi langkah-langkah pemulihan standar operasional IT yang cepat dan efektif.
+A. Grup Slack internal mendadak ramai oleh laporan tim operasional yang panik karena *taskbar* Windows 11 di laptop mereka mendadak membeku (*freeze*). Tombol Start tidak merespons, ikon aplikasi di bilah bawah tidak bisa diklik, dan mengeklik *system tray* sama sekali tidak membawa hasil. Padahal, rapat sinkronisasi server dan *deployment* sistem internal klien harus segera berjalan dalam waktu kurang dari setengah jam. Panik sempat melanda sejenak sebelum akhirnya kami mengeksekusi langkah-langkah pemulihan standar operasional IT yang cepat dan efektif.
 
 <div style="border-left: 4px solid #0284c7; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Catatan Lapangan IT:</strong> Masalah taskbar Windows 11 yang tidak merespons jarang sekali disebabkan oleh kerusakan permanen pada sistem operasi. Seringkali, masalah ini berakar dari proses antarmuka grafis yang mengalami *hang* atau konflik *cache* sementar
 
-**A.** </div>
+A. </div>
 
 ![Tech & IT Solution Guide](https://picsum.photos/seed/computer612/1000/550)
 
@@ -85,7 +85,7 @@ Jika langkah pertama belum membuahkan hasil, kita perlu mendaftarkan ulang kompo
 
 5. Biarkan proses berjalan hingga selesai, lalu *restart* perangkat komputer And
 
-**A.** ### Langkah 3: Memeriksa Pembaruan Sistem dan Driver Grafis
+A. ### Langkah 3: Memeriksa Pembaruan Sistem dan Driver Grafis
 
 Terkadang, ketidakcocokan antara *driver* grafis bawaan dengan pembaruan kumulatif Windows memicu *freeze* pada bilah tugas.
 
@@ -109,14 +109,14 @@ Saran dan Peringatan Ahli (Expert Warning)
 
 Pertanyaan yang Sering Diajukan (FAQ)
 
-**Q.** Apakah data saya akan hilang jika saya me-*restart* Windows Explorer melalui Task Manager?
+Q. Apakah data saya akan hilang jika saya me-*restart* Windows Explorer melalui Task Manager?
 
-**A.** Tidak sama sekali. Me-*restart* `explorer.exe` hanya menyegarkan antarmuka visual desktop, *taskbar*, dan jendela folder yang sedang terbuka, tanpa menutup aplikasi utama seperti browser atau editor teks yang sedang Anda kerjakan.
+A. Tidak sama sekali. Me-*restart* `explorer.exe` hanya menyegarkan antarmuka visual desktop, *taskbar*, dan jendela folder yang sedang terbuka, tanpa menutup aplikasi utama seperti browser atau editor teks yang sedang Anda kerjakan.
 
-**Q.** Mengapa masalah *taskbar* macet ini sering berulang di Windows 11?
+Q. Mengapa masalah *taskbar* macet ini sering berulang di Windows 11?
 
-**A.** Biasanya ini terjadi karena instalasi pembaruan Windows yang belum sempurna atau adanya aplikasi pihak ketiga (seperti kustomisasi *taskbar* atau antivirus agresif) yang mengganggu proses sistem inti. Pastikan sistem Anda selalu diperbarui ke versi stabil terbaru.
+A. Biasanya ini terjadi karena instalasi pembaruan Windows yang belum sempurna atau adanya aplikasi pihak ketiga (seperti kustomisasi *taskbar* atau antivirus agresif) yang mengganggu proses sistem inti. Pastikan sistem Anda selalu diperbarui ke versi stabil terbaru.
 
-**Q.** Apa yang harus saya lakukan jika tombol kombinasi *Ctrl + Shift + Esc* juga tidak berfungsi?
+Q. Apa yang harus saya lakukan jika tombol kombinasi *Ctrl + Shift + Esc* juga tidak berfungsi?
 
-**A.** Jika seluruh papan tik dan tetikus mengalami *freeze* total, lakukan *hard reset* dengan menekan dan menahan tombol daya (*power button*) fisik pada laptop atau PC Anda selama kurang lebih 5 hingga 10 detik hingga perangkat mati sepenuhnya, lalu nyalakan kembali.
+A. Jika seluruh papan tik dan tetikus mengalami *freeze* total, lakukan *hard reset* dengan menekan dan menahan tombol daya (*power button*) fisik pada laptop atau PC Anda selama kurang lebih 5 hingga 10 detik hingga perangkat mati sepenuhnya, lalu nyalakan kembali.

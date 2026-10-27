@@ -21,7 +21,7 @@ theme: "Sandstone Desert Minimal"
 
 ## 1. Tình huống sự cố khẩn cấp tại văn phòng
 
-Hôm nay là một ngày bận rộn tại văn phòng nằm ngay trung tâm Quận 1, TP. Hồ Chí Minh. Tôi vừa nhấp ngụm cà phê sáng thì đồng nghiệp ngồi bàn bên hoảng hốt gọi tôi đến hỗ trợ chiếc máy tính xách tay của anh ấy. Số là bên ngoài hợp tác xã và đối tác vừa gửi qua một tệp nén (ZIP) chứa các bản vẽ kỹ thuật và dữ liệu quan trọng. Anh ấy đang định dùng tổ hợp phím **Win + Shift + S** quen thuộc để cắt vài tấm hình chi tiết gửi ngay cho cấp trên kiểm tra tiến độ, nhưng bấm hoài mà màn hình cứ trơ ra, không có một chút phản hồi nào. Cửa sổ chụp ảnh màn hình của Snipping Tool hoàn toàn biến mất, khiến tiến độ công việc bị chững lại ngay lập tức.
+Hôm nay là một ngày bận rộn tại văn phòng nằm ngay trung tâm Quận 1, TP. Hồ Chí Minh. Tôi vừa nhấp ngụm cà phê sáng thì đồng nghiệp ngồi bàn bên hoảng hốt gọi tôi đến hỗ trợ chiếc máy tính xách tay của anh ấy. Số là bên ngoài hợp tác xã và đối tác vừa gửi qua một tệp nén (ZIP) chứa các bản vẽ kỹ thuật và dữ liệu quan trọng. Anh ấy đang định dùng tổ hợp phím Win + Shift + S quen thuộc để cắt vài tấm hình chi tiết gửi ngay cho cấp trên kiểm tra tiến độ, nhưng bấm hoài mà màn hình cứ trơ ra, không có một chút phản hồi nào. Cửa sổ chụp ảnh màn hình của Snipping Tool hoàn toàn biến mất, khiến tiến độ công việc bị chững lại ngay lập tức.
 
 <div style="border-left: 4px solid #a16207; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Mẹo nhanh từ kỹ thuật viên:</strong> Đừng vội khởi động lại máy khi gặp lỗi này. Trong 90% trường hợp, ứng dụng ngầm bị xung đột hoặc tính năng thông báo bị tắt chính là thủ phạm.
@@ -33,8 +33,8 @@ Hôm nay là một ngày bận rộn tại văn phòng nằm ngay trung tâm Qu�
 
 Trước khi đi vào các bước khắc phục, chúng ta hãy điểm qua ba nguyên nhân chính khiến tổ hợp phím chụp màn hình trên Windows 11 "đình công":
 
-* **Ứng dụng Snipping Tool bị treo ngầm:** Các tiến trình xử lý hình ảnh của Windows chạy ngầm bị kẹt, không nhận diện được lệnh kích hoạt từ bàn phím.
-* **Cài đặt thông báo (Notifications) bị chặn:** Windows 11 yêu cầu quyền hiển thị thông báo để đưa ảnh chụp vào khay nhớ tạm (clipboard). Nếu bạn vô tình tắt thông báo của Snipping Tool, tính năng sẽ không hoạt động đúng cách.
+* Ứng dụng Snipping Tool bị treo ngầm: Các tiến trình xử lý hình ảnh của Windows chạy ngầm bị kẹt, không nhận diện được lệnh kích hoạt từ bàn phím.
+* Cài đặt thông báo (Notifications) bị chặn: Windows 11 yêu cầu quyền hiển thị thông báo để đưa ảnh chụp vào khay nhớ tạm (clipboard). Nếu bạn vô tình tắt thông báo của Snipping Tool, tính năng sẽ không hoạt động đúng cách.
 * Xung đột ứng dụng bên thứ b
 
 A.Các phần mềm chụp màn hình khác như Lightshot, Greenshot hoặc các công cụ quay màn hình game đang chiếm quyền điều khiển phím tắt.
@@ -45,25 +45,25 @@ A.Các phần mềm chụp màn hình khác như Lightshot, Greenshot hoặc cá
 
 Bước 1: Khởi động lại hoặc kết thúc tiến trình Snipping Tool qua Task Manager
 Đôi khi ứng dụng đang chạy ngầm bị lỗi vòng lặp. Chúng ta cần tắt nó đi để hệ thống tự tải lại.
-- Nhấn tổ hợp phímCtrl + Shift + Esc**để mở**Task Manager.
+- Nhấn tổ hợp phímCtrl + Shift + Escđể mởTask Manager.
 - Tại tabProcesses, bạn tìm kiếm từ khóa `Snipping Tool` hoặc cuộn xuống tìm tiến trình có tên tương tự.
 - Nhấp chuột phải vào ứng dụng và chọnEnd task.
-- Thử bấm lại**Win + Shift + S**xem đã hoạt động chư
+- Thử bấm lạiWin + Shift + Sxem đã hoạt động chư
 
 A. Bước 2: Kiểm tra quyền thông báo trong Cài đặt (Settings)
 Snipping Tool trên Windows 11 phụ thuộc rất nhiều vào hệ thống thông báo để lưu trữ và hiển thị ảnh.
-- Nhấp vào nút Start, chọnCài đặt (Settings)**hình bánh răng cưa, hoặc bấm nhanh**Win + I.
-- Truy cập vào mục**Hệ thống (System)**rồi chọn**Thông báo (Notifications)**.
+- Nhấp vào nút Start, chọnCài đặt (Settings)hình bánh răng cưa, hoặc bấm nhanhWin + I.
+- Truy cập vào mụcHệ thống (System)rồi chọnThông báo (Notifications).
 - Cuộn danh sách ứng dụng xuống dưới để tìmSnipping Tool.
 - Đảm bảo rằng công tắc bật/tắt thông báo đã ở trạng tháiBật (On). Hãy chắc chắn các tùy chọn hiển thị banner thông báo cũng được kích hoạt.
 
 Bước 3: Sửa lỗi và Đặt lại (Repair & Reset) ứng dụng
 Nếu hai bước trên chưa đem lại kết quả, chúng ta sẽ tiến hành làm mới hoàn toàn cấu hình của ứng dụng thông qua menu ứng dụng hệ thống.
-- MởCài đặt (Settings)**và chọn mục**Ứng dụng (Apps)ở cột bên trái.
+- MởCài đặt (Settings)và chọn mụcỨng dụng (Apps)ở cột bên trái.
 - Nhấp vàoỨng dụng đã cài đặt (Installed apps).
 - Tìm kiếm từ khóa `Snipping Tool` trong thanh tìm kiếm.
 - Nhấp vào dấu ba chấm ở bên phải tên ứng dụng, chọnTùy chọn nâng cao (Advanced options).
-- Cuộn xuống dưới tìm mục**Đặt lại**. Bạn hãy thử bấm**Sửa chữa (Repair)**trước. Nếu vẫn không được, hãy bấmĐặt lại (Reset)để đưa ứng dụng về trạng thái mặc định ban đầu.
+- Cuộn xuống dưới tìm mụcĐặt lại. Bạn hãy thử bấmSửa chữa (Repair)trước. Nếu vẫn không được, hãy bấmĐặt lại (Reset)để đưa ứng dụng về trạng thái mặc định ban đầu.
 
 <div style="border-left: 4px solid #a16207; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Lưu ý quan trọng:</strong> Việc bấm Reset sẽ xóa sạch bộ nhớ đệm cũ của ứng dụng, giúp loại bỏ hoàn toàn các tệp cấu hình bị hỏng do xung đột phần mềm trước đó.
@@ -73,18 +73,18 @@ Nếu hai bước trên chưa đem lại kết quả, chúng ta sẽ tiến hàn
 
 Trong quá trình hỗ trợ xử lý sự cố cho các văn phòng tại TP. Hồ Chí Minh, tôi nhận thấy nhiều anh chị em nhân viên văn phòng thường cài đặt rất nhiều phần mềm bên thứ ba để hỗ trợ công việc. 
 
-- Hãy kiểm tra xem bàn phím của bạn có đang bật chế độFn Lock**hoặc phím**Win Lockhay không. Một số dòng laptop văn phòng có tính năng khóa phím Windows để tránh bấm nhầm khi chơi game, điều này vô tình làm vô hiệu hóa mọi tổ hợp phím có chứa phím Win.
+- Hãy kiểm tra xem bàn phím của bạn có đang bật chế độFn Lockhoặc phímWin Lockhay không. Một số dòng laptop văn phòng có tính năng khóa phím Windows để tránh bấm nhầm khi chơi game, điều này vô tình làm vô hiệu hóa mọi tổ hợp phím có chứa phím Win.
 - Thường xuyên cập nhật bản vá bảo mật mới nhất cho Windows 11 thông qua Windows Update để hạn chế tối đa các lỗi vặt liên quan đến giao diện hệ thống.
 
 5. Câu hỏi thường gặp (FAQ)
 
 Q. Tại sao tôi bấm Win + Shift + S nhưng không thấy ảnh lưu vào Clipboard?
 
-A. Nguyên nhân có thể do tính năng Clipboard History chưa được bật. Bạn hãy bấmWin + V**, sau đó chọn**Turn onđể kích hoạt lịch sử bộ nhớ tạm, giúp lưu lại nhiều ảnh chụp màn hình gần nhất.
+A. Nguyên nhân có thể do tính năng Clipboard History chưa được bật. Bạn hãy bấmWin + V, sau đó chọnTurn onđể kích hoạt lịch sử bộ nhớ tạm, giúp lưu lại nhiều ảnh chụp màn hình gần nhất.
 
 Q. Làm cách nào để chụp màn hình khi phím Win trên bàn phím bị hỏng hoàn toàn?
 
-**A. Bạn có thể vàoCài đặt (Settings) > Khả năng truy cập (Accessibility) > Bàn phím (Keyboard)và bật tính năng**Bàn phím ảo (On-screen keyboard)để sử dụng chuột click thay thế, hoặc dùng phần mềm chụp ảnh màn hình thay thế tạm thời.
+A. Bạn có thể vàoCài đặt (Settings) > Khả năng truy cập (Accessibility) > Bàn phím (Keyboard)và bật tính năngBàn phím ảo (On-screen keyboard)để sử dụng chuột click thay thế, hoặc dùng phần mềm chụp ảnh màn hình thay thế tạm thời.
 
 Q. Sau khi làm đủ mọi cách mà vẫn không chụp được thì phải làm sao?
 

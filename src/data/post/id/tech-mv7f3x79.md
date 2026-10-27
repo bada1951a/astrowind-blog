@@ -76,7 +76,7 @@ Setiap monitor mengirimkan data EDID yang berisi resolusi native, profil warna, 
 2. Tabrakan Driver Hybrid Graphics (iGPU vs dGPU)
 Mayoritas laptop bisnis mengandalkan kombinasi Intel Iris Xe / AMD Radeon Graphics untuk efisiensi daya dan NVIDIA GeForce / RTX untuk komputasi berat. Output fisik HDMI atau DisplayPort lewat USB-C sering kali dialihkan melalui jalur perangkat keras yang diatur oleh iGPU terlebih dahulu. Jika Windows Update mengganti driver display OEM dengan driver generik tanpa memperbarui subsistem dGPU, sinkronisasi *frame buffer* gagal, menghasilkan fenomena *blackout* 1–2 detik secara berkal
 
-**A.** ### 3. Degradasi Bandwidth Jalur Transmisi dan Handshake HDCP
+A. ### 3. Degradasi Bandwidth Jalur Transmisi dan Handshake HDCP
 Penggunaan monitor dengan resolusi tinggi (1440p atau 4K) membutuhkan stabilitas sinyal tanpa celah. Kabel HDMI/DP yang tidak memenuhi rating bandwidth (misalnya kabel HDMI High Speed standar digunakan untuk refresh rate 144Hz atau protokol HDR) akan mengalami *packet drop*. Ketika paket autentikasi HDCP (*High-bandwidth Digital Content Protection*) gagal diverifikasi dalam interval waktu tertentu, monitor akan memutus sinyal demi proteksi konten.
 
 ---
@@ -90,7 +90,7 @@ Sebelum membongkar konfigurasi sistem, picu restart pada *Desktop Window Manager
 
 1. Pastikan monitor eksternal dalam posisi terhubung dan menyal
 
-**A.** 2. Tekan kombinasi tombol pintas secara bersamaan:
+A. 2. Tekan kombinasi tombol pintas secara bersamaan:
 
    `Win` + `Ctrl` + `Shift` + `B`
 
@@ -115,7 +115,7 @@ Jika cache konfigurasi tampilan telah korup, sistem akan terus memuat konfiguras
 
 3. Di dalam folder `GraphicsDrivers`, cari tiga subfolder utam
 
-**A.** * `Configuration`
+A. * `Configuration`
    * `Connectivity`
    * `ScaleFactors`
 
@@ -123,9 +123,9 @@ Jika cache konfigurasi tampilan telah korup, sistem akan terus memuat konfiguras
 
 5. Jangan khawatir, folder-folder ini aman dihapus karena Windows akan otomatis membuatnya kembali dalam kondisi default (*fresh*) begitu sistem mendeteksi layar aktif.
 
-**Q6.** Lakukan *restart* laptop And
+Q6. Lakukan *restart* laptop And
 
-**A.** ```
+A. ```
 [GraphicsDrivers Registry Hierarchy]
 └── GraphicsDrivers
     ├── Configuration  ───> [HAPUS UNTUK RESET PROFIL DISPLAY]
@@ -142,7 +142,7 @@ Jika sinyal masih terputus, langkah berikutnya adalah mereset adaptor display da
 
 3. Klik kanan pada kartu grafis Anda (misalny
 
-**A.** *Intel(R) Iris(R) Xe Graphics* atau *AMD Radeon Graphics*), pilih Properties.
+A. *Intel(R) Iris(R) Xe Graphics* atau *AMD Radeon Graphics*), pilih Properties.
 
 4. Masuk ke tab Driver, lalu klik opsiRoll Back Driver jika opsi tersebut aktif (ini berguna jika masalah muncul tepat setelah pembaruan otomatis).
 
@@ -150,9 +150,9 @@ Jika sinyal masih terputus, langkah berikutnya adalah mereset adaptor display da
 
    * *Perhatian:* Jangan centang opsi *"Attempt to remove the driver for this device"* pada tahap ini.
 
-**Q6.** Perluas juga kategori Monitors, klik kanan pada semua entri bertuliskanGeneric PnP Monitor, dan pilihUninstall device.
+Q6. Perluas juga kategori Monitors, klik kanan pada semua entri bertuliskanGeneric PnP Monitor, dan pilihUninstall device.
 
-**Q7.** Pada menu bar bagian atas Device Manager, klik ikon Scan for hardware changes (ikon komputer dengan kaca pembesar). Layar akan mendeteksi ulang adaptor dan monitor secara otomatis.
+Q7. Pada menu bar bagian atas Device Manager, klik ikon Scan for hardware changes (ikon komputer dengan kaca pembesar). Layar akan mendeteksi ulang adaptor dan monitor secara otomatis.
 
 ```
 Device Manager
@@ -167,7 +167,7 @@ Device Manager
 Langkah 4: Sinkronisasi Refresh Rate dan Matikan Variable Refresh Rate (VRR)
 Flickering parah sering kali bersumber dari ketidakcocokan frekuensi transmisi sinyal (*refresh rate*) atau fitur Variable Refresh Rate (G-Sync/FreeSync) yang mencoba berjalan pada monitor kerja bias
 
-**A.** 1. Buka SettingsWindows (`Win` + `I`) >System>Display.
+A. 1. Buka SettingsWindows (`Win` + `I`) >System>Display.
 
 2. Klik monitor eksternal Anda (biasanya monitor nomor 2), lalu gulir ke bawah dan pilih Advanced display settings (Pengaturan Tampilan Lanjutan).
 
@@ -224,7 +224,7 @@ Tanya Jawab Teknis (FAQ)
 Monitor eksternal terdeteksi di Device Manager, namun layarnya tetap hitam bertuliskan "No Signal". Apa pemicunya?
 Kondisi ini menandakan bahwa jalur komunikasi kontrol I2C/DDC antara GPU dan monitor berfungsi (sehingga nama hardware terdeteksi), tetapi jalur transmisi video berkecepatan tinggi gagal melakukan *handshake*. Penyebab paling sering adalah resolusi output yang dipaksa pada level di luar batas jangkauan panel (*Out of Range*), kabel data yang tidak memiliki rating pelindung interferensi yang cukup, atau port output GPU terkunci pada status proteksi day
 
-**A.** Lakukan reset registri grafis sesuai Langkah 2 untuk memaksa GPU mendeteksi ulang batas resolusi aman.
+A. Lakukan reset registri grafis sesuai Langkah 2 untuk memaksa GPU mendeteksi ulang batas resolusi aman.
 
 Mengapa monitor eksternal hanya berkedip saat saya membuka browser seperti Google Chrome atau Microsoft Edge?
 Gejala ini hampir 100% dipicu oleh kegagalan fitur *Hardware Acceleration* pada aplikasi berbasis Chromium yang bertabrakan dengan driver iGPU. Browser mencoba memproses rendering halaman web melalui GPU, tetapi terjadi timeout pada tumpukan driver D3D. Buka pengaturan browser, masuk ke menu System/Sistem, lalu nonaktifkan opsiUse graphics acceleration when available (Gunakan akselerasi grafis saat tersedia), kemudian muat ulang browser.
