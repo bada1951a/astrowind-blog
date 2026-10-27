@@ -48,17 +48,17 @@ Cara paling cepat dan intuitif bagi pengguna umum maupun teknisi adalah mematika
 
 1. Buka Task Manager dengan menekan kombinasi tombol `Ctrl + Shift + Esc` secara bersamaan pada keyboard And
 
-**A.** 2. Pada jendela utama Task Manager, klik tab **Processes**untuk melihat seluruh aplikasi dan proses latar belakang yang sedang aktif berjalan.
-3. Gulir daftar proses ke bawah untuk mencari aplikasi terkait, misalnya**Microsoft Excel**atau proses lain yang dicurigai sedang menggunakan file tersebut.
-4. Klik kanan pada proses target tersebut, lalu pilih opsi**End task** untuk memaksa sistem menghentikan aplikasi beserta seluruh *file handle* yang dipegangnya secara paks
+**A.** 2. Pada jendela utama Task Manager, klik tab Processesuntuk melihat seluruh aplikasi dan proses latar belakang yang sedang aktif berjalan.
+3. Gulir daftar proses ke bawah untuk mencari aplikasi terkait, misalnyaMicrosoft Excelatau proses lain yang dicurigai sedang menggunakan file tersebut.
+4. Klik kanan pada proses target tersebut, lalu pilih opsiEnd task untuk memaksa sistem menghentikan aplikasi beserta seluruh *file handle* yang dipegangnya secara paks
 
-**A.** 5. Jika proses tidak mau berhenti, pindah ke tab **Details**, cari nama file eksekutable yang sesuai (contoh: `EXCEL.EXE`), klik kanan, lalu pilih**End process tree**agar seluruh sub-proses anak ikut terbunuh seketik
+A. 5. Jika proses tidak mau berhenti, pindah ke tab Details, cari nama file eksekutable yang sesuai (contoh: `EXCEL.EXE`), klik kanan, lalu pilihEnd process treeagar seluruh sub-proses anak ikut terbunuh seketik
 
-**A.** ### Metode 2: Eksekusi Perintah Pembersihan via Command Line atau PowerShell
+A. ### Metode 2: Eksekusi Perintah Pembersihan via Command Line atau PowerShell
 
 Jika antarmuka grafis gagal merespons, penggunaan baris perintah dengan hak akses administrator adalah senjata pamungkas yang sangat efektif.
 
-1. Buka menu Start, ketik `cmd`, lalu klik kanan pada**Command Prompt**dan pilih**Run as administrator**.
+1. Buka menu Start, ketik `cmd`, lalu klik kanan padaCommand Prompt**dan pilih**Run as administrator.
 2. Gunakan utilitas bawaan `taskkill` untuk memaksa menghentikan proses berdasarkan nama citra (*image name*) dengan mengetikkan perintah berikut di dalam kotak kode:
 ```cmd
 taskkill /f /im EXCEL.EXE
@@ -76,10 +76,10 @@ Jika sistem masih melaporkan bahwa file terkunci meskipun aplikasi utama telah d
 
 1. Tekan tombol `Win + R` pada keyboard untuk membuka kotak dialog Run, ketik `resmon`, lalu tekan Enter.
 2. Di dalam jendela Resource Monitor, klik pada tab **CPU**.
-3. Pada bagian**Associated Handles**, cari kotak input pencarian bertuliskan "Search Handle".
+3. Pada bagianAssociated Handles, cari kotak input pencarian bertuliskan "Search Handle".
 4. Ketik nama file yang terkunci (misalnya `Laporan_Keuangan.xlsx`) ke dalam kotak pencarian tersebut.
 5. Resource Monitor akan memindai dan menampilkan daftar proses apa saja yang sedang menggunakan file tersebut secara real-time.
-6. Klik kanan pada proses yang mencurigakan di dalam daftar hasil pencarian, lalu pilih**End Process** untuk melepaskan cengkeraman *handle* tersebut, dan file kini siap dihapus secara normal.
+6. Klik kanan pada proses yang mencurigakan di dalam daftar hasil pencarian, lalu pilihEnd Process untuk melepaskan cengkeraman *handle* tersebut, dan file kini siap dihapus secara normal.
 
 ## 4. Tips & Peringatan Penting Teknisi IT
 
@@ -89,13 +89,13 @@ Sebagai teknisi infrastruktur senior, saya sangat memperingatkan para profesiona
 
 ## 5. Pertanyaan yang Sering Diajukan (FAQ)
 
-**Q1.** Mengapa file tetap terkunci padahal aplikasi Microsoft Excel sudah saya tutup sepenuhnya dari layar monitor?
+Q1. Mengapa file tetap terkunci padahal aplikasi Microsoft Excel sudah saya tutup sepenuhnya dari layar monitor?
 
-**A1.** File sering kali tetap terkunci karena proses latar belakang aplikasi tersebut masih berjalan di memori RAM sebagai *background process* atau mengalami kegagalan *graceful exit*. Selain itu, layanan sistem seperti Windows Search Indexer atau pratinjau *thumbnail* Explorer mungkin sedang memindai file tersebut secara bersamaan. Menggunakan Task Manager untuk mematikan proses secara total atau memeriksa *handle* via Resource Monitor adalah solusi terbaik untuk mengatasi hal ini.
+A1. File sering kali tetap terkunci karena proses latar belakang aplikasi tersebut masih berjalan di memori RAM sebagai *background process* atau mengalami kegagalan *graceful exit*. Selain itu, layanan sistem seperti Windows Search Indexer atau pratinjau *thumbnail* Explorer mungkin sedang memindai file tersebut secara bersamaan. Menggunakan Task Manager untuk mematikan proses secara total atau memeriksa *handle* via Resource Monitor adalah solusi terbaik untuk mengatasi hal ini.
 
-**Q2.** Apakah aman menggunakan perintah `del /f /q` melalui Command Prompt untuk menghapus file penting di sistem operasi Windows?
+Q2. Apakah aman menggunakan perintah `del /f /q` melalui Command Prompt untuk menghapus file penting di sistem operasi Windows?
 
-**A2.** Perintah tersebut sangat aman jika Anda memastikan bahwa jalur direktori (*path*) yang dimasukkan sudah benar dan spesifik pada file target yang ingin dihapus. Namun, Anda harus berhati-hati agar tidak salah mengetikkan direktori sistem utama, karena perintah tingkat administrator ini bersifat mutlak dan tidak menyediakan opsi pemulihan langsung dari Recycle Bin jika dijalankan tanpa kehati-hatian.
+A2. Perintah tersebut sangat aman jika Anda memastikan bahwa jalur direktori (*path*) yang dimasukkan sudah benar dan spesifik pada file target yang ingin dihapus. Namun, Anda harus berhati-hati agar tidak salah mengetikkan direktori sistem utama, karena perintah tingkat administrator ini bersifat mutlak dan tidak menyediakan opsi pemulihan langsung dari Recycle Bin jika dijalankan tanpa kehati-hatian.
 
 **Q3.** Apa yang harus saya lakukan jika semua metode force delete gagal dan sistem menampilkan pesan akses ditolak (*access denied*)?
 
