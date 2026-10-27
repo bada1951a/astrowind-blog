@@ -3,42 +3,53 @@ import path from 'path';
 
 const POSTS_DIR = path.resolve('src/data/post');
 
-function cleanBrokenPost(content) {
+function cleanAllDuplicates(content) {
   let text = content;
 
-  // 1. [헤딩 뒤 Q1 엉킴 분리] 제목 끝에 바로 Q1이 붙어 거대 헤딩으로 변한 것 분리
+  // 1. [FAQ 헤딩 및 줄바꿈 복원]
   text = text.replace(/([#]+[^\n]*?FAQ[^\n]*?)\s*(Q[1-9]\.|\*\*Q[1-9]\.\*\*)/gi, '$1\n\n$2');
   text = text.replace(/(FAQ\)?)\s*(Q[1-9]\.|\*\*Q[1-9]\.\*\*)/gi, '$1\n\n$2');
-
-  // 2. [FAQ 문단 줄바꿈 강제] Q1/A1/Q2/A2 앞뒤 엔터 2번 확보
   text = text.replace(/([.!?])\s*(Q[1-9]\.|\*\*Q[1-9]\.\*\*)/g, '$1\n\n$2');
   text = text.replace(/([.!?])\s*(A[1-9]\.|\*\*A[1-9]\.\*\*)/g, '$1\n\n$2');
   text = text.replace(/(---)\s*(Q[1-9]\.)/g, '$1\n\n$2');
 
-  // 3. [동일 제목/문장 연타 반복 제거] 2번 헤딩처럼 똑같은 줄이 연속으로 반복 출력된 버그 청소
+  // 2. [빈 줄 무시 중복 헤딩/문장 전수 압축]
+  // 중간에 빈 줄이 끼어 있어도, 앞서 나온 헤딩과 내용이 같으면 모조리 삭제
   const lines = text.split('\n');
   const cleanedLines = [];
-  let prevLineTrimmed = '';
+  let lastSeenHeadingText = '';
 
-  for (const line of lines) {
+  for (let i = 0; i < lines.length; i++) {
+    const line = lines[i];
     const trimmed = line.trim();
-    // 빈 줄이 아니면서 바로 윗줄과 내용이 100% 똑같은 중복 줄은 건너뜀 (1개만 남김)
-    if (trimmed.length > 0 && trimmed === prevLineTrimmed) {
-      continue;
+
+    // 마크다운 헤딩(#)인 경우
+    if (/^#{1,6}\s+/.test(trimmed)) {
+      // '#' 기호와 앞뒤 공백을 뗀 순수 텍스트만 추출
+      const headingClean = trimmed.replace(/^#{1,6}\s+/, '').replace(/\*\*/g, '').trim();
+
+      // 바로 이전에 나왔던 헤딩 텍스트와 똑같다면 건너뜀 (삭제)
+      if (headingClean.length > 0 && headingClean === lastSeenHeadingText) {
+        continue;
+      }
+      lastSeenHeadingText = headingClean;
+    } else if (trimmed.length > 0) {
+      // 일반 본문 문장이 시작되면 헤딩 중복 추적 초기화
+      lastSeenHeadingText = '';
     }
+
     cleanedLines.push(line);
-    prevLineTrimmed = trimmed;
   }
+
   text = cleanedLines.join('\n');
 
-  // 4. [문법 찌꺼기만 제거] Q1.** 처럼 앞에 여는 별표 없는 닫는 별표만 제거 (정상 볼드는 절대 보존)
+  // 3. 문법 찌꺼기만 제거 (정상 본문 볼드는 건드리지 않음)
   text = text.replace(/([A-Za-z0-9가-힣]+)\.\*\*/g, '$1.');
   text = text.replace(/(^|\s)\*\*(\s|$)/g, '$1$2');
 
   return text;
 }
 
-// 전체 마크다운 파일 재귀 탐색
 function getAllMarkdownFiles(dir, fileList = []) {
   if (!fs.existsSync(dir)) return fileList;
   const files = fs.readdirSync(dir);
@@ -53,31 +64,27 @@ function getAllMarkdownFiles(dir, fileList = []) {
   return fileList;
 }
 
-function runFullSanitize() {
-  console.log('🚀 [과거 글 전수 조사] 중복 제목 연타 및 FAQ 서식 일괄 치료 시작...');
+function runAudit() {
+  console.log('🔍 [전수 조사] 수백 개 포스트 중복 헤딩 및 FAQ 서식 정밀 압축 시작...');
   const allFiles = getAllMarkdownFiles(POSTS_DIR);
 
-  let checkedCount = 0;
   let fixedCount = 0;
 
   for (const filePath of allFiles) {
-    checkedCount++;
     const original = fs.readFileSync(filePath, 'utf-8');
-    const cleaned = cleanBrokenPost(original);
+    const cleaned = cleanAllDuplicates(original);
 
-    // 실제 변경 사항(오류)이 발견된 파일만 덮어쓰기
     if (original !== cleaned) {
       fs.writeFileSync(filePath, cleaned, 'utf-8');
-      console.log(`🛠️ [치료 완료] ${path.basename(filePath)}`);
+      console.log(`🛠️ [수정됨] ${path.basename(filePath)}`);
       fixedCount++;
     }
   }
 
   console.log(`\n========================================`);
-  console.log(`총 검사한 파일: ${checkedCount}개`);
-  console.log(`오류 발견 및 자동 수리 완료: ${fixedCount}개`);
-  console.log(`오류 없는 정상 파일: ${checkedCount - fixedCount}개 (보존됨)`);
+  console.log(`총 파일 수: ${allFiles.length}개`);
+  console.log(`중복 헤딩/FAQ 오류 수정된 파일: ${fixedCount}개`);
   console.log(`========================================`);
 }
 
-runFullSanitize();
+runAudit();
