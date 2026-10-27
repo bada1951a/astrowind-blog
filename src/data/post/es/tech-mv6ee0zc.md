@@ -139,7 +139,6 @@ Para esta intervención se requiere exclusivamente un limpiador de contactos de 
 ```
        Cánula del spray
              \
-              \
                v
              +-------+  <-- Vástago (Stem) presionado al 100%
              |       |

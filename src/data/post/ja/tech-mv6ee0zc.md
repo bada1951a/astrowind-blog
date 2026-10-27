@@ -140,8 +140,6 @@ sudo evtest /dev/input/eventX
 4.  最低30分間、常温で自然乾燥
 
     </div>
-  </div>
-</div>
 
 5. ホットスワップ対応機の場合の基板チェック:
 
