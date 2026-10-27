@@ -35,7 +35,7 @@ Eram exatamente 13h45 em um escritório na Avenida Paulista, e a tensão na sala
 <div style="border-left: 4px solid #be123c; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Alerta de Bancad
 
-**a:**</strong> O novo menu de contexto do Windows 11 foi desenhado pensando em telas sensíveis ao toque e usuários casuais, mas para ambientes corporativos e analistas de TI, ele representa uma perda drástica de eficiência operacional.
+**A.** </strong> O novo menu de contexto do Windows 11 foi desenhado pensando em telas sensíveis ao toque e usuários casuais, mas para ambientes corporativos e analistas de TI, ele representa uma perda drástica de eficiência operacional.
 </div>
 
 Por Que Essa Mudança Incomoda Tanto os Profissionais?
@@ -46,7 +46,7 @@ Antes de aplicar a solução definitiva que salvou nossa reunião, vale a pena e
 
 2. Falta de Compatibilidade Nativa Imediat
 
-**a:** Milhares de softwares corporativos essenciais ainda usam as chaves antigas de registro do shell do Windows. Sem o ajuste correto, eles ficam ocultos no submenu secundário.
+**A.** Milhares de softwares corporativos essenciais ainda usam as chaves antigas de registro do shell do Windows. Sem o ajuste correto, eles ficam ocultos no submenu secundário.
 
 3. Ergonomia e Memória Muscular: Anos de uso do Windows 10 criaram uma memória muscular nos dedos. Parar o fluxo de trabalho para dar um clique duplo ou usar atalhos extras causa fadiga cognitiva desnecessária na equipe.
 
@@ -54,7 +54,9 @@ O Diagnóstico e a Tentativa Frustrada Inicial
 
 Assim que cheguei à mesa do diretor, a primeira reação instintiva de qualquer usuário comum foi tentar clicar em "Mostrar mais opções" ou buscar nas Configurações visuais do Windows 11 alguma chave mágica de reversão. Infelizmente, a Microsoft não colocou um botão simples de "Ligar/Desligar" o menu clássico no aplicativo de Configurações. 
 
-Perdemos quase 3 minutos preciosos tentando tutoriais antigos da internet que recomendavam apagar chaves complexas no Editor do Registro (Regedit) manualmente, o que em máquinas com políticas de segurança de domínio ativas (Group Policy) causava erros de permissão e negação de acesso. Precisávamos de algo rápido, cirúrgico e que funcionasse via linha de comando ou chave direta. ---
+Perdemos quase 3 minutos preciosos tentando tutoriais antigos da internet que recomendavam apagar chaves complexas no Editor do Registro (Regedit) manualmente, o que em máquinas com políticas de segurança de domínio ativas (Group Policy) causava erros de permissão e negação de acesso. Precisávamos de algo rápido, cirúrgico e que funcionasse via linha de comando ou chave diret
+
+**A.** ---
 
 Passo a Passo Definitivo: Restaurando o Menu Clássico
 
@@ -101,18 +103,23 @@ Cuidados Importantes e Segurança de Dados
 
 Perguntas Frequentes (FAQ)
 
-**Q.**Esse procedimento funciona nas versões mais recentes do Windows 11?
+**Q.** Esse procedimento funciona nas versões mais recentes do Windows 11?
 
-**A.**Sim. O comando afeta diretamente a estrutura de classes do shell do Windows e continua operacional nas builds mais recentes, pois a Microsoft mantém essa compatibilidade legada por razões de estabilidade empresarial.
+**A.** Sim. O comando afeta diretamente a estrutura de classes do shell do Windows e continua operacional nas builds mais recentes, pois a Microsoft mantém essa compatibilidade legada por razões de estabilidade empresarial.
 
 ![Tech Troubleshooting Guide](/images/tech-photo/storage%20(15).png)
 
 2. Posso reverter a alteração caso eu me arrependa?
-Com certeza. Se quiser voltar ao menu padrão do Windows 11, basta abrir o Prompt de Comando como Administrador e executar o comando para remover a chave criad
+Com certez
 
-**a:**
-`reg.exe delete "HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}" /f`
+**A.** Se quiser voltar ao menu padrão do Windows 11, basta abrir o Prompt de Comando como Administrador e executar o comando para remover a chave criad
+
+**A.** `reg.exe delete "HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}" /f`
 Em seguida, reinicie o Explorador de Arquivos pelo Gerenciador de Tarefas.
 
 3. Essa modificação afeta a estabilidade do sistema ou causa telas azuis (BSOD)?
-De forma alguma. Trata-se apenas de uma alteração inofensiva no Registro do Windows que diz ao Explorador de Arquivos qual interface gráfica de menu desenhar na tela. Nenhum driver de kernel ou hardware é tocado no processo.
+De forma algum
+
+**A.** Trata-se apenas de uma alteração inofensiva no Registro do Windows que diz ao Explorador de Arquivos qual interface gráfica de menu desenhar na tel
+
+**A.** Nenhum driver de kernel ou hardware é tocado no processo.

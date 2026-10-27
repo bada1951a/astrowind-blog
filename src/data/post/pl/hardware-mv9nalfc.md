@@ -30,11 +30,15 @@ theme: "Cyberpunk Terminal"
 
 ## 1. Nagła awaria w miejscu pracy
 
-Siedzę w biurowcu w samym sercu Warszawy, za oknem szarość, a na moim monitorze miga przerażający komunikat: "Mało miejsca na dysku (C:)". Masakra. Za dokładnie dwie godziny mamy wysłać kluczowy pakiet danych do klienta, a mój dysk zewnętrzny właśnie postanowił wyzionąć ducha i odmawia współpracy. System niespodziewanie zablokował się przy próbie skopiowania gigantycznego projektu, bo na partycji systemowej zostało równe 420 megabajtów wolnej przestrzeni. W takich momentach człowiek czuje, jak pot spływa po plecach, a wszystkie nerwy z lat pracy z IT kumulują się w jednym punkcie.
+Siedzę w biurowcu w samym sercu Warszawy, za oknem szarość, a na moim monitorze miga przerażający komunikat: "Mało miejsca na dysku (C:)". Masakr
+
+**A.** Za dokładnie dwie godziny mamy wysłać kluczowy pakiet danych do klienta, a mój dysk zewnętrzny właśnie postanowił wyzionąć ducha i odmawia współpracy. System niespodziewanie zablokował się przy próbie skopiowania gigantycznego projektu, bo na partycji systemowej zostało równe 420 megabajtów wolnej przestrzeni. W takich momentach człowiek czuje, jak pot spływa po plecach, a wszystkie nerwy z lat pracy z IT kumulują się w jednym punkcie.
 
 Próbowałem na szybko odinstalować kilka programów, ale deinstalatory domagają się wolnego miejsca do utworzenia własnych kopii zapasowych. Klasyczny bloker systemowy. Godzina ucieka, dysk zewnętrzny dalej leży martwy na biurku, a ja bezskutecznie szukam, gdzie system ukrył te wszystkie gigabajty śmieci. 
 
-Przełom nastąpił, gdy w desperacji porzuciłem klikanie w myszkę, odpaliłem terminal z uprawnieniami administratora i zacząłem bezlitośnie kopać w ukrytych folderach pamięci podręcznej. Okazało się, że Windows przez miesiące składował gigantyczne pliki tymczasowe, stare raporty aktualizacji i śmieci po przeglądarkach w miejscach, do których zwykły użytkownik nawet nie zagląda. W pięć minut odzyskałem 45 GB wolnego miejsca, spakowałem dane i uratowałem kontrakt. Chcesz wiedzieć, jak to zrobić bez żadnych płatnych programów "cud"? Oto moja instrukcja krok po kroku.
+Przełom nastąpił, gdy w desperacji porzuciłem klikanie w myszkę, odpaliłem terminal z uprawnieniami administratora i zacząłem bezlitośnie kopać w ukrytych folderach pamięci podręcznej. Okazało się, że Windows przez miesiące składował gigantyczne pliki tymczasowe, stare raporty aktualizacji i śmieci po przeglądarkach w miejscach, do których zwykły użytkownik nawet nie zagląd
+
+**A.** W pięć minut odzyskałem 45 GB wolnego miejsca, spakowałem dane i uratowałem kontrakt. Chcesz wiedzieć, jak to zrobić bez żadnych płatnych programów "cud"? Oto moja instrukcja krok po kroku.
 
 <div style="border-left: 4px solid #00ffcc; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>STATUS SYSTEMU:</strong> Krytyczny poziom zapełnienia dysku C. Poniższa procedura pozwala na natychmiastowe odzyskanie przestrzeni dyskowej bez użycia zewnętrznego oprogramowania szpiegowskiego czy wątpliwych optymalizatorów.
@@ -80,21 +84,27 @@ Zapomnij o prostym usuwaniu folderu pobranych plików. Zróbmy to porządnie:
 Krok 3: Ręczne czyszczenie folderów Temp przez konsolę
 Jeżeli potrzebujesz natychmiastowego efektu, oto najszybsza metoda na usunięcie bieżących śmieci:
 * Otwórz ponownie Wiersz polecenia jako administrator.
-* Wpisz polecenie `start %temp%` i naciśnij Enter. Otworzy się folder tymczasowy użytkownika. * Zaznacz wszystko (`Ctrl + A`) i usuń (`Shift + Delete`). 
+* Wpisz polecenie `start %temp%` i naciśnij Enter. Otworzy się folder tymczasowy użytkownik
+
+**A.** * Zaznacz wszystko (`Ctrl + A`) i usuń (`Shift + Delete`). 
 * *Wskazówka ekspert
 
-**a:*** Pliki, których system obecnie używa i nie pozwala skasować, po prostu zignoruj (kliknij "Pomiń").
+**A.** Pliki, których system obecnie używa i nie pozwala skasować, po prostu zignoruj (kliknij "Pomiń").
 * Następnie w Wierszu poleceń wpisz `temp` i powtórz operację dla głównego folderu systemowego.
 
 <div style="border-left: 4px solid #00ffcc; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
-<strong>OSTRZEŻENIE TECHNICZNE:</strong> Nigdy nie pobieraj losowych programów z internetu obiecujących "magiczne oczyszczanie jednym kliknięciem". W 90% przypadków to adware lub bloatware, które dodatkowo obciążają system i zapychają rejestr. Zaufaj wbudowanym mechanizmom Windowsa. </div>
+<strong>OSTRZEŻENIE TECHNICZNE:</strong> Nigdy nie pobieraj losowych programów z internetu obiecujących "magiczne oczyszczanie jednym kliknięciem". W 90% przypadków to adware lub bloatware, które dodatkowo obciążają system i zapychają rejestr. Zaufaj wbudowanym mechanizmom Windows
+
+**A.** </div>
 
 ---
 
 Często Zadawane Pytania (FAQ)
 
 1. Czy bezpiecznie jest usuwać zawartość folderu SoftwareDistribution?
-Tak, ale najlepiej robić to po zatrzymaniu usługi Windows Update. Folder ten zawiera pobrane pakiety instalacyjne aktualizacji. Jeśli jakaś aktualizacja utknęła w martwym punkcie i zapycha dysk, wyczyszczenie tego katalogu (znajdującego się w `C:\Windows`) jest w pełni bezpieczne i często naprawia błędy pobierania. ![Hardware Diagnostic & Troubleshooting](https://picsum.photos/seed/computer64/1000/550)
+Tak, ale najlepiej robić to po zatrzymaniu usługi Windows Update. Folder ten zawiera pobrane pakiety instalacyjne aktualizacji. Jeśli jakaś aktualizacja utknęła w martwym punkcie i zapycha dysk, wyczyszczenie tego katalogu (znajdującego się w `C:\Windows`) jest w pełni bezpieczne i często naprawia błędy pobierani
+
+**A.** ![Hardware Diagnostic & Troubleshooting](https://picsum.photos/seed/computer64/1000/550)
 
 2. Co zrobić, gdy zwolniłem miejsce, ale dysk znów zapełnia się samoczynnie?
 To znak, że w tle działa usługa, która generuje ogromne pliki dziennika (często błędy sterowników kart graficznych lub zapętlone próby pobrania uszkodzonej aktualizacji). Otwórz Menedżer urządzeń, sprawdź, czy któreś urządzenie nie zgłasza żółtego wykrzyknika, oraz przejrzyj harmonogram zadań.

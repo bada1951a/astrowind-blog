@@ -45,7 +45,7 @@ Before blindly mashing keys or restarting your PC, let us look at why this speci
 
 3. Corrupted App Package or Missing Updates: The modern WinRT application package for Screen Sketch (the engine behind the modern Snipping Tool) often becomes corrupted due to failed Windows updates or aggressive endpoint security software clearing background app states.
 
-## 3. Step-by-Step Practical Resolution Practical Resolution Practical Resolution
+## 3. Step-by-Step Practical Resolution Practical Resolution Practical Resolution Practical Resolution
 
 Let us roll up our sleeves and fix this step by step. Follow these exact procedures right from your desktop.
 
@@ -57,8 +57,9 @@ First, we need to kill any frozen instances of the tool.
 - Next, search for**Windows Explorer**near the bottom of the list, right-click it, and select**Restart**. This refreshes the entire Windows UI shell and restores global hotkey hooks.
 
 ### Step 2: Reset and Repair the Snipping Tool via Settings
-If killing processes did not work, let us reset the app itself to factory defaults without losing data.
-- Open**Settings**by pressing**Win + I**.
+If killing processes did not work, let us reset the app itself to factory defaults without losing dat
+
+**A.** - Open**Settings**by pressing**Win + I**.
 - Navigate to**Apps**>**Installed apps**.
 - Type "Snipping Tool" into the search bar.
 - Click the three dots (...) next to Snipping Tool and select**Advanced options**.
@@ -81,14 +82,14 @@ As an enterprise troubleshooter, I always advise keeping a fallback plan handy. 
 
 ## 5. Frequently Asked Questions (FAQ)
 
-**Q:**What should I do if**Win + Shift + S**still does not work after trying all these steps?
+**Q.** What should I do if**Win + Shift + S**still does not work after trying all these steps?
 
-**A:**Try creating a new local Windows user profile to test if the issue is profile-specific. If the shortcut works on a fresh profile, your primary user registry hive has a corrupted hotkey mapping which can often be resolved by running an**SFC /scannow**scan in an elevated command prompt.
+**A.** Try creating a new local Windows user profile to test if the issue is profile-specific. If the shortcut works on a fresh profile, your primary user registry hive has a corrupted hotkey mapping which can often be resolved by running an**SFC /scannow**scan in an elevated command prompt.
 
-**Q:**Is there an alternative shortcut if I need to take screenshots immediately during an emergency?
+**Q.** Is there an alternative shortcut if I need to take screenshots immediately during an emergency?
 
-**A:**Yes. You can enable the**PrtScn**(Print Screen) button to open the snipping rectangle natively by navigating to**Settings > Accessibility > Keyboard**and turning on the screen snipping shortcut toggle.
+**A.** Yes. You can enable the**PrtScn**(Print Screen) button to open the snipping rectangle natively by navigating to**Settings > Accessibility > Keyboard**and turning on the screen snipping shortcut toggle.
 
-**Q:**Can corporate Group Policies block the Snipping Tool shortcut?
+**Q.** Can corporate Group Policies block the Snipping Tool shortcut?
 
-**A:** Rarely, but strict enterprise endpoint management software or Data Loss Prevention (DLP) tools can sometimes intercept screen capture hooks. If this is a company-issued device and the issue persists across all users, contact your internal IT helpdesk to verify your security compliance policy.
+**A.** Rarely, but strict enterprise endpoint management software or Data Loss Prevention (DLP) tools can sometimes intercept screen capture hooks. If this is a company-issued device and the issue persists across all users, contact your internal IT helpdesk to verify your security compliance policy.

@@ -48,6 +48,8 @@ Heureusement, il existe une méthode propre, rapide et sécurisée via l'invite 
 
 ## 2. Analyse des causes principales de l'erreur
 
+## 2. Analyse des causes principales de l'erreur
+
 Pourquoi ce filigrane apparaît-il soudainement en plein milieu de vos tâches ?
 
 Avant de manipuler le système, comprenons l'origine technique de ce blocage pour éviter les fausses manœuvres :
@@ -57,6 +59,8 @@ Avant de manipuler le système, comprenons l'origine technique de ce blocage pou
 2. Mise à jour cumulative bloquée : Une mise à jour récente (notamment via Windows Update) a réinitialisé les caches graphiques du bureau et l'état des services de vérification visuelle.
 
 3. Corruption du cache de l'Explorateur (explorer.exe) : Le processus gérant l'interface graphique panique et affiche les couches de texte d'état d'activation par défaut en surimpression prioritaire.
+
+## 3. Guide de résolution étape par étape
 
 ## 3. Guide de résolution étape par étape
 
@@ -100,14 +104,14 @@ Le bureau réapparaît instantanément, et le filigrane a disparu, vous laissant
 </div>
 ## 5. Foire Aux Questions (FAQ)
 
-**Q.**Est-ce que cette manipulation présente un risque pour mes fichiers Excel ou mes documents en cours ?
+**Q.** Est-ce que cette manipulation présente un risque pour mes fichiers Excel ou mes documents en cours ?
 
-**A.**Non, absolument aucun. La commande `taskkill` stoppe uniquement l'interface visuelle (les dossiers ouverts, la barre des tâches). Vos fichiers ouverts dans les logiciels restent en mémoire vive (RAM) et réapparaîtront exactement là où vous les aviez laissés dès le redémarrage de `explorer.exe`.
+**A.** Non, absolument aucun. La commande `taskkill` stoppe uniquement l'interface visuelle (les dossiers ouverts, la barre des tâches). Vos fichiers ouverts dans les logiciels restent en mémoire vive (RAM) et réapparaîtront exactement là où vous les aviez laissés dès le redémarrage de `explorer.exe`.
 
-**Q.**Le filigrane revient systématiquement au bout de quelques heures, que faire ?
+**Q.** Le filigrane revient systématiquement au bout de quelques heures, que faire ?
 
-**A.**C'est le signe que votre PC n'arrive plus à joindre le serveur d'activation de l'entreprise. Si vous êtes en télétravail, connectez-vous au VPN d'entreprise, puis retournez dans lesParamètres > Système > Activation pour relancer une liaison directe avec le domaine.
+**A.** C'est le signe que votre PC n'arrive plus à joindre le serveur d'activation de l'entreprise. Si vous êtes en télétravail, connectez-vous au VPN d'entreprise, puis retournez dans lesParamètres > Système > Activation pour relancer une liaison directe avec le domaine.
 
-**Q.**Puis-je utiliser cette astuce sur toutes les versions de Windows ?
+**Q.** Puis-je utiliser cette astuce sur toutes les versions de Windows ?
 
 **A.** Oui, cette méthode fonctionne parfaitement sur Windows 10 et Windows 11, que ce soit en édition Professionnelle ou Entreprise, à condition de disposer des privilèges administrateur sur la machine.

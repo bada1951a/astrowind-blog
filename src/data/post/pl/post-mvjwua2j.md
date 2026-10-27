@@ -30,7 +30,9 @@ theme: "Acid Lime Hacker Space"
 
 ## 1. Nagła awaria w miejscu pracy
 
-Wtorek, kwadrans przed kluczową wideokonferencją z zarządem w nowo otwartej filii na Śląsku. Szybko wyciągam służbowego laptopa z torby i podpinam go pod stacjonarny monitor w sali konferencyjnej za pomocą kabla HDMI, żeby rzucić prezentację na wielki ekran. Prezentacja rusza bez zająknienia, slajdy wyglądają świetnie, ale gdy włączam materiał wideo z podkładem muzycznym… z głośników w sali dobiega całkowita cisza. Wszyscy patrzą na mnie, a systemowa ikonka głośnika w prawym dolnym rogu ekranu dumnie wyświetla mały, szary krzyżyk. Znam ten ból aż nazbyt dobrze.
+Wtorek, kwadrans przed kluczową wideokonferencją z zarządem w nowo otwartej filii na Śląsku. Szybko wyciągam służbowego laptopa z torby i podpinam go pod stacjonarny monitor w sali konferencyjnej za pomocą kabla HDMI, żeby rzucić prezentację na wielki ekran. Prezentacja rusza bez zająknienia, slajdy wyglądają świetnie, ale gdy włączam materiał wideo z podkładem muzycznym… z głośników w sali dobiega całkowita cisz
+
+**A.** Wszyscy patrzą na mnie, a systemowa ikonka głośnika w prawym dolnym rogu ekranu dumnie wyświetla mały, szary krzyżyk. Znam ten ból aż nazbyt dobrze.
 
 W takich momentach serce na chwilę zastyga, zwłaszcza gdy na szybkiej diagnozie zależy całemu zespołu. Jako inżynier wsparcia IT i serwisant sprzętu komputerowego przetestowałem już chyba każdy możliwy scenariusz awarii audio w systemie Windows 11. Zamiast panikować i tracić cenne minuty na przeinstalowywanie całego systemu, weźmy głęboki oddech i przejdźmy do konkretów. Oto sprawdzona procedura ratunkowa, którą wdrożysz w niespełna trzy minuty.
 
@@ -70,7 +72,9 @@ Gdy proste przełączenie nie pomaga, sterownik audio prawdopodobnie złapał "z
 - Kliknij prawym przyciskiem myszy na menu Start i wybierz [Menedżer urządzeń].
 - Rozwiń gałąź Kontrolery dźwięku, wideo i gieroraz sekcjęWejścia i wyjścia audio.
 - Znajdź swoje urządzenie (np. *Realtek Audio* lub *Intel Display Audio*). Jeśli widzisz przy nim żółty trójkąt z wykrzyknikiem, kliknij je prawym przyciskiem myszy i wybierz Odinstaluj urządzenie.
-- Po odinstalowaniu kliknij na górnym pasku ikonę skanowania w poszukiwaniu zmian sprzętu (lub po prostu uruchom ponownie komputer). Windows 11 samoczynnie wykryje brakujący element i wgra czystą instancję sterownika. ## Krok 3: Diagnoza usług systemowych w tle
+- Po odinstalowaniu kliknij na górnym pasku ikonę skanowania w poszukiwaniu zmian sprzętu (lub po prostu uruchom ponownie komputer). Windows 11 samoczynnie wykryje brakujący element i wgra czystą instancję sterownik
+
+**A.** ## Krok 3: Diagnoza usług systemowych w tle
 Jeśli ikonka głośnika reaguje komunikatem o błędzie, winne mogą być usługi systemowe:
 - Wpisz w menu Start frazę [Usługi] i otwórz aplikację.
 - Znajdź pozycję o nazwie Windows Audio.
@@ -89,7 +93,9 @@ Profesjonalne ostrzeżenie serwisowe
 
 Często zadawane pytania (FAQ)
 
-1. Co zrobić, gdy po aktualizacji systemu Windows 11 dźwięk całkowicie zniknął i żaden suwak nie pomaga? Najskuteczniejszą metodą w takim przypadku jest cofnięcie problematycznego sterownika. Wejdź w [Menedżer urządzeń], kliknij dwukrotnie na swoją kartę dźwiękową, przejdź do zakładki *Sterownik* i kliknij przycisk Przywróć sterownik(jeśli jest podświetlony). Często nowa łatka Microsoftu gryzie się ze starszym kodekiem producenta sprzętu.
+1. Co zrobić, gdy po aktualizacji systemu Windows 11 dźwięk całkowicie zniknął i żaden suwak nie pomaga? Najskuteczniejszą metodą w takim przypadku jest cofnięcie problematycznego sterownik
+
+**A.** Wejdź w [Menedżer urządzeń], kliknij dwukrotnie na swoją kartę dźwiękową, przejdź do zakładki *Sterownik* i kliknij przycisk Przywróć sterownik(jeśli jest podświetlony). Często nowa łatka Microsoftu gryzie się ze starszym kodekiem producenta sprzętu.
 
 2. Podłączyłem słuchawki na jacka 3.5 mm, ale laptop nadal odtwarza dźwięk z wbudowanych głośników.
 

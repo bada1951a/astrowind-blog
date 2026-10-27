@@ -25,9 +25,9 @@ Zanim przejdziemy do siłowego usuwania plików, warto zrozumieć, dlaczego syst
 
 2.**Eksplorator Windows blokujący miniatury:** Czasami sam proces *explorer.exe* próbuje generować podgląd uszkodzonego pliku graficznego lub wideo, co uniemożliwia jego modyfikację czy usunięcie.
 
-3. **Uprawnienia systemowe i pliki blokowane przez TrustedInstaller:**Foldery systemowe oraz te utworzone przez instalatory sterowników często posiadają restrykcyjne uprawnienia właściciela, przez co zwykły użytkownik (nawet z uprawnieniami administratora) napotyka błąd odmowy dostępu spleciony z blokadą użycia.
+3. **Uprawnienia systemowe i pliki blokowane przez TrustedInstaller:**Foldery systemowe oraz te utworzone przez instalatory sterowników często posiadają restrykcyjne uprawnienia właściciela, przez co zwykły użytkownik (nawet z uprawnieniami administratora) napotyka błąd odmowy dostępu spleciony z blokadą użyci
 
-<div style="border-left: 4px solid #334155; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
+**A.** <div style="border-left: 4px solid #334155; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Wskazówka serwisu IT:</strong> Nigdy nie szarp się z plikami na siłę za pomocą przypadkowych programów z internetu. Najpierw sprawdźmy, co dokładnie blokuje plik, korzystając z wbudowanych narzędzi systemu Windows.
 </div>
 
@@ -54,11 +54,14 @@ Ponieważ nasza awaria zaczęła się od sterownika graficznego, przywróćmy st
 
 3. Kliknij prawym przyciskiem myszy na swoją główną kartę i wybierz**Właściwości**.
 
-4. Przejdź do zakładki**Sterownik**i kliknij przycisk**Przywróć poprz. sterownik**(jeśli jest aktywny) lub**Odinstaluj urządzenie**, zaznaczając opcję usunięcia oprogramowania sterownika dla tego urządzenia. Dopiero teraz pliki instalacyjne dadzą się bez problemu usunąć.
+4. Przejdź do zakładki**Sterownik**i kliknij przycisk**Przywróć poprz. sterownik**(jeśli jest aktywny) lub**Odinstaluj urządzenie**, zaznaczając opcję usunięcia oprogramowania sterownika dla tego urządzeni
+
+**A.** Dopiero teraz pliki instalacyjne dadzą się bez problemu usunąć.
 
 ### Krok 3: Siłowe usunięcie przez Wiersz polecenia (PowerShell / CMD)
-Jeśli graficzny interfejs systemu nadal protestuje, użyjemy niezawodnego terminala w trybie administratora:
-1. Wpisz w menu Start frazę**cmd**, kliknij na**Wiersz polecenia**prawym przyciskiem myszy i wybierz**Uruchom jako administrator**.
+Jeśli graficzny interfejs systemu nadal protestuje, użyjemy niezawodnego terminala w trybie administrator
+
+**A.** 1. Wpisz w menu Start frazę**cmd**, kliknij na**Wiersz polecenia**prawym przyciskiem myszy i wybierz**Uruchom jako administrator**.
 
 2. Aby bezpiecznie usunąć uporczywy plik, skorzystaj z polecenia wymuszenia kasowania wraz ze ścieżką do pliku. Przykładowo wpisz w konsoli:
 
@@ -76,14 +79,14 @@ Zanim wykonasz twarde kasowanie, zawsze upewnij się, że zamknąłeś powiązan
 
 ## 5. Najczęściej zadawane pytania (FAQ)
 
-**Q:**Co zrobić, gdy nawet Wiersz polecenia zwraca błąd odmowy dostępu przy usuwaniu pliku?
+**Q.** Co zrobić, gdy nawet Wiersz polecenia zwraca błąd odmowy dostępu przy usuwaniu pliku?
 
-**A:**Oznacza to, że plik jest zabezpieczony przez system uprawnień NTFS. Musisz najpierw przejąć na własność dany plik, wpisując w terminalu uprawnienia administratora `takeown /f "ścieżka_do_pliku"`, a następnie nadać sobie pełny dostęp poleceniem `icacls "ścieżka_do_pliku" /grant Administrator:F`. Dopiero wtedy polecenie `del` zadziała bezbłędnie.
+**A.** Oznacza to, że plik jest zabezpieczony przez system uprawnień NTFS. Musisz najpierw przejąć na własność dany plik, wpisując w terminalu uprawnienia administratora `takeown /f "ścieżka_do_pliku"`, a następnie nadać sobie pełny dostęp poleceniem `icacls "ścieżka_do_pliku" /grant Administrator:F`. Dopiero wtedy polecenie `del` zadziała bezbłędnie.
 
-**Q:**Czy darmowe aplikacje typu Unlocker są bezpieczne w środowisku firmowym?
+**Q.** Czy darmowe aplikacje typu Unlocker są bezpieczne w środowisku firmowym?
 
-**A:**W korporacjach i profesjonalnych biurach technologicznych unikam instalowania zewnętrznych narzędzi tego typu ze względu na politykę bezpieczeństwa i ryzyko dołączania adware. Wbudowane mechanizmy Windowsa, takie jak Menedżer zadań, PowerShell czy Tryb awaryjny, w 99% przypadków w zupełności wystarczają do rozwiązania problemu.
+**A.** W korporacjach i profesjonalnych biurach technologicznych unikam instalowania zewnętrznych narzędzi tego typu ze względu na politykę bezpieczeństwa i ryzyko dołączania adware. Wbudowane mechanizmy Windowsa, takie jak Menedżer zadań, PowerShell czy Tryb awaryjny, w 99% przypadków w zupełności wystarczają do rozwiązania problemu.
 
-**Q:**Dlaczego po restrykcyjnym usunięciu pliku sterownika rozdzielczość nadal jest nieprawidłowa?
+**Q.** Dlaczego po restrykcyjnym usunięciu pliku sterownika rozdzielczość nadal jest nieprawidłowa?
 
-**A:** Usunięcie zablokowanego pliku tymczasowego to dopiero połowa sukcesu – usunąłeś jedynie śmieci po przerwanej instalacji. Teraz system działa na podstawowym, uniwersalnym sterowniku Microsoftu. Musisz pobrać najnowszy, stabilny sterownik bezpośrednio ze strony producenta (NVIDIA/AMD/Intel) i zainstalować go na czysto.
+**A.** Usunięcie zablokowanego pliku tymczasowego to dopiero połowa sukcesu – usunąłeś jedynie śmieci po przerwanej instalacji. Teraz system działa na podstawowym, uniwersalnym sterowniku Microsoftu. Musisz pobrać najnowszy, stabilny sterownik bezpośrednio ze strony producenta (NVIDIA/AMD/Intel) i zainstalować go na czysto.

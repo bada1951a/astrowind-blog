@@ -31,7 +31,7 @@ Why does Windows stubbornly block file deletion even when you have closed every 
 
 3.**Ghost Network or Hardware Handlers:**When setting up new docking stations, external audio drivers, or virtual display adapters, device-specific companion software often hooks into temporary configuration files right at boot or connection time.
 
-## 3. Step-by-Step Practical Resolution Practical Resolution Practical Resolution
+## 3. Step-by-Step Practical Resolution Practical Resolution Practical Resolution Practical Resolution
 
 Let us break down how to track down the offender and forcefully delete the stubborn files using native Windows tools, skipping third-party sketchy software.
 
@@ -79,14 +79,14 @@ When dealing with enterprise laptops and dynamic hot-desking environments, hardw
 
 ## 5. Frequently Asked Questions (FAQ)
 
-**Q:**What should I do if PowerShell still returns an "Access Denied" error after forcing deletion?
+**Q.** What should I do if PowerShell still returns an "Access Denied" error after forcing deletion?
 
-**A:**This usually means the file has strict TrustedInstaller or SYSTEM level ownership permissions. Open your terminal as an Administrator, or use `takeown /f "Path\To\File"` followed by `icacls` to grant your current user account full control before attempting deletion.
+**A.** This usually means the file has strict TrustedInstaller or SYSTEM level ownership permissions. Open your terminal as an Administrator, or use `takeown /f "Path\To\File"` followed by `icacls` to grant your current user account full control before attempting deletion.
 
-**Q:**Is it safe to restart Windows Explorer while running important corporate apps?
+**Q.** Is it safe to restart Windows Explorer while running important corporate apps?
 
-**A:**Yes, restarting `explorer.exe` only refreshes the Windows desktop interface, taskbar, and file explorer windows. It will not close independent applications like your browser, IDE, or corporate VPN client, though any open File Explorer folder windows will close.
+**A.** Yes, restarting `explorer.exe` only refreshes the Windows desktop interface, taskbar, and file explorer windows. It will not close independent applications like your browser, IDE, or corporate VPN client, though any open File Explorer folder windows will close.
 
-**Q:**Why do newly connected docking stations cause file locking issues in the first place?
+**Q.** Why do newly connected docking stations cause file locking issues in the first place?
 
-**A:** When you plug in a new dock, Plug and Play (PnP) services spin up companion software and hardware monitoring utilities that immediately scan connected user profiles for configuration logs, temporarily locking cache folders until the hardware handshake completes.
+**A.** When you plug in a new dock, Plug and Play (PnP) services spin up companion software and hardware monitoring utilities that immediately scan connected user profiles for configuration logs, temporarily locking cache folders until the hardware handshake completes.

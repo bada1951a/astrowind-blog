@@ -64,6 +64,8 @@ In meiner jahrelangen Praxis als Hardware-Diagnostiker haben sich drei übliche 
 
 ## 3. Schritt-für-Schritt-Lösungsanleitung
 
+## 3. Schritt-für-Schritt-Lösungsanleitung
+
 Schritt-für-Schritt-Anleitung: Den Übeltäter in der Ereignisanzeige entlarven
 
 Hören Sie auf, im Trüben zu fischen. Gehen wir systematisch vor, um den genauen Zeitpunkt des Absturzes zu finden.
@@ -97,6 +99,8 @@ Suchen Sie im System-Log exakt nach dem Eintrag Event-ID 41(Das war Ihr erzwunge
 </div>
 
 ---
+
+## 4. Praxistipps und Warnungen vom System-Admin
 
 ## 4. Praxistipps und Warnungen vom System-Admin
 

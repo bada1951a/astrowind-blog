@@ -30,7 +30,9 @@ theme: "High-Contrast Charcoal"
 
 ## 1. Nagła awaria w miejscu pracy
 
-Kwadrans przed kluczową prezentacją dla zarządu w warszawskim centrum biznesowym podchodzi do mnie blady jak ściana dyrektor handlowy. Na środku jego ekranu, dokładnie nad wykresami rocznej sprzedaży, dumnie widnieje irytujący, półprzezroczysty napis: „Aktywuj system Windows – przejdź do Ustawień, aby aktywować system”. Klienci mają wejść do sali za dokładnie dziesięć minut, rzutnik jest już rozstawiony, a ten nieszczęsny znak wodny zasłania kluczowe dane w Excelu. Każdy geek wie, że Windows po prostu przypomina o braku aktywacji, ale w warunkach korporacyjnych taki widok przed zarządem to wizerunkowa katastrofa. Szybki restart nie pomógł, a próby przeklinania pod nosem tylko podniosły ciśnienie. Zamiast panikować i szukać podejrzanych programów z internetu, które mogłyby zainfekować stację roboczą malwarem, musiałem działać szybko, legalnie (w ramach procedur testowych) i bezpośrednio z poziomu systemu.
+Kwadrans przed kluczową prezentacją dla zarządu w warszawskim centrum biznesowym podchodzi do mnie blady jak ściana dyrektor handlowy. Na środku jego ekranu, dokładnie nad wykresami rocznej sprzedaży, dumnie widnieje irytujący, półprzezroczysty napis: „Aktywuj system Windows – przejdź do Ustawień, aby aktywować system”. Klienci mają wejść do sali za dokładnie dziesięć minut, rzutnik jest już rozstawiony, a ten nieszczęsny znak wodny zasłania kluczowe dane w Excelu. Każdy geek wie, że Windows po prostu przypomina o braku aktywacji, ale w warunkach korporacyjnych taki widok przed zarządem to wizerunkowa katastrof
+
+**A.** Szybki restart nie pomógł, a próby przeklinania pod nosem tylko podniosły ciśnienie. Zamiast panikować i szukać podejrzanych programów z internetu, które mogłyby zainfekować stację roboczą malwarem, musiałem działać szybko, legalnie (w ramach procedur testowych) i bezpośrednio z poziomu systemu.
 
 Dlaczego ten cholerny napis w ogóle się pojawia?
 
@@ -38,9 +40,9 @@ Dlaczego ten cholerny napis w ogóle się pojawia?
 
 Zanim sięgnąłem po konsolę, muszę wyjaśnić, skąd bierze się ten problem na stanowiskach roboczych w biurze. Oto trzy najczęstsze przyczyny, z którymi mierzę się jako serwisant:
 
-1. Utrata połączenia z serwerem KMS w domenie: Komputery w firmach często aktywują się cyklicznie przez wewnętrzny serwer KMS. Jeśli stacja robocza była odłączona od sieci VPN lub firmowego LAN-u przez dłuższy czas, token wygasa.
+1. Utrata połączenia z serwerem KMS w domenie: Komputery w firmach często aktywują się cyklicznie przez wewnętrzny serwer KMS. Jeśli stacja robocza była odłączona od sieci VPN lub firmowego LAN-u przez dłuższy czas, token wygas
 
-2. Nieudana aktualizacja po wymianie sprzętu: Wymiana płyty głównej lub karty sieciowej w serwisie może unieważnić cyfrową licencję przypniętą do unikalnego identyfikatora sprzętowego (HWID).
+**A.** 2. Nieudana aktualizacja po wymianie sprzętu: Wymiana płyty głównej lub karty sieciowej w serwisie może unieważnić cyfrową licencję przypniętą do unikalnego identyfikatora sprzętowego (HWID).
 
 3. Zawieszenie usługi licencjonowania (Software Protection Platform): Czasami usługa odpowiedzialna za weryfikację stanu licencji po prostu się sypie po nagłym zaniku zasilania lub błędnej aktualizacji systemowej.
 
@@ -66,28 +68,34 @@ net stop sppsvc
 ```
 *Wskazówk
 
-**a:*** Jeśli otrzymasz komunikat, że usługa nie została uruchomiona, nie przejmuj się – przejdź do kolejnego kroku.
+**A.** Jeśli otrzymasz komunikat, że usługa nie została uruchomiona, nie przejmuj się – przejdź do kolejnego kroku.
 
 Krok 3: Wyczyszczenie i reset stanu powiadomień w rejestrze
 Teraz wykonamy właściwą operację dezaktywacji denerwującego powiadomienia o braku aktywacji. Wpisz następujące polecenie resetujące licznik powiadomień i zatwierdź je klawiszem Enter:
 ```text
 slmgr /rearm
 ```
-Po chwili na ekranie pojawi się małe okienko dialogowe z informacją, że polecenie wykonało się pomyślnie. Oznacza to, że system da nam spokój na kolejne 30 dni, a znak wodny zniknie po ponownym uruchomieniu komputera. ## Krok 4: Ponowne uruchomienie stacji roboczej
+Po chwili na ekranie pojawi się małe okienko dialogowe z informacją, że polecenie wykonało się pomyślnie. Oznacza to, że system da nam spokój na kolejne 30 dni, a znak wodny zniknie po ponownym uruchomieniu komputer
+
+**A.** ## Krok 4: Ponowne uruchomienie stacji roboczej
 Aby zmiany weszły w życie, nie musisz szukać zaawansowanych opcji w Panelu sterowaniaczyMenedżerze urządzeń. Po prostu zresetuj komputer w klasyczny sposób przez Menu Start lub wpisz w konsoli:
 ```text
 shutdown /r /t 0
 ```
 
 <div style="border-left: 4px solid #e11d48; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
-<strong>Ważna wskazówka dotycząca bezpieczeństwa danych:</strong> Polecenie <code>slmgr /rearm</code> resetuje okres próbny lub stan aktywacji KMS dozwolony przez producenta. Nie jest to uniwersalny "crack", lecz legalna komenda diagnostyczna wykorzystywana przez administratorów systemów do naprawy uszkodzonych stanów licencyjnych w środowiskach domenowych.
+<strong>Ważna wskazówka dotycząca bezpieczeństwa danych:</strong> Polecenie <code>slmgr /rearm</code> resetuje okres próbny lub stan aktywacji KMS dozwolony przez producent
+
+**A.** Nie jest to uniwersalny "crack", lecz legalna komenda diagnostyczna wykorzystywana przez administratorów systemów do naprawy uszkodzonych stanów licencyjnych w środowiskach domenowych.
 </div>
 
 Najczęściej zadawane pytania (FAQ)
 
 1. Czy to polecenie usunie moją legalną licencję Windows na stałe? Absolutnie nie. Polecenie `slmgr /rearm` resetuje licznik stanu aktywacji. Jeśli komputer jest połączony z firmową siecią VPN i serwerem KMS lub posiada przypisaną licencję cyfrową MS Account, po ponownym połączeniu z siecią system automatycznie pobierze poprawny status aktywacji.
 
-2. Co zrobić, jeśli polecenie zwraca błąd o odmowie dostępu? Najczęstszą przyczyną jest uruchomienie Wiersza polecenia bez uprawnień administratora. Upewnij się, że nad ikoną konsoli widniał napis "Administrator", a w razie problemów sprawdź wMenedżerze zadań, czy nie działają w tle zablokowane procesy skryptowe, które blokują pliki systemowe.
+2. Co zrobić, jeśli polecenie zwraca błąd o odmowie dostępu? Najczęstszą przyczyną jest uruchomienie Wiersza polecenia bez uprawnień administrator
+
+**A.** Upewnij się, że nad ikoną konsoli widniał napis "Administrator", a w razie problemów sprawdź wMenedżerze zadań, czy nie działają w tle zablokowane procesy skryptowe, które blokują pliki systemowe.
 
 3. Czy ten trik działa na każdej wersji systemu Windows 10 i 11?
 

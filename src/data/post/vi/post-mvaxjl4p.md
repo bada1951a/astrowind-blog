@@ -42,7 +42,7 @@ Sau nhiều năm hỗ trợ kỹ thuật cho các hệ thống từ văn phòng 
 
 1. Hiệu ứng "Domino" của ứng dụng bên thứ b
 
-**a:**Mỗi khi bạn cài đặt Zalo, Skype, Discord, Spotify hoặc các trình duyệt, chúng thường lén lút tích chọn mục "Run when computer starts" mà không hỏi ý kiến người dùng.
+**A.** Mỗi khi bạn cài đặt Zalo, Skype, Discord, Spotify hoặc các trình duyệt, chúng thường lén lút tích chọn mục "Run when computer starts" mà không hỏi ý kiến người dùng.
 
 2. Quá tải I/O ổ cứng (Đặc biệt với HDD cũ): Khi bật máy, hàng chục tiến trình cùng lúc lao vào đọc/ghi ổ cứng. Nếu bạn dùng HDD truyền thống, hiện tượng nghẽn cổ chai (bottleneck) là điều hiển nhiên.
 
@@ -55,7 +55,9 @@ Sau nhiều năm hỗ trợ kỹ thuật cho các hệ thống từ văn phòng 
 Không cần dùng phần mềm bên thứ ba rườm rà hay chỉnh sửa Registry mạo hiểm. Windows 10 đã tích hợp sẵn công cụ quản lý cực kỳ trực quan ngay trong Task Manager. Hãy làm theo thao tác chuẩn xác dưới đây:
 
 Bước 1: Mở Task Manager bằng phím tắt huyền thoại
-Bấm tổ hợp phím Ctrl + Shift + Esc trên bàn phím. Đây là cách nhanh nhất để mở thẳng trình quản lý tác vụ mà không cần thông qua màn hình khóa. ### Bước 2: Truy cập tab Startup
+Bấm tổ hợp phím Ctrl + Shift + Esc trên bàn phím. Đây là cách nhanh nhất để mở thẳng trình quản lý tác vụ mà không cần thông qua màn hình khó
+
+**A.** ### Bước 2: Truy cập tab Startup
 Trong giao diện Task Manager, nếu bạn chỉ thấy một bảng nhỏ gọn, hãy bấm vào dòng chữ More detailsở góc dưới bên trái. Sau đó, tìm và bấm chọn tabStartup (có biểu tượng hình đồng hồ đo tốc độ).
 
 Bước 3: Vô hiệu hóa ứng dụng không cần thiết
@@ -64,7 +66,7 @@ Tại đây, bạn sẽ thấy danh sách toàn bộ ứng dụng tự khởi đ
 <div style="border-left: 4px solid #bd93f9; padding: 12px 16px; margin: 20px 0; background-color: rgba(189,147,249,0.1); border-radius: 4px; color: #111827;">
 <strong>Mẹo chuyên gi
 
-**a:**</strong> Nhìn vào cột <code>Status</code>. Hãy click chuột phải vào các ứng dụng chat (Zalo, Skype, Teams), trình phát nhạc hoặc tiện ích mở rộng mà bạn không dùng thường xuyên khi vừa mở máy, sau đó chọn <strong>Disable</strong>. 
+**A.** </strong> Nhìn vào cột <code>Status</code>. Hãy click chuột phải vào các ứng dụng chat (Zalo, Skype, Teams), trình phát nhạc hoặc tiện ích mở rộng mà bạn không dùng thường xuyên khi vừa mở máy, sau đó chọn <strong>Disable</strong>. 
 </div>
 
 Chỉ giữ lại các tiến trình cực kỳ quan trọng như Windows Security Notification và trình điều khiển phần cứng (Realtek Audio, Touchpad driver). Khởi động lại máy và cảm nhận sự khác biệt rõ rệt!

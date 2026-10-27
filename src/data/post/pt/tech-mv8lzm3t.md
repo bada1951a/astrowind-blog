@@ -48,7 +48,7 @@ Meta de estabilidade: Reduzir o tempo de inicialização a frio para menos de 25
 
 Diagnóstico de Bancad
 
-**a:** Por que o seu Windows virou uma carroça?
+**A.** Por que o seu Windows virou uma carroça?
 
 Antes de sair metendo o louco e desinstalando coisa aleatória, vamos abrir o capô e entender o que está gerando esse atrito sistêmico. Na nossa esteira de testes aqui na TI, mapeamos três vilões clássicos:
 
@@ -62,7 +62,9 @@ Antes de sair metendo o louco e desinstalando coisa aleatória, vamos abrir o ca
 
 Procedimento Operacional Padrão (POP): O Passo a Passo da Cura
 
-Aqui não tem achismo, é comando de console e ferramenta nativa do Windows. Siga este roteiro cirúrgico para recuperar a dignidade da máquina. ## Passo 1: A Limpeza Cirúrgica do Gerenciador de Tarefas
+Aqui não tem achismo, é comando de console e ferramenta nativa do Windows. Siga este roteiro cirúrgico para recuperar a dignidade da máquin
+
+**A.** ## Passo 1: A Limpeza Cirúrgica do Gerenciador de Tarefas
 Esqueça programas de terceiros duvidosos como *CCleaner*. O próprio Windows já tem a ferramenta que a gente precisa para cortar o mal pela raiz.
 
 1. Pressione o atalho sagrado `Ctrl + Shift + Esc` para abrir o Gerenciador de Tarefas.
@@ -76,18 +78,18 @@ Esqueça programas de terceiros duvidosos como *CCleaner*. O próprio Windows j�
 5. Clique com o botão direito nos aplicativos desnecessários (tipo Steam, Epic Games, Cortana, utilitários de celular) e selecione Desabilitar. Deixe ativo apenas o antivírus e o driver de vídeo.
 
 Passo 2: Auditoria de Serviços via Console (`services.msc`)
-Muitos serviços inúteis continuam rodando no talo em segundo plano. Vamos desativar o que não presta.
+Muitos serviços inúteis continuam rodando no talo em segundo plano. Vamos desativar o que não prest
 
-1. Pressione `Windows + R`, digite `services.msc` e dê Enter.
+**A.** 1. Pressione `Windows + R`, digite `services.msc` e dê Enter.
 
 2. Procure por serviços pesados que você não usa no dia a dia corporativo ou pessoal (ex: *SysMain* em alguns cenários de SSD antigo, *Windows Search* se sua máquina for muito fraca, ou updaters automáticos de programas específicos).
 
 3. Clique duas vezes no serviço, mude o Tipo de inicializaçãoparaDesativadoouManual, e clique emParar.
 
 Passo 3: Faxina Profunda via Prompt de Comando (CMD) e Limpeza de Disco
-Agora vamos rodar a artilharia pesada para varrer o lixo acumulado que corrompe o registro e atrasa o carregamento dos arquivos do sistema.
+Agora vamos rodar a artilharia pesada para varrer o lixo acumulado que corrompe o registro e atrasa o carregamento dos arquivos do sistem
 
-1. Pressione `Windows + R`, digite `cmd`, e aperte `Ctrl + Shift + Enter` para abrir o Prompt de Comando como Administrador.
+**A.** 1. Pressione `Windows + R`, digite `cmd`, e aperte `Ctrl + Shift + Enter` para abrir o Prompt de Comando como Administrador.
 
 2. Digite o comando abaixo para verificar a integridade dos arquivos de sistema corrompidos que podem travar o boot:
 
@@ -102,7 +104,9 @@ Agora vamos rodar a artilharia pesada para varrer o lixo acumulado que corrompe 
    sfc /scannow
    ```
 
-4. Para finalizar a limpeza física de arquivos temporários de boot, abra o menu Iniciar, digite Limpeza de Disco(`cleanmgr`), selecione a unidade `C:`, marque todas as caixas de arquivos temporários, despejo de memória e cache, e clique emLimpar arquivos do sistema. ---
+4. Para finalizar a limpeza física de arquivos temporários de boot, abra o menu Iniciar, digite Limpeza de Disco(`cleanmgr`), selecione a unidade `C:`, marque todas as caixas de arquivos temporários, despejo de memória e cache, e clique emLimpar arquivos do sistem
+
+**A.** ---
 
 Alerta Vermelho da TI: Cuidados para não transformar o PC em peso de papel
 
@@ -115,9 +119,11 @@ Nunca desative drivers essenciais de chipset, controladoras de armazenamento (co
 
 FAQ Técnico: Dúvidas Comuns da Bancada
 
-1. Trocar o HD mecânico por um SSD resolve o problema de boot de vez? Com toda certeza. Enquanto um HD tradicional (7200 RPM) pena para entregar 100 MB/s de leitura sequencial com alto tempo de busca, um SSD SATA básico entrega cerca de 550 MB/s, e um NVMe moderno ultrapassa facilmente os 3500 MB/s. É a mudança com melhor custo-benefício que existe na computação moderna.
+1. Trocar o HD mecânico por um SSD resolve o problema de boot de vez? Com toda certez
 
-2. Devo usar programas milagrosos de otimization da internet? Evite ao máximo. A maioria desses softwares chamados "Game Boosters" ou "PC Cleaners" genéricos só serve para entupir o sistema de adware, rodar scripts inúteis e, ironicamente, adicionar mais processos residentes em segundo plano que deixam o computador ainda mais lento. O ecossistema nativo do Windows já possui ferramentas suficientes.
+**A.** Enquanto um HD tradicional (7200 RPM) pena para entregar 100 MB/s de leitura sequencial com alto tempo de busca, um SSD SATA básico entrega cerca de 550 MB/s, e um NVMe moderno ultrapassa facilmente os 3500 MB/s. É a mudança com melhor custo-benefício que existe na computação modern
+
+**A.** 2. Devo usar programas milagrosos de otimization da internet? Evite ao máximo. A maioria desses softwares chamados "Game Boosters" ou "PC Cleaners" genéricos só serve para entupir o sistema de adware, rodar scripts inúteis e, ironicamente, adicionar mais processos residentes em segundo plano que deixam o computador ainda mais lento. O ecossistema nativo do Windows já possui ferramentas suficientes.
 
 3. O relatório de inicialização do Gerenciador de Tarefas mostra "Tempo da última BIOS: X segundos". O que isso significa?
 

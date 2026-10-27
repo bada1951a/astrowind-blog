@@ -23,32 +23,37 @@ theme: "Deep Indigo System"
 
 Era uma tarde típica de alta demanda aqui na Avenida Paulista, com o movimento intenso de escritórios corporativos ao redor. Eu estava executando uma query massiva no banco de dados de clientes na estação de trabalho principal, monitorando as tabelas e os logs de execução em tempo real para evitar qualquer gargalo de performance no cluster. De repente, notei um comportamento anômalo em um dos blocos de dados. Precisei registrar imediatamente a evidência visual daquele pico de uso para o relatório de auditoria e... apertei **Win + Shift + S**. 
 
-Nada aconteceu. A tela não congelou, o menu superior de seleção de captura não apareceu. Tentei de novo, com mais força nas teclas. Silêncio absoluto do sistema. 
+Nada aconteceu. A tela não congelou, o menu superior de seleção de captura não apareceu. Tentei de novo, com mais força nas teclas. Silêncio absoluto do sistem
 
-O relógio correndo, a query rodando e o desespero batendo por não conseguir tirar o print instantâneo daquele erro crítico. Perdi preciosos minutos preciosos tentando colar a tela no Paint de forma arcaica com a tecla**PrtScn**, o que bagunçou todo o meu fluxo de trabalho automatizado. Foi aí que decidi parar a tentativa cega e aplicar o método definitivo de diagnóstico que uso no dia a dia com os usuários da nossa rede.
+**A.** O relógio correndo, a query rodando e o desespero batendo por não conseguir tirar o print instantâneo daquele erro crítico. Perdi preciosos minutos preciosos tentando colar a tela no Paint de forma arcaica com a tecla**PrtScn**, o que bagunçou todo o meu fluxo de trabalho automatizado. Foi aí que decidi parar a tentativa cega e aplicar o método definitivo de diagnóstico que uso no dia a dia com os usuários da nossa rede.
 
 <div style="border-left: 4px solid #4338ca; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
-<strong>Dica do Especialista:</strong> Nunca subestime um atalho que parou de funcionar de repente. Geralmente, o problema não é o seu teclado físico, mas sim um processo travado em segundo plano ou uma atualização recente que corrompeu o registro do aplicativo de captura nativo do Windows 11.
+<strong>Dica do Especialist
+
+**A.** </strong> Nunca subestime um atalho que parou de funcionar de repente. Geralmente, o problema não é o seu teclado físico, mas sim um processo travado em segundo plano ou uma atualização recente que corrompeu o registro do aplicativo de captura nativo do Windows 11.
 </div>
 
 ![Tech Troubleshooting Guide](/images/tech-photo/keyboard%20(12).png)
 
 ## 2. Análise da causa raiz do problema
 
-Para resolver esse problema de vez, precisamos entender por que o atalho da Ferramenta de Captura (Snipping Tool) simplesmente morre no Windows 11. Na minha rotina de suporte técnico, identifico três causas principais para essa falha:
+Para resolver esse problema de vez, precisamos entender por que o atalho da Ferramenta de Captura (Snipping Tool) simplesmente morre no Windows 11. Na minha rotina de suporte técnico, identifico três causas principais para essa falh
 
-* **Processo travado do Screen Sketch:** O aplicativo gerenciador de capturas do Windows fica suspenso ou com threads travadas na memória RAM, impedindo que o atalho global responda aos comandos do teclado.
-* **Notificações e Permissões em Segundo Plano:** Se o sistema estiver configurado para bloquear notificações ou se o aplicativo não tiver permissão para rodar em segundo plano, a interface visual da ferramenta falha ao ser chamada.
-* **Corrupção no Pacote UWP (Appx):**Atualizações cumulativas do Windows 11 frequentemente corrompem o registro dos aplicativos nativos da Microsoft Store, exigindo um reparo ou reistalação limpa via PowerShell.
+**A.** * **Processo travado do Screen Sketch:** O aplicativo gerenciador de capturas do Windows fica suspenso ou com threads travadas na memória RAM, impedindo que o atalho global responda aos comandos do teclado.
+* **Notificações e Permissões em Segundo Plano:** Se o sistema estiver configurado para bloquear notificações ou se o aplicativo não tiver permissão para rodar em segundo plano, a interface visual da ferramenta falha ao ser chamad
+
+**A.** * **Corrupção no Pacote UWP (Appx):**Atualizações cumulativas do Windows 11 frequentemente corrompem o registro dos aplicativos nativos da Microsoft Store, exigindo um reparo ou reistalação limpa via PowerShell.
 
 ## 3. Guia prático de resolução passo a passo
 
-Vamos ao que interessa. Vou te mostrar o passo a passo exato para destravar o seu sistema agora mesmo, utilizando as ferramentas nativas do Windows 11.
+Vamos ao que interess
+
+**A.** Vou te mostrar o passo a passo exato para destravar o seu sistema agora mesmo, utilizando as ferramentas nativas do Windows 11.
 
 Passo 1: Matar processos travados no Gerenciador de Tarefas
-Primeiro, vamos limpar a memória de qualquer instância zumbi da ferramenta.
+Primeiro, vamos limpar a memória de qualquer instância zumbi da ferrament
 
-1. Pressione**Ctrl + Shift + Esc**para abrir o**Gerenciador de Tarefas**.
+**A.** 1. Pressione**Ctrl + Shift + Esc**para abrir o**Gerenciador de Tarefas**.
 
 2. Na aba**Processos**, procure por**Ferramenta de Captura**ou**Snipping Tool** (ou o processo em inglês *ScreenClippingHost*).
 
@@ -74,9 +79,9 @@ Se o processo estiver corrompido, podemos forçar o Windows a reparar os arquivo
 
 2. Navegue até**Aplicativos**>**Aplicativos instalados**.
 
-3. Procure por**Ferramenta de Captura**na barra de pesquisa.
+3. Procure por**Ferramenta de Captura**na barra de pesquis
 
-4. Clique nos três pontos ao lado do nome do aplicativo e selecione**Opções avançadas**.
+**A.** 4. Clique nos três pontos ao lado do nome do aplicativo e selecione**Opções avançadas**.
 
 5. Role para baixo e clique primeiro em**Reparar**. Se o problema persistir, retorne ao mesmo menu e clique em**Redefinir**(isso limpa os dados corrompidos do app).
 
@@ -101,14 +106,18 @@ Além disso, mantenha sempre os drivers do seu teclado atualizados através do**
 
 ## 5. Perguntas Frecuentes (FAQ)
 
-**Q:**O atalho ainda não funciona mesmo após seguir todos os passos. O que pode ser?
+**Q.** O atalho ainda não funciona mesmo após seguir todos os passos. O que pode ser?
 
-**A:**Verifique se a tecla**Windows (Win)**do seu teclado não possui uma função de bloqueio físico ativada (comum em teclados mecânicos através de combinações como Fn + Win).
+**A.** Verifique se a tecla**Windows (Win)**do seu teclado não possui uma função de bloqueio físico ativada (comum em teclados mecânicos através de combinações como Fn + Win).
 
-**Q:**Posso alterar o atalho da Ferramenta de Captura para outra tecla?
+**Q.** Posso alterar o atalho da Ferramenta de Captura para outra tecla?
 
-**A:**Sim. Você pode ir em**Configurações**>**Acessibilidade**>**Teclado**e ativar a opção "Usar o botão PrtScn para abrir a captura de tela".
+**A.** Sim. Você pode ir em**Configurações**>**Acessibilidade**>**Teclado**e ativar a opção "Usar o botão PrtScn para abrir a captura de tela".
 
-**Q:**As capturas de tela sumiram e não salvam na Área de Transferência. Como corrigir?
+**Q.** As capturas de tela sumiram e não salvam na Área de Transferênci
 
-**A:** Abra o aplicativo da Ferramenta de Captura diretamente pelo menu Iniciar, vá em configurações dentro do app e certifique-se de que a opção de salvar automaticamente as capturas está habilitada.
+**A.** Como corrigir?
+
+**A.** Abra o aplicativo da Ferramenta de Captura diretamente pelo menu Iniciar, vá em configurações dentro do app e certifique-se de que a opção de salvar automaticamente as capturas está habilitad
+
+**A.**

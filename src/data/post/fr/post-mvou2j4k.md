@@ -63,14 +63,14 @@ Privilégiez toujours un redémarrage en**Mode sans échec**si le fichier résis
 
 ## 5. Foire Aux Questions (FAQ)
 
-**Q :**Puis-je débrancher mon SSD externe de force si le fichier refuse de se fermer ?
+**Q.** Puis-je débrancher mon SSD externe de force si le fichier refuse de se fermer ?
 
-**A :**Absolument pas. Débrancher un support pendant qu'un descripteur est actif risque de corrompre la partition. Utilisez toujours l'icône "Retirer le périphérique en toute sécurité" ou redémarrez votre PC.
+**A.** Absolument pas. Débrancher un support pendant qu'un descripteur est actif risque de corrompre la partition. Utilisez toujours l'icône "Retirer le périphérique en toute sécurité" ou redémarrez votre PC.
 
-**Q :**Que faire si le message "Fichier introuvable" apparaît juste après avoir fermé le programme ?
+**Q.** Que faire si le message "Fichier introuvable" apparaît juste après avoir fermé le programme ?
 
-**A :**C'est une bonne nouvelle ! Cela signifie que le verrou a sauté et que le fichier a finalement été supprimé ou déplacé par l'action précédente. Actualisez simplement l'affichage de votre dossier (touche F5).
+**A.** C'est une bonne nouvelle ! Cela signifie que le verrou a sauté et que le fichier a finalement été supprimé ou déplacé par l'action précédente. Actualisez simplement l'affichage de votre dossier (touche F5).
 
-**Q :**Comment éviter que ce problème ne se reproduise lors des prochains gros transferts de 2 To ?
+**Q.** Comment éviter que ce problème ne se reproduise lors des prochains gros transferts de 2 To ?
 
-**A :** Désactivez temporairement l'indexation Windows sur votre SSD externe via les propriétés du lecteur, et stoppez les synchronisations automatiques de votre NAS avant de lancer de volumineuses copies de sauvegarde.
+**A.** Désactivez temporairement l'indexation Windows sur votre SSD externe via les propriétés du lecteur, et stoppez les synchronisations automatiques de votre NAS avant de lancer de volumineuses copies de sauvegarde.

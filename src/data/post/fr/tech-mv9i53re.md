@@ -58,7 +58,9 @@ Pourquoi un ordinateur moderne, censé être une bête de course, finit-il par r
 
 Guide de survie : Le plan d'action étape par étape
 
-Pas besoin d'être ingénieur système pour régler ça. Voici la procédure exacte que j'ai appliquée à la va-vite entre deux gorgées de café serré pour sauver ma matinée.
+Pas besoin d'être ingénieur système pour régler ç
+
+**A.** Voici la procédure exacte que j'ai appliquée à la va-vite entre deux gorgées de café serré pour sauver ma matinée.
 
 Étape 1 : Mettre au pas les applications en arrière-plan
 Par défaut, Windows autorise presque tout le monde à s'activer en cachette. On va siffler la fin de la récréation.
@@ -96,10 +98,10 @@ Pour ne plus jamais vous retrouver bloqué la sueur au front avant une réunion 
 ---
 ## 5. Foire Aux Questions (FAQ)
 
-**Q1 :**Est-ce que désactiver les effets visuels va rendre mon écran moche ? R : Ça enlève les effets de transparence "verre dépoli" et les animations de glissement lorsque vous fermez ou ouvrez une fenêtre. Le rendu devient un peu plus brut, semblable à Windows 10, mais le gain de réactivité sur un PC de bureau ou un portable professionnel est immédiat et flagrant.
+**Q1.** Est-ce que désactiver les effets visuels va rendre mon écran moche ? R : Ça enlève les effets de transparence "verre dépoli" et les animations de glissement lorsque vous fermez ou ouvrez une fenêtre. Le rendu devient un peu plus brut, semblable à Windows 10, mais le gain de réactivité sur un PC de bureau ou un portable professionnel est immédiat et flagrant.
 
-**Q2 :**Si je bloque les applications en arrière-plan, est-ce que je risque de rater des notifications importantes ? R : Uniquement pour les applications secondaires que vous aurez ciblées (comme l'application Météo ou des jeux). Vos logiciels de messagerie principaux (comme Outlook ou Teams si configurés correctement) resteront actifs lorsqu'ils sont ouverts au premier plan.
+**Q2.** Si je bloque les applications en arrière-plan, est-ce que je risque de rater des notifications importantes ? R : Uniquement pour les applications secondaires que vous aurez ciblées (comme l'application Météo ou des jeux). Vos logiciels de messagerie principaux (comme Outlook ou Teams si configurés correctement) resteront actifs lorsqu'ils sont ouverts au premier plan.
 
-**Q3 :**Pourquoi mon PC redevient-il lent après quelques mois malgré cette optimisation ?
+**Q3.** Pourquoi mon PC redevient-il lent après quelques mois malgré cette optimisation ?
 
 **A.** Windows réinstalle parfois des applications par défaut lors des grosses mises à jour semestrielles, et le cache accumulé par votre navigateur web finit par peser lourd. Un petit nettoyage trimestriel des applications installées s'impose pour garder une machine saine.

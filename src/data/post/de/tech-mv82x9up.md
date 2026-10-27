@@ -46,6 +46,8 @@ Freitagnachmittag, 16:45 Uhr. Der letzte Deployment-Lauf für das Release am Mon
 
 ## 2. Detaillierte Ursachenanalyse
 
+## 2. Detaillierte Ursachenanalyse
+
 Root Cause Analysis: Warum streikt die Kiste genau jetzt?
 
 Bevor man panikartig anfängt, neue Hardware zu bestellen, muss man verstehen, was unter der Haube schiefgelaufen ist. In 90% solcher Fälle bei Bestandsgeräten liegt es nicht an einem defekten Bauteil, sondern an schleichenden Umwelteinflüssen.
@@ -92,6 +94,8 @@ mdsched.exe
 Falls Windows wider Erwarten hochfährt, werfen wir noch einen Blick in den Geräte-Manager (`devmgmt.msc`) unter dem Punkt *Computer*, ob alle ACPI-Treiber sauber geladen sind, und kontrollieren in der Datenträgerverwaltung (`diskmgmt.msc`), ob alle Laufwerke noch korrekt eingehängt sind.
 
 ---
+
+## 4. Praxistipps und Warnungen vom System-Admin
 
 ## 4. Praxistipps und Warnungen vom System-Admin
 

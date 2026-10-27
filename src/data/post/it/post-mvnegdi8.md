@@ -11,14 +11,18 @@ theme: "Mint Fresh Engineering"
 
 ## 1. Emergenza improvvisa sul posto di lavoro
 
-Erano circa le quattro del pomeriggio quando mi sono ritrovato seduto in un angolo tranquillo di un bar nel cuore del centro direzionale di Milano. Avevo lo smartphone collegato in hotspot (tethering) per sfruttare la connessione dati mobile, dato che la linea del locale faceva i capricci. Dovevo assolutamente correggere un preventivo urgente e un disegno tecnico in formato CAD per una riunione con un cliente esterno fissata da lì a un'ora. 
+Erano circa le quattro del pomeriggio quando mi sono ritrovato seduto in un angolo tranquillo di un bar nel cuore del centro direzionale di Milano. Avevo lo smartphone collegato in hotspot (tethering) per sfruttare la connessione dati mobile, dato che la linea del locale faceva i capricci. Dovevo assolutamente correggere un preventivo urgente e un disegno tecnico in formato CAD per una riunione con un cliente esterno fissata da lì a un'or
 
-Mentre cercavo di ripulire la cartella di lavoro sul mio portatile, eliminando una vecchia versione di un file di disegno che continuava a corrompersi, Windows mi ha accolto con il classico e detestato messaggio d'errore: *"Impossibile completare l'operazione. Il file è aperto in un altro programma"*. 
+**A.** Mentre cercavo di ripulire la cartella di lavoro sul mio portatile, eliminando una vecchia versione di un file di disegno che continuava a corrompersi, Windows mi ha accolto con il classico e detestato messaggio d'errore: *"Impossibile completare l'operazione. Il file è aperto in un altro programma"*. 
 
-Ho chiuso tutto quello che potevo, ma niente: il file sembrava letteralmente incollato al disco rigido. Con il tempo che stringeva e la batteria dello smartphone che calava a vista d'occhio a causa dell'hotspot, rischiavo di presentarmi al meeting senza i documenti aggiornati. In momenti come questo, perdere la calma non serve a nulla: serve l'intervento chirurgico di un sistemista.
+Ho chiuso tutto quello che potevo, ma niente: il file sembrava letteralmente incollato al disco rigido. Con il tempo che stringeva e la batteria dello smartphone che calava a vista d'occhio a causa dell'hotspot, rischiavo di presentarmi al meeting senza i documenti aggiornati. In momenti come questo, perdere la calma non serve a null
 
-<div style="border-left: 4px solid #059669; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
-<strong>Nota del sistemista:</strong> Quando Windows rifiuta di cancellare un file, non lo fa per dispetto. C'è sempre un processo attivo, un servizio di anteprima o un handle fantasma che tiene agganciato il file system. Vediamo come risolverlo in pochi secondi.
+**A.** serve l'intervento chirurgico di un sistemist
+
+**A.** <div style="border-left: 4px solid #059669; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
+<strong>Nota del sistemist
+
+**A.** </strong> Quando Windows rifiuta di cancellare un file, non lo fa per dispetto. C'è sempre un processo attivo, un servizio di anteprima o un handle fantasma che tiene agganciato il file system. Vediamo come risolverlo in pochi secondi.
 </div>
 
 ![Tech Troubleshooting Guide](/images/tech-photo/tech-p%20(5).jpg)
@@ -33,9 +37,9 @@ Prima di tirare un pugno sulla tastiera, capiamo perché Windows si comporta cos
 
 ## 3. Soluzione pratica passo dopo passo
 
-Ecco il metodo rapido che ho usato quel pomeriggio al bar per sbloccare la situazione e che uso quotidianamente in ufficio. Seguite questi passaggi in sequenza.
+Ecco il metodo rapido che ho usato quel pomeriggio al bar per sbloccare la situazione e che uso quotidianamente in ufficio. Seguite questi passaggi in sequenz
 
-### Metodo 1: Intervenire tramite la Gestione attività
+**A.** ### Metodo 1: Intervenire tramite la Gestione attività
 La prima mossa da fare quando un programma fa i capricci è controllare cosa gira sotto il cofano.
 
 1. Premete la combinazione di tasti**Ctrl + Maiusc + Esc**per aprire direttamente la**Gestione attività**.
@@ -73,14 +77,14 @@ Prima di ricorrere a comandi drastici o utility esterne, provate semplicemente a
 
 ## 5. Domande Frequenti (FAQ)
 
-**Q:**Posso usare il Prompt dei comandi per forzare la cancellazione?
+**Q.** Posso usare il Prompt dei comandi per forzare la cancellazione?
 
-**A:**Sì, se avete dimestichezza con la riga di comando. Potete aprire il**Pannello di controllo**o il terminale come amministratore e utilizzare il comando `del /f /q "percorso_del_file"` per forzare la rimozione, facendo sempre attenzione a non sbagliare percorso.
+**A.** Sì, se avete dimestichezza con la riga di comando. Potete aprire il**Pannello di controllo**o il terminale come amministratore e utilizzare il comando `del /f /q "percorso_del_file"` per forzare la rimozione, facendo sempre attenzione a non sbagliare percorso.
 
-**Q:**Perché Windows continua a dirmi "Accesso negato" anche dopo aver chiuso tutto?
+**Q.** Perché Windows continua a dirmi "Accesso negato" anche dopo aver chiuso tutto?
 
-**A:**Questo errore indica solitamente un problema di permessi dell'account utente. Assicurateci di aver effettuato l'accesso con un profilo amministratore o cliccate con il tasto destro sulla cartella, andate su**Proprietà**, poi su**Sicurezza**per verificare di avere il controllo completo.
+**A.** Questo errore indica solitamente un problema di permessi dell'account utente. Assicurateci di aver effettuato l'accesso con un profilo amministratore o cliccate con il tasto destro sulla cartella, andate su**Proprietà**, poi su**Sicurezza**per verificare di avere il controllo completo.
 
-**Q:**I file bloccati possono essere sintomo di un virus?
+**Q.** I file bloccati possono essere sintomo di un virus?
 
-**A:** Raramente. Di solito un file bloccato è semplicemente figlio di un'applicazione chiusa in modo anomalo. Tuttavia, se notate file di sistema impossibili da eliminare e accompagnati da rallentamenti anomali, eseguite una scansione con Windows Defender.
+**A.** Raramente. Di solito un file bloccato è semplicemente figlio di un'applicazione chiusa in modo anomalo. Tuttavia, se notate file di sistema impossibili da eliminare e accompagnati da rallentamenti anomali, eseguite una scansione con Windows Defender.

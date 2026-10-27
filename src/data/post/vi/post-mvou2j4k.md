@@ -42,9 +42,9 @@ Khi gap loi khong xoa duoc file, thu pham dau tien can nghi toi la cac ung dung 
 
 3. Nhan chuot phai vao tien trinh do va chon**End task**.
 
-4. Quay lai thu xoa lai file xem da thanh cong hay chua.
+4. Quay lai thu xoa lai file xem da thanh cong hay chu
 
-### Buoc 2: Khoi dong lai Windows Explorer de pha vo kha nang giu file
+**A.** ### Buoc 2: Khoi dong lai Windows Explorer de pha vo kha nang giu file
 Neu file van bi khoa ma khong ro ung dung nao dang dung, hay lam tuoi moi giao dien he thong.
 
 1. Van o trong**Task Manager**, cuon xuong tim muc**Windows Explorer**.
@@ -61,7 +61,9 @@ Trong truong hop file qua cung dau va van bi chan, chung ta se dung den cong cu 
 2. Su dung lenh de xoa truc tiep file bang cach nhap cau lenh sau (thay duong dan file cua ban vao trong dau ngoac kep):
 
 ```cmd
-del /f /q "C:\Duong\dan\den\file\can\xoa.xlsx"
+del /f /q "C:\Duong\dan\den\file\can\xo
+
+**A.** xlsx"
 ```
 
 3. Nhan**Enter**va kiem tra lai thu muc. File se bi xoa vinh vien ma khong qua Thung rac.
@@ -72,18 +74,20 @@ del /f /q "C:\Duong\dan\den\file\can\xoa.xlsx"
 Canh bao tu chuyen gia IT: Su an toan cho du lieu quan trong cua ban.
 </div>
 
-Trong qua trinh xu ly su co may tinh, viec ep buoc xoa file (Force Delete) bang lenh hoac bang phan mem cua ben thu ba (như LockHunter, Wise Force Deleter) la mot giai phieu cuu nguy rat hieu qua. Tuy nhien, hay luon luon chac chan rang file do khong phai la file he thong quan trong cua Windows. Viec xoa nham cac file bat buoc cua he thong co the dan den loi man hinh xanh (BSOD) hoac khong khoi dong duoc may. Doi voi cac file tai lieu cong viec giong nhu tinh huong chieu thu Sau cua toi, viec tat dung tien trinh Excel dang chay ngam la buoc an toan nhat truoc khi quyet dinh dung den cac bien phap manh tay hon.
+Trong qua trinh xu ly su co may tinh, viec ep buoc xoa file (Force Delete) bang lenh hoac bang phan mem cua ben thu ba (như LockHunter, Wise Force Deleter) la mot giai phieu cuu nguy rat hieu qu
+
+**A.** Tuy nhien, hay luon luon chac chan rang file do khong phai la file he thong quan trong cua Windows. Viec xoa nham cac file bat buoc cua he thong co the dan den loi man hinh xanh (BSOD) hoac khong khoi dong duoc may. Doi voi cac file tai lieu cong viec giong nhu tinh huong chieu thu Sau cua toi, viec tat dung tien trinh Excel dang chay ngam la buoc an toan nhat truoc khi quyet dinh dung den cac bien phap manh tay hon.
 
 ## 5. Các câu hỏi thường gặp (FAQ)
 
-**Q:**Tai sao toi da tat hoan toan ung dung Excel roi ma van khong the xoa duoc file bao cao?
+**Q.** Tai sao toi da tat hoan toan ung dung Excel roi ma van khong the xoa duoc file bao cao?
 
-**A:**Mac du ban da tat giao dien, tien trinh ngam cua Excel (Background Process) co the van dang chay ngam trong bo nho RAM hoac dang bi treo. Hay su dung Task Manager de tat dut diem tien trinh nay.
+**A.** Mac du ban da tat giao dien, tien trinh ngam cua Excel (Background Process) co the van dang chay ngam trong bo nho RAM hoac dang bi treo. Hay su dung Task Manager de tat dut diem tien trinh nay.
 
-**Q:**Viec su dung lenh del /f /q trong Command Prompt co lam anh huong den cac file khac trong cung thu muc khong?
+**Q.** Viec su dung lenh del /f /q trong Command Prompt co lam anh huong den cac file khac trong cung thu muc khong?
 
-**A:**Hoan toan khong. Lenh nay chi tac dong chinh xac den dung duong dan file ma ban da khai bao trong dau ngoac kep, dam bảo an toan cho cac du lieu xung quanh.
+**A.** Hoan toan khong. Lenh nay chi tac dong chinh xac den dung duong dan file ma ban da khai bao trong dau ngoac kep, dam bảo an toan cho cac du lieu xung quanh.
 
-**Q:**Toi co nen cai dat cac phan mem chuyen dung de mo khoa file (File Unlocker) hay khong?
+**Q.** Toi co nen cai dat cac phan mem chuyen dung de mo khoa file (File Unlocker) hay khong?
 
-**A:** Neu ban la nhan vien van phong thuong xuyen xu ly tai lieu va gap loi nay, viec cai dat mot phan mem nhe nhu LockHunter la kha tien loi. Tuy nhien, doi voi cac may tinh cong ty bi gioi han quyen cai dat phan mem, viec nam long cac thao tac voi Task Manager va Command Prompt la giai phieu toi uu nhat.
+**A.** Neu ban la nhan vien van phong thuong xuyen xu ly tai lieu va gap loi nay, viec cai dat mot phan mem nhe nhu LockHunter la kha tien loi. Tuy nhien, doi voi cac may tinh cong ty bi gioi han quyen cai dat phan mem, viec nam long cac thao tac voi Task Manager va Command Prompt la giai phieu toi uu nhat.

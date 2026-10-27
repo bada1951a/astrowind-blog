@@ -39,6 +39,8 @@ Puis, le drame : un collègue m'envoie un message urgent sur Teams me demandant 
 
 ## 2. Analyse des causes principales de l'erreur
 
+## 2. Analyse des causes principales de l'erreur
+
 Pourquoi ce raccourci magique nous lâche-t-il soudainement, surtout lors du passage à un bureau flexible ou multi-écrans ? Après avoir analysé des dizaines de cas similaires sur les parcs Windows 11 de l'entreprise, voici les trois coupables les plus fréquents :
 
 -**Le processus de l'application est planté ou suspendu :**Parfois, l'exécutable de l'Outil Capture d'écran reste bloqué en arrière-plan à la suite d'une mauvaise déconnexion précédente, empêchant toute nouvelle instance de se lancer.
@@ -103,14 +105,14 @@ De plus, méfiez-vous des logiciels tiers de capture d'écran (comme Greenshot, 
 
 ## 5. Foire Aux Questions (FAQ)
 
-**Q:**Le raccourci fonctionne mais l'écran ne s'assombrit pas, que faire ?
+**Q.** Le raccourci fonctionne mais l'écran ne s'assombrit pas, que faire ?
 
-**A:**Ce problème est souvent lié aux paramètres d'affichage de votre nouveau dock. Allez dans les**Paramètres**>**Système**>**Écran**et vérifiez que l'échelle d'affichage est bien réglée sur les valeurs recommandées (souvent 100% ou 125%) pour tous vos moniteurs.
+**A.** Ce problème est souvent lié aux paramètres d'affichage de votre nouveau dock. Allez dans les**Paramètres**>**Système**>**Écran**et vérifiez que l'échelle d'affichage est bien réglée sur les valeurs recommandées (souvent 100% ou 125%) pour tous vos moniteurs.
 
-**Q:**Puis-je modifier le raccourci Win + Shift + S pour utiliser une autre touche ?
+**Q.** Puis-je modifier le raccourci Win + Shift + S pour utiliser une autre touche ?
 
-**A:**Oui, tout à fait. Vous pouvez configurer la touche Impression écran (PrtScn) pour lancer l'Outil Capture d'écran. Allez dans**Paramètres**>**Accessibilité**>**Clavier**et activez l'option "Utiliser le bouton Impression écran pour ouvrir la capture d'écran".
+**A.** Oui, tout à fait. Vous pouvez configurer la touche Impression écran (PrtScn) pour lancer l'Outil Capture d'écran. Allez dans**Paramètres**>**Accessibilité**>**Clavier**et activez l'option "Utiliser le bouton Impression écran pour ouvrir la capture d'écran".
 
-**Q:**Pourquoi mes captures d'écran ne s'enregistrent-elles plus automatiquement dans le dossier Images ?
+**Q.** Pourquoi mes captures d'écran ne s'enregistrent-elles plus automatiquement dans le dossier Images ?
 
-**A:**Vérifiez les paramètres internes de l'application. Ouvrez l'**Outil Capture d'écran**manuellement, cliquez sur les trois points en haut à droite pour aller dans les**Paramètres**, et assurez-vous que l'option "Enregistrer automatiquement les captures d'écran" est bien activée.
+**A.** Vérifiez les paramètres internes de l'application. Ouvrez l'**Outil Capture d'écran**manuellement, cliquez sur les trois points en haut à droite pour aller dans les**Paramètres**, et assurez-vous que l'option "Enregistrer automatiquement les captures d'écran" est bien activée.

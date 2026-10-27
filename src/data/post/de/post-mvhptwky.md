@@ -44,6 +44,8 @@ Es ist kurz vor 10:00 Uhr morgens im Frankfurter Bankenviertel. In einer halben 
 
 ## 2. Detaillierte Ursachenanalyse
 
+## 2. Detaillierte Ursachenanalyse
+
 Warum Windows 11 uns das Leben schwer macht (Die 3 Ursachen)
 
 Bevor wir den Schraubenzieher digital ansetzen, müssen wir verstehen, warum Microsoft diesen Schritt gegangen ist:
@@ -55,6 +57,8 @@ Bevor wir den Schraubenzieher digital ansetzen, müssen wir verstehen, warum Mic
 3. Mangelnde Usability für Profis: Was für den normalen Nutzer aufgeräumt wirkt, ist für IT-Profis, die stündlich mit WinRAR, Git, Notepad++ und FTP-Clients arbeiten, ein echter Produktivitätskiller.
 
 Im ersten Moment versuchten wir es natürlich klassisch: Über die *Einstellungen* und den *Task-Manager* den Windows-Explorer neu starten – völlig sinnlos, da das Menü hardcodiert im Betriebssystem verankert ist. Auch ein Blick in die *Systemsteuerung* brachte keine Abhilfe. Der Frust wuchs, während die Uhr tickte. 
+
+## 3. Schritt-für-Schritt-Lösungsanleitung
 
 ## 3. Schritt-für-Schritt-Lösungsanleitung
 

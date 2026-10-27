@@ -116,13 +116,15 @@ Việc gỡ driver qua giao diện thông thường của Windows luôn để l�
 
 5. Trong mục Select device type, chọnGPU.
 
-**Q6.**Trong mục Select device, chọn hãng sản xuất card màn hình tích hợp trước (Intel hoặc AMD).
+**Q6.** Trong mục Select device, chọn hãng sản xuất card màn hình tích hợp trước (Intel hoặc AMD).
 
-**Q7.**Nhấp vào nút Clean and do NOT restart.
+**Q7.** Nhấp vào nút Clean and do NOT restart.
 
-**Q8.**Tiếp tục chọn lại mục Select devicesang card rời (NVIDIA/AMD) và bấmClean and restart.
+**Q8.** Tiếp tục chọn lại mục Select devicesang card rời (NVIDIA/AMD) và bấmClean and restart.
 
-**Q9.** Sau khi hệ thống khởi động lại, truy cập trang hỗ trợ chính thức của hãng laptop (Dell Service Tag, Lenovo Support, HP Support) để cài đặt đúng gói driver đồ họa đã được OEM chứng thực tính tương thích, tuyệt đối không dùng các công cụ tự động tìm driver bên thứ ba. ```
+**Q9.** Sau khi hệ thống khởi động lại, truy cập trang hỗ trợ chính thức của hãng laptop (Dell Service Tag, Lenovo Support, HP Support) để cài đặt đúng gói driver đồ họa đã được OEM chứng thực tính tương thích, tuyệt đối không dùng các công cụ tự động tìm driver bên thứ b
+
+**A.** ```
 Cấu hình chuẩn luồng cài đặt driver đồ họa laptop:
 [OS Clean Boot] → [Cài đặt Intel/AMD iGPU Driver trước] → [Khởi động lại] → [Cài đặt NVIDIA dGPU Driver sau] → [Khởi động lại]
 ```

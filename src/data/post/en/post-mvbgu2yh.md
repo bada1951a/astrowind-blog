@@ -48,6 +48,8 @@ We have all been there. You mash the Windows key, you frantically click around t
 
 ## 2. Root Cause Breakdown
 
+## 2. Root Cause Breakdown
+
 Why Your Windows 11 Taskbar Freezes
 
 To fix this issue permanently, it helps to understand what actually broke under the hood. In Windows 11, the taskbar is deeply intertwined with modern shell architecture, XAML islands, and background explorer processes. 
@@ -114,14 +116,14 @@ If the taskbar freezes repeatedly after every reboot, the underlying modern app 
 
 ## 5. Frequently Asked Questions (FAQ)
 
-**Q:**Can I fix a frozen taskbar without using the keyboard or Task Manager?
+**Q.** Can I fix a frozen taskbar without using the keyboard or Task Manager?
 
-**A:**If your mouse clicks do not register on the taskbar, try pressing the `Windows Key` to see if the Start menu pops up. If it does, you can navigate with arrow keys to open Settings or restart. If total input is frozen, plugging in an external USB mouse or using keyboard shortcuts is your fastest path.
+**A.** If your mouse clicks do not register on the taskbar, try pressing the `Windows Key` to see if the Start menu pops up. If it does, you can navigate with arrow keys to open Settings or restart. If total input is frozen, plugging in an external USB mouse or using keyboard shortcuts is your fastest path.
 
-**Q:**Why does my Windows 11 taskbar keep freezing after recent updates?
+**Q.** Why does my Windows 11 taskbar keep freezing after recent updates?
 
-**A:**This usually points to a graphics driver conflict or a corrupted system cache following a Windows Cumulative Update. Running an `sfc /scannow` command in an admin terminal and updating your GPU drivers via official vendor software will usually solve recurring stability issues.
+**A.** This usually points to a graphics driver conflict or a corrupted system cache following a Windows Cumulative Update. Running an `sfc /scannow` command in an admin terminal and updating your GPU drivers via official vendor software will usually solve recurring stability issues.
 
-**Q:**Will restarting Windows Explorer delete my open work?
+**Q.** Will restarting Windows Explorer delete my open work?
 
-**A:** No. Restarting `explorer.exe` only refreshes the graphical user interface shell (desktop, taskbar, file explorer windows). Your background applications, browser tabs, and active code editors running in memory remain completely untouched.
+**A.** No. Restarting `explorer.exe` only refreshes the graphical user interface shell (desktop, taskbar, file explorer windows). Your background applications, browser tabs, and active code editors running in memory remain completely untouched.

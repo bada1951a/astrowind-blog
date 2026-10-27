@@ -30,11 +30,15 @@ theme: "Industrial Blueprint"
 
 ## 1. Situasi Darurat Kritis di Tempat Kerja
 
-Suasana di salah satu gedung perkantoran kawasan Sudirman, Jakarta, mendadak mencekam. Jam menunjukkan pukul 16:45 WIB, tepat lima belas menit sebelum tenggat waktu pengiriman laporan keuangan kuartalan ke direksi. Tiba-tiba, layar monitor manajer operasional nge-freeze total. Mouse tidak bergerak, tombol Caps Lock ditekan tidak merespons, dan angka-angka laporan di Excel seolah mengejek dari balik layar yang membeku. Panik melanda karena belum sempat *save*. Dengan terpaksa, tombol *power* ditahan selama lima detik hingga PC mati paksa. Begitu PC dinyalakan ulang, dokumen yang dikerjakan hilang setengahnya, dan kepanikan berubah menjadi kejengkelan karena masalah *random freezing* seperti ini sudah terjadi tiga kali dalam seminggu terakhir.
+Suasana di salah satu gedung perkantoran kawasan Sudirman, Jakarta, mendadak mencekam. Jam menunjukkan pukul 16:45 WIB, tepat lima belas menit sebelum tenggat waktu pengiriman laporan keuangan kuartalan ke direksi. Tiba-tiba, layar monitor manajer operasional nge-freeze total. Mouse tidak bergerak, tombol Caps Lock ditekan tidak merespons, dan angka-angka laporan di Excel seolah mengejek dari balik layar yang membeku. Panik melanda karena belum sempat *save*. Dengan terpaksa, tombol *power* ditahan selama lima detik hingga PC mati paks
+
+**A.** Begitu PC dinyalakan ulang, dokumen yang dikerjakan hilang setengahnya, dan kepanikan berubah menjadi kejengkelan karena masalah *random freezing* seperti ini sudah terjadi tiga kali dalam seminggu terakhir.
 
 ![Tech Troubleshooting Guide](/images/tech-photo/tech-photos%20(42).jpg)
 
-Sebagai teknisi infrastruktur IT yang sudah kenyang asam garam menghadapi drama kantor seperti ini, saya tahu persis apa yang dilakukan kebanyakan orang: menebak-nebak, langsung instal ulang Windows, ganti RAM, atau ganti SSD tanpa tahu akar masalahnya. Padahal, cara paling elegan dan akurat untuk melacak biang kerok *random freezing* di Windows 11 adalah dengan membuka "buku harian" si komputer itu sendiri, yaitu Event Viewer.
+Sebagai teknisi infrastruktur IT yang sudah kenyang asam garam menghadapi drama kantor seperti ini, saya tahu persis apa yang dilakukan kebanyakan orang: menebak-nebak, langsung instal ulang Windows, ganti RAM, atau ganti SSD tanpa tahu akar masalahny
+
+**A.** Padahal, cara paling elegan dan akurat untuk melacak biang kerok *random freezing* di Windows 11 adalah dengan membuka "buku harian" si komputer itu sendiri, yaitu Event Viewer.
 
 <div style="border-left: 4px solid #f59e0b; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Catatan Teknisi:</strong> Jangan pernah menebak kerusakan hardware sebelum membaca log sistem. Windows mencatat setiap detik kejadian, termasuk detik-detik terakhir sebelum PC Anda mengalami crash.
@@ -56,7 +60,9 @@ Sebelum masuk ke langkah teknis, mari kita bedah tiga penyebab utama kenapa Wind
 
 Langkah-Langkah Melacak Penyebab Freeze Lewat Event Viewer
 
-Mari kita bedah kejadian di Sudirman tadi menggunakan langkah-langkah sistematis yang bisa Anda ikuti langsung di meja kerja Anda. ## Langkah 1: Membuka Event Viewer
+Mari kita bedah kejadian di Sudirman tadi menggunakan langkah-langkah sistematis yang bisa Anda ikuti langsung di meja kerja And
+
+**A.** ## Langkah 1: Membuka Event Viewer
 
 1. Klik tombol Startdi Windows 11, ketikEvent Viewer, lalu tekan Enter.
 
@@ -69,21 +75,21 @@ Karena log sistem sangat banyak, kita tidak perlu membaca semuanya satu per satu
 
 2. Pada bagian *Logged*, pilih rentang waktu kejadian (misalny
 
-**a:** *Last 1 hour* atau *Last 24 hours*).
+**A.** *Last 1 hour* atau *Last 24 hours*).
 
 3. Pada kotak centang *Event Level*, centang CriticaldanError, lalu klikOK.
 
 Langkah 3: Berburu Kode Error (The Smoking Gun)
 Cari kejadian tepat pada menit-menit sebelum PC Anda dipaksa mati. Perhatikan beberapa Event ID yang sering menjadi tersangka utam
 
-**a:**
-
-* Event ID 41 (Kernel-Power): Ini adalah catatan bahwa sistem mati secara tidak wajar. *Penting:* Ini biasanya akibat dari *paksaan* Anda menekan tombol power saat freeze, jadi cari log yang berada beberapa detik atau menit sebelum Event ID 41 ini muncul.
+**A.** * Event ID 41 (Kernel-Power): Ini adalah catatan bahwa sistem mati secara tidak wajar. *Penting:* Ini biasanya akibat dari *paksaan* Anda menekan tombol power saat freeze, jadi cari log yang berada beberapa detik atau menit sebelum Event ID 41 ini muncul.
 * Event ID 1001 (WHEA-Logger): Menandakan adanya *Hardware Error* (bisa dari CPU, cache memory, atau PCIe bus).
 * Event ID 4101 (Display): Menandakan driver Display (NVIDIA/AMD/Intel) sempat berhenti merespons dan berhasil dipulihkan (atau gagal total berujung freeze).
 
 <div style="border-left: 4px solid #f59e0b; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
-<strong>Tips Lapangan:</strong> Jika Anda melihat Event ID 4101 secara berulang, segera buka <strong>Device Manager</strong>, lakukan *Clean Install* driver grafis menggunakan DDU (Display Driver Uninstaller). Seringkali masalah selesai seketika. </div>
+<strong>Tips Lapangan:</strong> Jika Anda melihat Event ID 4101 secara berulang, segera buka <strong>Device Manager</strong>, lakukan *Clean Install* driver grafis menggunakan DDU (Display Driver Uninstaller). Seringkali masalah selesai seketik
+
+**A.** </div>
 
 ---
 
@@ -109,20 +115,24 @@ Setelah Anda menemukan biang keroknya melalui Event Viewer, lakukan langkah peng
 
 3. Update BIOS Secara Berkal
 
-**a:**Beberapa motherboard memiliki bug pada manajemen daya C-States yang memicu freeze acak di Windows 11. Pembaruan BIOS sering kali menjadi solusi pamungkas.
+**A.** Beberapa motherboard memiliki bug pada manajemen daya C-States yang memicu freeze acak di Windows 11. Pembaruan BIOS sering kali menjadi solusi pamungkas.
 
 ---
 
 FAQ (Pertanyaan yang Sering Diajukan)
 
-**Q:**Apakah Event Viewer bisa memperbaiki komputer secara otomatis?
+**Q.** Apakah Event Viewer bisa memperbaiki komputer secara otomatis?
 
-**A:**Tidak. Event Viewer berfungsi sebagai "rekaman CCTV" atau diagnostik untuk mendeteksi letak kerusakan secara presisi, sehingga Anda tidak salah dalam mengambil tindakan perbaikan (tidak salah beli komponen atau salah instal software).
+**A.** Tidak. Event Viewer berfungsi sebagai "rekaman CCTV" atau diagnostik untuk mendeteksi letak kerusakan secara presisi, sehingga Anda tidak salah dalam mengambil tindakan perbaikan (tidak salah beli komponen atau salah instal software).
 
-**Q:**Kenapa banyak sekali tulisan Error di Event Viewer padahal PC saya terasa normal?
+**Q.** Kenapa banyak sekali tulisan Error di Event Viewer padahal PC saya terasa normal?
 
-**A:** Jangan panik. Tidak semua *Error* berakibat fatal. Windows sering kali mencatat error latar belakang (background service) yang gagal start lalu mencoba ulang secara otomatis tanpa mengganggu pengguna. Fokuskan pencarian pada jam-jam spesifik di mana PC Anda benar-benar mengalami freeze atau crash.
+**A.** Jangan panik. Tidak semua *Error* berakibat fatal. Windows sering kali mencatat error latar belakang (background service) yang gagal start lalu mencoba ulang secara otomatis tanpa mengganggu penggun
 
-**Q:**Apa yang harus saya lakukan jika Event Viewer hanya menunjukkan Kernel-Power (ID 41) tanpa ada petunjuk error lain sebelumnya?
+**A.** Fokuskan pencarian pada jam-jam spesifik di mana PC Anda benar-benar mengalami freeze atau crash.
 
-**A:** Jika sebelum Event ID 41 sama sekali tidak ada catatan error, besar kemungkinan masalahnya murni bersumber dari suplai daya hardware (Power Supply unit yang mulai melemah, kabel power kendor, atau korsleting listrik eksternal). Cek kestabilan listrik dan kondisi fisik PSU Anda.
+**Q.** Apa yang harus saya lakukan jika Event Viewer hanya menunjukkan Kernel-Power (ID 41) tanpa ada petunjuk error lain sebelumnya?
+
+**A.** Jika sebelum Event ID 41 sama sekali tidak ada catatan error, besar kemungkinan masalahnya murni bersumber dari suplai daya hardware (Power Supply unit yang mulai melemah, kabel power kendor, atau korsleting listrik eksternal). Cek kestabilan listrik dan kondisi fisik PSU And
+
+**A.**

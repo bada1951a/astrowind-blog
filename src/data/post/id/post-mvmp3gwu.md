@@ -33,7 +33,9 @@ Setelah melakukan penelusuran cepat ala *troubleshooter* senior, masalah gagalny
 
 * **Aplikasi Background Terhenti (Background Process Crash):** Proses *Screen Sketch* atau *Snipping Tool* mengalami *freeze* di latar belakang sistem dan menolak merespons perintah *trigger* keyboard.
 * **Fitur Clipboard History Nonaktif:** Layanan penyimpanan memori papan klip Windows mengalami konflik atau dimatikan oleh kebijakan grup perusahaan (*Group Policy*).
-* **File Aplikasi Korup atau Update Tertunda:** Ekstensi aplikasi berbasis UWP (Universal Windows Platform) ini mengalami korupsi data setelah proses *deployment* sistem operasi yang baru.
+* **File Aplikasi Korup atau Update Tertund
+
+**A. Ekstensi aplikasi berbasis UWP (Universal Windows Platform) ini mengalami korupsi data setelah proses *deployment* sistem operasi yang baru.
 
 <div style="border-left: 4px solid #14b8a6; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Catatan Trigger Sistem:</strong> Pada PC workstation baru, seringkali modul integrasi sistem Windows mengalami tunda muat (delay loading) akibat proses sinkronisasi cloud akun Microsoft yang berjalan bersamaan di latar belakang.
@@ -41,9 +43,9 @@ Setelah melakukan penelusuran cepat ala *troubleshooter* senior, masalah gagalny
 
 ## 3. Panduan Langkah demi Langkah Penyelesaian Masalah
 
-Mari kita selesaikan masalah ini langkah demi langkah dengan panduan praktis yang mudah diikuti langsung dari meja kerja Anda.
+Mari kita selesaikan masalah ini langkah demi langkah dengan panduan praktis yang mudah diikuti langsung dari meja kerja And
 
-Langkah 1: Paksa Hentikan Proses via Task Manager
+**A.** Langkah 1: Paksa Hentikan Proses via Task Manager
 Jika proses aplikasi mengalami *hang*, kita harus mematikannya secara paksa agar sistem memuat ulang modulnya dari awal.
 
 1. Tekan kombinasi tombol **Ctrl + Shift + Esc**untuk membuka**Task Manager**.
@@ -84,14 +86,14 @@ Sebagai catatan tambahan dari pengalaman di lapangan, hindari menggunakan aplika
 
 ## 5. Pertanyaan yang Sering Diajukan (FAQ)
 
-**Q:**Kenapa shortcut Win + Shift + S saya tiba-tiba berubah fungsi menjadi membuka aplikasi lain?
+**Q.** Kenapa shortcut Win + Shift + S saya tiba-tiba berubah fungsi menjadi membuka aplikasi lain?
 
-**A:** Kemungkinan ada aplikasi pihak ketiga (seperti software perekam layar atau aplikasi kustom keyboard gaming) yang mengambil alih (*hijack*) fungsi tombol pintasan tersebut. Periksa aplikasi yang berjalan di system tray Anda.
+**A.** Kemungkinan ada aplikasi pihak ketiga (seperti software perekam layar atau aplikasi kustom keyboard gaming) yang mengambil alih (*hijack*) fungsi tombol pintasan tersebut. Periksa aplikasi yang berjalan di system tray And
 
-**Q:**Apakah saya harus menginstal ulang Windows jika cara di atas gagal total?
+**A.Q.** Apakah saya harus menginstal ulang Windows jika cara di atas gagal total?
 
-**A:**Tidak perlu terburu-buru install ulang. Anda bisa mendaftarkan ulang (re-register) seluruh aplikasi bawaan Windows melalui perintah PowerShell sebagai Administrator dengan perintah khusus manajemen paket UWP.
+**A.** Tidak perlu terburu-buru install ulang. Anda bisa mendaftarkan ulang (re-register) seluruh aplikasi bawaan Windows melalui perintah PowerShell sebagai Administrator dengan perintah khusus manajemen paket UWP.
 
-**Q:**Apakah masalah ini berhubungan dengan kerusakan pada hardware keyboard fisik?
+**Q.** Apakah masalah ini berhubungan dengan kerusakan pada hardware keyboard fisik?
 
-**A:** Sangat kecil kemungkinannya jika tombol Windows, Shift, dan huruf S masih berfungsi normal saat dikombinasikan untuk fungsi lain. Masalah ini 99% merupakan isu software atau konfigurasi sistem Windows 11.
+**A.** Sangat kecil kemungkinannya jika tombol Windows, Shift, dan huruf S masih berfungsi normal saat dikombinasikan untuk fungsi lain. Masalah ini 99% merupakan isu software atau konfigurasi sistem Windows 11.

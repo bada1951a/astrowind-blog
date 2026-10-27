@@ -49,7 +49,7 @@ Mechanische Tastaturschalter arbeiten fast ausnahmslos mit galvanischen Schaltko
 
 Ursache
 
-**A:** Mikroskopische Oxidation und Fremdkörperpartikel
+**A.** Mikroskopische Oxidation und Fremdkörperpartikel
 Mechanische Schalter sind selten hermetisch versiegelt. Im Laufe von Monaten dringen feiner Staub, Aerosole und mikroskopischer Abrieb in das Gehäuse ein. Setzen sich diese Partikel genau zwischen die Gold-Crosspoint-Kontakte, wird der Stromkreis beim Niederdrücken nicht stabil geschlossen. Das Resultat: Die Firmware registriert ein extremes Flattern des Pegels. Statt eines sauberen High-/Low-Signals interpretiert der Controller die Spannungsschwankungen als mehrfaches Drücken der Taste binnen weniger Millisekunden (Chattering) oder der Kontakt kommt schlicht gar nicht zustande.
 
 Ursache B: Materialermüdung und Dejustierung der Blattfeder
@@ -60,6 +60,8 @@ Jeder mechanische Schalter prellt von Natur aus einige Millisekunden beim Schlie
 
 ---
 ![Tech Hardware Guide](https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2? auto=format&fit=crop&w=1200&h=675&q=85)
+
+## 3. Schritt-für-Schritt-Lösungsanleitung
 
 ## 3. Schritt-für-Schritt-Lösungsanleitung
 
@@ -115,7 +117,7 @@ Die "Straw-and-Stem"-Methode (Ohne Gehäuseöffnung)
 
 5. Applikation:Geben Sieeinen einzigen, ultrakurzen Sprühstoß (weniger als eine halbe Sekunde) in den Schalter. Der Schalter soll nicht "ertrinken".
 
-**Q6.**Einarbeiten: Betätigen Sie den Switch sofort danach 50 bis 80 Mal schnell hintereinander mit dem Finger. Dadurch reibt sich der Schmutz von den Kontaktzungen ab, und das Lösungsmittel verteilt sich über die gesamte Oberfläche.
+**Q6.** Einarbeiten: Betätigen Sie den Switch sofort danach 50 bis 80 Mal schnell hintereinander mit dem Finger. Dadurch reibt sich der Schmutz von den Kontaktzungen ab, und das Lösungsmittel verteilt sich über die gesamte Oberfläche.
 
 **Q7.** Verdunstungszeit einhalten: Warten Sie mindestens 20 bis 30 Minuten, bis das Lösungsmittel restlos verflüchtigt ist. Nutzen Sie ggf. Druckluftspray aus der Dose, um Reste herauszublasen.
 
@@ -143,6 +145,8 @@ Sollte das Chattering nach Phase 2 weiterhin auftreten, ist die Blattfeder entwe
   Hier hilft nur das Entlöten mittels Entlötpumpe oder Entlötlitze auf der Platinenrückseite. Alternativ kann man den Schalter öffnen (*Switch Opening*), während er auf der Platine sitzt, sofern die Montageplatte (*Plate*) entsprechende Aussparungen ("Notches") besitzt. Biegen Sie die stationäre Kontaktzunge mit einer Uhrmacherpinzette um einen Bruchteil eines Millimeters nach innen, um den Anpressdruck der Goldkontakte wiederherzustellen.
 
 ---
+
+## 4. Praxistipps und Warnungen vom System-Admin
 
 ## 4. Praxistipps und Warnungen vom System-Admin
 

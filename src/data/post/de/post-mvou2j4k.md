@@ -79,14 +79,14 @@ Achten Sie zudem darauf, dass bei der Einrichtung neuer Peripheriegeräte wie Do
 
 ## 5. Häufig gestellte Fragen (FAQ)
 
-**Q:**Was kann ich tun, wenn selbst nach dem Schließen aller Programme die Meldung "Zugriff verweigert" erscheint?
+**Q.** Was kann ich tun, wenn selbst nach dem Schließen aller Programme die Meldung "Zugriff verweigert" erscheint?
 
-**A:**In diesem Fall fehlen Ihnen meist die nötigen Administratorrechte. Starten Sie die Eingabeaufforderung oder PowerShell als Administrator und versuchen Sie den Löschvorgang erneut. Gelegentlich hilft auch ein kurzer Blick in die**Ereignisanzeige**, um zu prüfen, ob ein Hintergrunddienst den Zugriff blockiert.
+**A.** In diesem Fall fehlen Ihnen meist die nötigen Administratorrechte. Starten Sie die Eingabeaufforderung oder PowerShell als Administrator und versuchen Sie den Löschvorgang erneut. Gelegentlich hilft auch ein kurzer Blick in die**Ereignisanzeige**, um zu prüfen, ob ein Hintergrunddienst den Zugriff blockiert.
 
-**Q:**Kann ein Neustart des Computers das Problem dauerhaft lösen?
+**Q.** Kann ein Neustart des Computers das Problem dauerhaft lösen?
 
-**A:**Ein Neustart beendet alle aktiven Prozesse und gibt sämtliche Datei-Locks im Arbeitsspeicher frei. Er ist daher die einfachste Methode, um vorübergehende Blockaden zu beseitigen. Er klärt jedoch nicht die Ursache, falls ein fehlerhaft konfiguriertes Programm beim Systemstart sofort wieder startet und die Datei sperrt.
+**A.** Ein Neustart beendet alle aktiven Prozesse und gibt sämtliche Datei-Locks im Arbeitsspeicher frei. Er ist daher die einfachste Methode, um vorübergehende Blockaden zu beseitigen. Er klärt jedoch nicht die Ursache, falls ein fehlerhaft konfiguriertes Programm beim Systemstart sofort wieder startet und die Datei sperrt.
 
-**Q:**Warum blockiert der Windows Explorer manchmal meine eigenen Dateien?
+**Q.** Warum blockiert der Windows Explorer manchmal meine eigenen Dateien?
 
-**A:** Der Windows Explorer generiert standardmäßig Miniaturansichten und liest Dateiinformationen im Hintergrund ein. Wenn eine Datei beschädigt ist oder gerade von einem Cloud-Dienst synchronisiert wird, hängt sich der Explorer bei diesem Leseprozess auf. Das Neustarten des Explorers über den Task-Manager ist hierbei das effektivste Mittel zur Abhilfe.
+**A.** Der Windows Explorer generiert standardmäßig Miniaturansichten und liest Dateiinformationen im Hintergrund ein. Wenn eine Datei beschädigt ist oder gerade von einem Cloud-Dienst synchronisiert wird, hängt sich der Explorer bei diesem Leseprozess auf. Das Neustarten des Explorers über den Task-Manager ist hierbei das effektivste Mittel zur Abhilfe.

@@ -81,14 +81,14 @@ Als Systemadministrator rate ich Ihnen dringend zur Vorsicht bei Systemdateien.
 
 ## 5. Häufig gestellte Fragen (FAQ)
 
-**Q:**Warum reicht es oft nicht aus, einfach den PC normal neu zu starten?
+**Q.** Warum reicht es oft nicht aus, einfach den PC normal neu zu starten?
 
-**A:**Wenn Windows im Rahmen des Schnellstarts (Fast Startup) herunterfährt, speichert es den Kernel-Zustand in einer Zwischendatei ab. Beim Hochfahren wird dieser Zustand oft wiederhergestellt, wodurch hängende Dateisperren hartnäckig im Arbeitsspeicher überleben.
+**A.** Wenn Windows im Rahmen des Schnellstarts (Fast Startup) herunterfährt, speichert es den Kernel-Zustand in einer Zwischendatei ab. Beim Hochfahren wird dieser Zustand oft wiederhergestellt, wodurch hängende Dateisperren hartnäckig im Arbeitsspeicher überleben.
 
-**Q:**Kann ich kostenlose Unlocker-Tools aus dem Internet verwenden?
+**Q.** Kann ich kostenlose Unlocker-Tools aus dem Internet verwenden?
 
-**A:**In einer professionellen Umgebung wie im Banken- oder Technologieumfeld sollten Sie aus Sicherheits- und Compliance-Gründen strikt auf Drittanbieter-Tools verzichten. Die integrierten Windows-Bordmittel wie der Ressourcen-Monitor und die PowerShell sind sicherer, schneller und hinterlassen keine ungeprüften Hintergrunddienste.
+**A.** In einer professionellen Umgebung wie im Banken- oder Technologieumfeld sollten Sie aus Sicherheits- und Compliance-Gründen strikt auf Drittanbieter-Tools verzichten. Die integrierten Windows-Bordmittel wie der Ressourcen-Monitor und die PowerShell sind sicherer, schneller und hinterlassen keine ungeprüften Hintergrunddienste.
 
-**Q:**Was mache ich, wenn selbst die PowerShell meldet, dass der Zugriff verweigert wird?
+**Q.** Was mache ich, wenn selbst die PowerShell meldet, dass der Zugriff verweigert wird?
 
-**A:** In diesem Fall besitzt Ihr aktuelles Benutzerkonto schlicht keine ausreichenden Berechtigungen (NTFS-Permissions) für die Datei. Öffnen Sie die PowerShell zwingend als Administrator (Rechtsklick -> Als Administrator ausführen) oder übernehmen Sie kurzzeitig den Besitz der Datei über die Dateieigenschaften im Reiter *Sicherheit*.
+**A.** In diesem Fall besitzt Ihr aktuelles Benutzerkonto schlicht keine ausreichenden Berechtigungen (NTFS-Permissions) für die Datei. Öffnen Sie die PowerShell zwingend als Administrator (Rechtsklick -> Als Administrator ausführen) oder übernehmen Sie kurzzeitig den Besitz der Datei über die Dateieigenschaften im Reiter *Sicherheit*.

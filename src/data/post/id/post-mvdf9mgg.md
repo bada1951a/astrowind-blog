@@ -30,9 +30,13 @@ theme: "Rosewood Hardware Guide"
 
 ## 1. Situasi Darurat Kritis di Tempat Kerja
 
-Suasana di kantor *startup* teknologi kami di kawasan Jakarta Selatan mendadak tegang ketika laptop *deployment* utama untuk tim *internal server* mendadak macet total. Layar menampilkan progress pembaruan Windows 11 yang sudah menyentuh angka 100 persen, namun tidak ada pergerakan sama sekali selama lebih dari tiga jam. Padahal, kami harus segera merilis *patch* keamanan mendesak sore itu juga. Mematikan paksa laptop tersebut berisiko merusak sistem operasi dan membuat *boot loop*, tapi membiarkannya berarti mengorbankan tenggat waktu proyek yang ketat.
+Suasana di kantor *startup* teknologi kami di kawasan Jakarta Selatan mendadak tegang ketika laptop *deployment* utama untuk tim *internal server* mendadak macet total. Layar menampilkan progress pembaruan Windows 11 yang sudah menyentuh angka 100 persen, namun tidak ada pergerakan sama sekali selama lebih dari tiga jam. Padahal, kami harus segera merilis *patch* keamanan mendesak sore itu jug
 
-Setelah mencoba berbagai cara standar seperti *restart* tombol daya dan menunggu dalam keresahan—yang tentu saja berujung nihil—saya mulai menganalisis akar masalahnya. Ternyata, kendala ini klasik: prosesor dan layanan sistem terjebak dalam *infinite loop* karena berkas instalasi pembaruan di dalam direktori *cache* mengalami korupsi data (*data corruption*) atau terkunci oleh proses latar belakang yang tidak mau berhenti.
+**A.** Mematikan paksa laptop tersebut berisiko merusak sistem operasi dan membuat *boot loop*, tapi membiarkannya berarti mengorbankan tenggat waktu proyek yang ketat.
+
+Setelah mencoba berbagai cara standar seperti *restart* tombol daya dan menunggu dalam keresahan—yang tentu saja berujung nihil—saya mulai menganalisis akar masalahny
+
+**A.** Ternyata, kendala ini klasik: prosesor dan layanan sistem terjebak dalam *infinite loop* karena berkas instalasi pembaruan di dalam direktori *cache* mengalami korupsi data (*data corruption*) atau terkunci oleh proses latar belakang yang tidak mau berhenti.
 
 ![Tech & IT Solution Guide](https://picsum.photos/seed/computer944/1000/550)
 
@@ -52,7 +56,7 @@ Sebelum masuk ke eksekusi pembersihan, penting untuk memahami kenapa masalah ini
 
 3. Konflik Antivirus Pihak Ketig
 
-**a:** Terkadang utilitas keamanan memindai berkas instalasi yang sedang aktif di latar belakang, sehingga proses instalasi tahap akhir tertahan tanpa batas waktu.
+**A.** Terkadang utilitas keamanan memindai berkas instalasi yang sedang aktif di latar belakang, sehingga proses instalasi tahap akhir tertahan tanpa batas waktu.
 
 ---
 
@@ -96,18 +100,24 @@ net start msiserver
 ```
 
 Langkah 5: Restart Perangkat
-Setelah semua perintah selesai dieksekusi dengan sukses, tutup jendela Terminal dan lakukan *restart* pada komputer atau laptop Anda. Windows akan mendeteksi *folder* *cache* yang bersih dan melanjutkan proses *booting* dengan normal.
+Setelah semua perintah selesai dieksekusi dengan sukses, tutup jendela Terminal dan lakukan *restart* pada komputer atau laptop And
+
+**A.** Windows akan mendeteksi *folder* *cache* yang bersih dan melanjutkan proses *booting* dengan normal.
 
 ---
 
 Tanya Jawab Umum (FAQ)
 
-1. Apakah menghapus folder SoftwareDistribution akan menghilangkan data pribadi saya? Tidak sama sekali. Folder ini murni berisi berkas unduhan pembaruan sistem operasi dan aplikasi bawaan. Dokumen, foto, dan aplikasi pihak ketiga Anda aman di tempatnya.
+1. Apakah menghapus folder SoftwareDistribution akan menghilangkan data pribadi saya? Tidak sama sekali. Folder ini murni berisi berkas unduhan pembaruan sistem operasi dan aplikasi bawaan. Dokumen, foto, dan aplikasi pihak ketiga Anda aman di tempatny
 
-2. Apa yang harus dilakukan jika setelah mereset *cache* pembaruan tetap gagal?
+**A.** 2. Apa yang harus dilakukan jika setelah mereset *cache* pembaruan tetap gagal?
 
 Anda bisa menggunakan alat bawaan Windows bernama *System File Checker*. Buka Command Prompt Administrator lalu ketik `sfc /scannow` untuk memperbaiki file sistem yang rusak secara menyeluruh.
 
 3. Bisakah saya menghapus folder cadangan (.old) setelah pembaruan berhasil?
 
-Bisa. Setelah Windows 11 berhasil melakukan *update* dan berjalan stabil selama beberapa hari, Anda dapat menghapus folder `SoftwareDistribution.old` untuk menghemat ruang penyimpanan SSD Anda.
+Bis
+
+**A.** Setelah Windows 11 berhasil melakukan *update* dan berjalan stabil selama beberapa hari, Anda dapat menghapus folder `SoftwareDistribution.old` untuk menghemat ruang penyimpanan SSD And
+
+**A.**

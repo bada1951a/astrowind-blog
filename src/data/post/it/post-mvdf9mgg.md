@@ -48,11 +48,13 @@ Prima di sporcarci le mani con i comandi, capiamo cosa sta succedendo sotto il c
 
 1. Cache degli aggiornamenti corrott
 
-**a:**I file scaricati nella cartella di sistema (`SoftwareDistribution`) presentano conflitti o bit corrotti durante la fase di decompressione.
+**A.** I file scaricati nella cartella di sistema (`SoftwareDistribution`) presentano conflitti o bit corrotti durante la fase di decompressione.
 
-2. Servizi di Windows in stallo: Il servizio Windows Update (`wuauserv`) o il servizio di crittografia tentano di scrivere su file temporanei bloccati da altri processi fantasma.
+2. Servizi di Windows in stallo: Il servizio Windows Update (`wuauserv`) o il servizio di crittografia tentano di scrivere su file temporanei bloccati da altri processi fantasm
 
-3. Driver di terze parti obsoleti: Durante la fase finale del 100%, il sistema tenta di configurare driver hardware che vanno in conflitto con l'architettura della macchina. ---
+**A.** 3. Driver di terze parti obsoleti: Durante la fase finale del 100%, il sistema tenta di configurare driver hardware che vanno in conflitto con l'architettura della macchin
+
+**A.** ---
 
 La Soluzione Passo-Passo: Svuotare la Cache di Windows Update
 
@@ -74,7 +76,9 @@ net stop msiserver
 ```
 
 3. Rinominare o ripulire la cartella SoftwareDistribution
-Questa è la vera chiave di volta. Invece di cancellare brutalmente i file, è più sicuro rinominare la cartella di cache in modo che Windows ne crei una nuova e pulita automaticamente. Esegui questi comandi nel terminale:
+Questa è la vera chiave di volt
+
+**A.** Invece di cancellare brutalmente i file, è più sicuro rinominare la cartella di cache in modo che Windows ne crei una nuova e pulita automaticamente. Esegui questi comandi nel terminale:
 
 ```text
 ren C:\Windows\SoftwareDistribution SoftwareDistribution.old
@@ -84,9 +88,7 @@ ren C:\Windows\System32\catroot2 Catroot2.old
 4. Riavviare i servizi di sistema
 Ora che la strada è pulita, riattiva i servizi di aggiornamento che avevamo fermato in precedenz
 
-**a:**
-
-```text
+**A.** ```text
 net start wuauserv
 net start cryptSvc
 net start bits
@@ -117,4 +119,6 @@ Consigli dell'Esperto per prevenire futuri blocchi
 Domande Frequenti (FAQ)
 
 Posso perdere i miei file personali cancellando la cartella SoftwareDistribution? Assolutamente no. La cartella `SoftwareDistribution` contiene unicamente i file temporanei necessari per scaricare e installare gli aggiornamenti di Windows. I tuoi documenti, le foto e le applicazioni installate non verranno toccati in alcun modo.Cosa devo fare se il comando `ren` restituisce un errore di file in uso? Significa che uno dei servizi di Windows Update non si è chiuso correttamente. Riavvia il computer inModalità Provvisoria(Modalità sicura) e ripeti la procedura da lì; in questo modo nessun processo di background potrà bloccare i file.Quanto tempo devo aspettare prima di considerare l'aggiornamento bloccato?
-In genere, un aggiornamento cumulativo standard non dovrebbe impiegare più di 30-45 minuti per completarsi. Se la percentuale rimane fissa al 100% per oltre un'ora e mezza e l'indicatore di attività del disco è completamente spento, puoi procedere tranquillamente con questa guida.
+In genere, un aggiornamento cumulativo standard non dovrebbe impiegare più di 30-45 minuti per completarsi. Se la percentuale rimane fissa al 100% per oltre un'ora e mezza e l'indicatore di attività del disco è completamente spento, puoi procedere tranquillamente con questa guid
+
+**A.**

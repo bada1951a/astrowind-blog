@@ -89,14 +89,14 @@ Là một kỹ sư công nghệ thông tin đã hỗ trợ hàng ngàn ca sự c
 
 ## 5. Các câu hỏi thường gặp (FAQ)
 
-**Q:**Tôi đã dùng Task Manager để tắt hết phần mềm nhưng máy vẫn báo lỗi không xóa được file thì phải làm sao?
+**Q.** Tôi đã dùng Task Manager để tắt hết phần mềm nhưng máy vẫn báo lỗi không xóa được file thì phải làm sao?
 
-**A:**Trường hợp này có thể do tệp tin đang được mở bởi một tiến trình hệ thống ẩn hoặc tính năng xem trước hình ảnh của File Explorer. Bạn hãy thử khởi động lại máy tính (Restart) hoặc đăng xuất tài khoản rồi đăng nhập lại, đây là cách nhanh nhất để làm mới hoàn toàn các quyền truy cập file.
+**A.** Trường hợp này có thể do tệp tin đang được mở bởi một tiến trình hệ thống ẩn hoặc tính năng xem trước hình ảnh của File Explorer. Bạn hãy thử khởi động lại máy tính (Restart) hoặc đăng xuất tài khoản rồi đăng nhập lại, đây là cách nhanh nhất để làm mới hoàn toàn các quyền truy cập file.
 
-**Q:**Lệnh `del /f /q` trong Command Prompt có làm mất dữ liệu quan trọng khác của máy không?
+**Q.** Lệnh `del /f /q` trong Command Prompt có làm mất dữ liệu quan trọng khác của máy không?
 
-**A:**Hoàn toàn không. Lệnh này chỉ tác động chính xác đến đường dẫn tệp tin mà bạn đã chỉ định trong dấu ngoặc kép. Tuy nhiên, bạn cần phải cẩn thận gõ đúng đường dẫn vì một khi đã dùng lệnh ép xóa này, file sẽ biến mất vĩnh viễn chứ không nằm trong Thùng rác (Recycle Bin).
+**A.** Hoàn toàn không. Lệnh này chỉ tác động chính xác đến đường dẫn tệp tin mà bạn đã chỉ định trong dấu ngoặc kép. Tuy nhiên, bạn cần phải cẩn thận gõ đúng đường dẫn vì một khi đã dùng lệnh ép xóa này, file sẽ biến mất vĩnh viễn chứ không nằm trong Thùng rác (Recycle Bin).
 
-**Q:**Có phần mềm bên thứ ba nào giúp tự động mở khóa file nhanh không?
+**Q.** Có phần mềm bên thứ ba nào giúp tự động mở khóa file nhanh không?
 
-**A:** Có một số phần mềm kinh điển như LockHunter hoặc IObit Unlocker hỗ trợ việc này rất tốt bằng cách thêm tùy chọn bấm chuột phải để mở khóa file. Tuy nhiên, đối với dân văn phòng hoặc khi đang ở nơi công cộng không có quyền cài đặt phần mềm mới, việc sử dụng Resource Monitor hoặc Command Prompt có sẵn trên Windows vẫn là lựa chọn an toàn và nhanh chóng nhất.
+**A.** Có một số phần mềm kinh điển như LockHunter hoặc IObit Unlocker hỗ trợ việc này rất tốt bằng cách thêm tùy chọn bấm chuột phải để mở khóa file. Tuy nhiên, đối với dân văn phòng hoặc khi đang ở nơi công cộng không có quyền cài đặt phần mềm mới, việc sử dụng Resource Monitor hoặc Command Prompt có sẵn trên Windows vẫn là lựa chọn an toàn và nhanh chóng nhất.

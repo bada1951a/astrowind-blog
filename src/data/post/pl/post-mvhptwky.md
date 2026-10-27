@@ -36,10 +36,12 @@ Znam ten ból na pamięć. Nowy interfejs w Windows 11 miał być "czysty" i "pr
 
 ![Tech Troubleshooting Guide](/images/tech-photo/tech-photos%20(43).jpg)
 
-W tym artykule pokażę Ci sprawdzoną metodę inżynierską, jak raz na zawsze przywrócić stare, dobre klasyczne menu kontekstowe w Windows 11 za pomocą jednego polecenia w Edytorze Rejestru. Zero zbędnego oprogramowania, czysta inżynieria systemowa. <div style="border-left: 4px solid #f59e0b; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
+W tym artykule pokażę Ci sprawdzoną metodę inżynierską, jak raz na zawsze przywrócić stare, dobre klasyczne menu kontekstowe w Windows 11 za pomocą jednego polecenia w Edytorze Rejestru. Zero zbędnego oprogramowania, czysta inżynieria systemow
+
+**A.** <div style="border-left: 4px solid #f59e0b; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Notatka serwisow
 
-**a:**</strong> Poniższa procedura modyfikacji rejestru została przetestowana na setkach stacji roboczych z systemem Windows 11 (od wersji 21H2 do najnowszych wydań 24H2). Jest w 100% bezpieczna, pod warunkiem trzymania się instrukcji krok po kroku.
+**A.** </strong> Poniższa procedura modyfikacji rejestru została przetestowana na setkach stacji roboczych z systemem Windows 11 (od wersji 21H2 do najnowszych wydań 24H2). Jest w 100% bezpieczna, pod warunkiem trzymania się instrukcji krok po kroku.
 </div>
 
 Dlaczego Microsoft utrudnił nam życie? (Analiza problemu)
@@ -77,14 +79,14 @@ Krok po kroku do pełnej wydajności:
 
 5. Wewnątrz klucza `InprocServer32` spójrz na prawą stronę ekranu. Kliknij dwukrotnie na domyślną wartość (Domyślna) (Default).
 
-**Q6.**Upewnij się, że pole "Dane wartości" jest całkowicie puste, po czym kliknij OK. Wartość domyślna powinna przyjąć stan `(wartość nie ustawiona)`.
+**Q6.** Upewnij się, że pole "Dane wartości" jest całkowicie puste, po czym kliknij OK. Wartość domyślna powinna przyjąć stan `(wartość nie ustawiona)`.
 
-**Q7.**Ostatni krok techniczny to restart interfejsu systemowego. Otwórz Menedżer zadań(skrót `Ctrl + Shift + Esc`), znajdź na liście procesówEksplorator Windows(Windows Explorer), kliknij na niego prawym przyciskiem myszy i wybierzUruchom ponownie.
+**Q7.** Ostatni krok techniczny to restart interfejsu systemowego. Otwórz Menedżer zadań(skrót `Ctrl + Shift + Esc`), znajdź na liście procesówEksplorator Windows(Windows Explorer), kliknij na niego prawym przyciskiem myszy i wybierzUruchom ponownie.
 
 <div style="border-left: 4px solid #f59e0b; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Wskazówka inżynier
 
-**a:**</strong> Po ponownym uruchomieniu Eksploratora pasek zadań na chwilę zniknie i pojawi się ponownie to całkowicie normalne. Oznacza to, że proces explorer.exe pomyślnie załadował nowe ustawienia rejestru.
+**A.** </strong> Po ponownym uruchomieniu Eksploratora pasek zadań na chwilę zniknie i pojawi się ponownie to całkowicie normalne. Oznacza to, że proces explorer.exe pomyślnie załadował nowe ustawienia rejestru.
 </div>
 
 ---
@@ -106,13 +108,12 @@ Profesjonalne ostrzeżenie i bezpieczeństwo danych
 
 Podczas pracy z edycją rejestru systemowego łatwo o pomyłkę, która może skutkować niestabilnością systemu operacyjnego. Zawsze trzymaj się następujących zasad bezpieczeństw
 
-**a:**
-* Kopia zapasow
+**A.** * Kopia zapasow
 
-**a:** Zanim cokolwiek zmienisz w rejestrze, wykonaj jego eksport (`Plik` -> `Eksportuj`). W razie problemów wystarczy kliknąć plik kopii zapasowej, aby przywrócić pierwotny stan.
+**A.** Zanim cokolwiek zmienisz w rejestrze, wykonaj jego eksport (`Plik` -> `Eksportuj`). W razie problemów wystarczy kliknąć plik kopii zapasowej, aby przywrócić pierwotny stan.
 * Uprawnieni
 
-**a:** Modyfikację wykonuj na koncie z uprawnieniami administratora stacji roboczej.
+**A.** Modyfikację wykonuj na koncie z uprawnieniami administratora stacji roboczej.
 * Aktualizacje systemu: Microsoft co kilka miesięcy wydaje duże aktualizacje zbiorcze dla Windows 11. Choć rzadko, zdarza się, że aktualizacja funkcyjna nadpisuje ustawienia rejestru. Jeśli po dużej aktualizacji menu powróci do formy domyślnej, wystarczy ponownie wykonać powyższe kroki konfiguracji klucza CLSID.
 
 ---

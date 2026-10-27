@@ -40,7 +40,7 @@ Waarom deze crash je workflow sloopt: De 3 hoofdoorzaken
 
 Voordat we willekeurig knoppen indrukken, moeten we begrijpen wat er onder de motorkap gebeurt bij foutcode 0x0000000
 
-**a.** Dit duidt er bijna altijd op dat een kernel-modus proces of driver probeerde geheugenlocaties te benaderen waartoe het geen toegang had. 
+**A.** Dit duidt er bijna altijd op dat een kernel-modus proces of driver probeerde geheugenlocaties te benaderen waartoe het geen toegang had. 
 
 <div style="border-left: 4px solid #1e40af; padding: 12px 16px; margin: 20px 0; background-color: rgba(30,64,175,0.05); border-radius: 4px; color: #111827;">
 <strong>Expert Inzicht:</strong> In 90% van de gevallen op moderne Windows-installaties wordt dit veroorzaakt door een corrupte driver na een automatische update, of een fysiek/logisch geheugenprobleem in je RAM-sticks.

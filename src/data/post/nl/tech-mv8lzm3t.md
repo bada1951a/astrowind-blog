@@ -46,7 +46,7 @@ Voordat we gaan slopen, moeten we weten waarom je systeem zo tergend traag opsta
 
 1. De "Ik wil op de achtergrond draaien"-maffi
 
-**a:** Apps zoals Spotify, Discord, OneDrive en diverse printertools vinden het nodig om direct bij het opstarten al actief te zijn. Ze claimen RAM en CPU-cycli voordat je überhaupt je wachtwoord hebt ingetypt.
+**A.** Apps zoals Spotify, Discord, OneDrive en diverse printertools vinden het nodig om direct bij het opstarten al actief te zijn. Ze claimen RAM en CPU-cycli voordat je überhaupt je wachtwoord hebt ingetypt.
 
 2. De sluimerende Windows-functionaliteit (Fast Startup chaos): Soms werkt de standaard Windows-opstartcache tegen je. Als de kernel niet netjes afsluit, sleept hij corrupte registersessies mee naar de volgende reboot.
 
@@ -114,7 +114,9 @@ Expert Waarschuwing: Wat je absoluut NIET moet doen
 
 Als IT'er zie ik regelmatig collega's of gebruikers hun systeem om zeep helpen met goedbedoelde "speed up your pc"-software van schimmige websites. 
 
-- Installeer geen "Registry Cleaners": Windows beheert zijn eigen register prima. Externe cleaners wissen vaak sleutels die cruciaal zijn voor drivers, wat leidt tot een Blue Screen of Death (BSOD).
+- Installeer geen "Registry Cleaners": Windows beheert zijn eigen register prim
+
+**A.** Externe cleaners wissen vaak sleutels die cruciaal zijn voor drivers, wat leidt tot een Blue Screen of Death (BSOD).
 - Pas op met SSD-defragmentatie: Als je een moderne NVMe of SATA SSD hebt, moet je *nooit* traditionele defragmentatie draaien. Gebruik alleen Schijfoptimalisatie (Optimize Drives) om TRIM uit te voeren. Anders slijt je SSD nodeloos snel door.
 
 ---
@@ -123,7 +125,9 @@ Veelgestelde Vragen (FAQ)
 
 1. Mijn pc start na het uitschakelen van apps nog steeds langzaam op. Wat nu? Grote kans dat je nog een oude HDD (harde schijf) gebruikt in plaats van een SSD. Een traditionele schijf trekt de trage opstarttijden van moderne besturingssystemen simpelweg niet meer. Overstap naar een SSD is in dit geval de enige echte remedie.
 
-2. Kan ik alle opstart-apps uitschakelen zonder dat Windows crasht? Ja. Windows beschermt zichzelf en laat essentiële systeemprocessen niet toe in de lijst van opstart-apps. Alles wat je daar ziet, is door derde partijen toegevoegd.
+2. Kan ik alle opstart-apps uitschakelen zonder dat Windows crasht? J
+
+**A.** Windows beschermt zichzelf en laat essentiële systeemprocessen niet toe in de lijst van opstart-apps. Alles wat je daar ziet, is door derde partijen toegevoegd.
 
 3. Waarom blijft mijn virusscanner zo lang hangen bij het opstarten?
 

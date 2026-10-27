@@ -11,7 +11,9 @@ theme: "Sandstone Desert Minimal"
 
 ## 1. Noodsituatie op de werkvloer
 
-Gisteren rond kwart over vijf, net toen ik op het punt stond om naar huis te gaan in ons kantoor op de Zuidas, liep de maandelijkse databackup volledig vast. Voor de veiligheid van onze projectdata was ik bezig met het overzetten van een flinke bak van zo'n 2TB aan kernbestanden naar een externe SSD en onze bedrijfs-NAS. Opeens verscheen de bekende, frustrerende Windows-foutmelding: *"Actie kan niet worden voltooid omdat het bestand is geopend in een ander programma."* 
+Gisteren rond kwart over vijf, net toen ik op het punt stond om naar huis te gaan in ons kantoor op de Zuidas, liep de maandelijkse databackup volledig vast. Voor de veiligheid van onze projectdata was ik bezig met het overzetten van een flinke bak van zo'n 2TB aan kernbestanden naar een externe SSD en onze bedrijfs-NAS. Opeens verscheen de bekende, frustrerende Windows-foutmelding: *"Actie kan niet worden voltooid omdat het bestand is geopend in een ander programm
+
+**A.** "* 
 
 Geen enkel idee welk programma de boosdoener was. Sluiten van alle zichtbare vensters hielp niet, en de deadline van de backup hijgde in mijn nek. Herstarten was geen optie omdat de overdracht al uren duurde en ik geen zin had om helemaal opnieuw te beginnen. Als rasechte IT-beheerder wist ik dat ik dit handmatig moest doorbreken met de juiste gereedschappen in plaats van doelloos te blijven klikken.
 
@@ -34,8 +36,9 @@ Voordat we ingaan op de oplossing, is het handig om te begrijpen *waarom* Window
 Genoeg gepraat over de theorie, tijd voor actie. Hier is het stappenplan dat ik zelf toepas in dit soort noodsituaties. We gaan van mild naar streng ingrijpen via**Taakbeheer**, de opdrachtprompt en handige tools.
 
 ### Stap 1: Controleer actieve processen via Taakbeheer
-Open**Taakbeheer**(druk op**Ctrl + Shift + Esc**). Zoek in het tabblad**Processen**naar toepassingen die het bestand mogelijk open hebben staan, zoals Microsoft Word, Adobe Reader of je backupprogramma. 
-Klik er met je rechtermuisknop op en kies**Taak beëindigen**.
+Open**Taakbeheer**(druk op**Ctrl + Shift + Esc**). Zoek in het tabblad**Processen**naar toepassingen die het bestand mogelijk open hebben staan, zoals Microsoft Word, Adobe Reader of je backupprogramm
+
+**A.** Klik er met je rechtermuisknop op en kies**Taak beëindigen**.
 
 ### Stap 2: Herstart Windows Verkenner
 Vaak houdt de Verkenner zelf de handeling vast.
@@ -73,14 +76,14 @@ Als hardware- en systeembeheerder geef ik je nog een paar belangrijke voorzorgsm
 
 ## 5. Veelgestelde Vragen (FAQ)
 
-**Q:**Kan ik mijn pc niet gewoon geforceerd uitzetten met de powerknop?
+**Q.** Kan ik mijn pc niet gewoon geforceerd uitzetten met de powerknop?
 
-**A:**Dat raden we ten zeerste af. Een harde reset tijdens een 2TB datatransfer naar een NAS of SSD kan leiden tot ernstige bestandscorruptie en beschadigde partities. Gebruik liever de stappen in dit artikel.
+**A.** Dat raden we ten zeerste af. Een harde reset tijdens een 2TB datatransfer naar een NAS of SSD kan leiden tot ernstige bestandscorruptie en beschadigde partities. Gebruik liever de stappen in dit artikel.
 
-**Q:**Waarom blijft Windows beweren dat een bestand in gebruik is terwijl ik alles heb afgesloten?
+**Q.** Waarom blijft Windows beweren dat een bestand in gebruik is terwijl ik alles heb afgesloten?
 
-**A:**Dit komt doordat Windows Verkenner soms een miniatuurweergave (thumbnail) of indexeringsproces op de achtergrond blijft uitvoeren. Het herstarten van de Verkenner (Stap 2) lost dit in 90% van de gevallen direct op.
+**A.** Dit komt doordat Windows Verkenner soms een miniatuurweergave (thumbnail) of indexeringsproces op de achtergrond blijft uitvoeren. Het herstarten van de Verkenner (Stap 2) lost dit in 90% van de gevallen direct op.
 
-**Q:**Is het veilig om externe software zoals Unlocker te gebruiken?
+**Q.** Is het veilig om externe software zoals Unlocker te gebruiken?
 
-**A:** Wees voorzichtig met verouderde freeware-tools van onbekende websites, omdat deze soms adware bevatten. Maak liever gebruik van vertrouwde tools zoals Microsoft Sysinternals Process Explorer of de officiële Microsoft PowerToys.
+**A.** Wees voorzichtig met verouderde freeware-tools van onbekende websites, omdat deze soms adware bevatten. Maak liever gebruik van vertrouwde tools zoals Microsoft Sysinternals Process Explorer of de officiële Microsoft PowerToys.

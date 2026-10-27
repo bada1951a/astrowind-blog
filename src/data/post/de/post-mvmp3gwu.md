@@ -23,7 +23,9 @@ theme: "Sandstone Desert Minimal"
 
 Es war ein typischer Dienstagnachmittag in einem gut besuchten Café in der Münchener Maxvorstadt. Draußen nieselte es leicht, drinnen roch es nach frisch geröstetem Espresso. Ich saß mit meinem Laptop am Holztisch, verbunden mit dem Smartphone-Hotspot via Tethering, um letzte Korrekturen an einer komplexen Kalkulation und den dazugehörigen CAD-Plänen für einen wichtigen Kunden im Frankfurter Bankenviertel vorzunehmen. Der Abgabetermin rückte bedrohlich näher. Plötzlich musste ich einen bestimmten Ausschnitt aus einer Excel-Tabelle und einen Teil des Architekturplans direkt in einer E-Mail dokumentieren. 
 
-Ich drückte wie gewohnt die Tastenkombination **Win + Shift + S**, um das Snipping Tool aufzurufen. Doch: Nichts passierte. Kein abdunkelnder Bildschirm, kein kleiner Ausschnitts-Cursor, absolut keine Reaktion. Panik machte sich breit. Ich versuchte es erneut, drückte fester auf die Tasten, startete das Touchpad neu – Fehlanzeige. Mitten im mobilen Workflow, fernab des Firmennetzwerks und ohne eingesteckte Maus, stand ich plötzlich ohne Screenshot-Werkzeug da. Ich musste die Datei mühsam als PDF exportieren, zuschneiden und als Bild speichern – ein zeitraubender Umweg, der mich wertvolle Minuten kostete.
+Ich drückte wie gewohnt die Tastenkombination **Win + Shift + S**, um das Snipping Tool aufzurufen. Doch: Nichts passierte. Kein abdunkelnder Bildschirm, kein kleiner Ausschnitts-Cursor, absolut keine Reaktion. Panik machte sich breit. Ich versuchte es erneut, drückte fester auf die Tasten, startete das Touchpad neu – Fehlanzeige. Mitten im mobilen Workflow, fernab des Firmennetzwerks und ohne eingesteckte Maus, stand ich plötzlich ohne Screenshot-Werkzeug d
+
+**A.** Ich musste die Datei mühsam als PDF exportieren, zuschneiden und als Bild speichern – ein zeitraubender Umweg, der mich wertvolle Minuten kostete.
 
 <div style="border-left: 4px solid #a16207; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Praxis-Tipp:</strong> Wenn Shortcuts im unpassenden Moment versagen, liegt das selten an defekter Hardware, sondern fast immer an hängenden Hintergrunddiensten oder blockierten Benachrichtigungseinstellungen.
@@ -95,14 +97,14 @@ Als IT-Diagnostiker rate ich Ihnen: Vermeiden Sie in stressigen Momenten blinden
 
 ## 5. Häufig gestellte Fragen (FAQ)
 
-**Q:**Was kann ich tun, wenn der Shortcut nach all diesen Schritten immer noch nicht funktioniert?
+**Q.** Was kann ich tun, wenn der Shortcut nach all diesen Schritten immer noch nicht funktioniert?
 
-**A:**Prüfen Sie, ob eine Drittanbieter-Software (wie Greenshot, ShareX oder Gaming-Overlays von Nvidia/Discord) den Hotkey**Win + Shift + S**blockiert. Deaktivieren Sie diese Programme testweise im Task-Manager.
+**A.** Prüfen Sie, ob eine Drittanbieter-Software (wie Greenshot, ShareX oder Gaming-Overlays von Nvidia/Discord) den Hotkey**Win + Shift + S**blockiert. Deaktivieren Sie diese Programme testweise im Task-Manager.
 
-**Q:**Gibt es eine alternative Tastenkombination für Screenshots unter Windows 11?
+**Q.** Gibt es eine alternative Tastenkombination für Screenshots unter Windows 11?
 
-**A:**Ja, Sie können in den**Einstellungen**unter**Erleichterte Bedienung > Tastatur**die Option aktivieren, dass die**Druck-Taste (PrtScn)**das Snipping Tool direkt öffnet, ohne dass Sie drei Tasten gleichzeitig drücken müssen.
+**A.** Ja, Sie können in den**Einstellungen**unter**Erleichterte Bedienung > Tastatur**die Option aktivieren, dass die**Druck-Taste (PrtScn)**das Snipping Tool direkt öffnet, ohne dass Sie drei Tasten gleichzeitig drücken müssen.
 
-**Q:**Warum speichert das Snipping Tool die Screenshots manchmal nicht automatisch in der Zwischenablage?
+**Q.** Warum speichert das Snipping Tool die Screenshots manchmal nicht automatisch in der Zwischenablage?
 
-**A:**Das liegt meist an einem deaktivierten Verlauf der Zwischenablage. Drücken Sie**Win + V**, um den Verlauf zu aktivieren und zu überprüfen, ob Ihre Screenshots dort aufgelistet werden.
+**A.** Das liegt meist an einem deaktivierten Verlauf der Zwischenablage. Drücken Sie**Win + V**, um den Verlauf zu aktivieren und zu überprüfen, ob Ihre Screenshots dort aufgelistet werden.

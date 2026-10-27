@@ -21,12 +21,20 @@ theme: "Pastel Lavender Tech"
 
 ## 1. Nagła awaria w miejscu pracy
 
-Siedzę przy biurku w naszym warszawskim biurowcu, a na wewnętrznym komunikatorze pali się czerwona lampka za czerwoną. Trwa gorący okres raportowania, a ja mam na ekranie otwartych dokładnie pięć różnych systemów ERP, arkusze kalkulacyjne, panel administracyjny i okno czatu z zirytowanym menedżerem projektu. W tym momencie potrzebuję na szybko zrobić zrzut ekranu fragmentu kodu i błędu, żeby wysłać go do zespołu wsparcia. Wciskam **Win + Shift + S**, odruchowo czekając na zaciemnienie ekranu i paletę wycinania. I... absolutnie nic. Ekran ani drgnie, żadna ikonka się nie pojawia, a ja zostaję z palcem na klawiaturze i rosnącą frustracją.
+Siedzę przy biurku w naszym warszawskim biurowcu, a na wewnętrznym komunikatorze pali się czerwona lampka za czerwoną. Trwa gorący okres raportowania, a ja mam na ekranie otwartych dokładnie pięć różnych systemów ERP, arkusze kalkulacyjne, panel administracyjny i okno czatu z zirytowanym menedżerem projektu. W tym momencie potrzebuję na szybko zrobić zrzut ekranu fragmentu kodu i błędu, żeby wysłać go do zespołu wsparci
 
-Zamiast spokojnie pracować, tracę cenne minuty na bezradne wciskanie kombinacji klawiszy, przeklinając aktualizacje Windowsa. Przecież to narzędzie jest mi potrzebne co pięć minut do dokumentowania zgłoszeń serwisowych! Znacie to uczucie, prawda? Kiedy sprzęt lub oprogramowanie zawodzi w najmniej odpowiednim momencie, cała efektywność szlag trafia. 
+**A.** Wciskam **Win + Shift + S**, odruchowo czekając na zaciemnienie ekranu i paletę wycinani
 
-<div style="border-left: 4px solid #7c3aed; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
-<strong>Wskazówka serwisowa:</strong> Nie trać czasu na ponowne uruchamianie całego komputera za każdym razem, gdy znany skrót przestaje reagować. Problem zazwyczaj tkwi w zawieszonym procesie powiadomień lub wyłączonych uprawnieniach aplikacji w tle.
+**A.** I... absolutnie nic. Ekran ani drgnie, żadna ikonka się nie pojawia, a ja zostaję z palcem na klawiaturze i rosnącą frustracją.
+
+Zamiast spokojnie pracować, tracę cenne minuty na bezradne wciskanie kombinacji klawiszy, przeklinając aktualizacje Windows
+
+**A.** Przecież to narzędzie jest mi potrzebne co pięć minut do dokumentowania zgłoszeń serwisowych! Znacie to uczucie, prawda? Kiedy sprzęt lub oprogramowanie zawodzi w najmniej odpowiednim momencie, cała efektywność szlag trafi
+
+**A.** <div style="border-left: 4px solid #7c3aed; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
+<strong>Wskazówka serwisow
+
+**A.** </strong> Nie trać czasu na ponowne uruchamianie całego komputera za każdym razem, gdy znany skrót przestaje reagować. Problem zazwyczaj tkwi w zawieszonym procesie powiadomień lub wyłączonych uprawnieniach aplikacji w tle.
 </div>
 
 ![Tech Troubleshooting Guide](/images/tech-photo/tech-photos%20(13).jpg)
@@ -70,7 +78,9 @@ Często problem wynika z niepoprawnie skonfigurowanych skrótów klawiszowych w 
 
 1. Wróć do**Ustawienia**, wybierz**Dostępność**, a następnie**Klawiatura**.
 
-2. Upewnij się, że opcja**Użyj przycisku PrtScn, aby otworzyć wycinanie ekranu**jest włączona. To świetna alternatywa, gdy kombinacja z klawiszem Shift zawodzi.
+2. Upewnij się, że opcja**Użyj przycisku PrtScn, aby otworzyć wycinanie ekranu**jest włączon
+
+**A.** To świetna alternatywa, gdy kombinacja z klawiszem Shift zawodzi.
 
 3. Sprawdź w sekcji**System -> Powiadomienia**, czy aplikacja Narzędzie wycinanie ma prawo wysyłać powiadomienia banerowe. Bez nich wycinek może być robiony, ale system nie pokazuje go na ekranie.
 
@@ -79,19 +89,24 @@ Często problem wynika z niepoprawnie skonfigurowanych skrótów klawiszowych w 
 Podczas intensywnej pracy wielozadaniowej łatwo nieświadomie wcisnąć kombinację klawiszy blokującą skróty, taką jak przełączenie układu klawiatury. Jeśli po wykonaniu powyższych kroków skrót nadal nie działa, sprawdź w**Menedżerze urządzeń**, czy Twoja klawiatura nie ma problemów ze sterownikami HID. 
 
 <div style="border-left: 4px solid #7c3aed; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
-<strong>Ważna uwaga:</strong> Unikaj instalowania podejrzanych programów innych firm obiecujących "przyspieszenie wycinania". Oryginalne Narzędzie wycinanie w Windows 11 jest w pełni zintegrowane z systemem i wszelkie zewnętrze nakładki często powodują konflikty z bibliotekami DirectX oraz pamięcią podręczną schowka.
-</div>
+<strong>Ważna uwag
+
+**A.** </strong> Unikaj instalowania podejrzanych programów innych firm obiecujących "przyspieszenie wycinania". Oryginalne Narzędzie wycinanie w Windows 11 jest w pełni zintegrowane z systemem i wszelkie zewnętrze nakładki często powodują konflikty z bibliotekami DirectX oraz pamięcią podręczną schowk
+
+**A.** </div>
 
 5. Często zadawane pytania (FAQ)
 
-**Q:**Co zrobić, jeśli skrót Win+Shift+S nadal nie działa po zresetowaniu aplikacji w Ustawieniach?
+**Q.** Co zrobić, jeśli skrót Win+Shift+S nadal nie działa po zresetowaniu aplikacji w Ustawieniach?
 
-**A:**W takiej sytuacji najskuteczniejszą metodą jest ponowna instalacja pakietu aplikacji przez PowerShell. Otwórz terminal jako administrator i wpisz odpowiednią komendę rejestrującą aplikacje na nowo lub skorzystaj ze sklepu Microsoft Store, aby zaktualizować Narzędzie wycinanie.
+**A.** W takiej sytuacji najskuteczniejszą metodą jest ponowna instalacja pakietu aplikacji przez PowerShell. Otwórz terminal jako administrator i wpisz odpowiednią komendę rejestrującą aplikacje na nowo lub skorzystaj ze sklepu Microsoft Store, aby zaktualizować Narzędzie wycinanie.
 
-**Q:**Czy wycinki gdzieś się zapisują, nawet jeśli nie pojawia się powiadomienie?
+**Q.** Czy wycinki gdzieś się zapisują, nawet jeśli nie pojawia się powiadomienie?
 
-**A:**Tak, domyślnie każdy zrzut ekranu wykonany tym skrótem trafia bezpośrednio do schowka systemowego. Możesz go wkleić (Ctrl + V) wklejając np. do Painta lub okna czatu, nawet jeśli miniatura nie wyświetliła się w prawym dolnym rogu ekranu.
+**A.** Tak, domyślnie każdy zrzut ekranu wykonany tym skrótem trafia bezpośrednio do schowka systemowego. Możesz go wkleić (Ctrl + V) wklejając np. do Painta lub okna czatu, nawet jeśli miniatura nie wyświetliła się w prawym dolnym rogu ekranu.
 
-**Q:**Czy tryb oszczędzania energii może blokować Narzędzie wycinanie?
+**Q.** Czy tryb oszczędzania energii może blokować Narzędzie wycinanie?
 
-**A:** Rzadko, ale agresywne tryby oszczędzania energii lub włączony tryb "Skupienia" mogą wyciszać powiadomienia o zrobionym zrzucie, przez co użytkownik ma wrażenie, że funkcja w ogóle nie zadziałała. Warto sprawdzić ustawienia powiadomień w centrum akcji.
+**A.** Rzadko, ale agresywne tryby oszczędzania energii lub włączony tryb "Skupienia" mogą wyciszać powiadomienia o zrobionym zrzucie, przez co użytkownik ma wrażenie, że funkcja w ogóle nie zadziałał
+
+**A.** Warto sprawdzić ustawienia powiadomień w centrum akcji.

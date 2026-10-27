@@ -36,7 +36,11 @@ Durante los primeros diez minutos, caí en el típico error de desesperación: r
 
 ![How to Fix 100 Percent CPU Usage Caused by System Process Tech Guide](/images/tech-photo/keyboard (17).png)
 
-Al ver que el reinicio en frío no servía de nada porque el problema volvía a aparecer a los dos minutos de arrancar, detuve la marcha, me puse la gorra de técnico especialista y apliqué el protocolo de emergencia que nunca falla. Aquí te comparto exactamente cómo rescaté el equipo y cómo puedes solucionarlo sin perder la calma. <div style="border-left: 4px solid #3b82f6; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
+Al ver que el reinicio en frío no servía de nada porque el problema volvía a aparecer a los dos minutos de arrancar, detuve la marcha, me puse la gorra de técnico especialista y apliqué el protocolo de emergencia que nunca fall
+
+**A.** Aquí te comparto exactamente cómo rescaté el equipo y cómo puedes solucionarlo sin perder la calm
+
+**A.** <div style="border-left: 4px solid #3b82f6; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Consejo del Técnico:</strong> Cuando el proceso "System" consume toda la CPU, casi nunca se trata de un virus troyano común, sino de un conflicto a nivel de controladores de hardware, servicios de indexación desbocados o errores en la gestión de energía del núcleo de Windows.
 </div>
 
@@ -46,13 +50,21 @@ Al ver que el reinicio en frío no servía de nada porque el problema volvía a 
 
 ## 2. Análisis detallado de la causa raíz
 
+## 2. Análisis detallado de la causa raíz
+
 ¿Por qué el proceso "System" devora tu CPU?
 
-Antes de pasar a los clics, entendamos brevemente qué está pasando bajo el capó. El proceso del sistema (`ntoskrnl.exe`) gestiona las tareas esenciales del núcleo de Windows, controladores y memoria física. Cuando se dispara al máximo, las causas más comunes son:
+Antes de pasar a los clics, entendamos brevemente qué está pasando bajo el capó. El proceso del sistema (`ntoskrnl.exe`) gestiona las tareas esenciales del núcleo de Windows, controladores y memoria físic
+
+**A.** Cuando se dispara al máximo, las causas más comunes son:
 
 - Controladores de hardware obsoletos o corruptos: Generalmente tarjetas de red (Wi-Fi/Ethernet) o controladores de almacenamiento NVMe que entran en bucle infinito de interrupciones.
 - Servicios de Windows en conflicto: El Administrador de impresión, Windows Update o el sistema de indexación de archivos (`Windows Search`) intentando reparar un índice dañado.
-- Periféricos USB defectuosos: Hubs o dispositivos externos que saturan las líneas de comunicación PCIe del bus del sistema. ---
+- Periféricos USB defectuosos: Hubs o dispositivos externos que saturan las líneas de comunicación PCIe del bus del sistem
+
+**A.** ---
+
+## 3. Solución práctica paso a paso
 
 ## 3. Solución práctica paso a paso
 
@@ -62,7 +74,9 @@ Antes de pasar a los clics, entendamos brevemente qué está pasando bajo el cap
 
 Guía paso a paso para solucionar el bloqueo
 
-Sigue estos pasos de forma ordenada. No saltes al paso final sin antes revisar el estado de tus controladores.
+Sigue estos pasos de forma ordenad
+
+**A.** No saltes al paso final sin antes revisar el estado de tus controladores.
 
 Paso 1: Aislar el conflicto mediante el Administrador de tareas avanzado
 No te quedes solo en la pestaña de Procesos. Vamos a ver qué hilo exacto está quemando el procesador.
@@ -71,14 +85,16 @@ No te quedes solo en la pestaña de Procesos. Vamos a ver qué hilo exacto está
 
 2. Ve a la pestaña Detalles y busca el proceso `ntoskrnl.exe` (que engloba a System).
 
-3. Haz clic derecho sobre él y selecciona Analizar cadena de espera.
+3. Haz clic derecho sobre él y selecciona Analizar cadena de esper
 
-4. Se abrirá una ventana emergente que te mostrará qué otros procesos o servicios están bloqueando los hilos del sistema. Si ves algún servicio de terceros o controlador de audio/red en esa lista, anota su nombre.
+**A.** 4. Se abrirá una ventana emergente que te mostrará qué otros procesos o servicios están bloqueando los hilos del sistem
+
+**A.** Si ves algún servicio de terceros o controlador de audio/red en esa lista, anota su nombre.
 
 Paso 2: Actualizar o deshabilitar controladores desde el Administrador de dispositivos
-En nuestro incidente de Madrid, el culpable resultó ser un driver de la controladora de red Ethernet que se había corrompido tras una actualización nocturna desatendida.
+En nuestro incidente de Madrid, el culpable resultó ser un driver de la controladora de red Ethernet que se había corrompido tras una actualización nocturna desatendid
 
-1. Haz clic en el botón de Inicio, escribe Administrador de dispositivos y presiónalo.
+**A.** 1. Haz clic en el botón de Inicio, escribe Administrador de dispositivos y presiónalo.
 
 2. Despliega la sección Adaptadores de red (y posteriormente Controladoras de bus serie universal si sospechas de USBs).
 
@@ -87,9 +103,9 @@ En nuestro incidente de Madrid, el culpable resultó ser un driver de la control
 4. Si la actualización no surte efecto, haz clic en Desinstalar el dispositivo y reinicia el equipo. Windows reinstalará un controlador limpio y genérico al arrancar.
 
 Paso 3: Desactivar temporalmente servicios de indexación y Superfetch (SysMain)
-Si el hardware está bien, el problema suele ser la base de datos de archivos corrupta.
+Si el hardware está bien, el problema suele ser la base de datos de archivos corrupt
 
-1. Presiona `Windows + R`, escribe `services.msc` y presiona Enter para abrir la consola de Servicios.
+**A.** 1. Presiona `Windows + R`, escribe `services.msc` y presiona Enter para abrir la consola de Servicios.
 
 2. Busca en la lista el servicio llamado SysMain (conocido antiguamente como Superfetch).
 
@@ -104,14 +120,14 @@ Si el hardware está bien, el problema suele ser la base de datos de archivos co
 ---
 ## 5. Preguntas Frecuentes (FAQ)
 
-**Q.**¿Es seguro deshabilitar el servicio SysMain (Superfetch) en Windows 10 u 11?
+**Q.** ¿Es seguro deshabilitar el servicio SysMain (Superfetch) en Windows 10 u 11?
 
-**A.**Sí, totalmente seguro. Superfetch fue diseñado para pre-cargar aplicaciones en la memoria RAM en equipos con discos mecánicos tradicionales (HDD). Si tu ordenador corporativo utiliza un disco de estado sólido (SSD moderno), este servicio es totalmente innecesario y muchas veces causa picos de uso del 100 por ciento en el proceso System.
+**A.** Sí, totalmente seguro. Superfetch fue diseñado para pre-cargar aplicaciones en la memoria RAM en equipos con discos mecánicos tradicionales (HDD). Si tu ordenador corporativo utiliza un disco de estado sólido (SSD moderno), este servicio es totalmente innecesario y muchas veces causa picos de uso del 100 por ciento en el proceso System.
 
-**Q.**¿Por qué el Administrador de tareas me muestra 100% de CPU pero la velocidad está por debajo de 1.00 GHz?
+**Q.** ¿Por qué el Administrador de tareas me muestra 100% de CPU pero la velocidad está por debajo de 1.00 GHz?
 
 **A.** Esto ocurre por un fenómeno conocido como *Thermal Throttling* o por un fallo en el plan de energía de Windows. El procesador reduce drásticamente su velocidad para protegerse del calor o debido a un controlador de ACPI corrupto. Ve al Panel de control > *Opciones de energía* y asegúrate de restablecer el plan a "Equilibrado".
 
-**Q.**¿Qué debo hacer si ninguna de estas soluciones software funciona?
+**Q.** ¿Qué debo hacer si ninguna de estas soluciones software funciona?
 
 **A.** Si el uso de la CPU persiste incluso después de limpiar controladores y servicios, es hora de revisar el hardware físico. Desconecta todos los periféricos USB (impresoras, discos externos, dongles de ratón inalámbricos). A veces, un puerto USB en cortocircuito obliga al proceso System a consumir recursos infinitos intentando gestionar la comunicación con el dispositivo averiado.

@@ -63,14 +63,14 @@ Attention également : si un fichier système ou un composant critique du systè
 
 ## 5. Foire Aux Questions (FAQ)
 
-**Q :**Que faire si Windows m'affiche "Accès refusé" même après avoir fermé tous les programmes ?
+**Q.** Que faire si Windows m'affiche "Accès refusé" même après avoir fermé tous les programmes ?
 
-**A :**Cela signifie généralement que vous ne possédez pas les droits de propriétaire sur le fichier. Faites un clic droit sur le fichier ou le dossier, allez dans**Propriétés**, puis dans l'onglet**Sécurité**, cliquez sur**Avancé**et modifiez le propriétaire pour l'attribuer à votre compte utilisateur actuel.
+**A.** Cela signifie généralement que vous ne possédez pas les droits de propriétaire sur le fichier. Faites un clic droit sur le fichier ou le dossier, allez dans**Propriétés**, puis dans l'onglet**Sécurité**, cliquez sur**Avancé**et modifiez le propriétaire pour l'attribuer à votre compte utilisateur actuel.
 
-**Q :**Est-ce dangereux d'utiliser la commande "del /f" pour forcer la suppression ?
+**Q.** Est-ce dangereux d'utiliser la commande "del /f" pour forcer la suppression ?
 
-**A :**Non, tant que vous ciblez un fichier de données classique (comme un document Office, une archive ou une image). En revanche, l'utilisation de cette commande sur des fichiers système (situés dans les dossiers System32 ou Windows) peut rendre votre machine instable.
+**A.** Non, tant que vous ciblez un fichier de données classique (comme un document Office, une archive ou une image). En revanche, l'utilisation de cette commande sur des fichiers système (situés dans les dossiers System32 ou Windows) peut rendre votre machine instable.
 
-**Q :**Pourquoi le Gestionnaire des tâches ne m'affiche pas le programme qui utilise le fichier ?
+**Q.** Pourquoi le Gestionnaire des tâches ne m'affiche pas le programme qui utilise le fichier ?
 
-**A :** Certains services système ou modules d'analyse antivirus s'exécutent avec des privilèges de niveau supérieur (SYSTEM). Dans ce cas, l'utilisation d'un outil comme *Process Explorer* (disponible sur le site officiel de Microsoft Sysinternals) est nécessaire pour faire une recherche textuelle du nom du fichier et identifier précisément le processus parent.
+**A.** Certains services système ou modules d'analyse antivirus s'exécutent avec des privilèges de niveau supérieur (SYSTEM). Dans ce cas, l'utilisation d'un outil comme *Process Explorer* (disponible sur le site officiel de Microsoft Sysinternals) est nécessaire pour faire une recherche textuelle du nom du fichier et identifier précisément le processus parent.

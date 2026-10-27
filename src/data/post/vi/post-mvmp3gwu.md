@@ -35,7 +35,9 @@ Trước khi đi vào các bước khắc phục, chúng ta hãy điểm qua ba 
 
 * **Ứng dụng Snipping Tool bị treo ngầm:** Các tiến trình xử lý hình ảnh của Windows chạy ngầm bị kẹt, không nhận diện được lệnh kích hoạt từ bàn phím.
 * **Cài đặt thông báo (Notifications) bị chặn:** Windows 11 yêu cầu quyền hiển thị thông báo để đưa ảnh chụp vào khay nhớ tạm (clipboard). Nếu bạn vô tình tắt thông báo của Snipping Tool, tính năng sẽ không hoạt động đúng cách.
-* **Xung đột ứng dụng bên thứ ba:**Các phần mềm chụp màn hình khác như Lightshot, Greenshot hoặc các công cụ quay màn hình game đang chiếm quyền điều khiển phím tắt.
+* **Xung đột ứng dụng bên thứ b
+
+**A.Các phần mềm chụp màn hình khác như Lightshot, Greenshot hoặc các công cụ quay màn hình game đang chiếm quyền điều khiển phím tắt.
 
 3. Các bước xử lý chi tiết
 
@@ -46,9 +48,9 @@ Bước 1: Khởi động lại hoặc kết thúc tiến trình Snipping Tool q
 - Nhấn tổ hợp phím**Ctrl + Shift + Esc**để mở**Task Manager**.
 - Tại tab**Processes**, bạn tìm kiếm từ khóa `Snipping Tool` hoặc cuộn xuống tìm tiến trình có tên tương tự.
 - Nhấp chuột phải vào ứng dụng và chọn**End task**.
-- Thử bấm lại**Win + Shift + S**xem đã hoạt động chưa.
+- Thử bấm lại**Win + Shift + S**xem đã hoạt động chư
 
-Bước 2: Kiểm tra quyền thông báo trong Cài đặt (Settings)
+**A.** Bước 2: Kiểm tra quyền thông báo trong Cài đặt (Settings)
 Snipping Tool trên Windows 11 phụ thuộc rất nhiều vào hệ thống thông báo để lưu trữ và hiển thị ảnh.
 - Nhấp vào nút Start, chọn**Cài đặt (Settings)**hình bánh răng cưa, hoặc bấm nhanh**Win + I**.
 - Truy cập vào mục**Hệ thống (System)**rồi chọn**Thông báo (Notifications)**.
@@ -76,14 +78,14 @@ Trong quá trình hỗ trợ xử lý sự cố cho các văn phòng tại TP. H
 
 5. Câu hỏi thường gặp (FAQ)
 
-**Q:**Tại sao tôi bấm Win + Shift + S nhưng không thấy ảnh lưu vào Clipboard?
+**Q.** Tại sao tôi bấm Win + Shift + S nhưng không thấy ảnh lưu vào Clipboard?
 
-**A:**Nguyên nhân có thể do tính năng Clipboard History chưa được bật. Bạn hãy bấm**Win + V**, sau đó chọn**Turn on**để kích hoạt lịch sử bộ nhớ tạm, giúp lưu lại nhiều ảnh chụp màn hình gần nhất.
+**A.** Nguyên nhân có thể do tính năng Clipboard History chưa được bật. Bạn hãy bấm**Win + V**, sau đó chọn**Turn on**để kích hoạt lịch sử bộ nhớ tạm, giúp lưu lại nhiều ảnh chụp màn hình gần nhất.
 
-**Q:**Làm cách nào để chụp màn hình khi phím Win trên bàn phím bị hỏng hoàn toàn?
+**Q.** Làm cách nào để chụp màn hình khi phím Win trên bàn phím bị hỏng hoàn toàn?
 
-**A:**Bạn có thể vào**Cài đặt (Settings) > Khả năng truy cập (Accessibility) > Bàn phím (Keyboard)**và bật tính năng**Bàn phím ảo (On-screen keyboard)**để sử dụng chuột click thay thế, hoặc dùng phần mềm chụp ảnh màn hình thay thế tạm thời.
+**A.** Bạn có thể vào**Cài đặt (Settings) > Khả năng truy cập (Accessibility) > Bàn phím (Keyboard)**và bật tính năng**Bàn phím ảo (On-screen keyboard)**để sử dụng chuột click thay thế, hoặc dùng phần mềm chụp ảnh màn hình thay thế tạm thời.
 
-**Q:**Sau khi làm đủ mọi cách mà vẫn không chụp được thì phải làm sao?
+**Q.** Sau khi làm đủ mọi cách mà vẫn không chụp được thì phải làm sao?
 
-**A:** Giải pháp cuối cùng là khởi động lại máy tính (Restart). Thao tác này giúp làm mới toàn bộ driver bàn phím và các dịch vụ cốt lõi của hệ điều hành Windows 11.
+**A.** Giải pháp cuối cùng là khởi động lại máy tính (Restart). Thao tác này giúp làm mới toàn bộ driver bàn phím và các dịch vụ cốt lõi của hệ điều hành Windows 11.

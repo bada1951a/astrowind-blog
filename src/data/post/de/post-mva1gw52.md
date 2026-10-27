@@ -42,6 +42,8 @@ Wer in einer schnelllebigen IT-Umgebung arbeitet, kennt das Problem. Windows 11 
 
 ## 2. Detaillierte Ursachenanalyse
 
+## 2. Detaillierte Ursachenanalyse
+
 Warum läuft das Laufwerk C: eigentlich immer wieder voll?
 
 Bevor wir blind Dateien löschen, müssen wir verstehen, woher der Ballast kommt. Das Hauptproblem liegt meistens in drei Bereichen:
@@ -55,6 +57,8 @@ Bevor wir blind Dateien löschen, müssen wir verstehen, woher der Ballast kommt
 <div style="border-left: 4px solid #ffffff; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Pro-Tipp aus der Praxis:</strong> Nutze niemals einfach Tools von Drittanbietern, die dir dubiose "Turbo-Cleanings" versprechen. Die integrierten Windows-Bordmittel arbeiten am zuverlässigsten und zerstören keine Systemverknüpfungen.
 </div>
+
+## 3. Schritt-für-Schritt-Lösungsanleitung
 
 ## 3. Schritt-für-Schritt-Lösungsanleitung
 
@@ -123,8 +127,12 @@ Ja, wenn dein Windows 11 stabil läuft und du kein Downgrade auf eine vorherige 
 
 ## 2. Detaillierte Ursachenanalyse
 
+## 2. Detaillierte Ursachenanalyse
+
 Warum läuft C: nach dem Löschen sofort wieder voll?
 Das liegt meist an virtuellen Maschinen (Hyper-V, WSL2), Docker-Images oder großen Browser-Caches. Prüfe mit einem Tool wie *TreeSize Free*, welche Ordner auf C: den tatsächlichen Speicherplatz belegen.
 
 Ist es sicher, den Inhalt von `%temp%` komplett zu löschen?
-Ja. Alle Dateien in diesem Ordner sind rein temporärer Natur. Programme, die aktuell laufen, sperren ihre eigenen Temp-Dateien, sodass Windows diese ohnehin schützt und das Löschen verweigert.
+J
+
+**A.** Alle Dateien in diesem Ordner sind rein temporärer Natur. Programme, die aktuell laufen, sperren ihre eigenen Temp-Dateien, sodass Windows diese ohnehin schützt und das Löschen verweigert.

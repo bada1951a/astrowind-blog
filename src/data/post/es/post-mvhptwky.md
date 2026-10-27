@@ -39,7 +39,9 @@ El problema diario: El infierno del nuevo diseño de Windows 11
 Durante los primeros minutos de panico, intente adaptarme a la nueva interfaz minimalista que Microsoft introdujo por defecto. Malgaste valiosos minutos buscando opciones avanzadas de compresion y herramientas de desarrollo que habian quedado sepultadas bajo el boton secundario o convertidas en iconos planos sin texto. En un entorno de oficina donde la velocidad de respuesta define la eficiencia del soporte tecnico, perder el acceso directo a las aplicaciones de terceros desde el menu contextual es un freno de mano inaceptable.
 
 <div style="border-left: 4px solid #f97316; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
-<strong>Nota del especialista:</strong> El nuevo menu contextual de Windows 11 prioriza la limpieza visual, pero sacrifica la productividad directa de los usuarios avanzados y profesionales de sistemas que dependen de accesos rapidos de terceros.
+<strong>Nota del especialist
+
+**A.** </strong> El nuevo menu contextual de Windows 11 prioriza la limpieza visual, pero sacrifica la productividad directa de los usuarios avanzados y profesionales de sistemas que dependen de accesos rapidos de terceros.
 </div>
 
 Causas raices de este quebradero de cabeza
@@ -50,15 +52,17 @@ Para entender por que ocurre esto y como solucionarlo de raiz sin alterar la est
 
 2. Falta de opciones nativas en la Interfaz grafic
 
-**a:**El menu de Configuracion general de Windows 11 no incluye un interruptor simple para desactivar este comportamiento, obligando a modificar registros o comandos del sistema.
+**A.** El menu de Configuracion general de Windows 11 no incluye un interruptor simple para desactivar este comportamiento, obligando a modificar registros o comandos del sistem
 
-3. Incompatibilidad de software heredado: Programas esenciales de oficina (como clientes FTP, compresores o herramientas de seguridad) necesitan engancharse al arbol de comandos antiguo para funcionar con agilidad.
+**A.** 3. Incompatibilidad de software heredado: Programas esenciales de oficina (como clientes FTP, compresores o herramientas de seguridad) necesitan engancharse al arbol de comandos antiguo para funcionar con agilidad.
 
 ---
 
 Guia paso a paso: Recupera el menu clasico al instante
 
-Como tecnico de sistemas, detesto las soluciones complejas que requieren instalar software de terceros dudoso. Vamos a solucionarlo mediante un comando limpio directamente en la consola del sistema. ## Paso 1: Abrir la Terminal o Símbolo del sistema con privilegios
+Como tecnico de sistemas, detesto las soluciones complejas que requieren instalar software de terceros dudoso. Vamos a solucionarlo mediante un comando limpio directamente en la consola del sistem
+
+**A.** ## Paso 1: Abrir la Terminal o Símbolo del sistema con privilegios
 Haz clic en el boton de Inicio, escribe `Terminal` o `cmd`, haz clic derecho sobre la aplicacion y selecciona "Ejecutar como administrador".
 
 Paso 2: Ejecutar el comando de restauracion del Registro
@@ -79,7 +83,7 @@ Para que los cambios surtan efecto de inmediato sin necesidad de reiniciar todo 
 
 Tabla comparativ
 
-**a:** Antes vs. Despues de aplicar el ajuste
+**A.** Antes vs. Despues de aplicar el ajuste
 
 | Caracteristica | Menu Moderno por Defecto | Menu Clasico Restaurado |
 | :--- | :--- | :--- |
@@ -100,14 +104,14 @@ Modificar el Registro de Windows es un procedimiento seguro si se siguen los pas
 ---
 ## 5. Preguntas Frecuentes (FAQ)
 
-**Q.**¿Este cambio afecta a la estabilidad general de Windows 11?
+**Q.** ¿Este cambio afecta a la estabilidad general de Windows 11?
 
-**A.**Absolutamente no. Este comando simplemente habilita una clave de CLSID nativa que Microsoft mantuvo en el codigo del sistema operativo para facilitar la transicion, por lo que no genera errores ni pantallazos azules.
+**A.** Absolutamente no. Este comando simplemente habilita una clave de CLSID nativa que Microsoft mantuvo en el codigo del sistema operativo para facilitar la transicion, por lo que no genera errores ni pantallazos azules.
 
-**Q.**¿ tendre que repetir este proceso despues de cada actualizacion grande de Windows?
+**Q.** ¿ tendre que repetir este proceso despues de cada actualizacion grande de Windows?
 
-**A.**En la gran mayoria de las actualizaciones acumulativas mensuales el ajuste se mantiene intacto. Sin embargo, en actualizaciones mayores de caracteristicas anuales, existe una pequeña posibilidad de que Microsoft restablezca el valor por defecto y debas volver a ejecutar el comando.
+**A.** En la gran mayoria de las actualizaciones acumulativas mensuales el ajuste se mantiene intacto. Sin embargo, en actualizaciones mayores de caracteristicas anuales, existe una pequeña posibilidad de que Microsoft restablezca el valor por defecto y debas volver a ejecutar el comando.
 
-**Q.**¿Puedo aplicar este truco en equipos portatiles y de sobremesa por igual?
+**Q.** ¿Puedo aplicar este truco en equipos portatiles y de sobremesa por igual?
 
 **A.** Si, funciona de manera identica en cualquier ediciones de Windows 11 (Home, Pro o Enterprise), ya que el funcionamiento interno del Explorador de archivos es exactamente el mismo en todas las arquitecturas compatibles.

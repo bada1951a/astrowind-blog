@@ -25,9 +25,9 @@ Zanim przejdziemy do klikania, rzućmy okiem na zaplecze techniczne. Dlaczego Wi
 
 2. **Zawieszone procesy systemowe (Zombie Processes):**Aplikacja uległa awarii, ale jej rdzeń nadal wisi w pamięci RAM, blokując dostęp do powiązanych plików tymczasowych lub baz danych.
 
-3.**Brak uprawnień administratora lub uszkodzony ACL:**Plik został utworzony przez inną usługę systemową (np.**TrustedInstaller**) i Twoje konto użytkownika, mimo praw administratora, natrafia na blokadę bezpieczeństwa.
+3.**Brak uprawnień administratora lub uszkodzony ACL:**Plik został utworzony przez inną usługę systemową (np.**TrustedInstaller**) i Twoje konto użytkownika, mimo praw administratora, natrafia na blokadę bezpieczeństw
 
-<div style="border-left: 4px solid #a6e22e; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
+**A.** <div style="border-left: 4px solid #a6e22e; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Wskazówka serwisu:</strong> Zanim sięgniesz po drastyczne metody wymuszonego kasowania, upewnij się, że plik nie jest krytycznym komponentem systemu operacyjnego. Usunięcie pliku blokowanego przez kluczowe usługi Windows może doprowadzić do ekranu BSOD!
 </div>
 
@@ -55,7 +55,9 @@ Jeśli nie znasz nazwy procesu blokującego:
 4. Zobaczysz dokładną listę procesów, które trzymają ten plik. Kliknij na proces prawym przyciskiem myszy i wybierz**Zakończ proces**.
 
 ### Krok 3: Wykorzystanie wiersza poleceń (PowerShell / CMD)
-Dla administratorów i zaawansowanych użytkowników najszybszą metodą jest użycie konsoli w trybie administratora. Otwórz**Terminal**lub**Wiersz poleceń**jako administrator i skorzystaj z poniższych komend:
+Dla administratorów i zaawansowanych użytkowników najszybszą metodą jest użycie konsoli w trybie administrator
+
+**A.** Otwórz**Terminal**lub**Wiersz poleceń**jako administrator i skorzystaj z poniższych komend:
 
 ```cmd
 # Wymuszenie zamknięcia pliku lub sprawdzenie zajętości
@@ -76,14 +78,14 @@ Nigdy nie używaj narzędzi typu "Force Delete" na ślepo w katalogach systemowy
 
 ## 5. Najczęściej zadawane pytania (FAQ)
 
-**Q:**Czy bezpiecznie jest używać zewnętrznych programów typu Unlocker do usuwania plików?
+**Q.** Czy bezpiecznie jest używać zewnętrznych programów typu Unlocker do usuwania plików?
 
-**A:**Tak, lekkie aplikacje open-source służące do zwalniania uchwytów plików są bezpieczne, pod warunkiem że pobierasz je z zaufanych źródeł i używasz ich tylko do plików tymczasowych lub dokumentów użytkownika.
+**A.** Tak, lekkie aplikacje open-source służące do zwalniania uchwytów plików są bezpieczne, pod warunkiem że pobierasz je z zaufanych źródeł i używasz ich tylko do plików tymczasowych lub dokumentów użytkownik
 
-**Q:**Co zrobić, gdy po zakończeniu procesu plik nadal nie chce się skasować?
+**A.Q.** Co zrobić, gdy po zakończeniu procesu plik nadal nie chce się skasować?
 
-**A:** Często winny jest eksplorator Windows (`explorer.exe`), który podtrzymuje bufor miniatur podglądu. Otwórz Menedżer zadań, znajdź *Eksplorator Windows*, kliknij *Uruchom ponownie*, a następnie spróbuj usunąć plik ponownie.
+**A.** Często winny jest eksplorator Windows (`explorer.exe`), który podtrzymuje bufor miniatur podglądu. Otwórz Menedżer zadań, znajdź *Eksplorator Windows*, kliknij *Uruchom ponownie*, a następnie spróbuj usunąć plik ponownie.
 
-**Q:**Czy błąd zablokowanego pliku może oznaczać infekcję złośliwym oprogramowaniem?
+**Q.** Czy błąd zablokowanego pliku może oznaczać infekcję złośliwym oprogramowaniem?
 
-**A:** Zdecydowanie tak. Zaawansowane trojany lub ransomware celowo blokują pliki dziennika oraz narzędzia antywirusowe, aby uniemożliwić ich usunięcie. Jeśli podejrzewasz wirusa, odłącz komputer od sieci i przeprowadź pełny skan w trybie offline.
+**A.** Zdecydowanie tak. Zaawansowane trojany lub ransomware celowo blokują pliki dziennika oraz narzędzia antywirusowe, aby uniemożliwić ich usunięcie. Jeśli podejrzewasz wirusa, odłącz komputer od sieci i przeprowadź pełny skan w trybie offline.

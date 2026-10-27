@@ -80,14 +80,14 @@ Zur Vermeidung wiederkehrender Dateisperren empfiehlt sich die Etablierung saube
 
 ## 5. Häufig gestellte Fragen (FAQ)
 
-**Q1.**Warum zeigt Windows mir oft nicht an, welches konkrete Programm eine Datei sperrt?
+**Q1.** Warum zeigt Windows mir oft nicht an, welches konkrete Programm eine Datei sperrt?
 
-**A1.**Windows verwendet standardmäßig ein generisches Fehlersystem, das aus Sicherheits- und Performance-Gründen keine detaillierte Prozesszuordnung direkt im Explorer-Dialog vornimmt. Das Betriebssystem bündelt Dateizugriffe über den I/O-Manager, wodurch die exakte PID für den normalen Anwender verborgen bleibt. Um die Ursache dennoch zu ermitteln, müssen administrative Werkzeuge wie der Ressourcenmonitor oder Sysinternals Process Explorer verwendet werden, die die offenen Handles direkt auslesen.
+**A1.** Windows verwendet standardmäßig ein generisches Fehlersystem, das aus Sicherheits- und Performance-Gründen keine detaillierte Prozesszuordnung direkt im Explorer-Dialog vornimmt. Das Betriebssystem bündelt Dateizugriffe über den I/O-Manager, wodurch die exakte PID für den normalen Anwender verborgen bleibt. Um die Ursache dennoch zu ermitteln, müssen administrative Werkzeuge wie der Ressourcenmonitor oder Sysinternals Process Explorer verwendet werden, die die offenen Handles direkt auslesen.
 
-**Q2.**Kann das gewaltsame Beenden eines Prozesses zur Beschädigung der offenen Datei führen?
+**Q2.** Kann das gewaltsame Beenden eines Prozesses zur Beschädigung der offenen Datei führen?
 
-**A2.**Ja, das erzwungene Beenden eines Prozesses während eines Schreibvorgangs kann zu unvollständigen Datenstrukturen und Dateikorruption führen. Wenn eine Anwendung gerade Daten in die Datei schreibt und der Prozess abrupt terminiert wird, verbleiben ungespeicherte Puffer im RAM und werden nicht mehr auf den Datenträger geschrieben. Deshalb sollte ein erzwungener Kill immer nur dann eingesetzt werden, wenn die Anwendung hängt und keine aktiven Schreibprozesse mehr stattfinden.
+**A2.** Ja, das erzwungene Beenden eines Prozesses während eines Schreibvorgangs kann zu unvollständigen Datenstrukturen und Dateikorruption führen. Wenn eine Anwendung gerade Daten in die Datei schreibt und der Prozess abrupt terminiert wird, verbleiben ungespeicherte Puffer im RAM und werden nicht mehr auf den Datenträger geschrieben. Deshalb sollte ein erzwungener Kill immer nur dann eingesetzt werden, wenn die Anwendung hängt und keine aktiven Schreibprozesse mehr stattfinden.
 
-**Q3.**Was kann ich tun, wenn selbst administrative Konsolenbefehle das Löschen der Datei verweigern?
+**Q3.** Was kann ich tun, wenn selbst administrative Konsolenbefehle das Löschen der Datei verweigern?
 
 **A3.** Wenn selbst der Administrator über die PowerShell oder Eingabeaufforderung keinen Zugriff erhält, liegt meist eine tiefgreifende Berechtigungssperre oder eine Beschädigung der Master File Table vor. In solchen Fällen hilft es, den Computer im abgesicherten Modus zu starten, da hierbei die meisten Autostart-Programme und Drittanbieter-Dienste gar nicht erst geladen werden. Alternativ kann die Berechtigung der Datei temporär übernommen werden, indem man den Besitzer im Reiter Sicherheit auf den Administrator-Account ändert und Vollzugriff erteilt.

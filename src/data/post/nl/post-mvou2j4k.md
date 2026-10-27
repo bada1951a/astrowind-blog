@@ -13,7 +13,9 @@ theme: "Crimson Emergency Field"
 
 Laat in de middag zat ik even lekker te werken in een drukke flexplek in het Amsterdamse Zuidas-district. Terwijl mijn laptop via de smartphone-hotspot (tethering) verbonden was met het mobiele netwerk, probeerde ik nog snel even de laatste aanpassingen door te voeren in een belangrijke offerte en een reeks technische AutoCAD-tekeningen voor een externe klant. De tijd begon te dringen, want de meeting stond over minder dan een uur gepland. 
 
-Toen ik de definitieve map wilde opschonen en een oud conceptbestand wilde weggooien, sloeg Windows opeens op de rem. De bekende, frustrerende melding popte op: *Het bestand is in gebruik door een ander programma.* Ik probeerde de map te sluiten, klikte driftig op opnieuw proberen, en sloot alle zichtbare vensters. Niks hielp. Het bestand bleef muurvastzitten, precies op het moment dat ik geen minuut te verliezen had met die trage 4G-verbinding. Als rasechte IT-systeembeheerder weet ik gelukkig dat dit soort spookprocessen vaak diep in de achtergrond draaien zonder dat je het doorhebt.
+Toen ik de definitieve map wilde opschonen en een oud conceptbestand wilde weggooien, sloeg Windows opeens op de rem. De bekende, frustrerende melding popte op: *Het bestand is in gebruik door een ander programm
+
+**A.** * Ik probeerde de map te sluiten, klikte driftig op opnieuw proberen, en sloot alle zichtbare vensters. Niks hielp. Het bestand bleef muurvastzitten, precies op het moment dat ik geen minuut te verliezen had met die trage 4G-verbinding. Als rasechte IT-systeembeheerder weet ik gelukkig dat dit soort spookprocessen vaak diep in de achtergrond draaien zonder dat je het doorhebt.
 
 <div style="border-left: 4px solid #ef4444; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Korte noodsituatie:</strong> Zit je vast in een vergelijkbare situatie vlak voor een deadline? Blijf rustig en ga niet onnodig je hele systeem opnieuw opstarten. Vaak blokkeert een onzichtbaar achtergrondproces of een thumbnail-generator de toegang.
@@ -67,14 +69,14 @@ Zorg dat je altijd goed controleert of je USB-apparaten of netwerkschijven corre
 
 ## 5. Veelgestelde Vragen (FAQ)
 
-**Q:**Wat moet ik doen als Taakbeheer het proces niet wil afsluiten?
+**Q.** Wat moet ik doen als Taakbeheer het proces niet wil afsluiten?
 
-**A:**Soms heeft een proces beheerdersrechten nodig om afgesloten te worden. Open Taakbeheer of de Opdrachtprompt als Administrator, of start je laptop tijdelijk opnieuw op in de Veilige Modus om het hardnekkige bestand te wissen.
+**A.** Soms heeft een proces beheerdersrechten nodig om afgesloten te worden. Open Taakbeheer of de Opdrachtprompt als Administrator, of start je laptop tijdelijk opnieuw op in de Veilige Modus om het hardnekkige bestand te wissen.
 
-**Q:**Kan ik een bestand ook verwijderen door mijn pc in de Veilige Modus op te starten?
+**Q.** Kan ik een bestand ook verwijderen door mijn pc in de Veilige Modus op te starten?
 
-**A:**Jazeker. In de Veilige Modus worden alleen de essentiële Windows-stuurprogramma's geladen. Achtergrondprocessen en applicaties van derden starten dan niet op, waardoor vrijwel elk bestand direct vrij is om te worden verwijderd.
+**A.** Jazeker. In de Veilige Modus worden alleen de essentiële Windows-stuurprogramma's geladen. Achtergrondprocessen en applicaties van derden starten dan niet op, waardoor vrijwel elk bestand direct vrij is om te worden verwijderd.
 
-**Q:**Is het gevaarlijk om de Windows Verkenner zomaar opnieuw te starten?
+**Q.** Is het gevaarlijk om de Windows Verkenner zomaar opnieuw te starten?
 
-**A:** Nee, dat is volkomen veilig. Het is een standaardbeheerhandeling die je bureaublad en taakbalk ververst zonder dat je openstaande documenten in actieve programma's kwijtraakt (al is het altijd verstandig om je werk tussentijds op te slaan).
+**A.** Nee, dat is volkomen veilig. Het is een standaardbeheerhandeling die je bureaublad en taakbalk ververst zonder dat je openstaande documenten in actieve programma's kwijtraakt (al is het altijd verstandig om je werk tussentijds op te slaan).

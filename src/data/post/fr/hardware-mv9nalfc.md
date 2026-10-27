@@ -48,6 +48,8 @@ Heureusement, après des années à dépanner les postes de l'équipe, j'ai une 
 
 ## 2. Analyse des causes principales de l'erreur
 
+## 2. Analyse des causes principales de l'erreur
+
 Pourquoi votre disque C se remplit tout seul ?
 
 Avant de passer à l'action, il est bon de comprendre ce qui s'est passé dans les coulisses de votre machine.
@@ -57,6 +59,8 @@ Avant de passer à l'action, il est bon de comprendre ce qui s'est passé dans l
 2. Les restes de Windows Update : Chaque mise à jour majeure du système conserve une copie de secours (le dossier `Windows.old` ou les packages dans `WinSxS`) au cas où il faudrait rétrograder. C'est souvent là que se cachent 20 à 40 Go de données fantômes.
 
 3. Les fichiers de mise en veille prolongée et mémoire virtuelle : Les fichiers `hiberfil.sys` et `pagefile.sys` taillent directement dans votre SSD en réservant l'équivalent de votre mémoire vive, parfois bien plus que nécessaire.
+
+## 3. Guide de résolution étape par étape
 
 ## 3. Guide de résolution étape par étape
 
@@ -110,12 +114,12 @@ Voici concrètement ce que vous pouvez espérer récupérer sur un PC de bureau 
 ---
 ## 5. Foire Aux Questions (FAQ)
 
-**Q1 :**Est-ce que vider le dossier `%temp%` risque de supprimer mes documents de travail ? R : Absolument pas. Le dossier `Temp` porte bien son nom : il ne contient que des données éphémères générées par les logiciels pour fonctionner. Vos documents personnels (Word, Excel, PDF, photos) stockés dans Documents ou Bureau ne sont jamais touchés.
+**Q1.** Est-ce que vider le dossier `%temp%` risque de supprimer mes documents de travail ? R : Absolument pas. Le dossier `Temp` porte bien son nom : il ne contient que des données éphémères générées par les logiciels pour fonctionner. Vos documents personnels (Word, Excel, PDF, photos) stockés dans Documents ou Bureau ne sont jamais touchés.
 
-**Q2 :**Que faire si mon disque C se remplit à nouveau tout seul en quelques jours ?
+**Q2.** Que faire si mon disque C se remplit à nouveau tout seul en quelques jours ?
 
 **A.** C'est souvent le signe d'un cache applicatif qui s'emballe (souvent un logiciel de visioconférence, un client de téléchargement de jeux ou un outil de synchronisation cloud mal configuré). Utilisez un outil gratuit comme *WizTree* ou *WinDirStat* pour identifier visuellement quel dossier pèse le plus lourd sur votre SSD.
 
-**Q3 :**Pourquoi mon SSD externe n'était-il pas détecté au début de ma panne ?
+**Q3.** Pourquoi mon SSD externe n'était-il pas détecté au début de ma panne ?
 
 **A.** Quand un PC sature complètement au niveau de son stockage et de sa mémoire virtuelle sur le disque C, le système d'exploitation (Windows) n'a plus assez de "respiration" ni d'espace d'échange pour allouer les pilotes nécessaires à la reconnaissance des périphériques USB branchés à chaud. En libérant de l'espace sur le disque C, le gestionnaire de périphériques retrouve sa pleine capacité de fonctionnement et redétecte vos disques externes sans broncher.

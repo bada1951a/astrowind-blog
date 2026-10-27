@@ -44,9 +44,13 @@ My Slack was blowing up right in the middle of a high-stakes executive sync in o
 
 ## 2. Root Cause Breakdown
 
+## 2. Root Cause Breakdown
+
 Why Your Windows 11 C Drive Fills Up So Fast
 
-Before we fix the issue, let us look at the structural architecture of how Windows 11 handles background data. Understanding these three primary bottlenecks prevents you from accidentally deleting files you actually need.
+Before we fix the issue, let us look at the structural architecture of how Windows 11 handles background dat
+
+**A.** Understanding these three primary bottlenecks prevents you from accidentally deleting files you actually need.
 
 <div style="margin: 20px 0; overflow-x: auto;">
 <table style="width: 100%; border-collapse: collapse; text-align: left; font-size: 14px; color: #111827;">
@@ -123,6 +127,8 @@ If you are a developer or power user, your Windows Component Store accumulates y
 3. Wait for the process to hit 100 percent. This safely strips away outdated system binaries without affecting your current OS stability.
 
 ---
+
+## 4. Professional Engineer Precautions & Tips
 
 ## 4. Professional Engineer Precautions & Tips
 

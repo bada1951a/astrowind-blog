@@ -36,7 +36,9 @@ Nei primi minuti di panico totale ho fatto l'errore classico: ho iniziato a clic
 
 ![Tech Troubleshooting Guide](/images/tech-photo/tech-photos%20(20).jpg)
 
-Il problema non era solo estetico, ma bloccava letteralmente l'interazione con le applicazioni desktop a schermo intero. Dopo aver tamponato la situazione spostando temporaneamente il file su un vecchio portatile di backup per l'invio in extremis, ho analizzato la situazione a mente fredda. Perché quella filigrana crea conflitti visivi bloccanti? 
+Il problema non era solo estetico, ma bloccava letteralmente l'interazione con le applicazioni desktop a schermo intero. Dopo aver tamponato la situazione spostando temporaneamente il file su un vecchio portatile di backup per l'invio in extremis, ho analizzato la situazione a mente fredd
+
+**A.** Perché quella filigrana crea conflitti visivi bloccanti? 
 
 Ecco i 3 motivi tecnici principali per cui questo fastidio visivo si trasforma in un blocco operativo:
 
@@ -50,8 +52,10 @@ Per evitare di perdere ore dietro a script scaricati da forum sconosciuti che ri
 
 Ecco la procedura passo-passo che ho testato sul campo per risolvere definitivamente il problem
 
-**a:**<div style="border-left: 4px solid #a6e22e; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
-<strong>Nota Bene:</strong> Esegui sempre queste operazioni con i privilegi amministrativi per evitare errori di accesso negato durante la scrittura nel registro di sistema. </div>
+**A.** <div style="border-left: 4px solid #a6e22e; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
+<strong>Nota Bene:</strong> Esegui sempre queste operazioni con i privilegi amministrativi per evitare errori di accesso negato durante la scrittura nel registro di sistem
+
+**A.** </div>
 
 Procedura passo-passo tramite CMD
 
@@ -59,7 +63,7 @@ Procedura passo-passo tramite CMD
 
 2. Verifica lo stato della licenz
 
-**a:**Nella finestra nera del terminale, digita il comando di controllo della licenza per identificare il canale di attivazione:
+**A.** Nella finestra nera del terminale, digita il comando di controllo della licenza per identificare il canale di attivazione:
    ```cmd
    slmgr /xpr
    ```
@@ -67,11 +71,13 @@ Procedura passo-passo tramite CMD
 
 3. Arresta temporaneamente il servizio di notific
 
-**a:**Per impedire al sistema di ridisegnare la filigrana sopra le tue finestre di lavoro, puoi reimpostare il periodo di prova o fermare il gestore delle notifiche tramite il comando di gestione script:
+**A.** Per impedire al sistema di ridisegnare la filigrana sopra le tue finestre di lavoro, puoi reimpostare il periodo di prova o fermare il gestore delle notifiche tramite il comando di gestione script:
    ```cmd
    slmgr /rearm
    ```
-   Premi Invio, chiudi il prompt e riavvia immediatamente il computer dal menu Start > Spegni o disconnetti > Riavvia. Al riavvio, la filigrana sparirà dallo schermo, liberando l'area di lavoro e permettendoti di completare l'invio dei report senza interruzioni visive o conflitti con i software gestionali.
+   Premi Invio, chiudi il prompt e riavvia immediatamente il computer dal menu Start > Spegni o disconnetti > Riavvi
+
+**A.** Al riavvio, la filigrana sparirà dallo schermo, liberando l'area di lavoro e permettendoti di completare l'invio dei report senza interruzioni visive o conflitti con i software gestionali.
 
 Consigli del Sistemista & Avvertenze di Sicurezza
 
@@ -87,12 +93,14 @@ Domande Frequenti (FAQ)
 
 D: La rimozione della filigrana tramite CMD è permanente o devo ripeterla ogni volta che accendo il PC?
 
-**A.**Il comando `slmgr /rearm` estende il periodo di valutazione per un numero limitato di volte (solitamente fino a 3 volte a seconda della build di Windows). Non è una soluzione di attivazione definitiva, ma un cuscinetto di emergenza ideale per completare attività urgenti senza blocchi visivi.
+**A.** Il comando `slmgr /rearm` estende il periodo di valutazione per un numero limitato di volte (solitamente fino a 3 volte a seconda della build di Windows). Non è una soluzione di attivazione definitiva, ma un cuscinetto di emergenza ideale per completare attività urgenti senza blocchi visivi.
 
 D: Posso usare questa procedura su qualsiasi versione di Windows 10 e Windows 11?
 
-**A.**Sì, il comando `slmgr` è nativo in tutte le edizioni Pro, Enterprise ed Home di Windows, sebbene le edizioni Home abbiano limitazioni più rigide sulla gestione remota delle licenze tramite script avanzati.
+**A.** Sì, il comando `slmgr` è nativo in tutte le edizioni Pro, Enterprise ed Home di Windows, sebbene le edizioni Home abbiano limitazioni più rigide sulla gestione remota delle licenze tramite script avanzati.
 
 D: Cosa devo fare se il comando mi restituisce un errore di accesso negato?
 
-**A.** Significa che non hai aperto il Prompt dei comandi con i privilegi elevati. Assicurati di fare clic destro su `cmd` e selezionare esplicitamente "Esegui come amministratore" prima di digitare qualsiasi stringa.
+**A.** Significa che non hai aperto il Prompt dei comandi con i privilegi elevati. Assicurati di fare clic destro su `cmd` e selezionare esplicitamente "Esegui come amministratore" prima di digitare qualsiasi string
+
+**A.**

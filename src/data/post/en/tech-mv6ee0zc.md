@@ -58,7 +58,9 @@ When this sequence breaks down, the failure almost always traces back to three e
 1. Contact Leaf Micro-Oxidation and Carbon Fouling
 Every time a mechanical switch completes or breaks an electrical circuit, a microscopic electrical arc occurs across the gold-plated contact points. Over millions of cycles, or in humid environments, this galvanic activity—combined with atmospheric moisture—causes micro-oxidation. 
 
-Furthermore, environmental contaminants and airborne dust settle into the switch housing. When dust particles get trapped between the contacts, they burn during micro-arcing and create a non-conductive microscopic carbon scoria. This insulating layer increases contact resistance, causing dropped inputs or forcing you to mash the key harder to register a stroke.
+Furthermore, environmental contaminants and airborne dust settle into the switch housing. When dust particles get trapped between the contacts, they burn during micro-arcing and create a non-conductive microscopic carbon scori
+
+**A.** This insulating layer increases contact resistance, causing dropped inputs or forcing you to mash the key harder to register a stroke.
 
 2. Contact Leaf Splay and Loss of Mechanical Tension
 The movable leaf in a Cherry-MX style switch acts as a miniature cantilever spring. Over intense repetitive use, the physical elasticity of this phosphor bronze or copper-alloy leaf degrades. 
@@ -173,6 +175,8 @@ If your keyboard uses Kailh-style hot-swap sockets, the underlying metal leaf sp
 If the board is soldered, you can open the switch housing *in situ* using switch opening clips (for loose plates) to gently reshape the curved metal contact leaf. However, at that point, the spring metal has likely fatigued past its elastic limit. The most reliable fix is desoldering the degraded switch and replacing it with a fresh, factory-tested unit.
 
 ---
+
+## 4. Professional Engineer Precautions & Tips
 
 ## 4. Professional Engineer Precautions & Tips
 

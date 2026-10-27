@@ -42,6 +42,8 @@ Die Ursache liegt selten an defekten Panels, sondern fast ausnahmslos in korrupt
 
 ## 2. Detaillierte Ursachenanalyse
 
+## 2. Detaillierte Ursachenanalyse
+
 3 Typische Fehlerursachen im Detail
 
 Bevor wir Komponenten deinstallieren, müssen wir verstehen, an welcher Schnittstelle die Signalübertragung abreißt. Bei modernen Notebooks wirken drei Kernmechanismen zusammen:
@@ -69,6 +71,8 @@ Moderne Monitore fordern hohe Datenraten (z. B. 4K bei 60 Hz oder 144 Hz mit 10-
 * Der Bildschirm meldet abrupt *„Kein Signal“*, obwohl das System fälschlicherweise meldet, die Anzeige sei aktiv geschaltet.
 
 ---
+
+## 3. Schritt-für-Schritt-Lösungsanleitung
 
 ## 3. Schritt-für-Schritt-Lösungsanleitung
 

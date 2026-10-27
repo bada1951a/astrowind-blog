@@ -35,7 +35,7 @@ Wczoraj rano, tuż przed kluczowym audytem stabilności infrastruktury dla nasze
 <div style="border-left: 4px solid #14b8a6; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Sytuacja kryzysow
 
-**a:**</strong> Zbyt duża liczba aplikacji startujących razem z systemem to główny zabójca wydajności dysków HDD oraz SSD podczas rozruchu. Na szczęście Windows 10 ma wbudowane narzędzia, by to okiełznać bez instalowania podejrzanego softu z sieci.
+**A.** </strong> Zbyt duża liczba aplikacji startujących razem z systemem to główny zabójca wydajności dysków HDD oraz SSD podczas rozruchu. Na szczęście Windows 10 ma wbudowane narzędzia, by to okiełznać bez instalowania podejrzanego softu z sieci.
 </div>
 
 ![Tech & IT Solution Guide](https://picsum.photos/seed/computer143/1000/550)
@@ -46,9 +46,11 @@ Zanim przejdziemy do klikania, spójrzmy prawdzie w oczy – skąd ten narastaj�
 
 1. Efekt "pijawki" instalacyjnej: Większość programów (od Spotify, przez Discord, po Adobe czy Epic Games) podczas instalacji ukradkiem zaznacza opcję "Uruchom razem z systemem". Po roku użytkowania masz w autostarcie armię aplikacji, o których istnieniu dawno zapomniałeś.
 
-2. Kolejkowanie I/O dysku: Nawet szybkie dyski NVMe potrafią złapać zadyszkę, gdy w tej samej milisekundzie po starcie systemu każdy program próbuje sprawdzać aktualizacje, pobierać metadane i meldować się na serwerach producenta.
+2. Kolejkowanie I/O dysku: Nawet szybkie dyski NVMe potrafią złapać zadyszkę, gdy w tej samej milisekundzie po starcie systemu każdy program próbuje sprawdzać aktualizacje, pobierać metadane i meldować się na serwerach producent
 
-3. Zasoby w tle (RAM i CPU): Aplikacje rezydujące w zasobniku systemowym (tray) bez przerwy konsumują pamięć operacyjną, co drastycznie wydłuża czas potrzebny na osiągnięcie pełnej gotowości roboczej komputera. ---
+**A.** 3. Zasoby w tle (RAM i CPU): Aplikacje rezydujące w zasobniku systemowym (tray) bez przerwy konsumują pamięć operacyjną, co drastycznie wydłuża czas potrzebny na osiągnięcie pełnej gotowości roboczej komputer
+
+**A.** ---
 
 Krok po kroku: Jak wyczyścić autostart w 1 minutę
 
@@ -66,7 +68,9 @@ Zwróć uwagę na kolumnę Wpływ na uruchamianie (Startup impact). Szukaj pozyc
 <div style="border-left: 4px solid #14b8a6; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Wskazówka praktyczn
 
-**a:**</strong> Kliknij prawym przyciskiem myszy na wybraną aplikację (np. uciążliwy komunikator lub launcher) i wybierz <strong>Wyłącz</strong> (Disable). Nic nie tracisz – program nadal będzie działał normalnie, gdy włączysz go ręcznie, ale przestanie marnować zasoby podczas rozruchu komputera. </div>
+**A.** </strong> Kliknij prawym przyciskiem myszy na wybraną aplikację (np. uciążliwy komunikator lub launcher) i wybierz <strong>Wyłącz</strong> (Disable). Nic nie tracisz – program nadal będzie działał normalnie, gdy włączysz go ręcznie, ale przestanie marnować zasoby podczas rozruchu komputer
+
+**A.** </div>
 
 ---
 
@@ -76,10 +80,10 @@ Podczas audytów w firmach często widzę przestrzelone optymalizacje, gdzie uż
 
 * Zostaw w spokoju sterowniki i zabezpieczeni
 
-**a:** Aplikacje powiązane z kartą graficzną (np. *NVIDIA Container*, *Realtek Audio Universal Service*) oraz program antywirusowy (np. *Windows Security notification icon*) powinny pozostać włączone.
+**A.** Aplikacje powiązane z kartą graficzną (np. *NVIDIA Container*, *Realtek Audio Universal Service*) oraz program antywirusowy (np. *Windows Security notification icon*) powinny pozostać włączone.
 * Bezpieczna zasad
 
-**a:** Jeśli nazwa procesu nic Ci nie mówi, a wydawca to *Microsoft Corporation*, lepiej tego nie dotykaj. Jeśli to program firm trzecich (np. Steam, Skype, OneDrive), śmiało możesz go uśpić w autostarcie.
+**A.** Jeśli nazwa procesu nic Ci nie mówi, a wydawca to *Microsoft Corporation*, lepiej tego nie dotykaj. Jeśli to program firm trzecich (np. Steam, Skype, OneDrive), śmiało możesz go uśpić w autostarcie.
 
 ---
 

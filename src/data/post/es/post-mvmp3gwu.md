@@ -23,14 +23,22 @@ theme: "Industrial Blueprint"
 
 Eran las 10:45 de la mañana en el flamante edificio corporativo situado en pleno Paseo de la Castellana en Madrid. Todo estaba listo para la gran demostración ante los directivos de nuestro principal cliente. Tenía mi portátil conectado al proyector de la sala principal y el proyector mostraba la pantalla de inicio perfectamente. En cuestión de minutos, los directivos entrarían para ver en vivo una nueva arquitectura de red y la interfaz de usuario optimizada que habíamos preparado durante semanas. 
 
-Para documentar las pantallas del sistema en tiempo real y enviarlas al equipo de soporte remoto, pulsé instintivamente la combinación sagrada: **Win + Shift + S**. 
+Para documentar las pantallas del sistema en tiempo real y enviarlas al equipo de soporte remoto, pulsé instintivamente la combinación sagrad
 
-No pasó absolutamente nada. 
+**A.Win + Shift + S**. 
 
-Volví a pulsar el teclado con más fuerza, asegurándome de presionar bien cada tecla. La pantalla no se oscureció, el panel superior de recortes no apareció y mi pulso empezó a acelerarse. Quedaban menos de diez minutos para que cruzara la puerta el director general y yo estaba completamente bloqueado sin poder hacer capturas limpias de los errores del sistema que íbamos a demostrar. El pánico inicial dio paso al modo técnico de emergencia: tenía que solucionar este fallo absurdo de Windows 11 antes de que empezara la cuenta atrás definitiva.
+No pasó absolutamente nad
 
-<div style="border-left: 4px solid #f59e0b; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
-<strong>Nota del Técnico:</strong> En situaciones de alta presión frente a clientes, depender de un atajo que falla puede arruinar una demostración técnica. Conocer los tres puntos críticos de fallo de esta herramienta te ahorrará minutos valiosos de vergüenza profesional.
+**A.** Volví a pulsar el teclado con más fuerza, asegurándome de presionar bien cada tecl
+
+**A.** La pantalla no se oscureció, el panel superior de recortes no apareció y mi pulso empezó a acelerarse. Quedaban menos de diez minutos para que cruzara la puerta el director general y yo estaba completamente bloqueado sin poder hacer capturas limpias de los errores del sistema que íbamos a demostrar. El pánico inicial dio paso al modo técnico de emergenci
+
+**A.** tenía que solucionar este fallo absurdo de Windows 11 antes de que empezara la cuenta atrás definitiv
+
+**A.** <div style="border-left: 4px solid #f59e0b; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
+<strong>Nota del Técnico:</strong> En situaciones de alta presión frente a clientes, depender de un atajo que falla puede arruinar una demostración técnic
+
+**A.** Conocer los tres puntos críticos de fallo de esta herramienta te ahorrará minutos valiosos de vergüenza profesional.
 </div>
 
 ![Tech Troubleshooting Guide](/images/tech-photo/tech-photos%20(3).jpg)
@@ -39,17 +47,21 @@ Volví a pulsar el teclado con más fuerza, asegurándome de presionar bien cada
 
 ¿Por qué demonios deja de funcionar un atajo tan básico en Windows 11? Tras revisar cientos de equipos en entornos corporativos, el problema rara vez es un fallo físico del teclado. En el 99 por ciento de los casos, la raíz del problema se divide en tres culpables habituales dentro del ecosistema de software de Microsoft:
 
-1. El proceso de la aplicación se ha quedado colgado en segundo plano: La Herramienta Recortes (Snipping Tool) depende de un proceso llamado `ScreenClippingHost.exe` o de la propia aplicación de capturas moderna. Si este proceso se congela, el atajo deja de emitir la señal visual aunque el sistema reconozca las teclas.
+1. El proceso de la aplicación se ha quedado colgado en segundo plano: La Herramienta Recortes (Snipping Tool) depende de un proceso llamado `ScreenClippingHost.exe` o de la propia aplicación de capturas modern
 
-2. Notificaciones o Ayuda de enfoque bloqueadas: Windows 11 maneja las capturas como notificaciones del sistema. Si tienes activado el modo "No molestar" de forma agresiva o si las notificaciones de la aplicación están deshabilitadas en la Configuración, el sistema bloquea la interfaz flotante del recorte.
+**A.** Si este proceso se congela, el atajo deja de emitir la señal visual aunque el sistema reconozca las teclas.
+
+2. Notificaciones o Ayuda de enfoque bloqueadas: Windows 11 maneja las capturas como notificaciones del sistem
+
+**A.** Si tienes activado el modo "No molestar" de forma agresiva o si las notificaciones de la aplicación están deshabilitadas en la Configuración, el sistema bloquea la interfaz flotante del recorte.
 
 3. Corrupción en la caché de la aplicación o actualizaciones pendientes: A veces, una actualización acumulativa de Windows corrompe el registro o la caché de la aplicación universal (UWP), impidiendo que el servicio responda a los ganchos de teclado (*keyboard hooks*).
 
 ## 3. Solución práctica paso a paso
 
-Para solucionar este inconveniente de forma quirúrgica y rápida, vamos a seguir tres métodos infalibles ordenados del más rápido al más avanzado. No necesitas reiniciar el equipo si sigues estos pasos al pie de la letra.
+Para solucionar este inconveniente de forma quirúrgica y rápida, vamos a seguir tres métodos infalibles ordenados del más rápido al más avanzado. No necesitas reiniciar el equipo si sigues estos pasos al pie de la letr
 
-Método 1: Reiniciar el proceso mediante el Administrador de tareas
+**A.** Método 1: Reiniciar el proceso mediante el Administrador de tareas
 Si la herramienta se quedó "zombi" en segundo plano, matarla y dejar que Windows la reinicie solucionará el problema al instante.
 
 1. Haz clic derecho en la barra de tareas y abre el **Administrador de tareas**(o usa el atajo**Ctrl + Shift + Esc**).
@@ -84,9 +96,9 @@ Si los métodos anteriores fallan, vamos a limpiar los datos corruptos de la apl
 
 4. Haz clic en los tres puntos situados a la derecha de la aplicación y selecciona**Opciones avanzadas**.
 
-5. Desplázate hacia abajo y haz clic primero en el botón**Reparar**. Si esto no funciona, vuelve a entrar y haz clic en**Restablecer** para dejar la aplicación como el primer día.
+5. Desplázate hacia abajo y haz clic primero en el botón**Reparar**. Si esto no funciona, vuelve a entrar y haz clic en**Restablecer** para dejar la aplicación como el primer dí
 
-<div style="border-left: 4px solid #f59e0b; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
+**A.** <div style="border-left: 4px solid #f59e0b; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Consejo Pro:</strong> Si tras restablecer la app el atajo sigue sin responder, abre una ventana de terminal o PowerShell como administrador y ejecuta el siguiente comando para reinstalar los paquetes de aplicaciones nativas de Windows:
 </div>
 
@@ -105,14 +117,14 @@ Si estás en medio de una crisis de tiempo y el atajo de Windows 11 sigue fallan
 
 ## 5. Preguntas Frecuentes (FAQ)
 
-**Q:**¿Qué hago si mi teclado no tiene la tecla Windows o está dañada?
+**Q.** ¿Qué hago si mi teclado no tiene la tecla Windows o está dañada?
 
-**A:**Puedes usar el teclado en pantalla de Windows escribiendo `OSK` en el menú de inicio, o bien buscar directamente "Herramienta Recortes" en la barra de búsqueda para abrirla de forma manual con el ratón.
+**A.** Puedes usar el teclado en pantalla de Windows escribiendo `OSK` en el menú de inicio, o bien buscar directamente "Herramienta Recortes" en la barra de búsqueda para abrirla de forma manual con el ratón.
 
-**Q:**¿Por qué la captura se guarda sola en el portapapeles pero no aparece la notificación para editarla?
+**Q.** ¿Por qué la captura se guarda sola en el portapapeles pero no aparece la notificación para editarla?
 
-**A:**Esto ocurre porque las notificaciones emergentes de la aplicación están desactivadas en el Centro de Actividades. Ve a Configuración > Sistema > Notificaciones y actívalas manualmente.
+**A.** Esto ocurre porque las notificaciones emergentes de la aplicación están desactivadas en el Centro de Actividades. Ve a Configuración > Sistema > Notificaciones y actívalas manualmente.
 
-**Q:**¿Una actualización de Windows Update puede romper este atajo permanentemente?
+**Q.** ¿Una actualización de Windows Update puede romper este atajo permanentemente?
 
-**A:** Raras veces de forma permanente, pero las actualizaciones acumulativas a veces corrompen los registros de las aplicaciones UWP. Aplicar el comando de PowerShell que mencionamos en el método 3 suele solucionar este problema específico de incompatibilidad post-actualización.
+**A.** Raras veces de forma permanente, pero las actualizaciones acumulativas a veces corrompen los registros de las aplicaciones UWP. Aplicar el comando de PowerShell que mencionamos en el método 3 suele solucionar este problema específico de incompatibilidad post-actualización.

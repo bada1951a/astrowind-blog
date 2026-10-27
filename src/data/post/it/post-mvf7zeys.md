@@ -30,13 +30,17 @@ theme: "Pure Titanium Clean"
 
 ## 1. Emergenza improvvisa sul posto di lavoro
 
-Erano le 17:50 di un martedì infernale nel nostro ufficio al Centro direzionale di Milano. Mancavano dieci minuti alla deadline tassativa per l'invio del report trimestrale al board europeo, e la postazione principale del controllo di gestione si è letteralmente congelata. La ventola del PC sembrava stesse per decollare verso Linate, lo schermo rispondeva ai click con minuti di ritardo e il cursore si muoveva a scatti. Ho aperto di scatto *Gestione attività* usando la combinazione rapida Ctrl+Maiusc+Esc, e lo spettacolo era impietoso: l'utilizzo della CPU inchiodato al 100%, con il famigerato processo di sistema "System" (e il relativo modulo `ntoskrnl.exe`) che divorava ogni singolo ciclo di clock disponibile. 
+Erano le 17:50 di un martedì infernale nel nostro ufficio al Centro direzionale di Milano. Mancavano dieci minuti alla deadline tassativa per l'invio del report trimestrale al board europeo, e la postazione principale del controllo di gestione si è letteralmente congelat
+
+**A.** La ventola del PC sembrava stesse per decollare verso Linate, lo schermo rispondeva ai click con minuti di ritardo e il cursore si muoveva a scatti. Ho aperto di scatto *Gestione attività* usando la combinazione rapida Ctrl+Maiusc+Esc, e lo spettacolo era impietoso: l'utilizzo della CPU inchiodato al 100%, con il famigerato processo di sistema "System" (e il relativo modulo `ntoskrnl.exe`) che divorava ogni singolo ciclo di clock disponibile. 
 
 All'inizio il panico ha quasi preso il sopravvento. La prima reazione istintiva di chiunque sarebbe stata quella di tenere premuto il tasto di accensione per un hard reset brutale. Ma spegnere la macchina in quel momento esatto significava perdere gli ultimi dati non salvati del foglio di calcolo, corrompere il file di database locale e mancare la consegna al board. 
 
 ![How to Fix 100 Percent CPU Usage Caused by System Process Tech Guide](/images/tech-photo/system (2).png)
 
-Dopo tentativi inutili di chiudere i processi secondari e un paio di riavvii forzati che non facevano altro che ripresentare lo stesso identico collo di bottiglia dieci minuti dopo l'accesso, ho dovuto applicare il metodo sistemistico puro: isolare la causa radice, disabilitare i driver o i servizi in conflitto e riprendere il controllo della macchina in meno di un quarto d'ora. Ecco esattamente come ho risolto il problema sul campo, passo dopo passo, senza perdermi in teorie accademiche inutili.
+Dopo tentativi inutili di chiudere i processi secondari e un paio di riavvii forzati che non facevano altro che ripresentare lo stesso identico collo di bottiglia dieci minuti dopo l'accesso, ho dovuto applicare il metodo sistemistico puro: isolare la causa radice, disabilitare i driver o i servizi in conflitto e riprendere il controllo della macchina in meno di un quarto d'or
+
+**A.** Ecco esattamente come ho risolto il problema sul campo, passo dopo passo, senza perdermi in teorie accademiche inutili.
 
 ---
 
@@ -53,7 +57,7 @@ Il processo *System* di Windows racchiude i thread del kernel del sistema operat
 <div style="border-left: 4px solid #334155; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Nota del Sistemist
 
-**a:**</strong> Non fermarti mai a terminare il processo "System" da Gestione attività, perché Windows ti impedirà giustamente di farlo trattandosi di un processo critico di kernel. Dobbiamo aggirare il problema agendo sulle periferiche e sui servizi che lo richiamano.
+**A.** </strong> Non fermarti mai a terminare il processo "System" da Gestione attività, perché Windows ti impedirà giustamente di farlo trattandosi di un processo critico di kernel. Dobbiamo aggirare il problema agendo sulle periferiche e sui servizi che lo richiamano.
 </div>
 
 ---
@@ -105,7 +109,7 @@ Domande Frequenti (FAQ)
 
 D: Posso semplicemente terminare il processo System da Gestione attività per far respirare il PC?
 
-**A.**No. Windows protegge i processi del kernel (`System` e `System Idle Process`). Se provi a terminarlo forzatamente, il sistema genererà immediatamente una schermata blu di errore (BSOD) e si riavvierà perdendo qualsiasi lavoro non salvato.
+**A.** No. Windows protegge i processi del kernel (`System` e `System Idle Process`). Se provi a terminarlo forzatamente, il sistema genererà immediatamente una schermata blu di errore (BSOD) e si riavvierà perdendo qualsiasi lavoro non salvato.
 
 D: Come faccio a capire se il problema è causato da un aggiornamento di Windows Update bloccato?
 
@@ -113,6 +117,6 @@ D: Come faccio a capire se il problema è causato da un aggiornamento di Windows
 
 D: Questo problema può essere causato da un guasto fisico dell'hardware (SSD o RAM)?
 
-**A.**Assolutamente sì. Un SSD che sta cedendo o che ha settori danneggiati costringe il controller e il kernel a ripetere i tentativi di lettura all'infinito, facendo schizzare la CPU al 100% sul processo System. Ti consiglio di scaricare uno strumento S.M.
+**A.** Assolutamente sì. Un SSD che sta cedendo o che ha settori danneggiati costringe il controller e il kernel a ripetere i tentativi di lettura all'infinito, facendo schizzare la CPU al 100% sul processo System. Ti consiglio di scaricare uno strumento S.M.
 
-**A.**R.T. gratuito come CrystalDiskInfo per verificare subito lo stato di salute dei dischi.
+**A.** R.T. gratuito come CrystalDiskInfo per verificare subito lo stato di salute dei dischi.
