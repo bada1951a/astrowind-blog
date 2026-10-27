@@ -72,7 +72,7 @@ Nếu switch bị lão hóa, độ đàn hồi của lá đồng suy giảm, th�
 3. Hỏng Hóc Mối Hàn Hoặc Giãn Chân Socket Hot-swap
 Đối với bàn phím mạch hàn (solder), các mối thiếc dưới đáy PCB sau thời gian chịu lực gõ mạnh có thể bị nứt chân chim (cold solder joint). Đối với bàn phím hỗ trợ thay switch nhanh (Hot-swap), hai ngàm kẹp bằng đồng của socket Kailh hoặc Gateron dưới bo mạch có thể bị toét rộng ra do rút cắm switch sai góc, dẫn đến tình trạng mất tiếp xúc chập chờn – lúc bấm ăn, lúc bấm trơ r
 
-**A.** ---
+A. ---
 
 Quy Trình Xử Lý Thực Chiến (Runbook Step-by-Step)
 

@@ -30,7 +30,7 @@ theme: "Rosewood Hardware Guide"
 
 ## 1. Tình huống sự cố khẩn cấp tại văn phòng
 
-**Q1.** 0 phút nữa là đến giờ sếp tổng họp chiến lược quý để duyệt ngân sách IT, tự nhiên cái máy trạm của ông Kế toán trưởng lăn ra chứng "màn hình đen xì". Quạt tản nhiệt nước hú lên như máy bay phản lực cất cánh, đèn LED trên Mainboard sáng rực, bàn phím gõ NumLock không thèm nhấp nháy một cái. Nhìn mặt ổng lúc đó tái mét, mồ hôi hột tuôn rơi vì toàn bộ file báo cáo dòng tiền năm chưa kịp backup nằm trọn trong đó. Đứng sau lưng thở dốc, mẹ kiếp, cảm giác cái ghế IT của mình lúc đó nó lung lay dữ dội hơn bao giờ hết.
+Q1. 0 phút nữa là đến giờ sếp tổng họp chiến lược quý để duyệt ngân sách IT, tự nhiên cái máy trạm của ông Kế toán trưởng lăn ra chứng "màn hình đen xì". Quạt tản nhiệt nước hú lên như máy bay phản lực cất cánh, đèn LED trên Mainboard sáng rực, bàn phím gõ NumLock không thèm nhấp nháy một cái. Nhìn mặt ổng lúc đó tái mét, mồ hôi hột tuôn rơi vì toàn bộ file báo cáo dòng tiền năm chưa kịp backup nằm trọn trong đó. Đứng sau lưng thở dốc, mẹ kiếp, cảm giác cái ghế IT của mình lúc đó nó lung lay dữ dội hơn bao giờ hết.
 
 Góc nhìn chuyên sâu từ phần cứng: Triệu chứng "Hồn lìa khỏi xác"
 
@@ -42,7 +42,7 @@ Trong môi trường văn phòng doanh nghiệp, có 3 thủ phạm chính gây 
 
 1. Oxi hóa chân tiếp điểm vàng (Golden Fingers): Độ ẩm không khí kết hợp với bụi mịn lọt qua khe case lâu ngày tạo thành một lớp màng cách điện mỏng như tờ giấy lụ
 
-**A.** 2. Lỏng khe cắm do sốc nhiệt hoặc rung lắc: Máy dùng lâu năm, quá trình co giãn vì nhiệt làm chân socket RAM bị hở nhẹ chân tín hiệu (Pins).
+A. 2. Lỏng khe cắm do sốc nhiệt hoặc rung lắc: Máy dùng lâu năm, quá trình co giãn vì nhiệt làm chân socket RAM bị hở nhẹ chân tín hiệu (Pins).
 
 3. Lỗi phân vùng bus hoặc dung tích RAM xung đột: Xảy ra sau khi anh em vừa táy máy nâng cấp thêm thanh RAM mới nhưng chưa clear CMOS hoặc bus RAM không đồng bộ.
 

@@ -75,7 +75,7 @@ Công cụ kinh điển này đôi khi tìm thấy những thứ mà giao diện
 * Chọn ổ đĩa C: và bấm OK.
 * Khi bảng thông báo hiện ra, bấm vào nút Dọn dẹp tệp hệ thống (Clean up system files) ở góc dưới bên trái, chọn lại ổ C một lần nữ
 
-**A.** * Tích chọn toàn bộ các ô có dung lượng lớn (đặc biệt chú ý ô *Windows Update Cleanup* thường chiếm từ 5GB đến 15GB). Nhấn OK để tiến hành xóa sạch sẽ.
+A. * Tích chọn toàn bộ các ô có dung lượng lớn (đặc biệt chú ý ô *Windows Update Cleanup* thường chiếm từ 5GB đến 15GB). Nhấn OK để tiến hành xóa sạch sẽ.
 
 Bước 3: Di chuyển vị trí thư mục Downloads ra khỏi ổ C
 

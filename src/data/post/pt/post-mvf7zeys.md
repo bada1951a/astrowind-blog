@@ -34,7 +34,7 @@ Eram exatamente 13:45 em um escritório na Avenida Paulista, São Paulo. A reuni
 
 Se você já passou por isso, sabe que o desespero bate na hor
 
-**A.** Reiniciar a máquina não adiantava, pois o Windows travava na tela de carregamento ou voltava com o mesmo gargalo infernal devido a indexações corrompidas, serviços de atualização travados ou conflitos de driver de hardware. 
+A. Reiniciar a máquina não adiantava, pois o Windows travava na tela de carregamento ou voltava com o mesmo gargalo infernal devido a indexações corrompidas, serviços de atualização travados ou conflitos de driver de hardware. 
 
 ![How to Fix 100 Percent CPU Usage Caused by System Process Tech Guide](/images/tech-photo/storage (3).png)
 
@@ -61,7 +61,7 @@ Esqueça teorias complexas. Vamos direto aos comandos e cliques que funcionam no
 <div style="border-left: 4px solid #a6e22e; padding: 12px 16px; margin: 20px 0; background-color: rgba(166,226,46,0.08); border-radius: 4px; color: #111827;">
 <strong>Dica do Especialist
 
-**A.** </strong> Se a máquina estiver totalmente travada, force o desligamento segurando o botão Power por 10 segundos e ligue-a novamente em <strong>Modo de Segurança</strong> (pressionando F8 ou Shift + Reiniciar) caso o erro persista na inicialização normal.
+A. </strong> Se a máquina estiver totalmente travada, force o desligamento segurando o botão Power por 10 segundos e ligue-a novamente em <strong>Modo de Segurança</strong> (pressionando F8 ou Shift + Reiniciar) caso o erro persista na inicialização normal.
 </div>
 
 Passo 1: Identificando o culpado no Gerenciador de Tarefas
@@ -108,9 +108,9 @@ Alerta Vermelho do Técnico: Cuidados Essenciais
 <div style="border-left: 4px solid #f92672; padding: 12px 16px; margin: 20px 0; background-color: rgba(249,38,114,0.08); border-radius: 4px; color: #111827;">
 <strong>Atenção com a Temperatur
 
-**A.** </strong> Processadores rodando a 100% de uso contínuo ultrapassam facilmente os 85°C a 95°C em poucos minutos. Certifique-se de que o cooler do notebook ou desktop não está bloqueado por poeir
+A. </strong> Processadores rodando a 100% de uso contínuo ultrapassam facilmente os 85°C a 95°C em poucos minutos. Certifique-se de que o cooler do notebook ou desktop não está bloqueado por poeir
 
-**A.** Se a máquina desligar sozinha por superaquecimento durante um procedimento de reparo de arquivos do sistema, você pode corromper permanentemente o registro do Windows.
+A. Se a máquina desligar sozinha por superaquecimento durante um procedimento de reparo de arquivos do sistema, você pode corromper permanentemente o registro do Windows.
 </div>
 
 ---

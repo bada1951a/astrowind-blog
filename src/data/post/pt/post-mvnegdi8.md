@@ -18,7 +18,7 @@ O relógio correndo, o diretor executivo esperando a retomada da reunião, e o b
 <div style="border-left: 4px solid #a6e22e; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Dica do Especialist
 
-**A.** </strong> Nunca force o desligamento bruto (segurando o botão Power) se houver arquivos de spool ou drivers de mídia travados. Isso pode corromper a tabela de alocação de arquivos (NTFS) e piorar ainda mais a latência DPC.
+A. </strong> Nunca force o desligamento bruto (segurando o botão Power) se houver arquivos de spool ou drivers de mídia travados. Isso pode corromper a tabela de alocação de arquivos (NTFS) e piorar ainda mais a latência DPC.
 </div>
 
 ![Tech Troubleshooting Guide](/images/tech-photo/tech-photo%20(7).jpg)
@@ -27,30 +27,30 @@ O relógio correndo, o diretor executivo esperando a retomada da reunião, e o b
 
 Por que o Windows insiste em bloquear a exclusão de arquivos mesmo quando fechamos os aplicativos visíveis? Na minha rotina de manutenção de redes e hardware, identifico três principais vilões para esse comportamento irritante:
 
-* **Processos em Segundo Plano (Background Services):** Aplicativos como suítes de videoconferência, utilitários de webcam e antivírus mantêm handles (ponteiros de arquivo) abertos na memória RAM, mesmo após a interface gráfica ser fechad
+* Processos em Segundo Plano (Background Services): Aplicativos como suítes de videoconferência, utilitários de webcam e antivírus mantêm handles (ponteiros de arquivo) abertos na memória RAM, mesmo após a interface gráfica ser fechad
 
-**A.** * **Locks de Hardware e DPC Latency:** Quando um driver de dispositivo (como o da placa de som ou da placa de captura de vídeo) falha em liberar o buffer, o sistema mantém o arquivo de log ou cache preso para evitar crash de tela azul (BSOD).
-* **Indexação e Serviço de Criptografi
+A. * **Locks de Hardware e DPC Latency:** Quando um driver de dispositivo (como o da placa de som ou da placa de captura de vídeo) falha em liberar o buffer, o sistema mantém o arquivo de log ou cache preso para evitar crash de tela azul (BSOD).
+* Indexação e Serviço de Criptografi
 
-**A.O indexador de arquivos do Windows (Windows Search) ou o System Insights tenta ler o arquivo milissegundos antes da exclusão, criando um conflito de acesso concorrente.
+A.O indexador de arquivos do Windows (Windows Search) ou o System Insights tenta ler o arquivo milissegundos antes da exclusão, criando um conflito de acesso concorrente.
 
 ## 3. Guia prático de resolução passo a passo
 
 Quando a interface gráfica padrão falha, nós, profissionais de TI, recorremos a métodos cirúrgicos via linha de comando ou ferramentas nativas do sistem
 
-**A.** Siga estes passos para resolver o problema de forma definitiv
+A. Siga estes passos para resolver o problema de forma definitiv
 
-**A.** ### Passo 1: Encerrando processos zumbis pelo Gerenciador de Tarefas
+A. ### Passo 1: Encerrando processos zumbis pelo Gerenciador de Tarefas
 Se o arquivo pertencer a um software que se recusou a fechar completamente:
-1. Pressione as teclas**Ctrl + Shift + Esc**para abrir o**Gerenciador de Tarefas**.
+1. Pressione as teclasCtrl + Shift + Esc**para abrir o**Gerenciador de Tarefas.
 
-2. Na aba**Processos**, procure pelo aplicativo suspeito (por exemplo, o utilitário da câmera ou a ferramenta de conferência).
+2. Na abaProcessos, procure pelo aplicativo suspeito (por exemplo, o utilitário da câmera ou a ferramenta de conferência).
 
-3. Clique com o botão direito sobre ele e selecione**Finalizar Tarefa**. Se persistir, vá até a aba**Detalhes**, localize o arquivo executável correspondente, clique com o botão direito e escolha**Encerrar Processo**.
+3. Clique com o botão direito sobre ele e selecioneFinalizar Tarefa**. Se persistir, vá até a aba**Detalhes, localize o arquivo executável correspondente, clique com o botão direito e escolhaEncerrar Processo.
 
 ### Passo 2: Desbloqueando o arquivo via Prompt de Comando (CMD)
 Se o Gerenciador de Tarefas não for suficiente, vamos usar o terminal como administrador:
-1. Clique no menu Iniciar, digite `cmd`, clique com o botão direito em**Prompt de Comando**e selecione**Executar como Administrador**.
+1. Clique no menu Iniciar, digite `cmd`, clique com o botão direito emPrompt de Comando**e selecione**Executar como Administrador.
 
 2. Utilize o comando abaixo para identificar e fechar tarefas travadas ou use o comando de exclusão forçada se tiver o caminho exato.
 
@@ -63,28 +63,28 @@ taskkill /f /im nome_do_processo.exe
 ### Passo 3: Ajustando permissões e inicialização limpa (Configurações)
 Caso o arquivo continue protegido por restrições de segurança do sistem
 
-**A.** 1. Abra as**Configurações**do Windows ou vá direto ao**Painel de Controle**.
+A. 1. Abra as**Configurações**do Windows ou vá direto aoPainel de Controle.
 
 2. Verifique se há atualizações pendentes de drivers de hardware que possam estar causando o travamento dos buffers.
 
-3. Se necessário, reinicie o computador em**Modo de Segurança**(segurando a tecla Shift enquanto clica em Reiniciar, indo em**Solucionar problemas**>**Opções avançadas**>**Configurações de Inicialização**). No modo seguro, nenhum driver de terceiro bloqueia arquivos de log, permitindo a exclusão imediat
+3. Se necessário, reinicie o computador emModo de Segurança(segurando a tecla Shift enquanto clica em Reiniciar, indo emSolucionar problemas**>**Opções avançadas**>**Configurações de Inicialização). No modo seguro, nenhum driver de terceiro bloqueia arquivos de log, permitindo a exclusão imediat
 
-**A.** ## 4. Recomendações e alertas de especialistas
+A. ## 4. Recomendações e alertas de especialistas
 
-Trabalhar com suporte corporativo em São Paulo me ensinou que a prevenção é o melhor remédio contra falhas de hardware e arquivos bloqueados. Sempre mantenha seus drivers de chipset, áudio e vídeo atualizados diretamente pelo**Gerenciador de Dispositivos**ou pelos utilitários oficiais dos fabricantes. 
+Trabalhar com suporte corporativo em São Paulo me ensinou que a prevenção é o melhor remédio contra falhas de hardware e arquivos bloqueados. Sempre mantenha seus drivers de chipset, áudio e vídeo atualizados diretamente peloGerenciador de Dispositivosou pelos utilitários oficiais dos fabricantes. 
 
-Evite o uso de softwares de terceiros "desbloqueadores de arquivos" baixados de fontes duvidosas, pois muitos vêm acompanhados de adwares ou podem corromper permissões NTFS críticas do diretório**System32**. Prefira sempre os métodos nativos do Windows (`taskkill`, PowerShell ou o modo de segurança).
+Evite o uso de softwares de terceiros "desbloqueadores de arquivos" baixados de fontes duvidosas, pois muitos vêm acompanhados de adwares ou podem corromper permissões NTFS críticas do diretórioSystem32. Prefira sempre os métodos nativos do Windows (`taskkill`, PowerShell ou o modo de segurança).
 
 ## 5. Perguntas Frecuentes (FAQ)
 
-**Q.** Posso usar o comando DEL comum no Prompt para apagar arquivos bloqueados?
+Q. Posso usar o comando DEL comum no Prompt para apagar arquivos bloqueados?
 
-**A.** Não diretamente. Se o arquivo estiver aberto por outro processo ativo na memória, o comando `del` retornará um erro de acesso negado. É necessário encerrar o processo responsável primeiro com o `taskkill`.
+A. Não diretamente. Se o arquivo estiver aberto por outro processo ativo na memória, o comando `del` retornará um erro de acesso negado. É necessário encerrar o processo responsável primeiro com o `taskkill`.
 
-**Q.** O que causa o aumento da DPC Latency durante reuniões online?
+Q. O que causa o aumento da DPC Latency durante reuniões online?
 
-**A.** A latência DPC (Deferred Procedure Call) geralmente ocorre quando drivers de hardware (especialmente placas de som USB, webcams ou adaptadores Wi-Fi) demoram muito para processar interrupções, fazendo o sistema travar arquivos de cache e gerar engasgos na transmissão.
+A. A latência DPC (Deferred Procedure Call) geralmente ocorre quando drivers de hardware (especialmente placas de som USB, webcams ou adaptadores Wi-Fi) demoram muito para processar interrupções, fazendo o sistema travar arquivos de cache e gerar engasgos na transmissão.
 
-**Q.** É seguro deletar arquivos de cache e logs temporários com o computador ligado?
+Q. É seguro deletar arquivos de cache e logs temporários com o computador ligado?
 
-**A.** Sim, desde que não sejam arquivos essenciais do sistema operacional em execução. Arquivos em pastas temporárias (`temp` ou `%userprofile%\AppData\Local\Temp`) criados por aplicativos de terceiros podem ser limpos sem riscos para liberar espaço e resolver conflitos de travamento.
+A. Sim, desde que não sejam arquivos essenciais do sistema operacional em execução. Arquivos em pastas temporárias (`temp` ou `%userprofile%\AppData\Local\Temp`) criados por aplicativos de terceiros podem ser limpos sem riscos para liberar espaço e resolver conflitos de travamento.

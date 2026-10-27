@@ -54,7 +54,7 @@ Bước 5: Nhìn xuống phần Shutdown settings ở dưới cùng của cửa 
 
 Sau khi hoàn tất quy trình trên, bạn hãy thử bấm Shutdown một lần nữa để kiểm tr
 
-**A.** Đèn báo nguồn trên thân máy và quạt tản nhiệt sẽ tắt hẳn sau vài giây, chấm dứt hoàn toàn nỗi lo máy tự nóng lên khi cất trong balo.
+A. Đèn báo nguồn trên thân máy và quạt tản nhiệt sẽ tắt hẳn sau vài giây, chấm dứt hoàn toàn nỗi lo máy tự nóng lên khi cất trong balo.
 
 Trong quá trình xử lý sự cố này ngoài đời thực, tôi nhận thấy có một số điểm kỹ thuật quan trọng mà người dùng cần lưu ý để tránh các lỗi phát sinh liên quan đến phần cứng:
 
@@ -66,14 +66,14 @@ Cuối cùng, hãy tập thói quen kiểm tra đèn tín hiệu nguồn trên l
 
 Dưới đây là các câu hỏi thường gặp khi xử lý lỗi máy tính không tắt nguồn mà người dùng hay thắc mắc:
 
-**Q1.** Tại sao tôi đã tắt Fast Startup rồi nhưng thỉnh thoảng máy vẫn không chịu tắt nguồn?
+Q1. Tại sao tôi đã tắt Fast Startup rồi nhưng thỉnh thoảng máy vẫn không chịu tắt nguồn?
 
-**A1.** Trường hợp này thường do các tiến trình nền của ứng dụng bên thứ ba như phần mềm diệt virus, Steam hoặc các dịch vụ ngầm của Windows chưa kịp giải phóng dung lượng trước khi lệnh Shutdown được thực thi. Bạn có thể thử khởi động lại máy trước khi bấm tắt nguồn, hoặc kiểm tra bằng Task Manager để đóng các ứng dụng đang bị treo.
+A1. Trường hợp này thường do các tiến trình nền của ứng dụng bên thứ ba như phần mềm diệt virus, Steam hoặc các dịch vụ ngầm của Windows chưa kịp giải phóng dung lượng trước khi lệnh Shutdown được thực thi. Bạn có thể thử khởi động lại máy trước khi bấm tắt nguồn, hoặc kiểm tra bằng Task Manager để đóng các ứng dụng đang bị treo.
 
-**Q2.** Việc tắt tính năng Fast Startup có làm giảm tuổi thọ của ổ cứng SSD không?
+Q2. Việc tắt tính năng Fast Startup có làm giảm tuổi thọ của ổ cứng SSD không?
 
-**A2.** Hoàn toàn không. Ngược lại, việc tắt Fast Startup giúp giảm bớt số lượng thao tác ghi dữ liệu tạm thời vào phân vùng hệ thống mỗi lần tắt máy, từ đó giúp kéo dài tuổi thọ cho ổ cứng SSD của bạn theo thời gian.
+A2. Hoàn toàn không. Ngược lại, việc tắt Fast Startup giúp giảm bớt số lượng thao tác ghi dữ liệu tạm thời vào phân vùng hệ thống mỗi lần tắt máy, từ đó giúp kéo dài tuổi thọ cho ổ cứng SSD của bạn theo thời gian.
 
-**Q3.** Sau khi cập nhật Windows, tại sao tùy chọn Fast Startup lại tự động bật lại?
+Q3. Sau khi cập nhật Windows, tại sao tùy chọn Fast Startup lại tự động bật lại?
 
-**A3.** Một số bản cập nhật lớn tính năng (Feature Update) của hệ điều hành Windows có xu hướng khôi phục lại các thiết lập mặc định ban đầu của hệ thống. Do đó, nếu bạn thấy hiện tượng máy không tắt nguồn lặp lại sau khi update, hãy truy cập lại Control Panel và thực hiện lại thao tác vô hiệu hóa tính năng này.
+A3. Một số bản cập nhật lớn tính năng (Feature Update) của hệ điều hành Windows có xu hướng khôi phục lại các thiết lập mặc định ban đầu của hệ thống. Do đó, nếu bạn thấy hiện tượng máy không tắt nguồn lặp lại sau khi update, hãy truy cập lại Control Panel và thực hiện lại thao tác vô hiệu hóa tính năng này.

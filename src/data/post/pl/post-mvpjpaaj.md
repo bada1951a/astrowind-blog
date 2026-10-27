@@ -32,7 +32,7 @@ Drugą niezwykle częstą przyczyną tego zjawiska są niewidoczne procesy w tle
 
 Warto również zwrócić uwagę na interferencję ze strony zewnętrznego oprogramowania zabezpieczającego. Nowoczesne pakiety antywirusowe w trakcie operacji zapisu na dysku SSD wykonują głęboką analizę heurystyczną pliku pod kątem obecności złośliwego kodu. Jeżeli plik jest przesyłany z zewnętrznego źródła mobilnego lub modyfikowany w folderze synchronizowanym przez chmurę, mechanizm skanowania w tle może przytrzymać uchwyt pliku na kilka lub kilkanaście sekund dłużej. W skrajnych przypadkach, gdy plik jest uszkodzony, proces skanowania wpada w pętlę nieskończoną, co skutkuje stałym zablokowaniem obiektu i brakiem reakcji ze strony systemu Windows na standardowe próby jego usunięci
 
-**A.** ## 3. Praktyczne rozwiązanie krok po kroku
+A. ## 3. Praktyczne rozwiązanie krok po kroku
 
 Aby skutecznie i bezpiecznie usunąć uporczywy, zablokowany plik bez konieczności restartowania całego komputera, należy zastosować jedną z trzech sprawdzonych metod inżynieryjnych. Poniżej przedstawiam procedury krok po kroku dla najbardziej efektywnych technik rozwiązywania tego problemu w środowisku korporacyjnym.
 
@@ -40,18 +40,18 @@ Aby skutecznie i bezpiecznie usunąć uporczywy, zablokowany plik bez konieczno�
 
 Pierwsza metoda opiera się na graficznym interfejsie użytkownika systemu Windows i pozwala na namierzenie oraz natychmiastowe ubicie procesu odpowiedzialnego za blokadę.
 
-1. Wciśnij kombinację klawiszy `Ctrl + Shift + Esc`, aby uruchomić **Menedżer zadań**.
-2. Jeśli okno otworzy się w wersji uproszczonej, kliknij przycisk**Więcej szczegółów**na samym dole.
-3. Przejdź do zakładki**Procesy**i przeszukaj listę pod kątem aplikacji, która mogła korzystać z pliku (np. Microsoft Excel, Adobe Acrobat, czy usługi hostujące).
-4. Kliknij prawym przyciskiem myszy na podejrzany proces i wybierz opcję**Zakończ zadanie**.
-5. Jeśli proces nadal figuruje w pamięci, przejdź do zakładki**Szczegóły**, odszukaj plik wykonywalny (np. `EXCEL.EXE`), kliknij go prawym przyciskiem myszy i wybierz opcję**Zakończ drzewo procesów**, co wymusi zamknięcie wszystkich powiązanych wątków.
+1. Wciśnij kombinację klawiszy `Ctrl + Shift + Esc`, aby uruchomić Menedżer zadań.
+2. Jeśli okno otworzy się w wersji uproszczonej, kliknij przyciskWięcej szczegółówna samym dole.
+3. Przejdź do zakładkiProcesyi przeszukaj listę pod kątem aplikacji, która mogła korzystać z pliku (np. Microsoft Excel, Adobe Acrobat, czy usługi hostujące).
+4. Kliknij prawym przyciskiem myszy na podejrzany proces i wybierz opcjęZakończ zadanie.
+5. Jeśli proces nadal figuruje w pamięci, przejdź do zakładkiSzczegóły, odszukaj plik wykonywalny (np. `EXCEL.EXE`), kliknij go prawym przyciskiem myszy i wybierz opcjęZakończ drzewo procesów, co wymusi zamknięcie wszystkich powiązanych wątków.
 6. Wróć do folderu z plikiem i spróbuj go usunąć, naciskając klawisz `Delete`.
 
 ### Metoda 2: Użycie konsoli poleceń PowerShell z uprawnieniami administratora
 
 Gdy interfejs graficzny zawodzi, najbardziej niezawodnym narzędziem staje się wiersz poleceń, który pozwala na bezpośrednią interakcję z jądrem systemu Windows i wymuszenie kasowania zasobów.
 
-1. Kliknij menu Start, wpisz `powershell`, a następnie kliknij opcję**Uruchom jako administrator**.
+1. Kliknij menu Start, wpisz `powershell`, a następnie kliknij opcjęUruchom jako administrator.
 2. Aby zlokalizować i zamknąć proces blokujący plik za pomocą narzędzia systemowego, wpisz komendę sprawdzającą lub skorzystaj bezpośrednio z narzędzia `taskkill`.
 3. Wpisz następujące polecenie, zastępując nazwę procesu właściwą nazwą aplikacji blokującej (np. `excel.exe`):
    ```cmd
@@ -67,9 +67,9 @@ Gdy interfejs graficzny zawodzi, najbardziej niezawodnym narzędziem staje się 
 
 Często blokadę zakładają procesy systemowe samego Eksploratora Windows. Zresetowanie tego komponentu natychmiast zwalnia wszystkie uchwyty przypisane do otwartych folderów.
 
-1. Uruchom ponownie**Menedżer zadań**za pomocą skrótu `Ctrl + Shift + Esc`.
-2. W zakładce**Procesy**odszukaj proces o nazwie**Eksplorator Windows**(często na samym końcu listy w sekcji procesów systemu Windows).
-3. Kliknij na niego prawym przyciskiem myszy i wybierz opcję**Uruchom ponownie**. Ekran na ułamek sekundy zgaśnie, pasek zadań zniknie i pojawi się ponownie, co oznacza pomyślny restart powłoki graficznej.
+1. Uruchom ponownieMenedżer zadańza pomocą skrótu `Ctrl + Shift + Esc`.
+2. W zakładceProcesy**odszukaj proces o nazwie**Eksplorator Windows(często na samym końcu listy w sekcji procesów systemu Windows).
+3. Kliknij na niego prawym przyciskiem myszy i wybierz opcjęUruchom ponownie. Ekran na ułamek sekundy zgaśnie, pasek zadań zniknie i pojawi się ponownie, co oznacza pomyślny restart powłoki graficznej.
 4. Przejdź do problematycznego folderu i wykonaj operację usunięcia pliku. Uchwyty folderowe powinny być już całkowicie zwolnione.
 
 ## 4. Wskazówki i ostrzeżenia eksperta IT
@@ -80,14 +80,14 @@ Aby skutecznie unikać problemów z zablokowanymi plikami w przyszłości, warto
 
 ## 5. Najczęściej zadawane pytania (FAQ)
 
-**Q1.** Co zrobić, gdy nawet po zamknięciu wszystkich procesów w Menedżerze zadań system nadal twierdzi, że plik jest w użyciu?
+Q1. Co zrobić, gdy nawet po zamknięciu wszystkich procesów w Menedżerze zadań system nadal twierdzi, że plik jest w użyciu?
 
-**A1.** Taka sytuacja zazwyczaj oznacza, że blokada jest utrzymywana przez ukrytą usługę systemową, taką jak Windows Search, bufor wydruku lub oprogramowanie antywirusowe skanujące plik w tle. W takim przypadku najlepszym rozwiązaniem jest tymczasowe przełączenie komputera w tryb awaryjny (Safe Mode) lub skorzystanie z zaawansowanego wiersza poleceń w celu zmiany uprawnień pliku i jego natychmiastowego skasowania z poziomu środowiska odzyskiwania systemu.
+A1. Taka sytuacja zazwyczaj oznacza, że blokada jest utrzymywana przez ukrytą usługę systemową, taką jak Windows Search, bufor wydruku lub oprogramowanie antywirusowe skanujące plik w tle. W takim przypadku najlepszym rozwiązaniem jest tymczasowe przełączenie komputera w tryb awaryjny (Safe Mode) lub skorzystanie z zaawansowanego wiersza poleceń w celu zmiany uprawnień pliku i jego natychmiastowego skasowania z poziomu środowiska odzyskiwania systemu.
 
-**Q2.** Czy wymuszone usunięcie pliku za pomocą konsoli PowerShell może uszkodzić system operacyjny?
+Q2. Czy wymuszone usunięcie pliku za pomocą konsoli PowerShell może uszkodzić system operacyjny?
 
-**A2.** Użycie polecenia `del /f` w odniesieniu do zwykłych plików użytkownika, takich jak dokumenty tekstowe, arkusze czy pliki PDF, jest całkowicie bezpieczne dla stabilności systemu Windows. Zagrożenie pojawia się wyłącznie wtedy, gdy użytkownik podejmie próbę siłowego usunięcia krytycznych plików systemowych znajdujących się w katalogu `System32` lub plików rozruchowych, co może skutkować uniemożliwieniem ponownego uruchomienia komputer
+A2. Użycie polecenia `del /f` w odniesieniu do zwykłych plików użytkownika, takich jak dokumenty tekstowe, arkusze czy pliki PDF, jest całkowicie bezpieczne dla stabilności systemu Windows. Zagrożenie pojawia się wyłącznie wtedy, gdy użytkownik podejmie próbę siłowego usunięcia krytycznych plików systemowych znajdujących się w katalogu `System32` lub plików rozruchowych, co może skutkować uniemożliwieniem ponownego uruchomienia komputer
 
-**A.Q3.** Dlaczego pendrive lub dysk zewnętrzny zgłasza błąd "Urządzenie jest obecnie używane" mimo zamknięcia wszystkich okien?
+A.Q3. Dlaczego pendrive lub dysk zewnętrzny zgłasza błąd "Urządzenie jest obecnie używane" mimo zamknięcia wszystkich okien?
 
-**A3.** Ten powszechny problem wynika z faktu, że system Windows domyślnie stosuje buforowanie zapisu (optymalizacja wydajności) dla zewnętrznych nośników danych. Oznacza to, że procesy systemowe w tle nadal przesyłają lub indeksują dane na dysku USB, nawet jeśli okno Eksploratora zostało zamknięte. Aby temu zaradzić, należy skorzystać z bezpiecznego usuwania sprzętu w zasobniku systemowym lub wymusić odmontowanie wolumenu za pomocą konsoli zarządzania dyskami.
+A3. Ten powszechny problem wynika z faktu, że system Windows domyślnie stosuje buforowanie zapisu (optymalizacja wydajności) dla zewnętrznych nośników danych. Oznacza to, że procesy systemowe w tle nadal przesyłają lub indeksują dane na dysku USB, nawet jeśli okno Eksploratora zostało zamknięte. Aby temu zaradzić, należy skorzystać z bezpiecznego usuwania sprzętu w zasobniku systemowym lub wymusić odmontowanie wolumenu za pomocą konsoli zarządzania dyskami.

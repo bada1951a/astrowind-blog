@@ -78,7 +78,7 @@ Bước 2: Chạy lệnh quét và phục hồi tệp hệ thống bằng SFC v�
 
    `DISM /Online /Cleanup-Image /RestoreHealth`
 
-**Q6.** Khởi động lại máy tính (`Restart`) ngay sau khi hoàn tất.
+Q6. Khởi động lại máy tính (`Restart`) ngay sau khi hoàn tất.
 
 Bước 3: Tinh chỉnh lại dịch vụ Windows Update và SysMain
 Nhiều trường hợp tiến trình System cố gắng tải xuống hoặc cài đặt bản cập nhật lỗi ngầm:

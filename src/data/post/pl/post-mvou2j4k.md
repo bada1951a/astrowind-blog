@@ -23,11 +23,11 @@ Zanim przejdziemy do klikania, rzućmy okiem na zaplecze techniczne. Dlaczego Wi
 
 1. **Uporczywe procesy w tle i usługi:** Program (często antywirus, indeksator plików Windows Search, czy zawieszona instancja pakietu Office) nadal trzyma uchwyt (*file handle*) do zasobu, nawet jeśli okno aplikacji zostało zamknięte.
 
-2. **Zawieszone procesy systemowe (Zombie Processes):**Aplikacja uległa awarii, ale jej rdzeń nadal wisi w pamięci RAM, blokując dostęp do powiązanych plików tymczasowych lub baz danych.
+2. Zawieszone procesy systemowe (Zombie Processes):Aplikacja uległa awarii, ale jej rdzeń nadal wisi w pamięci RAM, blokując dostęp do powiązanych plików tymczasowych lub baz danych.
 
-3.**Brak uprawnień administratora lub uszkodzony ACL:**Plik został utworzony przez inną usługę systemową (np.**TrustedInstaller**) i Twoje konto użytkownika, mimo praw administratora, natrafia na blokadę bezpieczeństw
+3.Brak uprawnień administratora lub uszkodzony ACL:Plik został utworzony przez inną usługę systemową (np.TrustedInstaller) i Twoje konto użytkownika, mimo praw administratora, natrafia na blokadę bezpieczeństw
 
-**A.** <div style="border-left: 4px solid #a6e22e; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
+A. <div style="border-left: 4px solid #a6e22e; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Wskazówka serwisu:</strong> Zanim sięgniesz po drastyczne metody wymuszonego kasowania, upewnij się, że plik nie jest krytycznym komponentem systemu operacyjnego. Usunięcie pliku blokowanego przez kluczowe usługi Windows może doprowadzić do ekranu BSOD!
 </div>
 
@@ -40,24 +40,24 @@ Najpierw sprawdzamy, co dokładnie trzyma plik.
 
 1. Otwórz**Menedżer zadań**(skrót**Ctrl + Shift + Esc**).
 
-2. Przejdź do zakładki**Procesy**lub**Szczegóły**.
+2. Przejdź do zakładki**Procesy**lubSzczegóły.
 
-3. Jeśli wiesz, jaka aplikacja mogła utworzyć plik, znajdź ją na liście, kliknij prawym przyciskiem myszy i wybierz**Zakończ zadanie**.
+3. Jeśli wiesz, jaka aplikacja mogła utworzyć plik, znajdź ją na liście, kliknij prawym przyciskiem myszy i wybierzZakończ zadanie.
 
 ### Krok 2: Użycie wbudowanego monitora zasobów (Resource Monitor)
 Jeśli nie znasz nazwy procesu blokującego:
-1. Wpisz w menu Start frazę `resmon` i otwórz**Monitor zasobów**.
+1. Wpisz w menu Start frazę `resmon` i otwórzMonitor zasobów.
 
 2. Przejdź do zakładki**CPU**.
 
-3. W sekcji**Skojarzone uchwyty**w polu wyszukiwania wpisz nazwę pliku lub jego rozszerzenie.
+3. W sekcjiSkojarzone uchwytyw polu wyszukiwania wpisz nazwę pliku lub jego rozszerzenie.
 
-4. Zobaczysz dokładną listę procesów, które trzymają ten plik. Kliknij na proces prawym przyciskiem myszy i wybierz**Zakończ proces**.
+4. Zobaczysz dokładną listę procesów, które trzymają ten plik. Kliknij na proces prawym przyciskiem myszy i wybierzZakończ proces.
 
 ### Krok 3: Wykorzystanie wiersza poleceń (PowerShell / CMD)
 Dla administratorów i zaawansowanych użytkowników najszybszą metodą jest użycie konsoli w trybie administrator
 
-**A.** Otwórz**Terminal**lub**Wiersz poleceń**jako administrator i skorzystaj z poniższych komend:
+A. Otwórz**Terminal**lubWiersz poleceńjako administrator i skorzystaj z poniższych komend:
 
 ```cmd
 # Wymuszenie zamknięcia pliku lub sprawdzenie zajętości
@@ -68,24 +68,24 @@ del /f /q "C:\sciezka\do\zablokowanego_pliku.ext"
 ```
 
 ### Krok 4: Ustawienia i tryb awaryjny
-Jeśli plik nadal stawia opór, najprostszym rozwiązaniem jest ponowne uruchomienie systemu w**Ustawienia > System > Odzyskiwanie > Uruchamianie zaawansowane**(Tryb awaryjny / Safe Mode), gdzie żadne zewnętrzne programy biurowe nie blokują dostępu do dysku.
+Jeśli plik nadal stawia opór, najprostszym rozwiązaniem jest ponowne uruchomienie systemu wUstawienia > System > Odzyskiwanie > Uruchamianie zaawansowane(Tryb awaryjny / Safe Mode), gdzie żadne zewnętrzne programy biurowe nie blokują dostępu do dysku.
 
 ## 4. Wskazówki i ostrzeżenia eksperta IT
 
-Jako osoba, która na co dzień ratuje dane i stacje robocze, muszę przypomnieć o jednej kluczowej zasadzie:**ostrożność przede wszystkim**. 
+Jako osoba, która na co dzień ratuje dane i stacje robocze, muszę przypomnieć o jednej kluczowej zasadzie:ostrożność przede wszystkim. 
 
-Nigdy nie używaj narzędzi typu "Force Delete" na ślepo w katalogach systemowych typu `System32` czy `WinSxS`. Jeśli system zgłasza błąd pliku podczas pracy dysku SSD, warto wykonać szybki test kondycji nośnika (np. za pomocą narzędzia**CrystalDiskInfo**lub komendy `chkdsk` w terminalu). Czasami pliki stają się "zablokowane" nie przez programy, lecz przez uszkodzone sektory fizyczne na dysku, a siłowe kasowanie może pogłębić uszkodzenie struktury partycji NTFS.
+Nigdy nie używaj narzędzi typu "Force Delete" na ślepo w katalogach systemowych typu `System32` czy `WinSxS`. Jeśli system zgłasza błąd pliku podczas pracy dysku SSD, warto wykonać szybki test kondycji nośnika (np. za pomocą narzędziaCrystalDiskInfolub komendy `chkdsk` w terminalu). Czasami pliki stają się "zablokowane" nie przez programy, lecz przez uszkodzone sektory fizyczne na dysku, a siłowe kasowanie może pogłębić uszkodzenie struktury partycji NTFS.
 
 ## 5. Najczęściej zadawane pytania (FAQ)
 
-**Q.** Czy bezpiecznie jest używać zewnętrznych programów typu Unlocker do usuwania plików?
+Q. Czy bezpiecznie jest używać zewnętrznych programów typu Unlocker do usuwania plików?
 
-**A.** Tak, lekkie aplikacje open-source służące do zwalniania uchwytów plików są bezpieczne, pod warunkiem że pobierasz je z zaufanych źródeł i używasz ich tylko do plików tymczasowych lub dokumentów użytkownik
+A. Tak, lekkie aplikacje open-source służące do zwalniania uchwytów plików są bezpieczne, pod warunkiem że pobierasz je z zaufanych źródeł i używasz ich tylko do plików tymczasowych lub dokumentów użytkownik
 
-**A.Q.** Co zrobić, gdy po zakończeniu procesu plik nadal nie chce się skasować?
+A.Q. Co zrobić, gdy po zakończeniu procesu plik nadal nie chce się skasować?
 
-**A.** Często winny jest eksplorator Windows (`explorer.exe`), który podtrzymuje bufor miniatur podglądu. Otwórz Menedżer zadań, znajdź *Eksplorator Windows*, kliknij *Uruchom ponownie*, a następnie spróbuj usunąć plik ponownie.
+A. Często winny jest eksplorator Windows (`explorer.exe`), który podtrzymuje bufor miniatur podglądu. Otwórz Menedżer zadań, znajdź *Eksplorator Windows*, kliknij *Uruchom ponownie*, a następnie spróbuj usunąć plik ponownie.
 
-**Q.** Czy błąd zablokowanego pliku może oznaczać infekcję złośliwym oprogramowaniem?
+Q. Czy błąd zablokowanego pliku może oznaczać infekcję złośliwym oprogramowaniem?
 
-**A.** Zdecydowanie tak. Zaawansowane trojany lub ransomware celowo blokują pliki dziennika oraz narzędzia antywirusowe, aby uniemożliwić ich usunięcie. Jeśli podejrzewasz wirusa, odłącz komputer od sieci i przeprowadź pełny skan w trybie offline.
+A. Zdecydowanie tak. Zaawansowane trojany lub ransomware celowo blokują pliki dziennika oraz narzędzia antywirusowe, aby uniemożliwić ich usunięcie. Jeśli podejrzewasz wirusa, odłącz komputer od sieci i przeprowadź pełny skan w trybie offline.

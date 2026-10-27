@@ -32,7 +32,7 @@ theme: "High-Contrast Charcoal"
 
 Mới 2 giờ chiều tại văn phòng giữa trung tâm Quận 1, TP.HCM, không khí đang cực kỳ căng thẳng vì chỉ còn đúng 30 phút nữa là đến hạn chót nộp bản báo cáo tài chính quý cho sếp tổng. Đúng lúc đó, màn hình chiếc máy tính chính của chị kế toán trưởng bỗng xuất hiện một dòng chữ mờ khó chịu ở góc dưới bên phải: "Activate Windows - Go to Settings to activate Windows". Đáng nói hơn, dòng chữ này cứ bám chặt lấy màn hình, che mất một phần số liệu quan trọng trong bảng Excel, thậm chí còn chặn luôn một số thao tác cá nhân hó
 
-**A.** Chị hoảng hốt gọi tôi qua xử lý gấp, miệng liên tục than thở vì sợ sếp thấy lại tưởng máy móc công ty có vấn đề bảo mật.
+A. Chị hoảng hốt gọi tôi qua xử lý gấp, miệng liên tục than thở vì sợ sếp thấy lại tưởng máy móc công ty có vấn đề bảo mật.
 
 <div style="border-left: 4px solid #e11d48; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Cảnh báo tình huống:</strong> Xử lý các vấn đề liên quan đến bản quyền Windows ngay sát giờ G đòi hỏi sự bình tĩnh tuyệt đối. Tuyệt đối không tải các phần mềm "Active" trôi nổi trên mạng lúc này vì rất dễ dính mã độc, khiến máy sập nguồn hoàn toàn trước khi kịp nộp báo cáo.
@@ -57,7 +57,7 @@ Thay vì loay hoay vào mục *Cài đặt* (Settings) rồi *Update & Security*
 Bước 1: Mở Command Prompt với quyền Quản trị viên (Administrator)
 Nhấn phím Windowstrên bàn phím, gõ chữ `cmd`. Ngay lập tức, kết quảCommand Promptsẽ hiện r
 
-**A.** Bạnkhông đượcnhấp chuột trái thông thường, hãynhấp chuột phảivào đó và chọnRun as administrator. Thao tác này cực kỳ quan trọng vì nếu không có quyền cao nhất, mọi lệnh can thiệp vào hệ thống đều sẽ bị từ chối.
+A. Bạnkhông đượcnhấp chuột trái thông thường, hãynhấp chuột phảivào đó và chọnRun as administrator. Thao tác này cực kỳ quan trọng vì nếu không có quyền cao nhất, mọi lệnh can thiệp vào hệ thống đều sẽ bị từ chối.
 
 Bước 2: Kiểm tra trạng thái bản quyền hiện tại
 Tại cửa sổ màu đen vừa hiện lên, hãy gõ chính xác dòng lệnh sau để kiểm tra xem Windows đang gặp lỗi gì:

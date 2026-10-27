@@ -32,14 +32,14 @@ Para compreender por que o Windows impede a exclusão de determinados arquivos, 
 
 O grande vilão na maioria dos incidentes corporativos são os processos *orphaned* (processos órfãos) que continuam rodando silenciosamente em segundo plano após o fechamento incorreto de uma aplicação. Softwares pesados de desenvolvimento e suítes gráficas frequentemente delegam tarefas para subcomponentes, módulos de telemetria, atualizadores automáticos e servidores locais de licenç
 
-**A.** Quando o usuário fecha a interface principal, esses subsistemas secundários (como instâncias ocultas do `EXCEL.EXE`, servidores de banco de dados embutidos ou daemons de renderização) persistem na memória, mantendo o *handle* do arquivo firmemente travado e impedindo qualquer intervenção direta do administrador.
+A. Quando o usuário fecha a interface principal, esses subsistemas secundários (como instâncias ocultas do `EXCEL.EXE`, servidores de banco de dados embutidos ou daemons de renderização) persistem na memória, mantendo o *handle* do arquivo firmemente travado e impedindo qualquer intervenção direta do administrador.
 
 Além dos processos órfãos, o próprio Explorador de Arquivos (*explorer.exe*) é uma fonte crônica de bloqueios indesejados. Quando o usuário navega por pastas contendo arquivos multimídia de alta resolução, pacotes pesados de compactação (.zip, .iso) ou bibliotecas de código compilado, o subsistema de pré-visualização de miniaturas (*thumbnail cache*) e o indexador de pesquisa do Windows (*Windows Search*) abrem conexões rápidas de leitura com esses arquivos. Se o sistema demorar para liberar esses *handles* de leitura devido à alta latência de I/O em discos NVMe sobrecarregados, a exclusão falha instantaneamente, gerando a falsa impressão de que o arquivo está em uso por um software complexo, quando na verdade é o próprio gerenciador gráfico do sistema que se recusa a soltar o ponteiro de acesso.
 
 <div style="border-left: 4px solid #f97316; padding: 14px 18px; margin: 24px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Nota do Especialist
 
-**A.** </strong> Nunca subestime a interferência de softwares antivírus corporativos e soluções EDR (Endpoint Detection and Response) no bloqueio de arquivos recém-baixados. Durante a cópia de pacotes de instalação na rede interna, motores heurísticos realizam varreduras em tempo real (*real-time scanning*), mantendo o arquivo sob custódia temporária para análise de assinatura de malware, o que gera bloqueios temporários de até dezenas de segundos.
+A. </strong> Nunca subestime a interferência de softwares antivírus corporativos e soluções EDR (Endpoint Detection and Response) no bloqueio de arquivos recém-baixados. Durante a cópia de pacotes de instalação na rede interna, motores heurísticos realizam varreduras em tempo real (*real-time scanning*), mantendo o arquivo sob custódia temporária para análise de assinatura de malware, o que gera bloqueios temporários de até dezenas de segundos.
 </div>
 
 ## 3. Guia prático de resolução passo a passo
@@ -73,12 +73,12 @@ A. exe
    ```
    *(Not
 
-**A.** Substitua `NOME_DO_PROGRAM
+A. Substitua `NOME_DO_PROGRAM
 
-**A.** exe` pelo executável real responsável pelo travamento, como `AcroRd32.exe` ou `chrome.exe`).*
+A. exe` pelo executável real responsável pelo travamento, como `AcroRd32.exe` ou `chrome.exe`).*
 3. Para excluir o arquivo de forma forçada ignorando atributos de somente leitura, navegue até o diretório ou aponte diretamente o caminho absoluto usando o utilitário de exclusão avançad
 
-**A.** ```cmd
+A. ```cmd
    del /f /q /a "C:\Caminho\Para\O\Arquivo_Travado.dll"
    ```
    *(Explicação das flags: `/f` força a exclusão de arquivos somente leitura; `/q` ativa o modo silencioso sem confirmação interativa; `/a` permite selecionar arquivos com atributos específicos).*
@@ -98,7 +98,7 @@ No ecossistema corporativo de TI, a busca por soluções rápidas frequentemente
 
 Para evitar que esse tipo de incidente ocorra recorrentemente em estações de trabalho de alto desempenho, adote sempre boas práticas de higiene de infraestrutur
 
-**A.** Antes de realizar atualizações críticas em diretórios de programas (`Program Files` ou pastas de sistema), encerre preventivamente serviços em segundo plano através do utilitário `services.msc` ou utilize scripts automatizados de parada de ambiente. Mantenha os drivers de armazenamento NVMe e os firmwares da controladora SATA/PCIe rigorosamente atualizados para garantir que o mecanismo de descarte de *handles* do sistema operacional funcione com latência zero e máxima confiabilidade.
+A. Antes de realizar atualizações críticas em diretórios de programas (`Program Files` ou pastas de sistema), encerre preventivamente serviços em segundo plano através do utilitário `services.msc` ou utilize scripts automatizados de parada de ambiente. Mantenha os drivers de armazenamento NVMe e os firmwares da controladora SATA/PCIe rigorosamente atualizados para garantir que o mecanismo de descarte de *handles* do sistema operacional funcione com latência zero e máxima confiabilidade.
 
 ## 5. Perguntas Frecuentes (FAQ)
 
