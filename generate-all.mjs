@@ -117,7 +117,7 @@ const I18N_SECTIONS = {
     s2: "2. Analisi approfondita della causa principale",
     s3: "3. Soluzione pratica passo dopo passo",
     s4: "4. Avvertenze e suggerimenti dell'esperto",
-    s5: "5. Domande Frecuenti (FAQ)",
+    s5: "5. Domande Frequenti (FAQ)",
     tags: ["Consigli Tech", "Hardware", "Risoluzione Problemi", "Assistenza PC"]
   },
   pt: {
@@ -125,7 +125,7 @@ const I18N_SECTIONS = {
     s2: "2. Análise da causa raiz do problema",
     s3: "3. Guia prático de resolução passo a passo",
     s4: "4. Recomendações e alertas de especialistas",
-    s5: "5. Perguntas Frecuentes (FAQ)",
+    s5: "5. Perguntas Frequentes (FAQ)",
     tags: ["Dicas Tech", "Hardware", "Solução de Problemas", "Manutenção PC"]
   },
   nl: {
@@ -163,7 +163,7 @@ const I18N_SECTIONS = {
 };
 
 // =========================================================================
-// [완전 무결 마크다운 정제 함수] 상단 공백 압축 + 핀셋 중복제거 + 수식 박멸 + 소제목/볼드 완전 교정
+// [완전 무결 마크다운 정제 + 영구 방패 함수]
 // =========================================================================
 function sanitizeMarkdownFormatting(content, langCode) {
   let cleaned = content;
@@ -178,7 +178,11 @@ function sanitizeMarkdownFormatting(content, langCode) {
   });
   cleaned = cleaned.replace(/\$([^$\n]+)\$/g, '`$1`');
 
-  // 3) AI가 출력한 영문 대괄호 템플릿 및 기본 헤더를 현지 언어로 100% 강제 치환
+  // 3) 🛡️ [FAQ 헤딩과 Q1 분리 방패] FAQ 헤딩 뒤에 Q1이 붙어있다면 먼저 줄바꿈으로 분리
+  cleaned = cleaned.replace(/([#]+[^\n]*?FAQ[^\n]*?)\s*(Q[1-9]\.|\*\*Q[1-9]\.\*\*)/gi, '$1\n\n$2');
+  cleaned = cleaned.replace(/(FAQ\)?)\s*(Q[1-9]\.|\*\*Q[1-9]\.\*\*)/gi, '$1\n\n$2');
+
+  // 4) AI가 출력한 영문 대괄호 템플릿 및 기본 헤더 치환
   cleaned = cleaned.replace(/^#{1,3}\s*1\.?\s*(\[Opening Story.*?\]|Opening Story.*?|\[Ouverture.*?\])/gmi, `## ${i18n.s1}`);
   cleaned = cleaned.replace(/^#{1,3}\s*2\.?\s*(\[Root Cause.*?\]|Root Cause Breakdown.*?|Root Cause.*?)/gmi, `## ${i18n.s2}`);
   cleaned = cleaned.replace(/^#{1,3}\s*3\.?\s*(\[Step-by-Step.*?\]|Step-by-Step Resolution.*?|Step-by-Step.*?)/gmi, `## ${i18n.s3}`);
@@ -197,36 +201,32 @@ function sanitizeMarkdownFormatting(content, langCode) {
   cleaned = cleaned.replace(/^(현직 엔지니어의 핵심 주의.*?)/gm, `## ${i18n.s4}\n\n$1`);
   cleaned = cleaned.replace(/^#{0,3}\s*(\d\.\s*)?(자주 묻는 질문|Häufig gestellte Fragen|Frequently Asked Questions|よくある(ご)?質問|Questions Fréquemment Posées|Foire [Aa]ux Questions|Preguntas [Ff]recuentes).*?$/gmi, `## ${i18n.s5}`);
 
-  // 대괄호 영문 태그 찌꺼기 완전 제거
+  // 대괄호 영문 태그 찌꺼기 제거
   cleaned = cleaned.replace(/\[(Opening Story\/Problem|Root Cause Breakdown|Step-by-Step Resolution|Expert Advice)\]/gi, '');
 
-  // 4) 1번 헤더 주입 및 [핀셋 정밀 제거] ## 1. 직후 중복 1줄 제거
+  // 1번 헤더 주입 및 중복 1줄 제거
   if (!cleaned.startsWith('## 1.')) {
     cleaned = `## ${i18n.s1}\n\n` + cleaned;
   }
   cleaned = cleaned.replace(/^(## 1\.[^\n]+)\n+(\s*1\.\s+[^\n]+)\n+/m, '$1\n\n');
 
-  // =========================================================================
-  // 🛡️ [핵심 보정 1] 헤딩(#) 줄 내부의 모든 ** 제거
-  // =========================================================================
+  // 헤딩(#) 줄 내부의 모든 ** 제거
   cleaned = cleaned.replace(/^(#{1,6}\s+[^\n]+)$/gm, (match) => {
     return match.replace(/\*\*/g, '');
   });
 
-  // =========================================================================
-  // 🛡️ [핵심 보정 2] 볼드(**) 기호 안쪽 공백 압축 및 파싱 풀림 복구
-  // =========================================================================
+  // 볼드 안쪽 공백 압축
   cleaned = cleaned.replace(/\*\*\s+([^*]+?)\s+\*\*/g, '**$1**');
   cleaned = cleaned.replace(/\*\*\s+([^*]+?)\*\*/g, '**$1**');
   cleaned = cleaned.replace(/\*\*([^*]+?)\s+\*\*/g, '**$1**');
 
-  // 6) 쪼개진 단어 복원 (스페인어 등)
+  // 쪼개진 단어 복원
   cleaned = cleaned.replace(/derech\s*\n\s*a:/gi, 'derecha:')
                     .replace(/con la energi\s*\n\s*a:/gi, 'con la energía:')
                     .replace(/preventiv\s*\n\s*a:/gi, 'preventiva:')
                     .replace(/STOP 0x0000000\s*\n\s*a:?/gi, 'STOP 0x0000000a:');
 
-  // 7) 뭉쳐버린 띄어쓰기 사전 교정
+  // 뭉쳐버린 띄어쓰기 교정
   const wordFixes = [
     [/Ctrl \+ Shift \+ Escsimultaneously/g, 'Ctrl + Shift + Esc simultaneously'],
     [/Task Manager\(Ctrl/g, 'Task Manager (Ctrl'],
@@ -245,33 +245,66 @@ function sanitizeMarkdownFormatting(content, langCode) {
     cleaned = cleaned.replace(pattern, replacement);
   }
 
-  // 8) 이미지 주소 공백 버그 방지
   cleaned = cleaned.replace(/\?\s+auto=format/g, '?auto=format');
 
   // =========================================================================
-  // 🛡️ [Q&A 전면 재정비] 깨진 별표 박멸, 번호 규격화, 볼드 및 줄바꿈 단일화
+  // 🛡️ [FAQ 완벽 분리 및 줄바꿈 보장]
   // =========================================================================
-  // 1) Q와 A 주변에 덕지덕지 붙은 별표(**)를 먼저 완전히 발라내어 순수 텍스트로 환원
   cleaned = cleaned.replace(/\*{1,4}\s*([QA][0-9]*)\s*[:.]\s*\*{1,4}/gi, '$1.');
   cleaned = cleaned.replace(/([QA][0-9]*)\s*[:.]/gi, (match, p1) => `${p1.toUpperCase()}.`);
 
-  // 2) 줄바꿈 강제: Q와 A 앞머리는 무조건 빈 줄 2개로 분리
+  // 마침표나 글자 뒤에 붙은 Q/A를 무조건 빈 줄 2개로 분리
   cleaned = cleaned.replace(/([^\n])\s*\n*\s*(Q[0-9]*\.)/gi, '$1\n\n$2');
   cleaned = cleaned.replace(/([^\n])\s*\n*\s*(A[0-9]*\.)/gi, '$1\n\n$2');
+  cleaned = cleaned.replace(/([.!?])\s*(Q[1-9]\.|\*\*Q[1-9]\.\*\*)/g, '$1\n\n$2');
+  cleaned = cleaned.replace(/([.!?])\s*(A[1-9]\.|\*\*A[1-9]\.\*\*)/g, '$1\n\n$2');
 
-  // 3) 외신/다국어 변칙 물음표 질문 대응
+  // 외신/다국어 변칙 대응
   cleaned = cleaned.replace(/^(\d+\.\s+)(¿.*?\?)\s*(.*)/gm, '**Q.** $2\n\n**A.** $3');
   cleaned = cleaned.replace(/^(\d+\.\s+)(.*?\?)\s*(Oui|Non|Si|No|Absolument|Para nada|E'|C'est|Ce)/gm, '**Q.** $2\n\n**A.** $3');
 
-  // 4) 완벽한 마크다운 볼드로 단 1회만 정확하게 감싸기 (**Q1.** 본문)
+  // 볼드로 감싸기
   cleaned = cleaned.replace(/^(Q[0-9]*\.)\s*(.*)$/gm, '**$1** $2');
   cleaned = cleaned.replace(/^(A[0-9]*\.)\s*(.*)$/gm, '**$1** $2');
 
-  // 5) 혹시 남은 변칙 FAQ 볼드 기호 잔여물 제거 및 물음표 띄어쓰기
+  cleaned = cleaned.replace(/([A-Za-z0-9가-힣]+)\.\*\*/g, '$1.');
   cleaned = cleaned.replace(/\*\*\s*\*\*/g, '');
   cleaned = cleaned.replace(/\?([A-Za-z\u00C0-\u024F\u1EA0-\u1EF9가-힣])/g, '? $1');
-  cleaned = cleaned.replace(/\n{3,}/g, '\n\n');
 
+  // =========================================================================
+  // 🛡️ [영구 방패: 동일 헤딩 연타 박멸 필터]
+  // 중간에 빈 줄이 있든 없든, 똑같은 2번/3번 헤딩이 연속 출력되면 무조건 1개만 남김
+  // =========================================================================
+  const lines = cleaned.split('\n');
+  const filteredLines = [];
+  let lastHeadingText = '';
+
+  for (let i = 0; i < lines.length; i++) {
+    const line = lines[i];
+    const trimmed = line.trim();
+
+    if (/^#{1,6}\s+/.test(trimmed)) {
+      const cleanH = trimmed.replace(/^#{1,6}\s+/, '').replace(/\*\*/g, '').trim();
+      if (cleanH.length > 0 && cleanH === lastHeadingText) {
+        continue; // 중복 헤딩 무조건 삭제
+      }
+      lastHeadingText = cleanH;
+    } else if (trimmed.length > 0) {
+      lastHeadingText = '';
+    }
+    filteredLines.push(line);
+  }
+  cleaned = filteredLines.join('\n');
+
+  // =========================================================================
+  // 🛡️ [영구 방패: 문단 전체를 먹어치운 괴물 볼드만 평문으로 해제]
+  // 150자 이상이면서 엔터(\n)를 포함해 문단을 시커멓게 태운 괴물 볼드만 해제 (정상 볼드 보존)
+  // =========================================================================
+  cleaned = cleaned.replace(/\*\*([^\*]*?\n[^\*]*?){150,}\*\*/g, (match) => {
+    return match.replace(/^\*\*/, '').replace(/\*\*$/, '');
+  });
+
+  cleaned = cleaned.replace(/\n{3,}/g, '\n\n');
   return cleaned.trim();
 }
 
@@ -515,7 +548,7 @@ theme: "${selectedTheme.name}"
       frontmatter = frontmatter.replace(/publishDate:\s*[^\n\r]+/i, `publishDate: ${pubDateIso}`);
       frontmatter = frontmatter.replace(/image:\s*["'][^"']*["']/i, `image: '${coverUrl}'`);
 
-      // 🛡️ [이중 방어] 12개국 고유 언어로 강제 치환 및 볼드/공백 서식 완벽 정제
+      // 🛡️ [이중 방어] 12개국 고유 언어로 강제 치환 및 볼드/공백/중복 헤딩 완벽 정제
       body = sanitizeMarkdownFormatting(body, lang.code);
 
       // 🛡️ [글자 수 물리적 강제 루프: 2,200자 미만 시 즉시 재작성]
@@ -543,17 +576,23 @@ theme: "${selectedTheme.name}"
       }
 
       const middleImageMarkdown = `\n\n![Tech Troubleshooting Guide](${bodyUrl})\n\n`;
-      if (body.includes('## 2.') || body.includes('### 2.')) {
-        body = body.replace(/(#{2,3}\s*2\.[^\n]+)/, `${middleImageMarkdown}$1`);
-      } else {
-        const paragraphs = body.split('\n\n');
-        if (paragraphs.length >= 3) {
-          paragraphs.splice(2, 0, middleImageMarkdown.trim());
-          body = paragraphs.join('\n\n');
+      // 이미지 중복 삽입 방지 및 2번 헤딩 직전에 안전하게 배치
+      if (!body.includes(middleImageMarkdown.trim())) {
+        if (body.includes('## 2.')) {
+          body = body.replace(/(##\s*2\.[^\n]+)/, `${middleImageMarkdown}$1`);
         } else {
-          body = `${middleImageMarkdown}${body}`;
+          const paragraphs = body.split('\n\n');
+          if (paragraphs.length >= 3) {
+            paragraphs.splice(2, 0, middleImageMarkdown.trim());
+            body = paragraphs.join('\n\n');
+          } else {
+            body = `${middleImageMarkdown}${body}`;
+          }
         }
       }
+
+      // 최종 마크다운 헤딩 중복 한 번 더 방어
+      body = sanitizeMarkdownFormatting(body, lang.code);
 
       text = `${frontmatter}\n\n${body}\n`;
     }
@@ -575,7 +614,7 @@ theme: "${selectedTheme.name}"
 
 async function run() {
   console.log("==================================================");
-  console.log("⚡ 12개국 최적화 고속 자동 포스팅 시작");
+  console.log("⚡ 12개국 최적화 고속 자동 포스팅 시작 (영구 방패 가동)");
   console.log("==================================================");
 
   let successCount = 0;
