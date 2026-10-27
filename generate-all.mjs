@@ -207,14 +207,14 @@ function sanitizeMarkdownFormatting(content, langCode) {
   cleaned = cleaned.replace(/^(## 1\.[^\n]+)\n+(\s*1\.\s+[^\n]+)\n+/m, '$1\n\n');
 
   // =========================================================================
-  // 🛡️ [핵심 보정 1] 헤딩(#) 줄 내부의 모든 ** 제거 (4호기 제목 중간 ** 완벽 제거)
+  // 🛡️ [핵심 보정 1] 헤딩(#) 줄 내부의 모든 ** 제거
   // =========================================================================
   cleaned = cleaned.replace(/^(#{1,6}\s+[^\n]+)$/gm, (match) => {
     return match.replace(/\*\*/g, '');
   });
 
   // =========================================================================
-  // 🛡️ [핵심 보정 2] 볼드(**) 기호 안쪽 공백 압축 및 파싱 풀림 복구 (2·3호기 ** 노출 박멸)
+  // 🛡️ [핵심 보정 2] 볼드(**) 기호 안쪽 공백 압축 및 파싱 풀림 복구
   // =========================================================================
   cleaned = cleaned.replace(/\*\*\s+([^*]+?)\s+\*\*/g, '**$1**');
   cleaned = cleaned.replace(/\*\*\s+([^*]+?)\*\*/g, '**$1**');
@@ -248,12 +248,27 @@ function sanitizeMarkdownFormatting(content, langCode) {
   // 8) 이미지 주소 공백 버그 방지
   cleaned = cleaned.replace(/\?\s+auto=format/g, '?auto=format');
 
-  // 9) Q&A 줄바꿈 및 볼드 보호: Q와 A는 무조건 빈 줄 2개로 분리
-  cleaned = cleaned.replace(/([^\n])\s*(\*\*?[QA][0-9]*\s*[:.]\*\*?)/gi, '$1\n\n$2');
-  cleaned = cleaned.replace(/([^\n])\s+([QA][0-9]*\s*[:.])/g, '$1\n\n$2');
-  cleaned = cleaned.replace(/([.!?])\s*(\*\*?[QA][0-9]*\s*[:.]\*\*?)/gi, '$1\n\n$2');
+  // =========================================================================
+  // 🛡️ [Q&A 전면 재정비] 깨진 별표 박멸, 번호 규격화, 볼드 및 줄바꿈 단일화
+  // =========================================================================
+  // 1) Q와 A 주변에 덕지덕지 붙은 별표(**)를 먼저 완전히 발라내어 순수 텍스트로 환원
+  cleaned = cleaned.replace(/\*{1,4}\s*([QA][0-9]*)\s*[:.]\s*\*{1,4}/gi, '$1.');
+  cleaned = cleaned.replace(/([QA][0-9]*)\s*[:.]/gi, (match, p1) => `${p1.toUpperCase()}.`);
 
-  // 10) 물음표 뒤 띄어쓰기 누락 보정 및 과도한 빈 줄 압축
+  // 2) 줄바꿈 강제: Q와 A 앞머리는 무조건 빈 줄 2개로 분리
+  cleaned = cleaned.replace(/([^\n])\s*\n*\s*(Q[0-9]*\.)/gi, '$1\n\n$2');
+  cleaned = cleaned.replace(/([^\n])\s*\n*\s*(A[0-9]*\.)/gi, '$1\n\n$2');
+
+  // 3) 외신/다국어 변칙 물음표 질문 대응
+  cleaned = cleaned.replace(/^(\d+\.\s+)(¿.*?\?)\s*(.*)/gm, '**Q.** $2\n\n**A.** $3');
+  cleaned = cleaned.replace(/^(\d+\.\s+)(.*?\?)\s*(Oui|Non|Si|No|Absolument|Para nada|E'|C'est|Ce)/gm, '**Q.** $2\n\n**A.** $3');
+
+  // 4) 완벽한 마크다운 볼드로 단 1회만 정확하게 감싸기 (**Q1.** 본문)
+  cleaned = cleaned.replace(/^(Q[0-9]*\.)\s*(.*)$/gm, '**$1** $2');
+  cleaned = cleaned.replace(/^(A[0-9]*\.)\s*(.*)$/gm, '**$1** $2');
+
+  // 5) 혹시 남은 변칙 FAQ 볼드 기호 잔여물 제거 및 물음표 띄어쓰기
+  cleaned = cleaned.replace(/\*\*\s*\*\*/g, '');
   cleaned = cleaned.replace(/\?([A-Za-z\u00C0-\u024F\u1EA0-\u1EF9가-힣])/g, '? $1');
   cleaned = cleaned.replace(/\n{3,}/g, '\n\n');
 
