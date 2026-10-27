@@ -128,7 +128,8 @@
   margin-top: 0;
 }
 
-/* Blog prose */
+/* Blog prose: inline code without the typography plugin's backticks, and
+   code blocks that follow the light/dark theme (Shiki dual themes). */
 .prose :where(code):not(:where(pre *)) {
   background-color: color-mix(in oklab, var(--aw-color-text-default) 8%, transparent);
   border-radius: 0.25rem;
@@ -148,77 +149,27 @@
   background-color: var(--shiki-dark-bg) !important;
 }
 
-/* ============================================================
-   [최종 종결] 12개국 타이포그래피 완벽 강제 (시원한 폰트 & 가독성 극대화)
-   ============================================================ */
-
-/* 1. 대주제 (H2) */
-:is(.prose, .prose-md, .prose-lg) h2 {
-  font-size: 2rem !important; /* 32px */
-  line-height: 1.35 !important;
-  font-weight: 800 !important;
-  margin-top: 4.5rem !important;
-  margin-bottom: 1.5rem !important;
-  color: var(--aw-color-text-heading) !important;
-  border-bottom: 2px solid color-mix(in oklab, var(--aw-color-text-default) 15%, transparent) !important;
-  padding-bottom: 0.6rem !important;
+/* ========================================================================= */
+/* [1호기 2호기 일치 보정] 한국어 단어 단위 줄바꿈 및 글자 크기 표준화 규격 */
+/* ========================================================================= */
+.prose {
+  word-break: keep-all;
+  overflow-wrap: break-word;
 }
 
-/* 2. 단계별 소제목 (H3) */
-:is(.prose, .prose-md, .prose-lg) h3 {
-  font-size: 1.5rem !important; /* 24px */
-  line-height: 1.4 !important;
-  font-weight: 700 !important;
-  margin-top: 3rem !important;
-  margin-bottom: 1rem !important;
-  color: var(--aw-color-text-heading) !important;
+.prose h1, .prose h2, .prose h3, .prose h4 {
+  word-break: keep-all;
+  letter-spacing: -0.02em;
 }
 
-:is(.prose, .prose-md, .prose-lg) h4 {
-  font-size: 1.25rem !important;
-  line-height: 1.4 !important;
-  font-weight: 700 !important;
-  margin-top: 2rem !important;
-  margin-bottom: 0.75rem !important;
-}
-
-/* 3. 본문 텍스트 - 시원한 18.5px & 26px 문단 여백 */
-:is(.prose, .prose-md, .prose-lg) p {
-  font-size: 1.15rem !important; /* 약 18.5px */
-  line-height: 1.9 !important;
-  margin-top: 0 !important;
-  margin-bottom: 1.65rem !important;
-  word-break: keep-all !important;
-}
-
-/* 4. 번호 목록 및 세부 단계 (18.5px) */
-:is(.prose, .prose-md, .prose-lg) ol,
-:is(.prose, .prose-md, .prose-lg) ul {
-  margin-top: 1rem !important;
-  margin-bottom: 2rem !important;
-  padding-left: 1.75rem !important;
-}
-
-:is(.prose, .prose-md, .prose-lg) ol > li,
-:is(.prose, .prose-md, .prose-lg) ul > li {
-  font-size: 1.15rem !important;
-  line-height: 1.85 !important;
-  margin-top: 0.85rem !important;
-  margin-bottom: 0.85rem !important;
-}
-
-/* 5. 볼드 텍스트 (소제목 대용으로 쓰인 Langkah, Paso, 1단계 등 강조) */
-:is(.prose, .prose-md, .prose-lg) strong,
-:is(.prose, .prose-md, .prose-lg) b {
-  font-weight: 800 !important;
-  color: var(--aw-color-text-heading) !important;
-}
-
-/* 6. 콜아웃/팁 상자 */
-:is(.prose, .prose-md, .prose-lg) blockquote {
-  font-size: 1.1rem !important;
-  line-height: 1.8 !important;
-  margin-top: 2.5rem !important;
-  margin-bottom: 2.5rem !important;
-  padding: 1.25rem 1.5rem !important;
+/* 모바일 폰트 및 소제목 크기 조정 (2호기와 1:1 일치) */
+@media (max-width: 768px) {
+  .prose h2 {
+    font-size: 1.35rem !important;
+    line-height: 1.4 !important;
+  }
+  .prose p {
+    font-size: 1.0625rem !important; /* 17px */
+    line-height: 1.75 !important;
+  }
 }
