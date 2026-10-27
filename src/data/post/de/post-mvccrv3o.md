@@ -44,11 +44,8 @@ Keine Vorwarnung, kein sanftes Herunterfahren, einfach harter Kernel-Absturz. De
 
 ## 2. Detaillierte Ursachenanalyse
 
-## 2. Detaillierte Ursachenanalyse
 
-## 2. Detaillierte Ursachenanalyse
 
-## 2. Detaillierte Ursachenanalyse
 
 Die drei Hauptursachen für den Fehler 0x0000000a
 
@@ -64,11 +61,8 @@ Bevor wir blind anfangen, Schraubenzieher zu schwingen oder das System neu aufzu
 
 ## 3. Schritt-für-Schritt-Lösungsanleitung
 
-## 3. Schritt-für-Schritt-Lösungsanleitung
 
-## 3. Schritt-für-Schritt-Lösungsanleitung
 
-## 3. Schritt-für-Schritt-Lösungsanleitung
 
 Schritt-für-Schritt-Anleitung zur Problemlösung
 
@@ -113,11 +107,8 @@ Manchmal hinterlässt der Absturz beschädigte Systemdateien. Das lässt sich sc
 
 ## 4. Praxistipps und Warnungen vom System-Admin
 
-## 4. Praxistipps und Warnungen vom System-Admin
 
-## 4. Praxistipps und Warnungen vom System-Admin
 
-## 4. Praxistipps und Warnungen vom System-Admin
 
 Experten-Warnung & Best Practices
 

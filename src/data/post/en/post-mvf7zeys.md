@@ -42,11 +42,8 @@ That's when I had to step back, put away the panic, and rely on systematic IT tr
 
 ## 2. Root Cause Breakdown
 
-## 2. Root Cause Breakdown
 
-## 2. Root Cause Breakdown
 
-## 2. Root Cause Breakdown
 
 Understanding the Blueprint: Why Is the "System" Process Eating Your CPU?
 
@@ -119,11 +116,8 @@ Quick Comparison of Diagnostic Approaches
 
 ## 4. Professional Engineer Precautions & Tips
 
-## 4. Professional Engineer Precautions & Tips
 
-## 4. Professional Engineer Precautions & Tips
 
-## 4. Professional Engineer Precautions & Tips
 
 Expert Warning: Hardware and Data Safety
 

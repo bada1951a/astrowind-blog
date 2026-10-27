@@ -41,11 +41,8 @@ Es ist mal wieder Freitag, kurz vor 17:00 Uhr in unserem Berliner Tech-Hub, und 
 
 ## 2. Detaillierte Ursachenanalyse
 
-## 2. Detaillierte Ursachenanalyse
 
-## 2. Detaillierte Ursachenanalyse
 
-## 2. Detaillierte Ursachenanalyse
 
 Warum Windows 11 beim Update-Endspurt stecken bleibt
 
@@ -59,11 +56,8 @@ Nachdem ich den Laptop im betroffenen Zustand per erzwungenem Aus-Schalter (Powe
 
 ## 3. Schritt-für-Schritt-Lösungsanleitung
 
-## 3. Schritt-für-Schritt-Lösungsanleitung
 
-## 3. Schritt-für-Schritt-Lösungsanleitung
 
-## 3. Schritt-für-Schritt-Lösungsanleitung
 
 Schritt-für-Schritt-Anleitung: Den Update-Knoten lösen
 

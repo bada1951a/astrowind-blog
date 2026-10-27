@@ -40,11 +40,8 @@ Es ist kurz vor 10:00 Uhr morgens im Frankfurter Bankenviertel. In einer halben 
 
 ## 2. Detaillierte Ursachenanalyse
 
-## 2. Detaillierte Ursachenanalyse
 
-## 2. Detaillierte Ursachenanalyse
 
-## 2. Detaillierte Ursachenanalyse
 
 Warum Windows 11 uns das Leben schwer macht (Die 3 Ursachen)
 
@@ -60,11 +57,8 @@ Im ersten Moment versuchten wir es natürlich klassisch: Über die *Einstellunge
 
 ## 3. Schritt-für-Schritt-Lösungsanleitung
 
-## 3. Schritt-für-Schritt-Lösungsanleitung
 
-## 3. Schritt-für-Schritt-Lösungsanleitung
 
-## 3. Schritt-für-Schritt-Lösungsanleitung
 
 Die Lösung: Schritt-für-Schritt zur klassischen Ansicht
 

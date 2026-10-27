@@ -51,11 +51,8 @@ Si te encuentras en una situation similar, aqui tienes el metodo directo para de
 
 ## 2. Análisis detallado de la causa raíz
 
-## 2. Análisis detallado de la causa raíz
 
-## 2. Análisis detallado de la causa raíz
 
-## 2. Análisis detallado de la causa raíz
 
 Diagnostico de Causas Raiz
 
@@ -71,11 +68,8 @@ Antes de hacer clic en cualquier sitio, debemos entender que buscan nuestros ojo
 
 ## 3. Solución práctica paso a paso
 
-## 3. Solución práctica paso a paso
 
-## 3. Solución práctica paso a paso
 
-## 3. Solución práctica paso a paso
 
 Paso a Paso: Como cazar al culpable con el Visor de eventos
 
@@ -111,11 +105,8 @@ A. </div>
 
 ## 4. Advertencias y consejos de un técnico
 
-## 4. Advertencias y consejos de un técnico
 
-## 4. Advertencias y consejos de un técnico
 
-## 4. Advertencias y consejos de un técnico
 
 Precauciones y Consejos de Hardware
 

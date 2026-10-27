@@ -44,11 +44,8 @@ Heureusement, il existe une méthode propre, rapide et sécurisée via l'invite 
 
 ## 2. Analyse des causes principales de l'erreur
 
-## 2. Analyse des causes principales de l'erreur
 
-## 2. Analyse des causes principales de l'erreur
 
-## 2. Analyse des causes principales de l'erreur
 
 Pourquoi ce filigrane apparaît-il soudainement en plein milieu de vos tâches ?
 
@@ -62,11 +59,8 @@ Avant de manipuler le système, comprenons l'origine technique de ce blocage pou
 
 ## 3. Guide de résolution étape par étape
 
-## 3. Guide de résolution étape par étape
 
-## 3. Guide de résolution étape par étape
 
-## 3. Guide de résolution étape par étape
 
 Guide étape par étape : Nettoyer l'affichage via CMD
 

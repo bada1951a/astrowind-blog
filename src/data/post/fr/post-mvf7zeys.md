@@ -46,11 +46,8 @@ Pour couper court aux lenteurs extrêmes, ouvrez l'Invite de commandes en mode a
 
 ## 2. Analyse des causes principales de l'erreur
 
-## 2. Analyse des causes principales de l'erreur
 
-## 2. Analyse des causes principales de l'erreur
 
-## 2. Analyse des causes principales de l'erreur
 
 Pourquoi votre processeur s'affole-t-il ? (Analyse des 3 causes principales)
 
@@ -66,11 +63,8 @@ Avant de bidouiller au hasard, comprenons ce qui se passe sous le capot. Lorsque
 
 ## 3. Guide de résolution étape par étape
 
-## 3. Guide de résolution étape par étape
 
-## 3. Guide de résolution étape par étape
 
-## 3. Guide de résolution étape par étape
 
 Résolution étape par étape : Reprenez le contrôle
 
@@ -110,11 +104,8 @@ Si le problème persiste après le redémarrage, le coupable est souvent un serv
 
 ## 4. Conseils et précautions d'un expert système
 
-## 4. Conseils et précautions d'un expert système
 
-## 4. Conseils et précautions d'un expert système
 
-## 4. Conseils et précautions d'un expert système
 
 Conseils d'expert et prévention matérielle
 

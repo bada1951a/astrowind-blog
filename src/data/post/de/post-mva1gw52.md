@@ -38,11 +38,8 @@ Wer in einer schnelllebigen IT-Umgebung arbeitet, kennt das Problem. Windows 11 
 
 ## 2. Detaillierte Ursachenanalyse
 
-## 2. Detaillierte Ursachenanalyse
 
-## 2. Detaillierte Ursachenanalyse
 
-## 2. Detaillierte Ursachenanalyse
 
 Warum läuft das Laufwerk C: eigentlich immer wieder voll?
 
@@ -60,11 +57,8 @@ Bevor wir blind Dateien löschen, müssen wir verstehen, woher der Ballast kommt
 
 ## 3. Schritt-für-Schritt-Lösungsanleitung
 
-## 3. Schritt-für-Schritt-Lösungsanleitung
 
-## 3. Schritt-für-Schritt-Lösungsanleitung
 
-## 3. Schritt-für-Schritt-Lösungsanleitung
 
 Schritt-für-Schritt-Anleitung: Sichere Bereinigung unter Windows 11
 
@@ -123,11 +117,8 @@ Ja, wenn dein Windows 11 stabil läuft und du kein Downgrade auf eine vorherige 
 
 ## 2. Detaillierte Ursachenanalyse
 
-## 2. Detaillierte Ursachenanalyse
 
-## 2. Detaillierte Ursachenanalyse
 
-## 2. Detaillierte Ursachenanalyse
 
 Warum läuft C: nach dem Löschen sofort wieder voll?
 Das liegt meist an virtuellen Maschinen (Hyper-V, WSL2), Docker-Images oder großen Browser-Caches. Prüfe mit einem Tool wie *TreeSize Free*, welche Ordner auf C: den tatsächlichen Speicherplatz belegen.

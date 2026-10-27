@@ -34,11 +34,8 @@ Il est 17h45 dans notre bureau tech du 11e arrondissement à Paris. Nous sommes 
 
 ## 2. Analyse des causes principales de l'erreur
 
-## 2. Analyse des causes principales de l'erreur
 
-## 2. Analyse des causes principales de l'erreur
 
-## 2. Analyse des causes principales de l'erreur
 
 Pourquoi ce fichu écran bleu surgit-il sans prévenir ?
 
@@ -59,11 +56,8 @@ Après un premier redémarrage forcé en mode sans échec, j'ai tout de suite an
 
 ## 3. Guide de résolution étape par étape
 
-## 3. Guide de résolution étape par étape
 
-## 3. Guide de résolution étape par étape
 
-## 3. Guide de résolution étape par étape
 
 Résolution pas à pas : Diagnostic mémoire et retour arrière
 
@@ -104,11 +98,8 @@ Une fois le pilote fautif identifié, il faut reprendre le contrôle depuis le G
 
 ## 4. Conseils et précautions d'un expert système
 
-## 4. Conseils et précautions d'un expert système
 
-## 4. Conseils et précautions d'un expert système
 
-## 4. Conseils et précautions d'un expert système
 
 Conseils d'expert pour éviter la récidive
 

@@ -51,11 +51,8 @@ Voici la méthode éprouvée, rapide et 100% sécurisée pour reprendre le contr
 
 ## 2. Analyse des causes principales de l'erreur
 
-## 2. Analyse des causes principales de l'erreur
 
-## 2. Analyse des causes principales de l'erreur
 
-## 2. Analyse des causes principales de l'erreur
 
 Pourquoi votre lecteur C se remplit-il tout seul ?
 
@@ -71,11 +68,8 @@ Avant de foncer tête baissée dans le nettoyage, comprenons pourquoi Windows 11
 
 ## 3. Guide de résolution étape par étape
 
-## 3. Guide de résolution étape par étape
 
-## 3. Guide de résolution étape par étape
 
-## 3. Guide de résolution étape par étape
 
 Guide étape par étape : Nettoyer proprement le lecteur C
 

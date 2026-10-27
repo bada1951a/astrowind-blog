@@ -44,11 +44,8 @@ We have all been there. You mash the Windows key, you frantically click around t
 
 ## 2. Root Cause Breakdown
 
-## 2. Root Cause Breakdown
 
-## 2. Root Cause Breakdown
 
-## 2. Root Cause Breakdown
 
 Why Your Windows 11 Taskbar Freezes
 

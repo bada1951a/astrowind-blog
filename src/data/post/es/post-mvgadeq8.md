@@ -54,11 +54,8 @@ A. Pones en riesgo la red corporativa entera frente a ransomware y troyanos. Usa
 
 ## 2. Análisis detallado de la causa raíz
 
-## 2. Análisis detallado de la causa raíz
 
-## 2. Análisis detallado de la causa raíz
 
-## 2. Análisis detallado de la causa raíz
 
 Por qué aparece este molesto aviso de activación
 
@@ -74,11 +71,8 @@ A. 3. Cambios en componentes de hardware:Una sustitución reciente de placa base
 
 ## 3. Solución práctica paso a paso
 
-## 3. Solución práctica paso a paso
 
-## 3. Solución práctica paso a paso
 
-## 3. Solución práctica paso a paso
 
 Pasos rápidos para limpiar la marca de agua mediante CMD
 
@@ -119,11 +113,8 @@ A. ---
 
 ## 4. Advertencias y consejos de un técnico
 
-## 4. Advertencias y consejos de un técnico
 
-## 4. Advertencias y consejos de un técnico
 
-## 4. Advertencias y consejos de un técnico
 
 Consejos del técnico de soporte
 

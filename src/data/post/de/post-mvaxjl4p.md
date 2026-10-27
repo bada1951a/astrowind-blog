@@ -40,11 +40,8 @@ Es war kurz vor 9 Uhr morgens in unserem Berliner Tech-Hub in Mitte. Der Espress
 
 ## 2. Detaillierte Ursachenanalyse
 
-## 2. Detaillierte Ursachenanalyse
 
-## 2. Detaillierte Ursachenanalyse
 
-## 2. Detaillierte Ursachenanalyse
 
 Warum der Rechner plötzlich kriecht: Die 3 Hauptverdächtigen
 
@@ -60,11 +57,8 @@ Bevor wir zur Tat schreiten, werfen wir einen kurzen Blick unter die Motorhaube.
 
 ## 3. Schritt-für-Schritt-Lösungsanleitung
 
-## 3. Schritt-für-Schritt-Lösungsanleitung
 
-## 3. Schritt-für-Schritt-Lösungsanleitung
 
-## 3. Schritt-für-Schritt-Lösungsanleitung
 
 In 60 Sekunden zum schnellen Start: Schritt-für-Schritt
 

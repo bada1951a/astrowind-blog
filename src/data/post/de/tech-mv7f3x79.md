@@ -38,11 +38,8 @@ Die Ursache liegt selten an defekten Panels, sondern fast ausnahmslos in korrupt
 
 ## 2. Detaillierte Ursachenanalyse
 
-## 2. Detaillierte Ursachenanalyse
 
-## 2. Detaillierte Ursachenanalyse
 
-## 2. Detaillierte Ursachenanalyse
 
 3 Typische Fehlerursachen im Detail
 
@@ -74,11 +71,8 @@ Moderne Monitore fordern hohe Datenraten (z. B. 4K bei 60 Hz oder 144 Hz mit 10-
 
 ## 3. Schritt-für-Schritt-Lösungsanleitung
 
-## 3. Schritt-für-Schritt-Lösungsanleitung
 
-## 3. Schritt-für-Schritt-Lösungsanleitung
 
-## 3. Schritt-für-Schritt-Lösungsanleitung
 
 Schritt-für-Schritt-Anleitung: Grafiktreiber-Stack restlos bereinigen
 

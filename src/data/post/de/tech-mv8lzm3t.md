@@ -40,11 +40,8 @@ Freitag, 16:50 Uhr. Zehn Minuten vor dem verdienten Feierabend brennt mal wieder
 
 ## 2. Detaillierte Ursachenanalyse
 
-## 2. Detaillierte Ursachenanalyse
 
-## 2. Detaillierte Ursachenanalyse
 
-## 2. Detaillierte Ursachenanalyse
 
 Warum der Rechner zur Krücke wird: Die 3 Hauptverdächtigen
 
@@ -58,11 +55,8 @@ Bevor wir die Werkzeuge auspacken, müssen wir verstehen, wer hier eigentlich br
 
 ## 3. Schritt-für-Schritt-Lösungsanleitung
 
-## 3. Schritt-für-Schritt-Lösungsanleitung
 
-## 3. Schritt-für-Schritt-Lösungsanleitung
 
-## 3. Schritt-für-Schritt-Lösungsanleitung
 
 Der Befreiungsschlag: Schritt-für-Schritt-Anleitung
 
@@ -95,11 +89,8 @@ Wenn der Rechner trotz leerem Autostart ewig bootet, klemmt es oft an der Hardwa
 
 ## 4. Praxistipps und Warnungen vom System-Admin
 
-## 4. Praxistipps und Warnungen vom System-Admin
 
-## 4. Praxistipps und Warnungen vom System-Admin
 
-## 4. Praxistipps und Warnungen vom System-Admin
 
 Admin-Warnung: Was du auf gar keinen Fall tun solltest!
 

@@ -54,11 +54,8 @@ A. El problema casi siempre radica en el Explorador de archivos (explorer.exe) o
 
 ## 2. Análisis detallado de la causa raíz
 
-## 2. Análisis detallado de la causa raíz
 
-## 2. Análisis detallado de la causa raíz
 
-## 2. Análisis detallado de la causa raíz
 
 ¿Por qué se congela la barra de tareas en Windows 11?
 
@@ -76,11 +73,8 @@ A. En Windows 11, la barra de tareas y el menú de inicio están estrechamente i
 
 ## 3. Solución práctica paso a paso
 
-## 3. Solución práctica paso a paso
 
-## 3. Solución práctica paso a paso
 
-## 3. Solución práctica paso a paso
 
 Solución paso a paso: De lo más rápido a la artillería pesada
 

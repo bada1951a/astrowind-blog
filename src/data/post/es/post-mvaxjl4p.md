@@ -44,11 +44,8 @@ A. El ventilador rugía como un motor de avión y el cursor apenas se arrastraba
 
 ## 2. Análisis detallado de la causa raíz
 
-## 2. Análisis detallado de la causa raíz
 
-## 2. Análisis detallado de la causa raíz
 
-## 2. Análisis detallado de la causa raíz
 
 Por qué tu Windows 10 se arrastra al encender (Causas Raíz)
 
@@ -62,11 +59,8 @@ Antes de lanzarnos a limpiar, entendamos por qué tu ordenador portátil o de so
 
 ## 3. Solución práctica paso a paso
 
-## 3. Solución práctica paso a paso
 
-## 3. Solución práctica paso a paso
 
-## 3. Solución práctica paso a paso
 
 Guía paso a paso: Cómo desactivar los programas de inicio
 

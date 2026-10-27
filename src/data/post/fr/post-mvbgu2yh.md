@@ -40,11 +40,8 @@ Il est 14h30 dans notre bureau tech à Paris, la tension est palpable. Nous somm
 
 ## 2. Analyse des causes principales de l'erreur
 
-## 2. Analyse des causes principales de l'erreur
 
-## 2. Analyse des causes principales de l'erreur
 
-## 2. Analyse des causes principales de l'erreur
 
 Pourquoi votre barre des tâches Windows 11 se fige-t-elle ?
 
@@ -60,11 +57,8 @@ Après avoir analysé ce comportement à plusieurs reprises lors de nos sessions
 
 ## 3. Guide de résolution étape par étape
 
-## 3. Guide de résolution étape par étape
 
-## 3. Guide de résolution étape par étape
 
-## 3. Guide de résolution étape par étape
 
 Guide de résolution étape par étape
 

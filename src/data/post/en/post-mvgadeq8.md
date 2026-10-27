@@ -42,11 +42,8 @@ In front of a room full of venture capitalists and board members, projecting a m
 
 ## 2. Root Cause Breakdown
 
-## 2. Root Cause Breakdown
 
-## 2. Root Cause Breakdown
 
-## 2. Root Cause Breakdown
 
 The Trap: Why Standard Panic Leads to Broken Systems
 
@@ -112,11 +109,8 @@ Within two seconds, the desktop reloaded. The watermark was completely gone, lea
 
 ## 4. Professional Engineer Precautions & Tips
 
-## 4. Professional Engineer Precautions & Tips
 
-## 4. Professional Engineer Precautions & Tips
 
-## 4. Professional Engineer Precautions & Tips
 
 Expert Warning & Hardware Safety Advice
 

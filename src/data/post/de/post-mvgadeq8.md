@@ -44,11 +44,8 @@ Zuerst verfällt man natürlich in blinden Aktionismus. Man klickt sich panisch 
 
 ## 2. Detaillierte Ursachenanalyse
 
-## 2. Detaillierte Ursachenanalyse
 
-## 2. Detaillierte Ursachenanalyse
 
-## 2. Detaillierte Ursachenanalyse
 
 Warum das Wasserzeichen auftaucht: Die 3 Hauptursachen
 
@@ -64,11 +61,8 @@ Bevor wir den Befehl absetzen, müssen wir verstehen, warum das System überhaup
 
 ## 3. Schritt-für-Schritt-Lösungsanleitung
 
-## 3. Schritt-für-Schritt-Lösungsanleitung
 
-## 3. Schritt-für-Schritt-Lösungsanleitung
 
-## 3. Schritt-für-Schritt-Lösungsanleitung
 
 Schritt-für-Schritt-Anleitung: Das Wasserzeichen per CMD temporär ausblenden
 
@@ -93,11 +87,8 @@ Schließen Sie alle Fenster und starten Sie das System über das Startmenü neu.
 
 ## 4. Praxistipps und Warnungen vom System-Admin
 
-## 4. Praxistipps und Warnungen vom System-Admin
 
-## 4. Praxistipps und Warnungen vom System-Admin
 
-## 4. Praxistipps und Warnungen vom System-Admin
 
 Kritische Experten-Warnung zur Hardwaresicherheit
 

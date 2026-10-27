@@ -44,11 +44,8 @@ A. El ventilador rugía como un reactor y el grupo de Slack echaba humo con comp
 
 ## 2. Análisis detallado de la causa raíz
 
-## 2. Análisis detallado de la causa raíz
 
-## 2. Análisis detallado de la causa raíz
 
-## 2. Análisis detallado de la causa raíz
 
 ¿Por qué se queda colgado Windows Update en el último segundo?
 
@@ -62,11 +59,8 @@ Tras rescatar el equipo mediante un reinicio forzoso y revisar los registros del
 
 ## 3. Solución práctica paso a paso
 
-## 3. Solución práctica paso a paso
 
-## 3. Solución práctica paso a paso
 
-## 3. Solución práctica paso a paso
 
 Pasos para la solución: Vaciado de la caché y reseteo de servicios
 
@@ -108,11 +102,8 @@ net start msiserver
 
 ## 4. Advertencias y consejos de un técnico
 
-## 4. Advertencias y consejos de un técnico
 
-## 4. Advertencias y consejos de un técnico
 
-## 4. Advertencias y consejos de un técnico
 
 Recomendaciones de estabilidad y prevención
 

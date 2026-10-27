@@ -50,11 +50,8 @@ A. Aquí te comparto el diagnóstico y el paso a paso definitivo para limpiar tu
 
 ## 2. Análisis detallado de la causa raíz
 
-## 2. Análisis detallado de la causa raíz
 
-## 2. Análisis detallado de la causa raíz
 
-## 2. Análisis detallado de la causa raíz
 
 ¿Por qué se llena el disco C: sin que te des cuenta?
 
@@ -70,11 +67,8 @@ Antes de lanzarnos a borrar cosas a lo loco, entendamos cuáles son las tres cau
 
 ## 3. Solución práctica paso a paso
 
-## 3. Solución práctica paso a paso
 
-## 3. Solución práctica paso a paso
 
-## 3. Solución práctica paso a paso
 
 Guía paso a paso: Cómo eliminar archivos temporales y recuperar tu disco C:
 
@@ -126,11 +120,8 @@ A. * Si Windows te avisa que algún archivo está abierto o en uso por un progra
 
 ## 4. Advertencias y consejos de un técnico
 
-## 4. Advertencias y consejos de un técnico
 
-## 4. Advertencias y consejos de un técnico
 
-## 4. Advertencias y consejos de un técnico
 
 Advertencias del experto técnico
 

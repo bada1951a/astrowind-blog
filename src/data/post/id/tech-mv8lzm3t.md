@@ -115,11 +115,8 @@ Kadang masalah booting lemot bukan cuma dari software startup, tapi fisik HDD/SS
 
 ## 4. Tips & Peringatan Penting Teknisi IT
 
-## 4. Tips & Peringatan Penting Teknisi IT
 
-## 4. Tips & Peringatan Penting Teknisi IT
 
-## 4. Tips & Peringatan Penting Teknisi IT
 
 Expert Warning & Pro Tips
 

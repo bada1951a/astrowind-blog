@@ -48,11 +48,8 @@ Si te ha pasado esto alguna vez, sabrás perfectamente la frustración que se si
 
 ## 2. Análisis detallado de la causa raíz
 
-## 2. Análisis detallado de la causa raíz
 
-## 2. Análisis detallado de la causa raíz
 
-## 2. Análisis detallado de la causa raíz
 
 ¿Por qué ocurre esto exactamente? Analicemos los tres motivos principales por los que tu ordenador se niega a descansar cuando le das la orden:
 

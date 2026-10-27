@@ -44,11 +44,8 @@ Ten minutes later, as I unpack my backpack on the desk, I notice the laptop chas
 
 ## 2. Root Cause Breakdown
 
-## 2. Root Cause Breakdown
 
-## 2. Root Cause Breakdown
 
-## 2. Root Cause Breakdown
 
 Why Your PC Refuses to Turn Off: Root Causes
 

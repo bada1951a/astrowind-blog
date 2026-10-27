@@ -48,11 +48,8 @@ Nachdem ich das Problem damals in Rekordzeit gelöst hatte (und der Rollout dank
 
 ## 3. Schritt-für-Schritt-Lösungsanleitung
 
-## 3. Schritt-für-Schritt-Lösungsanleitung
 
-## 3. Schritt-für-Schritt-Lösungsanleitung
 
-## 3. Schritt-für-Schritt-Lösungsanleitung
 
 Schritt-für-Schritt-Lösung: Schnelle Hilfe im Ernstfall
 

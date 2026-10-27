@@ -54,11 +54,8 @@ Nach jahrelanger Erfahrung im Support auf verschiedenen Technologie-Campi und in
 
 ## 3. Schritt-für-Schritt-Lösungsanleitung
 
-## 3. Schritt-für-Schritt-Lösungsanleitung
 
-## 3. Schritt-für-Schritt-Lösungsanleitung
 
-## 3. Schritt-für-Schritt-Lösungsanleitung
 
 Schritt-für-Schritt-Anleitung zur Problemlösung
 

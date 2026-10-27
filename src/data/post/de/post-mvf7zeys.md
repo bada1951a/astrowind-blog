@@ -40,11 +40,8 @@ In Panik habe ich zuerst den Laptop einfach hart ausgeschaltet – ein klassisch
 
 ## 2. Detaillierte Ursachenanalyse
 
-## 2. Detaillierte Ursachenanalyse
 
-## 2. Detaillierte Ursachenanalyse
 
-## 2. Detaillierte Ursachenanalyse
 
 Warum der Systemprozess Amok läuft: Die 3 Hauptursachen
 
@@ -60,11 +57,8 @@ Bevor wir zur Tat schreiten, müssen wir verstehen, warum Windows sich selbst au
 
 ## 3. Schritt-für-Schritt-Lösungsanleitung
 
-## 3. Schritt-für-Schritt-Lösungsanleitung
 
-## 3. Schritt-für-Schritt-Lösungsanleitung
 
-## 3. Schritt-für-Schritt-Lösungsanleitung
 
 Schritt-für-Schritt-Anleitung zur Problemlösung
 

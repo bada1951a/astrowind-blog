@@ -38,11 +38,8 @@ Let's fix this right now so it never happens to you again. You can reclaim your 
 
 ## 2. Root Cause Breakdown
 
-## 2. Root Cause Breakdown
 
-## 2. Root Cause Breakdown
 
-## 2. Root Cause Breakdown
 
 Why Your Windows 10 Boot Time Crawls to a Halt
 

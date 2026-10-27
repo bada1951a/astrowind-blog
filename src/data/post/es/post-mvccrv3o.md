@@ -47,11 +47,8 @@ A. </div>
 
 ## 2. Análisis detallado de la causa raíz
 
-## 2. Análisis detallado de la causa raíz
 
-## 2. Análisis detallado de la causa raíz
 
-## 2. Análisis detallado de la causa raíz
 
 ¿Por qué ocurre esto? Análisis de las 3 causas raíz
 
@@ -67,11 +64,8 @@ Para solucionar este fallo de inmediato sin perder tiempo probando soluciones al
 
 ## 3. Solución práctica paso a paso
 
-## 3. Solución práctica paso a paso
 
-## 3. Solución práctica paso a paso
 
-## 3. Solución práctica paso a paso
 
 Plan de acción paso a paso para resolver el conflicto
 
@@ -114,11 +108,8 @@ Si la memoria está perfecta, el problema es indudablemente software. Para rever
 
 ## 4. Advertencias y consejos de un técnico
 
-## 4. Advertencias y consejos de un técnico
 
-## 4. Advertencias y consejos de un técnico
 
-## 4. Advertencias y consejos de un técnico
 
 Precauciones críticas para evitar futuros bloqueos
 

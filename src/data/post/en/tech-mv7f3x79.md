@@ -191,11 +191,8 @@ Q6. Select each monitor individually from the top drop-down menu and lock down t
 
 ## 4. Professional Engineer Precautions & Tips
 
-## 4. Professional Engineer Precautions & Tips
 
-## 4. Professional Engineer Precautions & Tips
 
-## 4. Professional Engineer Precautions & Tips
 
 Expert Warning: Prevent Hardware-Level Failures
 

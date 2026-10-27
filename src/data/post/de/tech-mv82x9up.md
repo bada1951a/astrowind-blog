@@ -42,11 +42,8 @@ Freitagnachmittag, 16:45 Uhr. Der letzte Deployment-Lauf für das Release am Mon
 
 ## 2. Detaillierte Ursachenanalyse
 
-## 2. Detaillierte Ursachenanalyse
 
-## 2. Detaillierte Ursachenanalyse
 
-## 2. Detaillierte Ursachenanalyse
 
 Root Cause Analysis: Warum streikt die Kiste genau jetzt?
 
@@ -97,11 +94,8 @@ Falls Windows wider Erwarten hochfährt, werfen wir noch einen Blick in den Ger�
 
 ## 4. Praxistipps und Warnungen vom System-Admin
 
-## 4. Praxistipps und Warnungen vom System-Admin
 
-## 4. Praxistipps und Warnungen vom System-Admin
 
-## 4. Praxistipps und Warnungen vom System-Admin
 
 Expert Warning: Was du unbedingt vermeiden solltest
 

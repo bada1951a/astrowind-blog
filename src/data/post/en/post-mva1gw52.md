@@ -40,11 +40,8 @@ My Slack was blowing up right in the middle of a high-stakes executive sync in o
 
 ## 2. Root Cause Breakdown
 
-## 2. Root Cause Breakdown
 
-## 2. Root Cause Breakdown
 
-## 2. Root Cause Breakdown
 
 Why Your Windows 11 C Drive Fills Up So Fast
 
@@ -130,11 +127,8 @@ If you are a developer or power user, your Windows Component Store accumulates y
 
 ## 4. Professional Engineer Precautions & Tips
 
-## 4. Professional Engineer Precautions & Tips
 
-## 4. Professional Engineer Precautions & Tips
 
-## 4. Professional Engineer Precautions & Tips
 
 Expert Warning & Best Practices
 

@@ -42,11 +42,8 @@ Ce genre de lenteur extrême au boot n'arrive jamais par hasard. Après avoir pe
 
 ## 2. Analyse des causes principales de l'erreur
 
-## 2. Analyse des causes principales de l'erreur
 
-## 2. Analyse des causes principales de l'erreur
 
-## 2. Analyse des causes principales de l'erreur
 
 Anatomie du goulot d'étranglement au démarrage
 
@@ -64,11 +61,8 @@ Pourquoi Windows 10 finit-il par s'effondrer au boot après quelques mois d'util
 
 ## 3. Guide de résolution étape par étape
 
-## 3. Guide de résolution étape par étape
 
-## 3. Guide de résolution étape par étape
 
-## 3. Guide de résolution étape par étape
 
 Résolution express : Nettoyer le démarrage en 60 secondes
 
@@ -93,11 +87,8 @@ Faites un clic droit sur les applications superflues (par exemple : Cortana, app
 
 ## 4. Conseils et précautions d'un expert système
 
-## 4. Conseils et précautions d'un expert système
 
-## 4. Conseils et précautions d'un expert système
 
-## 4. Conseils et précautions d'un expert système
 
 Conseils d'expert pour maintenir un système sain
 

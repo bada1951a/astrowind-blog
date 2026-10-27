@@ -46,11 +46,8 @@ A. <div style="border-left: 4px solid #3b82f6; padding: 12px 16px; margin: 20px 
 
 ## 2. Análisis detallado de la causa raíz
 
-## 2. Análisis detallado de la causa raíz
 
-## 2. Análisis detallado de la causa raíz
 
-## 2. Análisis detallado de la causa raíz
 
 ¿Por qué el proceso "System" devora tu CPU?
 
@@ -66,11 +63,8 @@ A. ---
 
 ## 3. Solución práctica paso a paso
 
-## 3. Solución práctica paso a paso
 
-## 3. Solución práctica paso a paso
 
-## 3. Solución práctica paso a paso
 
 Guía paso a paso para solucionar el bloqueo
 

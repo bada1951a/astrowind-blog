@@ -40,11 +40,8 @@ Face à ce genre de panne aléatoire, la pire erreur est de jouer aux devinettes
 
 ## 2. Analyse des causes principales de l'erreur
 
-## 2. Analyse des causes principales de l'erreur
 
-## 2. Analyse des causes principales de l'erreur
 
-## 2. Analyse des causes principales de l'erreur
 
 Anatomie d'un freeze : les 3 causes racines les plus fréquentes
 
@@ -97,11 +94,8 @@ Une fois la piste identifiée dans les journaux, passons à la résolution prati
 
 ## 4. Conseils et précautions d'un expert système
 
-## 4. Conseils et précautions d'un expert système
 
-## 4. Conseils et précautions d'un expert système
 
-## 4. Conseils et précautions d'un expert système
 
 Précautions d'expert et sécurité des données
 

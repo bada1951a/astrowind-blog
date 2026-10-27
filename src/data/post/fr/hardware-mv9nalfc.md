@@ -44,11 +44,8 @@ Heureusement, après des années à dépanner les postes de l'équipe, j'ai une 
 
 ## 2. Analyse des causes principales de l'erreur
 
-## 2. Analyse des causes principales de l'erreur
 
-## 2. Analyse des causes principales de l'erreur
 
-## 2. Analyse des causes principales de l'erreur
 
 Pourquoi votre disque C se remplit tout seul ?
 
@@ -62,11 +59,8 @@ Avant de passer à l'action, il est bon de comprendre ce qui s'est passé dans l
 
 ## 3. Guide de résolution étape par étape
 
-## 3. Guide de résolution étape par étape
 
-## 3. Guide de résolution étape par étape
 
-## 3. Guide de résolution étape par étape
 
 Guide étape par étape : Nettoyage complet du disque C
 

@@ -60,11 +60,8 @@ In meiner jahrelangen Praxis als Hardware-Diagnostiker haben sich drei übliche 
 
 ## 3. Schritt-für-Schritt-Lösungsanleitung
 
-## 3. Schritt-für-Schritt-Lösungsanleitung
 
-## 3. Schritt-für-Schritt-Lösungsanleitung
 
-## 3. Schritt-für-Schritt-Lösungsanleitung
 
 Schritt-für-Schritt-Anleitung: Den Übeltäter in der Ereignisanzeige entlarven
 
@@ -102,11 +99,8 @@ Suchen Sie im System-Log exakt nach dem Eintrag Event-ID 41(Das war Ihr erzwunge
 
 ## 4. Praxistipps und Warnungen vom System-Admin
 
-## 4. Praxistipps und Warnungen vom System-Admin
 
-## 4. Praxistipps und Warnungen vom System-Admin
 
-## 4. Praxistipps und Warnungen vom System-Admin
 
 Maßnahmen zur Sofortbehebung nach der Diagnose
 

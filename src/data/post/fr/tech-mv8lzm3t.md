@@ -44,11 +44,8 @@ Ce genre de galère, en tant qu'ingénieur système, ça me met hors de moi. On 
 
 ## 2. Analyse des causes principales de l'erreur
 
-## 2. Analyse des causes principales de l'erreur
 
-## 2. Analyse des causes principales de l'erreur
 
-## 2. Analyse des causes principales de l'erreur
 
 Pourquoi votre machine met trois plombes à démarrer ?
 
@@ -120,11 +117,8 @@ Si le statut renvoie autre chose que *Healthy*, sauvez vos données immédiateme
 
 ## 4. Conseils et précautions d'un expert système
 
-## 4. Conseils et précautions d'un expert système
 
-## 4. Conseils et précautions d'un expert système
 
-## 4. Conseils et précautions d'un expert système
 
 Précautions d'expert (Avertissements)
 

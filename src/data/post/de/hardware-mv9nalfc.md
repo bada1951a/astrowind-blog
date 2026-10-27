@@ -40,11 +40,8 @@ Zuerst verfiel ich in blinden Aktionismus. Ich löschte ein paar größere PDF-D
 
 ## 2. Detaillierte Ursachenanalyse
 
-## 2. Detaillierte Ursachenanalyse
 
-## 2. Detaillierte Ursachenanalyse
 
-## 2. Detaillierte Ursachenanalyse
 
 Warum läuft das C-Laufwerk immer wieder voll? (Die 3 Hauptursachen)
 
@@ -60,11 +57,8 @@ Bevor wir zur Tat schreiten, müssen wir verstehen, woher dieser Datenmüll eige
 
 ## 3. Schritt-für-Schritt-Lösungsanleitung
 
-## 3. Schritt-für-Schritt-Lösungsanleitung
 
-## 3. Schritt-für-Schritt-Lösungsanleitung
 
-## 3. Schritt-für-Schritt-Lösungsanleitung
 
 Schritt-für-Schritt-Anleitung: Temporäre Dateien restlos löschen
 

@@ -93,11 +93,8 @@ A. Kadang ada jalur pin di *motherboard* yang kotor atau retak rambut akibat pan
 
 ## 4. Tips & Peringatan Penting Teknisi IT
 
-## 4. Tips & Peringatan Penting Teknisi IT
 
-## 4. Tips & Peringatan Penting Teknisi IT
 
-## 4. Tips & Peringatan Penting Teknisi IT
 
 Expert Warning: Jangan Asal Main Colok!
 

@@ -111,11 +111,8 @@ For persistent bloatware that refuses to disappear from your startup list:
 
 ## 4. Professional Engineer Precautions & Tips
 
-## 4. Professional Engineer Precautions & Tips
 
-## 4. Professional Engineer Precautions & Tips
 
-## 4. Professional Engineer Precautions & Tips
 
 Expert Warning / Advice
 

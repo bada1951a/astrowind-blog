@@ -63,11 +63,8 @@ Jeder mechanische Schalter prellt von Natur aus einige Millisekunden beim Schlie
 
 ## 3. Schritt-für-Schritt-Lösungsanleitung
 
-## 3. Schritt-für-Schritt-Lösungsanleitung
 
-## 3. Schritt-für-Schritt-Lösungsanleitung
 
-## 3. Schritt-für-Schritt-Lösungsanleitung
 
 2. Schritt-für-Schritt-Entstörung (Diagnose & Instandsetzung)
 
@@ -148,11 +145,8 @@ Sollte das Chattering nach Phase 2 weiterhin auftreten, ist die Blattfeder entwe
 
 ## 4. Praxistipps und Warnungen vom System-Admin
 
-## 4. Praxistipps und Warnungen vom System-Admin
 
-## 4. Praxistipps und Warnungen vom System-Admin
 
-## 4. Praxistipps und Warnungen vom System-Admin
 
 3. Experten-Warnung & Brandmelder-Prävention
 

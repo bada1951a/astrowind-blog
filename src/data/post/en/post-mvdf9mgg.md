@@ -40,11 +40,8 @@ The Slack workspace for our Mountain View office engineering team was blowing up
 
 ## 2. Root Cause Breakdown
 
-## 2. Root Cause Breakdown
 
-## 2. Root Cause Breakdown
 
-## 2. Root Cause Breakdown
 
 Why Your Windows 11 Update Gets Stuck at 100 Percent
 
@@ -103,11 +100,8 @@ Reboot your machine normally, head back into Settings > Windows Update, and hit 
 
 ## 4. Professional Engineer Precautions & Tips
 
-## 4. Professional Engineer Precautions & Tips
 
-## 4. Professional Engineer Precautions & Tips
 
-## 4. Professional Engineer Precautions & Tips
 
 Expert Warning & Best Practices
 

@@ -42,11 +42,8 @@ A. Estábamos a menos de dos horas de realizar el despliegue crítico de una nue
 
 ## 2. Análisis detallado de la causa raíz
 
-## 2. Análisis detallado de la causa raíz
 
-## 2. Análisis detallado de la causa raíz
 
-## 2. Análisis detallado de la causa raíz
 
 Por qué se llena tan rápido el disco C en Windows 11
 
@@ -64,11 +61,8 @@ A. Las actualizaciones de Windows Update anteriores, los instaladores de parches
 
 ## 3. Solución práctica paso a paso
 
-## 3. Solución práctica paso a paso
 
-## 3. Solución práctica paso a paso
 
-## 3. Solución práctica paso a paso
 
 Guía paso a paso: Liberación rápida en 1 minutos y limpieza profunda
 
@@ -112,11 +106,8 @@ A. * Si Windows te avisa de que un archivo está abierto en otra aplicación, si
 
 ## 4. Advertencias y consejos de un técnico
 
-## 4. Advertencias y consejos de un técnico
 
-## 4. Advertencias y consejos de un técnico
 
-## 4. Advertencias y consejos de un técnico
 
 Advertencias del experto técnico
 

@@ -103,11 +103,8 @@ A. mdsched.exe
 
 ## 4. Advertencias y consejos de un técnico
 
-## 4. Advertencias y consejos de un técnico
 
-## 4. Advertencias y consejos de un técnico
 
-## 4. Advertencias y consejos de un técnico
 
 Expert Warning / Advice: Lo que los tutoriales de YouTube no te dicen
 

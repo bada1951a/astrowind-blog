@@ -42,11 +42,8 @@ Ce genre de micro-frustration ergonomique au bureau, multiplié par des centaine
 
 ## 2. Analyse des causes principales de l'erreur
 
-## 2. Analyse des causes principales de l'erreur
 
-## 2. Analyse des causes principales de l'erreur
 
-## 2. Analyse des causes principales de l'erreur
 
 Pourquoi ce changement de menu nous ralentit-il autant ?
 
@@ -60,11 +57,8 @@ Avant de plonger dans le cambouis technique, comprenons ce qui se passe sous le 
 
 ## 3. Guide de résolution étape par étape
 
-## 3. Guide de résolution étape par étape
 
-## 3. Guide de résolution étape par étape
 
-## 3. Guide de résolution étape par étape
 
 Guide étape par étape : Récupérer le menu classique
 
@@ -101,11 +95,8 @@ Votre barre des tâches va disparaître et réapparaître une fraction de second
 
 ## 4. Conseils et précautions d'un expert système
 
-## 4. Conseils et précautions d'un expert système
 
-## 4. Conseils et précautions d'un expert système
 
-## 4. Conseils et précautions d'un expert système
 
 Conseils de sécurité et bonnes pratiques IT
 
