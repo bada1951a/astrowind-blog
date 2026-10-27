@@ -94,7 +94,7 @@ const { post, url } = Astro.props;
       }
     </header>
 
-    <!-- 모바일: 17px + 1.75배 행간 + 단어단위 줄바꿈(break-keep) / PC(lg 이상): 시원한 prose-xl 유지 -->
+    <!-- 모바일: 17px + 1.75배 행간 + 단어 단위 줄바꿈 / PC: 시원한 prose-xl 유지 -->
     <div
       class="mx-auto px-6 sm:px-6 max-w-3xl prose text-[17px] leading-[1.75] break-keep lg:prose-xl dark:prose-invert dark:prose-headings:text-slate-300 prose-headings:font-heading prose-headings:leading-tighter prose-headings:tracking-tighter prose-headings:font-bold prose-headings:break-keep prose-a:text-primary dark:prose-a:text-blue-400 prose-img:rounded-md prose-img:shadow-lg mt-8 prose-headings:scroll-mt-[80px] prose-li:my-0"
     >
@@ -108,12 +108,12 @@ const { post, url } = Astro.props;
   </article>
 </section>
 
+<!-- 마크다운 이미지 쪼개짐 자동 복구 스크립트 -->
 <script>
   function fixContentImages() {
     const content = document.querySelector('.prose');
     if (!content) return;
 
-    // 혹시라도 쪼개져 텍스트로 노출될 수 있는 마크다운 이미지 문법을 안전하게 img 태그로 치환
     const pElements = Array.from(content.querySelectorAll('p'));
     for (let i = 0; i < pElements.length; i++) {
       const p1 = pElements[i];
@@ -160,3 +160,30 @@ const { post, url } = Astro.props;
   }
   document.addEventListener('astro:page-load', fixContentImages);
 </script>
+
+<!-- 외부 CSS 및 Tailwind 기본값을 강제로 무력화하고 2호기 규격으로 고정하는 전역 스타일 -->
+<style is:global>
+  /* 본문 및 소제목 한글 단어 단위 줄바꿈 강제 (한 글자 쪼개짐 방지) */
+  .prose p,
+  .prose h1,
+  .prose h2,
+  .prose h3,
+  .prose h4,
+  .prose li {
+    word-break: keep-all !important;
+    overflow-wrap: break-word !important;
+    letter-spacing: -0.015em !important;
+  }
+
+  /* 모바일 화면에서 제목과 본문 크기를 2호기 규격(17px)으로 완전 일치 */
+  @media (max-width: 768px) {
+    .prose h2 {
+      font-size: 1.35rem !important;
+      line-height: 1.4 !important;
+    }
+    .prose p {
+      font-size: 1.0625rem !important; /* 17px */
+      line-height: 1.75 !important;
+    }
+  }
+</style>
