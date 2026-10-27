@@ -163,7 +163,7 @@ const I18N_SECTIONS = {
 };
 
 // =========================================================================
-// [완전 무결 마크다운 정제 함수] 상단 공백 압축 + 핀셋 중복제거 + 수식 박멸 + 소제목 강제
+// [완전 무결 마크다운 정제 함수] 상단 공백 압축 + 핀셋 중복제거 + 수식 박멸 + 소제목/볼드 완전 교정
 // =========================================================================
 function sanitizeMarkdownFormatting(content, langCode) {
   let cleaned = content;
@@ -172,7 +172,7 @@ function sanitizeMarkdownFormatting(content, langCode) {
   // 1) 상단 빈 줄 압축
   cleaned = cleaned.replace(/^\n+/, '');
 
-  // 2) 단축키 주변 달러($) 기호 및 LaTeX 수식 인라인 백틱화 (Strg $xg...$, $Win+1$ 등 박멸)
+  // 2) 단축키 주변 달러($) 기호 및 LaTeX 수식 인라인 백틱화
   cleaned = cleaned.replace(/\$(?:Strg|Ctrl|Win|Shift|Alt|Esc)\s*[^$\n]*\$/gi, (match) => {
     return `\`${match.replace(/\$/g, '').trim()}\``;
   });
@@ -206,14 +206,25 @@ function sanitizeMarkdownFormatting(content, langCode) {
   }
   cleaned = cleaned.replace(/^(## 1\.[^\n]+)\n+(\s*1\.\s+[^\n]+)\n+/m, '$1\n\n');
 
-  // 5) 소제목 헤딩(#)에 묻은 볼드 기호 정제 (### **제목** -> ### 제목)
-  cleaned = cleaned.replace(/^(#{1,6}\s*)\*\*(.*?)\*\*/gm, '$1$2');
+  // =========================================================================
+  // 🛡️ [핵심 보정 1] 헤딩(#) 줄 내부의 모든 ** 제거 (4호기 제목 중간 ** 완벽 제거)
+  // =========================================================================
+  cleaned = cleaned.replace(/^(#{1,6}\s+[^\n]+)$/gm, (match) => {
+    return match.replace(/\*\*/g, '');
+  });
+
+  // =========================================================================
+  // 🛡️ [핵심 보정 2] 볼드(**) 기호 안쪽 공백 압축 및 파싱 풀림 복구 (2·3호기 ** 노출 박멸)
+  // =========================================================================
+  cleaned = cleaned.replace(/\*\*\s+([^*]+?)\s+\*\*/g, '**$1**');
+  cleaned = cleaned.replace(/\*\*\s+([^*]+?)\*\*/g, '**$1**');
+  cleaned = cleaned.replace(/\*\*([^*]+?)\s+\*\*/g, '**$1**');
 
   // 6) 쪼개진 단어 복원 (스페인어 등)
   cleaned = cleaned.replace(/derech\s*\n\s*a:/gi, 'derecha:')
-                   .replace(/con la energi\s*\n\s*a:/gi, 'con la energía:')
-                   .replace(/preventiv\s*\n\s*a:/gi, 'preventiva:')
-                   .replace(/STOP 0x0000000\s*\n\s*a:?/gi, 'STOP 0x0000000a:');
+                    .replace(/con la energi\s*\n\s*a:/gi, 'con la energía:')
+                    .replace(/preventiv\s*\n\s*a:/gi, 'preventiva:')
+                    .replace(/STOP 0x0000000\s*\n\s*a:?/gi, 'STOP 0x0000000a:');
 
   // 7) 뭉쳐버린 띄어쓰기 사전 교정
   const wordFixes = [
@@ -263,7 +274,7 @@ if (lines.length === 0) {
 }
 
 const currentTopic = lines[0];
-console.log(`📌 오늘 처리할 주제 (1호기 메인 IT/Tech): "${currentTopic}"`);
+console.log(`📌 오늘 처리할 주제: "${currentTopic}"`);
 
 const IT_CRISIS_SCENARIOS_30 = [
   "금요일 퇴근 15분 전, 팀장님과 임원진에게 주간 최종 결산 보고서를 메일로 막 발송하려던 순간",
@@ -349,9 +360,6 @@ const TARGET_LANGS = [
 const delay = (ms) => new Promise((res) => setTimeout(res, ms));
 const fileSlug = `post-${Date.now().toString(36)}`;
 
-// =========================================================================
-// [영구 고정] gemini-3.5-flash-lite + maxOutputTokens 8192로 중간 절단 원천 차단
-// =========================================================================
 async function fetchWithRetry(prompt, maxRetries = 5, delayMs = 5000) {
   for (let attempt = 1; attempt <= maxRetries; attempt++) {
     try {
@@ -377,7 +385,7 @@ async function generateSinglePost(lang, index) {
   const selectedScenario = IT_CRISIS_SCENARIOS_30[Math.floor(Math.random() * IT_CRISIS_SCENARIOS_30.length)];
   const i18n = I18N_SECTIONS[lang.code] || I18N_SECTIONS.ko;
 
-  console.log(`\n🚀 [${index + 1}/12] ${lang.name} (${lang.code}) 1호기 메인 IT 포스팅 생성 중... (테마: ${selectedTheme.name})`);
+  console.log(`\n🚀 [${index + 1}/12] ${lang.name} (${lang.code}) 포스팅 생성 중... (테마: ${selectedTheme.name})`);
 
   const { coverUrl, bodyUrl } = getPostImages(index);
   const pubDateIso = getKstPublishDateIso(index);
@@ -434,7 +442,7 @@ You MUST strictly follow these 5 sections using clean H2 markdown headings (## )
 
 [STRICT MARKDOWN & FORMATTING RULES]
 1. HEADINGS: Keep clean markdown headings (e.g. "## ${i18n.s2}"). NEVER put bold asterisks (**) inside headings.
-2. BOLD FORMATTING: Use bold (**) ONLY for key button clicks or essential UI terms. Always put a space before and after the bold markup if surrounded by words.
+2. BOLD FORMATTING: Use bold (**word**) STRICTLY WITHOUT SPACES inside the asterisks. Never write "** word **".
 3. COMMANDS: Always wrap terminal commands in 3-backtick code blocks (\`\`\`cmd or \`\`\`bash).
 4. ABSOLUTE FORBIDDEN CHARACTERS:
    - NEVER use dollar signs ($) for keyboard shortcuts or variables. NEVER write $Win+X$ or $Ctrl+Shift+Esc$. Write \`Win + X\` or \`Ctrl + Shift + Esc\` instead.
@@ -498,7 +506,7 @@ theme: "${selectedTheme.name}"
       // 🛡️ [글자 수 물리적 강제 루프: 2,200자 미만 시 즉시 재작성]
       let retryCount = 0;
       while (lang.code === 'ko' && body.length < 2200 && retryCount < 2) {
-        console.warn(`⚠️ [1호기 분량 부족] 현재 ${body.length}자 -> 목표 2,500자 충족을 위해 재작성 시도 (${retryCount + 1}/2)...`);
+        console.warn(`⚠️ [분량 부족] 현재 ${body.length}자 -> 목표 2,500자 충족을 위해 재작성 시도 (${retryCount + 1}/2)...`);
         const retryPrompt = prompt + "\n\nCRITICAL ENFORCEMENT: The previous generated post was strictly too short. You MUST write at least 4 very long, deeply detailed paragraphs for EACH section. Elaborate on every technical concept and troubleshooting step exhaustively to exceed 2,500 Korean characters.";
         
         let retryRawText = await fetchWithRetry(retryPrompt);
@@ -516,7 +524,7 @@ theme: "${selectedTheme.name}"
       }
 
       if (lang.code === 'ko') {
-        console.log(`📏 [1호기 한국어 본문 최종 글자 수] ${body.length}자 (목표: 2,500자 이상)`);
+        console.log(`📏 [한국어 본문 최종 글자 수] ${body.length}자 (목표: 2,500자 이상)`);
       }
 
       const middleImageMarkdown = `\n\n![Tech Troubleshooting Guide](${bodyUrl})\n\n`;
@@ -532,7 +540,6 @@ theme: "${selectedTheme.name}"
         }
       }
 
-      // 프론트매터와 본문 사이 개행을 딱 2개로 고정하여 21줄 공백 버그 원천 차단
       text = `${frontmatter}\n\n${body}\n`;
     }
 
@@ -543,7 +550,7 @@ theme: "${selectedTheme.name}"
 
     const filePath = path.join(targetDir, `${fileSlug}.md`);
     fs.writeFileSync(filePath, text, 'utf-8');
-    console.log(`✅ [성공] 1호기 저장 완료: src/data/post/${lang.code}/${fileSlug}.md`);
+    console.log(`✅ [성공] 저장 완료: src/data/post/${lang.code}/${fileSlug}.md`);
     return true;
   } catch (error) {
     console.error(`❌ [최종 실패] ${lang.name} 생성 실패:`, error.message);
@@ -553,7 +560,7 @@ theme: "${selectedTheme.name}"
 
 async function run() {
   console.log("==================================================");
-  console.log("⚡ 1호기 Tech/IT 12개국 최적화 고속 자동 포스팅 시작");
+  console.log("⚡ 12개국 최적화 고속 자동 포스팅 시작");
   console.log("==================================================");
 
   let successCount = 0;
