@@ -46,37 +46,37 @@ Mari kita selesaikan masalah ini langkah demi langkah dengan panduan praktis yan
 Langkah 1: Paksa Hentikan Proses via Task Manager
 Jika proses aplikasi mengalami *hang*, kita harus mematikannya secara paksa agar sistem memuat ulang modulnya dari awal.
 
-1. Tekan kombinasi tombol **Ctrl + Shift + Esc** untuk membuka **Task Manager**.
+1. Tekan kombinasi tombol **Ctrl + Shift + Esc**untuk membuka**Task Manager**.
 
-2. Pada tab *Processes*, cari aplikasi bernama **Snipping Tool** atau **Screen Snipping**.
+2. Pada tab *Processes*, cari aplikasi bernama **Snipping Tool**atau**Screen Snipping**.
 
-3. Klik kanan pada aplikasi tersebut, lalu pilih **End Task**.
+3. Klik kanan pada aplikasi tersebut, lalu pilih**End Task**.
 
-4. Coba kembali tekan **Win + Shift + S** untuk menguji apakah sudah berfungsi normal.
+4. Coba kembali tekan**Win + Shift + S** untuk menguji apakah sudah berfungsi normal.
 
 Langkah 2: Periksa Pengaturan Notifikasi dan Clipboard
 Terkadang, notifikasi *Snipping Tool* diblokir oleh sistem atau fitur *Clipboard History* dalam keadaan mati sehingga hasil tangkapan layar gagal disimpan.
 
-1. Buka menu **Pengaturan (Settings)** dengan menekan **Win + I**.
+1. Buka menu **Pengaturan (Settings)**dengan menekan**Win + I**.
 
-2. Masuk ke menu **System**, lalu pilih **Notifications**. Pastikan tombol notifikasi utama dalam posisi **On**, dan cari aplikasi **Snipping Tool** di daftar bawah, pastikan juga dalam kondisi aktif.
+2. Masuk ke menu**System**, lalu pilih**Notifications**. Pastikan tombol notifikasi utama dalam posisi**On**, dan cari aplikasi**Snipping Tool** di daftar bawah, pastikan juga dalam kondisi aktif.
 
-3. Kembali ke menu utama *Settings*, pilih **System** > **Clipboard**.
+3. Kembali ke menu utama *Settings*, pilih **System**>**Clipboard**.
 
-4. Pastikan opsi **Clipboard history** diatur ke posisi **On**.
+4. Pastikan opsi**Clipboard history**diatur ke posisi**On**.
 
 Langkah 3: Perbaikan Melalui Menu Aplikasi Terinstal
 Jika kedua cara di atas belum membuahkan hasil, kita perlu melakukan *Reset* atau *Repair* melalui menu pengaturan sistem.
 
 1. Buka Pengaturan (Settings) (Win + I).
 
-2. Pilih menu **Apps**, lalu klik **Installed apps**.
+2. Pilih menu **Apps**, lalu klik**Installed apps**.
 
 3. Ketik "Snipping Tool" pada kolom pencarian.
 
-4. Klik ikon titik tiga di sebelah kanan nama aplikasi, lalu pilih **Advanced options**.
+4. Klik ikon titik tiga di sebelah kanan nama aplikasi, lalu pilih**Advanced options**.
 
-5. Gulir ke bawah, klik tombol **Repair**. Jika masih belum bisa, klik tombol **Reset** di bawahnya untuk mengembalikan aplikasi ke kondisi seperti baru terinstal.
+5. Gulir ke bawah, klik tombol**Repair**. Jika masih belum bisa, klik tombol**Reset** di bawahnya untuk mengembalikan aplikasi ke kondisi seperti baru terinstal.
 
 ## 4. Tips & Peringatan Penting Teknisi IT
 
@@ -84,14 +84,14 @@ Sebagai catatan tambahan dari pengalaman di lapangan, hindari menggunakan aplika
 
 ## 5. Pertanyaan yang Sering Diajukan (FAQ)
 
-**Q:** Kenapa shortcut Win + Shift + S saya tiba-tiba berubah fungsi menjadi membuka aplikasi lain?
+**Q:**Kenapa shortcut Win + Shift + S saya tiba-tiba berubah fungsi menjadi membuka aplikasi lain?
 
 **A:** Kemungkinan ada aplikasi pihak ketiga (seperti software perekam layar atau aplikasi kustom keyboard gaming) yang mengambil alih (*hijack*) fungsi tombol pintasan tersebut. Periksa aplikasi yang berjalan di system tray Anda.
 
-**Q:** Apakah saya harus menginstal ulang Windows jika cara di atas gagal total?
+**Q:**Apakah saya harus menginstal ulang Windows jika cara di atas gagal total?
 
-**A:** Tidak perlu terburu-buru install ulang. Anda bisa mendaftarkan ulang (re-register) seluruh aplikasi bawaan Windows melalui perintah PowerShell sebagai Administrator dengan perintah khusus manajemen paket UWP.
+**A:**Tidak perlu terburu-buru install ulang. Anda bisa mendaftarkan ulang (re-register) seluruh aplikasi bawaan Windows melalui perintah PowerShell sebagai Administrator dengan perintah khusus manajemen paket UWP.
 
-**Q:** Apakah masalah ini berhubungan dengan kerusakan pada hardware keyboard fisik?
+**Q:**Apakah masalah ini berhubungan dengan kerusakan pada hardware keyboard fisik?
 
 **A:** Sangat kecil kemungkinannya jika tombol Windows, Shift, dan huruf S masih berfungsi normal saat dikombinasikan untuk fungsi lain. Masalah ini 99% merupakan isu software atau konfigurasi sistem Windows 11.

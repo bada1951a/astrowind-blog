@@ -42,7 +42,7 @@ Erano le 17:45 in un frenetico ufficio al Centro direzionale di Milano, con la d
 
 Analisi del Problem
 
-**a:** Perché Windows 11 ci costringe a fare più clic?
+**a:**Perché Windows 11 ci costringe a fare più clic?
 
 Prima di mettere le mani nel sistema, capiamo cosa succede "sotto il cofano". Le ragioni principali di questo cambiamento e del disagio associato sono tre:
 
@@ -52,11 +52,11 @@ Prima di mettere le mani nel sistema, capiamo cosa succede "sotto il cofano". Le
 
 3. Mancanza di compatibilità nativa immediat
 
-**a:** Molti software aziendali e utility avanzate non si sono ancora integrati perfettamente nelle nuove API di Windows 11, costringendo l'utente a passare per il sottomenu legacy.
+**a:**Molti software aziendali e utility avanzate non si sono ancora integrati perfettamente nelle nuove API di Windows 11, costringendo l'utente a passare per il sottomenu legacy.
 
 La Soluzione Definitiv
 
-**a:** Procedura Passo-Passo
+**a:**Procedura Passo-Passo
 
 Fortunatamente, non dobbiamo convivere per forza con questa limitazione. Esistono metodi rapidi per ripristinare il comportamento classico o per aggirarlo definitivamente. Vediamo la procedura tramite il Prompt dei comandi (o il Terminale), che è la via più pulita e duratura. <div style="border-left: 4px solid #3b82f6; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Attenzione:</strong> Questa modifica interviene sul Registro di sistema di Windows. Seguite i passaggi con attenzione senza modificare chiavi non pertinenti.
@@ -78,7 +78,7 @@ reg.exe add "HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\
 
 5. Vedrete la scritta "Operazione completata con successo".
 
-**Q6.** Ora, per rendere effettiva la modifica senza riavviare l'intero PC, aprite Gestione attività (potete usare la scorciatoia da tastiera `Ctrl + Maiusc + Esc`).
+**Q6.**Ora, per rendere effettiva la modifica senza riavviare l'intero PC, aprite Gestione attività (potete usare la scorciatoia da tastiera `Ctrl + Maiusc + Esc`).
 
 **Q7.** Nella scheda *Processi*, scorrete l'elenco fino a trovare Esplora risorse (explorer.exe).
 

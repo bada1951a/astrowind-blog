@@ -46,6 +46,8 @@ Zuerst verfällt man natürlich in blinden Aktionismus. Man klickt sich panisch 
 
 ## 2. Detaillierte Ursachenanalyse
 
+## 2. Detaillierte Ursachenanalyse
+
 Warum das Wasserzeichen auftaucht: Die 3 Hauptursachen
 
 Bevor wir den Befehl absetzen, müssen wir verstehen, warum das System überhaupt meckert:
@@ -57,6 +59,8 @@ Bevor wir den Befehl absetzen, müssen wir verstehen, warum das System überhaup
 3. Build-Testphase: Auf dem Vorführgerät läuft testweise eine Enterprise-Evaluation-Version, deren Evaluierungszeitraum kurz vor dem Ablauf steht.
 
 ---
+
+## 3. Schritt-für-Schritt-Lösungsanleitung
 
 ## 3. Schritt-für-Schritt-Lösungsanleitung
 
@@ -87,6 +91,8 @@ Schließen Sie alle Fenster und starten Sie das System über das Startmenü neu.
 
 ## 4. Praxistipps und Warnungen vom System-Admin
 
+## 4. Praxistipps und Warnungen vom System-Admin
+
 Kritische Experten-Warnung zur Hardwaresicherheit
 
 <div style="border-left: 4px solid #be123c; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
@@ -96,10 +102,10 @@ Kritische Experten-Warnung zur Hardwaresicherheit
 ---
 ## 5. Häufig gestellte Fragen (FAQ)
 
-**Q.** Verliere ich durch diesen CMD-Befehl meine gespeicherten Daten oder Einstellungen?
+**Q.**Verliere ich durch diesen CMD-Befehl meine gespeicherten Daten oder Einstellungen?
 
-**A:** Nein, absolut nicht. Der Befehl greift ausschließlich in den Software Licensing Service (`sppsvc`) ein. Ihre Dokumente, installierten Programme und persönlichen Einstellungen im Benutzerprofil bleiben zu 100% unberührt.F: Was tun, wenn die Fehlermeldung "Der Befehl ist ungültig" in der CMD erscheint?
+**A:**Nein, absolut nicht. Der Befehl greift ausschließlich in den Software Licensing Service (`sppsvc`) ein. Ihre Dokumente, installierten Programme und persönlichen Einstellungen im Benutzerprofil bleiben zu 100% unberührt.F: Was tun, wenn die Fehlermeldung "Der Befehl ist ungültig" in der CMD erscheint?
 
-**A:** Überprüfen Sie, ob Sie die Eingabeaufforderung tatsächlichals Administratorgeöffnet haben. Ohne administrative Rechte verweigert Windows jeglichen Zugriff auf die Lizenzierungsskripte. Achten Sie zudem auf die exakte Schreibweise inklusive der Dateiendung `.vbs`.F: Funktioniert dieser Trick auch bei Windows 11 Pro und Enterprise?
+**A:**Überprüfen Sie, ob Sie die Eingabeaufforderung tatsächlichals Administratorgeöffnet haben. Ohne administrative Rechte verweigert Windows jeglichen Zugriff auf die Lizenzierungsskripte. Achten Sie zudem auf die exakte Schreibweise inklusive der Dateiendung `.vbs`.F: Funktioniert dieser Trick auch bei Windows 11 Pro und Enterprise?
 
 **A:** Ja, der zugrundeliegende Windows-Lizenzierungsmanager verhält sich bei Windows 10 und Windows 11 identisch. Auch hier gilt jedoch: Es handelt sich um eine administrative Überbrückung, keine dauerhafte Freischaltung ohne gültigen Key.

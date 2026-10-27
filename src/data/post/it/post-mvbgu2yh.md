@@ -85,7 +85,7 @@ Se la GUI del Task Manager fa i capricci, passiamo alla riga di comando.
 
    `start explorer.exe`
 
-**Q6.** Chiudi il prompt dei comandi. La tua taskbar è di nuovo operativa. ### Metodo 3: Re-registrare il pacchetto della Taskbar (Soluzione Avanzata)
+**Q6.**Chiudi il prompt dei comandi. La tua taskbar è di nuovo operativa. ### Metodo 3: Re-registrare il pacchetto della Taskbar (Soluzione Avanzata)
 
 Se il blocco si presenta continuamente, significa che i file di sistema della shell grafica sono corrotti. Dobbiamo ricaricarli via PowerShell.
 
@@ -113,10 +113,10 @@ Domande Frequenti (FAQ)
 
 1. Perché la barra delle applicazioni si blocca sempre dopo l'avvio del PC? Spesso è colpa di un'applicazione di terze parti che si avvia in background e va in conflitto con la shell di Windows (spesso antivirus aggressivi o utility di personalizzazione estetica). Prova a disabilitare le app superflue dalla scheda "App di avvio" nel Task Manager.
 
-**Q.** Posso usare il prompt dei comandi se il menu Start non si apre?
+**Q.**Posso usare il prompt dei comandi se il menu Start non si apre?
 
-**A.** Certamente. Anche se il menu Start e la taskbar sono totalmente bloccati, le scorciatoie da tastiera comeCtrl + Maiusc + Esc(per il Task Manager) oWin + R(per la finestra Esegui) continuano a funzionare nella maggior parte dei casi.
+**A.**Certamente. Anche se il menu Start e la taskbar sono totalmente bloccati, le scorciatoie da tastiera comeCtrl + Maiusc + Esc(per il Task Manager) oWin + R(per la finestra Esegui) continuano a funzionare nella maggior parte dei casi.
 
-**Q.** Questo problema cancella i miei file o le applicazioni aperte?
+**Q.**Questo problema cancella i miei file o le applicazioni aperte?
 
 **A.** No. Riavviare *explorer.exe* interrompe unicamente l'interfaccia grafica del desktop e della barra delle applicazioni, lasciando intatte tutte le applicazioni di lavoro aperte e i documenti in corso.

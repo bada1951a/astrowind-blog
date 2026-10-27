@@ -78,9 +78,7 @@ Benchmark de Conexão: Taxa de Atualização, Latência e Estabilidade
 
 Na tabela técnica abaixo, comparo os cenários de conexão mais comuns que analisamos em bancada, correlacionando a taxa de atualização, a estabilidade do sinal e o impacto na latência percebid
 
-**a:**
-
-| Interface & Protocolo | Resolução / Taxa Alvo | Uso de Largura de Banda | Input Lag Médio | Estabilidade Operacional |
+**a:**| Interface & Protocolo | Resolução / Taxa Alvo | Uso de Largura de Banda | Input Lag Médio | Estabilidade Operacional |
 | :--- | :--- | :--- | :--- | :--- |
 | HDMI 1.4 Genérico | 1080p @ 144Hz | 8.9 Gbps (Gargalo severo) | ~14.2 ms | ⚠️ Instável (Flicker frequente) |
 | HDMI 2.0 Certificado | 1080p @ 144Hz / 1440p @ 60Hz | 14.4 Gbps (Margem segura) | ~7.1 ms |  Excelente |
@@ -133,9 +131,7 @@ Etapa 3: Purga Completa de Drivers Gráficos com DDU (Display Driver Uninstaller
 
 A reinstalação convencional via instaladores executáveis costuma falhar porque deixa resíduos no registro e arquivos de cache corrompidos. Faremos uma instalação limp
 
-**a:**
-
-1. Baixe a versão mais recente do utilitário DDU (Display Driver Uninstaller) de um portal confiável.
+**a:**1. Baixe a versão mais recente do utilitário DDU (Display Driver Uninstaller) de um portal confiável.
 
 2. Baixe previamente os instaladores oficiais e mais recentes da sua GPU integrada e da sua GPU dedicada no site dos respectivos fabricantes.
 
@@ -214,6 +210,6 @@ Esse é o sintoma clássico de saturação de banda do cabo ou da porta de saíd
 2. O atalho `Win + Ctrl + Shift + B` resolve o problema de tela preta permanentemente?
 Não. Esse atalho funciona apenas como um alívio imediato para reiniciar o buffer do driver de vídeo em memória. Se a causa subjacente for um driver corrompido, sobreposição quebrada de MPO ou cabo com perda de pacotes, a tela voltará a piscar assim que o subsistema for exigido novamente por cargas gráficas mais altas. A solução definitiva requer a limpeza com DDU e a fixação das taxas corretas de transmissão.
 
-**Q.** Usar um hub USB-C multipor portas comuns aumenta o input lag em jogos competitivos?
+**Q.**Usar um hub USB-C multipor portas comuns aumenta o input lag em jogos competitivos?
 
 **A.** Sim. Docks e adaptadores simples que não utilizam linhas DisplayPort diretas (DisplayPort Alternate Mode) processam o sinal por meio de controladores intermediários (como chipsets DisplayLink genéricos) baseados em compressão por software via CPU. Isso adiciona uma fila de renderização com atraso de sinal de 15 a 35 milissegundos, gerando uma sensação perceptível de atraso no mouse (*mouse drift*). Para jogos competitivos, conecte o monitor diretamente a uma porta USB-C com saída nativa para a dGPU ou à porta HDMI nativa do notebook.

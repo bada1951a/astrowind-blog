@@ -102,6 +102,8 @@ mdsched.exe
 
 ## 4. Advertencias y consejos de un técnico
 
+## 4. Advertencias y consejos de un técnico
+
 Expert Warning / Advice: Lo que los tutoriales de YouTube no te dicen
 
 <div style="border-left: 4px solid #ff0055; padding: 12px 16px; margin: 20px 0; background-color: rgba(255,0,85,0.05); border-radius: 4px; font-family: monospace;">

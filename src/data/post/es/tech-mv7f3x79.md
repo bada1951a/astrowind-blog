@@ -119,13 +119,13 @@ Para garantizar que no queden residuos en las claves del registro, debemos recur
 
 5. En la pestaña Arranque, marca la casillaArranque a prueba de errorescon la opciónMínimo. Aplica y reinicia el sistema.
 
-**Q6.** Una vez dentro del Modo Seguro:
+**Q6.**Una vez dentro del Modo Seguro:
    - Ejecuta DDU como Administrador.
    - Selecciona el tipo de dispositivo: GPU.
    - Selecciona el fabricante (Intel / NVIDIA / AMD).
    - Haz clic en Limpiar y reiniciar.
 
-**Q7.** Repite el proceso para ambos adaptadores si dispones de un sistema híbrido (primero la gráfica integrada y luego la dedicada).
+**Q7.**Repite el proceso para ambos adaptadores si dispones de un sistema híbrido (primero la gráfica integrada y luego la dedicada).
 
 Paso 4: Reinstalación limpia y configuración de temporización
 
@@ -166,15 +166,15 @@ Advertencias del especialista y prevención de fallos
 ---
 ## 5. Preguntas Frecuentes (FAQ)
 
-**Q.** ¿Por qué el monitor parpadea únicamente al abrir ciertas aplicaciones como Netflix o reproductores multimedia?
+**Q.**¿Por qué el monitor parpadea únicamente al abrir ciertas aplicaciones como Netflix o reproductores multimedia?
 
-**A.** Esto se debe a un fallo en la negociación del protocolo anticopia HDCP (High-bandwidth Digital Content Protection). Cuando reproduces contenido protegido, la GPU exige un nivel de cifrado de hardware que viaja a través del cable. Si el cable tiene pines dañados o el driver tiene un fallo de sincronización en sus módulos criptográficos, la pantalla se desconecta por seguridad durante medio segundo de forma cíclica. La solución pasa por actualizar el firmware del monitor o sustituir el cable por uno con certificación HDCP 2.2 o superior.
+**A.**Esto se debe a un fallo en la negociación del protocolo anticopia HDCP (High-bandwidth Digital Content Protection). Cuando reproduces contenido protegido, la GPU exige un nivel de cifrado de hardware que viaja a través del cable. Si el cable tiene pines dañados o el driver tiene un fallo de sincronización en sus módulos criptográficos, la pantalla se desconecta por seguridad durante medio segundo de forma cíclica. La solución pasa por actualizar el firmware del monitor o sustituir el cable por uno con certificación HDCP 2.2 o superior.
 
 2. He reinstalado los drivers con DDU pero el monitor sigue sin dar señal.
 
 ¿Cómo sé si el puerto del portátil está dañado?
 Abre el Símbolo del sistema con privilegios elevados o PowerShell y revisa los eventos del sistema. Desconecta y conecta el cable; si en el Administrador de dispositivos no se actualiza la lista automáticamente (el árbol de dispositivos no parpadea buscando cambios de hardware), el fallo está en el conector físico o en el fusible térmico del puerto USB-C/HDMI de la placa. Adicionalmente, prueba arrancando una distribución de Ubuntu en modo Live USB: si allí tampoco hay señal externa, el fallo es estrictamente de hardware (puerto, cable o scaler del monitor) y no de Windows.
 
-**Q.** ¿Es mejor conectar la segunda pantalla por HDMI directo o mediante el puerto USB-C con soporte DisplayPort?
+**Q.**¿Es mejor conectar la segunda pantalla por HDMI directo o mediante el puerto USB-C con soporte DisplayPort?
 
 **A.** Técnicamente, USB-C con soporte nativo DisplayPort (DP Alt Mode) ofrece una arquitectura de transmisión más moderna y flexible, con mayor ancho de banda nativo por carril (lane) y mejor soporte para tasas de refresco adaptativas que los puertos HDMI 1.4/2.0 habituales en portátiles. No obstante, el puerto HDMI suele ser más robusto a nivel mecánico y no depende de la negociación de perfiles energéticos que a veces saturan el controlador de bus Type-C. Si buscas fiabilidad absoluta en oficina para 1080p o 1440p a 60 Hz, un HDMI nativo suele dar menos incidencias en jornadas prolongadas.

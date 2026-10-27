@@ -50,6 +50,8 @@ Por suerte, mi compañero de sistemas se acercó con calma, abrió el menú ocul
 
 ## 2. Análisis detallado de la causa raíz
 
+## 2. Análisis detallado de la causa raíz
+
 ¿Por qué se llena el disco C: sin que te des cuenta?
 
 Antes de lanzarnos a borrar cosas a lo loco, entendamos cuáles son las tres causas reales detrás de este problema en Windows:
@@ -61,6 +63,8 @@ Antes de lanzarnos a borrar cosas a lo loco, entendamos cuáles son las tres cau
 3. Caché de aplicaciones y navegadores web: Programas pesados de diseño, suites de oficina y navegadores acumulan gigabytes de caché de navegación e imágenes en directorios del sistema operativo.
 
 ---
+
+## 3. Solución práctica paso a paso
 
 ## 3. Solución práctica paso a paso
 
@@ -105,6 +109,8 @@ Si aún necesitas raspar más gigabytes, vamos a limpiar los directorios de usua
 4. Repite el proceso presionando `Windows + R`, escribiendo esta vez `temp` (sin los porcentajes) y repitiendo el borrado de archivos.
 
 ---
+
+## 4. Advertencias y consejos de un técnico
 
 ## 4. Advertencias y consejos de un técnico
 

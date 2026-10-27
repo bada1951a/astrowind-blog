@@ -105,7 +105,7 @@ Domande Frequenti (FAQ)
 
 D: Posso semplicemente terminare il processo System da Gestione attività per far respirare il PC?
 
-**A.** No. Windows protegge i processi del kernel (`System` e `System Idle Process`). Se provi a terminarlo forzatamente, il sistema genererà immediatamente una schermata blu di errore (BSOD) e si riavvierà perdendo qualsiasi lavoro non salvato.
+**A.**No. Windows protegge i processi del kernel (`System` e `System Idle Process`). Se provi a terminarlo forzatamente, il sistema genererà immediatamente una schermata blu di errore (BSOD) e si riavvierà perdendo qualsiasi lavoro non salvato.
 
 D: Come faccio a capire se il problema è causato da un aggiornamento di Windows Update bloccato?
 
@@ -113,6 +113,6 @@ D: Come faccio a capire se il problema è causato da un aggiornamento di Windows
 
 D: Questo problema può essere causato da un guasto fisico dell'hardware (SSD o RAM)?
 
-**A.** Assolutamente sì. Un SSD che sta cedendo o che ha settori danneggiati costringe il controller e il kernel a ripetere i tentativi di lettura all'infinito, facendo schizzare la CPU al 100% sul processo System. Ti consiglio di scaricare uno strumento S.M.
+**A.**Assolutamente sì. Un SSD che sta cedendo o che ha settori danneggiati costringe il controller e il kernel a ripetere i tentativi di lettura all'infinito, facendo schizzare la CPU al 100% sul processo System. Ti consiglio di scaricare uno strumento S.M.
 
 **A.**R.T. gratuito come CrystalDiskInfo per verificare subito lo stato di salute dei dischi.

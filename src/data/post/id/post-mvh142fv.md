@@ -109,20 +109,20 @@ Setelah Anda menemukan biang keroknya melalui Event Viewer, lakukan langkah peng
 
 3. Update BIOS Secara Berkal
 
-**a:** Beberapa motherboard memiliki bug pada manajemen daya C-States yang memicu freeze acak di Windows 11. Pembaruan BIOS sering kali menjadi solusi pamungkas.
+**a:**Beberapa motherboard memiliki bug pada manajemen daya C-States yang memicu freeze acak di Windows 11. Pembaruan BIOS sering kali menjadi solusi pamungkas.
 
 ---
 
 FAQ (Pertanyaan yang Sering Diajukan)
 
-**Q:** Apakah Event Viewer bisa memperbaiki komputer secara otomatis?
+**Q:**Apakah Event Viewer bisa memperbaiki komputer secara otomatis?
 
-**A:** Tidak. Event Viewer berfungsi sebagai "rekaman CCTV" atau diagnostik untuk mendeteksi letak kerusakan secara presisi, sehingga Anda tidak salah dalam mengambil tindakan perbaikan (tidak salah beli komponen atau salah instal software).
+**A:**Tidak. Event Viewer berfungsi sebagai "rekaman CCTV" atau diagnostik untuk mendeteksi letak kerusakan secara presisi, sehingga Anda tidak salah dalam mengambil tindakan perbaikan (tidak salah beli komponen atau salah instal software).
 
-**Q:** Kenapa banyak sekali tulisan Error di Event Viewer padahal PC saya terasa normal?
+**Q:**Kenapa banyak sekali tulisan Error di Event Viewer padahal PC saya terasa normal?
 
 **A:** Jangan panik. Tidak semua *Error* berakibat fatal. Windows sering kali mencatat error latar belakang (background service) yang gagal start lalu mencoba ulang secara otomatis tanpa mengganggu pengguna. Fokuskan pencarian pada jam-jam spesifik di mana PC Anda benar-benar mengalami freeze atau crash.
 
-**Q:** Apa yang harus saya lakukan jika Event Viewer hanya menunjukkan Kernel-Power (ID 41) tanpa ada petunjuk error lain sebelumnya?
+**Q:**Apa yang harus saya lakukan jika Event Viewer hanya menunjukkan Kernel-Power (ID 41) tanpa ada petunjuk error lain sebelumnya?
 
 **A:** Jika sebelum Event ID 41 sama sekali tidak ada catatan error, besar kemungkinan masalahnya murni bersumber dari suplai daya hardware (Power Supply unit yang mulai melemah, kabel power kendor, atau korsleting listrik eksternal). Cek kestabilan listrik dan kondisi fisik PSU Anda.

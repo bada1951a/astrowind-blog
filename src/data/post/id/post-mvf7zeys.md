@@ -118,14 +118,14 @@ Selalu pastikan sirkulasi udara pada casing PC atau laptop Anda tidak terhalang 
 
 Tanya Jawab Populer (FAQ)
 
-**Q:** Apakah aman mematikan layanan SysMain (Superfetch) secara permanen?
+**Q:**Apakah aman mematikan layanan SysMain (Superfetch) secara permanen?
 
-**A:** Sangat aman. Bagi komputer kantor yang menggunakan SSD sebagai penyimpanan utamanya, layanan SysMain justru sering kali tidak diperlukan dan malah membebani kinerja baca-tulis serta proses latar belakang CPU.
+**A:**Sangat aman. Bagi komputer kantor yang menggunakan SSD sebagai penyimpanan utamanya, layanan SysMain justru sering kali tidak diperlukan dan malah membebani kinerja baca-tulis serta proses latar belakang CPU.
 
-**Q:** Kenapa kipas laptop saya tetap berbunyi kencang meskipun Task Manager sudah menunjukkan penggunaan CPU di bawah 10 persen?
+**Q:**Kenapa kipas laptop saya tetap berbunyi kencang meskipun Task Manager sudah menunjukkan penggunaan CPU di bawah 10 persen?
 
-**A:** Sensor suhu pada prosesor membutuhkan waktu beberapa menit untuk mendinginkan diri setelah bekerja keras di angka 100 persen. Selama suhu fisik chip belum turun ke ambang normal (di bawah 50 derajat Celsius), putaran kipas akan dipertahankan pada kecepatan tinggi.
+**A:**Sensor suhu pada prosesor membutuhkan waktu beberapa menit untuk mendinginkan diri setelah bekerja keras di angka 100 persen. Selama suhu fisik chip belum turun ke ambang normal (di bawah 50 derajat Celsius), putaran kipas akan dipertahankan pada kecepatan tinggi.
 
-**Q:** Apakah reinstall Windows adalah satu-satunya jalan jika cara di atas gagal?
+**Q:**Apakah reinstall Windows adalah satu-satunya jalan jika cara di atas gagal?
 
 **A:** Tidak selalu. Biasanya masalah *System process* yang membandel dapat diselesaikan dengan melakukan *In-Place Upgrade* menggunakan file ISO Windows tanpa harus menghapus data dokumen kerja Anda yang tersimpan di drive C.

@@ -50,7 +50,7 @@ Para entender por que ocurre esto y como solucionarlo de raiz sin alterar la est
 
 2. Falta de opciones nativas en la Interfaz grafic
 
-**a:** El menu de Configuracion general de Windows 11 no incluye un interruptor simple para desactivar este comportamiento, obligando a modificar registros o comandos del sistema.
+**a:**El menu de Configuracion general de Windows 11 no incluye un interruptor simple para desactivar este comportamiento, obligando a modificar registros o comandos del sistema.
 
 3. Incompatibilidad de software heredado: Programas esenciales de oficina (como clientes FTP, compresores o herramientas de seguridad) necesitan engancharse al arbol de comandos antiguo para funcionar con agilidad.
 
@@ -100,14 +100,14 @@ Modificar el Registro de Windows es un procedimiento seguro si se siguen los pas
 ---
 ## 5. Preguntas Frecuentes (FAQ)
 
-**Q.** ¿Este cambio afecta a la estabilidad general de Windows 11?
+**Q.**¿Este cambio afecta a la estabilidad general de Windows 11?
 
-**A.** Absolutamente no. Este comando simplemente habilita una clave de CLSID nativa que Microsoft mantuvo en el codigo del sistema operativo para facilitar la transicion, por lo que no genera errores ni pantallazos azules.
+**A.**Absolutamente no. Este comando simplemente habilita una clave de CLSID nativa que Microsoft mantuvo en el codigo del sistema operativo para facilitar la transicion, por lo que no genera errores ni pantallazos azules.
 
-**Q.** ¿ tendre que repetir este proceso despues de cada actualizacion grande de Windows?
+**Q.**¿ tendre que repetir este proceso despues de cada actualizacion grande de Windows?
 
-**A.** En la gran mayoria de las actualizaciones acumulativas mensuales el ajuste se mantiene intacto. Sin embargo, en actualizaciones mayores de caracteristicas anuales, existe una pequeña posibilidad de que Microsoft restablezca el valor por defecto y debas volver a ejecutar el comando.
+**A.**En la gran mayoria de las actualizaciones acumulativas mensuales el ajuste se mantiene intacto. Sin embargo, en actualizaciones mayores de caracteristicas anuales, existe una pequeña posibilidad de que Microsoft restablezca el valor por defecto y debas volver a ejecutar el comando.
 
-**Q.** ¿Puedo aplicar este truco en equipos portatiles y de sobremesa por igual?
+**Q.**¿Puedo aplicar este truco en equipos portatiles y de sobremesa por igual?
 
 **A.** Si, funciona de manera identica en cualquier ediciones de Windows 11 (Home, Pro o Enterprise), ya que el funcionamiento interno del Explorador de archivos es exactamente el mismo en todas las arquitecturas compatibles.

@@ -34,7 +34,7 @@ Erano le 17:45 in un frenetico lunedì pomeriggio nel nostro ufficio al centro d
 
 Nei giorni successivi, quel maledetto blocco casuale ha iniziato a ripresentarsi con una regolarità esasperante: a volte mentre aprivo Outlook, altre volte semplicemente mentre il PC era in idle. Le classiche soluzioni da bar dello sport digitale non servivano a null
 
-**a:** reinstallare i driver video alla cieca, pulire la polvere con l'aria compressa o dare calci leggeri allo chassis non avevano sortito alcun effetto. 
+**a:**reinstallare i driver video alla cieca, pulire la polvere con l'aria compressa o dare calci leggeri allo chassis non avevano sortito alcun effetto. 
 
 ![Tech Troubleshooting Guide](/images/tech-photo/tech%20(8).jpg)
 
@@ -106,11 +106,11 @@ Domande Frequenti (FAQ)
 
 D: Il Visualizzatore Eventi mostra sempre la causa esatta del blocco?
 
-**A.** Non sempre in modo esplicito. Nei freeze totali causati da problemi hardware profondi (come una micro-interruzione di corrente sulla scheda madre o una tensione instabile dell'alimentatore), Windows si blocca così istantaneamente da non riuscire neppure a scrivere l'ultimo log su disco. In quel caso, l'assenza di un log specifico è già un indizio che punta verso l'hardware puro o l'alimentazione.
+**A.**Non sempre in modo esplicito. Nei freeze totali causati da problemi hardware profondi (come una micro-interruzione di corrente sulla scheda madre o una tensione instabile dell'alimentatore), Windows si blocca così istantaneamente da non riuscire neppure a scrivere l'ultimo log su disco. In quel caso, l'assenza di un log specifico è già un indizio che punta verso l'hardware puro o l'alimentazione.
 
 D: Come faccio a distinguere un problema software da un guasto hardware?
 
-**A.** Se dopo aver reinstallato Windows da zero e aggiornato tutti i driver ufficiali il PC continua a bloccarsi casualmente, la probabilità che si tratti di un problema hardware (RAM difettosa, SSD che perde colpi o surriscaldamento) sale al 95%.
+**A.**Se dopo aver reinstallato Windows da zero e aggiornato tutti i driver ufficiali il PC continua a bloccarsi casualmente, la probabilità che si tratti di un problema hardware (RAM difettosa, SSD che perde colpi o surriscaldamento) sale al 95%.
 
 D: I test della RAM come MemTest86 sono ancora affidabili su Windows 11?
 

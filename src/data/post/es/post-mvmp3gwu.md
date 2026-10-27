@@ -52,11 +52,11 @@ Para solucionar este inconveniente de forma quirúrgica y rápida, vamos a segui
 Método 1: Reiniciar el proceso mediante el Administrador de tareas
 Si la herramienta se quedó "zombi" en segundo plano, matarla y dejar que Windows la reinicie solucionará el problema al instante.
 
-1. Haz clic derecho en la barra de tareas y abre el **Administrador de tareas** (o usa el atajo **Ctrl + Shift + Esc**).
+1. Haz clic derecho en la barra de tareas y abre el **Administrador de tareas**(o usa el atajo**Ctrl + Shift + Esc**).
 
-2. En la pestaña **Procesos**, busca en la lista **Herramienta Recortes** o **Snipping Tool**.
+2. En la pestaña**Procesos**, busca en la lista**Herramienta Recortes**o**Snipping Tool**.
 
-3. Si lo encuentras, selecciónalo y haz clic en el botón superior **Finalizar tarea**.
+3. Si lo encuentras, selecciónalo y haz clic en el botón superior**Finalizar tarea**.
 
 4. Si no aparece con ese nombre, busca procesos con nombres similares como `ScreenClippingHost.exe` y fínzalos también.
 
@@ -65,26 +65,26 @@ Si la herramienta se quedó "zombi" en segundo plano, matarla y dejar que Window
 Método 2: Comprobar la Configuración de Notificaciones y Aplicaciones
 A veces el problema es simplemente que Windows cree que no quieres ver notificaciones flotantes.
 
-1. Abre la aplicación de **Configuración** pulsando **Win + I**.
+1. Abre la aplicación de**Configuración**pulsando**Win + I**.
 
-2. Navega hasta la sección **Sistema** y luego haz clic en **Notificaciones**.
+2. Navega hasta la sección**Sistema**y luego haz clic en**Notificaciones**.
 
-3. Asegúrate de que las notificaciones generales estén activadas y busca específicamente **Herramienta Recortes** en la lista de aplicaciones inferiores.
+3. Asegúrate de que las notificaciones generales estén activadas y busca específicamente**Herramienta Recortes**en la lista de aplicaciones inferiores.
 
-4. Entra en sus propiedades y verifica que tenga permitido mostrar notificaciones y banners. Ya de paso, asegúrate de que el modo **No molestar** no esté bloqueando las alertas críticas.
+4. Entra en sus propiedades y verifica que tenga permitido mostrar notificaciones y banners. Ya de paso, asegúrate de que el modo**No molestar**no esté bloqueando las alertas críticas.
 
 Método 3: Restablecer y reparar la aplicación desde Configuración
 Si los métodos anteriores fallan, vamos a limpiar los datos corruptos de la aplicación sin perder configuraciones importantes.
 
-1. Vuelve a entrar en **Configuración** (**Win + I**).
+1. Vuelve a entrar en**Configuración**(**Win + I**).
 
-2. Dirígete a **Aplicaciones** y selecciona **Aplicaciones instaladas**.
+2. Dirígete a**Aplicaciones**y selecciona**Aplicaciones instaladas**.
 
-3. Escribe "Recortes" en la barra de búsqueda superior para localizar la **Herramienta Recortes**.
+3. Escribe "Recortes" en la barra de búsqueda superior para localizar la**Herramienta Recortes**.
 
-4. Haz clic en los tres puntos situados a la derecha de la aplicación y selecciona **Opciones avanzadas**.
+4. Haz clic en los tres puntos situados a la derecha de la aplicación y selecciona**Opciones avanzadas**.
 
-5. Desplázate hacia abajo y haz clic primero en el botón **Reparar**. Si esto no funciona, vuelve a entrar y haz clic en **Restablecer** para dejar la aplicación como el primer día.
+5. Desplázate hacia abajo y haz clic primero en el botón**Reparar**. Si esto no funciona, vuelve a entrar y haz clic en**Restablecer** para dejar la aplicación como el primer día.
 
 <div style="border-left: 4px solid #f59e0b; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Consejo Pro:</strong> Si tras restablecer la app el atajo sigue sin responder, abre una ventana de terminal o PowerShell como administrador y ejecuta el siguiente comando para reinstalar los paquetes de aplicaciones nativas de Windows:
@@ -100,19 +100,19 @@ Como técnico de soporte hardware y sistemas, déjame darte un consejo de campo 
 
 Si estás en medio de una crisis de tiempo y el atajo de Windows 11 sigue fallando por políticas restrictivas de seguridad de la empresa o por un fallo desconocido del sistema operativo, recuerda que existen alternativas nativas e inmediatas:
 
-* **La tecla Impr Pant (PrtScn):** Puedes configurar Windows en **Configuración > Accesibilidad > Teclado** para que la tecla de impresión de pantalla abra directamente la herramienta de recortes sin necesidad de pulsar tres teclas a la vez.
+* **La tecla Impr Pant (PrtScn):**Puedes configurar Windows en**Configuración > Accesibilidad > Teclado** para que la tecla de impresión de pantalla abra directamente la herramienta de recortes sin necesidad de pulsar tres teclas a la vez.
 * **Software alternativo portátil:** Lleva siempre en tu memoria USB corporativa herramientas ligeras y portátiles como *Greenshot* o *Lightshot*. No requieren instalación pesada, corren desde el explorador y salvan cualquier demostración en cuestión de segundos.
 
 ## 5. Preguntas Frecuentes (FAQ)
 
-**Q:** ¿Qué hago si mi teclado no tiene la tecla Windows o está dañada?
+**Q:**¿Qué hago si mi teclado no tiene la tecla Windows o está dañada?
 
-**A:** Puedes usar el teclado en pantalla de Windows escribiendo `OSK` en el menú de inicio, o bien buscar directamente "Herramienta Recortes" en la barra de búsqueda para abrirla de forma manual con el ratón.
+**A:**Puedes usar el teclado en pantalla de Windows escribiendo `OSK` en el menú de inicio, o bien buscar directamente "Herramienta Recortes" en la barra de búsqueda para abrirla de forma manual con el ratón.
 
-**Q:** ¿Por qué la captura se guarda sola en el portapapeles pero no aparece la notificación para editarla?
+**Q:**¿Por qué la captura se guarda sola en el portapapeles pero no aparece la notificación para editarla?
 
-**A:** Esto ocurre porque las notificaciones emergentes de la aplicación están desactivadas en el Centro de Actividades. Ve a Configuración > Sistema > Notificaciones y actívalas manualmente.
+**A:**Esto ocurre porque las notificaciones emergentes de la aplicación están desactivadas en el Centro de Actividades. Ve a Configuración > Sistema > Notificaciones y actívalas manualmente.
 
-**Q:** ¿Una actualización de Windows Update puede romper este atajo permanentemente?
+**Q:**¿Una actualización de Windows Update puede romper este atajo permanentemente?
 
 **A:** Raras veces de forma permanente, pero las actualizaciones acumulativas a veces corrompen los registros de las aplicaciones UWP. Aplicar el comando de PowerShell que mencionamos en el método 3 suele solucionar este problema específico de incompatibilidad post-actualización.

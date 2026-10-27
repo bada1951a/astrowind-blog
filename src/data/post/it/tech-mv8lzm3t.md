@@ -97,7 +97,7 @@ Domande Frequenti (FAQ)
 
 D: Disabilitare i programmi dall'avvio mi impedisce di usarli in seguito?
 
-**A.** Assolutamente no. Significa solo che l'applicazione non si caricherà in background non appena accendi il computer. Potrai avviarla normalmente cliccando sulla sua icona quando ti serve davvero, risparmiando risorse preziose durante il boot.
+**A.**Assolutamente no. Significa solo che l'applicazione non si caricherà in background non appena accendi il computer. Potrai avviarla normalmente cliccando sulla sua icona quando ti serve davvero, risparmiando risorse preziose durante il boot.
 
 D: Ho disabilitato un servizio per errore e ora Windows fa i capricci, come ripristino?
 

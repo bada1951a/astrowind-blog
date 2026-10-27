@@ -44,6 +44,8 @@ Ce genre de micro-frustration ergonomique au bureau, multiplié par des centaine
 
 ## 2. Analyse des causes principales de l'erreur
 
+## 2. Analyse des causes principales de l'erreur
+
 Pourquoi ce changement de menu nous ralentit-il autant ?
 
 Avant de plonger dans le cambouis technique, comprenons ce qui se passe sous le capot de Windows 11. Microsoft a voulu faire du propre, mais l'expérience utilisateur en a pris un coup pour les profils techniques et administratifs.
@@ -53,6 +55,8 @@ Avant de plonger dans le cambouis technique, comprenons ce qui se passe sous le 
 - L'absence d'option native visible :Aucun interrupteur simple dans l'application Paramètres ne permet de basculer l'affichage de manière permanente, obligeant à modifier le registre système ou à passer par des commandes ciblées.
 
 ---
+
+## 3. Guide de résolution étape par étape
 
 ## 3. Guide de résolution étape par étape
 
@@ -95,6 +99,8 @@ Votre barre des tâches va disparaître et réapparaître une fraction de second
 
 ## 4. Conseils et précautions d'un expert système
 
+## 4. Conseils et précautions d'un expert système
+
 Conseils de sécurité et bonnes pratiques IT
 
 En tant que spécialiste de la maintenance, je vois souvent des scripts ou des logiciels tiers (souvent payants) téléchargés juste pour modifier cette simple clé de registre. 
@@ -105,14 +111,14 @@ En tant que spécialiste de la maintenance, je vois souvent des scripts ou des l
 ---
 ## 5. Foire Aux Questions (FAQ)
 
-**Q.** Cette manipulation est-elle réversible si je souhaite revenir au menu par défaut de Windows 11 ?
+**Q.**Cette manipulation est-elle réversible si je souhaite revenir au menu par défaut de Windows 11 ?
 
-**A.** Absolument. Il suffit d'ouvrir à nouveau le Terminal en administrateur et de supprimer la clé avec la commande suivante : `reg.exe delete "HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}" /f`, puis de redémarrer l'Explorateur Windows via le Gestionnaire des tâches.
+**A.**Absolument. Il suffit d'ouvrir à nouveau le Terminal en administrateur et de supprimer la clé avec la commande suivante : `reg.exe delete "HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}" /f`, puis de redémarrer l'Explorateur Windows via le Gestionnaire des tâches.
 
-**Q.** Est-ce que cela fonctionne sur toutes les versions de Windows 11 ?
+**Q.**Est-ce que cela fonctionne sur toutes les versions de Windows 11 ?
 
-**A.** Oui, cette astuce fonctionne sur les versions initiales ainsi que sur les mises à jour récentes (22H2, 23H2 et ultérieures). Microsoft n'a pas bloqué cette clé de contournement, car elle est tolérée pour des raisons de rétrocompatibilité.
+**A.**Oui, cette astuce fonctionne sur les versions initiales ainsi que sur les mises à jour récentes (22H2, 23H2 et ultérieures). Microsoft n'a pas bloqué cette clé de contournement, car elle est tolérée pour des raisons de rétrocompatibilité.
 
-**Q.** Vais-je perdre mes applications récentes dans le menu ?
+**Q.**Vais-je perdre mes applications récentes dans le menu ?
 
 **A.** Non. Vos logiciels habituels (comme 7-Zip, Notepad++, ou vos outils de gestion de documents) réapparaîtront directement au premier clic, sans que vous ayez besoin de chercher dans les sous-menus.

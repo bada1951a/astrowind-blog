@@ -97,14 +97,14 @@ Tips Keamanan & Saran Pakar Infrastruktur IT
 
 Pertanyaan yang Sering Diajukan (FAQ)
 
-**Q:** Apakah cara ini akan menghapus data atau file laporan saya yang belum tersimpan?
+**Q:**Apakah cara ini akan menghapus data atau file laporan saya yang belum tersimpan?
 
 **A:** Tidak sama sekali. Perintah CMD di atas hanya berinteraksi dengan modul manajemen lisensi Windows (*Software Licensing Service*), sehingga file dokumen Word, Excel, atau aplikasi kerja Anda di Task Managertetap aman seratus persen.
 
-**Q:** Kenapa setelah beberapa minggu watermarknya bisa muncul lagi?
+**Q:**Kenapa setelah beberapa minggu watermarknya bisa muncul lagi?
 
 **A:** Perintah `slmgr -rearm` sifatnya memperpanjang masa tenggang (*grace period*). Jika PC Anda tidak kunjung terhubung kembali ke server lisensi resmi kantor atau jaringan internal perusahaan, sistem akan kembali meminta validasi ulang.
 
-**Q:** Apakah metode ini aman untuk laptop kantor yang terhubung domain perusahaan?
+**Q:**Apakah metode ini aman untuk laptop kantor yang terhubung domain perusahaan?
 
 **A:** Sangat aman karena menggunakan utilitas bawaan asli Microsoft (`slmgr`). Metode ini tidak memodifikasi file sistem inti (*system files*) layaknya menggunakan *patch* ilegal atau bajakan.

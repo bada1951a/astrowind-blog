@@ -48,6 +48,8 @@ Por suerte, como técnico especialista, recordé un procedimiento rápido, limpi
 
 ## 2. Análisis detallado de la causa raíz
 
+## 2. Análisis detallado de la causa raíz
+
 Por qué aparece este molesto aviso de activación
 
 Antes de aplicar la solución, es bueno entender qué provocó el fallo en nuestro entorno de trabajo:
@@ -59,6 +61,8 @@ Antes de aplicar la solución, es bueno entender qué provocó el fallo en nuest
 3. Cambios en componentes de hardware:Una sustitución reciente de placa base o tarjeta de red en el Administrador de dispositivos puede invalidar el token de activación digital guardado en el equipo.
 
 ---
+
+## 3. Solución práctica paso a paso
 
 ## 3. Solución práctica paso a paso
 
@@ -96,6 +100,8 @@ slmgr -rearm
 
 Paso 4: Reiniciar el equipo de forma limpia
 No cierres el día operativo sin hacer un reinicio completo. Ve a Configuración > Inicio/Apagado > Reiniciar. Al volver a encender la máquina, el servicio se reiniciará de forma limpia y la molesta marca de agua habrá desaparecido, permitiéndote trabajar con la pantalla despejada. ---
+
+## 4. Advertencias y consejos de un técnico
 
 ## 4. Advertencias y consejos de un técnico
 

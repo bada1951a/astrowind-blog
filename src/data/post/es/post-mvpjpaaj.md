@@ -18,8 +18,6 @@ En los primeros momentos de desesperación, recurrí a los métodos más ingenuo
 
 La realización de lo que estaba en juego resultó abrumadora al comprender que, de no mediar una intervención técnica precisa a nivel de kernel y gestión de procesos, la integridad del perfil de usuario y la presentación corporativa quedarían completamente comprometidas. No bastaba con reiniciar la interfaz gráfica; era imperativo diagnosticar qué proceso fantasma estaba secuestrando los controladores del sistema, liberar los bloqueos exclusivos mediante comandos de nivel superior y recuperar el control absoluto del entorno de trabajo sin corromper el registro de Windows.
 
-
-
 ![Tech Troubleshooting Guide](/images/tech-photo/tech-photo%20(17).jpg)
 
 ## 2. Análisis detallado de la causa raíz
@@ -42,16 +40,16 @@ Para resolver esta incidencia crítica de manera definitiva, aplicaremos método
 Este método permite identificar y terminar procesos rebeldes utilizando la interfaz gráfica con privilegios ampliados.
 
 1. Presione las teclas `Ctrl + Shift + Esc` simultáneamente para abrir el **Administrador de tareas**.
-2. Haga clic en la opción **Más detalles** situada en la esquina inferior si se muestra la vista compacta.
-3. Navegue hasta la pestaña **Detalles** para visualizar todos los procesos en ejecución con sus respectivos identificadores de proceso (`PID`) y nombres de archivo ejecutables.
+2. Haga clic en la opción**Más detalles**situada en la esquina inferior si se muestra la vista compacta.
+3. Navegue hasta la pestaña**Detalles**para visualizar todos los procesos en ejecución con sus respectivos identificadores de proceso (`PID`) y nombres de archivo ejecutables.
 4. Busque procesos relacionados con el conflicto actual, tales como el software del controlador gráfico, `explorer.exe`, o utilidades asociadas.
-5. Haga clic derecho sobre el proceso infractor y seleccione **Finalizar árbol de procesos** para asegurarse de cerrar cualquier subproceso dependiente que mantenga el archivo bloqueado.
+5. Haga clic derecho sobre el proceso infractor y seleccione**Finalizar árbol de procesos**para asegurarse de cerrar cualquier subproceso dependiente que mantenga el archivo bloqueado.
 6. Vuelva a intentar eliminar el archivo desde el Explorador de archivos con total normalidad.
 
 ### Método 2: Eliminación mediante la consola de comandos de alta potencia (PowerShell o Símbolo del sistema)
 Cuando la interfaz gráfica no logra liberar el bloqueo, la línea de comandos con privilegios de administrador es la herramienta más eficaz.
 
-1. Presione la combinación `Win + X` y seleccione **Terminal (Administrador)** o **Símbolo del sistema (Administrador)**.
+1. Presione la combinación `Win + X` y seleccione**Terminal (Administrador)**o**Símbolo del sistema (Administrador)**.
 2. Identifique el nombre exacto del proceso que bloquea el archivo y ejecute el comando de terminación forzada escribiendo:
    ```cmd
    taskkill /f /im nombre_del_proceso.exe
@@ -66,10 +64,10 @@ Cuando la interfaz gráfica no logra liberar el bloqueo, la línea de comandos c
 ### Método 3: Reinicio del Explorador de Windows y liberación de identificadores (Handles)
 Si el bloqueo persiste debido a que el propio gestor gráfico de Windows retiene el archivo, la solución pasa por reiniciar el shell del sistema.
 
-1. Abra el **Administrador de tareas** mediante `Ctrl + Shift + Esc`.
-2. En la pestaña **Procesos**, busque el proceso denominado **Explorador de Windows** (`explorer.exe`).
-3. Haga clic derecho sobre él y seleccione la opción **Reiniciar**. La barra de tareas y el escritorio desaparecerán brevemente mientras se reinicia el entorno gráfico, liberando automáticamente miles de identificadores de archivos retenidos en caché.
-4. Si el archivo sigue inaccesible, abra el **Monitor de recursos** escribiendo `resmon` en el menú de inicio, vaya a la pestaña **CPU**, y en la sección **Handles asociados**, introduzca el nombre del archivo para identificar el proceso exacto que lo bloquea y finalizarlo desde allí.
+1. Abra el **Administrador de tareas**mediante `Ctrl + Shift + Esc`.
+2. En la pestaña**Procesos**, busque el proceso denominado**Explorador de Windows**(`explorer.exe`).
+3. Haga clic derecho sobre él y seleccione la opción**Reiniciar**. La barra de tareas y el escritorio desaparecerán brevemente mientras se reinicia el entorno gráfico, liberando automáticamente miles de identificadores de archivos retenidos en caché.
+4. Si el archivo sigue inaccesible, abra el**Monitor de recursos**escribiendo `resmon` en el menú de inicio, vaya a la pestaña**CPU**, y en la sección**Handles asociados**, introduzca el nombre del archivo para identificar el proceso exacto que lo bloquea y finalizarlo desde allí.
 
 ## 4. Advertencias y consejos de un técnico
 
@@ -79,14 +77,14 @@ Para prevenir la aparición recurrente de archivos bloqueados en entornos corpor
 
 ## 5. Preguntas Frecuentes (FAQ)
 
-**Q1.** ¿Es seguro utilizar el comando taskkill /f en archivos del sistema operativo?
+**Q1.**¿Es seguro utilizar el comando taskkill /f en archivos del sistema operativo?
 
-A1. El uso del comando de terminación forzada debe realizarse con extrema precaución y únicamente sobre aplicaciones de usuario o procesos de controladores no críticos. Si se finaliza de manera abrupta un proceso esencial del núcleo de Windows, el sistema puede volverse inestable y requerir un reinicio inmediato o la recuperación del sistema.
+**A1.** El uso del comando de terminación forzada debe realizarse con extrema precaución y únicamente sobre aplicaciones de usuario o procesos de controladores no críticos. Si se finaliza de manera abrupta un proceso esencial del núcleo de Windows, el sistema puede volverse inestable y requerir un reinicio inmediato o la recuperación del sistema.
 
-**Q2.** ¿Qué debo hacer si el sistema me indica que necesito permisos de administrador para borrar el archivo?
+**Q2.**¿Qué debo hacer si el sistema me indica que necesito permisos de administrador para borrar el archivo?
 
-A2. Este comportamiento indica que el archivo posee restricciones de propiedad a nivel de listas de control de acceso (ACL). Para solucionarlo, debe abrir la consola de comandos con privilegios elevados y tomar posesión del archivo utilizando el comando takeown antes de proceder a su eliminación definitiva con el comando del.
+**A2.** Este comportamiento indica que el archivo posee restricciones de propiedad a nivel de listas de control de acceso (ACL). Para solucionarlo, debe abrir la consola de comandos con privilegios elevados y tomar posesión del archivo utilizando el comando takeown antes de proceder a su eliminación definitiva con el comando del.
 
 **Q3.** ¿Por qué mi antivirus bloquea la eliminación de archivos temporales después de una actualización gráfica?
 
-A3. Las soluciones de seguridad corporativas escanean automáticamente los archivos recién modificados o descargados en busca de firmas maliciosas. Durante un proceso de actualización gráfica masivo, el motor heurístico del antivirus analiza los archivos temporales en busca de anomalías, bloqueando temporalmente el acceso hasta finalizar la verificación de integridad.
+**A3.** Las soluciones de seguridad corporativas escanean automáticamente los archivos recién modificados o descargados en busca de firmas maliciosas. Durante un proceso de actualización gráfica masivo, el motor heurístico del antivirus analiza los archivos temporales en busca de anomalías, bloqueando temporalmente el acceso hasta finalizar la verificación de integridad.

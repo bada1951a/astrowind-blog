@@ -70,11 +70,11 @@ Domande frequenti (FAQ)
 
 D1. Disabilitando l'avvio rapido il mio computer diventerà molto più lento ad accendersi?
 
-**A1.** Nella stragrande maggioranza dei PC moderni dotati di unità SSD, la differenza di tempo nell'avvio a freddo è impercettibile, solitamente quantificabile in pochissimi secondi. Il guadagno in termini di stabilità e assenza di bug ripaga ampiamente questa minima perdita.
+**A1.**Nella stragrande maggioranza dei PC moderni dotati di unità SSD, la differenza di tempo nell'avvio a freddo è impercettibile, solitamente quantificabile in pochissimi secondi. Il guadagno in termini di stabilità e assenza di bug ripaga ampiamente questa minima perdita.
 
 D2. Posso eseguire questa procedura anche sui PC dei miei colleghi tramite riga di comando o PowerShell?
 
-**A2.** Sì, se gestisci un parco macchine aziendale puoi disabilitare l'avvio rapido agendo direttamente sul registro di sistema o tramite criteri di gruppo (GPO), modificando la chiave HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Session Manager\\Power e impostando il valore HiberbootEnabled a 0.
+**A2.**Sì, se gestisci un parco macchine aziendale puoi disabilitare l'avvio rapido agendo direttamente sul registro di sistema o tramite criteri di gruppo (GPO), modificando la chiave HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Session Manager\\Power e impostando il valore HiberbootEnabled a 0.
 
 D3. Ho disabilitato l'avvio rapido ma il problema persiste, cosa devo controllare adesso?
 

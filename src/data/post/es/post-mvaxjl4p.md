@@ -42,6 +42,8 @@ Eran las 8:50 de la mañana en nuestra oficina del distrito 22@ en Barcelona. A 
 
 ## 2. Análisis detallado de la causa raíz
 
+## 2. Análisis detallado de la causa raíz
+
 Por qué tu Windows 10 se arrastra al encender (Causas Raíz)
 
 Antes de lanzarnos a limpiar, entendamos por qué tu ordenador portátil o de sobremesa pasa de tardar 10 segundos a necesitar un café entero para arrancar:
@@ -51,6 +53,8 @@ Antes de lanzarnos a limpiar, entendamos por qué tu ordenador portátil o de so
 2. Impacto acumulativo en el búfer de inicio: Windows 10 intenta cargar simultáneamente procesos de red, sincronización de la nube y agentes de actualización antes de dejarte ver el escritorio, saturando el disco (especialmente si aún usas un HDD mecánico o un SSD saturado).
 
 3. Falta de mantenimiento preventivo: Rara vez revisamos qué procesos se autoinician tras una gran actualización del sistema operativo, permitiendo que aplicaciones obsoletas sigan devorando memoria RAM desde el arranque.
+
+## 3. Solución práctica paso a paso
 
 ## 3. Solución práctica paso a paso
 

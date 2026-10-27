@@ -44,6 +44,8 @@ Ce genre de lenteur extrême au boot n'arrive jamais par hasard. Après avoir pe
 
 ## 2. Analyse des causes principales de l'erreur
 
+## 2. Analyse des causes principales de l'erreur
+
 Anatomie du goulot d'étranglement au démarrage
 
 Pourquoi Windows 10 finit-il par s'effondrer au boot après quelques mois d'utilisation intensive ? Trois coupables reviennent constamment dans nos environnements de travail :
@@ -57,6 +59,8 @@ Pourquoi Windows 10 finit-il par s'effondrer au boot après quelques mois d'util
 <div style="border-left: 4px solid #00ffcc; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,255,204,0.08); border-radius: 4px; color: #111827;">
 <strong>Diagnostic minute :</strong> Ne cherchez pas midi à quatorze heures. Dans 90% des cas sur Windows 10, le problème vient directement de la liste des applications lancées en arrière-plan au démarrage de la session.
 </div>
+
+## 3. Guide de résolution étape par étape
 
 ## 3. Guide de résolution étape par étape
 
@@ -87,6 +91,8 @@ Faites un clic droit sur les applications superflues (par exemple : Cortana, app
 
 ## 4. Conseils et précautions d'un expert système
 
+## 4. Conseils et précautions d'un expert système
+
 Conseils d'expert pour maintenir un système sain
 
 Une fois le ménage fait, redémarrez votre PC pour mesurer le gain de temps. Sur une machine standard, vous devriez constater une réduction du temps de boot de 30 à 60 secondes. 
@@ -98,14 +104,14 @@ Pour éviter de retomber dans les mêmes travers lors des prochains sprints :
 ---
 ## 5. Foire Aux Questions (FAQ)
 
-**Q.** Est-ce dangereux de désactiver des éléments dans l'onglet Démarrage ?
+**Q.**Est-ce dangereux de désactiver des éléments dans l'onglet Démarrage ?
 
-**A.** Non, absolument pas. Désactiver une application ici signifie simplement qu'elle ne se lancera plus toute seule en arrière-plan. Vous pourrez toujours l'ouvrir manuellement en double-cliquant sur son icône quand vous en aurez réellement besoin.
+**A.**Non, absolument pas. Désactiver une application ici signifie simplement qu'elle ne se lancera plus toute seule en arrière-plan. Vous pourrez toujours l'ouvrir manuellement en double-cliquant sur son icône quand vous en aurez réellement besoin.
 
-**Q.** Que faire si certaines applications persistent à se lancer malgré la désactivation ?
+**Q.**Que faire si certaines applications persistent à se lancer malgré la désactivation ?
 
-**A.** Certains logiciels récalcitrants possèdent leurs propres paramètres internes de lancement automatique. Ouvrez les préférences ou les paramètres de l'application concernée (comme Discord ou Steam) et décochez l'option "Lancer au démarrage de l'ordinateur" dans l'interface du logiciel lui-même.
+**A.**Certains logiciels récalcitrants possèdent leurs propres paramètres internes de lancement automatique. Ouvrez les préférences ou les paramètres de l'application concernée (comme Discord ou Steam) et décochez l'option "Lancer au démarrage de l'ordinateur" dans l'interface du logiciel lui-même.
 
-**Q.** Pourquoi mon PC reste-t-il lent malgré le nettoyage du démarrage ?
+**Q.**Pourquoi mon PC reste-t-il lent malgré le nettoyage du démarrage ?
 
 **A.** Si le temps de boot reste anormalement long après cette manipulation, le problème est probablement matériel. Un disque système (C:) saturé à plus de 90% ou un disque dur mécanique (HDD) en fin de vie provoquent ces symptômes. L'achat et l'installation d'un SSD NVMe résoudront définitivement le problème.

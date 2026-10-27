@@ -46,6 +46,8 @@ Ce genre de galère, en tant qu'ingénieur système, ça me met hors de moi. On 
 
 ## 2. Analyse des causes principales de l'erreur
 
+## 2. Analyse des causes principales de l'erreur
+
 Pourquoi votre machine met trois plombes à démarrer ?
 
 Avant de tout casser, faisons un état des lieux de la cata. Si votre poste met un temps infini à afficher le bureau, c'est généralement l'accumulation de trois facteurs critiques :
@@ -116,6 +118,8 @@ Si le statut renvoie autre chose que *Healthy*, sauvez vos données immédiateme
 
 ## 4. Conseils et précautions d'un expert système
 
+## 4. Conseils et précautions d'un expert système
+
 Précautions d'expert (Avertissements)
 
 Ne désactivez pas tout bêtement. Si vous désactivez les services liés au bus PCI Express, au chipset Intel/AMD ou à la sécurité Windows (Windows Defender Security Center / VBS), vous allez provoquer un bel écran bleu (BSOD) au prochain redémarrage. En cas de doute sur un nom de service abscons, faites une recherche rapide sur le web avant de couper le cordon.
@@ -124,10 +128,10 @@ Ne désactivez pas tout bêtement. Si vous désactivez les services liés au bus
 
 FAQ Technique
 
-**Q :** Est-ce que je risque de casser Windows si je désactive un mauvais programme au démarrage ? R : Non. Le Gestionnaire des tâches ne vous laisse pas désactiver les services critiques du noyau Windows. Au pire, une application ne se lancera pas toute seule et vous devrez l'ouvrir manuellement quand vous en aurez besoin.
+**Q :**Est-ce que je risque de casser Windows si je désactive un mauvais programme au démarrage ? R : Non. Le Gestionnaire des tâches ne vous laisse pas désactiver les services critiques du noyau Windows. Au pire, une application ne se lancera pas toute seule et vous devrez l'ouvrir manuellement quand vous en aurez besoin.
 
-**Q :** Pourquoi mon PC met quand même du temps à s'allumer alors que le démarrage est vide ? R : C'est souvent la "Démarrage rapide" (Fast Startup) de Windows qui met le bazar en combinant une hibernation hybride vérolée. Désactivez-le dans le Panneau de configuration -> Options d'alimentation -> Choisir l'action des boutons d'alimentation.
+**Q :**Pourquoi mon PC met quand même du temps à s'allumer alors que le démarrage est vide ? R : C'est souvent la "Démarrage rapide" (Fast Startup) de Windows qui met le bazar en combinant une hibernation hybride vérolée. Désactivez-le dans le Panneau de configuration -> Options d'alimentation -> Choisir l'action des boutons d'alimentation.
 
-**Q :** Les logiciels de défragmentation de registre servent-ils à quelque chose ?
+**Q :**Les logiciels de défragmentation de registre servent-ils à quelque chose ?
 
 **A.** En 2026, sur un SSD NVMe, c'est du pipeau marketing total. Ça ne fait que grappiller quelques millisecondes au prix d'une instabilité potentielle du registre. Restez sur les outils natifs.

@@ -125,7 +125,7 @@ Si le scintillement persiste, une corruption profonde de la bibliothèque de lie
   <strong>Remarque sur les systèmes hybrides :</strong> Sur les ordinateurs portables équipés d'un processeur avec contrôleur intégré (iGPU Intel/AMD) et d'un GPU dédié (dGPU NVIDIA), effectuez systématiquement le nettoyage de l'iGPU en premier, car c'est lui qui gère la table de routage physique des sorties vidéo sur la majorité des architectures non équipées d'un commutateur MUX matériel.
 </div>
 
-**Q6.** De retour sur votre session standard hors-ligne (déconnectez temporairement le Wi-Fi pour empêcher Windows Update d'installer un pilote générique tronqué), installez le package de pilote préalablement téléchargé.
+**Q6.**De retour sur votre session standard hors-ligne (déconnectez temporairement le Wi-Fi pour empêcher Windows Update d'installer un pilote générique tronqué), installez le package de pilote préalablement téléchargé.
 
 **Q7.** Cochez l'option Effectuer une nouvelle installation si le programme d'installation le propose (notamment chez NVIDIA).
 
@@ -162,6 +162,6 @@ Ce comportement est le symptôme typique d'une bande passante physique insuffisa
 Faut-il privilégier le pilote vidéo du fabricant de l'ordinateur portable (OEM) ou celui du fondeur (Intel/NVIDIA/AMD) ?
 En environnement d'entreprise, la règle d'ingénierie priorise le pilote OEM (validé par Dell, Lenovo, HP), car il intègre les profils de régulation thermique (*TGP/PL1/PL2*) et le routage des lignes PCIe spécifiques à la carte mère de l'appareil. Cependant, en cas de bogue d'affichage persistant sur des écrans récents, l'installation du pilote générique du fondeur (Intel Graphics Driver ou NVIDIA Studio/Game Ready) s'avère indispensable pour bénéficier des correctifs de conformité de la norme DisplayPort 2.1 / HDMI 2.
 
-**Q.** ### Est-il possible qu'un câble vidéo provoque des micro-coupures sans être totalement hors service ?
+**Q.**### Est-il possible qu'un câble vidéo provoque des micro-coupures sans être totalement hors service ?
 
 **A.** Absolument. Un câble présentant un blindage électromagnétique déficient ou une continuité marginale sur la broche HPD (*Hot Plug Detect*) peut transporter sans encombre les signaux basse résolution, mais générer des pertes de paquets massives lors de pics de charge vidéo ou lors du passage de signaux protégés HDCP. De simples interférences induites par le câble d'alimentation du moniteur longeant un câble vidéo bas de gamme suffisent à provoquer un écran noir intermittent d'une seconde.

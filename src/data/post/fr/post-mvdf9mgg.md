@@ -42,6 +42,8 @@ Voici la méthode directe et sans fioritures pour purger ce cache et reprendre l
 
 ## 2. Analyse des causes principales de l'erreur
 
+## 2. Analyse des causes principales de l'erreur
+
 Pourquoi votre mise à jour Windows 11 reste-t-elle bloquée à 100 pourcent ?
 
 Avant de manipuler les fichiers système, comprenons ce qui se passe sous le capot. Lorsque Windows télécharge une mise à jour, il stocke les fichiers d'installation temporaires dans un dossier spécifique. 
@@ -56,6 +58,8 @@ Avant de manipuler les fichiers système, comprenons ce qui se passe sous le cap
 </div>
 
 ---
+
+## 3. Guide de résolution étape par étape
 
 ## 3. Guide de résolution étape par étape
 
@@ -110,6 +114,8 @@ Il ne vous reste plus qu'à redémarrer votre machine, puis à vous rendre dans 
 
 ## 4. Conseils et précautions d'un expert système
 
+## 4. Conseils et précautions d'un expert système
+
 Précautions de l'expert et bonnes pratiques
 
 - Sauvegardez vos travaux en cours : Avant de manipuler les services système ou de forcer un arrêt, assurez-vous que vos modifications de code ou vos documents ouverts sont bien enregistrés (idéalement commités sur votre dépôt distant).
@@ -119,11 +125,11 @@ Précautions de l'expert et bonnes pratiques
 ---
 ## 5. Foire Aux Questions (FAQ)
 
-**Q.** Est-ce que renommer le dossier SoftwareDistribution efface mes fichiers personnels ?
+**Q.**Est-ce que renommer le dossier SoftwareDistribution efface mes fichiers personnels ?
 
-**A.** Absolument pas. Ce dossier contient uniquement les fichiers temporaires téléchargés pour les mises à jour Windows. Vos documents, applications et paramètres personnels ne sont en aucun cas touchés.
+**A.**Absolument pas. Ce dossier contient uniquement les fichiers temporaires téléchargés pour les mises à jour Windows. Vos documents, applications et paramètres personnels ne sont en aucun cas touchés.
 
-**Q.** Que faire si la commande `net stop wuauserv` reste bloquée sur "Arrêt en cours" ?
+**Q.**Que faire si la commande `net stop wuauserv` reste bloquée sur "Arrêt en cours" ?
 
 **A.** C'est un classique lorsque le service est totalement gelé. Ouvrez le Gestionnaire tâches (Ctrl + Maj + Échap), allez dans l'ongletServices, cherchez `wuauserv`, faites un clic droit dessus et choisissez Arrêter. Si cela ne suffit pas, un redémarrage de la machine s'impose.
 

@@ -77,9 +77,9 @@ Krok po kroku do pełnej wydajności:
 
 5. Wewnątrz klucza `InprocServer32` spójrz na prawą stronę ekranu. Kliknij dwukrotnie na domyślną wartość (Domyślna) (Default).
 
-**Q6.** Upewnij się, że pole "Dane wartości" jest całkowicie puste, po czym kliknij OK. Wartość domyślna powinna przyjąć stan `(wartość nie ustawiona)`.
+**Q6.**Upewnij się, że pole "Dane wartości" jest całkowicie puste, po czym kliknij OK. Wartość domyślna powinna przyjąć stan `(wartość nie ustawiona)`.
 
-**Q7.** Ostatni krok techniczny to restart interfejsu systemowego. Otwórz Menedżer zadań(skrót `Ctrl + Shift + Esc`), znajdź na liście procesówEksplorator Windows(Windows Explorer), kliknij na niego prawym przyciskiem myszy i wybierzUruchom ponownie.
+**Q7.**Ostatni krok techniczny to restart interfejsu systemowego. Otwórz Menedżer zadań(skrót `Ctrl + Shift + Esc`), znajdź na liście procesówEksplorator Windows(Windows Explorer), kliknij na niego prawym przyciskiem myszy i wybierzUruchom ponownie.
 
 <div style="border-left: 4px solid #f59e0b; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Wskazówka inżynier

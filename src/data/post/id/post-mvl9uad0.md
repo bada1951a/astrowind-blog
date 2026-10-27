@@ -81,20 +81,20 @@ Klik tombol "Save changes" di bagian bawah. Selesai! Sekarang coba lakukan pengu
 
 <div style="border-left: 4px solid #059669; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 
-> 💡 **Tips Tambahan**: Jika setelah menonaktifkan Fast Startup komputer Anda masih belum mau mati, coba lakukan pembaruan (update) driver BIOS motherboard dan driver chipset langsung dari situs resmi produsen laptop atau motherboard Anda.
+> 💡**Tips Tambahan**: Jika setelah menonaktifkan Fast Startup komputer Anda masih belum mau mati, coba lakukan pembaruan (update) driver BIOS motherboard dan driver chipset langsung dari situs resmi produsen laptop atau motherboard Anda.
 
 </div>
 
 Pertanyaan yang Sering Diajukan (FAQ)
 
-**Q1.** Apakah menonaktifkan Fast Startup akan membuat komputer saya menjadi sangat lambat saat dinyalakan keesokan harinya?
+**Q1.**Apakah menonaktifkan Fast Startup akan membuat komputer saya menjadi sangat lambat saat dinyalakan keesokan harinya?
 
-**A1.** Secara teori waktu booting akan sedikit bertambah, namun jika PC Anda sudah menggunakan SSD modern, perbedaan waktunya hanya sekitar 2 sampai 5 detik saja dan jauh lebih stabil tanpa risiko error daya.
+**A1.**Secara teori waktu booting akan sedikit bertambah, namun jika PC Anda sudah menggunakan SSD modern, perbedaan waktunya hanya sekitar 2 sampai 5 detik saja dan jauh lebih stabil tanpa risiko error daya.
 
-**Q2.** Kenapa opsi Fast Startup tidak muncul sama sekali di menu Power Options komputer saya?
+**Q2.**Kenapa opsi Fast Startup tidak muncul sama sekali di menu Power Options komputer saya?
 
-**A2.** Hal tersebut biasanya terjadi karena fitur Hibernate pada Windows dalam kondisi nonaktif. Anda bisa mengaktifkannya kembali dengan membuka Command Prompt sebagai administrator lalu mengetik perintah **powercfg /hibernate on**.
+**A2.**Hal tersebut biasanya terjadi karena fitur Hibernate pada Windows dalam kondisi nonaktif. Anda bisa mengaktifkannya kembali dengan membuka Command Prompt sebagai administrator lalu mengetik perintah**powercfg /hibernate on**.
 
-**Q3.** Apakah masalah ini bisa merusak komponen hardware jika dibiarkan terus-menerus?
+**Q3.**Apakah masalah ini bisa merusak komponen hardware jika dibiarkan terus-menerus?
 
 **A3.** Jika Anda selalu mematikannya secara paksa dengan menahan tombol power fisik di CPU, dalam jangka panjang hal tersebut berisiko merusak komponen motherboard serta menyebabkan kerusakan file data penting pada media penyimpanan.

@@ -42,6 +42,8 @@ Eran las 7:30 de la tarde en nuestra oficina tecnológica del distrito 22@ en Ba
 
 ## 2. Análisis detallado de la causa raíz
 
+## 2. Análisis detallado de la causa raíz
+
 ¿Por qué se queda colgado Windows Update en el último segundo?
 
 Tras rescatar el equipo mediante un reinicio forzoso y revisar los registros del Visor de eventos, el cuello de botella quedó clarísimo. Estos son los tres culpables habituales en entornos de desarrollo y producción:
@@ -51,6 +53,8 @@ Tras rescatar el equipo mediante un reinicio forzoso y revisar los registros del
 2. Servicios del sistema zombie: Los hilos de `wuauserv` (Windows Update) o `cryptsvc` (Cryptographic Services) se quedan colgados en bucle infinito intentando verificar firmas digitales que ya han expirado o fallado.
 
 3. Interferencias de software de seguridad o políticas de red corporativas: Un corte breve de la VPN de la oficina justo cuando descargaba el último manifiesto binario.
+
+## 3. Solución práctica paso a paso
 
 ## 3. Solución práctica paso a paso
 
@@ -91,6 +95,8 @@ net start msiserver
 <div style="border-left: 4px solid #d97706; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Consejo del experto:</strong> Si al intentar renombrar las carpetas el sistema te indica que están en uso, reinicia el equipo en Modo Seguro (Configuración > Sistema > Recuperación > Inicio avanzado) y ejecuta los comandos anteriores antes de que carguen los servicios en segundo plano.
 </div>
+
+## 4. Advertencias y consejos de un técnico
 
 ## 4. Advertencias y consejos de un técnico
 

@@ -111,6 +111,8 @@ Kadang masalah booting lemot bukan cuma dari software startup, tapi fisik HDD/SS
 
 ## 4. Tips & Peringatan Penting Teknisi IT
 
+## 4. Tips & Peringatan Penting Teknisi IT
+
 Expert Warning & Pro Tips
 
 > Catatan dari Lapangan: Jangan pernah percaya klaim aplikasi "PC Booster" atau "RAM Cleaner" gratisan di internet. 90% dari mereka justru adalah *bloatware* atau bahkan *malware* berkedok optimizer yang bikin RAM lu malah abis dipake iklan mereka sendiri. Cukup optimasi manual lewat sistem bawaan Windows secara berkala tiap 3 bulan sekali.

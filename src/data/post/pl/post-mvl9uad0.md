@@ -76,14 +76,14 @@ Zanim przejdziemy do sekcji pytań i odpowiedzi, przypominam o zachowaniu podsta
 
 FAQ
 
-**Q1:** Czy wyłączenie szybkiego uruchamiania sprawi, że mój komputer będzie się włączał dużo wolniej?
+**Q1:**Czy wyłączenie szybkiego uruchamiania sprawi, że mój komputer będzie się włączał dużo wolniej?
 
-**A1:** Na nowoczesnych dyskach SSD różnica wynosi zazwyczaj zaledwie od dwóch do pięciu sekund, co jest absolutnie niezauważalne w codziennej pracy biurowej, a zyskujesz w zamian pełną stabilność i pewność, że system poprawnie wyłączy się po każdym dniu pracy.
+**A1:**Na nowoczesnych dyskach SSD różnica wynosi zazwyczaj zaledwie od dwóch do pięciu sekund, co jest absolutnie niezauważalne w codziennej pracy biurowej, a zyskujesz w zamian pełną stabilność i pewność, że system poprawnie wyłączy się po każdym dniu pracy.
 
-**Q2:** Co zrobić, jeśli opcja szybkiego uruchamiania w ogóle nie pojawia się w Panelu sterowania?
+**Q2:**Co zrobić, jeśli opcja szybkiego uruchamiania w ogóle nie pojawia się w Panelu sterowania?
 
-**A2:** Oznacza to najczęściej, że funkcja hibernacji została wcześniej całkowicie wyłączona w systemie. Aby ją przywrócić i odblokować opcję szybkiego startu, otwórz wiersz poleceń jako administrator i wpisz komendę **powercfg /hibernate on**, a następnie odśwież okno Opcji zasilania.
+**A2:**Oznacza to najczęściej, że funkcja hibernacji została wcześniej całkowicie wyłączona w systemie. Aby ją przywrócić i odblokować opcję szybkiego startu, otwórz wiersz poleceń jako administrator i wpisz komendę**powercfg /hibernate on**, a następnie odśwież okno Opcji zasilania.
 
-**Q3:** Czy ten problem może powrócić po kolejnej aktualizacji systemu Windows?
+**Q3:**Czy ten problem może powrócić po kolejnej aktualizacji systemu Windows?
 
 **A3:** Niestety tak. Duże pakiety aktualizacyjne czasami resetują spersonalizowane ustawienia zasilania do wartości domyślnych. Jeśli po kolejnym patchu problem powróci, wystarczy ponownie powtórzyć procedurę wyłączenia szybkiego startu opisaną w tym poradniku.

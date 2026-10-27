@@ -101,9 +101,9 @@ Cuidados Importantes e Segurança de Dados
 
 Perguntas Frequentes (FAQ)
 
-**Q.** Esse procedimento funciona nas versões mais recentes do Windows 11?
+**Q.**Esse procedimento funciona nas versões mais recentes do Windows 11?
 
-**A.** Sim. O comando afeta diretamente a estrutura de classes do shell do Windows e continua operacional nas builds mais recentes, pois a Microsoft mantém essa compatibilidade legada por razões de estabilidade empresarial.
+**A.**Sim. O comando afeta diretamente a estrutura de classes do shell do Windows e continua operacional nas builds mais recentes, pois a Microsoft mantém essa compatibilidade legada por razões de estabilidade empresarial.
 
 ![Tech Troubleshooting Guide](/images/tech-photo/storage%20(15).png)
 

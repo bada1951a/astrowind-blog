@@ -56,9 +56,7 @@ Passo a Passo Prático: Limpando o Cache e Destravando o Sistema
 
 Se o seu sistema está inacessível pela interface gráfica normal, o caminho é iniciar em Modo de Segurança (Safe Mode) ou usar um ambiente de recuperação. Assumindo que você conseguiu acessar o Windows (mesmo que após um hard reset forçado) ou via Prompt de Comando na tela de Reparo Avançado, siga esta sequência exat
 
-**a:**
-
-Passo 1: Parar os serviços de atualização
+**a:**Passo 1: Parar os serviços de atualização
 Abra o Terminalou oPrompt de Comando com privilégios de Administrador (clique com o botão direito no menu Iniciar e selecione "Terminal (Administrador)"). Digite os comandos abaixo um por um, pressionando Enter após cada linh
 
 **a:**
@@ -74,9 +72,7 @@ net stop msiserver
 Passo 2: Renomear a pasta de cache (SoftwareDistribution)
 Ainda no Prompt de Comando, vamos renomear a pasta onde ficam os arquivos corrompidos para forçar o Windows a criar uma nova do zero limpinh
 
-**a:**
-
-```text
+**a:**```text
 ren C:\Windows\SoftwareDistribution SoftwareDistribution.old
 ren C:\Windows\System32\catroot2 catroot2.old
 ```
@@ -109,7 +105,7 @@ Perguntas Frequentes (FAQ)
 1. Se eu desligar o computador no botão físico enquanto está em 100%, vou perder meus arquivos?
 Na maioria das vezes, seus arquivos pessoais (documentos, fotos) ficam seguros nas pastas de usuário. No entanto, o sistema operacional pode corromper arquivos de registro, exigindo reparo de inicialização ou o procedimento de limpeza de cache que mostramos neste guia. ![Tech & IT Solution Guide](https://picsum.photos/seed/computer725/1000/550)
 
-**Q.** Posso apagar totalmente a pasta SoftwareDistribution.old depois que o PC ligar?
+**Q.**Posso apagar totalmente a pasta SoftwareDistribution.old depois que o PC ligar?
 
 **A.** Sim. Depois que o Windows iniciar normalmente e você verificar que tudo está funcionando e atualizado, você pode deletar a pasta `SoftwareDistribution.old` para liberar espaço em disco (pode ser necessário usar a limpeza de disco do sistema para permissões).
 

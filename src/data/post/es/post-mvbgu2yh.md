@@ -46,6 +46,8 @@ Si te ha pasado lo mismo justo cuando más prisa tienes, sabes la frustración q
 
 ## 2. Análisis detallado de la causa raíz
 
+## 2. Análisis detallado de la causa raíz
+
 ¿Por qué se congela la barra de tareas en Windows 11?
 
 Antes de aplicar la solución, es útil entender qué está pasando bajo el capó para evitar que vuelva a suceder:
@@ -59,6 +61,8 @@ Antes de aplicar la solución, es útil entender qué está pasando bajo el cap�
 3. Actualizaciones acumulativas recientes: Ciertas actualizaciones de seguridad de Windows han demostrado generar conflictos intermitentes con los complementos visuales del explorador.
 
 ---
+
+## 3. Solución práctica paso a paso
 
 ## 3. Solución práctica paso a paso
 
@@ -116,14 +120,14 @@ Consejos de mantenimiento para evitar futuros bloqueos
 * Mantén los controladores gráficos al día: Una GPU con drivers desactualizados puede corromper el renderizado de la interfaz gráfica de Windows. Revisa periódicamente las actualizaciones desde la aplicación oficial de tu tarjeta gráfica. ---
 ## 5. Preguntas Frecuentes (FAQ)
 
-**Q.** ¿Perderé mis archivos abiertos si reinicio el Explorador de Windows?
+**Q.**¿Perderé mis archivos abiertos si reinicio el Explorador de Windows?
 
-**A.** No. Reiniciar `explorer.exe` solo afecta a la interfaz gráfica (barra de tareas, iconos del escritorio y carpetas abiertas). Los documentos de Word, Excel o las pestañas del navegador que tengas en uso no se cerrarán ni perderán su progreso.
+**A.**No. Reiniciar `explorer.exe` solo afecta a la interfaz gráfica (barra de tareas, iconos del escritorio y carpetas abiertas). Los documentos de Word, Excel o las pestañas del navegador que tengas en uso no se cerrarán ni perderán su progreso.
 
-**Q.** ¿Qué hago si el comando de PowerShell da errores en rojo?
+**Q.**¿Qué hago si el comando de PowerShell da errores en rojo?
 
-**A.** Es totalmente normal. PowerShell intentará re registrar todos los paquetes nativos de Windows; aquellos que estén abiertos o bloqueados en ese momento mostrarán un aviso en rojo que puedes ignorar por completo. Lo importante es que el script complete el ciclo.
+**A.**Es totalmente normal. PowerShell intentará re registrar todos los paquetes nativos de Windows; aquellos que estén abiertos o bloqueados en ese momento mostrarán un aviso en rojo que puedes ignorar por completo. Lo importante es que el script complete el ciclo.
 
-**Q.** ¿Es recomendable usar puntos de restauración del sistema para esto?
+**Q.**¿Es recomendable usar puntos de restauración del sistema para esto?
 
 **A.** Solo como última alternativa si los comandos anteriores fallan. Por lo general, un fallo en la barra de tareas es un problema de servicios locales que se resuelve limpiando la caché o reiniciando el proceso del explorador, sin necesidad de retroceder el estado del sistema.

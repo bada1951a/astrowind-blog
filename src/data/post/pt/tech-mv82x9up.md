@@ -83,14 +83,14 @@ Escolha a opção para reiniciar imediatamente e verificar problemas na próxima
 *   Eletricidade Estática (ESD): Sempre toque na carcaça de metal da fonte (ainda ligada na tomada desligada, se o aterramento for confiável) antes de mexer nos componentes internos, ou use pulseira antiestática. Uma descarga de ESD invisível pode fritar o controlador de memória integrado à CPU.
 *   Força Bruta Excessiv
 
-**a:** Placas-mãe modernas flexionam bastante. Ao encaixar a RAM, apoie o dedo indicador por baixo do PCB da placa-mãe para contra-apoiar a pressão exercida ao encaixar o pente.
+**a:**Placas-mãe modernas flexionam bastante. Ao encaixar a RAM, apoie o dedo indicador por baixo do PCB da placa-mãe para contra-apoiar a pressão exercida ao encaixar o pente.
 
 4. Perguntas Frequentes (FAQ)
 
 P: Posso usar limpa-contatos em spray direto nos slots de RAM?
 
-**A.** Apenas se for um limpa-contatos específicosem lubrificante(seco) e com evaporção instantânea. Se usar spray oleoso, ele vai atrair poeira e transformar o slot numa pasta condutora corrosiva. O ideal para os slots é usar ar comprimido ou um pincel de cerdas firmes.P: O cooler gira, acende os LEDs, mas o teclado e o mouse não piscam. O problema é certeza que é RAM?
+**A.**Apenas se for um limpa-contatos específicosem lubrificante(seco) e com evaporção instantânea. Se usar spray oleoso, ele vai atrair poeira e transformar o slot numa pasta condutora corrosiva. O ideal para os slots é usar ar comprimido ou um pincel de cerdas firmes.P: O cooler gira, acende os LEDs, mas o teclado e o mouse não piscam. O problema é certeza que é RAM?
 
-**A.** É o suspeito número um. Quando o teclado e o mouse não inicializam (as luzes NumLock/Caps Lock não acendem ao apertar), significa que o teste POST travou antes de carregar os controladores USB, o que reforça uma falha de comunicação na inicialização da memória ou do processador.P: Se eu limpar a RAM e o PC funcionar por 2 dias e morrer de novo, o que pode ser?
+**A.**É o suspeito número um. Quando o teclado e o mouse não inicializam (as luzes NumLock/Caps Lock não acendem ao apertar), significa que o teste POST travou antes de carregar os controladores USB, o que reforça uma falha de comunicação na inicialização da memória ou do processador.P: Se eu limpar a RAM e o PC funcionar por 2 dias e morrer de novo, o que pode ser?
 
 **A.** Oxidação recorrente indica que o ambiente tem umidade excessiva (umidade relativa do ar acima de 70%). Vale a pena investir em sílica gel dentro do gabinete (longe de áreas quentes) ou verificar se há infiltrações/goteiras próximas à mesa do computador. Outra hipótese é o slot da placa-mãe estar com solda fria (trinca microscópica).

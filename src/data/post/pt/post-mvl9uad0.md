@@ -61,21 +61,20 @@ Passo 5: Clique no botão "Salvar alterações" localizado no rodapé direito.
 Feito isso, teste o encerramento do sistema. Vá novamente ao menu Iniciar e clique em Desligar. Agora, o Windows executará um encerramento real e limpo, descarregando completamente o kernel da memória e cortando a energia de forma adequada. No meu caso na Paulista, essa simples alteração permitiu que o computador desligasse em segundos, ligasse limpo e eu pudesse gerar o relatório de auditoria e enviá-lo com cinco minutos de sobra.
 
 <div style="border-left: 4px solid #ef4444; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
-Dica do Especialista: Se a opção de Inicialização Rápida não aparecer nas suas Opções de Energia, significa que a hibernação está desativada no seu Windows. Para reativá-la e poder gerenciar o recurso, abra o Prompt de Comando como Administrador e execute o comando: **powercfg /hibernate on**
-</div>
+Dica do Especialista: Se a opção de Inicialização Rápida não aparecer nas suas Opções de Energia, significa que a hibernação está desativada no seu Windows. Para reativá-la e poder gerenciar o recurso, abra o Prompt de Comando como Administrador e execute o comando: **powercfg /hibernate on**</div>
 
 Como profissional de suporte técnico e infraestrutura, sempre recomendo manter os drivers do chipset da placa-mãe atualizados através do site oficial do fabricante do seu equipamento (Dell, Lenovo, HP ou ASUS). Além disso, evite utilizar softwares de terceiros milagrosos que prometem otimizar a inicialização do Windows mexendo em chaves de registro sem critério, pois eles costumam corromper justamente os serviços de energia responsáveis pelo desligamento seguro.
 
 Perguntas Frequentes (FAQ)
 
-**Q1.** Desativar a Inicialização Rápida vai deixar meu computador muito lento para ligar?
+**Q1.**Desativar a Inicialização Rápida vai deixar meu computador muito lento para ligar?
 
-**A1.** Em computadores modernos equipados com unidades SSD NVMe ou SATA, a diferença de tempo de boot com ou sem a Inicialização Rápida ativada é imperceptível, variando em apenas 2 a 5 segundos. O ganho em estabilidade e a prevenção de travamentos compensam amplamente essa mínima variação.
+**A1.**Em computadores modernos equipados com unidades SSD NVMe ou SATA, a diferença de tempo de boot com ou sem a Inicialização Rápida ativada é imperceptível, variando em apenas 2 a 5 segundos. O ganho em estabilidade e a prevenção de travamentos compensam amplamente essa mínima variação.
 
-**Q2.** O problema persiste mesmo após desativar a Inicialização Rápida. O que devo verificar agora?
+**Q2.**O problema persiste mesmo após desativar a Inicialização Rápida. O que devo verificar agora?
 
-**A2.** Quando o desligamento continua falhando, o próximo passo recomendado é abrir o Gerenciador de Dispositivos, expandir a categoria Controladores de Barramento Universal (USB) e adaptadores de rede, clicar com o botão direito em cada item principal, selecionar Propriedades, ir na aba Gerenciamento de Energia e desmarcar a opção "O computador pode desligar o dispositivo para economizar energia".
+**A2.**Quando o desligamento continua falhando, o próximo passo recomendado é abrir o Gerenciador de Dispositivos, expandir a categoria Controladores de Barramento Universal (USB) e adaptadores de rede, clicar com o botão direito em cada item principal, selecionar Propriedades, ir na aba Gerenciamento de Energia e desmarcar a opção "O computador pode desligar o dispositivo para economizar energia".
 
-**Q3.** Essa falha de desligamento pode ser um defeito físico na fonte de alimentação ou na placa-mãe?
+**Q3.**Essa falha de desligamento pode ser um defeito físico na fonte de alimentação ou na placa-mãe?
 
 **A3.** É raro, mas possível. Se o sistema operacional envia o comando de corte de energia (sinal ACPI), mas os componentes continuam energizados e os coolers rodando indefinidamente mesmo após um boot limpo e com a Inicialização Rápida desativada, pode haver um curto no circuito de stand-by da fonte ou uma falha na BIOS que requer atualização de firmware.

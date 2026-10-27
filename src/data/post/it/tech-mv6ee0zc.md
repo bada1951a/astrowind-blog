@@ -74,7 +74,7 @@ Prima di procedere con solventi chimici o saldatori, è obbligatorio isolare il 
                  ▼
 [Ispezione Meccanic
 
-**a:** Rimozione Keycap & Switch]
+**a:**Rimozione Keycap & Switch]
                  │
                  ▼
 [Trattamento Chimico: Disossidante Contatti a Secco]
@@ -134,7 +134,7 @@ Il prodotto da utilizzare deve essere rigorosamente un disossidante per contatti
 
 5. Capovolgi la tastiera su un panno assorbente per favorire il deflusso di solvente in eccesso.
 
-**Q6.** Fase di asciugatura passiv
+**Q6.**Fase di asciugatura passiv
 
 **a:** Attendi non meno di 15-20 minuti prima di alimentare nuovamente la periferica. Il solvente deve evaporare completamente.
 

@@ -167,7 +167,7 @@ L'application de dégrippant universel standard (WD-40 classique), d'huile de si
 ---
 ## 5. Foire Aux Questions (FAQ)
 
-**Q1.** L'alcool isopropylique (IPA à 99,9 %) peut-il remplacer le nettoyant pour contacts ?
+**Q1.**L'alcool isopropylique (IPA à 99,9 %) peut-il remplacer le nettoyant pour contacts ?
 L'alcool isopropylique est un excellent dégraissant, mais il n'intègre pas d'agents désoxydants actifs conçus pour casser la passivation superficielle des métaux non ferreux. L'IPA diluera la crasse, mais ne traitera pas l'oxydation microscopique des lamelles. De plus, son temps d'évaporation au sein d'une chambre close non ventilée peut être plus long, augmentant le risque de piéger l'humidité atmosphérique lors du séchage. Le nettoyant contact diélectrique reste la solution technique supérieure.
 
 **Q2.** Peut-on compenser le chattering par voie logicielle plutôt que matérielle ?

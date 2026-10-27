@@ -46,6 +46,8 @@ Ten minutes later, as I unpack my backpack on the desk, I notice the laptop chas
 
 ## 2. Root Cause Breakdown
 
+## 2. Root Cause Breakdown
+
 Why Your PC Refuses to Turn Off: Root Causes
 
 When a modern Windows 10 or Windows 11 machine fails to power down completely, it is rarely a physical hardware switch failure. Instead, it usually boils down to three primary software and firmware culprits.
@@ -77,7 +79,7 @@ Look at the bottom section under Shutdown settings. Uncheck the box next to Turn
 
 <div style="border-left: 4px solid #3b82f6; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 
-> 💡 **Pro Technical Note**: Disabling Fast Startup might add 3 to 5 seconds to your cold boot time, but it completely eliminates shutdown hangs, driver conflicts, and mysterious battery drain while your laptop is packed in a sleeve.
+> 💡**Pro Technical Note**: Disabling Fast Startup might add 3 to 5 seconds to your cold boot time, but it completely eliminates shutdown hangs, driver conflicts, and mysterious battery drain while your laptop is packed in a sleeve.
 
 </div>
 
@@ -95,14 +97,14 @@ When troubleshooting power management issues on corporate laptops or enterprise 
 
 ## 5. Frequently Asked Questions (FAQ)
 
-**Q1.** Will disabling Fast Startup delete my personal files or installed applications?
+**Q1.**Will disabling Fast Startup delete my personal files or installed applications?
 
-**A1.** No. Disabling Fast Startup only changes how the Windows kernel handles memory caching and session states when you click shutdown. Your documents, apps, and user accounts remain completely untouched and safe.
+**A1.**No. Disabling Fast Startup only changes how the Windows kernel handles memory caching and session states when you click shutdown. Your documents, apps, and user accounts remain completely untouched and safe.
 
-**Q2.** Why is the option for Fast Startup missing entirely from my Control Panel?
+**Q2.**Why is the option for Fast Startup missing entirely from my Control Panel?
 
-**A2.** If the Fast Startup checkbox is missing, it means Hibernation is disabled on your operating system. Fast Startup requires hibernation to function. You can easily re-enable it by opening Command Prompt as an administrator and running the command `**powercfg /hibernate on**`, then reopening Power Options.
+**A2.**If the Fast Startup checkbox is missing, it means Hibernation is disabled on your operating system. Fast Startup requires hibernation to function. You can easily re-enable it by opening Command Prompt as an administrator and running the command `**powercfg /hibernate on**`, then reopening Power Options.
 
-**Q3.** My laptop still hangs on shutdown even after turning off Fast Startup. What should I do next?
+**Q3.**My laptop still hangs on shutdown even after turning off Fast Startup. What should I do next?
 
 **A3.** This usually points to a stubborn third-party background service or a graphics driver conflict. Open Task Manager before shutting down, close all active apps, and update your GPU and chipset drivers directly from the manufacturer website.

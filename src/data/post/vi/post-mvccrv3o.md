@@ -98,14 +98,14 @@ Nếu việc gỡ driver không giải quyết triệt để, nguyên nhân dị
 
 Các câu hỏi thường gặp (FAQ)
 
-**Q1:** Nếu công cụ chẩn đoán RAM của Windows báo lỗi nhưng tôi không có tiền thay RAM mới ngay thì phải làm sao?
+**Q1:**Nếu công cụ chẩn đoán RAM của Windows báo lỗi nhưng tôi không có tiền thay RAM mới ngay thì phải làm sao?
 
-**A:** Nếu máy bạn đang cắm 2 thanh RAM (ví dụ 2x8GB), hãy tháo từng thanh ra và chạy thử độc lập trên từng khe cắm. Thao tác này giúp bạn xác định chính xác thanh RAM nào đang bị lỗi để vô hiệu hóa nó, giữ lại thanh còn lại cứu nguy cho công việc trước mắt.
+**A:**Nếu máy bạn đang cắm 2 thanh RAM (ví dụ 2x8GB), hãy tháo từng thanh ra và chạy thử độc lập trên từng khe cắm. Thao tác này giúp bạn xác định chính xác thanh RAM nào đang bị lỗi để vô hiệu hóa nó, giữ lại thanh còn lại cứu nguy cho công việc trước mắt.
 
-**Q2:** Làm thế nào để ngăn chặn Windows tự động cập nhật lại bản driver gây lỗi?
+**Q2:**Làm thế nào để ngăn chặn Windows tự động cập nhật lại bản driver gây lỗi?
 
-**A:** Bạn có thể sử dụng công cụ ẩn bản cập nhật chính thức từ Microsoft có tên là "Show or hide updates" (wushowhide.diagcab). Khi bản driver lỗi hiện lên, hãy chọn Hide để chặn Windows cài đè nó trong tương lai.
+**A:**Bạn có thể sử dụng công cụ ẩn bản cập nhật chính thức từ Microsoft có tên là "Show or hide updates" (wushowhide.diagcab). Khi bản driver lỗi hiện lên, hãy chọn Hide để chặn Windows cài đè nó trong tương lai.
 
-**Q3:** Tôi đã thử mọi cách nhưng lỗi 0x0000000a vẫn xuất hiện ngẫu nhiên, nguyên nhân do đâu nữa?
+**Q3:**Tôi đã thử mọi cách nhưng lỗi 0x0000000a vẫn xuất hiện ngẫu nhiên, nguyên nhân do đâu nữa?
 
 **A:** Khi loại trừ RAM và Driver, thủ phạm cuối cùng thường làSSD/HDD bị lỗi sector hệ thốnghoặcBIOS phiên bản quá cũ gây bất tương thích với các bản cập nhật Windows mới. Hãy thử cập nhật BIOS lên bản mới nhất từ trang chủ hãng sản xuất mainboard (ASUS, MSI, Gigabyte...).

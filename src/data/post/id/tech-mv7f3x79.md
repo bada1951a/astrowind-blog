@@ -147,7 +147,7 @@ Jika sinyal masih terputus, langkah berikutnya adalah mereset adaptor display da
 
    * *Perhatian:* Jangan centang opsi *"Attempt to remove the driver for this device"* pada tahap ini.
 
-**Q6.** Perluas juga kategori Monitors, klik kanan pada semua entri bertuliskanGeneric PnP Monitor, dan pilihUninstall device.
+**Q6.**Perluas juga kategori Monitors, klik kanan pada semua entri bertuliskanGeneric PnP Monitor, dan pilihUninstall device.
 
 **Q7.** Pada menu bar bagian atas Device Manager, klik ikon Scan for hardware changes (ikon komputer dengan kaca pembesar). Layar akan mendeteksi ulang adaptor dan monitor secara otomatis.
 

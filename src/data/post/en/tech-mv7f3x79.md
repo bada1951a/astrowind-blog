@@ -193,6 +193,8 @@ Now we rebuild the physical display link without triggering an MST sync error.
 
 ## 4. Professional Engineer Precautions & Tips
 
+## 4. Professional Engineer Precautions & Tips
+
 Expert Warning: Prevent Hardware-Level Failures
 
 <div style="border-left: 4px solid #ef4444; padding: 14px 18px; margin: 24px 0; background-color: rgba(239, 68, 68, 0.04); border-radius: 4px;">
@@ -204,12 +206,12 @@ Expert Warning: Prevent Hardware-Level Failures
 
 ## 5. Frequently Asked Questions (FAQ)
 
-**Q1:** Why does hot-unplugging the cable fix the flicker for 15 minutes before the screen drops out again?
+**Q1:**Why does hot-unplugging the cable fix the flicker for 15 minutes before the screen drops out again?
 Hot-unplugging forces the graphics adapter to reset the DisplayPort auxiliary (AUX) channel and re-run link training from scratch. At connection time, the link operates cleanly. 
 
 However, as thermal loads rise or minor line noise builds up on poor-quality cables, uncorrected link errors quickly exceed the transceiver's error budget. Once the bit error rate threshold is crossed, the driver drops the display link to protect against memory corruption, producing the exact flicker loop you started with.
 
-**Q2:** Should I update my discrete GPU (NVIDIA) driver or integrated GPU (Intel/AMD) driver first?
+**Q2:**Should I update my discrete GPU (NVIDIA) driver or integrated GPU (Intel/AMD) driver first?
 Always update the Integrated GPU driver first. On modern dual-GPU laptops, the integrated GPU directly controls the internal display engine and manages the physical video routing lines (DisplayPort Alternate Mode) exiting the motherboard. 
 
 The discrete GPU functions primarily as a compute accelerator, rendering frames off-screen and copying them to the iGPU's framebuffer. If the integrated platform driver is outdated or broken, updating the discrete GPU won't solve external monitor signal drops.

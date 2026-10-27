@@ -129,14 +129,14 @@ Zanim zaczniesz bezmyślnie klikać "Wyłącz", spójrz na tę krótką listę r
 
 Często Zadawane Pytania (FAQ)
 
-**Q1:** Wyłączyłem aplikację w Menedżerze zadań, a ona dalej włącza się po restarcie. O co chodzi?
+**Q1:**Wyłączyłem aplikację w Menedżerze zadań, a ona dalej włącza się po restarcie. O co chodzi?
 
 **A:** Niektóre aplikacje mają własne ustawienia wewnętrzne, które przy każdym uruchomieniu programu same dopisują się z powrotem do autostartu. Wejdź w *Ustawienia* (Settings) danej aplikacji (np. Skype, Steam, Torrenty) i tam odznacz opcję "Uruchom wraz z systemem". Dopiero wtedy zniknie na dobre.
 
-**Q2:** Czy czyszczenie autostartu jest bezpieczne dla moich danych?
+**Q2:**Czy czyszczenie autostartu jest bezpieczne dla moich danych?
 
 **A:**W 100% bezpieczne. Wyłączenie aplikacji w autostarcienie oznacza jej odinstalowania. Programy te nadal będą działać idealnie, gdy klikniesz ich ikonkę ręcznie. Po prostu przestaną marnować zasoby komputera w momencie, gdy Ty próbujesz spokojnie zacząć pracę.
 
-**Q3:** Mój dysk to stary HDD. Czy samo wyłączenie autostartu mi pomoże?
+**Q3:**Mój dysk to stary HDD. Czy samo wyłączenie autostartu mi pomoże?
 
 **A:** Pomoże, ale na krótko. Tradycyjne dyski talerzowe (HDD) mają dramatycznie niski wskaźnik IOPS (operacji wejścia/wyjścia na sekundę). Przy starcie Windowsa głowica dysku skacze w tysiące miejsc jednocześnie, próbując załadować wszystko naraz. Jeśli chcesz autentycznego kopa, jedynym trwałym rozwiązaniem jest migracja systemu na dysk SSD (M.2 NVMe lub SATA). Autostart to tylko półśrodek, choć niezwykle skuteczny na start.

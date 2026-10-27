@@ -43,6 +43,8 @@ Es ist mal wieder Freitag, kurz vor 17:00 Uhr in unserem Berliner Tech-Hub, und 
 
 ## 2. Detaillierte Ursachenanalyse
 
+## 2. Detaillierte Ursachenanalyse
+
 Warum Windows 11 beim Update-Endspurt stecken bleibt
 
 Nachdem ich den Laptop im betroffenen Zustand per erzwungenem Aus-Schalter (Power-Button für 10 Sekunden gedrückt halten) in den sicheren Zustand gezwungen und die Update-Logs via Terminal (`C:\Windows\Logs\CBS\CBS.log`) analysiert hatte, kristallisierten sich drei typische Hauptursachen heraus:
@@ -52,6 +54,8 @@ Nachdem ich den Laptop im betroffenen Zustand per erzwungenem Aus-Schalter (Powe
 2. Hängende Hintergrunddienste: Der Windows Update-Dienst (`wuauserv`) sowie der Kryptografie-Dienst blockieren sich gegenseitig beim Versuch, die neuen Systemdateien final zu registrieren.
 
 3. Konflikte mit Drittanbieter-Virenschutz: Externe Sicherheitssoftware blockiert während der finalen Bereitstellungsphase den Zugriff auf kritische Registry-Schlüssel oder Systemordner.
+
+## 3. Schritt-für-Schritt-Lösungsanleitung
 
 ## 3. Schritt-für-Schritt-Lösungsanleitung
 

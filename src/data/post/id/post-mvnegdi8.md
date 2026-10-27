@@ -38,18 +38,18 @@ Berikut adalah tahapan praktis berstandar operasional prosedur (SOP) IT support 
 ### Langkah Pertama: Menghentikan Proses Melalui Task Manager
 Cara paling aman pertama adalah mematikan akar prosesnya secara manual.
 
-1. Tekan kombinasi tombol **Ctrl + Shift + Esc** untuk membuka **Task Manager**.
+1. Tekan kombinasi tombol **Ctrl + Shift + Esc**untuk membuka**Task Manager**.
 
-2. Klik tab **Processes**, lalu cari nama aplikasi atau program yang dicurigai menggunakan file tersebut.
+2. Klik tab**Processes**, lalu cari nama aplikasi atau program yang dicurigai menggunakan file tersebut.
 
-3. Klik kanan pada aplikasi tersebut, lalu pilih **End Task**.
+3. Klik kanan pada aplikasi tersebut, lalu pilih**End Task**.
 
-4. Jika tidak ketemu, buka **Resource Monitor** (ketik di menu pencarian Windows), masuk ke tab **CPU**, lalu cari nama file yang terkunci pada bagian **Associated Handles** untuk melihat proses mana yang memegangnya.
+4. Jika tidak ketemu, buka**Resource Monitor**(ketik di menu pencarian Windows), masuk ke tab**CPU**, lalu cari nama file yang terkunci pada bagian**Associated Handles**untuk melihat proses mana yang memegangnya.
 
 ### Langkah Kedua: Memakai Command Prompt (CMD) Mode Administrator
 Jika GUI Windows masih menolak, kita gunakan jalur eksekusi berbasis teks yang lebih bertenaga.
 
-1. Klik tombol Start, ketik **cmd**, lalu klik kanan dan pilih **Run as administrator**.
+1. Klik tombol Start, ketik**cmd**, lalu klik kanan dan pilih**Run as administrator**.
 
 2. Masuk ke direktori tempat file berada menggunakan perintah `cd`.
 
@@ -62,25 +62,25 @@ del /f /q /a "C:\Path\Ke\File\NamaFile.log"
 *Keterangan perintah:* `/f` memaksa penghapusan file *read-only*, `/q` mode quiet tanpa konfirmasi rewel, dan `/a` memilih atribut file secara spesifik.
 
 ### Langkah Ketiga: Masuk ke Safe Mode atau Memanfaatkan Tool Eksternal
-Jika kedua cara di atas masih gagal karena file dikunci oleh sistem kernel yang mendalam, opsi terakhir adalah menggunakan utilitas pihak ketiga yang aman dan ringan seperti **PowerToys File Locksmith** atau **LockHunter**. Cukup klik kanan pada file yang bermasalah, pilih menu *Unlock*, dan pilih *Unlock and Delete*.
+Jika kedua cara di atas masih gagal karena file dikunci oleh sistem kernel yang mendalam, opsi terakhir adalah menggunakan utilitas pihak ketiga yang aman dan ringan seperti **PowerToys File Locksmith**atau**LockHunter**. Cukup klik kanan pada file yang bermasalah, pilih menu *Unlock*, dan pilih *Unlock and Delete*.
 
 ## 4. Tips & Peringatan Penting Teknisi IT
 
 Sebagai praktisi infrastruktur IT senior, ada beberapa kaidah keselamatan hardware dan software yang wajib Anda ingat saat menghadapi masalah ini:
 - **Hindari Hard Reset:** Jangan pernah menekan tombol power fisik di casing atau mencabut kabel power saat file sistem sedang terkunci dan proses tulis sedang berjalan. Risiko *bad sector* pada HDD atau korupsi tabel NTFS pada SSD sangat tinggi.
 - **Perhatikan Hak Akses (Permissions):** Terkadang file tidak bisa dihapus bukan karena dipakai program, tapi karena Anda tidak memiliki hak akses administrator. Selalu pastikan akun Anda memiliki privilege *Full Control* pada folder tersebut lewat tab **Properties > Security**.
-- **Backup Sebelum Eksekusi:** Jika file tersebut berada di direktori penting server atau workstation produksi, selalu buat salinan cadangan (*copy-paste* ke folder lain) sebelum Anda mengeksekusi perintah *force delete*.
+-**Backup Sebelum Eksekusi:** Jika file tersebut berada di direktori penting server atau workstation produksi, selalu buat salinan cadangan (*copy-paste* ke folder lain) sebelum Anda mengeksekusi perintah *force delete*.
 
 ## 5. Pertanyaan yang Sering Diajukan (FAQ)
 
-**Q:** Apakah aman menggunakan software pihak ketiga untuk menghapus file yang terkunci?
+**Q:**Apakah aman menggunakan software pihak ketiga untuk menghapus file yang terkunci?
 
-**A:** Sangat aman asalkan Anda mengunduh tool yang kredibel seperti LockHunter atau Sysinternals Process Explorer resmi dari situs Microsoft. Hindari software sembarangan dari internet yang berisiko menyisipkan adware.
+**A:**Sangat aman asalkan Anda mengunduh tool yang kredibel seperti LockHunter atau Sysinternals Process Explorer resmi dari situs Microsoft. Hindari software sembarangan dari internet yang berisiko menyisipkan adware.
 
-**Q:** Kenapa pesan "Access Denied" tetap muncul meskipun saya sudah login sebagai Administrator?
+**Q:**Kenapa pesan "Access Denied" tetap muncul meskipun saya sudah login sebagai Administrator?
 
 **A:** Ini biasanya terjadi karena file tersebut dikuasai oleh sistem bawaan Windows (seperti *TrustedInstaller*). Anda harus mengubah kepemilikan (*ownership*) folder tersebut terlebih dahulu melalui menu *Advanced Security Settings*.
 
-**Q:** Apakah fitur File Locksmith di Microsoft PowerToys efektif untuk mengatasi masalah ini?
+**Q:**Apakah fitur File Locksmith di Microsoft PowerToys efektif untuk mengatasi masalah ini?
 
 **A:** Sangat efektif. Fitur bawaan resmi dari Microsoft ini langsung menunjukkan proses aplikasi mana yang sedang menahan file tersebut dan memberikan tombol *Terminate process* dalam satu klik mudah.

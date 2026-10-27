@@ -32,7 +32,7 @@ theme: "Deep Indigo System"
 
 Lunedì mattina, ore 8:55. Sono seduto alla mia scrivania nella nostra sede di Milano, con il caffè fumante ancora intatto, quando il responsabile commerciale mi si avvicina con la faccia di chi ha un'emergenz
 
-**a:** "Il portatile aziendale ci mette dieci minuti solo per accendersi, non riesco ad aprire neanche Teams per il meeting delle nove con i clienti!". Una scena che, se lavori nel settore IT o gestisci un'infrastruttura, ti farà sicuramente scattare un campanello d'allarme familiare. Il problema non è l'hardware obsoleto, ma la quantità industriale di applicazioni che si caricano silenziosamente in background nel momento esatto in cui premi il tasto di accensione.
+**a:**"Il portatile aziendale ci mette dieci minuti solo per accendersi, non riesco ad aprire neanche Teams per il meeting delle nove con i clienti!". Una scena che, se lavori nel settore IT o gestisci un'infrastruttura, ti farà sicuramente scattare un campanello d'allarme familiare. Il problema non è l'hardware obsoleto, ma la quantità industriale di applicazioni che si caricano silenziosamente in background nel momento esatto in cui premi il tasto di accensione.
 
 <div style="border-left: 4px solid #4338ca; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Il Collo di Bottigli
@@ -44,7 +44,7 @@ Lunedì mattina, ore 8:55. Sono seduto alla mia scrivania nella nostra sede di M
 
 Analisi del Problem
 
-**a:** Perché Windows 10 rallenta all'avvio?
+**a:**Perché Windows 10 rallenta all'avvio?
 
 Prima di mettere mano al sistema, capiamo cosa sta succedendo sotto il cofano. Nella mia esperienza quotidiana di ottimizzazione delle prestazioni, ho notato che i rallentamenti in fase di boot sono quasi sempre causati da tre fattori precisi:
 

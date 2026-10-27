@@ -46,6 +46,8 @@ Si te ha pasado esto alguna vez, sabrás perfectamente la frustración que se si
 
 ## 2. Análisis detallado de la causa raíz
 
+## 2. Análisis detallado de la causa raíz
+
 ¿Por qué ocurre esto exactamente? Analicemos los tres motivos principales por los que tu ordenador se niega a descansar cuando le das la orden:
 
 Primero, el conflicto con el Inicio Rápido. Esta característica de Windows no realiza un apagado limpio tradicional. En su lugar, cierra sesión en los programas de usuario pero vuelca una imagen híbrida del núcleo del sistema operativo en el disco duro (el archivo hiberfil.sys). Al encender de nuevo, carga esa imagen para ganar velocidad. Si hay un fallo de lectura o un controlador de terceros se queda enganchado en ese volcado, el equipo se congela en un bucle infinito al intentar apagar.
@@ -73,19 +75,19 @@ Ahora busca la casilla situada en la sección de configuración de apagado que d
 
 <div style="border-left: 4px solid #be123c; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 
-> 💡 **Consejo profesional**: Una vez desactivado el Inicio Rápido, te sugiero reiniciar el ordenador una vez de manera convencional para que el sistema libere por completo la caché de hibernación acumulada. Notarás que el tiempo de arranque apenas varía si usas un disco SSD moderno, pero ganarás una estabilidad absoluta al apagar.
+> 💡**Consejo profesional**: Una vez desactivado el Inicio Rápido, te sugiero reiniciar el ordenador una vez de manera convencional para que el sistema libere por completo la caché de hibernación acumulada. Notarás que el tiempo de arranque apenas varía si usas un disco SSD moderno, pero ganarás una estabilidad absoluta al apagar.
 
 </div>
 ## 5. Preguntas Frecuentes (FAQ)
 
-**Q1.** ¿Perderé velocidad al arrancar el ordenador si desactivo el Inicio Rápido?
+**Q1.**¿Perderé velocidad al arrancar el ordenador si desactivo el Inicio Rápido?
 
-**A1.** En la gran mayoría de los equipos actuales que montan unidades de almacenamiento SSD de estado sólido, la diferencia de tiempo al encender es de apenas un par de segundos. El beneficio de ganar un apagado limpio y evitar bloqueos constantes compensa con creces esa mínima variación.
+**A1.**En la gran mayoría de los equipos actuales que montan unidades de almacenamiento SSD de estado sólido, la diferencia de tiempo al encender es de apenas un par de segundos. El beneficio de ganar un apagado limpio y evitar bloqueos constantes compensa con creces esa mínima variación.
 
-**Q2.** He desactivado el Inicio Rápido pero el ordenador sigue sin apagarse, ¿qué más puedo comprobar?
+**Q2.**He desactivado el Inicio Rápido pero el ordenador sigue sin apagarse, ¿qué más puedo comprobar?
 
-**A2.** Si el problema persiste, el siguiente paso lógico es actualizar el BIOS o UEFI de tu placa base y revisar los controladores del chipset desde la página web oficial del fabricante (ASUS, MSI, Gigabyte, etc.). También puedes probar a desactivar temporalmente el "Inicio selectivo" en la herramienta msconfig para descartar conflictos con software de terceros en segundo plano.
+**A2.**Si el problema persiste, el siguiente paso lógico es actualizar el BIOS o UEFI de tu placa base y revisar los controladores del chipset desde la página web oficial del fabricante (ASUS, MSI, Gigabyte, etc.). También puedes probar a desactivar temporalmente el "Inicio selectivo" en la herramienta msconfig para descartar conflictos con software de terceros en segundo plano.
 
-**Q3.** ¿Esta solución sirve tanto para Windows 10 como para Windows 11?
+**Q3.**¿Esta solución sirve tanto para Windows 10 como para Windows 11?
 
 **A3.** Sí, absolutamente. Ambos sistemas operativos comparten la misma arquitectura base de gestión de energía y la característica de Inicio Rápido funciona de manera idéntica en las dos plataformas, por lo que los pasos del Panel de control son exactos.

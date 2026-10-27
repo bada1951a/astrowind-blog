@@ -42,7 +42,7 @@ Abaixo, detalho o passo a passo exato que utilizei naquele momento de pressão p
 
 🔍 Raiz do Problem
 
-**a:** Por que a Barra de Tarefas trava no Windows 11?
+**a:**Por que a Barra de Tarefas trava no Windows 11?
 
 Antes de aplicar os comandos, vale entender o que acontece por trás dos panos. Na maioria das vezes, o travamento não é um defeito físico do hardware, mas sim uma falha de sincronia em processos do sistema operacional:
 
@@ -76,7 +76,7 @@ Este é o método mais rápido e eficiente para recuperar a barra de tarefas sem
 
 5. *O que acontece agor
 
-**a:*** A barra de tarefas sumirá por um segundo junto com a área de trabalho e voltará a funcionar normalmente, já limpa e reestabilizada. ---
+**a:***A barra de tarefas sumirá por um segundo junto com a área de trabalho e voltará a funcionar normalmente, já limpa e reestabilizada. ---
 
 Método 2: Registrar novamente a Barra de Tarefas via PowerShell
 
@@ -118,7 +118,7 @@ Se o travamento for recorrente ao longo dos dias, arquivos do sistema podem esta
 
 ⚠️ Dica do Especialist
 
-**a:** Prevenção e Boas Práticas
+**a:**Prevenção e Boas Práticas
 
 Para evitar que esse tipo de situação volte a atrapalhar reuniões importantes ou entregas de última hora, recomendo manter o seu Windows 11 atualizado através das Configurações > Windows Update. Muitas das falhas de congelamento da barra de tarefas mapeadas nos últimos meses foram corrigidas diretamente em pacotes cumulativos opcionais que a Microsoft lança no meio de cada mês.
 
@@ -132,6 +132,6 @@ Evite também softwares de terceiros que prometem modificar profundamente o visu
 
 2. Esse problema de travamento da barra de tarefas é um vírus? Raramente. Na grande maioria dos casos, trata-se de um bug legítimo do próprio processo gráfico do Windows 11 (`explorer.exe`) ou conflito após uma atualização recente. Manter o Windows Defender ou seu antivírus corporativo atualizado garante que não há ameaças reais.
 
-**Q.** Posso usar softwares de terceiros para substituir a barra de tarefas do Windows 11?
+**Q.**Posso usar softwares de terceiros para substituir a barra de tarefas do Windows 11?
 
 **A.** Sim, existem ferramentas populares no mercado, mas lembre-se: quanto mais camadas de software você adiciona sobre a interface nativa do Windows 11, maior é a chance de instabilidade após grandes atualizações do sistema operacional. Prefira sempre usar os recursos nativos sempre que possível.

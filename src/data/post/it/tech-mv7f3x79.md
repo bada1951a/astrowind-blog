@@ -110,7 +110,7 @@ Se i file del driver contengono riferimenti incoerenti nel registro di sistema (
 
 5. Seleziona il produttore della scheda (es. Intel, AMD o NVIDIA) e clicca su Pulisci e NON riavviare.
 
-**Q6.** Se possiedi una configurazione a doppia GPU, ripeti l'operazione selezionando il secondo produttore.
+**Q6.**Se possiedi una configurazione a doppia GPU, ripeti l'operazione selezionando il secondo produttore.
 
 **Q7.** Al termine delle pulizie, riavvia la macchina in modalità standard.
 
@@ -131,7 +131,7 @@ Fase 3: Reinstallazione Pulita e Configurazione di Handshake
 
 5. Scorri verso il basso fino a Impostazioni schermo avanzate.
 
-**Q6.** Seleziona il monitor secondario e imposta manualmente una frequenza di aggiornamento standard (es. 59.94 Hz o 60.00 Hz invece di valori non standard o variabili come Dynamic Refresh Rate).
+**Q6.**Seleziona il monitor secondario e imposta manualmente una frequenza di aggiornamento standard (es. 59.94 Hz o 60.00 Hz invece di valori non standard o variabili come Dynamic Refresh Rate).
 
 ---
 
@@ -159,6 +159,6 @@ dism /online /cleanup-image /restorehealth
 ```
 Subito dopo, vai in Impostazioni schermo, seleziona il monitor cieco, cambia temporaneamente la risoluzione su `1280x720` a `60Hz`. Questo forza la scheda grafica a richiedere una larghezza di banda minima. Se a questa risoluzione compare il segnale, il problema risiede nella larghezza di banda del cavo o nei timing video avanzati non supportati dalla dock.
 
-**Q.** È sicuro disattivare completamente la GPU integrata da Gestione dispositivi per usare solo quella dedicata?
+**Q.**È sicuro disattivare completamente la GPU integrata da Gestione dispositivi per usare solo quella dedicata?
 
 **A.** No, è caldamente sconsigliato. Sulla maggior parte dei moderni laptop con architettura mobile, il display integrato e talvolta persino le porte USB-C/DisplayPort sono collegate fisicamente ai pin di output della iGPU. Disattivando l'adattatore grafico integrato in *Gestione dispositivi*, Windows passerà forzatamente al *Microsoft Basic Display Adapter*, perdendo l'accelerazione hardware di sistema, il supporto a risoluzioni superiori a 1080p e l'output multimonitor.

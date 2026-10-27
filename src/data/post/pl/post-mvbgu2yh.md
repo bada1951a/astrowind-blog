@@ -75,8 +75,7 @@ Jeśli Menedżer zadań zawodzi lub potrzebujesz podejścia bardziej zautomatyzo
 
 3. Wpisz poniższą komendę, aby natychmiastowo ubicić proces eksplorator
 
-**a:**
-   `taskkill /f /im explorer.exe`
+**a:**`taskkill /f /im explorer.exe`
 
 4. Następnie uruchom go ponownie, wpisując:
 

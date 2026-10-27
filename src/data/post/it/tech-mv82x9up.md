@@ -46,7 +46,7 @@ Nei miei anni passati a smanettare tra rack e banchi da laboratorio, ho visto di
 
 2. Micro-vibrazioni ed espansione termic
 
-**a:** Tra ventole che girano a 3000 RPM e cicli continui di caldo/freddo, i banchi di RAM tendono a "muoversi" millimetricamente nei loro slot, perdendo il contatto perfetto.
+**a:**Tra ventole che girano a 3000 RPM e cicli continui di caldo/freddo, i banchi di RAM tendono a "muoversi" millimetricamente nei loro slot, perdendo il contatto perfetto.
 
 3. Slot DIMM impolverati o danneggiati dal calore: La polvere che si accumula nei binari della scheda madre agisce come un isolante termico ed elettrico.
 

@@ -96,14 +96,14 @@ Agar kejadian memalukan seperti ini tidak terulang saat Anda sedang presentasi p
 
 Pertanyaan yang Sering Diajukan (FAQ)
 
-**Q:** Apakah aman melakukan Uninstall Device pada driver audio di Device Manager?
+**Q:**Apakah aman melakukan Uninstall Device pada driver audio di Device Manager?
 
-**A:** Sangat aman. Ini adalah teknik standar teknisi IT. Ketika Anda me-restart laptop setelah uninstall, Windows 11 secara otomatis akan mendeteksi ulang komponen audio fisik Anda dan memasang driver dasarnya dari sistem.
+**A:**Sangat aman. Ini adalah teknik standar teknisi IT. Ketika Anda me-restart laptop setelah uninstall, Windows 11 secara otomatis akan mendeteksi ulang komponen audio fisik Anda dan memasang driver dasarnya dari sistem.
 
-**Q:** Mengapa suara saya hilang persis setelah menyalakan VPN kantor?
+**Q:**Mengapa suara saya hilang persis setelah menyalakan VPN kantor?
 
 **A:** Beberapa aplikasi VPN korporat memiliki fitur keamanan ketat yang memblokir perangkat periferal eksternal atau mengalihkan *audio gateway*. Cek pengaturan *split tunneling* atau matikan sementara VPN jika sedang tidak mengakses data internal.
 
-**Q:** Ikon speaker di laptop saya ada tanda silang merah dan pesan "No Audio Output Device is Installed", apakah soundcard saya rusak secara fisik?
+**Q:**Ikon speaker di laptop saya ada tanda silang merah dan pesan "No Audio Output Device is Installed", apakah soundcard saya rusak secara fisik?
 
 **A:** 95% kasus dengan pesan ini bukanlah kerusakan hardware fisik (bukan karena soundcard terbakar), melainkan kegagalan sistem Windows membaca driver akibat *registry* yang korup atau layanan *Audiosrv* yang berhenti. Cukup ikuti Langkah 3 di atas untuk mengatasinya.

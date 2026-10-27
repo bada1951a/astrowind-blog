@@ -48,7 +48,7 @@ Prima di sporcarci le mani con i comandi, capiamo cosa sta succedendo sotto il c
 
 1. Cache degli aggiornamenti corrott
 
-**a:** I file scaricati nella cartella di sistema (`SoftwareDistribution`) presentano conflitti o bit corrotti durante la fase di decompressione.
+**a:**I file scaricati nella cartella di sistema (`SoftwareDistribution`) presentano conflitti o bit corrotti durante la fase di decompressione.
 
 2. Servizi di Windows in stallo: Il servizio Windows Update (`wuauserv`) o il servizio di crittografia tentano di scrivere su file temporanei bloccati da altri processi fantasma.
 

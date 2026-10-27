@@ -103,7 +103,7 @@ Als de snelle reset het probleem niet verhelpt, is het stuurprogramma in een ong
 
 5. Verwijder alle grijs weergegeven schermen (dit zijn zogeheten "ghost monitors" met verouderde EDID-caches) door met de rechtermuisknop te klikken en te kiezen voor Apparaat verwijderen.
 
-**Q6.** Klik met de rechtermuisknop op je primaire geïntegreerde beeldschermadapter en kies Stuurprogramma bijwerken->Op mijn computer naar stuurprogramma's zoeken->Ik wil kiezen uit een lijst met stuurprogramma's op mijn computer. Selecteer de vorige stabiele driverversie indien beschikbaar en voltooi de wizard.
+**Q6.**Klik met de rechtermuisknop op je primaire geïntegreerde beeldschermadapter en kies Stuurprogramma bijwerken->Op mijn computer naar stuurprogramma's zoeken->Ik wil kiezen uit een lijst met stuurprogramma's op mijn computer. Selecteer de vorige stabiele driverversie indien beschikbaar en voltooi de wizard.
 
 Stap 3: Uitvoeren van een Schone Driverinstallatie (DDU Methode)
 Wanneer Windows Update de stuurprogrammacache heeft beschadigd, biedt alleen een rigoureuze schoonmaak uitkomst.
@@ -118,7 +118,7 @@ Wanneer Windows Update de stuurprogrammacache heeft beschadigd, biedt alleen een
 
 5. Herhaal deze actie direct voor de discrete GPU (indien aanwezig).
 
-**Q6.** Sluit DDU af en herstart de laptop normaal.
+**Q6.**Sluit DDU af en herstart de laptop normaal.
 
 **Q7.** Installeer het vooraf gedownloade OEM-stuurprogrammabestand. Sluit de externe schermen pas weer aan nadat de installatie 100% is voltooid en de machine eenmaal opnieuw is opgestart.
 

@@ -44,6 +44,8 @@ Keine Vorwarnung, kein sanftes Herunterfahren, einfach harter Kernel-Absturz. De
 
 ## 2. Detaillierte Ursachenanalyse
 
+## 2. Detaillierte Ursachenanalyse
+
 Die drei Hauptursachen für den Fehler 0x0000000a
 
 Bevor wir blind anfangen, Schraubenzieher zu schwingen oder das System neu aufzusetzen, müssen wir die echten Flaschenhälse identifizieren:
@@ -55,6 +57,8 @@ Bevor wir blind anfangen, Schraubenzieher zu schwingen oder das System neu aufzu
 3. Konflikte mit Hintergrunddiensten: Antiviren-Software oder Low-Level-Systemtools, die sich tief in den Windows-Kernel eingraben.
 
 ---
+
+## 3. Schritt-für-Schritt-Lösungsanleitung
 
 ## 3. Schritt-für-Schritt-Lösungsanleitung
 
@@ -105,6 +109,8 @@ Manchmal hinterlässt der Absturz beschädigte Systemdateien. Das lässt sich sc
 
 ## 4. Praxistipps und Warnungen vom System-Admin
 
+## 4. Praxistipps und Warnungen vom System-Admin
+
 Experten-Warnung & Best Practices
 
 Vorsicht bei automatischen "Treiber-Update-Tools" aus dem Internet! Solche Software lädt oft generische Treiber herunter, die exakt diesen Bluescreen (0x0000000a) provozieren. Nutzen Sie für Mainboard-Treiber, Chipsatz und Netzwerk ausschließlich die offiziellen Treiber direkt vom Hersteller (Intel, AMD, ASUS, Lenovo etc.).
@@ -112,14 +118,14 @@ Vorsicht bei automatischen "Treiber-Update-Tools" aus dem Internet! Solche Softw
 ---
 ## 5. Häufig gestellte Fragen (FAQ)
 
-**Q.** Kann ich den PC im abgesicherten Modus starten, wenn der Bluescreen sofort beim Hochfahren auftritt?
+**Q.**Kann ich den PC im abgesicherten Modus starten, wenn der Bluescreen sofort beim Hochfahren auftritt?
 
 **A:** Ja. Schalten Sie den PC während des Bootvorgangs zweimal hintereinander hart aus (Netzstecker ziehen oder Powertaste gedrückt halten). Beim dritten Mal startet die automatische Windows-Reparaturumgebung. Navigieren Sie dort zu *Problembehandlung > Erweiterte Optionen > Startup Settings (Starteinstellungen)* und wählen Sie Neustart. Nach dem Neustart drücken Sie F4 oder 4 für den abgesicherten Modus.
 
-**Q.** Woran erkenne ich, welcher Treiber den Fehler exakt verursacht hat?
+**Q.**Woran erkenne ich, welcher Treiber den Fehler exakt verursacht hat?
 
 **A:** Nutzen Sie das kostenlose Tool *BlueScreenView* von NirSoft. Es liest die nach dem Absturz erstellten Minidump-Dateien (im Ordner `C:\Windows\Minidump`) aus und zeigt Ihnen direkt den Namen der fehlerhaften Datei an (z. B. `ntoskrnl.exe` oder spezifische `.sys`-Treiberdateien).
 
-**Q.** Was tun, wenn weder RAM-Test noch Treiber-Rollback helfen?
+**Q.**Was tun, wenn weder RAM-Test noch Treiber-Rollback helfen?
 
 **A:** Wenn die Software-Ebene sauber ist und der RAM getestet wurde, liegt es oft an der BIOS/UEFI-Version. Ein BIOS-Update oder das Zurücksetzen der UEFI-Einstellungen auf die Werksempfehlungen (insbesondere das Deaktivieren von aggressivem RAM-Overclocking/XMP) löst das Problem in hartnäckigen Fällen.

@@ -49,7 +49,7 @@ Get-WmiObject Win32_Keyboard | Format-Table Name, Description, DeviceID
 
 Em um ambiente corporativo crítico ou em uma estação de trabalho de infraestrutura, um periférico de entrada não é apenas um acessório: é a interface primária entre o engenheiro e o núcleo do sistema operacional. Já passei pela situação frustrante de ter um teclado mecânico de ponta falhando durante uma janela de manutenção de emergência às 02h00 da madrugada. Eu precisava executar comandos encadeados e, de repente, a tecla `Enter` ou a barra de espaço registrava dois ou três toques involuntários para cada pulso físico. Pior aind
 
-**a:** em comandos de deleção ou migração de containers, a perda de precisão pode ser catastrófica. Esse comportamento errático — conhecido no meio técnico como key chattering(repique ou duplicação de toques) ekey skipping (falha intermitente de acionamento) — é comum em teclados com switches mecânicos tradicionais baseados em lâminas de contato metálicas (folhas de cobre/ouro). O usuário leigo costuma presumir que a controladora queimou ou que o switch morreu definitivamente. Na maioria esmagadora das vezes em que atendi chamados de bancada, tratava-se de oxidação superficial microscópica, poeira dielétrica ou degradação na leitura do algoritmo de debounce. 
+**a:**em comandos de deleção ou migração de containers, a perda de precisão pode ser catastrófica. Esse comportamento errático — conhecido no meio técnico como key chattering(repique ou duplicação de toques) ekey skipping (falha intermitente de acionamento) — é comum em teclados com switches mecânicos tradicionais baseados em lâminas de contato metálicas (folhas de cobre/ouro). O usuário leigo costuma presumir que a controladora queimou ou que o switch morreu definitivamente. Na maioria esmagadora das vezes em que atendi chamados de bancada, tratava-se de oxidação superficial microscópica, poeira dielétrica ou degradação na leitura do algoritmo de debounce. 
 
 Neste guia prático de laboratório, mostro o protocolo exato que utilizo para diagnosticar, isolar e reparar esses switches em nível cirúrgico, fazendo uso correto de produtos químicos de grau eletrônico sem destruir as propriedades dos plásticos internos.
 
@@ -146,7 +146,7 @@ Aqui está o ponto central do procedimento. Você precisa de um spray Limpa-Cont
 
 5. Imediatamente após a borrifada, pressione a tecla repetidamente e com firmeza de 60 a 80 vezes seguidas. Esse movimento mecânico faz as lâminas rasparem uma contra a outra enquanto o solvente está úmido, desalojando o óxido e os resíduos microscópicos.
 
-**Q6.** Coloque o teclado virado de cabeça para baixo sobre um pano de microfibra limpo ou papel absorvente industrial para permitir que o excesso do fluido escorra trazendo as impurezas.
+**Q6.**Coloque o teclado virado de cabeça para baixo sobre um pano de microfibra limpo ou papel absorvente industrial para permitir que o excesso do fluido escorra trazendo as impurezas.
 
 **Q7.** Aguarde a evaporação completa por no mínimo 15 a 20 minutos.
 
@@ -181,7 +181,7 @@ Respost
 P2: Aumentar o "debounce time" no firmware do teclado resolve a falha em definitivo?
 Respost
 
-**a:** Não, apenas mascara o problema temporariamente. Alguns teclados de marcas premium (como Corsair, Wooting ou modelos compatíveis com QMK/VIA) permitem elevar o tempo de debounce de 5 ms para 15 ms ou 20 ms nas configurações de firmware. Isso faz o microcontrolador esperar mais tempo antes de aceitar um novo comando da mesma tecla, ignorando os repiques da lâmina danificada. Contudo, a oxidação ou fadiga metálica continuará progredindo. Conforme a folha de contato se deteriora, o tempo de vibração ultrapassará até mesmo o novo limite, resultando finalmente na parada total do switch. Trate o ajuste de debounce apenas como medida paliativa de contingência. ### P3: Como diferenciar se a falha é do switch mecânico ou do soquete Hot-Swap frouxo?
+**a:**Não, apenas mascara o problema temporariamente. Alguns teclados de marcas premium (como Corsair, Wooting ou modelos compatíveis com QMK/VIA) permitem elevar o tempo de debounce de 5 ms para 15 ms ou 20 ms nas configurações de firmware. Isso faz o microcontrolador esperar mais tempo antes de aceitar um novo comando da mesma tecla, ignorando os repiques da lâmina danificada. Contudo, a oxidação ou fadiga metálica continuará progredindo. Conforme a folha de contato se deteriora, o tempo de vibração ultrapassará até mesmo o novo limite, resultando finalmente na parada total do switch. Trate o ajuste de debounce apenas como medida paliativa de contingência. ### P3: Como diferenciar se a falha é do switch mecânico ou do soquete Hot-Swap frouxo?
 Respost
 
 **a:** Se ao pressionar a tecla em um ângulo específico ela registrar repiques, mas em pressão vertical reta funcionar perfeitamente, remova o switch e examine os contatos metálicos da parte de trás do PCB (os clipes de encaixe do soquete Hot-Swap). Com o tempo, trocas repetitivas de switches podem afrouxar os contatos de cobre do soquete, fazendo com que os pinos metálicos fiquem folgados. A solução técnica consiste em usar uma pinça de ponta fina para fechar suavemente as abas do soquete por trás do circuito ou refazer os pontos de solda do conector na placa de circuito impresso.

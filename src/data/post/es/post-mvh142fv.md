@@ -47,6 +47,8 @@ Si te encuentras en una situation similar, aqui tienes el metodo directo para de
 
 ## 2. Análisis detallado de la causa raíz
 
+## 2. Análisis detallado de la causa raíz
+
 Diagnostico de Causas Raiz
 
 Antes de hacer clic en cualquier sitio, debemos entender que buscan nuestros ojos expertos en los registros:
@@ -58,6 +60,8 @@ Antes de hacer clic en cualquier sitio, debemos entender que buscan nuestros ojo
 2. ## 3. Inestabilidad por perfiles de memoria agresivos (XMP/EXPO): Pequeñas desincronizaciones en los timings de la memoria RAM que provocan que Windows 11 colapse al gestionar paginacion pesada de memoria virtual.
 
 ---
+
+## 3. Solución práctica paso a paso
 
 ## 3. Solución práctica paso a paso
 
@@ -93,6 +97,8 @@ Anota mentalmente la hora exacta en la que tu PC se congelo hoy. Ahora, busca en
 
 ## 4. Advertencias y consejos de un técnico
 
+## 4. Advertencias y consejos de un técnico
+
 Precauciones y Consejos de Hardware
 
 - Atencion con la energía: Si el Visor de eventos te muestra constantemente el error Kernel-Power ID 41 sin un codigo de error bugcheck previo, es casi seguro un problema fisico de la fuente de alimentacion o una regleta defectuosa en la oficina. No descartes cambiar la fuente antes de seguir testeando software.
@@ -100,14 +106,14 @@ Precauciones y Consejos de Hardware
 - Copia de seguridad preventiva: Antes de modificar parametros de energia o voltajes de RAM en la BIOS tras un analisis de eventos, asegúrate de respaldar tus documentos criticos en la nube corporativa. ---
 ## 5. Preguntas Frecuentes (FAQ)
 
-**Q.** ¿Por que el Visor de eventos muestra tantos errores en rojo que parece que mi PC esta rota y sin embargo funciona bien?
+**Q.**¿Por que el Visor de eventos muestra tantos errores en rojo que parece que mi PC esta rota y sin embargo funciona bien?
 
-**A.** Es totalmente normal. Windows registra cientos de advertencias y errores menores en segundo plano (servicios que no arrancan a la primera, tiempos de espera agotados de aplicaciones secundarias). El secreto para un buen diagnostico tecnico es filtrar unicamente los errores que coinciden de forma milimetrica con la hora exacta en la que tu equipo sufrio el congelamiento real.
+**A.**Es totalmente normal. Windows registra cientos de advertencias y errores menores en segundo plano (servicios que no arrancan a la primera, tiempos de espera agotados de aplicaciones secundarias). El secreto para un buen diagnostico tecnico es filtrar unicamente los errores que coinciden de forma milimetrica con la hora exacta en la que tu equipo sufrio el congelamiento real.
 
-**Q.** Si el Visor de eventos muestra "Kernel-Power ID 41", significa 100% que mi fuente de alimentacion esta rota?
+**Q.**Si el Visor de eventos muestra "Kernel-Power ID 41", significa 100% que mi fuente de alimentacion esta rota?
 
-**A.** No necesariamente al cien por cien, pero es la causa principal en un 70% de los casos. El ID 41 simplemente significa que el equipo perdio la corriente de forma abrupta o se reinicio sin un apagado limpio. Tambien puede ser causado por un disyuntor en la placa base saltando por proteccion de voltaje, un enchufe flojo o una regleta de proteccion en mal estado.
+**A.**No necesariamente al cien por cien, pero es la causa principal en un 70% de los casos. El ID 41 simplemente significa que el equipo perdio la corriente de forma abrupta o se reinicio sin un apagado limpio. Tambien puede ser causado por un disyuntor en la placa base saltando por proteccion de voltaje, un enchufe flojo o una regleta de proteccion en mal estado.
 
-**Q.** ¿Debo tocar la configuracion de energia en el Panel de control si sufro estos congelamientos?
+**Q.**¿Debo tocar la configuracion de energia en el Panel de control si sufro estos congelamientos?
 
 **A.** Si despues de revisar los logs sospechas de gestion energetica agresiva, entra en elPanel de control, buscaOpciones de energiay cambia temporalmente el plan predeterminado aAlto rendimiento. Esto evita que Windows apague los estados de energia de los puertos PCIe o del disco NVMe durante los momentos de inactividad o carga variable, lo cual suele solucionar muchos micro-congelamientos aleatorios en portatiles y equipos de oficina.

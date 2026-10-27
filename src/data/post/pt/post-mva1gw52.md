@@ -94,7 +94,7 @@ Trabalhando no suporte a infraestrutura corporativa, já vi muita gente perder d
 
 Perguntas Frequentes (FAQ)
 
-**Q.** Posso apagar a pasta Windows.old sem medo?
+**Q.**Posso apagar a pasta Windows.old sem medo?
 
 **A.** Sim, desde que seu computador esteja funcionando perfeitamente após a última atualização do Windows. A pasta `Windows.old` serve apenas para reverter o sistema para uma versão anterior. Se você não planeja fazer downgrade, pode apagá-la sem receio através da Limpeza de Disco para recuperar dezenas de gigabytes.
 

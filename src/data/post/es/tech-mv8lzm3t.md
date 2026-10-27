@@ -107,12 +107,12 @@ Muchos servicios de Windows vienen activados por defecto ("Automático") sin que
 
 FA
 
-**Q:** Dudas de trinchera sobre optimización de equipos
+**Q:**Dudas de trinchera sobre optimización de equipos
 
 P: ¿Desactivar aplicaciones en el inicio afecta a su funcionamiento normal cuando las abro manualmente?
 
-**A.** Para nada. Lo único que evitas es que el programa cargue su proceso en segundo plano desde el preciso instante en que enciendes el ordenador. Se abrirá un poco más lento la primera vez que lo invoques, pero liberarás memoria RAM y ciclos de CPU críticos durante el boot.P: ¿Es recomendable usar scripts de GitHub que prometen "optimizar Windows con un solo clic"?
+**A.**Para nada. Lo único que evitas es que el programa cargue su proceso en segundo plano desde el preciso instante en que enciendes el ordenador. Se abrirá un poco más lento la primera vez que lo invoques, pero liberarás memoria RAM y ciclos de CPU críticos durante el boot.P: ¿Es recomendable usar scripts de GitHub que prometen "optimizar Windows con un solo clic"?
 
-**A.** Depende del repositorio. Muchos scripts públicos en GitHub automatizan tareas excelentes (eliminación de bloatware, desactivación de telemetría), pero debes revisar el código fuente antes de ejecutarlo en entornos de producción para evitar que rompan políticas de dominio de Active Directory o rompan la VPN corporativa. P: ¿Por qué mi SSD sigue lento incluso después de limpiar el inicio y formatear?
+**A.**Depende del repositorio. Muchos scripts públicos en GitHub automatizan tareas excelentes (eliminación de bloatware, desactivación de telemetría), pero debes revisar el código fuente antes de ejecutarlo en entornos de producción para evitar que rompan políticas de dominio de Active Directory o rompan la VPN corporativa. P: ¿Por qué mi SSD sigue lento incluso después de limpiar el inicio y formatear?
 
 **A.** Si el software está limpio y el arranque sigue siendo lento, el problema ya es hardware puro: celdas NAND flash degradadas, falta de actualización de la BIOS/UEFI de la placa base, o un perfil XMP/EXPO mal configurado en la memoria RAM que obliga al controlador a trabajar en frecuencias de seguridad por defecto.

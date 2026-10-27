@@ -102,7 +102,7 @@ Precauções de Segurança e Boas Práticas de TI
 
 Perguntas Frequentes (FAQ)
 
-**Q.** Esse procedimento funciona no Windows 11 Pro e Home?
+**Q.**Esse procedimento funciona no Windows 11 Pro e Home?
 
 **A.** Sim, os comandos baseados no `slmgr.vbs` e a manipulação do serviço `sppsvc` funcionam tanto no Windows 10 quanto no Windows 11. No entanto, edições Home possuem limitações quanto à conexão com servidores de volume KMS corporativo.
 

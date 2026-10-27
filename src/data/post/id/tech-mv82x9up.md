@@ -91,6 +91,8 @@ Simulasi Logika POST BIOS saat RAM Normal vs Error
 
 ## 4. Tips & Peringatan Penting Teknisi IT
 
+## 4. Tips & Peringatan Penting Teknisi IT
+
 Expert Warning: Jangan Asal Main Colok!
 
 <div style="border-left: 4px solid #84cc16; padding: 12px 16px; margin: 20px 0; background-color: rgba(132, 204, 22, 0.05); border-radius: 4px;">
@@ -107,7 +109,7 @@ FAQ (Pertanyaan Sering Muncul Seputar Masalah RAM & Layar Gelap)
 
 **A:** Kalau tidak ada suara *beep* sama sekali (bahkan beep pendek tanda normal), biasanya masalahnya ada di suplai daya utama (Power Supply / PSU) atau korsleting di jalur 12V CPU, bukan cuma di RAM. Tapi kalau ada bunyi *beep* berulang (misal *beep* panjang 3 kali), itu fix masalah RAM atau VGA card kurang nancap.
 
-**Q:** Apakah aman membersihkan pin RAM menggunakan amplas halus?>
+**Q:**Apakah aman membersihkan pin RAM menggunakan amplas halus?>
 
 **A:**HARAM!Jangan pernah pakai amplas, cutter, atau benda tajam buat ngilangin oksidasi di kuningan RAM. Lapisan emas tipis di pin itu gampang banget terkelupas. Kalau lapisan emasnya abis, RAM bakal permanen rusak dan nggak bakal terbaca sama sekali. Cukup pakai penghapus pensil karet.
 

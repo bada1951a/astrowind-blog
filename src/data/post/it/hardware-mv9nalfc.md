@@ -97,7 +97,7 @@ Domande Frequenti (FAQ)
 
 Sì, ma attenzione: la cartella *Windows.old* contiene i file della tua precedente versione o installazione di Windows. Se il sistema attuale è stabile e non hai bisogno di effettuare un rollback (tornare indietro alla versione precedente del sistema operativo), puoi eliminarla tranquillamente tramite la Pulizia disco per recuperare decine di gigabyte.
 
-**Q.** Cosa faccio se un file temporaneo si rifiuta di essere cancellato?
+**Q.**Cosa faccio se un file temporaneo si rifiuta di essere cancellato?
 
 **A.** Significa che c'è un processo in background o un'applicazione attiva che lo sta utilizzando in quel momento. ApriGestione attività(`Ctrl + Shift + Esc`), individua il programma sospetto, chiudilo forzatamente e riprova a cancellare il file.
 

@@ -42,6 +42,8 @@ Zuerst verfiel ich in blinden Aktionismus. Ich löschte ein paar größere PDF-D
 
 ## 2. Detaillierte Ursachenanalyse
 
+## 2. Detaillierte Ursachenanalyse
+
 Warum läuft das C-Laufwerk immer wieder voll? (Die 3 Hauptursachen)
 
 Bevor wir zur Tat schreiten, müssen wir verstehen, woher dieser Datenmüll eigentlich kommt. Windows und moderne Anwendungen sind wahre Meister im Verstecken von temporären Daten.
@@ -53,6 +55,8 @@ Bevor wir zur Tat schreiten, müssen wir verstehen, woher dieser Datenmüll eige
 3. Der unbarmherzige Ruhezustand und die Auslagerungsdatei: Die Dateien `hiberfil.sys` (für den Schnellstart/Ruhezustand) und `pagefile.sys` (virtueller Arbeitsspeicher) skalieren direkt mit der Größe deines RAMs und belegen oft fix 16 bis 32 Gigabyte auf der Systempartition.
 
 ---
+
+## 3. Schritt-für-Schritt-Lösungsanleitung
 
 ## 3. Schritt-für-Schritt-Lösungsanleitung
 

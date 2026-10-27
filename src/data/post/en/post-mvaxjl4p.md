@@ -40,6 +40,8 @@ Let's fix this right now so it never happens to you again. You can reclaim your 
 
 ## 2. Root Cause Breakdown
 
+## 2. Root Cause Breakdown
+
 Why Your Windows 10 Boot Time Crawls to a Halt
 
 Before we jump into the quick fix, let's look at why your machine behaves like it's dragging an anchor every time you turn it on.
@@ -53,6 +55,8 @@ Before we jump into the quick fix, let's look at why your machine behaves like i
 <div style="border-left: 4px solid #e11d48; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Critical Warning:</strong> Never disable core system drivers or your antivirus software (like Windows Defender) during this cleanup process. Stick strictly to third-party applications and user utilities.
 </div>
+
+## 3. Step-by-Step Practical Resolution Practical Resolution Practical Resolution
 
 ## 3. Step-by-Step Practical Resolution Practical Resolution
 
