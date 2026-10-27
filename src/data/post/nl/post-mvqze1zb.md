@@ -80,7 +80,9 @@ In de praktijk van het systeembeheer wordt maar al te vaak gegrepen naar snelle 
 
 Daarnaast is het van cruciaal belang om te begrijpen dat het geforceerd verwijderen van actieve bestanden nooit zonder risico is. Wanneer u een bestand wist dat op dat exact moment door een actieve applicatie of databasesysteem wordt beschreven, dwingt u een abrupte onderbreking af van de I/O-operaties. Dit kan resulteren in fatale bestandssysteemcorruptie, waarbij niet alleen het gewraakte bestand onbruikbaar wordt, maar ook de omliggende mètadatastructuur van de NTFS-partitie beschadigd raakt. Voer daarom altijd eerst een gecontroleerde procesbeëindiging uit zoals beschreven in de stappenplannen, en maak waar mogelijk direct een back-up van de omliggende directory voordat u overgaat tot destructieve terminalcommando's.
 
-## 5. Veelgestelde Vragen (FAQ)Q1. Kan ik een bestand dat in gebruik is veilig verwijderen zonder dataverlies te riskeren?
+## 5. Veelgestelde Vragen (FAQ)
+
+Q1. Kan ik een bestand dat in gebruik is veilig verwijderen zonder dataverlies te riskeren?
 
 A1. In de meeste gevallen is het direct geforceerd verwijderen van een bestand dat door een actief proces wordt gebruikt niet geheel zonder risico op datacorruptie. Als het proces op dat moment gegevens naar de schijf schreef, zal het geforceerd afbreken van het proces of het wissen van het bestand resulteren in een incomplete staat. Het is daarom altijd sterk aan te raden om eerst te proberen de toepassing op een nette manier via de gebruikersinterface af te sluiten voordat u overgaat tot drastische maatregelen zoals `taskkill`.
 

@@ -81,7 +81,9 @@ Im professionellen IT-Alltag im Frankfurter Bankenviertel und auf Münchner Tech
 
 Um wiederkehrende Dateisperren bei großen Kopiervorgängen von vornherein zu vermeiden, sollten Sie bewährte Best Practices etablieren. Trennen Sie externe SSDs und NAS-Laufwerke niemals ohne den Prozess des sicheren Entfernens über das Infobereichs-Icon, da ungeschriebene Cache-Daten im Hintergrund andauernde Schreibsperren verursachen. Deaktivieren Sie bei massiven Backup-Operationen temporär den Echtzeitschutz des Virenscanners für das spezifische Quell- und Zielverzeichnis, um zu verhindern, dass die Engine jede geschriebene Datei sofort exklusiv blockiert. Sollten hartnäckige Probleme fortbestehen, empfiehlt sich die Durchführung eines sauberen Systemstarts (Clean Boot), um störende Drittanbieterdienste als Ursache gänzlich auszuschließen.
 
-## 5. Häufig gestellte Fragen (FAQ)Q1. Warum zeigt Windows an, dass eine Datei verwendet wird, obwohl absolut kein Programm geöffnet ist?
+## 5. Häufig gestellte Fragen (FAQ)
+
+Q1. Warum zeigt Windows an, dass eine Datei verwendet wird, obwohl absolut kein Programm geöffnet ist?
 
 A1. Dieses Phänomen tritt auf, wenn ein Hintergrundprozess oder ein Systemdienst wie der Windows Search Indexer, der Virenscanner oder eine verwaiste Anwendungsinstanz im Arbeitsspeicher hängen geblieben ist und das Dateihandle nicht freigegeben hat. Das Betriebssystem sperrt die Datei so lange auf Kernel-Ebene, bis dieses spezifische Handle explodiert oder der Prozess gewaltsam beendet wird. Sie können dieses Problem am besten lösen, indem Sie den Ressourcenmonitor öffnen, nach dem genauen Dateipfad suchen und den zugrundeliegenden Prozess manuell terminieren.
 

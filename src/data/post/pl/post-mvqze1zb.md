@@ -77,7 +77,9 @@ W codziennej praktyce serwisowej często spotykam się z użytkownikami, którzy
 
 Aby w przyszłości unikać nawracających problemów z zablokowanymi plikami w środowisku produkcyjnym, warto wdrożyć kilka żelaznych zasad higieny pracy cyfrowej. Przede wszystkim należy zawsze bezpiecznie odłączać zewnętrzne nośniki danych oraz dbać o regularne czyszczenie pamięci podręcznej i indeksów wyszukiwania systemu. W przypadku pracy z gigantycznymi arkuszami kalkulacyjnymi lub bazami danych, dobrą praktyką jest okresowe restartowanie usługi buforowania oraz wykonywanie operacji na lokalnych dyskach SSD zamiast bezpośrednio na współdzielonych zasobach sieciowych SMB, gdzie opóźnienia sieciowe często generują sztuczne i trudne do usunięcia blokady sesji.
 
-## 5. Najczęściej zadawane pytania (FAQ)Q1. Co zrobić, gdy nawet po zamknięciu wszystkich procesów w Menedżerze Zadań plik nadal jest zablokowany z komunikatem o odmowie dostępu?
+## 5. Najczęściej zadawane pytania (FAQ)
+
+Q1. Co zrobić, gdy nawet po zamknięciu wszystkich procesów w Menedżerze Zadań plik nadal jest zablokowany z komunikatem o odmowie dostępu?
 
 A1. Taka sytuacja zazwyczaj oznacza, że blokada nie pochodzi od aplikacji użytkownika, lecz od podsystemu systemowego, takiego jak usługa indeksowania plików lub aktywny skaner antywirusowy w tle. Najskuteczniejszym rozwiązaniem w tym scenariuszu jest tymczasowe zatrzymanie usługi indeksowania (`WSearch`) za pomocą wiersza poleceń uruchomionego jako administrator. Dodatkowo można uruchomić komputer w trybie awaryjnym (Safe Mode), co całkowicie uniemożliwia uruchomienie większości procesów firm trzecich i pozwala na bezproblemowe usunięcie każdego pliku.
 
