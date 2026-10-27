@@ -114,7 +114,7 @@ function repairMarkdownPost(rawText, langCode) {
     frontmatter = frontmatter.replace(/(description:\s*")([^"]*)(")/g, (m, p1, p2, p3) => `${p1}${p2.replace(/[가-힣]+/g, '').trim()}${p3}`);
   }
 
-  // 2. 상단 20여 줄 빈 줄 제거
+  // 2. 상단 빈 줄 압축
   body = body.replace(/^\n+/, '');
 
   // 3. 쪼개진 단어 복원
@@ -339,7 +339,7 @@ function repairMarkdownPost(rawText, langCode) {
   body = body.replace(/^(再発を防ぐためのエンジニア的.*?)/gm, `${titles.s4}\n\n$1`);
   body = body.replace(/^(プロが教えるトラブルシューティング.*?)/gm, `${titles.s4}\n\n$1`);
   body = body.replace(/^(4\.\s*プロが教える現場の教訓.*?)/gm, `${titles.s4}\n\n$1`);
-  body = body.replace(/^(프로フェッショナルからの実用的な.*?)/gm, `${titles.s4}\n\n$1`);
+  body = body.replace(/^(프로페셔널からの実用的な.*?)/gm, `${titles.s4}\n\n$1`);
 
   body = body.replace(/^(Conseils d'expert.*?)/gm, `${titles.s4}\n\n$1`);
   body = body.replace(/^(Précautions de l'expert.*?)/gm, `${titles.s4}\n\n$1`);
@@ -355,18 +355,29 @@ function repairMarkdownPost(rawText, langCode) {
   // Section 5 (FAQ) 표준화
   body = body.replace(/^#{0,3}\s*(\d\.\s*)?(자주 묻는 질문|Häufig gestellte Fragen|Frequently Asked Questions|よくある(ご)?質問|Questions Fréquemment Posées|Foire [Aa]ux Questions|Preguntas [Ff]recuentes|Fragen und Antworten|Expert FA).*?$/gmi, titles.s5);
 
-  // 헤딩(#) 볼드 제거
-  body = body.replace(/^(#{1,6}\s*)\*\*(.*?)\*\*/gm, '$1$2');
+  // =========================================================================
+  // 🛡️ [핵심 안전 보정 1] 모든 헤딩(#) 줄 내부의 ** 강제 박멸 (소제목 중간 깨짐 원천 차단)
+  // =========================================================================
+  body = body.replace(/^(#{1,6}\s+[^\n]+)$/gm, (match) => {
+    return match.replace(/\*\*/g, '');
+  });
+
+  // =========================================================================
+  // 🛡️ [핵심 안전 보정 2] 본문 볼드(**) 기호 안쪽 공백 압축 (별표 노출 버그 원천 복원)
+  // =========================================================================
+  body = body.replace(/\*\*\s+([^*]+?)\s+\*\*/g, '**$1**');
+  body = body.replace(/\*\*\s+([^*]+?)\*\*/g, '**$1**');
+  body = body.replace(/\*\*([^*]+?)\s+\*\*/g, '**$1**');
 
   // 첫 문단 1번 소제목 주입
   if (!body.startsWith('## 1.')) {
     body = `${titles.s1}\n\n` + body;
   }
 
-  // ★ [핵심 정밀 타격] ## 1. 소제목 바로 다음 줄에 붙은 중복 '1. 문장'만 핀셋 제거
+  // ## 1. 소제목 바로 다음 줄에 붙은 중복 '1. 문장' 핀셋 제거
   body = body.replace(/^(## 1\.[^\n]+)\n+(\s*1\.\s+[^\n]+)\n+/m, '$1\n\n');
 
-  // 7. Q&A 표준화
+  // 7. Q&A 표준화 및 볼드 보호
   body = body.replace(/([^\n])\s*\n\s*(Q[0-9]*\s*[:.])/gi, '$1\n\n**$2**');
   body = body.replace(/([^\n])\s*\n\s*(A[0-9]*\s*[:.])/gi, '$1\n\n**$2**');
   body = body.replace(/([^\n])\s*\n\s*(F[0-9]*\s*[:.])/gi, '$1\n\n**Q.**');
