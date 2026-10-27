@@ -3,17 +3,17 @@ import path from 'path';
 
 const POSTS_DIR = path.resolve('src/data/post');
 
-// 볼드 에러 치료 함수
+// 1. 볼드 폭주 강제 정제 함수
 function sanitizeMarkdownText(content) {
   let text = content;
 
-  // 1. Q1.** 처럼 앞에 여는 별표 없이 단독으로 튀어나온 .** 제거
+  // Q1.** 처럼 앞에 여는 별표 없이 단독으로 튀어나온 .** 제거[cite: 4]
   text = text.replace(/([A-Za-z0-9가-힣]+)\.\*\*/g, '$1.');
 
-  // 2. 50자 넘게 통째로 볼드로 묶여 시커멓게 탄 문단 강제 해제
+  // 50자 넘게 통째로 볼드로 묶여 시커멓게 탄 문단 강제 해제 (오늘 1호기 문제)[cite: 6]
   text = text.replace(/\*\*([^*]{50,})\*\*/g, '$1');
 
-  // 3. 줄 단위 짝 안 맞는 홀수 ** 태그 강제 정리 (줄 끝 덜 닫힌 ** 삭제)
+  // 닫히지 않은 줄 단위 홀수 ** 태그 강제 정리
   text = text.split('\n').map(line => {
     const boldCount = (line.match(/\*\*/g) || []).length;
     if (boldCount % 2 !== 0) {
@@ -22,13 +22,13 @@ function sanitizeMarkdownText(content) {
     return line;
   }).join('\n');
 
-  // 4. 단독으로 남아있는 외톨이 ** 태그 청소
+  // 단독으로 남은 외톨이 ** 태그 청소
   text = text.replace(/(^|\s)\*\*(\s|$)/g, '$1$2');
 
   return text;
 }
 
-// 하위 폴더 재귀 탐색
+// 2. 모든 마크다운 파일 수집
 function getAllFiles(dir, fileList = []) {
   if (!fs.existsSync(dir)) return fileList;
   const files = fs.readdirSync(dir);
@@ -37,37 +37,40 @@ function getAllFiles(dir, fileList = []) {
     if (fs.statSync(fullPath).isDirectory()) {
       getAllFiles(fullPath, fileList);
     } else if (file.endsWith('.md') || file.endsWith('.mdx')) {
-      fileList.push({
-        path: fullPath,
-        name: file,
-        mtime: fs.statSync(fullPath).mtimeMs,
-      });
+      fileList.push(fullPath);
     }
   }
   return fileList;
 }
 
-function runActionFix() {
+function runExactTargetFix() {
+  console.log('🎯 [정밀 수술] 오늘 날짜(2026-10-28)가 포함된 포스트 탐색 시작...');
   const allFiles = getAllFiles(POSTS_DIR);
-  // 가장 최신 수정된 상위 48개 포스트만 정밀 타격 (과거 글 보호)
-  allFiles.sort((a, b) => b.mtime - a.mtime);
-  const targetFiles = allFiles.slice(0, 48);
 
-  console.log(`🎯 최신 포스트 ${targetFiles.length}개 정밀 수술 시작...`);
+  let targetCount = 0;
   let fixedCount = 0;
 
-  targetFiles.forEach(item => {
-    const original = fs.readFileSync(item.path, 'utf-8');
-    const fixed = sanitizeMarkdownText(original);
+  allFiles.forEach(filePath => {
+    const original = fs.readFileSync(filePath, 'utf-8');
 
-    if (original !== fixed) {
-      fs.writeFileSync(item.path, fixed, 'utf-8');
-      console.log(`🛠️ [수리 완료] ${item.name}`);
-      fixedCount++;
+    // 본문에 2026-10-28이 들어간 오늘 글만 타격 (과거 글 절대 패스)[cite: 2]
+    if (original.includes('2026-10-28')) {
+      targetCount++;
+      const fixed = sanitizeMarkdownText(original);
+
+      if (original !== fixed) {
+        fs.writeFileSync(filePath, fixed, 'utf-8');
+        console.log(`🛠️ [수리 완료] ${path.basename(filePath)}`);
+        fixedCount++;
+      } else {
+        console.log(`⏺ [이상 없음] ${path.basename(filePath)}`);
+      }
     }
   });
 
-  console.log(`\n🎉 수리 완료: 총 ${fixedCount}개 포스트 수정됨.`);
+  console.log(`\n========================================`);
+  console.log(`총 발견된 오늘 글: ${targetCount}개 | 볼드 교정 완료: ${fixedCount}개`);
+  console.log(`========================================`);
 }
 
-runActionFix();
+runExactTargetFix();
