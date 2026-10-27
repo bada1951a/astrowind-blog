@@ -3,39 +3,43 @@ import path from 'path';
 
 const POSTS_DIR = path.resolve('src/data/post');
 
-// 1. 볼드 폭주 강제 정제 함수
-function sanitizeMarkdownText(content) {
+function sanitizePostContent(content) {
   let text = content;
 
-  // Q1.** 처럼 앞에 여는 별표 없이 단독으로 튀어나온 .** 제거[cite: 4]
+  // 1. [FAQ 줄바꿈 분리] Q1., A1., Q2., A2.가 문장 뒤에 딱 붙어 뭉개진 것 강제 줄바꿈
+  text = text.replace(/([.!?])\s*(Q[1-9]\.|\*\*Q[1-9]\.\*\*)/g, '$1\n\n$2');
+  text = text.replace(/([.!?])\s*(A[1-9]\.|\*\*A[1-9]\.\*\*)/g, '$1\n\n$2');
+  text = text.replace(/(---)\s*(Q[1-9]\.)/g, '$1\n\n$2');
+
+  // 2. [볼드 깨짐 수리] Q1.** 처럼 앞에 여는 별표 없이 닫는 별표만 혼자 튀어나온 것 제거
   text = text.replace(/([A-Za-z0-9가-힣]+)\.\*\*/g, '$1.');
 
-  // 50자 넘게 통째로 볼드로 묶여 시커멓게 탄 문단 강제 해제 (오늘 1호기 문제)[cite: 6]
-  text = text.replace(/\*\*([^*]{50,})\*\*/g, '$1');
+  // 3. [시커먼 거대 볼드 폭주 해제] 백틱(`) 포함 25글자 이상 통째로 묶인 볼드는 일반 텍스트로 강제 변환
+  text = text.replace(/\*\*([\s\S]{25,}?)\*\*/g, '$1');
 
-  // 닫히지 않은 줄 단위 홀수 ** 태그 강제 정리
+  // 4. [외톨이 별표 청소] 줄 단위로 홀수 개만 남아 렌더링 터뜨리는 ** 태그 정리
   text = text.split('\n').map(line => {
-    const boldCount = (line.match(/\*\*/g) || []).length;
-    if (boldCount % 2 !== 0) {
+    const count = (line.match(/\*\*/g) || []).length;
+    if (count % 2 !== 0) {
       return line.replace(/\*\*(?![\s\S]*\*\*)/, '');
     }
     return line;
   }).join('\n');
 
-  // 단독으로 남은 외톨이 ** 태그 청소
+  // 5. 공백 사이에 홀로 남은 무의미한 빈 ** 삭제
   text = text.replace(/(^|\s)\*\*(\s|$)/g, '$1$2');
 
   return text;
 }
 
-// 2. 모든 마크다운 파일 수집
-function getAllFiles(dir, fileList = []) {
+// 하위 폴더(국가별, 카테고리별 등) 포함 모든 마크다운 파일 재귀 탐색
+function getAllMarkdownFiles(dir, fileList = []) {
   if (!fs.existsSync(dir)) return fileList;
   const files = fs.readdirSync(dir);
   for (const file of files) {
     const fullPath = path.join(dir, file);
     if (fs.statSync(fullPath).isDirectory()) {
-      getAllFiles(fullPath, fileList);
+      getAllMarkdownFiles(fullPath, fileList);
     } else if (file.endsWith('.md') || file.endsWith('.mdx')) {
       fileList.push(fullPath);
     }
@@ -43,34 +47,31 @@ function getAllFiles(dir, fileList = []) {
   return fileList;
 }
 
-function runExactTargetFix() {
-  console.log('🎯 [정밀 수술] 오늘 날짜(2026-10-28)가 포함된 포스트 탐색 시작...');
-  const allFiles = getAllFiles(POSTS_DIR);
+function runFullAudit() {
+  console.log('🚀 [전수 조사 시작] src/data/post 내 모든 마크다운 파일 전수 검사...');
+  const allFiles = getAllMarkdownFiles(POSTS_DIR);
 
-  let targetCount = 0;
+  let checkedCount = 0;
   let fixedCount = 0;
 
-  allFiles.forEach(filePath => {
+  for (const filePath of allFiles) {
+    checkedCount++;
     const original = fs.readFileSync(filePath, 'utf-8');
+    const fixed = sanitizePostContent(original);
 
-    // 본문에 2026-10-28이 들어간 오늘 글만 타격 (과거 글 절대 패스)[cite: 2]
-    if (original.includes('2026-10-28')) {
-      targetCount++;
-      const fixed = sanitizeMarkdownText(original);
-
-      if (original !== fixed) {
-        fs.writeFileSync(filePath, fixed, 'utf-8');
-        console.log(`🛠️ [수리 완료] ${path.basename(filePath)}`);
-        fixedCount++;
-      } else {
-        console.log(`⏺ [이상 없음] ${path.basename(filePath)}`);
-      }
+    // 내용에 실제 변화가 있는(오류가 발견된) 파일만 덮어쓰기
+    if (original !== fixed) {
+      fs.writeFileSync(filePath, fixed, 'utf-8');
+      console.log(`🛠️ [수리 완료] ${path.basename(filePath)}`);
+      fixedCount++;
     }
-  });
+  }
 
   console.log(`\n========================================`);
-  console.log(`총 발견된 오늘 글: ${targetCount}개 | 볼드 교정 완료: ${fixedCount}개`);
+  console.log(`총 검사한 파일: ${checkedCount}개`);
+  console.log(`오류 발견 및 수리 완료: ${fixedCount}개`);
+  console.log(`오류 없는 정상 파일: ${checkedCount - fixedCount}개 (보존됨)`);
   console.log(`========================================`);
 }
 
-runExactTargetFix();
+runFullAudit();
