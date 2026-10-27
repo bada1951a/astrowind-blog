@@ -69,9 +69,9 @@ cmd /c del /f /q /a "C:\Pad\Naar\Uw\VastgelopenBestand.log"
 
 ### Methode 3: Windows Verkenner herstarten en Resource Monitor Handlenalyse
 1. Druk op `Ctrl + Shift + Esc` om Taakbeheer te openen en zoek naar **Windows Verkenner**(`explorer.exe`) in het tabblad**Processen**.
-2. Klik met de rechtermuisknop op**Windows Verkenner**en selecteerOpnieuw starten. Dit verbreekt direct alle interne shell-handles en thumbnail-caches.
+2. Klik met de rechtermuisknop opWindows Verkenneren selecteerOpnieuw starten. Dit verbreekt direct alle interne shell-handles en thumbnail-caches.
 3. Mocht dit niet afdoende zijn, druk dan op `Win + R`, typ `resmon` en druk op Enter om deResource Monitorte openen.
-4. Ga naar het tabblad**CPU**, vouw het gedeelteGekoppelde ingangen(Associated Handles) uit en voer de exacte bestandsnaam in bij het zoekvakZoek naar ingang.
+4. Ga naar het tabbladCPU, vouw het gedeelteGekoppelde ingangen(Associated Handles) uit en voer de exacte bestandsnaam in bij het zoekvakZoek naar ingang.
 5. Klik met de rechtermuisknop op de gevonden processen die het bestand vasthouden en kiesHandle beëindigenvoordat u het bestand definitief wist in Verkenner.
 
 ## 4. Belangrijke waarschuwingen van IT-specialisten

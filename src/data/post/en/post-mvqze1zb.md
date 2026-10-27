@@ -49,7 +49,7 @@ When confronted with stubborn file locks that defy standard deletion attempts, s
    ```cmd
    taskkill /f /im jav
 
-**A.** exe
+A. exe
    ```
 3. Navigate to the directory housing the locked file using standard path syntax.
 4. Force delete the locked file by bypassing normal attribute restrictions using the command prompt file deletion switches:

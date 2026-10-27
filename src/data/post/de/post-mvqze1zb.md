@@ -62,7 +62,7 @@ Wenn die grafische Benutzeroberfläche blockiert ist, bietet die PowerShell mit 
    ```cmd
    del /f /q /a "D:\Backup_2026\ERP_Dat
 
-**A.** mdf"
+A. mdf"
    ```
    *Erläuterung der Flags:* `/f` erzwingt das Löschen schreibgeschützter Dateien, `/q` schaltet den Bestätigungsmodus stumm, und `/a` erlaubt den Zugriff auf Attribute-gesperrte Dateien.
 

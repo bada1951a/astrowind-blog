@@ -69,7 +69,7 @@ taskkill /f /im EXCEL.EXE
 
 *(Not
 
-**A.** Reemplace `EXCEL.EXE` por el nombre exacto del ejecutable que esté bloqueando su archivo).*
+A. Reemplace `EXCEL.EXE` por el nombre exacto del ejecutable que esté bloqueando su archivo).*
 
 3. Una vez eliminado el proceso responsable, proceda a forzar la eliminación del archivo bloqueado a nivel de consola utilizando el comando de eliminación de archivos de sistema con atributos forzados:
 
