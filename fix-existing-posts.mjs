@@ -356,14 +356,14 @@ function repairMarkdownPost(rawText, langCode) {
   body = body.replace(/^#{0,3}\s*(\d\.\s*)?(자주 묻는 질문|Häufig gestellte Fragen|Frequently Asked Questions|よくある(ご)?質問|Questions Fréquemment Posées|Foire [Aa]ux Questions|Preguntas [Ff]recuentes|Fragen und Antworten|Expert FA).*?$/gmi, titles.s5);
 
   // =========================================================================
-  // 🛡️ [핵심 안전 보정 1] 모든 헤딩(#) 줄 내부의 ** 강제 박멸 (소제목 중간 깨짐 원천 차단)
+  // 🛡️ [핵심 안전 보정 1] 모든 헤딩(#) 줄 내부의 ** 강제 박멸
   // =========================================================================
   body = body.replace(/^(#{1,6}\s+[^\n]+)$/gm, (match) => {
     return match.replace(/\*\*/g, '');
   });
 
   // =========================================================================
-  // 🛡️ [핵심 안전 보정 2] 본문 볼드(**) 기호 안쪽 공백 압축 (별표 노출 버그 원천 복원)
+  // 🛡️ [핵심 안전 보정 2] 본문 볼드(**) 기호 안쪽 공백 압축
   // =========================================================================
   body = body.replace(/\*\*\s+([^*]+?)\s+\*\*/g, '**$1**');
   body = body.replace(/\*\*\s+([^*]+?)\*\*/g, '**$1**');
@@ -377,15 +377,27 @@ function repairMarkdownPost(rawText, langCode) {
   // ## 1. 소제목 바로 다음 줄에 붙은 중복 '1. 문장' 핀셋 제거
   body = body.replace(/^(## 1\.[^\n]+)\n+(\s*1\.\s+[^\n]+)\n+/m, '$1\n\n');
 
-  // 7. Q&A 표준화 및 볼드 보호
-  body = body.replace(/([^\n])\s*\n\s*(Q[0-9]*\s*[:.])/gi, '$1\n\n**$2**');
-  body = body.replace(/([^\n])\s*\n\s*(A[0-9]*\s*[:.])/gi, '$1\n\n**$2**');
-  body = body.replace(/([^\n])\s*\n\s*(F[0-9]*\s*[:.])/gi, '$1\n\n**Q.**');
-  body = body.replace(/([^\n])\s*\n\s*(R[0-9]*\s*[:.])/gi, '$1\n\n**A.**');
-  body = body.replace(/([^\n])\s*(\*\*?[QA][0-9]*\s*[:.]\*\*?)/gi, '$1\n\n$2');
+  // =========================================================================
+  // 🛡️ [Q&A 전면 재정비] 깨진 별표 박멸, 번호 규격화, 볼드 및 줄바꿈 단일화
+  // =========================================================================
+  // 1) Q와 A 주변에 덕지덕지 붙은 별표(**)를 먼저 완전히 발라내어 순수 텍스트로 환원
+  body = body.replace(/\*{1,4}\s*([QA][0-9]*)\s*[:.]\s*\*{1,4}/gi, '$1.');
+  body = body.replace(/([QA][0-9]*)\s*[:.]/gi, (match, p1) => `${p1.toUpperCase()}.`);
 
+  // 2) 줄바꿈 강제: Q와 A 앞머리는 무조건 빈 줄 2개로 분리
+  body = body.replace(/([^\n])\s*\n*\s*(Q[0-9]*\.)/gi, '$1\n\n$2');
+  body = body.replace(/([^\n])\s*\n*\s*(A[0-9]*\.)/gi, '$1\n\n$2');
+
+  // 3) 외신/다국어 변칙 물음표 질문 대응
   body = body.replace(/^(\d+\.\s+)(¿.*?\?)\s*(.*)/gm, '**Q.** $2\n\n**A.** $3');
   body = body.replace(/^(\d+\.\s+)(.*?\?)\s*(Oui|Non|Si|No|Absolument|Para nada|E'|C'est|Ce)/gm, '**Q.** $2\n\n**A.** $3');
+
+  // 4) 완벽한 마크다운 볼드로 단 1회만 정확하게 감싸기 (**Q1.** 본문)
+  body = body.replace(/^(Q[0-9]*\.)\s*(.*)$/gm, '**$1** $2');
+  body = body.replace(/^(A[0-9]*\.)\s*(.*)$/gm, '**$1** $2');
+
+  // 5) 혹시 남은 변칙 FAQ 볼드 기호 잔여물 제거 및 물음표 띄어쓰기
+  body = body.replace(/\*\*\s*\*\*/g, '');
   body = body.replace(/\?([A-Za-z\u00C0-\u024F\u1EA0-\u1EF9가-힣])/g, '? $1');
 
   // 과도한 빈 줄 압축
