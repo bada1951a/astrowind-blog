@@ -184,6 +184,15 @@ function validateGeneratedPost(text, langCode) {
   const fm = text.match(/^---\s*\r?\n([\s\S]*?)\r?\n---\s*\r?\n/);
   if (!fm) return ['frontmatter missing'];
   const meta = fm[1], body = text.slice(fm[0].length);
+  // Duplicate YAML keys can silently override a trusted category, image or date.
+  for (const field of ['title', 'description', 'publishDate', 'image', 'category', 'tags', 'theme']) {
+    if ((meta.match(new RegExp('^' + field + ':', 'gm')) || []).length > 1)
+      errors.push(field + ' duplicated');
+  }
+  // Block prompt templates accidentally copied into an otherwise well-formed post.
+  if (/Native Clear Title in |Native concise description in |replace with 3-5 actual topic-specific/i.test(meta) ||
+      /^\s*##\s+[1-5]\.\s*\[Write a native-language heading/mi.test(body))
+    errors.push('unreplaced prompt placeholder');
   for (const field of ['title', 'description', 'publishDate', 'image', 'theme'])
     if (!new RegExp('^' + field + ':\\s*\\S', 'm').test(meta)) errors.push(field + ' missing');
   if (!/^category:\s*['"]?tech['"]?\s*$/m.test(meta)) errors.push('category must be tech');
@@ -475,6 +484,9 @@ async function run() {
     if (shouldRetryOpenAIStatus(400) || shouldRetryOpenAIStatus(401) || shouldRetryOpenAIStatus(403) || shouldRetryOpenAIStatus(429, 'insufficient_quota') || !shouldRetryOpenAIStatus(429, 'rate_limit_exceeded') || !shouldRetryOpenAIStatus(503)) throw new Error('OpenAI retry status classification regression');
     if (!getKstPublishDateIso().endsWith('T10:00:00.000Z')) throw new Error('KST 19:00 publish timestamp regression');
     if (!validateGeneratedPost(sample.replace('image: /images/tech-photo/test.jpg', 'image: https://example.com/other.jpg'), 'ko').includes('image must use /images/tech-photo')) throw new Error('Tech image path gate regression');
+    if (!validateGeneratedPost(sample.replace('category: tech', 'category: hardware'), 'ko').includes('category must be tech')) throw new Error('Tech-only category gate regression');
+    if (!validateGeneratedPost(sample.replace('category: tech', 'category: tech\ncategory: tech'), 'ko').includes('category duplicated')) throw new Error('Duplicate category gate regression');
+    if (!validateGeneratedPost(sample.replace('title: sample', 'title: Native Clear Title in English'), 'ko').includes('unreplaced prompt placeholder')) throw new Error('Prompt placeholder gate regression');
     console.log('PASS: Korean/Japanese length gates, FAQ repair, KST publish timestamp, and tech image path gate');
     return;
   }
