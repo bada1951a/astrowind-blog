@@ -26,8 +26,17 @@ const IMAGE_EXTS = /\.(jpe?g|png|webp|gif|avif)$/i;
 
 if (!DRY_RUN && !fs.existsSync(PHOTO_DIR)) fs.mkdirSync(PHOTO_DIR, { recursive: true });
 
-const localFiles = fs.existsSync(PHOTO_DIR) ? fs.readdirSync(PHOTO_DIR).filter(file => IMAGE_EXTS.test(file)) : [];
-let localImages = localFiles.map(file => encodeURI(`/images/tech-photo/${file}`));
+// Only real, non-empty image files count as usable; directories and zero-byte files must not trigger paid generation.
+const localFiles = fs.existsSync(PHOTO_DIR)
+  ? fs.readdirSync(PHOTO_DIR, { withFileTypes: true })
+      .filter(entry => entry.isFile() && IMAGE_EXTS.test(entry.name) && fs.statSync(path.join(PHOTO_DIR, entry.name)).size > 0)
+      .map(entry => entry.name)
+  : [];
+// Encode the filename, not the entire URL: # and ? in filenames must not become URL fragments or queries.
+function techPhotoUrl(filename) {
+  return `/images/tech-photo/${encodeURIComponent(filename)}`;
+}
+let localImages = localFiles.map(techPhotoUrl);
 
 if (localImages.length === 0) {
   // Do not spend paid generation tokens on articles that cannot pass the image-path gate.
@@ -496,6 +505,7 @@ async function run() {
     if (shouldRetryOpenAIStatus(400) || shouldRetryOpenAIStatus(401) || shouldRetryOpenAIStatus(403) || shouldRetryOpenAIStatus(429, 'insufficient_quota') || !shouldRetryOpenAIStatus(429, 'rate_limit_exceeded') || !shouldRetryOpenAIStatus(503)) throw new Error('OpenAI retry status classification regression');
     if (!isCompletedOpenAIResponse({ status: 'completed' }) || isCompletedOpenAIResponse({ status: 'incomplete', output: [{ content: [{ type: 'output_text', text: 'partial' }] }] })) throw new Error('Incomplete GPT response gate regression');
     if (!getKstPublishDateIso().endsWith('T10:00:00.000Z')) throw new Error('KST 19:00 publish timestamp regression');
+    if (techPhotoUrl('sample #1?.jpg') !== '/images/tech-photo/sample%20%231%3F.jpg') throw new Error('Local photo filename URL escaping regression');
     if (!validateGeneratedPost(sample.replace('image: /images/tech-photo/test.jpg', 'image: https://example.com/other.jpg'), 'ko').includes('image must use /images/tech-photo')) throw new Error('Tech image path gate regression');
     if (!validateGeneratedPost(sample.replace('category: tech', 'category: hardware'), 'ko').includes('category must be tech')) throw new Error('Tech-only category gate regression');
     if (!validateGeneratedPost(sample.replace('category: tech', 'category: tech\ncategory: tech'), 'ko').includes('category duplicated')) throw new Error('Duplicate category gate regression');
