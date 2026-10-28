@@ -39,3 +39,10 @@ Status: Agreed operating principles; not a claim of deployment or AdSense approv
 - If the assistant cannot reliably recall a prior decision, requirement, instruction, or work status, explicitly say it is uncertain or not remembered and ASK THE USER to confirm. Never invent memories, agreements, test outcomes, or completed work.
 - First check available conversation history and this document or other authoritative repository records when practical. If evidence is still insufficient, ask rather than guess.
 - Clearly distinguish verified facts, assumptions, plans, and actions actually completed. Do not pretend to remember something that cannot be verified.
+
+## Immediate business priority — AdSense application window (agreed 2026-10-29)
+- User is preparing for retirement; treat this as a critical long-term income project.
+- Highest immediate priority: AdSense readiness for storydailyview.com (1ho) and lifeweblab.com (2-1ho).
+- Target application around 2026-11-12, not guaranteed approval.
+- Audit actual published pages, original useful content, site navigation, policies, indexing eligibility, links, language quality and duplication before applying.
+- Fix quality and reliability before expanding site count; distinguish plans from verified results.
