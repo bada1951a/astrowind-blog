@@ -1,3 +1,12 @@
+// =========================================================================
+// 📌 [고정 식별자] 이 파일은 '1호기' 전용 스크립트입니다. (2호기/3호기/4호기/2-1호기 아님!)
+// ⚠️ [영구 고정 규칙]
+// 1. 카테고리는 대표님의 지시 전까지 'tech'로 영구 고정한다.
+// 2. 이미지 경로는 'public/images/tech-photo'로 영구 고정한다.
+// 3. LifeWebLab(2-1호기) 명칭 및 설정을 절대 혼용하지 않는다.
+// 4. 대표님과의 모든 설명 및 작업 안내는 반드시 100% 한국어로만 진행한다.
+// =========================================================================
+
 import fs from 'fs';
 import path from 'path';
 import { GoogleGenAI } from '@google/genai';
@@ -61,7 +70,7 @@ function getKstPublishDateIso(index) {
 }
 
 // =========================================================================
-// 12개국 100% 현지어 섹션 제목 및 치환 딕셔너리
+// 1호기 12개국 100% 현지어 섹션 제목 및 치환 딕셔너리 (영구 고정)
 // =========================================================================
 const I18N_SECTIONS = {
   ko: {
@@ -163,149 +172,62 @@ const I18N_SECTIONS = {
 };
 
 // =========================================================================
-// [완전 무결 마크다운 정제 + 영구 방패 함수]
+// 🛡️ [1호기 자가 검수 및 치유 엔진: Self-Healing Inspector]
 // =========================================================================
-function sanitizeMarkdownFormatting(content, langCode) {
-  let cleaned = content;
+function inspectAndHealMarkdown(body, langCode) {
+  let healed = body.trim();
   const i18n = I18N_SECTIONS[langCode] || I18N_SECTIONS.ko;
+  const auditLogs = [];
 
-  // 1) 상단 빈 줄 압축
-  cleaned = cleaned.replace(/^\n+/, '');
+  // 1) 헤딩 내부 볼드 제거 및 1호기 표준 소제목 강제 안착
+  healed = healed.replace(/^(#{1,6}\s+)\*\*(.*?)\*\*/gm, '$1$2');
+  healed = healed.replace(/^#{1,6}\s*1[.\s]+([^\n]+)/m, `## ${i18n.s1}`);
+  healed = healed.replace(/^#{1,6}\s*2[.\s]+([^\n]+)/m, `## ${i18n.s2}`);
+  healed = healed.replace(/^#{1,6}\s*3[.\s]+([^\n]+)/m, `## ${i18n.s3}`);
+  healed = healed.replace(/^#{1,6}\s*4[.\s]+([^\n]+)/m, `## ${i18n.s4}`);
+  healed = healed.replace(/^#{1,6}\s*5[.\s]+([^\n]+)/m, `## ${i18n.s5}`);
 
-  // 2) 단축키 주변 달러($) 기호 및 LaTeX 수식 인라인 백틱화
-  cleaned = cleaned.replace(/\$(?:Strg|Ctrl|Win|Shift|Alt|Esc)\s*[^$\n]*\$/gi, (match) => {
+  if (!healed.startsWith('## 1.')) {
+    healed = `## ${i18n.s1}\n\n` + healed;
+    auditLogs.push("1번 헤딩 주입");
+  }
+
+  // 2) 🛡️ Q&A 줄바꿈 뭉개짐 자동 분리 치유 (질문과 답변 사이 빈 줄 2개 보장)
+  const rawQnACount = (healed.match(/Q[1-3]\./gi) || []).length;
+  if (rawQnACount > 0) {
+    healed = healed.replace(/\s*(\*\*Q[1-3]\.\*\*|Q[1-3]\.)\s*/gi, '\n\n**$1** ');
+    healed = healed.replace(/\s*(\*\*A[1-3]\.\*\*|A[1-3]\.)\s*/gi, '\n\n**$1** ');
+    healed = healed.replace(/\*\*\s*\*\*(Q[1-3]\.|A[1-3]\.)\*\*\s*\*\*/gi, '**$1**');
+    healed = healed.replace(/\*\*(Q[1-3]\.|A[1-3]\.)\*\*/gi, '**$1**');
+    auditLogs.push("Q&A 줄바꿈 2열 분리 치유");
+  }
+
+  // 3) 볼드 기호 안쪽 공백 정돈 (** 단어 ** -> **단어**)
+  if (/\*\*\s+[^*]+?\s+\*\*/.test(healed)) {
+    healed = healed.replace(/\*\*\s+([^*]+?)\s+\*\*/g, '**$1**')
+                   .replace(/\*\*\s+([^*]+?)\*\*/g, '**$1**')
+                   .replace(/\*\*([^*]+?)\s+\*\*/g, '**$1**');
+    auditLogs.push("볼드 공백 정돈");
+  }
+
+  // 4) 특수문자 및 수식 인라인 백틱화
+  healed = healed.replace(/\$(?:Strg|Ctrl|Win|Shift|Alt|Esc)\s*[^$\n]*\$/gi, (match) => {
     return `\`${match.replace(/\$/g, '').trim()}\``;
   });
-  cleaned = cleaned.replace(/\$([^$\n]+)\$/g, '`$1`');
+  healed = healed.replace(/\$([A-Za-z0-9_-]+)\$/g, '`$1`');
+  healed = healed.replace(/\\times/g, 'x')
+                 .replace(/\\circ/g, '°')
+                 .replace(/\\approx/g, '≈')
+                 .replace(/~/g, '-');
 
-  // 3) 🛡️ [FAQ 헤딩과 Q1 분리 방패] FAQ 헤딩 뒤에 Q1이 붙어있다면 먼저 줄바꿈으로 분리
-  cleaned = cleaned.replace(/([#]+[^\n]*?FAQ[^\n]*?)\s*(Q[1-9]\.|\*\*Q[1-9]\.\*\*)/gi, '$1\n\n$2');
-  cleaned = cleaned.replace(/(FAQ\)?)\s*(Q[1-9]\.|\*\*Q[1-9]\.\*\*)/gi, '$1\n\n$2');
+  // 5) 연속 빈 줄 압축
+  healed = healed.replace(/\n{3,}/g, '\n\n').trim();
 
-  // 4) AI가 출력한 영문 대괄호 템플릿 및 기본 헤더 치환
-  cleaned = cleaned.replace(/^#{1,3}\s*1\.?\s*(\[Opening Story.*?\]|Opening Story.*?|\[Ouverture.*?\])/gmi, `## ${i18n.s1}`);
-  cleaned = cleaned.replace(/^#{1,3}\s*2\.?\s*(\[Root Cause.*?\]|Root Cause Breakdown.*?|Root Cause.*?)/gmi, `## ${i18n.s2}`);
-  cleaned = cleaned.replace(/^#{1,3}\s*3\.?\s*(\[Step-by-Step.*?\]|Step-by-Step Resolution.*?|Step-by-Step.*?)/gmi, `## ${i18n.s3}`);
-  cleaned = cleaned.replace(/^#{1,3}\s*4\.?\s*(\[Expert.*?\]|Expert Advice.*?|Expert.*?)/gmi, `## ${i18n.s4}`);
-  cleaned = cleaned.replace(/^#{1,3}\s*5\.?\s*(\[Frequently Asked Questions.*?\]|Frequently Asked Questions.*?|FAQ)/gmi, `## ${i18n.s5}`);
-
-  cleaned = cleaned.replace(/^1\.\s*\[Opening Story.*?\]/gmi, `## ${i18n.s1}`);
-  cleaned = cleaned.replace(/^2\.\s*\[Root Cause.*?\]/gmi, `## ${i18n.s2}`);
-  cleaned = cleaned.replace(/^3\.\s*\[Step-by-Step.*?\]/gmi, `## ${i18n.s3}`);
-  cleaned = cleaned.replace(/^4\.\s*\[Expert.*?\]/gmi, `## ${i18n.s4}`);
-  cleaned = cleaned.replace(/^5\.\s*(Frequently Asked Questions|\[Frequently Asked Questions\])/gmi, `## ${i18n.s5}`);
-
-  // 헤딩 기호 누락 시 자동 승격 보정
-  cleaned = cleaned.replace(/^(왜\s+(갑자기|내|하필|맨날|윈도우|이\s+에러).*?)/gm, `## ${i18n.s2}\n\n$1`);
-  cleaned = cleaned.replace(/^(단계별 해결 (방법|가이드|프로세스).*?)/gm, `## ${i18n.s3}\n\n$1`);
-  cleaned = cleaned.replace(/^(현직 엔지니어의 핵심 주의.*?)/gm, `## ${i18n.s4}\n\n$1`);
-  cleaned = cleaned.replace(/^#{0,3}\s*(\d\.\s*)?(자주 묻는 질문|Häufig gestellte Fragen|Frequently Asked Questions|よくある(ご)?質問|Questions Fréquemment Posées|Foire [Aa]ux Questions|Preguntas [Ff]recuentes).*?$/gmi, `## ${i18n.s5}`);
-
-  // 대괄호 영문 태그 찌꺼기 제거
-  cleaned = cleaned.replace(/\[(Opening Story\/Problem|Root Cause Breakdown|Step-by-Step Resolution|Expert Advice)\]/gi, '');
-
-  // 1번 헤더 주입 및 중복 1줄 제거
-  if (!cleaned.startsWith('## 1.')) {
-    cleaned = `## ${i18n.s1}\n\n` + cleaned;
-  }
-  cleaned = cleaned.replace(/^(## 1\.[^\n]+)\n+(\s*1\.\s+[^\n]+)\n+/m, '$1\n\n');
-
-  // 헤딩(#) 줄 내부의 모든 ** 제거
-  cleaned = cleaned.replace(/^(#{1,6}\s+[^\n]+)$/gm, (match) => {
-    return match.replace(/\*\*/g, '');
-  });
-
-  // 볼드 안쪽 공백 압축
-  cleaned = cleaned.replace(/\*\*\s+([^*]+?)\s+\*\*/g, '**$1**');
-  cleaned = cleaned.replace(/\*\*\s+([^*]+?)\*\*/g, '**$1**');
-  cleaned = cleaned.replace(/\*\*([^*]+?)\s+\*\*/g, '**$1**');
-
-  // 쪼개진 단어 복원
-  cleaned = cleaned.replace(/derech\s*\n\s*a:/gi, 'derecha:')
-                    .replace(/con la energi\s*\n\s*a:/gi, 'con la energía:')
-                    .replace(/preventiv\s*\n\s*a:/gi, 'preventiva:')
-                    .replace(/STOP 0x0000000\s*\n\s*a:?/gi, 'STOP 0x0000000a:');
-
-  // 뭉쳐버린 띄어쓰기 교정
-  const wordFixes = [
-    [/Ctrl \+ Shift \+ Escsimultaneously/g, 'Ctrl + Shift + Esc simultaneously'],
-    [/Task Manager\(Ctrl/g, 'Task Manager (Ctrl'],
-    [/Processestab/g, 'Processes tab'],
-    [/Windows 탐색기앱/g, 'Windows 탐색기 앱'],
-    [/명령 프롬프트앱/g, '명령 프롬프트 앱'],
-    [/작업 관리자실행/g, '작업 관리자 실행'],
-    [/눌러작업 관리자를/g, '눌러 작업 관리자를'],
-    [/Strg \+ Umschalt \+ Escum/g, 'Strg + Umschalt + Esc um'],
-    [/Task-Managerzu/g, 'Task-Manager zu'],
-    [/ReiterProzesse/g, 'Reiter Prozesse'],
-    [/zu Systemund/g, 'zu System und'],
-    [/dieSystemsteuerung/g, 'die Systemsteuerung']
-  ];
-  for (const [pattern, replacement] of wordFixes) {
-    cleaned = cleaned.replace(pattern, replacement);
+  if (auditLogs.length > 0) {
+    console.log(`   🩺 [자가 치유 완료]: ${auditLogs.join(' | ')}`);
   }
 
-  cleaned = cleaned.replace(/\?\s+auto=format/g, '?auto=format');
-
-  // =========================================================================
-  // 🛡️ [FAQ 완벽 분리 및 줄바꿈 보장]
-  // =========================================================================
-  cleaned = cleaned.replace(/\*{1,4}\s*([QA][0-9]*)\s*[:.]\s*\*{1,4}/gi, '$1.');
-  cleaned = cleaned.replace(/([QA][0-9]*)\s*[:.]/gi, (match, p1) => `${p1.toUpperCase()}.`);
-
-  // 마침표나 글자 뒤에 붙은 Q/A를 무조건 빈 줄 2개로 분리
-  cleaned = cleaned.replace(/([^\n])\s*\n*\s*(Q[0-9]*\.)/gi, '$1\n\n$2');
-  cleaned = cleaned.replace(/([^\n])\s*\n*\s*(A[0-9]*\.)/gi, '$1\n\n$2');
-  cleaned = cleaned.replace(/([.!?])\s*(Q[1-9]\.|\*\*Q[1-9]\.\*\*)/g, '$1\n\n$2');
-  cleaned = cleaned.replace(/([.!?])\s*(A[1-9]\.|\*\*A[1-9]\.\*\*)/g, '$1\n\n$2');
-
-  // 외신/다국어 변칙 대응
-  cleaned = cleaned.replace(/^(\d+\.\s+)(¿.*?\?)\s*(.*)/gm, '**Q.** $2\n\n**A.** $3');
-  cleaned = cleaned.replace(/^(\d+\.\s+)(.*?\?)\s*(Oui|Non|Si|No|Absolument|Para nada|E'|C'est|Ce)/gm, '**Q.** $2\n\n**A.** $3');
-
-  // 볼드로 감싸기
-  cleaned = cleaned.replace(/^(Q[0-9]*\.)\s*(.*)$/gm, '**$1** $2');
-  cleaned = cleaned.replace(/^(A[0-9]*\.)\s*(.*)$/gm, '**$1** $2');
-
-  cleaned = cleaned.replace(/([A-Za-z0-9가-힣]+)\.\*\*/g, '$1.');
-  cleaned = cleaned.replace(/\*\*\s*\*\*/g, '');
-  cleaned = cleaned.replace(/\?([A-Za-z\u00C0-\u024F\u1EA0-\u1EF9가-힣])/g, '? $1');
-
-  // =========================================================================
-  // 🛡️ [영구 방패: 동일 헤딩 연타 박멸 필터]
-  // 중간에 빈 줄이 있든 없든, 똑같은 2번/3번 헤딩이 연속 출력되면 무조건 1개만 남김
-  // =========================================================================
-  const lines = cleaned.split('\n');
-  const filteredLines = [];
-  let lastHeadingText = '';
-
-  for (let i = 0; i < lines.length; i++) {
-    const line = lines[i];
-    const trimmed = line.trim();
-
-    if (/^#{1,6}\s+/.test(trimmed)) {
-      const cleanH = trimmed.replace(/^#{1,6}\s+/, '').replace(/\*\*/g, '').trim();
-      if (cleanH.length > 0 && cleanH === lastHeadingText) {
-        continue; // 중복 헤딩 무조건 삭제
-      }
-      lastHeadingText = cleanH;
-    } else if (trimmed.length > 0) {
-      lastHeadingText = '';
-    }
-    filteredLines.push(line);
-  }
-  cleaned = filteredLines.join('\n');
-
-  // =========================================================================
-  // 🛡️ [영구 방패: 문단 전체를 먹어치운 괴물 볼드만 평문으로 해제]
-  // 150자 이상이면서 엔터(\n)를 포함해 문단을 시커멓게 태운 괴물 볼드만 해제 (정상 볼드 보존)
-  // =========================================================================
-  cleaned = cleaned.replace(/\*\*([^\*]*?\n[^\*]*?){150,}\*\*/g, (match) => {
-    return match.replace(/^\*\*/, '').replace(/\*\*$/, '');
-  });
-
-  cleaned = cleaned.replace(/\n{3,}/g, '\n\n');
-  return cleaned.trim();
+  return healed;
 }
 
 if (!fs.existsSync(TOPICS_FILE)) {
@@ -314,7 +236,7 @@ if (!fs.existsSync(TOPICS_FILE)) {
 }
 
 const fileContent = fs.readFileSync(TOPICS_FILE, 'utf-8');
-const lines = fileContent.split('\n').map(l => l.trim()).filter(l => l.length > 0);
+const lines = fileContent.split(/\r?\n/).map(l => l.trim()).filter(l => l.length > 0);
 
 if (lines.length === 0) {
   console.log("⚠️ topics.txt에 남은 주제가 없습니다. 생성을 건너뜁니다.");
@@ -362,32 +284,7 @@ const THEME_PRESETS = [
   { id: 2, name: "Modern Minimalist Slate", primaryColor: "#3b82f6", bgColor: "#f8fafc", layout: "미니멀 가이드 스타일, 여백 중심의 깔끔한 단계별 넘버링, 직관적 핵심 요약" },
   { id: 3, name: "Industrial Blueprint", primaryColor: "#f59e0b", bgColor: "#1e293b", layout: "엔지니어링 청사진 스타일, 워크플로우 병목 원인 시각화, 쉬운 3단 비교표 포함" },
   { id: 4, name: "Retro Monokai", primaryColor: "#a6e22e", bgColor: "#272822", layout: "개발자 에디터 스타일, 실전 프롬프트 코드 박스 중심 전개, 디버깅 팁" },
-  { id: 5, name: "Nordic Clean Ice", primaryColor: "#0284c7", bgColor: "#f0f9ff", layout: "북유럽 감성 클린 레이아웃, 인용구 중심 도입부, 실무 체크리스트" },
-  { id: 6, name: "Dark Velvet Obsidian", primaryColor: "#a855f7", bgColor: "#0f172a", layout: "고급 다크 모드, 전문가 독점 자동화 팁 배너, 단계별 문제 해결 타임라인" },
-  { id: 7, name: "Crimson Emergency Field", primaryColor: "#ef4444", bgColor: "#fff1f2", layout: "긴급 오류 복구 매뉴얼 스타일, 위험 경고 박스 최우선 강조, FAQ 아코디언형" },
-  { id: 8, name: "Forest Emerald Bio", primaryColor: "#10b981", bgColor: "#f0fdf4", layout: "칼퇴 효율 가이드 스타일, 시간 절약 지표 박스, 친절하고 명쾌한 어조" },
-  { id: 9, name: "Solarized Amber Warm", primaryColor: "#d97706", bgColor: "#fef3c7", layout: "실무 공방 노트 스타일, 실측 작업시간 단축 분석표, 초보자 세팅 팁" },
-  { id: 10, name: "Deep Ocean Cobalt", primaryColor: "#2563eb", bgColor: "#eff6ff", layout: "표준 소프트웨어 매뉴얼 지침서, 원인 분석 심층 다이어그램 텍스트, 권장 설정 안내" },
-  { id: 11, name: "Tokyo Neon Violet", primaryColor: "#8b5cf6", bgColor: "#2e1065", layout: "파워유저 최적화 스타일, 실행 속도 및 단축키 비교, 커스텀 세팅 팁" },
-  { id: 12, name: "Graphite Technical Paper", primaryColor: "#475569", bgColor: "#f1f5f9", layout: "깔끔한 기술 백서 스타일, 수식/코드 원인 가설 및 검증 절차, 표준화된 결론" },
-  { id: 13, name: "High-Contrast Charcoal", primaryColor: "#e11d48", bgColor: "#18181b", layout: "고대비 경보 스타일, 데이터 손실 방지 수칙, 긴급 롤백 팁 박스" },
-  { id: 14, name: "Warm Coffee Latte", primaryColor: "#78350f", bgColor: "#fefae0", layout: "초보자를 위한 친절한 오피스 수필 가이드, 쉬운 비유법, 차근차근 따라하기" },
-  { id: 15, name: "Steel Silver Metallic", primaryColor: "#64748b", bgColor: "#e2e8f0", layout: "공식 기술지원 티켓 스타일, 증상 체크리스트, 사전 자가진단표" },
-  { id: 16, name: "Sunset Horizon Coral", primaryColor: "#f97316", bgColor: "#fff7ed", layout: "생산성 꿀팁 세팅 스타일, 전후 비교 표, 추천 프롬프트 모음 배너" },
-  { id: 17, name: "Mint Fresh Engineering", primaryColor: "#059669", bgColor: "#ecfdf5", layout: "가벼운 워크플로우 최적화 매뉴얼, 불필요한 단계 정리 팁, 명쾌한 솔루션" },
-  { id: 18, name: "Midnight Navy Royal", primaryColor: "#1d4ed8", bgColor: "#172554", layout: "야간 배포 로그 스타일, 치명적 수식 에러 극복 타임스탬프, 재발 방지책" },
-  { id: 19, name: "Matte Black stealth", primaryColor: "#ffffff", bgColor: "#09090b", layout: "전문 실무 가이드 스타일, 불필요한 서술 배제, 직관적인 단계별 설명" },
-  { id: 20, name: "Teal Matrix Digital", primaryColor: "#14b8a6", bgColor: "#042f2e", layout: "API 및 데이터 연동 분석 스타일, 웹훅 신호 및 트리거 점검 체크리스트" },
-  { id: 21, name: "Pastel Lavender Tech", primaryColor: "#7c3aed", bgColor: "#faf5ff", layout: "사용자 경험 중심 가이드, 실무자가 가장 자주 묻는 질문 5선 최상단 요약 배치" },
-  { id: 22, name: "Bronze Artisan Workshop", primaryColor: "#b45309", bgColor: "#fffbeb", layout: "스프레드시트 튜닝 가이드, 대량 데이터 처리 시 주의 박스, 준비물 목록" },
-  { id: 23, name: "Cobalt Enterprise Lab", primaryColor: "#1e40af", bgColor: "#dbeafe", layout: "엔터프라이즈 실사용 생산성 리포트 형식, 비용 및 시간 절감 수치 인용" },
-  { id: 24, name: "Rosewood Hardware Guide", primaryColor: "#be123c", bgColor: "#ffe4e6", layout: "생산성 툴 매니아 분석기, 버전별/플랫폼별 기능 차이점 설명, 설정 기준표" },
-  { id: 25, name: "Deep Indigo System", primaryColor: "#4338ca", bgColor: "#e0e7ff", layout: "시스템 자동화 파이프라인 분석 형식, 불필요한 수작업 병목 식별법" },
-  { id: 26, name: "Acid Lime Hacker Space", primaryColor: "#84cc16", bgColor: "#14532d", layout: "유용한 무료 노코드 툴 가이드, 안전한 데이터 연동 안내" },
-  { id: 27, name: "Sandstone Desert Minimal", primaryColor: "#a16207", bgColor: "#fefce8", layout: "깔끔한 실무 매뉴얼 스타일, 소제목 하단 1줄 핵심 팁 강조 배너" },
-  { id: 28, name: "Dracula Purple Dev", primaryColor: "#bd93f9", bgColor: "#282a36", layout: "전통 드라큘라 테마 스타일, 필수 단축키 및 복구 함수 하이라이트" },
-  { id: 29, name: "Electric Cyan Speed", primaryColor: "#06b6d4", bgColor: "#ecfeff", layout: "초고속 1분 해결 가이드 형식, 빠른 조치법 -> 심층 세팅 2단계 분리" },
-  { id: 30, name: "Pure Titanium Clean", primaryColor: "#334155", bgColor: "#ffffff", layout: "초고화질 매뉴얼 스타일, 볼드 타이포그래피 강조, 깔끔한 구분선" }
+  { id: 5, name: "Nordic Clean Ice", primaryColor: "#0284c7", bgColor: "#f0f9ff", layout: "북유럽 감성 클린 레이아웃, 인용구 중심 도입부, 실무 체크리스트" }
 ];
 
 const TARGET_LANGS = [
@@ -408,20 +305,23 @@ const TARGET_LANGS = [
 const delay = (ms) => new Promise((res) => setTimeout(res, ms));
 const fileSlug = `post-${Date.now().toString(36)}`;
 
-async function fetchWithRetry(prompt, maxRetries = 5, delayMs = 5000) {
+// =========================================================================
+// [호출 함수] maxOutputTokens: 4096 (2,500자 정량 생성 최적화)
+// =========================================================================
+async function fetchWithRetry(prompt, maxRetries = 3, delayMs = 3000) {
   for (let attempt = 1; attempt <= maxRetries; attempt++) {
     try {
       const response = await ai.models.generateContent({
         model: 'gemini-3.5-flash-lite',
         contents: prompt,
         config: {
-          maxOutputTokens: 8192,
+          maxOutputTokens: 4096,
           temperature: 0.7,
         }
       });
       return response.text;
     } catch (error) {
-      console.warn(`⚠️ [호출 재시도] ${attempt}/${maxRetries}: ${error.message}`);
+      console.warn(`⚠️ [호출 재시도 ${attempt}/${maxRetries}]: ${error.message}`);
       if (attempt === maxRetries) { throw error; }
       await delay(delayMs);
     }
@@ -433,81 +333,64 @@ async function generateSinglePost(lang, index) {
   const selectedScenario = IT_CRISIS_SCENARIOS_30[Math.floor(Math.random() * IT_CRISIS_SCENARIOS_30.length)];
   const i18n = I18N_SECTIONS[lang.code] || I18N_SECTIONS.ko;
 
-  console.log(`\n🚀 [${index + 1}/12] ${lang.name} (${lang.code}) 포스팅 생성 중... (테마: ${selectedTheme.name})`);
+  console.log(`\n🚀 [${index + 1}/12] ${lang.name} (${lang.code}) 1호기 본진 애드센스 표준 생성 중... (테마: ${selectedTheme.name})`);
 
   const { coverUrl, bodyUrl } = getPostImages(index);
   const pubDateIso = getKstPublishDateIso(index);
 
+  // 🎯 [애드센스 승인 최적화 프롬프트: 2,400~2,600자 정량화]
   const prompt = `
 You are a ${lang.persona}.
-Write a definitive, exhaustive, highly professional IT troubleshooting guide natively in ${lang.name}.
-CRITICAL REQUIREMENT: Write 100% natively in ${lang.name}. NEVER mix English template headings or bracketed words unless writing the English post.
+Write a high-quality, practical IT/tech troubleshooting guide natively in ${lang.name}.
+Target Culture: "${lang.localeContext}"
+Assigned Situation: "${selectedScenario}"
+Topic: "${currentTopic}"
 
-[Topic]
-${currentTopic}
+[ADSENSE QUALITY & LENGTH REQUIREMENT]
+- For Korean (ko): Write exactly around 2,400 - 2,600 characters (do NOT exceed 3,000 characters).
+- For other languages: Write exactly 900 - 1,100 words.
+- Tone: Highly informative, professional, practical workplace advice.
 
-[Workplace Incident Context]
-- Target City/Culture: ${lang.localeContext}
-- Assigned Emergency Scenario: "${selectedScenario}"
-
-[MANDATORY TOTAL LENGTH ENFORCEMENT - ZERO CONDENSATION]
-- For Korean (ko): Total body MUST be AT LEAST 2,500 characters (공백 제외 최소 2,000자 이상). Summarizing or brief outputs are strictly prohibited.
-- For other languages: Total body MUST be AT LEAST 1,400 - 1,800 words of rich technical substance.
-
-[EXHAUSTIVE 5-SECTION STRUCTURE REQUIREMENTS]
-You MUST strictly follow these 5 sections using clean H2 markdown headings (## ):
+[STRUCTURE - STRICT 5 H2 HEADINGS]
+Use these exact H2 headings:
 
 ## ${i18n.s1}
-- Do NOT summarize. Write at least 4 long, vivid paragraphs describing:
-  1) The office background, exact time, urgent deadline, and system specifications.
-  2) The exact error message popup and the visceral panic it caused.
-  3) The naive first attempts to fix it (restarting app, spamming clicks) that completely failed.
-  4) The realization of what will be lost if this is not resolved immediately.
+Write 2 detailed paragraphs describing the sudden workplace IT crisis, the urgent deadline, and the initial panic based on: "${selectedScenario}".
 
 ## ${i18n.s2}
-- Do NOT just write 3 quick bullets. Write an exhaustive technical analysis across at least 4 detailed paragraphs explaining:
-  1) Internal OS file lock mechanisms, handle allocation, and exclusive write access.
-  2) Background orphaned processes (EXCEL.EXE, ACROBAT, DLL hosts) remaining silently in memory.
-  3) Windows Explorer indexing locks, thumbnail preview cache deadlocks, or third-party antivirus real-time file scanning interference.
+Write 2 analytical paragraphs explaining the technical root causes (system file locks, memory leak, background process deadlocks, or hardware driver conflicts).
 
 ## ${i18n.s3}
-- Provide at least 3 distinct, complete technical resolution methods matching "${lang.osUi}":
-  * Method 1: GUI-based force kill via Task Manager (Detailed UI navigation steps + Details tab process termination).
-  * Method 2: Command line / PowerShell terminal execution (Explain exact commands like taskkill /f /im, del /f /q /a, with code blocks and flag breakdowns).
-  * Method 3: Windows Explorer process restart or Resource Monitor Handle search (Exact handle searching technique).
-  * Write step-by-step with clear numbered lists and explanations for WHY each step works.
+Provide 3 concrete resolution steps matching "${lang.osUi}". Use clean numbered lists with practical action items and exact commands.
 
 ## ${i18n.s4}
-- Write at least 2 in-depth paragraphs of professional field technician wisdom:
-  1) Dangers of using unverified third-party "Unlocker" tools (malware, system file corruption).
-  2) Best practices to avoid recurring file locks (safe unmounting, cache cleanup, clean boot diagnostics).
+Write 2 paragraphs of practical precautions and operational tips to prevent recurrence.
 
 ## ${i18n.s5}
-- Provide exactly 3 realistic, highly specific Q&A items:
-  * Each question must be bold (**Q1.**, **Q2.**, **Q3.**) followed by the question text.
-  * Each answer (**A1.**, **A2.**, **A3.**) MUST be a detailed, multi-sentence technical explanation (at least 3-4 sentences per answer).
-  * Put an empty blank line between every Question and Answer.
+Provide exactly 3 practical Q&A items. You MUST put an empty line between Question and Answer:
 
-[STRICT MARKDOWN & FORMATTING RULES]
-1. HEADINGS: Keep clean markdown headings (e.g. "## ${i18n.s2}"). NEVER put bold asterisks (**) inside headings.
-2. BOLD FORMATTING: Use bold (**word**) STRICTLY WITHOUT SPACES inside the asterisks. Never write "** word **".
-3. COMMANDS: Always wrap terminal commands in 3-backtick code blocks (\`\`\`cmd or \`\`\`bash).
-4. ABSOLUTE FORBIDDEN CHARACTERS:
-   - NEVER use dollar signs ($) for keyboard shortcuts or variables. NEVER write $Win+X$ or $Ctrl+Shift+Esc$. Write \`Win + X\` or \`Ctrl + Shift + Esc\` instead.
-   - NEVER use tilde (~) for ranges; use hyphen (-).
-${lang.code !== 'ko' ? `- Absolutely NEVER include any Korean characters (가-힣) anywhere in non-Korean posts.` : ''}
+**Q1.** Question text
 
-[Design Theme & Layout Dynamic Rules]
-- Assigned Theme: "${selectedTheme.name}"
-- Primary Accent Color: ${selectedTheme.primaryColor}
-- Layout Characteristic: ${selectedTheme.layout}
-- Incorporate inline styled HTML callout boxes tailored to this theme:
-  <div style="border-left: 4px solid ${selectedTheme.primaryColor}; padding: 14px 18px; margin: 24px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">...</div>
+**A1.** Detailed answer (3-4 sentences).
+
+**Q2.** Question text
+
+**A2.** Detailed answer (3-4 sentences).
+
+**Q3.** Question text
+
+**A3.** Detailed answer (3-4 sentences).
+
+[FORMATTING RULES]
+1. Never put asterisks (**) inside H2 headings.
+2. Bold keywords with strict syntax: **keyword** (no space inside asterisks).
+3. Put commands, file paths, or registry keys in inline backticks (e.g. \`taskkill\`, \`devmgmt.msc\`).
+${lang.code !== 'ko' ? `- Absolutely NO Korean characters in non-Korean posts.` : ''}
 
 [Strict Output Format]
-Return raw Markdown starting with frontmatter:
+Return ONLY raw Markdown starting directly with frontmatter:
 ---
-title: "Native Catchy Title in ${lang.name}"
+title: "Native Clear Title in ${lang.name}"
 description: "Native concise description in ${lang.name} under 160 characters"
 publishDate: ${pubDateIso}
 image: "${coverUrl}"
@@ -515,7 +398,6 @@ category: "tech"
 tags: ${JSON.stringify(i18n.tags)}
 theme: "${selectedTheme.name}"
 ---
-(Body starts directly here without H1 header)
 `;
 
   try {
@@ -524,75 +406,30 @@ theme: "${selectedTheme.name}"
     if (text.startsWith('```markdown')) text = text.replace(/^```markdown\n/, '').replace(/\n```$/, '');
     if (text.startsWith('```')) text = text.replace(/^```\n/, '').replace(/\n```$/, '');
 
-    text = text.replace(/\\times/g, 'x')
-               .replace(/\\circ/g, '°')
-               .replace(/\\approx/g, '≈');
-
-    text = text.replace(/(\S)\s*~\s*(\S)/g, '$1 - $2');
-    text = text.replace(/~/g, '-');
-
-    if (lang.code !== 'ko') {
-      text = text.replace(/(title:\s*")([^"]*)(")/g, (match, p1, p2, p3) => `${p1}${p2.replace(/[가-힣]+/g, '').trim()}${p3}`);
-      text = text.replace(/(description:\s*")([^"]*)(")/g, (match, p1, p2, p3) => `${p1}${p2.replace(/[가-힣]+/g, '').trim()}${p3}`);
-    }
-
     const fmMatch = text.match(/^---[\s\S]*?---\n*/);
     if (fmMatch) {
       let frontmatter = fmMatch[0].trim();
       let body = text.slice(fmMatch[0].length).trim();
       body = body.replace(/^#\s+[^\n]+\n+/, '');
 
+      // ⚠️ 1호기 카테고리 'tech' 영구 보존 강제 검증
       frontmatter = frontmatter.replace(/category:\s*["'][^"']*["']/i, "category: 'tech'")
                                .replace(/category:\s*[^\n\r]+/i, "category: 'tech'");
 
-      frontmatter = frontmatter.replace(/publishDate:\s*[^\n\r]+/i, `publishDate: ${pubDateIso}`);
-      frontmatter = frontmatter.replace(/image:\s*["'][^"']*["']/i, `image: '${coverUrl}'`);
-
-      // 🛡️ [이중 방어] 12개국 고유 언어로 강제 치환 및 볼드/공백/중복 헤딩 완벽 정제
-      body = sanitizeMarkdownFormatting(body, lang.code);
-
-      // 🛡️ [글자 수 물리적 강제 루프: 2,200자 미만 시 즉시 재작성]
-      let retryCount = 0;
-      while (lang.code === 'ko' && body.length < 2200 && retryCount < 2) {
-        console.warn(`⚠️ [분량 부족] 현재 ${body.length}자 -> 목표 2,500자 충족을 위해 재작성 시도 (${retryCount + 1}/2)...`);
-        const retryPrompt = prompt + "\n\nCRITICAL ENFORCEMENT: The previous generated post was strictly too short. You MUST write at least 4 very long, deeply detailed paragraphs for EACH section. Elaborate on every technical concept and troubleshooting step exhaustively to exceed 2,500 Korean characters.";
-        
-        let retryRawText = await fetchWithRetry(retryPrompt);
-        let retryText = retryRawText.trim();
-        if (retryText.startsWith('```markdown')) retryText = retryText.replace(/^```markdown\n/, '').replace(/\n```$/, '');
-        if (retryText.startsWith('```')) retryText = retryText.replace(/^```\n/, '').replace(/\n```$/, '');
-
-        const newFmMatch = retryText.match(/^---[\s\S]*?---\n*/);
-        if (newFmMatch) {
-          let newBody = retryText.slice(newFmMatch[0].length).trim();
-          newBody = newBody.replace(/^#\s+[^\n]+\n+/, '');
-          body = sanitizeMarkdownFormatting(newBody, lang.code);
-        }
-        retryCount++;
-      }
+      // 🩺 [자가 검수 및 치유 엔진 가동]
+      body = inspectAndHealMarkdown(body, lang.code);
 
       if (lang.code === 'ko') {
-        console.log(`📏 [한국어 본문 최종 글자 수] ${body.length}자 (목표: 2,500자 이상)`);
+        console.log(`   📏 [1호기 본문 최종 글자 수] ${body.length}자 (애드센스 표준: 2,400~2,600자)`);
       }
 
+      // 본문 중간 이미지 배치 (2번 섹션 직전)
       const middleImageMarkdown = `\n\n![Tech Troubleshooting Guide](${bodyUrl})\n\n`;
-      // 이미지 중복 삽입 방지 및 2번 헤딩 직전에 안전하게 배치
-      if (!body.includes(middleImageMarkdown.trim())) {
-        if (body.includes('## 2.')) {
-          body = body.replace(/(##\s*2\.[^\n]+)/, `${middleImageMarkdown}$1`);
-        } else {
-          const paragraphs = body.split('\n\n');
-          if (paragraphs.length >= 3) {
-            paragraphs.splice(2, 0, middleImageMarkdown.trim());
-            body = paragraphs.join('\n\n');
-          } else {
-            body = `${middleImageMarkdown}${body}`;
-          }
-        }
+      if (body.includes('## 2.')) {
+        body = body.replace(/(##\s*2\.[^\n]+)/, `${middleImageMarkdown}$1`);
+      } else {
+        body = `${middleImageMarkdown}${body}`;
       }
-
-      // 최종 마크다운 헤딩 중복 한 번 더 방어
-      body = sanitizeMarkdownFormatting(body, lang.code);
 
       text = `${frontmatter}\n\n${body}\n`;
     }
@@ -604,7 +441,7 @@ theme: "${selectedTheme.name}"
 
     const filePath = path.join(targetDir, `${fileSlug}.md`);
     fs.writeFileSync(filePath, text, 'utf-8');
-    console.log(`✅ [성공] 저장 완료: src/data/post/${lang.code}/${fileSlug}.md`);
+    console.log(`   ✅ [성공] 1호기 저장 완료: src/data/post/${lang.code}/${fileSlug}.md`);
     return true;
   } catch (error) {
     console.error(`❌ [최종 실패] ${lang.name} 생성 실패:`, error.message);
@@ -614,7 +451,7 @@ theme: "${selectedTheme.name}"
 
 async function run() {
   console.log("==================================================");
-  console.log("⚡ 12개국 최적화 고속 자동 포스팅 시작 (영구 방패 가동)");
+  console.log("⚡ [1호기 본진] (카테고리: tech) 12개국 고속 자동 포스팅 시작");
   console.log("==================================================");
 
   let successCount = 0;
@@ -630,10 +467,10 @@ async function run() {
   if (successCount > 0) {
     lines.shift();
     fs.writeFileSync(TOPICS_FILE, lines.join('\n'), 'utf-8');
-    console.log(`\n🧹 총 ${successCount}개국 포스팅 완료. topics.txt에서 주제를 삭제했습니다.`);
+    console.log(`\n🧹 총 ${successCount}개국 포스팅 완료. topics.txt에서 주제를 제거했습니다.`);
     console.log(`📊 남은 주제 수: ${lines.length}개`);
   } else {
-    console.error("\n❌ 모든 언어 생성이 실패하여 topics.txt를 유지합니다.");
+    console.error("\n❌ 모든 언어 생성이 실패하여 topics.txt를 보존합니다.");
     process.exit(1);
   }
 }
