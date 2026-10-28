@@ -54,14 +54,14 @@ function getPostImages(index) {
 // =========================================================================
 // 한국 시간(KST) 기준 당일 발행 날짜 생성
 // =========================================================================
-function getKstPublishDateIso(index) {
+function getKstPublishDateIso() {
   const now = new Date();
   const kstTime = new Date(now.getTime() + 9 * 60 * 60 * 1000);
   const year = kstTime.getUTCFullYear();
   const month = String(kstTime.getUTCMonth() + 1).padStart(2, '0');
   const day = String(kstTime.getUTCDate()).padStart(2, '0');
-  const minute = String((index * 5) % 60).padStart(2, '0');
-  return `${year}-${month}-${day}T03:${minute}:00.000Z`;
+  // 10:00 UTC = 19:00 KST, matching the existing daily publishing schedule.
+  return `${year}-${month}-${day}T10:00:00.000Z`;
 }
 
 // =========================================================================
@@ -187,6 +187,7 @@ function validateGeneratedPost(text, langCode) {
   for (const field of ['title', 'description', 'publishDate', 'image', 'theme'])
     if (!new RegExp('^' + field + ':\\s*\\S', 'm').test(meta)) errors.push(field + ' missing');
   if (!/^category:\s*['"]?tech['"]?\s*$/m.test(meta)) errors.push('category must be tech');
+  if (!/^image:\s*["']?\/images\/tech-photo\/[^\r\n]+/m.test(meta)) errors.push('image must use /images/tech-photo');
   const readable = body.replace(/!\[[^\]]*\]\([^)]*\)/g,'').replace(/[#*_\x60>]/g,'');
   const isCharacterCountLanguage = langCode === 'ko' || langCode === 'ja';
   const count = isCharacterCountLanguage ? [...readable.replace(/\s/g, '')].length : (readable.match(/\S+/g) || []).length;
@@ -317,7 +318,7 @@ async function generateSinglePost(lang, index) {
   console.log(`\n🚀 [${index + 1}/12] ${lang.name} (${lang.code}) 1호기 본진 애드센스 표준 생성 중... (테마: ${selectedTheme.name})`);
 
   const { coverUrl, bodyUrl } = getPostImages(index);
-  const pubDateIso = getKstPublishDateIso(index);
+  const pubDateIso = getKstPublishDateIso();
 
   // 🎯 [애드센스 승인 최적화 프롬프트: 2,400~2,600자 정량화]
   const prompt = `
@@ -397,7 +398,10 @@ theme: "${selectedTheme.name}"
 
       // ⚠️ 1호기 카테고리 'tech' 영구 보존 강제 검증
       frontmatter = frontmatter.replace(/category:\s*["'][^"']*["']/i, "category: 'tech'")
-                               .replace(/category:\s*[^\n\r]+/i, "category: 'tech'");
+                               .replace(/category:\s*[^\n\r]+/i, "category: 'tech'")
+                                // Preserve trusted local image selection and 19:00 KST date, not model guesses.
+                                .replace(/^image:\s*[^\n\r]+/m, `image: "${coverUrl}"`)
+                                .replace(/^publishDate:\s*[^\n\r]+/m, `publishDate: ${pubDateIso}`);
 
       // 🩺 [자가 검수 및 치유 엔진 가동]
       body = inspectAndHealMarkdown(body);
@@ -448,7 +452,9 @@ async function run() {
     if (validateGeneratedPost(japaneseSample, 'ja').length) throw new Error('Valid Japanese character-count sample rejected');
     const repairedFaq = inspectAndHealMarkdown('**Q1. 와이파이 연결 오류인가요?**  \n**A1.** 답변');
     if (!repairedFaq.includes('**Q1.** 와이파이 연결 오류인가요?\n\n**A1.**')) throw new Error('FAQ bold-question repair or paragraph separation failed');
-    console.log('PASS: Korean/Japanese length gates and FAQ question-marker repair');
+    if (!getKstPublishDateIso().endsWith('T10:00:00.000Z')) throw new Error('KST 19:00 publish timestamp regression');
+    if (!validateGeneratedPost(sample.replace('image: /images/tech-photo/test.jpg', 'image: https://example.com/other.jpg'), 'ko').includes('image must use /images/tech-photo')) throw new Error('Tech image path gate regression');
+    console.log('PASS: Korean/Japanese length gates, FAQ repair, KST publish timestamp, and tech image path gate');
     return;
   }
   console.log("==================================================");
