@@ -1,0 +1,27 @@
+name: GPT Luna 1호기 Safe Review
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - review/gpt6-luna-1ho-no-publish
+permissions:
+  contents: read
+jobs:
+  review:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'npm'
+      - name: Install dependencies
+        run: npm ci --legacy-peer-deps
+      - name: Generator syntax
+        run: node --check generate-all.mjs
+      - name: Safe generator dry run
+        run: node generate-all.mjs --dry-run
+      - name: Astro checks
+        run: npm run check:astro
+      - name: Production build (no publishing)
+        run: npm run build
