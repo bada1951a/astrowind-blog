@@ -82,3 +82,9 @@ Status: Agreed operating principles; not a claim of deployment or AdSense approv
 ## Low-cost card-news image plan (2026-10-29)
 - Prioritize high-volume, low-cost image creation. Use deterministic SVG-to-PNG card templates from verified post titles and key steps, rather than paid AI image generation per post. Validate all 12 language fonts, text wrapping, mobile legibility, relevance, and duplicates.
 - Preserve existing user-managed images; inventory before replacing. Keep all experiments on review branches; do not alter main, scheduled publishing, or run paid APIs. The image QA lead reports findings to 지이사 for consolidated owner reporting.
+
+## Owner priority directive (2026-10-29): AdSense readiness first
+- PRIORITY 1: storydailyview.com (1ho); PRIORITY 2: lifeweblab.com (2-1ho). Focus work on correcting existing multilingual article defects, factual quality, mobile readability, appropriate unique image/card-news pilots, and site/indexing/navigation readiness before scaling production.
+- Defer large-scale image/content changes for 2ho/3ho/4ho until the first two sites are ready for AdSense review; only critical maintenance on the deferred sites.
+- Preserve existing content and images until verified replacements are ready. Work only on review branches. Scheduled publishing remains paused on all five main branches; do not restart, merge, deploy, or call paid APIs without owner approval.
+- Report measured progress, blockers, and AdSense readiness to 지이사 for a consolidated owner update; never promise approval or imply autonomous work without an actual scheduled workflow.
