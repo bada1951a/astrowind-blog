@@ -72,3 +72,9 @@ Status: Agreed operating principles; not a claim of deployment or AdSense approv
 - Preserve accurate technical guidance, meaningful bold emphasis, existing image policy, and 12-language localization; fix broken FAQ formatting, spacing, duplicate headings, and language contamination.
 - Preserve a relatable FIRST-PERSON storytelling voice, as explicitly requested. Do not invent factual firsthand experiences, clients, measurements, locations, or professional credentials. Frame illustrative first-person scenarios transparently as hypothetical or composite when not verified.
 - Perform careful review and build checks before any merge; this editorial discretion does NOT override the rule requiring explicit approval before production main changes or deployment.
+
+## Deferred internal-linking task (user-approved 2026-10-29)
+- User approved the principle of adding contextually relevant internal links, but instructed us to prioritize existing work first. DO NOT implement internal linking yet.
+- After 1ho content-formatting/readability fixes and QA, ASK the user before beginning the internal-linking phase; do not silently skip or start it.
+- Proposed implementation: link only to existing, verified posts in the SAME language; start with roughly 2-3 genuinely relevant links where appropriate (not a mandatory quota); check for broken links and avoid cross-language mismatches. Evaluate usefulness and crawlability; no AdSense approval guarantee.
+- Keep this item in the deferred work queue and raise it with the user at the appropriate milestone.
