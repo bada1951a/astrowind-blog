@@ -176,6 +176,7 @@ function inspectAndHealMarkdown(body) {
     // Luna sometimes bolds the whole FAQ question: **Q1. question?**.
     // Normalize the marker only; keep the native-language question text unchanged.
     .replace(/^\*\*Q([1-3])\.\s+([^\n]*?)\*\*[ \t]*$/gm, '**Q$1.** $2')
+    .replace(/(\*\*Q[1-3]\.\*\*[^\n]*)\n(?=\*\*A[1-3]\.\*\*)/g, '$1\n\n')
     .replace(/\n{3,}/g, '\n\n');
 }
 function validateGeneratedPost(text, langCode) {
@@ -446,7 +447,7 @@ async function run() {
     const japaneseSample = sample.slice(0, sample.indexOf('## 1. Test')) + japaneseBody;
     if (validateGeneratedPost(japaneseSample, 'ja').length) throw new Error('Valid Japanese character-count sample rejected');
     const repairedFaq = inspectAndHealMarkdown('**Q1. 와이파이 연결 오류인가요?**  \n**A1.** 답변');
-    if (!repairedFaq.includes('**Q1.** 와이파이 연결 오류인가요?')) throw new Error('FAQ bold-question repair failed');
+    if (!repairedFaq.includes('**Q1.** 와이파이 연결 오류인가요?\n\n**A1.**')) throw new Error('FAQ bold-question repair or paragraph separation failed');
     console.log('PASS: Korean/Japanese length gates and FAQ question-marker repair');
     return;
   }
