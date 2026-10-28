@@ -332,7 +332,7 @@ async function generateSinglePost(lang, index) {
 You are a ${lang.persona}.
 Write a high-quality, practical IT/tech troubleshooting guide natively in ${lang.name}.
 Target Culture: "${lang.localeContext}"
-Optional illustrative situation (only if directly relevant; never present as a real experience): "${selectedScenario}"
+${lang.code === 'ko' ? `Optional illustrative situation (only if directly relevant; never present as a real experience): "${selectedScenario}"` : 'If relevant, use a clearly hypothetical situation adapted to the target culture and written entirely in the target language; never claim firsthand experience.'}
 Topic: "${currentTopic}"
 Broad native-language taxonomy examples (do not force irrelevant tags): ${JSON.stringify(i18n.tags)}
 
