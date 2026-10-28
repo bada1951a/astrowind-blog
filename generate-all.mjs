@@ -201,6 +201,13 @@ function validateGeneratedPost(text, langCode) {
     if((body.match(new RegExp('\\*\\*Q'+n+'\\.\\*\\*','gi'))||[]).length!==1) errors.push('Q'+n+' missing or duplicated');
     if((body.match(new RegExp('\\*\\*A'+n+'\\.\\*\\*','gi'))||[]).length!==1) errors.push('A'+n+' missing or duplicated');
   }
+  // Require complete, ordered Q&A pairs in the fifth section; stray markers elsewhere are not enough.
+  const faqStart = headings[4] ? body.indexOf(headings[4]) : -1;
+  const faqBody = faqStart >= 0 ? body.slice(faqStart + headings[4].length) : '';
+  const faqMarkers = [...faqBody.matchAll(/^\*\*([QA])([1-3])\.\*\*[ \t]*(\S[^\n]*)$/gm)];
+  const expectedFaq = ['Q1', 'A1', 'Q2', 'A2', 'Q3', 'A3'];
+  if (faqMarkers.length !== 6 || faqMarkers.some((match, i) => match[1] + match[2] !== expectedFaq[i]))
+    errors.push('FAQ sequence or missing FAQ content');
   if((body.match(/^\x60\x60\x60/gm)||[]).length%2) errors.push('unclosed code fence');
   if(langCode!=='ko' && /[가-힣]/.test(body)) errors.push('Korean in non-Korean article');
   return errors;
@@ -450,6 +457,8 @@ async function run() {
     const japaneseBody = ['## 1. 症状', 'あ'.repeat(500), '## 2. 原因', 'あ'.repeat(500), '## 3. 対処法', 'あ'.repeat(500), '## 4. 注意点', 'あ'.repeat(500), '## 5. 質問', '**Q1.** 質問', '**A1.** 回答', '**Q2.** 質問', '**A2.** 回答', '**Q3.** 質問', '**A3.** 回答'].join('\n\n');
     const japaneseSample = sample.slice(0, sample.indexOf('## 1. Test')) + japaneseBody;
     if (validateGeneratedPost(japaneseSample, 'ja').length) throw new Error('Valid Japanese character-count sample rejected');
+    const brokenFaqSample = japaneseSample.replace('**Q2.** 質問', '**Q2.**');
+    if (!validateGeneratedPost(brokenFaqSample, 'ja').includes('FAQ sequence or missing FAQ content')) throw new Error('Empty FAQ question was not blocked');
     const repairedFaq = inspectAndHealMarkdown('**Q1. 와이파이 연결 오류인가요?**  \n**A1.** 답변');
     if (!repairedFaq.includes('**Q1.** 와이파이 연결 오류인가요?\n\n**A1.**')) throw new Error('FAQ bold-question repair or paragraph separation failed');
     if (!getKstPublishDateIso().endsWith('T10:00:00.000Z')) throw new Error('KST 19:00 publish timestamp regression');
