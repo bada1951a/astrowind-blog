@@ -52,3 +52,11 @@ Status: Agreed operating principles; not a claim of deployment or AdSense approv
 - User recently moved Group 1's original subdomain site to the root domain after two AdSense rejections. Google Search Console/indexing signals may need time to settle. Do not assume a fixed one-month recovery or a guaranteed application date.
 - Treat the previously discussed ~2026-11-12 application date as provisional: reassess readiness and Search Console migration/indexing health before applying.
 - Cloudflare Pages and GitHub are intended to minimize hosting overhead; verify actual platform limits rather than assuming 100 sites per domain is guaranteed.
+
+## Verified unit-to-domain mapping (user-confirmed 2026-10-29)
+- Group 1 / 1ho: https://storydailyview.com/ — bada1951a/astrowind-blog
+- Group 1 / 2ho: https://m.storydailyview.com/ — bada1951a/astrowind-blog-2ho
+- Group 1 / 3ho: https://work.storydailyview.com/ — bada1951a/astrowind-blog-3ho
+- Group 1 / 4ho: https://prompt.storydailyview.com/ — bada1951a/astrowind-blog-4ho
+- Group 2 / 2-1ho: https://lifeweblab.com/ — bada1951a/lifeweblab-1ho
+- Immediate AdSense priorities: 1ho and 2-1ho. Do not confuse 2ho with 2-1ho.
