@@ -171,17 +171,30 @@ const I18N_SECTIONS = {
 // =========================================================================
 function inspectAndHealMarkdown(body) {
   return body.trim()
-    .replace(/^(#{1,6}\s+)\*\*([^\n]*?)\*\*/gm, '$1$2')
-    .replace(/\*\*[ \t]+([^*\n]+?)[ \t]+\*\*/g, '**$1**')
+    .replace(/^(#{1,6}\s+)\*\*([^
+]*?)\*\*/gm, '$1$2')
+    .replace(/\*\*[ \t]+([^*
+]+?)[ \t]+\*\*/g, '**$1**')
     // Luna sometimes bolds the whole FAQ question: **Q1. question?**.
     // Normalize the marker only; keep the native-language question text unchanged.
-    .replace(/^\*\*Q([1-3])\.\s+([^\n]*?)\*\*[ \t]*$/gm, '**Q$1.** $2')
-    .replace(/(\*\*Q[1-3]\.\*\*[^\n]*)\n(?=\*\*A[1-3]\.\*\*)/g, '$1\n\n')
-    .replace(/\n{3,}/g, '\n\n');
+    .replace(/^\*\*Q([1-3])\.\s+([^
+]*?)\*\*[ \t]*$/gm, '**Q$1.** $2')
+    .replace(/(\*\*Q[1-3]\.\*\*[^
+]*)
+(?=\*\*A[1-3]\.\*\*)/g, '$1
+
+')
+    .replace(/
+{3,}/g, '
+
+');
 }
 function validateGeneratedPost(text, langCode) {
   const errors = [];
-  const fm = text.match(/^---\s*\r?\n([\s\S]*?)\r?\n---\s*\r?\n/);
+  const fm = text.match(/^---\s*\r?
+([\s\S]*?)\r?
+---\s*\r?
+/);
   if (!fm) return ['frontmatter missing'];
   const meta = fm[1], body = text.slice(fm[0].length);
   // Duplicate YAML keys can silently override a trusted category, image or date.
@@ -196,14 +209,16 @@ function validateGeneratedPost(text, langCode) {
   for (const field of ['title', 'description', 'publishDate', 'image', 'theme'])
     if (!new RegExp('^' + field + ':\\s*\\S', 'm').test(meta)) errors.push(field + ' missing');
   if (!/^category:\s*['"]?tech['"]?\s*$/m.test(meta)) errors.push('category must be tech');
-  if (!/^image:\s*["']?\/images\/tech-photo\/[^\r\n]+/m.test(meta)) errors.push('image must use /images/tech-photo');
+  if (!/^image:\s*["']?\/images\/tech-photo\/[^\r
+]+/m.test(meta)) errors.push('image must use /images/tech-photo');
   const readable = body.replace(/!\[[^\]]*\]\([^)]*\)/g,'').replace(/[#*_\x60>]/g,'');
   const isCharacterCountLanguage = langCode === 'ko' || langCode === 'ja';
   const count = isCharacterCountLanguage ? [...readable.replace(/\s/g, '')].length : (readable.match(/\S+/g) || []).length;
   const minLength = langCode === 'ko' ? 1900 : langCode === 'ja' ? 1700 : 700;
   const maxLength = langCode === 'ko' ? 3100 : langCode === 'ja' ? 3500 : 1400;
   if (count < minLength || count > maxLength) errors.push('body length ' + count);
-  const headings = body.match(/^##\s+[^\n]+/gm)||[];
+  const headings = body.match(/^##\s+[^
+]+/gm)||[];
   if (headings.length !== 5) errors.push('exactly 5 H2 headings required');
   for(let n=1;n<=5;n++) if(!headings[n-1]?.startsWith('## '+n+'. ')) errors.push('H2 order '+n);
   for(let n=1;n<=3;n++){
@@ -213,7 +228,8 @@ function validateGeneratedPost(text, langCode) {
   // Require complete, ordered Q&A pairs in the fifth section; stray markers elsewhere are not enough.
   const faqStart = headings[4] ? body.indexOf(headings[4]) : -1;
   const faqBody = faqStart >= 0 ? body.slice(faqStart + headings[4].length) : '';
-  const faqMarkers = [...faqBody.matchAll(/^\*\*([QA])([1-3])\.\*\*[ \t]*(\S[^\n]*)$/gm)];
+  const faqMarkers = [...faqBody.matchAll(/^\*\*([QA])([1-3])\.\*\*[ \t]*(\S[^
+]*)$/gm)];
   const expectedFaq = ['Q1', 'A1', 'Q2', 'A2', 'Q3', 'A3'];
   if (faqMarkers.length !== 6 || faqMarkers.some((match, i) => match[1] + match[2] !== expectedFaq[i]))
     errors.push('FAQ sequence or missing FAQ content');
@@ -228,7 +244,8 @@ if (!DRY_RUN && !fs.existsSync(TOPICS_FILE)) {
 }
 
 const fileContent = DRY_RUN ? 'offline test topic' : fs.readFileSync(TOPICS_FILE, 'utf-8');
-const lines = fileContent.split(/\r?\n/).map(l => l.trim()).filter(l => l.length > 0);
+const lines = fileContent.split(/\r?
+/).map(l => l.trim()).filter(l => l.length > 0);
 
 if (lines.length === 0) {
   console.log("⚠️ topics.txt에 남은 주제가 없습니다. 생성을 건너뜁니다.");
@@ -301,6 +318,10 @@ const fileSlug = 'post-' + createHash('sha256').update(currentTopic).digest('hex
 // [호출 함수] maxOutputTokens: 4096 (2,500자 정량 생성 최적화)
 // =========================================================================
 // Permanent API errors cannot be fixed by immediately repeating the same paid request.
+function isCompletedOpenAIResponse(result) {
+  return result.status === 'completed';
+}
+
 function shouldRetryOpenAIStatus(status, errorCode = '') {
   if (status === 429 && errorCode === 'insufficient_quota') return false;
   return status === 408 || status === 409 || status === 429 || status >= 500;
@@ -320,8 +341,15 @@ async function fetchWithRetry(prompt, maxRetries = 3, delayMs = 3000) {
         apiError.retryable = shouldRetryOpenAIStatus(response.status, result.error?.code);
         throw apiError;
       }
+      // A partially generated Responses API result can contain text; never save it.
+      if (!isCompletedOpenAIResponse(result)) {
+        const incomplete = new Error('OpenAI response not completed: ' + (result.status || 'unknown'));
+        incomplete.retryable = false;
+        throw incomplete;
+      }
       const output = (result.output || []).flatMap((item) => item.content || [])
-        .filter((part) => part.type === 'output_text').map((part) => part.text).join('\n');
+        .filter((part) => part.type === 'output_text').map((part) => part.text).join('
+');
       if (!output.trim()) throw new Error('No text in GPT response: ' + (result.status || 'unknown'));
       return output;
     } catch (error) {
@@ -341,7 +369,8 @@ async function generateSinglePost(lang, index) {
   }
   const selectedTheme = THEME_PRESETS[Math.floor(Math.random() * THEME_PRESETS.length)];
   const selectedScenario = IT_CRISIS_SCENARIOS_30[Math.floor(Math.random() * IT_CRISIS_SCENARIOS_30.length)];
-  console.log(`\n🚀 [${index + 1}/12] ${lang.name} (${lang.code}) 1호기 본진 애드센스 표준 생성 중... (테마: ${selectedTheme.name})`);
+  console.log(`
+🚀 [${index + 1}/12] ${lang.name} (${lang.code}) 1호기 본진 애드센스 표준 생성 중... (테마: ${selectedTheme.name})`);
 
   const { coverUrl, bodyUrl } = getPostImages(index);
   const pubDateIso = getKstPublishDateIso();
@@ -413,21 +442,31 @@ theme: "${selectedTheme.name}"
   try {
     let rawText = await fetchWithRetry(prompt);
     let text = rawText.trim();
-    if (text.startsWith('```markdown')) text = text.replace(/^```markdown\n/, '').replace(/\n```$/, '');
-    if (text.startsWith('```')) text = text.replace(/^```\n/, '').replace(/\n```$/, '');
+    if (text.startsWith('```markdown')) text = text.replace(/^```markdown
+/, '').replace(/
+```$/, '');
+    if (text.startsWith('```')) text = text.replace(/^```
+/, '').replace(/
+```$/, '');
 
-    const fmMatch = text.match(/^---[\s\S]*?---\n*/);
+    const fmMatch = text.match(/^---[\s\S]*?---
+*/);
     if (fmMatch) {
       let frontmatter = fmMatch[0].trim();
       let body = text.slice(fmMatch[0].length).trim();
-      body = body.replace(/^#\s+[^\n]+\n+/, '');
+      body = body.replace(/^#\s+[^
+]+
++/, '');
 
       // ⚠️ 1호기 카테고리 'tech' 영구 보존 강제 검증
       frontmatter = frontmatter.replace(/category:\s*["'][^"']*["']/i, "category: 'tech'")
-                               .replace(/category:\s*[^\n\r]+/i, "category: 'tech'")
+                               .replace(/category:\s*[^
+\r]+/i, "category: 'tech'")
                                 // Preserve trusted local image selection and 19:00 KST date, not model guesses.
-                                .replace(/^image:\s*[^\n\r]+/m, `image: "${coverUrl}"`)
-                                .replace(/^publishDate:\s*[^\n\r]+/m, `publishDate: ${pubDateIso}`);
+                                .replace(/^image:\s*[^
+\r]+/m, `image: "${coverUrl}"`)
+                                .replace(/^publishDate:\s*[^
+\r]+/m, `publishDate: ${pubDateIso}`);
 
       // 🩺 [자가 검수 및 치유 엔진 가동]
       body = inspectAndHealMarkdown(body);
@@ -437,14 +476,22 @@ theme: "${selectedTheme.name}"
       }
 
       // 본문 중간 이미지 배치 (2번 섹션 직전)
-      const middleImageMarkdown = `\n\n![Tech Troubleshooting Guide](${bodyUrl})\n\n`;
+      const middleImageMarkdown = `
+
+![Tech Troubleshooting Guide](${bodyUrl})
+
+`;
       if (body.includes('## 2.')) {
-        body = body.replace(/(##\s*2\.[^\n]+)/, `${middleImageMarkdown}$1`);
+        body = body.replace(/(##\s*2\.[^
+]+)/, `${middleImageMarkdown}$1`);
       } else {
         body = `${middleImageMarkdown}${body}`;
       }
 
-      text = `${frontmatter}\n\n${body}\n`;
+      text = `${frontmatter}
+
+${body}
+`;
     } else {
       throw new Error('Missing frontmatter; refusing to save.');
     }
@@ -471,21 +518,38 @@ theme: "${selectedTheme.name}"
 async function run() {
   if (DRY_RUN) {
     console.log('SAFE DRY RUN: no API calls, no files changed, no publishing');
-    const sample = '---\ntitle: sample\ndescription: sample\npublishDate: 2026-10-28\nimage: /images/tech-photo/test.jpg\ncategory: tech\ntheme: test\n---\n\n## 1. Test\nshort';
+    const sample = '---
+title: sample
+description: sample
+publishDate: 2026-10-28
+image: /images/tech-photo/test.jpg
+category: tech
+theme: test
+---
+
+## 1. Test
+short';
     if (!validateGeneratedPost(sample,'ko').some(e=>e.startsWith('body length'))) throw new Error('Validation smoke test failed for Korean');
     if (!validateGeneratedPost(sample,'ja').some(e=>e.startsWith('body length'))) throw new Error('Validation smoke test failed for Japanese');
-    const japaneseBody = ['## 1. 症状', 'あ'.repeat(500), '## 2. 原因', 'あ'.repeat(500), '## 3. 対処法', 'あ'.repeat(500), '## 4. 注意点', 'あ'.repeat(500), '## 5. 質問', '**Q1.** 質問', '**A1.** 回答', '**Q2.** 質問', '**A2.** 回答', '**Q3.** 質問', '**A3.** 回答'].join('\n\n');
+    const japaneseBody = ['## 1. 症状', 'あ'.repeat(500), '## 2. 原因', 'あ'.repeat(500), '## 3. 対処法', 'あ'.repeat(500), '## 4. 注意点', 'あ'.repeat(500), '## 5. 質問', '**Q1.** 質問', '**A1.** 回答', '**Q2.** 質問', '**A2.** 回答', '**Q3.** 質問', '**A3.** 回答'].join('
+
+');
     const japaneseSample = sample.slice(0, sample.indexOf('## 1. Test')) + japaneseBody;
     if (validateGeneratedPost(japaneseSample, 'ja').length) throw new Error('Valid Japanese character-count sample rejected');
     const brokenFaqSample = japaneseSample.replace('**Q2.** 質問', '**Q2.**');
     if (!validateGeneratedPost(brokenFaqSample, 'ja').includes('FAQ sequence or missing FAQ content')) throw new Error('Empty FAQ question was not blocked');
-    const repairedFaq = inspectAndHealMarkdown('**Q1. 와이파이 연결 오류인가요?**  \n**A1.** 답변');
-    if (!repairedFaq.includes('**Q1.** 와이파이 연결 오류인가요?\n\n**A1.**')) throw new Error('FAQ bold-question repair or paragraph separation failed');
+    const repairedFaq = inspectAndHealMarkdown('**Q1. 와이파이 연결 오류인가요?**  
+**A1.** 답변');
+    if (!repairedFaq.includes('**Q1.** 와이파이 연결 오류인가요?
+
+**A1.**')) throw new Error('FAQ bold-question repair or paragraph separation failed');
     if (shouldRetryOpenAIStatus(400) || shouldRetryOpenAIStatus(401) || shouldRetryOpenAIStatus(403) || shouldRetryOpenAIStatus(429, 'insufficient_quota') || !shouldRetryOpenAIStatus(429, 'rate_limit_exceeded') || !shouldRetryOpenAIStatus(503)) throw new Error('OpenAI retry status classification regression');
+    if (!isCompletedOpenAIResponse({ status: 'completed' }) || isCompletedOpenAIResponse({ status: 'incomplete', output: [{ content: [{ type: 'output_text', text: 'partial' }] }] })) throw new Error('Incomplete GPT response gate regression');
     if (!getKstPublishDateIso().endsWith('T10:00:00.000Z')) throw new Error('KST 19:00 publish timestamp regression');
     if (!validateGeneratedPost(sample.replace('image: /images/tech-photo/test.jpg', 'image: https://example.com/other.jpg'), 'ko').includes('image must use /images/tech-photo')) throw new Error('Tech image path gate regression');
     if (!validateGeneratedPost(sample.replace('category: tech', 'category: hardware'), 'ko').includes('category must be tech')) throw new Error('Tech-only category gate regression');
-    if (!validateGeneratedPost(sample.replace('category: tech', 'category: tech\ncategory: tech'), 'ko').includes('category duplicated')) throw new Error('Duplicate category gate regression');
+    if (!validateGeneratedPost(sample.replace('category: tech', 'category: tech
+category: tech'), 'ko').includes('category duplicated')) throw new Error('Duplicate category gate regression');
     if (!validateGeneratedPost(sample.replace('title: sample', 'title: Native Clear Title in English'), 'ko').includes('unreplaced prompt placeholder')) throw new Error('Prompt placeholder gate regression');
     console.log('PASS: Korean/Japanese length gates, FAQ repair, KST publish timestamp, and tech image path gate');
     return;
@@ -510,11 +574,14 @@ async function run() {
 
   if (successCount === TARGET_LANGS.length) {
     lines.shift();
-    fs.writeFileSync(TOPICS_FILE, lines.join('\n'), 'utf-8');
-    console.log(`\n🧹 총 ${successCount}개국 포스팅 완료. topics.txt에서 주제를 제거했습니다.`);
+    fs.writeFileSync(TOPICS_FILE, lines.join('
+'), 'utf-8');
+    console.log(`
+🧹 총 ${successCount}개국 포스팅 완료. topics.txt에서 주제를 제거했습니다.`);
     console.log(`📊 남은 주제 수: ${lines.length}개`);
   } else {
-    console.error(`\n❌ ${TARGET_LANGS.length - successCount}개 언어 실패. topics.txt 주제를 보존합니다.`);
+    console.error(`
+❌ ${TARGET_LANGS.length - successCount}개 언어 실패. topics.txt 주제를 보존합니다.`);
     process.exit(1);
   }
 }
