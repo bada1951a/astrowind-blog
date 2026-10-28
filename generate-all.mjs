@@ -454,7 +454,8 @@ theme: "${selectedTheme.name}"
     return true;
   } catch (error) {
     console.error(`❌ [최종 실패] ${lang.name} 생성 실패:`, error.message);
-    return false;
+    // null means permanent API failure: do not repeat the same paid request.
+    return error.retryable === false ? null : false;
   }
 }
 
@@ -485,9 +486,9 @@ async function run() {
 
   for (let i = 0; i < TARGET_LANGS.length; i++) {
     let isSuccess = false;
-    for (let attempt = 1; attempt <= 2 && !isSuccess; attempt++) {
+    for (let attempt = 1; attempt <= 2 && isSuccess === false; attempt++) {
       isSuccess = await generateSinglePost(TARGET_LANGS[i], i);
-      if (!isSuccess && attempt < 2) await delay(2500);
+      if (isSuccess === false && attempt < 2) await delay(2500);
     }
     if (isSuccess) successCount++;
     if (i < TARGET_LANGS.length - 1) {
