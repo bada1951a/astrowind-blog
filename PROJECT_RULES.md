@@ -46,3 +46,9 @@ Status: Agreed operating principles; not a claim of deployment or AdSense approv
 - Target application around 2026-11-12, not guaranteed approval.
 - Audit actual published pages, original useful content, site navigation, policies, indexing eligibility, links, language quality and duplication before applying.
 - Fix quality and reliability before expanding site count; distinguish plans from verified results.
+
+## Clarified rollout and domain migration (2026-10-29)
+- 100 blog units is a long-term goal, NOT an instruction to build them immediately. First stabilize and validate Group 1; then focus on Group 2.
+- User recently moved Group 1's original subdomain site to the root domain after two AdSense rejections. Google Search Console/indexing signals may need time to settle. Do not assume a fixed one-month recovery or a guaranteed application date.
+- Treat the previously discussed ~2026-11-12 application date as provisional: reassess readiness and Search Console migration/indexing health before applying.
+- Cloudflare Pages and GitHub are intended to minimize hosting overhead; verify actual platform limits rather than assuming 100 sites per domain is guaranteed.
