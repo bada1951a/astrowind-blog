@@ -9,6 +9,7 @@
 
 import fs from 'fs';
 import path from 'path';
+import { createHash } from 'node:crypto';
 
 
 const DRY_RUN = process.argv.includes('--dry-run');
@@ -270,7 +271,7 @@ const TARGET_LANGS = [
 ];
 
 const delay = (ms) => new Promise((res) => setTimeout(res, ms));
-const fileSlug = `post-${Date.now().toString(36)}`;
+const fileSlug = 'post-' + createHash('sha256').update(currentTopic).digest('hex').slice(0, 14);
 
 // =========================================================================
 // [호출 함수] maxOutputTokens: 4096 (2,500자 정량 생성 최적화)
@@ -298,10 +299,13 @@ async function fetchWithRetry(prompt, maxRetries = 3, delayMs = 3000) {
 }
 
 async function generateSinglePost(lang, index) {
+  const existingPath = path.join(POSTS_BASE_DIR, lang.code, `${fileSlug}.md`);
+  if (fs.existsSync(existingPath)) {
+    console.log(`Existing successful language post retained: ${lang.code}`);
+    return true;
+  }
   const selectedTheme = THEME_PRESETS[Math.floor(Math.random() * THEME_PRESETS.length)];
   const selectedScenario = IT_CRISIS_SCENARIOS_30[Math.floor(Math.random() * IT_CRISIS_SCENARIOS_30.length)];
-  const i18n = I18N_SECTIONS[lang.code] || I18N_SECTIONS.ko;
-
   console.log(`\n🚀 [${index + 1}/12] ${lang.name} (${lang.code}) 1호기 본진 애드센스 표준 생성 중... (테마: ${selectedTheme.name})`);
 
   const { coverUrl, bodyUrl } = getPostImages(index);
@@ -323,19 +327,19 @@ Topic: "${currentTopic}"
 [STRUCTURE - STRICT 5 H2 HEADINGS]
 Write five native-language, topic-specific H2 headings numbered 1 through 5, without generic unrelated wording:
 
-## ${i18n.s1}
+## 1. [Write a native-language heading directly relevant to the exact topic]
 Describe topic-specific symptoms and safe initial checks. Do not fabricate emergencies, personal experiences, professional credentials or guarantees.
 
-## ${i18n.s2}
+## 2. [Write a native-language heading directly relevant to the exact topic]
 Explain plausible causes that are specifically relevant to the topic; separate established facts from possible causes.
 
-## ${i18n.s3}
+## 3. [Write a native-language heading directly relevant to the exact topic]
 Give three practical, accurate and ordered troubleshooting steps; only use UI labels in "${lang.osUi}" or commands when actually applicable.
 
-## ${i18n.s4}
+## 4. [Write a native-language heading directly relevant to the exact topic]
 Give topic-specific checks to verify resolution, realistic exceptions, precautions, and escalation steps.
 
-## ${i18n.s5}
+## 5. [Write a native-language heading directly relevant to the exact topic]
 Provide exactly 3 practical Q&A items. You MUST put an empty line between Question and Answer:
 
 **Q1.** Question text
@@ -401,6 +405,8 @@ theme: "${selectedTheme.name}"
       }
 
       text = `${frontmatter}\n\n${body}\n`;
+    } else {
+      throw new Error('Missing frontmatter; refusing to save.');
     }
 
     const validationErrors = validateGeneratedPost(text, lang.code);
@@ -436,7 +442,11 @@ async function run() {
   let successCount = 0;
 
   for (let i = 0; i < TARGET_LANGS.length; i++) {
-    const isSuccess = await generateSinglePost(TARGET_LANGS[i], i);
+    let isSuccess = false;
+    for (let attempt = 1; attempt <= 2 && !isSuccess; attempt++) {
+      isSuccess = await generateSinglePost(TARGET_LANGS[i], i);
+      if (!isSuccess && attempt < 2) await delay(2500);
+    }
     if (isSuccess) successCount++;
     if (i < TARGET_LANGS.length - 1) {
       await delay(2000);
