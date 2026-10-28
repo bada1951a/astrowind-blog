@@ -66,3 +66,9 @@ Status: Agreed operating principles; not a claim of deployment or AdSense approv
 - 1ho and 2-1ho: images are manually uploaded and managed by the user; preserve this workflow and existing assets.
 - 2ho, 3ho, 4ho: use external Pexels image links for lower-maintenance publishing; verify links and image rights when auditing.
 - Do not change image sources, upload strategy, or production workflows without explicit approval.
+
+## Editorial discretion and readability (user-approved 2026-10-29)
+- User authorizes substantial editorial improvements to existing posts in review branches, prioritizing readability, mobile-first layout, useful comparison tables, checklists, step-by-step instructions, and concise callouts where relevant. Do not add decorative tables to every article.
+- Preserve accurate technical guidance, meaningful bold emphasis, existing image policy, and 12-language localization; fix broken FAQ formatting, spacing, duplicate headings, and language contamination.
+- Preserve a relatable FIRST-PERSON storytelling voice, as explicitly requested. Do not invent factual firsthand experiences, clients, measurements, locations, or professional credentials. Frame illustrative first-person scenarios transparently as hypothetical or composite when not verified.
+- Perform careful review and build checks before any merge; this editorial discretion does NOT override the rule requiring explicit approval before production main changes or deployment.
