@@ -184,8 +184,11 @@ function validateGeneratedPost(text, langCode) {
     if (!new RegExp('^' + field + ':\\s*\\S', 'm').test(meta)) errors.push(field + ' missing');
   if (!/^category:\s*['"]?tech['"]?\s*$/m.test(meta)) errors.push('category must be tech');
   const readable = body.replace(/!\[[^\]]*\]\([^)]*\)/g,'').replace(/[#*_\x60>]/g,'');
-  const count = langCode === 'ko' ? [...readable.replace(/\s/g,'')].length : (readable.match(/\S+/g)||[]).length;
-  if (count < (langCode==='ko'?1900:700) || count > (langCode==='ko'?3100:1400)) errors.push('body length '+count);
+  const isCharacterCountLanguage = langCode === 'ko' || langCode === 'ja';
+  const count = isCharacterCountLanguage ? [...readable.replace(/\s/g, '')].length : (readable.match(/\S+/g) || []).length;
+  const minLength = langCode === 'ko' ? 1900 : langCode === 'ja' ? 1700 : 700;
+  const maxLength = langCode === 'ko' ? 3100 : langCode === 'ja' ? 3500 : 1400;
+  if (count < minLength || count > maxLength) errors.push('body length ' + count);
   const headings = body.match(/^##\s+[^\n]+/gm)||[];
   if (headings.length !== 5) errors.push('exactly 5 H2 headings required');
   for(let n=1;n<=5;n++) if(!headings[n-1]?.startsWith('## '+n+'. ')) errors.push('H2 order '+n);
@@ -323,7 +326,8 @@ Broad native-language taxonomy examples (do not force irrelevant tags): ${JSON.s
 
 [ADSENSE QUALITY & LENGTH REQUIREMENT]
 - For Korean (ko): Target 2,400 - 2,600 characters excluding whitespace and Markdown markers, adding helpful diagnosis and edge cases rather than filler.
-- For other languages: Write exactly 900 - 1,100 words.
+- For Japanese (ja): Target 2,400 - 2,800 Japanese characters excluding whitespace and Markdown markers. Do not pad with artificial spaces or repetitive filler.
+- For other languages: Target 900 - 1,100 words.
 - Tone: Highly informative, professional, practical workplace advice.
 
 [STRUCTURE - STRICT 5 H2 HEADINGS]
@@ -433,8 +437,12 @@ async function run() {
   if (DRY_RUN) {
     console.log('SAFE DRY RUN: no API calls, no files changed, no publishing');
     const sample = '---\ntitle: sample\ndescription: sample\npublishDate: 2026-10-28\nimage: /images/tech-photo/test.jpg\ncategory: tech\ntheme: test\n---\n\n## 1. Test\nshort';
-    if (!validateGeneratedPost(sample,'ko').some(e=>e.startsWith('body length'))) throw new Error('Validation smoke test failed');
-    console.log('PASS: short malformed article blocked');
+    if (!validateGeneratedPost(sample,'ko').some(e=>e.startsWith('body length'))) throw new Error('Validation smoke test failed for Korean');
+    if (!validateGeneratedPost(sample,'ja').some(e=>e.startsWith('body length'))) throw new Error('Validation smoke test failed for Japanese');
+    const japaneseBody = ['## 1. 症状', 'あ'.repeat(500), '## 2. 原因', 'あ'.repeat(500), '## 3. 対処法', 'あ'.repeat(500), '## 4. 注意点', 'あ'.repeat(500), '## 5. 質問', '**Q1.** 質問', '**A1.** 回答', '**Q2.** 質問', '**A2.** 回答', '**Q3.** 質問', '**A3.** 回答'].join('\n\n');
+    const japaneseSample = sample.slice(0, sample.indexOf('## 1. Test')) + japaneseBody;
+    if (validateGeneratedPost(japaneseSample, 'ja').length) throw new Error('Valid Japanese character-count sample rejected');
+    console.log('PASS: Korean/Japanese short articles blocked and Japanese character-count sample accepted');
     return;
   }
   console.log("==================================================");
