@@ -30,8 +30,10 @@ const localFiles = fs.existsSync(PHOTO_DIR) ? fs.readdirSync(PHOTO_DIR).filter(f
 let localImages = localFiles.map(file => encodeURI(`/images/tech-photo/${file}`));
 
 if (localImages.length === 0) {
-  console.warn("⚠️ public/images/tech-photo 에 이미지가 없습니다. 기본 이미지를 사용합니다.");
-  localImages = ['/images/default-tech.jpg'];
+  // Do not spend paid generation tokens on articles that cannot pass the image-path gate.
+  // The placeholder is safe only for the offline --dry-run smoke tests.
+  if (!DRY_RUN) throw new Error('Publishing blocked before API call: public/images/tech-photo has no usable local images.');
+  localImages = ['/images/tech-photo/dry-run-placeholder.jpg'];
 }
 
 function shuffleArray(array) {
