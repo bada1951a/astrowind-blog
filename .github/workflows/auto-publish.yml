@@ -19,9 +19,11 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '22'
 
       - name: Run Auto Publishing Script
+        id: generator
+        continue-on-error: true
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         run: |
@@ -33,5 +35,13 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add src/data/post/ topics.txt
-          git commit -m "Auto published new multi-language tech posts" || echo "No changes to commit"
-          git push
+          if ! git diff --cached --quiet; then
+            git commit -m "Auto published new multi-language tech posts"
+            git push
+          else
+            echo "No changes to commit"
+          fi
+
+      - name: Report generation errors after preserving successful languages
+        if: steps.generator.outcome == 'failure'
+        run: exit 1
