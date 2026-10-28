@@ -299,6 +299,7 @@ async function fetchWithRetry(prompt, maxRetries = 3, delayMs = 3000) {
 }
 
 async function generateSinglePost(lang, index) {
+  const i18n = I18N_SECTIONS[lang.code] || I18N_SECTIONS.ko;
   const existingPath = path.join(POSTS_BASE_DIR, lang.code, `${fileSlug}.md`);
   if (fs.existsSync(existingPath)) {
     console.log(`Existing successful language post retained: ${lang.code}`);
@@ -318,6 +319,7 @@ Write a high-quality, practical IT/tech troubleshooting guide natively in ${lang
 Target Culture: "${lang.localeContext}"
 Optional illustrative situation (only if directly relevant; never present as a real experience): "${selectedScenario}"
 Topic: "${currentTopic}"
+Broad native-language taxonomy examples (do not force irrelevant tags): ${JSON.stringify(i18n.tags)}
 
 [ADSENSE QUALITY & LENGTH REQUIREMENT]
 - For Korean (ko): Target 2,400 - 2,600 characters excluding whitespace and Markdown markers, adding helpful diagnosis and edge cases rather than filler.
