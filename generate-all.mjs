@@ -172,7 +172,7 @@ const I18N_SECTIONS = {
 function inspectAndHealMarkdown(body) {
   return body.trim()
     .replace(/^(#{1,6}\s+)\*\*([^\n]*?)\*\*/gm, '$1$2')
-    .replace(/\*\*\s+([^*\n]+?)\s+\*\*/g, '**$1**')
+    .replace(/\*\*[ \t]+([^*\n]+?)[ \t]+\*\*/g, '**$1**')
     // Luna sometimes bolds the whole FAQ question: **Q1. question?**.
     // Normalize the marker only; keep the native-language question text unchanged.
     .replace(/^\*\*Q([1-3])\.\s+([^\n]*?)\*\*[ \t]*$/gm, '**Q$1.** $2')
