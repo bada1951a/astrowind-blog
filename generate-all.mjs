@@ -173,6 +173,9 @@ function inspectAndHealMarkdown(body) {
   return body.trim()
     .replace(/^(#{1,6}\s+)\*\*([^\n]*?)\*\*/gm, '$1$2')
     .replace(/\*\*\s+([^*\n]+?)\s+\*\*/g, '**$1**')
+    // Luna sometimes bolds the whole FAQ question: **Q1. question?**.
+    // Normalize the marker only; keep the native-language question text unchanged.
+    .replace(/^\*\*Q([1-3])\.\s+([^\n]*?)\*\*[ \t]*$/gm, '**Q$1.** $2')
     .replace(/\n{3,}/g, '\n\n');
 }
 function validateGeneratedPost(text, langCode) {
@@ -442,7 +445,9 @@ async function run() {
     const japaneseBody = ['## 1. 症状', 'あ'.repeat(500), '## 2. 原因', 'あ'.repeat(500), '## 3. 対処法', 'あ'.repeat(500), '## 4. 注意点', 'あ'.repeat(500), '## 5. 質問', '**Q1.** 質問', '**A1.** 回答', '**Q2.** 質問', '**A2.** 回答', '**Q3.** 質問', '**A3.** 回答'].join('\n\n');
     const japaneseSample = sample.slice(0, sample.indexOf('## 1. Test')) + japaneseBody;
     if (validateGeneratedPost(japaneseSample, 'ja').length) throw new Error('Valid Japanese character-count sample rejected');
-    console.log('PASS: Korean/Japanese short articles blocked and Japanese character-count sample accepted');
+    const repairedFaq = inspectAndHealMarkdown('**Q1. 와이파이 연결 오류인가요?**  \n**A1.** 답변');
+    if (!repairedFaq.includes('**Q1.** 와이파이 연결 오류인가요?')) throw new Error('FAQ bold-question repair failed');
+    console.log('PASS: Korean/Japanese length gates and FAQ question-marker repair');
     return;
   }
   console.log("==================================================");
