@@ -9,15 +9,11 @@
 
 import fs from 'fs';
 import path from 'path';
-import { GoogleGenAI } from '@google/genai';
 
-const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
-if (!GEMINI_API_KEY) {
-  console.error("❌ GEMINI_API_KEY 환경변수가 설정되지 않았습니다.");
-  process.exit(1);
-}
 
-const ai = new GoogleGenAI({ apiKey: GEMINI_API_KEY });
+const DRY_RUN = process.argv.includes('--dry-run');
+const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
+if (!DRY_RUN && !OPENAI_API_KEY) throw new Error('OPENAI_API_KEY secret is required.');
 const POSTS_BASE_DIR = path.resolve('src/data/post');
 const TOPICS_FILE = path.resolve('topics.txt');
 const PHOTO_DIR = path.resolve('public/images/tech-photo');
@@ -27,11 +23,9 @@ const PHOTO_DIR = path.resolve('public/images/tech-photo');
 // =========================================================================
 const IMAGE_EXTS = /\.(jpe?g|png|webp|gif|avif)$/i;
 
-if (!fs.existsSync(PHOTO_DIR)) {
-  fs.mkdirSync(PHOTO_DIR, { recursive: true });
-}
+if (!DRY_RUN && !fs.existsSync(PHOTO_DIR)) fs.mkdirSync(PHOTO_DIR, { recursive: true });
 
-const localFiles = fs.readdirSync(PHOTO_DIR).filter(file => IMAGE_EXTS.test(file));
+const localFiles = fs.existsSync(PHOTO_DIR) ? fs.readdirSync(PHOTO_DIR).filter(file => IMAGE_EXTS.test(file)) : [];
 let localImages = localFiles.map(file => encodeURI(`/images/tech-photo/${file}`));
 
 if (localImages.length === 0) {
@@ -174,68 +168,41 @@ const I18N_SECTIONS = {
 // =========================================================================
 // 🛡️ [1호기 자가 검수 및 치유 엔진: Self-Healing Inspector]
 // =========================================================================
-function inspectAndHealMarkdown(body, langCode) {
-  let healed = body.trim();
-  const i18n = I18N_SECTIONS[langCode] || I18N_SECTIONS.ko;
-  const auditLogs = [];
-
-  // 1) 헤딩 내부 볼드 제거 및 1호기 표준 소제목 강제 안착
-  healed = healed.replace(/^(#{1,6}\s+)\*\*(.*?)\*\*/gm, '$1$2');
-  healed = healed.replace(/^#{1,6}\s*1[.\s]+([^\n]+)/m, `## ${i18n.s1}`);
-  healed = healed.replace(/^#{1,6}\s*2[.\s]+([^\n]+)/m, `## ${i18n.s2}`);
-  healed = healed.replace(/^#{1,6}\s*3[.\s]+([^\n]+)/m, `## ${i18n.s3}`);
-  healed = healed.replace(/^#{1,6}\s*4[.\s]+([^\n]+)/m, `## ${i18n.s4}`);
-  healed = healed.replace(/^#{1,6}\s*5[.\s]+([^\n]+)/m, `## ${i18n.s5}`);
-
-  if (!healed.startsWith('## 1.')) {
-    healed = `## ${i18n.s1}\n\n` + healed;
-    auditLogs.push("1번 헤딩 주입");
+function inspectAndHealMarkdown(body) {
+  return body.trim()
+    .replace(/^(#{1,6}\\s+)\\*\\*([^\\n]*?)\\*\\*/gm, '$1$2')
+    .replace(/\\*\\*\\s+([^*\\n]+?)\\s+\\*\\*/g, '**$1**')
+    .replace(/\\n{3,}/g, '\\n\\n');
+}
+function validateGeneratedPost(text, langCode) {
+  const errors = [];
+  const fm = text.match(/^---\\s*\\r?\\n([\\s\\S]*?)\\r?\\n---\\s*\\r?\\n/);
+  if (!fm) return ['frontmatter missing'];
+  const meta = fm[1], body = text.slice(fm[0].length);
+  for (const field of ['title', 'description', 'publishDate', 'image', 'theme'])
+    if (!new RegExp('^' + field + ':\\\\s*\\\\S', 'm').test(meta)) errors.push(field + ' missing');
+  if (!/^category:\\s*['"]?tech['"]?\\s*$/m.test(meta)) errors.push('category must be tech');
+  const readable = body.replace(/!\\[[^\\]]*\\]\\([^)]*\\)/g,'').replace(/[#*_\\x60>]/g,'');
+  const count = langCode === 'ko' ? [...readable.replace(/\\s/g,'')].length : (readable.match(/\\S+/g)||[]).length;
+  if (count < (langCode==='ko'?1900:700) || count > (langCode==='ko'?3100:1400)) errors.push('body length '+count);
+  const headings = body.match(/^##\\s+[^\\n]+/gm)||[];
+  if (headings.length !== 5) errors.push('exactly 5 H2 headings required');
+  for(let n=1;n<=5;n++) if(!headings[n-1]?.startsWith('## '+n+'. ')) errors.push('H2 order '+n);
+  for(let n=1;n<=3;n++){
+    if((body.match(new RegExp('\\\\*\\\\*Q'+n+'\\\\.\\\\*\\\\*','gi'))||[]).length!==1) errors.push('Q'+n+' missing or duplicated');
+    if((body.match(new RegExp('\\\\*\\\\*A'+n+'\\\\.\\\\*\\\\*','gi'))||[]).length!==1) errors.push('A'+n+' missing or duplicated');
   }
-
-  // 2) 🛡️ Q&A 줄바꿈 뭉개짐 자동 분리 치유 (질문과 답변 사이 빈 줄 2개 보장)
-  const rawQnACount = (healed.match(/Q[1-3]\./gi) || []).length;
-  if (rawQnACount > 0) {
-    healed = healed.replace(/\s*(\*\*Q[1-3]\.\*\*|Q[1-3]\.)\s*/gi, '\n\n**$1** ');
-    healed = healed.replace(/\s*(\*\*A[1-3]\.\*\*|A[1-3]\.)\s*/gi, '\n\n**$1** ');
-    healed = healed.replace(/\*\*\s*\*\*(Q[1-3]\.|A[1-3]\.)\*\*\s*\*\*/gi, '**$1**');
-    healed = healed.replace(/\*\*(Q[1-3]\.|A[1-3]\.)\*\*/gi, '**$1**');
-    auditLogs.push("Q&A 줄바꿈 2열 분리 치유");
-  }
-
-  // 3) 볼드 기호 안쪽 공백 정돈 (** 단어 ** -> **단어**)
-  if (/\*\*\s+[^*]+?\s+\*\*/.test(healed)) {
-    healed = healed.replace(/\*\*\s+([^*]+?)\s+\*\*/g, '**$1**')
-                   .replace(/\*\*\s+([^*]+?)\*\*/g, '**$1**')
-                   .replace(/\*\*([^*]+?)\s+\*\*/g, '**$1**');
-    auditLogs.push("볼드 공백 정돈");
-  }
-
-  // 4) 특수문자 및 수식 인라인 백틱화
-  healed = healed.replace(/\$(?:Strg|Ctrl|Win|Shift|Alt|Esc)\s*[^$\n]*\$/gi, (match) => {
-    return `\`${match.replace(/\$/g, '').trim()}\``;
-  });
-  healed = healed.replace(/\$([A-Za-z0-9_-]+)\$/g, '`$1`');
-  healed = healed.replace(/\\times/g, 'x')
-                 .replace(/\\circ/g, '°')
-                 .replace(/\\approx/g, '≈')
-                 .replace(/~/g, '-');
-
-  // 5) 연속 빈 줄 압축
-  healed = healed.replace(/\n{3,}/g, '\n\n').trim();
-
-  if (auditLogs.length > 0) {
-    console.log(`   🩺 [자가 치유 완료]: ${auditLogs.join(' | ')}`);
-  }
-
-  return healed;
+  if((body.match(/^\\x60\\x60\\x60/gm)||[]).length%2) errors.push('unclosed code fence');
+  if(langCode!=='ko' && /[가-힣]/.test(body)) errors.push('Korean in non-Korean article');
+  return errors;
 }
 
-if (!fs.existsSync(TOPICS_FILE)) {
+if (!DRY_RUN && !fs.existsSync(TOPICS_FILE)) {
   console.error("❌ topics.txt 파일이 존재하지 않습니다.");
   process.exit(1);
 }
 
-const fileContent = fs.readFileSync(TOPICS_FILE, 'utf-8');
+const fileContent = DRY_RUN ? 'offline test topic' : fs.readFileSync(TOPICS_FILE, 'utf-8');
 const lines = fileContent.split(/\r?\n/).map(l => l.trim()).filter(l => l.length > 0);
 
 if (lines.length === 0) {
@@ -311,19 +278,21 @@ const fileSlug = `post-${Date.now().toString(36)}`;
 async function fetchWithRetry(prompt, maxRetries = 3, delayMs = 3000) {
   for (let attempt = 1; attempt <= maxRetries; attempt++) {
     try {
-      const response = await ai.models.generateContent({
-        model: 'gemini-3.5-flash-lite',
-        contents: prompt,
-        config: {
-          maxOutputTokens: 4096,
-          temperature: 0.7,
-        }
+      const response = await fetch('https://api.openai.com/v1/responses', {
+        method: 'POST',
+        headers: { Authorization: `Bearer ${OPENAI_API_KEY}`, 'Content-Type': 'application/json' },
+        body: JSON.stringify({ model: 'gpt-6-luna', input: prompt, max_output_tokens: 6500 }),
       });
-      return response.text;
+      const result = await response.json();
+      if (!response.ok) throw new Error(`OpenAI HTTP ${response.status}: ${JSON.stringify(result.error || result).slice(0, 400)}`);
+      const output = (result.output || []).flatMap((item) => item.content || [])
+        .filter((part) => part.type === 'output_text').map((part) => part.text).join('\n');
+      if (!output.trim()) throw new Error('No text in GPT response: ' + (result.status || 'unknown'));
+      return output;
     } catch (error) {
-      console.warn(`⚠️ [호출 재시도 ${attempt}/${maxRetries}]: ${error.message}`);
-      if (attempt === maxRetries) { throw error; }
-      await delay(delayMs);
+      console.warn(`GPT retry ${attempt}/${maxRetries}: ${error.message}`);
+      if (attempt === maxRetries) throw error;
+      await delay(delayMs * attempt);
     }
   }
 }
@@ -343,28 +312,28 @@ async function generateSinglePost(lang, index) {
 You are a ${lang.persona}.
 Write a high-quality, practical IT/tech troubleshooting guide natively in ${lang.name}.
 Target Culture: "${lang.localeContext}"
-Assigned Situation: "${selectedScenario}"
+Optional illustrative situation (only if directly relevant; never present as a real experience): "${selectedScenario}"
 Topic: "${currentTopic}"
 
 [ADSENSE QUALITY & LENGTH REQUIREMENT]
-- For Korean (ko): Write exactly around 2,400 - 2,600 characters (do NOT exceed 3,000 characters).
+- For Korean (ko): Target 2,400 - 2,600 characters excluding whitespace and Markdown markers, adding helpful diagnosis and edge cases rather than filler.
 - For other languages: Write exactly 900 - 1,100 words.
 - Tone: Highly informative, professional, practical workplace advice.
 
 [STRUCTURE - STRICT 5 H2 HEADINGS]
-Use these exact H2 headings:
+Write five native-language, topic-specific H2 headings numbered 1 through 5, without generic unrelated wording:
 
 ## ${i18n.s1}
-Write 2 detailed paragraphs describing the sudden workplace IT crisis, the urgent deadline, and the initial panic based on: "${selectedScenario}".
+Describe topic-specific symptoms and safe initial checks. Do not fabricate emergencies, personal experiences, professional credentials or guarantees.
 
 ## ${i18n.s2}
-Write 2 analytical paragraphs explaining the technical root causes (system file locks, memory leak, background process deadlocks, or hardware driver conflicts).
+Explain plausible causes that are specifically relevant to the topic; separate established facts from possible causes.
 
 ## ${i18n.s3}
-Provide 3 concrete resolution steps matching "${lang.osUi}". Use clean numbered lists with practical action items and exact commands.
+Give three practical, accurate and ordered troubleshooting steps; only use UI labels in "${lang.osUi}" or commands when actually applicable.
 
 ## ${i18n.s4}
-Write 2 paragraphs of practical precautions and operational tips to prevent recurrence.
+Give topic-specific checks to verify resolution, realistic exceptions, precautions, and escalation steps.
 
 ## ${i18n.s5}
 Provide exactly 3 practical Q&A items. You MUST put an empty line between Question and Answer:
@@ -395,7 +364,7 @@ description: "Native concise description in ${lang.name} under 160 characters"
 publishDate: ${pubDateIso}
 image: "${coverUrl}"
 category: "tech"
-tags: ${JSON.stringify(i18n.tags)}
+tags: ["replace with 3-5 actual topic-specific native-language tags"]
 theme: "${selectedTheme.name}"
 ---
 `;
@@ -417,7 +386,7 @@ theme: "${selectedTheme.name}"
                                .replace(/category:\s*[^\n\r]+/i, "category: 'tech'");
 
       // 🩺 [자가 검수 및 치유 엔진 가동]
-      body = inspectAndHealMarkdown(body, lang.code);
+      body = inspectAndHealMarkdown(body);
 
       if (lang.code === 'ko') {
         console.log(`   📏 [1호기 본문 최종 글자 수] ${body.length}자 (애드센스 표준: 2,400~2,600자)`);
@@ -433,6 +402,9 @@ theme: "${selectedTheme.name}"
 
       text = `${frontmatter}\n\n${body}\n`;
     }
+
+    const validationErrors = validateGeneratedPost(text, lang.code);
+    if (validationErrors.length) throw new Error('Publishing blocked: ' + validationErrors.join(', '));
 
     const targetDir = path.join(POSTS_BASE_DIR, lang.code);
     if (!fs.existsSync(targetDir)) {
@@ -450,6 +422,13 @@ theme: "${selectedTheme.name}"
 }
 
 async function run() {
+  if (DRY_RUN) {
+    console.log('SAFE DRY RUN: no API calls, no files changed, no publishing');
+    const sample = '---\\ntitle: sample\\ndescription: sample\\npublishDate: 2026-10-28\\nimage: /images/tech-photo/test.jpg\\ncategory: tech\\ntheme: test\\n---\\n\\n## 1. Test\\nshort';
+    if (!validateGeneratedPost(sample,'ko').some(e=>e.startsWith('body length'))) throw new Error('Validation smoke test failed');
+    console.log('PASS: short malformed article blocked');
+    return;
+  }
   console.log("==================================================");
   console.log("⚡ [1호기 본진] (카테고리: tech) 12개국 고속 자동 포스팅 시작");
   console.log("==================================================");
@@ -464,13 +443,13 @@ async function run() {
     }
   }
 
-  if (successCount > 0) {
+  if (successCount === TARGET_LANGS.length) {
     lines.shift();
     fs.writeFileSync(TOPICS_FILE, lines.join('\n'), 'utf-8');
     console.log(`\n🧹 총 ${successCount}개국 포스팅 완료. topics.txt에서 주제를 제거했습니다.`);
     console.log(`📊 남은 주제 수: ${lines.length}개`);
   } else {
-    console.error("\n❌ 모든 언어 생성이 실패하여 topics.txt를 보존합니다.");
+    console.error(`\n❌ ${TARGET_LANGS.length - successCount}개 언어 실패. topics.txt 주제를 보존합니다.`);
     process.exit(1);
   }
 }
