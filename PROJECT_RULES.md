@@ -78,3 +78,7 @@ Status: Agreed operating principles; not a claim of deployment or AdSense approv
 - After 1ho content-formatting/readability fixes and QA, ASK the user before beginning the internal-linking phase; do not silently skip or start it.
 - Proposed implementation: link only to existing, verified posts in the SAME language; start with roughly 2-3 genuinely relevant links where appropriate (not a mandatory quota); check for broken links and avoid cross-language mismatches. Evaluate usefulness and crawlability; no AdSense approval guarantee.
 - Keep this item in the deferred work queue and raise it with the user at the appropriate milestone.
+
+## Low-cost card-news image plan (2026-10-29)
+- Prioritize high-volume, low-cost image creation. Use deterministic SVG-to-PNG card templates from verified post titles and key steps, rather than paid AI image generation per post. Validate all 12 language fonts, text wrapping, mobile legibility, relevance, and duplicates.
+- Preserve existing user-managed images; inventory before replacing. Keep all experiments on review branches; do not alter main, scheduled publishing, or run paid APIs. The image QA lead reports findings to 지이사 for consolidated owner reporting.
