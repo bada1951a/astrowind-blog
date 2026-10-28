@@ -171,29 +171,29 @@ const I18N_SECTIONS = {
 // =========================================================================
 function inspectAndHealMarkdown(body) {
   return body.trim()
-    .replace(/^(#{1,6}\\s+)\\*\\*([^\\n]*?)\\*\\*/gm, '$1$2')
-    .replace(/\\*\\*\\s+([^*\\n]+?)\\s+\\*\\*/g, '**$1**')
-    .replace(/\\n{3,}/g, '\\n\\n');
+    .replace(/^(#{1,6}\s+)\*\*([^\n]*?)\*\*/gm, '$1$2')
+    .replace(/\*\*\s+([^*\n]+?)\s+\*\*/g, '**$1**')
+    .replace(/\n{3,}/g, '\n\n');
 }
 function validateGeneratedPost(text, langCode) {
   const errors = [];
-  const fm = text.match(/^---\\s*\\r?\\n([\\s\\S]*?)\\r?\\n---\\s*\\r?\\n/);
+  const fm = text.match(/^---\s*\r?\n([\s\S]*?)\r?\n---\s*\r?\n/);
   if (!fm) return ['frontmatter missing'];
   const meta = fm[1], body = text.slice(fm[0].length);
   for (const field of ['title', 'description', 'publishDate', 'image', 'theme'])
-    if (!new RegExp('^' + field + ':\\\\s*\\\\S', 'm').test(meta)) errors.push(field + ' missing');
-  if (!/^category:\\s*['"]?tech['"]?\\s*$/m.test(meta)) errors.push('category must be tech');
-  const readable = body.replace(/!\\[[^\\]]*\\]\\([^)]*\\)/g,'').replace(/[#*_\\x60>]/g,'');
-  const count = langCode === 'ko' ? [...readable.replace(/\\s/g,'')].length : (readable.match(/\\S+/g)||[]).length;
+    if (!new RegExp('^' + field + ':\\s*\\S', 'm').test(meta)) errors.push(field + ' missing');
+  if (!/^category:\s*['"]?tech['"]?\s*$/m.test(meta)) errors.push('category must be tech');
+  const readable = body.replace(/!\[[^\]]*\]\([^)]*\)/g,'').replace(/[#*_\x60>]/g,'');
+  const count = langCode === 'ko' ? [...readable.replace(/\s/g,'')].length : (readable.match(/\S+/g)||[]).length;
   if (count < (langCode==='ko'?1900:700) || count > (langCode==='ko'?3100:1400)) errors.push('body length '+count);
-  const headings = body.match(/^##\\s+[^\\n]+/gm)||[];
+  const headings = body.match(/^##\s+[^\n]+/gm)||[];
   if (headings.length !== 5) errors.push('exactly 5 H2 headings required');
   for(let n=1;n<=5;n++) if(!headings[n-1]?.startsWith('## '+n+'. ')) errors.push('H2 order '+n);
   for(let n=1;n<=3;n++){
-    if((body.match(new RegExp('\\\\*\\\\*Q'+n+'\\\\.\\\\*\\\\*','gi'))||[]).length!==1) errors.push('Q'+n+' missing or duplicated');
-    if((body.match(new RegExp('\\\\*\\\\*A'+n+'\\\\.\\\\*\\\\*','gi'))||[]).length!==1) errors.push('A'+n+' missing or duplicated');
+    if((body.match(new RegExp('\\*\\*Q'+n+'\\.\\*\\*','gi'))||[]).length!==1) errors.push('Q'+n+' missing or duplicated');
+    if((body.match(new RegExp('\\*\\*A'+n+'\\.\\*\\*','gi'))||[]).length!==1) errors.push('A'+n+' missing or duplicated');
   }
-  if((body.match(/^\\x60\\x60\\x60/gm)||[]).length%2) errors.push('unclosed code fence');
+  if((body.match(/^\x60\x60\x60/gm)||[]).length%2) errors.push('unclosed code fence');
   if(langCode!=='ko' && /[가-힣]/.test(body)) errors.push('Korean in non-Korean article');
   return errors;
 }
@@ -430,7 +430,7 @@ theme: "${selectedTheme.name}"
 async function run() {
   if (DRY_RUN) {
     console.log('SAFE DRY RUN: no API calls, no files changed, no publishing');
-    const sample = '---\\ntitle: sample\\ndescription: sample\\npublishDate: 2026-10-28\\nimage: /images/tech-photo/test.jpg\\ncategory: tech\\ntheme: test\\n---\\n\\n## 1. Test\\nshort';
+    const sample = '---\ntitle: sample\ndescription: sample\npublishDate: 2026-10-28\nimage: /images/tech-photo/test.jpg\ncategory: tech\ntheme: test\n---\n\n## 1. Test\nshort';
     if (!validateGeneratedPost(sample,'ko').some(e=>e.startsWith('body length'))) throw new Error('Validation smoke test failed');
     console.log('PASS: short malformed article blocked');
     return;
