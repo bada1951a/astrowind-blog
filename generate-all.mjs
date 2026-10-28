@@ -291,6 +291,12 @@ const fileSlug = 'post-' + createHash('sha256').update(currentTopic).digest('hex
 // =========================================================================
 // [호출 함수] maxOutputTokens: 4096 (2,500자 정량 생성 최적화)
 // =========================================================================
+// Permanent API errors cannot be fixed by immediately repeating the same paid request.
+function shouldRetryOpenAIStatus(status, errorCode = '') {
+  if (status === 429 && errorCode === 'insufficient_quota') return false;
+  return status === 408 || status === 409 || status === 429 || status >= 500;
+}
+
 async function fetchWithRetry(prompt, maxRetries = 3, delayMs = 3000) {
   for (let attempt = 1; attempt <= maxRetries; attempt++) {
     try {
@@ -300,14 +306,18 @@ async function fetchWithRetry(prompt, maxRetries = 3, delayMs = 3000) {
         body: JSON.stringify({ model: 'gpt-6-luna', input: prompt, max_output_tokens: 6500 }),
       });
       const result = await response.json();
-      if (!response.ok) throw new Error(`OpenAI HTTP ${response.status}: ${JSON.stringify(result.error || result).slice(0, 400)}`);
+      if (!response.ok) {
+        const apiError = new Error(`OpenAI HTTP ${response.status}: ${JSON.stringify(result.error || result).slice(0, 400)}`);
+        apiError.retryable = shouldRetryOpenAIStatus(response.status, result.error?.code);
+        throw apiError;
+      }
       const output = (result.output || []).flatMap((item) => item.content || [])
         .filter((part) => part.type === 'output_text').map((part) => part.text).join('\n');
       if (!output.trim()) throw new Error('No text in GPT response: ' + (result.status || 'unknown'));
       return output;
     } catch (error) {
       console.warn(`GPT retry ${attempt}/${maxRetries}: ${error.message}`);
-      if (attempt === maxRetries) throw error;
+      if (attempt === maxRetries || error.retryable === false) throw error;
       await delay(delayMs * attempt);
     }
   }
@@ -461,6 +471,7 @@ async function run() {
     if (!validateGeneratedPost(brokenFaqSample, 'ja').includes('FAQ sequence or missing FAQ content')) throw new Error('Empty FAQ question was not blocked');
     const repairedFaq = inspectAndHealMarkdown('**Q1. 와이파이 연결 오류인가요?**  \n**A1.** 답변');
     if (!repairedFaq.includes('**Q1.** 와이파이 연결 오류인가요?\n\n**A1.**')) throw new Error('FAQ bold-question repair or paragraph separation failed');
+    if (shouldRetryOpenAIStatus(400) || shouldRetryOpenAIStatus(401) || shouldRetryOpenAIStatus(403) || shouldRetryOpenAIStatus(429, 'insufficient_quota') || !shouldRetryOpenAIStatus(429, 'rate_limit_exceeded') || !shouldRetryOpenAIStatus(503)) throw new Error('OpenAI retry status classification regression');
     if (!getKstPublishDateIso().endsWith('T10:00:00.000Z')) throw new Error('KST 19:00 publish timestamp regression');
     if (!validateGeneratedPost(sample.replace('image: /images/tech-photo/test.jpg', 'image: https://example.com/other.jpg'), 'ko').includes('image must use /images/tech-photo')) throw new Error('Tech image path gate regression');
     console.log('PASS: Korean/Japanese length gates, FAQ repair, KST publish timestamp, and tech image path gate');
