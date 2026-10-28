@@ -1,4 +1,4 @@
-name: Free QA Team (read-only)
+name: Free QA Team (read-only, parallel checks)
 on:
   pull_request:
     branches: [main]
@@ -31,4 +31,52 @@ jobs:
         with:
           name: free-qa-markdown-report
           path: qa-report.json
+          retention-days: 14
+
+  link-and-image-audit:
+    name: Jisawon - Internal links and image references
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Check local references (read-only)
+        run: |
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+          import path from 'node:path';
+          const root = 'src/data/post';
+          let files=0, checked=0;
+          const findings=[];
+          for(const lang of fs.readdirSync(root)){
+            const folder=path.join(root,lang);
+            if(!fs.statSync(folder).isDirectory())continue;
+            for(const name of fs.readdirSync(folder).filter(x=>/\.mdx?$/.test(x))){
+              files++;
+              const file=path.join(folder,name), src=fs.readFileSync(file,'utf8');
+              const matches=[...src.matchAll(/!?(?:\[[^\]]*\]\(([^)]+)\))|(?:\bsrc=["']([^"']+)["'])/g)];
+              for(const m of matches){
+                const target=(m[1]||m[2]||'').trim().split(/\s+["']/)[0].split(/[?#]/)[0];
+                if(!target||/^(https?:|data:|mailto:|tel:|#)/i.test(target))continue;
+                checked++;
+                if(target.startsWith('/')){
+                  if(!path.extname(target))continue; // routed internal page, not a local asset
+                  const local=path.join('public',target.slice(1));
+                  if(!fs.existsSync(local))findings.push({file,target,code:'missing-local-asset'});
+                }else if(/\.(?:png|jpe?g|gif|svg|webp|avif|pdf)$/i.test(target)){
+                  const local=path.resolve(path.dirname(file),target);
+                  if(!fs.existsSync(local))findings.push({file,target,code:'missing-relative-asset'});
+                }
+              }
+            }
+          }
+          fs.writeFileSync('qa-links-report.json',JSON.stringify({files,checked,totalFlags:findings.length,findings},null,2));
+          console.log(JSON.stringify({files,checked,totalFlags:findings.length}));
+          NODE
+      - uses: actions/upload-artifact@v4
+        with:
+          name: free-qa-links-report
+          path: qa-links-report.json
           retention-days: 14
