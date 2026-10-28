@@ -1,0 +1,34 @@
+name: Free QA Team (read-only)
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'src/data/post/**'
+      - 'scripts/audit-posts.mjs'
+      - '.github/workflows/free-qa-team.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  markdown-audit:
+    name: Jidaeri - Markdown and language QA
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Audit posts (no API calls or edits)
+        run: node scripts/audit-posts.mjs > qa-report.json
+      - name: Print audit summary
+        run: |
+          node --input-type=module -e "import fs from 'node:fs'; const d=JSON.parse(fs.readFileSync('qa-report.json','utf8')); console.log(JSON.stringify({totalFiles:d.totalFiles,totalFlags:d.totalFlags,byLanguage:d.byLanguage,byCode:d.byCode},null,2));"
+      - name: Upload audit report
+        uses: actions/upload-artifact@v4
+        with:
+          name: free-qa-markdown-report
+          path: qa-report.json
+          retention-days: 14
