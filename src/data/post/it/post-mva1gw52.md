@@ -2,7 +2,9 @@
 title: "Disco C Pieno su Windows 11: Come Liberare Spazio e Cancellare i File Temporanei in Sicurezza"
 description: "Guida pratica da Milano: risolvi il problema del disco C pieno su Windows 11 eliminando file temporanei e ottimizzando l'infrastruttura IT."
 publishDate: 2026-10-15T16:00:00.000Z
-image: "/images/tech-photo/tech-photo (20).jpg"
+# Pexels cover: Jakub Zerdzicki — https://www.pexels.com/photo/modern-office-desk-with-laptop-and-external-drives-28729682/
+image: "https://images.pexels.com/photos/28729682/pexels-photo-28729682/free-photo-of-modern-office-desk-with-laptop-and-external-drives.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "Portatile e unità esterne su una scrivania"
 category: 'tech'
 tags: ["Windows 11", "IT Support", "Ottimizzazione", "Milano"]
 theme: "Cobalt Enterprise Lab"
@@ -37,7 +39,8 @@ Il metodo più rapido e sicuro integrato in Windows 11.
 
 
 
-![Tech & IT Solution Guide](https://picsum.photos/seed/computer625/1000/550)
+<!-- Photo by Andrea Piacquadio on Pexels: https://www.pexels.com/photo/black-square-device-on-brown-wooden-table-3915760/ -->
+![Una persona collega un disco rigido esterno a un portatile.](https://images.pexels.com/photos/3915760/pexels-photo-3915760.jpeg?auto=compress&cs=tinysrgb&w=1200)
 
 ### 2. Pulizia Disco Avanzata (Pulizia file di sistema)
 Per eliminare residui che il Sensore Memoria potrebbe ignorare, usiamo lo storico ma potentissimo strumento di amministrazione.
