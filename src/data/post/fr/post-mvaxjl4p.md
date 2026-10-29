@@ -2,7 +2,8 @@
 title: "Windows 10 lent au démarrage : Désactiver les applications au lancement en 1 minute"
 description: "Comment résoudre un PC Windows 10 qui rame au démarrage en plein sprint à Paris. Guide rapide et technique."
 publishDate: 2026-10-16T13:30:00.000Z
-image: "/images/tech-photo/tech-photo (2).jpg"
+image: "https://images.pexels.com/photos/7864378/pexels-photo-7864378.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "undefined"
 category: 'tech'
 tags: ["Windows 10", "Optimisation", "Productivite", "Astuce IT", "Bureau Paris"]
 theme: "Cyberpunk Terminal"
@@ -14,7 +15,7 @@ theme: "Cyberpunk Terminal"
 
 Il est 8h55 dans notre bureau tech à Paris. Le sprint final pour la livraison de notre nouvelle application client commence dans exactement cinq minutes, et c'est le moment que choisit mon vieux PC sous Windows 10 pour faire des siennes. Je redémarre en catastrophe suite à une mise à jour bloquée, et là, c'est le drame : la barre des tâches met trois plombes à s'afficher, Slack refuse de s'ouvrir, et la diode du disque dur clignote d'un rouge anxiogène. Pendant que l'équipe s'agite sur notre canal de communication, je regarde mon écran figé, sueur froide au front.
 
-![Tech & IT Solution Guide](https://picsum.photos/seed/computer778/1000/550)
+![A person working with a computer program open on a laptop.](https://images.pexels.com/photos/3888149/pexels-photo-3888149.jpeg?auto=compress&cs=tinysrgb&w=1200)
 
 Ce genre de lenteur extrême au boot n'arrive jamais par hasard. Après avoir pesté contre le système, j'ai pris une minute pour analyser le problème à froid une fois la tempête passée.
 

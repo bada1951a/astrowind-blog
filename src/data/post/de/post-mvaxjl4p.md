@@ -2,7 +2,8 @@
 title: "Windows 10 Start stoppen: Autostart aufräumen in unter einer Minute"
 description: "Dein Windows 10 Laptop braucht ewig zum Hochfahren vor dem nächsten Rollout? So entrümpelst du den Autostart blitzschnell im Berliner Tech-Hub."
 publishDate: 2026-10-16T12:15:00.000Z
-image: "/images/tech-photo/tech-photo (18).jpg"
+image: "https://images.pexels.com/photos/7864378/pexels-photo-7864378.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "undefined"
 category: 'tech'
 tags: ["Windows 10", "Performance", "Autostart", "IT-Tipps", "Produktivität"]
 theme: "Warm Coffee Latte"
@@ -14,7 +15,7 @@ Es war kurz vor 9 Uhr morgens in unserem Berliner Tech-Hub in Mitte. Der Espress
 <strong>Praxis-Tipp aus dem Büroalltag:</strong> Ein langsamer Systemstart ist fast nie ein Problem von Windows selbst, sondern schlicht das Resultat von Dutzenden Programmen, die sich ungefragt beim Systemstart ewig einnisten. Wer hier aufräumt, gewinnt sofort spürbar Zeit und Nerven.
 </div>
 
-![Tech Hardware Guide](https://images.unsplash.com/photo-1607604276583-eef5d076aa5f? auto=format&fit=crop&w=1200&h=675&q=85)
+![A person working with a computer program open on a laptop.](https://images.pexels.com/photos/3888149/pexels-photo-3888149.jpeg?auto=compress&cs=tinysrgb&w=1200)
 
 ### Warum der Rechner plötzlich kriecht: Die 3 Hauptverdächtigen
 

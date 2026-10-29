@@ -2,7 +2,8 @@
 title: "윈도우 10 부팅 속도 개선: 1분 만에 시작 프로그램 비활성화하는 방법"
 description: "판교 IT 기업 사무실에서 겪은 부팅 지연 대란! 윈도우 10 시작 프로그램 관리로 1분 만에 부팅 속도를 극적으로 끌어올리는 실무 가이드."
 publishDate: 2026-10-16T08:30:00.000Z
-image: "/images/tech-photo/tech-photo (31).jpg"
+image: "https://images.pexels.com/photos/7864378/pexels-photo-7864378.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "undefined"
 category: 'tech'
 tags: ["Windows10", "PCOptimization", "ITTips", "Productivity"]
 theme: "Sunset Horizon Coral"
@@ -32,7 +33,7 @@ PC를 켤 때마다 화면은 켜지는데 마우스 커서가 버벅이고 브�
 
 
 
-![Tech Hardware Guide](https://images.unsplash.com/photo-1519389950473-47ba0277781c? auto=format&fit=crop&w=1200&h=675&q=85)
+![A person working with a computer program open on a laptop.](https://images.pexels.com/photos/3888149/pexels-photo-3888149.jpeg?auto=compress&cs=tinysrgb&w=1200)
 
 ## 2. 1분 만에 끝내는 시작 프로그램 비활성화 스텝별 가이드
 

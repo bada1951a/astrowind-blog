@@ -2,7 +2,8 @@
 title: "渋谷のITオフィス発：Windows 10の起動が劇的に速くなる！スタートアップ無効化の裏技"
 description: "プロジェクト納品直前の緊迫した現場で、重くなったWindows 10の起動を1分で劇的に改善するスタートアップ無効化の具体的な手順を現役エンジニアが徹底解説。"
 publishDate: 2026-10-16T11:00:00.000Z
-image: "/images/tech-photo/tech-photo (26).jpg"
+image: "https://images.pexels.com/photos/7864378/pexels-photo-7864378.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "undefined"
 category: 'tech'
 tags: ["Windows10", "PC高速化", "業務効率化", "トラブルシューティング"]
 theme: "Tokyo Neon Violet"
@@ -12,7 +13,7 @@ theme: "Tokyo Neon Violet"
 
 ### なぜWindows 10の起動はこれほど遅くなるのか？3つの根本原因
 
-![Tech & IT Solution Guide](https://picsum.photos/seed/computer632/1000/550)
+![A person working with a computer program open on a laptop.](https://images.pexels.com/photos/3888149/pexels-photo-3888149.jpeg?auto=compress&cs=tinysrgb&w=1200)
 
 PCを購入した当時はあんなにサクサク動いていたのに、数ヶ月、数年と使い続けるうちに起動が異常に遅くなる現象。これには明確なシステム上の理由があります。
 

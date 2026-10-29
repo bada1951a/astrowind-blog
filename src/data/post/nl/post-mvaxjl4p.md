@@ -2,7 +2,8 @@
 title: "Windows 10 trage opstart: Schakel opstartprogramma's uit in 1 minuut"
 description: "Los een trage Windows 10 opstart direct op. Stop achtergrondprocessen en versnel je pc op de tech campus in Eindhoven of Amsterdam binnen 60 seconden."
 publishDate: 2026-10-16T18:30:00.000Z
-image: "/images/tech-photo/tech-photo (19).jpg"
+image: "https://images.pexels.com/photos/7864378/pexels-photo-7864378.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "undefined"
 category: 'tech'
 tags: ["Windows10", "PCVersnellen", "ITTips", "Productiviteit"]
 theme: "Steel Silver Metallic"
@@ -14,7 +15,7 @@ Afgelopen dinsdagochtend om kwart voor negen op de High Tech Campus in Eindhoven
 <strong>Symptoom Checklist:</strong> Doet je Windows 10 pc er langer dan een minuut over om op te starten? Hoor je de ventilator loeien zodra het bureaublad verschijnt? Grote kans dat je systeem bezwijkt onder onnodige opstartprogramma's.
 </div>
 
-![Tech & IT Solution Guide](https://picsum.photos/seed/computer70/1000/550)
+![A person working with a computer program open on a laptop.](https://images.pexels.com/photos/3888149/pexels-photo-3888149.jpeg?auto=compress&cs=tinysrgb&w=1200)
 
 ### De echte boosdoeners achter een trage Windows 10 start
 

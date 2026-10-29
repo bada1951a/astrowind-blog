@@ -2,7 +2,8 @@
 title: "Windows 10 Lemot Saat Startup? Begini Cara Matikan Aplikasi Berjalan Otomatis dalam 1 Menit"
 description: "Atasi Windows 10 yang lemot saat booting di kantor startup Jakarta dengan mematikan aplikasi startup yang tidak perlu. Cepat, praktis, dan langsung ngebut!"
 publishDate: 2026-10-16T21:00:00.000Z
-image: "/images/tech-photo/tech-photo (7).jpg"
+image: "https://images.pexels.com/photos/7864378/pexels-photo-7864378.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "undefined"
 category: 'tech'
 tags: ["Windows 10", "Tips IT", "Produktivitas", "Troubleshooting"]
 theme: "Sunset Horizon Coral"
@@ -12,7 +13,7 @@ Jam menunjukkan pukul 08.55 WIB. Lima menit lagi *daily standup meeting* via Zoo
 
 Situasi seperti ini pasti sering bikin darah tinggi, kan? Kalau Anda bekerja di lingkungan cepat seperti *startup* Jakarta, menunggu laptop *loading* selama 5 sampai 10 menit adalah kemewahan yang tidak kita miliki. 
 
-![Tech & IT Solution Guide](https://picsum.photos/seed/computer216/1000/550)
+![A person working with a computer program open on a laptop.](https://images.pexels.com/photos/3888149/pexels-photo-3888149.jpeg?auto=compress&cs=tinysrgb&w=1200)
 
 Mari kita bedah kenapa hal ini bisa terjadi dan bagaimana cara membereskannya kurang dari 60 detik.
 

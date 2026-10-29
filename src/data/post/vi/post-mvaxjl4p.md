@@ -2,7 +2,8 @@
 title: "Khắc phục lỗi Windows 10 khởi động chậm: Tắt ứng dụng khởi động ngầm trong 1 phút"
 description: "Hướng dẫn thực chiến từ chuyên gia IT tại Hà Nội giúp xử lý dứt điểm tình trạng Windows 10 khởi động chậm, tối ưu hiệu năng chỉ trong 1 phút."
 publishDate: 2026-10-16T22:15:00.000Z
-image: "/images/tech-photo/tech-photo (34).jpg"
+image: "https://images.pexels.com/photos/7864378/pexels-photo-7864378.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "undefined"
 category: 'tech'
 tags: ["Windows 10", "Tối ưu hóa", "Thủ thuật IT", "Hiệu năng", "Dracula Dev"]
 theme: "Dracula Purple Dev"
@@ -62,7 +63,7 @@ Hoàn toàn không có gì nguy hiểm. Hệ thống sẽ không bị hỏng. B�
 
 
 
-![Tech & IT Solution Guide](https://picsum.photos/seed/computer289/1000/550)
+![A person working with a computer program open on a laptop.](https://images.pexels.com/photos/3888149/pexels-photo-3888149.jpeg?auto=compress&cs=tinysrgb&w=1200)
 
 ### 2. Tại sao tôi đã Disable ứng dụng rồi mà nó vẫn tự bật lên?
 Một số ứng dụng cứng đầu (đặc biệt là các phần mềm chat hoặc tool chỉnh sửa ảnh) có cài đặt ẩn bên trong tùy chọn (Settings) riêng của chúng. Bạn cần mở ứng dụng đó lên, vào mục Cài đặt và tìm dòng "Khởi động cùng Windows" để tắt hẳn đi.
