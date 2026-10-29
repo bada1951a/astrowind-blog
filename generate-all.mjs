@@ -10,7 +10,11 @@
 import fs from 'fs';
 import path from 'path';
 import crypto from 'crypto';
-import { canResumeGenerationManifest, createFreshGenerationManifest, GENERATION_RECIPE_VERSION } from './generation-recovery.mjs';
+import {
+  canResumeGenerationManifest,
+  createFreshGenerationManifest,
+  GENERATION_RECIPE_VERSION,
+} from './generation-recovery.mjs';
 
 const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
 if (!OPENAI_API_KEY) {
@@ -348,7 +352,7 @@ const THEME_PRESETS = [
     name: 'Modern Minimalist Slate',
     primaryColor: '#3b82f6',
     bgColor: '#f8fafc',
-    layout: '미니멀 가이드 스타일, 여백 중심의 깔끔한 단계별 넘버링, 직관적 핵심 요약',
+    layout: '미니멀 가이드 스��일, 여백 중심의 깔끔한 단계별 넘버링, 직관적 핵심 요약',
   },
   {
     id: 3,
