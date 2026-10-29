@@ -10,6 +10,7 @@
 import fs from 'fs';
 import path from 'path';
 import crypto from 'crypto';
+import { canResumeGenerationManifest, createFreshGenerationManifest, GENERATION_RECIPE_VERSION } from './generation-recovery.mjs';
 
 const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
 if (!OPENAI_API_KEY) {
@@ -305,35 +306,30 @@ function saveRecoveryManifest() {
   fs.writeFileSync(RECOVERY_MANIFEST_PATH, JSON.stringify(generationManifest, null, 2), 'utf-8');
 }
 
-let generationManifest = null;
+let previousManifest = null;
 if (fs.existsSync(RECOVERY_MANIFEST_PATH)) {
   try {
-    const previousManifest = JSON.parse(fs.readFileSync(RECOVERY_MANIFEST_PATH, 'utf-8'));
-    if (
-      previousManifest.version === 1 &&
-      previousManifest.topic === currentTopic &&
-      previousManifest.fileSlug &&
-      previousManifest.locales &&
-      typeof previousManifest.locales === 'object'
-    ) {
-      generationManifest = previousManifest;
-      console.log('♻️ 저장된 언어별 검증 결과를 복구해 이어서 진행합니다.');
-    }
+    previousManifest = JSON.parse(fs.readFileSync(RECOVERY_MANIFEST_PATH, 'utf-8'));
   } catch (error) {
     console.warn('⚠️ 생성 복구 manifest를 읽지 못해 새 세트를 시작합니다: ' + error.message);
   }
 }
 
-if (!generationManifest) {
-  generationManifest = {
-    version: 1,
+let generationManifest;
+if (canResumeGenerationManifest(previousManifest, currentTopic, GENERATION_RECIPE_VERSION)) {
+  generationManifest = previousManifest;
+  console.log('♻️ 같은 recipe 버전의 저장된 언어별 검증 결과를 복구해 이어서 진행합니다.');
+} else {
+  if (previousManifest?.topic === currentTopic && previousManifest.recipeVersion !== GENERATION_RECIPE_VERSION) {
+    console.warn('⚠️ 생성 recipe 버전이 달라 기존 locale 초안/검증 결과를 폐기하고 다시 생성합니다.');
+  }
+  generationManifest = createFreshGenerationManifest({
+    previousManifest,
     topic: currentTopic,
+    recipeVersion: GENERATION_RECIPE_VERSION,
     fileSlug: 'post-' + Date.now().toString(36),
     publishDate: getKstPublishDateIso(),
-    status: 'in_progress',
-    images: {},
-    locales: {},
-  };
+  });
 }
 fs.mkdirSync(RECOVERY_DIR, { recursive: true });
 saveRecoveryManifest();
