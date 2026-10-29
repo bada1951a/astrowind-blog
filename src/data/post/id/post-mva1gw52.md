@@ -2,7 +2,9 @@
 title: "Cara Mengatasi Drive C Penuh di Windows 11 dan Menghapus File Temp dengan Aman"
 description: "Panduan praktis teknisi IT startup Jakarta untuk mengatasi masalah drive C penuh di Windows 11 dan membersihkan file temp tanpa risiko kehilangan data penting."
 publishDate: 2026-10-15T21:00:00.000Z
-image: "/images/tech-photo/tech-photo (35).jpg"
+# Pexels cover: Jakub Zerdzicki — https://www.pexels.com/photo/modern-office-desk-with-laptop-and-external-drives-28729682/
+image: "https://images.pexels.com/photos/28729682/pexels-photo-28729682/free-photo-of-modern-office-desk-with-laptop-and-external-drives.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "Laptop dan hard drive eksternal di atas meja"
 category: 'tech'
 tags: ["Windows 11", "IT Support", "Troubleshooting", "Tips Teknologi"]
 theme: "Graphite Technical Paper"
@@ -14,7 +16,8 @@ Layar monitor di ruang server kantor kami di kawasan SCBD mendadak menyala merah
 <strong>Catatan Lapangan IT:</strong> Masalah Drive C penuh di Windows 11 jarang sekali disebabkan oleh dokumen pekerjaan biasa. 90 persen kasus di lingkungan kantor kami berakar dari tumpukan *cache* aplikasi modern, *installer* sisa pembaruan sistem, dan file sementara (*temp files*) yang dibiarkan menumpuk selama berbulan-bulan.
 </div>
 
-![Tech & IT Solution Guide](https://picsum.photos/seed/computer917/1000/550)
+<!-- Photo by Andrea Piacquadio on Pexels: https://www.pexels.com/photo/black-square-device-on-brown-wooden-table-3915760/ -->
+![Seseorang menghubungkan hard drive eksternal ke laptop.](https://images.pexels.com/photos/3915760/pexels-photo-3915760.jpeg?auto=compress&cs=tinysrgb&w=1200)
 
 ## Bedah Masalah: 3 Akar Penyebab Utama Drive C Penuh
 
