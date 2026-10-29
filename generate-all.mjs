@@ -57,14 +57,13 @@ function getPostImages(index) {
 // =========================================================================
 // 한국 시간(KST) 기준 당일 발행 날짜 생성
 // =========================================================================
-function getKstPublishDateIso(index) {
+function getKstPublishDateIso() {
   const now = new Date();
-  const kstTime = new Date(now.getTime() + 9 * 60 * 60 * 1000);
-  const year = kstTime.getUTCFullYear();
-  const month = String(kstTime.getUTCMonth() + 1).padStart(2, '0');
-  const day = String(kstTime.getUTCDate()).padStart(2, '0');
-  const minute = String((index * 5) % 60).padStart(2, '0');
-  return `${year}-${month}-${day}T03:${minute}:00.000Z`;
+  const kst = new Date(now.getTime() + 9 * 60 * 60 * 1000);
+  const year = kst.getUTCFullYear();
+  const month = kst.getUTCMonth() + 1;
+  const day = kst.getUTCDate();
+  return new Date(Date.UTC(year, month - 1, day, 10, 0, 0)).toISOString();
 }
 
 // =========================================================================
@@ -373,7 +372,7 @@ async function generateSinglePost(lang, index) {
   console.log(`\n🚀 [${index + 1}/12] ${lang.name} (${lang.code}) 1호기 본진 애드센스 표준 생성 중... (테마: ${selectedTheme.name})`);
 
   const { coverUrl, bodyUrl } = getPostImages(index);
-  const pubDateIso = getKstPublishDateIso(index);
+  const pubDateIso = getKstPublishDateIso();
 
   // 🎯 [애드센스 승인 최적화 프롬프트: 2,400~2,600자 정량화]
   const prompt = `
