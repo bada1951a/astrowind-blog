@@ -306,7 +306,7 @@ const delay = (ms) => new Promise((res) => setTimeout(res, ms));
 const fileSlug = `post-${Date.now().toString(36)}`;
 
 // =========================================================================
-// [호출 함수] maxOutputTokens: 4096 (2,500자 정량 생성 최적화)
+// [호출 함수] maxOutputTokens: 8192 (2,500자 정량 생성 최적화)
 // =========================================================================
 async function fetchWithRetry(prompt, maxRetries = 3, delayMs = 3000) {
   for (let attempt = 1; attempt <= maxRetries; attempt++) {
@@ -350,6 +350,10 @@ Topic: "${currentTopic}"
 - For Korean (ko): Write exactly around 2,400 - 2,600 characters (do NOT exceed 3,000 characters).
 - For other languages: Write exactly 900 - 1,100 words.
 - Tone: Highly informative, professional, practical workplace advice.
+- Narrative voice: Write in a first-person storytelling voice ("I"/the natural first-person form in ${lang.name}) from the assigned expert persona's perspective.
+- Open with a vivid but clearly illustrative scene based on the assigned situation; build a story arc from the urgent problem through diagnosis, safe action, and outcome, then explain the practical guidance.
+- Do not falsely claim that an illustrative scenario is a real customer case or the author's personal experience. Do not invent verified outcomes, quotations, or facts. Clearly frame hypothetical/composite events as illustrative.
+- Keep first-person narration throughout the opening and transitions, while making technical instructions, safety warnings, and sources precise and factual.
 
 [STRUCTURE - STRICT 5 H2 HEADINGS]
 Use these exact H2 headings:
