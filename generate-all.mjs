@@ -210,7 +210,9 @@ function validateGeneratedPost(text, langCode) {
   if (!/^image:\s*["']?\/images\/tech-photo\/[^\r\n]+/m.test(meta)) errors.push('image must use /images/tech-photo');
   // AI-generated body images must not bypass the manually managed 1ho tech-photo source.
   const bodyImages = [...body.matchAll(/!\[[^\]\r\n]*\]\(([^)\r\n]+)\)/g)];
-  if (bodyImages.some(match => !match[1].trim().startsWith('/images/tech-photo/')))
+  // Only accept images that are actually present in the approved local photo pool.
+  // A matching prefix alone can hide missing files or ../ traversal paths.
+  if (bodyImages.some(match => !localImages.includes(match[1].trim())))
     errors.push('body image must use /images/tech-photo');
   // Block image syntaxes not covered by the inline Markdown path check; never silently accept external images.
   if (/<img\b/i.test(body) || /!\[[^\]\r\n]*\]\[[^\]\r\n]*\]/.test(body))
@@ -525,6 +527,9 @@ async function run() {
     if (techPhotoUrl('sample #1?.jpg') !== '/images/tech-photo/sample%20%231%3F.jpg') throw new Error('Local photo filename URL escaping regression');
     if (!validateGeneratedPost(sample.replace('image: /images/tech-photo/test.jpg', 'image: https://example.com/other.jpg'), 'ko').includes('image must use /images/tech-photo')) throw new Error('Tech image path gate regression');
     if (!validateGeneratedPost(japaneseSample.replace('## 2. 原因', '![Untrusted](https://example.com/photo.jpg)\n\n## 2. 原因'), 'ja').includes('body image must use /images/tech-photo')) throw new Error('Untrusted body image gate regression');
+    if (validateGeneratedPost(japaneseSample.replace('## 2. 原因', `![Local](${localImages[0]})\n\n## 2. 原因`), 'ja').length !== 0) throw new Error('Existing local body image rejected');
+    if (!validateGeneratedPost(japaneseSample.replace('## 2. 原因', '![Missing](/images/tech-photo/missing-photo-never-exists.jpg)\n\n## 2. 原因'), 'ja').includes('body image must use /images/tech-photo')) throw new Error('Missing local body image gate regression');
+    if (!validateGeneratedPost(japaneseSample.replace('## 2. 原因', '![Escape](/images/tech-photo/../outside.jpg)\n\n## 2. 原因'), 'ja').includes('body image must use /images/tech-photo')) throw new Error('Traversal body image gate regression');
     if (!validateGeneratedPost(japaneseSample.replace('## 2. 原因', '<img src="https://example.com/photo.jpg">\n\n## 2. 原因'), 'ja').includes('unsupported body image syntax')) throw new Error('HTML image bypass regression');
     if (!validateGeneratedPost(japaneseSample.replace('## 2. 原因', '![Untrusted][external-photo]\n\n## 2. 原因'), 'ja').includes('unsupported body image syntax')) throw new Error('Reference image bypass regression');
     if (!validateGeneratedPost(sample.replace('category: tech', 'category: hardware'), 'ko').includes('category must be tech')) throw new Error('Tech-only category gate regression');
