@@ -2,7 +2,9 @@
 title: "Jak zwolnić dysk C w Windows 11: Bezpieczne czyszczenie plików Temp"
 description: "Walczysz z czerwonym paskiem zapełnienia dysku C w Windows 11? Sprawdzone, bezpieczne metody na czyszczenie plików tymczasowych wrocławskiego eksperta IT."
 publishDate: 2026-10-15T19:45:00.000Z
-image: "/images/tech-photo/tech-photo (38).jpg"
+# Pexels cover: Jakub Zerdzicki — https://www.pexels.com/photo/modern-office-desk-with-laptop-and-external-drives-28729682/
+image: "https://images.pexels.com/photos/28729682/pexels-photo-28729682/free-photo-of-modern-office-desk-with-laptop-and-external-drives.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "Laptop i dyski zewnętrzne na biurku"
 category: 'tech'
 tags: ["Windows 11", "Optymalizacja", "IT", "Poradnik"]
 theme: "Tokyo Neon Violet"
@@ -37,7 +39,8 @@ Wejdź w menu <strong>Ustawienia</strong> (skrót Windows + I), przejdź do zak�
 
 
 
-![Tech & IT Solution Guide](https://picsum.photos/seed/computer844/1000/550)
+<!-- Photo by Andrea Piacquadio on Pexels: https://www.pexels.com/photo/black-square-device-on-brown-wooden-table-3915760/ -->
+![Osoba podłącza zewnętrzny dysk twardy do laptopa.](https://images.pexels.com/photos/3915760/pexels-photo-3915760.jpeg?auto=compress&cs=tinysrgb&w=1200)
 
 ### 2. Ręczne czyszczenie folderu Temp przez okno Uruchom
 Często instalatory programów zostawiają śmieci w folderach użytkownika.
