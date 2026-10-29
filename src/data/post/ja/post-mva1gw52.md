@@ -2,7 +2,9 @@
 title: "Windows 11のCドライブ容量不足を安全に解消！一時ファイルを一掃する完全ガイド"
 description: "渋谷のオフィスでプロジェクト納品直前にCドライブが突然パンク！安全かつ確実な一時ファイルの削除方法と、容量不足を根本から防ぐ設定手順を現役エンジニアが徹底解説。"
 publishDate: 2026-10-15T11:00:00.000Z
-image: "/images/tech-photo/tech-photo (18).jpg"
+# Pexels cover: Jakub Zerdzicki — https://www.pexels.com/photo/modern-office-desk-with-laptop-and-external-drives-28729682/
+image: "https://images.pexels.com/photos/28729682/pexels-photo-28729682/free-photo-of-modern-office-desk-with-laptop-and-external-drives.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "机の上のノートパソコンと外付けドライブ"
 category: 'tech'
 tags: ["Windows11", "Cドライブ容量不足", "一時ファイル", "トラブルシューティング", "ITエンジニア"]
 theme: "Rosewood Hardware Guide"
@@ -12,7 +14,8 @@ theme: "Rosewood Hardware Guide"
 
 慌ててエクスプローラーを開いてCドライブのプロパティを確認すると、総容量512GBのSSDの残り容量がわずか「450MB」。原因を探るべく、まずはよくある「適当な不要フォルダの削除」を試みましたが見た目の容量はほとんど減りません。デバッグログやビルドキャッシュ、過去のWindows Updateの残骸がシステム深部にこびりついており、安易にファイルを消すとOS自体が起動しなくなるリスクすらありました。
 
-![Tech & IT Solution Guide](https://picsum.photos/seed/computer333/1000/550)
+<!-- Photo by Andrea Piacquadio on Pexels: https://www.pexels.com/photo/black-square-device-on-brown-wooden-table-3915760/ -->
+![外付けハードドライブをノートパソコンに接続する様子](https://images.pexels.com/photos/3915760/pexels-photo-3915760.jpeg?auto=compress&cs=tinysrgb&w=1200)
 
 そこで、現場のエンジニアとして培った知見を総動員し、OSの正規機能を安全に使いながら、システムやアプリに一切のダメージを与えずにCドライブの空き容量を爆発的に増やす手順を体系化しました。今回はその実践的なノウハウを余すところなくお届けします。
 
