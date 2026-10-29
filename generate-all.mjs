@@ -357,10 +357,19 @@ async function fetchWithRetry(prompt, maxRetries = 3, delayMs = 3000) {
   }
 }
 
+function isUsableExistingPostStat(stat) {
+  return stat.isFile() && stat.size > 0;
+}
+
 async function generateSinglePost(lang, index) {
   const i18n = I18N_SECTIONS[lang.code] || I18N_SECTIONS.ko;
   const existingPath = path.join(POSTS_BASE_DIR, lang.code, `${fileSlug}.md`);
   if (fs.existsSync(existingPath)) {
+    // Preserve existing content; never count an empty file or directory as a completed article.
+    if (!isUsableExistingPostStat(fs.statSync(existingPath))) {
+      console.error(`Existing post is empty or not a file; manual review required: ${existingPath}`);
+      return null;
+    }
     console.log(`Existing successful language post retained: ${lang.code}`);
     return true;
   }
@@ -506,6 +515,7 @@ async function run() {
     if (!validateGeneratedPost(brokenFaqSample, 'ja').includes('FAQ sequence or missing FAQ content')) throw new Error('Empty FAQ question was not blocked');
     const repairedFaq = inspectAndHealMarkdown('**Q1. 와이파이 연결 오류인가요?**  \n**A1.** 답변');
     if (!repairedFaq.includes('**Q1.** 와이파이 연결 오류인가요?\n\n**A1.**')) throw new Error('FAQ bold-question repair or paragraph separation failed');
+    if (isUsableExistingPostStat({ isFile: () => true, size: 0 }) || isUsableExistingPostStat({ isFile: () => false, size: 100 }) || !isUsableExistingPostStat({ isFile: () => true, size: 1 })) throw new Error('Existing post file safety gate regression');
     if (shouldRetryOpenAIStatus(400) || shouldRetryOpenAIStatus(401) || shouldRetryOpenAIStatus(403) || shouldRetryOpenAIStatus(429, 'insufficient_quota') || !shouldRetryOpenAIStatus(429, 'rate_limit_exceeded') || !shouldRetryOpenAIStatus(503)) throw new Error('OpenAI retry status classification regression');
     if (!isCompletedOpenAIResponse({ status: 'completed' }) || isCompletedOpenAIResponse({ status: 'incomplete', output: [{ content: [{ type: 'output_text', text: 'partial' }] }] })) throw new Error('Incomplete GPT response gate regression');
     if (!getKstPublishDateIso().endsWith('T10:00:00.000Z')) throw new Error('KST 19:00 publish timestamp regression');
