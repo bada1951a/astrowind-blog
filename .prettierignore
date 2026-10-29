@@ -4,4 +4,4 @@ node_modules
 .changeset
 
 # Generated/published localized article content is validated separately.
-src/data/post/**
+src/data/post/**/*.md
