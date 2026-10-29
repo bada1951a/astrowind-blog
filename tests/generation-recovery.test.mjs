@@ -19,10 +19,7 @@ const savedManifest = {
 };
 
 test('same recipe version resumes validated locale drafts', () => {
-  assert.equal(
-    canResumeGenerationManifest(savedManifest, savedManifest.topic, GENERATION_RECIPE_VERSION),
-    true
-  );
+  assert.equal(canResumeGenerationManifest(savedManifest, savedManifest.topic, GENERATION_RECIPE_VERSION), true);
 });
 
 test('changed recipe version invalidates drafts but preserves set identity', () => {
