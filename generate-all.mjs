@@ -210,6 +210,11 @@ function validateGeneratedPost(text, langCode) {
   if (!/^category:\s*['"]?tech['"]?\s*$/m.test(meta)) errors.push('category must be tech');
   // Reject missing/empty tags and unexpected draft flags before saving generated articles.
   if (!/^tags:[ \t]*\[[ \t]*[^\]\s,][^\]\r\n]*\][ \t]*$/m.test(meta)) errors.push('tags must be a non-empty inline list');
+  // A syntactically non-empty array can still contain empty tags (e.g. [""], ["", "Wi-Fi"]).
+  // Reject empty values before writing so generated metadata cannot silently lose its taxonomy.
+  const tagList = meta.match(/^tags:[ \t]*\[([^\]\r\n]*)\][ \t]*$/m);
+  if (tagList && tagList[1].split(',').some(tag => !tag.trim().replace(/^['"]|['"]$/g, '').trim()))
+    errors.push('tags contain empty values');
   if (/^draft:[ \t]*/m.test(meta)) errors.push('unexpected draft flag');
   if (!/^image:\s*["']?\/images\/tech-photo\/[^\r\n]+/m.test(meta)) errors.push('image must use /images/tech-photo');
   // AI-generated body images must not bypass the manually managed 1ho tech-photo source.
@@ -544,6 +549,8 @@ async function run() {
     if (!validateGeneratedPost(japaneseSample.replace('title: sample', 'title: 한국어 제목'), 'ja').includes('Korean in non-Korean metadata')) throw new Error('Non-native metadata language gate regression');
     if (!validateGeneratedPost(sample.replace('category: tech', 'category: hardware'), 'ko').includes('category must be tech')) throw new Error('Tech-only category gate regression');
     if (!validateGeneratedPost(sample.replace('tags: ["Tech"]', 'tags: []'), 'ko').includes('tags must be a non-empty inline list')) throw new Error('Empty tags gate regression');
+    if (!validateGeneratedPost(sample.replace('tags: ["Tech"]', 'tags: [""]'), 'ko').includes('tags contain empty values')) throw new Error('Blank tag value gate regression');
+    if (!validateGeneratedPost(sample.replace('tags: ["Tech"]', 'tags: ["", "Wi-Fi"]'), 'ko').includes('tags contain empty values')) throw new Error('Mixed blank tag value gate regression');
     if (!validateGeneratedPost(sample.replace('tags: ["Tech"]\n', ''), 'ko').includes('tags must be a non-empty inline list')) throw new Error('Missing tags gate regression');
     if (!validateGeneratedPost(sample.replace('category: tech', 'category: tech\ndraft: true'), 'ko').includes('unexpected draft flag')) throw new Error('Unexpected draft flag gate regression');
     if (!validateGeneratedPost(sample.replace('category: tech', 'category: tech\ncategory: tech'), 'ko').includes('category duplicated')) throw new Error('Duplicate category gate regression');
