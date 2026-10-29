@@ -208,6 +208,9 @@ function validateGeneratedPost(text, langCode) {
   for (const field of ['title', 'description', 'publishDate', 'image', 'theme'])
     if (!new RegExp('^' + field + ':\\s*\\S', 'm').test(meta)) errors.push(field + ' missing');
   if (!/^category:\s*['"]?tech['"]?\s*$/m.test(meta)) errors.push('category must be tech');
+  // Reject missing/empty tags and unexpected draft flags before saving generated articles.
+  if (!/^tags:[ \t]*\[[ \t]*[^\]\s,][^\]\r\n]*\][ \t]*$/m.test(meta)) errors.push('tags must be a non-empty inline list');
+  if (/^draft:[ \t]*/m.test(meta)) errors.push('unexpected draft flag');
   if (!/^image:\s*["']?\/images\/tech-photo\/[^\r\n]+/m.test(meta)) errors.push('image must use /images/tech-photo');
   // AI-generated body images must not bypass the manually managed 1ho tech-photo source.
   const bodyImages = [...body.matchAll(/!\[[^\]\r\n]*\]\(([^)\r\n]+)\)/g)];
@@ -515,7 +518,7 @@ theme: "${selectedTheme.name}"
 async function run() {
   if (DRY_RUN) {
     console.log('SAFE DRY RUN: no API calls, no files changed, no publishing');
-    const sample = '---\ntitle: sample\ndescription: sample\npublishDate: 2026-10-28\nimage: /images/tech-photo/test.jpg\ncategory: tech\ntheme: test\n---\n\n## 1. Test\nshort';
+    const sample = '---\ntitle: sample\ndescription: sample\npublishDate: 2026-10-28\nimage: /images/tech-photo/test.jpg\ncategory: tech\ntags: ["Tech"]\ntheme: test\n---\n\n## 1. Test\nshort';
     if (!validateGeneratedPost(sample,'ko').some(e=>e.startsWith('body length'))) throw new Error('Validation smoke test failed for Korean');
     if (!validateGeneratedPost(sample,'ja').some(e=>e.startsWith('body length'))) throw new Error('Validation smoke test failed for Japanese');
     const japaneseBody = ['## 1. 症状', 'あ'.repeat(500), '## 2. 原因', 'あ'.repeat(500), '## 3. 対処法', 'あ'.repeat(500), '## 4. 注意点', 'あ'.repeat(500), '## 5. 質問', '**Q1.** 質問', '**A1.** 回答', '**Q2.** 質問', '**A2.** 回答', '**Q3.** 質問', '**A3.** 回答'].join('\n\n');
@@ -540,6 +543,9 @@ async function run() {
     if (!validateGeneratedPost(japaneseSample.replace('## 2. 原因', '![Untrusted][external-photo]\n\n## 2. 原因'), 'ja').includes('unsupported body image syntax')) throw new Error('Reference image bypass regression');
     if (!validateGeneratedPost(japaneseSample.replace('title: sample', 'title: 한국어 제목'), 'ja').includes('Korean in non-Korean metadata')) throw new Error('Non-native metadata language gate regression');
     if (!validateGeneratedPost(sample.replace('category: tech', 'category: hardware'), 'ko').includes('category must be tech')) throw new Error('Tech-only category gate regression');
+    if (!validateGeneratedPost(sample.replace('tags: ["Tech"]', 'tags: []'), 'ko').includes('tags must be a non-empty inline list')) throw new Error('Empty tags gate regression');
+    if (!validateGeneratedPost(sample.replace('tags: ["Tech"]\n', ''), 'ko').includes('tags must be a non-empty inline list')) throw new Error('Missing tags gate regression');
+    if (!validateGeneratedPost(sample.replace('category: tech', 'category: tech\ndraft: true'), 'ko').includes('unexpected draft flag')) throw new Error('Unexpected draft flag gate regression');
     if (!validateGeneratedPost(sample.replace('category: tech', 'category: tech\ncategory: tech'), 'ko').includes('category duplicated')) throw new Error('Duplicate category gate regression');
     if (!validateGeneratedPost(sample.replace('title: sample', 'title: Native Clear Title in English'), 'ko').includes('unreplaced prompt placeholder')) throw new Error('Prompt placeholder gate regression');
     console.log('PASS: Korean/Japanese length gates, FAQ repair, KST publish timestamp, and tech image path gate');
