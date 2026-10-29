@@ -2,7 +2,9 @@
 title: "Windows 11 C-schijf vol? Zo ruim je tijdelijke bestanden veilig op"
 description: "Ervaar je acute prestatieproblemen op je C-schijf vanuit ons tech-kantoor in Amsterdam of Eindhoven? Leer hoe je snel en veilig temp-bestanden opruimt."
 publishDate: 2026-10-15T18:30:00.000Z
-image: "/images/tech-photo/tech-photo (1).jpg"
+# Pexels cover: Jakub Zerdzicki — https://www.pexels.com/photo/modern-office-desk-with-laptop-and-external-drives-28729682/
+image: "https://images.pexels.com/photos/28729682/pexels-photo-28729682/free-photo-of-modern-office-desk-with-laptop-and-external-drives.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "Laptop en externe schijven op een bureau"
 category: 'tech'
 tags: ["Windows 11", "Schoonmaak", "IT Tips", "Prestaties"]
 theme: "Warm Coffee Latte"
@@ -14,7 +16,8 @@ Het was half drie op een drukke dinsdagmiddag op onze tech-campus in Eindhoven. 
 <strong>De IT-Expert Realiteitscode:</strong> Voordat je willekeurig mappen gaat verwijderen en hoopt dat Windows blijft werken, moet je begrijpen waar die gigabytes naartoe verdwijnen. Paniek leidt tot het weggooien van essentiële systeemarchieven.
 </div>
 
-![Tech & IT Solution Guide](https://picsum.photos/seed/computer771/1000/550)
+<!-- Photo by Andrea Piacquadio on Pexels: https://www.pexels.com/photo/black-square-device-on-brown-wooden-table-3915760/ -->
+![Iemand sluit een externe harde schijf aan op een laptop.](https://images.pexels.com/photos/3915760/pexels-photo-3915760.jpeg?auto=compress&cs=tinysrgb&w=1200)
 
 ## Waarom loopt je C-schijf zomaar vol?
 
