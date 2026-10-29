@@ -2,7 +2,9 @@
 title: "Khắc Phục Triệt Để Lỗi Laptop Không Nhận Màn Hình Phụ Và Chớp Nháy: Quy Trình QA Lab Doanh Nghiệp"
 description: "Hướng dẫn kỹ thuật chuyên sâu xử lý lỗi No Signal và màn hình phụ nhấp nháy khi kết nối laptop. Phân tích nguyên nhân và quy trình reset driver chuẩn IT Lab."
 publishDate: 2026-10-14T22:15:00.000Z
-image: "/images/tech-photo/tech-photo (4).jpg"
+image: "https://images.pexels.com/photos/29475620/pexels-photo-29475620.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "undefined"
+<!-- Pexels cover source: https://www.pexels.com/photo/man-using-editing-tools-on-dual-monitors-29475620/; inline source: https://www.pexels.com/photo/computer-with-two-displays-standing-on-a-desk-in-a-dimly-lit-room-18304031/ -->
 category: "Hardware"
 tags: ["Tech", "Troubleshooting", "Hardware"]
 theme: "Cobalt Enterprise Lab"
@@ -47,7 +49,7 @@ Khi cắm thêm màn hình thứ hai, hệ điều hành phải phân luồng t�
 
 
 
-![Hardware Diagnostic & Troubleshooting](https://images.unsplash.com/photo-1550745165-9bc0b252726f? auto=format&fit=crop&w=1000&h=550&q=80)
+![undefined](https://images.pexels.com/photos/18304031/pexels-photo-18304031.jpeg?auto=compress&cs=tinysrgb&w=1200)
 
 ### 2. Thất Bại Trong Quy Trình Bắt Tay Băng Thông (Link Training Failure) & Suy Hao Tín Hiệu
 Giao thức DisplayPort và HDMI tốc độ cao (FRL/TMDS) đòi hỏi quá trình "Link Training" giữa laptop và màn hình ngoài phải diễn ra trong vài mili-giây để xác định số lượng làn dữ liệu (Lanes) và điện áp truyền tải. 

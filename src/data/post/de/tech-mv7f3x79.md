@@ -2,7 +2,9 @@
 title: "Kein Signal & Bildschirmflackern am Laptop-Zweitmonitor: Der ultimative Guide zur Treiber-Wiederherstellung"
 description: "Schluss mit schwarzem Bildschirm und Flackern bei Multi-Monitor-Setups. Ein Sysadmin zeigt Schritt für Schritt, wie Sie Grafiktreiber sauber zurücksetzen."
 publishDate: 2026-10-14T12:15:00.000Z
-image: "/images/tech-photo/tech-photo (25).jpg"
+image: "https://images.pexels.com/photos/29475620/pexels-photo-29475620.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "undefined"
+<!-- Pexels cover source: https://www.pexels.com/photo/man-using-editing-tools-on-dual-monitors-29475620/; inline source: https://www.pexels.com/photo/computer-with-two-displays-standing-on-a-desk-in-a-dimly-lit-room-18304031/ -->
 category: 'tech'
 tags: ["Tech", "Troubleshooting", "Hardware"]
 theme: "Dracula Purple Dev"
@@ -30,7 +32,7 @@ Beim Anschließen eines externen Monitors handeln Grafikkarte und Display via I2
 
 
 
-![Tech Hardware Guide](https://images.unsplash.com/photo-1531297484001-80022131f5a1? auto=format&fit=crop&w=1200&h=675&q=85)
+![undefined](https://images.pexels.com/photos/18304031/pexels-photo-18304031.jpeg?auto=compress&cs=tinysrgb&w=1200)
 
 ### 2. Treiber-Fragmentierung durch Windows Update (DCH-Konflikte)
 Windows Update neigt dazu, funktionierende WHQL-Treiber der Chiphersteller (Intel, AMD, NVIDIA) im Hintergrund durch generische, abgespeckte OEM-Pakete zu überschreiben. 

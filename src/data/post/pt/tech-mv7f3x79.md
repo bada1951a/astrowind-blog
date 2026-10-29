@@ -2,7 +2,9 @@
 title: "Monitor Sem Sinal e Tela Piscando no Notebook: Guia Técnico de Reset de Driver e Otimização"
 description: "Resolva telas piscando e erro de sem sinal no segundo monitor do notebook. Passo a passo com DDU, handshake EDID e ajustes finos de latência."
 publishDate: 2026-10-14T17:15:00.000Z
-image: "/images/tech-photo/tech-photo (33).jpg"
+image: "https://images.pexels.com/photos/29475620/pexels-photo-29475620.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "undefined"
+<!-- Pexels cover source: https://www.pexels.com/photo/man-using-editing-tools-on-dual-monitors-29475620/; inline source: https://www.pexels.com/photo/computer-with-two-displays-standing-on-a-desk-in-a-dimly-lit-room-18304031/ -->
 category: "Hardware"
 tags: ["Hardware", "Notebook", "Monitores", "Drivers", "Troubleshooting"]
 theme: "Tokyo Neon Violet"
@@ -44,7 +46,7 @@ Ao conectar o cabo HDMI ou DisplayPort (via USB-C Alt Mode), a GPU e o monitor t
 
 
 
-![Hardware Diagnostic & Troubleshooting](https://images.unsplash.com/photo-1527443224154-c4a3942d3acf? auto=format&fit=crop&w=1000&h=550&q=80)
+![undefined](https://images.pexels.com/photos/18304031/pexels-photo-18304031.jpeg?auto=compress&cs=tinysrgb&w=1200)
 
 ### 2. Conflito de Drivers e Descompasso do Windows Update
 O Windows Update tem o péssimo hábito de sobrescrever silenciosamente drivers homologados (seja da NVIDIA, AMD ou Intel) por versões genéricas da biblioteca WHQL. Isso quebra a integração do subsistema *Multi-Plane Overlay* (MPO). Quando o MPO é acionado para renderizar janelas transparentes, aceleração por hardware em navegadores ou jogos em modo janela sem bordas, a interface gráfica perde o quadro e o sinal cai momentaneamente.

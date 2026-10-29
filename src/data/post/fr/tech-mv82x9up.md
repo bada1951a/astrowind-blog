@@ -2,7 +2,9 @@
 title: "Bécane noire, écran noir : Chronique d'une barrette de RAM récalcitrante un vendredi de prod"
 description: "Le ventilo tourne, la LED brille, mais le moniteur reste désespérément muet ? Guide de survie d'un ingénieur système pour décrasser sa RAM."
 publishDate: 2026-10-14T13:30:00.000Z
-image: "/images/tech-photo/tech-photo (22).jpg"
+image: "https://images.pexels.com/photos/6236574/pexels-photo-6236574.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "undefined"
+<!-- Pexels cover source: https://www.pexels.com/photo/components-of-computer-hardware-6236574/; inline source: https://www.pexels.com/photo/man-screwing-a-screw-into-a-computer-7859349/ -->
 category: "Hardware"
 tags: ["SysAdmin", "Hardware", "Troubleshooting", "RAM", "LinuxWindows"]
 theme: "Steel Silver Metallic"
@@ -17,7 +19,7 @@ Vendredi, 17h45. Le commit final de la semaine est prêt à être poussé, la ma
 <strong>Diagnostic terrain :</strong> Faux contact RAM / Oxydation des pins / Slot DIMM défaillant.
 </div>
 
-![Hardware Diagnostic & Troubleshooting](https://picsum.photos/seed/hardware-657/1000/550)
+![undefined](https://images.pexels.com/photos/7859349/pexels-photo-7859349.jpeg?auto=compress&cs=tinysrgb&w=1200)
 
 ## Anatomie d'un plantage à la con : Pourquoi ce putain d'écran reste noir ?
 

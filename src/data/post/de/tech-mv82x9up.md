@@ -2,7 +2,9 @@
 title: "Schwarzer Bildschirm, Lüfter drehen: Wenn der RAM wieder Geister hostet"
 description: "Rechner läuft, Monitor bleibt schwarz? Wie du RAM-Kontakte reinigst und Slots debuggst wie ein echter Sysadmin."
 publishDate: 2026-10-14T12:15:00.000Z
-image: "/images/tech-photo/tech-photo (10).jpg"
+image: "https://images.pexels.com/photos/6236574/pexels-photo-6236574.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "undefined"
+<!-- Pexels cover source: https://www.pexels.com/photo/components-of-computer-hardware-6236574/; inline source: https://www.pexels.com/photo/man-screwing-a-screw-into-a-computer-7859349/ -->
 category: 'tech'
 tags: ["Sysadmin", "Hardware", "Troubleshooting", "RAM"]
 theme: "Retro Monokai"
@@ -16,7 +18,7 @@ Freitagnachmittag, 16:45 Uhr. Der letzte Deployment-Lauf für das Release am Mon
 [16:48:20] ERROR: POST halted. No display signal. CPU initialization failed or RAM missing/unstable.
 </div>
 
-![Tech Hardware Guide](https://images.unsplash.com/photo-1544197150-b99a580bb7a8? auto=format&fit=crop&w=1200&h=675&q=85)
+![undefined](https://images.pexels.com/photos/7859349/pexels-photo-7859349.jpeg?auto=compress&cs=tinysrgb&w=1200)
 
 ## Root Cause Analysis: Warum streikt die Kiste genau jetzt?
 

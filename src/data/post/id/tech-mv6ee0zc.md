@@ -2,7 +2,9 @@
 title: "Panduan Teknisi: Mengatasi Keyboard Mekanikal Chattering dan Miss-Click Menggunakan Contact Cleaner"
 description: "Solusi mandiri mengatasi keyboard mekanikal double-click (chattering) dan tombol tidak merespons menggunakan contact cleaner secara aman dan efektif."
 publishDate: 2026-10-13T21:00:00.000Z
-image: "/images/tech-photo/tech-photo (14).jpg"
+image: "https://images.pexels.com/photos/2115257/pexels-photo-2115257.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "undefined"
+<!-- Pexels cover source: https://www.pexels.com/photo/close-up-photo-of-gaming-keyboard-2115257/; inline source: https://www.pexels.com/photo/close-up-of-computer-keyboards-20475584/ -->
 category: "Hardware"
 tags: ["Keyboard Mekanikal", "Troubleshooting", "Hardware", "DIY Repair"]
 theme: "Sandstone Desert Minimal"
@@ -38,7 +40,7 @@ Setiap mikrokontroler keyboard memiliki algoritma bawaan bernama *debounce delay
 Jika Anda menggunakan keyboard custom yang dilumasi secara manual (*factory lubed* atau *hand lubed*), penggunaan gemuk (*grease*) sintetis seperti Krytox yang berlebihan sering kali merembes ke titik temu bilah kontak tembaga. Karakter pelumas yang bersifat isolator listrik ini memutus aliran sinyal. Selain itu, pada keyboard yang sering dipukul keras atau jatuh, titik solderan kaki switch ke PCB dapat mengalami keretakan mikro (*hairline crack*), menyebabkan input terputus-putus tergantung sudut tekanan jari Anda.
 
 ---
-![Tech Diagnostics](https://images.unsplash.com/photo-1516321318423-f06f85e504b3? auto=format&fit=crop&w=1000&h=550&q=80)
+![undefined](https://images.pexels.com/photos/20475584/pexels-photo-20475584.jpeg?auto=compress&cs=tinysrgb&w=1200)
 
 ## 2. Prosedur Diagnostik Sistem Sebelum Tindakan Fisik
 

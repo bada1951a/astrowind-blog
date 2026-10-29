@@ -2,7 +2,9 @@
 title: "Mechanisch toetsenbord repareren: Haperende toetsen en dubbele invoer (chattering) oplossen"
 description: "Praktische handleiding van een IT-specialist voor het oplossen van chattering en weigerende mechanische switches met contactspray en firmware-tuning."
 publishDate: 2026-10-13T18:30:00.000Z
-image: "/images/tech-photo/tech-photo (6).jpg"
+image: "https://images.pexels.com/photos/2115257/pexels-photo-2115257.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "undefined"
+<!-- Pexels cover source: https://www.pexels.com/photo/close-up-photo-of-gaming-keyboard-2115257/; inline source: https://www.pexels.com/photo/close-up-of-computer-keyboards-20475584/ -->
 category: "Hardware"
 tags: ["Tech", "Troubleshooting", "Hardware"]
 theme: "Pastel Lavender Tech"
@@ -53,7 +55,7 @@ Bij moderne toetsenborden met Kailh- of Gateron hot-swap sockets zitten de schak
 Elke mechanische schakelaar stuitert van nature fysiek na (ongeveer 2 tot 5 milliseconden). De microcontroller van het toetsenbord filtert dit weg via een zogeheten *debounce-algoritme* (zoals Eager PR of Symmetric Defer). Wanneer de fysieke slijtage van het koperen bladveertje ervoor zorgt dat de stuitertijd langer duurt dan de softwarematige filterdrempel (vaak ingesteld op 5ms), wordt de stuitering geregistreerd als een volwaardige tweede toetsaanslag.
 
 ---
-![Tech Diagnostics](https://images.unsplash.com/photo-1527443224154-c4a3942d3acf? auto=format&fit=crop&w=1000&h=550&q=80)
+![undefined](https://images.pexels.com/photos/20475584/pexels-photo-20475584.jpeg?auto=compress&cs=tinysrgb&w=1200)
 
 ## Stapsgewijze probleemoplossing en herstelprocedure
 

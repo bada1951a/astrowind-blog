@@ -2,7 +2,9 @@
 title: "Monitor Esterno su Laptop: Risolvere Assenza di Segnale e Sfarfallio con il Reset dei Driver Grafici"
 description: "Guida tecnica sistemistica per eliminare sfarfallio e schermo nero su laptop multimonitor tramite diagnosi hardware e reinstallazione pulita dei driver."
 publishDate: 2026-10-14T16:00:00.000Z
-image: "/images/tech-photo/tech-photo (3).jpg"
+image: "https://images.pexels.com/photos/29475620/pexels-photo-29475620.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "undefined"
+<!-- Pexels cover source: https://www.pexels.com/photo/man-using-editing-tools-on-dual-monitors-29475620/; inline source: https://www.pexels.com/photo/computer-with-two-displays-standing-on-a-desk-in-a-dimly-lit-room-18304031/ -->
 category: "Hardware"
 tags: ["Tech", "Troubleshooting", "Hardware"]
 theme: "Nordic Clean Ice"
@@ -35,7 +37,7 @@ Quando una docking station o un'uscita diretta USB-C/HDMI non aggancia stabilmen
 #### 1. Corruzione del Cache EDID e Fallimento dell'Handshake HDCP
 L'EDID (*Extended Display Identification Data*) è la struttura dati con cui il monitor comunica risoluzione nativa, timing e frequenze supportate. Se la chiave crittografica HDCP o la lettura dei registri EDID fallisce durante il passaggio del segnale tra il bridge USB-C/DisplayPort e l'adattatore grafico, il Desktop Window Manager (DWM) disconnette l'output per prevenire anomalie di rendering, generando lo schermo nero transitorio.
 
-![Hardware Diagnostic & Troubleshooting](https://images.unsplash.com/photo-1517430816045-df4b7de11d1d? auto=format&fit=crop&w=1000&h=550&q=80)
+![undefined](https://images.pexels.com/photos/18304031/pexels-photo-18304031.jpeg?auto=compress&cs=tinysrgb&w=1200)
 
 ### 2. Timeout Detection and Recovery (TDR) ciclico del Driver
 Sotto Windows, se la GPU non risponde entro due secondi a una richiesta di scheduling grafico, il sistema innesca una procedura TDR (`TdrDelay`). Questo riavvia il thread del driver video in background. All'utente il fenomeno appare esattamente come uno sfarfallio persistente o un black screen di 1-3 secondi accompagnato dal suono di periferica disconnessa.

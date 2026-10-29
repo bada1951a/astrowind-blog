@@ -2,7 +2,9 @@
 title: "Il PC si accende ma lo schermo è nero: come resuscitare la RAM e i banchi"
 description: "Guida pratica da Ingegnere Sistemista Hardware per risolvere il problema del PC che si accende senza video a causa della RAM."
 publishDate: 2026-10-14T16:00:00.000Z
-image: "/images/tech-photo/tech-photo (32).jpg"
+image: "https://images.pexels.com/photos/6236574/pexels-photo-6236574.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "undefined"
+<!-- Pexels cover source: https://www.pexels.com/photo/components-of-computer-hardware-6236574/; inline source: https://www.pexels.com/photo/man-screwing-a-screw-into-a-computer-7859349/ -->
 category: "Hardware"
 tags: ["Hardware", "Troubleshooting", "RAM", "Manutenzione"]
 theme: "Sandstone Desert Minimal"
@@ -14,7 +16,7 @@ Venerdì pomeriggio, ore 17:45. Mancano esattamente quindici minuti alla chiusur
 💡 <strong>Consiglio pratico:</strong> Ventole a palla e schermo nero? Nella maggior parte dei casi non è colpa della GPU, ma di un classico falso contatto sui banchi di memoria. Non toccate subito i cavi HDMI o DisplayPort!
 </div>
 
-![Hardware Diagnostic & Troubleshooting](https://picsum.photos/seed/hardware-803/1000/550)
+![undefined](https://images.pexels.com/photos/7859349/pexels-photo-7859349.jpeg?auto=compress&cs=tinysrgb&w=1200)
 
 ### Anatomia di un Disastro: Le 3 Cause Reali
 

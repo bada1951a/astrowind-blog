@@ -2,7 +2,9 @@
 title: "Nhật Ký Xử Lý Sự Cố Ca Đêm: Khắc Phục Triệt Để Phím Cơ Bị Chattering Và Nuốt Phím Bằng Chai Phục Hồi Tiếp Điểm"
 description: "Cẩm nang chuyên sâu xử lý lỗi bàn phím cơ bị double phím hoặc liệt nút bằng dung dịch phục hồi tiếp điểm chuyên dụng từ kinh nghiệm IT Helpdesk ca đêm."
 publishDate: 2026-10-13T22:15:00.000Z
-image: "/images/tech-photo/tech-photo (5).jpg"
+image: "https://images.pexels.com/photos/2115257/pexels-photo-2115257.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "undefined"
+<!-- Pexels cover source: https://www.pexels.com/photo/close-up-photo-of-gaming-keyboard-2115257/; inline source: https://www.pexels.com/photo/close-up-of-computer-keyboards-20475584/ -->
 category: "Hardware"
 tags: ["Tech", "Troubleshooting", "Hardware"]
 theme: "Midnight Navy Royal"
@@ -35,7 +37,7 @@ Bài viết này là quy trình chuẩn hóa thực chiến rút ra từ hàng t
         |
         +---> 3. Rạn chân hàn PCB / Lỏng ngàm lá đồng Hot-swap socket
 ```
-![Tech Diagnostics](https://images.unsplash.com/photo-1555680202-c86f0e12f086? auto=format&fit=crop&w=1000&h=550&q=80)
+![undefined](https://images.pexels.com/photos/20475584/pexels-photo-20475584.jpeg?auto=compress&cs=tinysrgb&w=1200)
 
 ### 1. Nhiễm Bụi Vi Mô Và Oxy Hóa Bề Mặt Lá Đồng (Oxidation & Contamination)
 Khi bạn nhấn phím, stem trượt xuống tách hoặc đẩy hai lá đồng chạm vào nhau để khép kín mạch điện. Điểm tiếp xúc này thường được mạ vàng hoặc hợp kim chống rỉ mỏng. Sau 1-2 năm sử dụng trong môi trường văn phòng nóng ẩm tại Việt Nam:

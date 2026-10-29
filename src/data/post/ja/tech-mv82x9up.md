@@ -2,7 +2,9 @@
 title: "「ファンは回るのに画面が暗黒」…修羅場のITインフラ屋が教える、死んだRAMを生き返らせる禁断の接点復活手順"
 description: "金曜夜のデプロイ直前にPCが突然の画面ブラックアウト。通電するのにPOSTすら通過しない恐怖の「RAM接触不良」を、現場のノウハウで秒速解決する実践的リカバリ手順を徹底解説。"
 publishDate: 2026-10-14T11:00:00.000Z
-image: "/images/tech-photo/tech-photo (15).jpg"
+image: "https://images.pexels.com/photos/6236574/pexels-photo-6236574.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "undefined"
+<!-- Pexels cover source: https://www.pexels.com/photo/components-of-computer-hardware-6236574/; inline source: https://www.pexels.com/photo/man-screwing-a-screw-into-a-computer-7859349/ -->
 category: "Hardware"
 tags: ["ITインフラ", "トラブルシューティング", "RAM", "ハードウェア保守"]
 theme: "Teal Matrix Digital"
@@ -32,7 +34,7 @@ theme: "Teal Matrix Digital"
 
 
 
-![Hardware Diagnostic & Troubleshooting](https://picsum.photos/seed/hardware-511/1000/550)
+![undefined](https://images.pexels.com/photos/7859349/pexels-photo-7859349.jpeg?auto=compress&cs=tinysrgb&w=1200)
 
 ### 2. 熱膨張・収縮による「メモリスロットのラッチ浮き」
 高負荷なビルド処理やデプロイを繰り返すと、PC内部の温度が急激に上昇・冷却される。この熱サイクルによってマザーボードの基板とRAMがわずかに伸縮し、スロットの片側の固定ラッチ（ツメ）が緩んで数ミリ浮き上がり、特定のデータ線（アドレスバスやデータバス）の接続が物理的に切断される現象。

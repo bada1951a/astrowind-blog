@@ -2,7 +2,9 @@
 title: "Fallo de señal y parpadeo en monitor dual: Guía de reconfiguración y purga de drivers"
 description: "Soluciona la pérdida de señal y parpadeos en pantallas externas conectadas a portátiles mediante análisis de circuito y reinstalación limpia de controladores."
 publishDate: 2026-10-14T14:45:00.000Z
-image: "/images/tech-photo/tech-photo (1).jpg"
+image: "https://images.pexels.com/photos/29475620/pexels-photo-29475620.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "undefined"
+<!-- Pexels cover source: https://www.pexels.com/photo/man-using-editing-tools-on-dual-monitors-29475620/; inline source: https://www.pexels.com/photo/computer-with-two-displays-standing-on-a-desk-in-a-dimly-lit-room-18304031/ -->
 category: "Hardware"
 tags: ["Hardware", "Display", "Troubleshooting", "Windows 11"]
 theme: "Industrial Blueprint"
@@ -34,7 +36,7 @@ El monitor y la GPU se comunican mediante el canal DDC (Display Data Channel) pa
 
 
 
-![Hardware Diagnostic & Troubleshooting](https://images.unsplash.com/photo-1555680202-c86f0e12f086? auto=format&fit=crop&w=1000&h=550&q=80)
+![undefined](https://images.pexels.com/photos/18304031/pexels-photo-18304031.jpeg?auto=compress&cs=tinysrgb&w=1200)
 
 ### 2. Conflicto de conmutación híbrida (iGPU vs. dGPU / MUX Switch)
 La inmensa mayoría de los portátiles modernos cuentan con gráficos integrados (Intel Iris Xe o AMD Radeon) y una gráfica dedicada (NVIDIA RTX / AMD Radeon RX). En entornos de oficina, el puerto USB-C suele estar ruteado directamente a la iGPU, mientras que las salidas HDMI directas suelen depender de la dGPU. Cuando Windows intenta balancear la carga energética modificando el estado de energía (P-State) del procesador gráfico, el bus PCIe sufre micro-latencias que cortan la sincronización del reloj de píxel (Pixel Clock).

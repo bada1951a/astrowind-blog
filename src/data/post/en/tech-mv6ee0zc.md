@@ -2,7 +2,9 @@
 title: "Fixing Mechanical Keyboard Chatter and Missed Keystrokes: A Field Guide to Switch Triage and Contact Cleaners"
 description: "Diagnose and repair mechanical keyboard key chatter and dropped keystrokes using targeted contact cleaner flushes and leaf recalibration."
 publishDate: 2026-10-13T09:45:00.000Z
-image: "/images/tech-photo/tech-photo (21).jpg"
+image: "https://images.pexels.com/photos/2115257/pexels-photo-2115257.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "undefined"
+<!-- Pexels cover source: https://www.pexels.com/photo/close-up-photo-of-gaming-keyboard-2115257/; inline source: https://www.pexels.com/photo/close-up-of-computer-keyboards-20475584/ -->
 category: "Hardware"
 tags: ["Tech", "Troubleshooting", "Hardware"]
 theme: "Nordic Clean Ice"
@@ -89,7 +91,7 @@ Before picking up any chemical solvents or tools, systematically isolate the ope
    * <strong>Skipping (Dead switch):</strong> Inputs fail entirely under standard actuation pressure.
 
 ---
-![Tech Diagnostics](https://images.unsplash.com/photo-1555680202-c86f0e12f086? auto=format&fit=crop&w=1000&h=550&q=80)
+![undefined](https://images.pexels.com/photos/20475584/pexels-photo-20475584.jpeg?auto=compress&cs=tinysrgb&w=1200)
 
 ### Phase 2: Chemical Decontamination (Electronic Contact Cleaner)
 

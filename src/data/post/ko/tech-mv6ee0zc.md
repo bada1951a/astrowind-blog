@@ -2,7 +2,9 @@
 title: "기계식 키보드 채터링 및 키 씹힘 완벽 해결 가이드: 접점 부활제 실무 정비 프로토콜"
 description: "기계식 키보드 채터링(중복 입력)과 씹힘 현상의 하드웨어 회로 원인을 규명하고, BW-100 접점 부활제를 활용한 정밀 세척 및 핫스왑 수리 공정을 다룹니다."
 publishDate: 2026-10-13T08:30:00.000Z
-image: "/images/tech-photo/tech-photo (12).jpg"
+image: "https://images.pexels.com/photos/2115257/pexels-photo-2115257.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "undefined"
+<!-- Pexels cover source: https://www.pexels.com/photo/close-up-photo-of-gaming-keyboard-2115257/; inline source: https://www.pexels.com/photo/close-up-of-computer-keyboards-20475584/ -->
 category: 'tech'
 tags: ["Tech", "Troubleshooting", "Hardware"]
 theme: "Industrial Blueprint"
@@ -53,7 +55,7 @@ theme: "Industrial Blueprint"
 핫스왑(Kailh 스타일) 기판의 경우, 스위치 탈착을 반복하면서 PCB 배면의 소켓 금속 핀이 벌어져 핀 체결력이 약화됩니다. 또는 솔더링(납땜) 기판의 솔더 조인트에 크랙이 발생해 미세 진동에 의해 회로가 끊어졌다 붙었다 하는 현상이 발생합니다.
 
 ---
-![Tech Hardware Guide](https://images.unsplash.com/photo-1531297484001-80022131f5a1? auto=format&fit=crop&w=1200&h=675&q=85)
+![undefined](https://images.pexels.com/photos/20475584/pexels-photo-20475584.jpeg?auto=compress&cs=tinysrgb&w=1200)
 
 ## 2. 세척 용제 및 정비 방식 기술 비교
 

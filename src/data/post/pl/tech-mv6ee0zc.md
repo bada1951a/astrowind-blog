@@ -2,7 +2,9 @@
 title: "Jak naprawić chattering i zacinające się klawisze w klawiaturze mechanicznej: Praktyczny poradnik DIY"
 description: "Praktyczny poradnik IT: diagnostyka chatteringu, usuwanie podwójnego kliku i bezpieczna regeneracja switchy preparatem do styków bez lutowania."
 publishDate: 2026-10-13T19:45:00.000Z
-image: "/images/tech-photo/tech-photo (7).jpg"
+image: "https://images.pexels.com/photos/2115257/pexels-photo-2115257.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "undefined"
+<!-- Pexels cover source: https://www.pexels.com/photo/close-up-photo-of-gaming-keyboard-2115257/; inline source: https://www.pexels.com/photo/close-up-of-computer-keyboards-20475584/ -->
 category: "Hardware"
 tags: ["Tech", "Troubleshooting", "Hardware"]
 theme: "Sunset Horizon Coral"
@@ -43,7 +45,7 @@ Zjawisko *key chatteringu* (odbijania styków) oraz gubienia wciśnięć (*key s
    Przy bardzo intensywnej eksploatacji (np. klawisze `WASD` czy spacja) sprężynująca blaszka traci swoją pierwotną geometrię. Jeśli klawiatura posiada gniazda wymienne (*hot-swap Kailh/Gateron*), powodem problemów może być również rozszerzenie metalowych widełek gniazda na spodzie PCB. Wtedy nóżka przełącznika nie ma stabilnego kontaktu z samą płytą główną.
 
 ---
-![Tech Diagnostics](https://images.unsplash.com/photo-1515378791036-0648a3ef77b2? auto=format&fit=crop&w=1000&h=550&q=80)
+![undefined](https://images.pexels.com/photos/20475584/pexels-photo-20475584.jpeg?auto=compress&cs=tinysrgb&w=1200)
 
 ## Procedura krok po kroku: Diagnostyka i chemiczna regeneracja styków
 

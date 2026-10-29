@@ -2,7 +2,9 @@
 title: "Tasten-Chattering und Aussetzer beheben: Sysadmin-Leitfaden zur Reparatur mechanischer Tastaturen"
 description: "Mechanische Tastatur prellt oder schluckt Tastenanschläge? Praxiserprobte Anleitung zur Switch-Diagnose und Instandsetzung mittels Kontaktreiniger."
 publishDate: 2026-10-13T12:15:00.000Z
-image: "/images/tech-photo/tech-photo (19).jpg"
+image: "https://images.pexels.com/photos/2115257/pexels-photo-2115257.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "undefined"
+<!-- Pexels cover source: https://www.pexels.com/photo/close-up-photo-of-gaming-keyboard-2115257/; inline source: https://www.pexels.com/photo/close-up-of-computer-keyboards-20475584/ -->
 category: 'tech'
 tags: ["Hardware", "Troubleshooting", "Mechanische Tastatur", "Peripherie"]
 theme: "Midnight Navy Royal"
@@ -35,7 +37,7 @@ Jeder Tastenanschlag biegt die innenliegende Blattfeder. Nach mehreren Millionen
 Jeder mechanische Schalter prellt von Natur aus einige Millisekunden beim Schließen der Kontakte. Tastatur-Controller fangen dies über einen Entprell-Algorithmus (*Debounce Time*) ab. Wenn Schalter altern, verlängert sich diese Prellphase typischerweise von beispielsweise 5 ms auf 15 bis 20 ms. Steht die Firmware der Tastatur auf einer aggressiven, zu niedrigen Entprellzeit (etwa im "Gamer-Modus" mit 1 bis 2 ms), wird eine ganz normale Schalteralterung sofort als doppelter Tastendruck interpretiert.
 
 ---
-![Tech Hardware Guide](https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2? auto=format&fit=crop&w=1200&h=675&q=85)
+![undefined](https://images.pexels.com/photos/20475584/pexels-photo-20475584.jpeg?auto=compress&cs=tinysrgb&w=1200)
 
 ## 2. Schritt-für-Schritt-Entstörung (Diagnose & Instandsetzung)
 

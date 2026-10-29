@@ -2,7 +2,9 @@
 title: "Brak sygnału i migotanie monitora w laptopie: Zaawansowana naprawa sterowników i rejestru"
 description: "Praktyczny przewodnik inżyniera IT: diagnoza konfliktów WDDM, analiza identyfikatorów Hardware ID oraz czyszczenie rejestru EDID przy problemach z dwoma monitorami."
 publishDate: 2026-10-14T19:45:00.000Z
-image: "/images/tech-photo/tech-photo (21).jpg"
+image: "https://images.pexels.com/photos/29475620/pexels-photo-29475620.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "undefined"
+<!-- Pexels cover source: https://www.pexels.com/photo/man-using-editing-tools-on-dual-monitors-29475620/; inline source: https://www.pexels.com/photo/computer-with-two-displays-standing-on-a-desk-in-a-dimly-lit-room-18304031/ -->
 category: "Hardware"
 tags: ["Tech", "Troubleshooting", "Hardware"]
 theme: "Deep Indigo System"
@@ -25,7 +27,7 @@ Zrozumienie, dlaczego system traci synchronizację z monitorem zewnętrznym, wym
 #### 1. Kolizja bufora ramki i architektury hybrydowej (Optimus / CrossFire)
 W architekturze hybrydowej wyjścia wideo USB-C/DisplayPort fizycznie przechodzą przez magistralę zintegrowanego procesora graficznego (iGPU – Intel Iris Xe lub AMD Radeon), podczas gdy obciążenia 3D renderuje dedykowany procesor (dGPU – NVIDIA RTX). Jeśli wersje sterowników iGPU i dGPU posiadają niespójne biblioteki WDDM (Windows Display Driver Model), systemowy menedżer okien (*Desktop Window Manager* - `dwm.exe`) gubi klatki synchronizacji pionowej, wywołując reset sterownika i charakterystyczne czarne mignięcie.
 
-![Hardware Diagnostic & Troubleshooting](https://images.unsplash.com/photo-1504384308090-c894fdcc538d? auto=format&fit=crop&w=1000&h=550&q=80)
+![undefined](https://images.pexels.com/photos/18304031/pexels-photo-18304031.jpeg?auto=compress&cs=tinysrgb&w=1200)
 
 ### 2. Timeout mechanizmu TDR w jądrze `dxgkrnl.sys`
 Podsystem graficzny DirectX monitoruje czas odpowiedzi karty. Jeśli kontroler DisplayPort Alternate Mode lub transceiver stacji dokującej opóźni handshake EDID o więcej niż 2 sekundy podczas negocjacji szyfrowania HDCP, jądro systemu uznaje sterownik za zawieszony. Uruchamiana jest procedura TDR: jądro resetuje akcelerator graficzny, co objawia się natychmiastowym zgaśnięciem wszystkich paneli i przejściem drugiego monitora w tryb uśpienia.

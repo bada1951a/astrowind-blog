@@ -2,7 +2,9 @@
 title: "Panik Jam 5 Sore: PC Nyala tapi Layar Gelap, Masalah RAM Langsung Beres"
 description: "Pengalaman nyata teknisi IT menghadapi PC kantor nyala tapi monitor no signal. Bongkar trik bersihin RAM dan cek slot ala hacker hardware!"
 publishDate: 2026-10-14T21:00:00.000Z
-image: "/images/tech-photo/tech-photo (23).jpg"
+image: "https://images.pexels.com/photos/6236574/pexels-photo-6236574.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "undefined"
+<!-- Pexels cover source: https://www.pexels.com/photo/components-of-computer-hardware-6236574/; inline source: https://www.pexels.com/photo/man-screwing-a-screw-into-a-computer-7859349/ -->
 category: "Hardware"
 tags: ["IT Support", "Troubleshooting PC", "RAM Kotor", "Hardware Maintenance"]
 theme: "Acid Lime Hacker Space"
@@ -36,7 +38,7 @@ Karena kita lagi ngejar deadline mepet, nggak usah pusing buka-buka command prom
 * Cabut kabel power dari colokan listrik dinding.
 * Tekan dan tahan tombol power (*Power Button*) di casing selama <strong>15-20 detik</strong>. Ini trik wajib buat mengosongkan sisa kapasitansi di *motherboard*.
 
-![Hardware Diagnostic & Troubleshooting](https://picsum.photos/seed/hardware-95/1000/550)
+![undefined](https://images.pexels.com/photos/7859349/pexels-photo-7859349.jpeg?auto=compress&cs=tinysrgb&w=1200)
 
 ### 2. Operasi Pembersihan Kepingan RAM
 * Buka *casing* samping PC. Cari letak RAM (biasanya dekat kipas prosesor).

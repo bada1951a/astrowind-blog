@@ -2,7 +2,9 @@
 title: "El PC enciende pero no da vídeo: Resurrección de RAM al estilo sysadmin"
 description: "Guía de campo de un soporte TI: Cómo revivir un PC que enciende sin vídeo limpiando y reubicando la memoria RAM como un profesional."
 publishDate: 2026-10-14T14:45:00.000Z
-image: "/images/tech-photo/tech-photo (6).jpg"
+image: "https://images.pexels.com/photos/6236574/pexels-photo-6236574.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "undefined"
+<!-- Pexels cover source: https://www.pexels.com/photo/components-of-computer-hardware-6236574/; inline source: https://www.pexels.com/photo/man-screwing-a-screw-into-a-computer-7859349/ -->
 category: "Hardware"
 tags: ["SoporteTI", "Hardware", "Troubleshooting", "RAM"]
 theme: "Cyberpunk Terminal"
@@ -15,7 +17,7 @@ Eran las 4:55 PM de un viernes. El *jefe de proyectos* tenía que presentar los 
 CRITICAL: POST_SCREEN_FAILURE - Display output null. RAM modules uninitialized. Executing emergency protocol...
 </div>
 
-![Hardware Diagnostic & Troubleshooting](https://picsum.photos/seed/hardware-730/1000/550)
+![undefined](https://images.pexels.com/photos/7859349/pexels-photo-7859349.jpeg?auto=compress&cs=tinysrgb&w=1200)
 
 No era la tarjeta gráfica, ni el cable HDMI. El verdadero culpable estaba escondido en la ranura DIMM, acumulando el polvo y el drama de tres años de oficina. Si te ha pasado esto en medio de una urgencia, sabes perfectamente de lo que hablo. Vamos a destripar este problema como verdaderos ingenieros de sistemas.
 

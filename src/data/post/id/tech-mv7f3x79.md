@@ -2,7 +2,9 @@
 title: "Solusi Layar Blank dan Flickering Dual Monitor Laptop: Prosedur Reset Driver Standar IT Enterprise"
 description: "Panduan teknis mengatasi monitor eksternal no signal dan berkedip saat terhubung ke laptop melalui reset display driver dan kalibrasi refresh rate."
 publishDate: 2026-10-14T21:00:00.000Z
-image: "/images/tech-photo/tech-photo (37).jpg"
+image: "https://images.pexels.com/photos/29475620/pexels-photo-29475620.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "undefined"
+<!-- Pexels cover source: https://www.pexels.com/photo/man-using-editing-tools-on-dual-monitors-29475620/; inline source: https://www.pexels.com/photo/computer-with-two-displays-standing-on-a-desk-in-a-dimly-lit-room-18304031/ -->
 category: "Hardware"
 tags: ["Tech", "Troubleshooting", "Hardware"]
 theme: "Deep Ocean Cobalt"
@@ -51,7 +53,7 @@ Setiap monitor mengirimkan data EDID yang berisi resolusi native, profil warna, 
 
 
 
-![Hardware Diagnostic & Troubleshooting](https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe? auto=format&fit=crop&w=1000&h=550&q=80)
+![undefined](https://images.pexels.com/photos/18304031/pexels-photo-18304031.jpeg?auto=compress&cs=tinysrgb&w=1200)
 
 ### 2. Tabrakan Driver Hybrid Graphics (iGPU vs dGPU)
 Mayoritas laptop bisnis mengandalkan kombinasi Intel Iris Xe / AMD Radeon Graphics untuk efisiensi daya dan NVIDIA GeForce / RTX untuk komputasi berat. Output fisik HDMI atau DisplayPort lewat USB-C sering kali dialihkan melalui jalur perangkat keras yang diatur oleh iGPU terlebih dahulu. Jika Windows Update mengganti driver display OEM dengan driver generik tanpa memperbarui subsistem dGPU, sinkronisasi *frame buffer* gagal, menghasilkan fenomena *blackout* 1–2 detik secara berkala.

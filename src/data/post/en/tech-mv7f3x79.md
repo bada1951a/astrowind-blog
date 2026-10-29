@@ -2,7 +2,9 @@
 title: "Fixing Laptop Dual Monitor Black Screens and Flickering: The Complete Driver Reset Protocol"
 description: "A battle-tested field guide to resolving laptop dual-monitor 'No Signal' errors, intermittent black screens, and flickering via deep driver teardowns."
 publishDate: 2026-10-14T09:45:00.000Z
-image: "/images/tech-photo/tech-photo (20).jpg"
+image: "https://images.pexels.com/photos/29475620/pexels-photo-29475620.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "undefined"
+<!-- Pexels cover source: https://www.pexels.com/photo/man-using-editing-tools-on-dual-monitors-29475620/; inline source: https://www.pexels.com/photo/computer-with-two-displays-standing-on-a-desk-in-a-dimly-lit-room-18304031/ -->
 category: "Hardware"
 tags: ["Tech", "Troubleshooting", "Hardware"]
 theme: "Sunset Horizon Coral"
@@ -44,7 +46,7 @@ Modern laptops use hybrid graphics switching (NVIDIA Optimus or AMD SmartAccess)
 
 When Windows Update pushes a generic WHQL DCH graphics driver in the background, it often overwrites custom OEM-tuned clock tables. This causes a desync between the iGPU frame presentation and the dGPU render queue, manifesting as intermittent black frames whenever dynamic refresh rates change or hardware acceleration initializes.
 
-![Hardware Diagnostic & Troubleshooting](https://images.unsplash.com/photo-1581092918056-0c4c3acd3789? auto=format&fit=crop&w=1000&h=550&q=80)
+![undefined](https://images.pexels.com/photos/18304031/pexels-photo-18304031.jpeg?auto=compress&cs=tinysrgb&w=1200)
 
 ### 2. DisplayPort Link Training Failures & DSC Bandwidth Starvation
 When you plug in dual monitors, the graphics transmitter initiates <strong>Link Training</strong> with the monitor's receiver (scaler). They negotiate clock speeds, lane counts, and Display Stream Compression (DSC). 

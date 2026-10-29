@@ -2,7 +2,9 @@
 title: "Geen beeld, wel stroom? Hoe je RAM-reiniging en slot-diagnostiek je pc redden"
 description: "Paniek op de werkvloer: de pc start wel op, maar het scherm blijft zwart. Praktische gids voor RAM-reiniging en slot-diagnostiek in native Nederlandse IT-stijl."
 publishDate: 2026-10-14T18:30:00.000Z
-image: "/images/tech-photo/tech-photo (16).jpg"
+image: "https://images.pexels.com/photos/6236574/pexels-photo-6236574.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "undefined"
+<!-- Pexels cover source: https://www.pexels.com/photo/components-of-computer-hardware-6236574/; inline source: https://www.pexels.com/photo/man-screwing-a-screw-into-a-computer-7859349/ -->
 category: "Hardware"
 tags: ["Tech", "Troubleshooting", "Hardware", "RAM", "Infrastructuur"]
 theme: "Dracula Purple Dev"
@@ -12,7 +14,7 @@ Vrijdagmiddag, kwart over vier. Mijn grootste afnemer belde net dat de staging-o
 
 Dit soort situaties kosten je levensjaren. Je vervloekt de hardware, denkt meteen dat je moederbord naar de haaien is, en ziet je weekend in duigen vallen. Maar na jaren meedraaien in de IT-infrastructuur weet ik inmiddels beter: in negen van de tien gevallen is het een banale contactfout. Tijd om die kast open te schroeven en handen uit de mouwen te steken.
 
-![Hardware Diagnostic & Troubleshooting](https://picsum.photos/seed/hardware-949/1000/550)
+![undefined](https://images.pexels.com/photos/7859349/pexels-photo-7859349.jpeg?auto=compress&cs=tinysrgb&w=1200)
 
 ---
 

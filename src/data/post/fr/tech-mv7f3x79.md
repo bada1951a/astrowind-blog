@@ -2,7 +2,9 @@
 title: "Diagnostic et résolution des pannes d'affichage double écran : Absence de signal et scintillement sous Windows"
 description: "Guide technique d'ingénierie système pour diagnostiquer et réinitialiser les pilotes graphiques lors de coupures ou scintillements en double écran."
 publishDate: 2026-10-14T13:30:00.000Z
-image: "/images/tech-photo/tech-photo (24).jpg"
+image: "https://images.pexels.com/photos/29475620/pexels-photo-29475620.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "undefined"
+<!-- Pexels cover source: https://www.pexels.com/photo/man-using-editing-tools-on-dual-monitors-29475620/; inline source: https://www.pexels.com/photo/computer-with-two-displays-standing-on-a-desk-in-a-dimly-lit-room-18304031/ -->
 category: "Hardware"
 tags: ["Dépannage", "Pilotes Graphiques", "Double Écran", "Windows", "Hardware"]
 theme: "Graphite Technical Paper"
@@ -35,7 +37,7 @@ Le sous-système graphique de Windows conserve l'historique complet de chaque mo
 
 
 
-![Hardware Diagnostic & Troubleshooting](https://images.unsplash.com/photo-1588508065123-287b28e013da? auto=format&fit=crop&w=1000&h=550&q=80)
+![undefined](https://images.pexels.com/photos/18304031/pexels-photo-18304031.jpeg?auto=compress&cs=tinysrgb&w=1200)
 
 ## 2. Protocole de résolution et réinitialisation des pilotes
 

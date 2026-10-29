@@ -2,7 +2,9 @@
 title: "Dépannage matériel : Corriger le chattering et les ratés d'un clavier mécanique"
 description: "Guide d'ingénieur pour réparer le rebond de touche (chattering) et les faux contacts sur clavier mécanique grâce au nettoyant contact diélectrique."
 publishDate: 2026-10-13T13:30:00.000Z
-image: "/images/tech-photo/tech-photo (37).jpg"
+image: "https://images.pexels.com/photos/2115257/pexels-photo-2115257.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "undefined"
+<!-- Pexels cover source: https://www.pexels.com/photo/close-up-photo-of-gaming-keyboard-2115257/; inline source: https://www.pexels.com/photo/close-up-of-computer-keyboards-20475584/ -->
 category: "Hardware"
 tags: ["Tech", "Troubleshooting", "Hardware"]
 theme: "Pure Titanium Clean"
@@ -38,7 +40,7 @@ Les environnements de travail ne sont pas des salles blanches. Les cellules mort
 Chaque microcontrôleur de clavier intègre un algorithme d'anti-rebond (*debounce filter*) programmé pour ignorer les rebonds physiques normaux intervenant en quelques millisecondes (généralement entre 5 et 15 ms). Si la lamelle métallique a perdu de son élasticité par fatigue mécanique, son temps de stabilisation dépasse la fenêtre tolérée par le microcode, induisant une double saisie logique pour une seule pression physique.
 
 ---
-![Tech Diagnostics](https://images.unsplash.com/photo-1588508065123-287b28e013da? auto=format&fit=crop&w=1000&h=550&q=80)
+![undefined](https://images.pexels.com/photos/20475584/pexels-photo-20475584.jpeg?auto=compress&cs=tinysrgb&w=1200)
 
 ## 2. Procédure de résolution pas-à-pas
 

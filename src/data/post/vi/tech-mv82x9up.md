@@ -2,7 +2,9 @@
 title: "Màn hình đen thui dù quạt tản nhiệt vẫn hú: Kinh nghiệm xương máu xử lý lỗi RAM doanh nghiệp"
 description: "Sự cố mở nguồn lên nhưng màn hình không tín hiệu tại văn phòng và cách xử lý RAM, khe cắm chuẩn kỹ sư IT thực chiến."
 publishDate: 2026-10-14T22:15:00.000Z
-image: "/images/tech-photo/tech-photo (12).jpg"
+image: "https://images.pexels.com/photos/6236574/pexels-photo-6236574.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "undefined"
+<!-- Pexels cover source: https://www.pexels.com/photo/components-of-computer-hardware-6236574/; inline source: https://www.pexels.com/photo/man-screwing-a-screw-into-a-computer-7859349/ -->
 category: "Hardware"
 tags: ["IT Troubleshooting", "RAM Fix", "Hardware Repair", "Doanh Nghiệp"]
 theme: "Rosewood Hardware Guide"
@@ -67,7 +69,7 @@ Tiếng bíp dài liên tục (hoặc chu kỳ bíp lặp lại) thường báo 
 
 
 
-![Hardware Diagnostic & Troubleshooting](https://picsum.photos/seed/hardware-168/1000/550)
+![undefined](https://images.pexels.com/photos/7859349/pexels-photo-7859349.jpeg?auto=compress&cs=tinysrgb&w=1200)
 
 ### 2. Có cần thiết phải bôi mỡ tản nhiệt hay dung dịch bảo vệ chân RAM không?
 Tuyệt đối <strong>không</strong> bôi bất kỳ loại mỡ tản nhiệt hay dầu mỡ nào vào chân RAM. Chân tiếp điểm RAM cần độ khô ráo tuyệt đối để truyền dẫn tín hiệu điện tử với tốc độ cao hàng nghìn MHz. Việc bôi chất lạ sẽ làm cản trở tiếp xúc và gây chập cháy.

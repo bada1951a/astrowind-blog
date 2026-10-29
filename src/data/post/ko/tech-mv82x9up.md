@@ -2,7 +2,9 @@
 title: "출근 직전 본체만 요란하게 도는데 모니터가'신호 없음'? 8년 차 엔지니어가 알려주는 RAM 접촉 불량 5분 컷 살생부"
 description: "컴퓨터 전원은 켜지는데 화면이 안 나올 때, 람(RAM) 접촉 불량 원인 분석부터 지우개 신공, 슬롯 점검까지 8년 차 IT 엔지니어가 현장 감성으로 완벽 정리해 드립니다."
 publishDate: 2026-10-14T08:30:00.000Z
-image: "/images/tech-photo/tech-photo (11).jpg"
+image: "https://images.pexels.com/photos/6236574/pexels-photo-6236574.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "undefined"
+<!-- Pexels cover source: https://www.pexels.com/photo/components-of-computer-hardware-6236574/; inline source: https://www.pexels.com/photo/man-screwing-a-screw-into-a-computer-7859349/ -->
 category: 'tech'
 tags: ["하드웨어", "RAM접촉불량", "PC수리", "블라인드썰", "엔지니어노하우"]
 theme: "Cobalt Enterprise Lab"
@@ -17,7 +19,7 @@ theme: "Cobalt Enterprise Lab"
 - <strong>내구성 및 산화 스트레스:</strong> 미세 진동 및 온도 변화로 인한 골드핑거(Gold Finger) 산화막 형성 메커니즘 분석 완료
 </div>
 
-![Tech Hardware Guide](https://images.unsplash.com/photo-1550751827-4bd374c3f58b? auto=format&fit=crop&w=1200&h=675&q=85)
+![undefined](https://images.pexels.com/photos/7859349/pexels-photo-7859349.jpeg?auto=compress&cs=tinysrgb&w=1200)
 
 ---
 

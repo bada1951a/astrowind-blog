@@ -2,7 +2,9 @@
 title: "Guía de Diagnóstico y Reparación de Chattering y Fallos de Pulsación en Teclados Mecánicos"
 description: "Procedimiento estándar para solucionar pulsaciones fantasma, rebotes (chattering) y switches atascados en teclados mecánicos mediante limpiador de contactos dieléctrico."
 publishDate: 2026-10-13T14:45:00.000Z
-image: "/images/tech-photo/tech-photo (4).jpg"
+image: "https://images.pexels.com/photos/2115257/pexels-photo-2115257.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "undefined"
+<!-- Pexels cover source: https://www.pexels.com/photo/close-up-photo-of-gaming-keyboard-2115257/; inline source: https://www.pexels.com/photo/close-up-of-computer-keyboards-20475584/ -->
 category: "Hardware"
 tags: ["Hardware", "Mantenimiento TI", "Periféricos", "Soporte Técnico"]
 theme: "Deep Ocean Cobalt"
@@ -52,7 +54,7 @@ La lámina flexible interna depende de una constante elástica calculada al mil�
 Los microcontroladores integrados (ARM Cortex-M0, ATmega32U4, etc.) ejecutan un bucle de escaneo de matriz a intervalos de entre 1000 Hz y 8000 Hz. Dado que ningún contacto metálico es perfecto al cerrarse, se aplica un filtro por software denominado *debounce time* (típicamente entre 5 y 15 milisegundos) que ignora las fluctuaciones rápidas. Si la degradación física del conmutador prolonga la vibración de la señal por encima de la ventana de desrebote configurada en el firmware, el teclado registra dos, tres o más eventos `KeyDown` para una única pulsación.
 
 ---
-![Tech Diagnostics](https://images.unsplash.com/photo-1607604276583-eef5d076aa5f? auto=format&fit=crop&w=1000&h=550&q=80)
+![undefined](https://images.pexels.com/photos/20475584/pexels-photo-20475584.jpeg?auto=compress&cs=tinysrgb&w=1200)
 
 ## 2. Protocolo de Resolución Paso a Paso
 

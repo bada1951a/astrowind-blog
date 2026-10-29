@@ -2,7 +2,9 @@
 title: "RAM Seating Failure: Fixing the Black Screen of Death Before Deadline"
 description: "Check RAM seating and slot diagnostics when a PC powers on but shows a black screen, with model-specific precautions and startup checks."
 publishDate: 2026-10-14T09:45:00.000Z
-image: "/images/tech-photo/tech-photo (24).jpg"
+image: "https://images.pexels.com/photos/6236574/pexels-photo-6236574.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "undefined"
+<!-- Pexels cover source: https://www.pexels.com/photo/components-of-computer-hardware-6236574/; inline source: https://www.pexels.com/photo/man-screwing-a-screw-into-a-computer-7859349/ -->
 category: "Hardware"
 tags: ["Hardware Troubleshooting", "RAM Seating", "PC Repair", "System Maintenance"]
 theme: "Mint Fresh Engineering"
@@ -16,7 +18,7 @@ A desktop can start its fans while the monitor remains blank. Before an importan
 <strong>💡 Mint Fresh Engineering System Tip:</strong> A black screen alone does not identify a RAM fault. Check the monitor input, video cable, and the computer's diagnostic lights or beep codes first.
 </div>
 
-![Hardware Diagnostic & Troubleshooting](https://picsum.photos/seed/hardware-438/1000/550)
+![undefined](https://images.pexels.com/photos/7859349/pexels-photo-7859349.jpeg?auto=compress&cs=tinysrgb&w=1200)
 
 ## 2. Check the likely causes before opening the case
 

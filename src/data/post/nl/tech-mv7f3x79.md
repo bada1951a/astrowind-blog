@@ -2,7 +2,9 @@
 title: "Laptop Tweede Scherm Knippert of Geeft Geen Signaal: Systeembeheerder Gids voor Driverherstel"
 description: "Praktische handleiding van een IT-infrastructuurspecialist voor het oplossen van 'Geen Signaal' en knipperende externe schermen via geavanceerd driverherstel."
 publishDate: 2026-10-14T18:30:00.000Z
-image: "/images/tech-photo/tech-photo (27).jpg"
+image: "https://images.pexels.com/photos/29475620/pexels-photo-29475620.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "undefined"
+<!-- Pexels cover source: https://www.pexels.com/photo/man-using-editing-tools-on-dual-monitors-29475620/; inline source: https://www.pexels.com/photo/computer-with-two-displays-standing-on-a-desk-in-a-dimly-lit-room-18304031/ -->
 category: "Hardware"
 tags: ["Tech", "Troubleshooting", "Hardware"]
 theme: "Midnight Navy Royal"
@@ -27,7 +29,7 @@ Wanneer een laptop via USB-C, HDMI of DisplayPort een extern scherm aanstuurt, i
 #### 1. DCH-Driverconflicten door Geforceerde Windows Update-overschrijvingen
 Het grootste pijnpunt in moderne Windows-omgevingen is de automatische vervanging van specifieke OEM-videodrivers door generieke stuurprogramma's via Windows Update. Als Windows een generieke Intel- of AMD-driver over een door de fabrikant (Lenovo, Dell, HP) geoptimaliseerde driver heen installeert, ontstaat er een incompatibiliteit tussen de stroombeheerfuncties van het moederbord en de DisplayPort Alternate Mode (DP Alt Mode) van de USB-C-controller. Het resultaat is dat de GPU de aangesloten monitor niet langer herkent zodra de PCIe-link naar een lagere energiebeheermodus (C-state) schakelt.
 
-![Hardware Diagnostic & Troubleshooting](https://images.unsplash.com/photo-1542751371-adc38448a05e? auto=format&fit=crop&w=1000&h=550&q=80)
+![undefined](https://images.pexels.com/photos/18304031/pexels-photo-18304031.jpeg?auto=compress&cs=tinysrgb&w=1200)
 
 ### 2. Corruptie van de EDID-handshake en HDCP-onderhandeling
 Extended Display Identification Data (EDID) is de metadata die de monitor naar de videokaart stuurt met informatie over resoluties, vernieuwingsfrequenties en kleurprofielen. Als de laptop vanuit de slaapstand ontwaakt terwijl het dockingstation al stroom levert, kan deze handshake halverwege vastlopen. De High-bandwidth Digital Content Protection (HDCP) ziet dit als een potentiële beveiligingsinbreuk en sluit de videotransmissie abrupt af. Dit veroorzaakt de beruchte "knipperlus": de GPU probeert te verbinden, faalt de HDCP-controle, verbreekt de verbinding en start opnieuw op.

@@ -2,7 +2,9 @@
 title: "Czarna mafia w biurze, czyli dlaczego komputer wstaje bez monitora i jak zmusić RAM do współpracy"
 description: "Prawdziwa historia polskiego inżyniera IT o reanimacji zgliszczy: jak domowymi sposobami uleczyć martwy ekran, gdy pamięć RAM łapie fochy."
 publishDate: 2026-10-14T19:45:00.000Z
-image: "/images/tech-photo/tech-photo (28).jpg"
+image: "https://images.pexels.com/photos/6236574/pexels-photo-6236574.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "undefined"
+<!-- Pexels cover source: https://www.pexels.com/photo/components-of-computer-hardware-6236574/; inline source: https://www.pexels.com/photo/man-screwing-a-screw-into-a-computer-7859349/ -->
 category: "Hardware"
 tags: ["IT Support", "Hardware", "RAM", "Troubleshooting", "Warszawa"]
 theme: "Warm Coffee Latte"
@@ -12,7 +14,7 @@ Godzina 14:50 w piątek. Za dziesięć minut miałem kończyć kwartalny raport 
 
 Znamy to wszyscy, prawda? Komputer ożywa, diody świecą, dyski szumią, ale ekran uparcie pozostaje martwy. Pierwsza myśl? Padła karta graficzna. Druga? Płyta główna poszła z dymem. Ale spokojnie, odłóżcie młotki i wyciągnijcie ten kubek z letnią kawą latte – zapraszam na krótką, inżynieryjną opowieść z okopów warszawskiego supportu, jak bez wydawania ani grosza postawić taki grat na nogi za pomocą zwykłej gumki do ścierania.
 
-![Hardware Diagnostic & Troubleshooting](https://picsum.photos/seed/hardware-22/1000/550)
+![undefined](https://images.pexels.com/photos/7859349/pexels-photo-7859349.jpeg?auto=compress&cs=tinysrgb&w=1200)
 
 ## Korzeniowy dramat: Dlaczego sprzęt udaje trupa?
 

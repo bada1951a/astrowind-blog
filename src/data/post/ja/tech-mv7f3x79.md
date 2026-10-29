@@ -2,7 +2,9 @@
 title: "ノートPCのデュアルモニター「信号なし・画面のチラつき」を根治する：現場叩き上げエンジニアのディスプレイドライバー完全再構築手順"
 description: "ノートPCに外部モニターを接続した際の「信号なし（No Signal）」や断続的な画面点滅・チラつきを根本から解消。社内情シス・インフラエンジニアが実践するドライバ完全初期化と再設定の全手順。"
 publishDate: 2026-10-14T11:00:00.000Z
-image: "/images/tech-photo/tech-photo (14).jpg"
+image: "https://images.pexels.com/photos/29475620/pexels-photo-29475620.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "undefined"
+<!-- Pexels cover source: https://www.pexels.com/photo/man-using-editing-tools-on-dual-monitors-29475620/; inline source: https://www.pexels.com/photo/computer-with-two-displays-standing-on-a-desk-in-a-dimly-lit-room-18304031/ -->
 category: "Hardware"
 tags: ["Tech", "Troubleshooting", "Hardware"]
 theme: "Dark Velvet Obsidian"
@@ -33,7 +35,7 @@ USB Type-CやThunderboltドックを介したマルチモニター環境が標�
 
 
 
-![Hardware Diagnostic & Troubleshooting](https://images.unsplash.com/photo-1587202372775-e229f172b9d7? auto=format&fit=crop&w=1000&h=550&q=80)
+![undefined](https://images.pexels.com/photos/18304031/pexels-photo-18304031.jpeg?auto=compress&cs=tinysrgb&w=1200)
 
 ### 2. DisplayPort Alt ModeおよびHDCPのハンドシェイクタイムアウト
 USB Type-C経由でのDisplayPort信号伝送（DP Alt Mode）時、グラフィックスエンジンとモニター間では常時HDCP（著作権保護）認証と通信レーンのネゴシエーションが行われています。省電力状態からの復帰（モダンスタンバイ復帰時など）でGPUの応答が数ミリ秒遅れると、OS側が「モニター切断」と誤認し、画面の点滅ループ（切断・再接続の繰り返し）へ陥ります。
