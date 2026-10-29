@@ -1,35 +1,52 @@
 ---
-import Layout from '~/layouts/PageLayout.astro';
+import Layout from "~/layouts/PageLayout.astro";
 
 const metadata = {
-  title: 'Contact Us — Daily Insight',
-  description: 'Contact the editorial team at Daily Insight for inquiries and technical feedback.',
+  title: "Contact Us — Daily Insight",
+  description:
+    "Contact the editorial team at Daily Insight for inquiries and technical feedback.",
 };
 ---
 
 <Layout metadata={metadata}>
   <section class="px-6 py-12 sm:py-16 lg:py-20 mx-auto max-w-4xl text-default">
-    <h1 class="text-3xl md:text-4xl font-bold tracking-tight mb-8">Contact Us</h1>
-    
-    <div class="prose dark:prose-invert max-w-none text-muted leading-relaxed space-y-8">
+    <h1 class="text-3xl md:text-4xl font-bold tracking-tight mb-8">
+      Contact Us
+    </h1>
+
+    <div
+      class="prose dark:prose-invert max-w-none text-muted leading-relaxed space-y-8"
+    >
       <div>
         <p class="text-lg">
-          For technical feedback, errata submissions, hardware reviews, or business inquiries, please reach out directly via email.
+          For technical feedback, errata submissions, hardware reviews, or
+          business inquiries, please reach out directly via email.
         </p>
         <p>
-          Our editorial team reviews all messages and strives to respond within 2 to 3 business days.
+          Our editorial team reviews all messages and strives to respond within
+          2 to 3 business days.
         </p>
       </div>
 
       <div class="border-t border-gray-200 dark:border-gray-800 pt-6">
-        <h2 class="text-xl font-semibold text-default mb-4">Official Contact Address</h2>
-        <div class="p-5 rounded-xl bg-gray-50 dark:bg-slate-800/60 border border-gray-200 dark:border-gray-700/60 inline-block w-full max-w-lg">
-          <p class="text-sm text-gray-500 dark:text-gray-400 mb-1">Direct Editorial & Business Inquiries</p>
+        <h2 class="text-xl font-semibold text-default mb-4">
+          Official Contact Address
+        </h2>
+        <div
+          class="p-5 rounded-xl bg-gray-50 dark:bg-slate-800/60 border border-gray-200 dark:border-gray-700/60 inline-block w-full max-w-lg"
+        >
+          <p class="text-sm text-gray-500 dark:text-gray-400 mb-1">
+            Direct Editorial & Business Inquiries
+          </p>
           <!-- data-cfemail 파싱 방지 처리된 순수 텍스트 -->
-          <p class="font-mono text-lg font-bold text-primary dark:text-blue-400 select-all tracking-wide">
+          <p
+            class="font-mono text-lg font-bold text-primary dark:text-blue-400 select-all tracking-wide"
+          >
             contact<span>@</span>storydailyview.com
           </p>
-          <p class="text-xs text-gray-400 mt-2">* Plain text address. Please copy and paste into your email client.</p>
+          <p class="text-xs text-gray-400 mt-2">
+            * Plain text address. Please copy and paste into your email client.
+          </p>
         </div>
       </div>
     </div>
