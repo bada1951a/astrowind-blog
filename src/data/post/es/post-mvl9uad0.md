@@ -2,7 +2,8 @@
 title: "El PC no se apaga tras darle a Apagar: Cómo desactivar el Inicio Rápido"
 description: "Soluciona el molesto fallo donde Windows se queda pillado y no apaga del todo. Guía paso a paso para desactivar el Inicio Rápido."
 publishDate: 2026-10-24T03:25:00.000Z
-image: '/images/tech-photo/ram%20(10).png'
+image: "https://images.pexels.com/photos/19228384/pexels-photo-19228384.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "undefined"
 category: 'tech'
 tags: ["Soporte Tecnico", "Hardware", "Windows 10", "Windows 11", "Trucos PC"]
 theme: "Rosewood Hardware Guide"
@@ -38,7 +39,7 @@ Sudor frío en la frente, el servidor web interno echando humo y yo atrapado por
 
 Si te ha pasado esto alguna vez, sabrás perfectamente la frustración que se siente. No es una avería de hardware catastrófica ni se ha quemado la fuente de alimentación; el verdadero culpable detrás de este comportamiento tan errático suele ser una función nativa de Windows llamada Inicio Rápido o Fast Startup. Aunque suena genial sobre el papel para acelerar los tiempos de arranque, en la práctica se convierte en un dolor de cabeza monumental cuando se acumulan errores temporales en el archivo de hibernación o algún controlador de la placa base no interpreta bien la orden de apagado profundo.
 
-![Tech Troubleshooting Guide](/images/tech-photo/tech-photos%20(47).jpg)
+![undefined](https://images.pexels.com/photos/30433037/pexels-photo-30433037.jpeg?auto=compress&cs=tinysrgb&w=1200).jpg)
 
 <div style="border-left: 4px solid #be123c; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 

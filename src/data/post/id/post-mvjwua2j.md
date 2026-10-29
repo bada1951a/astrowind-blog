@@ -2,7 +2,8 @@
 title: "Panik Audio Hilang Saat WFH di SCBD: Panduan Kilat Mengatasi Windows 11 No Sound"
 description: "Cara praktis mengatasi masalah Windows 11 tidak ada suara saat terhubung VPN kantor dan mau meeting penting Zoom atau Teams dalam 5 menit."
 publishDate: 2026-10-23T03:50:00.000Z
-image: '/images/tech-photo/ram%20(1).png'
+image: "https://images.pexels.com/photos/15670390/pexels-photo-15670390.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "undefined"
 category: 'tech'
 tags: ["Windows 11 Audio", "Troubleshooting PC", "WFH SCBD", "Audio Driver Fix", "Tips IT"]
 theme: "Warm Coffee Latte"
@@ -12,7 +13,7 @@ Jantung saya rasanya mau copot. Waktu menunjukkan pukul 09.55 pagi di apartemen 
 
 Sebagai teknisi infrastruktur IT yang biasa merawat ratusan unit PC kantor, saya tahu persis kepanikan ini. Jangan buru-buru banting laptop atau instal ulang Windows. Masalah ini sangat umum terjadi pada Windows 11, terutama saat sistem terbebani koneksi VPN yang mengubah routing jaringan atau ada konflik driver audio mendadak setelah *update* otomatis. 
 
-![Tech Troubleshooting Guide](/images/tech-photo/storage%20(9).png)
+![undefined](https://images.pexels.com/photos/11044640/pexels-photo-11044640.jpeg?auto=compress&cs=tinysrgb&w=1200).png)
 
 Mari kita bedah apa yang sebenarnya terjadi di balik layar sistem operasi Anda.
 

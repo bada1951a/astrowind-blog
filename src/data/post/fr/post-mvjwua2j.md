@@ -2,7 +2,8 @@
 title: "Plus de son sous Windows 11 : Guide de dépannage audio d'urgence en entreprise"
 description: "Résolvez instantanément les problèmes de son sous Windows 11. Guide pratique pour le bureau : périphériques, pilotes et paramètres audio."
 publishDate: 2026-10-23T03:20:00.000Z
-image: '/images/tech-photo/tech-p%20(1).jpg'
+image: "https://images.pexels.com/photos/15670390/pexels-photo-15670390.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "undefined"
 category: 'tech'
 tags: ["Tech Tips", "Hardware", "Troubleshooting", "PC Fix"]
 theme: "Sandstone Desert Minimal"
@@ -14,7 +15,7 @@ Vendredi, 17h45. Le compte à rebours est lancé dans notre open space de La Dé
 <strong>Conseil d'urgence :</strong> Ne paniquez pas et ne redémarrez pas votre PC en catastrophe. Dans 90 % des cas sous Windows 11, il s'agit d'un simple conflit de routage entre les périphériques audio ou d'un service Windows qui a planté. Suivez ce guide, nous allons régler cela en moins de 3 minutes.
 </div>
 
-![Tech Troubleshooting Guide](/images/tech-photo/tech-photos%20(26).jpg)
+![undefined](https://images.pexels.com/photos/11044640/pexels-photo-11044640.jpeg?auto=compress&cs=tinysrgb&w=1200).jpg)
 
 ## Pourquoi votre PC Windows 11 est-il soudainement muet ?
 

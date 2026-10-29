@@ -2,7 +2,8 @@
 title: "Mẹo khôi phục menu chuột phải cổ điển trên Windows 11 trong 2 phút"
 description: "Hướng dẫn cách mang menu chuột phải quen thuộc trở lại trên Windows 11 mà không cần phần mềm phức tạp, cứu nguy cho dân văn phòng."
 publishDate: 2026-10-22T03:00:00.000Z
-image: '/images/tech-photo/tech-photo%20(14).jpg'
+image: "https://images.pexels.com/photos/28297692/pexels-photo-28297692.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "undefined"
 category: 'tech'
 tags: ["Windows 11", "Meo May Tinh", "Thu Thuat IT", "Van Phong"]
 theme: "Mint Fresh Engineering"
@@ -75,7 +76,7 @@ Việc can thiệp vào Registry tuy nhỏ nhưng bạn cần lưu ý một số
 
 
 
-![Tech Troubleshooting Guide](/images/tech-photo/system%20(7).png)
+![undefined](https://images.pexels.com/photos/15372897/pexels-photo-15372897.jpeg?auto=compress&cs=tinysrgb&w=1200).png)
 
 ### 2. Sau khi cập nhật (Update) lớn cho Windows 11, menu này có bị mất không?
 Có khả năng. Đôi khi các bản cập nhật tính năng lớn (Major Updates) từ Microsoft sẽ khôi phục lại cài đặt gốc của hệ thống. Nếu thấy menu mới xuất hiện trở lại, bạn chỉ cần lặp lại đúng 3 bước chạy lệnh Terminal ở trên là xong.

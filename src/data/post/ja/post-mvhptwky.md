@@ -2,7 +2,8 @@
 title: "Windows 11の右クリックメニューを「従来の表示」に戻す方法"
 description: "東京・丸の内のオフィスで月次報告書の送信直前に起きたPCトラブル。Windows 11の使いにくい新しい右クリックメニューを一発で従来のクラシック表示に戻す実戦的な手順を現場のSEが徹底解説。"
 publishDate: 2026-10-22T03:00:00.000Z
-image: '/images/tech-photo/tech-photo%20(10).jpg'
+image: "https://images.pexels.com/photos/28297692/pexels-photo-28297692.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "undefined"
 category: 'tech'
 tags: ["Windows 11", "Troubleshooting", "PC Tips", "Registry"]
 theme: "Crimson Emergency Field"
@@ -15,7 +16,7 @@ theme: "Crimson Emergency Field"
 Windows 11の新しいコンテキストメニューは見た目こそすっきりしていますが、実務で頻繁に使う「圧縮」「共有」「各種アプリの独自拡張機能」が隠されてしまい、クリック回数が無駄に増えます。毎日の細かい動作の積み重ねが、大きなタイムロスとストレスを生み出しています。
 </div>
 
-![Tech Troubleshooting Guide](/images/tech-photo/bsod%20(18).png)
+![undefined](https://images.pexels.com/photos/15372897/pexels-photo-15372897.jpeg?auto=compress&cs=tinysrgb&w=1200).png)
 
 ## なぜWindows 11の右クリックは使いにくいのか？3つの根本原因
 

@@ -2,7 +2,8 @@
 title: "Windows 11 Geen Geluid Na Crash: Zo Herstel Je Audio en Stuurprogramma's Direct"
 description: "Geen geluid in Windows 11 na een plotselinge blauwe scherm (BSOD) crash? Volg deze praktische handleiding om je audioapparaten en drivers direct te herstellen."
 publishDate: 2026-10-23T03:40:00.000Z
-image: '/images/tech-photo/tech-photos%20(19).jpg'
+image: "https://images.pexels.com/photos/15670390/pexels-photo-15670390.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "undefined"
 category: 'tech'
 tags: ["Windows 11", "Audio Fix", "Systeembeheer", "Hardware", "Troubleshooting"]
 theme: "Crimson Emergency Field"
@@ -14,7 +15,7 @@ theme: "Crimson Emergency Field"
 
 Het was midden op een drukke dinsdagmiddag in een glazen kantoorpand aan de Amsterdamse Zuidas. Terwijl ik snel een laatste set complexe financiële analyses doornam voor een spoedoverleg, flitste er in nog geen seconde een cryptische blauwe scherm (BSOD) voor mijn ogen. Voordat ik kon bedenken wat er misging, deed mijn workstation een geforceerde herstart. Alles leek weer op de rit te staan totdat ik een testaudio wilde afspelen en... volkomen stilte. Geen systeemmeldingen, geen muziek, en mijn Microsoft Teams-gesprek bleef akelig luidloos. Het luidsprekericoontje rechtsonder in de taakbalk was voorzien van dat vervelende rode kruisje. 
 
-![Tech Troubleshooting Guide](/images/tech-photo/storage%20(10).png)
+![undefined](https://images.pexels.com/photos/11044640/pexels-photo-11044640.jpeg?auto=compress&cs=tinysrgb&w=1200).png)
 
 In de hectiek begin je dan al snel te stressen. Eerst klik je willekeurig op het volume, daarna trek je de stekker van je headset erin en eruit, en voor je het weet ben je verloren geraakt in eindeloze Windows-menu's zonder enig resultaat. Tijd om dit methodisch en professioneel aan te pakken.
 

@@ -2,7 +2,8 @@
 title: "Windowsのライセンス認証透かしをCMDで安全に非表示にする実務手順"
 description: "東京・丸の内のオフィスで月次報告書送信直前に発生したPCトラブル。Windowsのライセンス認証透かしをコマンドプロンプトを使って安全に消去する実践的な手順をITサポートエンジニアが解説します。"
 publishDate: 2026-10-20T11:00:00.000Z
-image: '/images/tech-photo/storage%20(15).png'
+image: "https://images.pexels.com/photos/28297692/pexels-photo-28297692.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "undefined"
 category: 'tech'
 tags: ["Windows", "CMD", "Troubleshooting", "IT Support", "PC Fix"]
 theme: "Deep Ocean Cobalt"
@@ -12,7 +13,7 @@ theme: "Deep Ocean Cobalt"
 
 その瞬間、メインで作業していたExcelがフリーズし、画面上のマウスポインタがくるくると回り始めました。「おいおい、嘘だろ……今これが固まるか！」。佐藤さんは青ざめた顔で私を呼び止めました。クライアントへの提出期限まであと15分。このままでは業務が完全にストップしてしまいます。
 
-![Tech Troubleshooting Guide](/images/tech-photo/bsod%20(6).png)
+![undefined](https://images.pexels.com/photos/7107487/pexels-photo-7107487.jpeg?auto=compress&cs=tinysrgb&w=1200).png)
 
 慌ててネット上の怪しいフリーソフトを探そうとする佐藤さんを制止し、私は自席から自分のツールボックスを手に取りました。焦っている時ほど、安易なサードパーティ製ソフトに頼るのは危険です。今回は、Windowsに標準搭載されている「コマンドプロンプト（CMD）」を使い、データやシステムを一切傷つけずに、この「ライセンス認証の透かし（ウォーターマーク）」を安全かつ一時的に非表示にする実務的な手順を共有します。
 

@@ -2,7 +2,8 @@
 title: "Sửa lỗi máy tính Windows 11 mất âm thanh khi đang làm quyết toán tài chính"
 description: "Hướng dẫn thực tế xử lý sự cố mất âm thanh trên Windows 11 trong giờ phút quyết toán tài chính gấp rút tại văn phòng."
 publishDate: 2026-10-23T03:55:00.000Z
-image: '/images/tech-photo/ram%20(9).png'
+image: "https://images.pexels.com/photos/15670390/pexels-photo-15670390.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "undefined"
 category: 'tech'
 tags: ["Tech Tips", "Hardware", "Troubleshooting", "PC Fix"]
 theme: "Nordic Clean Ice"
@@ -14,7 +15,7 @@ theme: "Nordic Clean Ice"
 
 Là một kỹ sư công nghệ thông tin phụ trách kỹ thuật tại chỗ, tôi hiểu rõ sự hoảng loạn khi hệ thống âm thanh "đình công" vào những khoảnh khắc sống còn như thế này. Đừng cuống cuồng khởi động lại máy hay đập tay vào thùng CPU nữa. Dưới đây là quy trình xử lý thực chiến giúp bạn lấy lại âm thanh trên Windows 11 chỉ trong vòng vài phút ngắn ngủi.
 
-![Tech Troubleshooting Guide](/images/tech-photo/display%20(13).png)
+![undefined](https://images.pexels.com/photos/11044640/pexels-photo-11044640.jpeg?auto=compress&cs=tinysrgb&w=1200).png)
 
 ## Nguyên nhân gốc rễ gây mất âm thanh trên Windows 11
 

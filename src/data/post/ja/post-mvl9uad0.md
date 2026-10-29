@@ -2,7 +2,8 @@
 title: "シャットダウンしてもPCの電源が落ちない？「高速スタートアップ」を無効化してすっきり解決する手順"
 description: "海外出張先やオフィスで「シャットダウンしたのに電源が落ちない」トラブルの原因と、高速スタートアップ無効化による確実な解決手順を現場のSEが分かりやすく解説します。"
 publishDate: 2026-10-24T03:10:00.000Z
-image: '/images/tech-photo/tech-photos%20(46).jpg'
+image: "https://images.pexels.com/photos/19228384/pexels-photo-19228384.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "undefined"
 category: 'tech'
 tags: ["Tech Tips", "Hardware", "Troubleshooting", "PC Fix"]
 theme: "Warm Coffee Latte"
@@ -34,7 +35,7 @@ theme: "Warm Coffee Latte"
 
 バッテリー残量は刻一刻と減り続け、焦って電源ボタンを長押しして強制終了するハメに。翌朝、現地オフィスに向かうタクシーの中でも「また電源が落ちなかったらどうしよう」と不安が頭をよぎりました。丸の内や品川のオフィスでも、終業間際に「シャットダウンしたのにランプが消えない」という相談を本当によく受けます。今回は、この厄介な現象の正体と、現場のエンジニアが真っ先に試す確実な解決策を、あたたかいコーヒーでも飲みながらリラックスして読める手順でご紹介します。
 
-![Tech Troubleshooting Guide](/images/tech-photo/bsod%20(9).png)
+![undefined](https://images.pexels.com/photos/30433037/pexels-photo-30433037.jpeg?auto=compress&cs=tinysrgb&w=1200).png)
 
 <div style="border-left: 4px solid #78350f; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 現場メモ：電源が切れないトラブルの多くは、パーツの故障ではなくWindowsの省電力機能の「思い込み」が原因です。焦らず順番に設定を見直していきましょう。

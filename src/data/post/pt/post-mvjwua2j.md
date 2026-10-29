@@ -2,7 +2,8 @@
 title: "Windows 11 Sem Som: Como Resolver Dispositivo de Áudio e Driver"
 description: "Guia prático para resolver falhas de áudio no Windows 11 durante o trabalho. Recupere o som do seu PC em poucos cliques."
 publishDate: 2026-10-23T03:35:00.000Z
-image: '/images/tech-photo/bsod%20(16).png'
+image: "https://images.pexels.com/photos/15670390/pexels-photo-15670390.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "undefined"
 category: 'tech'
 tags: ["Windows 11", "Áudio", "Hardware", "Suporte TI", "Dicas PC"]
 theme: "Bronze Artisan Workshop"
@@ -74,7 +75,7 @@ Isso indica que o driver sumiu completamente ou a placa de áudio foi desativada
 
 
 
-![Tech Troubleshooting Guide](/images/tech-photo/storage%20(18).png)
+![undefined](https://images.pexels.com/photos/11044640/pexels-photo-11044640.jpeg?auto=compress&cs=tinysrgb&w=1200).png)
 
 ### 2. O meu fone Bluetooth conecta, mas o som sai pelas caixas do notebook. Como corrigir?
 O Windows 11 separa perfis de áudio Bluetooth (Stereo vs. Hands-Free). Vá em <strong>Configurações</strong>><strong>Bluetooth e dispositivos</strong>, desconecte o fone e reconecte. Em seguida, volte em <strong>Configurações</strong>><strong>Som</strong> e certifique-se de selecionar o perfil estéreo correto do seu fone na lista de saída.

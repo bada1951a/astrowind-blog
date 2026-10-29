@@ -2,7 +2,8 @@
 title: "Computer Wont Turn Off After Shutdown: How to Disable Fast Startup"
 description: "Fix Windows computers refusing to power down completely after shutdown by disabling Fast Startup with this quick enterprise tech guide."
 publishDate: 2026-10-24T03:05:00.000Z
-image: '/images/tech-photo/system%20(4).png'
+image: "https://images.pexels.com/photos/19228384/pexels-photo-19228384.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "undefined"
 category: 'tech'
 tags: ["Tech Tips", "Hardware", "Troubleshooting", "PC Fix", "Windows 10", "Windows 11"]
 theme: "Modern Minimalist Slate"
@@ -34,7 +35,7 @@ Picture this: It is late evening, and I am sitting in a busy Silicon Valley hote
 
 Ten minutes later, as I unpack my backpack on the desk, I notice the laptop chassis feels unusually warm. The tiny side power LED is still glowing softly. I open the lid, and the screen instantly lights back up to the lock screen, and my battery is now drained down to a critical 4 percent. The machine simply refused to turn off. Instead of shutting down, it hung in a bizarre limbo state where the operating system pretended to close while the hardware refused to power down the motherboard and power rails. This is a classic enterprise headache that wastes battery, overheats systems in transport, and ruins morning workflows.
 
-![Tech Troubleshooting Guide](/images/tech-photo/ram%20(4).png)
+![undefined](https://images.pexels.com/photos/30433037/pexels-photo-30433037.jpeg?auto=compress&cs=tinysrgb&w=1200).png)
 
 <div style="border-left: 4px solid #3b82f6; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 

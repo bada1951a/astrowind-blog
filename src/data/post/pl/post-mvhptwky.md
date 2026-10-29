@@ -2,7 +2,8 @@
 title: "Jak przywrócić klasyczne menu kontekstowe w Windows 11"
 description: "Poradnik inżyniera IT: Jak szybko i bezpiecznie odzyskać klasyczne menu prawego przycisku myszy w systemie Windows 11 bez szukania opcji Pokaż więcej."
 publishDate: 2026-10-22T03:00:00.000Z
-image: '/images/tech-photo/tech-photos%20(29).jpg'
+image: "https://images.pexels.com/photos/28297692/pexels-photo-28297692.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "undefined"
 category: 'tech'
 tags: ["Windows 11", "IT Support", "Optymalizacja", "Porady PC"]
 theme: "Industrial Blueprint"
@@ -12,7 +13,7 @@ Siedzę w szklanej sali konferencyjnej w warszawskim centrum biznesowym przy Ron
 
 Znam ten ból na pamięć. Nowy interfejs w Windows 11 miał być "czysty" i "przyjazny", ale dla analityków, programistów i sysadminów, którzy codziennie operują dziesiątkami plików, skrótów i narzędzi deweloperskich, ukrywanie tradycyjnych opcji za dodatkowym kliknięciem to czysta patologia produktywności. Klienci korporacyjni dzwonią do mojego serwisu w tej sprawie przynajmniej kilka razy w tygodniu.
 
-![Tech Troubleshooting Guide](/images/tech-photo/tech-photos%20(43).jpg)
+![undefined](https://images.pexels.com/photos/15372897/pexels-photo-15372897.jpeg?auto=compress&cs=tinysrgb&w=1200).jpg)
 
 W tym artykule pokażę Ci sprawdzoną metodę inżynierską, jak raz na zawsze przywrócić stare, dobre klasyczne menu kontekstowe w Windows 11 za pomocą jednego polecenia w Edytorze Rejestru. Zero zbędnego oprogramowania, czysta inżynieria systemowa.
 

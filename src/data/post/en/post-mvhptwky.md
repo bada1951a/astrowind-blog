@@ -2,7 +2,8 @@
 title: "How to Restore the Classic Right Click Context Menu in Windows 11"
 description: "Fix Windows 11 right-click fatigue. Step-by-step registry and command-line guides to bring back the full classic context menu instantly."
 publishDate: 2026-10-22T03:00:00.000Z
-image: '/images/tech-photo/display%20(15).png'
+image: "https://images.pexels.com/photos/28297692/pexels-photo-28297692.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "undefined"
 category: 'tech'
 tags: ["Windows 11", "Productivity", "Registry Fix", "IT Support"]
 theme: "Industrial Blueprint"
@@ -14,7 +15,7 @@ theme: "Industrial Blueprint"
 
 If you have spent any time deploying or migrating users to Windows 11 in an enterprise environment, you already know the pain point. Microsoft decided to clean up the shell extension by hiding classic third-party tools and standard options behind an extra layer. While it looks sleek on a marketing slide, it acts as a massive productivity bottleneck for power users, developers, and administrative staff who rely on muscle memory.
 
-![Tech Troubleshooting Guide](/images/tech-photo/bsod%20(5).png)
+![undefined](https://images.pexels.com/photos/15372897/pexels-photo-15372897.jpeg?auto=compress&cs=tinysrgb&w=1200).png)
 
 Let us look at why this happens and how you can restore the classic right-click context menu across your organization in under 2 minutes.
 

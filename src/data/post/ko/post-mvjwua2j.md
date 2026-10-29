@@ -2,7 +2,8 @@
 title: "윈도우 11 소리 안 남 원인 및 오디오 드라이버 완벽 해결법"
 description: "대용량 백업 중 갑자기 사라진 윈도우 11 오디오 장치와 소리 안 남 현상, 장치 관리자와 설정으로 3분 만에 해결하는 실무 가이드."
 publishDate: 2026-10-23T03:00:00.000Z
-image: '/images/tech-photo/tech-p%20(11).jpg'
+image: "https://images.pexels.com/photos/15670390/pexels-photo-15670390.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "undefined"
 category: 'tech'
 tags: ["Windows 11", "Audio Fix", "Driver Troubleshooting", "PC Repair"]
 theme: "Sunset Horizon Coral"
@@ -12,7 +13,7 @@ theme: "Sunset Horizon Coral"
 
 급한 마음에 유튜브 영상을 재생해 보고, 사운드바 전원을 껐다 켜기도 하고, 심지어 본체 오디오 단자를 뽑았다가 다시 꽂아봐도 소용없었습니다. 재부팅을 하면 되겠지 하고 시스템을 재시작했으나, 윈도우 11 로딩 화면이 지나간 뒤에도 오디오 장치는 여전히 유령처럼 사라진 상태였습니다. 대용량 파일 전송 중 시스템 I/O 부하와 드라이버 충돌이 겹치면서 사운드카드 서비스가 완전히 뻗어버린 것이 원인이었습니다.
 
-![Tech Troubleshooting Guide](/images/tech-photo/keyboard%20(4).png)
+![undefined](https://images.pexels.com/photos/11044640/pexels-photo-11044640.jpeg?auto=compress&cs=tinysrgb&w=1200).png)
 
 <div style="border-left: 4px solid #f97316; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>엔지니어 실무 노트:</strong> 윈도우 11에서 갑자기 소리가 안 나고 출력 장치가 사라지는 현상은 하드웨어 고장보다는 대용량 데이터 전송이나 윈도우 업데이트 직후 오디오 서비스(Windows Audio) 중단 또는 드라이버 꼬임 때문에 발생하는 경우가 90% 이상입니다. 포맷이나 부품 교체 전에 소프트웨어적 접근으로 먼저 해결해야 합니다.

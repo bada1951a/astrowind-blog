@@ -2,7 +2,8 @@
 title: "컴퓨터 종료 후 안 꺼짐 현상 해결: 빠른 시작 끄는 법"
 description: "고객사 시연 직전 발생한 PC 종료 불량 원인과 제어판 빠른 시작 비활성화, 고급 전원 옵션 및 드라이버 재설정 방법을 현장 엔지니어가 상세히 안내합니다."
 publishDate: 2026-10-24T03:00:00.000Z
-image: '/images/tech-photo/ram%20(16).png'
+image: "https://images.pexels.com/photos/19228384/pexels-photo-19228384.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "undefined"
 category: 'tech'
 tags: ["PC 트러블슈팅", "빠른 시작 끄기", "컴퓨터 안꺼짐", "윈도우 설정", "하드웨어 팁"]
 theme: "Bronze Artisan Workshop"
@@ -14,7 +15,7 @@ theme: "Bronze Artisan Workshop"
 
 단순히 재부팅 한두 번으로 해결될 가벼운 일시적 오류가 아니었습니다. 윈도우가 하드웨어 전원 공급 장치에 내리는 신호 체계와 저전력 대기 모드 알고리즘 간에 심각한 병목 현상이 발생한 것입니다. 현장에서 피 말리는 위기를 넘기며 시스템을 단숨에 정상화시켰던 엔지니어의 실전 경험을 바탕으로, 컴퓨터가 정상적으로 꺼지지 않는 기술적 메커니즘과 이를 완벽하게 뿌리 뽑는 3단계 해결법을 정리해 드립니다.
 
-![Tech Troubleshooting Guide](/images/tech-photo/tech-photo%20(35).jpg)
+![undefined](https://images.pexels.com/photos/30433037/pexels-photo-30433037.jpeg?auto=compress&cs=tinysrgb&w=1200).jpg)
 
 <div style="border-left: 4px solid #b45309; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 

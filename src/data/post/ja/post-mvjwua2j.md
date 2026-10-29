@@ -2,7 +2,8 @@
 title: "丸の内のオフィスで突然の音響トラブル！Windows 11で音が出ない時の原因と解決策"
 description: "昼休みの直後、品川や丸の内のオフィスでWindows 11から突然音が消えた！オーディオデバイスやドライバーのトラブルを素早く解決する実践的な手順をITサポートエンジニアが徹底解説。"
 publishDate: 2026-10-23T03:10:00.000Z
-image: '/images/tech-photo/display%20(7).png'
+image: "https://images.pexels.com/photos/15670390/pexels-photo-15670390.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "undefined"
 category: 'tech'
 tags: ["Windows11", "PCトラブル", "ハードウェア", "ITサポート"]
 theme: "Mint Fresh Engineering"
@@ -12,7 +13,7 @@ theme: "Mint Fresh Engineering"
 
 現場で数多くのPCトラブルを見てきた私だが、昼休み明けの音声トラブルは非常に多い。スリープ復帰時のドライバの誤作動や、Bluetoothイヤホンとの接続競合など、原因は様々だ。慌てて再起動をする前に、まずは落ち着いて原因を切り分け、最短で音を取り戻すためのステップを踏んでいこう。
 
-![Tech Troubleshooting Guide](/images/tech-photo/ram%20(11).png)
+![undefined](https://images.pexels.com/photos/11044640/pexels-photo-11044640.jpeg?auto=compress&cs=tinysrgb&w=1200).png)
 
 <div style="border-left: 4px solid #059669; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>エンジニアのワンポイントメモ：</strong> 焦って何度もPCを再起動すると、かえって時間がかかります。まずは「設定」と「デバイスマネージャー」を確認し、論理的な手順で原因を特定するのが一番の近道です。

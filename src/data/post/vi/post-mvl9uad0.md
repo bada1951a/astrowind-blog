@@ -2,7 +2,8 @@
 title: "Khắc phục lỗi laptop không chịu tắt nguồn sau khi Shutdown"
 description: "Hướng dẫn xử lý triệt để lỗi máy tính không tắt nguồn hoàn toàn sau khi Shutdown bằng cách tắt tính năng Fast Startup trên Windows."
 publishDate: 2026-10-24T03:55:00.000Z
-image: '/images/tech-photo/system%20(13).png'
+image: "https://images.pexels.com/photos/19228384/pexels-photo-19228384.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "undefined"
 category: 'tech'
 tags: ["Tech Tips", "Hardware", "Troubleshooting", "PC Fix"]
 theme: "Cyberpunk Terminal"
@@ -34,7 +35,7 @@ Mới tuần trước, trong một chuyến công tác xa, tôi kẹt lại ở 
 
 Đó không phải là lần đầu tiên tôi gặp tình huống trớ trêu này trong nghề IT. Lỗi máy tính không chịu tắt nguồn hẳn sau khi bấm Shutdown là một bệnh cực kỳ phổ biến trên Windows 10 và Windows 11. Đa số mọi người khi gặp tình trạng này thường nghĩ ngay đến việc lỗi ổ cứng, lỗi win hoặc hỏng nút nguồn vật lý. Họ mất hàng giờ liền để cài lại driver chipset, quét virus tổng thể hoặc thậm chí là ghost lại máy nhưng rốt cuộc lỗi vẫn hoàn lỗi. Nguyên nhân cốt lõi thực ra rất đơn giản và nằm ở một tính năng mặc định của hệ điều hành mang tên Fast Startup. Khi tính năng này bật, thay vì tắt máy hoàn toàn, Windows sẽ đóng băng một phần trạng thái kernel vào ổ cứng để lần sau khởi động nhanh hơn, vô tình khiến máy bị treo ở trạng thái lửng lơ, không ngắt hẳn dòng điện cấp cho bo mạch chủ và linh kiện.
 
-![Tech Troubleshooting Guide](/images/tech-photo/storage%20(11).png)
+![undefined](https://images.pexels.com/photos/30433037/pexels-photo-30433037.jpeg?auto=compress&cs=tinysrgb&w=1200).png)
 
 <div style="border-left: 4px solid #00ffcc; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 Cảnh báo nhanh: Việc để laptop tiếp tục chạy ngầm trong balo kín không chỉ làm cạn kiệt pin mà còn tạo ra nhiệt lượng cực lớn, có nguy cơ gây phồng pin, hỏng ổ cứng SSD hoặc làm suy giảm tuổi thọ vi xử lý do quá nhiệt.

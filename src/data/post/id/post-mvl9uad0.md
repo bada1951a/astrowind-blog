@@ -2,7 +2,8 @@
 title: "Komputer Tidak Mau Mati Setelah Shutdown? Ini Cara Matikan Fast Startup"
 description: "Panduan praktis teknisi IT SCBD untuk mengatasi komputer kantor yang tidak mau mati total setelah diklik shutdown akibat fitur Fast Startup Windows."
 publishDate: 2026-10-24T03:50:00.000Z
-image: '/images/tech-photo/display%20(19).png'
+image: "https://images.pexels.com/photos/19228384/pexels-photo-19228384.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "undefined"
 category: 'tech'
 tags: ["Tech Tips", "Hardware", "Troubleshooting", "PC Fix"]
 theme: "Mint Fresh Engineering"
@@ -36,7 +37,7 @@ Awalnya saya mengira ini hanya gangguan kecil biasa.
 
 Saya coba tekan lama tombol power di casing komputer untuk mematikannya secara paksa, lalu menyalakannya kembali untuk melanjutkan pekerjaan rekonsiliasi. Namun, setiap kali selesai bekerja dan menekan Shutdown, masalah yang sama terus berulang. Komputer seolah-olah masuk ke mode tidur yang dalam, bukan benar-benar mati. Situasi ini membuat saya khawatir terjadi korupsi data pada file Excel laporan tahunan yang sedang saya verifikasi, mengingat proses tulis data ke SSD bisa terganggu jika PC tidak mati secara normal. 
 
-![Tech Troubleshooting Guide](/images/tech-photo/keyboard%20(7).png)
+![undefined](https://images.pexels.com/photos/30433037/pexels-photo-30433037.jpeg?auto=compress&cs=tinysrgb&w=1200).png)
 
 Sebagai seorang teknisi infrastruktur IT yang sudah belasan tahun mengurusi perangkat keras di area bisnis Jakarta, saya langsung paham apa biang keladinya.
 

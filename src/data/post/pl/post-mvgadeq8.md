@@ -2,7 +2,8 @@
 title: "Jak bezpiecznie usunąć znak wodny Aktywuj system Windows przez CMD"
 description: "Poradnik serwisu IT: Jak szybko i bezpiecznie pozbyć się napisu Aktywuj system Windows z pulpitu za pomocą Wiersza polecenia w biurzie."
 publishDate: 2026-10-20T19:45:00.000Z
-image: '/images/tech-photo/tech-photo%20(20).jpg'
+image: "https://images.pexels.com/photos/28297692/pexels-photo-28297692.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "undefined"
 category: 'tech'
 tags: ["Windows", "CMD", "IT Support", "Rozwiązywanie problemów", "Porady PC"]
 theme: "High-Contrast Charcoal"
@@ -12,7 +13,7 @@ Kwadrans przed kluczową prezentacją dla zarządu w warszawskim centrum bizneso
 
 ### Dlaczego ten cholerny napis w ogóle się pojawia?
 
-![Tech Troubleshooting Guide](/images/tech-photo/keyboard%20(20).png)
+![undefined](https://images.pexels.com/photos/7107487/pexels-photo-7107487.jpeg?auto=compress&cs=tinysrgb&w=1200).png)
 
 Zanim sięgnąłem po konsolę, muszę wyjaśnić, skąd bierze się ten problem na stanowiskach roboczych w biurze. Oto trzy najczęstsze przyczyny, z którymi mierzę się jako serwisant:
 

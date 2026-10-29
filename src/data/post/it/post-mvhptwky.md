@@ -2,7 +2,8 @@
 title: "Windows 11: Come Ripristinare il Vecchio Menu Contestuale del Tasto Destro"
 description: "Guida pratica per ripristinare il menu contestuale classico di Windows 11 ed eliminare i fastidiosi passaggi aggiuntivi."
 publishDate: 2026-10-22T03:00:00.000Z
-image: '/images/tech-photo/tech-photo%20(12).jpg'
+image: "https://images.pexels.com/photos/28297692/pexels-photo-28297692.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "undefined"
 category: 'tech'
 tags: ["Windows 11", "Tips", "Productivity", "Registry"]
 theme: "Modern Minimalist Slate"
@@ -14,7 +15,7 @@ Erano le 17:45 in un frenetico ufficio al Centro direzionale di Milano, con la d
 <strong>Nota del Sistemista:</strong> Microsoft ha introdotto il nuovo menu contestuale in Windows 11 per pulire l'interfaccia e migliorare le prestazioni, ma per chi lavora ogni giorno con gestionali, archivi e strumenti di terze parti, si tratta di un vero e proprio collo di bottiglia per la produttività.
 </div>
 
-![Tech Troubleshooting Guide](/images/tech-photo/bsod%20(8).png)
+![undefined](https://images.pexels.com/photos/15372897/pexels-photo-15372897.jpeg?auto=compress&cs=tinysrgb&w=1200).png)
 
 ## Analisi del Problema: Perché Windows 11 ci costringe a fare più clic?
 

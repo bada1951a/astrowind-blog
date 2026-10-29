@@ -2,7 +2,8 @@
 title: "Windows 11 Kein Ton: Audio-Ausgabegerät und Treiber reparieren"
 description: "Praxisnaher Leitfaden für IT-Admins: So lösen Sie Audioprobleme unter Windows 11 nach Datenimporten und Treiberkollisionen im Büro."
 publishDate: 2026-10-23T03:15:00.000Z
-image: '/images/tech-photo/tech-photos%20(38).jpg'
+image: "https://images.pexels.com/photos/15670390/pexels-photo-15670390.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "undefined"
 category: 'tech'
 tags: ["Windows 11", "Audio Fix", "Treiber", "Hardware Diagnose", "IT Support"]
 theme: "Sandstone Desert Minimal"
@@ -12,7 +13,7 @@ Es war kurz vor zwei Uhr nachmittags in unserem Büro im Frankfurter Bankenviert
 
 Solche unerklärlichen Audio-Aussetzer kosten im hektischen Arbeitsalltag wertvolle Minuten. Wenn man gerade mitten in der Analyse steckt und Videokonferenzen oder Sprachnachrichten anstehen, brennt der Hut. Lassen Sie uns das Problem Schritt für Schritt analysieren und dauerhaft beheben, ohne gleich das Betriebssystem neu zu installieren.
 
-![Tech Troubleshooting Guide](/images/tech-photo/tech-photo%20(11).jpg)
+![undefined](https://images.pexels.com/photos/11044640/pexels-photo-11044640.jpeg?auto=compress&cs=tinysrgb&w=1200).jpg)
 
 <div style="border-left: 4px solid #a16207; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Admin-Soforttipp:</strong> Bevor Sie tief im System graben, prüfen Sie in der Taskleiste unten rechts per Rechtsklick auf das Lautsprechersymbol die "Lautstärkemixtur öffnen". Oft hat sich Windows nach dem Einlesen externer Daten einfach nur stumm geschaltet oder das Standard-Ausgabegerät auf einen virtuellen HDMI-Port umgeschaltet.

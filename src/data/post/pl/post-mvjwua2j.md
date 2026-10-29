@@ -2,7 +2,8 @@
 title: "Brak dźwięku w Windows 11: Jak szybko naprawić urządzenia audio"
 description: "Poradnik serwisu IT: Szybkie rozwiązywanie problemów z brakiem dźwięku w Windows 11 po podłączeniu do monitora lub projektora."
 publishDate: 2026-10-23T03:45:00.000Z
-image: '/images/tech-photo/keyboard%20(5).png'
+image: "https://images.pexels.com/photos/15670390/pexels-photo-15670390.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "undefined"
 category: 'tech'
 tags: ["Tech Tips", "Hardware", "Troubleshooting", "PC Fix"]
 theme: "Acid Lime Hacker Space"
@@ -12,7 +13,7 @@ Wtorek, kwadrans przed kluczową wideokonferencją z zarządem w nowo otwartej f
 
 W takich momentach serce na chwilę zastyga, zwłaszcza gdy na szybkiej diagnozie zależy całemu zespołu. Jako inżynier wsparcia IT i serwisant sprzętu komputerowego przetestowałem już chyba każdy możliwy scenariusz awarii audio w systemie Windows 11. Zamiast panikować i tracić cenne minuty na przeinstalowywanie całego systemu, weźmy głęboki oddech i przejdźmy do konkretów. Oto sprawdzona procedura ratunkowa, którą wdrożysz w niespełna trzy minuty.
 
-![Tech Troubleshooting Guide](/images/tech-photo/display%20(12).png)
+![undefined](https://images.pexels.com/photos/11044640/pexels-photo-11044640.jpeg?auto=compress&cs=tinysrgb&w=1200).png)
 
 ---
 

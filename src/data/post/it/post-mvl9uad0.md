@@ -2,7 +2,8 @@
 title: "Il PC non si spegne dopo lo spegnimento? Come risolvere disabilitando l'Avvio Rapido"
 description: "Guida pratica per sistemisti: risolvi il problema del PC che non si spegne completamente disabilitando l'Avvio Rapido di Windows prima di una demo."
 publishDate: 2026-10-24T03:30:00.000Z
-image: '/images/tech-photo/tech-photos%20(4).jpg'
+image: "https://images.pexels.com/photos/19228384/pexels-photo-19228384.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "undefined"
 category: 'tech'
 tags: ["Tech Tips", "Hardware", "Troubleshooting", "PC Fix"]
 theme: "Pastel Lavender Tech"
@@ -42,7 +43,7 @@ Nota del sistemista.
 Questo fastidioso difetto in cui Windows sembra spegnersi ma in realtà resta in uno stato di ibernazione ibrida non risolto è quasi sempre causato da una funzione nativa introdotta anni fa per velocizzare l'avvio, ma che manda in tilt i driver ACPI di molti componenti hardware.
 </div>
 
-![Tech Troubleshooting Guide](/images/tech-photo/display%20(8).png)
+![undefined](https://images.pexels.com/photos/30433037/pexels-photo-30433037.jpeg?auto=compress&cs=tinysrgb&w=1200).png)
 
 Perché succede questo? Spesso ci si perde a cercare guasti sulla scheda madre o a testare l'alimentatore, ma la radice del problema è quasi sempre software e legata alla gestione energetica del sistema operativo. Ecco i tre motivi principali per cui il computer si rifiuta di spegnersi del tutto:
 

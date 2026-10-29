@@ -2,7 +2,8 @@
 title: "PC schaltet nach Herunterfahren nicht aus: Schnellstart deaktivieren"
 description: "Der Rechner geht nach dem Herunterfahren nicht aus? Erfahre, wie du das Problem mit dem Windows-Schnellstart im Banken- und Tech-Alltag behebst."
 publishDate: 2026-10-24T03:15:00.000Z
-image: '/images/tech-photo/tech-p%20(12).jpg'
+image: "https://images.pexels.com/photos/19228384/pexels-photo-19228384.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "undefined"
 category: 'tech'
 tags: ["Tech Tips", "Hardware", "Troubleshooting", "PC Fix"]
 theme: "Modern Minimalist Slate"
@@ -36,7 +37,7 @@ Es ist exakt 16:30 Uhr an einem Freitag im Frankfurter Bankenviertel. Genau in d
 Der Klassiker unter den Windows-Ärgernissen: Der Rechner tut so, als würde er herunterfahren, bleibt aber in einem undefinierten ACPI-Energiezustand hängen. Schuld ist fast immer eine Software- oder Treiberspezifikation, die beim Kernel-Sitzungs-Reset klemmt.
 </div>
 
-![Tech Troubleshooting Guide](/images/tech-photo/tech-photo%20(12).jpg)
+![undefined](https://images.pexels.com/photos/30433037/pexels-photo-30433037.jpeg?auto=compress&cs=tinysrgb&w=1200).jpg)
 
 Hinter diesem frustrierenden Phänomen stecken meist drei konkrete Ursachen aus der Praxis. Erstens blockiert der sogenannte Schnellstart von Windows den echten Neustart, indem er Teile des Kernels in eine hiberfile.sys auslagert und beim nächsten Start einfach wieder lädt. Zweitens spielen veraltete Treiber für das Power Management oder den Chipsatz nicht sauber mit den modernen ACPI-Sustained States des Mainboards zusammen. Drittens hängen manchmal Hintergrundprozesse im Task-Manager fest, die beim Abmelden den Shutdown-Prozess blockieren, weil sie auf Signale von externen USB-Geräten oder Netzwerkadaptern warten.
 

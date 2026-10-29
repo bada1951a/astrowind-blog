@@ -2,7 +2,8 @@
 title: "Windows 11 Senza Audio: Come Risolvere Dispositivi e Driver in 5 Minuti"
 description: "Guida pratica per sistemisti e impiegati per risolvere problemi di audio su Windows 11 durante il multitasking in ufficio."
 publishDate: 2026-10-23T03:30:00.000Z
-image: '/images/tech-photo/bsod%20(14).png'
+image: "https://images.pexels.com/photos/15670390/pexels-photo-15670390.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "undefined"
 category: 'tech'
 tags: ["Tech Tips", "Windows 11", "Troubleshooting", "Audio Fix"]
 theme: "Warm Coffee Latte"
@@ -14,7 +15,7 @@ Erano le undici e mezza del mattino qui al Centro Direzionale di Milano, uno di 
 <strong>Nota del Sistemista:</strong> Non perdere la testa se Windows decide di ammutolirsi proprio durante il carico di lavoro più intenso. Nel 90% dei casi non è un guasto hardware irreparabile, ma un conflitto di driver o una periferica predefinita che è saltata a causa del multitasking spinto.
 </div>
 
-![Tech Troubleshooting Guide](/images/tech-photo/tech-p%20(21).jpg)
+![undefined](https://images.pexels.com/photos/11044640/pexels-photo-11044640.jpeg?auto=compress&cs=tinysrgb&w=1200).jpg)
 
 ## Perché sparisce l'audio su Windows 11? Le 3 cause principali
 

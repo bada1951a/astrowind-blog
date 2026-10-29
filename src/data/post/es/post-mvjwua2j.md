@@ -2,7 +2,8 @@
 title: "Windows 11 sin sonido: Cómo arreglar dispositivos de audio y controladores"
 description: "Guía práctica de soporte técnico para resolver problemas de audio en Windows 11 durante cierres contables y momentos críticos de oficina."
 publishDate: 2026-10-23T03:25:00.000Z
-image: '/images/tech-photo/tech-photo%20(6).jpg'
+image: "https://images.pexels.com/photos/15670390/pexels-photo-15670390.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "undefined"
 category: 'tech'
 tags: ["Soporte Informatico", "Windows 11", "Audio", "Hardware", "Resolucion de Problemas"]
 theme: "Nordic Clean Ice"
@@ -12,7 +13,7 @@ Eran las siete de la tarde en las Torres Kio, en pleno distrito financiero de Ma
 
 El pánico se apoderó de la oficina. En medio del estrés por cumplir con los plazos de la auditoría, los compañeros empezaron a desconectar los auriculares, a reiniciar el PC a lo loco y a golpear ligeramente el puerto Jack de 3.5mm pensando que era un fallo físico de los cascos. Por supuesto, eso solo empeoró las cosas y nos hizo perder valiosos minutos valiosos. Como técnico de sistemas de la casa, me tocó intervenir de inmediato para aplicar una solución rápida, limpia y definitiva en Windows 11 sin perder ni un solo dato del cierre contable.
 
-![Tech Troubleshooting Guide](/images/tech-photo/tech%20(9).jpg)
+![undefined](https://images.pexels.com/photos/11044640/pexels-photo-11044640.jpeg?auto=compress&cs=tinysrgb&w=1200).jpg)
 
 <div style="border-left: 4px solid #0284c7; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Nota del técnico:</strong> En situaciones de alta presión corporativa, lo último que debes hacer es perder la calma o empezar a desinstalar drivers al azar. Sigue este protocolo quirúrgico para recuperar el audio en menos de cinco minutos.

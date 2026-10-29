@@ -2,7 +2,8 @@
 title: "Como Restaurar o Menu de Contexto Classico no Windows 11 em Segundos"
 description: "Aprenda a trazer o menu de botao direito antigo do Windows 11 de volta sem instalador externo. Guia pratico para suporte de TI e produtividade."
 publishDate: 2026-10-22T03:00:00.000Z
-image: '/images/tech-photo/display%20(4).png'
+image: "https://images.pexels.com/photos/28297692/pexels-photo-28297692.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "undefined"
 category: 'tech'
 tags: ["Windows 11", "Dicas de TI", "Produtividade", "Suporte Tecnico"]
 theme: "Rosewood Hardware Guide"
@@ -74,7 +75,7 @@ Sim. O comando afeta diretamente a estrutura de classes do shell do Windows e co
 
 
 
-![Tech Troubleshooting Guide](/images/tech-photo/storage%20(15).png)
+![undefined](https://images.pexels.com/photos/15372897/pexels-photo-15372897.jpeg?auto=compress&cs=tinysrgb&w=1200).png)
 
 ### 2. Posso reverter a alteração caso eu me arrependa?
 Com certeza. Se quiser voltar ao menu padrão do Windows 11, basta abrir o Prompt de Comando como Administrador e executar o comando para remover a chave criada:

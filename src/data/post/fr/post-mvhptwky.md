@@ -2,7 +2,8 @@
 title: "Restaurer le menu contextuel classique de Windows 11"
 description: "Guide pratique pour retrouver le menu clic-droit complet sur Windows 11 sans passer par l'option 'Afficher plus d'options'."
 publishDate: 2026-10-22T03:00:00.000Z
-image: '/images/tech-photo/bsod%20(12).png'
+image: "https://images.pexels.com/photos/28297692/pexels-photo-28297692.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "undefined"
 category: 'tech'
 tags: ["Windows 11", "Productivite", "Astuces PC", "Support IT"]
 theme: "Pastel Lavender Tech"
@@ -12,7 +13,7 @@ Il est 17h55 dans notre open space de La Défense. La clôture des dossiers trim
 
 Ce genre de micro-frustration ergonomique au bureau, multiplié par des centaines de clics par jour, finit par plomber totalement la productivité des équipes. En tant qu'ingénieur support, j'ai vu trop de collègues pester contre cette interface moderne mais peu pratique. Heureusement, il existe une solution radicale et propre pour retrouver le comportement classique de Windows 10 en quelques clics.
 
-![Tech Troubleshooting Guide](/images/tech-photo/tech-photos%20(7).jpg)
+![undefined](https://images.pexels.com/photos/15372897/pexels-photo-15372897.jpeg?auto=compress&cs=tinysrgb&w=1200).jpg)
 
 <div style="border-left: 4px solid #7c3aed; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Note du technicien :</strong> Cette modification ne désactive pas les nouveautés de Windows 11, elle rétablit simplement le menu complet par défaut directement au premier clic, exactement comme sur les versions précédentes.

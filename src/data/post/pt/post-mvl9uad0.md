@@ -2,7 +2,8 @@
 title: "PC não desliga após o encerramento? Como desativar a Inicialização Rápida no Windows"
 description: "Resolva o problema do PC que não desliga após o encerramento. Guia prático de TI para desativar a Inicialização Rápida no Windows e salvar seu prazo de entrega."
 publishDate: 2026-10-24T03:35:00.000Z
-image: '/images/tech-photo/tech-photos%20(38).jpg'
+image: "https://images.pexels.com/photos/19228384/pexels-photo-19228384.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "undefined"
 category: 'tech'
 tags: ["Tech Tips", "Hardware", "Troubleshooting", "PC Fix", "Windows"]
 theme: "Crimson Emergency Field"
@@ -40,7 +41,7 @@ Aviso Crítico de Emergência.
 Forçar o desligamento puxando o cabo da tomada ou segurando o botão de energia repetidamente pode corromper tabelas de partição do SSD e arquivos de log essenciais para auditorias de TI.
 </div>
 
-![Tech Troubleshooting Guide](/images/tech-photo/display%20(14).png)
+![undefined](https://images.pexels.com/photos/30433037/pexels-photo-30433037.jpeg?auto=compress&cs=tinysrgb&w=1200).png)
 
 Esse problema frustrante acontece muito mais do que imaginamos no dia a dia corporativo e costuma pegar profissionais de surpresa justamente quando há mais urgência.
 

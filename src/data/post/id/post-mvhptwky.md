@@ -2,7 +2,8 @@
 title: "Cara Mengembalikan Klik Kanan Klasik Windows 11 Tanpa Ribet"
 description: "Panduan praktis teknisi IT mengembalikan menu klik kanan klasik di Windows 11 untuk efisiensi kerja tanpa aplikasi tambahan."
 publishDate: 2026-10-22T03:00:00.000Z
-image: '/images/tech-photo/tech-photos%20(15).jpg'
+image: "https://images.pexels.com/photos/28297692/pexels-photo-28297692.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "undefined"
 category: 'tech'
 tags: ["Windows 11", "Troubleshooting", "IT Support", "Tips PC"]
 theme: "Retro Monokai"
@@ -12,7 +13,7 @@ Jam menunjukkan pukul 16.45 WIB di salah satu gedung perkantoran kawasan Sudirma
 
 Bayangkan betapa frustrasinya harus mengklik dua kali hanya untuk melakukan ekstrak file atau scan antivirus di detik-detik krusial menjelang pengumpulan laporan. Waktu terbuang percuma untuk melakukan trial-and-error mengklik menu tersembunyi yang tidak responsif di bawah tekanan tenggat waktu yang begitu ketat.
 
-![Tech Troubleshooting Guide](/images/tech-photo/bsod%20(14).png)
+![undefined](https://images.pexels.com/photos/15372897/pexels-photo-15372897.jpeg?auto=compress&cs=tinysrgb&w=1200).png)
 
 Sebagai seorang teknisi infrastruktur IT, saya tidak boleh tinggal diam. Setelah meredakan kepanikan sejenak, saya langsung mengeksekusi trik cepat melalui Registry Editor untuk mematikan tampilan baru Windows 11 dan mengembalikan menu klik kanan klasik yang sudah akrab bertahun-tahun. Berikut adalah panduan langkah demi langkah yang bisa Anda terapkan sendiri dalam waktu kurang dari dua menit.
 

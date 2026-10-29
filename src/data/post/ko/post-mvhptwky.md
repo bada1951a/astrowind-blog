@@ -2,7 +2,8 @@
 title: "윈도우 11 구형 마우스 우클릭 메뉴 복구 방법: 프레젠테이션 직전의 위기를 구하는 3분 해결법"
 description: "중요한 프레젠테이션 직전 윈도우 11의 숨겨진 우클릭 메뉴 때문에 당황하셨나요? 레지스트리 수정과 명령어 한 줄로 클래식 메뉴를 완벽하게 되돌리는 현직 엔지니어의 실전 가이드입니다."
 publishDate: 2026-10-22T03:00:00.000Z
-image: '/images/tech-photo/system%20(9).png'
+image: "https://images.pexels.com/photos/28297692/pexels-photo-28297692.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "undefined"
 category: 'tech'
 tags: ["Windows11", "TechTips", "PCFix", "Registry", "Troubleshooting"]
 theme: "Dracula Purple Dev"
@@ -12,7 +13,7 @@ theme: "Dracula Purple Dev"
 
 이런 아찔한 상황은 비단 저만의 경험이 아닐 것입니다. 윈도우 11이 대중화되면서 가장 많은 직장인들과 엔지니어들을 답답하게 만드는 주범 중 하나가 바로 이 간소화된 우클릭 컨텍스트 메뉴입니다. 마이크로소프트는 깔끔한 디자인을 내세웠지만, 실무에서 수십 번씩 마우스 피로도를 높이는 주원인이 되었죠. 
 
-![Tech Troubleshooting Guide](/images/tech-photo/ram%20(10).png)
+![undefined](https://images.pexels.com/photos/15372897/pexels-photo-15372897.jpeg?auto=compress&cs=tinysrgb&w=1200).png)
 
 오늘 이 시간, 불필요한 시행착오 없이 단 3분 만에 예전 윈도우 10 시절의 직관적인 클래식 우클릭 메뉴로 원복하는 확실하고 안전한 방법을 현직 테크 엔지니어의 노하우를 담아 낱낱이 풀어드리겠습니다.
 

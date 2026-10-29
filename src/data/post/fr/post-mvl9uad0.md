@@ -2,7 +2,8 @@
 title: "PC qui refuse de s'eteindre : Desactivez le demarrage rapide"
 description: "Guide d'urgence pour reparer un PC qui ne s'eteint pas apres un arret Windows. Solution rapide grace au demarrage rapide."
 publishDate: 2026-10-24T03:20:00.000Z
-image: '/images/tech-photo/tech-p%20(18).jpg'
+image: "https://images.pexels.com/photos/19228384/pexels-photo-19228384.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "undefined"
 category: 'tech'
 tags: ["Tech Tips", "Hardware", "Troubleshooting", "PC Fix"]
 theme: "Electric Cyan Speed"
@@ -34,7 +35,7 @@ Il est exactement une heure du matin ici au siege de notre entreprise a Paris La
 
 Dans l'urgence absolue de cette nuit de travail, j'ai commence par le reflexe le plus brutal et le plus risque. J'ai appuye longuement sur le bouton d'alimentation physique du boitier pour forcer l'extinction electrique. Mauvaise idee quand on manipule des bases de donnees et des scripts de migration en cours de finalisation. En redarrant la machine pour verifier l'integrite de mes fichiers, rebelote : au moment de quitter le bureau pour une pause cafe rapide, impossible d'eteindre proprement la machine. Apres avoir perdu de precieuses minutes a debrancher des peripheriques USB un par un, a verifier le Gestionnaire des taches pour traquer un processus bloquant, et a fouiller dans les Parametres d'alimentation, j'ai identifie le coupable invisible de Windows.
 
-![Tech Troubleshooting Guide](/images/tech-photo/tech-photo%20(38).jpg)
+![undefined](https://images.pexels.com/photos/30433037/pexels-photo-30433037.jpeg?auto=compress&cs=tinysrgb&w=1200).jpg)
 
 <div style="border-left: 4px solid #06b6d4; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 Astuce d'urgence Electric Cyan Speed : Ne perdez plus votre temps a redemarrer en boucle ou a debrancher l'alimentation secteur. Le probleme vient presque toujours d'une fonctionnalite logicielle cachee nommee le demarrage rapide, qui empeche le noyau Windows de se decharger correctement lors de l'arret.

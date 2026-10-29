@@ -2,7 +2,8 @@
 title: "PC blijft aan na afsluiten? Zo los je het op in Windows"
 description: "Hulp van een IT-specialist: waarom je computer niet wil uitschakelen na afsluiten en hoe je Snel opstarten uitschakelt om dit op te lossen."
 publishDate: 2026-10-24T03:40:00.000Z
-image: '/images/tech-photo/tech-photo%20(30).jpg'
+image: "https://images.pexels.com/photos/19228384/pexels-photo-19228384.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "undefined"
 category: 'tech'
 tags: ["Tech Tips", "Hardware", "Troubleshooting", "PC Fix"]
 theme: "Deep Ocean Cobalt"
@@ -34,7 +35,7 @@ Afgelopen dinsdagmiddag, midden in het hectische Zuidas-zakendistrict in Amsterd
 
 Dit fenomeen, waarbij een pc weigert om echt uit te schakelen en in een soort zombie-slaapmodus blijft hangen, komt verrassend vaak voor in kantooromgevingen. Als IT-hardware specialist krijg ik hier wekelijks vragen over. Het goede nieuws is dat je er geen ingewikkelde scripttalen of dure hardwarevervangingen voor nodig hebt. Laten we eens diep duiken in de echte technische oorzaken en direct aan de slag gaan met een definitieve oplossing.
 
-![Tech Troubleshooting Guide](/images/tech-photo/keyboard%20(1).png)
+![undefined](https://images.pexels.com/photos/30433037/pexels-photo-30433037.jpeg?auto=compress&cs=tinysrgb&w=1200).png)
 
 <div style="border-left: 4px solid #2563eb; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 Belangrijke opmerking van de specialist: Dit probleem wordt in negen van de tien gevallen niet veroorzaakt door een defect moederbord, maar door een hardnekkige softwarematige energiebeheerfunctie in Windows.

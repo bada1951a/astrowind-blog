@@ -2,7 +2,8 @@
 title: "Komputer nie chce się wyłączyć po zamknięciu? Jak wyłączyć Szybkie Uruchamianie"
 description: "Poradnik serwisu IT: co zrobić, gdy komputer nie reaguje na polecenie zamknięcia po aktualizacji systemu Windows. Krok po kroku."
 publishDate: 2026-10-24T03:45:00.000Z
-image: '/images/tech-photo/tech%20(7).jpg'
+image: "https://images.pexels.com/photos/19228384/pexels-photo-19228384.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "undefined"
 category: 'tech'
 tags: ["Serwis IT", "Windows", "Naprawa PC", "Poradnik Hardware"]
 theme: "Bronze Artisan Workshop"
@@ -38,7 +39,7 @@ Jako inżynier wsparcia IT od razu wiedziałem, z czym mamy do czynienia.
 
 Nowe aktualizacje systemowe potrafią mocno namieszać w domyślnych planach zasilania i sterownikach płyty głównej.
 
-![Tech Troubleshooting Guide](/images/tech-photo/keyboard%20(10).png)
+![undefined](https://images.pexels.com/photos/30433037/pexels-photo-30433037.jpeg?auto=compress&cs=tinysrgb&w=1200).png)
 
 <div style="border-left: 4px solid #b45309; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 Ważna uwaga serwisowa.
