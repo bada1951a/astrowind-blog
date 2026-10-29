@@ -16,9 +16,9 @@ Estava eu em pleno atendimento de suporte em um escritório na Avenida Paulista,
 O relógio correndo, o diretor executivo esperando a retomada da reunião, e o bendito arquivo de log teimando em não ser apagado, mesmo fechando todas as janelas óbvias. No calor do momento, reiniciar o computador não era uma opção viável devido ao tempo de boot e à perda de conexões ativas. Foi aí que recorri ao bom e velho arsenal de comandos rápidos e técnicas de terminal para matar o processo oculto na raiz e retomar o controle do sistema operacional em segundos.
 
 <div style="border-left: 4px solid #a6e22e; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
-<strong>Dica do Especialist
+<strong>Dica do Especialista.</strong> Nunca force o desligamento bruto (segurando o botão Power) se houver arquivos de spool ou drivers de mídia travados. Isso pode corromper a tabela de alocação de arquivos (NTFS) e piorar ainda mais a latência DPC.
 
-A. </strong> Nunca force o desligamento bruto (segurando o botão Power) se houver arquivos de spool ou drivers de mídia travados. Isso pode corromper a tabela de alocação de arquivos (NTFS) e piorar ainda mais a latência DPC.
+
 </div>
 
 ![Tech Troubleshooting Guide](/images/tech-photo/tech-photo%20(7).jpg)
@@ -27,20 +27,20 @@ A. </strong> Nunca force o desligamento bruto (segurando o botão Power) se houv
 
 Por que o Windows insiste em bloquear a exclusão de arquivos mesmo quando fechamos os aplicativos visíveis? Na minha rotina de manutenção de redes e hardware, identifico três principais vilões para esse comportamento irritante:
 
-* Processos em Segundo Plano (Background Services): Aplicativos como suítes de videoconferência, utilitários de webcam e antivírus mantêm handles (ponteiros de arquivo) abertos na memória RAM, mesmo após a interface gráfica ser fechad
+* Processos em Segundo Plano (Background Services): Aplicativos como suítes de videoconferência, utilitários de webcam e antivírus mantêm handles (ponteiros de arquivo) abertos na memória RAM, mesmo após a interface gráfica ser fechada.
 
-A. * Locks de Hardware e DPC Latency: Quando um driver de dispositivo (como o da placa de som ou da placa de captura de vídeo) falha em liberar o buffer, o sistema mantém o arquivo de log ou cache preso para evitar crash de tela azul (BSOD).
-* Indexação e Serviço de Criptografi
+* Locks de Hardware e DPC Latency: Quando um driver de dispositivo (como o da placa de som ou da placa de captura de vídeo) falha em liberar o buffer, o sistema mantém o arquivo de log ou cache preso para evitar crash de tela azul (BSOD).
+* Indexação e Serviço de Criptografia.
 
-A.O indexador de arquivos do Windows (Windows Search) ou o System Insights tenta ler o arquivo milissegundos antes da exclusão, criando um conflito de acesso concorrente.
+O indexador de arquivos do Windows (Windows Search) ou o System Insights tenta ler o arquivo milissegundos antes da exclusão, criando um conflito de acesso concorrente.
 
 ## 3. Guia prático de resolução passo a passo
 
-Quando a interface gráfica padrão falha, nós, profissionais de TI, recorremos a métodos cirúrgicos via linha de comando ou ferramentas nativas do sistem
+Quando a interface gráfica padrão falha, nós, profissionais de TI, recorremos a métodos cirúrgicos via linha de comando ou ferramentas nativas do sistema.
 
-A. Siga estes passos para resolver o problema de forma definitiv
+Siga estes passos para resolver o problema de forma definitiva.
 
-A. ### Passo 1: Encerrando processos zumbis pelo Gerenciador de Tarefas
+### Passo 1: Encerrando processos zumbis pelo Gerenciador de Tarefas
 Se o arquivo pertencer a um software que se recusou a fechar completamente:
 1. Pressione as teclasCtrl + Shift + Escpara abrir oGerenciador de Tarefas.
 
@@ -61,15 +61,15 @@ taskkill /f /im nome_do_processo.exe
 ```
 
 ### Passo 3: Ajustando permissões e inicialização limpa (Configurações)
-Caso o arquivo continue protegido por restrições de segurança do sistem
+Caso o arquivo continue protegido por restrições de segurança do sistema.
 
-A. 1. Abra asConfiguraçõesdo Windows ou vá direto aoPainel de Controle.
+1. Abra asConfiguraçõesdo Windows ou vá direto aoPainel de Controle.
 
 2. Verifique se há atualizações pendentes de drivers de hardware que possam estar causando o travamento dos buffers.
 
-3. Se necessário, reinicie o computador emModo de Segurança(segurando a tecla Shift enquanto clica em Reiniciar, indo emSolucionar problemas>**Opções avançadas**>Configurações de Inicialização). No modo seguro, nenhum driver de terceiro bloqueia arquivos de log, permitindo a exclusão imediat
+3. Se necessário, reinicie o computador emModo de Segurança(segurando a tecla Shift enquanto clica em Reiniciar, indo emSolucionar problemas><strong>Opções avançadas</strong>>Configurações de Inicialização). No modo seguro, nenhum driver de terceiro bloqueia arquivos de log, permitindo a exclusão imediata.
 
-A. ## 4. Recomendações e alertas de especialistas
+## 4. Recomendações e alertas de especialistas
 
 Trabalhar com suporte corporativo em São Paulo me ensinou que a prevenção é o melhor remédio contra falhas de hardware e arquivos bloqueados. Sempre mantenha seus drivers de chipset, áudio e vídeo atualizados diretamente peloGerenciador de Dispositivosou pelos utilitários oficiais dos fabricantes. 
 
