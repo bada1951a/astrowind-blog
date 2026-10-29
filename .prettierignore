@@ -2,3 +2,6 @@ dist
 node_modules
 .github
 .changeset
+
+# Generated/published localized article content is validated separately.
+src/data/post/**
