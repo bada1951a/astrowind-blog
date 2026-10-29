@@ -2,7 +2,7 @@
 title: "Sửa lỗi ổ cứng ngoài không nhận và dọn sạch ổ C đầy dung lượng tại văn phòng TP.HCM"
 description: "Mẹo thực chiến khắc phục nhanh lỗi ổ cứng ngoài không nhận trước giờ họp ở TP.HCM và cách dọn sạch file rác ổ C chỉ trong 3 bước."
 publishDate: 2026-10-15T22:15:00.000Z
-image: "/images/tech-photo/tech-photo (36).jpg"
+image: "https://images.pexels.com/photos/28729682/pexels-photo-28729682/free-photo-of-modern-office-desk-with-laptop-and-external-drives.jpeg?auto=compress&cs=tinysrgb&w=1200"
 category: "Hardware"
 tags: ["PC", "Hardware", "Troubleshooting", "Windows", "Ho Chi Minh City"]
 theme: "Midnight Navy Royal"
@@ -65,7 +65,7 @@ Ngay sau khi ổ C đã có không gian trống, việc kết nối ổ cứng n
 ### 1. Tại sao tôi đã xóa hết phim và nhạc ở ổ C nhưng dung lượng trống vẫn rất ít?
 <strong>Trả lời:</strong> Windows thường lưu trữ các bản vá lỗi cập nhật cũ, điểm khôi phục hệ thống (System Restore) và file ngủ đông (hiberfil.sys) ẩn sâu bên trong. Bạn cần dùng công cụ *Disk Cleanup* chọn mục *Clean up system files* để xóa sạch các bản backup Windows Update cũ, nơi thường ngốn từ 10GB đến 30GB dung lượng ổ C mà người dùng không hề hay biết.
 
-![Hardware Diagnostic & Troubleshooting](https://picsum.photos/seed/gadget710/1000/550)
+![Eine Person verbindet eine externe Festplatte mit einem Laptop.](https://images.pexels.com/photos/3915760/pexels-photo-3915760.jpeg?auto=compress&cs=tinysrgb&w=1200)
 
 ### 2. Ổ cứng ngoài cắm vào máy tính có đèn sáng nhưng không hiện trong My Computer thì xử lý thế nào?
 <strong>Trả lời:</strong> Trường hợp này 90% là do ổ cứng chưa được gán tên ký tự ổ đĩa hoặc thiếu nguồn điện. Hãy thử cắm ổ cứng vào cổng USB ở phía sau thùng máy (kết nối trực tiếp với bo mạch chủ Mainboard thay vì cổng phía trước case) và tiến hành gán lại ký tự trong *Disk Management* như hướng dẫn ở Bước 2.

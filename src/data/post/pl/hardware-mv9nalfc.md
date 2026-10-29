@@ -2,7 +2,7 @@
 title: "Brak miejsca na dysku C? Jak bezpiecznie usunąć ukryte pliki tymczasowe w Windows"
 description: "Walczysz z czerwoną ikoną dysku C w warszawskim biurowcu? Oto szybki przewodnik jak odzyskać dziesiątki gigabajtów."
 publishDate: 2026-10-15T19:45:00.000Z
-image: "/images/tech-photo/tech-photo (9).jpg"
+image: "https://images.pexels.com/photos/28729682/pexels-photo-28729682/free-photo-of-modern-office-desk-with-laptop-and-external-drives.jpeg?auto=compress&cs=tinysrgb&w=1200"
 category: "Hardware"
 tags: ["Windows", "Dysk C", "Optymalizacja", "Poradnik PC"]
 theme: "Cyberpunk Terminal"
@@ -68,7 +68,7 @@ Tak, ale najlepiej robić to po zatrzymaniu usługi Windows Update. Folder ten z
 
 
 
-![Hardware Diagnostic & Troubleshooting](https://picsum.photos/seed/computer64/1000/550)
+![Eine Person verbindet eine externe Festplatte mit einem Laptop.](https://images.pexels.com/photos/3915760/pexels-photo-3915760.jpeg?auto=compress&cs=tinysrgb&w=1200)
 
 ### 2. Co zrobić, gdy zwolniłem miejsce, ale dysk znów zapełnia się samoczynnie?
 To znak, że w tle działa usługa, która generuje ogromne pliki dziennika (często błędy sterowników kart graficznych lub zapętlone próby pobrania uszkodzonej aktualizacji). Otwórz <strong>Menedżer urządzeń</strong>, sprawdź, czy któreś urządzenie nie zgłasza żółtego wykrzyknika, oraz przejrzyj harmonogram zadań.

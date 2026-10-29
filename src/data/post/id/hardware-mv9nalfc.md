@@ -2,7 +2,7 @@
 title: "Mengatasi C Drive Penuh Akibat File Sampah di Kantor Jakarta"
 description: "Panduan praktis membersihkan file temporary dan cache Windows yang menumpuk di C drive untuk mengatasi memori penuh saat lembur."
 publishDate: 2026-10-15T21:00:00.000Z
-image: "/images/tech-photo/tech-photo (38).jpg"
+image: "https://images.pexels.com/photos/28729682/pexels-photo-28729682/free-photo-of-modern-office-desk-with-laptop-and-external-drives.jpeg?auto=compress&cs=tinysrgb&w=1200"
 category: "Hardware"
 tags: ["PC", "Hardware", "Troubleshooting", "Windows", "SSD"]
 theme: "Retro Monokai"
@@ -12,7 +12,7 @@ Jam menunjukkan pukul 10 malam di sebuah gedung perkantoran kawasan SCBD, Jakart
 
 Awalnya saya mengira SSD NVMe saya rusak atau tidak terbaca karena panas berlebih akibat kerja nonstop. Saya sempat bolak-balik mencabut pasang kabel dan masuk ke menu BIOS, padahal masalahnya jauh lebih sepele namun tersembunyi: tumpukan file sampah sistem yang tidak pernah dibersihkan selama bertahun-tahun.
 
-![Hardware Diagnostic & Troubleshooting](https://picsum.photos/seed/computer137/1000/550)
+![Eine Person verbindet eine externe Festplatte mit einem Laptop.](https://images.pexels.com/photos/3915760/pexels-photo-3915760.jpeg?auto=compress&cs=tinysrgb&w=1200)
 
 <div style="border-left: 4px solid #a6e22e; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Catatan Teknisi:</strong> Jangan buru-buru memformat ulang PC atau mengganti SSD baru jika drive C penuh secara misterius. Seringkali 20 hingga 50 gigabita ruang kosong Anda dihabiskan oleh file temporary aplikasi yang berjalan di latar belakang.

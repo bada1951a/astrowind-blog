@@ -2,7 +2,7 @@
 title: "Como resolver o erro de espaço insuficiente no C e apagar arquivos temporários"
 description: "Aprenda a liberar espaço no drive C limpando arquivos temporários e resolvendo o erro de leitura em SSD NVMe externo no escritório."
 publishDate: 2026-10-15T17:15:00.000Z
-image: "/images/tech-photo/tech-photo (35).jpg"
+image: "https://images.pexels.com/photos/28729682/pexels-photo-28729682/free-photo-of-modern-office-desk-with-laptop-and-external-drives.jpeg?auto=compress&cs=tinysrgb&w=1200"
 category: "Hardware"
 tags: ["Windows", "SSD", "Manutencao", "DicasPC"]
 theme: "Sandstone Desert Minimal"
@@ -37,7 +37,7 @@ Pressione as teclas do teclado para abrir o menu Iniciar, digite <strong>Limpeza
 
 
 
-![Hardware Diagnostic & Troubleshooting](https://picsum.photos/seed/computer918/1000/550)
+![Eine Person verbindet eine externe Festplatte mit einem Laptop.](https://images.pexels.com/photos/3915760/pexels-photo-3915760.jpeg?auto=compress&cs=tinysrgb&w=1200)
 
 ### 2. Faxina Manual nas Pastas Ocultas de Cache
 Para remover o lixo que o utilitário automático às vezes não alcança:

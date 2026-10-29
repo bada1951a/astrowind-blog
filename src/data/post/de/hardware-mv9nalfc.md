@@ -2,7 +2,7 @@
 title: "C-Laufwerk voll? So löschst du versteckte temporäre Dateien unter Windows richtig"
 description: "Roter Balken im Explorer mitten im Frankfurter Büroalltag? Erfahre, wie du unsichtbare Temp-Dateien restlos entfernst und dein System rettest."
 publishDate: 2026-10-15T12:15:00.000Z
-image: "/images/tech-photo/tech-photo (39).jpg"
+image: "https://images.pexels.com/photos/28729682/pexels-photo-28729682/free-photo-of-modern-office-desk-with-laptop-and-external-drives.jpeg?auto=compress&cs=tinysrgb&w=1200"
 category: 'tech'
 tags: ["Windows", "C-Laufwerk", "Speicherplatz", "Troubleshooting", "Frankfurt"]
 theme: "High-Contrast Charcoal"
@@ -64,7 +64,7 @@ Ja, wenn du den Schnellstart oder den Ruhezustand nie nutzt. Öffne die <strong>
 
 
 
-![Tech Hardware Guide](https://images.unsplash.com/photo-1587202372775-e229f172b9d7? auto=format&fit=crop&w=1200&h=675&q=85)
+![Eine Person verbindet eine externe Festplatte mit einem Laptop.](https://images.pexels.com/photos/3915760/pexels-photo-3915760.jpeg?auto=compress&cs=tinysrgb&w=1200)
 
 ### 2. Warum füllt sich mein C-Laufwerk nach dem Löschen sofort wieder?
 Das liegt meist an automatischen Hintergrundprozessen wie Windows Update, die im Moment des Aufräumens neue Installationspakete herunterladen, oder an Browsern wie Google Chrome, die riesige Caches aufbauen. Es empfiehlt sich, nach der Bereinigung einmal den <strong>Task-Manager</strong> zu öffnen, um zu prüfen, ob gerade ein Update-Prozess im Hintergrund läuft.

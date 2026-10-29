@@ -2,7 +2,7 @@
 title: "C-schijf bijna vol in Amsterdam? Zo ruim je verborgen rommel op"
 description: "Kampt je laptop op de Zuidas met een volle C-schijf? Ontdek hoe je in een paar stappen al je tijdelijke bestanden wist en gigabytes aan ruimte terugwint."
 publishDate: 2026-10-15T18:30:00.000Z
-image: "/images/tech-photo/tech-photo (29).jpg"
+image: "https://images.pexels.com/photos/28729682/pexels-photo-28729682/free-photo-of-modern-office-desk-with-laptop-and-external-drives.jpeg?auto=compress&cs=tinysrgb&w=1200"
 category: "Hardware"
 tags: ["Windows", "PC", "Opslag", "Schoonmaak"]
 theme: "Sunset Horizon Coral"
@@ -14,7 +14,7 @@ Afgelopen dinsdagmiddag, midden in de hectiek op kantoor op de Zuidas in Amsterd
 <strong>Tech-tip van de specialist:</strong> Laat je niet gek maken door dure opslagopschchoonprogramma's die je online tegenkomt. Je kunt 90 procent van de verborgen rotzooi gewoon opruimen met ingebouwde Windows-functies, zónder dat je risico loopt op dataverlies.
 </div>
 
-![Hardware Diagnostic & Troubleshooting](https://picsum.photos/seed/computer991/1000/550)
+![Eine Person verbindet eine externe Festplatte mit einem Laptop.](https://images.pexels.com/photos/3915760/pexels-photo-3915760.jpeg?auto=compress&cs=tinysrgb&w=1200)
 
 ### Waarom loopt je C-schijf zo snel vol?
 

@@ -2,7 +2,7 @@
 title: "丸の内の悲劇を防げ！Cドライブ容量不足を一発で解消する不要ファイル完全削除術"
 description: "丸の内のオフィスでプレゼン直前の大ピンチ！Cドライブの容量不足でPCが重い、保存できないトラブルを現役ITワーカーが優しく解決。隠れゴーストファイルを一掃する安全な手順を解説します。"
 publishDate: 2026-10-15T11:00:00.000Z
-image: "/images/tech-photo/tech-photo (16).jpg"
+image: "https://images.pexels.com/photos/28729682/pexels-photo-28729682/free-photo-of-modern-office-desk-with-laptop-and-external-drives.jpeg?auto=compress&cs=tinysrgb&w=1200"
 category: "Hardware"
 tags: ["PCトラブル", "Cドライブ", "容量不足", "Windows"]
 theme: "Warm Coffee Latte"
@@ -12,7 +12,7 @@ theme: "Warm Coffee Latte"
 
 「ディスク領域が不足しています。空き容量を増やすには、不要なファイルを削除してください」
 
-![Hardware Diagnostic & Troubleshooting](https://picsum.photos/seed/computer553/1000/550)
+![Eine Person verbindet eine externe Festplatte mit einem Laptop.](https://images.pexels.com/photos/3915760/pexels-photo-3915760.jpeg?auto=compress&cs=tinysrgb&w=1200)
 
 心臓がキュッと締め付けられるような焦燥感です。プレゼン資料の最終版が保存できないどころか、PCの動作自体がカクつき始めてマウスカーソルすらまともに動かない。慌ててデスクトップのアイコンをゴミ箱に放り込んでも、減る容量はほんのわずか数メガバイト。外付けSSDの認識エラーと相まって、冷や汗が止まらない最悪の15分間が幕を開けました。
 

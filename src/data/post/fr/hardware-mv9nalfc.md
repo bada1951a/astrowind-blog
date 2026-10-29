@@ -2,7 +2,7 @@
 title: "Sature de stockage C : Comment nettoyer les fichiers temporaires et récupérer de l'espace"
 description: "Guide pratique pour libérer de l'espace sur votre disque C en supprimant définitivement les fichiers temporaires qui saturent votre PC."
 publishDate: 2026-10-15T13:30:00.000Z
-image: "/images/tech-photo/tech-photo (5).jpg"
+image: "https://images.pexels.com/photos/28729682/pexels-photo-28729682/free-photo-of-modern-office-desk-with-laptop-and-external-drives.jpeg?auto=compress&cs=tinysrgb&w=1200"
 category: "Hardware"
 tags: ["PC", "SSD", "Windows", "Stockage", "Maintenance"]
 theme: "Sunset Horizon Coral"
@@ -12,7 +12,7 @@ C'était un mardi matin agité dans notre open space de La Défense. Je m'apprê
 
 Dans ce genre de situation critique, on a tous tendance à faire n'importe quoi : vider la Corbeille en espérant un miracle, supprimer à la hache des dossiers dont on ne connait pas l'utilité, ou redémarrer la machine en boucle en espérant que l'espace va magiquement réapparaître. Évidemment, ça ne sert à rien. Le vrai coupable invisible, c'est l'accumulation silencieuse de fichiers temporaires, de caches système et de résidus de mises à jour qui étouffent votre partition principale sans que vous ne remarquiez rien.
 
-![Hardware Diagnostic & Troubleshooting](https://picsum.photos/seed/computer699/1000/550)
+![Eine Person verbindet eine externe Festplatte mit einem Laptop.](https://images.pexels.com/photos/3915760/pexels-photo-3915760.jpeg?auto=compress&cs=tinysrgb&w=1200)
 
 Heureusement, après des années à dépanner les postes de l'équipe, j'ai une méthode infaillible et rapide pour faire le ménage par le vide sans risquer de planter Windows. On oublie les logiciels tiers louches bourrés de publicités : on va utiliser les outils natifs du système, proprement et efficacement.
 

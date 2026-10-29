@@ -2,7 +2,7 @@
 title: "Como liberar espacio en el disco C: eliminando archivos temporales en Windows"
 description: "Aprende a solucionar el problema de falta de espacio en el disco C: borrando archivos temporales y basura del sistema paso a paso."
 publishDate: 2026-10-15T14:45:00.000Z
-image: "/images/tech-photo/tech-photo (8).jpg"
+image: "https://images.pexels.com/photos/28729682/pexels-photo-28729682/free-photo-of-modern-office-desk-with-laptop-and-external-drives.jpeg?auto=compress&cs=tinysrgb&w=1200"
 category: "Hardware"
 tags: ["PC", "Hardware", "Troubleshooting", "Windows", "Almacenamiento"]
 theme: "Deep Indigo System"
@@ -12,7 +12,7 @@ Eran las 6:30 de la tarde en nuestra oficina en Madrid. Teníamos sobre la mesa 
 
 En medio del pánico inicial, mi primer instinto fue empezar a vaciar la papelera de reciclaje y borrar un par de carpetas pesadas de descargas. Pero no era suficiente. El sistema seguía ahogado, marcando apenas 400 megabytes libres en una partición de 500 gigas que misteriosamente se había llenado hasta el tope. Probé a desinstalar programas a la carrera, perdiendo preciosos minutos valiosos viendo cómo la barra de progreso apenas semovía mientras el ventilador del procesador zumbaba al máximo. 
 
-![Hardware Diagnostic & Troubleshooting](https://picsum.photos/seed/computer772/1000/550)
+![Eine Person verbindet eine externe Festplatte mit einem Laptop.](https://images.pexels.com/photos/3915760/pexels-photo-3915760.jpeg?auto=compress&cs=tinysrgb&w=1200)
 
 <div style="border-left: 4px solid #4338ca; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Diagnóstico de emergencia:</strong> Cuando Windows se queda sin espacio libre en la partición principal de forma repentina, el culpable rara vez son tus archivos personales. El verdadero villano son gigabytes y gigabytes de datos invisibles acumulados en segundo plano.

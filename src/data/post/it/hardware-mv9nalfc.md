@@ -2,7 +2,7 @@
 title: "Disco C Pieno e Crash improvvisi: Guida Definitiva per Cancellare i File Temporanei"
 description: "Risolvi l'emergenza di Windows bloccato per spazio esaurito sul disco C. Guida pratica dal banco di lavoro per eliminare file temporanei e spazzatura in sicurezza."
 publishDate: 2026-10-15T16:00:00.000Z
-image: "/images/tech-photo/tech-photo (4).jpg"
+image: "https://images.pexels.com/photos/28729682/pexels-photo-28729682/free-photo-of-modern-office-desk-with-laptop-and-external-drives.jpeg?auto=compress&cs=tinysrgb&w=1200"
 category: "Hardware"
 tags: ["PC", "Hardware", "Troubleshooting", "Windows", "Manutenzione"]
 theme: "Midnight Navy Royal"
@@ -15,7 +15,7 @@ Timestamp: 02:42 AM. Chiamata urgente da uno studio di design in zona Porta Nuov
 
 Quante volte vi è capitato di guardare l'icona del vostro disco principale e vederla colorata di un rosso allarmante? Quando lo spazio sul disco C si riduce a zero, Windows va letteralmente in tilt. Non riesce a creare i file di paginazione (*pagefile.sys*), non può gestire la memoria virtuale e va in crash continuo. 
 
-![Hardware Diagnostic & Troubleshooting](https://picsum.photos/seed/computer845/1000/550)
+![Eine Person verbindet eine externe Festplatte mit einem Laptop.](https://images.pexels.com/photos/3915760/pexels-photo-3915760.jpeg?auto=compress&cs=tinysrgb&w=1200)
 
 In questo articolo ti porto direttamente dietro il mio banco di lavoro per mostrarti come ripulire a fondo il sistema, liberare decine di gigabyte e rimettere in sesto il PC in pochi minuti, senza rischiare di cancellare dati importanti.
 
