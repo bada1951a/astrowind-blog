@@ -1,23 +1,23 @@
 ---
-import '~/assets/styles/tailwind.css';
+import "~/assets/styles/tailwind.css";
 
-import { Font } from 'astro:assets';
+import { Font } from "astro:assets";
 
-import { I18N } from 'astrowind:config';
+import { I18N } from "astrowind:config";
 
-import CommonMeta from '~/components/common/CommonMeta.astro';
-import Favicons from '~/components/Favicons.astro';
-import CustomStyles from '~/components/CustomStyles.astro';
-import ApplyColorMode from '~/components/common/ApplyColorMode.astro';
-import Metadata from '~/components/common/Metadata.astro';
-import SiteVerification from '~/components/common/SiteVerification.astro';
-import Analytics from '~/components/common/Analytics.astro';
-import Intersect from '~/components/common/Intersect.astro';
+import CommonMeta from "~/components/common/CommonMeta.astro";
+import Favicons from "~/components/Favicons.astro";
+import CustomStyles from "~/components/CustomStyles.astro";
+import ApplyColorMode from "~/components/common/ApplyColorMode.astro";
+import Metadata from "~/components/common/Metadata.astro";
+import SiteVerification from "~/components/common/SiteVerification.astro";
+import Analytics from "~/components/common/Analytics.astro";
+import Intersect from "~/components/common/Intersect.astro";
 
 // Comment the line below to disable View Transitions
-import { ClientRouter } from 'astro:transitions';
+import { ClientRouter } from "astro:transitions";
 
-import type { MetaData as MetaDataType } from '~/types';
+import type { MetaData as MetaDataType } from "~/types";
 
 export interface Props {
   metadata?: MetaDataType;
@@ -30,22 +30,31 @@ const { language, textDirection } = I18N;
 <!doctype html>
 <html lang={language} dir={textDirection} class="2xl:text-[20px]">
   <head>
-    <meta name="naver-site-verification" content="69ceca582295f60d79467fd37f95a39f6ef65266" />
+    <meta
+      name="naver-site-verification"
+      content="69ceca582295f60d79467fd37f95a39f6ef65266"
+    />
 
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9N381KKW13"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9N381KKW13"
+    ></script>
     <script is:inline>
       window.dataLayer = window.dataLayer || [];
-      function gtag(...args){window.dataLayer.push(args);}
-      gtag('js', new Date());
+      function gtag(...args) {
+        window.dataLayer.push(args);
+      }
+      gtag("js", new Date());
 
-      gtag('config', 'G-9N381KKW13');
+      gtag("config", "G-9N381KKW13");
     </script>
 
     <!-- Open Graph 기본 메타태그 -->
     <meta property="og:type" content="website" />
     <meta property="og:title" content="데일리 인사이트 - 실전 IT 트러블슈팅" />
-    <meta property="og:description" content="10년 차 테크닥터가 알려주는 컴퓨터 고장 진단과 윈도우 최적화 실전 가이드" />
+    <meta
+      property="og:description"
+      content="10년 차 테크닥터가 알려주는 컴퓨터 고장 진단과 윈도우 최적화 실전 가이드"
+    />
     <meta property="og:url" content="https://storydailyview.com" />
 
     <CommonMeta />
@@ -58,7 +67,10 @@ const { language, textDirection } = I18N;
     <Analytics />
 
     <!-- Cloudflare Web Analytics (1호기) -->
-    <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "bfb758ff8664456daf95f10561a8af21"}'></script>
+    <script
+      type="module"
+      src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token": "bfb758ff8664456daf95f10561a8af21"}'></script>
     <!-- End Cloudflare Web Analytics -->
 
     <link rel="preconnect" href="https://images.unsplash.com" />
@@ -70,7 +82,9 @@ const { language, textDirection } = I18N;
     <slot name="head" />
   </head>
 
-  <body class="antialiased text-default bg-page tracking-tight min-h-screen flex flex-col">
+  <body
+    class="antialiased text-default bg-page tracking-tight min-h-screen flex flex-col"
+  >
     <slot />
 
     <Intersect />
