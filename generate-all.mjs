@@ -782,7 +782,7 @@ async function generateSinglePost(lang, index) {
     '[TOPIC FOCUS AND TRUST]',
     '- Keep the title, description, every section, examples, diagnosis, steps, and FAQ directly about the exact topic above.',
     '- Identify the specific product, operating system, symptom, or task in the topic. Explain only causes and steps that plausibly apply to it. Do not add generic lists of unrelated causes, tools, crises, or hardware.',
-    '- Do not force an office emergency, deadline, panic scene, customer story, or dramatic outcome. Open with a relatable, topic-specific situation and the narrator's first-person reasoning. Keep the opening vivid and engaging; never label it hypothetical or fictional, and never imply a real personal or customer experience.',
+    '- Do not force an office emergency, deadline, panic scene, customer story, or dramatic outcome. Open with a relatable, topic-specific situation and the narrator’s first-person reasoning. Keep the opening vivid and engaging; never label it hypothetical or fictional, and never imply a real personal or customer experience.',
     "- Never invent personal troubleshooting history, customer cases, credentials, quotations, test results, statistics, or guaranteed outcomes. First person may describe the guide's reasoning (what to check first), not fabricated autobiographical experience.",
     '',
     '- Do not invent commands, menu names, version-specific behavior, or causes. If steps differ by OS version or configuration, say what to verify and offer the safest applicable branch. Warn before destructive steps, data loss, security changes, or registry edits.',
