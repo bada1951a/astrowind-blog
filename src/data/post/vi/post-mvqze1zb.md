@@ -2,7 +2,9 @@
 title: "Hướng dẫn chi tiết buộc xóa tệp cứng đầu đang bị khóa bởi tiến trình ẩn trên Windows"
 description: "Quy trình chuyên nghiệp từ kỹ sư IT giúp xử lý dứt điểm lỗi tệp đang được sử dụng, không thể xóa trên Windows bằng Task Manager và PowerShell."
 publishDate: 2026-10-28T03:55:00.000Z
-image: '/images/tech-photo/display%20(13).png'
+image: "https://images.pexels.com/photos/6889206/pexels-photo-6889206.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "undefined"
+<!-- Pexels cover source: https://www.pexels.com/photo/files-and-folder-on-computer-screen-6889206/; inline source: https://www.pexels.com/photo/man-working-on-laptop-in-an-office-9052865/ -->
 category: 'tech'
 tags: ["Mẹo Công Nghệ","Phần Cứng","Khắc Phục Sự Cố","Sửa Máy Tính"]
 theme: "Retro Monokai"
@@ -20,7 +22,7 @@ Nếu vấn đề này không được giải quyết tức thì, công ty sẽ 
 
 
 
-![Tech Troubleshooting Guide](/images/tech-photo/storage%20(13).png)
+![undefined](https://images.pexels.com/photos/9052865/pexels-photo-9052865.jpeg?auto=compress&cs=tinysrgb&w=1200).png)
 
 ## 2. Phân tích nguyên nhân gốc rễ chi tiết
 

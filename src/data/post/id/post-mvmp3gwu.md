@@ -2,7 +2,9 @@
 title: "Cara Mengatasi Shortcut Snipping Tool Windows 11 (Win + Shift + S) yang Tidak Berfungsi"
 description: "Panduan praktis teknisi IT untuk memperbaiki shortcut Snipping Tool Win + Shift + S di Windows 11 dengan cepat dan tuntas tanpa ribet."
 publishDate: 2026-10-25T03:50:00.000Z
-image: '/images/tech-photo/storage%20(11).png'
+image: "https://images.pexels.com/photos/2115257/pexels-photo-2115257.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "undefined"
+<!-- Pexels cover source: https://www.pexels.com/photo/close-up-photo-of-gaming-keyboard-2115257/; inline source: https://www.pexels.com/photo/opened-program-for-working-online-on-laptop-3888149/ -->
 category: 'tech'
 tags: ["Windows 11", "Snipping Tool", "IT Support", "Troubleshooting", "Hardware PC"]
 theme: "Teal Matrix Digital"
@@ -16,7 +18,7 @@ Di tengah proses setup yang serba cepat ini, tiba-tiba tombol kombinasi keramat 
 
 
 
-![Tech Troubleshooting Guide](/images/tech-photo/system%20(5).png)
+![undefined](https://images.pexels.com/photos/3888149/pexels-photo-3888149.jpeg?auto=compress&cs=tinysrgb&w=1200).png)
 
 ## 2. [Root Cause Breakdown]
 

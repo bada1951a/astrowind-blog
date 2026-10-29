@@ -2,7 +2,9 @@
 title: "Nagle nie działa skrót Win+Shift+S w Windows 11? Oto jak to naprawić w 2 minuty"
 description: "Praktyczny poradnik inżyniera IT: jak szybko przywrócić działający skrót Narzędzia wycinanie w Windows 11 po awarii wielozadaniowości."
 publishDate: 2026-10-25T03:45:00.000Z
-image: '/images/tech-photo/tech-p%20(14).jpg'
+image: "https://images.pexels.com/photos/2115257/pexels-photo-2115257.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "undefined"
+<!-- Pexels cover source: https://www.pexels.com/photo/close-up-photo-of-gaming-keyboard-2115257/; inline source: https://www.pexels.com/photo/opened-program-for-working-online-on-laptop-3888149/ -->
 category: 'tech'
 tags: ["Tech Tips", "Windows 11", "Troubleshooting", "PC Fix"]
 theme: "Pastel Lavender Tech"
@@ -20,7 +22,7 @@ Zamiast spokojnie pracować, tracę cenne minuty na bezradne wciskanie kombinacj
 
 
 
-![Tech Troubleshooting Guide](/images/tech-photo/tech-photos%20(13).jpg)
+![undefined](https://images.pexels.com/photos/3888149/pexels-photo-3888149.jpeg?auto=compress&cs=tinysrgb&w=1200).jpg)
 
 ## 2. Dlaczego skrót nagle przestaje działać?
 

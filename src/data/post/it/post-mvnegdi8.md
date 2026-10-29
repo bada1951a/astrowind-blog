@@ -2,7 +2,9 @@
 title: "File bloccato e impossibile da eliminare? Ecco come forzare la cancellazione"
 description: "Guida pratica da sistemista per sbloccare e cancellare file in uso da un altro programma su Windows, senza riavviare."
 publishDate: 2026-10-25T03:30:00.000Z
-image: '/images/tech-photo/ram%20(17).png'
+image: "https://images.pexels.com/photos/6889206/pexels-photo-6889206.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "undefined"
+<!-- Pexels cover source: https://www.pexels.com/photo/files-and-folder-on-computer-screen-6889206/; inline source: https://www.pexels.com/photo/man-working-on-laptop-in-an-office-9052865/ -->
 category: 'tech'
 tags: ["Windows Tips", "Troubleshooting", "File System", "PC Fix"]
 theme: "Mint Fresh Engineering"
@@ -22,7 +24,7 @@ Ho chiuso tutto quello che potevo, ma niente: il file sembrava letteralmente inc
 
 
 
-![Tech Troubleshooting Guide](/images/tech-photo/tech-p%20(5).jpg)
+![undefined](https://images.pexels.com/photos/9052865/pexels-photo-9052865.jpeg?auto=compress&cs=tinysrgb&w=1200).jpg)
 
 ## 2. [Root Cause Breakdown]
 

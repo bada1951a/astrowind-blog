@@ -2,7 +2,9 @@
 title: "Guida pratica: ripulire i programmi all'avvio per resuscitare un PC lento"
 description: "Guida da ingegnere sistemista per ripulire i programmi all'avvio ed eliminare i colli di bottiglia hardware su Windows."
 publishDate: 2026-10-14T16:00:00.000Z
-image: "/images/tech-photo/tech-photo (13).jpg"
+image: "https://images.pexels.com/photos/7864378/pexels-photo-7864378.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "undefined"
+<!-- Pexels cover source: https://www.pexels.com/photo/a-person-typing-on-a-laptop-7864378/; inline source: https://www.pexels.com/photo/opened-program-for-working-online-on-laptop-3888149/ -->
 category: "Hardware"
 tags: ["Windows", "Troubleshooting", "SystemAdmin", "Cyberpunk"]
 theme: "Cyberpunk Terminal"
@@ -38,7 +40,7 @@ Premi la combinazione di tasti `Ctrl + Shift + Esc` per aprire la *Gestione atti
 
 Ordina la lista per "Impatto sull'avvio" e disabilita senza pietà tutto ciò che non è un driver critico o un antivirus. 
 
-![Hardware Diagnostic & Troubleshooting](https://picsum.photos/seed/hardware-688/1000/550)
+![undefined](https://images.pexels.com/photos/3888149/pexels-photo-3888149.jpeg?auto=compress&cs=tinysrgb&w=1200)
 
 ### 2. Audit approfondito via Prompt dei comandi (CLI)
 Se vuoi avere una visione chirurgica e senza fronzoli dei processi attivi e dei servizi configurati in modalità automatica, apri il *Prompt dei comandi* come amministratore (`Win + R`, digita `cmd`, poi `Ctrl + Shift + Enter`) ed esegui questa query WMI:

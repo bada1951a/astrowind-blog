@@ -2,7 +2,9 @@
 title: "Cách Buộc Xóa File Đang Bị Khóa Bởi Ứng Dụng Khác Trên Windows"
 description: "Hướng dẫn chi tiết từ kỹ sư IT cách xử lý lỗi file đang mở bằng chương trình khác khi làm việc đa nhiệm căng thẳng tại văn phòng."
 publishDate: 2026-10-28T03:55:00.000Z
-image: "/images/tech-photo/system%20(3).png"
+image: "https://images.pexels.com/photos/6889206/pexels-photo-6889206.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "undefined"
+<!-- Pexels cover source: https://www.pexels.com/photo/files-and-folder-on-computer-screen-6889206/; inline source: https://www.pexels.com/photo/man-working-on-laptop-in-an-office-9052865/ -->
 category: 'tech'
 tags: ["Mẹo Công Nghệ","Phần Cứng","Khắc Phục Sự Cố","Sửa Máy Tính"]
 theme: "Retro Monokai"
@@ -15,7 +17,7 @@ Chính trong khoảnh khắc <strong>làm việc đa nhiệm căng thẳng (mult
 
 
 
-![Tech Troubleshooting Guide](/images/tech-photo/tech-photos%20(10).jpg)
+![undefined](https://images.pexels.com/photos/9052865/pexels-photo-9052865.jpeg?auto=compress&cs=tinysrgb&w=1200).jpg)
 
 ## 2. Phân tích nguyên nhân gốc rễ chi tiết
 Dưới góc độ kỹ thuật phần cứng và hệ thống, hiện tượng tệp tin bị khóa (file lock) xảy ra khi một tiến trình hệ thống, ứng dụng nền hoặc dịch vụ chưa được giải phóng tài nguyên. Khi chúng ta chạy quá nhiều công cụ nghiệp vụ cùng lúc, RAM và CPU bị quá tải, dẫn đến hiện tượng <strong>rò rỉ bộ nhớ (memory leak)</strong> hoặc tình trạng treo tiến trình ngầm (background process deadlocks). Hệ điều hành Windows chủ động khóa tệp tin để ngăn chặn xung đột dữ liệu, bảo vệ tính toàn vẹn của tệp nhưng đồng thời lại chặn quyền truy cập hợp pháp của người dùng.

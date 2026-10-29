@@ -2,7 +2,9 @@
 title: "Exorcising the Startup Bloat: Why Your Work Rig Boots Like a 56k Modem"
 description: "A senior systems engineer's field guide to ruthlessly purging startup bloatware, reclaiming I/O throughput, and fixing sluggish boot times."
 publishDate: 2026-10-14T09:45:00.000Z
-image: "/images/tech-photo/tech-photo (36).jpg"
+image: "https://images.pexels.com/photos/7864378/pexels-photo-7864378.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "undefined"
+<!-- Pexels cover source: https://www.pexels.com/photo/a-person-typing-on-a-laptop-7864378/; inline source: https://www.pexels.com/photo/opened-program-for-working-online-on-laptop-3888149/ -->
 category: "Hardware"
 tags: ["Tech", "Troubleshooting", "Hardware", "Performance"]
 theme: "Cyberpunk Terminal"
@@ -15,7 +17,7 @@ root@silicon-valley-hq:~# ./diagnose_boot_lag.sh --status=critical
 
 It was 8:56 AM on a brutal Tuesday when my VP dropped unannounced into my bay. *"Hey, we’re pitching to the Series B investors in ten minutes. Can you pull up the updated telemetry deck on your primary?"* I hit the power button on my engineering workstation—a beastly rig meant to compile C++ microservices in seconds—and watched in absolute horror as the login screen decided to take a scenic 4-minute coffee break. The CPU fan spun up like a jet turbine, Task Manager was unresponsive, and my career flashed before my eyes. 
 
-![Hardware Diagnostic & Troubleshooting](https://picsum.photos/seed/hardware-323/1000/550)
+![undefined](https://images.pexels.com/photos/3888149/pexels-photo-3888149.jpeg?auto=compress&cs=tinysrgb&w=1200)
 
 Every engineer knows this sinking feeling. You install a few dozen development SDKs, container runtimes, corporate telemetry wrappers, and harmless little desktop chat apps, and suddenly your NVMe SSD feels like a floppy disk from 1998. 
 

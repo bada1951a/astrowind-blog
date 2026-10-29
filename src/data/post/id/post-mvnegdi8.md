@@ -2,7 +2,9 @@
 title: "Cara Paksa Hapus File yang Sedang Aktif Digunakan Program di Windows"
 description: "Panduan praktis teknisi IT SCBD untuk mengatasi file terkunci yang tidak bisa dihapus dengan cara paksa menggunakan Task Manager, CMD, hingga tool pihak ketiga."
 publishDate: 2026-10-25T03:50:00.000Z
-image: '/images/tech-photo/tech-photos%20(10).jpg'
+image: "https://images.pexels.com/photos/6889206/pexels-photo-6889206.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "undefined"
+<!-- Pexels cover source: https://www.pexels.com/photo/files-and-folder-on-computer-screen-6889206/; inline source: https://www.pexels.com/photo/man-working-on-laptop-in-an-office-9052865/ -->
 category: 'tech'
 tags: ["Tech Tips", "Hardware", "Troubleshooting", "PC Fix"]
 theme: "Teal Matrix Digital"
@@ -20,7 +22,7 @@ Panik? Jelas. Query database sedang berjalan di background, proses eksekusi tida
 
 
 
-![Tech Troubleshooting Guide](/images/tech-photo/system%20(5).png)
+![undefined](https://images.pexels.com/photos/9052865/pexels-photo-9052865.jpeg?auto=compress&cs=tinysrgb&w=1200).png)
 
 ## 2. [Root Cause Breakdown]
 

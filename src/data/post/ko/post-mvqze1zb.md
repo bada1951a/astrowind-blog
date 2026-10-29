@@ -2,7 +2,9 @@
 title: "사용 중인 파일 강제 삭제 완벽 가이드: 사내 시스템 오류 긴급 대처법"
 description: "다른 프로그램에서 사용 중이라 삭제할 수 없는 파일을 1분 만에 안전하고 확실하게 강제 삭제하는 현직 엔지니어의 실무 트러블슈팅 가이드"
 publishDate: 2026-10-28T03:00:00.000Z
-image: '/images/tech-photo/tech-p%20(13).jpg'
+image: "https://images.pexels.com/photos/6889206/pexels-photo-6889206.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "undefined"
+<!-- Pexels cover source: https://www.pexels.com/photo/files-and-folder-on-computer-screen-6889206/; inline source: https://www.pexels.com/photo/man-working-on-laptop-in-an-office-9052865/ -->
 category: 'tech'
 tags: ["테크팁","하드웨어","트러블슈팅","PC해결"]
 theme: "Pure Titanium Clean"
@@ -22,7 +24,7 @@ theme: "Pure Titanium Clean"
 
 
 
-![Tech Troubleshooting Guide](/images/tech-photo/display%20(19).png)
+![undefined](https://images.pexels.com/photos/9052865/pexels-photo-9052865.jpeg?auto=compress&cs=tinysrgb&w=1200).png)
 
 ## 2. 오류와 병목의 진짜 핵심 원인 분석
 

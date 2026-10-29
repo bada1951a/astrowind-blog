@@ -2,7 +2,9 @@
 title: "Bestanden die door een ander programma worden gebruikt geforceerd verwijderen"
 description: "Praktische handleiding voor IT-systeembeheerders om hardnekkige bestanden en vergrendelde processen geforceerd te verwijderen tijdens cruciale migraties."
 publishDate: 2026-10-28T03:40:00.000Z
-image: "/images/tech-photo/tech-photos%20(40).jpg"
+image: "https://images.pexels.com/photos/6889206/pexels-photo-6889206.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "undefined"
+<!-- Pexels cover source: https://www.pexels.com/photo/files-and-folder-on-computer-screen-6889206/; inline source: https://www.pexels.com/photo/man-working-on-laptop-in-an-office-9052865/ -->
 category: 'tech'
 tags: ["Tech Tips","Hardware","Probleemoplossing","PC Herstel"]
 theme: "Modern Minimalist Slate"
@@ -16,7 +18,7 @@ De paniek dreigt even toe te slaan omdat de klok onverbiddelijk tikt en de gepla
 
 
 
-![Tech Troubleshooting Guide](/images/tech-photo/tech-p%20(19).jpg)
+![undefined](https://images.pexels.com/photos/9052865/pexels-photo-9052865.jpeg?auto=compress&cs=tinysrgb&w=1200).jpg)
 
 ## 2. Grondige analyse van de hoofdoorzaak
 

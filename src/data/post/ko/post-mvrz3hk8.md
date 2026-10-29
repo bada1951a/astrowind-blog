@@ -2,7 +2,9 @@
 title: "지방 지사 출장 중 발생한 파일 삭제 오류, 강제 종료 및 해결 가이드"
 description: "출장지 회의실에서 노트북 연결 및 파일 삭제 오류 시 대처하는 현직 엔지니어의 실무 트러블슈팅 가이드"
 publishDate: 2026-10-28T03:00:00.000Z
-image: "/images/tech-photo/display%20(13).png"
+image: "https://images.pexels.com/photos/6889206/pexels-photo-6889206.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "undefined"
+<!-- Pexels cover source: https://www.pexels.com/photo/files-and-folder-on-computer-screen-6889206/; inline source: https://www.pexels.com/photo/man-working-on-laptop-in-an-office-9052865/ -->
 category: 'tech'
 tags: ["테크팁","하드웨어","트러블슈팅","PC해결"]
 theme: "Modern Minimalist Slate"
@@ -16,7 +18,7 @@ theme: "Modern Minimalist Slate"
 
 
 
-![Tech Troubleshooting Guide](/images/tech-photo/tech%20(10).jpg)
+![undefined](https://images.pexels.com/photos/9052865/pexels-photo-9052865.jpeg?auto=compress&cs=tinysrgb&w=1200).jpg)
 
 ## 2. 오류와 병목의 진짜 핵심 원인 분석
 

@@ -2,7 +2,9 @@
 title: "Mẹo xử lý máy tính khởi động rùa bò: Cẩm nang thực chiến cứu nguy deadline"
 description: "Hướng dẫn thực chiến từ kỹ sư IT cách dọn dẹp Startup, tối ưu tốc độ boot máy tính Windows cực nhanh và hiệu quả cho dân văn phòng."
 publishDate: 2026-10-14T22:15:00.000Z
-image: "/images/tech-photo/tech-photo (24).jpg"
+image: "https://images.pexels.com/photos/7864378/pexels-photo-7864378.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "undefined"
+<!-- Pexels cover source: https://www.pexels.com/photo/a-person-typing-on-a-laptop-7864378/; inline source: https://www.pexels.com/photo/opened-program-for-working-online-on-laptop-3888149/ -->
 category: "Hardware"
 tags: ["Tech", "Troubleshooting", "Hardware"]
 theme: "Pure Titanium Clean"
@@ -12,7 +14,7 @@ Mới sáng thứ Hai đầu tuần, sếp tổng gọi gấp vào phòng họp 
 
 Đó là lúc anh em kỹ sư IT như tụi mình phải bật chế độ "cấp cứu" ngay lập tức. Đừng vội mang ra tiệm tốn tiền hay cài lại Win mất thời gian, bài viết này tôi sẽ chỉ cho anh em cách "phẫu thuật" tận gốc bệnh khởi động chậm trễ này chỉ trong vòng một nốt nhạc.
 
-![Hardware Diagnostic & Troubleshooting](https://picsum.photos/seed/hardware-53/1000/550)
+![undefined](https://images.pexels.com/photos/3888149/pexels-photo-3888149.jpeg?auto=compress&cs=tinysrgb&w=1200)
 
 ---
 

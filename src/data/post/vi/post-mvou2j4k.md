@@ -2,7 +2,9 @@
 title: "Meo ep xoa file dang chay trong Windows khi gap loi Action Cannot Be Completed"
 description: "Huong dan cach xu ly triet de tinh trang khong xoa duoc file vi dang bi treo hoac bi chiem dung boi ung dung ngam tren Windows mot cach nhanh chong."
 publishDate: 2026-10-26T03:55:00.000Z
-image: '/images/tech-photo/keyboard%20(2).png'
+image: "https://images.pexels.com/photos/6889206/pexels-photo-6889206.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "undefined"
+<!-- Pexels cover source: https://www.pexels.com/photo/files-and-folder-on-computer-screen-6889206/; inline source: https://www.pexels.com/photo/man-working-on-laptop-in-an-office-9052865/ -->
 category: 'tech'
 tags: ["Tech Tips", "Hardware", "Troubleshooting", "PC Fix"]
 theme: "Rosewood Hardware Guide"
@@ -16,7 +18,7 @@ Nhung tro trêu thay, mot hop thoai loi hien len man hinh voi dong chu lanh ngat
 
 
 
-![Tech Troubleshooting Guide](/images/tech-photo/tech-photos%20(36).jpg)
+![undefined](https://images.pexels.com/photos/9052865/pexels-photo-9052865.jpeg?auto=compress&cs=tinysrgb&w=1200).jpg)
 
 ## 2. [Root Cause Breakdown]
 

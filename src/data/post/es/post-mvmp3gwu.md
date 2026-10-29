@@ -2,7 +2,9 @@
 title: "Solución Rápida: Atajo Win + Shift + S No Funciona en Windows 11"
 description: "Aprende a solucionar cuando el atajo de la Herramienta Recortes de Windows 11 deja de funcionar justo antes de una presentación importante."
 publishDate: 2026-10-25T03:25:00.000Z
-image: '/images/tech-photo/system%20(20).png'
+image: "https://images.pexels.com/photos/2115257/pexels-photo-2115257.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "undefined"
+<!-- Pexels cover source: https://www.pexels.com/photo/close-up-photo-of-gaming-keyboard-2115257/; inline source: https://www.pexels.com/photo/opened-program-for-working-online-on-laptop-3888149/ -->
 category: 'tech'
 tags: ["Windows 11", "Herramienta Recortes", "Soporte TI", "Atajos de Teclado", "Trucos PC"]
 theme: "Industrial Blueprint"
@@ -24,7 +26,7 @@ Volví a pulsar el teclado con más fuerza, asegurándome de presionar bien cada
 
 
 
-![Tech Troubleshooting Guide](/images/tech-photo/tech-photos%20(3).jpg)
+![undefined](https://images.pexels.com/photos/3888149/pexels-photo-3888149.jpeg?auto=compress&cs=tinysrgb&w=1200).jpg)
 
 ## 2. Root Cause Breakdown
 

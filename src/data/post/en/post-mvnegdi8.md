@@ -2,7 +2,9 @@
 title: "How to Force Delete Files in Use by Another Program on Windows"
 description: "Master the art of force deleting stubborn files locked by background processes using Task Manager, Resource Monitor, and the command line."
 publishDate: 2026-10-25T03:05:00.000Z
-image: '/images/tech-photo/display%20(16).png'
+image: "https://images.pexels.com/photos/6889206/pexels-photo-6889206.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "undefined"
+<!-- Pexels cover source: https://www.pexels.com/photo/files-and-folder-on-computer-screen-6889206/; inline source: https://www.pexels.com/photo/man-working-on-laptop-in-an-office-9052865/ -->
 category: 'tech'
 tags: ["Tech Tips", "Windows", "Troubleshooting", "File Management"]
 theme: "Midnight Navy Royal"
@@ -20,7 +22,7 @@ No file name was specified, no helpful hint was given, and the UI just flat-out 
 
 
 
-![Tech Troubleshooting Guide](/images/tech-photo/tech-photos%20(8).jpg)
+![undefined](https://images.pexels.com/photos/9052865/pexels-photo-9052865.jpeg?auto=compress&cs=tinysrgb&w=1200).jpg)
 
 ## 2. Root Cause Breakdown
 

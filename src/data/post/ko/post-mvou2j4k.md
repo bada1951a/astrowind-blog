@@ -2,7 +2,9 @@
 title: "다른 프로그램에서 사용 중인 파일 강제 삭제 방법"
 description: "새벽 마감 직전 파일을 지우려는데 '사용 중'이라며 삭제가 안 될 때, 작업 관리자와 명령 프롬프트를 이용해 확실하게 해결하는 실무 가이드."
 publishDate: 2026-10-26T03:00:00.000Z
-image: '/images/tech-photo/display%20(12).png'
+image: "https://images.pexels.com/photos/6889206/pexels-photo-6889206.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "undefined"
+<!-- Pexels cover source: https://www.pexels.com/photo/files-and-folder-on-computer-screen-6889206/; inline source: https://www.pexels.com/photo/man-working-on-laptop-in-an-office-9052865/ -->
 category: 'tech'
 tags: ["Tech Tips", "Hardware", "Troubleshooting", "PC Fix"]
 theme: "Pastel Lavender Tech"
@@ -18,7 +20,7 @@ theme: "Pastel Lavender Tech"
 
 
 
-![Tech Troubleshooting Guide](/images/tech-photo/tech-photo%20(24).jpg)
+![undefined](https://images.pexels.com/photos/9052865/pexels-photo-9052865.jpeg?auto=compress&cs=tinysrgb&w=1200).jpg)
 
 ## 2. [Root Cause Breakdown]
 

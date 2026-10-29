@@ -2,7 +2,9 @@
 title: "Windows 11でWin+Shift+Sが効かない！焦るセキュリティ監査前の緊急修復ガイド"
 description: "丸の内・品川のオフィスで急増中。社内ITセキュリティ監査の提出30分前にSnipping Toolのショートカットが効かなくなった際の現場直結の緊急修復手順を徹底解説。"
 publishDate: 2026-10-25T03:10:00.000Z
-image: '/images/tech-photo/tech-photo%20(18).jpg'
+image: "https://images.pexels.com/photos/2115257/pexels-photo-2115257.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "undefined"
+<!-- Pexels cover source: https://www.pexels.com/photo/close-up-photo-of-gaming-keyboard-2115257/; inline source: https://www.pexels.com/photo/opened-program-for-working-online-on-laptop-3888149/ -->
 category: 'tech'
 tags: ["Windows 11", "Snipping Tool", "IT Support", "Troubleshooting", "PC Fix"]
 theme: "High-Contrast Charcoal"
@@ -18,7 +20,7 @@ theme: "High-Contrast Charcoal"
 
 
 
-![Tech Troubleshooting Guide](/images/tech-photo/tech-photo%20(11).jpg)
+![undefined](https://images.pexels.com/photos/3888149/pexels-photo-3888149.jpeg?auto=compress&cs=tinysrgb&w=1200).jpg)
 
 ## 2. [Root Cause Breakdown]
 

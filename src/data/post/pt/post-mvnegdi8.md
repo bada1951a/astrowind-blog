@@ -2,7 +2,9 @@
 title: "Como Forçar a Exclusão de Arquivos em Uso no Windows: Guia Prático de TI"
 description: "Aprenda a forçar a exclusão de arquivos travados por outros programas no Windows com métodos práticos e seguros usados por especialistas de TI."
 publishDate: 2026-10-25T03:35:00.000Z
-image: '/images/tech-photo/storage%20(3).png'
+image: "https://images.pexels.com/photos/6889206/pexels-photo-6889206.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "undefined"
+<!-- Pexels cover source: https://www.pexels.com/photo/files-and-folder-on-computer-screen-6889206/; inline source: https://www.pexels.com/photo/man-working-on-laptop-in-an-office-9052865/ -->
 category: 'tech'
 tags: ["Tech Tips", "Hardware", "Troubleshooting", "PC Fix"]
 theme: "Retro Monokai"
@@ -21,7 +23,7 @@ O relógio correndo, o diretor executivo esperando a retomada da reunião, e o b
 
 </div>
 
-![Tech Troubleshooting Guide](/images/tech-photo/tech-photo%20(7).jpg)
+![undefined](https://images.pexels.com/photos/9052865/pexels-photo-9052865.jpeg?auto=compress&cs=tinysrgb&w=1200).jpg)
 
 ## 2. Análise da causa raiz do problema
 

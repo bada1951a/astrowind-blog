@@ -2,7 +2,9 @@
 title: "아침 출근길 켜놓은 팀즈가 부팅을 망쳤다: OS 커널 레벨에서 파헤치는 시작프로그램 팩폭 정리 가이드"
 description: "8년 차 현업 엔지니어가 전수하는 진짜 부팅 속도 개선법. 작업관리자 수준을 넘어선 커널 로그와 레지스트리, 드라이버 충돌 분석으로 10초 만에 켜지는 법."
 publishDate: 2026-10-14T08:30:00.000Z
-image: "/images/tech-photo/tech-photo (32).jpg"
+image: "https://images.pexels.com/photos/7864378/pexels-photo-7864378.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "undefined"
+<!-- Pexels cover source: https://www.pexels.com/photo/a-person-typing-on-a-laptop-7864378/; inline source: https://www.pexels.com/photo/opened-program-for-working-online-on-laptop-3888149/ -->
 category: 'tech'
 tags: ["Windows", "Troubleshooting", "SystemOptimization", "Registry"]
 theme: "Deep Indigo System"
@@ -12,7 +14,7 @@ theme: "Deep Indigo System"
 
 개발자 8년 차 구르면서 터득한, 겉핥기 식 클리너 프로그램 따위 쓰지 않고 레지스트리와 장치 관리자를 직접 파고들어 부팅 속도를 광속으로 끌어올리는 팩폭 가이드를 풀어본다.
 
-![Tech Hardware Guide](https://images.unsplash.com/photo-1593642632823-8f785ba67e45? auto=format&fit=crop&w=1200&h=675&q=85)
+![undefined](https://images.pexels.com/photos/3888149/pexels-photo-3888149.jpeg?auto=compress&cs=tinysrgb&w=1200)
 
 ---
 

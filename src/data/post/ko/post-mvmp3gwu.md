@@ -2,7 +2,9 @@
 title: "윈도우 11 캡처 도구 단축키 먹통 해결법: Win Shift S 1분 긴급 복구 가이드"
 description: "사내 보안 감사 마감 30분 전, 윈도우 11 캡처 단축키(Win + Shift + S)가 안 될 때 즉시 해결하는 초고속 복구 및 근본 원인 해결법."
 publishDate: 2026-10-25T03:00:00.000Z
-image: '/images/tech-photo/ram%20(9).png'
+image: "https://images.pexels.com/photos/2115257/pexels-photo-2115257.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "undefined"
+<!-- Pexels cover source: https://www.pexels.com/photo/close-up-photo-of-gaming-keyboard-2115257/; inline source: https://www.pexels.com/photo/opened-program-for-working-online-on-laptop-3888149/ -->
 category: 'tech'
 tags: ["Windows 11", "Snipping Tool", "단축키 오류", "IT 트러블슈팅", "PC 최적화"]
 theme: "Electric Cyan Speed"
@@ -20,7 +22,7 @@ theme: "Electric Cyan Speed"
 
 
 
-![Tech Troubleshooting Guide](/images/tech-photo/tech-photos%20(1).jpg)
+![undefined](https://images.pexels.com/photos/3888149/pexels-photo-3888149.jpeg?auto=compress&cs=tinysrgb&w=1200).jpg)
 
 ## 2. Root Cause Breakdown
 

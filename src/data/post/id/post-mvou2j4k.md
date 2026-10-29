@@ -2,7 +2,9 @@
 title: "Cara Paksa Hapus File yang Sedang Digunakan Program Lain di Windows"
 description: "Panduan praktis teknisi IT untuk mengatasi file yang tidak bisa dihapus karena sedang berjalan di background, lengkap dengan trik aman anti-gagal."
 publishDate: 2026-10-26T03:50:00.000Z
-image: '/images/tech-photo/tech-p%20(20).jpg'
+image: "https://images.pexels.com/photos/6889206/pexels-photo-6889206.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "undefined"
+<!-- Pexels cover source: https://www.pexels.com/photo/files-and-folder-on-computer-screen-6889206/; inline source: https://www.pexels.com/photo/man-working-on-laptop-in-an-office-9052865/ -->
 category: 'tech'
 tags: ["Tech Tips", "Hardware", "Troubleshooting", "PC Fix", "Windows"]
 theme: "Crimson Emergency Field"
@@ -20,7 +22,7 @@ Waktu menipis, baterai terus merosot, dan dokumen itu terkunci rapat tanpa alasa
 
 
 
-![Tech Troubleshooting Guide](/images/tech-photo/bsod%20(1).png)
+![undefined](https://images.pexels.com/photos/9052865/pexels-photo-9052865.jpeg?auto=compress&cs=tinysrgb&w=1200).png)
 
 ## 2. Root Cause Breakdown
 

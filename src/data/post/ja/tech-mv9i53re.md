@@ -2,7 +2,9 @@
 title: "Windows 11が重い？バックグラウンドアプリと視覚効果をサクッと最適化して爆速にする方法"
 description: "丸の内のオフィスでプレゼン直前なのにPCがフリーズ！Windows 11の重さを解消するバックグラウンドアプリの停止と視覚効果の最適化手順を分かりやすく解説します。"
 publishDate: 2026-10-15T11:00:00.000Z
-image: "/images/tech-photo/tech-photo (39).jpg"
+image: "https://images.pexels.com/photos/7864378/pexels-photo-7864378.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "undefined"
+<!-- Pexels cover source: https://www.pexels.com/photo/a-person-typing-on-a-laptop-7864378/; inline source: https://www.pexels.com/photo/opened-program-for-working-online-on-laptop-3888149/ -->
 category: "PCトラブル解決"
 tags: ["Windows11", "動作が重い", "PC最適化", "仕事効率化"]
 theme: "Pastel Lavender Tech"
@@ -12,7 +14,7 @@ theme: "Pastel Lavender Tech"
 
 原因は、裏で勝手に動き回っていた無数のバックグラウンドアプリと、Windows 11の無駄にリッチなアニメーション（視覚効果）がメモリとCPUのパワーを完全に食い潰していたことでした。
 
-![Hardware Diagnostic & Troubleshooting](https://images.unsplash.com/photo-1588872657578-7efd1f1555ed? w=1000&auto=format&fit=crop&q=80)
+![undefined](https://images.pexels.com/photos/3888149/pexels-photo-3888149.jpeg?auto=compress&cs=tinysrgb&w=1200)
 
 <div style="border-left: 4px solid #7c3aed; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>【よくある質問 5選サクッとまとめ】</strong><br>

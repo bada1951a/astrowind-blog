@@ -2,7 +2,9 @@
 title: "Como Consertar o Atalho Win Shift S da Ferramenta de Captura no Windows 11"
 description: "Resolva o problema do atalho Win Shift S no Windows 11 com passos práticos e rápidos. Guia direto de um técnico de TI em São Paulo."
 publishDate: 2026-10-25T03:35:00.000Z
-image: '/images/tech-photo/ram%20(8).png'
+image: "https://images.pexels.com/photos/2115257/pexels-photo-2115257.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "undefined"
+<!-- Pexels cover source: https://www.pexels.com/photo/close-up-photo-of-gaming-keyboard-2115257/; inline source: https://www.pexels.com/photo/opened-program-for-working-online-on-laptop-3888149/ -->
 category: 'tech'
 tags: ["Windows 11", "Snipping Tool", "Atalhos", "Suporte TI", "Produtividade"]
 theme: "Deep Indigo System"
@@ -22,7 +24,7 @@ O relógio correndo, a query rodando e o desespero batendo por não conseguir ti
 
 
 
-![Tech Troubleshooting Guide](/images/tech-photo/keyboard%20(12).png)
+![undefined](https://images.pexels.com/photos/3888149/pexels-photo-3888149.jpeg?auto=compress&cs=tinysrgb&w=1200).png)
 
 ## 2. Root Cause Breakdown
 

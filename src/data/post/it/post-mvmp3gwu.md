@@ -2,7 +2,9 @@
 title: "Come risolvere la scorciatoia Win + Shift + S bloccata in Windows 11"
 description: "Guida pratica per sistemisti per ripristinare lo Strumento di cattura e la combinazione Win + Shift + S quando smette di funzionare su Windows 11."
 publishDate: 2026-10-25T03:30:00.000Z
-image: '/images/tech-photo/keyboard%20(4).png'
+image: "https://images.pexels.com/photos/2115257/pexels-photo-2115257.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "undefined"
+<!-- Pexels cover source: https://www.pexels.com/photo/close-up-photo-of-gaming-keyboard-2115257/; inline source: https://www.pexels.com/photo/opened-program-for-working-online-on-laptop-3888149/ -->
 category: 'tech'
 tags: ["Windows 11", "Troubleshooting", "SysAdmin", "Shortcut Fix"]
 theme: "Matte Black stealth"
@@ -16,7 +18,7 @@ Il vuoto assoluto. Nessun oscuramento dello schermo, nessuna notifica in basso a
 
 
 
-![Tech Troubleshooting Guide](/images/tech-photo/ram%20(1).png)
+![undefined](https://images.pexels.com/photos/3888149/pexels-photo-3888149.jpeg?auto=compress&cs=tinysrgb&w=1200).png)
 
 ## 2. Root Cause Breakdown
 

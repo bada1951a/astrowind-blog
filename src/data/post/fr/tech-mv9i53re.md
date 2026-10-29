@@ -2,7 +2,9 @@
 title: "Windows 11 ronge votre PC : Comment neutraliser les applications en arrière-plan et les effets visuels superflus"
 description: "Journal de bord d'un technicien support à La Défense : comment j'ai sauvé mon PC portable avant une réunion tendue dans le TGV Paris-Lyon."
 publishDate: 2026-10-15T13:30:00.000Z
-image: "/images/tech-photo/tech-photo (21).jpg"
+image: "https://images.pexels.com/photos/7864378/pexels-photo-7864378.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "undefined"
+<!-- Pexels cover source: https://www.pexels.com/photo/a-person-typing-on-a-laptop-7864378/; inline source: https://www.pexels.com/photo/opened-program-for-working-online-on-laptop-3888149/ -->
 category: "tech"
 tags: ["Windows 11", "Optimisation", "Support IT", "Productivité"]
 theme: "Midnight Navy Royal"
@@ -12,7 +14,7 @@ Il est 7h45 ce mardi matin. Je suis assis à mon bureau dans une tour de verre �
 
 Ce genre de panne n'attend jamais le bon moment. Si vous aussi, votre bécane a l'air de traîner un boulet invisible alors que vous avez juste besoin d'efficacité immédiate, sortez votre carnet de notes. Voici le journal de bord de mon intervention d'urgence, heure par heure, pour redonner vie à un Windows 11 essoufflé.
 
-![Hardware Diagnostic & Troubleshooting](https://picsum.photos/seed/computer834/1000/550)
+![undefined](https://images.pexels.com/photos/3888149/pexels-photo-3888149.jpeg?auto=compress&cs=tinysrgb&w=1200)
 
 <div style="border-left: 4px solid #1d4ed8; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Journal d'incident - Incident #404-W11</strong><br>

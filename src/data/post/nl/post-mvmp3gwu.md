@@ -2,7 +2,9 @@
 title: "Windows 11 Knipprogramma Sneltoets Werkt Niet: Win+Shift+S Oplossen"
 description: "Ervaar je dat Win+Shift+S niet werkt op Windows 11? Leer hoe je dit oplost tijdens presentaties, buitendienst of op kantoor."
 publishDate: 2026-10-25T03:40:00.000Z
-image: '/images/tech-photo/keyboard%20(14).png'
+image: "https://images.pexels.com/photos/2115257/pexels-photo-2115257.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "undefined"
+<!-- Pexels cover source: https://www.pexels.com/photo/close-up-photo-of-gaming-keyboard-2115257/; inline source: https://www.pexels.com/photo/opened-program-for-working-online-on-laptop-3888149/ -->
 category: 'tech'
 tags: ["Windows 11", "Sneltoets", "Knipprogramma", "IT Beheer", "Troubleshooting"]
 theme: "Deep Ocean Cobalt"
@@ -20,7 +22,7 @@ In zo'n hectische situatie, met een groep collega's die direct resultaat verwach
 
 
 
-![Tech Troubleshooting Guide](/images/tech-photo/bsod%20(10).png)
+![undefined](https://images.pexels.com/photos/3888149/pexels-photo-3888149.jpeg?auto=compress&cs=tinysrgb&w=1200).png)
 
 ## 2. Waarom de Sneltoets Weigert
 

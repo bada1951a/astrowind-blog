@@ -2,7 +2,9 @@
 title: "「別のプログラムがこのファイルを開いているため…」を強制削除する確実な手順"
 description: "丸の内・品川のオフィスで頻発するファイル削除エラー。週末当直の緊急事態に役立つ、ロックされたファイルを確実に強制削除する実践的トラブルシューティングガイド。"
 publishDate: 2026-10-25T03:10:00.000Z
-image: '/images/tech-photo/tech-photo%20(21).jpg'
+image: "https://images.pexels.com/photos/6889206/pexels-photo-6889206.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "undefined"
+<!-- Pexels cover source: https://www.pexels.com/photo/files-and-folder-on-computer-screen-6889206/; inline source: https://www.pexels.com/photo/man-working-on-laptop-in-an-office-9052865/ -->
 category: 'tech'
 tags: ["Tech Tips", "Hardware", "Troubleshooting", "PC Fix"]
 theme: "Crimson Emergency Field"
@@ -22,7 +24,7 @@ theme: "Crimson Emergency Field"
 
 
 
-![Tech Troubleshooting Guide](/images/tech-photo/tech-photos%20(31).jpg)
+![undefined](https://images.pexels.com/photos/9052865/pexels-photo-9052865.jpeg?auto=compress&cs=tinysrgb&w=1200).jpg)
 
 ## 2. [Root Cause Breakdown]
 

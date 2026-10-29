@@ -2,7 +2,9 @@
 title: "Cómo eliminar archivos en uso por otro programa en Windows"
 description: "Guía práctica de soporte técnico para forzar el borrado de archivos bloqueados en Windows con métodos rápidos y seguros."
 publishDate: 2026-10-25T03:25:00.000Z
-image: '/images/tech-photo/ram%20(10).png'
+image: "https://images.pexels.com/photos/6889206/pexels-photo-6889206.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "undefined"
+<!-- Pexels cover source: https://www.pexels.com/photo/files-and-folder-on-computer-screen-6889206/; inline source: https://www.pexels.com/photo/man-working-on-laptop-in-an-office-9052865/ -->
 category: 'tech'
 tags: ["Soporte TI", "Windows", "Trucos PC", "Hardware"]
 theme: "Tokyo Neon Violet"
@@ -24,7 +26,7 @@ El corazón da un vuelco. Pruebo a cerrar las aplicaciones visibles en la barra 
 
 </div>
 
-![Tech Troubleshooting Guide](/images/tech-photo/keyboard%20(9).png)
+![undefined](https://images.pexels.com/photos/9052865/pexels-photo-9052865.jpeg?auto=compress&cs=tinysrgb&w=1200).png)
 
 ## 2. Por qué ocurre este molesto bloqueo
 

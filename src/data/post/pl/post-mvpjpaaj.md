@@ -2,7 +2,9 @@
 title: "Jak wymusić usunięcie zablokowanego pliku w systemie Windows"
 description: "Kompleksowy poradnik inżyniera wsparcia IT dotyczący bezpiecznego zamykania procesów i wymuszonego usuwania plików zablokowanych przez system."
 publishDate: 2026-10-27T03:45:00.000Z
-image: '/images/tech-photo/tech%20(4).jpg'
+image: "https://images.pexels.com/photos/6889206/pexels-photo-6889206.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "undefined"
+<!-- Pexels cover source: https://www.pexels.com/photo/files-and-folder-on-computer-screen-6889206/; inline source: https://www.pexels.com/photo/man-working-on-laptop-in-an-office-9052865/ -->
 category: 'tech'
 tags: ["Porady Tech","Sprzęt","Rozwiązywanie Problemów","Naprawa PC"]
 theme: "Pure Titanium Clean"
@@ -20,7 +22,7 @@ Uświadomiłem sobie wówczas, jak dramatyczne mogą być konsekwencje braku pan
 
 
 
-![Tech Troubleshooting Guide](/images/tech-photo/tech-photos%20(28).jpg)
+![undefined](https://images.pexels.com/photos/9052865/pexels-photo-9052865.jpeg?auto=compress&cs=tinysrgb&w=1200).jpg)
 
 ## 2. Szczegółowa analiza przyczyn źródłowych
 

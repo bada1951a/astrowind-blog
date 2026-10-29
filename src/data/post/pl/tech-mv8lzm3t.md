@@ -2,7 +2,9 @@
 title: "Mój lapek wstawał dłużej niż ja w poniedziałek: Jak opanowałem chaos w autostarcie"
 description: "Prawdziwy manual inżyniera IT: bez litości czścimy autostart Windowsa i przywracamy maszyny do żywych."
 publishDate: 2026-10-14T19:45:00.000Z
-image: "/images/tech-photo/tech-photo (23).jpg"
+image: "https://images.pexels.com/photos/7864378/pexels-photo-7864378.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "undefined"
+<!-- Pexels cover source: https://www.pexels.com/photo/a-person-typing-on-a-laptop-7864378/; inline source: https://www.pexels.com/photo/opened-program-for-working-online-on-laptop-3888149/ -->
 category: "Hardware"
 tags: ["Tech", "Troubleshooting", "Windows", "Autostart"]
 theme: "Crimson Emergency Field"
@@ -15,7 +17,7 @@ Godzina 8:52 rano. Za acht minut mam mieć gotowy raport dla zarządu i rzuconeg
 Jeśli Twój system startuje dłużej niż parzenie porannej kawy, oznacza to, że Twoja pamięć operacyjna i podsystem dyskowy są dosłownie dławione przez zombie-procesy działające w tle od samego momentu włączenia komputera.
 </div>
 
-![Hardware Diagnostic & Troubleshooting](https://picsum.photos/seed/hardware-907/1000/550)
+![undefined](https://images.pexels.com/photos/3888149/pexels-photo-3888149.jpeg?auto=compress&cs=tinysrgb&w=1200)
 
 Przez pierwsze dziesięć minut borykałem się z tym badziewiem jak jakiś amator. Próbowałem odpalać *Zarządzanie dyskami*, sprawdzałem *Menedżer urządzeń*, czy mi karta sieciowa nie zwariowała, klikałem losowe ikonki w zasobniku systemowym (tray), tracąc bezcenny czas. Szybki rzut okiem na procesy w tle i wyszło szydło z worka – system walczył o życie z 47 aplikacjami rezydentnymi, które uznały, że są pępkiem wszechświata.
 

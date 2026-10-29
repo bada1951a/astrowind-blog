@@ -2,7 +2,9 @@
 title: "Panduan Tuntas Mengatasi File Terkunci yang Tidak Bisa Dihapus di Windows"
 description: "Cara aman dan cepat melakukan force delete file yang sedang digunakan oleh program lain menggunakan Task Manager, Command Prompt, dan Resource Monitor."
 publishDate: 2026-10-28T03:50:00.000Z
-image: '/images/tech-photo/tech-photo%20(30).jpg'
+image: "https://images.pexels.com/photos/6889206/pexels-photo-6889206.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "undefined"
+<!-- Pexels cover source: https://www.pexels.com/photo/files-and-folder-on-computer-screen-6889206/; inline source: https://www.pexels.com/photo/man-working-on-laptop-in-an-office-9052865/ -->
 category: 'tech'
 tags: ["Tips Teknologi","Perangkat Keras","Troubleshooting","Perbaikan PC"]
 theme: "Retro Monokai"
@@ -22,7 +24,7 @@ Sebagai teknisi senior infrastruktur IT, saya tahu persis bahwa kepanikan hanya 
 
 
 
-![Tech Troubleshooting Guide](/images/tech-photo/system%20(8).png)
+![undefined](https://images.pexels.com/photos/9052865/pexels-photo-9052865.jpeg?auto=compress&cs=tinysrgb&w=1200).png)
 
 ## 2. Analisis Mendalam Akar Masalah
 

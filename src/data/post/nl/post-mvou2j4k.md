@@ -2,7 +2,9 @@
 title: "Bestand in gebruik: Zo forceer je het verwijderen in Windows"
 description: "Ervaar je de irritante melding dat een bestand in gebruik is? Leer als IT-specialist hoe je dit probleem snel oplost met Taakbeheer en handige tools."
 publishDate: 2026-10-26T03:40:00.000Z
-image: '/images/tech-photo/display%20(6).png'
+image: "https://images.pexels.com/photos/6889206/pexels-photo-6889206.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "undefined"
+<!-- Pexels cover source: https://www.pexels.com/photo/files-and-folder-on-computer-screen-6889206/; inline source: https://www.pexels.com/photo/man-working-on-laptop-in-an-office-9052865/ -->
 category: 'tech'
 tags: ["Windows Tips", "Bestandsbeheer", "Troubleshooting", "IT Beheer"]
 theme: "Crimson Emergency Field"
@@ -20,7 +22,7 @@ Toen ik de definitieve map wilde opschonen en een oud conceptbestand wilde weggo
 
 
 
-![Tech Troubleshooting Guide](/images/tech-photo/system%20(2).png)
+![undefined](https://images.pexels.com/photos/9052865/pexels-photo-9052865.jpeg?auto=compress&cs=tinysrgb&w=1200).png)
 
 ## 2. Root Cause Breakdown
 

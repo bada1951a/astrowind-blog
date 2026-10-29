@@ -2,7 +2,9 @@
 title: "Outil Capture Windows 11 : Le raccourci Win+Shift+S ne fonctionne plus ?"
 description: "Guide expert pour réparer le raccourci Win+Shift+S de l'Outil Capture d'écran sur Windows 11 après un changement de poste ou de dock."
 publishDate: 2026-10-25T03:20:00.000Z
-image: '/images/tech-photo/ram%20(18).png'
+image: "https://images.pexels.com/photos/2115257/pexels-photo-2115257.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "undefined"
+<!-- Pexels cover source: https://www.pexels.com/photo/close-up-photo-of-gaming-keyboard-2115257/; inline source: https://www.pexels.com/photo/opened-program-for-working-online-on-laptop-3888149/ -->
 category: 'tech'
 tags: ["Windows 11", "Dépannage PC", "Support IT", "Raccourci Clavier"]
 theme: "Warm Coffee Latte"
@@ -20,7 +22,7 @@ Puis, le drame : un collègue m'envoie un message urgent sur Teams me demandant 
 
 
 
-![Tech Troubleshooting Guide](/images/tech-photo/tech-photos%20(30).jpg)
+![undefined](https://images.pexels.com/photos/3888149/pexels-photo-3888149.jpeg?auto=compress&cs=tinysrgb&w=1200).jpg)
 
 ## 2. [Root Cause Breakdown]
 

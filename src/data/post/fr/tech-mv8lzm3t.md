@@ -2,7 +2,9 @@
 title: "L'enfer du boot lent : guide de survie pour nettoyer ces fichus programmes au démarrage"
 description: "Mon PC mettait 15 minutes à booter avant ma prez client. Voici comment j'ai nettoyé ce bordel avec les outils natifs Windows."
 publishDate: 2026-10-14T13:30:00.000Z
-image: "/images/tech-photo/tech-photo (34).jpg"
+image: "https://images.pexels.com/photos/7864378/pexels-photo-7864378.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "undefined"
+<!-- Pexels cover source: https://www.pexels.com/photo/a-person-typing-on-a-laptop-7864378/; inline source: https://www.pexels.com/photo/opened-program-for-working-online-on-laptop-3888149/ -->
 category: "Hardware"
 tags: ["Tech", "Troubleshooting", "Hardware"]
 theme: "Matte Black stealth"
@@ -12,7 +14,7 @@ Lundi matin, 8h52. La réunion stratégique avec le N+2 commence dans 8 minutes.
 
 Ce genre de galère, en tant qu'ingénieur système, ça me met hors de moi. On a sous les doigts des bécanes sous i7 avec 32 Go de RAM, et pourtant, à cause d'une ribambelle de bloatwares et de services tiers qui s'invitent au boot, nos machines rament comme des Pentium 4 sous Windows 98. 
 
-![Hardware Diagnostic & Troubleshooting](https://picsum.photos/seed/hardware-542/1000/550)
+![undefined](https://images.pexels.com/photos/3888149/pexels-photo-3888149.jpeg?auto=compress&cs=tinysrgb&w=1200)
 
 <div style="border-left: 4px solid #ffffff; padding: 12px 16px; margin: 20px 0; background-color: rgba(255,255,255,0.05); border-radius: 4px;">
 <strong>Note de l'ingénieur :</strong> Oubliez les logiciels tiers miracles du type "PC Cleaner" qui vous promettent monts et merveilles. La plupart du temps, ce sont eux les pires parasites. On va mettre les mains dans le cambouis avec les outils natifs.

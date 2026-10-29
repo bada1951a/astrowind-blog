@@ -2,7 +2,9 @@
 title: "Como Excluir Arquivos em Uso por Outro Programa com Segurança"
 description: "Guia prático para forçar a exclusão de arquivos bloqueados no Windows durante reuniões e apresentações corporativas."
 publishDate: 2026-10-28T03:35:00.000Z
-image: "/images/tech-photo/tech-photos%20(24).jpg"
+image: "https://images.pexels.com/photos/6889206/pexels-photo-6889206.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "undefined"
+<!-- Pexels cover source: https://www.pexels.com/photo/files-and-folder-on-computer-screen-6889206/; inline source: https://www.pexels.com/photo/man-working-on-laptop-in-an-office-9052865/ -->
 category: 'tech'
 tags: ["Dicas Tech","Hardware","Solução de Problemas","Manutenção PC"]
 theme: "Nordic Clean IPs"
@@ -16,7 +18,7 @@ A pressão aumenta instantaneamente enquanto os ponteiros do relógio avançam e
 
 
 
-![Tech Troubleshooting Guide](/images/tech-photo/tech-photos%20(11).jpg)
+![undefined](https://images.pexels.com/photos/9052865/pexels-photo-9052865.jpeg?auto=compress&cs=tinysrgb&w=1200).jpg)
 
 ## 2. Análise da causa raiz do problema
 

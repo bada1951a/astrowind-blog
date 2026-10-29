@@ -2,7 +2,9 @@
 title: "다른 프로그램에서 사용 중인 파일 강제 삭제 완벽 가이드"
 description: "파일 삭제 시 발생하는 사용 중 오류의 원인을 분석하고 작업 관리자와 명령 프롬프트를 활용해 1분 만에 강제로 해결하는 실무 트러블슈팅 가이드입니다."
 publishDate: 2026-10-27T03:00:00.000Z
-image: '/images/tech-photo/tech-photos%20(2).jpg'
+image: "https://images.pexels.com/photos/6889206/pexels-photo-6889206.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "undefined"
+<!-- Pexels cover source: https://www.pexels.com/photo/files-and-folder-on-computer-screen-6889206/; inline source: https://www.pexels.com/photo/man-working-on-laptop-in-an-office-9052865/ -->
 category: 'tech'
 tags: ["테크팁", "하드웨어", "트러블슈팅", "PC해결"]
 theme: "Sunset Horizon Coral"
@@ -24,7 +26,7 @@ theme: "Sunset Horizon Coral"
 
 
 
-![Tech Troubleshooting Guide](/images/tech-photo/tech-p%20(4).jpg)
+![undefined](https://images.pexels.com/photos/9052865/pexels-photo-9052865.jpeg?auto=compress&cs=tinysrgb&w=1200).jpg)
 
 ## 2. 오류와 병목의 진짜 핵심 원인 분석
 

@@ -2,7 +2,9 @@
 title: "Mijn PC start weer op als een raket: Weg met die trage opstarttijd"
 description: "Ergert u zich ook kapot aan een trage Windows-pc? Leer als een echte IT-specialist hoe u uw opstarttijd minimaliseert."
 publishDate: 2026-10-14T18:30:00.000Z
-image: "/images/tech-photo/tech-photo (39).jpg"
+image: "https://images.pexels.com/photos/7864378/pexels-photo-7864378.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "undefined"
+<!-- Pexels cover source: https://www.pexels.com/photo/a-person-typing-on-a-laptop-7864378/; inline source: https://www.pexels.com/photo/opened-program-for-working-online-on-laptop-3888149/ -->
 category: "Hardware"
 tags: ["Windows", "Opstarttijd", "Troubleshooting", "Systeemprestaties"]
 theme: "Modern Minimalist Slate"
@@ -12,7 +14,7 @@ Het was vrijdagochtend, kwart voor negen. Om negen uur stond de weekly stand-up 
 
 Dat moment van pure paniek kent iedereen in de IT wel. Je zit vast achter een scherm dat weigert door te starten, terwijl de stress door je aderen giert. Na die bijna-ramp heb ik de boel eens flink onder de loep genomen. Geen vage fabels over "register opschonen" met duistere freeware, maar gewoon een no-nonsense aanpak zoals we die op de supportafdeling gewend zijn.
 
-![Hardware Diagnostic & Troubleshooting](https://picsum.photos/seed/hardware-834/1000/550)
+![undefined](https://images.pexels.com/photos/3888149/pexels-photo-3888149.jpeg?auto=compress&cs=tinysrgb&w=1200)
 
 <div style="border-left: 4px solid #3b82f6; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px;">
 <strong>Essentieel Inzicht:</strong> Windows is standaard ingericht om vriendelijk te zijn voor softwareontwikkelaars, niet voor jou. Vrijwel elke applicatie die je installeert, nestelt zich stiekem in je opstartsequentie. Tijd om orde op zaken te stellen.

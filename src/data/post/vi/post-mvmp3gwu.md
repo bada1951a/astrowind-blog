@@ -2,7 +2,9 @@
 title: "Sửa lỗi tổ hợp phím Win Shift S không hoạt động trên Windows 11"
 description: "Hướng dẫn chi tiết cách khắc phục sự cố phím tắt chụp màn hình Snipping Tool Win Shift S không hoạt động nhanh chóng cho dân văn phòng."
 publishDate: 2026-10-25T03:55:00.000Z
-image: '/images/tech-photo/tech-photos%20(23).jpg'
+image: "https://images.pexels.com/photos/2115257/pexels-photo-2115257.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "undefined"
+<!-- Pexels cover source: https://www.pexels.com/photo/close-up-photo-of-gaming-keyboard-2115257/; inline source: https://www.pexels.com/photo/opened-program-for-working-online-on-laptop-3888149/ -->
 category: 'tech'
 tags: ["Windows 11", "Snipping Tool", "Sua loi may tinh", "IT Helpdesk", "Thu thuat PC"]
 theme: "Sandstone Desert Minimal"
@@ -18,7 +20,7 @@ Hôm nay là một ngày bận rộn tại văn phòng nằm ngay trung tâm Qu�
 
 
 
-![Tech Troubleshooting Guide](/images/tech-photo/tech-photo%20(37).jpg)
+![undefined](https://images.pexels.com/photos/3888149/pexels-photo-3888149.jpeg?auto=compress&cs=tinysrgb&w=1200).jpg)
 
 ## 2. Nguyên nhân cốt lõi gây lỗi
 

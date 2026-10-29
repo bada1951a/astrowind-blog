@@ -2,7 +2,9 @@
 title: "O PC tá demorando mais que estagiário pra ligar? Guia de sobrevivência e auditoria de boot"
 description: "Sua máquina virou uma carroça para iniciar? Relatório de bancada com o passo a passo definitivo para limpar o Windows sem formatar."
 publishDate: 2026-10-14T17:15:00.000Z
-image: "/images/tech-photo/tech-photo (38).jpg"
+image: "https://images.pexels.com/photos/7864378/pexels-photo-7864378.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "undefined"
+<!-- Pexels cover source: https://www.pexels.com/photo/a-person-typing-on-a-laptop-7864378/; inline source: https://www.pexels.com/photo/opened-program-for-working-online-on-laptop-3888149/ -->
 category: "Hardware"
 tags: ["Windows", "Otimização", "Suporte TI", "Hardware"]
 theme: "Cobalt Enterprise Lab"
@@ -12,7 +14,7 @@ Eram exatos 08h45 de uma segunda-feira chuvosa quando o diretor comercial brotou
 
 A gente sabe como é: o usuário instala aplicativo de chat da empresa, utilitário de impressora que roda desde o século passado, antivírus corporativo pesadíssimo e atualizações acumuladas. Tudo isso decide carregar no *startup* ao mesmo tempo. O resultado? Um gargalo miserável que transforma uma máquina com SSD NVMe numa carroça de tração animal. 
 
-![Hardware Diagnostic & Troubleshooting](https://picsum.photos/seed/hardware-761/1000/550)
+![undefined](https://images.pexels.com/photos/3888149/pexels-photo-3888149.jpeg?auto=compress&cs=tinysrgb&w=1200)
 
 Depois de apagar o incêndio com o diretor (passando o HDMI correndo na sala de reuniões enquanto o bicho terminava de ligar), decidi que era hora de aplicar um procedimento padrão de laboratório aqui no escritório. O relatório abaixo é o resumo da nossa auditoria de bancada para estancar esse sangramento de performance.
 

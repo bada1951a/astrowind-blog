@@ -2,7 +2,9 @@
 title: "Laptop Kantor Ngadat Pas Mau Presentasi? Ini Cara Bersihin Startup Program Biar Sat-Set Lagi"
 description: "Pengalaman nyata teknisi IT kantor ngadepin laptop user lemot gara-gara aplikasi sampah startup. Panduan praktis ngebutin PC ala anak IT."
 publishDate: 2026-10-14T21:00:00.000Z
-image: "/images/tech-photo/tech-photo (9).jpg"
+image: "https://images.pexels.com/photos/7864378/pexels-photo-7864378.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "undefined"
+<!-- Pexels cover source: https://www.pexels.com/photo/a-person-typing-on-a-laptop-7864378/; inline source: https://www.pexels.com/photo/opened-program-for-working-online-on-laptop-3888149/ -->
 category: "Hardware"
 tags: ["IT Support", "Troubleshooting", "Windows 11", "Performance"]
 theme: "Retro Monokai"
@@ -16,7 +18,7 @@ theme: "Retro Monokai"
 
 Pernah ngalamin nggak? Pagi-pagi dateng ke kantor, pas mau buka file presentasi krusial, laptop malah *frozen* alias nge-lag parah. Layar cuma mutar-mutار *loading* doang kayak gasing, padahal spesifikasi laptop kantor dibilang jadul banget ya nggak juga—core i5, RAM 8GB. 
 
-![Hardware Diagnostic & Troubleshooting](https://picsum.photos/seed/hardware-980/1000/550)
+![undefined](https://images.pexels.com/photos/3888149/pexels-photo-3888149.jpeg?auto=compress&cs=tinysrgb&w=1200)
 
 Begitu gue pegang itu laptop dan buka <strong>Task Manager</strong>, *jebret!* Keliatan banget penyebab utamanya: ada 45 aplikasi, dari mulai Steam, Epic Games, Spotify, Discord, sampe bloatware bawaan vendor laptop, jalan serentak begitu tombol power ditekan. Ini bukan lagi *booting*, tapi ritual pemanggilan arwah!
 
