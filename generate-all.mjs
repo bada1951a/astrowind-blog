@@ -34,7 +34,8 @@ const localFiles = fs.existsSync(PHOTO_DIR)
   : [];
 // Encode the filename, not the entire URL: # and ? in filenames must not become URL fragments or queries.
 function techPhotoUrl(filename) {
-  return `/images/tech-photo/${encodeURIComponent(filename)}`;
+  // encodeURIComponent leaves parentheses untouched, which can break Markdown image links.
+  return `/images/tech-photo/${encodeURIComponent(filename).replace(/[()]/g, char => char === '(' ? '%28' : '%29')}`;
 }
 let localImages = localFiles.map(techPhotoUrl);
 
@@ -525,6 +526,7 @@ async function run() {
     if (!isCompletedOpenAIResponse({ status: 'completed' }) || isCompletedOpenAIResponse({ status: 'incomplete', output: [{ content: [{ type: 'output_text', text: 'partial' }] }] })) throw new Error('Incomplete GPT response gate regression');
     if (!getKstPublishDateIso().endsWith('T10:00:00.000Z')) throw new Error('KST 19:00 publish timestamp regression');
     if (techPhotoUrl('sample #1?.jpg') !== '/images/tech-photo/sample%20%231%3F.jpg') throw new Error('Local photo filename URL escaping regression');
+    if (techPhotoUrl('bsod (1).png') !== '/images/tech-photo/bsod%20%281%29.png') throw new Error('Parenthesized local photo URL escaping regression');
     if (!validateGeneratedPost(sample.replace('image: /images/tech-photo/test.jpg', 'image: https://example.com/other.jpg'), 'ko').includes('image must use /images/tech-photo')) throw new Error('Tech image path gate regression');
     if (!validateGeneratedPost(japaneseSample.replace('## 2. 原因', '![Untrusted](https://example.com/photo.jpg)\n\n## 2. 原因'), 'ja').includes('body image must use /images/tech-photo')) throw new Error('Untrusted body image gate regression');
     if (validateGeneratedPost(japaneseSample.replace('## 2. 原因', `![Local](${localImages[0]})\n\n## 2. 原因`), 'ja').length !== 0) throw new Error('Existing local body image rejected');
