@@ -2,7 +2,8 @@
 title: "Sửa lỗi Taskbar Windows 11 bị đơ, không click được: Cẩm nang thực chiến từ kỹ sư"
 description: "Hướng dẫn chi tiết cách khắc phục tận gốc tình trạng thanh Taskbar Windows 11 bị đơ cứng, không bấm được chuột từ chuyên gia IT."
 publishDate: 2026-10-16T22:15:00.000Z
-image: "/images/tech-photo/tech-photo (2).jpg"
+image: "https://images.pexels.com/photos/7107487/pexels-photo-7107487.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "undefined"
 category: 'tech'
 tags: ["Windows 11", "Taskbar", "IT Support", "Windows Fix", "Tech Guide"]
 theme: "Matte Black stealth"
@@ -85,7 +86,7 @@ Trong trường hợp phím tắt bị khóa hoặc máy đơ toàn tập, hãy 
 
 
 
-![Tech & IT Solution Guide](https://picsum.photos/seed/computer685/1000/550)
+![undefined](https://images.pexels.com/photos/3042508/pexels-photo-3042508.jpeg?auto=compress&cs=tinysrgb&w=1200)
 
 ### 2. Lỗi Taskbar này có phải do virus hay mã độc không?
 Rất hiếm khi. Phần lớn lỗi Taskbar không bấm được là do xung đột tiến trình nội bộ của Windows 11 sau các bản update hoặc do ứng dụng bên thứ ba gây ra tranh chấp tài nguyên RAM.

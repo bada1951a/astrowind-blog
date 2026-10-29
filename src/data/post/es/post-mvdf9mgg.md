@@ -2,7 +2,8 @@
 title: "Windows 11 bloqueado al 100 por ciento en la actualización: Cómo vaciar la caché"
 description: "Soluciona el bloqueo de Windows 11 al 100% en actualizaciones vaciando la carpeta SoftwareDistribution en nuestra oficina de Barcelona."
 publishDate: 2026-10-18T14:45:00.000Z
-image: "/images/tech-photo/tech-photo (32).jpg"
+image: "https://images.pexels.com/photos/6611937/pexels-photo-6611937.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "undefined"
 category: 'tech'
 tags: ["Windows11", "SoporteIT", "ResoluciónDeFallos", "SysAdmin"]
 theme: "Solarized Amber Warm"
@@ -14,7 +15,7 @@ Eran las 7:30 de la tarde en nuestra oficina tecnológica del distrito 22@ en Ba
 <strong>Nota de campo desde el estudio:</strong> Cuando el proceso de Windows Update se congela exactamente en el 100%, casi nunca se debe a que el sistema esté instalando código complejo. En el 95% de los casos, el servicio se ha quedado intentando registrar componentes o procesando archivos corruptos dentro del directorio de caché local sin poder avanzar ni dar marcha atrás.
 </div>
 
-![Tech & IT Solution Guide](https://picsum.photos/seed/computer579/1000/550)
+![undefined](https://images.pexels.com/photos/38190068/pexels-photo-38190068.jpeg?auto=compress&cs=tinysrgb&w=1200)
 
 ## ¿Por qué se queda colgado Windows Update en el último segundo?
 

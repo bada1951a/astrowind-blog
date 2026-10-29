@@ -2,7 +2,8 @@
 title: "Windows 11: Barra delle applicazioni bloccata? Ecco come risolverla"
 description: "La barra delle applicazioni di Windows 11 non risponde ai clic? Guida pratica per risolvere il blocco in pochi minuti."
 publishDate: 2026-10-16T16:00:00.000Z
-image: "/images/tech-photo/tech-photo (22).jpg"
+image: "https://images.pexels.com/photos/7107487/pexels-photo-7107487.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "undefined"
 category: 'tech'
 tags: ["Windows 11", "Troubleshooting", "IT Support", "Produttività"]
 theme: "Sunset Horizon Coral"
@@ -14,7 +15,7 @@ Erano le 16:30 di un martedì pomeriggio frenetico nella nostra azienda IT a Mil
 <strong>Situazione di emergenza:</strong> Quando la taskbar di Windows 11 smette di rispondere, il panico è comprensibile, ma nella maggior parte dei casi non serve riavviare la macchina. Il colpevole è quasi sempre il gestore dell'interfaccia grafica.
 </div>
 
-![Tech & IT Solution Guide](https://picsum.photos/seed/computer320/1000/550)
+![undefined](https://images.pexels.com/photos/3042508/pexels-photo-3042508.jpeg?auto=compress&cs=tinysrgb&w=1200)
 
 Dopo una rapida analisi, ho capito che non si trattava di un problema hardware, ma del famigerato "Explorer freeze", un bug noto che affligge occasionalmente l'interfaccia grafica di Windows 11, spesso legato a conflitti con aggiornamenti recenti o processi di sistema in stallo.
 

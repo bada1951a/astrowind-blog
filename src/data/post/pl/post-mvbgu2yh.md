@@ -2,7 +2,8 @@
 title: "Jak naprawić zablokowany pasek zadań w Windows 11"
 description: "Praktyczny poradnik inżynierski: sprawdzone metody na zawieszony pasek zadań i brak reakcji na kliknięcia w Windows 11."
 publishDate: 2026-10-16T19:45:00.000Z
-image: "/images/tech-photo/tech-photo (35).jpg"
+image: "https://images.pexels.com/photos/7107487/pexels-photo-7107487.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "undefined"
 category: 'tech'
 tags: ["Windows 11", "IT Support", "Rozwiązywanie problemów", "Pasek zadań"]
 theme: "Graphite Technical Paper"
@@ -14,7 +15,7 @@ Siedzę w naszym biurze we wrocławskim parku technologicznym, zegar wskazuje za
 <strong>Kontekst inżynierski:</strong> W środowiskach produkcyjnych restart całego systemu operacyjnego z powodu zamrożonego GUI to ostateczność. Poniższe metody pozwalają zresetować sam silnik powłoki graficznej Windows w niecałą minutę.
 </div>
 
-![Tech & IT Solution Guide](https://picsum.photos/seed/computer539/1000/550)
+![undefined](https://images.pexels.com/photos/3042508/pexels-photo-3042508.jpeg?auto=compress&cs=tinysrgb&w=1200)
 
 ### Dlaczego pasek zadań w Windows 11 tak często się zawiesza?
 

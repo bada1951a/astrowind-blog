@@ -2,7 +2,8 @@
 title: "Blocage de Windows 11 à 100 pourcent : Comment vider le dossier SoftwareDistribution"
 description: "Votre mise à jour Windows 11 est bloquée à 100 pourcent en plein sprint ? Guide pratique pour nettoyer le cache et relancer le système."
 publishDate: 2026-10-18T13:30:00.000Z
-image: "/images/tech-photo/tech-photo (30).jpg"
+image: "https://images.pexels.com/photos/6611937/pexels-photo-6611937.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "undefined"
 category: 'tech'
 tags: ["Windows 11", "Depannage IT", "Mise a jour", "Systeme", "Astuce Tech"]
 theme: "Bronze Artisan Workshop"
@@ -12,7 +13,7 @@ Il est 19h45 dans notre bureau tech près de la place de la République à Paris
 
 J'ai déjà vécu cette situation ubuesque des dizaines de fois en entreprise. Plutôt que de paniquer ou d'attendre un miracle qui ne viendra pas, il faut agir à la source. Le coupable idéal dans ce genre de scénario ? Un cache de mise à jour corrompu qui boucle sur lui-même en essayant d'appliquer des paquets figés.
 
-![Tech & IT Solution Guide](https://picsum.photos/seed/computer506/1000/550)
+![undefined](https://images.pexels.com/photos/38190068/pexels-photo-38190068.jpeg?auto=compress&cs=tinysrgb&w=1200)
 
 Voici la méthode directe et sans fioritures pour purger ce cache et reprendre le contrôle de votre machine en moins de dix minutes.
 

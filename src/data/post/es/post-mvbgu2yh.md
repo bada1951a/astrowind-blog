@@ -2,7 +2,8 @@
 title: "Cómo solucionar la barra de tareas de Windows 11 congelada y sin respuesta"
 description: "Guía práctica de un especialista en IT para revivir la barra de tareas de Windows 11 en tu oficina de Barcelona o Madrid sin formatear."
 publishDate: 2026-10-16T14:45:00.000Z
-image: "/images/tech-photo/tech-photo (12).jpg"
+image: "https://images.pexels.com/photos/7107487/pexels-photo-7107487.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "undefined"
 category: 'tech'
 tags: ["Windows 11", "Productividad", "Soporte IT", "Trucos Windows"]
 theme: "Modern Minimalist Slate"
@@ -12,7 +13,7 @@ Eran las 18:45 en nuestra oficina tecnológica en el distrito 22@ de Barcelona. 
 
 Si te ha pasado lo mismo justo cuando más prisa tienes, sabes la frustración que genera. Vamos a ir directos al grano con los métodos reales que utilizamos los ingenieros de soporte para solucionar este fallo clásico de Windows 11 sin perder la paciencia ni los datos.
 
-![Tech & IT Solution Guide](https://picsum.photos/seed/computer247/1000/550)
+![undefined](https://images.pexels.com/photos/3042508/pexels-photo-3042508.jpeg?auto=compress&cs=tinysrgb&w=1200)
 
 <div style="border-left: 4px solid #3b82f6; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Nota rápida del experto:</strong> No pierdas tiempo intentando hacer clic repetidamente o cambiando la resolución de pantalla. El problema casi siempre radica en el Explorador de archivos (explorer.exe) o en un conflicto temporal con el servicio de interfaz de usuario de Windows (XamlShell).

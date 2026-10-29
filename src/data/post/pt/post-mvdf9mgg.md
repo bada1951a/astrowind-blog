@@ -2,7 +2,8 @@
 title: "Windows 11 Travado em 100 porcento na Atualizacao: Como Resolver limpando o Cache"
 description: "Resolva o Windows 11 travado em 100 porcento na atualizacao reiniciando a pasta SoftwareDistribution com este guia pratico direto de Sao Paulo."
 publishDate: 2026-10-18T17:15:00.000Z
-image: "/images/tech-photo/tech-photo (7).jpg"
+image: "https://images.pexels.com/photos/6611937/pexels-photo-6611937.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "undefined"
 category: 'tech'
 tags: ["Windows 11", "Suporte TI", "Dicas de Tecnologia", "Produtividade"]
 theme: "Graphite Technical Paper"
@@ -81,7 +82,7 @@ Na maioria das vezes, seus arquivos pessoais (documentos, fotos) ficam seguros n
 
 
 
-![Tech & IT Solution Guide](https://picsum.photos/seed/computer725/1000/550)
+![undefined](https://images.pexels.com/photos/38190068/pexels-photo-38190068.jpeg?auto=compress&cs=tinysrgb&w=1200)
 
 ### 2. Posso apagar totalmente a pasta SoftwareDistribution.old depois que o PC ligar?
 Sim. Depois que o Windows iniciar normalmente e você verificar que tudo está funcionando e atualizado, você pode deletar a pasta `SoftwareDistribution.old` para liberar espaço em disco (pode ser necessário usar a limpeza de disco do sistema para permissões).

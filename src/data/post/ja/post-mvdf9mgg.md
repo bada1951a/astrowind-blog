@@ -2,7 +2,8 @@
 title: "Windows 11のアップデートが100%でフリーズした時の解決策！キャッシュフォルダをリセットする手順"
 description: "渋谷のオフィスでプロジェクト納品直前に発生したWindows 11のアップデート地獄。100%で止まった進捗バーをサクッと脱出するためのキャッシュフォルダクリア手順を現役エンジニアが徹底解説。"
 publishDate: 2026-10-18T11:00:00.000Z
-image: "/images/tech-photo/tech-photo (27).jpg"
+image: "https://images.pexels.com/photos/6611937/pexels-photo-6611937.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "undefined"
 category: 'tech'
 tags: ["Windows11", "トラブルシューティング", "アップデート", "ITエンジニア", "PC高速化"]
 theme: "Electric Cyan Speed"
@@ -12,7 +13,7 @@ theme: "Electric Cyan Speed"
 
 今回は、現場のエンジニアが実際に遭遇し、何度も窮地を救ってきた「Windows 11のアップデートが100%で固まる現象」に対する最も確実でスピーディーな対処法を共有します。
 
-![Tech & IT Solution Guide](https://picsum.photos/seed/computer360/1000/550)
+![undefined](https://images.pexels.com/photos/38190068/pexels-photo-38190068.jpeg?auto=compress&cs=tinysrgb&w=1200)
 
 <div style="border-left: 4px solid #06b6d4; padding: 12px 16px; margin: 20px 0; background-color: rgba(6,182,212,0.05); border-radius: 4px; color: #111827;">
 <strong>Electric Cyan Speed 警報:</strong> 納品直前の焦った状態で適当に電源ボタンを長押しすると、システムファイルが破損してOSが起動しなくなるリスクが跳ね上がります。冷静にバックグラウンドサービスを制御するのがプロのやり方です。

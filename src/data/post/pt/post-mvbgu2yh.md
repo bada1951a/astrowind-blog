@@ -2,7 +2,8 @@
 title: "Como Corrigir a Barra de Tarefas do Windows 11 Travada e Sem Responder"
 description: "Guia prático para resolver o travamento da barra de tarefas do Windows 11 rapidamente. Métodos testados direto do nosso hub em São Paulo."
 publishDate: 2026-10-16T17:15:00.000Z
-image: "/images/tech-photo/tech-photo (10).jpg"
+image: "https://images.pexels.com/photos/7107487/pexels-photo-7107487.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "undefined"
 category: 'tech'
 tags: ["Windows 11", "Produtividade", "Suporte TI", "Dicas de Tecnologia"]
 theme: "Deep Ocean Cobalt"
@@ -12,7 +13,7 @@ Eram exatamente 14h50 de uma terça-feira movimentada no nosso hub de tecnologia
 
 Se você já passou por isso, sabe o nível de frustração. O Windows 11 é excelente em design, mas o Explorador de Arquivos e a camada gráfica da barra de tarefas (que agora dependem fortemente de pacotes modernos do sistema) ainda sofrem com engasgos intermitentes. 
 
-![Tech & IT Solution Guide](https://picsum.photos/seed/computer393/1000/550)
+![undefined](https://images.pexels.com/photos/3042508/pexels-photo-3042508.jpeg?auto=compress&cs=tinysrgb&w=1200)
 
 Abaixo, detalho o passo a passo exato que utilizei naquele momento de pressão para resolver o problema em menos de dois minutos — e que agora você pode aplicar na sua estação.
 

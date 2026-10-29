@@ -2,7 +2,8 @@
 title: "Windows 11 zawiesił się na 100 procent aktualizacji? Jak zresetować folder pamięci podręcznej"
 description: "Praktyczny poradnik administratora: jak szybko rozwiązać problem zacinającej się aktualizacji Windows 11 na 100% poprzez reset folderu SoftwareDistribution."
 publishDate: 2026-10-18T19:45:00.000Z
-image: "/images/tech-photo/tech-photo (33).jpg"
+image: "https://images.pexels.com/photos/6611937/pexels-photo-6611937.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "undefined"
 category: 'tech'
 tags: ["Windows 11", "Aktualizacja", "IT Support", "SoftwareDistribution", "Poradnik"]
 theme: "Forest Emerald Bio"
@@ -12,7 +13,7 @@ Była dokładnie 21:40, gdy w naszym biurze we wrocławskim parku technologiczny
 
 Zamiast panikować, sięgnąłem po sprawdzoną procedurę awaryjną, którą stosuję w takich sytuacjach od lat. Problem nie tkwił w samej procedurze instalacji poprawek, lecz w uszkodzonym buforze systemu Windows Update. Usługa pobierania utknęła w martwym punkcie, próbując zweryfikować zablokowane pliki tymczasowe.
 
-![Tech & IT Solution Guide](https://picsum.photos/seed/computer871/1000/550)
+![undefined](https://images.pexels.com/photos/38190068/pexels-photo-38190068.jpeg?auto=compress&cs=tinysrgb&w=1200)
 
 <div style="border-left: 4px solid #10b981; padding: 12px 16px; margin: 20px 0; background-color: rgba(16,185,129,0.05); border-radius: 4px; color: #111827;">
 <strong>Wskaźnik Efektywności IT:</strong> Prawidłowy reset folderu pamięci podręcznej aktualizacji (SoftwareDistribution) skraca czas przestoju systemu z kilku godzin bezczynnego oczekiwania do zaledwie 5 minut sprawnej interwencji wiersza poleceń.

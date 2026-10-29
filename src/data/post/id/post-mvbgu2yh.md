@@ -2,7 +2,8 @@
 title: "Cara Mengatasi Taskbar Windows 11 yang Macet dan Tidak Bisa Diklik"
 description: "Panduan praktis mengatasi taskbar Windows 11 yang freeze atau tidak berfungsi tanpa harus instal ulang, langsung dari meja kerja IT."
 publishDate: 2026-10-16T21:00:00.000Z
-image: "/images/tech-photo/tech-photo (15).jpg"
+image: "https://images.pexels.com/photos/7107487/pexels-photo-7107487.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "undefined"
 category: 'tech'
 tags: ["Windows 11", "Troubleshooting", "Taskbar", "IT Support"]
 theme: "Nordic Clean Ice"
@@ -14,7 +15,7 @@ Jam menunjukkan pukul 09:15 pagi di kantor *startup* teknologi kami di kawasan S
 <strong>Catatan Lapangan IT:</strong> Masalah taskbar Windows 11 yang tidak merespons jarang sekali disebabkan oleh kerusakan permanen pada sistem operasi. Seringkali, masalah ini berakar dari proses antarmuka grafis yang mengalami *hang* atau konflik *cache* sementara.
 </div>
 
-![Tech & IT Solution Guide](https://picsum.photos/seed/computer612/1000/550)
+![undefined](https://images.pexels.com/photos/3042508/pexels-photo-3042508.jpeg?auto=compress&cs=tinysrgb&w=1200)
 
 ## Mengapa Taskbar Windows 11 Bisa Macet?
 

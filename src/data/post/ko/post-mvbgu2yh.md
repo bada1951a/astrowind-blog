@@ -2,7 +2,8 @@
 title: "Windows 11 작업표시줄 먹통 및 클릭 안 됨 현상 완벽 해결 가이드"
 description: "판교 IT 기업 실무 현장에서 자주 발생하는 윈도우 11 작업표시줄 프리징 및 클릭 불능 오류의 원인과 3단계 해결 방법을 소개합니다."
 publishDate: 2026-10-16T08:30:00.000Z
-image: "/images/tech-photo/tech-photo (20).jpg"
+image: "https://images.pexels.com/photos/7107487/pexels-photo-7107487.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "undefined"
 category: 'tech'
 tags: ["Windows11", "Taskbar", "Troubleshooting", "IT", "Productivity"]
 theme: "Bronze Artisan Workshop"
@@ -14,7 +15,7 @@ theme: "Bronze Artisan Workshop"
 <strong>실무자 긴급 팁:</strong> 작업표시줄이 먹통일 때는 컴퓨터를 재부팅하기 전에 윈도우 탐색기 프로세스만 재시작하는 것이 가장 빠릅니다. 소요 시간 단 10초!
 </div>
 
-![Tech Hardware Guide](https://images.unsplash.com/photo-1515378791036-0648a3ef77b2? auto=format&fit=crop&w=1200&h=675&q=85)
+![undefined](https://images.pexels.com/photos/3042508/pexels-photo-3042508.jpeg?auto=compress&cs=tinysrgb&w=1200)
 
 ---
 

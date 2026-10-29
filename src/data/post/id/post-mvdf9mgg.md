@@ -2,7 +2,8 @@
 title: "Windows 11 Update Tertahan di 100 Persen: Cara Bersihkan Folder Cache"
 description: "Panduan praktis mengatasi Windows 11 update yang nyangkut di 100 persen dengan cara mereset folder cache sistem secara aman."
 publishDate: 2026-10-18T21:00:00.000Z
-image: "/images/tech-photo/tech-photo (17).jpg"
+image: "https://images.pexels.com/photos/6611937/pexels-photo-6611937.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "undefined"
 category: 'tech'
 tags: ["Windows 11", "Troubleshooting", "IT Support", "Software Update"]
 theme: "Rosewood Hardware Guide"
@@ -12,7 +13,7 @@ Suasana di kantor *startup* teknologi kami di kawasan Jakarta Selatan mendadak t
 
 Setelah mencoba berbagai cara standar seperti *restart* tombol daya dan menunggu dalam keresahan—yang tentu saja berujung nihil—saya mulai menganalisis akar masalahnya. Ternyata, kendala ini klasik: prosesor dan layanan sistem terjebak dalam *infinite loop* karena berkas instalasi pembaruan di dalam direktori *cache* mengalami korupsi data (*data corruption*) atau terkunci oleh proses latar belakang yang tidak mau berhenti.
 
-![Tech & IT Solution Guide](https://picsum.photos/seed/computer944/1000/550)
+![undefined](https://images.pexels.com/photos/38190068/pexels-photo-38190068.jpeg?auto=compress&cs=tinysrgb&w=1200)
 
 Berikut adalah panduan langkah demi langkah berbasis pengalaman lapangan yang paling efektif untuk membersihkan *folder cache* dan meloloskan Windows 11 dari jeratan 100 persen tersebut.
 

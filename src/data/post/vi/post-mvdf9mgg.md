@@ -2,7 +2,8 @@
 title: "Sửa lỗi Windows 11 kẹt 100% khi update: Xóa và reset thư mục cache ngay"
 description: "Hướng dẫn thực chiến từ kỹ sư IT tại Đà Nẵng giúp bạn xử lý triệt để tình trạng Windows 11 bị kẹt ở 100% khi cập nhật bằng cách reset thư mục cache."
 publishDate: 2026-10-18T22:15:00.000Z
-image: "/images/tech-photo/tech-photo (22).jpg"
+image: "https://images.pexels.com/photos/6611937/pexels-photo-6611937.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "undefined"
 category: 'tech'
 tags: ["Windows 11", "Troubleshooting", "System Optimization", "IT Support"]
 theme: "Mint Fresh Engineering"
@@ -79,7 +80,7 @@ Tuyệt đối không. Thư mục này chỉ chứa các bản cập nhật tả
 
 
 
-![Tech & IT Solution Guide](https://picsum.photos/seed/computer17/1000/550)
+![undefined](https://images.pexels.com/photos/38190068/pexels-photo-38190068.jpeg?auto=compress&cs=tinysrgb&w=1200)
 
 ### 2. Tại sao Windows 11 hay gặp lỗi kẹt update ở bản dựng gần đây?
 Nguyên nhân chủ yếu do sự không tương thích phần cứng ngầm hoặc các bản vá bảo mật cumulative update có dung lượng lớn, dễ bị nghẽn mạng hoặc lỗi xung đột driver thiết bị ngoại vi trong quá trình giải nén.

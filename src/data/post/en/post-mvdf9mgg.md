@@ -2,7 +2,8 @@
 title: "Fix Windows 11 Update Stuck at 100 Percent: Reset Cache Folder"
 description: "Quickly fix a Windows 11 update stuck at 100 percent by stopping Windows Update services and resetting the SoftwareDistribution cache folder."
 publishDate: 2026-10-18T09:45:00.000Z
-image: "/images/tech-photo/tech-photo (34).jpg"
+image: "https://images.pexels.com/photos/6611937/pexels-photo-6611937.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "undefined"
 category: 'tech'
 tags: ["Windows11", "Troubleshooting", "ITSupport", "TechTips"]
 theme: "Electric Cyan Speed"
@@ -14,7 +15,7 @@ The Slack workspace for our Mountain View office engineering team was blowing up
 <strong>Silicon Valley Pro Tip:</strong> Never force-restart a machine mid-update without a backup plan unless the update process has genuinely stalled background disk writes for over an hour. If the SSD read/write light is completely dead, your update queue is likely deadlocked.
 </div>
 
-![Tech & IT Solution Guide](https://picsum.photos/seed/computer287/1000/550)
+![undefined](https://images.pexels.com/photos/38190068/pexels-photo-38190068.jpeg?auto=compress&cs=tinysrgb&w=1200)
 
 ## Why Your Windows 11 Update Gets Stuck at 100 Percent
 

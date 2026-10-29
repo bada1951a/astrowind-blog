@@ -2,7 +2,8 @@
 title: "Windows 11 update vast op 100 procent? Zo los je de cache-map direct op"
 description: "Ervaar je acute prestatieproblemen op de tech campus in Eindhoven of Amsterdam? Zo los je een vastgelopen Windows 11 update op door de cache-map te resetten."
 publishDate: 2026-10-18T18:30:00.000Z
-image: "/images/tech-photo/tech-photo (18).jpg"
+image: "https://images.pexels.com/photos/6611937/pexels-photo-6611937.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "undefined"
 category: 'tech'
 tags: ["Windows 11", "Troubleshooting", "IT Support", "Systeembeheer"]
 theme: "Acid Lime Hacker Space"
@@ -14,7 +15,7 @@ Het is kwart voor negen 's ochtends op onze hub aan de Amsterdamse Zuidas. Over 
 <strong>Situatie-update:</strong> Als de update blijft hangen op 100%, is de kans groot dat het systeem worstelt met corrupte bestanden in de lokale downloadcache. Het geforceerd uitzetten van de laptop zonder enige structuur leidt geheid tot een beschadigde boot-sector.
 </div>
 
-![Tech & IT Solution Guide](https://picsum.photos/seed/computer798/1000/550)
+![undefined](https://images.pexels.com/photos/38190068/pexels-photo-38190068.jpeg?auto=compress&cs=tinysrgb&w=1200)
 
 Na wat trial-and-error en het analyseren van de logs, werd de root bottleneck al snel pijnlijk duidelijk: de Windows Update-service (wuauserv) probeert hardnekkig een beschadigd pakket weg te schrijven naar de SoftwareDistribution-map, maar komt in een oneindige lus terecht omdat het bestand in gebruik blijft door een achtergrondproces.
 

@@ -2,7 +2,8 @@
 title: "Windows 11 bloccato al 100% durante gli aggiornamenti: Come risolvere"
 description: "Il tuo aggiornamento di Windows 11 è bloccato al 100%? Guida pratica per svuotare la cartella SoftwareDistribution e sbloccare il PC."
 publishDate: 2026-10-18T16:00:00.000Z
-image: "/images/tech-photo/tech-photo (31).jpg"
+image: "https://images.pexels.com/photos/6611937/pexels-photo-6611937.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "undefined"
 category: 'tech'
 tags: ["Windows 11", "Troubleshooting", "IT Support", "Risoluzione Problemi"]
 theme: "Sunset Horizon Coral"
@@ -37,7 +38,7 @@ Per sbloccare la situazione senza fare danni, dobbiamo interrompere temporaneame
 #### 1. Aprire il Terminale con privilegi amministrativi
 Clicca sul menu <strong>Start</strong>, digita `Terminale` (o `Prompt dei comandi`), fai clic destro sull'applicazione e seleziona <strong>Esegui come amministratore</strong>.
 
-![Tech & IT Solution Guide](https://picsum.photos/seed/computer652/1000/550)
+![undefined](https://images.pexels.com/photos/38190068/pexels-photo-38190068.jpeg?auto=compress&cs=tinysrgb&w=1200)
 
 ### 2. Fermare i servizi di Windows Update
 Prima di poter cancellare o modificare i file di cache, dobbiamo ordinare a Windows di rilasciare il controllo su di essi. Digita i seguenti comandi premendo Invio dopo ciascuno:

@@ -2,7 +2,8 @@
 title: "윈도우 11 업데이트 100% 무한 멈춤 현상 완벽 해결 방법: 캐시 폴더 초기화의 모든 것"
 description: "서울/판교 IT 기업 실무에서 겪은 윈도우 11 업데이트 100% 멈춤 현상. SoftwareDistribution 캐시 초기화로 단 5분 만에 해결하는 실전 가이드입니다."
 publishDate: 2026-10-18T08:30:00.000Z
-image: "/images/tech-photo/tech-photo (8).jpg"
+image: "https://images.pexels.com/photos/6611937/pexels-photo-6611937.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "undefined"
 category: 'tech'
 tags: ["Windows11", "Troubleshooting", "ITGuide", "SystemOptimization"]
 theme: "Forest Emerald Bio"
@@ -14,7 +15,7 @@ theme: "Forest Emerald Bio"
 <strong>실무 전문가의 긴급 진단:</strong> 윈도우 11 업데이트가 100%에서 멈추는 현상은 대부분 다운로드된 패키지를 설치하는 과정에서 시스템 캐시 파일이 꼬였거나, 이전 설치 잔여물과의 충돌로 인해 백그라운드 프로세스가 데드락(Deadlock) 상태에 빠졌기 때문입니다.
 </div>
 
-![Tech Hardware Guide](https://images.unsplash.com/photo-1607604276583-eef5d076aa5f? auto=format&fit=crop&w=1200&h=675&q=85)
+![undefined](https://images.pexels.com/photos/38190068/pexels-photo-38190068.jpeg?auto=compress&cs=tinysrgb&w=1200)
 
 ---
 
