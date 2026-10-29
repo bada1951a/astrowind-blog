@@ -2,7 +2,9 @@
 title: "Windows 11 saturé : Comment nettoyer le lecteur C et purger les fichiers temporaires"
 description: "Guide pratique pour libérer de l'espace sur votre lecteur C sous Windows 11 en toute sécurité lors d'un sprint critique."
 publishDate: 2026-10-15T13:30:00.000Z
-image: "/images/tech-photo/tech-photo (28).jpg"
+# Pexels cover: Jakub Zerdzicki — https://www.pexels.com/photo/modern-office-desk-with-laptop-and-external-drives-28729682/
+image: "https://images.pexels.com/photos/28729682/pexels-photo-28729682/free-photo-of-modern-office-desk-with-laptop-and-external-drives.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "Ordinateur portable et disques externes sur un bureau"
 category: 'tech'
 tags: ["Windows 11", "Nettoyage", "Stockage", "Optimisation"]
 theme: "Pastel Lavender Tech"
@@ -12,7 +14,8 @@ Il est 16h45 dans notre bureau tech près de la place de la République à Paris
 
 Dans l'urgence, le premier réflexe est souvent de supprimer des dossiers au hasard ou de vider la corbeille en espérant un miracle. C'est exactement là que l'on commet l'irréparable en effaçant des caches de développement essentiels ou des points de restauration cruciaux. Après plusieurs minutes de tâtonnements et un diagnostic rapide des dossiers cachés, la cause de la panne est devenue évidente : l'accumulation massive de fichiers temporaires système, de résidus d'anciennes mises à jour Windows Update et de caches d'applications obsolètes. 
 
-![Tech & IT Solution Guide](https://picsum.photos/seed/computer479/1000/550)
+<!-- Photo by Andrea Piacquadio on Pexels: https://www.pexels.com/photo/black-square-device-on-brown-wooden-table-3915760/ -->
+![Une personne connecte un disque dur externe à un ordinateur portable.](https://images.pexels.com/photos/3915760/pexels-photo-3915760.jpeg?auto=compress&cs=tinysrgb&w=1200)
 
 Voici la méthode éprouvée, rapide et 100% sécurisée pour reprendre le contrôle de votre espace disque sous Windows 11 sans risquer de casser votre configuration.
 
