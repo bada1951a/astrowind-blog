@@ -2,7 +2,9 @@
 title: "Cómo solucionar la unidad C llena en Windows 11 y borrar archivos temporales sin riesgo"
 description: "Guía práctica para liberar espacio en el disco C de Windows 11 de forma segura, eliminando archivos temporales y optimizando tu PC en minutos."
 publishDate: 2026-10-15T14:45:00.000Z
-image: "/images/tech-photo/tech-photo (31).jpg"
+# Pexels cover: Jakub Zerdzicki — https://www.pexels.com/photo/modern-office-desk-with-laptop-and-external-drives-28729682/
+image: "https://images.pexels.com/photos/28729682/pexels-photo-28729682/free-photo-of-modern-office-desk-with-laptop-and-external-drives.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "Portátil y discos externos sobre un escritorio"
 category: 'tech'
 tags: ["Windows 11", "Mantenimiento PC", "Optimización", "Tutoriales IT"]
 theme: "Electric Cyan Speed"
@@ -14,7 +16,8 @@ Eran las 18:30 en nuestras oficinas del 22@ en Barcelona. Estábamos a menos de 
 <strong>Emergencia en el entorno de desarrollo:</strong> Cuando el disco C se llena por completo, Windows 11 no solo deja de recibir actualizaciones, sino que pierde la capacidad de gestionar la memoria virtual (archivo de paginación), provocando cierres inesperados de aplicaciones críticas.
 </div>
 
-![Tech & IT Solution Guide](https://picsum.photos/seed/computer552/1000/550)
+<!-- Photo by Andrea Piacquadio on Pexels: https://www.pexels.com/photo/black-square-device-on-brown-wooden-table-3915760/ -->
+![Una persona conecta un disco duro externo a un portátil.](https://images.pexels.com/photos/3915760/pexels-photo-3915760.jpeg?auto=compress&cs=tinysrgb&w=1200)
 
 ### Por qué se llena tan rápido el disco C en Windows 11
 
