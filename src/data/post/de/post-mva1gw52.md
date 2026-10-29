@@ -2,7 +2,9 @@
 title: "Windows 11 C-Platte voll? So löschst du Temp-Dateien sicher im Berliner Tech-Hub"
 description: "Rolle einen System-Rollout im Berliner Tech-Hub aus und C: ist voll? Erfahre, wie du Windows 11 Temp-Dateien sicher löschst und Speicherplatz freigibst."
 publishDate: 2026-10-15T12:15:00.000Z
-image: "/images/tech-photo/tech-photo (29).jpg"
+# Pexels cover: Jakub Zerdzicki — https://www.pexels.com/photo/modern-office-desk-with-laptop-and-external-drives-28729682/
+image: "https://images.pexels.com/photos/28729682/pexels-photo-28729682/free-photo-of-modern-office-desk-with-laptop-and-external-drives.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "Laptop und externe Festplatten auf einem Schreibtisch"
 category: 'tech'
 tags: ["Windows 11", "Speicherfreigabe", "IT-Support", "Performance", "Berlin Tech"]
 theme: "Matte Black stealth"
@@ -12,7 +14,8 @@ Es war kurz vor 17 Uhr in unserem Büro in Berlin-Mitte. Mitten in der finalen V
 
 Wer in einer schnelllebigen IT-Umgebung arbeitet, kennt das Problem. Windows 11 neigt dazu, sich im Laufe der Zeit unbemerkt mit Gigabytes an temporärem Datenmüll vollzusaugen. Hier ist mein praxiserprobter Leitfaden, wie du deine C-Platte in wenigen Minuten wieder freiräumst, ohne dein System zu gefährden.
 
-![Tech Hardware Guide](https://images.unsplash.com/photo-1518770660439-4636190af475? auto=format&fit=crop&w=1200&h=675&q=85)
+<!-- Photo by Andrea Piacquadio on Pexels: https://www.pexels.com/photo/black-square-device-on-brown-wooden-table-3915760/ -->
+![Eine Person verbindet eine externe Festplatte mit einem Laptop.](https://images.pexels.com/photos/3915760/pexels-photo-3915760.jpeg?auto=compress&cs=tinysrgb&w=1200)
 
 ## Warum läuft das Laufwerk C: eigentlich immer wieder voll?
 
