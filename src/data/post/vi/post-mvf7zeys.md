@@ -2,7 +2,8 @@
 title: "Cứu ngay chiếc PC đơ cứng vì lỗi 100 phần trăm CPU do System Process"
 description: "Hướng dẫn thực tế xử lý triệt để tình trạng CPU chạm mốc 100 phần trăm do tiến trình hệ thống System Process gây ra ngay tại văn phòng."
 publishDate: 2026-10-19T22:15:00.000Z
-image: '/images/tech-photo/display (3).png'
+image: "https://images.pexels.com/photos/30433037/pexels-photo-30433037.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "undefined"
 category: 'tech'
 tags: ["Tech Tips", "Hardware", "Troubleshooting", "PC Fix"]
 theme: "Modern Minimalist Slate"
@@ -64,7 +65,7 @@ Nhiều trường hợp tiến trình System cố gắng tải xuống hoặc c�
 
 
 
-![How to Fix 100 Percent CPU Usage Caused by System Process Tech Guide](/images/tech-photo/keyboard (14).png)
+![undefined](https://images.pexels.com/photos/10359908/pexels-photo-10359908.jpeg?auto=compress&cs=tinysrgb&w=1200).png)
 
 ### 2. Tại sao sau khi khởi động lại máy một lúc thì lỗi 100 phần trăm CPU lại quay trở lại?
 Điều này chứng tỏ có một tác vụ nền hoặc bản cập nhật phần cứng đang bị kẹt vòng lặp liên tục. Bạn cần kiểm tra lại mục <strong>Device Manager</strong>, tìm xem thiết bị nào có dấu chấm than vàng (thường là driver card mạng hoặc âm thanh) để tiến hành cập nhật hoặc gỡ cài đặt phiên bản driver đó đi.

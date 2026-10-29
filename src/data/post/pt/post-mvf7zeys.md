@@ -2,7 +2,8 @@
 title: "Como Resolver Uso de 100% de CPU Causado pelo Processo do Sistema"
 description: "Guia prático para resolver o travamento de 100% de CPU por processos do sistema em momentos críticos na empresa."
 publishDate: 2026-10-19T17:15:00.000Z
-image: '/images/tech-photo/tech-photo (20).jpg'
+image: "https://images.pexels.com/photos/30433037/pexels-photo-30433037.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "undefined"
 category: 'tech'
 tags: ["Manutenção de TI", "Hardware", "Windows", "Suporte Técnico"]
 theme: "Retro Monokai"
@@ -12,7 +13,7 @@ Eram exatamente 13:45 em um escritório na Avenida Paulista, São Paulo. A reuni
 
 Se você já passou por isso, sabe que o desespero bate na hora. Reiniciar a máquina não adiantava, pois o Windows travava na tela de carregamento ou voltava com o mesmo gargalo infernal devido a indexações corrompidas, serviços de atualização travados ou conflitos de driver de hardware. 
 
-![How to Fix 100 Percent CPU Usage Caused by System Process Tech Guide](/images/tech-photo/storage (3).png)
+![undefined](https://images.pexels.com/photos/10359908/pexels-photo-10359908.jpeg?auto=compress&cs=tinysrgb&w=1200).png)
 
 Neste artigo, vou te mostrar o passo a passo exato, direto da bancada de suporte, de como matar esse problema em minutos sem perder os arquivos do usuário.
 

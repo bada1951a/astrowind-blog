@@ -2,7 +2,8 @@
 title: "100 Prozent CPU-Auslastung durch Systemprozess beheben: Der Notfall-Guide"
 description: "Löse das Problem der 100% CPU-Auslastung durch Windows-Systemprozesse wie NT Kernel & System direkt im Bankenviertel-Stil."
 publishDate: 2026-10-19T12:15:00.000Z
-image: '/images/tech-photo/ram (15).png'
+image: "https://images.pexels.com/photos/30433037/pexels-photo-30433037.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "undefined"
 category: 'tech'
 tags: ["CPU Auslastung", "Windows Troubleshooting", "Systemprozess", "IT Support"]
 theme: "Sunset Horizon Coral"
@@ -82,7 +83,7 @@ Nein, das geht absolut nicht. PID 4 (System) ist der Windows-Kernel selbst. Wenn
 
 
 
-![How to Fix 100 Percent CPU Usage Caused by System Process Tech Guide](/images/tech-photo/ram (6).png)
+![undefined](https://images.pexels.com/photos/10359908/pexels-photo-10359908.jpeg?auto=compress&cs=tinysrgb&w=1200).png)
 
 ### 2. Warum tritt dieses Problem oft nach Windows-Updates auf?
 Manchmal bleibt ein Update-Prozess im Hintergrund hängen oder der Windows Search Indexer baut nach einem Kernel-Patch die Datenbank komplett neu auf. Ein gezielter Neustart oder das temporäre Anhalten der Windows Update-Dienste über die Dienste-App (`services.msc`) löst dies in der Regel sofort.

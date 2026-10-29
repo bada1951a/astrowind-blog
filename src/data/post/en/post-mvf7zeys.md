@@ -2,7 +2,8 @@
 title: "How to Fix 100 Percent CPU Usage Caused by System Process"
 description: "Battle-tested guide to diagnose and fix 100 percent CPU usage caused by Windows System processes right before a critical meeting."
 publishDate: 2026-10-19T09:45:00.000Z
-image: '/images/tech-photo/bsod (4).png'
+image: "https://images.pexels.com/photos/30433037/pexels-photo-30433037.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "undefined"
 category: 'tech'
 tags: ["Tech Tips", "Hardware", "Troubleshooting", "PC Fix"]
 theme: "Industrial Blueprint"
@@ -12,7 +13,7 @@ The clock on the wall in our Manhattan office read 9:40 AM. Exactly twenty minut
 
 Panic instantly set in. For the past ten minutes, I had been blindly stumbling through typical quick fixes—frantically smashing keyboard shortcuts, force-closing random background apps, and rebooting the machine twice, only to watch the CPU peg back at maximum capacity the moment the Windows login screen loaded. Restarting was getting us nowhere, and the clock was ticking down fast.
 
-![How to Fix 100 Percent CPU Usage Caused by System Process Tech Guide](/images/tech-photo/tech-photo (30).jpg)
+![undefined](https://images.pexels.com/photos/10359908/pexels-photo-10359908.jpeg?auto=compress&cs=tinysrgb&w=1200).jpg)
 
 That's when I had to step back, put away the panic, and rely on systematic IT troubleshooting. If you are staring at a frozen screen right now with your CPU pinned at 100 percent due to a stubborn System process, take a deep breath. Here is the exact, battle-tested playbook I used to regain control in under five minutes—and how you can do it too.
 

@@ -2,7 +2,8 @@
 title: "Mengatasi CPU 100 Persen Karena System Process di Windows"
 description: "Panduan praktis teknisi IT mengatasi CPU mentok 100 persen akibat System process yang bikin PC kantor ngadat pas mau deadline."
 publishDate: 2026-10-19T21:00:00.000Z
-image: '/images/tech-photo/system (9).png'
+image: "https://images.pexels.com/photos/30433037/pexels-photo-30433037.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "undefined"
 category: 'tech'
 tags: ["Tech Tips", "Hardware", "Troubleshooting", "PC Fix"]
 theme: "Deep Indigo System"
@@ -12,7 +13,7 @@ Jam 4 sore di sebuah gedung perkantoran kawasan Sudirman Jakarta, suasana mendad
 
 Panik? Pastinya. Rekan kerja di sebelah mulai keringat dingin karena dokumen Excel penting belum sempat tersimpan. Berbagai cara amatiran langsung dicoba, mulai dari menekan tombol restart paksa di CPU berulang kali, mencabut kabel power, hingga memukul-mukul meja karena kesal. Padahal, tindakan asal-asalan seperti itu justru berisiko merusak sektor *hard drive* atau membuat file laporan korup total. 
 
-![How to Fix 100 Percent CPU Usage Caused by System Process Tech Guide](/images/tech-photo/ram (13).png)
+![undefined](https://images.pexels.com/photos/10359908/pexels-photo-10359908.jpeg?auto=compress&cs=tinysrgb&w=1200).png)
 
 Sebagai seorang teknisi infrastruktur IT yang sudah kenyang asam garam menghadapi drama kantor seperti ini, saya langsung bergerak cepat. Masalah CPU 100 persen akibat *System process* ini bukan hal mistis. Ini murni masalah sinkronisasi *driver*, *interrupt request* (IRQ) yang bentrok, atau layanan latar belakang Windows yang mengalami *infinite loop*. Mari kita bedah tuntas akar masalahnya dan selesaikan dengan protokol penanganan yang benar.
 

@@ -2,7 +2,8 @@
 title: "Help, mijn laptop brandt af! 100% CPU-gebruik door'Systeem' oplossen op de Zuidas"
 description: "Ervaar je een muurvastlopende pc vlak voor een belangrijke meeting? Zo los je 100% CPU-gebruik door het Windows Systeem-proces direct op."
 publishDate: 2026-10-19T18:30:00.000Z
-image: '/images/tech-photo/keyboard (15).png'
+image: "https://images.pexels.com/photos/30433037/pexels-photo-30433037.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "undefined"
 category: 'tech'
 tags: ["Tech Tips", "Hardware", "Troubleshooting", "PC Fix", "Systeembeheer"]
 theme: "Cobalt Enterprise Lab"
@@ -14,7 +15,7 @@ Het was kwart voor twee op een gure dinsdagmiddag in het Zuidas zakendistrict in
 <strong>Cobalt Enterprise Lab Advies:</strong> Laat je niet gek maken door paniek. Een 100% CPU-belasting door het Windows Systeem-proces betekent vrijwel altijd dat de kernel oneindig aan het loopen is door een stuurprogramma-conflict, een corrupte update of een vastgelopen achtergrondtaak. Met de juiste stappen binnen Taakbeheer en Apparaatbeheer heb je dit binnen vijf minuten onder controle.
 </div>
 
-![How to Fix 100 Percent CPU Usage Caused by System Process Tech Guide](/images/tech-photo/bsod (8).png)
+![undefined](https://images.pexels.com/photos/10359908/pexels-photo-10359908.jpeg?auto=compress&cs=tinysrgb&w=1200).png)
 
 ### Wat we eerst *fout* deden (en jij dus niet moet doen)
 

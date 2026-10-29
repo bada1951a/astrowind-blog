@@ -2,7 +2,8 @@
 title: "Windows 11 łapie zwiechy? Jak namierzyć winowajcę w Podglądzie Zdarzeń"
 description: "Komputer zamarza w najmniej odpowiednim momencie? Zobacz, jak krok po kroku przeszukać Podgląd Zdarzeń w Windows 11 i uratować sytuację."
 publishDate: 2026-10-21T00:00:00Z
-image: '/images/tech-photo/tech-photos%20(35).jpg'
+image: "https://images.pexels.com/photos/8199606/pexels-photo-8199606.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "undefined"
 category: 'tech'
 tags: ["Windows 11", "Podgląd Zdarzeń", "Serwis PC", "Hardware", "Naprawa Komputera"]
 theme: "High-Contrast Charcoal"
@@ -12,7 +13,7 @@ Była dokładnie 10:45 rano, a w warszawskim centrum biznesowym przy Rondzie Das
 
 ### Trzy najczęstsze powody losowych zwiech w Windows 11
 
-![Tech Troubleshooting Guide](/images/tech-photo/tech-photo%20(39).jpg)
+![undefined](https://images.pexels.com/photos/6173671/pexels-photo-6173671.jpeg?auto=compress&cs=tinysrgb&w=1200).jpg)
 
 Zanim przejdziemy do diagnostyki, warto zrozumieć, dlaczego nowoczesny sprzęt nagle przestaje odpowiadać. Losowe zamrożenia (tzw. freezy) rzadko są dziełem przypadku. W mojej praktyce serwisowej na pierwszym miejscu stawiam zazwyczaj trzy scenariusze:
 

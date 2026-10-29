@@ -2,7 +2,8 @@
 title: "Windows 11 si blocca a caso? Ecco come scovare il colpevole con il Visualizzatore Eventi"
 description: "Guida pratica per sistemisti: scopri come diagnosticare e risolvere i freeze improvvisi su Windows 11 usando il Visualizzatore Eventi senza perdere la pazienza."
 publishDate: 2026-10-21T00:00:00Z
-image: '/images/tech-photo/tech-photos%20(32).jpg'
+image: "https://images.pexels.com/photos/8199606/pexels-photo-8199606.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "undefined"
 category: 'tech'
 tags: ["Tech Tips", "Hardware", "Troubleshooting", "PC Fix", "Windows 11"]
 theme: "Dracula Purple Dev"
@@ -12,7 +13,7 @@ Erano le 17:45 in un frenetico lunedì pomeriggio nel nostro ufficio al centro d
 
 Nei giorni successivi, quel maledetto blocco casuale ha iniziato a ripresentarsi con una regolarità esasperante: a volte mentre aprivo Outlook, altre volte semplicemente mentre il PC era in idle. Le classiche soluzioni da bar dello sport digitale non servivano a nulla: reinstallare i driver video alla cieca, pulire la polvere con l'aria compressa o dare calci leggeri allo chassis non avevano sortito alcun effetto. 
 
-![Tech Troubleshooting Guide](/images/tech-photo/tech%20(8).jpg)
+![undefined](https://images.pexels.com/photos/6173671/pexels-photo-6173671.jpeg?auto=compress&cs=tinysrgb&w=1200).jpg)
 
 Prima di mettermi a smontare banchi di RAM o a ordinare un nuovo alimentatore su Amazon, ho deciso di fare quello che ogni sistemista con un minimo di esperienza dovrebbe fare subito: smettere di tirare ad indovinare e andare a leggere la scatola nera del sistema operativo. 
 

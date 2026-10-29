@@ -2,7 +2,8 @@
 title: "Windows 11 Random Freezing: Trace Causes Using Event Viewer Like a Pro"
 description: "Stop guessing why your Windows 11 PC freezes. Learn how to track down root hardware and driver causes using Event Viewer before your next big meeting."
 publishDate: 2026-10-21T00:00:00Z
-image: '/images/tech-photo/storage%20(9).png'
+image: "https://images.pexels.com/photos/8199606/pexels-photo-8199606.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "undefined"
 category: 'tech'
 tags: ["Tech Tips", "Hardware", "Troubleshooting", "PC Fix", "Windows 11"]
 theme: "Rosewood Hardware Guide"
@@ -12,7 +13,7 @@ The clock on the wall of our NYC office was glaring at me: 2:40 PM. The company-
 
 If you work in IT or manage high-performance setups, you know this gut-wrenching feeling all too well. Windows 11 random freezing is arguably the most frustrating diagnostic nightmare because it leaves zero error messages on your screen when it happens. 
 
-![Tech Troubleshooting Guide](/images/tech-photo/display%20(17).png)
+![undefined](https://images.pexels.com/photos/6173671/pexels-photo-6173671.jpeg?auto=compress&cs=tinysrgb&w=1200).png)
 
 <div style="border-left: 4px solid #be123c; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>The Emergency Trap:</strong> Most people respond to random freezes by blindly updating every driver in Device Manager or reinstalling Windows overnight. That is a massive waste of time. Your PC actually recorded the exact culprit right before it died; you just need to know where to look.

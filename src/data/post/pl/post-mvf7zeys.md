@@ -2,7 +2,8 @@
 title: "Jak naprawić 100% użycia procesora przez proces systemowy w Windows"
 description: "Praktyczny poradnik inżyniera IT: jak szybko zdiagnozować i naprawić zablokowane 100% CPU przez proces systemowy w biurze."
 publishDate: 2026-10-19T19:45:00.000Z
-image: '/images/tech-photo/storage (13).png'
+image: "https://images.pexels.com/photos/30433037/pexels-photo-30433037.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "undefined"
 category: 'tech'
 tags: ["Serwis IT", "Windows", "Wydajność PC", "Naprawa sprzętu"]
 theme: "Pure Titanium Clean"
@@ -12,7 +13,7 @@ Godzina 8:45 rano, warszawskie centrum biznesowe na Mokotowie. Za piętnaście m
 
 Znam ten ból na pamięć. Zanim wpadłem na właściwy trop, straciłem mnóstwo czasu na bezmyślne restarty komputera, odinstalowywanie pakietu Office czy skanowanie antywirusem, które w tym konkretnym scenariuszu nie dawały absolutnie nic. Problem leżał głębiej – w sterownikach, uszkodzonej usłudze Windows Update lub konflikcie podzespołów. 
 
-![How to Fix 100 Percent CPU Usage Caused by System Process Tech Guide](/images/tech-photo/keyboard (19).png)
+![undefined](https://images.pexels.com/photos/10359908/pexels-photo-10359908.jpeg?auto=compress&cs=tinysrgb&w=1200).png)
 
 Dziś pokażę Ci szybką, sprawdzoną metodę krok po kroku, jak opanować tę sytuację bez formatowania dysku i tracenia nerwów.
 

@@ -2,7 +2,8 @@
 title: "시스템 프로세스 CPU 100퍼센트 점유 오류, 칼퇴를 부르는 긴급 해결 가이드"
 description: "중요한 프레젠테이션 직전 발생한 시스템 프로세스 CPU 100퍼센트 점유 오류! 현직 테크 엔지니어가 알려주는 빠르고 정확한 원인 분석과 실전 해결법을 확인하세요."
 publishDate: 2026-10-19T08:30:00.000Z
-image: '/images/tech-photo/bsod (19).png'
+image: "https://images.pexels.com/photos/30433037/pexels-photo-30433037.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "undefined"
 category: 'tech'
 tags: ["Tech Tips", "Hardware", "Troubleshooting", "PC Fix", "CPU 100"]
 theme: "Forest Emerald Bio"
@@ -12,7 +13,7 @@ theme: "Forest Emerald Bio"
 
 당시 저는 재부팅을 세 번이나 하고, 전원 케이블을 뽑았다가 다시 꽂고, 램(RAM)을 뺐다 껴보는 등 야전에서 할 수 있는 온갖 비전문적인 삽질을 다 해보았습니다. 하지만 문제는 간단히 해결되지 않았고, 결국 발표 직전 간신히 예비용 노트북으로 접속해 위기를 모면했습니다. 그날 퇴근 후 연구에 매달린 끝에 알아낸, 시스템 프로세스가 CPU를 통째로 집어삼키는 원인과 그에 대한 확실한 실전 처방전을 오늘 여러분과 공유하려 합니다.
 
-![How to Fix 100 Percent CPU Usage Caused by System Process Tech Guide](/images/tech-photo/keyboard (13).png)
+![undefined](https://images.pexels.com/photos/10359908/pexels-photo-10359908.jpeg?auto=compress&cs=tinysrgb&w=1200).png)
 
 ---
 

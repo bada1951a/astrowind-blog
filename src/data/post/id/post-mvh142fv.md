@@ -2,7 +2,8 @@
 title: "Mengatasi Windows 11 Random Freezing Menggunakan Event Viewer"
 description: "Panduan praktis teknisi IT melacak penyebab PC nge-freeze mendadak di Windows 11 menggunakan Event Viewer tanpa tebak-tebakan."
 publishDate: 2026-10-21T00:00:00Z
-image: '/images/tech-photo/tech-photos%20(3).jpg'
+image: "https://images.pexels.com/photos/8199606/pexels-photo-8199606.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "undefined"
 category: 'tech'
 tags: ["Windows 11", "Troubleshooting", "Event Viewer", "Hardware PC"]
 theme: "Industrial Blueprint"
@@ -12,7 +13,7 @@ Suasana di salah satu gedung perkantoran kawasan Sudirman, Jakarta, mendadak men
 
 Begitu PC dinyalakan ulang, dokumen yang dikerjakan hilang setengahnya, dan kepanikan berubah menjadi kejengkelan karena masalah *random freezing* seperti ini sudah terjadi tiga kali dalam seminggu terakhir.
 
-![Tech Troubleshooting Guide](/images/tech-photo/tech-photos%20(42).jpg)
+![undefined](https://images.pexels.com/photos/6173671/pexels-photo-6173671.jpeg?auto=compress&cs=tinysrgb&w=1200).jpg)
 
 Sebagai teknisi infrastruktur IT yang sudah kenyang asam garam menghadapi drama kantor seperti ini, saya tahu persis apa yang dilakukan kebanyakan orang: menebak-nebak, langsung instal ulang Windows, ganti RAM, atau ganti SSD tanpa tahu akar masalahnya. Padahal, cara paling elegan dan akurat untuk melacak biang kerok *random freezing* di Windows 11 adalah dengan membuka "buku harian" si komputer itu sendiri, yaitu <strong>Event Viewer</strong>.
 

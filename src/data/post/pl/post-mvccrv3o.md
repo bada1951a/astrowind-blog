@@ -2,7 +2,8 @@
 title: "Walka z BSoD 0x0000000a: Diagnostyka pamięci i cofanie sterowników w praktyce"
 description: "Poradnik administratora: jak szybko zdiagnozować błąd Blue Screen 0x0000000a, przetestować pamięć RAM i bezpiecznie cofnąć feralny sterownik."
 publishDate: 2026-10-17T19:45:00.000Z
-image: "/images/tech-photo/tech-photo (37).jpg"
+image: "https://images.pexels.com/photos/7859349/pexels-photo-7859349.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "undefined"
 category: 'tech'
 tags: ["Windows", "BSoD", "Diagnostyka", "Administrator", "Hardware"]
 theme: "Deep Indigo System"
@@ -72,7 +73,7 @@ Kliknij Start, wpisz `Zaawansowane ustawienia systemu` (Advanced system settings
 
 
 
-![Tech & IT Solution Guide](https://picsum.photos/seed/computer564/1000/550)
+![undefined](https://images.pexels.com/photos/10868736/pexels-photo-10868736.jpeg?auto=compress&cs=tinysrgb&w=1200)
 
 ### 2. Czy błąd 0x0000000a może być spowodowany przez uszkodzony dysk SSD?
 Tak. Jeśli kontroler dysku NVMe gubi spójność danych w pamięci podręcznej, jądro systemu traci dostęp do sektorów wymiany, co kończy się identycznym błędem IRQL. Warto sprawdzić stan dysku za pomocą aplikacji diagnostycznej producenta (np. Samsung Magician, CrystalDiskInfo).

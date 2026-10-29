@@ -2,7 +2,8 @@
 title: "Figeages aléatoires sous Windows 11 : comment pister la panne avec l'Observateur d'événements"
 description: "Guide pratique de dépannage informatique pour identifier et résoudre les gels et plantages aléatoires de Windows 11 à La Défense."
 publishDate: 2026-10-21T00:00:00Z
-image: '/images/tech-photo/display%20(20).png'
+image: "https://images.pexels.com/photos/8199606/pexels-photo-8199606.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "undefined"
 category: 'tech'
 tags: ["Tech Tips", "Hardware", "Troubleshooting", "PC Fix"]
 theme: "Mint Fresh Engineering"
@@ -36,7 +37,7 @@ Dans la colonne de gauche, développez l'arborescence : <strong>Journaux Windows
 
 
 
-![Tech Troubleshooting Guide](/images/tech-photo/display%20(14).png)
+![undefined](https://images.pexels.com/photos/6173671/pexels-photo-6173671.jpeg?auto=compress&cs=tinysrgb&w=1200).png)
 
 ### 2. Filtrer les erreurs critiques (Kernel-Power)
 Un freeze brutal se solde presque toujours par une coupure forcée. Cherchez dans la liste centrale l'événement portant l'ID <strong>41</strong> (source *Kernel-Power*). 

@@ -2,7 +2,8 @@
 title: "Xử lý triệt để lỗi Màn hình xanh 0x0000000a: Chẩn đoán RAM và Rollback Driver"
 description: "Hướng dẫn thực chiến từ chuyên gia IT tại Hà Nội để khắc phục lỗi Blue Screen 0x0000000a bằng cách kiểm tra RAM và hoàn tác driver."
 publishDate: 2026-10-17T22:15:00.000Z
-image: "/images/tech-photo/tech-photo (20).jpg"
+image: "https://images.pexels.com/photos/7859349/pexels-photo-7859349.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "undefined"
 category: 'tech'
 tags: ["BlueScreen", "WindowsFix", "RAMDiagnostic", "DriverRollback", "ITSupport"]
 theme: "Teal Matrix Digital"
@@ -12,7 +13,7 @@ Mới sáng thứ Hai đầu tuần, chiếc máy trạm của một đồng ngh
 
 Đừng hoảng loạn cài lại Windows vội. Hãy cùng tôi đi thẳng vào quy trình chẩn đoán và xử lý thực chiến đã được kiểm chứng qua hàng loạt hệ thống tại các văn phòng công nghệ Việt Nam.
 
-![Tech & IT Solution Guide](https://picsum.photos/seed/computer710/1000/550)
+![undefined](https://images.pexels.com/photos/10868736/pexels-photo-10868736.jpeg?auto=compress&cs=tinysrgb&w=1200)
 
 <div style="border-left: 4px solid #14b8a6; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Cảnh báo nhanh từ chuyên gia:</strong> Lỗi 0x0000000a xảy ra khi một tiến trình chế độ kernel hoặc một trình điều khiển (driver) cố gắng truy cập vào một địa chỉ bộ nhớ mà nó không có quyền, hoặc quyền IRQL quá cao. Thủ phạm chính thường nằm ở thanh RAM chập chờn hoặc bản cập nhật driver gần nhất.

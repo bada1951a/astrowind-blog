@@ -2,7 +2,8 @@
 title: "CPU al 100% per colpa di System: Come ho salvato il report a Milano"
 description: "Guida pratica da sistemista per risolvere il blocco della CPU al 100% causato dal processo System di Windows in ambiente aziendale."
 publishDate: 2026-10-19T16:00:00.000Z
-image: '/images/tech-photo/keyboard (3).png'
+image: "https://images.pexels.com/photos/30433037/pexels-photo-30433037.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "undefined"
 category: 'tech'
 tags: ["Tech Tips", "Hardware", "Troubleshooting", "PC Fix", "Windows 11"]
 theme: "Pure Titanium Clean"
@@ -12,7 +13,7 @@ Erano le 17:50 di un martedì infernale nel nostro ufficio al Centro direzionale
 
 All'inizio il panico ha quasi preso il sopravvento. La prima reazione istintiva di chiunque sarebbe stata quella di tenere premuto il tasto di accensione per un hard reset brutale. Ma spegnere la macchina in quel momento esatto significava perdere gli ultimi dati non salvati del foglio di calcolo, corrompere il file di database locale e mancare la consegna al board. 
 
-![How to Fix 100 Percent CPU Usage Caused by System Process Tech Guide](/images/tech-photo/system (2).png)
+![undefined](https://images.pexels.com/photos/10359908/pexels-photo-10359908.jpeg?auto=compress&cs=tinysrgb&w=1200).png)
 
 Dopo tentativi inutili di chiudere i processi secondari e un paio di riavvii forzati che non facevano altro che ripresentare lo stesso identico collo di bottiglia dieci minuti dopo l'accesso, ho dovuto applicare il metodo sistemistico puro: isolare la causa radice, disabilitare i driver o i servizi in conflitto e riprendere il controllo della macchina in meno di un quarto d'ora. 
 

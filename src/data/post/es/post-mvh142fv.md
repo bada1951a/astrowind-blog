@@ -2,7 +2,8 @@
 title: "Guia rapida de reparacion: Como cazar bloqueos aleatorios en Windows 11 usando el Visor de eventos"
 description: "Aprende a diagnosticar congelamientos aleatorios en Windows 11 durante entregas criticas usando el Visor de eventos sin perder la calma."
 publishDate: 2026-10-21T00:00:00Z
-image: '/images/tech-photo/storage%20(12).png'
+image: "https://images.pexels.com/photos/8199606/pexels-photo-8199606.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "undefined"
 category: 'tech'
 tags: ["Soporte Tecnico", "Hardware", "Windows 11", "Visor de Eventos"]
 theme: "Graphite Technical Paper"
@@ -41,7 +42,7 @@ El cursor no respondia, el teclado estaba muerto y el ventilador seguia zumbando
 
 </div>
 
-![Tech Troubleshooting Guide](/images/tech-photo/keyboard%20(2).png)
+![undefined](https://images.pexels.com/photos/6173671/pexels-photo-6173671.jpeg?auto=compress&cs=tinysrgb&w=1200).png)
 
 Durante los primeros dias, cometi el error tipico de tecnico novato: probe a cambiar los modulos de RAM, actualize la BIOS a lo loco y reinstale los drivers de video tres veces pensando que era un problema grafico. Nada de eso funciono porque estaba atacando sintomas y no la causa raiz. El verdadero punto de inflexion llego cuando decidi dejar de adivinar y empezar a rastrear los logs del sistema operativo de forma quirurgica utilizando la herramienta nativa que Microsoft incluye para esto.
 

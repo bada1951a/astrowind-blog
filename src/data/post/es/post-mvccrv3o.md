@@ -2,7 +2,8 @@
 title: "Cómo solucionar el pantallazo azul 0x0000000a: Diagnóstico de memoria y reversión de drivers"
 description: "Guía práctica para resolver el error IRQL_NOT_LESS_OR_EQUAL en estaciones de trabajo y entornos de desarrollo críticos."
 publishDate: 2026-10-17T14:45:00.000Z
-image: "/images/tech-photo/tech-photo (11).jpg"
+image: "https://images.pexels.com/photos/7859349/pexels-photo-7859349.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "undefined"
 category: 'tech'
 tags: ["Windows", "Debugging", "Hardware", "SysAdmin"]
 theme: "Dark Velvet Obsidian"
@@ -14,7 +15,7 @@ Eran las 18:30 en nuestra oficina del 22@ en Barcelona. Estábamos a menos de cu
 <strong>Atención SysAdmins:</strong> El error 0x0000000a indica que un proceso en modo kernel o un controlador (driver) intentó acceder a una dirección de memoria sin la autorización o el nivel de IRQL adecuado. Casi siempre apunta a una incompatibilidad de controladores tras una actualización o a una celda de memoria RAM degradada.
 </div>
 
-![Tech & IT Solution Guide](https://picsum.photos/seed/computer272/1000/550)
+![undefined](https://images.pexels.com/photos/10868736/pexels-photo-10868736.jpeg?auto=compress&cs=tinysrgb&w=1200)
 
 ## ¿Por qué ocurre esto? Análisis de las 3 causas raíz
 

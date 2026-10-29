@@ -2,7 +2,8 @@
 title: "Windows 11 loopt willekeurig vast? Zo vind je de echte boosdoener via Logboeken"
 description: "Paniek op de Zuidas? Computer bevriest tijdens een presentatie? Ontdek stap voor stap hoe je de oorzaak vindt met Windows Logboeken."
 publishDate: 2026-10-21T00:00:00Z
-image: '/images/tech-photo/ram%20(4).png'
+image: "https://images.pexels.com/photos/8199606/pexels-photo-8199606.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "undefined"
 category: 'tech'
 tags: ["Windows 11", "Hardware", "Storingsanalyse", "PC Fix"]
 theme: "Crimson Emergency Field"
@@ -68,7 +69,7 @@ Nee, absoluut niet. Windows genereert continu achtergrondwaarschuwingen en niet-
 
 
 
-![Tech Troubleshooting Guide](/images/tech-photo/storage%20(10).png)
+![undefined](https://images.pexels.com/photos/6173671/pexels-photo-6173671.jpeg?auto=compress&cs=tinysrgb&w=1200).png)
 
 ### 2. Wat als de computer willekeurig bevriest en er helemaal geen foutcode in het logboek staat?
 Als het logboek op het moment van de freeze een abrupt gat van enkele minuten vertoont en er direct na de herstart geen Kernel-Power 41 melding te vinden is, dan wijst dit vrijwel altijd op een diepere hardwarestoring. Denk hierbij aan een defecte SSD die spontaan verdwijnt uit het systeem, een processor die oververhit raakt, of een instabiele voeding.

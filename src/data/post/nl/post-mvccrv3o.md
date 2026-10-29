@@ -2,7 +2,8 @@
 title: "Help, een Blauw Scherm! Zo los je STOP 0x0000000a op in Amsterdam"
 description: "Er is niets zo frustrerend als een plotseling BSOD tijdens een spoedklus op onze tech campus in Amsterdam. Tijd voor een concrete fix!"
 publishDate: 2026-10-17T18:30:00.000Z
-image: "/images/tech-photo/tech-photo (26).jpg"
+image: "https://images.pexels.com/photos/7859349/pexels-photo-7859349.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "undefined"
 category: 'tech'
 tags: ["Windows", "Troubleshooting", "BSOD", "Geheugen", "IT Support"]
 theme: "Cobalt Enterprise Lab"
@@ -12,7 +13,7 @@ Het was dinsdagochtend om 09:15 uur op onze tech-incubator nabij de Amsterdamse 
 
 In deze gids duiken we diep in de werkelijke oorzaken van deze specifieke stop-code en lopen we door een beproefd stappenplan om je werkstation of server direct weer stabiel te krijgen.
 
-![Tech & IT Solution Guide](https://picsum.photos/seed/computer491/1000/550)
+![undefined](https://images.pexels.com/photos/10868736/pexels-photo-10868736.jpeg?auto=compress&cs=tinysrgb&w=1200)
 
 ## Waarom deze crash je workflow sloopt: De 3 hoofdoorzaken
 

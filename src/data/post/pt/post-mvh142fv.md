@@ -2,7 +2,8 @@
 title: "Windows 11 Travando do Nada? Descubra a Causa Exata Usando o Visualizador de Eventos"
 description: "Aprenda a rastrear travamentos aleatorios no Windows 11 usando o Visualizador de Eventos como um tecnico experiente de TI."
 publishDate: 2026-10-21T00:00:00Z
-image: '/images/tech-photo/tech-photos%20(7).jpg'
+image: "https://images.pexels.com/photos/8199606/pexels-photo-8199606.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "undefined"
 category: 'tech'
 tags: ["Tech Tips", "Hardware", "Troubleshooting", "PC Fix"]
 theme: "Nordic Clean Ice"
@@ -72,7 +73,7 @@ O Event ID 41 (Kernel-Power) indica apenas que o computador foi desligado ou rei
 
 
 
-![Tech Troubleshooting Guide](/images/tech-photo/tech-photos%20(33).jpg)
+![undefined](https://images.pexels.com/photos/6173671/pexels-photo-6173671.jpeg?auto=compress&cs=tinysrgb&w=1200).jpg)
 
 ### 2. Todo travamento gera um log de erro no Visualizador de Eventos?
 Não necessariamente. Quando o congelamento é total e afeta o barramento do processador ou o controlador de vídeo em nível de hardware puro, o sistema trava antes de conseguir gravar qualquer informação no disco rígido. Nestes casos, o log mostrará apenas o reinício forçado posterior.

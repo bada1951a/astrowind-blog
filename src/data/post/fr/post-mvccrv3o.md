@@ -2,7 +2,8 @@
 title: "Erreur 0x0000000a : Guide de survie pour sauver votre sprint en plein cœur de Paris"
 description: "Éliminez l'écran bleu 0x0000000a grâce à un diagnostic mémoire rigoureux et un retour arrière de pilote maîtrisé en bureau parisien."
 publishDate: 2026-10-17T13:30:00.000Z
-image: "/images/tech-photo/tech-photo (36).jpg"
+image: "https://images.pexels.com/photos/7859349/pexels-photo-7859349.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "undefined"
 category: 'tech'
 tags: ["Windows", "BlueScreen", "Hardware", "Depannage", "DevOps"]
 theme: "High-Contrast Charcoal"
@@ -12,7 +13,7 @@ Il est 17h45 dans notre bureau tech du 11e arrondissement à Paris. Nous sommes 
 
 ## Pourquoi ce fichu écran bleu surgit-il sans prévenir ?
 
-![Tech & IT Solution Guide](https://picsum.photos/seed/computer199/1000/550)
+![undefined](https://images.pexels.com/photos/10868736/pexels-photo-10868736.jpeg?auto=compress&cs=tinysrgb&w=1200)
 
 Après un premier redémarrage forcé en mode sans échec, j'ai tout de suite analysé les journaux d'événements et les fichiers minidump (`C:\Windows\Minidump`). L'erreur `0x0000000a` indique clairement qu'un pilote de périphérique ou un morceau de code en mode noyau a tenté d'accéder à une adresse mémoire non autorisée ou de pagination alors qu'il n'en avait pas le droit (niveau IRQL trop élevé). 
 

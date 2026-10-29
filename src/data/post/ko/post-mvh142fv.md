@@ -2,7 +2,8 @@
 title: "윈도우 11 갑자기 멈춤 현상, 이벤트 뷰어로 원인 칼같이 잡는 법"
 description: "중요한 프레젠테이션 직전 윈도우 11 PC가 멈추는 프리징 현상으로 식은땀 흘리셨나요? 이벤트 뷰어를 통해 원인을 추적하고 해결하는 실전 가이드를 소개합니다."
 publishDate: 2026-10-21T00:00:00Z
-image: '/images/tech-photo/tech-photo%20(12).jpg'
+image: "https://images.pexels.com/photos/8199606/pexels-photo-8199606.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "undefined"
 category: 'tech'
 tags: ["Tech Tips", "Hardware", "Troubleshooting", "PC Fix"]
 theme: "Warm Coffee Latte"
@@ -12,7 +13,7 @@ theme: "Warm Coffee Latte"
 
 이런 윈도우 11 랜덤 프리징(Random Freezing) 현상은 직장인들에게는 그야말로 마청과도 같습니다. 블루스크린이라도 뜨면 오류 코드라도 적어두겠지만, 화면이 멈춘 채 멍하니 멈춰버리거나 강제 재부팅 외에는 답이 없는 상황이 반복되면 하드웨어 고장인지 소프트웨어 충돌인지 헷갈리기 마련입니다.
 
-![Tech Troubleshooting Guide](/images/tech-photo/tech-photo%20(21).jpg)
+![undefined](https://images.pexels.com/photos/6173671/pexels-photo-6173671.jpeg?auto=compress&cs=tinysrgb&w=1200).jpg)
 
 <div style="border-left: 4px solid #78350f; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>전문가 노트:</strong> PC가 갑자기 멈출 때 무작정 포맷을 하거나 부품을 새로 사는 것은 금물입니다. 윈도우 내부에는 그날 일어난 모든 사건을 기록하는 일종의 '블랙박스'가 숨어 있습니다. 바로 오늘 우리가 다룰 <strong>이벤트 뷰어(Event Viewer)</strong>입니다.

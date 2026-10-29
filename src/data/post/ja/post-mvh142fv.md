@@ -2,7 +2,8 @@
 title: "Windows 11の突然のフリーズをイベントビューアーで徹底追跡！現場のプロが教える原因特定と対策"
 description: "東京・丸の内のオフィスで月次報告書の送信直前にPCがフリーズ！Windows 11のランダムフリーズの原因をイベントビューアーで正確に突き止め、二度と同じトラブルを防ぐための実践的な対処法をハードウェアの専門家が徹底解説。"
 publishDate: 2026-10-21T00:00:00Z
-image: '/images/tech-photo/tech-photo%20(9).jpg'
+image: "https://images.pexels.com/photos/8199606/pexels-photo-8199606.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "undefined"
 category: 'tech'
 tags: ["Tech Tips", "Hardware", "Troubleshooting", "PC Fix"]
 theme: "Graphite Technical Paper"
@@ -31,7 +32,7 @@ theme: "Graphite Technical Paper"
 
 
 
-![Tech Troubleshooting Guide](/images/tech-photo/keyboard%20(4).png)
+![undefined](https://images.pexels.com/photos/6173671/pexels-photo-6173671.jpeg?auto=compress&cs=tinysrgb&w=1200).png)
 
 ## 2. 犯人はコイツだ！「イベントビューアー」でエラーの足跡を追う
 

@@ -2,7 +2,8 @@
 title: "Cómo solucionar el 100 por ciento de uso de CPU por procesos del sistema"
 description: "Guía práctica de soporte técnico para resolver el cuello de botella del proceso System en Windows durante entregas críticas."
 publishDate: 2026-10-19T14:45:00.000Z
-image: '/images/tech-photo/ram (11).png'
+image: "https://images.pexels.com/photos/30433037/pexels-photo-30433037.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "undefined"
 category: 'tech'
 tags: ["Soporte TI", "Hardware", "Windows", "Rendimiento PC"]
 theme: "Modern Minimalist Slate"
@@ -12,7 +13,7 @@ Eran las 18:30 en nuestra oficina corporativa en Madrid. A solo media hora de en
 
 Durante los primeros diez minutos, caí en el típico error de desesperación: reinicié el equipo tres veces seguidas a la fuerza manteniendo presionado el botón de encendido. Grave error. Lo único que conseguí fue corrupción temporal en la caché de Windows y perder valiosos minutos valiosos que debimos usar para estabilizar el sistema operativo.
 
-![How to Fix 100 Percent CPU Usage Caused by System Process Tech Guide](/images/tech-photo/keyboard (17).png)
+![undefined](https://images.pexels.com/photos/10359908/pexels-photo-10359908.jpeg?auto=compress&cs=tinysrgb&w=1200).png)
 
 Al ver que el reinicio en frío no servía de nada porque el problema volvía a aparecer a los dos minutos de arrancar, detuve la marcha, me puse la gorra de técnico especialista y apliqué el protocolo de emergencia que nunca falla. Aquí te comparto exactamente cómo rescaté el equipo y cómo puedes solucionarlo sin perder la calma.
 

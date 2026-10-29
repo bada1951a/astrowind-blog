@@ -2,7 +2,8 @@
 title: "「システム」プロセスがCPU使用率100%に？丸の内のオフィスで起きた悲劇と即効の解決策"
 description: "月次報告書の送信直前にPCがフリーズ！「システム」プロセスの暴走でCPU使用率100%になった時の原因と、現場のエンジニアが教える確実な対処法を徹底解説。"
 publishDate: 2026-10-19T11:00:00.000Z
-image: '/images/tech-photo/bsod (18).png'
+image: "https://images.pexels.com/photos/30433037/pexels-photo-30433037.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "undefined"
 category: 'tech'
 tags: ["ITサポート", "Windowsトラブル", "CPU100パーセント", "PC修理", "業務効率化"]
 theme: "Deep Ocean Cobalt"
@@ -15,7 +16,7 @@ theme: "Deep Ocean Cobalt"
 タスクマネージャーで「システム」プロセスがCPUを食いつぶしている場合、通常のアプリのフリーズとは異なり、Windowsの根幹（ドライバーやカーネルレベル）で無限ループやハードウェアの応答遅延が発生しています。焦って電源ボタン長押しをする前に、正しい原因切り分けを行いましょう。
 </div>
 
-![How to Fix 100 Percent CPU Usage Caused by System Process Tech Guide](/images/tech-photo/system (19).png)
+![undefined](https://images.pexels.com/photos/10359908/pexels-photo-10359908.jpeg?auto=compress&cs=tinysrgb&w=1200).png)
 
 ---
 

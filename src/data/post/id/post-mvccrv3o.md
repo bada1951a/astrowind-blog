@@ -2,7 +2,8 @@
 title: "Mengatasi Blue Screen 0x0000000a: Solusi Cepat Diagnostik Memori dan Driver Rollback"
 description: "Panduan praktis menangani Blue Screen error 0x0000000a di lingkungan kerja IT Jakarta. Mulai dari cek RAM hingga rollback driver."
 publishDate: 2026-10-17T21:00:00.000Z
-image: "/images/tech-photo/tech-photo (33).jpg"
+image: "https://images.pexels.com/photos/7859349/pexels-photo-7859349.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "undefined"
 category: 'tech'
 tags: ["Windows", "Troubleshooting", "Blue Screen", "IT Support", "Driver"]
 theme: "Solarized Amber Warm"
@@ -12,7 +13,7 @@ Jam 8 malam di kantor startup kawasan SCBD Jakarta. Tim *engineering* sedang ber
 
 Setelah berjibaku selama dua jam mencoba berbagai cara instan seperti mematikan paksa dan mencabut kabel daya yang ternyata tidak membuahkan hasil, saya mulai melakukan penelusuran sistematis. Kode error 0x0000000a ini sebenarnya memberikan petunjuk yang sangat spesifik: ada proses di level *kernel* atau *driver* yang mencoba mengakses alamat memori yang tidak diizinkan. 
 
-![Tech & IT Solution Guide](https://picsum.photos/seed/computer637/1000/550)
+![undefined](https://images.pexels.com/photos/10868736/pexels-photo-10868736.jpeg?auto=compress&cs=tinysrgb&w=1200)
 
 <div style="border-left: 4px solid #d97706; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
 <strong>Catatan Lapangan IT:</strong> Jangan buru-buru melakukan instal ulang Windows saat menghadapi error 0x0000000a. Sembilan puluh persen kasus ini bisa diselesaikan lewat investigasi RAM fisik atau pembaruan/penurunan versi driver yang bermasalah.

@@ -2,7 +2,8 @@
 title: "Schermata Blu 0x0000000a: Come Risolvere con Diagnostica Memoria e Rollback"
 description: "Guida pratica dalla nostra azienda IT a Milano per risolvere l'errore IRQL_NOT_LESS_OR_EQUAL tramite diagnostica RAM e rollback dei driver."
 publishDate: 2026-10-17T16:00:00.000Z
-image: "/images/tech-photo/tech-photo (8).jpg"
+image: "https://images.pexels.com/photos/7859349/pexels-photo-7859349.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "undefined"
 category: 'tech'
 tags: ["Windows", "Hardware", "Troubleshooting", "Driver", "Milano"]
 theme: "Bronze Artisan Workshop"
@@ -12,7 +13,7 @@ Erano le 17:30 di un giovedì caotico nel nostro ufficio di consulenza IT in zon
 
 Dopo vent'anni passati a mettere le mani nei PC e nei server, ho imparato che le emergenze hardware e software non si affrontano con la disperazione, ma con un metodo chirurgico, degno di una bottega artigiana digitale. In questo articolo ti mostro esattamente come ho isolato il problema e come puoi risolverlo anche tu in pochi passaggi.
 
-![Tech & IT Solution Guide](https://picsum.photos/seed/computer345/1000/550)
+![undefined](https://images.pexels.com/photos/10868736/pexels-photo-10868736.jpeg?auto=compress&cs=tinysrgb&w=1200)
 
 <div style="border-left: 4px solid #b45309; padding: 12px 16px; margin: 20px 0; background-color: rgba(180, 83, 9, 0.05); border-radius: 4px; color: #111827;">
 <strong>Nota dell'Esperto:</strong> L'errore 0x0000000a indica che un processo in modalità kernel o un driver ha tentato di accedere a un indirizzo di memoria a cui non aveva il permesso di accedere, oppure a cui non avrebbe dovuto accedere. Spesso la causa è un banco RAM instabile o un driver di periferica appena aggiornato non compatibile.

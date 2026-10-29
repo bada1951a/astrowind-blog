@@ -2,7 +2,8 @@
 title: "Surcharge CPU à 100 pourcent par le Processus Système : Guide de Survie à La Défense"
 description: "Comment résoudre instantanément un blocage CPU à 100 pourcent causé par les processus système sous Windows en plein bouclage de dossiers à La Défense."
 publishDate: 2026-10-19T13:30:00.000Z
-image: '/images/tech-photo/system (18).png'
+image: "https://images.pexels.com/photos/30433037/pexels-photo-30433037.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "undefined"
 category: 'tech'
 tags: ["Tech Tips", "Hardware", "Troubleshooting", "PC Fix"]
 theme: "Cyberpunk Terminal"
@@ -12,7 +13,7 @@ Il est 17h55, un vendredi de clôture trimestrielle dans notre open space de La 
 
 Ce genre de panne soudaine, je l'ai vue cent fois sur les bureaux de mes collègues. Avant de céder à la tentation de balancer l'unité centrale par la fenêtre du 15ème étage, voyons comment diagnostiquer et terrasser ce bug de surconsommation CPU en quelques minutes.
 
-![How to Fix 100 Percent CPU Usage Caused by System Process Tech Guide](/images/tech-photo/tech-photo (29).jpg)
+![undefined](https://images.pexels.com/photos/10359908/pexels-photo-10359908.jpeg?auto=compress&cs=tinysrgb&w=1200).jpg)
 
 <div style="border-left: 4px solid #00ffcc; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,255,204,0.08); border-radius: 4px; color: #111827;">
 <strong>CLI / QUICK FIX - ACCÈS RAPIDE TERMINAL</strong><br>

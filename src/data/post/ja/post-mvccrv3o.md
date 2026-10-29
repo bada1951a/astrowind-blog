@@ -2,7 +2,8 @@
 title: "渋谷のデスクトップで急増？ブルースクリーン「0x0000000a」をメモリ診断とドライバロールバックで秒速解決する手順"
 description: "プロジェクト納品直前の渋谷のオフィスで発生したブルースクリーンエラー（STOP 0x0000000a）。メモリ診断とドライバのロールバックを使った現場直行の復旧手順を現役エンジニアが徹底解説します。"
 publishDate: 2026-10-17T11:00:00.000Z
-image: "/images/tech-photo/tech-photo (25).jpg"
+image: "https://images.pexels.com/photos/7859349/pexels-photo-7859349.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "undefined"
 category: 'tech'
 tags: ["Windows", "ブルースクリーン", "トラブルシューティング", "メモリ診断", "ドライバ"]
 theme: "Forest Emerald Bio"
@@ -14,7 +15,7 @@ theme: "Forest Emerald Bio"
 <strong>緊急時の心得：</strong> 0x0000000aエラーは、主にカーネルモードのプロセスやドライバが、アクセスしてはいけないメモリ領域（IRQLが高すぎる状態）にアクセスしようとしたときに発生します。焦ってOSをクリーンインストールする前に、まずはハードウェア（メモリ）と直近のアップデート（ドライバ）を疑うのが鉄則です。
 </div>
 
-![Tech & IT Solution Guide](https://picsum.photos/seed/computer53/1000/550)
+![undefined](https://images.pexels.com/photos/10868736/pexels-photo-10868736.jpeg?auto=compress&cs=tinysrgb&w=1200)
 
 ---
 

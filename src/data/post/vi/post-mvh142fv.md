@@ -2,7 +2,8 @@
 title: "Sửa lỗi máy tính Windows 11 đơ cứng ngẫu nhiên bằng Event Viewer"
 description: "Hướng dẫn kỹ thuật viên xử lý triệt để tình trạng Windows 11 random freezing, tra cứu lỗi phần cứng và phần mềm chính xác qua Event Viewer."
 publishDate: 2026-10-21T00:00:00Z
-image: '/images/tech-photo/ram%20(7).png'
+image: "https://images.pexels.com/photos/8199606/pexels-photo-8199606.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "undefined"
 category: 'tech'
 tags: ["Tech Tips", "Hardware", "Troubleshooting", "PC Fix"]
 theme: "Graphite Technical Paper"
@@ -12,7 +13,7 @@ theme: "Graphite Technical Paper"
 
 Trước đây, khi gặp tình trạng này, phản xạ đầu tiên của dân văn phòng lẫn nhiều anh em làm IT non tay là cài lại toàn bộ Windows, hoặc tháo tung thùng máy ra phủi bụi, cắm lại thanh RAM cho có lệ. Nhưng cách làm mò mẫm đó ngốn cả tiếng đồng hồ quý giá và thường chẳng giải quyết được tận gốc vấn đề, để rồi ngày mai lỗi cũ lại tái diễn.
 
-![Tech Troubleshooting Guide](/images/tech-photo/tech-photo%20(28).jpg)
+![undefined](https://images.pexels.com/photos/6173671/pexels-photo-6173671.jpeg?auto=compress&cs=tinysrgb&w=1200).jpg)
 
 Thực tế, Windows 11 lưu giữ toàn bộ "lý lịch tử vong" của hệ thống mỗi khi bị đơ cứng. Bí quyết nằm ở công cụ tích hợp sẵn mang tên <strong>Event Viewer</strong> (Trình xem sự kiện). Hãy cùng tôi bóc trần nguyên nhân và xử lý dứt điểm tình trạng này theo chuẩn kỹ thuật viên chuyên nghiệp.
 
