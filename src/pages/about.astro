@@ -1,41 +1,68 @@
 ---
-import Layout from '~/layouts/PageLayout.astro';
+import Layout from "~/layouts/PageLayout.astro";
 
 const metadata = {
-  title: 'About Us — Daily Insight',
-  description: 'Learn about Daily Insight, an independent tech publication for hardware diagnostics and practical IT guides.',
+  title: "About Us — Daily Insight",
+  description:
+    "Learn about Daily Insight, an independent tech publication for hardware diagnostics and practical IT guides.",
 };
 ---
 
 <Layout metadata={metadata}>
   <section class="px-6 py-12 sm:py-16 lg:py-20 mx-auto max-w-4xl text-default">
-    <h1 class="text-3xl md:text-4xl font-bold tracking-tight mb-8">About Daily Insight</h1>
-    
-    <div class="prose dark:prose-invert max-w-none text-muted leading-relaxed space-y-8">
+    <h1 class="text-3xl md:text-4xl font-bold tracking-tight mb-8">
+      About Daily Insight
+    </h1>
+
+    <div
+      class="prose dark:prose-invert max-w-none text-muted leading-relaxed space-y-8"
+    >
       <div>
         <h2 class="text-2xl font-semibold text-default mb-3">Our Mission</h2>
         <p>
-          <strong>Daily Insight</strong> is an independent technical publication dedicated to delivering practical tech insights, hardware diagnostics, and system troubleshooting guides.
+          <strong>Daily Insight</strong> is an independent technical publication dedicated
+          to delivering practical tech insights, hardware diagnostics, and system
+          troubleshooting guides.
         </p>
         <p>
-          We focus on verified, real-world solutions rather than theoretical overviews. Our goal is to provide clear, actionable workflows for hardware compatibility, storage maintenance, and operating system optimization to help readers resolve technical issues quickly and safely.
+          We focus on verified, real-world solutions rather than theoretical
+          overviews. Our goal is to provide clear, actionable workflows for
+          hardware compatibility, storage maintenance, and operating system
+          optimization to help readers resolve technical issues quickly and
+          safely.
         </p>
       </div>
 
       <div class="border-t border-gray-200 dark:border-gray-800 pt-6">
         <h2 class="text-2xl font-semibold text-default mb-3">What We Cover</h2>
         <ul class="list-disc list-inside space-y-2 mt-2">
-          <li><strong>Hardware & Storage:</strong> NVMe enclosures, external drive formatting standards (exFAT, NTFS), and data integrity verification.</li>
-          <li><strong>System Diagnostics:</strong> Windows and macOS troubleshooting, command-line repair utilities (CHKDSK, SFC, DISM).</li>
-          <li><strong>Tech Peripherals & Gear:</strong> Mechanical keyboards, ergonomic workspace setups, and display interface connectivity.</li>
-          <li><strong>Practical Tech Insights:</strong> Industry trends focused on productivity, efficiency, and system reliability.</li>
+          <li>
+            <strong>Hardware & Storage:</strong> NVMe enclosures, external drive formatting
+            standards (exFAT, NTFS), and data integrity verification.
+          </li>
+          <li>
+            <strong>System Diagnostics:</strong> Windows and macOS troubleshooting,
+            command-line repair utilities (CHKDSK, SFC, DISM).
+          </li>
+          <li>
+            <strong>Tech Peripherals & Gear:</strong> Mechanical keyboards, ergonomic
+            workspace setups, and display interface connectivity.
+          </li>
+          <li>
+            <strong>Practical Tech Insights:</strong> Industry trends focused on productivity,
+            efficiency, and system reliability.
+          </li>
         </ul>
       </div>
 
       <div class="border-t border-gray-200 dark:border-gray-800 pt-6">
-        <h2 class="text-2xl font-semibold text-default mb-3">Editorial Standards</h2>
+        <h2 class="text-2xl font-semibold text-default mb-3">
+          Editorial Standards
+        </h2>
         <p>
-          Every technical workflow published on Daily Insight is tested to ensure stability and accuracy. We prioritize data preservation and transparent, reproducible methodologies across all guides.
+          Every technical workflow published on Daily Insight is tested to
+          ensure stability and accuracy. We prioritize data preservation and
+          transparent, reproducible methodologies across all guides.
         </p>
       </div>
     </div>
