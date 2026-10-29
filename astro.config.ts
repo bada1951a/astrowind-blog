@@ -90,7 +90,7 @@ export default defineConfig({
   ],
 
   image: {
-    domains: ['cdn.pixabay.com', 'images.unsplash.com'],
+    domains: ['cdn.pixabay.com', 'images.unsplash.com', 'images.pexels.com'],
     responsiveStyles: true,
   },
 

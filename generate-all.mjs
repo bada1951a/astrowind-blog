@@ -21,19 +21,21 @@ const TOPICS_FILE = path.resolve('topics.txt');
 const PHOTO_DIR = path.resolve('public/images/tech-photo');
 
 // =========================================================================
-// [1호기 전용] public/images/tech-photo 로컬 이미지 자동 셔플
-// =========================================================================
+/* Pexels topic search is optional: missing credentials or API errors fall back
+   to the existing local image pool so scheduled generation does not stop. */
+const PEXELS_API_KEY = process.env.PEXELS_API_KEY;
 const IMAGE_EXTS = /\.(jpe?g|png|webp|gif|avif)$/i;
+const STOP_WORDS = new Set(['how', 'to', 'fix', 'the', 'a', 'an', 'and', 'for', 'with', 'on', 'in', 'of', 'by', 'using', 'step', 'steps', 'windows']);
 
 if (!fs.existsSync(PHOTO_DIR)) {
   fs.mkdirSync(PHOTO_DIR, { recursive: true });
 }
 
 const localFiles = fs.readdirSync(PHOTO_DIR).filter(file => IMAGE_EXTS.test(file));
-let localImages = localFiles.map(file => encodeURI(`/images/tech-photo/${file}`));
+let localImages = localFiles.map(file => encodeURI('/images/tech-photo/' + file));
 
 if (localImages.length === 0) {
-  console.warn("⚠️ public/images/tech-photo 에 이미지가 없습니다. 기본 이미지를 사용합니다.");
+  console.warn('⚠️ public/images/tech-photo 에 이미지가 없습니다. 기본 이미지를 사용합니다.');
   localImages = ['/images/default-tech.jpg'];
 }
 
@@ -47,11 +49,94 @@ function shuffleArray(array) {
 }
 
 const shuffledPool = shuffleArray(localImages);
+const usedPexelsPhotoIds = new Set();
+let topicImagePairPromise;
 
-function getPostImages(index) {
+function getLocalPostImages(index) {
   const coverUrl = shuffledPool[(index * 2) % shuffledPool.length];
   const bodyUrl = shuffledPool[(index * 2 + 1) % shuffledPool.length];
-  return { coverUrl, bodyUrl };
+  return { coverUrl, bodyUrl, coverAlt: '', bodyAlt: '', sourceComment: '' };
+}
+
+function getPexelsHost(value, expectedHost) {
+  try {
+    const url = new URL(value);
+    return url.protocol === 'https:' && url.hostname === expectedHost;
+  } catch {
+    return false;
+  }
+}
+
+function cleanSourceText(value) {
+  return String(value || '').replace(/[\r\n]/g, ' ').replace(/-->/g, '->').replace(/--/g, '-');
+}
+
+async function getPostImages(index) {
+  if (!topicImagePairPromise) {
+    topicImagePairPromise = (async () => {
+      if (!PEXELS_API_KEY) {
+        console.warn('⚠️ PEXELS_API_KEY 미설정: 주제별 Pexels 검색을 건너뛰고 기존 로컬 이미지 셔플을 사용합니다.');
+        return getLocalPostImages(index);
+      }
+
+      try {
+        const endpoint = new URL('https://api.pexels.com/v1/search');
+        endpoint.searchParams.set('query', currentTopic.slice(0, 100));
+        endpoint.searchParams.set('per_page', '40');
+        endpoint.searchParams.set('orientation', 'landscape');
+
+        const response = await fetch(endpoint, {
+          headers: { Authorization: PEXELS_API_KEY },
+        });
+        if (!response.ok) throw new Error('Pexels HTTP ' + response.status);
+        const payload = await response.json();
+        if (!Array.isArray(payload.photos)) throw new Error('Pexels 검색 결과 형식 오류');
+
+        const topicTerms = [...new Set((currentTopic.toLowerCase().match(/[\p{L}\p{N}]{3,}/gu) || [])
+          .filter(term => !STOP_WORDS.has(term)))];
+        const ranked = payload.photos.map((photo, index) => {
+          const altTerms = new Set((String(photo.alt || '').toLowerCase().match(/[\p{L}\p{N}]{3,}/gu) || []));
+          const overlap = topicTerms.reduce((score, term) => score + (altTerms.has(term) ? 1 : 0), 0);
+          return { photo, index, overlap };
+        }).sort((left, right) => right.overlap - left.overlap || left.index - right.index);
+
+        const selected = [];
+        for (const candidate of ranked) {
+          const photo = candidate.photo;
+          if (!photo.id || usedPexelsPhotoIds.has(photo.id)) continue;
+          if (!getPexelsHost(photo.src?.large, 'images.pexels.com')) continue;
+          if (!getPexelsHost(photo.url, 'www.pexels.com')) continue;
+          selected.push(candidate);
+          if (selected.length === 2) break;
+        }
+        if (selected.length !== 2) throw new Error('서로 다른 유효 사진 2장을 찾지 못했습니다.');
+
+        selected.forEach(candidate => usedPexelsPhotoIds.add(candidate.photo.id));
+        if (selected.some(candidate => candidate.overlap === 0)) {
+          console.warn('⚠️ Pexels 검색 순위와 alt 텍스트를 사용했지만 주제 키워드 일치가 약한 이미지가 있습니다. 자동 시각 검수는 하지 않았습니다.');
+        }
+
+        const cover = selected[0].photo;
+        const body = selected[1].photo;
+        const sourceComment = '<!-- Pexels source metadata (API query + alt; not visually inspected): cover ' +
+          cleanSourceText(cover.photographer) + ' | ' + cleanSourceText(cover.url) +
+          ' ; inline ' + cleanSourceText(body.photographer) + ' | ' + cleanSourceText(body.url) + ' -->';
+
+        console.log('🖼️ Pexels 주제 검색으로 서로 다른 사진 2장을 선택했습니다. 12개 locale에서 같은 쌍을 공유합니다.');
+        return {
+          coverUrl: cover.src.large,
+          bodyUrl: body.src.large,
+          coverAlt: String(cover.alt || ''),
+          bodyAlt: String(body.alt || ''),
+          sourceComment,
+        };
+      } catch (error) {
+        console.warn('⚠️ Pexels 검색 실패 (' + error.message + '): 기존 로컬 이미지 셔플로 계속합니다. 이미지 주제 관련성은 자동 보장되지 않습니다.');
+        return getLocalPostImages(index);
+      }
+    })();
+  }
+  return topicImagePairPromise;
 }
 
 // =========================================================================
@@ -389,11 +474,12 @@ async function generateSinglePost(lang, index) {
 
   console.log(`\n🚀 [${index + 1}/12] ${lang.name} (${lang.code}) 1호기 본진 애드센스 표준 생성 중... (테마: ${selectedTheme.name})`);
 
-  const { coverUrl, bodyUrl } = getPostImages(index);
+  const { coverUrl, bodyUrl, coverAlt, bodyAlt, sourceComment } = await getPostImages(index);
   const pubDateIso = getKstPublishDateIso();
 
   // 12개 locale은 동일 주제를 각각 독립 호출로 작성한다.
   const prompt = [
+    'Image source notes: cover alt from Pexels metadata: "' + coverAlt + '"; inline image alt from Pexels metadata: "' + bodyAlt + '". These descriptions are metadata only; the images have not been visually inspected.',
     'You are writing as a practical technical editor with a ' + lang.persona + ' perspective. This is a writing role, not a claim about your real identity, employment, credentials, or personal history.',
     'Write one useful, accurate troubleshooting guide natively in ' + lang.name + '.',
     'Target locale: "' + lang.localeContext + '"',
@@ -465,7 +551,8 @@ async function generateSinglePost(lang, index) {
       }
 
       // 본문 중간 이미지 배치 (2번 섹션 직전)
-      const middleImageMarkdown = `\n\n![Tech Troubleshooting Guide](${bodyUrl})\n\n`;
+      const safeBodyAlt = (bodyAlt || 'Tech troubleshooting guide').replace(/[\r\n\]]/g, ' ');
+      const middleImageMarkdown = `\n\n![${safeBodyAlt}](${bodyUrl})\n\n${sourceComment}\n\n`;
       if (body.includes('## 2.')) {
         body = body.replace(/(##\s*2\.[^\n]+)/, `${middleImageMarkdown}$1`);
       } else {
