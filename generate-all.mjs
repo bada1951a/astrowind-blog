@@ -239,6 +239,10 @@ function validateGeneratedPost(text, langCode) {
   if (faqMarkers.length !== 6 || faqMarkers.some((match, i) => match[1] + match[2] !== expectedFaq[i]))
     errors.push('FAQ sequence or missing FAQ content');
   if((body.match(/^\x60\x60\x60/gm)||[]).length%2) errors.push('unclosed code fence');
+  // Metadata must also be native-language; Korean topic text can leak into titles, descriptions or tags.
+  // Do not scan image paths: approved local filenames may legitimately contain Korean.
+  if (langCode !== 'ko' && (meta.match(/^(?:title|description|tags):[^\r\n]*/gm) || []).some(line => /[가-힣]/.test(line)))
+    errors.push('Korean in non-Korean metadata');
   if(langCode!=='ko' && /[가-힣]/.test(body)) errors.push('Korean in non-Korean article');
   return errors;
 }
@@ -534,6 +538,7 @@ async function run() {
     if (!validateGeneratedPost(japaneseSample.replace('## 2. 原因', '![Escape](/images/tech-photo/../outside.jpg)\n\n## 2. 原因'), 'ja').includes('body image must use /images/tech-photo')) throw new Error('Traversal body image gate regression');
     if (!validateGeneratedPost(japaneseSample.replace('## 2. 原因', '<img src="https://example.com/photo.jpg">\n\n## 2. 原因'), 'ja').includes('unsupported body image syntax')) throw new Error('HTML image bypass regression');
     if (!validateGeneratedPost(japaneseSample.replace('## 2. 原因', '![Untrusted][external-photo]\n\n## 2. 原因'), 'ja').includes('unsupported body image syntax')) throw new Error('Reference image bypass regression');
+    if (!validateGeneratedPost(japaneseSample.replace('title: sample', 'title: 한국어 제목'), 'ja').includes('Korean in non-Korean metadata')) throw new Error('Non-native metadata language gate regression');
     if (!validateGeneratedPost(sample.replace('category: tech', 'category: hardware'), 'ko').includes('category must be tech')) throw new Error('Tech-only category gate regression');
     if (!validateGeneratedPost(sample.replace('category: tech', 'category: tech\ncategory: tech'), 'ko').includes('category duplicated')) throw new Error('Duplicate category gate regression');
     if (!validateGeneratedPost(sample.replace('title: sample', 'title: Native Clear Title in English'), 'ko').includes('unreplaced prompt placeholder')) throw new Error('Prompt placeholder gate regression');
