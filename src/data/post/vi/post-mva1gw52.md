@@ -2,7 +2,9 @@
 title: "Cứu ngay ổ C Windows 11 đỏ rực: Dọn file rác an toàn không sợ lỗi hệ thống"
 description: "Hướng dẫn thực chiến từ kỹ sư IT tại Đà Nẵng giúp xử lý tận gốc tình trạng ổ C đầy đỏ rực trên Windows 11 và dọn dẹp tệp tạm an toàn tuyệt đối."
 publishDate: 2026-10-15T22:15:00.000Z
-image: "/images/tech-photo/tech-photo (30).jpg"
+# Pexels cover: Jakub Zerdzicki — https://www.pexels.com/photo/modern-office-desk-with-laptop-and-external-drives-28729682/
+image: "https://images.pexels.com/photos/28729682/pexels-photo-28729682/free-photo-of-modern-office-desk-with-laptop-and-external-drives.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "Máy tính xách tay và ổ cứng ngoài trên bàn làm việc"
 category: 'tech'
 tags: ["Windows 11", "Toi ưu he thong", "Don dep o C", "Thu thuat IT"]
 theme: "High-Contrast Charcoal"
@@ -14,7 +16,8 @@ Sáng nay vừa bước chân vào văn phòng công nghệ ở khu vực ven bi
 <strong>CẢNH BÁO KHẨN CẤP:</strong> Khi ổ C vượt ngưỡng 95% dung lượng đầy, hệ thống tuyệt đối không được tắt máy ngang hoặc khởi động lại bằng nút nguồn cứng nếu không muốn bị lỗi màn hình xanh (BSOD) do thiếu không gian ghi log khởi động. Hãy bình tĩnh xử lý theo quy trình dưới đây.
 </div>
 
-![Tech & IT Solution Guide](https://picsum.photos/seed/computer990/1000/550)
+<!-- Photo by Andrea Piacquadio on Pexels: https://www.pexels.com/photo/black-square-device-on-brown-wooden-table-3915760/ -->
+![Một người đang kết nối ổ cứng ngoài với máy tính xách tay.](https://images.pexels.com/photos/3915760/pexels-photo-3915760.jpeg?auto=compress&cs=tinysrgb&w=1200)
 
 ## 3 nguyên nhân cốt lõi khiến ổ C Windows 11 nhanh chóng bị "bóp nghẹt"
 
