@@ -9,6 +9,7 @@
 
 import fs from 'fs';
 import path from 'path';
+import crypto from 'crypto';
 
 
 const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
@@ -17,6 +18,31 @@ if (!OPENAI_API_KEY) {
   process.exit(1);
 }
 const POSTS_BASE_DIR = path.resolve('src/data/post');
+
+function recoveryCipherKey() {
+  return crypto.scryptSync(OPENAI_API_KEY, 'astrowind-blog-generation-recovery-v1', 32);
+}
+function writeRecoveryDraft(filePath, plainText) {
+  const iv = crypto.randomBytes(12);
+  const cipher = crypto.createCipheriv('aes-256-gcm', recoveryCipherKey(), iv);
+  const ciphertext = Buffer.concat([cipher.update(plainText, 'utf8'), cipher.final()]);
+  fs.writeFileSync(filePath, JSON.stringify({
+    version: 1, algorithm: 'aes-256-gcm', iv: iv.toString('base64'),
+    tag: cipher.getAuthTag().toString('base64'), ciphertext: ciphertext.toString('base64'),
+  }), 'utf-8');
+}
+function readRecoveryDraft(filePath) {
+  try {
+    const envelope = JSON.parse(fs.readFileSync(filePath, 'utf-8'));
+    if (envelope.version !== 1 || envelope.algorithm !== 'aes-256-gcm') throw new Error();
+    const decipher = crypto.createDecipheriv('aes-256-gcm', recoveryCipherKey(), Buffer.from(envelope.iv, 'base64'));
+    decipher.setAuthTag(Buffer.from(envelope.tag, 'base64'));
+    return Buffer.concat([decipher.update(Buffer.from(envelope.ciphertext, 'base64')), decipher.final()]).toString('utf8');
+  } catch {
+    throw new Error('복구 초안 복호화에 실패했습니다. API 키 또는 캐시가 바뀌었을 수 있습니다.');
+  }
+}
+
 const TOPICS_FILE = path.resolve('topics.txt');
 const PHOTO_DIR = path.resolve('public/images/tech-photo');
 
@@ -562,7 +588,7 @@ function prepareGeneratedPost(rawText, lang, expected) {
 async function generateSinglePost(lang, index) {
   const i18n = I18N_SECTIONS[lang.code] || I18N_SECTIONS.ko;
   let localeRecord = generationManifest.locales[lang.code] || {};
-  const recoveryPath = path.join(RECOVERY_DIR, lang.code, fileSlug + '.md');
+  const recoveryPath = path.join(RECOVERY_DIR, lang.code, fileSlug + '.md.enc');
 
   if (localeRecord.status === 'validated' && fs.existsSync(recoveryPath)) {
     const cachedExpected = {
@@ -571,15 +597,22 @@ async function generateSinglePost(lang, index) {
       theme: localeRecord.theme,
       tags: i18n.tags,
     };
-    const cachedText = fs.readFileSync(recoveryPath, 'utf-8');
-    const cachedErrors = validateGeneratedPost(cachedText, lang.code, cachedExpected);
-    if (cachedErrors.length === 0) {
-      console.log('♻️ [' + lang.code + '] 이미 검증된 원고를 재사용합니다.');
-      return true;
+    let cachedText = null;
+    try {
+      cachedText = readRecoveryDraft(recoveryPath);
+    } catch {
+      console.warn('⚠️ [' + lang.code + '] 저장된 원고를 복호화할 수 없어 해당 언어만 다시 생성합니다.');
     }
-    console.warn('⚠️ [' + lang.code + '] 저장된 원고 재검증 실패: ' + cachedErrors.join(', '));
-    localeRecord.status = 'failed';
-    localeRecord.lastValidationErrors = cachedErrors;
+    if (cachedText !== null) {
+      const cachedErrors = validateGeneratedPost(cachedText, lang.code, cachedExpected);
+      if (cachedErrors.length === 0) {
+        console.log('♻️ [' + lang.code + '] 이미 검증된 원고를 재사용합니다.');
+        return true;
+      }
+      console.warn('⚠️ [' + lang.code + '] 저장된 원고 재검증 실패: ' + cachedErrors.join(', '));
+      localeRecord.status = 'failed';
+      localeRecord.lastValidationErrors = cachedErrors;
+    }
   }
 
   const selectedTheme = THEME_PRESETS.find(theme => theme.name === localeRecord.theme) ||
@@ -689,7 +722,7 @@ async function generateSinglePost(lang, index) {
 
     const recoveryLocaleDir = path.join(RECOVERY_DIR, lang.code);
     fs.mkdirSync(recoveryLocaleDir, { recursive: true });
-    fs.writeFileSync(recoveryPath, prepared.text, 'utf-8');
+    writeRecoveryDraft(recoveryPath, prepared.text);
     localeRecord.status = 'validated';
     localeRecord.correctionAttempts = correctionAttempts;
     localeRecord.lastValidationErrors = [];
@@ -714,33 +747,43 @@ async function run() {
   console.log('==================================================');
 
   let successCount = 0;
-  let failedLocale = null;
+  const failedLocales = [];
+  const successfulLocales = [];
   for (let i = 0; i < TARGET_LANGS.length; i++) {
-    const isSuccess = await generateSinglePost(TARGET_LANGS[i], i);
-    if (!isSuccess) {
-      failedLocale = TARGET_LANGS[i];
-      break;
+    const lang = TARGET_LANGS[i];
+    const isSuccess = await generateSinglePost(lang, i);
+    if (isSuccess) {
+      successCount++;
+      successfulLocales.push(lang.code);
+    } else {
+      failedLocales.push(lang.code);
     }
-    successCount++;
     if (i < TARGET_LANGS.length - 1) await delay(2000);
   }
 
-  if (successCount !== TARGET_LANGS.length) {
+  if (successCount < 10) {
     generationManifest.status = 'in_progress';
+    generationManifest.failedLocales = failedLocales;
+    generationManifest.successfulLocales = successfulLocales;
     saveRecoveryManifest();
-    console.error('12개 언어 세트가 완성되지 않아 작업을 중단했습니다. 검증된 언어 원고는 복구 캐시에 보존되고 topics.txt와 발행 콘텐츠는 그대로 유지됩니다. 실패 locale: ' +
-      (failedLocale?.code || 'unknown') + '. 이번 실행에서는 부분 세트를 게시하거나 커밋하지 않습니다.');
+    console.error('검증 통과 locale이 ' + successCount + '/12로 최소 기준 10개에 미달했습니다. 이번 실행은 어떤 글도 게시 경로에 반영하지 않았고 주제도 큐에 유지합니다. 실패 locale: ' + failedLocales.join(', '));
     process.exit(1);
   }
 
+  console.log('✅ 통과 ' + successCount + '/12. 실패 locale은 이번 주제에서 건너뜁니다: ' + (failedLocales.join(', ') || '없음'));
+  generationManifest.failedLocales = failedLocales;
+  generationManifest.successfulLocales = successfulLocales;
+  generationManifest.status = failedLocales.length ? 'ready_partial_set' : 'ready_to_commit';
+
   const stagedPosts = [];
   for (const lang of TARGET_LANGS) {
+    if (failedLocales.includes(lang.code)) continue;
     const localeRecord = generationManifest.locales[lang.code];
-    const cachePath = path.join(RECOVERY_DIR, lang.code, fileSlug + '.md');
+    const cachePath = path.join(RECOVERY_DIR, lang.code, fileSlug + '.md.enc');
     if (!localeRecord || localeRecord.status !== 'validated' || !fs.existsSync(cachePath)) {
       throw new Error('12개 locale 복구 캐시가 모두 검증 완료 상태가 아닙니다: ' + lang.code);
     }
-    const text = fs.readFileSync(cachePath, 'utf-8');
+    const text = readRecoveryDraft(cachePath);
     const errors = validateGeneratedPost(text, lang.code, {
       publishDate: localeRecord.publishDate,
       coverUrl: generationManifest.imagePair.coverUrl,
@@ -748,7 +791,7 @@ async function run() {
       tags: I18N_SECTIONS[lang.code].tags,
     });
     if (errors.length) throw new Error('최종 세트 검수 실패 (' + lang.code + '): ' + errors.join(', '));
-    stagedPosts.push({ lang, text, destination: path.join(POSTS_BASE_DIR, lang.code, fileSlug + '.md') });
+    stagedPosts.push({ lang, text, destination: path.join(POSTS_BASE_DIR, lang.code, fileSlug + '.md.enc') });
   }
 
   // All 12 files are validated before any file reaches the publishable content tree.
@@ -758,14 +801,14 @@ async function run() {
       throw new Error('기존 파일을 덮어쓰지 않도록 중단합니다: ' + post.destination);
     }
   }
-  generationManifest.status = 'ready_to_commit';
+  generationManifest.status = failedLocales.length ? 'ready_partial_set' : 'ready_to_commit';
   saveRecoveryManifest();
   for (const post of stagedPosts) fs.writeFileSync(post.destination, post.text, 'utf-8');
 
   lines.shift();
   fs.writeFileSync(TOPICS_FILE, lines.join('\n'), 'utf-8');
   saveRecoveryManifest();
-  console.log('\n✅ 12개 locale 모두 검증을 통과했습니다. 이때만 새 글 파일을 준비하고 topics.txt에서 주제를 제거했습니다.');
+  console.log('\n✅ 유효한 locale ' + successCount + '개를 반영했습니다. 실패 locale은 제외하고 topics.txt에서 해당 주제를 제거했습니다.');
   console.log('📊 남은 주제 수: ' + lines.length + '개');
 }
 
