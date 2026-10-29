@@ -52,9 +52,9 @@ Bước 4: Mặc định các tùy chọn bên dưới sẽ bị mờ đi và b�
 
 Bước 5: Nhìn xuống phần Shutdown settings ở dưới cùng của cửa sổ, bạn sẽ thấy ô vuông cạnh dòng Turn on fast startup (recommended) đang được tích chọn. Hãy bỏ dấu tích ở ô này đi, sau đó bấm nút Save changes ở góc dưới để lưu lại thay đổi.
 
-Sau khi hoàn tất quy trình trên, bạn hãy thử bấm Shutdown một lần nữa để kiểm tr
+Sau khi hoàn tất quy trình trên, bạn hãy thử bấm Shutdown một lần nữa để kiểm tra.
 
-A. Đèn báo nguồn trên thân máy và quạt tản nhiệt sẽ tắt hẳn sau vài giây, chấm dứt hoàn toàn nỗi lo máy tự nóng lên khi cất trong balo.
+Đèn báo nguồn trên thân máy và quạt tản nhiệt sẽ tắt hẳn sau vài giây, chấm dứt hoàn toàn nỗi lo máy tự nóng lên khi cất trong balo.
 
 Trong quá trình xử lý sự cố này ngoài đời thực, tôi nhận thấy có một số điểm kỹ thuật quan trọng mà người dùng cần lưu ý để tránh các lỗi phát sinh liên quan đến phần cứng:
 

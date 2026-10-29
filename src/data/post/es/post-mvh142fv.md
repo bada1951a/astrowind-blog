@@ -30,16 +30,16 @@ theme: "Graphite Technical Paper"
 
 ## 1. Emergencia crítica en el trabajo
 
-Eran las 18:45 en nuestra oficina corporativa en Madrid. A solo quince minutos de enviar el paquete definitivo de un proyecto clave para un cliente multinacional, la pantalla de la workstation principal se quedo totalmente congelad
+Eran las 18:45 en nuestra oficina corporativa en Madrid. A solo quince minutos de enviar el paquete definitivo de un proyecto clave para un cliente multinacional, la pantalla de la workstation principal se quedo totalmente congelada.
 
-A. El cursor no respondia, el teclado estaba muerto y el ventilador seguia zumbando con una calma insultante. Un reinicio por botonazo nos costo diez minutos vitales y, por supuesto, la entrega se retraso, generando un ambiente de tension maxima en el departamento de sistemas. Lo peor no fue el bloqueo en si, sino que era la tercera vez en la semana que ocurria sin dejar rastro aparente.
+El cursor no respondia, el teclado estaba muerto y el ventilador seguia zumbando con una calma insultante. Un reinicio por botonazo nos costo diez minutos vitales y, por supuesto, la entrega se retraso, generando un ambiente de tension maxima en el departamento de sistemas. Lo peor no fue el bloqueo en si, sino que era la tercera vez en la semana que ocurria sin dejar rastro aparente.
 
 <div style="border-left: 4px solid #475569; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
-<strong>Nota del especialist
+<strong>Nota del especialista.</strong> Cuando un ordenador se congela de forma aleatoria (random freezing) y no muestra una pantalla azul de error (BSOD) tradicional, buscar a ciegas cambiando piezas o formateando es una perdida de tiempo y dinero. Hay que ir directo a los registros del sistema.
 
-A. </strong> Cuando un ordenador se congela de forma aleatoria (random freezing) y no muestra una pantalla azul de error (BSOD) tradicional, buscar a ciegas cambiando piezas o formateando es una perdida de tiempo y dinero. Hay que ir directo a los registros del sistem
 
-A. </div>
+
+</div>
 
 ![Tech Troubleshooting Guide](/images/tech-photo/keyboard%20(2).png)
 
@@ -76,19 +76,19 @@ Paso a Paso: Como cazar al culpable con el Visor de eventos
 Vamos a aplicar el procedimiento tecnico estandar para extraer la verdad de los registros de Windows sin rodeos academicos.
 
 Paso 1: Abrir el Visor de Eventos de Windows
-Usa la combinacion de teclas `Windows + X` en tu teclado y selecciona Visor de eventos en el menu rapido que aparece abajo a la izquierd
+Usa la combinacion de teclas `Windows + X` en tu teclado y selecciona Visor de eventos en el menu rapido que aparece abajo a la izquierda.
 
-A. Tambien puedes buscarlo directamente escribiendo "Visor de eventos" en la barra de tareas de Windows 11.
+Tambien puedes buscarlo directamente escribiendo "Visor de eventos" en la barra de tareas de Windows 11.
 
 Paso 2: Filtrar los registros criticos del sistema
 
-1. En la columna de la izquierda, haz clic en Registros de Windows y luego selecciona Sistem
+1. En la columna de la izquierda, haz clic en Registros de Windows y luego selecciona Sistema.
 
-A. 2. En la columna de la derecha, haz clic en la opcion Filtrar registro actual....
+2. En la columna de la derecha, haz clic en la opcion Filtrar registro actual....
 
-3. En la ventana que se abre, busca la casilla de Nivel de eventoy marca unicamente las opciones:Critico,ErroryAdvertenci
+3. En la ventana que se abre, busca la casilla de Nivel de eventoy marca unicamente las opciones:Critico,ErroryAdvertencia.
 
-A. Haz clic en Aceptar.
+Haz clic en Aceptar.
 
 Paso 3: Buscar las marcas de tiempo del congelamiento
 Anota mentalmente la hora exacta en la que tu PC se congelo hoy. Ahora, busca en la lista central los eventos registrados exactamente en esa franja horaria o 1-2 minutos antes. 
@@ -97,9 +97,9 @@ Anota mentalmente la hora exacta en la que tu PC se congelo hoy. Ahora, busca en
 - Revisa si aparece el Event ID 10010 (DistributedCOM) o errores relacionados con el controlador de almacenamiento (origen `disk` o `storahci`).
 
 <div style="border-left: 4px solid #475569; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
-<strong>Consejo Pro:</strong> Si encuentras errores recurrentes del controlador de disco justo antes del bloqueo, entra inmediatamente en el <strong>Administrador de dispositivos</strong> (haz clic derecho en el boton de Inicio y seleccionalo), busca tus unidades de disco, haz clic derecho en tu SSD principal, selecciona desinstalar el dispositivo y reinicia para que Windows 11 reconstruya la pila de drivers limpi
+<strong>Consejo Pro:</strong> Si encuentras errores recurrentes del controlador de disco justo antes del bloqueo, entra inmediatamente en el <strong>Administrador de dispositivos</strong> (haz clic derecho en el boton de Inicio y seleccionalo), busca tus unidades de disco, haz clic derecho en tu SSD principal, selecciona desinstalar el dispositivo y reinicia para que Windows 11 reconstruya la pila de drivers limpia.
 
-A. </div>
+</div>
 
 ---
 
@@ -110,17 +110,17 @@ A. </div>
 
 Precauciones y Consejos de Hardware
 
-- Atencion con la energí
+- Atencion con la energía.
 
-A. Si el Visor de eventos te muestra constantemente el error Kernel-Power ID 41 sin un codigo de error bugcheck previo, es casi seguro un problema fisico de la fuente de alimentacion o una regleta defectuosa en la oficin
+Si el Visor de eventos te muestra constantemente el error Kernel-Power ID 41 sin un codigo de error bugcheck previo, es casi seguro un problema fisico de la fuente de alimentacion o una regleta defectuosa en la oficina.
 
-A. No descartes cambiar la fuente antes de seguir testeando software.
+No descartes cambiar la fuente antes de seguir testeando software.
 - Temperaturas bajo control: Utiliza herramientas de monitorizacion para asegurarte de que los sensores no superan los 85°C en picos de trabajo. Un procesador haciendo thermal throttling severo puede colgar por completo el bus PCIe de la placa base.
-- Copia de seguridad preventiv
+- Copia de seguridad preventiva.
 
-A. Antes de modificar parametros de energia o voltajes de RAM en la BIOS tras un analisis de eventos, asegúrate de respaldar tus documentos criticos en la nube corporativ
+Antes de modificar parametros de energia o voltajes de RAM en la BIOS tras un analisis de eventos, asegúrate de respaldar tus documentos criticos en la nube corporativa.
 
-A. ---
+---
 ## 5. Preguntas Frecuentes (FAQ)
 
 Q. ¿Por que el Visor de eventos muestra tantos errores en rojo que parece que mi PC esta rota y sin embargo funciona bien?
@@ -133,6 +133,6 @@ A. No necesariamente al cien por cien, pero es la causa principal en un 70% de l
 
 Q. ¿Debo tocar la configuracion de energia en el Panel de control si sufro estos congelamientos?
 
-A. Si despues de revisar los logs sospechas de gestion energetica agresiva, entra en elPanel de control, buscaOpciones de energiay cambia temporalmente el plan predeterminado aAlto rendimiento. Esto evita que Windows apague los estados de energia de los puertos PCIe o del disco NVMe durante los momentos de inactividad o carga variable, lo cual suele solucionar muchos micro-congelamientos aleatorios en portatiles y equipos de oficin
+A. Si despues de revisar los logs sospechas de gestion energetica agresiva, entra en elPanel de control, buscaOpciones de energiay cambia temporalmente el plan predeterminado aAlto rendimiento. Esto evita que Windows apague los estados de energia de los puertos PCIe o del disco NVMe durante los momentos de inactividad o carga variable, lo cual suele solucionar muchos micro-congelamientos aleatorios en portatiles y equipos de oficina.
 
-A.
+

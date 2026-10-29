@@ -1,0 +1,300 @@
+# 1호기 기존 글 전수 복구 결과 — 2026-10-29
+
+대상: 기존 266개 Markdown 글 / 12개 언어. 검토 브랜치에서만 작업. 운영 main 반영·병합·배포·발행·유료 API 호출 없음.
+
+## 수행 및 결과
+- 266개 전수 정적 검사 및 266개 생성된 본문 HTML 확인.
+- 기존 QA 검토 표시 91개 → 0개. 이는 해당 자동 규칙 기준이며 사실성·자연스러움 전체 검증을 뜻하지 않는다.
+- 추가 HTML 검사에서 발견한 19개 글의 표시상 볼드 기호 28개 → 최종 0개.
+- 11개 언어의 한 줄 FAQ와 코드블록 A. 접두사 결함을 복구.
+- 과거 커밋의 원문과 비교하여 삭제된 강조·공백·FAQ·단어 끝을 복원. 현재 본문에만 있는 의미있는 내용이 발견된 경우 역사 버전의 일괄 대체를 보류. 이미지·링크는 현재 값을 보존.
+- 영문 폴더의 한국어 RAM 가이드를 영어로 복구. 허구의 직접 체험·미검증 90% 수치·임의 RAM 전압 변경·손가락/지우개 접점 청소 권고를 바로잡음. 원문 주제·이미지·URL 유지. 모델별 서비스 설명서 우선, 공식 Dell 자료 참조.
+- 일본어·베트남어·이탈리아어·포르투갈어의 한글/일본어 혼입 수정. 이탈리아어 제목의 일본어도 수정.
+- 볼드 앞뒤 공백은 언어에 맞게 처리. 한국어 조사는 일괄 분리하지 않음. CommonMark와 HTML 콜아웃·CJK 구두점에서 안정적으로 표시되도록 strong 태그 사용.
+- 코드 안의 jav / A. exe, ERP_Dat / A. mdf 등 분리된 명령어·파일명도 복구.
+- 빈 소제목, FAQ에 잘못 삽입된 중복 제목 및 본문의 A. 찌꺼기 점검·복구.
+
+## 보존 검증
+- 266개 모두 publishDate, image, category, tags, theme 원문 행 보존.
+- 266개 모두 본문 Markdown 이미지 참조·순서·alt 보존.
+- 기존 각 글의 /언어/파일명 경로 266개 모두 빌드 산출물에서 존재 확인.
+- 메타데이터 예외: en/tech-mv82x9up.md description(허구 체험 설명 제거), it/post-mvl9uad0.md title(일본어 혼입 교정). 제목 변경은 slug 파일명 변경을 수반하지 않음.
+- 레이아웃·생성 스크립트·발행 워크플로·이미지 파일 변경 없음.
+
+## 검증 및 한계
+- npm run build 성공.
+- 기존 scripts/audit-posts.mjs 결과 0 flags.
+- 266개 HTML article 검사: 본문 텍스트에 노출되는 ** 없음, 빈 제목 없음.
+- 소스 전체 Hangul(비한국어)/Kana(비일본어·비한국어) 검사는 0건. 이는 라틴 문자 언어 상호 혼입이나 의미적 현지화의 완전한 검증이 아님.
+- npm run check의 Astro/ESLint는 통과했으나 Prettier는 기존부터 실패. 전역 포맷터로 코드·정상 글까지 다시 쓰지 않음. CI 통과 또는 운영 준비 완료로 보고하지 않음.
+- 모든 글의 기술적 주장, 허위 체험, 과장, 외부 링크 HTTP/권리, 12개 언어의 원어민 수준 편집 검수는 완료하지 않음. 실제 Cloudflare 배포·운영 화면 검증은 승인 전 보류.
+- 기존 category 행을 보존했으므로 과거 Hardware 등 카테고리 값의 tech 단일화는 URL/탐색 영향 검토 후 별도 처리 필요.
+
+## 다음 단계
+사장님께 1호기 검토 브랜치 수정 완료 보고 후 2호기 전수 조사. 운영 병합·배포·발행은 사장님 결정 전 실행 금지.
+
+## 수정 파일
+- `src/data/post/de/hardware-mv9nalfc.md`
+- `src/data/post/de/post-mva1gw52.md`
+- `src/data/post/de/post-mvaxjl4p.md`
+- `src/data/post/de/post-mvbgu2yh.md`
+- `src/data/post/de/post-mvccrv3o.md`
+- `src/data/post/de/post-mvdf9mgg.md`
+- `src/data/post/de/post-mvf7zeys.md`
+- `src/data/post/de/post-mvgadeq8.md`
+- `src/data/post/de/post-mvh142fv.md`
+- `src/data/post/de/post-mvhptwky.md`
+- `src/data/post/de/post-mvjwua2j.md`
+- `src/data/post/de/post-mvl9uad0.md`
+- `src/data/post/de/post-mvmp3gwu.md`
+- `src/data/post/de/post-mvnegdi8.md`
+- `src/data/post/de/post-mvou2j4k.md`
+- `src/data/post/de/post-mvpjpaaj.md`
+- `src/data/post/de/post-mvqze1zb.md`
+- `src/data/post/de/post-mvrz3hk8.md`
+- `src/data/post/de/tech-mv6ee0zc.md`
+- `src/data/post/de/tech-mv7f3x79.md`
+- `src/data/post/de/tech-mv82x9up.md`
+- `src/data/post/de/tech-mv8lzm3t.md`
+- `src/data/post/en/hardware-mv9nalfc.md`
+- `src/data/post/en/post-mva1gw52.md`
+- `src/data/post/en/post-mvaxjl4p.md`
+- `src/data/post/en/post-mvbgu2yh.md`
+- `src/data/post/en/post-mvccrv3o.md`
+- `src/data/post/en/post-mvdf9mgg.md`
+- `src/data/post/en/post-mvf7zeys.md`
+- `src/data/post/en/post-mvgadeq8.md`
+- `src/data/post/en/post-mvh142fv.md`
+- `src/data/post/en/post-mvhptwky.md`
+- `src/data/post/en/post-mvjwua2j.md`
+- `src/data/post/en/post-mvl9uad0.md`
+- `src/data/post/en/post-mvmp3gwu.md`
+- `src/data/post/en/post-mvnegdi8.md`
+- `src/data/post/en/post-mvou2j4k.md`
+- `src/data/post/en/post-mvpjpaaj.md`
+- `src/data/post/en/post-mvqze1zb.md`
+- `src/data/post/en/post-mvrz3hk8.md`
+- `src/data/post/en/tech-mv6ee0zc.md`
+- `src/data/post/en/tech-mv7f3x79.md`
+- `src/data/post/en/tech-mv82x9up.md`
+- `src/data/post/en/tech-mv8lzm3t.md`
+- `src/data/post/es/hardware-mv9nalfc.md`
+- `src/data/post/es/post-mva1gw52.md`
+- `src/data/post/es/post-mvaxjl4p.md`
+- `src/data/post/es/post-mvbgu2yh.md`
+- `src/data/post/es/post-mvccrv3o.md`
+- `src/data/post/es/post-mvdf9mgg.md`
+- `src/data/post/es/post-mvf7zeys.md`
+- `src/data/post/es/post-mvgadeq8.md`
+- `src/data/post/es/post-mvh142fv.md`
+- `src/data/post/es/post-mvhptwky.md`
+- `src/data/post/es/post-mvjwua2j.md`
+- `src/data/post/es/post-mvl9uad0.md`
+- `src/data/post/es/post-mvmp3gwu.md`
+- `src/data/post/es/post-mvnegdi8.md`
+- `src/data/post/es/post-mvou2j4k.md`
+- `src/data/post/es/post-mvpjpaaj.md`
+- `src/data/post/es/post-mvqze1zb.md`
+- `src/data/post/es/post-mvrz3hk8.md`
+- `src/data/post/es/tech-mv6ee0zc.md`
+- `src/data/post/es/tech-mv7f3x79.md`
+- `src/data/post/es/tech-mv82x9up.md`
+- `src/data/post/es/tech-mv8lzm3t.md`
+- `src/data/post/fr/hardware-mv9nalfc.md`
+- `src/data/post/fr/post-mva1gw52.md`
+- `src/data/post/fr/post-mvaxjl4p.md`
+- `src/data/post/fr/post-mvbgu2yh.md`
+- `src/data/post/fr/post-mvccrv3o.md`
+- `src/data/post/fr/post-mvdf9mgg.md`
+- `src/data/post/fr/post-mvf7zeys.md`
+- `src/data/post/fr/post-mvgadeq8.md`
+- `src/data/post/fr/post-mvh142fv.md`
+- `src/data/post/fr/post-mvhptwky.md`
+- `src/data/post/fr/post-mvjwua2j.md`
+- `src/data/post/fr/post-mvmp3gwu.md`
+- `src/data/post/fr/post-mvnegdi8.md`
+- `src/data/post/fr/post-mvou2j4k.md`
+- `src/data/post/fr/post-mvpjpaaj.md`
+- `src/data/post/fr/post-mvqze1zb.md`
+- `src/data/post/fr/post-mvrz3hk8.md`
+- `src/data/post/fr/tech-mv6ee0zc.md`
+- `src/data/post/fr/tech-mv7f3x79.md`
+- `src/data/post/fr/tech-mv82x9up.md`
+- `src/data/post/fr/tech-mv8lzm3t.md`
+- `src/data/post/fr/tech-mv9i53re.md`
+- `src/data/post/id/hardware-mv9nalfc.md`
+- `src/data/post/id/post-mva1gw52.md`
+- `src/data/post/id/post-mvaxjl4p.md`
+- `src/data/post/id/post-mvbgu2yh.md`
+- `src/data/post/id/post-mvccrv3o.md`
+- `src/data/post/id/post-mvdf9mgg.md`
+- `src/data/post/id/post-mvf7zeys.md`
+- `src/data/post/id/post-mvgadeq8.md`
+- `src/data/post/id/post-mvh142fv.md`
+- `src/data/post/id/post-mvhptwky.md`
+- `src/data/post/id/post-mvjwua2j.md`
+- `src/data/post/id/post-mvl9uad0.md`
+- `src/data/post/id/post-mvmp3gwu.md`
+- `src/data/post/id/post-mvnegdi8.md`
+- `src/data/post/id/post-mvou2j4k.md`
+- `src/data/post/id/post-mvpjpaaj.md`
+- `src/data/post/id/post-mvqze1zb.md`
+- `src/data/post/id/post-mvrz3hk8.md`
+- `src/data/post/id/tech-mv6ee0zc.md`
+- `src/data/post/id/tech-mv7f3x79.md`
+- `src/data/post/id/tech-mv82x9up.md`
+- `src/data/post/id/tech-mv8lzm3t.md`
+- `src/data/post/it/hardware-mv9nalfc.md`
+- `src/data/post/it/post-mva1gw52.md`
+- `src/data/post/it/post-mvaxjl4p.md`
+- `src/data/post/it/post-mvbgu2yh.md`
+- `src/data/post/it/post-mvccrv3o.md`
+- `src/data/post/it/post-mvdf9mgg.md`
+- `src/data/post/it/post-mvf7zeys.md`
+- `src/data/post/it/post-mvgadeq8.md`
+- `src/data/post/it/post-mvh142fv.md`
+- `src/data/post/it/post-mvhptwky.md`
+- `src/data/post/it/post-mvjwua2j.md`
+- `src/data/post/it/post-mvl9uad0.md`
+- `src/data/post/it/post-mvmp3gwu.md`
+- `src/data/post/it/post-mvnegdi8.md`
+- `src/data/post/it/post-mvou2j4k.md`
+- `src/data/post/it/post-mvpjpaaj.md`
+- `src/data/post/it/post-mvqze1zb.md`
+- `src/data/post/it/post-mvrz3hk8.md`
+- `src/data/post/it/tech-mv6ee0zc.md`
+- `src/data/post/it/tech-mv7f3x79.md`
+- `src/data/post/it/tech-mv82x9up.md`
+- `src/data/post/it/tech-mv8lzm3t.md`
+- `src/data/post/ja/hardware-mv9nalfc.md`
+- `src/data/post/ja/post-mva1gw52.md`
+- `src/data/post/ja/post-mvaxjl4p.md`
+- `src/data/post/ja/post-mvbgu2yh.md`
+- `src/data/post/ja/post-mvccrv3o.md`
+- `src/data/post/ja/post-mvdf9mgg.md`
+- `src/data/post/ja/post-mvf7zeys.md`
+- `src/data/post/ja/post-mvgadeq8.md`
+- `src/data/post/ja/post-mvh142fv.md`
+- `src/data/post/ja/post-mvhptwky.md`
+- `src/data/post/ja/post-mvjwua2j.md`
+- `src/data/post/ja/post-mvl9uad0.md`
+- `src/data/post/ja/post-mvmp3gwu.md`
+- `src/data/post/ja/post-mvnegdi8.md`
+- `src/data/post/ja/post-mvou2j4k.md`
+- `src/data/post/ja/post-mvpjpaaj.md`
+- `src/data/post/ja/post-mvqze1zb.md`
+- `src/data/post/ja/post-mvrz3hk8.md`
+- `src/data/post/ja/tech-mv6ee0zc.md`
+- `src/data/post/ja/tech-mv7f3x79.md`
+- `src/data/post/ja/tech-mv82x9up.md`
+- `src/data/post/ja/tech-mv8lzm3t.md`
+- `src/data/post/ja/tech-mv9i53re.md`
+- `src/data/post/ko/hardware-mv9nalfc.md`
+- `src/data/post/ko/post-mva1gw52.md`
+- `src/data/post/ko/post-mvaxjl4p.md`
+- `src/data/post/ko/post-mvbgu2yh.md`
+- `src/data/post/ko/post-mvccrv3o.md`
+- `src/data/post/ko/post-mvdf9mgg.md`
+- `src/data/post/ko/post-mvf7zeys.md`
+- `src/data/post/ko/post-mvgadeq8.md`
+- `src/data/post/ko/post-mvh142fv.md`
+- `src/data/post/ko/post-mvhptwky.md`
+- `src/data/post/ko/post-mvjwua2j.md`
+- `src/data/post/ko/post-mvl9uad0.md`
+- `src/data/post/ko/post-mvmp3gwu.md`
+- `src/data/post/ko/post-mvnegdi8.md`
+- `src/data/post/ko/post-mvou2j4k.md`
+- `src/data/post/ko/post-mvpjpaaj.md`
+- `src/data/post/ko/post-mvqze1zb.md`
+- `src/data/post/ko/post-mvrz3hk8.md`
+- `src/data/post/ko/tech-mv6ee0zc.md`
+- `src/data/post/ko/tech-mv7f3x79.md`
+- `src/data/post/ko/tech-mv82x9up.md`
+- `src/data/post/ko/tech-mv8lzm3t.md`
+- `src/data/post/nl/hardware-mv9nalfc.md`
+- `src/data/post/nl/post-mva1gw52.md`
+- `src/data/post/nl/post-mvaxjl4p.md`
+- `src/data/post/nl/post-mvbgu2yh.md`
+- `src/data/post/nl/post-mvccrv3o.md`
+- `src/data/post/nl/post-mvdf9mgg.md`
+- `src/data/post/nl/post-mvf7zeys.md`
+- `src/data/post/nl/post-mvgadeq8.md`
+- `src/data/post/nl/post-mvh142fv.md`
+- `src/data/post/nl/post-mvhptwky.md`
+- `src/data/post/nl/post-mvjwua2j.md`
+- `src/data/post/nl/post-mvmp3gwu.md`
+- `src/data/post/nl/post-mvnegdi8.md`
+- `src/data/post/nl/post-mvou2j4k.md`
+- `src/data/post/nl/post-mvpjpaaj.md`
+- `src/data/post/nl/post-mvqze1zb.md`
+- `src/data/post/nl/post-mvrz3hk8.md`
+- `src/data/post/nl/tech-mv6ee0zc.md`
+- `src/data/post/nl/tech-mv7f3x79.md`
+- `src/data/post/nl/tech-mv82x9up.md`
+- `src/data/post/nl/tech-mv8lzm3t.md`
+- `src/data/post/pl/hardware-mv9nalfc.md`
+- `src/data/post/pl/post-mva1gw52.md`
+- `src/data/post/pl/post-mvaxjl4p.md`
+- `src/data/post/pl/post-mvbgu2yh.md`
+- `src/data/post/pl/post-mvccrv3o.md`
+- `src/data/post/pl/post-mvdf9mgg.md`
+- `src/data/post/pl/post-mvf7zeys.md`
+- `src/data/post/pl/post-mvgadeq8.md`
+- `src/data/post/pl/post-mvh142fv.md`
+- `src/data/post/pl/post-mvhptwky.md`
+- `src/data/post/pl/post-mvjwua2j.md`
+- `src/data/post/pl/post-mvl9uad0.md`
+- `src/data/post/pl/post-mvmp3gwu.md`
+- `src/data/post/pl/post-mvnegdi8.md`
+- `src/data/post/pl/post-mvou2j4k.md`
+- `src/data/post/pl/post-mvpjpaaj.md`
+- `src/data/post/pl/post-mvqze1zb.md`
+- `src/data/post/pl/post-mvrz3hk8.md`
+- `src/data/post/pl/tech-mv6ee0zc.md`
+- `src/data/post/pl/tech-mv7f3x79.md`
+- `src/data/post/pl/tech-mv82x9up.md`
+- `src/data/post/pl/tech-mv8lzm3t.md`
+- `src/data/post/pt/hardware-mv9nalfc.md`
+- `src/data/post/pt/post-mva1gw52.md`
+- `src/data/post/pt/post-mvaxjl4p.md`
+- `src/data/post/pt/post-mvbgu2yh.md`
+- `src/data/post/pt/post-mvccrv3o.md`
+- `src/data/post/pt/post-mvdf9mgg.md`
+- `src/data/post/pt/post-mvf7zeys.md`
+- `src/data/post/pt/post-mvgadeq8.md`
+- `src/data/post/pt/post-mvh142fv.md`
+- `src/data/post/pt/post-mvhptwky.md`
+- `src/data/post/pt/post-mvjwua2j.md`
+- `src/data/post/pt/post-mvl9uad0.md`
+- `src/data/post/pt/post-mvmp3gwu.md`
+- `src/data/post/pt/post-mvnegdi8.md`
+- `src/data/post/pt/post-mvou2j4k.md`
+- `src/data/post/pt/post-mvpjpaaj.md`
+- `src/data/post/pt/post-mvqze1zb.md`
+- `src/data/post/pt/post-mvrz3hk8.md`
+- `src/data/post/pt/tech-mv6ee0zc.md`
+- `src/data/post/pt/tech-mv7f3x79.md`
+- `src/data/post/pt/tech-mv82x9up.md`
+- `src/data/post/pt/tech-mv8lzm3t.md`
+- `src/data/post/vi/hardware-mv9nalfc.md`
+- `src/data/post/vi/post-mva1gw52.md`
+- `src/data/post/vi/post-mvaxjl4p.md`
+- `src/data/post/vi/post-mvbgu2yh.md`
+- `src/data/post/vi/post-mvccrv3o.md`
+- `src/data/post/vi/post-mvdf9mgg.md`
+- `src/data/post/vi/post-mvf7zeys.md`
+- `src/data/post/vi/post-mvgadeq8.md`
+- `src/data/post/vi/post-mvh142fv.md`
+- `src/data/post/vi/post-mvhptwky.md`
+- `src/data/post/vi/post-mvjwua2j.md`
+- `src/data/post/vi/post-mvl9uad0.md`
+- `src/data/post/vi/post-mvmp3gwu.md`
+- `src/data/post/vi/post-mvnegdi8.md`
+- `src/data/post/vi/post-mvou2j4k.md`
+- `src/data/post/vi/post-mvpjpaaj.md`
+- `src/data/post/vi/post-mvqze1zb.md`
+- `src/data/post/vi/post-mvrz3hk8.md`
+- `src/data/post/vi/tech-mv6ee0zc.md`
+- `src/data/post/vi/tech-mv7f3x79.md`
+- `src/data/post/vi/tech-mv82x9up.md`
+- `src/data/post/vi/tech-mv8lzm3t.md`
