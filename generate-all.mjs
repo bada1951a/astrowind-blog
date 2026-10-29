@@ -443,7 +443,7 @@ function validateGeneratedPost(text, langCode, expected) {
     .replace(inlineCode, ' ')
     .trim();
   const prose = stripNonProse(body);
-  const wordTokens = value => stripNonProse(value).match(/\p{L}[\p{L}\p{M}'’\-]*/gu) || [];
+  const wordTokens = value => stripNonProse(value).match(/\p{L}[\p{L}\p{M}'’-]*/gu) || [];
   if (!prose) errors.push('본문 누락');
   if (/\b(?:TODO|TBD|insert (?:text|answer)|question text|detailed answer)\b/i.test(prose)) errors.push('본문 placeholder');
   if (body.split(tick.repeat(3)).length % 2 === 0) errors.push('코드펜스 미종결');
