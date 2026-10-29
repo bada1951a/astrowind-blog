@@ -84,14 +84,38 @@ Pour éviter la récurrence de ces blocages agaçants, il est recommandé d'adop
 
 ## 5. Foire Aux Questions (FAQ)
 
+
+
+
+
 Q1. Pourquoi Windows m'affiche-t-il l'erreur de fichier en cours d'utilisation alors qu'aucune application n'est visible à l'écran ?
+
+
+
+
 
 A1. Cette situation se produit fréquemment lorsqu'un processus s'exécute de manière invisible en arrière-plan, sous forme de service système ou de tâche en tâche de fond isolée. Même si l'interface graphique de l'application a été fermée, le descripteur du fichier (handle) reste ouvert dans la mémoire vive par le noyau du système d'exploitation. L'utilisation du Gestionnaire des tâches ou de la console PowerShell avec la commande taskkill permet d'interrompre définitivement ces processus invisibles pour libérer la ressource.
 
+
+
+
+
 Q2. Est-il risqué d'utiliser la commande de suppression forcée `del /f` sur des fichiers système Windows ?
+
+
+
+
 
 A2. Oui, l'utilisation de commandes de suppression forcée sur des répertoires système critiques comporte des risques majeurs pour la stabilité de la machine. Si vous forcez la suppression d'un fichier dynamiquement requis par le noyau ou par un service vital de Windows, vous risquez de provoquer un écran bleu au prochain redémarrage ou de corrompre le profil utilisateur. Il est impératif de réserver cette méthode aux fichiers temporaires, aux caches d'installation et aux journaux applicatifs dont vous certifiez l'origine non critique.
 
+
+
+
+
 Q3. Comment puis-je réinitialiser proprement l'affichage de mon écran si la barre des tâches reste instable après une mise à jour graphique ?
+
+
+
+
 
 A3. Si la mise à jour du pilote graphique a provoqué des instabilités visuelles persistantes sur la barre des tâches, la méthode la plus efficace consiste à redémarrer le Gestionnaire des tâches en relançant le processus explorer.exe. Vous pouvez également effectuer un redémarrage complet du sous-système graphique en appuyant simultanément sur les touches `Win + Ctrl + Shift + B`, ce qui réinitialise instantanément le pilote d'affichage sans perturber vos applications en cours d'exécution.

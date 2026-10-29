@@ -11,18 +11,18 @@ theme: "Tokyo Neon Violet"
 
 ## 1. El susto en la sala de juntas de Madrid
 
-Imagínate la escen
+Imagínate la escena.
 
-A. son las diez de la mañana en una moderna torre de oficinas en el Paseo de la Castellana en Madrid. Estoy en la sala de juntas principal del cliente corporativo, con el proyector listo y el equipo directivo sentado alrededor de la mes
+son las diez de la mañana en una moderna torre de oficinas en el Paseo de la Castellana en Madrid. Estoy en la sala de juntas principal del cliente corporativo, con el proyector listo y el equipo directivo sentado alrededor de la mesa.
 
-A. Justo en el momento de abrir el portátil para compartir la pantalla en tiempo real y hacer la gran demostración del nuevo software, necesito actualizar un archivo de configuración crítico. Intento borrar la versión antigua y salta el temido mensaje: El archivo está abierto en otro programa. 
+Justo en el momento de abrir el portátil para compartir la pantalla en tiempo real y hacer la gran demostración del nuevo software, necesito actualizar un archivo de configuración crítico. Intento borrar la versión antigua y salta el temido mensaje: El archivo está abierto en otro programa. 
 
 El corazón da un vuelco. Pruebo a cerrar las aplicaciones visibles en la barra de tareas, pero el sistema operativo sigue negándose tercamente a soltar el archivo. Los minutos pasan, las miradas de los directivos se posan sobre mí, y el sudor frío empieza a recorrer mi frente. En el soporte técnico de campo, este tipo de bloqueos repentinos son el pan de nuestro día a día, y cuando estás en directo frente al cliente, no hay tiempo para buscar teorías abstractas en internet. Necesitas comandos rápidos, eficaces y directos al grano para recuperar el control de la estación de trabajo en cuestión de segundos.
 
 <div style="border-left: 4px solid #8b5cf6; padding: 12px 16px; margin: 20px 0; background-color: rgba(0,0,0,0.03); border-radius: 4px; color: #111827;">
-<strong>Consejo del técnico:</strong> Nunca entres en pánico si Windows bloquea un archivo crítico antes de una presentación. El problema casi siempre se debe a un proceso en segundo plano que se ha quedado colgado y que podemos matar de inmediato con las herramientas nativas del sistem
+<strong>Consejo del técnico:</strong> Nunca entres en pánico si Windows bloquea un archivo crítico antes de una presentación. El problema casi siempre se debe a un proceso en segundo plano que se ha quedado colgado y que podemos matar de inmediato con las herramientas nativas del sistema.
 
-A. </div>
+</div>
 
 ![Tech Troubleshooting Guide](/images/tech-photo/keyboard%20(9).png)
 
@@ -50,9 +50,9 @@ Pulsa la combinación de teclasCtrl + Shift + Escpara abrir de forma instantáne
 ### Paso 2: Reiniciar el Explorador de Windows
 Si el paso anterior no funciona, el culpable suele ser el gestor visual de escritorio.
 
-1. En el mismoAdministrador de tareas, buscaExplorador de Windows(explorer.exe) al final de la list
+1. En el mismoAdministrador de tareas, buscaExplorador de Windows(explorer.exe) al final de la lista.
 
-A. 2. Haz clic derecho y seleccionaReiniciar. Verás cómo la barra de tareas y el fondo desaparecen durante un par de segundos mientras el sistema libera todas las cachés y manejadores de archivos bloqueados.
+2. Haz clic derecho y seleccionaReiniciar. Verás cómo la barra de tareas y el fondo desaparecen durante un par de segundos mientras el sistema libera todas las cachés y manejadores de archivos bloqueados.
 
 ### Paso 3: Usar la consola de comandos para un borrado limpio
 Si prefieres la velocidad de la terminal como un auténtico power user, abre el menú de inicio, escribecmd, haz clic derecho y seleccionaEjecutar como administrador. Utiliza el siguiente comando para forzar la eliminación si tienes la ruta exacta del archivo:
@@ -69,17 +69,17 @@ del /f /q "C:\Ruta\De\Tu\Archivo\bloqueado.txt"
 
 ## 4. Advertencias y consejos de experto
 
-Trabajar con comandos de borrado forzoso requiere disciplin
+Trabajar con comandos de borrado forzoso requiere disciplina.
 
-A. Ten en cuenta estas precauciones fundamentales para evitar daños en el sistem
+Ten en cuenta estas precauciones fundamentales para evitar daños en el sistema.
 
-A. -Cuidado con los archivos del sistem
+-Cuidado con los archivos del sistema.
 
-A.Nunca utilices estos métodos de borrado forzoso en directorios críticos como `System32` a menos que sepas exactamente qué estás haciendo. Podrías corromper el arranque de Windows.
+Nunca utilices estos métodos de borrado forzoso en directorios críticos como `System32` a menos que sepas exactamente qué estás haciendo. Podrías corromper el arranque de Windows.
 -Permisos de administrador:Si el sistema te indica que "necesitas permisos para realizar esta acción", asegúrate de que tu cuenta de usuario pertenece al grupo de administradores locales o ejecuta la consola de comandos con privilegios elevados.
--Herramientas externas:Aunque existen aplicaciones de terceros muy populares como LockHunter o Process Explorer, en entornos corporativos estrictos a veces las políticas de seguridad impiden instalar software nuevo. Por ello, dominar los métodos nativos de Windows es una habilidad obligatori
+-Herramientas externas:Aunque existen aplicaciones de terceros muy populares como LockHunter o Process Explorer, en entornos corporativos estrictos a veces las políticas de seguridad impiden instalar software nuevo. Por ello, dominar los métodos nativos de Windows es una habilidad obligatoria.
 
-A. ## 5. Preguntas Frecuentes (FAQ)
+## 5. Preguntas Frecuentes (FAQ)
 
 Q. ¿Qué hago si tras reiniciar el Explorador de Windows el archivo sigue bloqueado?
 

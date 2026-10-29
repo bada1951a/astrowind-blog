@@ -47,9 +47,7 @@ When confronted with stubborn file locks that defy standard deletion attempts, s
 1. Open the Quick Link menu by pressing `Win + X` and select "Terminal (Admin)" or "PowerShell (Admin)" to ensure elevated privileges.
 2. Execute the taskkill command with the forced termination flag to instantly wipe out stubborn application instances by their image name:
    ```cmd
-   taskkill /f /im jav
-
-A. exe
+   taskkill /f /im java.exe
    ```
 3. Navigate to the directory housing the locked file using standard path syntax.
 4. Force delete the locked file by bypassing normal attribute restrictions using the command prompt file deletion switches:
@@ -73,14 +71,16 @@ To prevent recurring file locks in production environments, establish robust hyg
 
 ## 5. Frequently Asked Questions (FAQ)
 
-Q1. Why does Windows claim a file is still in use even when no applications are visible on my desktop?
+
+
+Q1. Why does Windows claim a file is still in use even when no applications are visible on my desktop? 
 
 A1. When an application crashes or terminates abnormally, its background worker threads, helper DLLs, or console helper processes often remain active in system memory as orphan tasks. These background processes continue holding an open file handle in the operating system kernel, making the file completely inaccessible to user-space deletion requests until the underlying process ID is explicitly terminated via Task Manager or command-line tools.
 
-Q2. Is it safe to use the command line `del /f` command on system files or shared network drives?
+Q2. Is it safe to use the command line `del /f` command on system files or shared network drives? 
 
 A2. Utilizing the `/f` flag forces the deletion of read-only files, which is generally safe for temporary data logs and staging documents. However, executing this command on core system files, active operating system binaries, or locked network shares can cause catastrophic application crashes, data corruption, or permission conflicts across distributed network environments. Always verify your file path and ensure you have proper administrative authorization before forcing deletions.
 
-Q3. What should I do if a file still refuses to delete after terminating all related processes and restarting Explorer?
+Q3. What should I do if a file still refuses to delete after terminating all related processes and restarting Explorer? 
 
 A3. If stubborn file locks persist despite terminating all visible processes and restarting the explorer shell, the lock is likely held by a low-level kernel driver, such as an antivirus real-time scanner or a cloud storage synchronization service like OneDrive. To resolve this, temporarily pause your synchronization software or boot the machine into Safe Mode to bypass third-party file hooks and complete the deletion safely.
