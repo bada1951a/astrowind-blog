@@ -3,6 +3,7 @@ title: "丸の内の悲劇を防げ！Cドライブ容量不足を一発で解�
 description: "丸の内のオフィスでプレゼン直前の大ピンチ！Cドライブの容量不足でPCが重い、保存できないトラブルを現役ITワーカーが優しく解決。隠れゴーストファイルを一掃する安全な手順を解説します。"
 publishDate: 2026-10-15T11:00:00.000Z
 image: "https://images.pexels.com/photos/28729682/pexels-photo-28729682/free-photo-of-modern-office-desk-with-laptop-and-external-drives.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "undefined"
 category: "Hardware"
 tags: ["PCトラブル", "Cドライブ", "容量不足", "Windows"]
 theme: "Warm Coffee Latte"

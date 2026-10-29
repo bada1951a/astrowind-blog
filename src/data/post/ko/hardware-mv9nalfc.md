@@ -3,6 +3,7 @@ title: "C드라이브 용량 부족 해결 용량 잡아먹는 임시파일 완�
 description: "서울 판교 IT 기업 전산실에서 겪은 C드라이브 용량 부족 비상 상황! 임시파일 정리와 디스크 청소로 속 시원하게 해결하는 실무 매뉴얼."
 publishDate: 2026-10-15T08:30:00.000Z
 image: "https://images.pexels.com/photos/28729682/pexels-photo-28729682/free-photo-of-modern-office-desk-with-laptop-and-external-drives.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "undefined"
 category: 'tech'
 tags: ["C드라이브용량부족", "임시파일삭제", "윈도우최적화", "PC유지보수", "전산실팁"]
 theme: "Sandstone Desert Minimal"

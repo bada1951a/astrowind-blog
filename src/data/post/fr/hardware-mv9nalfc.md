@@ -3,6 +3,7 @@ title: "Sature de stockage C : Comment nettoyer les fichiers temporaires et réc
 description: "Guide pratique pour libérer de l'espace sur votre disque C en supprimant définitivement les fichiers temporaires qui saturent votre PC."
 publishDate: 2026-10-15T13:30:00.000Z
 image: "https://images.pexels.com/photos/28729682/pexels-photo-28729682/free-photo-of-modern-office-desk-with-laptop-and-external-drives.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "undefined"
 category: "Hardware"
 tags: ["PC", "SSD", "Windows", "Stockage", "Maintenance"]
 theme: "Sunset Horizon Coral"

@@ -3,6 +3,7 @@ title: "C-schijf bijna vol in Amsterdam? Zo ruim je verborgen rommel op"
 description: "Kampt je laptop op de Zuidas met een volle C-schijf? Ontdek hoe je in een paar stappen al je tijdelijke bestanden wist en gigabytes aan ruimte terugwint."
 publishDate: 2026-10-15T18:30:00.000Z
 image: "https://images.pexels.com/photos/28729682/pexels-photo-28729682/free-photo-of-modern-office-desk-with-laptop-and-external-drives.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "undefined"
 category: "Hardware"
 tags: ["Windows", "PC", "Opslag", "Schoonmaak"]
 theme: "Sunset Horizon Coral"

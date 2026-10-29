@@ -3,6 +3,7 @@ title: "Mengatasi C Drive Penuh Akibat File Sampah di Kantor Jakarta"
 description: "Panduan praktis membersihkan file temporary dan cache Windows yang menumpuk di C drive untuk mengatasi memori penuh saat lembur."
 publishDate: 2026-10-15T21:00:00.000Z
 image: "https://images.pexels.com/photos/28729682/pexels-photo-28729682/free-photo-of-modern-office-desk-with-laptop-and-external-drives.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "undefined"
 category: "Hardware"
 tags: ["PC", "Hardware", "Troubleshooting", "Windows", "SSD"]
 theme: "Retro Monokai"
