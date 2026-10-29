@@ -2,7 +2,9 @@
 title: "Windows 11 com Disco C: Cheio? Como Limpar Arquivos Temporários com Segurança"
 description: "Aprenda a liberar espaço no drive C do Windows 11 de forma definitiva e segura, eliminando arquivos temporários sem riscos ao sistema."
 publishDate: 2026-10-15T17:15:00.000Z
-image: "/images/tech-photo/tech-photo (15).jpg"
+# Pexels cover: Jakub Zerdzicki — https://www.pexels.com/photo/modern-office-desk-with-laptop-and-external-drives-28729682/
+image: "https://images.pexels.com/photos/28729682/pexels-photo-28729682/free-photo-of-modern-office-desk-with-laptop-and-external-drives.jpeg?auto=compress&cs=tinysrgb&w=1200"
+imageAlt: "Laptop e unidades externas sobre uma mesa"
 category: 'tech'
 tags: ["Windows 11", "Otimização", "Dicas de TI", "Produtividade", "Manutenção"]
 theme: "Teal Matrix Digital"
@@ -78,7 +80,8 @@ Sim, desde que seu computador esteja funcionando perfeitamente após a última a
 
 
 
-![Tech & IT Solution Guide](https://picsum.photos/seed/computer698/1000/550)
+<!-- Photo by Andrea Piacquadio on Pexels: https://www.pexels.com/photo/black-square-device-on-brown-wooden-table-3915760/ -->
+![Uma pessoa conectando um disco rígido externo a um laptop.](https://images.pexels.com/photos/3915760/pexels-photo-3915760.jpeg?auto=compress&cs=tinysrgb&w=1200)
 
 ### 2. Com que frequência devo fazer essa limpeza no Windows 11?
 O ideal é revisar o <strong>Sensor de Armazenamento</strong> a cada 30 ou 60 dias. Se você trabalha com edição de vídeos, desenvolvimento de software ou design, os arquivos de cache acumulam muito mais rápido, exigindo uma limpeza quinzenal.
