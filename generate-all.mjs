@@ -47,8 +47,8 @@ const TOPICS_FILE = path.resolve('topics.txt');
 const PHOTO_DIR = path.resolve('public/images/tech-photo');
 
 // =========================================================================
-/* Pexels topic search is optional: missing credentials or API errors fall back
-   to the existing local image pool so scheduled generation does not stop. */
+/* Pexels requires PEXELS_API_KEY. Without it this run explicitly uses local images.
+   If a configured search cannot return two relevant photos, fail safely and keep the topic queued. */
 const PEXELS_API_KEY = process.env.PEXELS_API_KEY;
 const IMAGE_EXTS = /\.(jpe?g|png|webp|gif|avif)$/i;
 const STOP_WORDS = new Set(['how', 'to', 'fix', 'the', 'a', 'an', 'and', 'for', 'with', 'on', 'in', 'of', 'by', 'using', 'step', 'steps', 'windows']);
@@ -60,9 +60,8 @@ if (!fs.existsSync(PHOTO_DIR)) {
 const localFiles = fs.readdirSync(PHOTO_DIR).filter(file => IMAGE_EXTS.test(file));
 let localImages = localFiles.map(file => encodeURI('/images/tech-photo/' + file));
 
-if (localImages.length === 0) {
-  console.warn('⚠️ public/images/tech-photo 에 이미지가 없습니다. 기본 이미지를 사용합니다.');
-  localImages = ['/images/default-tech.jpg'];
+if (localImages.length < 2) {
+  console.warn('⚠️ 로컬 이미지가 2장 미만입니다. Pexels 검색 키가 없거나 실패하면 이미지 부족으로 생성 세트를 중단합니다.');
 }
 
 function shuffleArray(array) {
@@ -79,6 +78,7 @@ const usedPexelsPhotoIds = new Set();
 let topicImagePairPromise;
 
 function getLocalPostImages(index) {
+  if (shuffledPool.length < 2) throw new Error('로컬 이미지가 2장 미만이라 서로 다른 이미지 쌍을 만들 수 없습니다.');
   const coverUrl = shuffledPool[(index * 2) % shuffledPool.length];
   const bodyUrl = shuffledPool[(index * 2 + 1) % shuffledPool.length];
   return { coverUrl, bodyUrl, coverAlt: '', bodyAlt: '', sourceComment: '' };
@@ -98,12 +98,13 @@ function cleanSourceText(value) {
 }
 
 async function getPostImages(index) {
+  // Freeze the topic's image pair on first run so resumed locales cannot diverge.
   if (generationManifest.imagePair) return generationManifest.imagePair;
   if (!topicImagePairPromise) {
     topicImagePairPromise = (async () => {
       if (!PEXELS_API_KEY) {
-        console.warn('⚠️ PEXELS_API_KEY 미설정: 주제별 Pexels 검색을 건너뛰고 기존 로컬 이미지 셔플을 사용합니다.');
-        generationManifest.imagePair = getLocalPostImages(index);
+        console.warn('⚠️ PEXELS_API_KEY가 없어 이번 실행은 Pexels를 사용하지 않습니다. 기존 로컬 이미지 셔플로 진행합니다.');
+        generationManifest.imagePair = { ...getLocalPostImages(index), source: 'local-fallback' };
         saveRecoveryManifest();
         return generationManifest.imagePair;
       }
@@ -133,12 +134,17 @@ async function getPostImages(index) {
         for (const candidate of ranked) {
           const photo = candidate.photo;
           if (!photo.id || usedPexelsPhotoIds.has(photo.id)) continue;
+          if (candidate.overlap < 1) continue;
           if (!getPexelsHost(photo.src?.large, 'images.pexels.com')) continue;
           if (!getPexelsHost(photo.url, 'www.pexels.com')) continue;
+          if (selected.some(item => item.photo.src?.large === photo.src.large)) continue;
           selected.push(candidate);
           if (selected.length === 2) break;
         }
-        if (selected.length !== 2) throw new Error('서로 다른 유효 사진 2장을 찾지 못했습니다.');
+        if (selected.length !== 2 || new Set(selected.map(candidate => candidate.photo.id)).size !== 2 ||
+            new Set(selected.map(candidate => candidate.photo.src.large)).size !== 2) {
+          throw new Error('alt 텍스트에서 주제 키워드가 확인되는 서로 다른 사진 2장을 찾지 못했습니다.');
+        }
 
         selected.forEach(candidate => usedPexelsPhotoIds.add(candidate.photo.id));
         if (selected.some(candidate => candidate.overlap === 0)) {
@@ -158,14 +164,12 @@ async function getPostImages(index) {
           coverAlt: String(cover.alt || ''),
           bodyAlt: String(body.alt || ''),
           sourceComment,
+          source: 'pexels',
         };
         saveRecoveryManifest();
         return generationManifest.imagePair;
       } catch (error) {
-        console.warn('⚠️ Pexels 검색 실패 (' + error.message + '): 기존 로컬 이미지 셔플로 계속합니다. 이미지 주제 관련성은 자동 보장되지 않습니다.');
-        generationManifest.imagePair = getLocalPostImages(index);
-        saveRecoveryManifest();
-        return generationManifest.imagePair;
+        throw new Error('PEXELS_API_KEY는 설정됐지만 주제에 맞는 서로 다른 사진 2장을 확보하지 못했습니다: ' + error.message);
       }
     })();
   }
@@ -480,7 +484,7 @@ function validateGeneratedPost(text, langCode, expected) {
   if (!fm) return ['frontmatter 시작/종료 구분자 누락'];
   const frontmatter = fm[1];
   const body = text.slice(fm[0].length).trim();
-  const valueOf = (key) => {
+  const valueOf = key => {
     const match = frontmatter.match(new RegExp('^' + key + ':\\s*(.*?)\\s*$', 'm'));
     return match ? match[1].trim().replace(/^(['"])([\s\S]*)\1$/, '$2') : '';
   };
@@ -514,25 +518,81 @@ function validateGeneratedPost(text, langCode, expected) {
     }
   }
 
-  if (!body) errors.push('본문 누락');
-  const fence = String.fromCharCode(96).repeat(3);
-  if (body.split(fence).length % 2 === 0) errors.push('코드펜스 미종결');
-  if (/\b(?:TODO|TBD|insert (?:text|answer)|question text|detailed answer)\b/i.test(body)) errors.push('본문 placeholder');
-  if (langCode !== 'ko' && /[가-힣]/.test(body)) errors.push('비한국어 본문에 한글 포함');
+  const tick = String.fromCharCode(96);
+  const fencedCode = new RegExp(tick.repeat(3) + '[\\s\\S]*?' + tick.repeat(3), 'g');
+  const inlineCode = new RegExp(tick + '[^' + tick + ']*' + tick, 'g');
+  const stripNonProse = value => value
+    .replace(/<!--[\s\S]*?-->/g, ' ')
+    .replace(/!\[[^\]]*\]\([^)]*\)/g, ' ')
+    .replace(/\[([^\]]+)\]\([^)]*\)/g, '$1')
+    .replace(/https?:\/\/\S+/g, ' ')
+    .replace(fencedCode, ' ')
+    .replace(inlineCode, ' ')
+    .trim();
+  const prose = stripNonProse(body);
+  const wordTokens = value => stripNonProse(value).match(/\p{L}[\p{L}\p{M}'’\-]*/gu) || [];
+  if (!prose) errors.push('본문 누락');
+  if (/\b(?:TODO|TBD|insert (?:text|answer)|question text|detailed answer)\b/i.test(prose)) errors.push('본문 placeholder');
+  if (body.split(tick.repeat(3)).length % 2 === 0) errors.push('코드펜스 미종결');
 
   const headings = [...body.matchAll(/^##\s+(.+)\s*$/gm)].map(match => match[1].trim());
   const i18n = I18N_SECTIONS[langCode];
   const requiredHeadings = [i18n.s1, i18n.s2, i18n.s3, i18n.s4, i18n.s5];
-  if (headings.length !== requiredHeadings.length) errors.push('H2 섹션 수가 5개와 불일치');
+  if (headings.length !== 5) errors.push('H2 섹션 수가 5개와 불일치');
   if (requiredHeadings.some((heading, index) => headings[index] !== heading)) errors.push('필수 H2 제목/순서 불일치');
-
   const sections = body.split(/^##\s+.+\s*$/m).slice(1);
   if (sections.length === 5) {
     sections.forEach((section, index) => {
-      const plainText = section.replace(/!\[[^\]]*\]\([^)]*\)/g, '').trim();
-      if (plainText.length < (index === 4 ? 240 : 180)) errors.push('섹션 ' + (index + 1) + ' 내용 부족');
+      const clean = stripNonProse(section);
+      const chars = [...clean.replace(/\s/g, '')].length;
+      const words = wordTokens(section).length;
+      if (langCode === 'ko' && chars < (index === 4 ? 280 : 300)) errors.push('섹션 ' + (index + 1) + ' 내용 부족');
+      else if (langCode === 'ja' && chars < (index === 4 ? 220 : 160)) errors.push('섹션 ' + (index + 1) + ' 내용 부족');
+      else if (!['ko', 'ja'].includes(langCode) && words < (index === 4 ? 100 : 80)) errors.push('섹션 ' + (index + 1) + ' 분량 부족');
     });
+    const stepLines = sections[2].match(/^\s*\d+[.)]\s+\S.+$/gm) || [];
+    if (stepLines.length < 3) errors.push('해결 절차의 번호가 붙은 단계가 3개 미만');
   }
+
+  if (langCode === 'ko') {
+    const koreanChars = (prose.match(/[가-힣]/g) || []).length;
+    const totalChars = [...prose.replace(/\s/g, '')].length;
+    if (koreanChars < 900) errors.push('한국어 본문 비율/분량 부족');
+    if (totalChars < 2100 || totalChars > 3300) errors.push('한국어 본문 목표 분량(2,400~2,600자)에서 크게 벗어남');
+    if (!/[가-힣]{2,}/.test(title) || !/[가-힣]{2,}/.test(description)) errors.push('한국어 title/description 언어 불일치');
+  } else if (langCode === 'ja') {
+    const japaneseChars = (prose.match(/[ぁ-んァ-ン一-龯]/g) || []).length;
+    const totalChars = [...prose.replace(/\s/g, '')].length;
+    if (japaneseChars < 700) errors.push('일본어 본문 문자 비율 부족');
+    if (totalChars < 1300 || totalChars > 4500) errors.push('일본어 본문 분량 오류');
+    if (!/[ぁ-んァ-ン一-龯]/.test(title) || !/[ぁ-んァ-ン一-龯]/.test(description)) errors.push('일본어 title/description 언어 불일치');
+  } else {
+    if (/[가-힣]/.test(title + ' ' + description + ' ' + prose)) errors.push('비한국어 글에 한글 포함');
+    const localeMarkers = {
+      en: 'the and with for from this that you your not can when',
+      de: 'der die das und mit nicht ist für wenn auf',
+      fr: 'le la les et avec pour pas dans des une',
+      es: 'el la los las y con para que no una',
+      it: 'il lo la gli e con per non che una',
+      pt: 'o a os as e com para não que uma',
+      nl: 'de het een en met voor niet dat zijn',
+      pl: 'oraz jest nie dla się które można przez',
+      id: 'dan yang dengan untuk tidak dari dalam ini pada',
+      vi: 'và của là có được trong không với một những',
+    };
+    const tokens = new Set(wordTokens(prose).map(token => token.toLocaleLowerCase(langCode)));
+    const markers = (localeMarkers[langCode] || '').split(/\s+/).filter(Boolean);
+    const localeMarkerCount = markers.filter(marker => tokens.has(marker)).length;
+    if (localeMarkerCount < 4) errors.push('본문 언어가 요청 locale(' + langCode + ')와 일치하는지 확인 필요');
+    const titleTokens = wordTokens(title + ' ' + description).map(token => token.toLocaleLowerCase(langCode));
+    if (!titleTokens.some(token => tokens.has(token))) errors.push('title/description과 본문 주제어가 연결되지 않음');
+  }
+
+  if (!['ko', 'ja'].includes(langCode)) {
+    const wordCount = wordTokens(prose).length;
+    if (wordCount < 650 || wordCount > 1400) errors.push('본문 분량 오류: ' + wordCount + ' words (target 900–1100)');
+  }
+
   const questions = [...body.matchAll(/^\*\*Q([1-3])\.\*\*\s*(.+)$/gim)];
   const answers = [...body.matchAll(/^\*\*A([1-3])\.\*\*\s*(.+)$/gim)];
   if (questions.length !== 3 || new Set(questions.map(match => match[1])).size !== 3) errors.push('FAQ 질문 3개 구조 오류');
@@ -550,7 +610,7 @@ function validateGeneratedPost(text, langCode, expected) {
 function prepareGeneratedPost(rawText, lang, expected) {
   let text = String(rawText || '').trim();
   const fence = String.fromCharCode(96).repeat(3);
-  const fenced = new RegExp('^' + fence + '(?:markdown)?\s*\r?\n([\s\S]*?)\r?\n' + fence + '$', 'i').exec(text);
+  const fenced = new RegExp('^' + fence + '(?:markdown)?\\s*\\r?\\n([\\s\\S]*?)\\r?\\n' + fence + '$', 'i').exec(text);
   if (fenced) text = fenced[1].trim();
   else if (text.startsWith(fence) || text.endsWith(fence)) {
     return { text, errors: ['Markdown code fence가 열리거나 닫히지 않았습니다.'] };
@@ -617,7 +677,18 @@ async function generateSinglePost(lang, index) {
 
   const selectedTheme = THEME_PRESETS.find(theme => theme.name === localeRecord.theme) ||
     THEME_PRESETS[Math.floor(Math.random() * THEME_PRESETS.length)];
-  const { coverUrl, bodyUrl, coverAlt, bodyAlt, sourceComment } = await getPostImages(index);
+  let postImages;
+  try {
+    postImages = await getPostImages(index);
+  } catch (error) {
+    localeRecord.status = 'failed';
+    localeRecord.lastError = error.message;
+    generationManifest.locales[lang.code] = localeRecord;
+    saveRecoveryManifest();
+    console.error('❌ [' + lang.code + '] 주제 이미지 2장을 확보하지 못해 원고 생성을 중단했습니다: ' + error.message);
+    return false;
+  }
+  const { coverUrl, bodyUrl, coverAlt, bodyAlt, sourceComment } = postImages;
   const pubDateIso = localeRecord.publishDate || generationManifest.publishDate;
 
   localeRecord = {
@@ -651,11 +722,11 @@ async function generateSinglePost(lang, index) {
     '- Use natural, engaging native-language prose. Use enough narrative to keep the reader engaged while keeping the practical explanation and steps dominant; do not force a dramatic scene. Vary phrasing naturally by locale and do not reuse or translate another locale\'s prose.',
     '',
     '[LENGTH AND STRUCTURE]',
-    '- Korean: aim for about 2,400–2,600 characters; other languages: aim for about 900–1,100 words. These are targets, not permission to pad, repeat, or invent material. Accuracy and completeness come first.',
+    '- Korean: aim for about 2,400–2,600 characters. Japanese: aim for about 1,800–3,200 Japanese characters, excluding spaces. Other languages: aim for about 900–1,100 words. These are targets, not permission to pad, repeat, or invent material. Accuracy and completeness come first.',
     '- Use exactly five H2 headings below, in this order. Keep each section substantial and specific to this topic.',
     '- Heading 1: explain the topic and a relevant symptom or use case without imposing a crisis.',
     '- Heading 2: explain plausible topic-specific causes and how to distinguish them; no generic cause checklist.',
-    '- Heading 3: give three or more safe, ordered practical steps with decision points. Match reliable UI names to this locale; put commands and paths in backticks.',
+    '- Heading 3: give at least three safe, ordered practical steps, numbered 1, 2, 3, with decision points. Match reliable UI names to this locale; put commands and paths in backticks.',
     '- Heading 4: cover topic-relevant risks, prevention, and when to stop or escalate.',
     '- Heading 5: write exactly three useful topic-specific FAQ pairs with a blank line between each question and answer. Answer each directly.',
     '- These are 12 independent compositions about the same topic, not translations of one master article. Keep core factual guidance consistent.',
@@ -791,10 +862,10 @@ async function run() {
       tags: I18N_SECTIONS[lang.code].tags,
     });
     if (errors.length) throw new Error('최종 세트 검수 실패 (' + lang.code + '): ' + errors.join(', '));
-    stagedPosts.push({ lang, text, destination: path.join(POSTS_BASE_DIR, lang.code, fileSlug + '.md.enc') });
+    stagedPosts.push({ lang, text, destination: path.join(POSTS_BASE_DIR, lang.code, fileSlug + '.md') });
   }
 
-  // All 12 files are validated before any file reaches the publishable content tree.
+  // Every locale selected for this set is validated before any file reaches the publishable content tree.
   for (const post of stagedPosts) {
     fs.mkdirSync(path.dirname(post.destination), { recursive: true });
     if (fs.existsSync(post.destination) && fs.readFileSync(post.destination, 'utf-8') !== post.text) {
