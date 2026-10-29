@@ -9,15 +9,13 @@
 
 import fs from 'fs';
 import path from 'path';
-import { GoogleGenAI } from '@google/genai';
 
-const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
-if (!GEMINI_API_KEY) {
-  console.error("❌ GEMINI_API_KEY 환경변수가 설정되지 않았습니다.");
+
+const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
+if (!OPENAI_API_KEY) {
+  console.error('❌ OPENAI_API_KEY 환경변수가 설정되지 않았습니다.');
   process.exit(1);
 }
-
-const ai = new GoogleGenAI({ apiKey: GEMINI_API_KEY });
 const POSTS_BASE_DIR = path.resolve('src/data/post');
 const TOPICS_FILE = path.resolve('topics.txt');
 const PHOTO_DIR = path.resolve('public/images/tech-photo');
@@ -59,14 +57,13 @@ function getPostImages(index) {
 // =========================================================================
 // 한국 시간(KST) 기준 당일 발행 날짜 생성
 // =========================================================================
-function getKstPublishDateIso(index) {
+function getKstPublishDateIso() {
   const now = new Date();
-  const kstTime = new Date(now.getTime() + 9 * 60 * 60 * 1000);
-  const year = kstTime.getUTCFullYear();
-  const month = String(kstTime.getUTCMonth() + 1).padStart(2, '0');
-  const day = String(kstTime.getUTCDate()).padStart(2, '0');
-  const minute = String((index * 5) % 60).padStart(2, '0');
-  return `${year}-${month}-${day}T03:${minute}:00.000Z`;
+  const kst = new Date(now.getTime() + 9 * 60 * 60 * 1000);
+  const year = kst.getUTCFullYear();
+  const month = kst.getUTCMonth() + 1;
+  const day = kst.getUTCDate();
+  return new Date(Date.UTC(year, month - 1, day, 10, 0, 0)).toISOString();
 }
 
 // =========================================================================
@@ -305,27 +302,66 @@ const TARGET_LANGS = [
 const delay = (ms) => new Promise((res) => setTimeout(res, ms));
 const fileSlug = `post-${Date.now().toString(36)}`;
 
+const generatedPostFiles = [];
+
 // =========================================================================
 // [호출 함수] maxOutputTokens: 8192 (2,500자 정량 생성 최적화)
 // =========================================================================
 async function fetchWithRetry(prompt, maxRetries = 3, delayMs = 3000) {
   for (let attempt = 1; attempt <= maxRetries; attempt++) {
     try {
-      const response = await ai.models.generateContent({
-        model: 'gemini-3.5-flash-lite',
-        contents: prompt,
-        config: {
-          maxOutputTokens: 8192,
-          temperature: 0.7,
-        }
+      const response = await fetch('https://api.openai.com/v1/responses', {
+        method: 'POST',
+        headers: {
+          Authorization: `Bearer ${OPENAI_API_KEY}`,
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          model: 'gpt-6-luna',
+          reasoning: { effort: 'none' },
+          max_output_tokens: 8192,
+          input: prompt,
+        }),
       });
-      return response.text;
+
+      const payload = await response.json();
+      if (!response.ok) {
+        const message = payload?.error?.message || `HTTP ${response.status}`;
+        throw new Error(`OpenAI API 오류: ${message}`);
+      }
+
+      const generatedText = (payload.output || [])
+        .flatMap((item) => item.content || [])
+        .filter((item) => item.type === 'output_text')
+        .map((item) => item.text || '')
+        .join('\n')
+        .trim();
+
+      if (!generatedText) throw new Error('OpenAI 응답에 글 본문이 없습니다.');
+      return generatedText;
     } catch (error) {
       console.warn(`⚠️ [호출 재시도 ${attempt}/${maxRetries}]: ${error.message}`);
-      if (attempt === maxRetries) { throw error; }
-      await delay(delayMs);
+      if (attempt === maxRetries) throw error;
+      await delay(delayMs * attempt);
     }
   }
+  throw new Error('OpenAI API 호출이 최대 재시도 횟수를 초과했습니다.');
+}
+
+function validateGeneratedPost(text, langCode) {
+  const fm = text.match(/^---\s*\r?\n([\s\S]*?)\r?\n---\s*\r?\n/);
+  if (!fm) return ['frontmatter 구분자 누락'];
+  const body = text.slice(fm[0].length).trim();
+  const errors = [];
+  for (const field of ['title', 'description', 'publishDate', 'image']) {
+    if (!new RegExp('^' + field + ':\\s*\\S', 'm').test(fm[1])) errors.push(field + ' 누락');
+  }
+  if (body.length < (langCode === 'ko' ? 1000 : 1800)) errors.push('본문 길이 부족 또는 잘림');
+  if ((body.match(/^##\s+/gm) || []).length < 5) errors.push('H2 섹션 5개 미만');
+  if ((body.match(/\*\*Q[1-3]\.\*\*/gi) || []).length < 3) errors.push('FAQ 질문 3개 미만');
+  if ((body.match(/\*\*A[1-3]\.\*\*/gi) || []).length < 3) errors.push('FAQ 답변 3개 미만');
+  if (langCode !== 'ko' && /[가-힣]/.test(body)) errors.push('비한국어 본문에 한글 포함');
+  return errors;
 }
 
 async function generateSinglePost(lang, index) {
@@ -336,7 +372,7 @@ async function generateSinglePost(lang, index) {
   console.log(`\n🚀 [${index + 1}/12] ${lang.name} (${lang.code}) 1호기 본진 애드센스 표준 생성 중... (테마: ${selectedTheme.name})`);
 
   const { coverUrl, bodyUrl } = getPostImages(index);
-  const pubDateIso = getKstPublishDateIso(index);
+  const pubDateIso = getKstPublishDateIso();
 
   // 🎯 [애드센스 승인 최적화 프롬프트: 2,400~2,600자 정량화]
   const prompt = `
@@ -443,8 +479,12 @@ theme: "${selectedTheme.name}"
       fs.mkdirSync(targetDir, { recursive: true });
     }
 
+    const validationErrors = validateGeneratedPost(text, lang.code);
+    if (validationErrors.length) throw new Error('발행 전 검수 실패: ' + validationErrors.join(', '));
+
     const filePath = path.join(targetDir, `${fileSlug}.md`);
     fs.writeFileSync(filePath, text, 'utf-8');
+    generatedPostFiles.push(filePath);
     console.log(`   ✅ [성공] 1호기 저장 완료: src/data/post/${lang.code}/${fileSlug}.md`);
     return true;
   } catch (error) {
@@ -458,6 +498,7 @@ async function run() {
   console.log("⚡ [1호기 본진] (카테고리: tech) 12개국 고속 자동 포스팅 시작");
   console.log("==================================================");
 
+  const batchStart = generatedPostFiles.length;
   let successCount = 0;
 
   for (let i = 0; i < TARGET_LANGS.length; i++) {
@@ -468,13 +509,16 @@ async function run() {
     }
   }
 
-  if (successCount > 0) {
+  if (successCount === TARGET_LANGS.length) {
     lines.shift();
     fs.writeFileSync(TOPICS_FILE, lines.join('\n'), 'utf-8');
     console.log(`\n🧹 총 ${successCount}개국 포스팅 완료. topics.txt에서 주제를 제거했습니다.`);
     console.log(`📊 남은 주제 수: ${lines.length}개`);
   } else {
-    console.error("\n❌ 모든 언어 생성이 실패하여 topics.txt를 보존합니다.");
+    for (const filePath of generatedPostFiles.slice(batchStart)) {
+      if (fs.existsSync(filePath)) fs.unlinkSync(filePath);
+    }
+    console.error(`12개 언어 세트 검수 실패 (${successCount}/${TARGET_LANGS.length}). 생성된 이번 세트 파일을 되돌리고 topics.txt의 주제를 보존합니다.`);
     process.exit(1);
   }
 }
