@@ -315,7 +315,7 @@ async function fetchWithRetry(prompt, maxRetries = 3, delayMs = 3000) {
         model: 'gemini-3.5-flash-lite',
         contents: prompt,
         config: {
-          maxOutputTokens: 4096,
+          maxOutputTokens: 8192,
           temperature: 0.7,
         }
       });
