@@ -71,98 +71,98 @@ function getKstPublishDateIso() {
 // =========================================================================
 const I18N_SECTIONS = {
   ko: {
-    s1: "1. 직장인 식은땀 나는 돌발 상황",
-    s2: "2. 오류와 병목의 진짜 핵심 원인 분석",
-    s3: "3. 1분 만에 끝내는 단계별 실무 해결법",
-    s4: "4. 현직 엔지니어의 핵심 주의사항 및 실무 팁",
+    s1: "1. 주제와 발생 상황",
+    s2: "2. 가능한 원인과 확인 방법",
+    s3: "3. 안전한 단계별 해결 절차",
+    s4: "4. 주의사항과 재발 방지",
     s5: "5. 자주 묻는 질문 (FAQ)",
     tags: ["테크팁", "하드웨어", "트러블슈팅", "PC해결"]
   },
   en: {
-    s1: "1. Workplace Emergency Situation",
-    s2: "2. Root Cause Breakdown",
-    s3: "3. Step-by-Step Practical Resolution",
-    s4: "4. Professional Engineer Precautions & Tips",
+    s1: "1. Topic and Situation",
+    s2: "2. Possible Causes and Checks",
+    s3: "3. Safe Step-by-Step Resolution",
+    s4: "4. Precautions and Prevention",
     s5: "5. Frequently Asked Questions (FAQ)",
     tags: ["Tech Tips", "Hardware", "Troubleshooting", "PC Fix"]
   },
   ja: {
-    s1: "1. 職場で冷や汗をかいた緊急トラブル",
-    s2: "2. エラーとボトルネックの根本原因",
-    s3: "3. 1分で完了する実践的な解決手順",
-    s4: "4. 現役エンジニアが教える注意点とコツ",
+    s1: "1. テーマと発生状況",
+    s2: "2. 考えられる原因と確認方法",
+    s3: "3. 安全な解決手順",
+    s4: "4. 注意点と再発防止策",
     s5: "5. よくある質問 (FAQ)",
     tags: ["テックのヒント", "ハードウェア", "トラブルシューティング", "PC解決"]
   },
   de: {
-    s1: "1. Kritische Fehlersituation am Arbeitsplatz",
-    s2: "2. Detaillierte Ursachenanalyse",
-    s3: "3. Schritt-für-Schritt-Lösungsanleitung",
-    s4: "4. Praxistipps und Warnungen vom System-Admin",
+    s1: "1. Thema und Ausgangssituation",
+    s2: "2. Mögliche Ursachen und Prüfungen",
+    s3: "3. Sichere Lösung Schritt für Schritt",
+    s4: "4. Vorsichtsmaßnahmen und Vorbeugung",
     s5: "5. Häufig gestellte Fragen (FAQ)",
     tags: ["Tech-Tipps", "Hardware", "Fehlerbehebung", "PC-Reparatur"]
   },
   fr: {
-    s1: "1. Situation d'urgence critique au bureau",
-    s2: "2. Analyse des causes principales de l'erreur",
-    s3: "3. Guide de résolution étape par étape",
-    s4: "4. Conseils et précautions d'un expert système",
+    s1: "1. Sujet et situation",
+    s2: "2. Causes possibles et vérifications",
+    s3: "3. Résolution sûre étape par étape",
+    s4: "4. Précautions et prévention",
     s5: "5. Foire Aux Questions (FAQ)",
     tags: ["Astuces Tech", "Matériel", "Dépannage", "Réparation PC"]
   },
   es: {
-    s1: "1. Emergencia crítica en el trabajo",
-    s2: "2. Análisis detallado de la causa raíz",
-    s3: "3. Solución práctica paso a paso",
-    s4: "4. Advertencias y consejos de un técnico",
+    s1: "1. Tema y situación",
+    s2: "2. Posibles causas y comprobaciones",
+    s3: "3. Solución segura paso a paso",
+    s4: "4. Precauciones y prevención",
     s5: "5. Preguntas Frecuentes (FAQ)",
     tags: ["Consejos Tech", "Hardware", "Solución de Problemas", "Reparación PC"]
   },
   it: {
-    s1: "1. Emergenza improvvisa sul posto di lavoro",
-    s2: "2. Analisi approfondita della causa principale",
-    s3: "3. Soluzione pratica passo dopo passo",
-    s4: "4. Avvertenze e suggerimenti dell'esperto",
+    s1: "1. Argomento e situazione",
+    s2: "2. Possibili cause e verifiche",
+    s3: "3. Procedura sicura passo dopo passo",
+    s4: "4. Precauzioni e prevenzione",
     s5: "5. Domande Frequenti (FAQ)",
     tags: ["Consigli Tech", "Hardware", "Risoluzione Problemi", "Assistenza PC"]
   },
   pt: {
-    s1: "1. Situação de emergência no trabalho",
-    s2: "2. Análise da causa raiz do problema",
-    s3: "3. Guia prático de resolução passo a passo",
-    s4: "4. Recomendações e alertas de especialistas",
+    s1: "1. Tema e situação",
+    s2: "2. Possíveis causas e verificações",
+    s3: "3. Resolução segura passo a passo",
+    s4: "4. Precauções e prevenção",
     s5: "5. Perguntas Frequentes (FAQ)",
     tags: ["Dicas Tech", "Hardware", "Solução de Problemas", "Manutenção PC"]
   },
   nl: {
-    s1: "1. Noodsituatie op de werkvloer",
-    s2: "2. Grondige analyse van de hoofdoorzaak",
-    s3: "3. Stapsgewijze praktische oplossing",
-    s4: "4. Belangrijke waarschuwingen van IT-specialisten",
+    s1: "1. Onderwerp en situatie",
+    s2: "2. Mogelijke oorzaken en controles",
+    s3: "3. Veilige oplossing stap voor stap",
+    s4: "4. Aandachtspunten en preventie",
     s5: "5. Veelgestelde Vragen (FAQ)",
     tags: ["Tech Tips", "Hardware", "Probleemoplossing", "PC Herstel"]
   },
   pl: {
-    s1: "1. Nagła awaria w miejscu pracy",
-    s2: "2. Szczegółowa analiza przyczyn źródłowych",
-    s3: "3. Praktyczne rozwiązanie krok po kroku",
-    s4: "4. Wskazówki i ostrzeżenia eksperta IT",
+    s1: "1. Temat i sytuacja",
+    s2: "2. Możliwe przyczyny i sprawdzenia",
+    s3: "3. Bezpieczne rozwiązanie krok po kroku",
+    s4: "4. Środki ostrożności i zapobieganie",
     s5: "5. Najczęściej zadawane pytania (FAQ)",
     tags: ["Porady Tech", "Sprzęt", "Rozwiązywanie Problemów", "Naprawa PC"]
   },
   id: {
-    s1: "1. Situasi Darurat Kritis di Tempat Kerja",
-    s2: "2. Analisis Mendalam Akar Masalah",
-    s3: "3. Panduan Langkah demi Langkah Penyelesaian Masalah",
-    s4: "4. Tips & Peringatan Penting Teknisi IT",
+    s1: "1. Topik dan Situasi",
+    s2: "2. Kemungkinan Penyebab dan Pemeriksaan",
+    s3: "3. Langkah Penyelesaian yang Aman",
+    s4: "4. Hal yang Perlu Diperhatikan dan Pencegahan",
     s5: "5. Pertanyaan yang Sering Diajukan (FAQ)",
     tags: ["Tips Teknologi", "Perangkat Keras", "Troubleshooting", "Perbaikan PC"]
   },
   vi: {
-    s1: "1. Tình huống sự cố khẩn cấp tại văn phòng",
-    s2: "2. Phân tích nguyên nhân gốc rễ chi tiết",
-    s3: "3. Các bước khắc phục sự cố thực tế",
-    s4: "4. Lời khuyên và lưu ý quan trọng từ kỹ sư IT",
+    s1: "1. Chủ đề và tình huống",
+    s2: "2. Nguyên nhân có thể và cách kiểm tra",
+    s3: "3. Các bước khắc phục an toàn",
+    s4: "4. Lưu ý và cách phòng tránh",
     s5: "5. Các câu hỏi thường gặp (FAQ)",
     tags: ["Mẹo Công Nghệ", "Phần Cứng", "Khắc Phục Sự Cố", "Sửa Máy Tính"]
   }
@@ -171,23 +171,12 @@ const I18N_SECTIONS = {
 // =========================================================================
 // 🛡️ [1호기 자가 검수 및 치유 엔진: Self-Healing Inspector]
 // =========================================================================
-function inspectAndHealMarkdown(body, langCode) {
+function inspectAndHealMarkdown(body) {
   let healed = body.trim();
-  const i18n = I18N_SECTIONS[langCode] || I18N_SECTIONS.ko;
   const auditLogs = [];
 
-  // 1) 헤딩 내부 볼드 제거 및 1호기 표준 소제목 강제 안착
+  // 서식 오류만 정리하며, 누락된 문장을 템플릿으로 채워 넣지 않는다.
   healed = healed.replace(/^(#{1,6}\s+)\*\*(.*?)\*\*/gm, '$1$2');
-  healed = healed.replace(/^#{1,6}\s*1[.\s]+([^\n]+)/m, `## ${i18n.s1}`);
-  healed = healed.replace(/^#{1,6}\s*2[.\s]+([^\n]+)/m, `## ${i18n.s2}`);
-  healed = healed.replace(/^#{1,6}\s*3[.\s]+([^\n]+)/m, `## ${i18n.s3}`);
-  healed = healed.replace(/^#{1,6}\s*4[.\s]+([^\n]+)/m, `## ${i18n.s4}`);
-  healed = healed.replace(/^#{1,6}\s*5[.\s]+([^\n]+)/m, `## ${i18n.s5}`);
-
-  if (!healed.startsWith('## 1.')) {
-    healed = `## ${i18n.s1}\n\n` + healed;
-    auditLogs.push("1번 헤딩 주입");
-  }
 
   // 2) 🛡️ Q&A 줄바꿈 뭉개짐 자동 분리 치유 (질문과 답변 사이 빈 줄 2개 보장)
   const rawQnACount = (healed.match(/Q[1-3]\./gi) || []).length;
@@ -242,39 +231,6 @@ if (lines.length === 0) {
 
 const currentTopic = lines[0];
 console.log(`📌 오늘 처리할 주제: "${currentTopic}"`);
-
-const IT_CRISIS_SCENARIOS_30 = [
-  "금요일 퇴근 15분 전, 팀장님과 임원진에게 주간 최종 결산 보고서를 메일로 막 발송하려던 순간",
-  "월요일 출근 직후 오전 9시, 전사 주간 정례 킥오프 회의 시작을 앞두고 PC를 켠 순간",
-  "야간에 사무실에 홀로 남아 내일 배포할 핵심 시스템 및 데이터 마이그레이션 작업을 진행하던 새벽 1시",
-  "점심시간 직후 커피를 들고 자리에 복귀해 오후 첫 업무 창을 띄우는 순간",
-  "급한 프로젝트 마감을 위해 밤샘 작업을 이어가던 새벽 4시경 피로가 극에 달한 순간",
-  "나른한 목요일 오후 4시, 집중해서 작성하던 중간 납품 검수 문서를 정리하던 순간",
-  "휴일 직전 연휴 시작 30분 전, 남은 사내 결재 문서를 모두 승인 처리하려던 타이밍",
-  "주말 당직 근무 중 예기치 못한 사내 시스템 에러 알림을 받고 긴급히 PC에 로그인한 상황",
-  "해외 출장지 호텔 로비에서 노트북 배터리가 18% 남은 상태로 급히 본사 공유 문서를 열람하던 상황",
-  "카페에서 스마트폰 핫스팟(테더링)을 연결해 외부 고객 미팅용 견적서와 설계 도면을 수정하던 오후",
-  "재택근무 중 사내 VPN 보안 연결을 걸고 중요한 화상회의(Zoom/Teams) 접속 5분 전",
-  "KTX/기차 안에서 이동하며 불안정한 무선 와이파이 상태로 긴급 수정 요청 메일을 확인하던 순간",
-  "지방 지사로 출장을 가 현장 회의실 낯선 모니터와 프로젝터에 노트북을 연결하던 상황",
-  "고객사 본사 회의실에 방문하여 현장 실무진과 실시간 시스템 화면을 공유하며 시연하기 직전",
-  "공항 출국장 라운지에서 탑승 직전 20분을 남겨두고 최종 승인 문서를 전송해야 하는 급박한 상황",
-  "스마트오피스 자율좌석에서 처음 연결해 보는 도킹 스테이션과 듀얼 모니터를 세팅하던 아침",
-  "월간 데이터 백업을 위해 2TB 분량의 핵심 업무 파일을 외장 SSD와 나스(NAS)로 전송하던 중",
-  "사내 IT 보안 감사팀의 분기별 PC 점검 마감 30분 전, 자체 진단 리포트를 생성해 제출해야 하는 상황",
-  "새로 지급받은 고사양 개발 및 그래픽 작업용 PC에 필수 사내 라이선스 툴들을 처음 세팅하던 날",
-  "수백 명의 직원이 접속하는 사내 인트라넷 게시판에 전사 공지 파일과 첨부 자료를 업로드하던 순간",
-  "회계 연도 마감을 앞두고 1년 치 결산 엑셀 시트와 전산 시스템을 교차 검증하던 중요한 시점",
-  "대규모 고객 데이터베이스(DB) 쿼리를 실행해 두고 모니터링 창을 지켜보던 긴박한 순간",
-  "사내 메신저로 급한 오류 수정 요청이 쏟아져 동시에 5개의 실무 툴을 띄워놓고 멀티태스킹을 하던 중",
-  "외부 협력업체에서 보내온 압축 파일과 도면 데이터를 다운로드받아 사내 검사를 진행하려던 찰나",
-  "어젯밤 진행된 윈도우 대규모 누적 보안 업데이트 이후 첫 부팅을 마치고 업무를 시작하려던 아침",
-  "메인보드 바이오스(BIOS) 펌웨어를 최신 버전으로 올린 뒤 윈도우 진입 화면에서 평소와 다른 증상을 마주한 순간",
-  "작업 도중 원인 모를 블루스크린(BSOD)이 스쳐 지나가며 강제 재부팅된 직후의 당혹스러운 상황",
-  "백신 실시간 감시 프로그램이 갑자기 시스템 리소스를 100% 점유하며 전체 화면이 멈칫거리던 순간",
-  "그래픽카드 드라이버 자동 업데이트가 완료된 후 작업표시줄과 해상도가 비정상적으로 흔들리던 시점",
-  "중요한 화상 발표 도중 마이크와 웹캠이 간헐적으로 끊기며 시스템 지연(DPC Latency)이 발생하던 상황"
-];
 
 const THEME_PRESETS = [
   { id: 1, name: "Cyberpunk Terminal", primaryColor: "#00ffcc", bgColor: "#111827", layout: "CLI/터미널 스타일, 자동화 단축 경로 최상단 배치" },
@@ -337,6 +293,11 @@ async function fetchWithRetry(prompt, maxRetries = 3, delayMs = 3000) {
         .join('\n')
         .trim();
 
+      if (payload.status && payload.status !== 'completed') {
+        const detail = payload.incomplete_details?.reason || payload.status;
+        throw new Error(`OpenAI 응답이 완료되지 않았습니다: ${detail}`);
+      }
+      if ((payload.output || []).some(item => item.type === 'refusal')) throw new Error('OpenAI가 원고 생성을 거절했습니다.');
       if (!generatedText) throw new Error('OpenAI 응답에 글 본문이 없습니다.');
       return generatedText;
     } catch (error) {
@@ -348,25 +309,82 @@ async function fetchWithRetry(prompt, maxRetries = 3, delayMs = 3000) {
   throw new Error('OpenAI API 호출이 최대 재시도 횟수를 초과했습니다.');
 }
 
-function validateGeneratedPost(text, langCode) {
-  const fm = text.match(/^---\s*\r?\n([\s\S]*?)\r?\n---\s*\r?\n/);
-  if (!fm) return ['frontmatter 구분자 누락'];
-  const body = text.slice(fm[0].length).trim();
+function validateGeneratedPost(text, langCode, expected) {
   const errors = [];
-  for (const field of ['title', 'description', 'publishDate', 'image']) {
-    if (!new RegExp('^' + field + ':\\s*\\S', 'm').test(fm[1])) errors.push(field + ' 누락');
+  if (typeof text !== 'string' || !text.trim()) return ['응답이 비어 있음'];
+  const fm = text.match(/^---\s*\r?\n([\s\S]*?)\r?\n---\s*(?:\r?\n|$)/);
+  if (!fm) return ['frontmatter 시작/종료 구분자 누락'];
+  const frontmatter = fm[1];
+  const body = text.slice(fm[0].length).trim();
+  const valueOf = (key) => {
+    const match = frontmatter.match(new RegExp('^' + key + ':\\s*(.*?)\\s*$', 'm'));
+    return match ? match[1].trim().replace(/^(['"])([\s\S]*)\1$/, '$2') : '';
+  };
+  const title = valueOf('title');
+  const description = valueOf('description');
+  const publishDate = valueOf('publishDate');
+  const image = valueOf('image');
+  const category = valueOf('category');
+  const theme = valueOf('theme');
+  for (const [field, value] of Object.entries({ title, description, publishDate, image, category, theme })) {
+    if (!value || /^(?:undefined|null|["']{2}|TODO|TBD)$/i.test(value)) errors.push(field + ' 누락/placeholder');
   }
-  if (body.length < (langCode === 'ko' ? 1000 : 1800)) errors.push('본문 길이 부족 또는 잘림');
-  if ((body.match(/^##\s+/gm) || []).length < 5) errors.push('H2 섹션 5개 미만');
-  if ((body.match(/\*\*Q[1-3]\.\*\*/gi) || []).length < 3) errors.push('FAQ 질문 3개 미만');
-  if ((body.match(/\*\*A[1-3]\.\*\*/gi) || []).length < 3) errors.push('FAQ 답변 3개 미만');
+  if (title.length < 8 || title.length > 120) errors.push('title 길이/형식 오류');
+  if (description.length < 30 || description.length > 160) errors.push('description 길이 오류');
+  if (/native clear title|a clear native-language title|title text|제목 입력/i.test(title)) errors.push('title placeholder');
+  if (/native concise|a concise native-language description|description text|설명 입력/i.test(description)) errors.push('description placeholder');
+  if (publishDate !== expected.publishDate) errors.push('publishDate가 요청값과 불일치');
+  if (image !== expected.coverUrl) errors.push('image가 선택된 cover 경로와 불일치');
+  if (category !== 'tech') errors.push('category가 tech와 불일치');
+  if (theme !== expected.theme) errors.push('theme가 선택값과 불일치');
+
+  const tagsMatch = frontmatter.match(/^tags:\s*(\[[^\r\n]*\])\s*$/m);
+  if (!tagsMatch) errors.push('tags 배열 누락/형식 오류');
+  else {
+    try {
+      const tags = JSON.parse(tagsMatch[1]);
+      if (!Array.isArray(tags) || tags.length !== expected.tags.length ||
+          tags.some((tag, index) => tag !== expected.tags[index])) errors.push('tags가 요청값과 불일치');
+    } catch {
+      errors.push('tags JSON 배열 파싱 실패');
+    }
+  }
+
+  if (!body) errors.push('본문 누락');
+  const fence = String.fromCharCode(96).repeat(3);
+  if (body.split(fence).length % 2 === 0) errors.push('코드펜스 미종결');
+  if (/\b(?:TODO|TBD|insert (?:text|answer)|question text|detailed answer)\b/i.test(body)) errors.push('본문 placeholder');
   if (langCode !== 'ko' && /[가-힣]/.test(body)) errors.push('비한국어 본문에 한글 포함');
-  return errors;
+
+  const headings = [...body.matchAll(/^##\s+(.+)\s*$/gm)].map(match => match[1].trim());
+  const i18n = I18N_SECTIONS[langCode];
+  const requiredHeadings = [i18n.s1, i18n.s2, i18n.s3, i18n.s4, i18n.s5];
+  if (headings.length !== requiredHeadings.length) errors.push('H2 섹션 수가 5개와 불일치');
+  if (requiredHeadings.some((heading, index) => headings[index] !== heading)) errors.push('필수 H2 제목/순서 불일치');
+
+  const sections = body.split(/^##\s+.+\s*$/m).slice(1);
+  if (sections.length === 5) {
+    sections.forEach((section, index) => {
+      const plainText = section.replace(/!\[[^\]]*\]\([^)]*\)/g, '').trim();
+      if (plainText.length < (index === 4 ? 240 : 180)) errors.push('섹션 ' + (index + 1) + ' 내용 부족');
+    });
+  }
+  const questions = [...body.matchAll(/^\*\*Q([1-3])\.\*\*\s*(.+)$/gim)];
+  const answers = [...body.matchAll(/^\*\*A([1-3])\.\*\*\s*(.+)$/gim)];
+  if (questions.length !== 3 || new Set(questions.map(match => match[1])).size !== 3) errors.push('FAQ 질문 3개 구조 오류');
+  if (answers.length !== 3 || new Set(answers.map(match => match[1])).size !== 3) errors.push('FAQ 답변 3개 구조 오류');
+  for (const match of answers) {
+    if (match[2].trim().length < 45) errors.push('FAQ A' + match[1] + ' 답변이 너무 짧음');
+  }
+  if (questions.some(question => {
+    const answer = answers.find(candidate => candidate[1] === question[1]);
+    return !answer || question.index >= answer.index;
+  })) errors.push('FAQ 질문/답변 순서 오류');
+  return [...new Set(errors)];
 }
 
 async function generateSinglePost(lang, index) {
   const selectedTheme = THEME_PRESETS[Math.floor(Math.random() * THEME_PRESETS.length)];
-  const selectedScenario = IT_CRISIS_SCENARIOS_30[Math.floor(Math.random() * IT_CRISIS_SCENARIOS_30.length)];
   const i18n = I18N_SECTIONS[lang.code] || I18N_SECTIONS.ko;
 
   console.log(`\n🚀 [${index + 1}/12] ${lang.name} (${lang.code}) 1호기 본진 애드센스 표준 생성 중... (테마: ${selectedTheme.name})`);
@@ -374,90 +392,73 @@ async function generateSinglePost(lang, index) {
   const { coverUrl, bodyUrl } = getPostImages(index);
   const pubDateIso = getKstPublishDateIso();
 
-  // 🎯 [애드센스 승인 최적화 프롬프트: 2,400~2,600자 정량화]
-  const prompt = `
-You are a ${lang.persona}.
-Write a high-quality, practical IT/tech troubleshooting guide natively in ${lang.name}.
-Target Culture: "${lang.localeContext}"
-Assigned Situation: "${selectedScenario}"
-Topic: "${currentTopic}"
-
-[ADSENSE QUALITY & LENGTH REQUIREMENT]
-- For Korean (ko): Write exactly around 2,400 - 2,600 characters (do NOT exceed 3,000 characters).
-- For other languages: Write exactly 900 - 1,100 words.
-- Tone: Highly informative, professional, practical workplace advice.
-- Narrative voice: Write in a first-person storytelling voice ("I"/the natural first-person form in ${lang.name}) from the assigned expert persona's perspective.
-- Open with a vivid but clearly illustrative scene based on the assigned situation; use roughly 30% of the article for first-person story and transitions and 70% for verified explanations, step-by-step guidance, and safety information. Build a story arc from the urgent problem through diagnosis, safe action, and outcome.
-- Do not falsely claim that an illustrative scenario is a real customer case or the author's personal experience. Do not invent verified outcomes, quotations, or facts. Clearly frame hypothetical/composite events as illustrative.
-- Keep first-person narration throughout the opening and transitions, while making technical instructions, safety warnings, and sources precise and factual.
-
-[STRUCTURE - STRICT 5 H2 HEADINGS]
-Use these exact H2 headings:
-
-## ${i18n.s1}
-Write 2 detailed paragraphs describing the sudden workplace IT crisis, the urgent deadline, and the initial panic based on: "${selectedScenario}".
-
-## ${i18n.s2}
-Write 2 analytical paragraphs explaining the technical root causes (system file locks, memory leak, background process deadlocks, or hardware driver conflicts).
-
-## ${i18n.s3}
-Provide 3 concrete resolution steps matching "${lang.osUi}". Use clean numbered lists with practical action items and exact commands.
-
-## ${i18n.s4}
-Write 2 paragraphs of practical precautions and operational tips to prevent recurrence.
-
-## ${i18n.s5}
-Provide exactly 3 practical Q&A items. You MUST put an empty line between Question and Answer:
-
-**Q1.** Question text
-
-**A1.** Detailed answer (3-4 sentences).
-
-**Q2.** Question text
-
-**A2.** Detailed answer (3-4 sentences).
-
-**Q3.** Question text
-
-**A3.** Detailed answer (3-4 sentences).
-
-[FORMATTING RULES]
-1. Never put asterisks (**) inside H2 headings.
-2. Bold keywords with strict syntax: **keyword** (no space inside asterisks).
-3. Put commands, file paths, or registry keys in inline backticks (e.g. \`taskkill\`, \`devmgmt.msc\`).
-${lang.code !== 'ko' ? `- Absolutely NO Korean characters in non-Korean posts.` : ''}
-
-[Strict Output Format]
-Return ONLY raw Markdown starting directly with frontmatter:
----
-title: "Native Clear Title in ${lang.name}"
-description: "Native concise description in ${lang.name} under 160 characters"
-publishDate: ${pubDateIso}
-image: "${coverUrl}"
-category: "tech"
-tags: ${JSON.stringify(i18n.tags)}
-theme: "${selectedTheme.name}"
----
-`;
+  // 12개 locale은 동일 주제를 각각 독립 호출로 작성한다.
+  const prompt = [
+    'You are writing as a practical technical editor with a ' + lang.persona + ' perspective. This is a writing role, not a claim about your real identity, employment, credentials, or personal history.',
+    'Write one useful, accurate troubleshooting guide natively in ' + lang.name + '.',
+    'Target locale: "' + lang.localeContext + '"',
+    'Exact shared topic for this 12-language set: "' + currentTopic + '"',
+    '',
+    '[TOPIC FOCUS AND TRUST]',
+    '- Keep the title, description, every section, examples, diagnosis, steps, and FAQ directly about the exact topic above.',
+    '- Identify the specific product, operating system, symptom, or task in the topic. Explain only causes and steps that plausibly apply to it. Do not add generic lists of unrelated causes, tools, crises, or hardware.',
+    '- Do not force an office emergency, deadline, panic scene, customer story, or dramatic outcome. Use an engaging first-person narrative voice in the opening and transitions, building a short topic-specific arc from noticing the problem through diagnosis to a safe next step. You may show a clearly hypothetical situation naturally, without a boilerplate disclaimer; do not claim the event happened to you or a real customer.',
+    '- Never invent personal troubleshooting history, customer cases, credentials, quotations, test results, statistics, or guaranteed outcomes. First person may describe the guide\'s reasoning (what to check first), not fabricated autobiographical experience.',
+    '- Do not add a boilerplate disclaimer that a story is fictional. If you use an illustrative example, make its hypothetical nature clear naturally.',
+    '- Do not invent commands, menu names, version-specific behavior, or causes. If steps differ by OS version or configuration, say what to verify and offer the safest applicable branch. Warn before destructive steps, data loss, security changes, or registry edits.',
+    '- Give concrete diagnosis and practical steps in a logical order. Explain what each step checks, what to do based on the result, and when to stop or seek qualified help.',
+    '- Use natural, engaging native-language prose. Use enough narrative to keep the reader engaged while keeping the practical explanation and steps dominant; do not force a dramatic scene. Vary phrasing naturally by locale and do not reuse or translate another locale\'s prose.',
+    '',
+    '[LENGTH AND STRUCTURE]',
+    '- Korean: aim for about 2,400–2,600 characters; other languages: aim for about 900–1,100 words. These are targets, not permission to pad, repeat, or invent material. Accuracy and completeness come first.',
+    '- Use exactly five H2 headings below, in this order. Keep each section substantial and specific to this topic.',
+    '- Heading 1: explain the topic and a relevant symptom or use case without imposing a crisis.',
+    '- Heading 2: explain plausible topic-specific causes and how to distinguish them; no generic cause checklist.',
+    '- Heading 3: give three or more safe, ordered practical steps with decision points. Match reliable UI names to this locale; put commands and paths in backticks.',
+    '- Heading 4: cover topic-relevant risks, prevention, and when to stop or escalate.',
+    '- Heading 5: write exactly three useful topic-specific FAQ pairs with a blank line between each question and answer. Answer each directly.',
+    '- These are 12 independent compositions about the same topic, not translations of one master article. Keep core factual guidance consistent.',
+    '',
+    '[REQUIRED H2 HEADINGS]',
+    '## ' + i18n.s1,
+    '## ' + i18n.s2,
+    '## ' + i18n.s3,
+    '## ' + i18n.s4,
+    '## ' + i18n.s5,
+    '',
+    '[FORMATTING]',
+    '- Never put asterisks inside H2 headings. Bold syntax must be exactly **keyword**, without spaces inside.',
+    '- Put commands, file paths, and registry keys in inline backticks.',
+    lang.code !== 'ko' ? '- Do not include Korean characters.' : '',
+    '',
+    '[STRICT OUTPUT]',
+    'Return only raw Markdown, starting with frontmatter. Title and description must be natural ' + lang.name + ', clearly describe this exact topic, and not be generic placeholders. Use precisely these metadata values:',
+    '---',
+    'title: "A clear native-language title for the exact topic"',
+    'description: "A concise native-language description of this exact topic, under 160 characters"',
+    'publishDate: ' + pubDateIso,
+    'image: "' + coverUrl + '"',
+    'category: "tech"',
+    'tags: ' + JSON.stringify(i18n.tags),
+    'theme: "' + selectedTheme.name + '"',
+    '---',
+  ].filter(Boolean).join(String.fromCharCode(10));
 
   try {
     let rawText = await fetchWithRetry(prompt);
     let text = rawText.trim();
-    if (text.startsWith('```markdown')) text = text.replace(/^```markdown\n/, '').replace(/\n```$/, '');
-    if (text.startsWith('```')) text = text.replace(/^```\n/, '').replace(/\n```$/, '');
-
+    const fence = String.fromCharCode(96).repeat(3);
+    const fenced = new RegExp('^' + fence + '(?:markdown)?\\s*\\r?\\n([\\s\\S]*?)\\r?\\n' + fence + '$', 'i').exec(text);
+    if (fenced) text = fenced[1].trim();
+    else if (text.startsWith(fence) || text.endsWith(fence)) throw new Error('Markdown code fence가 열리거나 닫히지 않았습니다.');
     const fmMatch = text.match(/^---[\s\S]*?---\n*/);
     if (fmMatch) {
       let frontmatter = fmMatch[0].trim();
       let body = text.slice(fmMatch[0].length).trim();
       body = body.replace(/^#\s+[^\n]+\n+/, '');
 
-      // ⚠️ 1호기 카테고리 'tech' 영구 보존 강제 검증
-      frontmatter = frontmatter.replace(/category:\s*["'][^"']*["']/i, "category: 'tech'")
-                               .replace(/category:\s*[^\n\r]+/i, "category: 'tech'");
-
       // 🩺 [자가 검수 및 치유 엔진 가동]
-      body = inspectAndHealMarkdown(body, lang.code);
+      body = inspectAndHealMarkdown(body);
 
       if (lang.code === 'ko') {
         console.log(`   📏 [1호기 본문 최종 글자 수] ${body.length}자 (애드센스 표준: 2,400~2,600자)`);
@@ -479,7 +480,7 @@ theme: "${selectedTheme.name}"
       fs.mkdirSync(targetDir, { recursive: true });
     }
 
-    const validationErrors = validateGeneratedPost(text, lang.code);
+    const validationErrors = validateGeneratedPost(text, lang.code, { publishDate: pubDateIso, coverUrl, theme: selectedTheme.name, tags: i18n.tags });
     if (validationErrors.length) throw new Error('발행 전 검수 실패: ' + validationErrors.join(', '));
 
     const filePath = path.join(targetDir, `${fileSlug}.md`);
