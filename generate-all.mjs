@@ -212,6 +212,9 @@ function validateGeneratedPost(text, langCode) {
   const bodyImages = [...body.matchAll(/!\[[^\]\r\n]*\]\(([^)\r\n]+)\)/g)];
   if (bodyImages.some(match => !match[1].trim().startsWith('/images/tech-photo/')))
     errors.push('body image must use /images/tech-photo');
+  // Block image syntaxes not covered by the inline Markdown path check; never silently accept external images.
+  if (/<img\b/i.test(body) || /!\[[^\]\r\n]*\]\[[^\]\r\n]*\]/.test(body))
+    errors.push('unsupported body image syntax');
   const readable = body.replace(/!\[[^\]]*\]\([^)]*\)/g,'').replace(/[#*_\x60>]/g,'');
   const isCharacterCountLanguage = langCode === 'ko' || langCode === 'ja';
   const count = isCharacterCountLanguage ? [...readable.replace(/\s/g, '')].length : (readable.match(/\S+/g) || []).length;
@@ -522,6 +525,8 @@ async function run() {
     if (techPhotoUrl('sample #1?.jpg') !== '/images/tech-photo/sample%20%231%3F.jpg') throw new Error('Local photo filename URL escaping regression');
     if (!validateGeneratedPost(sample.replace('image: /images/tech-photo/test.jpg', 'image: https://example.com/other.jpg'), 'ko').includes('image must use /images/tech-photo')) throw new Error('Tech image path gate regression');
     if (!validateGeneratedPost(japaneseSample.replace('## 2. 原因', '![Untrusted](https://example.com/photo.jpg)\n\n## 2. 原因'), 'ja').includes('body image must use /images/tech-photo')) throw new Error('Untrusted body image gate regression');
+    if (!validateGeneratedPost(japaneseSample.replace('## 2. 原因', '<img src="https://example.com/photo.jpg">\n\n## 2. 原因'), 'ja').includes('unsupported body image syntax')) throw new Error('HTML image bypass regression');
+    if (!validateGeneratedPost(japaneseSample.replace('## 2. 原因', '![Untrusted][external-photo]\n\n## 2. 原因'), 'ja').includes('unsupported body image syntax')) throw new Error('Reference image bypass regression');
     if (!validateGeneratedPost(sample.replace('category: tech', 'category: hardware'), 'ko').includes('category must be tech')) throw new Error('Tech-only category gate regression');
     if (!validateGeneratedPost(sample.replace('category: tech', 'category: tech\ncategory: tech'), 'ko').includes('category duplicated')) throw new Error('Duplicate category gate regression');
     if (!validateGeneratedPost(sample.replace('title: sample', 'title: Native Clear Title in English'), 'ko').includes('unreplaced prompt placeholder')) throw new Error('Prompt placeholder gate regression');
