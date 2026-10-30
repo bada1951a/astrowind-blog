@@ -1,6 +1,6 @@
 import { createHash } from 'node:crypto';
 
-export const GENERATION_RECIPE_VERSION = '1ho-topic-specific-headings-v6';
+export const GENERATION_RECIPE_VERSION = '1ho-truthful-first-person-v7';
 
 export function createTopicFileSlug(topic) {
   if (typeof topic !== 'string' || !topic.trim()) {
@@ -84,3 +84,4 @@ export function decidePublishLocales(targetLanguages, successfulLocaleCodes, min
     canPublish: passingCodes.length >= minimum,
   };
 }
+
