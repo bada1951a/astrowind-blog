@@ -75,21 +75,13 @@ const publicationTargets = ['ko', 'en', 'ja', 'de', 'fr', 'es', 'it', 'pt', 'nl'
   code,
 }));
 
-test('publication gate preserves every passing locale, including a single success', () => {
-  const one = decidePublishLocales(publicationTargets, ['ko'], 1);
-  assert.equal(one.canPublish, true);
-  assert.deepEqual(one.passingCodes, ['ko']);
-  assert.deepEqual(
-    one.failedCodes,
-    publicationTargets.slice(1).map(({ code }) => code)
-  );
-
+test('publication gate requires at least 10 of 12 locales and returns only passing locales', () => {
   const nine = decidePublishLocales(
     publicationTargets,
-    publicationTargets.slice(0, 9).map(({ code }) => code),
-    1
+    publicationTargets.slice(0, 9).map(({ code }) => code)
   );
-  assert.equal(nine.canPublish, true);
+  assert.equal(nine.minimum, 10);
+  assert.equal(nine.canPublish, false);
   assert.deepEqual(
     nine.passingCodes,
     publicationTargets.slice(0, 9).map(({ code }) => code)
@@ -101,8 +93,7 @@ test('publication gate preserves every passing locale, including a single succes
 
   const ten = decidePublishLocales(
     publicationTargets,
-    publicationTargets.slice(0, 10).map(({ code }) => code),
-    1
+    publicationTargets.slice(0, 10).map(({ code }) => code)
   );
   assert.equal(ten.canPublish, true);
   assert.deepEqual(ten.passingLocales, publicationTargets.slice(0, 10));
@@ -113,25 +104,22 @@ test('publication gate preserves every passing locale, including a single succes
 
   const twelve = decidePublishLocales(
     publicationTargets,
-    publicationTargets.map(({ code }) => code),
-    1
+    publicationTargets.map(({ code }) => code)
   );
   assert.equal(twelve.canPublish, true);
   assert.deepEqual(twelve.passingLocales, publicationTargets);
   assert.deepEqual(twelve.failedCodes, []);
 });
-
-test('generator publishes successes and retains the topic until failed locales recover', () => {
+test('generator enforces the 10/12 threshold and retries failed locales', () => {
   const source = readFileSync(new URL('../generate-all.mjs', import.meta.url), 'utf8');
-  assert.match(source, /decidePublishLocales\(TARGET_LANGS, successfulLocales, 1\)/);
-  assert.match(source, /if \(!publication\.canPublish\)/);
-  assert.match(source, /for \(const lang of publication\.passingLocales\)/);
-  assert.match(source, /if \(failedLocales\.length === 0\)\s*\{\s*lines\.shift\(\)/);
-  assert.match(source, /실패 locale만 다음 실행에서 재시도하도록 주제를 topics\.txt에 유지합니다/);
-  assert.match(source, /실패 locale은 topics\.txt에 유지해 다음 실행에서 재시도합니다/);
-  assert.match(source, /모든 locale 검증이 끝나 주제를 큐에서 제거했습니다/);
+  assert.ok(source.includes('decidePublishLocales(TARGET_LANGS, successfulLocales, 10)'));
+  assert.ok(source.includes('if (!publication.canPublish)'));
+  assert.ok(source.includes('for (const lang of publication.passingLocales)'));
+  assert.ok(source.includes('10개 미만이라 이번 실행은'));
+  assert.ok(source.includes('if (failedLocales.length === 0)'));
+  assert.ok(source.includes('실패 locale만 다음 실행에서 재시도하도록 주제를 topics.txt에 유지합니다'));
+  assert.ok(source.includes('실패 locale은 topics.txt에 유지해 다음 실행에서 재시도합니다'));
 });
-
 test('generator prompt enables engaging story examples while grounding claims in evidence', () => {
   const source = readFileSync(new URL('../generate-all.mjs', import.meta.url), 'utf8');
   assert.ok(source.includes('roughly 30% narrator reasoning'));
