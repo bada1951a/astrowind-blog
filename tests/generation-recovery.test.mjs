@@ -82,8 +82,14 @@ test('publication gate requires at least 10 of 12 locales and returns only passi
   );
   assert.equal(nine.minimum, 10);
   assert.equal(nine.canPublish, false);
-  assert.deepEqual(nine.passingCodes, publicationTargets.slice(0, 9).map(({ code }) => code));
-  assert.deepEqual(nine.failedCodes, publicationTargets.slice(9).map(({ code }) => code));
+  assert.deepEqual(
+    nine.passingCodes,
+    publicationTargets.slice(0, 9).map(({ code }) => code)
+  );
+  assert.deepEqual(
+    nine.failedCodes,
+    publicationTargets.slice(9).map(({ code }) => code)
+  );
 
   const ten = decidePublishLocales(
     publicationTargets,
@@ -91,9 +97,15 @@ test('publication gate requires at least 10 of 12 locales and returns only passi
   );
   assert.equal(ten.canPublish, true);
   assert.deepEqual(ten.passingLocales, publicationTargets.slice(0, 10));
-  assert.deepEqual(ten.failedCodes, publicationTargets.slice(10).map(({ code }) => code));
+  assert.deepEqual(
+    ten.failedCodes,
+    publicationTargets.slice(10).map(({ code }) => code)
+  );
 
-  const twelve = decidePublishLocales(publicationTargets, publicationTargets.map(({ code }) => code));
+  const twelve = decidePublishLocales(
+    publicationTargets,
+    publicationTargets.map(({ code }) => code)
+  );
   assert.equal(twelve.canPublish, true);
   assert.deepEqual(twelve.passingLocales, publicationTargets);
   assert.deepEqual(twelve.failedCodes, []);
@@ -231,3 +243,4 @@ test('locale personas avoid unsupported credentials or experience claims', () =>
     assert.ok(persona.length > 0);
   }
 });
+
