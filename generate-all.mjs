@@ -744,7 +744,7 @@ async function generateSinglePost(lang, index) {
     THEME_PRESETS[Math.floor(Math.random() * THEME_PRESETS.length)];
   let postImages;
   try {
-    postImages = await getPostImages(index);
+    postImages = await getPostImages(lang.code, index);
   } catch (error) {
     localeRecord.status = 'failed';
     localeRecord.lastError = error.message;
