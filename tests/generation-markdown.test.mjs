@@ -63,6 +63,64 @@ test('preserves formatting outside the FAQ block', () => {
   );
 });
 
+test('preserves FAQ code fences and marker-like examples inside the FAQ section', () => {
+  const fencedExample = [
+    '## 5. FAQ',
+    'Example source:',
+    '```md',
+    '**Q1.** Example question',
+    '**A1.** Example answer',
+    '```',
+    '**Q1.**',
+    'The real question follows the example.',
+    '**A1.**',
+    'The real answer is long enough to pass the minimum length check safely.',
+  ].join('\n');
+
+  assert.equal(
+    normalizeFaqMarkers(fencedExample),
+    [
+      '## 5. FAQ',
+      'Example source:',
+      '```md',
+      '**Q1.** Example question',
+      '**A1.** Example answer',
+      '```',
+      '',
+      '**Q1.** The real question follows the example.',
+      '',
+      '**A1.** The real answer is long enough to pass the minimum length check safely.',
+    ].join('\n')
+  );
+});
+
+test('preserves FAQ paragraph boundaries and continuation lines when repairing a split answer', () => {
+  const multilineAnswer = [
+    '## 5. FAQ',
+    '',
+    '**Q1.** Why should I check the backup first?',
+    '**A1.**',
+    'A backup protects files before a reset.',
+    'Check that the copy opens on another device.',
+    '',
+    'Keep the original until the restored copy is verified.',
+  ].join('\n');
+
+  assert.equal(
+    normalizeFaqMarkers(multilineAnswer),
+    [
+      '## 5. FAQ',
+      '',
+      '**Q1.** Why should I check the backup first?',
+      '',
+      '**A1.** A backup protects files before a reset.',
+      'Check that the copy opens on another device.',
+      '',
+      'Keep the original until the restored copy is verified.',
+    ].join('\n')
+  );
+});
+
 test('validator ignores Q/A examples before the FAQ section', () => {
   const input = [
     '## 1. Example',
@@ -107,3 +165,4 @@ test('validator rejects missing, short, or out-of-order FAQ pairs', () => {
     '## 5. FAQ\n\n**A1.** This answer is long enough to pass the minimum length check safely.\n\n**Q1.** Question one?\n\n**Q2.** Question two?\n\n**A2.** This answer is long enough to pass the minimum length check safely.\n\n**Q3.** Question three?\n\n**A3.** This answer is long enough to pass the minimum length check safely.';
   assert.ok(validateFaqStructure(wrongOrder).includes('FAQ 질문/답변 순서 오류'));
 });
+

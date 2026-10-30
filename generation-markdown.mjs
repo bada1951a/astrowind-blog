@@ -6,22 +6,16 @@ export function normalizeBoldWhitespace(markdown) {
 
 const faqMarkerPattern = /^\s*(?:\*{2,4})?\s*([QA])\s*([1-3])\s*[.．:：)]\s*(?:\*{2,4})?\s*(.*?)\s*$/i;
 
-function cleanFaqProse(lines) {
-  const prose = lines
-    .filter((line) => !/^\s*\*\*\s*$/.test(line))
-    .map((line) => line.trim())
-    .filter(Boolean)
-    .join(' ')
-    .replace(/^\*\*(.*?)\*\*$/, '$1')
-    .trim();
-
-  const boldTokenCount = (prose.match(/\*\*/g) || []).length;
+function cleanFaqProse(prose) {
+  const cleaned = String(prose)
+    .trim()
+    .replace(/^\*\*(.*?)\*\*$/, '$1');
+  const boldTokenCount = (cleaned.match(/\*\*/g) || []).length;
   if (boldTokenCount % 2 === 1) {
-    if (prose.startsWith('**')) return prose.slice(2).trim();
-    if (prose.endsWith('**')) return prose.slice(0, -2).trim();
+    if (cleaned.startsWith('**')) return cleaned.slice(2).trim();
+    if (cleaned.endsWith('**')) return cleaned.slice(0, -2).trim();
   }
-
-  return prose;
+  return cleaned;
 }
 
 function findFaqSection(lines) {
@@ -43,48 +37,70 @@ export function normalizeFaqMarkers(markdown) {
   const { start: faqStart, end: faqEnd } = findFaqSection(lines);
   if (faqStart < 0) return source;
   const faqLines = lines.slice(faqStart, faqEnd);
-  const markerIndexes = faqLines
-    .map((line, index) => (faqMarkerPattern.test(line) ? index : -1))
-    .filter((index) => index >= 0);
-  if (markerIndexes.length === 0) return source;
-
-  const faqFormattingStart = Math.max(0, markerIndexes[0] - 2);
-  const faqFormattingEnd = Math.min(faqLines.length - 1, markerIndexes[markerIndexes.length - 1] + 2);
   const output = [];
   let changed = false;
+  let fenceCharacter = null;
+  let fenceLength = 0;
 
   for (let index = 0; index < faqLines.length; index += 1) {
-    const match = faqMarkerPattern.exec(faqLines[index]);
-    if (!match) {
-      if (index >= faqFormattingStart && index <= faqFormattingEnd && /^\s*\*\*\s*$/.test(faqLines[index])) {
-        changed = true;
-        continue;
+    const line = faqLines[index];
+    const fence = line.match(/^ {0,3}(`{3,}|~{3,})/);
+    if (fenceCharacter) {
+      output.push(line);
+      if (fence && fence[1][0] === fenceCharacter && fence[1].length >= fenceLength) {
+        fenceCharacter = null;
+        fenceLength = 0;
       }
-      output.push(faqLines[index]);
+      continue;
+    }
+    if (fence) {
+      output.push(line);
+      fenceCharacter = fence[1][0];
+      fenceLength = fence[1].length;
       continue;
     }
 
-    const proseLines = [match[3]];
-    let nextIndex = index + 1;
-    while (nextIndex < faqLines.length && !faqMarkerPattern.test(faqLines[nextIndex])) {
-      if (/^\s*#{1,6}\s+/.test(faqLines[nextIndex])) break;
-      proseLines.push(faqLines[nextIndex]);
-      nextIndex += 1;
+    const match = faqMarkerPattern.exec(line);
+    if (!match) {
+      if (/^\s*\*\*\s*$/.test(line)) {
+        changed = true;
+        continue;
+      }
+      output.push(line);
+      continue;
     }
 
-    const prose = cleanFaqProse(proseLines);
+    let prose = cleanFaqProse(match[3]);
+    if (!prose) {
+      let proseIndex = index + 1;
+      while (proseIndex < faqLines.length && /^\s*(?:\*\*\s*)?$/.test(faqLines[proseIndex])) {
+        proseIndex += 1;
+      }
+      const nextLine = faqLines[proseIndex] || '';
+      if (
+        proseIndex < faqLines.length &&
+        !faqMarkerPattern.test(nextLine) &&
+        !/^\s*#{1,6}\s+/.test(nextLine) &&
+        !/^\s*(?:[-*+]|\d+[.)])\s+/.test(nextLine) &&
+        !/^\s*>/.test(nextLine) &&
+        !/^ {0,3}(?:`{3,}|~{3,})/.test(nextLine)
+      ) {
+        prose = cleanFaqProse(nextLine);
+        index = proseIndex;
+      }
+    }
+
     const canonical = `**${match[1].toUpperCase()}${match[2]}.**${prose ? ` ${prose}` : ''}`;
-    if (canonical !== faqLines[index] || nextIndex > index + 1) changed = true;
+    if (canonical !== line || (prose && !match[3].trim())) changed = true;
 
     while (output.length > 0 && output[output.length - 1] === '') output.pop();
     if (output.length > 0) output.push('');
     output.push(canonical);
-    index = nextIndex - 1;
   }
 
   if (!changed) return source;
-  const normalizedFaq = output.join('\n');
-  return [...lines.slice(0, faqStart), ...normalizedFaq.split('\n'), ...lines.slice(faqEnd)].join('\n');
+  const newline = source.includes('\r\n') ? '\r\n' : '\n';
+  return [...lines.slice(0, faqStart), ...output, ...lines.slice(faqEnd)].join(newline);
 }
 
 export function validateFaqStructure(markdown) {
@@ -113,3 +129,4 @@ export function validateFaqStructure(markdown) {
   }
   return [...new Set(errors)];
 }
+
