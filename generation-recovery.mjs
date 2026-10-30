@@ -41,6 +41,12 @@ export function createFreshGenerationManifest({ previousManifest, topic, recipeV
       keepIdentity && previousManifest.images && typeof previousManifest.images === 'object'
         ? previousManifest.images
         : {},
+    commonsImageSelection:
+      keepIdentity &&
+      previousManifest.commonsImageSelection &&
+      typeof previousManifest.commonsImageSelection === 'object'
+        ? previousManifest.commonsImageSelection
+        : null,
     locales: {},
   };
 }

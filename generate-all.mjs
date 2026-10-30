@@ -11,6 +11,7 @@ import fs from 'fs';
 import path from 'path';
 import crypto from 'crypto';
 import { normalizeBoldWhitespace } from './generation-markdown.mjs';
+import { selectCommonsImagePair } from './commons-image-selector.mjs';
 import {
   canResumeGenerationManifest,
   createFreshGenerationManifest,
@@ -96,9 +97,66 @@ function selectLocalPostImages(index) {
   return { coverUrl, bodyUrl };
 }
 
-function getPostImages(localeCode, index) {
+function getPreviouslyUsedCommonsSha1s() {
+  const used = new Set();
+  if (!fs.existsSync(POSTS_BASE_DIR)) return used;
+  for (const entry of fs.readdirSync(POSTS_BASE_DIR, { recursive: true })) {
+    if (typeof entry !== 'string' || !entry.endsWith('.md')) continue;
+    const filePath = path.join(POSTS_BASE_DIR, entry);
+    if (!fs.statSync(filePath).isFile()) continue;
+    const markdown = fs.readFileSync(filePath, 'utf8');
+    for (const match of markdown.matchAll(/\/images\/commons\/([a-f0-9]{40})\.(?:jpg|png|webp)/giu)) {
+      used.add(match[1].toLowerCase());
+    }
+  }
+  return used;
+}
+
+async function getPostImages(localeCode, index) {
   generationManifest.images ||= {};
   if (generationManifest.images[localeCode]) return generationManifest.images[localeCode];
+
+  const commonsSelection = generationManifest.commonsImageSelection;
+  if (commonsSelection?.status === 'selected') {
+    const validFiles =
+      commonsSelection.files?.length === 2 &&
+      commonsSelection.files.every((file) => fs.existsSync(path.resolve('public', file.localUrl.replace(/^\//u, ''))));
+    if (validFiles) {
+      for (const lang of TARGET_LANGS) generationManifest.images[lang.code] = commonsSelection.images;
+      saveRecoveryManifest();
+      return commonsSelection.images;
+    }
+    generationManifest.commonsImageSelection = { status: 'fallback', reason: 'cached-commons-file-missing' };
+    saveRecoveryManifest();
+  }
+
+  // Never change image sources halfway through a recovered locale set.
+  const hasExistingLocaleImages = Object.keys(generationManifest.images).length > 0;
+  if (!hasExistingLocaleImages && !generationManifest.commonsImageSelection) {
+    const selection = await selectCommonsImagePair({
+      topic: currentTopic,
+      usedSha1s: getPreviouslyUsedCommonsSha1s(),
+      outputDir: path.resolve('public/images/commons'),
+    });
+    if (selection) {
+      const files = selection.files.map((file) => ({
+        ...file,
+        localPath: path.resolve('public', file.localUrl.replace(/^\//u, '')),
+      }));
+      generationManifest.commonsImageSelection = { ...selection, files };
+      for (const lang of TARGET_LANGS) generationManifest.images[lang.code] = selection.images;
+      saveRecoveryManifest();
+      console.log('🖼️ 이번 주제의 Commons CC0 이미지 2장을 12개 locale에서 재사용합니다.');
+      return selection.images;
+    }
+    generationManifest.commonsImageSelection = { status: 'fallback', reason: 'no-verified-cc0-pair' };
+    saveRecoveryManifest();
+    console.log('ℹ️ 조건을 통과한 Commons CC0 이미지 2장을 찾지 못해 기존 로컬 이미지 풀을 사용합니다.');
+  } else if (!generationManifest.commonsImageSelection) {
+    generationManifest.commonsImageSelection = { status: 'fallback', reason: 'locale-set-already-started' };
+    saveRecoveryManifest();
+  }
+
   const pair = selectLocalPostImages(index);
   generationManifest.images[localeCode] = pair;
   saveRecoveryManifest();

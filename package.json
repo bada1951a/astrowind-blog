@@ -20,7 +20,7 @@
     "fix": "npm run fix:eslint && npm run fix:prettier",
     "fix:eslint": "eslint --fix .",
     "fix:prettier": "prettier -w .",
-    "test:recovery": "node --test tests/generation-recovery.test.mjs"
+    "test:recovery": "node --test tests/generation-recovery.test.mjs tests/commons-image-selector.test.mjs"
   },
   "dependencies": {
     "@astro-community/astro-embed-twitter": "^0.5.11",
