@@ -180,7 +180,7 @@ test('numbered-step guidance matches the validator format and correction error w
   assert.match(NUMBERED_STEPS_GUIDANCE, /Do not invent product behavior, facts, or actions/);
   assert.match(NUMBERED_STEPS_GUIDANCE, /allow validation to fail/);
   const instruction = getNumberedStepsCorrectionInstruction([NUMBERED_STEPS_VALIDATION_ERROR]);
-  assert.match(instruction, /^\\[NUMBERED STEPS CORRECTION\\]/);
+  assert.match(instruction, /^\[NUMBERED STEPS CORRECTION\]/);
   assert.ok(instruction.includes(NUMBERED_STEPS_GUIDANCE));
   assert.equal(getNumberedStepsCorrectionInstruction(['unrelated validator error']), '');
 });
