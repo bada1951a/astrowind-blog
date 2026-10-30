@@ -591,7 +591,6 @@ function validateGeneratedPost(text, langCode, expected) {
   if (body.split(tick.repeat(3)).length % 2 === 0) errors.push('코드펜스 미종결');
 
   const headings = [...body.matchAll(/^##\s+(.+)\s*$/gm)].map((match) => match[1].trim());
-  const i18n = I18N_SECTIONS[langCode];
   if (headings.length !== 5) errors.push('H2 섹션 수가 5개와 불일치');
   const headingNumbers = headings.map((heading) => heading.match(/^(\d+)[.)]\s+\S/)?.[1] || '');
   if (headingNumbers.join(',') !== '1,2,3,4,5') errors.push('H2 제목은 1~5번 순서의 주제 맞춤 번호형이어야 함');
