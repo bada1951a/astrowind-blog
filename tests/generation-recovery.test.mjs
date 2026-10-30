@@ -132,6 +132,12 @@ test('generator prompt specifies the FAQ markers required by its structural vali
   assert.ok(source.includes('separate every question from its answer with a blank line'));
 });
 
+test('targeted FAQ correction prompt separates its guidance with real line breaks', () => {
+  const source = readFileSync(new URL('../generate-all.mjs', import.meta.url), 'utf8');
+  assert.ok(source.includes("'\\n\\nFor FAQ structure"));
+  assert.equal(source.includes("'\\\\n\\\\nFor FAQ structure"), false);
+});
+
 test('bold whitespace normalization preserves Q&A labels and blank lines', () => {
   const input = [
     '**Q1.** What does this check?',
