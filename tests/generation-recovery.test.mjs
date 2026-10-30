@@ -110,15 +110,17 @@ test('publication gate requires at least 10 of 12 locales and returns only passi
   assert.deepEqual(twelve.passingLocales, publicationTargets);
   assert.deepEqual(twelve.failedCodes, []);
 });
-test('generator enforces the 10/12 threshold and retries failed locales', () => {
+test('generator applies the 10/12 gate, retains under-threshold topics, and discards failed locales after partial publication', () => {
   const source = readFileSync(new URL('../generate-all.mjs', import.meta.url), 'utf8');
   assert.ok(source.includes('decidePublishLocales(TARGET_LANGS, successfulLocales, 10)'));
   assert.ok(source.includes('if (!publication.canPublish)'));
   assert.ok(source.includes('for (const lang of publication.passingLocales)'));
   assert.ok(source.includes('10개 미만이라 이번 실행은'));
-  assert.ok(source.includes('if (failedLocales.length === 0)'));
-  assert.ok(source.includes('실패 locale만 다음 실행에서 재시도하도록 주제를 topics.txt에 유지합니다'));
-  assert.ok(source.includes('실패 locale은 topics.txt에 유지해 다음 실행에서 재시도합니다'));
+  assert.ok(source.includes('lines.shift();'));
+  assert.ok(source.includes("generationManifest.status = failedLocales.length ? 'published_partial_set' : 'published';"));
+  assert.ok(source.includes('실패 locale은 이번 세트에서 제외했고 주제를 큐에서 제거했습니다.'));
+  assert.equal(source.includes('실패 locale만 다음 실행에서 재시도하도록 주제를 topics.txt에 유지합니다.'), false);
+  assert.equal(source.includes('실패 locale은 topics.txt에 유지해 다음 실행에서 재시도합니다.'), false);
 });
 test('generator prompt enables engaging story examples while grounding claims in evidence', () => {
   const source = readFileSync(new URL('../generate-all.mjs', import.meta.url), 'utf8');
