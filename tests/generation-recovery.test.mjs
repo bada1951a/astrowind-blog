@@ -239,4 +239,3 @@ test('locale personas avoid unsupported credentials or experience claims', () =>
     assert.ok(persona.length > 0);
   }
 });
-
