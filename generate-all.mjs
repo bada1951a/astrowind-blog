@@ -13,6 +13,7 @@ import crypto from 'crypto';
 import {
   canResumeGenerationManifest,
   createFreshGenerationManifest,
+  createTopicFileSlug,
   GENERATION_RECIPE_VERSION,
 } from './generation-recovery.mjs';
 
@@ -331,7 +332,7 @@ if (canResumeGenerationManifest(previousManifest, currentTopic, GENERATION_RECIP
     previousManifest,
     topic: currentTopic,
     recipeVersion: GENERATION_RECIPE_VERSION,
-    fileSlug: 'post-' + Date.now().toString(36),
+    fileSlug: createTopicFileSlug(currentTopic),
     publishDate: getKstPublishDateIso(),
   });
 }

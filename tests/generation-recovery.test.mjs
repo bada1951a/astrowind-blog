@@ -5,6 +5,7 @@ import { readFileSync } from 'node:fs';
 import {
   canResumeGenerationManifest,
   createFreshGenerationManifest,
+  createTopicFileSlug,
   GENERATION_RECIPE_VERSION,
 } from '../generation-recovery.mjs';
 
@@ -47,3 +48,14 @@ test('generator passes locale code and index to the image recovery lookup', () =
   assert.match(generatorSource, /function getPostImages\(localeCode, index\)/);
   assert.match(generatorSource, /postImages = await getPostImages\(lang\.code, index\);/);
 });
+
+test('topic file slugs are deterministic, normalized, and topic-scoped', () => {
+  const topic = 'Diagnose a slow laptop startup';
+  const slug = createTopicFileSlug(topic);
+
+  assert.equal(slug, createTopicFileSlug(topic));
+  assert.equal(slug, createTopicFileSlug(`  ${topic}  `));
+  assert.match(slug, /^post-[a-f0-9]{16}$/);
+  assert.notEqual(slug, createTopicFileSlug('Diagnose a slow laptop battery'));
+});
+
