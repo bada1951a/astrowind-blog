@@ -1,7 +1,12 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
 import { readFileSync } from 'node:fs';
-import { normalizeBoldWhitespace } from '../generation-markdown.mjs';
+import {
+  getNumberedStepsCorrectionInstruction,
+  normalizeBoldWhitespace,
+  NUMBERED_STEPS_GUIDANCE,
+  NUMBERED_STEPS_VALIDATION_ERROR,
+} from '../generation-markdown.mjs';
 
 import {
   canResumeGenerationManifest,
@@ -29,6 +34,27 @@ test('the generator requests topic-specific headings and rejects boilerplate cla
   assert.ok(source.includes('Make each concise and specific to the exact topic and its section'));
   assert.ok(source.includes('Do not claim guaranteed resolution times or outcomes'));
   assert.ok(source.includes("headingNumbers.join(',') !== '1,2,3,4,5'"));
+});
+
+test('numbered-step guidance matches the validator format without permitting invented actions', () => {
+  assert.match(NUMBERED_STEPS_GUIDANCE, /H2 section 3/);
+  assert.match(NUMBERED_STEPS_GUIDANCE, /own Markdown ordered-list line/);
+  assert.match(NUMBERED_STEPS_GUIDANCE, /ASCII markers `1\.`, `2\.`, and `3\.`/);
+  assert.match(NUMBERED_STEPS_GUIDANCE, /Do not invent product behavior, facts, or actions/);
+  assert.match(NUMBERED_STEPS_GUIDANCE, /allow validation to fail/);
+
+  const instruction = getNumberedStepsCorrectionInstruction([NUMBERED_STEPS_VALIDATION_ERROR]);
+  assert.match(instruction, /^\[NUMBERED STEPS CORRECTION\]/);
+  assert.ok(instruction.includes(NUMBERED_STEPS_GUIDANCE));
+  assert.equal(getNumberedStepsCorrectionInstruction(['unrelated validator error']), '');
+});
+
+test('numbered-step guidance is shared by generation and only added to matching corrections', () => {
+  const source = readFileSync(new URL('../generate-all.mjs', import.meta.url), 'utf8');
+  assert.match(source, /NUMBERED_STEPS_GUIDANCE/);
+  assert.match(source, /getNumberedStepsCorrectionInstruction\(prepared\.errors\)/);
+  assert.match(source, /while \(prepared\.errors\.length > 0 && correctionAttempts < 2\)/);
+  assert.match(source, /decidePublishLocales\(/);
 });
 
 test('same recipe version resumes validated locale drafts', () => {
