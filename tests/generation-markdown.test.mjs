@@ -47,7 +47,7 @@ test('normalizes FAQ markers and prose split across lines without changing the w
       '**Q3.** Can I delete app data instead?',
       '',
       '**A3.** Only after backing up important files and checking sign-in recovery.',
-  ].join('\n');
+    ].join('\n')
   );
 
   const normalized = normalizeFaqMarkers(input);
@@ -81,7 +81,7 @@ test('splits multiple FAQ markers on one line while preserving their prose', () 
       '**Q3.** Can I disable the service immediately?',
       '',
       '**A3.** First confirm the service is actually causing the load and save open work. If the cause remains unclear, avoid changing startup settings.',
-  ].join('\n');
+    ].join('\n')
   );
   assert.deepEqual(validateFaqStructure(normalized), []);
 });
@@ -126,7 +126,7 @@ test('preserves FAQ code fences and marker-like examples inside the FAQ section'
       '**Q1.** The real question follows the example.',
       '',
       '**A1.** The real answer is long enough to pass the minimum length check safely.',
-  ].join('\n');
+    ].join('\n')
   );
 });
 
@@ -153,7 +153,7 @@ test('preserves FAQ paragraph boundaries and continuation lines when repairing a
       'Check that the copy opens on another device.',
       '',
       'Keep the original until the restored copy is verified.',
-  ].join('\n');
+    ].join('\n')
   );
 });
 
@@ -169,7 +169,7 @@ test('validator ignores Q/A examples before the FAQ section', () => {
     '**A2.** This answer is long enough to pass the minimum length check safely.',
     '**Q3.** Third question?',
     '**A3.** This answer is long enough to pass the minimum length check safely.',
-  ].join('\n');
+  ].join('\n\n');
   assert.deepEqual(validateFaqStructure(input), []);
 });
 
