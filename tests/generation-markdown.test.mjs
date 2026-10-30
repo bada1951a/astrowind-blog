@@ -165,4 +165,3 @@ test('validator rejects missing, short, or out-of-order FAQ pairs', () => {
     '## 5. FAQ\n\n**A1.** This answer is long enough to pass the minimum length check safely.\n\n**Q1.** Question one?\n\n**Q2.** Question two?\n\n**A2.** This answer is long enough to pass the minimum length check safely.\n\n**Q3.** Question three?\n\n**A3.** This answer is long enough to pass the minimum length check safely.';
   assert.ok(validateFaqStructure(wrongOrder).includes('FAQ 질문/답변 순서 오류'));
 });
-
