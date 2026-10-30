@@ -184,4 +184,3 @@ export function validateFaqStructure(markdown) {
   }
   return [...new Set(errors)];
 }
-
