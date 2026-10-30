@@ -84,4 +84,3 @@ export function decidePublishLocales(targetLanguages, successfulLocaleCodes, min
     canPublish: passingCodes.length >= minimum,
   };
 }
-
