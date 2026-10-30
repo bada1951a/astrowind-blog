@@ -18,7 +18,9 @@ const savedManifest = {
   fileSlug: 'post-stable-slug',
   publishDate: '2026-10-30T10:00:00.000Z',
   status: 'in_progress',
-  images: { ko: { coverUrl: '/images/cover.jpg', bodyUrl: '/images/body.jpg' } },
+  images: {
+    ko: { coverUrl: '/images/cover.jpg', bodyUrl: '/images/body.jpg' },
+  },
   locales: { ko: { status: 'validated' } },
 };
 
@@ -114,7 +116,6 @@ test('generator prompt specifies a topic-fit first-person narrative and practica
   assert.ok(source.includes('70% practical explanations'));
 });
 
-
 test('bold whitespace normalization preserves Q&A labels and blank lines', () => {
   const input = [
     '**Q1.** What does this check?',
@@ -140,8 +141,14 @@ test('bold whitespace normalization preserves Q&A labels and blank lines', () =>
 
   const questions = [...normalized.matchAll(/^\*\*Q([1-3])\.\*\*/gm)];
   const answers = [...normalized.matchAll(/^\*\*A([1-3])\.\*\*/gm)];
-  assert.deepEqual(questions.map((match) => match[1]), ['1', '2', '3']);
-  assert.deepEqual(answers.map((match) => match[1]), ['1', '2', '3']);
+  assert.deepEqual(
+    questions.map((match) => match[1]),
+    ['1', '2', '3']
+  );
+  assert.deepEqual(
+    answers.map((match) => match[1]),
+    ['1', '2', '3']
+  );
   for (const [index, question] of questions.entries()) {
     assert.equal(question[1], String(index + 1));
     assert.equal(answers[index][1], question[1]);
