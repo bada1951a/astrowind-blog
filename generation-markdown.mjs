@@ -44,7 +44,7 @@ function splitInlineFaqMarkerLines(lines) {
   const output = [];
   let fenceCharacter = null;
   let fenceLength = 0;
-  const markerPattern = /(?:\\*{2,4}\\s*)?([QA])\\s*([1-3])\\s*[.．:：)](?:\\s*\\*{2,4})?/gi;
+  const markerPattern = /(?:\*{2,4}\s*)?([QA])\s*([1-3])\s*[.．:：)](?:\s*\*{2,4})?/gi;
 
   for (const line of lines) {
     const fence = line.match(/^ {0,3}(`{3,}|~{3,})/);
