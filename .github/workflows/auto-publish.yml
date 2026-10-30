@@ -6,6 +6,10 @@ on:
       timezone: 'Asia/Seoul'
   workflow_dispatch: # Actions 탭에서 수동 실행 가능
 
+concurrency:
+  group: blog-publish-${{ github.repository }}-${{ github.ref }}
+  cancel-in-progress: false
+  queue: max
 permissions:
   contents: write # 생성된 새 글을 GitHub 리포지토리에 푸시하기 위한 필수 권한
 
