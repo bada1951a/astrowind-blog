@@ -789,7 +789,7 @@ async function generateSinglePost(lang, index) {
     '',
     '- Do not invent commands, menu names, version-specific behavior, or causes. If steps differ by OS version or configuration, say what to verify and offer the safest applicable branch. Warn before destructive steps, data loss, security changes, or registry edits.',
     '- Give concrete diagnosis and practical steps in a logical order. Explain what each step checks, what to do based on the result, and when to stop or seek qualified help.',
-    "- Use natural, engaging native-language prose. Use enough narrative to keep the reader engaged while keeping the practical explanation and steps dominant; do not force a dramatic scene. Vary phrasing naturally by locale and do not reuse or translate another locale's prose.",
+    "- Use a natural, engaging first-person guide voice. Aim for roughly 30% narrator reasoning and transitions and 70% practical explanations, diagnosis, and steps. Keep each story moment tied to this topic; do not add filler, force drama, reuse another locale's prose, or translate it.",
     '',
     '[LENGTH AND STRUCTURE]',
     '- Korean: aim for about 2,400–2,600 characters. Japanese: aim for about 1,800–3,200 Japanese characters, excluding spaces. Other languages: aim for about 900–1,100 words. These are targets, not permission to pad, repeat, or invent material. Accuracy and completeness come first.',
