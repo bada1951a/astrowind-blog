@@ -121,7 +121,12 @@ test('generator prompt requires truthful first-person guidance without invented 
   const source = readFileSync(new URL('../generate-all.mjs', import.meta.url), 'utf8');
   assert.ok(source.includes('roughly 30% narrator reasoning'));
   assert.ok(source.includes('70% practical explanations'));
-  for (const directive of ["Use first person only for the guide narrator's present reasoning and recommendations, such as what I would check next; do not claim past events.","Open with the assigned topic's symptom, reader question, or decision point, then explain what I would check and why. Do not stage a personal scene.","Unless the user supplied it as verified fact, do not invent or imply a narrator's past event, commute, customer interaction, meeting, named person, specific city, date, time, or case.","Do not add a disclaimer that a scene is hypothetical, fictional, illustrative, or not a real customer case."]) {
+  for (const directive of [
+    "Use first person only for the guide narrator's present reasoning and recommendations, such as what I would check next; do not claim past events.",
+    "Open with the assigned topic's symptom, reader question, or decision point, then explain what I would check and why. Do not stage a personal scene.",
+    "Unless the user supplied it as verified fact, do not invent or imply a narrator's past event, commute, customer interaction, meeting, named person, specific city, date, time, or case.",
+    'Do not add a disclaimer that a scene is hypothetical, fictional, illustrative, or not a real customer case.',
+  ]) {
     assert.ok(source.includes(directive), 'Missing truthful narration directive: ' + directive);
   }
   const localeStart = source.indexOf('const TARGET_LANGS = [');
@@ -129,8 +134,37 @@ test('generator prompt requires truthful first-person guidance without invented 
   assert.notEqual(localeStart, -1);
   assert.notEqual(localeEnd, -1);
   const localeConfig = source.slice(localeStart, localeEnd);
-  const localeContexts = localeConfig.split('\n').filter((line) => line.includes('localeContext:')).join('\n').toLowerCase();
-  for (const place of ["seoul","silicon valley","new york","nyc","tokyo","marunouchi","shinagawa","frankfurt","munich","münchen","berlin","paris la défense","madrid","milan","milano","são paulo","amsterdam","zuidas","warsaw","warszawa","jakarta","ho chi minh","quận 1","hà nội"]) {
+  const localeContexts = localeConfig
+    .split('\n')
+    .filter((line) => line.includes('localeContext:'))
+    .join('\n')
+    .toLowerCase();
+  for (const place of [
+    'seoul',
+    'silicon valley',
+    'new york',
+    'nyc',
+    'tokyo',
+    'marunouchi',
+    'shinagawa',
+    'frankfurt',
+    'munich',
+    'münchen',
+    'berlin',
+    'paris la défense',
+    'madrid',
+    'milan',
+    'milano',
+    'são paulo',
+    'amsterdam',
+    'zuidas',
+    'warsaw',
+    'warszawa',
+    'jakarta',
+    'ho chi minh',
+    'quận 1',
+    'hà nội',
+  ]) {
     assert.equal(localeContexts.includes(place), false, 'locale context must not seed a city: ' + place);
   }
 });
@@ -187,6 +221,22 @@ test('bold whitespace normalization preserves Q&A labels and blank lines', () =>
     assert.equal(question[1], String(index + 1));
     assert.equal(answers[index][1], question[1]);
     assert.ok(question.index < answers[index].index);
+  }
+});
+
+test('locale personas avoid unsupported credentials or experience claims', () => {
+  const source = readFileSync(new URL('../generate-all.mjs', import.meta.url), 'utf8');
+  const personas = [...source.matchAll(/persona:\s*(['"])(.*?)\1/g)].map((match) => match[2].toLowerCase());
+  assert.equal(personas.length, 12);
+  const unsupportedClaim =
+    /(experienced|senior|expert|engineer|technician|specialist|professional|consultant|architect|現役|経験|専門家|エンジニア|기술자|전문가|경력|수리 기사|실무 경험|técnico|experto|especialista|technicien|ingénieur|esperto|experiente|techniker|ingenieur|serwisant|inżynier|chuyên gia|kỹ sư|teknisi senior)/i;
+  for (const persona of personas) {
+    assert.equal(
+      unsupportedClaim.test(persona),
+      false,
+      'Persona must not imply credentials or personal experience: ' + persona
+    );
+    assert.ok(persona.length > 0);
   }
 });
 
