@@ -56,6 +56,36 @@ test('normalizes FAQ markers and prose split across lines without changing the w
   assert.deepEqual(validateFaqStructure(normalized), []);
 });
 
+test('splits multiple FAQ markers on one line while preserving their prose', () => {
+  const input = [
+    '## 5. FAQ',
+    '- **Q1.** Should I check the disk activity first? **A1.** Yes. Sort Task Manager by disk usage and note which process stays at the top for several minutes.',
+    '**Q2.** Does high usage prove SysMain is responsible? **A2.** No. Compare the process list before changing a service, because another app or Windows task may be using the drive.',
+    '**Q3.** Can I disable the service immediately? **A3.** First confirm the service is actually causing the load and save open work. If the cause remains unclear, avoid changing startup settings.',
+  ].join('\\n');
+
+  const normalized = normalizeFaqMarkers(input);
+  assert.equal(
+    normalized,
+    [
+      '## 5. FAQ',
+      '',
+      '**Q1.** Should I check the disk activity first?',
+      '',
+      '**A1.** Yes. Sort Task Manager by disk usage and note which process stays at the top for several minutes.',
+      '',
+      '**Q2.** Does high usage prove SysMain is responsible?',
+      '',
+      '**A2.** No. Compare the process list before changing a service, because another app or Windows task may be using the drive.',
+      '',
+      '**Q3.** Can I disable the service immediately?',
+      '',
+      '**A3.** First confirm the service is actually causing the load and save open work. If the cause remains unclear, avoid changing startup settings.',
+    ].join('\\n')
+  );
+  assert.deepEqual(validateFaqStructure(normalized), []);
+});
+
 test('leaves missing FAQ prose empty instead of inventing content', () => {
   const input = '## 5. FAQ\n\n**Q1.**\n\n**A1.**';
   assert.equal(normalizeFaqMarkers(input), '## 5. FAQ\n\n**Q1.**\n\n**A1.**');
