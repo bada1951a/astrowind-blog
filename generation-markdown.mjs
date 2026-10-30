@@ -40,6 +40,47 @@ function findFaqSection(lines) {
  * Canonicalize FAQ labels and prose that the model split across lines or left
  * with stray bold markers. This changes formatting only; it never invents text.
  */
+function splitInlineFaqMarkerLines(lines) {
+  const output = [];
+  let fenceCharacter = null;
+  let fenceLength = 0;
+  const markerPattern = /(?:\\*{2,4}\\s*)?([QA])\\s*([1-3])\\s*[.．:：)](?:\\s*\\*{2,4})?/gi;
+
+  for (const line of lines) {
+    const fence = line.match(/^ {0,3}(`{3,}|~{3,})/);
+    if (fenceCharacter) {
+      output.push(line);
+      if (fence && fence[1][0] === fenceCharacter && fence[1].length >= fenceLength) {
+        fenceCharacter = null;
+        fenceLength = 0;
+      }
+      continue;
+    }
+    if (fence) {
+      output.push(line);
+      fenceCharacter = fence[1][0];
+      fenceLength = fence[1].length;
+      continue;
+    }
+
+    const markers = [...line.matchAll(markerPattern)];
+    if (markers.length < 2) {
+      output.push(line);
+      continue;
+    }
+
+    const prefix = line.slice(0, markers[0].index).trim();
+    if (prefix && !/^[-*+>]+$/.test(prefix)) output.push(prefix);
+    for (let index = 0; index < markers.length; index += 1) {
+      const start = markers[index].index;
+      const end = markers[index + 1]?.index ?? line.length;
+      output.push(line.slice(start, end).trim());
+    }
+  }
+
+  return output;
+}
+
 export function normalizeFaqMarkers(markdown) {
   const source = String(markdown);
   const lines = source.split(/\r?\n/);
@@ -47,7 +88,7 @@ export function normalizeFaqMarkers(markdown) {
   // labels in the article body are not mistaken for the FAQ.
   const { start: faqStart, end: faqEnd } = findFaqSection(lines);
   if (faqStart < 0) return source;
-  const faqLines = lines.slice(faqStart, faqEnd);
+  const faqLines = splitInlineFaqMarkerLines(lines.slice(faqStart, faqEnd));
   const output = [];
   let changed = false;
   let fenceCharacter = null;
