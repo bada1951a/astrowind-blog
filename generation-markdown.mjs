@@ -63,18 +63,19 @@ function splitInlineFaqMarkerLines(lines) {
       continue;
     }
 
-    const markers = [...line.matchAll(markerPattern)];
+    const faqLine = line.replace(/^(\s*)(?:[-*+]|\d+[.)])\s+(?=(?:\*{2,4}\s*)?[QA]\s*[1-3]\s*[.．:：)])/i, '$1');
+    const markers = [...faqLine.matchAll(markerPattern)];
     if (markers.length < 2) {
-      output.push(line);
+      output.push(faqLine);
       continue;
     }
 
-    const prefix = line.slice(0, markers[0].index).trim();
+    const prefix = faqLine.slice(0, markers[0].index).trim();
     if (prefix && !/^[-*+>]+$/.test(prefix)) output.push(prefix);
     for (let index = 0; index < markers.length; index += 1) {
       const start = markers[index].index;
-      const end = markers[index + 1]?.index ?? line.length;
-      output.push(line.slice(start, end).trim());
+      const end = markers[index + 1]?.index ?? faqLine.length;
+      output.push(faqLine.slice(start, end).trim());
     }
   }
 
