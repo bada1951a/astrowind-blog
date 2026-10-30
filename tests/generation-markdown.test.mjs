@@ -172,11 +172,10 @@ test('validator rejects missing, short, or out-of-order FAQ pairs', () => {
   assert.ok(validateFaqStructure(wrongOrder).includes('FAQ 질문/답변 순서 오류'));
 });
 
-
 test('numbered-step guidance matches the validator format and correction error without permitting invented actions', () => {
   assert.match(NUMBERED_STEPS_GUIDANCE, /H2 section 3/);
   assert.match(NUMBERED_STEPS_GUIDANCE, /own Markdown ordered-list line/);
-  assert.match(NUMBERED_STEPS_GUIDANCE, /ASCII markers `1\\.`, `2\\.`, and `3\\.`/);
+  assert.match(NUMBERED_STEPS_GUIDANCE, /ASCII markers `1\.`, `2\.`, and `3\.`/);
   assert.match(NUMBERED_STEPS_GUIDANCE, /Do not invent product behavior, facts, or actions/);
   assert.match(NUMBERED_STEPS_GUIDANCE, /allow validation to fail/);
   const instruction = getNumberedStepsCorrectionInstruction([NUMBERED_STEPS_VALIDATION_ERROR]);
