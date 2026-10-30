@@ -6,6 +6,7 @@ import {
   canResumeGenerationManifest,
   createFreshGenerationManifest,
   createTopicFileSlug,
+  decidePublishLocales,
   GENERATION_RECIPE_VERSION,
 } from '../generation-recovery.mjs';
 
@@ -58,4 +59,31 @@ test('topic file slugs are deterministic, normalized, and topic-scoped', () => {
   assert.equal(slug, createTopicFileSlug(topic.replace(/\s+/gu, '   ')));
   assert.match(slug, /^post-[a-f0-9]{16}$/);
   assert.notEqual(slug, createTopicFileSlug('Diagnose a slow laptop battery'));
+});
+
+
+const publicationTargets = ['ko', 'en', 'ja', 'de', 'fr', 'es', 'it', 'pt', 'nl', 'pl', 'id', 'vi'].map((code) => ({ code }));
+
+test('publication gate allows exactly passing locales at 9/12, 10/12, and 12/12', () => {
+  const nine = decidePublishLocales(publicationTargets, publicationTargets.slice(0, 9).map(({ code }) => code));
+  assert.equal(nine.canPublish, false);
+  assert.deepEqual(nine.passingCodes, publicationTargets.slice(0, 9).map(({ code }) => code));
+  assert.deepEqual(nine.failedCodes, publicationTargets.slice(9).map(({ code }) => code));
+
+  const ten = decidePublishLocales(publicationTargets, publicationTargets.slice(0, 10).map(({ code }) => code));
+  assert.equal(ten.canPublish, true);
+  assert.deepEqual(ten.passingLocales, publicationTargets.slice(0, 10));
+  assert.deepEqual(ten.failedCodes, publicationTargets.slice(10).map(({ code }) => code));
+
+  const twelve = decidePublishLocales(publicationTargets, publicationTargets.map(({ code }) => code));
+  assert.equal(twelve.canPublish, true);
+  assert.deepEqual(twelve.passingLocales, publicationTargets);
+  assert.deepEqual(twelve.failedCodes, []);
+});
+
+test('generator uses the tested publication plan to gate and stage locales', () => {
+  const source = readFileSync(new URL('../generate-all.mjs', import.meta.url), 'utf8');
+  assert.match(source, /decidePublishLocales\(TARGET_LANGS, successfulLocales, 10\)/);
+  assert.match(source, /if \(!publication\.canPublish\)/);
+  assert.match(source, /for \(const lang of publication\.passingLocales\)/);
 });
