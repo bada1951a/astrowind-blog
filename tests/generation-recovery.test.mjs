@@ -117,7 +117,7 @@ test('generator prompt specifies a topic-fit first-person narrative and practica
 
 test('bold whitespace normalization preserves Q&A labels and blank lines', () => {
   const input = [
-    '**Q1.** What does this check? ',
+    '**Q1.** What does this check?',
     '',
     '**A1.** It checks the marker and keeps this answer on its own paragraph.',
     '',
@@ -142,5 +142,9 @@ test('bold whitespace normalization preserves Q&A labels and blank lines', () =>
   const answers = [...normalized.matchAll(/^\*\*A([1-3])\.\*\*/gm)];
   assert.deepEqual(questions.map((match) => match[1]), ['1', '2', '3']);
   assert.deepEqual(answers.map((match) => match[1]), ['1', '2', '3']);
-  assert.ok(questions.every((question) => answers.some((answer) => answer[1] === question[1] && question.index < answer.index)));
+  for (const [index, question] of questions.entries()) {
+    assert.equal(question[1], String(index + 1));
+    assert.equal(answers[index][1], question[1]);
+    assert.ok(question.index < answers[index].index);
+  }
 });
