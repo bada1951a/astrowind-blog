@@ -63,10 +63,7 @@ function splitInlineFaqMarkerLines(lines) {
       continue;
     }
 
-    const faqLine = line.replace(
-      /^(\s*)(?:[-*+]|\d+[.)])\s+(?=(?:\*{2,4}\s*)?[QA]\s*[1-3]\s*[.．:：)])/i,
-      '$1'
-    );
+    const faqLine = line.replace(/^(\s*)(?:[-*+]|\d+[.)])\s+(?=(?:\*{2,4}\s*)?[QA]\s*[1-3]\s*[.．:：)])/i, '$1');
     const markers = [...faqLine.matchAll(markerPattern)];
     if (markers.length < 2) {
       output.push(faqLine);
@@ -187,3 +184,4 @@ export function validateFaqStructure(markdown) {
   }
   return [...new Set(errors)];
 }
+
