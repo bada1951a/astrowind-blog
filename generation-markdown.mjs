@@ -24,6 +24,13 @@ function cleanFaqProse(lines) {
   return prose;
 }
 
+function findFaqSection(lines) {
+  const start = lines.findIndex((line) => /^##\s+5[.)]\s+\S/i.test(line));
+  if (start < 0) return { start: -1, end: -1 };
+  const nextSection = lines.findIndex((line, index) => index > start && /^##\s+/.test(line));
+  return { start, end: nextSection < 0 ? lines.length : nextSection };
+}
+
 /**
  * Canonicalize FAQ labels and prose that the model split across lines or left
  * with stray bold markers. This changes formatting only; it never invents text.
@@ -33,10 +40,8 @@ export function normalizeFaqMarkers(markdown) {
   const lines = source.split(/\r?\n/);
   // Restrict repair to the fifth H2 section so examples or literal Q1/A1
   // labels in the article body are not mistaken for the FAQ.
-  const faqStart = lines.findIndex((line) => /^##\s+5[.)]\s+\S/i.test(line));
+  const { start: faqStart, end: faqEnd } = findFaqSection(lines);
   if (faqStart < 0) return source;
-  const nextSection = lines.findIndex((line, index) => index > faqStart && /^##\s+/.test(line));
-  const faqEnd = nextSection < 0 ? lines.length : nextSection;
   const faqLines = lines.slice(faqStart, faqEnd);
   const markerIndexes = faqLines
     .map((line, index) => (faqMarkerPattern.test(line) ? index : -1))
@@ -83,7 +88,9 @@ export function normalizeFaqMarkers(markdown) {
 }
 
 export function validateFaqStructure(markdown) {
-  const body = String(markdown);
+  const lines = String(markdown).split(/\r?\n/);
+  const { start, end } = findFaqSection(lines);
+  const body = start < 0 ? '' : lines.slice(start, end).join('\n');
   const errors = [];
   const questions = [...body.matchAll(/^\*\*Q([1-3])\.\*\*\s*(.+)$/gim)];
   const answers = [...body.matchAll(/^\*\*A([1-3])\.\*\*\s*(.+)$/gim)];

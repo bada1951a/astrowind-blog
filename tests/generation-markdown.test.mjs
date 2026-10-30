@@ -63,6 +63,22 @@ test('preserves formatting outside the FAQ block', () => {
   );
 });
 
+test('validator ignores Q/A examples before the FAQ section', () => {
+  const input = [
+    '## 1. Example',
+    '**Q1.** Example question?',
+    '**A1.** This example answer is long enough that it would pass the validator if counted.',
+    '## 5. FAQ',
+    '**Q1.** First question?',
+    '**A1.** This answer is long enough to pass the minimum length check safely.',
+    '**Q2.** Second question?',
+    '**A2.** This answer is long enough to pass the minimum length check safely.',
+    '**Q3.** Third question?',
+    '**A3.** This answer is long enough to pass the minimum length check safely.',
+  ].join('\n\n');
+  assert.deepEqual(validateFaqStructure(input), []);
+});
+
 test('normalizes plain and doubled-bold Q/A labels with full-width punctuation inside the FAQ section', () => {
   const input =
     '## 5. よくある質問 (FAQ)\n\nQ1：これは質問ですか？\nA1：これは回答です。\n\n****Q2．**** 別の質問ですか？\n**A2.** はい、確認できます。';
@@ -84,10 +100,10 @@ test('validator rejects missing, short, or out-of-order FAQ pairs', () => {
   assert.deepEqual(validateFaqStructure(missingPair), ['FAQ 질문 3개 구조 오류', 'FAQ 답변 3개 구조 오류']);
 
   const shortAnswer =
-    '**Q1.** Question one?\n\n**A1.** Too short.\n\n**Q2.** Question two?\n\n**A2.** This answer is long enough to pass the minimum length check safely.\n\n**Q3.** Question three?\n\n**A3.** This answer is long enough to pass the minimum length check safely.';
+    '## 5. FAQ\n\n**Q1.** Question one?\n\n**A1.** Too short.\n\n**Q2.** Question two?\n\n**A2.** This answer is long enough to pass the minimum length check safely.\n\n**Q3.** Question three?\n\n**A3.** This answer is long enough to pass the minimum length check safely.';
   assert.deepEqual(validateFaqStructure(shortAnswer), ['FAQ A1 답변이 너무 짧음']);
 
   const wrongOrder =
-    '**A1.** This answer is long enough to pass the minimum length check safely.\n\n**Q1.** Question one?\n\n**Q2.** Question two?\n\n**A2.** This answer is long enough to pass the minimum length check safely.\n\n**Q3.** Question three?\n\n**A3.** This answer is long enough to pass the minimum length check safely.';
+    '## 5. FAQ\n\n**A1.** This answer is long enough to pass the minimum length check safely.\n\n**Q1.** Question one?\n\n**Q2.** Question two?\n\n**A2.** This answer is long enough to pass the minimum length check safely.\n\n**Q3.** Question three?\n\n**A3.** This answer is long enough to pass the minimum length check safely.';
   assert.ok(validateFaqStructure(wrongOrder).includes('FAQ 질문/답변 순서 오류'));
 });
