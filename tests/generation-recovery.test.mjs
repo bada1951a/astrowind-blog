@@ -109,5 +109,6 @@ test('generator uses the tested publication plan to gate and stage locales', () 
 
 test('generator prompt specifies a topic-fit first-person narrative and practical balance', () => {
   const source = readFileSync(new URL('../generate-all.mjs', import.meta.url), 'utf8');
-  assert.match(source, /roughly 30%[\\s\\S]*70%/);
+  assert.ok(source.includes('roughly 30% narrator reasoning'));
+  assert.ok(source.includes('70% practical explanations'));
 });
