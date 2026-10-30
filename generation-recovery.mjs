@@ -1,6 +1,6 @@
 import { createHash } from 'node:crypto';
 
-export const GENERATION_RECIPE_VERSION = '1ho-truthful-first-person-v7';
+export const GENERATION_RECIPE_VERSION = '1ho-truthful-first-person-v8';
 
 export function createTopicFileSlug(topic) {
   if (typeof topic !== 'string' || !topic.trim()) {
