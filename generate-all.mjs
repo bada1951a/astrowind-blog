@@ -10,6 +10,7 @@
 import fs from 'fs';
 import path from 'path';
 import crypto from 'crypto';
+import { normalizeBoldWhitespace } from './generation-markdown.mjs';
 import {
   canResumeGenerationManifest,
   createFreshGenerationManifest,
@@ -238,12 +239,10 @@ function inspectAndHealMarkdown(body) {
     auditLogs.push('Q&A 줄바꿈 2열 분리 치유');
   }
 
-  // 3) 볼드 기호 안쪽 공백 정돈 (** 단어 ** -> **단어**)
-  if (/\*\*\s+[^*]+?\s+\*\*/.test(healed)) {
-    healed = healed
-      .replace(/\*\*\s+([^*]+?)\s+\*\*/g, '**$1**')
-      .replace(/\*\*\s+([^*]+?)\*\*/g, '**$1**')
-      .replace(/\*\*([^*]+?)\s+\*\*/g, '**$1**');
+  // 3) Keep bold whitespace cleanup within a single line and a single Markdown token.
+  const normalizedBoldWhitespace = normalizeBoldWhitespace(healed);
+  if (normalizedBoldWhitespace !== healed) {
+    healed = normalizedBoldWhitespace;
     auditLogs.push('볼드 공백 정돈');
   }
 
