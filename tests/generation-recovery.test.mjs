@@ -24,6 +24,13 @@ const savedManifest = {
   locales: { ko: { status: 'validated' } },
 };
 
+test('the generator requests topic-specific headings and rejects boilerplate claims', () => {
+  const source = readFileSync(new URL('../generate-all.mjs', import.meta.url), 'utf8');
+  assert.ok(source.includes('Make each concise and specific to the exact topic and its section'));
+  assert.ok(source.includes('Do not claim guaranteed resolution times or outcomes'));
+  assert.ok(source.includes("headingNumbers.join(',') !== '1,2,3,4,5'"));
+});
+
 test('same recipe version resumes validated locale drafts', () => {
   assert.equal(canResumeGenerationManifest(savedManifest, savedManifest.topic, GENERATION_RECIPE_VERSION), true);
 });
