@@ -30,6 +30,9 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Test generator recovery and topic identity
+        run: node --test tests/generation-recovery.test.mjs
+
       - name: Run checks
         run: npm run check
 
