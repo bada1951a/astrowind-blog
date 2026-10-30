@@ -13,7 +13,7 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "check": "npm run check:astro && npm run check:eslint && npm run check:prettier && npm run test:recovery && npm run test:markdown",
+    "check": "npm run check:astro && npm run check:eslint && npm run check:prettier && npm run test:recovery && npm run test:markdown && npm run test:budget",
     "check:astro": "astro check",
     "check:eslint": "eslint .",
     "check:prettier": "prettier --check .",
@@ -21,7 +21,8 @@
     "fix:eslint": "eslint --fix .",
     "fix:prettier": "prettier -w .",
     "test:recovery": "node --test tests/generation-recovery.test.mjs",
-    "test:markdown": "node --test tests/generation-markdown.test.mjs"
+    "test:markdown": "node --test tests/generation-markdown.test.mjs",
+    "test:budget": "node --test tests/openai-budget.test.mjs"
   },
   "dependencies": {
     "@astro-community/astro-embed-twitter": "^0.5.11",
