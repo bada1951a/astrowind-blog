@@ -14,6 +14,7 @@ import {
   canResumeGenerationManifest,
   createFreshGenerationManifest,
   createTopicFileSlug,
+  decidePublishLocales,
   GENERATION_RECIPE_VERSION,
 } from './generation-recovery.mjs';
 
@@ -904,22 +905,18 @@ async function run() {
   console.log('⚡ [1호기] 주제 1개 × 12개 언어 생성 시작');
   console.log('==================================================');
 
-  let successCount = 0;
-  const failedLocales = [];
   const successfulLocales = [];
   for (let i = 0; i < TARGET_LANGS.length; i++) {
     const lang = TARGET_LANGS[i];
     const isSuccess = await generateSinglePost(lang, i);
-    if (isSuccess) {
-      successCount++;
-      successfulLocales.push(lang.code);
-    } else {
-      failedLocales.push(lang.code);
-    }
+    if (isSuccess) successfulLocales.push(lang.code);
     if (i < TARGET_LANGS.length - 1) await delay(2000);
   }
 
-  if (successCount < 10) {
+  const publication = decidePublishLocales(TARGET_LANGS, successfulLocales, 10);
+  const successCount = publication.passingCodes.length;
+  const failedLocales = publication.failedCodes;
+  if (!publication.canPublish) {
     generationManifest.status = 'in_progress';
     generationManifest.failedLocales = failedLocales;
     generationManifest.successfulLocales = successfulLocales;
@@ -941,8 +938,7 @@ async function run() {
   generationManifest.status = failedLocales.length ? 'ready_partial_set' : 'ready_to_commit';
 
   const stagedPosts = [];
-  for (const lang of TARGET_LANGS) {
-    if (failedLocales.includes(lang.code)) continue;
+  for (const lang of publication.passingLocales) {
     const localeRecord = generationManifest.locales[lang.code];
     const cachePath = path.join(RECOVERY_DIR, lang.code, fileSlug + '.md.enc');
     if (!localeRecord || localeRecord.status !== 'validated' || !fs.existsSync(cachePath)) {
