@@ -118,7 +118,8 @@ test('generator applies the 10/12 gate, retains under-threshold topics, and disc
   assert.ok(source.includes('10개 미만이라 이번 실행은'));
   assert.ok(source.includes('lines.shift();'));
   assert.ok(source.includes("generationManifest.status = failedLocales.length ? 'published_partial_set' : 'published';"));
-  assert.ok(source.includes('실패 locale은 이번 세트에서 제외했고 주제를 큐에서 제거했습니다.'));
+  assert.ok(source.includes("failedLocales.join(', ') +"));
+  assert.ok(source.includes("']은 이번 세트에서 제외했고 주제를 큐에서 제거했습니다.'"));
   assert.equal(source.includes('실패 locale만 다음 실행에서 재시도하도록 주제를 topics.txt에 유지합니다.'), false);
   assert.equal(source.includes('실패 locale은 topics.txt에 유지해 다음 실행에서 재시도합니다.'), false);
 });
