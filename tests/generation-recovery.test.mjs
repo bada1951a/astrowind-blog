@@ -1,6 +1,7 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
 import { readFileSync } from 'node:fs';
+import { normalizeBoldWhitespace } from '../generation-markdown.mjs';
 
 import {
   canResumeGenerationManifest,
@@ -111,4 +112,35 @@ test('generator prompt specifies a topic-fit first-person narrative and practica
   const source = readFileSync(new URL('../generate-all.mjs', import.meta.url), 'utf8');
   assert.ok(source.includes('roughly 30% narrator reasoning'));
   assert.ok(source.includes('70% practical explanations'));
+});
+
+
+test('bold whitespace normalization preserves Q&A labels and blank lines', () => {
+  const input = [
+    '**Q1.** What does this check? ',
+    '',
+    '**A1.** It checks the marker and keeps this answer on its own paragraph.',
+    '',
+    '**Q2.** What if spacing is inconsistent?',
+    '',
+    '**A2.** The normalizer trims spaces inside bold tokens without joining lines.',
+    '',
+    '**Q3.** Does the third pair remain ordered?',
+    '',
+    '**A3.** Yes. The final pair remains separate and ordered.',
+    '',
+    '** spaced keyword ** stays on this line.',
+  ].join('\n');
+
+  const normalized = normalizeBoldWhitespace(input);
+  assert.match(normalized, /\*\*Q1\.\*\* What does this check\?\n\n\*\*A1\.\*\*/);
+  assert.match(normalized, /\*\*Q2\.\*\* What if spacing is inconsistent\?\n\n\*\*A2\.\*\*/);
+  assert.match(normalized, /\*\*Q3\.\*\* Does the third pair remain ordered\?\n\n\*\*A3\.\*\*/);
+  assert.match(normalized, /\*\*spaced keyword\*\* stays on this line\./);
+
+  const questions = [...normalized.matchAll(/^\*\*Q([1-3])\.\*\*/gm)];
+  const answers = [...normalized.matchAll(/^\*\*A([1-3])\.\*\*/gm)];
+  assert.deepEqual(questions.map((match) => match[1]), ['1', '2', '3']);
+  assert.deepEqual(answers.map((match) => match[1]), ['1', '2', '3']);
+  assert.ok(questions.every((question) => answers.some((answer) => answer[1] === question[1] && question.index < answer.index)));
 });
