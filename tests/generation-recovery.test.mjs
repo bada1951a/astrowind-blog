@@ -1,5 +1,6 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
+import { readFileSync } from 'node:fs';
 
 import {
   canResumeGenerationManifest,
@@ -39,4 +40,10 @@ test('changed recipe version invalidates drafts but preserves set identity', () 
   assert.equal(freshManifest.publishDate, savedManifest.publishDate);
   assert.deepEqual(freshManifest.images, savedManifest.images);
   assert.deepEqual(freshManifest.locales, {});
+});
+
+test('generator passes locale code and index to the image recovery lookup', () => {
+  const generatorSource = readFileSync(new URL('../generate-all.mjs', import.meta.url), 'utf8');
+  assert.match(generatorSource, /function getPostImages\(localeCode, index\)/);
+  assert.match(generatorSource, /postImages = await getPostImages\(lang\.code, index\);/);
 });
