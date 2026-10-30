@@ -942,10 +942,8 @@ async function run() {
     if (i < TARGET_LANGS.length - 1) await delay(2000);
   }
 
-  // Publish every locale that passed its fatal-content checks. Keep the topic
-  // queued while any locale failed so the recovery cache can retry only those
-  // locales on the next run without discarding successful drafts.
-  const publication = decidePublishLocales(TARGET_LANGS, successfulLocales, 1);
+  // Publish passing locales only after at least 10 of 12 pass; keep the topic queued while others retry.
+  const publication = decidePublishLocales(TARGET_LANGS, successfulLocales, 10);
   const successCount = publication.passingCodes.length;
   const failedLocales = publication.failedCodes;
   if (!publication.canPublish) {
@@ -954,7 +952,7 @@ async function run() {
     generationManifest.successfulLocales = successfulLocales;
     saveRecoveryManifest();
     console.error(
-      '검증 통과 locale이 없어 이번 실행은 어떤 글도 게시 경로에 반영하지 않았고 주제를 큐에 유지합니다. 실패 locale: ' +
+      '검증 통과 locale이 10개 미만이라 이번 실행은 어떤 글도 게시 경로에 반영하지 않았고 주제를 큐에 유지합니다. 실패 locale: ' +
         failedLocales.join(', ')
     );
     process.exit(1);
