@@ -7,7 +7,7 @@ on:
   workflow_dispatch: # Actions 탭에서 수동 실행 가능
 
 concurrency:
-  group: blog-publish-${{ github.repository }}-${{ github.ref }}
+  group: blog-publish-${{ github.repository }}
   cancel-in-progress: false
   queue: max
 permissions:
@@ -16,9 +16,19 @@ permissions:
 jobs:
   publish:
     runs-on: ubuntu-latest
+    timeout-minutes: 90
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Require the main branch for scheduled publishing
+        run: |
+          if [[ "$GITHUB_REF" != "refs/heads/main" ]]; then
+            echo "Budget-protected publishing is allowed only from main."
+            exit 1
+          fi
 
       - name: Restore one-topic locale recovery cache
         uses: actions/cache/restore@v4
@@ -36,8 +46,11 @@ jobs:
       - name: Run Auto Publishing Script
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          GITHUB_TOKEN: ${{ github.token }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+          OPENAI_BUDGET_LEDGER_BRANCH: automation/openai-budget-ledger
         run: |
-          npm install --legacy-peer-deps
+          npm ci --legacy-peer-deps
           node generate-all.mjs
           npm run build
 
@@ -49,9 +62,19 @@ jobs:
           if git diff --staged --quiet; then
             echo "No changes to commit"
           else
+            git pull --rebase origin main
             git commit -m "Auto published new multi-language tech posts"
           fi
           git push
+
+      - name: Report monthly API budget
+        if: always()
+        continue-on-error: true
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+          OPENAI_BUDGET_LEDGER_BRANCH: automation/openai-budget-ledger
+        run: node openai-budget.mjs summary >> "$GITHUB_STEP_SUMMARY"
 
       - name: Save one-topic locale recovery cache
         if: always() && hashFiles('.generation-recovery/**') != ''

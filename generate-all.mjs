@@ -24,12 +24,26 @@ import {
   decidePublishLocales,
   GENERATION_RECIPE_VERSION,
 } from './generation-recovery.mjs';
+import {
+  budgetRequestId,
+  GitHubBudgetLedger,
+  MAX_API_ATTEMPTS_PER_RUN,
+  MAX_INPUT_BYTES,
+  MAX_OUTPUT_TOKENS,
+  MONTHLY_BUDGET_KRW,
+} from './openai-budget.mjs';
 
 const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
 if (!OPENAI_API_KEY) {
   console.error('❌ OPENAI_API_KEY 환경변수가 설정되지 않았습니다.');
   process.exit(1);
 }
+const budgetLedger = new GitHubBudgetLedger({
+  repository: process.env.GITHUB_REPOSITORY,
+  token: process.env.GITHUB_TOKEN,
+  branch: process.env.OPENAI_BUDGET_LEDGER_BRANCH,
+});
+let apiRequestOrdinal = 0;
 const POSTS_BASE_DIR = path.resolve('src/data/post');
 
 function recoveryCipherKey() {
@@ -468,11 +482,32 @@ const TARGET_LANGS = [
 const delay = (ms) => new Promise((res) => setTimeout(res, ms));
 
 // =========================================================================
-// [호출 함수] maxOutputTokens: 8192 (2,500자 정량 생성 최적화)
+// [호출 함수] API 월 예산 원장에 요청 상한을 먼저 기록한 뒤 호출합니다.
 // =========================================================================
-async function fetchWithRetry(prompt, maxRetries = 3, delayMs = 3000) {
+async function fetchWithRetry(prompt, maxRetries = 2, delayMs = 5000) {
+  const inputBytes = Buffer.byteLength(prompt, 'utf8');
+  if (inputBytes > MAX_INPUT_BYTES) {
+    throw new Error(`요청 본문이 예산 보호 입력 상한(${MAX_INPUT_BYTES} UTF-8 bytes)을 초과했습니다.`);
+  }
   for (let attempt = 1; attempt <= maxRetries; attempt++) {
     try {
+      apiRequestOrdinal += 1;
+      if (apiRequestOrdinal > MAX_API_ATTEMPTS_PER_RUN) {
+        throw new Error(`이번 실행의 API 호출 상한 ${MAX_API_ATTEMPTS_PER_RUN}회에 도달했습니다.`);
+      }
+      const requestId = budgetRequestId({
+        runId: process.env.GITHUB_RUN_ID || `local-${process.pid}`,
+        runAttempt: process.env.GITHUB_RUN_ATTEMPT || '1',
+        ordinal: apiRequestOrdinal,
+      });
+      const reservation = await budgetLedger.reserve({
+        requestId,
+        inputBytes,
+        maxOutputTokens: MAX_OUTPUT_TOKENS,
+      });
+      console.log(
+        `💳 API 비용 상한 ${reservation.reservationKrw}원 예약 (${reservation.committedKrw}/${MONTHLY_BUDGET_KRW}원, ${reservation.month})`
+      );
       const response = await fetch('https://api.openai.com/v1/responses', {
         method: 'POST',
         headers: {
@@ -482,7 +517,7 @@ async function fetchWithRetry(prompt, maxRetries = 3, delayMs = 3000) {
         body: JSON.stringify({
           model: 'gpt-6-luna',
           reasoning: { effort: 'none' },
-          max_output_tokens: 8192,
+          max_output_tokens: MAX_OUTPUT_TOKENS,
           input: prompt,
         }),
       });
@@ -491,6 +526,15 @@ async function fetchWithRetry(prompt, maxRetries = 3, delayMs = 3000) {
       if (!response.ok) {
         const message = payload?.error?.message || `HTTP ${response.status}`;
         throw new Error(`OpenAI API 오류: ${message}`);
+      }
+
+      if (Number.isSafeInteger(payload.usage?.input_tokens) && Number.isSafeInteger(payload.usage?.output_tokens)) {
+        await budgetLedger.settle({
+          requestId,
+          month: reservation.month,
+          inputTokens: payload.usage.input_tokens,
+          outputTokens: payload.usage.output_tokens,
+        });
       }
 
       const generatedText = (payload.output || [])
@@ -511,7 +555,7 @@ async function fetchWithRetry(prompt, maxRetries = 3, delayMs = 3000) {
     } catch (error) {
       console.warn(`⚠️ [호출 재시도 ${attempt}/${maxRetries}]: ${error.message}`);
       if (attempt === maxRetries) throw error;
-      await delay(delayMs * attempt);
+      await delay(delayMs * 2 ** (attempt - 1));
     }
   }
   throw new Error('OpenAI API 호출이 최대 재시도 횟수를 초과했습니다.');
