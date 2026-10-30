@@ -591,10 +591,9 @@ function validateGeneratedPost(text, langCode, expected) {
   if (body.split(tick.repeat(3)).length % 2 === 0) errors.push('코드펜스 미종결');
 
   const headings = [...body.matchAll(/^##\s+(.+)\s*$/gm)].map((match) => match[1].trim());
-  const i18n = I18N_SECTIONS[langCode];
-  const requiredHeadings = [i18n.s1, i18n.s2, i18n.s3, i18n.s4, i18n.s5];
   if (headings.length !== 5) errors.push('H2 섹션 수가 5개와 불일치');
-  if (requiredHeadings.some((heading, index) => headings[index] !== heading)) errors.push('필수 H2 제목/순서 불일치');
+  const headingNumbers = headings.map((heading) => heading.match(/^(\d+)[.)]\s+\S/)?.[1] || '');
+  if (headingNumbers.join(',') !== '1,2,3,4,5') errors.push('H2 제목은 1~5번 순서의 주제 맞춤 번호형이어야 함');
   const sections = body.split(/^##\s+.+\s*$/m).slice(1);
   if (sections.length === 5) {
     sections.forEach((section, index) => {
@@ -792,20 +791,14 @@ async function generateSinglePost(lang, index) {
     '',
     '[LENGTH AND STRUCTURE]',
     '- Korean: aim for about 2,400–2,600 characters. Japanese: aim for about 1,800–3,200 Japanese characters, excluding spaces. Other languages: aim for about 900–1,100 words. These are targets, not permission to pad, repeat, or invent material. Accuracy and completeness come first.',
-    '- Use exactly five H2 headings below, in this order. Keep each section substantial and specific to this topic.',
-    '- Heading 1: explain the topic and a relevant symptom or use case without imposing a crisis.',
+    '- Write exactly five numbered H2 headings in the target language, in order 1 through 5. Make each concise and specific to the exact topic and its section; do not copy generic boilerplate.',
+    '- Do not claim guaranteed resolution times or outcomes, use crisis language without evidence, or imply unverified professional credentials.',
+    '- Heading 1: frame a topic-specific reader situation or question without inventing an actual event.',
     '- Heading 2: explain plausible topic-specific causes and how to distinguish them; no generic cause checklist.',
-    '- Heading 3: give at least three safe, ordered practical steps, numbered 1, 2, 3, with decision points. Match reliable UI names to this locale; put commands and paths in backticks.',
+    '- Heading 3: give at least three safe, ordered practical steps with decision points. Match reliable UI names to this locale; put commands and paths in backticks.',
     '- Heading 4: cover topic-relevant risks, prevention, and when to stop or escalate.',
     '- Heading 5: write exactly three useful topic-specific FAQ pairs. Keep the question and answer prose in the target locale, but use these exact untranslated structural markers: **Q1.**, **A1.**, **Q2.**, **A2.**, **Q3.**, **A3.**. Put each marker at the start of its own line, separate every question from its answer with a blank line, and separate the pairs with a blank line.',
     '- These are 12 independent compositions about the same topic, not translations of one master article. Keep core factual guidance consistent.',
-    '',
-    '[REQUIRED H2 HEADINGS]',
-    '## ' + i18n.s1,
-    '## ' + i18n.s2,
-    '## ' + i18n.s3,
-    '## ' + i18n.s4,
-    '## ' + i18n.s5,
     '',
     '[FORMATTING]',
     '- Never put asterisks inside H2 headings. Bold syntax must be exactly **keyword**, without spaces inside.',
