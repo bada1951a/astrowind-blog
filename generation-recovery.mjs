@@ -45,7 +45,6 @@ export function createFreshGenerationManifest({ previousManifest, topic, recipeV
   };
 }
 
-
 export function decidePublishLocales(targetLanguages, successfulLocaleCodes, minimum = 10) {
   if (!Array.isArray(targetLanguages) || targetLanguages.length === 0) {
     throw new TypeError('targetLanguages must be a non-empty array.');
