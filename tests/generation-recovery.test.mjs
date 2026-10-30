@@ -116,6 +116,15 @@ test('generator prompt specifies a topic-fit first-person narrative and practica
   assert.ok(source.includes('70% practical explanations'));
 });
 
+test('generator prompt specifies the FAQ markers required by its structural validator', () => {
+  const source = readFileSync(new URL('../generate-all.mjs', import.meta.url), 'utf8');
+  for (const marker of ['**Q1.**', '**A1.**', '**Q2.**', '**A2.**', '**Q3.**', '**A3.**']) {
+    assert.ok(source.includes(marker));
+  }
+  assert.ok(source.includes('Keep the question and answer prose in the target locale'));
+  assert.ok(source.includes('separate every question from its answer with a blank line'));
+});
+
 test('bold whitespace normalization preserves Q&A labels and blank lines', () => {
   const input = [
     '**Q1.** What does this check?',
