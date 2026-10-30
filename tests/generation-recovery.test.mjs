@@ -128,6 +128,8 @@ test('generator publishes successes and retains the topic until failed locales r
   assert.match(source, /for \(const lang of publication\.passingLocales\)/);
   assert.match(source, /if \(failedLocales\.length === 0\)\s*\{\s*lines\.shift\(\)/);
   assert.match(source, /실패 locale만 다음 실행에서 재시도하도록 주제를 topics\.txt에 유지합니다/);
+  assert.match(source, /실패 locale은 topics\.txt에 유지해 다음 실행에서 재시도합니다/);
+  assert.match(source, /모든 locale 검증이 끝나 주제를 큐에서 제거했습니다/);
 });
 
 test('generator prompt enables engaging story examples while grounding claims in evidence', () => {

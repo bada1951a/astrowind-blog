@@ -972,7 +972,7 @@ async function run() {
     const localeRecord = generationManifest.locales[lang.code];
     const cachePath = path.join(RECOVERY_DIR, lang.code, fileSlug + '.md.enc');
     if (!localeRecord || localeRecord.status !== 'validated' || !fs.existsSync(cachePath)) {
-      throw new Error('12개 locale 복구 캐시가 모두 검증 완료 상태가 아닙니다: ' + lang.code);
+      throw new Error('게시 대상 locale 복구 캐시가 검증 완료 상태가 아닙니다: ' + lang.code);
     }
     const text = readRecoveryDraft(cachePath);
     const errors = validateGeneratedPost(text, lang.code, {
@@ -1007,11 +1007,17 @@ async function run() {
     console.log('♻️ 실패 locale만 다음 실행에서 재시도하도록 주제를 topics.txt에 유지합니다.');
   }
   saveRecoveryManifest();
-  console.log(
-    '\n✅ 유효한 locale ' +
-      successCount +
-      '개를 반영했습니다. 실패 locale은 제외하고 topics.txt에서 해당 주제를 제거했습니다.'
-  );
+  if (failedLocales.length === 0) {
+    console.log(
+      '\n✅ 유효한 locale ' + successCount + '개를 반영했습니다. 모든 locale 검증이 끝나 주제를 큐에서 제거했습니다.'
+    );
+  } else {
+    console.log(
+      '\n✅ 유효한 locale ' +
+        successCount +
+        '개를 반영했습니다. 실패 locale은 topics.txt에 유지해 다음 실행에서 재시도합니다.'
+    );
+  }
   console.log('📊 남은 주제 수: ' + lines.length + '개');
 }
 
