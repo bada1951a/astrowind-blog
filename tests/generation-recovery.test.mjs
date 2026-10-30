@@ -117,15 +117,16 @@ test('generator uses the tested publication plan to gate and stage locales', () 
   assert.match(source, /for \(const lang of publication\.passingLocales\)/);
 });
 
-test('generator prompt requires truthful first-person guidance without invented scenes or details', () => {
+test('generator prompt enables engaging story examples while grounding claims in evidence', () => {
   const source = readFileSync(new URL('../generate-all.mjs', import.meta.url), 'utf8');
   assert.ok(source.includes('roughly 30% narrator reasoning'));
   assert.ok(source.includes('70% practical explanations'));
   for (const directive of [
-    "Use first person only for the guide narrator's present reasoning and recommendations, such as what I would check next; do not claim past events.",
-    "Open with the assigned topic's symptom, reader question, or decision point, then explain what I would check and why. Do not stage a personal scene.",
-    "Unless the user supplied it as verified fact, do not invent or imply a narrator's past event, commute, customer interaction, meeting, named person, specific city, date, time, or case.",
-    'Do not add a disclaimer that a scene is hypothetical, fictional, illustrative, or not a real customer case.',
+    'A clearly signaled illustrative scenario is allowed when no real case was supplied',
+    'Describe past testing or outcomes only when supported by user-provided evidence',
+    'Build a natural story flow: recognizable problem, competing explanations, a reproducible comparison or check',
+    "Clearly cue any invented example with natural wording equivalent to 'for example' or 'imagine this'",
+    'First-person past-tense experience requires verified source material',
   ]) {
     assert.ok(source.includes(directive), 'Missing truthful narration directive: ' + directive);
   }
