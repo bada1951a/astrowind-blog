@@ -2,6 +2,6 @@
   "version": 1,
   "currency": "KRW",
   "monthlyLimitKrw": 30000,
-  "usdToKrwCeiling": 2000,
+  "usdToKrwCeiling": 2500,
   "months": {}
 }
