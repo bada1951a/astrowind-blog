@@ -86,6 +86,39 @@ test('splits multiple FAQ markers on one line while preserving their prose', () 
   assert.deepEqual(validateFaqStructure(normalized), []);
 });
 
+test('normalizes FAQ markers that appear as separate Markdown list items', () => {
+  const input = [
+    '## 5. FAQ',
+    '- **Q1.** Where should I start checking?',
+    '- **A1.** Begin in the Resolution Center and read the exact request.',
+    '* Q2: Can I send every document I have?',
+    '* A2: No. Submit only the documents requested for the account review.',
+    '1. Q3. Does submission guarantee the limitation will end today?',
+    '2. A3. No. The review time depends on the case, so check the account for follow-up requests.',
+  ].join('\\n');
+
+  const normalized = normalizeFaqMarkers(input);
+  assert.deepEqual(
+    normalized,
+    [
+      '## 5. FAQ',
+      '',
+      '**Q1.** Where should I start checking?',
+      '',
+      '**A1.** Begin in the Resolution Center and read the exact request.',
+      '',
+      '**Q2.** Can I send every document I have?',
+      '',
+      '**A2.** No. Submit only the documents requested for the account review.',
+      '',
+      '**Q3.** Does submission guarantee the limitation will end today?',
+      '',
+      '**A3.** No. The review time depends on the case, so check the account for follow-up requests.',
+    ].join('\\n')
+  );
+  assert.deepEqual(validateFaqStructure(normalized), []);
+});
+
 test('leaves missing FAQ prose empty instead of inventing content', () => {
   const input = '## 5. FAQ\n\n**Q1.**\n\n**A1.**';
   assert.equal(normalizeFaqMarkers(input), '## 5. FAQ\n\n**Q1.**\n\n**A1.**');
