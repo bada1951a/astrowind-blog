@@ -64,7 +64,7 @@ function splitInlineFaqMarkerLines(lines) {
     }
 
     const faqLine = line.replace(
-      /^(\\s*)(?:[-*+]|\\d+[.)])\\s+(?=(?:\\*{2,4}\\s*)?[QA]\\s*[1-3]\\s*[.．:：)])/i,
+      /^(\s*)(?:[-*+]|\d+[.)])\s+(?=(?:\*{2,4}\s*)?[QA]\s*[1-3]\s*[.．:：)])/i,
       '$1'
     );
     const markers = [...faqLine.matchAll(markerPattern)];
