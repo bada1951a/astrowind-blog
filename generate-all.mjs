@@ -10,7 +10,7 @@
 import fs from 'fs';
 import path from 'path';
 import crypto from 'crypto';
-import { normalizeBoldWhitespace } from './generation-markdown.mjs';
+import { normalizeBoldWhitespace, normalizeFaqMarkers, validateFaqStructure } from './generation-markdown.mjs';
 import {
   canResumeGenerationManifest,
   createFreshGenerationManifest,
@@ -223,21 +223,15 @@ const I18N_SECTIONS = {
 // 🛡️ [1호기 자가 검수 및 치유 엔진: Self-Healing Inspector]
 // =========================================================================
 function inspectAndHealMarkdown(body) {
-  let healed = body.trim();
+  const trimmedBody = body.trim();
+  let healed = normalizeFaqMarkers(trimmedBody);
   const auditLogs = [];
 
   // 서식 오류만 정리하며, 누락된 문장을 템플릿으로 채워 넣지 않는다.
   healed = healed.replace(/^(#{1,6}\s+)\*\*(.*?)\*\*/gm, '$1$2');
 
-  // 2) 🛡️ Q&A 줄바꿈 뭉개짐 자동 분리 치유 (질문과 답변 사이 빈 줄 2개 보장)
-  const rawQnACount = (healed.match(/Q[1-3]\./gi) || []).length;
-  if (rawQnACount > 0) {
-    healed = healed.replace(/\s*(\*\*Q[1-3]\.\*\*|Q[1-3]\.)\s*/gi, '\n\n**$1** ');
-    healed = healed.replace(/\s*(\*\*A[1-3]\.\*\*|A[1-3]\.)\s*/gi, '\n\n**$1** ');
-    healed = healed.replace(/\*\*\s*\*\*(Q[1-3]\.|A[1-3]\.)\*\*\s*\*\*/gi, '**$1**');
-    healed = healed.replace(/\*\*(Q[1-3]\.|A[1-3]\.)\*\*/gi, '**$1**');
-    auditLogs.push('Q&A 줄바꿈 2열 분리 치유');
-  }
+  // 2) Canonical FAQ labels, one-line prose, and clean separators for new drafts.
+  if (healed !== trimmedBody) auditLogs.push('FAQ 표식과 질문/답변 줄 구조 정돈');
 
   // 3) Keep bold whitespace cleanup within a single line and a single Markdown token.
   const normalizedBoldWhitespace = normalizeBoldWhitespace(healed);
@@ -651,22 +645,7 @@ function validateGeneratedPost(text, langCode, expected) {
     if (wordCount < 650 || wordCount > 1400) errors.push('본문 분량 오류: ' + wordCount + ' words (target 900–1100)');
   }
 
-  const questions = [...body.matchAll(/^\*\*Q([1-3])\.\*\*\s*(.+)$/gim)];
-  const answers = [...body.matchAll(/^\*\*A([1-3])\.\*\*\s*(.+)$/gim)];
-  if (questions.length !== 3 || new Set(questions.map((match) => match[1])).size !== 3)
-    errors.push('FAQ 질문 3개 구조 오류');
-  if (answers.length !== 3 || new Set(answers.map((match) => match[1])).size !== 3)
-    errors.push('FAQ 답변 3개 구조 오류');
-  for (const match of answers) {
-    if (match[2].trim().length < 45) errors.push('FAQ A' + match[1] + ' 답변이 너무 짧음');
-  }
-  if (
-    questions.some((question) => {
-      const answer = answers.find((candidate) => candidate[1] === question[1]);
-      return !answer || question.index >= answer.index;
-    })
-  )
-    errors.push('FAQ 질문/답변 순서 오��');
+  errors.push(...validateFaqStructure(body));
   return [...new Set(errors)];
 }
 
@@ -979,3 +958,4 @@ async function run() {
 }
 
 run();
+
