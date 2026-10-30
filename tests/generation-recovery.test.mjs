@@ -58,4 +58,3 @@ test('topic file slugs are deterministic, normalized, and topic-scoped', () => {
   assert.match(slug, /^post-[a-f0-9]{16}$/);
   assert.notEqual(slug, createTopicFileSlug('Diagnose a slow laptop battery'));
 });
-
