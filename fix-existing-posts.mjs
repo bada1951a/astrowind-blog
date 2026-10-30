@@ -26,7 +26,10 @@ function cleanAllDuplicates(content) {
     // 마크다운 헤딩(#)인 경우
     if (/^#{1,6}\s+/.test(trimmed)) {
       // '#' 기호와 앞뒤 공백을 뗀 순수 텍스트만 추출
-      const headingClean = trimmed.replace(/^#{1,6}\s+/, '').replace(/\*\*/g, '').trim();
+      const headingClean = trimmed
+        .replace(/^#{1,6}\s+/, '')
+        .replace(/\*\*/g, '')
+        .trim();
 
       // 바로 이전에 나왔던 헤딩 텍스트와 똑같다면 건너뜀 (삭제)
       if (headingClean.length > 0 && headingClean === lastSeenHeadingText) {

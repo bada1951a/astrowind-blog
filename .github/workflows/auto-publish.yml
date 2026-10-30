@@ -6,6 +6,10 @@ on:
       timezone: 'Asia/Seoul'
   workflow_dispatch: # Actions 탭에서 수동 실행 가능
 
+concurrency:
+  group: blog-publish-${{ github.repository }}-${{ github.ref }}
+  cancel-in-progress: false
+  queue: max
 permissions:
   contents: write # 생성된 새 글을 GitHub 리포지토리에 푸시하기 위한 필수 권한
 
@@ -15,6 +19,14 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
+
+      - name: Restore one-topic locale recovery cache
+        uses: actions/cache/restore@v4
+        with:
+          path: .generation-recovery/
+          key: 1ho-astrowind-blog-recovery-encrypted-v1-${{ github.run_id }}-${{ github.run_attempt }}
+          restore-keys: |
+            1ho-astrowind-blog-recovery-encrypted-v1-
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -36,3 +48,10 @@ jobs:
           git add src/data/post/ topics.txt
           git commit -m "Auto published new multi-language tech posts" || echo "No changes to commit"
           git push
+
+      - name: Save one-topic locale recovery cache
+        if: always() && hashFiles('.generation-recovery/**') != ''
+        uses: actions/cache/save@v4
+        with:
+          path: .generation-recovery/
+          key: 1ho-astrowind-blog-recovery-encrypted-v1-${{ github.run_id }}-${{ github.run_attempt }}
