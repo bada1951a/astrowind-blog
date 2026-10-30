@@ -1,6 +1,12 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
-import { normalizeFaqMarkers, validateFaqStructure } from '../generation-markdown.mjs';
+import {
+  getNumberedStepsCorrectionInstruction,
+  normalizeFaqMarkers,
+  NUMBERED_STEPS_GUIDANCE,
+  NUMBERED_STEPS_VALIDATION_ERROR,
+  validateFaqStructure,
+} from '../generation-markdown.mjs';
 
 test('normalizes FAQ markers and prose split across lines without changing the words', () => {
   const input = [
@@ -164,4 +170,17 @@ test('validator rejects missing, short, or out-of-order FAQ pairs', () => {
   const wrongOrder =
     '## 5. FAQ\n\n**A1.** This answer is long enough to pass the minimum length check safely.\n\n**Q1.** Question one?\n\n**Q2.** Question two?\n\n**A2.** This answer is long enough to pass the minimum length check safely.\n\n**Q3.** Question three?\n\n**A3.** This answer is long enough to pass the minimum length check safely.';
   assert.ok(validateFaqStructure(wrongOrder).includes('FAQ 질문/답변 순서 오류'));
+});
+
+
+test('numbered-step guidance matches the validator format and correction error without permitting invented actions', () => {
+  assert.match(NUMBERED_STEPS_GUIDANCE, /H2 section 3/);
+  assert.match(NUMBERED_STEPS_GUIDANCE, /own Markdown ordered-list line/);
+  assert.match(NUMBERED_STEPS_GUIDANCE, /ASCII markers `1\\.`, `2\\.`, and `3\\.`/);
+  assert.match(NUMBERED_STEPS_GUIDANCE, /Do not invent product behavior, facts, or actions/);
+  assert.match(NUMBERED_STEPS_GUIDANCE, /allow validation to fail/);
+  const instruction = getNumberedStepsCorrectionInstruction([NUMBERED_STEPS_VALIDATION_ERROR]);
+  assert.match(instruction, /^\\[NUMBERED STEPS CORRECTION\\]/);
+  assert.ok(instruction.includes(NUMBERED_STEPS_GUIDANCE));
+  assert.equal(getNumberedStepsCorrectionInstruction(['unrelated validator error']), '');
 });
