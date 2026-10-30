@@ -95,7 +95,7 @@ test('normalizes FAQ markers that appear as separate Markdown list items', () =>
     '* A2: No. Submit only the documents requested for the account review.',
     '1. Q3. Does submission guarantee the limitation will end today?',
     '2. A3. No. The review time depends on the case, so check the account for follow-up requests.',
-  ].join('\\n');
+  ].join('\n');
 
   const normalized = normalizeFaqMarkers(input);
   assert.deepEqual(
@@ -114,7 +114,7 @@ test('normalizes FAQ markers that appear as separate Markdown list items', () =>
       '**Q3.** Does submission guarantee the limitation will end today?',
       '',
       '**A3.** No. The review time depends on the case, so check the account for follow-up requests.',
-    ].join('\\n')
+    ].join('\n')
   );
   assert.deepEqual(validateFaqStructure(normalized), []);
 });
