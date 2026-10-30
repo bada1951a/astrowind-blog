@@ -88,9 +88,11 @@ export function normalizeFaqMarkers(markdown) {
   // labels in the article body are not mistaken for the FAQ.
   const { start: faqStart, end: faqEnd } = findFaqSection(lines);
   if (faqStart < 0) return source;
-  const faqLines = splitInlineFaqMarkerLines(lines.slice(faqStart, faqEnd));
+  const sourceFaqLines = lines.slice(faqStart, faqEnd);
+  const faqLines = splitInlineFaqMarkerLines(sourceFaqLines);
   const output = [];
-  let changed = false;
+  let changed =
+    faqLines.length !== sourceFaqLines.length || faqLines.some((line, index) => line !== sourceFaqLines[index]);
   let fenceCharacter = null;
   let fenceLength = 0;
 
