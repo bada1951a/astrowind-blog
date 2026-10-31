@@ -127,17 +127,13 @@ test('generator applies the 10/12 gate, retains under-threshold topics, and disc
 });
 test('generator prompt enables engaging story examples while grounding claims in evidence', () => {
   const source = readFileSync(new URL('../generate-all.mjs', import.meta.url), 'utf8');
-  assert.ok(source.includes('roughly 30% narrator reasoning'));
-  assert.ok(source.includes('70% practical explanations'));
-  for (const directive of [
-    'A clearly signaled illustrative scenario is allowed when no real case was supplied',
-    'Describe past testing or outcomes only when supported by user-provided evidence',
-    'Build a natural story flow: recognizable problem, competing explanations, a reproducible comparison or check',
-    "Clearly cue any invented example with natural wording equivalent to 'for example' or 'imagine this'",
-    'First-person past-tense experience requires verified source material',
-  ]) {
-    assert.ok(source.includes(directive), 'Missing truthful narration directive: ' + directive);
-  }
+  assert.ok(source.includes('MANDATORY: Open the first paragraph IN MEDIAS RES'));
+  assert.ok(source.includes('fictional first-person dramatization, not a claim of the writer'));
+  assert.ok(source.includes('Within a clearly labeled fictional scenario'));
+  assert.ok(source.includes('Roughly half narrative and half practical guidance'));
+  assert.ok(source.includes('never imply that the author actually performed tests or obtained results'));
+  assert.ok(source.includes('Never claim the author personally experienced it'));
+  assert.ok(source.includes('These are 12 independent compositions about the same topic, not translations of one master article.'));
   const localeStart = source.indexOf('const TARGET_LANGS = [');
   const localeEnd = source.indexOf('const delay =', localeStart);
   assert.notEqual(localeStart, -1);
