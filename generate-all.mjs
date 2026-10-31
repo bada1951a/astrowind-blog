@@ -136,7 +136,7 @@ function getKstPublishDateIso() {
   const year = kst.getUTCFullYear();
   const month = kst.getUTCMonth() + 1;
   const day = kst.getUTCDate();
-  return new Date(Date.UTC(year, month - 1, day, 10, 0, 0)).toISOString();
+  return new Date(Date.UTC(year, month - 1, day, 9, 28, 0)).toISOString();
 }
 
 // =========================================================================
