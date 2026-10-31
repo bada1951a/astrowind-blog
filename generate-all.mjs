@@ -942,7 +942,7 @@ async function run() {
     if (i < TARGET_LANGS.length - 1) await delay(2000);
   }
 
-  // Publish passing locales only after at least 10 of 12 pass; keep the topic queued while others retry.
+  // Publish passing locales only after at least 10 of 12 pass; discard failed locales and advance the topic.
   const publication = decidePublishLocales(TARGET_LANGS, successfulLocales, 10);
   const successCount = publication.passingCodes.length;
   const failedLocales = publication.failedCodes;
@@ -998,12 +998,9 @@ async function run() {
   saveRecoveryManifest();
   for (const post of stagedPosts) fs.writeFileSync(post.destination, post.text, 'utf-8');
 
-  if (failedLocales.length === 0) {
-    lines.shift();
-    fs.writeFileSync(TOPICS_FILE, lines.join('\n'), 'utf-8');
-  } else {
-    console.log('♻️ 실패 locale만 다음 실행에서 재시도하도록 주제를 topics.txt에 유지합니다.');
-  }
+  lines.shift();
+  fs.writeFileSync(TOPICS_FILE, lines.join('\n'), 'utf-8');
+  generationManifest.status = failedLocales.length ? 'published_partial_set' : 'published';
   saveRecoveryManifest();
   if (failedLocales.length === 0) {
     console.log(
@@ -1013,7 +1010,9 @@ async function run() {
     console.log(
       '\n✅ 유효한 locale ' +
         successCount +
-        '개를 반영했습니다. 실패 locale은 topics.txt에 유지해 다음 실행에서 재시도합니다.'
+        '개를 반영했습니다. 실패 locale [' +
+        failedLocales.join(', ') +
+        ']은 이번 세트에서 제외했고 주제를 큐에서 제거했습니다.'
     );
   }
   console.log('📊 남은 주제 수: ' + lines.length + '개');
