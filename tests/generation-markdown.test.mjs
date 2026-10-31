@@ -2,10 +2,13 @@ import assert from 'node:assert/strict';
 import test from 'node:test';
 import {
   getNumberedStepsCorrectionInstruction,
+  getStoryOpeningCorrectionInstruction,
   normalizeFaqMarkers,
   NUMBERED_STEPS_GUIDANCE,
   NUMBERED_STEPS_VALIDATION_ERROR,
+  STORY_OPENING_VALIDATION_ERROR,
   validateFaqStructure,
+  validateStoryOpening,
 } from '../generation-markdown.mjs';
 
 test('normalizes FAQ markers and prose split across lines without changing the words', () => {
@@ -245,4 +248,36 @@ test('numbered-step guidance matches the validator format and correction error w
   assert.match(instruction, /^\[NUMBERED STEPS CORRECTION\]/);
   assert.ok(instruction.includes(NUMBERED_STEPS_GUIDANCE));
   assert.equal(getNumberedStepsCorrectionInstruction(['unrelated validator error']), '');
+});
+
+test('story opening validator requires first-person and a clear fictional cue in the first paragraph for all locales', () => {
+  const examples = {
+    de: 'Ich stelle mir eine fiktive Szene vor, in der mein Laptop langsam startet.',
+    en: 'I picture a fictional Monday when my laptop stalls.',
+    es: 'Imagino una escena ficticia: mi portátil se queda bloqueado.',
+    fr: 'J’imagine une scène fictive : mon ordinateur ralentit.',
+    id: 'Saya membayangkan adegan fiktif: laptop saya melambat.',
+    it: 'Immagino una scena fittizia: il mio computer rallenta.',
+    ja: '架空の朝を想像します。私のパソコンが遅くなりました。',
+    ko: '가상의 아침을 떠올립니다. 제 컴퓨터가 느려졌습니다.',
+    nl: 'Ik stel me een fictieve ochtend voor waarop mijn laptop traag is.',
+    pl: 'Wyobrażam sobie fikcyjny poranek, gdy mój laptop zwalnia.',
+    pt: 'Imagino uma cena fictícia: meu computador ficou lento.',
+    vi: 'Tôi hình dung một buổi sáng giả định: máy tính của tôi chạy chậm.',
+  };
+  for (const [locale, opening] of Object.entries(examples)) {
+    const article = `---\ntitle: Test\n---\n\n## 1. Test\n\n${opening}\n\n## 2. Test`;
+    assert.deepEqual(validateStoryOpening(article, locale), [], locale);
+  }
+
+  const dry =
+    '---\ntitle: Test\n---\n\n## 1. Test\n\nDisk activity is a useful measure.\n\nI later picture a fictional scene.';
+  assert.deepEqual(validateStoryOpening(dry, 'en'), [STORY_OPENING_VALIDATION_ERROR]);
+});
+
+test('story-opening correction is supplied only for its matching validation error', () => {
+  const correction = getStoryOpeningCorrectionInstruction([STORY_OPENING_VALIDATION_ERROR]);
+  assert.match(correction, /^\[STORY OPENING CORRECTION\]/);
+  assert.match(correction, /first-person fictional scene/);
+  assert.equal(getStoryOpeningCorrectionInstruction(['unrelated error']), '');
 });

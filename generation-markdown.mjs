@@ -1,5 +1,67 @@
 export const NUMBERED_STEPS_VALIDATION_ERROR = '해결 절차의 번호가 붙은 단계가 3개 미만';
 
+export const STORY_OPENING_VALIDATION_ERROR = '서두 1인칭 허구 상황 프레이밍 부족';
+
+const storyOpeningCues = {
+  en: {
+    firstPerson: /\b(?:I|me|my|mine)\b/i,
+    fiction: /\b(?:fictional|illustrative|imaginary|imagine|hypothetical)\b/i,
+  },
+  de: {
+    firstPerson: /\b(?:ich|mir|mich|mein(?:e|er|en|em|es)?)\b/i,
+    fiction: /\b(?:fiktiv\w*|beispielhaft|vorgestellt|stellen wir uns vor)\b/i,
+  },
+  es: {
+    firstPerson: /\b(?:yo|me|mi|mis|imagino)\b/i,
+    fiction: /\b(?:fictici[oa]|ilustrativ[oa]|imaginari[oa]|hipotétic[oa])\b/i,
+  },
+  fr: {
+    firstPerson: /\b(?:je|j'|me|moi|mon|ma|mes)\b/i,
+    fiction: /\b(?:ficti(?:f|ve)|illustrati(?:f|ve)|imaginaire|hypothétique)\b/i,
+  },
+  id: { firstPerson: /\b(?:saya|aku|saya|milikku)\b/i, fiction: /\b(?:fiktif|ilustrasi|bayangkan|hipotetis)\b/i },
+  it: {
+    firstPerson: /\b(?:io|mi|mio|mia|immagino)\b/i,
+    fiction: /\b(?:fittizi[oa]|illustrativ[oa]|immaginari[oa]|ipotetic[oa])\b/i,
+  },
+  ja: { firstPerson: /(?:私|僕|俺|わたし|ぼく)/, fiction: /(?:架空|想像|仮の|説明用|例として)/ },
+  ko: { firstPerson: /(?:저는|제가|나는|내가|제|내)/, fiction: /(?:가상의|가정한|상상해|설명을 위한|예시)/ },
+  nl: {
+    firstPerson: /\b(?:ik|mijn|me|mij)\b/i,
+    fiction: /\b(?:ficti\w*|illustratief\w*|denkbeeldig|stel me voor|stel ik me voor)\b/i,
+  },
+  pl: {
+    firstPerson: /\b(?:ja|mnie|mój\w*|moja\w*|moje\w*|wyobrażam)\b/i,
+    fiction: /\b(?:fikcyjn\w*|przykładow\w*|wyobrażon\w*|hipotetyczn\w*)\b/i,
+  },
+  pt: {
+    firstPerson: /\b(?:eu|meu|minha|me|imagino)\b/i,
+    fiction: /\b(?:fictíci\w*|ilustrativ\w*|imaginári\w*|hipotétic\w*)\b/i,
+  },
+  vi: { firstPerson: /(?:tôi|mình|ta)/i, fiction: /(?:giả định|minh họa|tưởng tượng|hư cấu)/i },
+};
+
+export function validateStoryOpening(markdown, langCode) {
+  const body = String(markdown).replace(/^---\s*\r?\n[\s\S]*?\r?\n---\s*(?:\r?\n|$)/, '');
+  const firstHeading = body.search(/^##\s+/m);
+  if (firstHeading < 0) return [STORY_OPENING_VALIDATION_ERROR];
+  const opening = body
+    .slice(firstHeading)
+    .replace(/^##\s+[^\r\n]*\r?\n/, '')
+    .split(/\r?\n\s*\r?\n|^!/m, 1)[0];
+  const cues = storyOpeningCues[langCode];
+  if (!cues) return [];
+  return cues.firstPerson.test(opening) && cues.fiction.test(opening) ? [] : [STORY_OPENING_VALIDATION_ERROR];
+}
+
+export function getStoryOpeningCorrectionInstruction(errors) {
+  if (!Array.isArray(errors) || !errors.includes(STORY_OPENING_VALIDATION_ERROR)) return '';
+  return [
+    '[STORY OPENING CORRECTION]',
+    'Rewrite only the opening prose after H2 section 1 so its first paragraph starts inside a vivid, topic-specific first-person fictional scene. Include a natural cue that the scene is illustrative and not a verified personal experience. Keep it in the target locale, avoid stock phrasing, and preserve accurate technical claims and all other required structure.',
+  ].join('\n');
+}
+
 export const NUMBERED_STEPS_GUIDANCE =
   'In H2 section 3, give at least three distinct, safe, ordered practical actions supported by reliable, topic-specific guidance. Put each action on its own Markdown ordered-list line beginning with the ASCII markers `1.`, `2.`, and `3.`, and continue numbering for any additional actions. Include decision points where they help the reader choose what to do next. Do not invent product behavior, facts, or actions, and do not pad the article just to reach a count. If fewer than three safe actions can be supported, keep the content accurate and allow validation to fail.';
 
