@@ -62,8 +62,8 @@ jobs:
           if git diff --staged --quiet; then
             echo "No changes to commit"
           else
-            git pull --rebase origin main
             git commit -m "Auto published new multi-language tech posts"
+            git pull --rebase --autostash origin main
           fi
           git push
 
