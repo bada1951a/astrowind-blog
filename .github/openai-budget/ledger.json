@@ -41,10 +41,14 @@
         "41192979381-1-5": {
           "status": "reserved",
           "reservedKrw": 9
+        },
+        "41192979381-1-6": {
+          "status": "reserved",
+          "reservedKrw": 9
         }
       },
-      "committedKrw": 20,
-      "updatedAt": "2026-10-31T10:31:59.595Z"
+      "committedKrw": 29,
+      "updatedAt": "2026-10-31T10:32:09.908Z"
     }
   }
 }
