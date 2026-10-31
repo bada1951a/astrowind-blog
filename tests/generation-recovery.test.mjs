@@ -127,13 +127,16 @@ test('generator applies the 10/12 gate, retains under-threshold topics, and disc
 });
 test('generator prompt enables engaging story examples while grounding claims in evidence', () => {
   const source = readFileSync(new URL('../generate-all.mjs', import.meta.url), 'utf8');
-  assert.ok(source.includes('MANDATORY: Open the first paragraph IN MEDIAS RES'));
-  assert.ok(source.includes('fictional first-person dramatization, not a claim of the writer'));
-  assert.ok(source.includes('Within a clearly labeled fictional scenario'));
-  assert.ok(source.includes('Roughly half narrative and half practical guidance'));
-  assert.ok(source.includes('never imply that the author actually performed tests or obtained results'));
-  assert.ok(source.includes('Never claim the author personally experienced it'));
-  assert.ok(source.includes('These are 12 independent compositions about the same topic, not translations of one master article.'));
+  for (const directive of [
+    'Open the first paragraph IN MEDIAS RES with an exciting first-person scene',
+    'This is a fictional first-person dramatization, not a claim of the writer',
+    'never imply that the author actually performed tests or obtained results',
+    'Keep distinct, culturally natural plots for all 12 locales; never translate a shared story',
+    'Avoid stock hooks, repeated sentence patterns, filler, and generic AI-sounding transitions',
+    'Never fabricate credentials, real-world testimonials, actual performed tests, measured values, or guaranteed outcomes',
+  ]) {
+    assert.ok(source.includes(directive), 'Missing quality directive: ' + directive);
+  }
   const localeStart = source.indexOf('const TARGET_LANGS = [');
   const localeEnd = source.indexOf('const delay =', localeStart);
   assert.notEqual(localeStart, -1);
