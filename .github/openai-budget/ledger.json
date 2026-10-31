@@ -99,12 +99,16 @@
           "settledAt": "2026-10-31T10:34:22.017Z"
         },
         "41192979381-1-13": {
-          "status": "reserved",
-          "reservedKrw": 8
+          "status": "settled",
+          "reservedKrw": 8,
+          "actualKrw": 3,
+          "inputTokens": 1177,
+          "outputTokens": 1770,
+          "settledAt": "2026-10-31T10:34:43.093Z"
         }
       },
-      "committedKrw": 49,
-      "updatedAt": "2026-10-31T10:34:25.124Z"
+      "committedKrw": 44,
+      "updatedAt": "2026-10-31T10:34:43.093Z"
     }
   }
 }
