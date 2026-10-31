@@ -105,10 +105,14 @@
           "inputTokens": 1177,
           "outputTokens": 1770,
           "settledAt": "2026-10-31T10:34:43.093Z"
+        },
+        "41192979381-1-14": {
+          "status": "reserved",
+          "reservedKrw": 8
         }
       },
-      "committedKrw": 44,
-      "updatedAt": "2026-10-31T10:34:43.093Z"
+      "committedKrw": 52,
+      "updatedAt": "2026-10-31T10:34:46.230Z"
     }
   }
 }
